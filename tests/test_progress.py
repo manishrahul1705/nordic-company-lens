@@ -31,7 +31,7 @@ def test_progress_state_schema_and_serialization(tmp_path):
     assert snap.companies.failed == 1
     assert snap.companies.in_flight == 0
     assert snap.companies.queued == 8
-    assert snap.companies.terminal == 2
+    assert (snap.companies.successful + snap.companies.failed) == 2
     assert snap.requests.measured == 5
     assert snap.requests.limit == 200
     assert snap.requests.estimated_cost_usd == 0.025
@@ -87,7 +87,7 @@ def test_progress_writer_extra_path_and_zero_rows(tmp_path):
     )
     snap = writer._snapshot(budget_events_count=0)
     assert snap.companies.total == 0
-    assert snap.companies.terminal == 0
+    assert (snap.companies.successful + snap.companies.failed) == 0
     # Verify both files are written atomically
     writer._write_atomic(snap.model_dump_json(indent=2))
     assert (tmp_path / "state" / "progress.json").exists()

@@ -17,9 +17,6 @@ class CompanyCounts(BaseModel):
     successful: int = 0
     failed: int = 0
 
-    @property
-    def terminal(self) -> int:
-        return self.successful + self.failed
 
 
 class RequestMetrics(BaseModel):

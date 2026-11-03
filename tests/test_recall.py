@@ -10,7 +10,7 @@ from signalpost.sources.blobstore import BlobStore
 from signalpost.web.fetcher import WebsiteHttp
 from signalpost.web.candidates import Candidate, generate
 from signalpost.web.activity import parse
-from signalpost.sources.nav import candidate_score, name_tokens, Index, prefetch
+from signalpost.sources.nav import name_tokens, Index, prefetch
 from tests.test_registry import config
 from tests.test_websites import execute_web, html, OUR
 
@@ -60,10 +60,8 @@ def test_candidate_order_and_stop_after_verified(tmp_path, monkeypatch):
     assert report['dns_precheck_lookups']==0 and report['dns_lookups']==2
 
 
-def test_rank_rare_tokens_suffixes_and_transliteration():
+def test_name_tokens_suffixes_and_transliteration():
     assert name_tokens('Gjøvik Åsheim Ægir SERVICES AS')==name_tokens('Gjoevik Aasheim Aegir ASA')
-    assert candidate_score('Rare Common AS','Rare Ventures ASA',{'rare':1,'common':50}) > candidate_score('Common AS','Common Ventures',{'common':50})
-    assert candidate_score('Generic Service AS','Other Services',{})==0
 
 
 def test_ranked_cap_order_and_incomplete_companies(tmp_path):

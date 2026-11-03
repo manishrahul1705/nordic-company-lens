@@ -1,6 +1,5 @@
 """Optional paid discovery. Search results never become evidence or facts."""
 import asyncio,json,os,time,httpx
-from typing import Protocol
 from urllib.parse import urlsplit
 from .candidates import Candidate,legal_name
 from .policy import normalize_url,domain,SOCIAL,DIRECTORIES,FREE_MAIL
@@ -17,8 +16,6 @@ GENERIC_DOMAINS={'gulesider.no','proff.no','purehelp.no','1881.no','180.no',
                  'youtube.com','tiktok.com','finn.no','mittanbud.no','anbudstorget.no',
                  'yellowpages.no','kompass.com','europages.com','crunchbase.com'}
 
-class Provider(Protocol):
-    async def search(self,query:str,timeout:float)->list[dict|str]: ...
 
 class Brave:
     def __init__(self,client,key):self.client,self.key=client,key

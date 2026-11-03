@@ -1,4 +1,3 @@
-import base64
 import hashlib
 import threading
 from pathlib import Path
@@ -44,10 +43,3 @@ class BlobStore:
             self._recent[sha] = body
             self._recent_bytes += len(body)
         return sha
-
-    def restore(self, evidence):
-        # Legacy envelopes can still supply embedded data. New envelopes
-        # carry metadata only; an absent prior blob is not a fetch instruction.
-        if evidence.snapshot_body_base64:
-            return self.put(base64.b64decode(evidence.snapshot_body_base64, validate=True))
-        return evidence.content_sha256

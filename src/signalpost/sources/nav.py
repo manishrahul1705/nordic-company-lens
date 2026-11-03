@@ -75,9 +75,6 @@ def name_matches(header,candidate):
                 (header==candidate or (' '+candidate+' ') in (' '+header+' ')))
 
 
-def candidate_score(header, candidate, frequency):
-    common=name_tokens(header) & name_tokens(candidate)
-    return sum(1 / max(1, frequency.get(token, 1)) for token in sorted(common))
 
 
 def time_cap(config):

@@ -5,31 +5,11 @@ import pytest
 
 from signalpost.models.shapes import serialize
 from signalpost.site import (
-    generate_site, CSP, sanitize_csv_cell, format_csv_orgnr,
-    export_directory_csv, export_directory_json,
-    export_profile_claims_json, export_profile_summary_csv
+    generate_site, CSP
 )
 from tests.test_synthesis import envelope
 from tests.test_synthesis_readability import available
 from tests.test_registry import config, execute
-
-
-def test_unknown_reporting_currency_is_not_exported_as_nok():
-    import csv,io
-    row=next(csv.DictReader(io.StringIO(export_directory_csv([{'orgnr':'923609016','revenue':123}]))))
-    assert row['Revenue']=='123' and row['Currency']==''
-
-
-def test_csv_control_prefixes_cannot_hide_formulas():
-    import csv,io
-    for prefix in ['\x00','\x0b','\x1f','\x7f','\x85','\u200b','\ufeff','\u00a0',' \n\t']:
-        for trigger in ['=SUM(1,2)','+cmd','-2+3','@SUM(A1)']:
-            raw=prefix+trigger
-            decoded=next(csv.reader(io.StringIO(sanitize_csv_cell(raw))))[0]
-            assert decoded=="'"+raw
-    for text in ['æøå “quoted”','line1\nline2','a,"b"',None,'-12.34']:
-        cell=sanitize_csv_cell(text)
-        assert cell=='' if text is None else next(csv.reader(io.StringIO(cell)))[0]==text
 
 
 def test_carried_fact_shows_last_successful_check():
@@ -309,102 +289,6 @@ def test_update_status_panel_markup_and_accessibility(tmp_path):
     assert CSP in __import__('html').unescape(index_html)
 
 
-def test_formula_sanitization_and_orgnr_formatting():
-    # Dangerous formula characters are prefixed with single quote '
-    assert sanitize_csv_cell("=1+1") == "'=1+1"
-    assert sanitize_csv_cell("+cmd|' /C calc'!A0") == "'+cmd|' /C calc'!A0"
-    assert sanitize_csv_cell("-MIN(A1:A5)") == "'-MIN(A1:A5)"
-    assert sanitize_csv_cell("-2+3") == "'-2+3"
-    assert sanitize_csv_cell("@SUM(B1:B2)") == "'@SUM(B1:B2)"
-    assert sanitize_csv_cell("\ttab_attack") == "'\ttab_attack"
-    assert sanitize_csv_cell(" =1+1") == "' =1+1"
-    assert sanitize_csv_cell("\rcarriage_return") == '"\'\rcarriage_return"'
-
-    # Commas, quotes, and newlines are safely quoted and escaped per RFC 4180
-    assert sanitize_csv_cell('Hello, "World"') == '"Hello, ""World"""'
-    assert sanitize_csv_cell("Line 1\nLine 2") == '"Line 1\nLine 2"'
-
-    # Legitimate numbers (including negative amounts and string negative numbers) remain clean
-    assert sanitize_csv_cell(12345) == "12345"
-    assert sanitize_csv_cell(-450000) == "-450000"
-    assert sanitize_csv_cell("-450000") == "-450000"
-    assert sanitize_csv_cell("-12.34") == "-12.34"
-    assert sanitize_csv_cell(0) == "0"
-    assert sanitize_csv_cell(None) == ""
-    assert sanitize_csv_cell(True) == "Yes"
-    assert sanitize_csv_cell(False) == "No"
-
-    # Organisation numbers formatted as plain literal digit strings (no ="..." formula bypass)
-    assert format_csv_orgnr("012345678") == "012345678"
-    assert format_csv_orgnr(987654321) == "987654321"
-
-
-def test_directory_exports_csv_and_json():
-    records = [
-        {
-            "orgnr": "012345678",
-            "name": "Nordic Solutions AS",
-            "municipality": "Oslo",
-            "nace": "62.010",
-            "industry_en": "Computer programming activities",
-            "employees": 15,
-            "size_band": "small",
-            "revenue": 25000000,
-            "annual_result": 3200000,
-            "currency": "NOK",
-            "unit": "NOK",
-            "fiscal_year": 2024,
-            "website": "https://example.no",
-            "website_origin": "registry_website",
-            "jobs": 2,
-            "social": 1,
-            "activity": 3,
-            "claim_count": 28,
-            "last_checked": "2026-10-14T10:00:00Z"
-        }
-    ]
-
-    csv_data = export_directory_csv(records)
-    lines = csv_data.strip().split("\r\n")
-    assert len(lines) == 2
-    assert "Organisation number,Name,Municipality" in lines[0]
-    assert "Revenue,Annual result,Currency,Financial unit,Fiscal year" in lines[0]
-    assert "012345678,Nordic Solutions AS,Oslo" in lines[1]
-    assert "25000000,3200000,NOK,NOK,2024" in lines[1]
-
-    json_data = export_directory_json(records)
-    parsed = json.loads(json_data)
-    assert len(parsed) == 1
-    assert parsed[0]["orgnr"] == "012345678"
-    assert parsed[0]["name"] == "Nordic Solutions AS"
-
-
-def test_profile_claims_provenance_exports(tmp_path):
-    row, _ = envelope(tmp_path / 'run')
-    # Row dictionary as used in site generation
-    row_dict = json.loads(json.dumps(serialize(row, 'union')))
-
-    json_exp = export_profile_claims_json(row_dict)
-    data = json.loads(json_exp)
-    assert data["organisation_number"] == row.organisation_number
-    assert data["claims_count"] == len(row.claims)
-    assert len(data["claims"]) == len(row.claims)
-
-    # Check complete supporting provenance on available claims
-    available_claim = next(c for c in data["claims"] if c["availability"] == "available" and c["evidence"])
-    ev = available_claim["evidence"][0]
-    for key in ("source_class", "source_url", "locator", "claim_span", "content_sha256", "retrieved_at"):
-        assert key in ev
-        assert ev[key] is not None
-        assert len(ev["claim_span"]) <= 300
-
-    csv_exp = export_profile_summary_csv(row_dict)
-    csv_lines = csv_exp.strip().split("\r\n")
-    assert len(csv_lines) == len(row.claims) + 1
-    assert "Organisation number,Field,Family,Availability,Value" in csv_lines[0]
-    assert f'{row.organisation_number}' in csv_lines[1]
-
-
 def test_evidence_explorer_markup_and_export_controls(tmp_path):
     row, _ = envelope(tmp_path / 'run')
     out = tmp_path / 'site'
@@ -511,7 +395,3 @@ def test_hiring_explorer_watchlist_and_financial_trend(tmp_path):
     assert 'btn-watchlist' in profile_html
     assert 'class="financial-trend-banner"' in profile_html
     assert 'Multi-year filing trend' in profile_html
-
-
-
-

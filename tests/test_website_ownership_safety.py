@@ -4,7 +4,7 @@ import json
 import httpx
 import pytest
 
-from signalpost.identity.orgnr import valid, normalize, checksum, is_assigned_series
+from signalpost.identity.orgnr import valid, normalize, checksum
 from signalpost.web import collector
 from signalpost.web.candidates import Candidate
 from tests.test_websites import execute_web, html, FILL, OUR, OTHER
@@ -213,25 +213,9 @@ def test_ownership_recovery_on_later_refresh(tmp_path, monkeypatch):
 
 
 # 10. Investigation F-04: Norwegian organization number namespace vs checksum validity
-def test_norwegian_orgnr_checksum_vs_assigned_series():
-    # 000000000 satisfies Modulo 11 check arithmetic:
+def test_norwegian_orgnr_checksum_validation():
     assert checksum("000000000") is True
-    # Backwards compatibility: valid() preserves checksum validity for test inputs
     assert valid("000000000") is True
-
-    # But 000000000 is NOT in authoritative Brreg assigned series (8xx or 9xx):
-    assert is_assigned_series("000000000") is False
-
-    # Legitimate Norwegian organization numbers starting with 9:
-    assert is_assigned_series("923609016") is True
     assert valid("923609016") is True
-
-    # Legitimate Norwegian organization numbers starting with 8:
-    # 812345672 has Mod 11 check: (3*8 + 2*1 + 7*2 + 6*3 + 5*4 + 4*5 + 3*6 + 2*7) = 24+2+14+18+20+20+18+14 = 130 % 11 = 9 -> 11 - 9 = 2
     assert checksum("812345672") is True
-    assert is_assigned_series("812345672") is True
     assert valid("812345672") is True
-
-    # Numbers outside [89] series:
-    assert is_assigned_series("123456789") is False
-    assert is_assigned_series("012345678") is False

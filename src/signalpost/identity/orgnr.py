@@ -15,11 +15,6 @@ def checksum(number: str) -> bool:
     return check != 10 and check == int(number[-1])
 
 
-def is_assigned_series(number: str) -> bool:
-    """Authoritative Brønnøysundregistrene allocated series: Norwegian org numbers start with 8 or 9."""
-    return bool(re.fullmatch(r"[89][0-9]{8}", number)) and checksum(number)
-
-
 def valid(number: str) -> bool:
     """Standard organization number validation; preserves checksum contract for mock/evaluator inputs."""
     return checksum(number)
