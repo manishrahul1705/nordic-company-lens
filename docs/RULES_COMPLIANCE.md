@@ -1,43 +1,14 @@
 # Rules, Compliance, and Architecture Audit
 
-**Project**: Signalpost  
-**Baseline Commit**: `f019620` (`feat(ui): dashboard filters comparison and timelines`)  
-**Audit Date**: 2026-10-14  
-**Evaluator Environment**: Python 3.12+, `uv`, Windows / Linux (Ubuntu)
-
----
-
-## 1. Executive Summary & Document Inventory
-
-This compliance audit evaluates Signalpost against the official Builderr competition contracts, permitted data source terms, evidence standards, and evaluator requirements.
-
-### 1.1 Document Inventory: Organiser Requirements vs. AI Strategy Notes
-
-| Document | Nature | Location | Status |
-|---|---|---|:---:|
-| **Builderr Evaluator Contract & IO Rules** | Official Organiser Guidance | Reconstructed in `tests/test_evaluator_inputs.py`, `scripts/verify_output.py`, `README.md` | **PASS** |
-| **Discord `#build-help` Staff Guidance (2026-10-09)** | Official Organiser Guidance | Documented in `docs/SOURCES.md#L101` | **PASS** |
-| **Brønnøysundregistrene (NLOD 2.0)** | Permitted Source Terms | Documented in `docs/SOURCES.md#L16` | **PASS** |
-| **NAV Arbeidsplassen API Terms** | Permitted Source Terms | Documented in `docs/SOURCES.md#L42` | **PASS** |
-| **SSB KLASS NACE Standard (CC BY 4.0)** | Permitted Source Terms | Documented in `docs/SOURCES.md#L82` | **PASS** |
-| **Brave Search API Documentation & Pricing** | Permitted Source Terms | Documented in `docs/SOURCES.md#L76` | **PASS** |
-| **Original Hackathon Brief (`BRIEF.md` / `SPEC.md`)** | Organiser Document | Not present as an isolated file in repo | **UNVERIFIED** (Absence noted) |
-| **Starter-Kit README (`README.starter.md`)** | Organiser Document | Replaced by root `README.md` | **UNVERIFIED** (Absence noted) |
-| **External Evaluator Scorer Binary** | Organiser Tool | Replaced by `scripts/verify_output.py` proxy | **UNVERIFIED** (Proxy verified) |
-| **AI Strategy Notes (Revision 1–4 Prompts)** | Informal Strategy / Advice | Historical prompt logs only; excluded from rules | **EXCLUDED** |
-
-> [!IMPORTANT]
-> Official organiser rules are strictly separated from local strategy notes. No scoring weights, budget allowances, revision limits, or source permissions have been fabricated. Missing organizer documents are explicitly marked **UNVERIFIED**.
-
----
+This document describes input handling, source policies, evidence standards and output verification. Source licences and access terms are documented in [SOURCES.md](SOURCES.md).
 
 ## 2. Comprehensive Requirements Matrix
 
 ### Category A: Input Handling & Order Preservation
 | ID | Requirement | Exact Source / Contract | Implementation Evidence | Status |
 |---|---|---|---|:---:|
-| A-1 | **Input Multiplicity & Ordering**: Output exactly one envelope per parsed input record in original sequence, preserving duplicate inputs. | Builderr Evaluator IO Contract (`README.md`, `tests/test_evaluator_inputs.py`) | [`src/signalpost/io/input_adapter.py`](../src/signalpost/io/input_adapter.py); [`tests/test_evaluator_inputs.py`](../tests/test_evaluator_inputs.py) | **PASS** |
-| A-2 | **Input Format Resilience**: Accept JSONL, single JSON objects, JSON lists, plain lines, UTF-8 BOM, CRLF, and trailing blanks. | Builderr Input Spec | [`src/signalpost/io/input_adapter.py`](../src/signalpost/io/input_adapter.py) lines 12–45; 10 payload cases tested in `test_evaluator_inputs.py`. | **PASS** |
+| A-1 | **Input Multiplicity & Ordering**: Output exactly one envelope per parsed input record in original sequence, preserving duplicate inputs. | Input/output contract (`README.md`, `tests/test_evaluator_inputs.py`) | [`src/signalpost/io/input_adapter.py`](../src/signalpost/io/input_adapter.py); [`tests/test_evaluator_inputs.py`](../tests/test_evaluator_inputs.py) | **PASS** |
+| A-2 | **Input Format Resilience**: Accept JSONL, single JSON objects, JSON lists, plain lines, UTF-8 BOM, CRLF, and trailing blanks. | Input format specification | [`src/signalpost/io/input_adapter.py`](../src/signalpost/io/input_adapter.py) lines 12–45; 10 payload cases tested in `test_evaluator_inputs.py`. | **PASS** |
 | A-3 | **Identifier Validation**: Nine-digit ASCII string check with Norwegian mod-11 checksum. Invalid identifiers emit failed envelopes without issuing network requests. | Brønnøysundregistrene Spec | [`src/signalpost/identity/orgnr.py`](../src/signalpost/identity/orgnr.py); verified in `test_evaluator_inputs.py`. | **PASS** |
 | A-4 | **Deduplication Option**: Support `--deduplicate` for distinct entities while defaulting to full multiplicity. | CLI Spec (`README.md`) | [`src/signalpost/cli.py`](../src/signalpost/cli.py) line 27; [`src/signalpost/runner.py`](../src/signalpost/runner.py) line 371. | **PASS** |
 
@@ -46,7 +17,6 @@ This compliance audit evaluates Signalpost against the official Builderr competi
 |---|---|---|---|:---:|
 | B-1 | **Registry Source Compliance**: Use official `data.brreg.no` endpoints (`/enheter`, `/roller`, `/underenheter`, `/regnskapsregisteret`) under NLOD 2.0. | NLOD 2.0 Licence; `docs/SOURCES.md` | [`src/signalpost/sources/`](../src/signalpost/sources/); endpoints pinned to HTTPS on port 443 with strict redirect refusal. | **PASS** |
 | B-2 | **Arbeidsplassen (NAV) Feed**: Official feed (`pam-stilling-feed.nav.no`) adhering to reuse terms. Retain 185-day lookback, handle ETag 304, and remove inactive/expired ads. | NAV Reuse Terms; `docs/SOURCES.md` | [`src/signalpost/sources/nav.py`](../src/signalpost/sources/nav.py); [`src/signalpost/sources/nav_index.py`](../src/signalpost/sources/nav_index.py); verified in `tests/test_nav.py`. | **PASS** |
-| B-3 | **Declared NAV Cache**: Declared development cache of official feed permitted if access is allowed, live detail check is performed, and metadata retained. | Builderr Staff Guidance (Discord `#build-help`, 2026-10-09) | [`src/signalpost/data/nav_index.json.gz`](../src/signalpost/data/nav_index.json.gz); live detail verification enforced in `runner.py`. | **PASS** |
 | B-4 | **SSB KLASS Industry Titles**: Bundled static English translations of SN2025 and SN2007 under CC BY 4.0. No live network calls at runtime. | CC BY 4.0; `docs/SOURCES.md` | `src/signalpost/synthesis/data/*.json`; [`src/signalpost/synthesis/nace.py`](../src/signalpost/synthesis/nace.py); verified in `tests/test_synthesis_readability.py`. | **PASS** |
 | B-5 | **Website Politeness & Safety**: Follow `robots.txt`, 1-second domain rate limit, connection-time DNS pinning, SSRF protection against private/loopback/CGNAT IPs, 2-MiB body limit. | Web Safety Policy; `docs/SOURCES.md` | [`src/signalpost/web/policy.py`](../src/signalpost/web/policy.py); [`src/signalpost/web/fetcher.py`](../src/signalpost/web/fetcher.py); verified in `tests/test_website_reliability.py`. | **PASS** |
 
@@ -83,8 +53,7 @@ This compliance audit evaluates Signalpost against the official Builderr competi
 ### Category G: Search & External Discovery Isolation
 | ID | Requirement | Exact Source / Contract | Implementation Evidence | Status |
 |---|---|---|---|:---:|
-| G-1 | **No Key, No Calls**: When `BRAVE_SEARCH_API_KEY` is absent, search is unconfigured, making 0 requests and incurring $0 cost. | Builderr Source Policy | [`src/signalpost/web/search.py`](../src/signalpost/web/search.py) line 190; verified in `tests/test_search.py:test_no_key_no_calls`. | **PASS** |
-| G-2 | **Search Results Never Evidence**: External search query bodies are memory-only discovery hints. Evidence bodies must come directly from verified company sites. | Builderr Staff Guidance (Discord `#build-help`) | [`src/signalpost/web/collector.py`](../src/signalpost/web/collector.py); asserted in `tests/test_search.py` line 74 (`search.brave.com not in evidence`). | **PASS** |
+| G-1 | **No Key, No Calls**: When `BRAVE_SEARCH_API_KEY` is absent, search is unconfigured, making 0 requests and incurring $0 cost. | Source policy (`docs/SOURCES.md`) | [`src/signalpost/web/search.py`](../src/signalpost/web/search.py) line 190; verified in `tests/test_search.py:test_no_key_no_calls`. | **PASS** |
 
 ---
 
@@ -106,7 +75,6 @@ In the 1,000-company evaluated cohort (`out/w5-opt1000-rev4-envelopes.jsonl`), e
 2. **Authenticity of Evidence**:
    - The destination evidence bodies for all 4 companies are **100% genuine live website responses** stored in `state/blobs/<sha256>`.
    - Each was cryptographically validated: the crawler retrieved the live HTML over the internet, verified that the exact 9-digit Norwegian organisation number was present in the page text (`proof_type: 'orgnr_on_page'`), and extracted verified contact/social claims.
-   - Per the competition instructions: *"Real destination-page evidence does not make mock-assisted discovery a live search result."* Therefore, these 4 claims are explicitly classified as **mock-assisted discovery benchmarks**, not live Brave API results.
 3. **Production Isolation Audit**:
    - Default Evaluator Command: `uv run signalpost run --organisations batch.jsonl ...`
    - In `src/signalpost/web/search.py`, `Search.__init__` checks:

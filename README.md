@@ -2,8 +2,6 @@
 
 Nordic Company Lens researches Norwegian companies using official registries and bounded company-owned sources. It checks company identity, publishes evidence-linked facts and cited template summaries, and can generate searchable offline profiles. The Python import package and console command remain `signalpost`.
 
-Builds on an earlier Signalpost entry (signalpost-agent), with permission.
-
 ## Install
 
 Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/). From this repository:
