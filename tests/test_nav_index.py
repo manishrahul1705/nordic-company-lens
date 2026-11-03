@@ -155,12 +155,20 @@ def test_incomplete_forward_feed_never_establishes_absence(tmp_path):
     assert result.state=='blocked'
 
 
-def test_stale_index_falls_back_to_full_feed(tmp_path):
-    path,_=artifact(tmp_path,[],built_at='2020-01-01T00:00:00Z')
+@pytest.mark.parametrize('fault,reason', [('stale','index_stale'), ('malformed','index_version_invalid'), ('incomplete','index_incomplete')])
+def test_unusable_index_falls_back_to_full_feed(tmp_path,fault,reason):
+    if fault=='stale':
+        path,_=artifact(tmp_path,[],built_at='2020-01-01T00:00:00Z')
+    elif fault=='incomplete':
+        path,_=artifact(tmp_path,[],failed_details=1)
+    else:
+        path,data=artifact(tmp_path,[])
+        data['schema_version']=999
+        path.write_bytes(gzip.compress(json.dumps(data).encode()))
     cfg=config(tmp_path,[ORG],hiring=True,nav_index_path=path)
     index,result,calls=asyncio.run(execute(cfg,path))
     assert index.metrics['source_mode']=='full_feed_fallback'
-    assert index.metrics['index_fallback_reason']=='index_stale'
+    assert index.metrics['index_fallback_reason']==reason
     assert '/api/v1/feed' in calls and result.state=='not_available'
 
 
@@ -214,4 +222,3 @@ def test_refresh_closure_has_live_evidence_and_no_unverified_ad_carry(tmp_path):
         assert not any(e['type']=='closed_job' for e in row['changes'])
         assert report['observation_changes']>0
         assert not any(c['family']=='hiring' and c['availability']=='available' for c in row['claims'])
-

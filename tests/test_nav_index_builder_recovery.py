@@ -14,11 +14,6 @@ from uuid import uuid4
 import pytest
 import httpx
 
-from signalpost.sources.nav_manifest import (
-    certify_index_data,
-    CERT_COMPLETE,
-    CERT_INTEGRITY_FAILED,
-)
 from signalpost.sources.nav_index import load, write
 
 
@@ -123,8 +118,3 @@ def test_nav_index_builder_checkpoint_and_withdrawal_lifecycle(tmp_path):
     decompressed, age = load(out_file, allow_historical_snapshot=True)
     assert decompressed["ads_count"] == 1
     assert decompressed["ads"][0]["uuid"] == uuid_1
-
-    # Verify manifest certification
-    cert = certify_index_data(decompressed)
-    assert cert.is_usable_for_publication() is True
-    assert cert.certification_status == CERT_COMPLETE

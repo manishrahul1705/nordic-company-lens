@@ -25,7 +25,6 @@ from signalpost.runner import placeholder
 from signalpost.sources.blobstore import BlobStore
 from signalpost.sources.nav import allowed, NavHttp, Index, section, BASE
 from signalpost.sources.nav_index import load, write, DEFAULT_PATH
-from signalpost.sources.nav_auth import redact_token
 
 
 def test_allowed_url_ssrf_and_host_validation():

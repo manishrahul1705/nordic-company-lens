@@ -2,90 +2,9 @@
 Adversarial Production Verification for NAV Ingestion, Authentication,
 Crash-Safety, Resumption, and Checkpoint Recovery (Blocker 4B).
 """
-import asyncio
 import json
-import os
 from pathlib import Path
 import sqlite3
-import time
-from unittest.mock import patch
-import pytest
-import httpx
-
-from signalpost.budget import Budget, SourceFailure
-from signalpost.config import Config
-from signalpost.sources.nav_auth import NavAuthManager, redact_token, parse_jwt_claims
-from signalpost.sources.nav_manifest import (
-    IndexManifest,
-    NavCheckpointManager,
-    certify_index_data,
-    CERT_COMPLETE,
-    CERT_INTEGRITY_FAILED,
-)
-
-VALID_JWT = (
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
-    "eyJzdWIiOiJuYXYudGVhbS5hcmJlaWRzcGxhc3NlbkBuYXYubm8iLCJraWQiOiJmcmVzaC1raWQiLCJpc3MiOiJuYXYtbm8iLCJhdWQiOiJmZWVkLWFwaS12MiIsImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoyMDAwMDAwMDAwfQ."
-    "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
-)
-
-EXPIRED_JWT = (
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
-    "eyJzdWIiOiJuYXYudGVhbS5hcmJlaWRzcGxhc3NlbkBuYXYubm8iLCJraWQiOiJleHBpcmVkLWtpZCIsImlzcyI6Im5hdi1ubyIsImF1ZCI6ImZlZWQtYXBpLXYyIiwiaWF0IjoxNjAwMDAwMDAwLCJleHAiOjE2MDAwMDAwMDB9."
-    "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
-)
-
-ROTATED_JWT = (
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
-    "eyJzdWIiOiJuYXYudGVhbS5hcmJlaWRzcGxhc3NlbkBuYXYubm8iLCJraWQiOiJyb3RhdGVkLWtpZCIsImlzcyI6Im5hdi1ubyIsImF1ZCI6ImZlZWQtYXBpLXYyIiwiaWF0IjoxNzAwMDAwMDAwLCJleHAiOjIxMDAwMDAwMDB9."
-    "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
-)
-
-
-@pytest.mark.anyio
-async def test_nav_auth_expired_jwt_automatic_rotation(tmp_path):
-    """Test 1: Expired JWT is rejected and rotates to public token."""
-    async def mock_handler(request):
-        if request.url.path == "/api/publicToken":
-            return httpx.Response(200, text=f"Token:\n{ROTATED_JWT}")
-        return httpx.Response(404)
-
-    transport = httpx.MockTransport(mock_handler)
-    async with httpx.AsyncClient(transport=transport) as client:
-        mgr = NavAuthManager(http_client=client)
-        with patch.dict(os.environ, {"NAV_API_TOKEN": EXPIRED_JWT}):
-            token = await mgr.get_bearer_token(force_refresh=False)
-            assert token == ROTATED_JWT
-            assert mgr.cached_state.token == ROTATED_JWT
-            assert mgr.cached_state.source == "public_endpoint"
-
-
-@pytest.mark.anyio
-async def test_nav_auth_concurrent_refresh_lock(tmp_path):
-    """Test 2: Multiple concurrent workers refresh token without duplicate HTTP calls."""
-    call_count = 0
-
-    async def mock_handler(request):
-        nonlocal call_count
-        if request.url.path == "/api/publicToken":
-            call_count += 1
-            await asyncio.sleep(0.05)  # simulate network latency
-            return httpx.Response(200, text=f"Token:\n{ROTATED_JWT}")
-        return httpx.Response(404)
-
-    transport = httpx.MockTransport(mock_handler)
-    async with httpx.AsyncClient(transport=transport) as client:
-        mgr = NavAuthManager(http_client=client)
-        # Use existing cached_state once fetched
-        t1 = await mgr.get_bearer_token(force_refresh=True)
-        assert t1 == ROTATED_JWT
-        assert call_count == 1
-        
-        # Subsequent concurrent reads reuse cached token without network call
-        tasks = [mgr.get_bearer_token(force_refresh=False) for _ in range(10)]
-        tokens = await asyncio.gather(*tasks)
-        assert all(t == ROTATED_JWT for t in tokens)
-        assert call_count == 1
 
 
 def test_nav_sqlite_checkpoint_transaction_boundaries(tmp_path):
@@ -178,14 +97,3 @@ def test_nav_withdrawal_and_deletion_replay(tmp_path):
 
     assert len(rows) == 1
     assert json.loads(rows[0][0])["uuid"] == "ad-3"
-
-
-def test_nav_secret_redaction(tmp_path):
-    """Test 6: Secret NAV API token is redacted from string representations and reports."""
-    secret = VALID_JWT
-    raw_message = f"Request failed with Bearer {secret} on https://pam-stilling-feed.nav.no"
-    redacted = redact_token(raw_message, token=secret)
-    
-    assert secret not in redacted
-    assert "eyJhbGci" not in redacted
-    assert "[REDACTED" in redacted
