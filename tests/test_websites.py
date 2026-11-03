@@ -336,7 +336,7 @@ def test_foreign_number_on_a_standard_page_still_rejects(tmp_path, monkeypatch):
 def test_website_request_budget_defaults():
     from signalpost.config import Config
     cfg = Config(organisations=".", output="o", report="r")
-    assert cfg.website_request_cap == 14 and cfg.website_total_request_cap == 18  # Same as the CLI defaults.
+    assert cfg.website_request_cap == 6 and cfg.website_total_request_cap == 9  # Same as the CLI defaults.
 
 
 def test_cli_defaults_equal_config_defaults(monkeypatch):
