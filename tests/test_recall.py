@@ -33,20 +33,20 @@ def test_dns_no_http_and_cached_failure(tmp_path, failure, code):
             for org in [OUR, '993578843']:
                 with pytest.raises(SourceFailure) as exc: await http.candidate(Candidate('https://missing.no/','missing.no','legal_name_slug'),org)
                 assert exc.value.code==code
-            assert http.dns_lookups==1
+            assert http.dns_lookups==(2 if failure in {'no_such_domain', 'empty'} else 1)
     asyncio.run(run())
-    assert dns==['missing.no'] and not calls
+    assert dns==(['missing.no', 'www.missing.no'] if failure in {'no_such_domain', 'empty'} else ['missing.no']) and not calls
 
 
-def test_dns_cap_eight_and_ssrf_recheck(tmp_path):
+def test_dns_cap_sixty_four_and_ssrf_recheck(tmp_path):
     async def resolver(host, port): return ['93.184.216.34']
     cfg=config(tmp_path,[OUR],websites=True)
     async def run():
         async with httpx.AsyncClient() as client:
             http=WebsiteHttp(client,cfg,Budget(cfg),BlobStore(cfg.state_dir),resolver)
-            for i in range(8): await http.precheck(Candidate(f'https://example{i}.no/', f'example{i}.no','registry_email'),OUR)
+            for i in range(64): await http.precheck(Candidate(f'https://example{i}.no/', f'example{i}.no','registry_email'),OUR)
             with pytest.raises(SourceFailure): await http.precheck(Candidate('https://ninth.no/','ninth.no','registry_email'),OUR)
-            assert http.dns_lookups==8
+            assert http.dns_lookups==64
     asyncio.run(run())
 
 

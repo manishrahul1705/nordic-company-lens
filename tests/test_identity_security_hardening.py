@@ -399,7 +399,7 @@ def test_transient_website_error_with_verified_identity_preserves_claims(tmp_pat
     When identity is verified fresh and website encounters a transient timeout,
     website claims must carry forward without being dropped.
     """
-    async def public_dns(host, port=443): return ["93.184.216.34"]
+    from tests.test_websites import example_only_dns as public_dns
     monkeypatch.setattr(policy, "resolve_public", public_dns)
 
     baseline_cfg = config(tmp_path / "baseline", [OUR], websites=True).model_copy(update={"website_politeness_seconds": 0})
@@ -431,7 +431,7 @@ def test_genuine_website_ownership_conflict_emits_removal(tmp_path, monkeypatch)
     When website displays a foreign orgnr (ownership conflict), old claims must NOT carry forward
     and a removed change must be emitted.
     """
-    async def public_dns(host, port=443): return ["93.184.216.34"]
+    from tests.test_websites import example_only_dns as public_dns
     monkeypatch.setattr(policy, "resolve_public", public_dns)
 
     baseline_cfg = config(tmp_path / "baseline", [OUR], websites=True).model_copy(update={"website_politeness_seconds": 0})

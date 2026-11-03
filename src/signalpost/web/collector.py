@@ -188,7 +188,7 @@ def previous_nomination(previous, context, units):
 
 async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
-    units={c.value['organisation_number']:{} for c in envelope.claims
+    units={c.value['organisation_number']:{'name': c.value.get('name')} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
     for c in envelope.claims:
         if c.availability!='available' or not c.field.startswith('subunits.detail.'):continue
@@ -203,19 +203,19 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
             val = getattr(ad_item, 'value', ad_item) if isinstance(ad_item, (dict, object)) else {}
             val_dict = val if isinstance(val, dict) else getattr(val, '__dict__', {})
             hp = val_dict.get('employer_homepage')
-            if hp:
+            if hp and val_dict.get('employer_orgnr') == org:
                 nav_homepages.append({'url': hp, 'subunit_orgnr': None})
         for unit_org in units:
             for ad_item in active_nav.ads.get(unit_org, []):
                 val = getattr(ad_item, 'value', ad_item) if isinstance(ad_item, (dict, object)) else {}
                 val_dict = val if isinstance(val, dict) else getattr(val, '__dict__', {})
                 hp = val_dict.get('employer_homepage')
-                if hp:
+                if hp and val_dict.get('employer_orgnr') == unit_org:
                     nav_homepages.append({'url': hp, 'subunit_orgnr': unit_org})
     for c in envelope.claims:
         if c.family == 'hiring' and c.availability == 'available' and isinstance(c.value, dict):
             hp = c.value.get('employer_homepage')
-            if hp:
+            if hp and c.value.get('employer_orgnr') in {org, *units}:
                 emp_org = c.value.get('employer_orgnr')
                 sub = emp_org if (emp_org and emp_org != org and emp_org in units) else None
                 nav_homepages.append({'url': hp, 'subunit_orgnr': sub})

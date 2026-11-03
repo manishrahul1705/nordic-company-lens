@@ -87,7 +87,7 @@ def test_verify_bulk_refresh_preserves_historical_accounts_on_accounts_failure(t
 
 # Scenario 3: verify_bulk refresh preserves historical website on transient website failure
 def test_verify_bulk_refresh_preserves_historical_website_on_website_failure(tmp_path, monkeypatch):
-    async def public_dns(host, port=443): return ["93.184.216.34"]
+    from tests.test_websites import example_only_dns as public_dns
     monkeypatch.setattr(policy, "resolve_public", public_dns)
 
     base_cfg = config(tmp_path / "base", [OUR], websites=True).model_copy(update={"website_politeness_seconds": 0})

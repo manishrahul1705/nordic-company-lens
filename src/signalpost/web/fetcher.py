@@ -46,7 +46,7 @@ class WebsiteHttp:
         if candidate.origin == 'registry_website' or not self.config.dns_precheck:
             return
         host = urlsplit(candidate.url).hostname
-        if self.dns_counts.get(org, 0) >= 8:
+        if self.dns_counts.get(org, 0) >= 64:
             raise SourceFailure('dns_unavailable')
         self.dns_counts[org] = self.dns_counts.get(org, 0) + 1
         lock = self.dns_locks.setdefault(host, asyncio.Lock())
@@ -181,7 +181,15 @@ class WebsiteHttp:
 
     async def candidate(self, candidate, org, proven=()):
         """Try hostname variants with verified TLS, then permitted plaintext."""
-        await self.precheck(candidate, org)
+        try:
+            await self.precheck(candidate, org)
+        except SourceFailure as exc:
+            if exc.code != 'no_such_domain':
+                raise
+            from dataclasses import replace
+            p = urlsplit(candidate.url)
+            other = p.hostname[4:] if p.hostname.startswith('www.') else 'www.' + p.hostname
+            await self.precheck(replace(candidate, url=urlunsplit((p.scheme, other, p.path, '', ''))), org)
         p = urlsplit(candidate.url)
         host = p.hostname
         other = host[4:] if host.startswith('www.') else 'www.' + host

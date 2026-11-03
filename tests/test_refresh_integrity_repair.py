@@ -476,8 +476,7 @@ def test_refresh_genuine_confirmed_removal_emits_removal(tmp_path, monkeypatch):
     When a website is confirmed removed (e.g. registry website removed, all discovery clean with no hits),
     the system must emit a material 'removed' change and NOT carry forward old claims.
     """
-    async def public_dns(host, port=443):
-        return ["93.184.216.34"]
+    from tests.test_websites import example_only_dns as public_dns
     monkeypatch.setattr(policy, "resolve_public", public_dns)
 
     # 1. Baseline: verified website
@@ -531,8 +530,7 @@ def test_refresh_foreign_orgnr_on_website_rejects_and_removes(tmp_path, monkeypa
     If a previously verified website now displays a foreign organization number (ownership change),
     it must be rejected (level='REJECT'), section set to 'not_available', and old evidence removed.
     """
-    async def public_dns(host, port=443):
-        return ["93.184.216.34"]
+    from tests.test_websites import example_only_dns as public_dns
     monkeypatch.setattr(policy, "resolve_public", public_dns)
 
     baseline_cfg = config(tmp_path / "baseline", [OUR], websites=True).model_copy(

@@ -19,6 +19,13 @@ OTHER = "993578843"
 FILL = "Company services and local business information. " * 9
 
 
+async def example_only_dns(host, port=443):
+    """The refresh fixtures declare only Example's domain, not every guess."""
+    if host in {'example.no', 'www.example.no'}:
+        return ['93.184.216.34']
+    raise SourceFailure('no_such_domain')
+
+
 def html(footer="Org nr 923609016", extra="", title="Example AS"):
     return f'<html><head><title>{title}</title></head><body><header>Example AS</header><main>{FILL}</main>{extra}<footer>{footer}</footer></body></html>'
 
