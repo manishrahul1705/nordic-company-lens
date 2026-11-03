@@ -38,6 +38,8 @@ Registry identity, roles, subunits and accounts come from official Bronnoysundre
 
 Website research follows robots, public-IP, redirect, request and time limits. Published website facts require the documented company-identity proof. Social profile links can be recognised on accepted company pages; social platforms are not fetched. Public activity uses bounded company-site feeds/sitemaps and supported registry events. Bundled SSB KLASS industry titles retain CC BY 4.0 attribution to Statistics Norway.
 
+Feeds and sitemaps nominate news URLs. Website news is published only after fetching an article with a page title, article body and publication date; modification dates are not publication evidence. Registry activity is checked separately.
+
 Code and documentation use the [MIT licence](LICENSE). NAV, company websites and dependencies retain their own terms. See [source policy and dependency licences](docs/SOURCES.md) and [identity rules](docs/IDENTITY_RESOLUTION.md).
 
 ## Cost

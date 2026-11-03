@@ -13,10 +13,94 @@ from ..budget import SourceFailure
 from ..models.evidence import digest
 from ..sources.extract import Section, add, response_source, missing
 from .policy import domain, normalize_url
+from .html import Page, json_values
 
 NEWS = re.compile(r'(?:nyheter|news|aktuelt|presse|blogg|blog|artikler|artikkel|arkiv)', re.I)
 NON_ITEM = re.compile(r'/(?:author|authors|forfatter|kirjoittaja|category|kategori|tag|tags|page|feed)(?:/|$)', re.I)
 GENERIC_TITLES = {'les mer', 'read more', 'se mer', 'mer', 'apne', 'vis mer', 'lenke', 'link', 'klikk her'}
+
+
+def article(body, url, now, feed_date=None):
+    """Validate the fetched article; discovery metadata is never publication proof."""
+    if re.search(r'/(?:produkt\w*|products?|shop|kategori|category|tags?|archive|arkiv|side|page)(?:/|$)', urlsplit(url).path, re.I):
+        return None
+    page = Page(body, url)
+    raw = page.raw
+    if any(str(t).casefold() == 'product' for obj in page.jsonld for t in json_values(obj, '@type')):
+        return None
+    if re.search(r'add.to.cart|legg.{0,10}handlekurv|class=[\'\"][^\'\"]*(?:product-price|woocommerce)', raw, re.I):
+        return None
+    containers = re.findall(r'<(?:article|main)\b[^>]*>(.*?)</(?:article|main)\s*>', raw, re.I | re.S)
+    if not containers or len(re.findall(r'<article\b', raw, re.I)) > 1:
+        return None
+    content = max(containers, key=len)
+    paragraphs = re.findall(r'<p\b[^>]*>(.*?)</p\s*>', content, re.I | re.S)
+    text = html.unescape(re.sub('<[^>]+>', ' ', ' '.join(paragraphs))).strip()
+    if len(text) < 80:
+        return None
+    heading = re.search(r'<h1\b[^>]*>(.*?)</h1\s*>', content, re.I | re.S)
+    title = page.meta.get('og:title') or (re.sub('<[^>]+>', '', heading[1]) if heading else '') or page.title
+    site = page.meta.get('og:site_name', '')
+    if site:
+        title = re.sub(r'\s*[-|–:]\s*' + re.escape(site) + r'\s*$', '', title, flags=re.I)
+    title = html.unescape(title).strip()
+    if not title or len(title) > 200 or re.search(r'^(?:se flere nyheter|see more news|nyheter|news|aktuelt|arkiv|archive)$', title, re.I):
+        return None
+    candidates = [(v, 'datePublished') for obj in page.jsonld for v in json_values(obj, 'datePublished') if isinstance(v, str)]
+    candidates.append((page.meta.get('article:published_time'), 'article:published_time'))
+    candidates.extend((v, 'article_time') for v in re.findall(r'<time\b[^>]*datetime\s*=\s*[\'\"]([^\'\"]+)', content, re.I))
+    header = re.search(r'<header\b[^>]*>(.*?)</header\s*>', content, re.I | re.S)
+    if header:
+        candidates.extend((v, 'article_header') for v in re.findall(r'\b\d{4}-\d{2}-\d{2}\b', re.sub('<[^>]+>', ' ', header[1])))
+    if feed_date:
+        candidates.append(feed_date)
+    for token, origin in candidates:
+        date = dated(token, now)
+        if not date:
+            continue
+        # Feed dates retain their own XML evidence; all other dates must occur
+        # in the fetched article, whose body and title have just been checked.
+        position = raw.find(token) if token else -1
+        if position < 0 and origin not in {'pubDate', 'published'}:
+            continue
+        span = raw[max(0, position - 40):position + len(token) + 40] if position >= 0 else None
+        return ({'title': title, 'title_source': 'article_page', 'url': url, 'date': date,
+                 'date_source': origin, 'identity_level': None}, span)
+    return None
+
+
+async def publish_articles(section, items, org, proof, http, checked, discovery_response=None):
+    root = domain(proof.value['final_url'])
+    for value, locator, span in items:
+        response = await http.get(value['url'], org, root)
+        if response.status in {200, 404, 410}:
+            checked.add(response.url)
+        if response.status != 200 or domain(response.url) != root:
+            continue
+        checked.add(response.url)
+        # Only actual feed publication dates may supplement the article page.
+        feed_date = (value['date'], value['date_source']) if value['date_source'] in {'pubDate', 'published'} else None
+        result = await offload(article, response.body, response.url, datetime.now(timezone.utc), feed_date)
+        if not result:
+            continue
+        actual, article_span = result
+        actual.update(identity_level=proof.value['identity_level'], identity_claim_id=proof.id)
+        if article_span is None and discovery_response is None:
+            continue
+        if article_span is None:
+            article_span = Page(response.body, response.url).name_span(actual['title'])
+            if not article_span:
+                continue
+        add(section, response_source(response), org, 'activity', 'dated_item.' + digest(actual['url'])[:20],
+            actual, '/article', span=article_span, effective=actual['date'], source_class='company_owned', method='signalpost.activity.article.v1')
+        if feed_date and actual['date_source'] in {'pubDate', 'published'} and discovery_response is not None:
+            date_proof = Section()
+            add(date_proof, response_source(discovery_response), org, 'activity', section.claims[-1].field,
+                actual, locator, span=span, effective=actual['date'], source_class='company_owned', method='signalpost.activity.feed.v1')
+            section.evidence.extend(date_proof.evidence)
+            section.claims[-1].evidence_ids.extend(date_proof.claims[0].evidence_ids)
+    if section.claims:
+        section.state = 'available'
 
 
 def local(tag):
@@ -142,11 +226,7 @@ async def fetch(org, envelope, http, pages):
                 urls = children[:1] if level == 0 else []
                 if level == 1: raise SourceFailure('activity_sitemap_depth')
                 continue
-            for value, locator, span in items:
-                value['identity_level'] = proof.value['identity_level']
-                value['identity_claim_id'] = proof.id
-                add(section, response_source(response), org, 'activity', 'dated_item.' + digest(value['url'])[:20],
-                    value, locator, span=span, effective=value['date'], source_class='company_owned', method='signalpost.activity.v1')
+            await publish_articles(section, items, org, proof, http, checked, response)
             if section.claims: section.state = 'available'
             break
         if not section.claims:
@@ -257,11 +337,7 @@ async def fetch_html(org, proof, http, pages, checked):
                 continue
             checked.add(response.url)
             items = await offload(parse_html, response.body, response.url, datetime.now(timezone.utc))
-            for value, locator, span in items:
-                value['identity_level'] = proof.value['identity_level']
-                value['identity_claim_id'] = proof.id
-                add(section, response_source(response), org, 'activity', 'dated_item.'+digest(value['url'])[:20],
-                    value, locator, span=span, effective=value['date'], source_class='company_owned', method='signalpost.activity.html.v1')
+            await publish_articles(section, items, org, proof, http, checked)
             if section.claims:
                 section.state = 'available'
                 break

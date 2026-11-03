@@ -1,6 +1,18 @@
 {
   "description": "SYNTHETIC: no real company facts; fixed observation 2026-10-15T10:00:00Z",
   "fixtures": [
+{
+      "url": "https://zephyrsynthetic.no/news/launch",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+            "content-type": "text/html"
+      },
+      "content_sha256": "46883f6f3cb94078031aa60fc2b524d77d0eac8e648385c4f1e30ff7591c0e91",
+      "blob_file": "46883f6f3cb94078031aa60fc2b524d77d0eac8e648385c4f1e30ff7591c0e91",
+      "metadata_complete": true,
+      "repeatable": true
+},
     {
       "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
       "method": "GET",

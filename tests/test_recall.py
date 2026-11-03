@@ -123,10 +123,12 @@ def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
     def response(request):
         if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nAllow: /')
         if request.url.path=='/sitemap.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/xml'})
+        if request.url.path=='/news/update':
+            return httpx.Response(200,text=f'<head><title>New office</title><meta property="article:published_time" content="{now}"></head><article><h1>New office</h1><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
         return httpx.Response(200,text=html())
     report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True)
     assert row['run']['sections']['activity']=='available'
-    assert len([u for u in requests if 'data.brreg.no' not in u])==3
+    assert len([u for u in requests if 'data.brreg.no' not in u])==4
     env=Envelope.model_validate(row)
     sentence=next(s for s in env.run.synthesis.sections.changes if s.text.startswith('Latest dated'))
     assert sentence_error(sentence,env) is None
@@ -134,9 +136,10 @@ def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
     report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output)
     assert report['changes']==0 and report['observation_changes']==0
     def missing(request):
-        if request.url.path=='/sitemap.xml':return httpx.Response(404)
+        if request.url.path=='/news/update':return httpx.Response(404)
         return response(request)
-    report,removed,_,_=execute_web(tmp_path/'removed',monkeypatch,response=missing,public_activity=True,previous=cfg.output)
+    report,removed,_,_=execute_web(tmp_path/'removed',monkeypatch,response=missing,public_activity=True,previous=cfg.output,
+                                  website_request_cap=8, website_total_request_cap=12)
     assert any(c['type']=='removed' and c['materiality']=='minor' for c in removed['changes'])
     def failed(request):
         if request.url.path=='/sitemap.xml':return httpx.Response(500)
