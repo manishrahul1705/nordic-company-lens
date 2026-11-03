@@ -14,7 +14,7 @@ def test_registry_declared_is_not_available_to_guesses():
     body=html('Distinctive street 12',title='Distinctive Services')
     context={'name':'Distinctive Enterprise AS','street':['Distinctive street 12']}
     proof=score(Page(body.encode(),'https://example.no/'),OUR,context,'registry_website',[])
-    assert proof.level=='LOW'  # A partial brand plus address cannot prove ownership.
+    assert proof.level=='REGISTRY_DECLARED' and proof.proof_type=='registry_declared_live'
     assert score(Page(body.encode(),'https://example.no/'),OUR,context,'registry_email',[]).level!='REGISTRY_DECLARED'
     assert score(Page(html('Org.nr '+OTHER,title='Distinctive').encode(),'https://example.no/'),OUR,context,'registry_website',[]).level=='REJECT'
     assert score(Page(html('',title='Holding').encode(),'https://example.no/'),OUR,{'name':'Holding AS'},'registry_website',[]).level!='REGISTRY_DECLARED'

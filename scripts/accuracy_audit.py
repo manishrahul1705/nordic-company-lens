@@ -547,12 +547,11 @@ def extract_org_context_and_leaders(claims: list[dict]) -> tuple[dict, list[str]
     street = addr_claim.get("adresse") if isinstance(addr_claim, dict) else None
     postcode = addr_claim.get("postnummer") if isinstance(addr_claim, dict) else None
     city = addr_claim.get("poststed") if isinstance(addr_claim, dict) else None
-    phone_val = next((c.get("value") for c in claims if c.get("field") == "identity.registered_phone"), None)
+    phone_val = next((c.get("value") for c in claims if "phone" in c.get("field", "") or "telefon" in c.get("field", "")), None)
     context = {
         "name": name,
         "website": reg_web,
         "phone": phone_val,
-        "email": next((c.get('value') for c in claims if c.get('field') == 'identity.registered_email'), None),
         "municipality": muni,
         "street": street,
         "postcode": postcode,
@@ -678,30 +677,6 @@ def audit_website_claim(
                     is_legitimate_group = True
         if not is_legitimate_group:
             return "INCORRECT", f"Multi-entity list or directory table containing multiple organisation numbers ({len(all_structural_orgnrs)} found)", None
-
-    if ptype == 'legal_name_and_registry_contact':
-        ctx = context or {}
-        normalize = lambda v: ' '.join(re.findall(r'\w+', str(v or '').casefold()))
-        owner = normalize(page.title + ' ' + page.owner_text)
-        name = normalize(ctx.get('name'))
-        if not name or not re.search(r'(?<!\w)' + re.escape(name) + r'(?!\w)', owner):
-            return 'INCORRECT', 'Full legal name including suffix missing', None
-        if (brand_orgnrs | json_ids) - {org}:
-            return 'INCORRECT', 'Different site owner identifier', None
-        contacts = []
-        streets = ctx.get('street') if isinstance(ctx.get('street'), list) else [ctx.get('street')]
-        contacts.extend('street' for s in streets if s and len(str(s)) > 4 and normalize(s) in owner)
-        if ctx.get('postcode') and ctx.get('city') and str(ctx['postcode']) in owner and normalize(ctx['city']) in owner:
-            contacts.append('postcode_city')
-        expected = phone(ctx.get('phone'))
-        numbers = {phone(x.href[4:]) for x in page.links if x.href.startswith('tel:')}
-        numbers.update(phone(m.group()) for m in re.finditer(r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)', page.owner_text))
-        if expected and expected in numbers:
-            contacts.append('phone')
-        email = str(ctx.get('email') or '').casefold()
-        if email and (email in page.owner_text.casefold() or any(x.href.casefold().split('?')[0] == 'mailto:' + email for x in page.links)):
-            contacts.append('email')
-        return ('CORRECT', 'Exact legal name plus independent registry ' + ','.join(contacts), url) if contacts else ('INCORRECT', 'No matching registry contact', None)
 
     if ptype in ("orgnr_on_page", "orgnr"):
         if org in all_structural_orgnrs:

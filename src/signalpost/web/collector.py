@@ -149,8 +149,8 @@ def followup_links(page):
 
 # Pages where Norwegian companies state their organisation number. They are tried
 # after the links found on the home page; proof rules apply to them unchanged.
-FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/om', '/personvern', '/about', '/contact', '/privacy', '/personvernerklaering')
-FOLLOWUP_PAGES = 3
+FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/om', '/personvern', '/personvernerklaering')
+FOLLOWUP_PAGES = len(FALLBACK_PROOF_PATHS)
 
 
 def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
@@ -281,35 +281,54 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 except SourceFailure as exc:
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
-            # Owner conflicts on any checked page cannot be rescued by another
-            # page on that domain. Up to three same-domain proof pages are checked.
-            if proof.reason != 'foreign_orgnr':
+            if proof.level in {"VERIFIED", "HIGH"} and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.config.website_request_cap:
+                links = followup_links(page)
+                for target in links[:1]:
+                    target = normalize_url(target)
+                    if target and domain(target) == domain(response.url):
+                        try:
+                            extra = await http.get(target, org, candidate.domain, proved)
+                            if extra.status == 200:
+                                extra_page = await offload(Page, extra.body, extra.url)
+                                extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders)
+                                if extra_proof.level != 'BLOCKED' and not (extra_proof.level == 'REJECT' and extra_proof.reason == 'foreign_orgnr'):
+                                    pages.append((extra, extra_page))
+                        except SourceFailure:
+                            pass
+            elif proof.level not in {"VERIFIED", "REJECT"} or (proof.reason == 'foreign_orgnr' and candidate.origin in {'registry_website', 'subunit_registry_website'}):
                 seen = {response.url}
                 for target in proof_page_targets(page, response.url):
-                    if target in seen or domain(target) != domain(response.url):
+                    if not target or target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
                     try:
                         extra = await http.get(target, org, candidate.domain, proved)
                     except SourceFailure as exc:
-                        attempts.append({'domain': candidate.domain, 'reason': exc.code, 'page': target})
-                        if exc.code in {'website_budget_exhausted', 'budget_exhausted', 'deadline'}:
+                        attempts.append({"domain": candidate.domain, "level": "LOW", "reason": exc.code, "page": target})
+                        if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
                             budget_hit = exc.code
                             break
                         continue
                     if extra.status != 200:
                         continue
-                    extra_page = await offload(Page, extra.body, extra.url)
-                    extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders)
+                    extra_page = await offload(Page,extra.body,extra.url)
+                    extra_proof = await offload(candidate_proof,extra_page,org,context,candidate,leaders)
                     if extra_proof.level == 'BLOCKED':
+                        attempts.append({'domain':candidate.domain,'origin':candidate.origin,'reason':'block_page','page':target})
                         continue
                     pages.append((extra, extra_page))
-                    if extra_proof.reason == 'foreign_orgnr':
+                    if extra_proof.level == "REJECT" and extra_proof.reason == "foreign_orgnr":
                         best = (extra_proof, extra, extra_page)
+                        continue
+                    ranks = {"REJECT": -1, "BLOCKED": -1, "LOW": 0, "MEDIUM": 1,'REGISTRY_DECLARED':2, "HIGH": 3, "VERIFIED": 4}
+                    if ranks[extra_proof.level] > ranks[best[0].level] and (extra_proof.level == 'VERIFIED' or best[0].reason != 'foreign_orgnr'):
+                        best = (extra_proof, extra, extra_page)
+                    if extra_proof.level == "VERIFIED":
+                        # A foreign footer is not evidence for this entity's
+                        # contacts or profiles. Retain only its exact proof page.
+                        if any(candidate_proof(p, org, context, candidate, leaders).reason == 'foreign_orgnr' for _, p in pages):
+                            pages = [(extra, extra_page)]
                         break
-                    ranks = {'REJECT': -1, 'BLOCKED': -1, 'LOW': 0, 'MEDIUM': 1, 'REGISTRY_DECLARED': 2, 'HIGH': 3, 'VERIFIED': 4}
-                    if ranks[extra_proof.level] > ranks[best[0].level]:
-                        best = (extra_proof, extra, extra_page)
             proof, response, page = best
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
             is_prev_domain = bool(refresh_candidate and (candidate is refresh_candidate or candidate.domain == refresh_candidate.domain or domain(response.url) == refresh_candidate.domain))
@@ -328,7 +347,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                         break
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
-            if proof.level != 'REJECT' and not successes and http.counts.get(org, 0) + 2 <= http.discovery_cap(org):
+            if not successes and http.counts.get(org, 0) + 2 <= http.discovery_cap(org):
                 legal_nm = context.get('name')
                 brand_nm = context.get('brand')
                 metrics = getattr(http, 'discovery_metrics', None)
@@ -485,7 +504,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=proof.token if proof.level=='VERIFIED' else org
-    span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type != "legal_name_and_registry_contact" else page.name_span(proof.token)
+    span = page.proof_span(matched) if proof.level == "VERIFIED" else page.name_span(proof.token)
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")
     value = {"final_url": root_url, "identity_level": proof.level, "proof_type": proof.proof_type,
@@ -505,7 +524,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         section.evidence.extend(e for e in envelope.evidence if e.id in refs)
         section.claims[-1].evidence_ids.extend(sorted(refs))
     # HIGH combines page signals with authoritative registry/roles facts.
-    if proof.level in {"HIGH",'REGISTRY_DECLARED'} or proof.proof_type == "legal_name_and_registry_contact":
+    if proof.level in {"HIGH",'REGISTRY_DECLARED'}:
         registry_refs = [e for e in envelope.evidence if e.source_class == "official_registry"]
         section.evidence.extend(registry_refs)
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)
