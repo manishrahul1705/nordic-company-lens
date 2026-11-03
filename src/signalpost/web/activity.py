@@ -14,7 +14,7 @@ from ..models.evidence import digest
 from ..sources.extract import Section, add, response_source, missing
 from .policy import domain, normalize_url
 from .html import Page, json_values
-from .social import path_scope, company_names, compact
+from .social import path_scope, company_names, mentions_company
 
 NEWS = re.compile(r'(?:nyheter|news|aktuelt|presse|blogg|blog|artikler|artikkel|arkiv)', re.I)
 NON_ITEM = re.compile(r'/(?:author|authors|forfatter|kirjoittaja|category|kategori|tag|tags|page|feed)(?:/|$)', re.I)
@@ -88,7 +88,7 @@ async def publish_articles(section, items, org, proof, http, checked, discovery_
         if not result:
             continue
         actual, article_span = result
-        if scope and not any(compact(n) in compact(actual['title']) for n in proof.value.get('company_scope_names', [])):
+        if scope and not mentions_company(actual['title'],proof.value.get('company_scope_names', [])):
             continue
         actual.update(identity_level=proof.value['identity_level'], identity_claim_id=proof.id)
         if article_span is None and discovery_response is None:

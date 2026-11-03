@@ -633,7 +633,7 @@ def audit_website_claim(
     all_structural_orgnrs = visible_orgnrs | owner_orgnrs | meta_orgnrs | json_ids
 
     # 2. Check for script-only occurrence
-    if orgnr_pat.search(body) and org not in all_structural_orgnrs:
+    if ptype != 'legal_name_and_registry_contact' and orgnr_pat.search(body) and org not in all_structural_orgnrs:
         return "INCORRECT", f"Orgnr {org} found only in script tags or invisible markup, not in company-identifying page context", None
 
     # 3. If another distinct company owns the footer/header brand context
@@ -682,7 +682,7 @@ def audit_website_claim(
     if ptype == 'legal_name_and_registry_contact':
         ctx = context or {}
         normalize = lambda v: ' '.join(re.findall(r'\w+', str(v or '').casefold()))
-        owner = normalize(page.title + ' ' + page.owner_text)
+        owner = normalize(page.title + ' ' + page.meta.get('og:site_name','') + ' ' + page.owner_text)
         name = normalize(ctx.get('name'))
         if not name or not re.search(r'(?<!\w)' + re.escape(name) + r'(?!\w)', owner):
             return 'INCORRECT', 'Full legal name including suffix missing', None

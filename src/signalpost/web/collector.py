@@ -13,7 +13,7 @@ from .candidates import generate, context_from_bulk, legal_name, Candidate, GENE
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card
-from .social import discover, profile_url, attributed
+from .social import discover, profile_url, attributed, observed_profiles, matches_profile, company_names
 
 
 def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
@@ -223,7 +223,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     from .wikidata import websites
     context['wikidata_homepages'] = websites(getattr(http, 'wikidata_index', {'records':{}}), org)
     section = Section(state="not_available")
-    if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")):
+    if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")) and matches_profile(social,company_names(context)):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
     candidates = generate(context)
@@ -523,6 +523,6 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     section.state = "available"
     http.accepted_pages[org] = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
     envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]})}
-    envelope.run.refresh['website']['observed_social_profiles'] = sorted({url for _, p in http.accepted_pages[org] for url in discover(p)})
+    envelope.run.refresh['website']['observed_social_profiles'] = sorted({url for _, p in http.accepted_pages[org] for url in observed_profiles(p)})
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

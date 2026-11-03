@@ -71,8 +71,36 @@ def matches_profile(url, names):
     parsed = profile_url(url)
     if not parsed:
         return False
-    handle = urlsplit(parsed).path.rstrip('/').rsplit('/', 1)[-1]
+    bits = [unquote(x) for x in urlsplit(parsed).path.split('/') if x]
+    handle = bits[1] if domain(parsed)=='facebook.com' and len(bits)==3 and bits[0].lower()=='pages' else bits[-1]
+    if handle.isdigit() or domain(parsed)=='youtube.com' and bits[0].lower()=='channel':
+        return False
     return name_matches(handle, names)
+
+
+def mentions_company(text, names):
+    words = re.findall(r'\w+', str(text).casefold())
+    text = ' '.join(words)
+    return any(re.search(r'(?<!\w)'+re.escape(legal_name(n))+r'(?!\w)', text) for n in names if legal_name(n))
+
+
+def observed_profiles(page):
+    """Track all observed handles, including ones in unpublishable contexts."""
+    found={url for link in page.links if (url:=profile_url(link.href))}
+    for body in page.jsonld:
+        for values in json_values(body,'sameAs'):
+            for value in values if isinstance(values,list) else [values]:
+                if isinstance(value,str) and (url:=profile_url(value)):found.add(url)
+    return found
+
+
+def profile_key(url):
+    root=domain(url)
+    if root=='twitter.com':root='x.com'
+    path=unquote(urlsplit(url).path).rstrip('/').casefold()
+    if root=='facebook.com' and (identifier:=re.search(r'(?:^|[-/])(\d{5,})$',path)):
+        path='/'+identifier[1]
+    return root+path
 
 
 def path_scope(proof, context):
@@ -99,29 +127,52 @@ def attributed(page, proof, context, *, same_as=True):
     return {u:s for u,s in found.items() if matches_profile(u, names)}
 
 
-def drop_shared(envelopes):
+def drop_shared(envelopes, blobs=None):
     """A profile observed for multiple legal companies is never company-specific."""
     owners = {}
     for envelope in envelopes:
         for observed in envelope.run.refresh.get('website', {}).get('observed_social_profiles', []):
-            url = observed.lower().replace('://www.', '://').replace('http://', 'https://')
+            url = profile_key(observed)
             owners.setdefault(url, set()).add(envelope.organisation_number)
         for claim in envelope.claims:
-            if claim.field.startswith('social_profile.') and claim.availability == 'available':
-                url = str(claim.value.get('url', '')).lower().replace('://www.', '://').replace('http://', 'https://')
+            if claim.field.startswith(('social_profile.','registry_social.')) and claim.availability == 'available':
+                url = profile_key(str(claim.value.get('url', '')))
                 owners.setdefault(url, set()).add(envelope.organisation_number)
     for envelope in envelopes:
         removed = []
+        context={'name':next((c.value for c in envelope.claims if c.field=='identity.legal_name' and c.availability=='available'),''),
+                 'subunits':[c.value for c in envelope.claims if c.field.startswith('subunits.unit.') and c.availability=='available']}
+        names=company_names(context)
+        proof=next((c.value for c in envelope.claims if c.field=='official_website' and c.availability=='available'),{})
+        evidence={e.id:e for e in envelope.evidence}
+        shared_count=0
         for claim in envelope.claims:
-            if claim.field.startswith('social_profile.') and claim.availability == 'available':
-                url = str(claim.value.get('url', '')).lower().replace('://www.', '://').replace('http://', 'https://')
-                if len(owners[url]) > 1:
+            if claim.field.startswith(('social_profile.','registry_social.')) and claim.availability == 'available':
+                target=str(claim.value.get('url',''));url=profile_key(target)
+                rejected=not matches_profile(target,names)
+                # Refresh carry-forward must obey the current attribution rules.
+                if not rejected and blobs is not None and path_scope(proof,context):
+                    from .html import Page
+                    allowed=False
+                    for ref in claim.evidence_ids:
+                        e=evidence.get(ref)
+                        if not e:continue
+                        if e.source_class=='wikidata':allowed=True;break
+                        try:
+                            page=Page((blobs.directory/e.content_sha256).read_bytes(),e.source_url)
+                            if target in attributed(page,proof,context):allowed=True;break
+                        except (OSError,ValueError):pass
+                    rejected=not allowed
+                shared=len(owners[url])>1
+                if rejected or shared:
                     removed.append(claim.id)
+                    shared_count+=int(shared)
         if removed:
             fields = {c.field for c in envelope.claims if c.id in removed}
             envelope.claims = [c for c in envelope.claims if c.id not in removed]
             envelope.changes = [c for c in envelope.changes if c.field not in fields]
-            envelope.run.refresh.setdefault('website', {})['shared_social_dropped'] = len(removed)
+            envelope.run.refresh.setdefault('website', {})['shared_social_dropped'] = shared_count
+            envelope.run.refresh['website']['social_attribution_dropped'] = len(removed)
             if hasattr(envelope.profile, 'values'):
                 envelope.profile.values = {c.field:c.value for c in envelope.claims}
             else:

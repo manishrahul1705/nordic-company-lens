@@ -27,9 +27,10 @@ def diagnose(row):
     elif attempts and reasons <= {'no_such_domain','', 'website_candidates'}:reason='all candidates DNS-missing';stage='DNS'
     elif not attempts:reason='no candidates generated';stage='nomination'
     else:reason='fetched but no proof';stage='HTTP non-success or insufficient recorded proof'
+    furthest='ownership proof' if fetched else 'HTTP / policy' if any(x.get('status') for x in attempts) or state=='blocked' else 'DNS' if attempts else 'nomination'
     return {'organisation_number':row['organisation_number'],
             'name':next((c['value'] for c in row['claims'] if c['field']=='identity.legal_name' and c['availability']=='available'),None),
-            'state':state,'furthest_stage':stage,'reason':reason,
+            'state':state,'furthest_stage':furthest,'stop_stage':stage,'reason':reason,
             'candidates':list(dict.fromkeys(x['domain'] for x in attempts if x.get('domain'))),
             'diagnostics':attempts,'error_codes':[e['code'] for e in errors]}
 

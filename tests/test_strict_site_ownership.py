@@ -36,6 +36,14 @@ def test_name_only_is_ambiguous():
     assert proof('<h1>Example</h1><a href="tel:12345678">Call</a>', {'name':'Example AS','phone':'12345678'}).level!='VERIFIED'
 
 
+def test_name_contact_audit_does_not_require_visible_orgnr():
+    from scripts.accuracy_audit import audit_website_claim
+    body='<head><meta property="og:site_name" content="Example AS"></head><script>var org="923609016";</script><footer>Example gate 1</footer>'
+    claim={'field':'official_website','value':{'final_url':'https://example.no/', 'proof_type':'legal_name_and_registry_contact','identity_level':'VERIFIED'}}
+    assert audit_website_claim(OUR,claim,{},body,context={'name':'Example AS','street':['Example gate 1']})[0]=='CORRECT'
+    assert audit_website_claim(OUR,claim,{},body,context={'name':'Other AS','street':['Example gate 1']})[0]=='INCORRECT'
+
+
 def test_foreign_owner_rejects_even_with_target_mention():
     assert proof('<main>Org nr '+OUR+'</main><footer>Org nr '+OTHER+'</footer>').level=='REJECT'
 

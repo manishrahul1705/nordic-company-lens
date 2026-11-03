@@ -22,3 +22,9 @@ def test_loss_retains_full_conflict_and_candidate_evidence():
 
 def test_available_sites_not_counted_as_lost():
     assert diagnose(row([],state='available')) is None
+
+
+def test_furthest_proof_stage_retained_when_later_candidate_connect_fails():
+    result=diagnose(row([{'domain':'live.no','level':'LOW','points':0}, {'domain':'other.no','reason':'website_connect_error'}]))
+    assert result['furthest_stage']=='ownership proof'
+    assert result['reason']=='TLS-connect failure'
