@@ -222,6 +222,8 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     context['nav_homepages'] = nav_homepages
     from .wikidata import websites
     context['wikidata_homepages'] = websites(getattr(http, 'wikidata_index', {'records':{}}), org)
+    from .search import active_for_search
+    context['active_for_search'] = active_for_search(envelope)
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")) and matches_profile(social,company_names(context)):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],

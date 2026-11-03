@@ -46,7 +46,8 @@ class WebsiteHttp:
         if candidate.origin == 'registry_website' or not self.config.dns_precheck:
             return
         host = urlsplit(candidate.url).hostname
-        if self.dns_counts.get(org, 0) >= 64:
+        dns_cap = 74 if candidate.origin == 'search_brave' else 64
+        if self.dns_counts.get(org, 0) >= dns_cap:
             raise SourceFailure('dns_unavailable')
         self.dns_counts[org] = self.dns_counts.get(org, 0) + 1
         lock = self.dns_locks.setdefault(host, asyncio.Lock())

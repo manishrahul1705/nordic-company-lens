@@ -14,7 +14,20 @@ GENERIC_DOMAINS={'gulesider.no','proff.no','purehelp.no','1881.no','180.no',
                  'ratsit.no','regnskapstall.no','allabolag.se','eniro.no',
                  'linkedin.com','facebook.com','instagram.com','twitter.com','x.com',
                  'youtube.com','tiktok.com','finn.no','mittanbud.no','anbudstorget.no',
-                 'yellowpages.no','kompass.com','europages.com','crunchbase.com'}
+                 'yellowpages.no','kompass.com','europages.com','crunchbase.com',
+                 'brreg.no','google.com','bing.com','duckduckgo.com'}
+NEWS_DOMAINS={'nrk.no','tv2.no','vg.no','dagbladet.no','aftenposten.no','dn.no','e24.no',
+              'finansavisen.no','nettavisen.no','dagensnyheter.no','lofotposten.no','an.no',
+              'bt.no','ba.no','aftenbladet.no','adressa.no','bbc.com','reuters.com'}
+
+
+def active_for_search(envelope):
+    for claim in envelope.claims:
+        if claim.availability=='available' and claim.field in {'identity.employees','accounts.revenue'}:
+            try:
+                if float(claim.value)>0:return True
+            except (ValueError,TypeError,OverflowError):pass
+    return False
 
 
 class Brave:
@@ -182,15 +195,14 @@ class MockBraveProvider:
 class Search:
     def __init__(self,client,config,budget,provider=None):
         self.config,self.budget=config,budget;self.provider=provider;self.seen=set();self.lock=asyncio.Lock();self.sem=asyncio.Semaphore(2);self.next_start=0
-        name=(os.environ.get('SIGNALPOST_SEARCH_PROVIDER') or 'brave').lower()
+        name=(os.environ.get('SIGNALPOST_SEARCH_PROVIDER') or '').strip().lower()
         key=os.environ.get('BRAVE_SEARCH_API_KEY')
         if provider is None and name=='brave' and key:self.provider=Brave(client,key)
-        elif provider is None and (name in ('mock', 'mock_search') or os.environ.get('SIGNALPOST_SEARCH_MOCK')=='1'):
-            self.provider=MockBraveProvider()
         self.metrics={'status':'configured' if self.provider else 'not configured','provider':name if self.provider else None,
             'queries':0,'companies_queried':0,'estimated_usd':0.,'unit_price_usd':config.search_unit_price_usd,
-            'price_note':'verify before use; retries count as billable queries; no free credit assumed',
-            'errors':0,'cap_skips':0,'result_domains':0}
+            'price_note':'estimate at configured unit price; one query per company; no free credit assumed',
+            'budget_usd':min(config.max_cost_usd,config.search_max_cost_usd),
+            'errors':0,'cap_skips':0,'inactive_skips':0,'result_domains':0}
         from ..io.input_adapter import read
         self.cap=config.search_max_queries if config.search_max_queries is not None else len(read(config.organisations).unique)
     def room(self,org,http):
@@ -199,58 +211,49 @@ class Search:
         return (self.provider is not None and len(self.budget.events)+3<=self.budget.cap and
             total+3<=self.config.website_total_request_cap and
             http.counts.get(org,0)+2<=self.config.website_request_cap and
-            http.dns_counts.get(org,0)<8)
+            http.dns_counts.get(org,0)<74)
     async def nominate(self,org,context,http):
+        if not context.get('active_for_search'):
+            if self.provider:self.metrics['inactive_skips']+=1
+            return []
         if org in self.seen or not self.room(org,http):return []
         name=legal_name(context.get('name'))
         if not name:return []
+        query=f"{name} {context.get('municipality') or ''}".strip()
+        if len(query)>600 or len(query.split())>75:
+            self.metrics['cap_skips']+=1;return []
         self.seen.add(org);self.metrics['companies_queried']+=1
-        brand=(context.get('brand') or '').strip()
-        query=f"{name} {brand} site:.no".strip() if (brand and brand!=name) else f"{name} site:.no".strip()
-        results=[]
         async with self.sem:
-            for attempt in range(2):
-                async with self.lock:
-                    if (self.metrics['queries']>=self.cap or
-                        (self.metrics['queries']+1)*self.config.search_unit_price_usd>self.config.search_max_cost_usd or
-                        not self.room(org,http)):
-                        self.metrics['cap_skips']+=1;return []
-                    await asyncio.sleep(max(0,self.next_start-time.monotonic()))
-                    try:event=self.budget.reserve(ENDPOINT,urlsplit(ENDPOINT).hostname,org)
-                    except SourceFailure:return []
-                    event['section']='search';self.metrics['queries']+=1
-                    self.metrics['estimated_usd']=self.metrics['queries']*self.config.search_unit_price_usd
-                    began=time.monotonic();self.next_start=began+1
-                    try:
-                        remaining=min(8,max(.001,self.budget.deadline-time.monotonic()))
-                        async with asyncio.timeout(remaining):results=await self.provider.search(query,remaining)
-                        event['status']=200;break
-                    except Exception as exc:
-                        self.metrics['errors']+=1;event['error']='search_provider_error'
-                        status=exc.status if isinstance(exc,SearchError) else None;event['status']=status
-                        retryable=status in {429,500,502,503,504} or isinstance(exc,(TimeoutError,httpx.TimeoutException,httpx.NetworkError))
-                        if attempt or not retryable:return []
-                        delay=1.
-                        if isinstance(exc,SearchError) and exc.retry_after:
-                            from email.utils import parsedate_to_datetime
-                            from datetime import datetime,timezone
-                            try:delay=max(delay,float(exc.retry_after))
-                            except ValueError:
-                                try:delay=max(delay,(parsedate_to_datetime(exc.retry_after)-datetime.now(timezone.utc)).total_seconds())
-                                except (ValueError,TypeError):return []
-                        if delay>8 or time.monotonic()+delay>=self.budget.deadline:return []
-                        self.next_start=max(self.next_start,time.monotonic()+delay)
-                    finally:event['runtime_ms']=round((time.monotonic()-began)*1000)
-        scored=[];seen=set()
+            async with self.lock:
+                if (self.metrics['queries']>=self.cap or
+                    (self.metrics['queries']+1)*self.config.search_unit_price_usd>self.metrics['budget_usd'] or
+                    not self.room(org,http)):
+                    self.metrics['cap_skips']+=1;return []
+                await asyncio.sleep(max(0,self.next_start-time.monotonic()))
+                try:event=self.budget.reserve(ENDPOINT,urlsplit(ENDPOINT).hostname,org)
+                except SourceFailure:return []
+                event['section']='search';self.metrics['queries']+=1
+                self.metrics['estimated_usd']=self.metrics['queries']*self.config.search_unit_price_usd
+                began=time.monotonic();self.next_start=began+1
+                try:
+                    remaining=min(8,max(.001,self.budget.deadline-time.monotonic()))
+                    async with asyncio.timeout(remaining):results=await self.provider.search(query,remaining)
+                    event['status']=200
+                except Exception as exc:
+                    self.metrics['errors']+=1;event['error']='search_provider_error'
+                    event['status']=exc.status if isinstance(exc,SearchError) else None
+                    # Never retry: each company permits at most one paid query.
+                    return []
+                finally:event['runtime_ms']=round((time.monotonic()-began)*1000)
+        output=[];seen=set()
         for raw in results:
-            score,sigs=score_identity(raw,org,context)
-            if score<60:continue
             raw_url=raw.get('url') if isinstance(raw,dict) else (raw if isinstance(raw,str) else getattr(raw,'url',''))
-            url=normalize_url(raw_url);host=domain(url) if url else ''
-            if not host or host in seen or host in SOCIAL|DIRECTORIES|FREE_MAIL|MARKETPLACES:continue
-            seen.add(host);cand=Candidate(url,host,'search_brave')
-            scored.append((score,cand))
-        scored.sort(key=lambda x:x[0],reverse=True)
-        output=[cand for _,cand in scored[:15]]
+            try:
+                url=normalize_url(raw_url);host=domain(url) if url else ''
+            except (ValueError,TypeError):
+                continue
+            if not host or host in seen or host in SOCIAL|DIRECTORIES|FREE_MAIL|MARKETPLACES|GENERIC_DOMAINS|NEWS_DOMAINS:continue
+            seen.add(host);output.append(Candidate(url,host,'search_brave'))
+            if len(output)==5:break
         self.metrics['result_domains']+=len(output)
         return output
