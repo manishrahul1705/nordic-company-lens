@@ -386,6 +386,9 @@ async def run_production_replay(
         workers=workers,
         time_budget_seconds=120,
         website_politeness_seconds=1,
+        # Offline fixtures exercise three ownership pages plus feed/article proof.
+        website_request_cap=8,
+        website_total_request_cap=12,
         nav_index_path=state_dir / "no-live-discovery-index.json.gz",
     )
 
