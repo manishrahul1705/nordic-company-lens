@@ -47,7 +47,7 @@ def test_www_connect_fallback_and_http_only_after_connection_failure(tmp_path,mo
         if request.url.scheme=='https' and request.url.host=='example.no':
             raise httpx.ConnectError('TLS failed',request=request)
         return httpx.Response(200,text='User-agent: *\nAllow: /' if request.url.path=='/robots.txt' else html())
-    report,row,requests,_=execute_web(tmp_path,monkeypatch,response=response)
+    report,row,requests,_=execute_web(tmp_path,monkeypatch,response=response,website_request_cap=6,website_total_request_cap=9)
     assert next(c for c in row['claims'] if c['field']=='official_website')['value']['final_url']=='https://www.example.no'
     assert not any(url.startswith('http://') for url in requests)
     assert report['max_requests_per_company']<=9
