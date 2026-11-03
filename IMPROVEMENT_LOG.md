@@ -22,3 +22,29 @@ F1 evidence: `bench/runs/20261103T184623325670Z-ce486e0/` contains the scoreboar
 F8 evidence: `bench/runs/20261103T185130143467Z-30976c6/` contains the scoreboard, raw source state, complete newly available item list and opened exact-company proofs in `newly-available-review.json`. Test count: 696.
 
 NAV-INACTIVE evidence: `bench/runs/20261103T190201769481Z-9e5b7f0/` contains the scoreboard, raw source state, complete newly available item list and opened exact-company proofs in `newly-available-review.json`. Test count: 702.
+
+## S3 Windows scale check
+
+One default-budget 1000-company run at `73d5b5f`: exit 0, 1000 envelopes,
+358.241 seconds of the 2400-second budget (14.93%), 5613 HTTP requests of 20000,
+zero deadline hits and no warnings. No output-limit reductions occurred.
+Available counts: 1000/998/774/999/51/25/3/234. Website budget-exhausted: 303.
+The 1000 cohort begins with the frozen 100; all 100 retain available accounts.
+The current registry bulk matched 998 inputs; the other two used live fallback.
+
+One accounts failure: `926077422` (NRP ANAXO NORDIC M2, VPFO). All three
+accounts attempts returned HTTP 500 with message
+`Regnskapet inneholder en oppstillingsplan som ikke er stottet (VPFO)`.
+This is an unsupported source-side accounts layout, not a 429 or transport
+timeout. Accounts request statuses were 999 × HTTP 200 and 3 × HTTP 500;
+no accounts transport errors were recorded. No accounts fix was made.
+
+Artifacts: `bench/runs/20261103T190729469739Z-73d5b5f/scoreboard.json`,
+`scale-diagnosis.json`, `S3_REPORT.md`, and the original report/state bodies.
+The scale check also retains three incomplete hiring sections; feed coverage
+finished, with a detail-cap hit recorded. These were not generically suppressed.
+
+The NAV fix's first live trial exposed an additional in-flight ordering case.
+Its final implementation handles settled work at finalization as well as header
+arrival. The final benchmark has zero failed hiring sections at 100 companies,
+and no new vacancy is published for ARCTIC GRILL. The final suite passed 702 tests.
