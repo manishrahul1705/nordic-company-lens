@@ -521,5 +521,6 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     section.state = "available"
     http.accepted_pages[org] = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
     envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]})}
+    envelope.run.refresh['website']['observed_social_profiles'] = sorted({url for _, p in http.accepted_pages[org] for url in discover(p)})
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

@@ -39,3 +39,18 @@ def test_profile_shared_by_different_companies_is_removed():
         row.claims=section.claims;rows.append(row)
     drop_shared(rows)
     assert all(not r.claims for r in rows)
+
+
+def test_profile_observed_on_another_company_but_not_published_is_dropped():
+    first=placeholder('923609016','test',utc_now());second=placeholder('993578843','test',utc_now())
+    section=Section()
+    add(section,Source('https://example.no',b'body','a'*64,utc_now()),'923609016','website','social_profile.example',{'url':'https://facebook.com/example'},'/')
+    first.claims=section.claims
+    second.run.refresh['website']={'observed_social_profiles':['https://www.facebook.com/example']}
+    drop_shared([first,second])
+    assert not first.claims
+
+
+def test_language_prefix_does_not_allow_shared_template_footer():
+    page=Page(b'<footer><a href="https://facebook.com/Rolidbakken-FUS-Barnehage-AS">Facebook</a></footer>','https://fus.no/en/rolidbakken')
+    assert not attributed(page,{**PROOF,'proof_page_url':page.url},CONTEXT)

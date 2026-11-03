@@ -79,10 +79,11 @@ def path_scope(proof, context):
     """A company-named branch path on a shared domain needs local attribution."""
     url = proof.get('proof_page_url') or proof.get('final_url') or ''
     bits = [unquote(x).casefold() for x in urlsplit(url).path.split('/') if x]
-    if not bits or bits[0] in {'kontakt','kontakt-oss','contact','contact-us','om','om-oss','about','privacy','personvern','en','no','nb','pages'}:
+    subject_bits = bits[1:] if bits and bits[0] in {'en','no','nb'} else bits
+    if not subject_bits or subject_bits[0] in {'kontakt','kontakt-oss','contact','contact-us','om','om-oss','about','privacy','personvern','pages'}:
         return None
     names = company_names(context)
-    first = compact(bits[0])
+    first = compact(subject_bits[0])
     if any(first == compact(t) and len(first) >= 4 for n in names for t in legal_name(n).split()):
         return '/' + '/'.join(bits)
     return None
@@ -102,6 +103,9 @@ def drop_shared(envelopes):
     """A profile observed for multiple legal companies is never company-specific."""
     owners = {}
     for envelope in envelopes:
+        for observed in envelope.run.refresh.get('website', {}).get('observed_social_profiles', []):
+            url = observed.lower().replace('://www.', '://').replace('http://', 'https://')
+            owners.setdefault(url, set()).add(envelope.organisation_number)
         for claim in envelope.claims:
             if claim.field.startswith('social_profile.') and claim.availability == 'available':
                 url = str(claim.value.get('url', '')).lower().replace('://www.', '://').replace('http://', 'https://')
