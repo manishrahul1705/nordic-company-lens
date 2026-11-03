@@ -22,6 +22,7 @@ change against the same frozen cohort, preserving its scoreboard and state.
 | 2026-11-04 | `3240e5b` | S5-2D | Reapply 14/18 website caps after social fixes | 100/100/85/100/10/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 6 items / 0 wrong | KEEP | 744 tests; 50.961s, 745 HTTP. All social items plus new Orje website reviewed; budget errors 22 to 2; no count drops |
 | 2026-11-04 | `c1ca5df` | S5-3 | Read-only F17 website-loss table and complete company diagnostics | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 744-full+3-analyzer tests; 49.153s, 741 HTTP. No runtime changes; largest missing-site bucket DNS guesses; compare historical scale caps separately |
 | 2026-11-04 | `e9ebb73` | S5-4 | Add exact-org batched Wikidata nominations and CC0 name-matched social source | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 753 tests; 61.377s, 747 HTTP. HTTP 200 empty bindings for 100; zero matches and no coverage change; all social reviewed |
+| 2026-11-04 | `e8f8467` | S5-4-scale | 1000-company checkpoint includes restored C/D and social fixes plus Wikidata | 1000/998/774/999/52/27/3/230 → 1000/998/774/999/73/33/3/232 | 24 | 109 items / 0 wrong | KEEP | 753 tests; 291.317s, 6592 HTTP. All 51 social, 38 changed websites and 20 articles opened; 9 Wikidata matches, 5 CC0 socials, zero WD-origin verified websites; not isolated C/D attribution |
 
 Baseline artifact: `bench/runs/20261103T183536297367Z-f409645/scoreboard.json` (ignored local run; retain or upload the run directory). Measured wall time 47.052 seconds, HTTP requests 610, latest-year accounts 100, deadline hits 0, warnings none. The earlier D run used 609 HTTP requests and 62.081 seconds; this live rerun made 256 website requests versus 255 because connection/redirect fallback outcomes changed. Registry requests stayed 302 and NAV requests stayed 52; no coverage or distinct-fact totals changed.
 
@@ -95,3 +96,36 @@ S5-2D evidence: `bench/runs/20261103T205132975943Z-3240e5b`. Full social and new
 S5-3 evidence: `bench/runs/20261103T205448475112Z-c1ca5df`. Full social and new website/news source list: `s5-review.json`.
 
 S5-4 evidence: `bench/runs/20261103T210508740261Z-e9ebb73`. Full social and new website/news source list: `s5-review.json`.
+
+S5-4-scale evidence: `bench/runs/20261103T210757525212Z-e8f8467`. Full social and new website/news source list: `s5-review.json`.
+
+Social items rejected by stricter attribution in this step:
+- `919653477` https://www.linkedin.com/company/vokser-group — name/profile or shared-template attribution rejected.
+- `991368000` https://www.instagram.com/studioralstonbau — name/profile or shared-template attribution rejected.
+- `936855865` https://www.instagram.com/shopify — name/profile or shared-template attribution rejected.
+- `990012288` https://www.facebook.com/pages/TB-Maskin-As/455200387968353 — name/profile or shared-template attribution rejected.
+- `990012288` https://www.youtube.com/user/thomasbech8 — name/profile or shared-template attribution rejected.
+- `971349743` https://www.facebook.com/museumssenteret — name/profile or shared-template attribution rejected.
+- `971349743` https://www.youtube.com/channel/UCjvUaEpHHOTVtcwEljAU_Uw — name/profile or shared-template attribution rejected.
+- `938092516` https://www.facebook.com/OsloChamber — name/profile or shared-template attribution rejected.
+- `930166030` https://www.instagram.com/plumposlo — name/profile or shared-template attribution rejected.
+- `997790952` https://www.facebook.com/HillerenProsjekteringAS — name/profile or shared-template attribution rejected.
+- `918486666` https://www.instagram.com/antisink_systems — name/profile or shared-template attribution rejected.
+- `920358411` https://www.facebook.com/LarsZach — name/profile or shared-template attribution rejected.
+- `912667758` https://www.instagram.com/eimealt_as — name/profile or shared-template attribution rejected.
+- `912667758` https://www.tiktok.com/@eimealt — name/profile or shared-template attribution rejected.
+- `971558415` https://www.facebook.com/scenehuset — name/profile or shared-template attribution rejected.
+- `971558415` https://www.instagram.com/scenehuset — name/profile or shared-template attribution rejected.
+- `952785052` https://www.facebook.com/nsnl2 — name/profile or shared-template attribution rejected.
+- `925310492` https://www.facebook.com/bruktemaskinernorge — name/profile or shared-template attribution rejected.
+- `983485731` https://www.facebook.com/advokatenestorgata2 — name/profile or shared-template attribution rejected.
+- `917816328` https://www.instagram.com/geiterygghytta — name/profile or shared-template attribution rejected.
+- `917816328` https://www.facebook.com/pages/Geiterygghytta/142069355875460 — name/profile or shared-template attribution rejected.
+- `917816328` https://www.facebook.com/turistforeningen — name/profile or shared-template attribution rejected.
+- `917816328` https://www.instagram.com/turistforeningen — name/profile or shared-template attribution rejected.
+- `917816328` https://www.youtube.com/@turistforeningen — name/profile or shared-template attribution rejected.
+- `990342555` https://www.facebook.com/nordstrandkulturskole — name/profile or shared-template attribution rejected.
+- `990342555` https://www.instagram.com/nordstrandkulturskole — name/profile or shared-template attribution rejected.
+- `939725709` https://www.facebook.com/sagaregnskap — name/profile or shared-template attribution rejected.
+- `939725709` https://www.linkedin.com/company/sagarr — name/profile or shared-template attribution rejected.
+- `939725709` https://www.instagram.com/sagaregnskap — name/profile or shared-template attribution rejected.
