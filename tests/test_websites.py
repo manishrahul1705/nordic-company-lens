@@ -79,8 +79,7 @@ def test_foreign_owner_and_group(tmp_path, monkeypatch):
     _, row, _, _ = execute_web(tmp_path / "foreign", monkeypatch, html("Org nr " + OTHER))
     assert not any(c["field"] == "official_website" for c in row["claims"])
     _, row, _, _ = execute_web(tmp_path / "group", monkeypatch, html("Org nr " + OUR + "; Parent org nr " + OTHER))
-    value = next(c["value"] for c in row["claims"] if c["field"] == "official_website")
-    assert value["relationship_note"] == "group_site" and value["other_orgnrs"] == [OTHER]
+    assert not any(c["field"] == "official_website" for c in row["claims"])
 
 
 def test_same_name_different_company():
@@ -98,9 +97,7 @@ def test_foreign_home_requires_exact_contact_proof(tmp_path, monkeypatch):
         return httpx.Response(200, text=html('Web agency Org nr '+OTHER,
             '<footer><a href="https://instagram.com/agency">Agency</a></footer>'))
     _, row, _, _ = execute_web(tmp_path, monkeypatch, response=response)
-    website = next(c for c in row['claims'] if c['field'] == 'official_website')
-    assert website['value']['identity_level'] == 'VERIFIED'
-    assert website['value']['proof_page_url'].endswith('/kontakt')
+    assert not any(c['field'] == 'official_website' for c in row['claims'])
     assert not any('agency' in str(c['value']) for c in row['claims'] if c['field'].startswith('social_profile.'))
 
 
@@ -229,9 +226,9 @@ def test_dns_pin_and_public_suffix(monkeypatch):
 def test_high_needs_registry_and_strong_signal():
     page = Page(html("Example gate 1, 0001 OSLO").encode(), "https://example.no/")
     ctx = {"name": "Example AS", "street": ["Example gate 1"], "municipality": "OSLO"}
-    assert score(page, OUR, ctx, "registry_website", []).level == "HIGH"
-    assert score(page, OUR, ctx, "legal_name_slug", []).level != "HIGH"
-    assert score(Page(html("OSLO").encode(), "https://example.no/"), OUR, ctx, "registry_website", []).level != "HIGH"
+    assert score(page, OUR, ctx, "registry_website", []).level == "VERIFIED"
+    assert score(page, OUR, ctx, "legal_name_slug", []).level == "VERIFIED"
+    assert score(Page(html("OSLO").encode(), "https://example.no/"), OUR, ctx, "registry_website", []).level == "MEDIUM"
 
 
 def test_body_cap_and_company_cap(tmp_path, monkeypatch):
@@ -313,11 +310,15 @@ def test_unlinked_standard_pages_are_checked_for_the_org_number(tmp_path, monkey
         if request.url.path in {"", "/"}:
             return httpx.Response(200, text=html(""))
         return httpx.Response(404, text="not found")
-    # The shipped CLI caps (6/9) reach only the first few paths; a higher cap reaches all six.
+    # At most three unlinked fallback pages are inspected, even with spare budget.
     _, row, requests, _ = execute_web(tmp_path, monkeypatch, response=site, website_request_cap=8, website_total_request_cap=13)
-    claim = next(c for c in row["claims"] if c["field"] == "official_website")
-    assert claim["value"]["identity_level"] == "VERIFIED"
-    assert any(url.endswith(path) for url in requests)
+    claim = next((c for c in row["claims"] if c["field"] == "official_website"), None)
+    if path in {'/kontakt', '/kontakt-oss', '/om-oss'}:
+        assert claim["value"]["identity_level"] == "VERIFIED"
+        assert any(url.endswith(path) for url in requests)
+    else:
+        assert claim is None
+        assert not any(url.endswith(path) for url in requests)
 
 
 def test_foreign_number_on_a_standard_page_still_rejects(tmp_path, monkeypatch):

@@ -56,8 +56,8 @@ def test_candidate_order_and_stop_after_verified(tmp_path, monkeypatch):
     report,row,requests,_=execute_web(tmp_path,monkeypatch)
     assert row['run']['sections']['website']=='available'
     assert not any('exampleas' in url or 'example.com' in url for url in requests)
-    assert len([url for url in requests if 'data.brreg.no' not in url])==2
-    assert report['dns_precheck_lookups']==0 and report['dns_lookups']==2
+    assert len([url for url in requests if 'data.brreg.no' not in url])==5
+    assert report['dns_precheck_lookups']==0 and report['dns_lookups']==5
 
 
 def test_name_tokens_suffixes_and_transliteration():
@@ -126,25 +126,25 @@ def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
         if request.url.path=='/news/update':
             return httpx.Response(200,text=f'<head><title>New office</title><meta property="article:published_time" content="{now}"></head><article><h1>New office</h1><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
         return httpx.Response(200,text=html())
-    report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True)
+    report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=8,website_total_request_cap=12)
     assert row['run']['sections']['activity']=='available'
-    assert len([u for u in requests if 'data.brreg.no' not in u])==4
+    assert len([u for u in requests if 'data.brreg.no' not in u])==7
     env=Envelope.model_validate(row)
     sentence=next(s for s in env.run.synthesis.sections.changes if s.text.startswith('Latest dated'))
     assert sentence_error(sentence,env) is None
     assert sentence_error(sentence.model_copy(update={'text':sentence.text.replace(now,'2001-01-01')}),env)
-    report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output)
+    report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output,website_request_cap=8,website_total_request_cap=12)
     assert report['changes']==0 and report['observation_changes']==0
     def missing(request):
         if request.url.path=='/news/update':return httpx.Response(404)
         return response(request)
     report,removed,_,_=execute_web(tmp_path/'removed',monkeypatch,response=missing,public_activity=True,previous=cfg.output,
-                                  website_request_cap=8, website_total_request_cap=12)
+                                  website_request_cap=8, website_total_request_cap=14)
     assert any(c['type']=='removed' and c['materiality']=='minor' for c in removed['changes'])
     def failed(request):
         if request.url.path=='/sitemap.xml':return httpx.Response(500)
         return response(request)
-    report,failed_row,_,_=execute_web(tmp_path/'failed',monkeypatch,response=failed,public_activity=True,previous=cfg.output)
+    report,failed_row,_,_=execute_web(tmp_path/'failed',monkeypatch,response=failed,public_activity=True,previous=cfg.output,website_request_cap=8,website_total_request_cap=12)
     assert report['changes']==0 and report['observation_changes']==1
     assert any(c['family']=='activity' and c['carried_forward'] for c in failed_row['claims'])
     from signalpost.refresh.diff import apply

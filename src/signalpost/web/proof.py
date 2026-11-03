@@ -4,6 +4,7 @@ from ..identity.orgnr import valid
 from .candidates import legal_name
 from .html import json_values
 from .candidates import GENERIC
+from .policy import domain, DIRECTORIES, SOCIAL
 
 
 def orgnrs(text):
@@ -203,6 +204,8 @@ class Proof:
 
 
 def score(page, org, context, origin, leaders):
+    if domain(page.url) in DIRECTORIES | SOCIAL:
+        return Proof('REJECT', reason='directory_or_marketplace')
     raw = page.raw.lower()
     is_active_challenge = (
         any(x in raw for x in ("cf-chl-", "cf-turnstile", "verify you are human", "checking your browser"))
@@ -214,8 +217,6 @@ def score(page, org, context, origin, leaders):
         return Proof("BLOCKED", reason="block_page")
     if any(x in raw for x in ("this domain is for sale", "domenet er til salgs", "domain is parked", "buy this domain", "sedo.com/search")):
         return Proof("REJECT", reason="parked")
-    if len(page.visible.strip()) < 300:
-        return Proof("LOW", reason="short_or_js_shell")
     visible = orgnrs(page.owner_text)
     meta = orgnrs(" ".join(page.meta.values()))
     json_ids = set()
@@ -231,6 +232,9 @@ def score(page, org, context, origin, leaders):
                     json_ids |= orgnrs(value.get("value", ""))
     all_ids = visible | meta | json_ids
     others = sorted(all_ids - {org})
+    owner_ids = orgnrs(' '.join(page.brand_parts)) | json_ids
+    if owner_ids - {org}:
+        return Proof('REJECT', other_orgnrs=sorted(owner_ids - {org}), reason='foreign_orgnr')
     if org in all_ids:
         # A listed partner/customer is not the operator of the page. Exact
         # identifiers in directory text need an independent entity card or
@@ -251,62 +255,30 @@ def score(page, org, context, origin, leaders):
         return Proof("VERIFIED", "jsonld_vatid" if org in json_ids else "orgnr_on_page", other_orgnrs=others, token=org)
     if others:
         return Proof("REJECT", other_orgnrs=others, reason="foreign_orgnr")
-    text = legal_name(page.title + " " + page.meta.get("og:site_name", "") + " " + page.owner_text)
-    signals = []
-    points = 0
-    name = legal_name(context.get("name"))
-    if name and re.search(r"(?<!\w)" + re.escape(name) + r"(?!\w)", text):
-        signals.append("legal_name"); points += 2
-    street = context.get("street")
+    def normalized(value):
+        return " ".join(re.findall(r"\w+", str(value or "").casefold()))
+    full_name = normalized(context.get('name'))
+    owner_text = normalized(page.title + ' ' + page.meta.get('og:site_name', '') + ' ' + page.owner_text)
+    exact_name = bool(full_name and re.search(r'(?<!\w)' + re.escape(full_name) + r'(?!\w)', owner_text))
+    branding = normalized(page.title + ' ' + page.meta.get('og:site_name', ''))
+    if re.search(r'\b(?:group|gruppen|gruppe|holding)\b', branding) and not re.search(r'\b(?:group|gruppen|gruppe|holding)\b', full_name):
+        return Proof('REJECT', reason='parent_group_without_exact_orgnr')
+    signals = ['exact_legal_name'] if exact_name else []
+    street = context.get('street')
     streets = street if isinstance(street, list) else [street]
-    address = any(s and len(str(s)) > 4 and legal_name(s) in text for s in streets)
-    if not address and context.get("postcode") and context.get("city"):
-        address = str(context["postcode"]) in page.visible and legal_name(context["city"]) in text
-    if address:
-        signals.append("address"); points += 2
-    expected_phone = phone(context.get("phone"))
-    page_phones = {phone(link.href[4:]) for link in page.links if link.href.startswith("tel:")}
-    for match in re.finditer(r"(?:\+47|0047)[ .()0-9-]{8,20}", page.visible):
+    if any(s and len(str(s)) > 4 and normalized(s) in owner_text for s in streets):
+        signals.append('street')
+    if context.get('postcode') and context.get('city') and str(context['postcode']) in owner_text and normalized(context['city']) in owner_text:
+        signals.append('postcode_city')
+    expected_phone = phone(context.get('phone'))
+    page_phones = {phone(link.href[4:]) for link in page.links if link.href.startswith('tel:')}
+    for match in re.finditer(r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)', page.owner_text):
         page_phones.add(phone(match.group()))
     if expected_phone and expected_phone in page_phones:
-        signals.append("phone"); points += 2
-    if any(legal_name(name) and legal_name(name) in text for name in leaders):
-        signals.append("leader"); points += 2
-    if origin == "registry_website":
-        signals.append("registry_website"); points += 2
-    municipality = legal_name(context.get("municipality"))
-    if municipality and municipality in text:
-        signals.append("municipality"); points += 1
-    # Tightened precision policy: name/source/municipality alone cannot establish
-    # ownership. Guessed slug/email domains require an exact orgnr.
-    # A subsidiary name in a group navigation/list is insufficient. Signal-only
-    # publication also requires the page's own title/site name to identify it.
-    branding = legal_name(page.title + " " + page.meta.get("og:site_name", ""))
-    own_brand = bool(name and re.search(r"(?<!\w)" + re.escape(name) + r"(?!\w)", branding))
-    high = points >= 5 and "legal_name" in signals and own_brand and len(signals) >= 2 and bool(set(signals) & {"address", "phone", "leader"}) and origin == "registry_website"
-    if high:
-        return Proof('HIGH','signals',signals,points,reason='corroboration',token=name)
-    if origin == 'registry_website':
-        branded = legal_name(page.title+' '+page.meta.get('og:site_name','')+' '+' '.join(page.brand_parts))
-        generic = GENERIC | {'norsk','norske','norge','stiftelsen','selskap','gruppen','group','nasjonalt','ressurssenter','foreningen'}
-        tokens = [t for t in name.split() if len(t)>=4 and t.isalpha() and t not in generic]
-        token = next((t for t in tokens if re.search(r'(?<!\w)'+re.escape(t)+r'(?!\w)',branded)),None)
-        declared=[]
-        proof_token=None
-        if token and page.name_span(token):
-            declared.append('distinctive_legal_name'); proof_token=token
-        # Postcode/city alone can be shared by a different group company.
-        if any(s and len(str(s)) > 4 and legal_name(s) in text for s in streets):
-            token = next((str(s) for s in streets if s and page.name_span(str(s))),None)
-            token = token or (str(context.get('postcode')) if context.get('postcode') and page.name_span(str(context['postcode'])) else None)
-            if token:
-                declared.append('address'); proof_token=proof_token or token
-        if expected_phone and expected_phone in page_phones:
-            link = next((x for x in page.links if x.href.startswith('tel:') and phone(x.href[4:])==expected_phone),None)
-            if link:
-                declared.append('phone'); proof_token=proof_token or link.href
-        # Audit found a housing association pointing to its management provider;
-        # their shared phone alone was insufficient. Require two signal types.
-        if len(declared)>=2:
-            return Proof('REGISTRY_DECLARED','registry_declared_live',declared,2*len(declared),reason='registry_and_live_corroboration',token=proof_token)
-    return Proof("HIGH" if high else "MEDIUM" if points >= 3 else "LOW", "signals", signals, points, reason="corroboration", token=name)
+        signals.append('phone')
+    email = str(context.get('email') or '').strip().casefold()
+    if email and (email in page.owner_text.casefold() or any(link.href.casefold().split('?')[0] == 'mailto:' + email for link in page.links)):
+        signals.append('email')
+    if exact_name and len(signals) >= 2:
+        return Proof('VERIFIED', 'legal_name_and_registry_contact', signals, 2 * len(signals), token=str(context['name']))
+    return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))
