@@ -12,6 +12,7 @@ class Link:
     text: str
     span: str
     owned_context: bool
+    template_context: bool = False
 
 
 def decode_html(body: bytes) -> str:
@@ -74,6 +75,7 @@ class Page(HTMLParser):
                         span = raw_tag[start:start + 300]
                         break
             self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, any(x[1] for x in self.stack) and not any(x[0] == "article" or x[2] for x in self.stack))
+            self._anchor.template_context = any(x[1] for x in self.stack)
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._script = ""
         if tag == 'p' and not any(x[2] for x in self.stack):

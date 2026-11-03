@@ -541,6 +541,8 @@ async def _run(config, client=None):
                 await isolate(envelope,'hiring',lambda:offload(nav.section,envelope,nav_index,blobs,prior.get(org)))
         # Invalid numbers must never inherit previously published information.
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
+    from .web.social import drop_shared
+    drop_shared(list(envelopes.values()))
     progress.stage_update("Cited Synthesis", "running")
     synthesis_service=SynthesisService()
     for envelope in envelopes.values():

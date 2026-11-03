@@ -13,7 +13,7 @@ from .candidates import generate, context_from_bulk, legal_name, Candidate, GENE
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card
-from .social import discover, profile_url
+from .social import discover, profile_url, attributed
 
 
 def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
@@ -444,7 +444,7 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
         if domain(source_response.url) != target_domain:
             continue
         cards = extract_entity_cards(source_page.raw) if is_group else []
-        for url, source_span in discover(source_page).items():
+        for url, source_span in attributed(source_page, web_val, context).items():
             if url not in social_seen:
                 if is_group:
                     p_path = urlsplit(url).path.rstrip("/").lower()

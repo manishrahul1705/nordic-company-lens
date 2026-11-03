@@ -14,6 +14,7 @@ from ..models.evidence import digest
 from ..sources.extract import Section, add, response_source, missing
 from .policy import domain, normalize_url
 from .html import Page, json_values
+from .social import path_scope, company_names, compact
 
 NEWS = re.compile(r'(?:nyheter|news|aktuelt|presse|blogg|blog|artikler|artikkel|arkiv)', re.I)
 NON_ITEM = re.compile(r'/(?:author|authors|forfatter|kirjoittaja|category|kategori|tag|tags|page|feed)(?:/|$)', re.I)
@@ -72,6 +73,9 @@ def article(body, url, now, feed_date=None):
 async def publish_articles(section, items, org, proof, http, checked, discovery_response=None):
     root = domain(proof.value['final_url'])
     for value, locator, span in items:
+        scope = proof.value.get('company_path_scope')
+        if scope and not (urlsplit(value['url']).path.startswith(scope+'/')):
+            continue
         response = await http.get(value['url'], org, root)
         if response.status in {200, 404, 410}:
             checked.add(response.url)
@@ -84,6 +88,8 @@ async def publish_articles(section, items, org, proof, http, checked, discovery_
         if not result:
             continue
         actual, article_span = result
+        if scope and not any(compact(n) in compact(actual['title']) for n in proof.value.get('company_scope_names', [])):
+            continue
         actual.update(identity_level=proof.value['identity_level'], identity_claim_id=proof.id)
         if article_span is None and discovery_response is None:
             continue
@@ -185,6 +191,13 @@ async def fetch(org, envelope, http, pages):
             'state': 'not_applicable', 'complete': False, 'reason': 'no_verified_website'}
         return missing('activity', 'no_verified_website', state='not_applicable')
     homepage = proof.value['final_url']
+    context = {'name': next((c.value for c in envelope.claims if c.field == 'identity.legal_name' and c.availability == 'available'), ''),
+               'subunits': [c.value for c in envelope.claims if c.field.startswith('subunits.unit.') and c.availability == 'available']}
+    scope = path_scope(proof.value, context)
+    # Local copy: diagnostics for news do not mutate the website identity claim.
+    proof = proof.model_copy(deep=True)
+    if scope:
+        proof.value.update(company_path_scope=scope, company_scope_names=company_names(context))
     root = domain(homepage)
     feeds = []
     for response, page in pages:

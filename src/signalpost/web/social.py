@@ -1,5 +1,7 @@
 import re
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlsplit, urlunsplit, unquote
+import unicodedata
+from .candidates import legal_name
 from .policy import SOCIAL, domain
 from .html import json_values
 
@@ -41,3 +43,82 @@ def discover(page):
                 if isinstance(value, str) and (url := profile_url(value)):
                     found.setdefault(url, page.span_for(value))
     return found
+
+
+def compact(value):
+    value = str(value or '').casefold().replace('æ', 'ae').replace('ø', 'o').replace('å', 'a')
+    return ''.join(c for c in unicodedata.normalize('NFKD', value) if c.isalnum())
+
+
+def company_names(context):
+    return [n for n in [context.get('name'), *context.get('registered_brands', []),
+                       *(u.get('name') for u in context.get('subunits', []))] if n]
+
+
+def name_matches(value, names):
+    """Whole handle/name equality, allowing legal suffix and trailing profile ID."""
+    value = unquote(str(value or '')).lstrip('@')
+    value = re.sub(r'[-_. ]*\d{5,}$', '', value)
+    actual = compact(legal_name(value.replace('-', ' ').replace('_', ' ')))
+    for name in names:
+        expected = compact(legal_name(name))
+        if len(expected) >= 3 and actual in {expected, expected+'as', expected+'asa'}:
+            return True
+    return False
+
+
+def matches_profile(url, names):
+    parsed = profile_url(url)
+    if not parsed:
+        return False
+    handle = urlsplit(parsed).path.rstrip('/').rsplit('/', 1)[-1]
+    return name_matches(handle, names)
+
+
+def path_scope(proof, context):
+    """A company-named branch path on a shared domain needs local attribution."""
+    url = proof.get('proof_page_url') or proof.get('final_url') or ''
+    bits = [unquote(x).casefold() for x in urlsplit(url).path.split('/') if x]
+    if not bits or bits[0] in {'kontakt','kontakt-oss','contact','contact-us','om','om-oss','about','privacy','personvern','en','no','nb','pages'}:
+        return None
+    names = company_names(context)
+    first = compact(bits[0])
+    if any(first == compact(t) and len(first) >= 4 for n in names for t in legal_name(n).split()):
+        return '/' + '/'.join(bits)
+    return None
+
+
+def attributed(page, proof, context, *, same_as=True):
+    names = company_names(context)
+    scope = path_scope(proof, context)
+    found = discover(page) if not scope else {
+        profile_url(x.href): x.span for x in page.links
+        if profile_url(x.href) and not x.template_context
+        and (urlsplit(page.url).path.rstrip('/') == scope or urlsplit(page.url).path.startswith(scope+'/'))}
+    return {u:s for u,s in found.items() if matches_profile(u, names)}
+
+
+def drop_shared(envelopes):
+    """A profile observed for multiple legal companies is never company-specific."""
+    owners = {}
+    for envelope in envelopes:
+        for claim in envelope.claims:
+            if claim.field.startswith('social_profile.') and claim.availability == 'available':
+                url = str(claim.value.get('url', '')).lower().replace('://www.', '://').replace('http://', 'https://')
+                owners.setdefault(url, set()).add(envelope.organisation_number)
+    for envelope in envelopes:
+        removed = []
+        for claim in envelope.claims:
+            if claim.field.startswith('social_profile.') and claim.availability == 'available':
+                url = str(claim.value.get('url', '')).lower().replace('://www.', '://').replace('http://', 'https://')
+                if len(owners[url]) > 1:
+                    removed.append(claim.id)
+        if removed:
+            fields = {c.field for c in envelope.claims if c.id in removed}
+            envelope.claims = [c for c in envelope.claims if c.id not in removed]
+            envelope.changes = [c for c in envelope.changes if c.field not in fields]
+            envelope.run.refresh.setdefault('website', {})['shared_social_dropped'] = len(removed)
+            if hasattr(envelope.profile, 'values'):
+                envelope.profile.values = {c.field:c.value for c in envelope.claims}
+            else:
+                envelope.profile.claims = envelope.claims
