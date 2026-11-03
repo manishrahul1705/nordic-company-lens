@@ -25,6 +25,14 @@ class Candidates:
         for event in self.events:event.set()
     def version(self,uuid):
         return self.headers[uuid][0] if uuid in self.headers else (self.members.get(uuid,{}).get('last_modified') or 'index:'+self.data['index_version'])
+    def reconcile_closed(self, uuid):
+        header = self.headers.get(uuid)
+        if (header and header[1]['_feed_entry']['status'] == 'INACTIVE'
+                and uuid in self.index.live_closed and uuid not in self.failed
+                and uuid not in self.pending and uuid not in self.inflight):
+            self.checked[uuid] = header[0]
+            return True
+        return False
     def candidate(self,uuid,affected,origin):
         if not affected:return
         self.affected[uuid].update(affected)
@@ -98,6 +106,10 @@ class Candidates:
         if status!='ACTIVE':
             self.index.closed.add(uuid)
             # Feed status alone never creates a closed_job event.
+        if self.reconcile_closed(uuid):
+            # A repeated inactive header cannot invalidate an already live-proven
+            # closure. Pending/failed verification is never silently resolved.
+            return
         member=self.members.get(uuid)
         if member:
             self.candidate(uuid,self.owners.get(member['employer_orgnr'],set()),'declared_cache')
@@ -134,7 +146,10 @@ class Candidates:
             at=stamp.isoformat();old=self.headers.get(uuid)
             if old and timestamp(old[0])>stamp:continue
             self.headers[uuid]=(at,item)
-            if entry['status']=='ACTIVE':self.index.closed.discard(uuid)
+            if entry['status']=='ACTIVE':
+                self.index.closed.discard(uuid)
+                self.index.live_closed.discard(uuid)
+                self.index.closure_proofs.pop(uuid, None)
             await self.inspect(uuid)
     def take(self):
         if self.index.metrics.get('detail_requests',0)+len(self.inflight)>=self.index.metrics.get('detail_request_cap',0):return None
@@ -341,6 +356,9 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
         if tasks:await asyncio.gather(*tasks,return_exceptions=True)
         incomplete=set()
         for uuid in state.discovered:
+            # The newest inactive header may have arrived during its detail.
+            # Reconcile only now-settled work; failures/pending work still fail.
+            state.reconcile_closed(uuid)
             if state.checked.get(uuid)!=state.version(uuid):
                 member=state.members.get(uuid)
                 affected=state.affected.get(uuid,set()) | (state.owners.get(member['employer_orgnr'],set()) if member else set())
