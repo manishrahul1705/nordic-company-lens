@@ -70,7 +70,7 @@ Run reports include membership/duplicate/invalid counts; terminal/availability c
 
 ## Synthesis
 
-`run.synthesis` is mirrored in `profile.synthesis` without new root keys. Its fields are mode (template/llm), language (en), summary, sections, checks, generator and change_claims.
+`run.synthesis` is mirrored in `profile.synthesis` without new root keys. Its fields are mode, language (en), summary, sections, checks, generator and change_claims. New runs emit mode `template`; `--synthesis auto` also uses templates. The model still accepts legacy `llm` records when reading existing output, but the CLI rejects `--synthesis llm`.
 
 Sections contain what_it_does, scale, leadership, changes sentence arrays, plus unknowns. A sentence has text, claim_ids, value_kind (reported/derived), optional count and record_type (workplaces/board_members/active_ads). Positive derived counts equal distinct cited available records of that type; the displayed count is checked too. Counts never enter `claims[]`. Workplace examples are limited to three, social URLs to two and distinct description excerpts to two; counts still cite all qualifying records. Unknowns contain family, explicit state, reason and optional field. Missing counts are not reported as zero.
 
@@ -80,7 +80,7 @@ Generator records name/version/model/input_sha256. Template version 3 starts wit
 
 For changes, change_claims contains deterministic old/new citation records with field, value and original evidence_ids, derived from envelope change events. They live inside synthesis rather than the scored source-claim list. Both evidence sides remain in the envelope.
 
-The report adds aggregate synthesis companies/sentences/cited/dropped counts and llm calls/cache_hits/input_tokens/output_tokens/estimated_usd/fallbacks. Optional providers reserve costs conservatively; verified pricing must be supplied before a live adapter is enabled. Shipped prices are synthetic test rates.
+The report adds aggregate synthesis companies/sentences/cited/dropped counts and llm calls/cache_hits/input_tokens/output_tokens/estimated_usd/fallbacks. The existing `llm` report keys remain for output compatibility; template runs make no model calls and record zero token usage and model cost.
 
 ## Separate raw profiles output
 

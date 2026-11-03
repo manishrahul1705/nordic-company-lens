@@ -43,7 +43,7 @@ def main():
     for proc in psutil.process_iter(['pid','name','cmdline']):
         try:
             command=' '.join(proc.info['cmdline'] or [])
-            if proc.pid!=os.getpid() and 'Signalpost' in command and any(x in command for x in ['-m pytest','pytest --cov','scripts/browser_verify.py']):conflicts.append(proc.pid)
+            if proc.pid!=os.getpid() and 'Signalpost' in command and any(x in command for x in ['-m pytest','pytest --cov','scripts/run_comprehensive_browser_tests.py']):conflicts.append(proc.pid)
         except (psutil.AccessDenied,psutil.NoSuchProcess):unknown+=1
     if conflicts:raise RuntimeError(f'Concurrent test/browser jobs: {conflicts}')
     out=args.output_dir;out.mkdir(parents=True)
