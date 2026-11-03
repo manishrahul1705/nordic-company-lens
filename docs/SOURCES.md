@@ -17,7 +17,7 @@ Enhetsregisteret data uses NLOD 2.0: attribute Bronnoysundregistrene. Primary re
 
 ## Websites
 
-Candidates use parent registry website/email, listed-subunit website/email, then legal-name slugs, within unchanged candidate/request/DNS caps. Optional configured search may nominate further candidates only if there is budget for proof fetching. Public Suffix List boundaries come from the installed tldextract snapshot without network updates. Social/directory/search hosts are refused as company sources. Only HTML/XHTML/plain responses are used; scripts, images and third-party resources are not fetched. There is no browser renderer.
+Candidates use parent registry website/email, exact-employer NAV homepages, listed-subunit website/email and names, then legal-name domains. Consumer email and ISP domains are excluded. Discovery considers at most 32 distinct domains and 64 candidate DNS probes, including www fallback after an absent apex hostname, within request/time caps. Optional configured search may nominate further candidates only if there is budget for proof fetching. Public Suffix List boundaries come from the installed tldextract snapshot without network updates. Social/directory/search hosts are refused as company sources. Only HTML/XHTML/plain responses are used; scripts, images and third-party resources are not fetched. There is no browser renderer.
 
 Every DNS answer and redirect must pass public-unicast and company-domain rules. Connection-time DNS pinning preserves TLS hostname checks and blocks rebinding to private, loopback, link-local, CGNAT, multicast or reserved addresses. HTTPS certificates remain verified; plaintext fallback is permitted only after TLS/connect failure.
 
