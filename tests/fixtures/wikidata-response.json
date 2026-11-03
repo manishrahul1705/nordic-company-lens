@@ -1,0 +1,9 @@
+{
+  "head": {"vars": ["org", "item", "property", "value"]},
+  "results": {"bindings": [
+    {"org":{"type":"literal","value":"923609016"},"item":{"type":"uri","value":"http://www.wikidata.org/entity/Q123456"},"property":{"type":"uri","value":"http://www.wikidata.org/prop/direct/P856"},"value":{"type":"uri","value":"https://example.no/"}},
+    {"org":{"type":"literal","value":"923609016"},"item":{"type":"uri","value":"http://www.wikidata.org/entity/Q123456"},"property":{"type":"uri","value":"http://www.wikidata.org/prop/direct/P2013"},"value":{"type":"literal","value":"example"}},
+    {"org":{"type":"literal","value":"923609016"},"item":{"type":"uri","value":"http://www.wikidata.org/entity/Q123456"},"property":{"type":"uri","value":"http://www.wikidata.org/prop/direct/P2003"},"value":{"type":"literal","value":"othercompany"}},
+    {"org":{"type":"literal","value":"993578843"},"item":{"type":"uri","value":"http://www.wikidata.org/entity/Q987654"},"property":{"type":"uri","value":"http://www.wikidata.org/prop/direct/P856"},"value":{"type":"uri","value":"https://other.no/"}}
+  ]}
+}

@@ -10,18 +10,17 @@ Live identity and accounts must explicitly identify the requested company. Roles
 
 ## Websites
 
-At most four registrable-domain candidates come from the registered website, registry email or legal-name slugs. Registry website claims remain registry assertions until website identity is independently established. Social/directory domains are excluded from candidate fetching.
+At most 32 registrable-domain candidates come from registry websites/emails, exact-employer NAV homepages, registered subunits, exact-organisation Wikidata nominations and legal-name domains. Registry and Wikidata website claims remain nominations until live website identity is independently established. Social/directory domains are excluded from candidate fetching.
 
 | Level | Publication rule |
 |---|---|
-| VERIFIED | A checksum-valid exact organisation number appears in owner/footer content, appropriate metadata, or explicit non-person JSON-LD identifiers. A group page listing the company is labeled `group_site`. |
-| HIGH | Registry-origin domain, full legal-name match, matching site title/brand, strong address/phone/leader corroboration and at least five proof points. Navigation-only matches do not qualify. |
-| REGISTRY_DECLARED | Registry-origin domain stays on its registrable domain; live content is neither parked, blocked nor a shell; no foreign owner number appears; two independent signal types among distinctive legal-name branding, registered address and registry phone support it. |
+| VERIFIED | Exact organisation-number ownership proof, including explicit JSON-LD identifiers; or the full legal name including suffix plus a registered phone, email, street address or postcode and city. A conflicting site-owner number on a checked page rejects the domain. |
+| HIGH / REGISTRY_DECLARED | Legacy values; not produced by the current ownership scorer. Declarations alone do not establish ownership. |
 | MEDIUM / LOW | Abstain. Several qualifying domains remain ambiguous unless the policy selects a unique exact-verified domain. |
 
-Guessed slug and email domains require exact organisation-number proof. Hidden text, arbitrary scripts, foreign numbers and page instructions cannot establish ownership. A matching phone alone cannot qualify a registry-declared website.
+The homepage and up to three same-domain contact/about/privacy pages are checked. Name-only matches remain ambiguous. Hidden text, arbitrary scripts, foreign owner numbers and page instructions cannot establish ownership. A matching phone without the full legal name cannot qualify a website.
 
-Contacts and social-profile links are extracted only from accepted company sites. Social platforms are never fetched. Company profile links are restricted to accepted-site navigation/footer/header or non-person `sameAs`; sharing, article, platform-root and personal links are excluded.
+Social platforms are never fetched. Company profiles require a complete matching legal/registered-subunit name in the handle, excluding legal suffixes and trailing profile IDs. Shared company-path pages exclude template header/footer links. Profiles observed across different companies are suppressed for the whole run. Wikidata social identifiers additionally require the exact P2333 organisation number and retain their CC0 item provenance. Sharing, platform-root and personal links are excluded.
 
 ## Job advertisements
 

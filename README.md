@@ -42,6 +42,8 @@ Feeds and sitemaps nominate news URLs. Website news is published only after fetc
 
 Code and documentation use the [MIT licence](LICENSE). NAV, company websites and dependencies retain their own terms. See [source policy and dependency licences](docs/SOURCES.md) and [identity rules](docs/IDENTITY_RESOLUTION.md).
 
+Wikidata's CC0 structured data is queried by exact Norwegian organisation number for website nominations and name-matched social identifiers. Website nominations still need live ownership proof; Wikidata failures do not prevent registry or website research. Wikidata social claims identify their item URL and licence.
+
 ## Cost
 
 The command above has **$0 provider cost**, uses no LLM and makes no paid search calls. Compute, storage and network costs are excluded. Summaries use deterministic templates. `--synthesis` accepts `template` (default) or `auto`, which also uses templates. `llm` is rejected with a CLI argument error. Optional paid Brave search exists in the code but is disabled in this command by `--search-max-queries 0`. When configured separately, search only nominates candidates; published facts still require permitted-source verification.

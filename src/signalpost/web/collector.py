@@ -220,6 +220,8 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 sub = emp_org if (emp_org and emp_org != org and emp_org in units) else None
                 nav_homepages.append({'url': hp, 'subunit_orgnr': sub})
     context['nav_homepages'] = nav_homepages
+    from .wikidata import websites
+    context['wikidata_homepages'] = websites(getattr(http, 'wikidata_index', {'records':{}}), org)
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],

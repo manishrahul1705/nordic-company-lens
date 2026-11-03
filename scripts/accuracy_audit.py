@@ -971,6 +971,30 @@ def audit_social_claim(
     s_url = val.get("url") if isinstance(val, dict) else str(val)
     platform = val.get("platform") if isinstance(val, dict) else ""
 
+    if ev.get('source_class') == 'wikidata':
+        try:
+            found,binding=resolve_json_pointer(json.loads(body),ev['locator'])
+            if not found:return 'INCORRECT','Wikidata locator not found',None
+            value=lambda key: binding[key]['value']
+            item=value('item').rsplit('/',1)[1]
+            prefixes={'P2013':'https://www.facebook.com/','P2003':'https://www.instagram.com/',
+                      'P4264':'https://www.linkedin.com/company/','P2002':'https://x.com/',
+                      'P2397':'https://www.youtube.com/channel/'}
+            prop=value('property').rsplit('/',1)[1]
+            from urllib.parse import quote
+            expected=prefixes[prop]+quote(value('value').lstrip('@'),safe='-_.')
+            if value('org')!=org or ev['source_url']!='https://www.wikidata.org/wiki/'+item or expected!=s_url:
+                return 'INCORRECT','Wikidata organisation/item/profile mismatch',None
+            normalize=lambda text: re.sub(r'[^a-z0-9]','',legal_name(text).casefold().replace('æ','ae').replace('ø','o').replace('å','a'))
+            handle=re.sub(r'[-_. ]*\d{5,}$','',value('value'))
+            actual=normalize(handle.replace('-',' ').replace('_',' '))
+            name=normalize((context or {}).get('name',''))
+            if name and actual in {name,name+'as',name+'asa'}:
+                return 'CORRECT','Exact P2333 organisation and matching company social handle (Wikidata CC0)',s_url
+            return 'UNVERIFIABLE','Registry name/subunit corroboration required for Wikidata social handle',None
+        except (KeyError,TypeError,ValueError,IndexError):
+            return 'INCORRECT','Invalid Wikidata social source record',None
+
     if not body:
         return "UNVERIFIABLE", "Supporting page body unavailable", None
 

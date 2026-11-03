@@ -85,6 +85,8 @@ def generate(context):
         add(unit.get('website'),'subunit_registry_website',unit['orgnr'])
         email=str(unit.get('email') or '')
         if '@' in email:add(email.rsplit('@',1)[1],'subunit_registry_email',unit['orgnr'])
+    for url in context.get('wikidata_homepages', []):
+        add(url, 'wikidata_website')
     for unit in context.get('subunits', []):
         for slug in legal_name_slugs(legal_name(unit.get('name'))):
             add(slug, 'subunit_name_slug', unit['orgnr'])

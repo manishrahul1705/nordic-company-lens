@@ -68,6 +68,7 @@ def config(tmp, orgs, **kwargs):
     path.write_text("\n".join(orgs), encoding="utf-8")
     kwargs.setdefault('nav_index_path',tmp/'missing-nav-index.json.gz')
     kwargs.setdefault('registry_changes', False)  # Legacy fixtures contain no change-feed responses.
+    kwargs.setdefault('wikidata', False)  # Legacy offline fixtures declare no Wikidata responses.
     return Config(organisations=path, output=tmp / "envelopes.jsonl", report=tmp / "report.json", state_dir=tmp / "state", **kwargs)
 
 

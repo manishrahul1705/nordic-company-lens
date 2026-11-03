@@ -446,6 +446,7 @@ async def _run(config, client=None):
         http = Http(active_client, config, budget, blobs)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
         website_http.nav_index = nav_index
+        website_http.wikidata_index = wikidata_index
         from .web.search import Search
         website_http.search=Search(active_client,config,budget)
         search_metrics.update(website_http.search.metrics)
@@ -478,6 +479,8 @@ async def _run(config, client=None):
         if urgent:
             await finish_before_deadline(urgent, budget, CANCEL_GRACE_SECONDS)
         progress.stage_update("Registry & Subunits", "running")
+        from .web.wikidata import fetch_batch
+        wikidata_index.update(await fetch_batch(valid_orgs, active_client, config, budget, blobs))
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
         try:
             pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
@@ -514,6 +517,7 @@ async def _run(config, client=None):
                     nav_task.exception()  # Retrieved; failures are already recorded on the index.
     dns_metrics = {'dns_lookups': 0}
     search_metrics={'status':'not configured','queries':0,'estimated_usd':0.}
+    wikidata_index={'records':{},'metrics':{'status':'disabled'}}
     if client is None:
         transport = safe_transport(config.workers * 2, dns_metrics) if config.websites or config.hiring else httpx.AsyncHTTPTransport(limits=httpx.Limits(max_connections=config.workers * 2))
         async with AsyncExitStack() as stack:
@@ -540,6 +544,9 @@ async def _run(config, client=None):
             if any(nav_index.ads.get(number) for number in scope):
                 await isolate(envelope,'hiring',lambda:offload(nav.section,envelope,nav_index,blobs,prior.get(org)))
         # Invalid numbers must never inherit previously published information.
+        if config.websites and envelope.run.sections.get('identity') == 'available':
+            from .web.wikidata import publish_social
+            await offload(publish_social, wikidata_index, org, envelope, blobs)
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     from .web.social import drop_shared
     drop_shared(list(envelopes.values()))
@@ -571,6 +578,7 @@ async def _run(config, client=None):
     report['registry_provenance']['verify_bulk'] = config.verify_bulk
     report['llm']=synthesis_service.metrics
     report['search']=search_metrics
+    report['wikidata']=wikidata_index['metrics']
     total=synthesis_service.metrics['estimated_usd']+search_metrics['estimated_usd']
     report.update({'total_cost_usd':total,'cost_per_100_companies_usd':total*100/len(envelopes) if envelopes else 0,
         'cost_per_official_batch_usd':total*config.official_batch_size/len(envelopes) if envelopes else 0})
