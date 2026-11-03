@@ -22,6 +22,8 @@ The homepage and up to three same-domain contact/about/privacy pages are checked
 
 Social platforms are never fetched. Company profiles require a complete matching legal/registered-subunit name in the handle, excluding legal suffixes and trailing profile IDs. Shared company-path pages exclude template header/footer links. Profiles observed across different companies are suppressed for the whole run. Wikidata social identifiers additionally require the exact P2333 organisation number and retain their CC0 item provenance. Sharing, platform-root and personal links are excluded.
 
+JSON-LD `sameAs` is read only from Organization/LocalBusiness records and supported business subtypes on verified pages. Person, Product and untyped records do not authorize profiles. A named organization object must match a registered company/subunit name. On shared company-path pages, the object URL must identify that same path. Every resulting profile still passes the handle and cross-company sharing checks.
+
 ## Job advertisements
 
 NAV header employer names are discovery only. Normalize legal, known brand and subunit names, strip legal suffixes, and require a distinctive token of at least four letters. Distinctive-token overlap ranks candidate details by inverse header-token frequency; Norwegian and ASCII spelling variants converge. Names never authorize publication. The optional unranked reproduction mode uses full-phrase matching. Nameless headers fall back to unfiltered detail discovery within the same cap.

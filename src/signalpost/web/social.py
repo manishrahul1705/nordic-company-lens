@@ -1,5 +1,5 @@
 import re
-from urllib.parse import urlsplit, urlunsplit, unquote
+from urllib.parse import urlsplit, urlunsplit, unquote, urljoin
 import unicodedata
 from .candidates import legal_name
 from .policy import SOCIAL, domain
@@ -31,17 +31,49 @@ def profile_url(url):
     return urlunsplit((p.scheme, (p.hostname or "").lower(), "/" + "/".join(bits), "", "")) if allowed else None
 
 
-def discover(page):
+ORGANIZATION_TYPES={'Organization','LocalBusiness','Corporation','ProfessionalService','Store',
+                    'AccountingService','Electrician','AutoRepair','ChildCare','NGO','EducationalOrganization','GovernmentOrganization'}
+
+
+def organization_objects(value):
+    if isinstance(value,list):
+        for item in value:yield from organization_objects(item)
+    elif isinstance(value,dict):
+        types=value.get('@type',[])
+        types=types if isinstance(types,list) else [types]
+        types={str(t).rsplit('/',1)[-1].rsplit(':',1)[-1] for t in types}
+        if 'Person' in types:return
+        if types & ORGANIZATION_TYPES:yield value
+        for item in value.values():yield from organization_objects(item)
+
+
+def organization_social(page,context=None,scope=None):
+    found={}
+    for body in page.jsonld:
+        for node in organization_objects(body):
+            name=node.get('legalName') or node.get('name')
+            if context and name and (not isinstance(name,str) or not name_matches(name,company_names(context))):continue
+            if scope:
+                own=node.get('url') or node.get('@id')
+                if not isinstance(own,str):continue
+                own=urljoin(page.url,own)
+                if domain(own)!=domain(page.url) or not (urlsplit(own).path.rstrip('/')==scope or urlsplit(own).path.startswith(scope+'/')):continue
+            values=node.get('sameAs',[])
+            for value in values if isinstance(values,list) else [values]:
+                value=value.get('@id') if isinstance(value,dict) else value
+                if isinstance(value,str) and (url:=profile_url(value)):
+                    found.setdefault(url,page.span_for(value))
+    return found
+
+
+def discover(page,context=None,*,same_as=True):
     found = {}
     for link in page.links:
         url = profile_url(link.href)
         if url and link.owned_context:
             found.setdefault(url, link.span)
-    for body in page.jsonld:
-        for values in json_values(body, "sameAs", exclude_person=True):
-            for value in values if isinstance(values, list) else [values]:
-                if isinstance(value, str) and (url := profile_url(value)):
-                    found.setdefault(url, page.span_for(value))
+    if same_as:
+        for url,span in organization_social(page,context).items():found.setdefault(url,span)
     return found
 
 
@@ -120,10 +152,12 @@ def path_scope(proof, context):
 def attributed(page, proof, context, *, same_as=True):
     names = company_names(context)
     scope = path_scope(proof, context)
-    found = discover(page) if not scope else {
+    found = discover(page,context,same_as=same_as) if not scope else {
         profile_url(x.href): x.span for x in page.links
         if profile_url(x.href) and not x.template_context
         and (urlsplit(page.url).path.rstrip('/') == scope or urlsplit(page.url).path.startswith(scope+'/'))}
+    if scope and same_as:
+        for url,span in organization_social(page,context,scope).items():found.setdefault(url,span)
     return {u:s for u,s in found.items() if matches_profile(u, names)}
 
 
