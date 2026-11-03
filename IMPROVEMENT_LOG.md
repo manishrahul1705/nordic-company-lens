@@ -23,6 +23,7 @@ change against the same frozen cohort, preserving its scoreboard and state.
 | 2026-11-04 | `c1ca5df` | S5-3 | Read-only F17 website-loss table and complete company diagnostics | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 744-full+3-analyzer tests; 49.153s, 741 HTTP. No runtime changes; largest missing-site bucket DNS guesses; compare historical scale caps separately |
 | 2026-11-04 | `e9ebb73` | S5-4 | Add exact-org batched Wikidata nominations and CC0 name-matched social source | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 753 tests; 61.377s, 747 HTTP. HTTP 200 empty bindings for 100; zero matches and no coverage change; all social reviewed |
 | 2026-11-04 | `e8f8467` | S5-4-scale | 1000-company checkpoint includes restored C/D and social fixes plus Wikidata | 1000/998/774/999/52/27/3/230 → 1000/998/774/999/73/33/3/232 | 24 | 109 items / 0 wrong | KEEP | 753 tests; 291.317s, 6592 HTTP. All 51 social, 38 changed websites and 20 articles opened; 9 Wikidata matches, 5 CC0 socials, zero WD-origin verified websites; not isolated C/D attribution |
+| 2026-11-04 | `66cdb5d` | S5-1c | Revalidate social attribution after refresh and track aliases/all observed contexts | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 761 tests; 56.675s, 743 HTTP. All five social items reviewed; no count drops; independent auditor and furthest-stage reporting corrected |
 
 Baseline artifact: `bench/runs/20261103T183536297367Z-f409645/scoreboard.json` (ignored local run; retain or upload the run directory). Measured wall time 47.052 seconds, HTTP requests 610, latest-year accounts 100, deadline hits 0, warnings none. The earlier D run used 609 HTTP requests and 62.081 seconds; this live rerun made 256 website requests versus 255 because connection/redirect fallback outcomes changed. Registry requests stayed 302 and NAV requests stayed 52; no coverage or distinct-fact totals changed.
 
@@ -84,8 +85,8 @@ Scale precision scope: ten changed website proof items opened, zero wrong-compan
 S5-1 evidence: `bench/runs/20261103T203539261283Z-3c98640`. Full social and new website/news source list: `s5-review.json`.
 
 Social items rejected by stricter attribution in this step:
-- `919653477` https://www.linkedin.com/company/vokser-group — name/profile or shared-template attribution rejected.
-- `991368000` https://www.instagram.com/studioralstonbau — name/profile or shared-template attribution rejected.
+- `919653477` https://www.linkedin.com/company/vokser-group — handle does not match a registered company/subunit name.
+- `991368000` https://www.instagram.com/studioralstonbau — handle does not match a registered company/subunit name.
 
 S5-2C evidence: `bench/runs/20261103T204015696246Z-4cd4892`. Full social and new website/news source list: `s5-review.json`.
 
@@ -100,32 +101,34 @@ S5-4 evidence: `bench/runs/20261103T210508740261Z-e9ebb73`. Full social and new 
 S5-4-scale evidence: `bench/runs/20261103T210757525212Z-e8f8467`. Full social and new website/news source list: `s5-review.json`.
 
 Social items rejected by stricter attribution in this step:
-- `919653477` https://www.linkedin.com/company/vokser-group — name/profile or shared-template attribution rejected.
-- `991368000` https://www.instagram.com/studioralstonbau — name/profile or shared-template attribution rejected.
-- `936855865` https://www.instagram.com/shopify — name/profile or shared-template attribution rejected.
-- `990012288` https://www.facebook.com/pages/TB-Maskin-As/455200387968353 — name/profile or shared-template attribution rejected.
-- `990012288` https://www.youtube.com/user/thomasbech8 — name/profile or shared-template attribution rejected.
-- `971349743` https://www.facebook.com/museumssenteret — name/profile or shared-template attribution rejected.
-- `971349743` https://www.youtube.com/channel/UCjvUaEpHHOTVtcwEljAU_Uw — name/profile or shared-template attribution rejected.
-- `938092516` https://www.facebook.com/OsloChamber — name/profile or shared-template attribution rejected.
-- `930166030` https://www.instagram.com/plumposlo — name/profile or shared-template attribution rejected.
-- `997790952` https://www.facebook.com/HillerenProsjekteringAS — name/profile or shared-template attribution rejected.
-- `918486666` https://www.instagram.com/antisink_systems — name/profile or shared-template attribution rejected.
-- `920358411` https://www.facebook.com/LarsZach — name/profile or shared-template attribution rejected.
-- `912667758` https://www.instagram.com/eimealt_as — name/profile or shared-template attribution rejected.
-- `912667758` https://www.tiktok.com/@eimealt — name/profile or shared-template attribution rejected.
-- `971558415` https://www.facebook.com/scenehuset — name/profile or shared-template attribution rejected.
-- `971558415` https://www.instagram.com/scenehuset — name/profile or shared-template attribution rejected.
-- `952785052` https://www.facebook.com/nsnl2 — name/profile or shared-template attribution rejected.
-- `925310492` https://www.facebook.com/bruktemaskinernorge — name/profile or shared-template attribution rejected.
-- `983485731` https://www.facebook.com/advokatenestorgata2 — name/profile or shared-template attribution rejected.
-- `917816328` https://www.instagram.com/geiterygghytta — name/profile or shared-template attribution rejected.
-- `917816328` https://www.facebook.com/pages/Geiterygghytta/142069355875460 — name/profile or shared-template attribution rejected.
-- `917816328` https://www.facebook.com/turistforeningen — name/profile or shared-template attribution rejected.
-- `917816328` https://www.instagram.com/turistforeningen — name/profile or shared-template attribution rejected.
-- `917816328` https://www.youtube.com/@turistforeningen — name/profile or shared-template attribution rejected.
-- `990342555` https://www.facebook.com/nordstrandkulturskole — name/profile or shared-template attribution rejected.
-- `990342555` https://www.instagram.com/nordstrandkulturskole — name/profile or shared-template attribution rejected.
-- `939725709` https://www.facebook.com/sagaregnskap — name/profile or shared-template attribution rejected.
-- `939725709` https://www.linkedin.com/company/sagarr — name/profile or shared-template attribution rejected.
-- `939725709` https://www.instagram.com/sagaregnskap — name/profile or shared-template attribution rejected.
+- `919653477` https://www.linkedin.com/company/vokser-group — handle does not match a registered company/subunit name.
+- `991368000` https://www.instagram.com/studioralstonbau — handle does not match a registered company/subunit name.
+- `936855865` https://www.instagram.com/shopify — handle does not match a registered company/subunit name.
+- `990012288` https://www.facebook.com/pages/TB-Maskin-As/455200387968353 — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `990012288` https://www.youtube.com/user/thomasbech8 — handle does not match a registered company/subunit name.
+- `971349743` https://www.facebook.com/museumssenteret — handle does not match a registered company/subunit name.
+- `971349743` https://www.youtube.com/channel/UCjvUaEpHHOTVtcwEljAU_Uw — handle does not match a registered company/subunit name.
+- `938092516` https://www.facebook.com/OsloChamber — handle does not match a registered company/subunit name.
+- `930166030` https://www.instagram.com/plumposlo — handle does not match a registered company/subunit name.
+- `997790952` https://www.facebook.com/HillerenProsjekteringAS — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `918486666` https://www.instagram.com/antisink_systems — handle does not match a registered company/subunit name.
+- `920358411` https://www.facebook.com/LarsZach — handle does not match a registered company/subunit name.
+- `912667758` https://www.instagram.com/eimealt_as — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `912667758` https://www.tiktok.com/@eimealt — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `971558415` https://www.facebook.com/scenehuset — handle does not match a registered company/subunit name.
+- `971558415` https://www.instagram.com/scenehuset — handle does not match a registered company/subunit name.
+- `952785052` https://www.facebook.com/nsnl2 — handle does not match a registered company/subunit name.
+- `925310492` https://www.facebook.com/bruktemaskinernorge — handle does not match a registered company/subunit name.
+- `983485731` https://www.facebook.com/advokatenestorgata2 — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `917816328` https://www.instagram.com/geiterygghytta — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `917816328` https://www.facebook.com/pages/Geiterygghytta/142069355875460 — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `917816328` https://www.facebook.com/turistforeningen — handle does not match a registered company/subunit name.
+- `917816328` https://www.instagram.com/turistforeningen — handle does not match a registered company/subunit name.
+- `917816328` https://www.youtube.com/@turistforeningen — handle does not match a registered company/subunit name.
+- `990342555` https://www.facebook.com/nordstrandkulturskole — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `990342555` https://www.instagram.com/nordstrandkulturskole — not republished in this run; consult current website/source diagnostics; not itself a wrong-company finding.
+- `939725709` https://www.facebook.com/sagaregnskap — handle does not match a registered company/subunit name.
+- `939725709` https://www.linkedin.com/company/sagarr — handle does not match a registered company/subunit name.
+- `939725709` https://www.instagram.com/sagaregnskap — handle does not match a registered company/subunit name.
+
+S5-1c evidence: `bench/runs/20261103T212216230863Z-66cdb5d`. Full social and new website/news source list: `s5-review.json`.
