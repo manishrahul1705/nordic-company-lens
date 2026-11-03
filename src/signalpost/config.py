@@ -36,7 +36,7 @@ class Config(BaseModel):
     website_request_cap: int = Field(default=6, ge=0, le=8)
     website_total_request_cap: int = Field(default=9, ge=0)
     website_politeness_seconds: float = Field(default=1, ge=1)
-    website_user_agent: str = "SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)"
+    website_user_agent: str = "SignalpostAgent/1.0 (+https://github.com/manishrahul1705/nordic-company-lens)"
     hiring: bool = False
     nav_max_pages: int = Field(default=512,ge=0)
     nav_max_details: int | None = Field(default=None,ge=0)

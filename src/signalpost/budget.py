@@ -9,8 +9,8 @@ class SourceFailure(Exception):
 
 
 # Seconds of terminal work per company after the crawl stops: output write and
-# verification, finalisation, synthesis, profiles and report. Calibrated on the
-# 1,000-company capacity runs (reports/step1a-finalisation.md).
+# verification, finalisation, synthesis, profiles and report. Calibrated on
+# historical capacity runs.
 FINALISE_SECONDS_PER_COMPANY = 0.03
 # Static site generation, which is optional and skipped when it cannot fit.
 SITE_SECONDS_PER_COMPANY = 0.05
