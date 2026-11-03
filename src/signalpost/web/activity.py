@@ -94,7 +94,11 @@ async def fetch(org, envelope, http, pages):
     if not proof or proof.carried_forward or proof.value.get('identity_level') not in {'VERIFIED', 'HIGH', 'REGISTRY_DECLARED'}:
         website_state=envelope.run.sections.get('website')
         if website_state in {'failed','blocked','ambiguous'}:
+            envelope.run.refresh.setdefault('activity', {})['website_news'] = {
+                'state': website_state, 'complete': False, 'reason': 'website_check_incomplete'}
             return missing('activity','website_check_incomplete',state=website_state)
+        envelope.run.refresh.setdefault('activity', {})['website_news'] = {
+            'state': 'not_applicable', 'complete': False, 'reason': 'no_verified_website'}
         return missing('activity', 'no_verified_website', state='not_applicable')
     homepage = proof.value['final_url']
     root = domain(homepage)
@@ -154,7 +158,7 @@ async def fetch(org, envelope, http, pages):
         return await fetch_html(org, proof, http, pages, checked)
     finally:
         http.activity_extra.discard(org)
-        envelope.run.refresh['activity']={'checked_urls':sorted(checked)}
+        envelope.run.refresh.setdefault('activity', {})['checked_urls'] = sorted(checked)
 
 
 def parse_html(body, source_url, now):

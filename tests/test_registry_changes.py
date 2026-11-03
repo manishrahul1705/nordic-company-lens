@@ -210,3 +210,39 @@ def test_forced_feed_failure_100_terminal_envelopes(tmp_path):
         validate(row, 'union')
         assert row['run']['sections']['identity'] == 'available'
         assert row['run']['sections']['activity'] == 'failed'
+
+
+@pytest.mark.parametrize('registry_facts,registry_state,expected', [
+    (True, 'available', 'available'),
+    (False, 'not_available', 'failed'),
+    (True, 'failed', 'failed'),
+])
+def test_registry_activity_availability_keeps_website_completeness_visible(registry_facts, registry_state, expected):
+    from signalpost.models.envelope import Error
+
+    env = envelope()
+    env.run.sections['activity'] = 'failed'
+    env.errors = [Error(section='activity', code='website_check_incomplete', message='website_check_incomplete')]
+    section = extract(event()) if registry_facts else Section(state='not_available')
+    section.state = registry_state
+    if registry_state == 'failed':
+        section.errors.append(Error(section='activity', code='registry_change_incomplete', message='registry_change_incomplete'))
+    merged = rc.merge(env, section, website_enabled=True)
+    assert merged.state == expected
+    assert any(e.code == 'website_check_incomplete' for e in merged.errors)
+    assert env.run.refresh['activity']['website_news']['complete'] is False
+    assert env.run.refresh['activity']['registry_activity']['complete'] == (registry_state != 'failed')
+    assert merged.claims == section.claims
+    if registry_state == 'failed':
+        assert any(e.code == 'registry_change_incomplete' for e in merged.errors)
+
+
+def test_unchecked_website_news_records_its_own_diagnostic():
+    from signalpost.web.activity import fetch
+
+    env = envelope()
+    env.run.sections['website'] = 'failed'
+    result = asyncio.run(fetch(ORG, env, None, []))
+    assert result.state == 'failed'
+    assert env.run.refresh['activity']['website_news'] == {
+        'state': 'failed', 'complete': False, 'reason': 'website_check_incomplete'}

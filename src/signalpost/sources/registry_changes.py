@@ -223,6 +223,14 @@ def merge(envelope, section, website_enabled):
     evidence = [e for e in envelope.evidence if any(e.id in c.evidence_ids for c in claims)]
     old_state = envelope.run.sections.get('activity')
     errors = [e for e in envelope.errors if e.section == 'activity'] if website_enabled else []
-    state = 'failed' if section.state == 'failed' or (website_enabled and old_state in {'failed', 'blocked', 'ambiguous'}) else 'available' if claims or section.claims else 'not_available'
+    registry_complete = section.state in {'available', 'not_available'}
+    registry_facts = any(c.availability == 'available' and c.value is not None for c in section.claims)
+    diagnostics = envelope.run.refresh.setdefault('activity', {})
+    diagnostics['registry_activity'] = {'state': section.state, 'complete': registry_complete}
+    website_news = diagnostics.setdefault('website_news', {})
+    website_news.update(state=old_state if website_enabled else 'not_applicable',
+                        complete=website_enabled and old_state in {'available', 'not_available'},
+                        errors=[{'code': e.code, 'message': e.message} for e in errors])
+    state = 'failed' if not registry_complete or (website_enabled and old_state in {'failed', 'blocked', 'ambiguous'} and not registry_facts) else 'available' if claims or section.claims else 'not_available'
     return Section(state=state, claims=claims + section.claims, evidence=evidence + section.evidence,
                    errors=errors + section.errors)
