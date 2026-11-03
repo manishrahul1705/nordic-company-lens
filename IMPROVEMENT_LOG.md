@@ -135,3 +135,26 @@ Social items rejected by stricter attribution in this step:
 S5-1c evidence: `bench/runs/20261103T212216230863Z-66cdb5d`. Full social and new website/news source list: `s5-review.json`.
 
 S5-5 evidence: `bench/runs/20261103T212841589097Z-18d31aa`. Full social and new website/news source list: `s5-review.json`.
+
+## S5 optional-search preparation ? pending live gate
+
+Prepared code: `2801e02`. Full suite: 793 passed; final focused Brave/environment suite: 27 passed; PowerShell wrapper syntax valid. No live Brave request has been made. Both explicit terminal variables and positive query/cost room are required. The opt-in benchmark supplies at most $0.50 for 100 companies. The normal benchmark strips search credentials.
+
+The user explicitly requested STOP before live testing so they can set SIGNALPOST_SEARCH_PROVIDER=brave and BRAVE_SEARCH_API_KEY in the terminal. The paired 100-company comparison, search KEEP/ROLLBACK decision, and final search-OFF 1000 run are pending that setup. No step-6 KEEP is claimed from mocked tests.
+
+Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Latest 1000 checkpoint (before the final refresh/typed-sameAs changes): `bench/runs/20261103T210757525212Z-e8f8467/`, exit 0, 291.317s, 6592 HTTP, no deadline hits, 24 website budget errors; 73 websites and 33 social available. Full item/source reviews are saved in each run. The interim S5 report, full per-step review list and git log are at `bench/runs/20261103T212841589097Z-18d31aa/S5_REPORT.md`.
+
+### F17 latest completed checkpoints
+
+| Exclusive stop reason | 100 | 1000 checkpoint |
+|---|---:|---:|
+| no candidates generated | 2 | 11 |
+| all candidates DNS-missing | 44 | 479 |
+| robots or blocked | 6 | 46 |
+| fetched but no proof | 16 | 165 |
+| proof conflict (other orgnr) | 0 | 43 |
+| ambiguous (name-only or competing candidates) | 1 | 28 |
+| budget exhausted | 1 | 16 |
+| TLS-connect failure | 19 | 139 |
+
+Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
