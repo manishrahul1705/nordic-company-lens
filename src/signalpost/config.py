@@ -56,4 +56,3 @@ class Config(BaseModel):
     synthesis: str = 'template'
     llm_max_calls: int = Field(default=100,ge=0)
     llm_max_cost_usd: float = Field(default=.50,ge=0)
-    llm_timeout_seconds: float = Field(default=15,gt=0,le=15)

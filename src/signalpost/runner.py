@@ -157,12 +157,12 @@ def write_report(path, report):
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
 
 
-async def run(config, client=None,synthesis_provider=None):
+async def run(config, client=None):
     from .monitor import LoopMonitor
     from .power import SystemAwake
     with SystemAwake(config.prevent_system_sleep) as power:
         monitor=LoopMonitor();monitor.start()
-        try:report=await _run(config,client,synthesis_provider)
+        try:report=await _run(config,client)
         finally:lag=await monitor.stop()
     report['event_loop']=lag
     report['system_awake_request']=power.result
@@ -172,7 +172,7 @@ async def run(config, client=None,synthesis_provider=None):
     return report
 
 
-async def _run(config, client=None,synthesis_provider=None):
+async def _run(config, client=None):
     budget = Budget(config)
     if not config.run_id:
         config.run_id = uuid.uuid4().hex
@@ -542,7 +542,7 @@ async def _run(config, client=None,synthesis_provider=None):
         # Invalid numbers must never inherit previously published information.
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     progress.stage_update("Cited Synthesis", "running")
-    synthesis_service=SynthesisService(config,budget,synthesis_provider)
+    synthesis_service=SynthesisService()
     for envelope in envelopes.values():
         envelope.run.synthesis=await synthesis_service.summarize(envelope)
         envelope.profile.synthesis=envelope.run.synthesis

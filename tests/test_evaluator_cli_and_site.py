@@ -113,3 +113,32 @@ def test_evaluator_shapes_union_contract_reference(tmp_path):
         )
         assert result["schema_valid"] is True
         assert result["lines"] == 20
+
+def test_cli_rejects_removed_llm_mode(capsys):
+    import pytest
+
+    with pytest.raises(SystemExit) as error:
+        main(['run', '--organisations', 'unused.jsonl', '--output', 'unused-output.jsonl',
+              '--report', 'unused-report.json', '--synthesis', 'llm'])
+    assert error.value.code == 2
+    message = capsys.readouterr().err
+    assert 'invalid choice' in message and "'llm'" in message
+    assert 'choose from auto, template' in message
+
+
+def test_cli_accepts_template_and_auto_modes(tmp_path, monkeypatch):
+    seen = []
+
+    async def run(config):
+        seen.append(config.synthesis)
+        return {'emitted_envelopes': 0, 'invalid_inputs': [], 'requests': 0,
+                'runtime_ms': 0, 'changes': 0, 'observation_changes': 0,
+                'deadline_hits': 0, 'warnings': []}
+
+    monkeypatch.setattr('signalpost.cli.run', run)
+    for mode in ('template', 'auto'):
+        assert main(['run', '--organisations', str(tmp_path / 'input.jsonl'),
+                     '--output', str(tmp_path / 'output.jsonl'),
+                     '--report', str(tmp_path / 'report.json'),
+                     '--synthesis', mode]) == 0
+    assert seen == ['template', 'auto']

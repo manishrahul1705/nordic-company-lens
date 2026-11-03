@@ -50,7 +50,7 @@ def main(argv=None):
     command.add_argument('--search-max-queries',type=int)
     command.add_argument('--search-max-cost-usd',type=float,default=5.)
     command.add_argument('--search-unit-price-usd',type=float,default=.005)
-    command.add_argument('--synthesis',choices=('auto','template','llm'),default='template')
+    command.add_argument('--synthesis',choices=('auto','template'),default='template')
     command.add_argument('--llm-max-calls',type=int,default=100)
     command.add_argument('--llm-max-cost-usd',type=float,default=.50)
     for flag,kind,default in [('nav-max-pages',int,512),('nav-max-details',int,None),('nav-time-cap-seconds',float,None),('nav-lookback-days',int,185),('nav-concurrency',int,4),('nav-request-timeout',float,30),('nav-body-cap-mb',float,2)]:
@@ -87,4 +87,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
     sys.exit(main())
-

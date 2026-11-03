@@ -42,7 +42,7 @@ Code and documentation use the [MIT licence](LICENSE). NAV, company websites and
 
 ## Cost
 
-The command above has **$0 provider cost**, uses no LLM and makes no paid search calls. Compute, storage and network costs are excluded. Summaries use deterministic templates; no live model adapter is shipped. Optional paid Brave search exists in the code but is disabled in this command by `--search-max-queries 0`. When configured separately, search only nominates candidates; published facts still require permitted-source verification.
+The command above has **$0 provider cost**, uses no LLM and makes no paid search calls. Compute, storage and network costs are excluded. Summaries use deterministic templates. `--synthesis` accepts `template` (default) or `auto`, which also uses templates. `llm` is rejected with a CLI argument error. Optional paid Brave search exists in the code but is disabled in this command by `--search-max-queries 0`. When configured separately, search only nominates candidates; published facts still require permitted-source verification.
 
 ## Limitations and checks
 
