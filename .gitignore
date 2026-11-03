@@ -14,6 +14,8 @@ dev-notes/
 state/
 out/
 downloads/
+bench/runs/
+bench/cache/
 blobs/
 *.jsonl
 *.csv
@@ -24,6 +26,8 @@ blobs/
 !tests/fixtures/**/*.csv
 !tests/fixtures/**/*.gz
 !tests/fixtures/**/*.pdf
+!bench/inputs/**/*.jsonl
+!bench/inputs/**/*.csv
 !tests/fixtures/integration_bundle/blobs/
 !tests/fixtures/integration_bundle/blobs/*
 # Environments, secrets and caches

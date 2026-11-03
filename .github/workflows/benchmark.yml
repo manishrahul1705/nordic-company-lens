@@ -1,0 +1,31 @@
+name: Manual frozen benchmark
+on:
+  workflow_dispatch:
+    inputs:
+      size:
+        description: 'Companies (20/100 frozen; 1000 uses a hash-recorded cached bulk snapshot)'
+        type: choice
+        default: '100'
+        options: ['20', '100', '1000']
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - name: Run benchmark
+        run: bash scripts/bench.sh --size "$BENCH_SIZE"
+        env:
+          BENCH_SIZE: ${{ inputs.size }}
+      - name: Upload benchmark outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-${{ inputs.size }}-${{ github.sha }}
+          path: bench/runs/
+          if-no-files-found: warn

@@ -1,0 +1,9 @@
+# Frozen benchmark inputs. SHA-256; paths relative to bench/inputs/.
+# Seed 20261103; 20 is the first 20 input records of 100.
+# 100 copied byte-for-byte from compare; BRREG subset retrieved 2026-11-03.
+# Universe: https://builderr.ai/signalpost-company-universe-2025.jsonl.gz
+# Bulk: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv
+54f5c4254b5d61a969ed6ec5969fab905e45d947f920a8f8cdcb71e575b159f7  100/batch.jsonl
+2721de541081cc0ce500276b9579ad29b60d1d07462cc5e20e2b881b767a1e15  100/registry.csv
+063413dffd75909022d7e730aac60fcfc178230972620a3cbb5eea20085acf11  20/batch.jsonl
+c5bc0057237c91bdc5c4a8e64684f6c0cdc4955e4ab4450a72ae2dd8173b766a  20/registry.csv

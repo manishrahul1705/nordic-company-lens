@@ -1,2 +1,4 @@
 # Recorded HTTP response hashes depend on exact bytes on Windows as well.
 tests/fixtures/external_integration/blobs/* -text
+bench/inputs/** -text whitespace=cr-at-eol
+scripts/bench.sh text eol=lf
