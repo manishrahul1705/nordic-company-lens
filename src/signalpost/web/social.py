@@ -7,8 +7,12 @@ from .html import json_values
 
 
 def profile_url(url):
-    p = urlsplit(url)
-    root = domain(url)
+    try:
+        p = urlsplit(url)
+        root = domain(url)
+    except (TypeError, ValueError):
+        # Broken third-party sameAs values must not discard valid site proof.
+        return None
     if p.scheme not in {"http", "https"} or root not in SOCIAL:
         return None
     bits = [x for x in p.path.split("/") if x]
