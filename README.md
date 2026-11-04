@@ -46,7 +46,7 @@ Wikidata's CC0 structured data is queried by exact Norwegian organisation number
 
 ## Cost
 
-The command above has **$0 provider cost**, uses no LLM and makes no paid search calls. Compute, storage and network costs are excluded. Summaries use deterministic templates. `--synthesis` accepts `template` (default) or `auto`, which also uses templates. `llm` is rejected with a CLI argument error. Optional Brave search requires both `SIGNALPOST_SEARCH_PROVIDER=brave` and `BRAVE_SEARCH_API_KEY` in the environment, plus a positive `--max-cost-usd` budget. It is off by default and disabled in the command above by `--search-max-queries 0`. It issues at most one query per active-looking company still without a verified site, estimates $0.005 per query, and treats results only as ownership-proof candidates. Keys are never written to run outputs.
+The command above has **$0 provider cost**, uses no LLM and makes no paid search calls. Compute, storage and network costs are excluded. Summaries use deterministic templates. `--synthesis` accepts `template` (default) or `auto`, which also uses templates. `llm` is rejected with a CLI argument error. Optional paid Brave search exists in the code but is disabled in this command by `--search-max-queries 0`. When configured separately, search only nominates candidates; published facts still require permitted-source verification.
 
 ## Limitations and checks
 

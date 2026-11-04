@@ -158,9 +158,15 @@ Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Lat
 | TLS-connect failure | 19 | 139 |
 | 2026-11-04 | `0b05b2e` | S5-6-trial | Optional Brave live trial; two false official-directory assignments | 100/100/85/100/10/4/1/29 → 100/100/85/100/13/5/1/29 | 18 | 9 items / 2 wrong | ROLLED BACK | 793 tests; 391.532s, 1512 HTTP. 59 queries, estimated USD 0.295; two directory pages rejected on full review. Existing directory guard root cause will receive a separate regression fix before reapplication. Ralston recovery is transport variance, not search gain. |
 | 2026-11-04 | `47a295c` | S5-6-root | Reject two registry-copy directories globally and in independent audit | 100/100/85/100/10/4/1/29 → 100/100/85/100/11/5/1/29 | 2 | 6 items / 0 wrong | KEEP | 776 tests; 546.260s, 1091 HTTP. Four regression cases pass. No available-count drops; five social and one recovered exact-org website reviewed. Ralston recovery is transport variance. Search OFF; estimated cost zero. |
+| 2026-11-04 | `e33b951` | S5-6-retrial | Reapplied Brave after first directory guard; LEI record rejected on review | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/4/1/29 | 17 | 6 items / 1 wrong | ROLLED BACK | 797 tests; 469.008s, 1470 HTTP. 61 queries, estimated USD 0.305. One false official attribution: NordLEI record for Giljeholmen. KN Elektro social lost to independent robots/redirect timeouts. Extend ownership guard to LEI records before another reapplication. |
 
 Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
 
 S5-6-trial evidence: `bench/runs/20261104T051103339719Z-0b05b2e`. Full social and new website/news source list: `s5-review.json`.
 
 S5-6-root evidence: `bench/runs/20261104T052607204480Z-47a295c`. Full social and new website/news source list: `s5-review.json`.
+
+S5-6-retrial evidence: `bench/runs/20261104T054207443662Z-e33b951`. Full social and new website/news source list: `s5-review.json`.
+
+Social items rejected by stricter attribution in this step:
+- `823147112` https://www.facebook.com/KN-Elektro-As-104194150969215 — website proof unavailable or source profile no longer published; not asserted wrong-company.

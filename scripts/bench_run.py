@@ -10,10 +10,7 @@ import subprocess
 import sys
 import time
 
-if __package__:
-    from .scoreboard import build_scoreboard, read_jsonl, summary
-else:
-    from scoreboard import build_scoreboard, read_jsonl, summary
+from scoreboard import build_scoreboard, read_jsonl, summary
 
 
 def verify_inputs(directory, manifest):
@@ -33,35 +30,18 @@ def verify_inputs(directory, manifest):
     return hashes
 
 
-def benchmark_environment(search=False, environment=None):
-    env = dict(os.environ if environment is None else environment)
-    if search and ((env.get('SIGNALPOST_SEARCH_PROVIDER') or '').strip().lower() != 'brave'
-                   or not env.get('BRAVE_SEARCH_API_KEY')):
-        raise ValueError('Search benchmark requires SIGNALPOST_SEARCH_PROVIDER=brave and BRAVE_SEARCH_API_KEY set in the terminal')
-    for key in list(env):
-        if ('API_KEY' in key.upper() or key == 'NAV_API_TOKEN'
-                or key.startswith(('SIGNALPOST_SEARCH', 'SIGNALPOST_LLM'))):
-            if search and key in {'BRAVE_SEARCH_API_KEY','SIGNALPOST_SEARCH_PROVIDER'}:
-                continue
-            env.pop(key)
-    return env
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--size', choices=(20, 100, 1000), type=int, default=100)
-    parser.add_argument('--search', action='store_true', help='Explicit paid Brave comparison; requires terminal environment variables')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
-    try:
-        env = benchmark_environment(args.search)
-    except ValueError as exc:
-        parser.error(str(exc))
+    env = os.environ.copy()
+    for key in list(env):
+        if ('API_KEY' in key.upper() or key == 'NAV_API_TOKEN'
+                or key.startswith(('SIGNALPOST_SEARCH', 'SIGNALPOST_LLM'))):
+            env.pop(key)
     if args.size == 1000:
-        if __package__:
-            from .prepare_bench_inputs import prepare
-        else:
-            from prepare_bench_inputs import prepare
+        from prepare_bench_inputs import prepare
         inputs, manifest = prepare(root)
     else:
         inputs, manifest = root / f'bench/inputs/{args.size}', root / 'bench/inputs/MANIFEST.txt'
@@ -91,15 +71,10 @@ def main():
                '--report', str(destination / 'report.json'), '--site-dir', str(destination / 'site'),
                '--state-dir', str(state), '--websites', '--hiring', '--public-activity',
                '--run-id', 'bench-' + stamp, '--expected-count', str(args.size)]
-    if args.search:
-        # User-authorized comparison: at most one $0.005 query per company.
-        command.extend(['--search-max-queries',str(args.size),'--max-cost-usd',str(args.size*.005)])
     execution = {'commit': commit, 'working_tree_dirty': dirty, 'size': args.size,
                  'started_at': datetime.now(timezone.utc).isoformat(), 'command': command,
                  'input_sha256': hashes,
-                 'search_enabled': args.search,
-                 'credentials': ('Only Brave provider/key retained in child environment; values never recorded' if args.search
-                                 else 'API key variables, NAV_API_TOKEN and search/model selectors removed')}
+                 'credentials': 'API key variables, NAV_API_TOKEN and search/model selectors removed'}
     execution_path = destination / 'execution.json'
     execution_path.write_text(json.dumps(execution, indent=2) + '\n', encoding='utf-8')
     print('Benchmark output: ' + str(destination), flush=True)
