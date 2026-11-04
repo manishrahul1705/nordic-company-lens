@@ -31,7 +31,8 @@ from signalpost.web.proof import phone, orgnrs, is_dedicated_entity_card, extrac
 DIRECTORY_DOMAINS = {
     "proff.no", "180.no", "gulesider.no", "purehelp.no", "allabolag.se",
     "enhetsregisteret.no", "brreg.no", "facebook.com", "linkedin.com",
-    "instagram.com", "twitter.com", "x.com", "wikipedia.org", "youtube.com"
+    "instagram.com", "twitter.com", "x.com", "wikipedia.org", "youtube.com",
+    "utdanning.no", "vat-validation.com"
 }
 
 # Generic platform landing paths that do not constitute verified company profiles
