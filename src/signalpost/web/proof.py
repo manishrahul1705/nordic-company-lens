@@ -5,14 +5,12 @@ from ..identity.orgnr import valid
 from .candidates import legal_name
 from .html import json_values
 from .candidates import GENERIC
-from .policy import domain, extract, DIRECTORIES, SOCIAL, is_directory_record
-from .social import compact
+from .policy import domain, DIRECTORIES, SOCIAL, is_directory_record
 
 
 def orgnrs(text):
     result = set()
-    text=re.sub(r'(?<!\w)NO\s*((?:[0-9][ .\u00a0]*){8}[0-9])(?:\s*MVA)?(?!\w)',r' \1 ',str(text),flags=re.I)
-    for match in re.finditer(r"(?<!\w)[0-9](?:[0-9 .\u00a0]*[0-9])?(?!\w)", text):
+    for match in re.finditer(r"(?<!\w)[0-9](?:[0-9 .\u00a0]*[0-9])?(?!\w)", str(text)):
         digits = re.sub(r"[^0-9]", "", match.group())
         if valid(digits):
             result.add(digits)
@@ -324,14 +322,4 @@ def score(page, org, context, origin, leaders):
         signals.append('email')
     if exact_name and len(signals) >= 2:
         return Proof('VERIFIED', 'legal_name_and_registry_contact', signals, 2 * len(signals), token=str(context['name']))
-    base_name=legal_name(context.get('name'))
-    exact_base=bool(base_name and re.search(r'(?<!\w)'+re.escape(normalized(base_name))+r'(?!\w)',owner_text))
-    label=compact(extract(page.url).domain)
-    derived=label in {compact(base_name),compact(base_name)+'as',compact(base_name)+'asa'} and len(compact(base_name))>=4
-    contacts=[s for s in signals if s in {'street','postcode_city','phone','email'}]
-    if exact_base and derived and len(contacts)>=2:
-        return Proof('VERIFIED','legal_name_without_suffix_and_two_contacts',
-                     ['legal_name_without_suffix','name_derived_domain',*contacts],2*len(contacts),token=base_name)
-    if exact_base:
-        return Proof('MEDIUM','signals',['legal_name_without_suffix',*contacts],2*len(contacts),reason='name_without_suffix_insufficient_contacts_or_domain',token=base_name)
     return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))
