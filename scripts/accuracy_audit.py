@@ -25,7 +25,8 @@ from urllib.parse import urlparse
 
 from signalpost.web.html import Page, json_values
 from signalpost.web.candidates import legal_name
-from signalpost.web.policy import is_directory_record
+from signalpost.web.policy import is_directory_record, extract
+from signalpost.web.social import compact
 from signalpost.web.proof import phone, orgnrs, normalized_address, is_dedicated_entity_card, extract_entity_cards, find_containing_card
 
 # Known directory and aggregator domains that cannot serve as company official websites
@@ -684,11 +685,12 @@ def audit_website_claim(
         if not is_legitimate_group:
             return "INCORRECT", f"Multi-entity list or directory table containing multiple organisation numbers ({len(all_structural_orgnrs)} found)", None
 
-    if ptype == 'legal_name_and_registry_contact':
+    if ptype in {'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts'}:
         ctx = context or {}
         normalize = lambda v: ' '.join(re.findall(r'\w+', str(v or '').casefold()))
         owner = normalize(page.title + ' ' + page.meta.get('og:site_name','') + ' ' + page.owner_text)
-        name = normalize(ctx.get('name'))
+        short=ptype=='legal_name_without_suffix_and_two_contacts'
+        name = normalize(legal_name(ctx.get('name')) if short else ctx.get('name'))
         if not name or not re.search(r'(?<!\w)' + re.escape(name) + r'(?!\w)', owner):
             return 'INCORRECT', 'Full legal name including suffix missing', None
         if (brand_orgnrs | json_ids) - {org}:
@@ -706,6 +708,12 @@ def audit_website_claim(
         email = str(ctx.get('email') or '').casefold()
         if email and (email in page.owner_text.casefold() or any(x.href.casefold().split('?')[0] == 'mailto:' + email for x in page.links)):
             contacts.append('email')
+        if short:
+            base=compact(legal_name(ctx.get('name')))
+            if compact(extract(page.url).domain) not in {base,base+'as',base+'asa'} or len(base)<4:
+                return 'INCORRECT','Registrable domain is not derived from full registered name',None
+            if len(set(contacts))<2:
+                return 'INCORRECT','Fewer than two independent registry contact categories',None
         return ('CORRECT', 'Exact legal name plus independent registry ' + ','.join(contacts), url) if contacts else ('INCORRECT', 'No matching registry contact', None)
 
     if ptype=='contact_section_orgnr':
