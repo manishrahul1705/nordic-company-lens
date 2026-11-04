@@ -170,6 +170,7 @@ Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Lat
 | 2026-11-04 | `4407516` | S6-2-1000 | Fallback robustness, normal1000 gate | 1000/997/774/999/72/33/3/231 → 1000/997/774/999/72/33/3/231 | 21 | 52 items / 0 wrong | KEEP | 811 tests; 249.476s, 6482 HTTP; NAV declared_index, 29.203s/6 requests, 0 incomplete. Declared-index normal path unchanged;0 incomplete and no count drops. All52 social sources reviewed. |
 | 2026-11-04 | `1abf474` | S6-3a-100 | Bounded own-company contact section and extra proof pages,100 | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 6 | 5 items / 0 wrong | KEEP | 823 tests; 56.959s, 751 HTTP; NAV declared_index, 4.187s/4 requests, 0 incomplete. No coverage drops;5social sources checked;website budget errors2to6. |
 | 2026-11-04 | `1abf474` | S6-3a-1000 | Saga/contact proof and up to3extra imprint/privacy checks,scale | 1000/997/774/999/72/33/3/231 → 1000/997/774/999/75/34/3/231 | 65 | 59 items / 0 wrong | KEEP | 823 tests; 273.237s, 7108 HTTP; NAV declared_index, 28.750s/7 requests, 0 incomplete. Full54social and5changed site proofs reviewed,0wrong. Net3websites/1social;budget errors21to65. Exact new identities Balder,Eimealt,Saga,7ocean;old NSNL plaintext fallback tracked for Step4. |
+| 2026-11-04 | `5a43013` (reverts `2b97438`) | S6-3b | Revert unbenchmarked suffix-absent trial | No benchmark; retained Step 3a results unchanged | not measured | not performed | not completed (model capacity interruption) | User-directed hard-stop wrap-up; no KEEP claim; rerun full 100/1000 gates before reconsidering. |
 
 Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
 
@@ -215,3 +216,9 @@ S6-2-1000 evidence: `bench/runs/20261104T075735641992Z-4407516`. Full opened sou
 S6-3a-100 evidence: `bench/runs/20261104T081142666432Z-1abf474`. Full opened source list: `s6-review.json`.
 
 S6-3a-1000 evidence: `bench/runs/20261104T081322420645Z-1abf474`. Full opened source list: `s6-review.json`.
+
+S6 hard-stop wrap-up: Steps 1, 2 and 3a KEEP; Step 3b reverted as not completed (model capacity interruption); Step 4 and S7 not started. Durable reports and evidence are in `bench/reports/`.
+
+Open issue for S6 Step 4: NSNL (org 952785052) was published as `http://www.nsnl.no` by the existing plaintext fallback in the Step 3a 1000 benchmark. Exact-company review passed, but plaintext is not valid TLS evidence. Do not treat this as resolved: Step 4 must permit only an HTTP redirect probe to valid HTTPS and never publish plaintext page evidence. No fix was attempted during wrap-up.
+
+Final hard-stop validation after reverting Step 3b: `uv run pytest -q` ? **823 passed in 192.93s**, exit 0. No new benchmark was run during wrap-up. Production code, scripts and tests match the kept Step 3a checkpoint (`4d80529`).

@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "commit": "4407516014e600bb9c8b34b75042ce2fa3de43df",
+  "run_id": "bench-20261104T075124281242Z",
+  "exit_code": 0,
+  "wall_seconds": 346.9977274999983,
+  "wall_seconds_source": "execution",
+  "http_requests": 7143,
+  "envelopes": 1000,
+  "profiles": 1000,
+  "deadline_hits": 0,
+  "warnings": [],
+  "website_budget_exhausted_count": 26,
+  "latest_year_accounts_count": 999,
+  "registry_latest_year_matched_count": 996,
+  "sections": {
+    "identity": {
+      "states": {
+        "available": 1000,
+        "not_available": 0,
+        "not_applicable": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "blocked": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 1000,
+        "not_found": 0,
+        "source_error": 0,
+        "not_applicable": 0,
+        "blocked": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 28737,
+      "error_conditions": {
+        "budget_exhausted": 0,
+        "deadline": 0
+      }
+    },
+    "people": {
+      "states": {
+        "available": 997,
+        "not_available": 3,
+        "not_applicable": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "blocked": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 997,
+        "not_found": 3,
+        "source_error": 0,
+        "not_applicable": 0,
+        "blocked": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 11800,
+      "error_conditions": {
+        "budget_exhausted": 0,
+        "deadline": 0
+      }
+    },
+    "locations": {
+      "states": {
+        "available": 774,
+        "not_available": 226,
+        "not_applicable": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "blocked": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 774,
+        "not_found": 226,
+        "source_error": 0,
+        "not_applicable": 0,
+        "blocked": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 6527,
+      "error_conditions": {
+        "budget_exhausted": 0,
+        "deadline": 0
+      }
+    },
+    "financials": {
+      "states": {
+        "available": 999,
+        "not_available": 0,
+        "not_applicable": 0,
+        "failed": 1,
+        "ambiguous": 0,
+        "blocked": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 999,
+        "not_found": 0,
+        "source_error": 1,
+        "not_applicable": 0,
+        "blocked": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 62584,
+      "error_conditions": {
+        "budget_exhausted": 0,
+        "deadline": 0
+      }
+    },
+    "website": {
+      "states": {
+        "available": 71,
+        "not_available": 817,
+        "not_applicable": 0,
+        "failed": 82,
+        "ambiguous": 27,
+        "blocked": 3,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 71,
+        "not_found": 817,
+        "source_error": 109,
+        "not_applicable": 0,
+        "blocked": 3,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 597,
+      "error_conditions": {
+        "budget_exhausted": 26,
+        "deadline": 0
+      }
+    },
+    "social": {
+      "states": {
+        "available": 32,
+        "not_available": 856,
+        "not_applicable": 0,
+        "failed": 82,
+        "ambiguous": 27,
+        "blocked": 3,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 32,
+        "not_found": 856,
+        "source_error": 109,
+        "not_applicable": 0,
+        "blocked": 3,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 50,
+      "error_conditions": {
+        "budget_exhausted": 26,
+        "deadline": 0
+      }
+    },
+    "jobs": {
+      "states": {
+        "available": 2,
+        "not_available": 929,
+        "not_applicable": 0,
+        "failed": 69,
+        "ambiguous": 0,
+        "blocked": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 2,
+        "not_found": 929,
+        "source_error": 69,
+        "not_applicable": 0,
+        "blocked": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 2,
+      "error_conditions": {
+        "budget_exhausted": 0,
+        "deadline": 0
+      }
+    },
+    "news/activity": {
+      "states": {
+        "available": 231,
+        "not_available": 681,
+        "not_applicable": 0,
+        "failed": 88,
+        "ambiguous": 0,
+        "blocked": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "profile_states": {
+        "available": 231,
+        "not_found": 681,
+        "source_error": 88,
+        "not_applicable": 0,
+        "blocked": 0,
+        "failed": 0,
+        "ambiguous": 0,
+        "budget_exhausted": 0,
+        "deadline": 0
+      },
+      "distinct_facts": 607,
+      "error_conditions": {
+        "budget_exhausted": 5,
+        "deadline": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "before": "bench\\runs\\20261104T064156705198Z-098dc33",
+  "after": "bench\\runs\\20261104T073725872378Z-52818c4",
+  "drops": {},
+  "opened": [
+    {
+      "org": "991247610",
+      "names": [
+        "ROLIDBAKKEN FUS BARNEHAGE AS",
+        "ROLIDBAKKEN FUS BARNEHAGE AS"
+      ],
+      "field": "hiring.job.bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+      "value": {
+        "uuid": "bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+        "employer_orgnr": "931166492",
+        "status": "ACTIVE",
+        "title": "Du vet den barnehagen du h\u00e5per finnes? Kanskje du nettopp fant den. ",
+        "location": [
+          {
+            "municipality": "GJ\u00d8VIK",
+            "city": "BIRI"
+          }
+        ],
+        "published": "2026-10-23T08:15:17+02:00",
+        "expires": "2026-11-13T00:00:00+01:00",
+        "occupation_categories": [
+          {
+            "level1": "Utdanning",
+            "level2": "Barnehagel\u00e6rer"
+          }
+        ],
+        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+        "availability": {
+          "location": "available",
+          "occupation_categories": "available"
+        },
+        "employer_homepage": "https://fus.no/rolidbakken",
+        "matched_via": "subunit 931166492"
+      },
+      "changed": true,
+      "sources": [
+        {
+          "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+          "sha": "ab1c0f08de9c72b500babd439c750674a5deed6c23a98a45bc5f3f413ec39191",
+          "excerpt": "{\"uuid\":\"bdb50d18-4cdb-485f-a8cf-f861927dd9ca\",\"published\":\"2026-10-23T08:15:17+02:00\",\"expires\":\"2026-11-13T00:00:00+01:00\",\"updated\":\"2026-10-23T08:18:11.839499+02:00\",\"workLocations\":[{\"country\":\"NORGE\",\"address\":\"Snertingdalsveien 150\",\"city\":\"BIRI\",\"postalCode\":\"2836\",\"county\":\"INNLANDET\",\"muni",
+          "method": "signalpost.nav.v1",
+          "source_class": "official_nav",
+          "raw_employer": {
+            "name": "Rolidbakken Fus Barnehage As",
+            "orgnr": "931166492",
+            "description": "<p>Vi i Rolidbakken FUS Barnehage mener at gode barnehager skapes av mennesker som trives sammen. Hos oss m\u00f8ter du engasjerte kollegaer som l\u00f8fter hverandre, ler sammen og alltid har barnas beste i fokus.</p>\n<p>Vi er opptatt av \u00e5 skape en hverdag preget av trygghet, lekeglede og nysgjerrighet. Her f\u00e5r du mulighet til \u00e5 bruke kompetansen din, p\u00e5virke praksisen v\u00e5r og v\u00e6re en viktig del av et faglig fellesskap som \u00f8nsker \u00e5 utvikle seg sammen.</p>\n<p>Vi vet at ingen er perfekte, men vi tror p\u00e5 \u00e5 spille hverandre gode. Derfor jobber vi for en kultur preget av \u00e5penhet, samarbeid og tillit. Hos oss skal du bli sett, h\u00f8rt og verdsatt for den du er.</p>\n<p>Hver dag hos oss handler om \u00e5 gi barn en trygg start p\u00e5 livet, skape magiske \u00f8yeblikk i leken og v\u00e6re den voksne som gj\u00f8r en forskjell.</p>\n<p><strong>\u00d8nsker du en arbeidsplass med varme, engasjement og faglig stolthet? Da kan Rolidbakken v\u00e6re stedet for deg.</strong></p>\n<p><em>&#34;Vi bygger ikke bare en barnehage. Vi bygger barndom.&#34;</em> \u2764\ufe0f</p>\n",
+            "homepage": "https://fus.no/rolidbakken"
+          },
+          "raw_status": "ACTIVE",
+          "raw_title": "Du vet den barnehagen du h\u00e5per finnes? Kanskje du nettopp fant den. ",
+          "raw_uuid": "bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+          "raw_expires": "2026-11-13T00:00:00+01:00"
+        }
+      ],
+      "permitted_employers": [
+        "931166492",
+        "991247610"
+      ]
+    },
+    {
+      "org": "986739874",
+      "names": [
+        "AAS BETONG AS",
+        "AAS BETONG AS"
+      ],
+      "field": "social_profile.6f188b99ccf6f9021547",
+      "value": {
+        "url": "https://www.facebook.com/Aas-Betong-As-576953999078361",
+        "platform": "facebook.com"
+      },
+      "changed": false,
+      "sources": [
+        {
+          "url": "https://www.aasbetong.no/",
+          "sha": "610f46940f54b205a83485fefae46c97212e6695ad5a012236ac23751d3012ec",
+          "excerpt": "<a rel=\"noreferrer\" id=\"w-node-e3dbc314-55eb-09ba-259b-a056b9b74243-b9b741de\" href=\"https://www.facebook.com/Aas-Betong-As-576953999078361/\" target=\"_blank\" class=\"facebook-block w-inline-block\">",
+          "method": "signalpost.website.v1",
+          "source_class": "company_owned",
+          "title": "Et utemilj\u00f8 \u00e5 v\u00e6re stolt av",
+          "visible_excerpt": "Et utemilj\u00f8 \u00e5 v\u00e6re stolt av produktkategori Produktkategori oversikt Heller Belegningsstein Mur og Blokk Redi St\u00f8ttemur Tilbeh\u00f8r Kantstein Dekor og grusprodukter Sperreprodukter Blomsterkasser Andre produkter AKtuelt inspirasjon forhandlere Oversikt Vestland Viken Tr\u00f8ndelag Troms og Finnmark Rogaland Nordland M\u00f8re og Romsdal Innlandet om oss Om AAS BETONG Kontakt Historikk Ledige stillinger Salgs- og leveringsbetingelser Et utemilj\u00f8 \u00e5 v\u00e6re stolt av Vi er en betongvarefabrikk som produserer heller, belegningsstein, murer og bygningsblokk til privat og offentlig marked. V\u00e5re produkter Heller Belegningsstein Mur og Blokk Redi St\u00f8ttemur Tilbeh\u00f8r Kantstein Dekor og grusprodukter Sperreprodukter Blomsterkasser Andre produkter Aktuelt Nytt veikryss ved \u00c5se, \u00c5lesund sykehus Redi st\u00f8ttemur brukt ved ny veistruktur ved \u00c5se Sykehus i \u00c5lesund Produkter levert i sm\u00e5sekk Vi leverer ulike produkter i p"
+        }
+      ],
+      "name_match": true
+    },
+    {
+      "org": "920918204",
+      "names": [
+        "STOA AUTOREP AS",
+        "STOA AUTOREP AS"
+      ],
+      "field": "social_profile.4a5bbc80815934310b5a",
+      "value": {
+        "url": "https://www.facebook.com/stoaautorep",
+        "platform": "facebook.com"
+      },
+      "changed": false,
+      "sources": [
+        {
+          "url": "https://stoaautorep.no/",
+          "sha": "f2f1bcfdc1f7c5220ea6648fdb22dab1da4ab15c7d1b9b3411cbd59b2c8c4382",
+          "excerpt": "<a href=\"https://www.facebook.com/stoaautorep/\" target=\"_blank\">",
+          "method": "signalpost.website.v1",
+          "source_class": "company_owned",
+          "title": "Bilverksted i Arendal - MECA bilverksted - Stoa Autorep",
+          "visible_excerpt": "kontor@stoaautorep.no 37 00 10 50 \u00c5pningstider Facebook Hjem Om oss V\u00e5re tjenester Bilverksted Arendal Elbil-verksted i Arendal EU-kontroll Arendal Dieselvarmer Dekk og dekkhotell Alkol\u00e5s-verksted Bestill time Kontakt oss N\u00e5r det kommer til h\u00f8y kvalitet, god \u00f8konomi p\u00e5 vedlikehold og reparasjon for alle bilmodeller, svaret er enkelt Close Hjem Om oss V\u00e5re tjenester Bilverksted Arendal Elbil-verksted i Arendal EU-kontroll Arendal Dieselvarmer Dekk og dekkhotell Alkol\u00e5s-verksted Bestill time Kontakt oss BESTILL TIME MECA konto KONTAKT OSS KAMPANJER BESTILL TIME MECA konto KONTAKT OSS KAMPANJER Bilverksted Arendal LES MER Elbil-verksted Arendal LES MER S\u00d8KEFUNKSJON EU kontroll Arendal LES MER Dieselvarmer LES MER Dekk og dekkhotell LES MER Bilverksted i Arendal Stoa Autorep er et komplett bilverksted i Arendal. Teamet v\u00e5rt best\u00e5r av 8 trivelige ansatte som vil gj\u00f8re sitt aller beste for at "
+        }
+      ],
+      "name_match": true
+    },
+    {
+      "org": "823147112",
+      "names": [
+        "KN ELEKTRO AS",
+        "KN ELEKTRO AS"
+      ],
+      "field": "social_profile.19b491ae8376e3f94d32",
+      "value": {
+        "url": "https://www.facebook.com/KN-Elektro-As-104194150969215",
+        "platform": "facebook.com"
+      },
+      "changed": false,
+      "sources": [
+        {
+          "url": "https://knelektro.no/",
+          "sha": "362ddb0331859fb7d52a14994604b4579beb3c758d0bbdcac22f9b9b182d7001",
+          "excerpt": "a property=\"article:publisher\" content=\"https://www.facebook.com/KN-Elektro-As-104194150969215\" />\n\t<meta property=\"article:modified_time\" content=\"2026-08-14T18:03:09+00:00\" />\n\t<meta property=\"og:image\" content=\"https://knelektro.no/wp-content/uploads/2020/03/Slider001-scaled.jpg\" />\n\t<meta proper",
+          "method": "signalpost.website.v1",
+          "source_class": "company_owned",
+          "title": "Forside - KN Elektro",
+          "visible_excerpt": "97 17 10 29 post@knelektro.no Man - Fre: 8:00 - 16:00 Forside Tjenester Elektrikerpakker Varmepumpe Referanser Kontakt KN Elektro utf\u00f8rer alt innen elektrotjenester Kontakt oss Kontakt oss for en hyggelig og uforpliktende prat Kontakt oss Ladestasjon elbil (16A) Komplett montering av ladestasjon med ny kurs og integrert jordfeilbryter. Finn ut mer Ladestasjon elbil (32A) Komplett montering av ladestasjon med ny kurs og integrert jordfeilbryter. Finn ut mer Halogen til LED Utsikfting av eldre halogenlspotter til LED. Finn ut mer Oppgradering sikringsskap Komplett oppgradering av eldre sikringsskap til nytt. Finn ut mer OM KN ELEKTRO AS KN Elektro AS har lang erfaring innen ulike elektriske installasjoner og er veldig opptatt av deg som kunde. Vi \u00f8nsker \u00e5 levere de beste produktene og tjenestene til enhver tid. V\u00e5re ansatte har lang erfaring og alle n\u00f8dvendige sertifiseringer. Noen sp\u00f8rsm\u00e5"
+        }
+      ],
+      "name_match": true
+    },
+    {
+      "org": "991368000",
+      "names": [
+        "RALSTON BAU AS",
+        "RALSTON BAU AS"
+      ],
+      "field": "social_profile.943c0bea445efdf691a2",
+      "value": {
+        "url": "https://www.facebook.com/ralstonbau",
+        "platform": "facebook.com"
+      },
+      "changed": false,
+      "sources": [
+        {
+          "url": "https://ralstonbau.com/en/about",
+          "sha": "4409128aa00739ffd929fc157295512f2292406864723033960bacb625cff989",
+          "excerpt": "<a href=\"https://www.facebook.com/ralstonbau\" target=\"_blank\">",
+          "method": "signalpost.website.v1",
+          "source_class": "company_owned",
+          "title": "Contact | \tRalston Bau",
+          "visible_excerpt": "Cases Space Object Program Practice Big picture People Scenario Form Studio Profile Practice Publications Academia Honors Contact English Fran\u00e7ais Norsk Irregular Notes Big picture People Scenario Form Space Object Program Profile Practice Publications Academia Honors Contact Contact For any request or order, please contact us at studio@ralstonbau.com RALSTON BAU Damsg\u00e5rdsveien 227 N-5160 Bergen, Norway +47 48 123 115 73-75 La Canebi\u00e8re F-13001 Marseille, France +33 (0)6 0920 1898 studio@ralstonbau.com Org. nr. NO-991368000 MVA The Irregular Notes is a newsletter sharing the Ralston Bau studio research and interventions. It is, as the name says, sent out irregularly two to four times per year. We take our General Data Protection Regulation (GDPR) obligations seriously and strive to ensure that your personal data is securely held at all times. We do not use cookies and will never disclose"
+        }
+      ],
+      "name_match": true
+    },
+    {
+      "org": "928657523",
+      "names": [
+        "VIVIFY GRUPPEN AS",
+        "VIVIFY GRUPPEN AS"
+      ],
+      "field": "social_profile.07cfe9a233e8741b1ba5",
+      "value": {
+        "url": "https://www.linkedin.com/company/vivify-gruppen",
+        "platform": "linkedin.com"
+      },
+      "changed": false,
+      "sources": [
+        {
+          "url": "https://www.vivify.no/",
+          "sha": "3ea7dd443d03c3ecb11bf54bcbf523a5c9065de740277fc0ca902c99cd4542b9",
+          "excerpt": "<a\n            href=\"https://www.linkedin.com/company/vivify-gruppen/\"\n            target=\"_blank\"\n            class=\"sqs-svg-icon--wrapper linkedin-unauth\"\n            aria-label=\"LinkedIn\"\n          >",
+          "method": "signalpost.website.v1",
+          "source_class": "company_owned",
+          "title": "Vivify | Bygginnredning for n\u00e6ringsbygg i hele Norge",
+          "visible_excerpt": "0 Hopp til innhold V\u00e5re prosjekter V\u00e5re selskaper V\u00e5re l\u00f8sninger Om Vivify Om oss Ledergruppen B\u00e6rekraft og ansvarlighet Kontakt oss V\u00e5re prosjekter V\u00e5re selskaper V\u00e5re l\u00f8sninger Om Vivify Om oss Ledergruppen B\u00e6rekraft og ansvarlighet Kontakt oss V\u00e5re prosjekter V\u00e5re selskaper V\u00e5re l\u00f8sninger Mappe: Om Vivify Tilbake Om oss Ledergruppen B\u00e6rekraft og ansvarlighet Kontakt oss Vi skaper vakre rom som virker Vivifys selskaper produserer, leverer og monterer bygginnredning for private og offentlige n\u00e6ringsbygg. Gode opplevelser. Satt i system. Se v\u00e5re prosjekter Vivify er et konsern av sterke lokale selskaper innen bygg- og systeminnredning Vi skaper rom der mennesker skal jobbe, m\u00f8tes og trives, og bygger trygghet gjennom hele leveransen. Sammen kombinerer vi n\u00e6rhet til markedet med kapasitet, spesialkompetanse og leveransedyktighet p\u00e5 tvers av regioner og prosjekter. Hvert selskap i Vivify k"
+        }
+      ],
+      "name_match": true
+    }
+  ],
+  "review_status": "COMPLETE",
+  "wrong_company": 0,
+  "decision": "KEEP 100 gate; scale pending",
+  "review_note": "All five unchanged exact-name social primary sources checked. Rolidbakken job live detail explicitly names Rolidbakken Fus Barnehage As, employer orgnr 931166492, registry-validated subunit of 991247610; ACTIVE, correct UUID/title and future expiry. No new websites/news. NAV complete with zero incomplete. No count drops."
+}

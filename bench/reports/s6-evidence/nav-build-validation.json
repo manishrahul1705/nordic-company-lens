@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "index_version": "nav-20261104T071654.150483Z-v1",
+  "built_at": "2026-11-04T07:16:54.150483Z",
+  "source_urls": [
+    "https://pam-stilling-feed.nav.no/api/v1/feed",
+    "https://pam-stilling-feed.nav.no/api/v1/feedentry/{uuid}"
+  ],
+  "ads_count": 8554,
+  "employer_count": 5500,
+  "failed_details": 0,
+  "seeded_from_disk": 0,
+  "fresh_fetched_ads": 8554,
+  "compressed_bytes": 396394,
+  "runtime_seconds": 1303.453999999998,
+  "requests_this_attempt": 9262,
+  "token_used": "public",
+  "optional_token_file": "absent",
+  "sha256": "96fcbe1976a41dfda0fca829a1d5dc64ad754122fb58d87dbca1273ff9cc63a6",
+  "valid_until_utc": "2026-11-25T07:16:54.150483+00:00"
+}
