@@ -3,6 +3,7 @@ from ..workers import offload,nav_offload
 
 import asyncio
 import heapq
+import math
 import json
 import os
 import time
@@ -10,6 +11,7 @@ import threading
 from functools import wraps
 from concurrent.futures import ThreadPoolExecutor
 from collections import Counter,defaultdict
+from statistics import median
 from datetime import datetime,timedelta,timezone
 from email.utils import format_datetime
 from uuid import UUID
@@ -21,6 +23,23 @@ from .nav import (BASE,NavHttp,Ad,allowed,time_cap,token_from,timestamp,header_n
 
 def version(record):
     return (record[0],record[1]['_feed_entry']['status'],header_name(record[1]))
+
+
+def detail_capacity(config,budget,index,began,now=None):
+    """Admit detail attempts from remaining NAV/crawl time and request room."""
+    if config.nav_max_details is not None:
+        return config.nav_max_details
+    now=time.monotonic() if now is None else now
+    remaining=max(0,min(budget.deadline,began+time_cap(config))-now)
+    used=index.metrics.get('detail_requests',0)
+    durations=[e['runtime_ms']/1000 for e in budget.events
+               if '/feedentry/' in e.get('url','') and e.get('runtime_ms',0)>0]
+    seconds=max(.05,median(durations[-32:])) if durations else min(1.,config.nav_request_timeout)
+    room=max(0,budget.cap-len(budget.events))
+    attempts=max(config.nav_concurrency,math.floor(remaining*config.nav_concurrency/seconds)) if remaining>0 else 0
+    index.metrics.update({'detail_cap_basis':'remaining_time_and_requests',
+                          'detail_seconds_left':remaining,'detail_seconds_per_attempt':seconds})
+    return used+min(room,attempts)
 
 
 def locked(fn):
@@ -37,7 +56,7 @@ class Stream:
         self.unfiltered=unfiltered;self.names=None;self.token_orgs=defaultdict(set)
         self.scores={}
         self.latest={};self.active={};self.frequency=Counter();self.discovered=set()
-        self.pending={};self.heap=[];self.checked={};self.failed={};self.capped=set();self.inflight=0;self.serial=0
+        self.pending={};self.heap=[];self.checked={};self.failed={};self.capped=set();self.running={};self.inflight=0;self.serial=0
         self.changed=asyncio.Event();self.waiters=[];self.done=False;self.page_complete=False;self.names_complete=False;self.errors=[]
 
     def wake(self):
@@ -82,10 +101,10 @@ class Stream:
         if not self.unfiltered and header_name(record[1]) and not affected:
             self.pending.pop(uuid,None);return
         self.discovered.add(uuid)
-        self.index.metrics['detail_request_cap']=(self.config.nav_max_details if self.config.nav_max_details is not None
-            else min(len(self.discovered),max(300,2*len(self.names))))
+        self.index.metrics['detail_request_cap']=detail_capacity(self.config,self.http.budget,self.index,self.began)
         v=version(record)
         if self.checked.get(uuid)==v or self.failed.get(uuid)==v:return
+        if self.running.get(uuid)==v:return
         if uuid in self.pending and version(self.pending[uuid][0])==v:return
         self.pending[uuid]=(record,affected);self.serial+=1
         heapq.heappush(self.heap,(-score,uuid,self.serial,v))
@@ -201,18 +220,20 @@ class Stream:
 
     @locked
     def take(self):
-        cap=self.index.metrics.get('detail_request_cap',0)
+        cap=detail_capacity(self.config,self.http.budget,self.index,self.began)
+        self.index.metrics['detail_request_cap']=cap
         if self.names is not None and self.index.metrics.get('detail_requests',0)+self.inflight<cap:
             while self.heap:
                 _,uuid,_,v=heapq.heappop(self.heap);current=self.pending.get(uuid)
                 if current is not None and version(current[0])==v:
-                    record,affected=self.pending.pop(uuid);self.inflight+=1
+                    record,affected=self.pending.pop(uuid);self.inflight+=1;self.running[uuid]=v
                     return (uuid,record,affected),False
         return None,self.done and self.names_complete
 
     @locked
     def checked_detail(self,uuid,record,good):
         self.inflight-=1
+        self.running.pop(uuid,None)
         if uuid not in self.capped:(self.checked if good else self.failed)[uuid]=version(record)
         self.wake()
 
@@ -296,7 +317,11 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
             url=BASE+'/api/v1/feed';next_url=url;headers={'If-Modified-Since':format_datetime(cutoff,usegmt=True)};seen=set()
             paging_began=time.monotonic()
             while url:
-                if index.metrics['pages']>=config.nav_max_pages:state.errors.append('nav_page_cap');break
+                if index.metrics['pages']>=config.nav_max_pages:
+                    state.errors.append('nav_page_cap')
+                    index.metrics.update({'page_cap_exceeded':True,'page_cap':config.nav_max_pages,
+                                          'unread_next_url':url})
+                    break
                 url=allowed(url)
                 if url in seen:raise SourceFailure('nav_paging_loop')
                 seen.add(url)

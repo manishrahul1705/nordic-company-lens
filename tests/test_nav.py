@@ -203,7 +203,9 @@ def test_default_candidate_cap_and_bounded_parallel_details(tmp_path):
         async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:
             await prefetch(client,cfg,Budget(cfg),BlobStore(cfg.state_dir),index,names)
     asyncio.run(run_gate())
-    assert index.metrics['detail_request_cap']==index.metrics['distinct_candidate_ads']==6
+    assert index.metrics['distinct_candidate_ads']==6
+    assert index.metrics['detail_request_cap']>=6
+    assert index.metrics['detail_cap_basis']=='remaining_time_and_requests'
     assert index.metrics['detail_requests']==6 and index.complete
     assert 1<peak<=4
 

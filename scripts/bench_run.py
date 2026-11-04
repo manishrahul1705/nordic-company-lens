@@ -51,6 +51,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--size', choices=(20, 100, 1000), type=int, default=100)
     parser.add_argument('--search', action='store_true', help='Explicit paid Brave comparison; requires terminal environment variables')
+    parser.add_argument('--nav-index-path',type=Path,help='Explicit fixture override for stale/malformed index benchmarks')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     try:
@@ -94,6 +95,8 @@ def main():
     if args.search:
         # User-authorized comparison: at most one $0.005 query per company.
         command.extend(['--search-max-queries',str(args.size),'--max-cost-usd',str(args.size*.005)])
+    if args.nav_index_path:
+        command.extend(['--nav-index-path',str(args.nav_index_path.resolve())])
     execution = {'commit': commit, 'working_tree_dirty': dirty, 'size': args.size,
                  'started_at': datetime.now(timezone.utc).isoformat(), 'command': command,
                  'input_sha256': hashes,
@@ -101,6 +104,8 @@ def main():
                  'credentials': ('Only Brave provider/key retained in child environment; values never recorded' if args.search
                                  else 'API key variables, NAV_API_TOKEN and search/model selectors removed')}
     execution_path = destination / 'execution.json'
+    if args.nav_index_path:
+        execution['nav_index_override_sha256']=hashlib.sha256(args.nav_index_path.read_bytes()).hexdigest()
     execution_path.write_text(json.dumps(execution, indent=2) + '\n', encoding='utf-8')
     print('Benchmark output: ' + str(destination), flush=True)
     began = time.perf_counter()
