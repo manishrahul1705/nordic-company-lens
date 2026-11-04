@@ -10,9 +10,7 @@ Live identity and accounts must explicitly identify the requested company. Roles
 
 ## Websites
 
-Free discovery considers at most 32 registrable-domain candidates from registry websites/emails, exact-employer NAV homepages, registered subunits, exact-organisation Wikidata nominations and legal-name domains. Registry and Wikidata website claims remain nominations until live website identity is independently established. Social/directory domains are excluded from candidate fetching.
-
-Explicitly opted-in Brave search can nominate up to five additional domains after free discovery fails, only for a company with employees or latest revenue greater than zero. It gets one paid attempt per company within query/cost budgets. Search snippets never authorize facts; every candidate passes the same live ownership proof.
+At most 32 registrable-domain candidates come from registry websites/emails, exact-employer NAV homepages, registered subunits, exact-organisation Wikidata nominations and legal-name domains. Registry and Wikidata website claims remain nominations until live website identity is independently established. Social/directory domains are excluded from candidate fetching.
 
 | Level | Publication rule |
 |---|---|

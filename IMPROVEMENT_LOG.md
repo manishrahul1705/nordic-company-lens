@@ -156,5 +156,8 @@ Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Lat
 | ambiguous (name-only or competing candidates) | 1 | 28 |
 | budget exhausted | 1 | 16 |
 | TLS-connect failure | 19 | 139 |
+| 2026-11-04 | `0b05b2e` | S5-6-trial | Optional Brave live trial; two false official-directory assignments | 100/100/85/100/10/4/1/29 → 100/100/85/100/13/5/1/29 | 18 | 9 items / 2 wrong | ROLLED BACK | 793 tests; 391.532s, 1512 HTTP. 59 queries, estimated USD 0.295; two directory pages rejected on full review. Existing directory guard root cause will receive a separate regression fix before reapplication. Ralston recovery is transport variance, not search gain. |
 
 Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
+
+S5-6-trial evidence: `bench/runs/20261104T051103339719Z-0b05b2e`. Full social and new website/news source list: `s5-review.json`.
