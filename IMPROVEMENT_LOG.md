@@ -165,6 +165,9 @@ Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Lat
 | 2026-11-04 | `c0da0a1` | S5-final-scale | Final 1000-company search-OFF validation after malformed metadata safeguard | 1000/997/774/999/68/29/2/231 → 1000/997/774/999/71/32/2/231 | 23 | 54 items / 0 wrong | VALIDATION | 806 tests; 472.309s, 6989 HTTP. 1000 envelopes, exit zero, 472.309s = 19.68 percent of 2400s, under 1200s. Zero deadlines/exceptions, 6989 HTTP. All 50 social and four changed site proofs reviewed; all 71 sites audited, 0 wrong. NAV stale-index full fallback 363.188s/508 requests; 73 hiring-incomplete companies retained. One accounts VPFO source failure unchanged. Runtime variation is not attributed to NAV changes. |
 | 2026-11-04 | `52818c4` | S6-1-100 | Fresh public-token NAV index, 100-company gate | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 6 items / 0 wrong | KEEP | 808 tests; 59.596s, 700 HTTP; NAV declared_index, 4.516s/4 requests, 0 incomplete. NAV incomplete8 to0; no section drop; job and five social sources reviewed. |
 | 2026-11-04 | `52818c4` | S6-1-1000 | Fresh public-token NAV index, scale gate | 1000/997/774/999/71/32/2/231 → 1000/997/774/999/72/33/3/231 | 24 | 57 items / 0 wrong | KEEP | 808 tests; 316.499s, 6495 HTTP; NAV declared_index, 34.453s/6 requests, 0 incomplete. NAV incomplete73 to0, declared_index; all52 social,3 jobs and2 changed site proofs reviewed, zero wrong. No section drop. |
+| 2026-11-04 | `4407516` | S6-2-100 | Fallback time-based detail budget, normal100 | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 811 tests; 55.340s, 694 HTTP; NAV declared_index, 4.500s/4 requests, 0 incomplete. All5 social sources reviewed; no new assignments or count drops. |
+| 2026-11-04 | `4407516` | S6-2-stale1000 | Forced-stale fallback stress gate | 1000/997/774/999/71/32/2/231 → 1000/997/774/999/71/32/2/231 | 26 | 51 items / 0 wrong | KEEP | 811 tests; 346.998s, 7143 HTTP; NAV full_feed_fallback, 272.438s/663 requests, 69 incomplete. Original October14 index;299 detail attempts,0 unchecked candidate companies,0 failed ads/cap hits. Incomplete73 to69, all name-unusable, honest nav_name_unusable.346.998s under1200. No section drop versus stale baseline,50 social and1 changed site reviewed. |
+| 2026-11-04 | `4407516` | S6-2-1000 | Fallback robustness, normal1000 gate | 1000/997/774/999/72/33/3/231 → 1000/997/774/999/72/33/3/231 | 21 | 52 items / 0 wrong | KEEP | 811 tests; 249.476s, 6482 HTTP; NAV declared_index, 29.203s/6 requests, 0 incomplete. Declared-index normal path unchanged;0 incomplete and no count drops. All52 social sources reviewed. |
 
 Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
 
@@ -200,3 +203,9 @@ S6 Step 1 fresh NAV index build (benchmarks pending): public token, new checkpoi
 S6-1-100 evidence: `bench/runs/20261104T073725872378Z-52818c4`. Full opened source list: `s6-review.json`.
 
 S6-1-1000 evidence: `bench/runs/20261104T073852917844Z-52818c4`. Full opened source list: `s6-review.json`.
+
+S6-2-100 evidence: `bench/runs/20261104T074953456731Z-4407516`. Full opened source list: `s6-review.json`.
+
+S6-2-stale1000 evidence: `bench/runs/20261104T075124281242Z-4407516`. Full opened source list: `s6-review.json`.
+
+S6-2-1000 evidence: `bench/runs/20261104T075735641992Z-4407516`. Full opened source list: `s6-review.json`.
