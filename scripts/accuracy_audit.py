@@ -25,6 +25,7 @@ from urllib.parse import urlparse
 
 from signalpost.web.html import Page, json_values
 from signalpost.web.candidates import legal_name
+from signalpost.web.policy import is_directory_record
 from signalpost.web.proof import phone, orgnrs, is_dedicated_entity_card, extract_entity_cards, find_containing_card
 
 # Known directory and aggregator domains that cannot serve as company official websites
@@ -32,7 +33,7 @@ DIRECTORY_DOMAINS = {
     "proff.no", "180.no", "gulesider.no", "purehelp.no", "allabolag.se",
     "enhetsregisteret.no", "brreg.no", "facebook.com", "linkedin.com",
     "instagram.com", "twitter.com", "x.com", "wikipedia.org", "youtube.com",
-    "utdanning.no", "vat-validation.com"
+    "utdanning.no", "vat-validation.com", "nordlei.no"
 }
 
 # Generic platform landing paths that do not constitute verified company profiles
@@ -605,6 +606,9 @@ def audit_website_claim(
 
     if not body:
         return "UNVERIFIABLE", "Stored destination website body unavailable", None
+
+    if any(is_directory_record(candidate) for candidate in (url, val.get('proof_page_url')) if candidate):
+        return 'INCORRECT', 'An LEI directory record cannot prove official-site ownership', None
 
     # 1. Reject known directory and social aggregator domains
     if url:

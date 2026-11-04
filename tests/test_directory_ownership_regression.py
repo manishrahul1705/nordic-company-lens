@@ -40,3 +40,24 @@ def test_directory_subdomains_cannot_bypass_ownership_guard(url):
                 '926698435',{'name':'UPPSTAD VVS AVDELING HOVDEN AS'},'registry_website',[])
     assert proof.level=='REJECT'
     assert proof.reason=='directory_or_marketplace'
+
+
+@pytest.mark.parametrize('host', ['nordlei.no', 'www.nordlei.no', 'unlisted-lei-provider.no'])
+def test_lei_directory_record_is_not_an_owned_site_even_on_unlisted_domain(host):
+    url=f'https://{host}/lei/254900XUQRFIPTZYQ539/giljeholmen-as'
+    body='<title>LEI registration and lookup</title><h1>GILJEHOLMEN AS</h1><p>Selskapsregisternummer 918 270 205</p>'
+    context={'name':'GILJEHOLMEN AS','website':url}
+    proof=score(Page(body.encode(),url),'918270205',context,'registry_website',[])
+    assert proof.level=='REJECT' and proof.reason=='directory_or_marketplace'
+    assert all(candidate.url!=url for candidate in generate(context))
+    with pytest.raises(SourceFailure):
+        validate_url(url,{host.removeprefix('www.')})
+    claim={'field':'official_website','value':{'final_url':f'https://{host}',
+          'proof_page_url':url,'identity_level':'VERIFIED'}}
+    assert audit_website_claim('918270205',claim,{},body,context=context)[0]=='INCORRECT'
+
+
+def test_company_homepage_can_disclose_its_own_lei():
+    body=b'<h1>GILJEHOLMEN AS</h1><footer>Org.nr 918270205; LEI 254900XUQRFIPTZYQ539</footer>'
+    assert score(Page(body,'https://giljeholmen.no/'),'918270205',
+                 {'name':'GILJEHOLMEN AS'},'registry_website',[]).level=='VERIFIED'

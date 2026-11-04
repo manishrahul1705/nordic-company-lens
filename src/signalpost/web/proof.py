@@ -4,7 +4,7 @@ from ..identity.orgnr import valid
 from .candidates import legal_name
 from .html import json_values
 from .candidates import GENERIC
-from .policy import domain, DIRECTORIES, SOCIAL
+from .policy import domain, DIRECTORIES, SOCIAL, is_directory_record
 
 
 def orgnrs(text):
@@ -204,7 +204,7 @@ class Proof:
 
 
 def score(page, org, context, origin, leaders):
-    if domain(page.url) in DIRECTORIES | SOCIAL:
+    if domain(page.url) in DIRECTORIES | SOCIAL or is_directory_record(page.url):
         return Proof('REJECT', reason='directory_or_marketplace')
     raw = page.raw.lower()
     is_active_challenge = (

@@ -1,5 +1,6 @@
 import asyncio
 import ipaddress
+import re
 import socket
 from contextvars import ContextVar
 from urllib.parse import urlsplit, urlunsplit
@@ -14,7 +15,7 @@ SOCIAL = {"facebook.com", "instagram.com", "linkedin.com", "x.com", "twitter.com
 DIRECTORIES = {"proff.no", "proff.com", "proff.dk", "proff.se", "gulesider.no", "1881.no", "purehelp.no", "finn.no", "fb.me", "fb.com", "youtu.be", "lnkd.in", "t.co", "threads.net"}
 # These services reproduce registry identity/contact data; a matching company
 # entry is not evidence that the company owns the service's website.
-DIRECTORIES |= {"utdanning.no", "vat-validation.com"}
+DIRECTORIES |= {"utdanning.no", "vat-validation.com", "nordlei.no"}
 FREE_MAIL = {"gmail.com", "googlemail.com", "hotmail.com", "hotmail.no", "outlook.com", "live.com", "live.no", "yahoo.com", "yahoo.no", "online.no", "icloud.com", "me.com", "protonmail.com", "proton.me", "aol.com", "msn.com", "mail.com"}
 FREE_MAIL |= {'outlook.no', 'hotmail.co.uk', 'outlook.co.uk', 'yahoo.co.uk',
               'yahoo.fr', 'ymail.com', 'mac.com', 'getmail.no', 'start.no',
@@ -46,9 +47,14 @@ def normalize_url(value):
     return urlunsplit((parts.scheme, host + port, parts.path or "/", "", ""))
 
 
+def is_directory_record(url):
+    """An LEI lookup record identifies a registry entry, not an owned site."""
+    return bool(re.search(r'/lei/[a-z0-9]{20}(?:/|$)', urlsplit(url).path, re.I))
+
+
 def validate_url(url, domains):
     normalized = normalize_url(url)
-    if normalized is None or domain(normalized) not in domains or domain(normalized) in SOCIAL | DIRECTORIES:
+    if normalized is None or domain(normalized) not in domains or domain(normalized) in SOCIAL | DIRECTORIES or is_directory_record(normalized):
         raise SourceFailure("url_refused", "URL lies outside this company's permitted candidate domains")
     return normalized
 

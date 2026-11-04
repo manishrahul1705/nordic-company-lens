@@ -1,7 +1,7 @@
 import re
 from functools import lru_cache
 from dataclasses import dataclass
-from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
+from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL, is_directory_record
 from ..sources.bulk_registry import column
 
 FORMS = r"\b(?:as|asa|ans|da|enk|nuf|sa|ba|ks|iks|sti)\b$"
@@ -63,7 +63,7 @@ def generate(context):
     def add(value, origin, subunit_orgnr=None):
         url = normalize_url(value)
         root = domain(url) if url else ""
-        if root and root not in seen and root not in SOCIAL | DIRECTORIES | FREE_MAIL:
+        if root and root not in seen and root not in SOCIAL | DIRECTORIES | FREE_MAIL and not is_directory_record(url):
             output.append(Candidate(url, root, origin,subunit_orgnr))
             seen.add(root)
     add(context.get("website"), "registry_website")
