@@ -149,7 +149,7 @@ def followup_links(page):
 
 # Pages where Norwegian companies state their organisation number. They are tried
 # after the links found on the home page; proof rules apply to them unchanged.
-FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/om', '/personvern', '/about', '/contact', '/privacy', '/personvernerklaering')
+FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/impressum', '/privacy-policy', '/personvern', '/om', '/about', '/contact', '/privacy', '/personvernerklaering')
 FOLLOWUP_PAGES = 3
 
 
@@ -289,7 +289,9 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
             # page on that domain. Up to three same-domain proof pages are checked.
             if proof.reason != 'foreign_orgnr':
                 seen = {response.url}
-                for target in proof_page_targets(page, response.url):
+                for position,target in enumerate(proof_page_targets(page, response.url, limit=FOLLOWUP_PAGES+3)):
+                    if position>=FOLLOWUP_PAGES and best[0].level=='VERIFIED':
+                        break
                     if target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)

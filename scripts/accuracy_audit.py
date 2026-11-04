@@ -26,7 +26,7 @@ from urllib.parse import urlparse
 from signalpost.web.html import Page, json_values
 from signalpost.web.candidates import legal_name
 from signalpost.web.policy import is_directory_record
-from signalpost.web.proof import phone, orgnrs, is_dedicated_entity_card, extract_entity_cards, find_containing_card
+from signalpost.web.proof import phone, orgnrs, normalized_address, is_dedicated_entity_card, extract_entity_cards, find_containing_card
 
 # Known directory and aggregator domains that cannot serve as company official websites
 DIRECTORY_DOMAINS = {
@@ -695,7 +695,7 @@ def audit_website_claim(
             return 'INCORRECT', 'Different site owner identifier', None
         contacts = []
         streets = ctx.get('street') if isinstance(ctx.get('street'), list) else [ctx.get('street')]
-        contacts.extend('street' for s in streets if s and len(str(s)) > 4 and normalize(s) in owner)
+        contacts.extend('street' for s in streets if s and len(str(s)) > 4 and re.search(r'(?<!\w)'+re.escape(normalized_address(s))+r'(?!\w)',normalized_address(page.owner_text)))
         if ctx.get('postcode') and ctx.get('city') and str(ctx['postcode']) in owner and normalize(ctx['city']) in owner:
             contacts.append('postcode_city')
         expected = phone(ctx.get('phone'))
@@ -707,6 +707,17 @@ def audit_website_claim(
         if email and (email in page.owner_text.casefold() or any(x.href.casefold().split('?')[0] == 'mailto:' + email for x in page.links)):
             contacts.append('email')
         return ('CORRECT', 'Exact legal name plus independent registry ' + ','.join(contacts), url) if contacts else ('INCORRECT', 'No matching registry contact', None)
+
+    if ptype=='contact_section_orgnr':
+        # Review this explicit new method as a contact-page assertion, not a
+        # generic article identifier or a name-only company assignment.
+        name=' '.join(re.findall(r'\w+',str((context or {}).get('name') or '').casefold()))
+        visible=' '.join(re.findall(r'\w+',page.visible.casefold()))
+        path=urlparse(page.url).path.rstrip('/').split('/')[-1].casefold()
+        contact_path=path in {'kontakt','kontakt-oss','contact','contact-us','impressum','imprint','personvern','privacy','privacy-policy'}
+        if contact_path and name and name in visible and org in orgnrs(page.visible) and not ((brand_orgnrs|json_ids)-{org}):
+            return 'CORRECT','Full legal entity and labelled organisation number in company contact page',url
+        return 'INCORRECT','Company contact-section identity evidence missing',None
 
     if ptype in ("orgnr_on_page", "orgnr"):
         if org in all_structural_orgnrs:

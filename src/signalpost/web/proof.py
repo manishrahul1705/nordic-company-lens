@@ -1,4 +1,5 @@
 import re
+from urllib.parse import urlsplit
 from dataclasses import dataclass, field
 from ..identity.orgnr import valid
 from .candidates import legal_name
@@ -26,6 +27,43 @@ def phone(value):
     elif len(number) == 10 and number.startswith("47"):
         number = number[2:]
     return "+47" + number if len(number) == 8 else None
+
+
+def contact_section_number(page, org, context):
+    """Exact own-company number in a CMS contact page, never a news article."""
+    path=urlsplit(page.url).path.rstrip('/').split('/')[-1].casefold()
+    if path not in {'kontakt','kontakt-oss','contact','contact-us','impressum','imprint','personvern','privacy','privacy-policy'}:
+        return False
+    if not re.search(r'<article\b[^>]*\bclass=[\'"][^\'"]*\btype-page\b',page.raw,re.I):
+        return False
+    if any(str(t).rsplit('/',1)[-1] in {'NewsArticle','BlogPosting','Article'}
+           for body in page.jsonld for declared in json_values(body,'@type')
+           for t in (declared if isinstance(declared,list) else [declared])):
+        return False
+    normalize=lambda value:' '.join(re.findall(r'\w+',str(value or '').casefold()))
+    name=normalize(context.get('name'))
+    if not name:return False
+    visible=' '.join(page.visible.split())
+    number=re.compile(r'(?<!\d)'+r'[\s.]?'.join(org)+r'(?!\d)')
+    for match in number.finditer(visible):
+        block=visible[max(0,match.start()-400):match.end()]
+        headings=list(re.finditer(r'\b(?:hovedkontor|kontaktinformasjon|registered office|company details|impressum)\b',block,re.I))
+        if not headings:continue
+        block=block[headings[-1].start():]
+        if (re.search(r'(?<!\w)'+re.escape(name)+r'(?!\w)',normalize(block))
+                and re.search(r'\b(?:hovedkontor|kontaktinformasjon|registered office|company details|impressum)\b',block,re.I)
+                and re.search(r'\b(?:org\.?\s*nr|organisasjonsnummer|vat|tax\s*id)',block,re.I)
+                and not re.search(r'\b(?:kunde|kunder|customer|customers|partner|partners|client|clients|referanser)\b',block,re.I)):
+            return True
+    return False
+
+
+def normalized_address(value):
+    text=' '.join(re.findall(r'\w+',str(value or '').casefold()))
+    text=re.sub(r'\b(\w+?)(?:gata|gaten|gate|gt)\b',r'\1gate',text)
+    text=re.sub(r'\b(\w+?)(?:veien|vegen|vei|veg|vn)\b',r'\1vei',text)
+    text=re.sub(r'\bgt\b','gate',text)
+    return re.sub(r'\b(?:vn|vegen|veien|veg)\b','vei',text)
 
 
 from html.parser import HTMLParser
@@ -235,6 +273,8 @@ def score(page, org, context, origin, leaders):
     owner_ids = orgnrs(' '.join(page.brand_parts)) | json_ids
     if owner_ids - {org}:
         return Proof('REJECT', other_orgnrs=sorted(owner_ids - {org}), reason='foreign_orgnr')
+    if not others and contact_section_number(page,org,context):
+        return Proof('VERIFIED','contact_section_orgnr',token=org)
     if org in all_ids:
         # A listed partner/customer is not the operator of the page. Exact
         # identifiers in directory text need an independent entity card or
@@ -266,7 +306,8 @@ def score(page, org, context, origin, leaders):
     signals = ['exact_legal_name'] if exact_name else []
     street = context.get('street')
     streets = street if isinstance(street, list) else [street]
-    if any(s and len(str(s)) > 4 and normalized(s) in owner_text for s in streets):
+    address_text=normalized_address(page.owner_text)
+    if any(s and len(str(s)) > 4 and re.search(r'(?<!\w)'+re.escape(normalized_address(s))+r'(?!\w)',address_text) for s in streets):
         signals.append('street')
     if context.get('postcode') and context.get('city') and str(context['postcode']) in owner_text and normalized(context['city']) in owner_text:
         signals.append('postcode_city')

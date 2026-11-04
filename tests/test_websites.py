@@ -310,10 +310,10 @@ def test_unlinked_standard_pages_are_checked_for_the_org_number(tmp_path, monkey
         if request.url.path in {"", "/"}:
             return httpx.Response(200, text=html(""))
         return httpx.Response(404, text="not found")
-    # At most three unlinked fallback pages are inspected, even with spare budget.
+    # Three original pages plus at most three authorized imprint/privacy checks.
     _, row, requests, _ = execute_web(tmp_path, monkeypatch, response=site, website_request_cap=8, website_total_request_cap=13)
     claim = next((c for c in row["claims"] if c["field"] == "official_website"), None)
-    if path in {'/kontakt', '/kontakt-oss', '/om-oss'}:
+    if path in {'/kontakt', '/kontakt-oss', '/om-oss', '/personvern'}:
         assert claim["value"]["identity_level"] == "VERIFIED"
         assert any(url.endswith(path) for url in requests)
     else:
