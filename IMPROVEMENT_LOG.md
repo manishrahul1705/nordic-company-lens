@@ -161,6 +161,7 @@ Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Lat
 | 2026-11-04 | `e33b951` | S5-6-retrial | Reapplied Brave after first directory guard; LEI record rejected on review | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/4/1/29 | 17 | 6 items / 1 wrong | ROLLED BACK | 797 tests; 469.008s, 1470 HTTP. 61 queries, estimated USD 0.305. One false official attribution: NordLEI record for Giljeholmen. KN Elektro social lost to independent robots/redirect timeouts. Extend ownership guard to LEI records before another reapplication. |
 | 2026-11-04 | `44bf7cb` | S5-6-LEI-root | Reject LEI lookup records on known and unlisted provider domains | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 780 tests; 344.674s, 1081 HTTP. Eight directory regressions preserve own-company homepages with LEI disclosures. All five social sources reviewed; no available-count drops. Search OFF, zero cost. |
 | 2026-11-04 | `87ab7ab` | S5-6-final | Optional Brave behind explicit environment and positive budget gates; reject registry lookup results | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 15 | 6 items / 0 wrong | KEEP | 801 tests; 372.803s, 1498 HTTP. 59 queries, all HTTP200; USD 0.295 estimate. Zero additional verified sites/social/news and no available-count drops; all five social plus changed exact-org proof reviewed. Keep default-OFF, not recommended for this cohort. Website budget errors 2 to 15. Failed trials plus final: 179 attempts, USD 0.895 total estimate. |
+| 2026-11-04 | `098dc33` | S5-metadata-guard | Ignore malformed social URL metadata without discarding exact site proof | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 806 tests; 292.558s, 1090 HTTP. CNC Norway sameAs https://[object Object] reproduced ValueError in observation ledger; five regressions and full suite pass. All five social sources reviewed; no count drops. No NAV/index changes. Search OFF. |
 
 Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
 
@@ -176,3 +177,5 @@ Social items rejected by stricter attribution in this step:
 S5-6-LEI-root evidence: `bench/runs/20261104T055653185175Z-44bf7cb`. Full social and new website/news source list: `s5-review.json`.
 
 S5-6-final evidence: `bench/runs/20261104T060955663646Z-87ab7ab`. Full social and new website/news source list: `s5-review.json`.
+
+S5-metadata-guard evidence: `bench/runs/20261104T064156705198Z-098dc33`. Full social and new website/news source list: `s5-review.json`.
