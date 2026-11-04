@@ -3,9 +3,10 @@ import argparse
 from collections import Counter
 import json
 from pathlib import Path
+from urllib.parse import urlsplit
 
 
-def diagnose(row):
+def diagnose(row, retained_pages=()):
     attempts=[]
     errors=[e for e in row.get('errors',[]) if e['section']=='website']
     for e in errors:
@@ -17,27 +18,40 @@ def diagnose(row):
     if state=='available':return None
     # LOW is also assigned to DNS exceptions; only proof-scoring records have
     # points/signals. Do not call an unfetched NXDOMAIN guess a fetched page.
-    fetched=any(200<=x.get('status',0)<300 or 'points' in x or x.get('level') in {'MEDIUM','HIGH','VERIFIED','REJECT'} for x in attempts)
+    fetched=bool(retained_pages)
     if state=='ambiguous':reason='ambiguous (name-only or competing candidates)';stage='ownership proof'
     elif state=='blocked' or reasons & {'robots','robots_unavailable','http_blocked','block_page'}:reason='robots or blocked';stage='HTTP / policy'
     elif 'foreign_orgnr' in reasons:reason='proof conflict (other orgnr)';stage='ownership proof'
     elif reasons & {'website_budget_exhausted','budget_exhausted','deadline'}:reason='budget exhausted';stage='request budget'
     elif reasons & {'website_connect_error','website_timeout','dns_timeout','dns_unavailable','dns_error'}:reason='TLS-connect failure';stage='connection / DNS timeout'
     elif fetched:reason='fetched but no proof';stage='ownership proof'
-    elif attempts and reasons <= {'no_such_domain','', 'website_candidates'}:reason='all candidates DNS-missing';stage='DNS'
+    elif 'no_such_domain' in reasons and reasons <= {'no_such_domain','', 'website_candidates'} and not any('status' in x or 'points' in x for x in attempts):reason='all candidates DNS-missing';stage='DNS'
     elif not attempts:reason='no candidates generated';stage='nomination'
-    else:reason='fetched but no proof';stage='HTTP non-success or insufficient recorded proof'
+    else:reason='no retained successful company page';stage='HTTP non-success or insufficient retained evidence'
     furthest='ownership proof' if fetched else 'HTTP / policy' if any(x.get('status') for x in attempts) or state=='blocked' else 'DNS' if attempts else 'nomination'
     return {'organisation_number':row['organisation_number'],
             'name':next((c['value'] for c in row['claims'] if c['field']=='identity.legal_name' and c['availability']=='available'),None),
             'state':state,'furthest_stage':furthest,'stop_stage':stage,'reason':reason,
             'candidates':list(dict.fromkeys(x['domain'] for x in attempts if x.get('domain'))),
-            'diagnostics':attempts,'error_codes':[e['code'] for e in errors]}
+            'diagnostics':attempts,'retained_pages':list(retained_pages),'error_codes':[e['code'] for e in errors]}
 
 
 def analyze(run):
     rows=list(map(json.loads,(run/'envelopes.jsonl').read_text(encoding='utf8').splitlines()))
-    missing=[d for r in rows if (d:=diagnose(r))]
+    retained={}
+    report_path=run/'report.json'
+    report=json.loads(report_path.read_text(encoding='utf8')) if report_path.exists() else {}
+    for event in report.get('request_log',[]):
+        if event.get('section')!='website' or event.get('status')!=200 or event.get('error') or event.get('truncated'):
+            continue
+        url=event.get('url','');path=urlsplit(url).path.lower()
+        if path.endswith('/robots.txt') or path.endswith(('.xml','.rss','.atom')):
+            continue
+        sha=event.get('content_sha256')
+        blob=run/'state/blobs'/sha if sha else None
+        if blob is not None and blob.is_file() and blob.stat().st_size:
+            retained.setdefault(event.get('organisation_number'),[]).append({'url':url,'sha256':sha})
+    missing=[d for r in rows if (d:=diagnose(r,retained.get(r['organisation_number'],())))]
     counts=Counter(d['reason'] for d in missing)
     return {'run':str(run),'companies':len(rows),'available':len(rows)-len(missing),'counts':dict(counts.most_common()),
             'companies_without_available_website':missing,
