@@ -160,6 +160,7 @@ Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Lat
 | 2026-11-04 | `47a295c` | S5-6-root | Reject two registry-copy directories globally and in independent audit | 100/100/85/100/10/4/1/29 → 100/100/85/100/11/5/1/29 | 2 | 6 items / 0 wrong | KEEP | 776 tests; 546.260s, 1091 HTTP. Four regression cases pass. No available-count drops; five social and one recovered exact-org website reviewed. Ralston recovery is transport variance. Search OFF; estimated cost zero. |
 | 2026-11-04 | `e33b951` | S5-6-retrial | Reapplied Brave after first directory guard; LEI record rejected on review | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/4/1/29 | 17 | 6 items / 1 wrong | ROLLED BACK | 797 tests; 469.008s, 1470 HTTP. 61 queries, estimated USD 0.305. One false official attribution: NordLEI record for Giljeholmen. KN Elektro social lost to independent robots/redirect timeouts. Extend ownership guard to LEI records before another reapplication. |
 | 2026-11-04 | `44bf7cb` | S5-6-LEI-root | Reject LEI lookup records on known and unlisted provider domains | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 780 tests; 344.674s, 1081 HTTP. Eight directory regressions preserve own-company homepages with LEI disclosures. All five social sources reviewed; no available-count drops. Search OFF, zero cost. |
+| 2026-11-04 | `87ab7ab` | S5-6-final | Optional Brave behind explicit environment and positive budget gates; reject registry lookup results | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 15 | 6 items / 0 wrong | KEEP | 801 tests; 372.803s, 1498 HTTP. 59 queries, all HTTP200; USD 0.295 estimate. Zero additional verified sites/social/news and no available-count drops; all five social plus changed exact-org proof reviewed. Keep default-OFF, not recommended for this cohort. Website budget errors 2 to 15. Failed trials plus final: 179 attempts, USD 0.895 total estimate. |
 
 Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
 
@@ -173,3 +174,5 @@ Social items rejected by stricter attribution in this step:
 - `823147112` https://www.facebook.com/KN-Elektro-As-104194150969215 — website proof unavailable or source profile no longer published; not asserted wrong-company.
 
 S5-6-LEI-root evidence: `bench/runs/20261104T055653185175Z-44bf7cb`. Full social and new website/news source list: `s5-review.json`.
+
+S5-6-final evidence: `bench/runs/20261104T060955663646Z-87ab7ab`. Full social and new website/news source list: `s5-review.json`.
