@@ -168,6 +168,8 @@ Latest completed 100 free run: `bench/runs/20261103T212841589097Z-18d31aa/`. Lat
 | 2026-11-04 | `4407516` | S6-2-100 | Fallback time-based detail budget, normal100 | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 2 | 5 items / 0 wrong | KEEP | 811 tests; 55.340s, 694 HTTP; NAV declared_index, 4.500s/4 requests, 0 incomplete. All5 social sources reviewed; no new assignments or count drops. |
 | 2026-11-04 | `4407516` | S6-2-stale1000 | Forced-stale fallback stress gate | 1000/997/774/999/71/32/2/231 → 1000/997/774/999/71/32/2/231 | 26 | 51 items / 0 wrong | KEEP | 811 tests; 346.998s, 7143 HTTP; NAV full_feed_fallback, 272.438s/663 requests, 69 incomplete. Original October14 index;299 detail attempts,0 unchecked candidate companies,0 failed ads/cap hits. Incomplete73 to69, all name-unusable, honest nav_name_unusable.346.998s under1200. No section drop versus stale baseline,50 social and1 changed site reviewed. |
 | 2026-11-04 | `4407516` | S6-2-1000 | Fallback robustness, normal1000 gate | 1000/997/774/999/72/33/3/231 → 1000/997/774/999/72/33/3/231 | 21 | 52 items / 0 wrong | KEEP | 811 tests; 249.476s, 6482 HTTP; NAV declared_index, 29.203s/6 requests, 0 incomplete. Declared-index normal path unchanged;0 incomplete and no count drops. All52 social sources reviewed. |
+| 2026-11-04 | `1abf474` | S6-3a-100 | Bounded own-company contact section and extra proof pages,100 | 100/100/85/100/11/5/1/29 → 100/100/85/100/11/5/1/29 | 6 | 5 items / 0 wrong | KEEP | 823 tests; 56.959s, 751 HTTP; NAV declared_index, 4.187s/4 requests, 0 incomplete. No coverage drops;5social sources checked;website budget errors2to6. |
+| 2026-11-04 | `1abf474` | S6-3a-1000 | Saga/contact proof and up to3extra imprint/privacy checks,scale | 1000/997/774/999/72/33/3/231 → 1000/997/774/999/75/34/3/231 | 65 | 59 items / 0 wrong | KEEP | 823 tests; 273.237s, 7108 HTTP; NAV declared_index, 28.750s/7 requests, 0 incomplete. Full54social and5changed site proofs reviewed,0wrong. Net3websites/1social;budget errors21to65. Exact new identities Balder,Eimealt,Saga,7ocean;old NSNL plaintext fallback tracked for Step4. |
 
 Candidate-only DNS/connect/timeouts do not prove a real official website is unreachable. Stop buckets are exclusive; budget error totals can overlap other stop states. New nominations address the largest observed gap; bucket sizes are not measured recovery promises.
 
@@ -209,3 +211,7 @@ S6-2-100 evidence: `bench/runs/20261104T074953456731Z-4407516`. Full opened sour
 S6-2-stale1000 evidence: `bench/runs/20261104T075124281242Z-4407516`. Full opened source list: `s6-review.json`.
 
 S6-2-1000 evidence: `bench/runs/20261104T075735641992Z-4407516`. Full opened source list: `s6-review.json`.
+
+S6-3a-100 evidence: `bench/runs/20261104T081142666432Z-1abf474`. Full opened source list: `s6-review.json`.
+
+S6-3a-1000 evidence: `bench/runs/20261104T081322420645Z-1abf474`. Full opened source list: `s6-review.json`.
