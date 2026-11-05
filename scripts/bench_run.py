@@ -39,7 +39,7 @@ def benchmark_environment(search=False, environment=None):
                    or not env.get('BRAVE_SEARCH_API_KEY')):
         raise ValueError('Search benchmark requires SIGNALPOST_SEARCH_PROVIDER=brave and BRAVE_SEARCH_API_KEY set in the terminal')
     for key in list(env):
-        if ('API_KEY' in key.upper() or key == 'NAV_API_TOKEN'
+        if (any(marker in key.upper() for marker in ('API_KEY', 'APIKEY', 'TOKEN', 'SECRET', 'CREDENTIAL'))
                 or key.startswith(('SIGNALPOST_SEARCH', 'SIGNALPOST_LLM'))):
             if search and key in {'BRAVE_SEARCH_API_KEY','SIGNALPOST_SEARCH_PROVIDER'}:
                 continue
