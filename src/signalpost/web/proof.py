@@ -346,3 +346,56 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
     if suffix_contact and exact_base:
         return Proof('MEDIUM','signals',['legal_name_without_suffix',*contacts],2*len(contacts),reason='name_without_suffix_insufficient_contacts_or_domain',token=base_name)
     return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))
+
+
+def rescue_suffix_host(pages, org, context, origin, leaders):
+    """Join a suffix-free name and observed registry contact on one exact host.
+
+    A registry email domain alone is not proof: an address at that domain must
+    actually appear in a fetched page. All existing rejection guards still apply.
+    Return the name-page/contact-page indexes and contact token for provenance.
+    """
+    if not pages:
+        return None
+    host=urlsplit(pages[0].url).hostname
+    selected=[(i,p) for i,p in enumerate(pages) if urlsplit(p.url).hostname==host]
+    evaluated=[(i,p,score(p,org,context,origin,leaders,suffix_contact=True)) for i,p in selected]
+    if any(proof.level in {'REJECT','BLOCKED'} for _,_,proof in evaluated):
+        return None
+    base=legal_name(context.get('name'))
+    label=compact(extract(pages[0].url).domain)
+    if not base:
+        return None
+    name=next(((i,p) for i,p,proof in evaluated if 'legal_name_without_suffix' in proof.signals
+               and p.name_span(base)),None)
+    if name is None:
+        return None
+    expected_phone=re.sub(r'\D','',str(context.get('phone') or ''))
+    expected_phone=expected_phone[-8:] if len(expected_phone)>=8 else ''
+    expected_email=str(context.get('email') or '').strip().casefold()
+    email_domain=expected_email.rsplit('@',1)[-1] if '@' in expected_email else ''
+    address_pattern=r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+    for contact_index,page,_ in evaluated:
+        numbers=[m.group().strip() for m in re.finditer(
+            r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)',page.visible)]
+        numbers += [link.href[4:] for link in page.links if link.href.startswith('tel:')]
+        matches=[]
+        for number in numbers:
+            if expected_phone and re.sub(r'\D','',number)[-8:]==expected_phone:
+                matches.append(('phone',number))
+        addresses=re.findall(address_pattern,page.visible)
+        addresses += [link.href[7:].split('?',1)[0] for link in page.links if link.href.startswith('mailto:')]
+        for address in addresses:
+            value=address.casefold()
+            if expected_email and value==expected_email:
+                matches.append(('email',address))
+            elif email_domain==domain(page.url) and value.rsplit('@',1)[-1]==email_domain:
+                matches.append(('email_domain',address))
+        for signal,token in matches:
+            if not page.name_span(token):
+                continue
+            derived=['name_derived_domain'] if label in {compact(base),compact(base)+'as',compact(base)+'asa'} else []
+            proof=Proof('VERIFIED','legal_name_without_suffix_and_registry_contact',
+                        ['legal_name_without_suffix',*derived,signal],4,token=base)
+            return proof,name[0],contact_index,token
+    return None

@@ -53,7 +53,7 @@ def main():
     parser.add_argument('--website-suffix-contact-proof',action=argparse.BooleanOptionalAction,default=True)
     parser.add_argument('--website-domain-location-proof',action='store_true')
     parser.add_argument('--website-transient-retry',action=argparse.BooleanOptionalAction,default=True)
-    parser.add_argument('--website-suffix-contact-rescue',action=argparse.BooleanOptionalAction,default=False)
+    parser.add_argument('--website-suffix-contact-rescue',action=argparse.BooleanOptionalAction,default=True)
     parser.add_argument('--website-request-cap',type=int,default=16)
     parser.add_argument('--search', action='store_true', help='Explicit paid Brave comparison; requires terminal environment variables')
     parser.add_argument('--nav-index-path',type=Path,help='Explicit fixture override for stale/malformed index benchmarks')
