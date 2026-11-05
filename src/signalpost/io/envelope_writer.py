@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 from pathlib import Path
 from ..models.envelope import Envelope
 from ..models.shapes import serialize, validate
@@ -112,3 +113,20 @@ def previous(path):
     except Exception as exc:
         warnings.append(f"previous file unreadable: {type(exc).__name__}")
     return rows, warnings
+
+
+def latest_snapshot(state_dir: Path) -> Path:
+    return state_dir / "latest-envelopes.jsonl"
+
+
+def store_latest_snapshot(source: Path, state_dir: Path):
+    """Atomically retain the latest complete run for implicit same-state refresh."""
+    state_dir.mkdir(parents=True, exist_ok=True)
+    target = latest_snapshot(state_dir)
+    temporary = target.with_name(target.name + ".tmp")
+    with source.open("rb") as src, temporary.open("wb") as dst:
+        shutil.copyfileobj(src, dst)
+        dst.flush()
+        os.fsync(dst.fileno())
+    os.replace(temporary, target)
+    return target

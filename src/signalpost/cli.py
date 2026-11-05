@@ -78,7 +78,9 @@ def main(argv=None):
             print(json.dumps(generate_site(args['input'], args['out'], args['title'])))
             return 0
         config = Config(**args)
+        snapshot = config.state_dir / "latest-envelopes.jsonl"
         resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
+        resolved.append(snapshot.resolve())
         temporary = [p.with_name(p.name+'.tmp').resolve() for p in (config.output,config.profiles_output) if p]
         protected = [p.resolve() for p in (config.organisations, config.bulk, config.previous) if p]
         targets=resolved+temporary

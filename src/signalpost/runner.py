@@ -11,7 +11,7 @@ import httpx
 from .budget import Budget, SourceFailure
 from .identity.orgnr import valid
 from .io.input_adapter import read, Inputs
-from .io.envelope_writer import previous, write
+from .io.envelope_writer import latest_snapshot, previous, store_latest_snapshot, write
 from .io.report import build
 from .models.envelope import Envelope, Run, Operations, Module, Error, Profile, CompactProfile
 from .models.claim import Claim
@@ -213,7 +213,12 @@ async def _run(config, client=None):
     )
     progress.start(budget)
     progress.log_event(f"Pipeline started with {len(inputs.rows)} input rows, {len(inputs.unique)} unique companies")
-    prior, previous_warnings = previous(config.previous)
+    previous_path = config.previous
+    if previous_path is None:
+        implicit_previous = latest_snapshot(config.state_dir)
+        if implicit_previous.is_file():
+            previous_path = implicit_previous
+    prior, previous_warnings = previous(previous_path)
     warnings.extend(previous_warnings)
     storage_error = None
     try:
@@ -563,6 +568,11 @@ async def _run(config, client=None):
     order = inputs.rows if config.emit_duplicates else inputs.unique
     result = [envelopes[org] for org in order]
     size, output_limited, minimum_exceeded = await offload(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
+    if not output_limited and not minimum_exceeded:
+        try:
+            await offload(store_latest_snapshot, config.output, config.state_dir)
+        except OSError as exc:
+            warnings.append(f"latest state snapshot failed: {type(exc).__name__}")
     report = await offload(build,result,inputs,budget,config,warnings,time.monotonic() - budget.start)
     report['limits']['max_requests']=budget.cap
     report['limits']['time_budget_seconds']=budget.total_seconds

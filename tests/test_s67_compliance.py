@@ -38,20 +38,19 @@ def test_nonexistent_registry_identifier_still_emits_one(tmp_path):
 
 def test_same_state_identical_refresh_and_actual_changed_values(tmp_path):
     cfg = config(tmp_path, ['923609016'])
-    execute(cfg)
-    previous = tmp_path / 'previous.jsonl'
-    previous.write_bytes(cfg.output.read_bytes())
-    cfg = cfg.model_copy(update={'previous': previous})
+    execute(cfg, handler(role_name='Person One'))
+    snapshot = cfg.state_dir / 'latest-envelopes.jsonl'
+    assert snapshot.is_file()
     before = set((cfg.state_dir / 'blobs').iterdir())
-    report, rows = execute(cfg)
-    assert report['changes'] == report['observation_changes'] == 0
-    assert rows[0]['changes'] == []
-    assert before <= set((cfg.state_dir / 'blobs').iterdir())
     report, rows = execute(cfg, handler(role_name='Person Two'))
     changes = rows[0]['changes']
     assert len(changes) == 1
     assert 'Person One' in json.dumps(changes[0]['old_value'])
     assert 'Person Two' in json.dumps(changes[0]['new_value'])
+    assert before <= set((cfg.state_dir / 'blobs').iterdir())
+    report, rows = execute(cfg, handler(role_name='Person Two'))
+    assert report['changes'] == report['observation_changes'] == 0
+    assert rows[0]['changes'] == []
 
 
 def test_shipped_index_valid_through_november_30_without_redating(tmp_path):

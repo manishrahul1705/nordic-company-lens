@@ -25,10 +25,13 @@ console progress is not the data stream. Exit zero means membership was emitted,
 not that all sources succeeded. See [schema](docs/DATA_SCHEMA.md) for shapes,
 states, evidence and provenance.
 
-Refresh uses the same `--state-dir` plus an explicit `--previous` snapshot.
-Copy the first output before overwriting it. Supported changes include old and
-new values and their evidence; identical snapshots yield no company changes or
-observation changes. A state folder alone does not select a prior snapshot.
+Refresh uses the same `--state-dir`. Each complete run atomically saves its
+latest envelopes and claims at `latest-envelopes.jsonl` inside that state
+folder; the next run uses that snapshot automatically when `--previous` is
+omitted. An explicit `--previous` overrides the automatic snapshot. Supported
+changes include old and new values and their evidence; an identical snapshot
+yields no company changes or observation changes. Evidence blobs stay in the
+same state folder for provenance checks.
 
 The hard HTTP ceiling is 18 per distinct normalized input, including retries
 and shared NAV requests; duplicates share research. The hard time ceiling is
