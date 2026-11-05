@@ -491,7 +491,8 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=proof.token if proof.level=='VERIFIED' else org
-    span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type != "legal_name_and_registry_contact" else page.name_span(proof.token)
+    contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts'}
+    span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else page.name_span(proof.token)
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")
     value = {"final_url": root_url, "identity_level": proof.level, "proof_type": proof.proof_type,
@@ -511,7 +512,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         section.evidence.extend(e for e in envelope.evidence if e.id in refs)
         section.claims[-1].evidence_ids.extend(sorted(refs))
     # HIGH combines page signals with authoritative registry/roles facts.
-    if proof.level in {"HIGH",'REGISTRY_DECLARED'} or proof.proof_type == "legal_name_and_registry_contact":
+    if proof.level in {"HIGH",'REGISTRY_DECLARED'} or proof.proof_type in contact_proofs:
         registry_refs = [e for e in envelope.evidence if e.source_class == "official_registry"]
         section.evidence.extend(registry_refs)
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)

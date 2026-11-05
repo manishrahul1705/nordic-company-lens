@@ -1,0 +1,358 @@
+{
+  "new_items": [
+    {
+      "org": "914248906",
+      "name": "INDIGOBOOM AS",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.indigoboom.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_without_suffix_and_two_contacts",
+        "proof_page_url": "https://www.indigoboom.no/",
+        "signals": [
+          "legal_name_without_suffix",
+          "name_derived_domain",
+          "street",
+          "postcode_city"
+        ],
+        "points": 4,
+        "candidate_origin": "subunit_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "sources": [
+        {
+          "url": "https://www.indigoboom.no/",
+          "sha256": "58cf1dd57c4aa2b05658d66b3c954adcb2a7e57dbc0c3db0ed420da13fccaf28",
+          "locator": "identity-proof:indigoboom",
+          "span": null,
+          "title": "Indigoboom digital distribusjon Oslo",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… Indigoboom Digital Distribusjon Din musikk på + mange fler Vi er her for å hjelpe deg å få mest mulig ut av musikken du gir ut. Bruker du oss som distributør har du en samtalepartner. Noen å spørre til råds når det trengs. På mail, SMS, telefon eller over en kaffe. ✅ Gi ut så mange singler, EP og album du vil ✅ På alle platformer uten ekstra kostnader ✅ Del royaltyinntektene dine enkelt og gratis ✅ Detaljert statistikk: land, kjønn, alder og masse mer ✅ Gi ut coverlåter uten ekstra kostnad ✅ Gratis Spotify Pre-save og linksamlinger ✅ Tjen penger på TikTok, FaceBook og YouTube ✅ Ny miks? Last opp den nye over den gamle (gratis) ✅ Bytte Coverbilde? Kjør på (gratis) ✅ Redigere info? (gratis) Hvorfor Indigoboom? Flere tusen artister, bl.a. Kyle Alessandro • Carina Dahl • INGEBORG • Sissel Kyrkjebø • Rein Alexander • Anita Skorgan ISÁK • Lothepus • Randi Oline • Elle Melle • Ole Evenrud • Anakin Justin • Norwegian House Mafia Keiser Augustus • Clöben • Kira Dalan • Funhouse • Oscar A • Ella Stae • AUGUST • JNS Damien • FRØY Mathilde SPZ • Lasse Lokøy • Bonnie & The Jets • Tommy Kristiansen Sigrun Loe Sparboe • Odd René Andersen • Cathrine Fornæss • CELIIN • Ane.Fin • ELIA Egil Ellevill • Bob Dalton • Tommy Fredvang • Halvor Holter • lene 3000 • Safario • Akuvi Kom igang i dag! Velg mellom BASIC GOLD PLATINUM START HER Anchor 3 Takk for henvendelsen Send Du finner oss i: Maridalsveien 89 0461 Oslo Arbeidstidene våre er: Mandag- Fredag 0900 - 1700 ​ Besøksadresse: Maridalsveien 89, 0461 Oslo Har du spørsmål? ​ ​ Ring oss på 90617345 Send en epost til: support@indigoboom.com Eller fyll inn kontaktskjemaet under. Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "792b15f61ed93dbf1fff5a94c7ee9000ea9089d66f106b521f7c268dfee9a8ec",
+          "locator": "row:914248906/column:stiftelsesdato",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914248906&size=1000&page=0",
+          "sha256": "ee43c2da76b6910a7b1532314c5608cf8fc6b948dbccd7018423be2c7926b67f",
+          "locator": "/_embedded/underenheter/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/914248906/roller",
+          "sha256": "58a36e147abc89a2e383170ad60f47b0c9b47c568335c7418fa7c061d3a11086",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/914248906",
+          "sha256": "7ee0a90b734f58787b671af828f077852e9fa1b194e392406208afe885eef6f0",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": null,
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "INDIGOBOOM own branded .no site links support@indigoboom.com; Maridalsveien 89, 0461 Oslo exactly matches frozen registered address. About page describes Indigoboom as a Skyskraper subsidiary, not Skyskraper itself. One existing template-placeholder description remains low-quality but is not a wrong-company attribution."
+    },
+    {
+      "org": "914248906",
+      "name": "INDIGOBOOM AS",
+      "field": "website_description.meta_description.0c915acfef450f29",
+      "value": {
+        "text": "Vi snakker norsk og er superlette å få tak i på telefon, SMS og mail. Vi kjenner det norske markedet. Indigoboom-artister er på Spotify New Music Friday bortimot hver fredag. Profesjonell digital distribusjon til Spotify, TikTok, TIDAL, Apple Music + mer.",
+        "kind": "meta_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "773b7c45e8641cbb65af9878a1223cc21309a7ea8d7afea71afe153529ace5bf"
+      },
+      "sources": [
+        {
+          "url": "https://www.indigoboom.no/",
+          "sha256": "58cf1dd57c4aa2b05658d66b3c954adcb2a7e57dbc0c3db0ed420da13fccaf28",
+          "locator": "meta:description@content",
+          "span": null,
+          "title": "Indigoboom digital distribusjon Oslo",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… Indigoboom Digital Distribusjon Din musikk på + mange fler Vi er her for å hjelpe deg å få mest mulig ut av musikken du gir ut. Bruker du oss som distributør har du en samtalepartner. Noen å spørre til råds når det trengs. På mail, SMS, telefon eller over en kaffe. ✅ Gi ut så mange singler, EP og album du vil ✅ På alle platformer uten ekstra kostnader ✅ Del royaltyinntektene dine enkelt og gratis ✅ Detaljert statistikk: land, kjønn, alder og masse mer ✅ Gi ut coverlåter uten ekstra kostnad ✅ Gratis Spotify Pre-save og linksamlinger ✅ Tjen penger på TikTok, FaceBook og YouTube ✅ Ny miks? Last opp den nye over den gamle (gratis) ✅ Bytte Coverbilde? Kjør på (gratis) ✅ Redigere info? (gratis) Hvorfor Indigoboom? Flere tusen artister, bl.a. Kyle Alessandro • Carina Dahl • INGEBORG • Sissel Kyrkjebø • Rein Alexander • Anita Skorgan ISÁK • Lothepus • Randi Oline • Elle Melle • Ole Evenrud • Anakin Justin • Norwegian House Mafia Keiser Augustus • Clöben • Kira Dalan • Funhouse • Oscar A • Ella Stae • AUGUST • JNS Damien • FRØY Mathilde SPZ • Lasse Lokøy • Bonnie & The Jets • Tommy Kristiansen Sigrun Loe Sparboe • Odd René Andersen • Cathrine Fornæss • CELIIN • Ane.Fin • ELIA Egil Ellevill • Bob Dalton • Tommy Fredvang • Halvor Holter • lene 3000 • Safario • Akuvi Kom igang i dag! Velg mellom BASIC GOLD PLATINUM START HER Anchor 3 Takk for henvendelsen Send Du finner oss i: Maridalsveien 89 0461 Oslo Arbeidstidene våre er: Mandag- Fredag 0900 - 1700 ​ Besøksadresse: Maridalsveien 89, 0461 Oslo Har du spørsmål? ​ ​ Ring oss på 90617345 Send en epost til: support@indigoboom.com Eller fyll inn kontaktskjemaet under. Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "792b15f61ed93dbf1fff5a94c7ee9000ea9089d66f106b521f7c268dfee9a8ec",
+          "locator": "row:914248906/column:stiftelsesdato",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914248906&size=1000&page=0",
+          "sha256": "ee43c2da76b6910a7b1532314c5608cf8fc6b948dbccd7018423be2c7926b67f",
+          "locator": "/_embedded/underenheter/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/914248906/roller",
+          "sha256": "58a36e147abc89a2e383170ad60f47b0c9b47c568335c7418fa7c061d3a11086",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/914248906",
+          "sha256": "7ee0a90b734f58787b671af828f077852e9fa1b194e392406208afe885eef6f0",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": null,
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "INDIGOBOOM own branded .no site links support@indigoboom.com; Maridalsveien 89, 0461 Oslo exactly matches frozen registered address. About page describes Indigoboom as a Skyskraper subsidiary, not Skyskraper itself. One existing template-placeholder description remains low-quality but is not a wrong-company attribution."
+    },
+    {
+      "org": "914248906",
+      "name": "INDIGOBOOM AS",
+      "field": "website_description.og_description.0c915acfef450f29",
+      "value": {
+        "text": "Vi snakker norsk og er superlette å få tak i på telefon, SMS og mail. Vi kjenner det norske markedet. Indigoboom-artister er på Spotify New Music Friday bortimot hver fredag. Profesjonell digital distribusjon til Spotify, TikTok, TIDAL, Apple Music + mer.",
+        "kind": "og_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "773b7c45e8641cbb65af9878a1223cc21309a7ea8d7afea71afe153529ace5bf"
+      },
+      "sources": [
+        {
+          "url": "https://www.indigoboom.no/",
+          "sha256": "58cf1dd57c4aa2b05658d66b3c954adcb2a7e57dbc0c3db0ed420da13fccaf28",
+          "locator": "meta:og:description@content",
+          "span": null,
+          "title": "Indigoboom digital distribusjon Oslo",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… Indigoboom Digital Distribusjon Din musikk på + mange fler Vi er her for å hjelpe deg å få mest mulig ut av musikken du gir ut. Bruker du oss som distributør har du en samtalepartner. Noen å spørre til råds når det trengs. På mail, SMS, telefon eller over en kaffe. ✅ Gi ut så mange singler, EP og album du vil ✅ På alle platformer uten ekstra kostnader ✅ Del royaltyinntektene dine enkelt og gratis ✅ Detaljert statistikk: land, kjønn, alder og masse mer ✅ Gi ut coverlåter uten ekstra kostnad ✅ Gratis Spotify Pre-save og linksamlinger ✅ Tjen penger på TikTok, FaceBook og YouTube ✅ Ny miks? Last opp den nye over den gamle (gratis) ✅ Bytte Coverbilde? Kjør på (gratis) ✅ Redigere info? (gratis) Hvorfor Indigoboom? Flere tusen artister, bl.a. Kyle Alessandro • Carina Dahl • INGEBORG • Sissel Kyrkjebø • Rein Alexander • Anita Skorgan ISÁK • Lothepus • Randi Oline • Elle Melle • Ole Evenrud • Anakin Justin • Norwegian House Mafia Keiser Augustus • Clöben • Kira Dalan • Funhouse • Oscar A • Ella Stae • AUGUST • JNS Damien • FRØY Mathilde SPZ • Lasse Lokøy • Bonnie & The Jets • Tommy Kristiansen Sigrun Loe Sparboe • Odd René Andersen • Cathrine Fornæss • CELIIN • Ane.Fin • ELIA Egil Ellevill • Bob Dalton • Tommy Fredvang • Halvor Holter • lene 3000 • Safario • Akuvi Kom igang i dag! Velg mellom BASIC GOLD PLATINUM START HER Anchor 3 Takk for henvendelsen Send Du finner oss i: Maridalsveien 89 0461 Oslo Arbeidstidene våre er: Mandag- Fredag 0900 - 1700 ​ Besøksadresse: Maridalsveien 89, 0461 Oslo Har du spørsmål? ​ ​ Ring oss på 90617345 Send en epost til: support@indigoboom.com Eller fyll inn kontaktskjemaet under. Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "792b15f61ed93dbf1fff5a94c7ee9000ea9089d66f106b521f7c268dfee9a8ec",
+          "locator": "row:914248906/column:stiftelsesdato",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914248906&size=1000&page=0",
+          "sha256": "ee43c2da76b6910a7b1532314c5608cf8fc6b948dbccd7018423be2c7926b67f",
+          "locator": "/_embedded/underenheter/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/914248906/roller",
+          "sha256": "58a36e147abc89a2e383170ad60f47b0c9b47c568335c7418fa7c061d3a11086",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/914248906",
+          "sha256": "7ee0a90b734f58787b671af828f077852e9fa1b194e392406208afe885eef6f0",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": null,
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "INDIGOBOOM own branded .no site links support@indigoboom.com; Maridalsveien 89, 0461 Oslo exactly matches frozen registered address. About page describes Indigoboom as a Skyskraper subsidiary, not Skyskraper itself. One existing template-placeholder description remains low-quality but is not a wrong-company attribution."
+    },
+    {
+      "org": "914248906",
+      "name": "INDIGOBOOM AS",
+      "field": "website_description.meta_description.8cbfb796357ee812",
+      "value": {
+        "text": "Digital musikkdistribusjon for band, soloartister og plateselskap til alle musikktjenester. Rask og personlig service. Ring oss!",
+        "kind": "meta_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "773b7c45e8641cbb65af9878a1223cc21309a7ea8d7afea71afe153529ace5bf"
+      },
+      "sources": [
+        {
+          "url": "https://www.indigoboom.no/om-oss",
+          "sha256": "6ca378354fbcc5f43afe43810b62db1e66f3621adaad1172065bdc387d8b4c00",
+          "locator": "meta:description@content",
+          "span": null,
+          "title": "Om oss i Indigoboom",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… INDIGOBOOM Moderne musikkselskap, kunnskapsformidler og nettverksressurs for artister. I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. Hva er IndiGoBoom? Indigoboom er en norsk digital musikkdistributør for artister og band som vil gi ut musikken sin selv. Kort forklart betyr dette at dersom du har musikk du vil ha ut på Spotify, TIDAL, Apple, TikTok og alle de andre, kan du registrere deg hos oss, laste opp musikkfiler og coverbilde, så sørger vi for at musikken din blir tilgjengelig der du ønsker og utbetaler royalties for salg til deg/dere. Hvem er IndigoBoom? Indigoboom ble startet i 2011 og ble i 2014 et selskap i mediehuset Skyskraper. Vi har langt over hundretusen titler ute på de digitale tjenestene. Titlene omfavner mange ulike genre.Vi jobber med alt fra helt ferske artister til etablerte størrelser som Sissel Kyrkjebø, Anita Skorgan, OnklP m.fl. Du er artist. Men vet du hva det innebærer? Landskapet norske artister opererer i er raskt og brutalt endret de siste årene. Som et nokså direkte resultat av denne utviklingen står mange norske artister uten støttefunksjonene de tidligere hadde rundt seg og er ofte i tvil om hvordan de skal komme seg videre. Unge nye artister har som regel av naturlige årsaker begrenset innsikt i virkeligheten. For deg som er i startgropa kan det være greitt å ha en norsk stemme på telefon eller i møte å stille spørsmål til. Distribusjon og navigasjonshjelp for artister Vi hjelper deg ut på Spotify, Apple TikTok osv. og vi hjelper deg som artist å forstå og forvalte mulighetene og begrensningene du møter. IndiGoBoom fyller eller formidler de fleste praktiske funksjonene du trenger å ha rundt seg for å lykkes. Et slags artisthjem for totusentallet. Hos oss kan du få uhildet rådgivning og strategisk gjennomgang av alle sider ved det du gjør. Title. Double click me. DIN MUSIKK PÅ IndigoBoom Digital Distribusjon START HER + Mer Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://www.indigoboom.no/",
+          "sha256": "58cf1dd57c4aa2b05658d66b3c954adcb2a7e57dbc0c3db0ed420da13fccaf28",
+          "locator": "identity-proof:indigoboom",
+          "span": null,
+          "title": "Indigoboom digital distribusjon Oslo",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… Indigoboom Digital Distribusjon Din musikk på + mange fler Vi er her for å hjelpe deg å få mest mulig ut av musikken du gir ut. Bruker du oss som distributør har du en samtalepartner. Noen å spørre til råds når det trengs. På mail, SMS, telefon eller over en kaffe. ✅ Gi ut så mange singler, EP og album du vil ✅ På alle platformer uten ekstra kostnader ✅ Del royaltyinntektene dine enkelt og gratis ✅ Detaljert statistikk: land, kjønn, alder og masse mer ✅ Gi ut coverlåter uten ekstra kostnad ✅ Gratis Spotify Pre-save og linksamlinger ✅ Tjen penger på TikTok, FaceBook og YouTube ✅ Ny miks? Last opp den nye over den gamle (gratis) ✅ Bytte Coverbilde? Kjør på (gratis) ✅ Redigere info? (gratis) Hvorfor Indigoboom? Flere tusen artister, bl.a. Kyle Alessandro • Carina Dahl • INGEBORG • Sissel Kyrkjebø • Rein Alexander • Anita Skorgan ISÁK • Lothepus • Randi Oline • Elle Melle • Ole Evenrud • Anakin Justin • Norwegian House Mafia Keiser Augustus • Clöben • Kira Dalan • Funhouse • Oscar A • Ella Stae • AUGUST • JNS Damien • FRØY Mathilde SPZ • Lasse Lokøy • Bonnie & The Jets • Tommy Kristiansen Sigrun Loe Sparboe • Odd René Andersen • Cathrine Fornæss • CELIIN • Ane.Fin • ELIA Egil Ellevill • Bob Dalton • Tommy Fredvang • Halvor Holter • lene 3000 • Safario • Akuvi Kom igang i dag! Velg mellom BASIC GOLD PLATINUM START HER Anchor 3 Takk for henvendelsen Send Du finner oss i: Maridalsveien 89 0461 Oslo Arbeidstidene våre er: Mandag- Fredag 0900 - 1700 ​ Besøksadresse: Maridalsveien 89, 0461 Oslo Har du spørsmål? ​ ​ Ring oss på 90617345 Send en epost til: support@indigoboom.com Eller fyll inn kontaktskjemaet under. Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "792b15f61ed93dbf1fff5a94c7ee9000ea9089d66f106b521f7c268dfee9a8ec",
+          "locator": "row:914248906/column:stiftelsesdato",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914248906&size=1000&page=0",
+          "sha256": "ee43c2da76b6910a7b1532314c5608cf8fc6b948dbccd7018423be2c7926b67f",
+          "locator": "/_embedded/underenheter/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/914248906/roller",
+          "sha256": "58a36e147abc89a2e383170ad60f47b0c9b47c568335c7418fa7c061d3a11086",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/914248906",
+          "sha256": "7ee0a90b734f58787b671af828f077852e9fa1b194e392406208afe885eef6f0",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": null,
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "INDIGOBOOM own branded .no site links support@indigoboom.com; Maridalsveien 89, 0461 Oslo exactly matches frozen registered address. About page describes Indigoboom as a Skyskraper subsidiary, not Skyskraper itself. One existing template-placeholder description remains low-quality but is not a wrong-company attribution."
+    },
+    {
+      "org": "914248906",
+      "name": "INDIGOBOOM AS",
+      "field": "website_description.og_description.8cbfb796357ee812",
+      "value": {
+        "text": "Digital musikkdistribusjon for band, soloartister og plateselskap til alle musikktjenester. Rask og personlig service. Ring oss!",
+        "kind": "og_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "773b7c45e8641cbb65af9878a1223cc21309a7ea8d7afea71afe153529ace5bf"
+      },
+      "sources": [
+        {
+          "url": "https://www.indigoboom.no/om-oss",
+          "sha256": "6ca378354fbcc5f43afe43810b62db1e66f3621adaad1172065bdc387d8b4c00",
+          "locator": "meta:og:description@content",
+          "span": null,
+          "title": "Om oss i Indigoboom",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… INDIGOBOOM Moderne musikkselskap, kunnskapsformidler og nettverksressurs for artister. I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. Hva er IndiGoBoom? Indigoboom er en norsk digital musikkdistributør for artister og band som vil gi ut musikken sin selv. Kort forklart betyr dette at dersom du har musikk du vil ha ut på Spotify, TIDAL, Apple, TikTok og alle de andre, kan du registrere deg hos oss, laste opp musikkfiler og coverbilde, så sørger vi for at musikken din blir tilgjengelig der du ønsker og utbetaler royalties for salg til deg/dere. Hvem er IndigoBoom? Indigoboom ble startet i 2011 og ble i 2014 et selskap i mediehuset Skyskraper. Vi har langt over hundretusen titler ute på de digitale tjenestene. Titlene omfavner mange ulike genre.Vi jobber med alt fra helt ferske artister til etablerte størrelser som Sissel Kyrkjebø, Anita Skorgan, OnklP m.fl. Du er artist. Men vet du hva det innebærer? Landskapet norske artister opererer i er raskt og brutalt endret de siste årene. Som et nokså direkte resultat av denne utviklingen står mange norske artister uten støttefunksjonene de tidligere hadde rundt seg og er ofte i tvil om hvordan de skal komme seg videre. Unge nye artister har som regel av naturlige årsaker begrenset innsikt i virkeligheten. For deg som er i startgropa kan det være greitt å ha en norsk stemme på telefon eller i møte å stille spørsmål til. Distribusjon og navigasjonshjelp for artister Vi hjelper deg ut på Spotify, Apple TikTok osv. og vi hjelper deg som artist å forstå og forvalte mulighetene og begrensningene du møter. IndiGoBoom fyller eller formidler de fleste praktiske funksjonene du trenger å ha rundt seg for å lykkes. Et slags artisthjem for totusentallet. Hos oss kan du få uhildet rådgivning og strategisk gjennomgang av alle sider ved det du gjør. Title. Double click me. DIN MUSIKK PÅ IndigoBoom Digital Distribusjon START HER + Mer Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://www.indigoboom.no/",
+          "sha256": "58cf1dd57c4aa2b05658d66b3c954adcb2a7e57dbc0c3db0ed420da13fccaf28",
+          "locator": "identity-proof:indigoboom",
+          "span": null,
+          "title": "Indigoboom digital distribusjon Oslo",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… Indigoboom Digital Distribusjon Din musikk på + mange fler Vi er her for å hjelpe deg å få mest mulig ut av musikken du gir ut. Bruker du oss som distributør har du en samtalepartner. Noen å spørre til råds når det trengs. På mail, SMS, telefon eller over en kaffe. ✅ Gi ut så mange singler, EP og album du vil ✅ På alle platformer uten ekstra kostnader ✅ Del royaltyinntektene dine enkelt og gratis ✅ Detaljert statistikk: land, kjønn, alder og masse mer ✅ Gi ut coverlåter uten ekstra kostnad ✅ Gratis Spotify Pre-save og linksamlinger ✅ Tjen penger på TikTok, FaceBook og YouTube ✅ Ny miks? Last opp den nye over den gamle (gratis) ✅ Bytte Coverbilde? Kjør på (gratis) ✅ Redigere info? (gratis) Hvorfor Indigoboom? Flere tusen artister, bl.a. Kyle Alessandro • Carina Dahl • INGEBORG • Sissel Kyrkjebø • Rein Alexander • Anita Skorgan ISÁK • Lothepus • Randi Oline • Elle Melle • Ole Evenrud • Anakin Justin • Norwegian House Mafia Keiser Augustus • Clöben • Kira Dalan • Funhouse • Oscar A • Ella Stae • AUGUST • JNS Damien • FRØY Mathilde SPZ • Lasse Lokøy • Bonnie & The Jets • Tommy Kristiansen Sigrun Loe Sparboe • Odd René Andersen • Cathrine Fornæss • CELIIN • Ane.Fin • ELIA Egil Ellevill • Bob Dalton • Tommy Fredvang • Halvor Holter • lene 3000 • Safario • Akuvi Kom igang i dag! Velg mellom BASIC GOLD PLATINUM START HER Anchor 3 Takk for henvendelsen Send Du finner oss i: Maridalsveien 89 0461 Oslo Arbeidstidene våre er: Mandag- Fredag 0900 - 1700 ​ Besøksadresse: Maridalsveien 89, 0461 Oslo Har du spørsmål? ​ ​ Ring oss på 90617345 Send en epost til: support@indigoboom.com Eller fyll inn kontaktskjemaet under. Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "792b15f61ed93dbf1fff5a94c7ee9000ea9089d66f106b521f7c268dfee9a8ec",
+          "locator": "row:914248906/column:stiftelsesdato",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914248906&size=1000&page=0",
+          "sha256": "ee43c2da76b6910a7b1532314c5608cf8fc6b948dbccd7018423be2c7926b67f",
+          "locator": "/_embedded/underenheter/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/914248906/roller",
+          "sha256": "58a36e147abc89a2e383170ad60f47b0c9b47c568335c7418fa7c061d3a11086",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/914248906",
+          "sha256": "7ee0a90b734f58787b671af828f077852e9fa1b194e392406208afe885eef6f0",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": null,
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "INDIGOBOOM own branded .no site links support@indigoboom.com; Maridalsveien 89, 0461 Oslo exactly matches frozen registered address. About page describes Indigoboom as a Skyskraper subsidiary, not Skyskraper itself. One existing template-placeholder description remains low-quality but is not a wrong-company attribution."
+    },
+    {
+      "org": "914248906",
+      "name": "INDIGOBOOM AS",
+      "field": "website_description.about_paragraph.8cbfb796357ee812",
+      "value": {
+        "text": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a l",
+        "kind": "about_paragraph",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "773b7c45e8641cbb65af9878a1223cc21309a7ea8d7afea71afe153529ace5bf"
+      },
+      "sources": [
+        {
+          "url": "https://www.indigoboom.no/om-oss",
+          "sha256": "6ca378354fbcc5f43afe43810b62db1e66f3621adaad1172065bdc387d8b4c00",
+          "locator": "visible:p:first",
+          "span": null,
+          "title": "Om oss i Indigoboom",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… INDIGOBOOM Moderne musikkselskap, kunnskapsformidler og nettverksressurs for artister. I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. Hva er IndiGoBoom? Indigoboom er en norsk digital musikkdistributør for artister og band som vil gi ut musikken sin selv. Kort forklart betyr dette at dersom du har musikk du vil ha ut på Spotify, TIDAL, Apple, TikTok og alle de andre, kan du registrere deg hos oss, laste opp musikkfiler og coverbilde, så sørger vi for at musikken din blir tilgjengelig der du ønsker og utbetaler royalties for salg til deg/dere. Hvem er IndigoBoom? Indigoboom ble startet i 2011 og ble i 2014 et selskap i mediehuset Skyskraper. Vi har langt over hundretusen titler ute på de digitale tjenestene. Titlene omfavner mange ulike genre.Vi jobber med alt fra helt ferske artister til etablerte størrelser som Sissel Kyrkjebø, Anita Skorgan, OnklP m.fl. Du er artist. Men vet du hva det innebærer? Landskapet norske artister opererer i er raskt og brutalt endret de siste årene. Som et nokså direkte resultat av denne utviklingen står mange norske artister uten støttefunksjonene de tidligere hadde rundt seg og er ofte i tvil om hvordan de skal komme seg videre. Unge nye artister har som regel av naturlige årsaker begrenset innsikt i virkeligheten. For deg som er i startgropa kan det være greitt å ha en norsk stemme på telefon eller i møte å stille spørsmål til. Distribusjon og navigasjonshjelp for artister Vi hjelper deg ut på Spotify, Apple TikTok osv. og vi hjelper deg som artist å forstå og forvalte mulighetene og begrensningene du møter. IndiGoBoom fyller eller formidler de fleste praktiske funksjonene du trenger å ha rundt seg for å lykkes. Et slags artisthjem for totusentallet. Hos oss kan du få uhildet rådgivning og strategisk gjennomgang av alle sider ved det du gjør. Title. Double click me. DIN MUSIKK PÅ IndigoBoom Digital Distribusjon START HER + Mer Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://www.indigoboom.no/",
+          "sha256": "58cf1dd57c4aa2b05658d66b3c954adcb2a7e57dbc0c3db0ed420da13fccaf28",
+          "locator": "identity-proof:indigoboom",
+          "span": null,
+          "title": "Indigoboom digital distribusjon Oslo",
+          "text": "top of page REGISTRER DEG INDIGOBOOM VS DISTROKID ARTISTER PRISER INDIGO$PLITZ ÅRETS LÅT 🏆 SEND INN KONSERTINFO Mer… Indigoboom Digital Distribusjon Din musikk på + mange fler Vi er her for å hjelpe deg å få mest mulig ut av musikken du gir ut. Bruker du oss som distributør har du en samtalepartner. Noen å spørre til råds når det trengs. På mail, SMS, telefon eller over en kaffe. ✅ Gi ut så mange singler, EP og album du vil ✅ På alle platformer uten ekstra kostnader ✅ Del royaltyinntektene dine enkelt og gratis ✅ Detaljert statistikk: land, kjønn, alder og masse mer ✅ Gi ut coverlåter uten ekstra kostnad ✅ Gratis Spotify Pre-save og linksamlinger ✅ Tjen penger på TikTok, FaceBook og YouTube ✅ Ny miks? Last opp den nye over den gamle (gratis) ✅ Bytte Coverbilde? Kjør på (gratis) ✅ Redigere info? (gratis) Hvorfor Indigoboom? Flere tusen artister, bl.a. Kyle Alessandro • Carina Dahl • INGEBORG • Sissel Kyrkjebø • Rein Alexander • Anita Skorgan ISÁK • Lothepus • Randi Oline • Elle Melle • Ole Evenrud • Anakin Justin • Norwegian House Mafia Keiser Augustus • Clöben • Kira Dalan • Funhouse • Oscar A • Ella Stae • AUGUST • JNS Damien • FRØY Mathilde SPZ • Lasse Lokøy • Bonnie & The Jets • Tommy Kristiansen Sigrun Loe Sparboe • Odd René Andersen • Cathrine Fornæss • CELIIN • Ane.Fin • ELIA Egil Ellevill • Bob Dalton • Tommy Fredvang • Halvor Holter • lene 3000 • Safario • Akuvi Kom igang i dag! Velg mellom BASIC GOLD PLATINUM START HER Anchor 3 Takk for henvendelsen Send Du finner oss i: Maridalsveien 89 0461 Oslo Arbeidstidene våre er: Mandag- Fredag 0900 - 1700 ​ Besøksadresse: Maridalsveien 89, 0461 Oslo Har du spørsmål? ​ ​ Ring oss på 90617345 Send en epost til: support@indigoboom.com Eller fyll inn kontaktskjemaet under. Ofte Stilte Spørsmål Litt Om Oss Personvernærklæring Vilkår bottom of page"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "792b15f61ed93dbf1fff5a94c7ee9000ea9089d66f106b521f7c268dfee9a8ec",
+          "locator": "row:914248906/column:stiftelsesdato",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914248906&size=1000&page=0",
+          "sha256": "ee43c2da76b6910a7b1532314c5608cf8fc6b948dbccd7018423be2c7926b67f",
+          "locator": "/_embedded/underenheter/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/914248906/roller",
+          "sha256": "58a36e147abc89a2e383170ad60f47b0c9b47c568335c7418fa7c061d3a11086",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": null,
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/914248906",
+          "sha256": "7ee0a90b734f58787b671af828f077852e9fa1b194e392406208afe885eef6f0",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": null,
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "INDIGOBOOM own branded .no site links support@indigoboom.com; Maridalsveien 89, 0461 Oslo exactly matches frozen registered address. About page describes Indigoboom as a Skyskraper subsidiary, not Skyskraper itself. One existing template-placeholder description remains low-quality but is not a wrong-company attribution."
+    }
+  ],
+  "wrong_company": 0,
+  "decision": "KEEP",
+  "tests": "840 passed in 139.80s",
+  "precision": {
+    "accepted_trial_proofs": 1,
+    "correct_company": 1,
+    "precision": 1.0,
+    "sample": "Frozen 100-company benchmark; changed proof for an existing website, not a new coverage gain"
+  }
+}
