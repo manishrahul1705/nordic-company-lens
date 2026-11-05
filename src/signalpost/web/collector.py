@@ -12,7 +12,7 @@ from ..sources.extract import Section, Source, add, missing, response_source
 from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
-from .proof import score, phone, extract_entity_cards, find_containing_card, rescue_suffix_host
+from .proof import score, phone, extract_entity_cards, find_containing_card
 from .social import discover, profile_url, attributed, observed_profiles, matches_profile, company_names
 
 
@@ -319,14 +319,6 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                     ranks = {'REJECT': -1, 'BLOCKED': -1, 'LOW': 0, 'MEDIUM': 1, 'REGISTRY_DECLARED': 2, 'HIGH': 3, 'VERIFIED': 4}
                     if ranks[extra_proof.level] > ranks[best[0].level]:
                         best = (extra_proof, extra, extra_page)
-            if (getattr(http.config,'website_suffix_contact_rescue',False)
-                    and best[0].level not in {'VERIFIED','REJECT','BLOCKED'}):
-                rescued=await offload(rescue_suffix_host,[p for _,p in pages],org,context,candidate.origin,leaders)
-                if rescued:
-                    rescued_proof,name_index,contact_index,contact_token=rescued
-                    rescued_proof.contact_response,rescued_proof.contact_page=pages[contact_index]
-                    rescued_proof.contact_token=contact_token
-                    best=(rescued_proof,*pages[name_index])
             proof, response, page = best
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
             is_prev_domain = bool(refresh_candidate and (candidate is refresh_candidate or candidate.domain == refresh_candidate.domain or domain(response.url) == refresh_candidate.domain))
@@ -505,7 +497,6 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=proof.token if proof.level=='VERIFIED' else org
     contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
-                    'legal_name_without_suffix_and_registry_contact',
                     'domain_legal_name_and_registry_location'}
     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else page.name_span(proof.token)
     if not span:
@@ -518,14 +509,6 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
         value['matched_via_subunit']=matched
     publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
-    if proof.proof_type=='legal_name_without_suffix_and_registry_contact':
-        # Retain both pages when the name and contact were observed separately.
-        identity=section.claims[-1]
-        supporting=Section()
-        publish(supporting,proof.contact_response,org,'official_website',value,
-                'registry-contact:'+proof.contact_token,proof.contact_page.name_span(proof.contact_token))
-        section.evidence.extend(supporting.evidence)
-        identity.evidence_ids.extend(supporting.claims[0].evidence_ids)
     if candidate.origin in {'registry_email', 'subunit_registry_email'}:
         section.claims[-1].reasons['discovery_method'] = 'registry email domain'
     if candidate.origin in {'nav_employer_homepage', 'subunit_nav_employer_homepage'}:
