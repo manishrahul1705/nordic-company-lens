@@ -39,22 +39,24 @@ ORGANIZATION_TYPES={'Organization','LocalBusiness','Corporation','ProfessionalSe
                     'AccountingService','Electrician','AutoRepair','ChildCare','NGO','EducationalOrganization','GovernmentOrganization'}
 
 
-def organization_objects(value):
+def organization_objects(value, *, own_only=False):
     if isinstance(value,list):
-        for item in value:yield from organization_objects(item)
+        for item in value:yield from organization_objects(item, own_only=own_only)
     elif isinstance(value,dict):
         types=value.get('@type',[])
         types=types if isinstance(types,list) else [types]
         types={str(t).rsplit('/',1)[-1].rsplit(':',1)[-1] for t in types}
         if 'Person' in types:return
         if types & ORGANIZATION_TYPES:yield value
-        for item in value.values():yield from organization_objects(item)
+        for key,item in value.items():
+            if own_only and key in {'parentOrganization','subOrganization','memberOf','brand','sponsor','provider','publisher'}:continue
+            yield from organization_objects(item, own_only=own_only)
 
 
 def organization_social(page,context=None,scope=None):
     found={}
     for body in page.jsonld:
-        for node in organization_objects(body):
+        for node in organization_objects(body, own_only=True):
             name=node.get('legalName') or node.get('name')
             if context and name and (not isinstance(name,str) or not name_matches(name,company_names(context))):continue
             if scope:
@@ -154,7 +156,8 @@ def path_scope(proof, context):
 
 
 def attributed(page, proof, context, *, same_as=True):
-    names = company_names(context)
+    names = verified_site_names(page, proof, context)
+    context = {**context, 'registered_brands': names}
     scope = path_scope(proof, context)
     found = discover(page,context,same_as=same_as) if not scope else {
         profile_url(x.href): x.span for x in page.links
@@ -163,6 +166,36 @@ def attributed(page, proof, context, *, same_as=True):
     if scope and same_as:
         for url,span in organization_social(page,context,scope).items():found.setdefault(url,span)
     return {u:s for u,s in found.items() if matches_profile(u, names)}
+
+
+def verified_site_names(page, proof, context):
+    """Site-declared aliases apply only to the verified company's own host."""
+    names = [context.get('name') or '']
+    if (proof.get('identity_level') != 'VERIFIED'
+            or domain(page.url) != domain(proof.get('final_url', ''))
+            or path_scope(proof, context) or proof.get('other_orgnrs')):
+        return names
+    from .candidates import GENERIC
+    aliases = [domain(page.url).split('.')[0], page.meta.get('og:site_name', '')]
+    aliases.extend(re.split(r'\s+[|–—-]\s+', page.title))
+    for body in page.jsonld:
+        # Do not borrow the parentOrganization/brand of an unrelated nested node.
+        for node in organization_objects(body, own_only=True):
+            own = node.get('url') or node.get('@id')
+            if not isinstance(own, str) or domain(urljoin(page.url, own)) != domain(page.url):
+                continue
+            if node.get('legalName') and not name_matches(node['legalName'], names):
+                continue
+            for key in ('name', 'alternateName'):
+                value = node.get(key, [])
+                aliases.extend(value if isinstance(value, list) else [value])
+    generic = GENERIC | {'home', 'hjem', 'forside', 'velkommen', 'welcome', 'kontakt', 'about'}
+    for alias in aliases:
+        if (isinstance(alias, str) and 3 <= len(compact(alias)) <= 80
+                and legal_name(alias) not in generic
+                and not re.search(r'\b(?:group|gruppen|gruppe|holding|agency|byrå)\b', alias, re.I)):
+            names.append(alias)
+    return names
 
 
 def drop_shared(envelopes, blobs=None):
@@ -188,6 +221,17 @@ def drop_shared(envelopes, blobs=None):
             if claim.field.startswith(('social_profile.','registry_social.')) and claim.availability == 'available':
                 target=str(claim.value.get('url',''));url=profile_key(target)
                 rejected=not matches_profile(target,names)
+                if rejected and blobs is not None and claim.field.startswith('social_profile.'):
+                    from .html import Page
+                    for ref in claim.evidence_ids:
+                        e=evidence.get(ref)
+                        if not e or e.source_class != 'company_owned':continue
+                        try:
+                            page=Page((blobs.directory/e.content_sha256).read_bytes(),e.source_url)
+                            if target in attributed(page,proof,context):
+                                rejected=False
+                                break
+                        except (OSError,ValueError):pass
                 # Refresh carry-forward must obey the current attribution rules.
                 if not rejected and blobs is not None and path_scope(proof,context):
                     from .html import Page
