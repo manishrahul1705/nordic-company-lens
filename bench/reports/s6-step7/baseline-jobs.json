@@ -1,0 +1,152 @@
+[
+  {
+    "company": "ROLIDBAKKEN FUS BARNEHAGE AS",
+    "orgnr": "991247610",
+    "job": {
+      "uuid": "bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+      "employer_orgnr": "931166492",
+      "status": "ACTIVE",
+      "title": "Du vet den barnehagen du håper finnes? Kanskje du nettopp fant den. ",
+      "location": [
+        {
+          "municipality": "GJØVIK",
+          "city": "BIRI"
+        }
+      ],
+      "published": "2026-10-23T08:15:17+02:00",
+      "expires": "2026-11-13T00:00:00+01:00",
+      "occupation_categories": [
+        {
+          "level1": "Utdanning",
+          "level2": "Barnehagelærer"
+        }
+      ],
+      "url": "https://arbeidsplassen.nav.no/stillinger/stilling/bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+      "availability": {
+        "location": "available",
+        "occupation_categories": "available"
+      },
+      "employer_homepage": "https://fus.no/rolidbakken",
+      "matched_via": "subunit 931166492"
+    },
+    "evidence": [
+      {
+        "id": "012ea001d47ba1b397d67cdf5aa2451eb3989c14fcf87f850b3f4dbf83575279",
+        "source_url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+        "source_class": "official_nav",
+        "retrieved_at": "2026-11-05T12:58:34.564781Z",
+        "content_sha256": "ab1c0f08de9c72b500babd439c750674a5deed6c23a98a45bc5f3f413ec39191",
+        "claim_span": "{\"uuid\":\"bdb50d18-4cdb-485f-a8cf-f861927dd9ca\",\"published\":\"2026-10-23T08:15:17+02:00\",\"expires\":\"2026-11-13T00:00:00+01:00\",\"updated\":\"2026-10-23T08:18:11.839499+02:00\",\"workLocations\":[{\"country\":\"NORGE\",\"address\":\"Snertingdalsveien 150\",\"city\":\"BIRI\",\"postalCode\":\"2836\",\"county\":\"INNLANDET\",\"muni",
+        "locator": "/ad_content",
+        "extraction_method": "signalpost.nav.v1",
+        "source_identifier": "{\"candidate_origin\":\"declared_cache\",\"index_built_at\":\"2026-11-04T07:16:54.150483Z\",\"index_version\":\"nav-20261104T071654.150483Z-v1\"}",
+        "effective_at": "2026-10-23T08:15:17+02:00",
+        "reporting_period": null
+      }
+    ],
+    "subunits": [
+      "931166492",
+      null
+    ]
+  },
+  {
+    "company": "CL BYGG & EIENDOM AS",
+    "orgnr": "917283109",
+    "job": {
+      "uuid": "dc6921ca-b513-40d6-a0b3-937ca398e779",
+      "employer_orgnr": "998671175",
+      "status": "ACTIVE",
+      "title": "Kvalitetsbevisst tømrer søkes til anerkjent bedrift i Sande",
+      "location": [
+        {
+          "municipality": "HOLMESTRAND",
+          "city": "SANDE I VESTFOLD"
+        }
+      ],
+      "published": "2026-06-08T00:00:01+02:00",
+      "expires": "2026-11-08T23:59:59+01:00",
+      "occupation_categories": [
+        {
+          "level1": "Håndverkere",
+          "level2": "Tømrer og snekker"
+        }
+      ],
+      "url": "https://arbeidsplassen.nav.no/stillinger/stilling/dc6921ca-b513-40d6-a0b3-937ca398e779",
+      "availability": {
+        "location": "available",
+        "occupation_categories": "available"
+      },
+      "employer_homepage": "https://clbygg.no/#om-oss",
+      "matched_via": "subunit 998671175"
+    },
+    "evidence": [
+      {
+        "id": "dc612cc7a6568abb2051b278b58583eb891716ff3b5fa7cb5358da488752d5d9",
+        "source_url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/dc6921ca-b513-40d6-a0b3-937ca398e779",
+        "source_class": "official_nav",
+        "retrieved_at": "2026-11-05T12:58:47.647129Z",
+        "content_sha256": "5e420ed5f6137a519b8b18a1bbf2a8c28816341fc2fbcacf9f4c276b13543f6e",
+        "claim_span": "{\"uuid\":\"dc6921ca-b513-40d6-a0b3-937ca398e779\",\"published\":\"2026-06-08T00:00:01+02:00\",\"expires\":\"2026-11-08T23:59:59+01:00\",\"updated\":\"2026-10-13T09:49:59.919785+02:00\",\"workLocations\":[{\"country\":\"NORGE\",\"address\":\"\",\"city\":\"SANDE I VESTFOLD\",\"postalCode\":\"3077\",\"county\":\"VESTFOLD\",\"municipal\":\"HO",
+        "locator": "/ad_content",
+        "extraction_method": "signalpost.nav.v1",
+        "source_identifier": "{\"candidate_origin\":\"declared_cache\",\"index_built_at\":\"2026-11-04T07:16:54.150483Z\",\"index_version\":\"nav-20261104T071654.150483Z-v1\"}",
+        "effective_at": "2026-06-08T00:00:01+02:00",
+        "reporting_period": null
+      }
+    ],
+    "subunits": [
+      "998671175",
+      null
+    ]
+  },
+  {
+    "company": "NORLANDIA ENGA BARNEHAGE AS",
+    "orgnr": "930202894",
+    "job": {
+      "uuid": "c0349976-bbfc-41f4-a980-b482f06e5f2d",
+      "employer_orgnr": "997453964",
+      "status": "ACTIVE",
+      "title": "Pedagogisk leder 40% vikariat",
+      "location": [
+        {
+          "municipality": "OSLO",
+          "city": "OSLO"
+        }
+      ],
+      "published": "2026-10-26T10:53:41.231396+01:00",
+      "expires": "2026-11-26T00:00:00+01:00",
+      "occupation_categories": [
+        {
+          "level1": "Utdanning",
+          "level2": "Barnehagelærer"
+        }
+      ],
+      "url": "https://arbeidsplassen.nav.no/stillinger/stilling/c0349976-bbfc-41f4-a980-b482f06e5f2d",
+      "availability": {
+        "location": "available",
+        "occupation_categories": "available"
+      },
+      "matched_via": "subunit 997453964"
+    },
+    "evidence": [
+      {
+        "id": "9734f41f5a622199f6e8a5af389674ddb13789aa054f48078c7e6a188f66f2d3",
+        "source_url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/c0349976-bbfc-41f4-a980-b482f06e5f2d",
+        "source_class": "official_nav",
+        "retrieved_at": "2026-11-05T12:58:55.857956Z",
+        "content_sha256": "04f6bcb4dda6f88e0e688fcaa7e8133e4cec0abaf3942e3b249d15520b9a1d4c",
+        "claim_span": "{\"uuid\":\"c0349976-bbfc-41f4-a980-b482f06e5f2d\",\"published\":\"2026-10-26T10:53:41.231396+01:00\",\"expires\":\"2026-11-26T00:00:00+01:00\",\"updated\":\"2026-10-26T11:54:54.005583+01:00\",\"workLocations\":[{\"country\":\"NORGE\",\"address\":\"Opplandgata 5, 0657 Oslo, Norge\",\"city\":\"OSLO\",\"postalCode\":\"0657\",\"county\":",
+        "locator": "/ad_content",
+        "extraction_method": "signalpost.nav.v1",
+        "source_identifier": "{\"candidate_origin\":\"declared_cache\",\"index_built_at\":\"2026-11-04T07:16:54.150483Z\",\"index_version\":\"nav-20261104T071654.150483Z-v1\"}",
+        "effective_at": "2026-10-26T10:53:41.231396+01:00",
+        "reporting_period": null
+      }
+    ],
+    "subunits": [
+      "997453964",
+      null,
+      null
+    ]
+  }
+]

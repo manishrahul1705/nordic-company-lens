@@ -1,0 +1,59 @@
+[
+  {
+    "test": "test_every_site_timeout_preser0",
+    "requests": 1800,
+    "max_per_company": 18,
+    "mean": 18.0,
+    "limits": {
+      "max_requests": 1800,
+      "max_cost_usd": 0,
+      "time_budget_seconds": 2400,
+      "deadline_fraction": 0.85,
+      "request_timeout": 10,
+      "host_concurrency": 10,
+      "hard_max_requests": 1800,
+      "hard_time_budget_seconds": 2400
+    },
+    "envelopes": 100,
+    "deadline_errors": null,
+    "nav_mode": null
+  },
+  {
+    "test": "test_every_site_timeout_preser1",
+    "requests": 435,
+    "max_per_company": 18,
+    "mean": 4.35,
+    "limits": {
+      "max_requests": 1800,
+      "max_cost_usd": 0,
+      "time_budget_seconds": 2400,
+      "deadline_fraction": 0.85,
+      "request_timeout": 10,
+      "host_concurrency": 10,
+      "hard_max_requests": 1800,
+      "hard_time_budget_seconds": 2400
+    },
+    "envelopes": 100,
+    "deadline_errors": null,
+    "nav_mode": null
+  },
+  {
+    "test": "test_full_feed_fallback_cannot0",
+    "requests": 420,
+    "max_per_company": 4,
+    "mean": 3.38,
+    "limits": {
+      "max_requests": 420,
+      "max_cost_usd": 0,
+      "time_budget_seconds": 2400,
+      "deadline_fraction": 0.85,
+      "request_timeout": 10,
+      "host_concurrency": 10,
+      "hard_max_requests": 1800,
+      "hard_time_budget_seconds": 2400
+    },
+    "envelopes": 100,
+    "deadline_errors": null,
+    "nav_mode": "full_feed_fallback"
+  }
+]

@@ -1,0 +1,2865 @@
+{
+  "before": "bench\\runs\\20261105T125807303812Z-7dbcd26",
+  "after": "bench\\runs\\20261105T144615250970Z-1fe27a0",
+  "sections": {
+    "identity": {
+      "before": 1000,
+      "after": 1000,
+      "difference": 0,
+      "absolute_difference": 0
+    },
+    "people": {
+      "before": 997,
+      "after": 997,
+      "difference": 0,
+      "absolute_difference": 0
+    },
+    "locations": {
+      "before": 774,
+      "after": 774,
+      "difference": 0,
+      "absolute_difference": 0
+    },
+    "financials": {
+      "before": 999,
+      "after": 999,
+      "difference": 0,
+      "absolute_difference": 0
+    },
+    "website": {
+      "before": 83,
+      "after": 79,
+      "difference": -4,
+      "absolute_difference": 4
+    },
+    "social": {
+      "before": 39,
+      "after": 33,
+      "difference": -6,
+      "absolute_difference": 6
+    },
+    "jobs": {
+      "before": 3,
+      "after": 3,
+      "difference": 0,
+      "absolute_difference": 0
+    },
+    "news/activity": {
+      "before": 231,
+      "after": 231,
+      "difference": 0,
+      "absolute_difference": 0
+    }
+  },
+  "website_symmetric_difference": [
+    {
+      "org": "926490060",
+      "name": "CONTROL SOLUTIONS AS",
+      "before": "https://www.control-solutions.no",
+      "after": null,
+      "failure_section": "failed",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        },
+        {
+          "section": "website",
+          "code": "website_budget_exhausted",
+          "message": "Website work ended at configured budget"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "controlsolutions.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "controlsolutions-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutionsas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "url": "http://control-solutions.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutions.no",
+          "origin": "subunit_name_slug",
+          "url": "https://controlsolutions.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "controlsolutions.no",
+          "url": "https://www.controlsolutions.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutions.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.controlsolutions.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "controlsolutions.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.controlsolutions.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "url": "http://controlsolutions.no/",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutions.no",
+          "origin": "subunit_name_slug",
+          "url": "http://controlsolutions.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "controlsolutions-as.no",
+          "url": "https://controlsolutions-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutions-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://controlsolutions-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions-as.no",
+          "url": "https://www.controlsolutions-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutions-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.controlsolutions-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.controlsolutions-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://controlsolutions-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutionsas.no",
+          "url": "https://controlsolutionsas.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutionsas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://controlsolutionsas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutionsas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.controlsolutionsas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutionsas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.controlsolutionsas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutionsas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://controlsolutionsas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions.as",
+          "origin": "subunit_name_slug",
+          "url": "https://controlsolutions.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions.as",
+          "url": "https://www.controlsolutions.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutions.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.controlsolutions.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.controlsolutions.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions.as",
+          "origin": "subunit_name_slug",
+          "url": "http://controlsolutions.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "controlsolutions.com",
+          "url": "https://controlsolutions.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "controlsolutions.com",
+          "origin": "subunit_name_slug",
+          "url": "https://controlsolutions.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ]
+    },
+    {
+      "org": "987895276",
+      "name": "CONPLAN AS",
+      "before": "https://www.conplan.no",
+      "after": null,
+      "failure_section": "failed",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "conplan.no",
+          "origin": "registry_email",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "conplan-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplanas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan.com",
+          "reason": "website_timeout",
+          "page": "http://www.conplan.com/om-oss"
+        },
+        {
+          "domain": "conplan.com",
+          "reason": "website_timeout",
+          "page": "http://www.conplan.com/impressum"
+        },
+        {
+          "domain": "conplan.com",
+          "reason": "website_timeout",
+          "page": "http://www.conplan.com/privacy-policy"
+        },
+        {
+          "domain": "conplan.com",
+          "reason": "dns_timeout",
+          "page": "http://www.conplan.com/personvern"
+        },
+        {
+          "domain": "conplan.com",
+          "level": "REJECT",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "parked"
+        },
+        {
+          "domain": "conplan.no",
+          "url": "https://conplan.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "conplan.no",
+          "origin": "registry_email",
+          "url": "https://conplan.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "conplan.no",
+          "url": "https://www.conplan.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "conplan.no",
+          "origin": "registry_email",
+          "url": "https://www.conplan.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "conplan.no",
+          "origin": "registry_email",
+          "url": "http://www.conplan.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "conplan.no",
+          "origin": "registry_email",
+          "url": "http://conplan.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "conplan-as.no",
+          "url": "https://conplan-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "conplan-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://conplan-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.conplan-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.conplan-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://conplan-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplanas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://conplanas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplanas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.conplanas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplanas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.conplanas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplanas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://conplanas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan.as",
+          "origin": "subunit_name_slug",
+          "url": "https://conplan.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.conplan.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.conplan.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan.as",
+          "origin": "subunit_name_slug",
+          "url": "http://conplan.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "conplan.com",
+          "origin": "subunit_name_slug",
+          "url": "https://conplan.com/",
+          "reason": "website_tls_error"
+        },
+        {
+          "domain": "conplan.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.conplan.com/",
+          "reason": "website_tls_error"
+        },
+        {
+          "domain": "conplan.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.conplan.com/",
+          "final_url": "http://www.conplan.com/",
+          "status": 200
+        },
+        {
+          "url": "http://www.conplan.com/om-oss",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "url": "http://www.conplan.com/impressum",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "url": "http://www.conplan.com/privacy-policy",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "url": "http://www.conplan.com/personvern",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        }
+      ]
+    },
+    {
+      "org": "811888672",
+      "name": "Fusa Mekaniske Industri AS",
+      "before": "https://www.fusamek.no",
+      "after": null,
+      "failure_section": "failed",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "fusamek.no",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "fusamekaniskeindustri.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustrias.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "fusamekaniskeindustri.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industrias.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "url": "https://www.fusamek.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamek.no",
+          "origin": "registry_website",
+          "url": "https://fusamek.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "url": "https://www.fusamek.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamek.no",
+          "origin": "registry_website",
+          "url": "https://www.fusamek.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "http://www.fusamek.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamek.no",
+          "origin": "registry_website",
+          "url": "http://www.fusamek.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "http://fusamek.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamek.no",
+          "origin": "registry_website",
+          "url": "http://fusamek.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "fusamekaniskeindustri.no",
+          "origin": "subunit_name_slug",
+          "url": "https://fusamekaniskeindustri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.no",
+          "url": "https://www.fusamekaniskeindustri.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamekaniskeindustri.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusamekaniskeindustri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusamekaniskeindustri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.no",
+          "origin": "subunit_name_slug",
+          "url": "http://fusamekaniskeindustri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://fusamekaniskeindustri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusamekaniskeindustri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusamekaniskeindustri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://fusamekaniskeindustri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustrias.no",
+          "url": "https://fusamekaniskeindustrias.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamekaniskeindustrias.no",
+          "origin": "subunit_name_slug",
+          "url": "https://fusamekaniskeindustrias.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustrias.no",
+          "url": "https://www.fusamekaniskeindustrias.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamekaniskeindustrias.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusamekaniskeindustrias.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "fusamekaniskeindustrias.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusamekaniskeindustrias.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "fusamekaniskeindustrias.no",
+          "origin": "subunit_name_slug",
+          "url": "http://fusamekaniskeindustrias.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.as",
+          "url": "https://fusamekaniskeindustri.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamekaniskeindustri.as",
+          "origin": "subunit_name_slug",
+          "url": "https://fusamekaniskeindustri.as/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "fusamekaniskeindustri.as",
+          "url": "https://www.fusamekaniskeindustri.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusamekaniskeindustri.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusamekaniskeindustri.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusamekaniskeindustri.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.as",
+          "origin": "subunit_name_slug",
+          "url": "http://fusamekaniskeindustri.as/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "fusamekaniskeindustri.com",
+          "origin": "subunit_name_slug",
+          "url": "https://fusamekaniskeindustri.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusamekaniskeindustri.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusamekaniskeindustri.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusamekaniskeindustri.com",
+          "origin": "subunit_name_slug",
+          "url": "http://fusamekaniskeindustri.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.no",
+          "origin": "subunit_name_slug",
+          "url": "https://fusa-mekaniske-industri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusa-mekaniske-industri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusa-mekaniske-industri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.no",
+          "origin": "subunit_name_slug",
+          "url": "http://fusa-mekaniske-industri.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://fusa-mekaniske-industri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusa-mekaniske-industri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusa-mekaniske-industri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://fusa-mekaniske-industri-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industrias.no",
+          "origin": "subunit_name_slug",
+          "url": "https://fusa-mekaniske-industrias.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industrias.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusa-mekaniske-industrias.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industrias.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusa-mekaniske-industrias.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industrias.no",
+          "origin": "subunit_name_slug",
+          "url": "http://fusa-mekaniske-industrias.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.as",
+          "origin": "subunit_name_slug",
+          "url": "https://fusa-mekaniske-industri.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusa-mekaniske-industri.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusa-mekaniske-industri.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.as",
+          "origin": "subunit_name_slug",
+          "url": "http://fusa-mekaniske-industri.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.com",
+          "origin": "subunit_name_slug",
+          "url": "https://fusa-mekaniske-industri.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.com",
+          "url": "https://www.fusa-mekaniske-industri.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "fusa-mekaniske-industri.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.fusa-mekaniske-industri.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.fusa-mekaniske-industri.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fusa-mekaniske-industri.com",
+          "origin": "subunit_name_slug",
+          "url": "http://fusa-mekaniske-industri.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "999530095",
+      "name": "7OCEAN HOLDING AS",
+      "before": "https://www.7ocean.no",
+      "after": null,
+      "failure_section": "failed",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "7ocean.no",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "7oceanholding.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding-as.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholdingas.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholding.as",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholding.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding-as.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holdingas.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.as",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "url": "https://7ocean.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7ocean.no",
+          "origin": "registry_website",
+          "url": "https://7ocean.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "https://www.7ocean.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7ocean.no",
+          "origin": "registry_website",
+          "url": "https://www.7ocean.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "http://www.7ocean.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7ocean.no",
+          "origin": "registry_website",
+          "url": "http://www.7ocean.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "url": "http://7ocean.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7ocean.no",
+          "origin": "registry_website",
+          "url": "http://7ocean.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "7oceanholding.no",
+          "origin": "legal_name_slug",
+          "url": "https://7oceanholding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.no",
+          "url": "https://www.7oceanholding.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7oceanholding.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.7oceanholding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.7oceanholding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.no",
+          "origin": "legal_name_slug",
+          "url": "http://7oceanholding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://7oceanholding-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding-as.no",
+          "url": "https://www.7oceanholding-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7oceanholding-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.7oceanholding-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholding-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.7oceanholding-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholding-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://7oceanholding-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholdingas.no",
+          "url": "https://7oceanholdingas.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7oceanholdingas.no",
+          "origin": "legal_name_slug",
+          "url": "https://7oceanholdingas.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholdingas.no",
+          "url": "https://www.7oceanholdingas.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7oceanholdingas.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.7oceanholdingas.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholdingas.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.7oceanholdingas.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholdingas.no",
+          "origin": "legal_name_slug",
+          "url": "http://7oceanholdingas.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholding.as",
+          "url": "https://7oceanholding.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7oceanholding.as",
+          "origin": "legal_name_slug",
+          "url": "https://7oceanholding.as/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholding.as",
+          "url": "https://www.7oceanholding.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "7oceanholding.as",
+          "origin": "legal_name_slug",
+          "url": "https://www.7oceanholding.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.as",
+          "origin": "legal_name_slug",
+          "url": "http://www.7oceanholding.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.as",
+          "origin": "legal_name_slug",
+          "url": "http://7oceanholding.as/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "7oceanholding.com",
+          "origin": "legal_name_slug",
+          "url": "https://7oceanholding.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.7oceanholding.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.7oceanholding.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7oceanholding.com",
+          "origin": "legal_name_slug",
+          "url": "http://7oceanholding.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.no",
+          "origin": "legal_name_slug",
+          "url": "https://7ocean-holding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.7ocean-holding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.7ocean-holding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.no",
+          "origin": "legal_name_slug",
+          "url": "http://7ocean-holding.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://7ocean-holding-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.7ocean-holding-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.7ocean-holding-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://7ocean-holding-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holdingas.no",
+          "origin": "legal_name_slug",
+          "url": "https://7ocean-holdingas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holdingas.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.7ocean-holdingas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holdingas.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.7ocean-holdingas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holdingas.no",
+          "origin": "legal_name_slug",
+          "url": "http://7ocean-holdingas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.as",
+          "origin": "legal_name_slug",
+          "url": "https://7ocean-holding.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.as",
+          "origin": "legal_name_slug",
+          "url": "https://www.7ocean-holding.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.as",
+          "origin": "legal_name_slug",
+          "url": "http://www.7ocean-holding.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.as",
+          "origin": "legal_name_slug",
+          "url": "http://7ocean-holding.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.com",
+          "origin": "legal_name_slug",
+          "url": "https://7ocean-holding.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.7ocean-holding.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.7ocean-holding.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "7ocean-holding.com",
+          "origin": "legal_name_slug",
+          "url": "http://7ocean-holding.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "926065173",
+      "name": "THE LAB RETRIEVER AS",
+      "before": "https://thelabretriever.com",
+      "after": null,
+      "failure_section": "failed",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "thelabretriever.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever-as.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretrieveras.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "thelabretriever.as",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "the-lab-retriever.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "the-lab-retriever-as.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retrieveras.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.as",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.no",
+          "origin": "legal_name_slug",
+          "url": "https://thelabretriever.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.thelabretriever.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.thelabretriever.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.no",
+          "origin": "legal_name_slug",
+          "url": "http://thelabretriever.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://thelabretriever-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever-as.no",
+          "url": "https://www.thelabretriever-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "thelabretriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.thelabretriever-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "thelabretriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.thelabretriever-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "thelabretriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://thelabretriever-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretrieveras.no",
+          "url": "https://thelabretrieveras.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "thelabretrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "https://thelabretrieveras.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "thelabretrieveras.no",
+          "url": "https://www.thelabretrieveras.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "thelabretrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.thelabretrieveras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.thelabretrieveras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "http://thelabretrieveras.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "thelabretriever.as",
+          "origin": "legal_name_slug",
+          "url": "https://thelabretriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.as",
+          "url": "https://www.thelabretriever.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "thelabretriever.as",
+          "origin": "legal_name_slug",
+          "url": "https://www.thelabretriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.as",
+          "origin": "legal_name_slug",
+          "url": "http://www.thelabretriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.as",
+          "origin": "legal_name_slug",
+          "url": "http://thelabretriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "thelabretriever.com",
+          "url": "https://thelabretriever.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "url": "https://thelabretriever.com/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "thelabretriever.com",
+          "origin": "legal_name_slug",
+          "url": "https://thelabretriever.com/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "thelabretriever.com",
+          "url": "https://www.thelabretriever.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "thelabretriever.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.thelabretriever.com/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "thelabretriever.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.thelabretriever.com/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "url": "http://thelabretriever.com/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "thelabretriever.com",
+          "origin": "legal_name_slug",
+          "url": "http://thelabretriever.com/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "the-lab-retriever.no",
+          "url": "https://the-lab-retriever.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "the-lab-retriever.no",
+          "origin": "legal_name_slug",
+          "url": "https://the-lab-retriever.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "the-lab-retriever.no",
+          "url": "https://www.the-lab-retriever.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "the-lab-retriever.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.the-lab-retriever.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.the-lab-retriever.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.no",
+          "origin": "legal_name_slug",
+          "url": "http://the-lab-retriever.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "the-lab-retriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://the-lab-retriever-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.the-lab-retriever-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.the-lab-retriever-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever-as.no",
+          "origin": "legal_name_slug",
+          "url": "http://the-lab-retriever-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "https://the-lab-retrieveras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.the-lab-retrieveras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.the-lab-retrieveras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retrieveras.no",
+          "origin": "legal_name_slug",
+          "url": "http://the-lab-retrieveras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.as",
+          "origin": "legal_name_slug",
+          "url": "https://the-lab-retriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.as",
+          "origin": "legal_name_slug",
+          "url": "https://www.the-lab-retriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.as",
+          "origin": "legal_name_slug",
+          "url": "http://www.the-lab-retriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.as",
+          "origin": "legal_name_slug",
+          "url": "http://the-lab-retriever.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.com",
+          "origin": "legal_name_slug",
+          "url": "https://the-lab-retriever.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.the-lab-retriever.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.the-lab-retriever.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "the-lab-retriever.com",
+          "origin": "legal_name_slug",
+          "url": "http://the-lab-retriever.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "971349743",
+      "name": "STIFTINGA MUSEUMSSENTERET I HORDALAND",
+      "before": "https://muho.no",
+      "after": null,
+      "failure_section": "failed",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        },
+        {
+          "section": "website",
+          "code": "website_budget_exhausted",
+          "message": "Website work ended at configured budget"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "muho.no",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "havra.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "havraas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_servfail"
+        },
+        {
+          "domain": "havraa.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraaas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.com",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "xn--havr-toa.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "url": "https://muho.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "muho.no",
+          "origin": "registry_website",
+          "url": "https://muho.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "https://www.muho.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "muho.no",
+          "origin": "registry_website",
+          "url": "https://www.muho.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "http://www.muho.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "muho.no",
+          "origin": "registry_website",
+          "url": "http://www.muho.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "url": "http://muho.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "muho.no",
+          "origin": "registry_website",
+          "url": "http://muho.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "havra.no",
+          "url": "https://havra.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "havra.no",
+          "origin": "subunit_name_slug",
+          "url": "https://havra.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.no",
+          "url": "https://www.havra.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "havra.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havra.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havra.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.no",
+          "origin": "subunit_name_slug",
+          "url": "http://havra.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra-as.no",
+          "url": "https://havra-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "havra-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://havra-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "havra-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havra-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havra-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://havra-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "havraas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://havraas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havraas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havraas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://havraas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.as",
+          "origin": "subunit_name_slug",
+          "url": "https://havra.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havra.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havra.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.as",
+          "origin": "subunit_name_slug",
+          "url": "http://havra.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havra.com",
+          "url": "https://havra.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "SourceFailure",
+          "message": "dns_servfail",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "havra.com",
+          "origin": "subunit_name_slug",
+          "url": "https://havra.com/",
+          "reason": "dns_servfail"
+        },
+        {
+          "domain": "havra.com",
+          "url": "https://www.havra.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "havra.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havra.com/",
+          "reason": "dns_servfail"
+        },
+        {
+          "domain": "havra.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havra.com/",
+          "reason": "dns_servfail"
+        },
+        {
+          "domain": "havra.com",
+          "origin": "subunit_name_slug",
+          "url": "http://havra.com/",
+          "reason": "dns_servfail"
+        },
+        {
+          "domain": "havraa.no",
+          "origin": "subunit_name_slug",
+          "url": "https://havraa.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havraa.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havraa.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.no",
+          "origin": "subunit_name_slug",
+          "url": "http://havraa.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://havraa-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havraa-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havraa-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://havraa-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraaas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://havraaas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraaas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havraaas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraaas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havraaas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraaas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://havraaas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.as",
+          "origin": "subunit_name_slug",
+          "url": "https://havraa.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.havraa.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.havraa.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.as",
+          "origin": "subunit_name_slug",
+          "url": "http://havraa.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "havraa.com",
+          "origin": "subunit_name_slug",
+          "url": "https://havraa.com/",
+          "final_url": "https://havraa.com/",
+          "status": 200
+        },
+        {
+          "domain": "xn--havr-toa.no",
+          "origin": "subunit_name_slug",
+          "url": "https://xn--havr-toa.no/",
+          "reason": "website_budget_exhausted"
+        }
+      ]
+    },
+    {
+      "org": "999329969",
+      "name": "X2 WORKS AS",
+      "before": null,
+      "after": "https://x2.no",
+      "failure_section": "failed",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "x2.no",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "x2works.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2works-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2worksas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-worksas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "url": "https://x2.no/",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2.no",
+          "origin": "registry_website",
+          "url": "https://x2.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "https://www.x2.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2.no",
+          "origin": "registry_website",
+          "url": "https://www.x2.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "http://www.x2.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2.no",
+          "origin": "registry_website",
+          "url": "http://www.x2.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "http://x2.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "url": "http://x2.no/",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2.no",
+          "origin": "registry_website",
+          "url": "http://x2.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "x2works.no",
+          "url": "https://x2works.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2works.no",
+          "origin": "subunit_name_slug",
+          "url": "https://x2works.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2works.no",
+          "url": "https://www.x2works.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2works.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2works.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2works.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2works.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2works.no",
+          "origin": "subunit_name_slug",
+          "url": "http://x2works.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2works-as.no",
+          "url": "https://x2works-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://x2works-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2works-as.no",
+          "url": "https://www.x2works-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "x2works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2works-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2works-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://x2works-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "x2worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://x2worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://x2worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.as",
+          "origin": "subunit_name_slug",
+          "url": "https://x2works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.as",
+          "origin": "subunit_name_slug",
+          "url": "http://x2works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.com",
+          "origin": "subunit_name_slug",
+          "url": "https://x2works.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2works.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2works.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2works.com",
+          "origin": "subunit_name_slug",
+          "url": "http://x2works.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.no",
+          "origin": "subunit_name_slug",
+          "url": "https://x2-works.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2-works.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2-works.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.no",
+          "origin": "subunit_name_slug",
+          "url": "http://x2-works.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://x2-works-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2-works-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2-works-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://x2-works-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://x2-worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2-worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2-worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-worksas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://x2-worksas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.as",
+          "origin": "subunit_name_slug",
+          "url": "https://x2-works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2-works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2-works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.as",
+          "origin": "subunit_name_slug",
+          "url": "http://x2-works.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.com",
+          "origin": "subunit_name_slug",
+          "url": "https://x2-works.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.x2-works.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.x2-works.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "x2-works.com",
+          "origin": "subunit_name_slug",
+          "url": "http://x2-works.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "952785052",
+      "name": "NASJONALT SENTER FOR NORDLANDSHEST /LYNGSHEST AS",
+      "before": "https://www.nsnl.no",
+      "after": "http://www.nsnl.no",
+      "failure_section": null,
+      "failure_errors": [],
+      "diagnostics": []
+    },
+    {
+      "org": "980362779",
+      "name": "RENTHALL AS",
+      "before": null,
+      "after": "https://renthall.no",
+      "failure_section": "ambiguous",
+      "failure_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        },
+        {
+          "section": "website",
+          "code": "website_budget_exhausted",
+          "message": "Website work ended at configured budget"
+        }
+      ],
+      "diagnostics": [
+        {
+          "domain": "hallmaker.no",
+          "origin": "registry_email",
+          "level": "LOW",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "renthall.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "renthall-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthallas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall.com",
+          "reason": "website_budget_exhausted",
+          "page": "https://renthall.com/terms-conditions/"
+        },
+        {
+          "domain": "renthall.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "url": "https://hallmaker.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "hallmaker.no",
+          "origin": "registry_email",
+          "url": "https://hallmaker.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "hallmaker.no",
+          "url": "https://www.hallmaker.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "hallmaker.no",
+          "origin": "registry_email",
+          "url": "https://www.hallmaker.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "hallmaker.no",
+          "origin": "registry_email",
+          "url": "http://www.hallmaker.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "url": "http://hallmaker.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "hallmaker.no",
+          "origin": "registry_email",
+          "url": "http://hallmaker.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "renthall.no",
+          "url": "https://renthall.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "renthall.no",
+          "origin": "subunit_name_slug",
+          "url": "https://renthall.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "url": "https://www.renthall.no/",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "renthall.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.renthall.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "http://www.renthall.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "url": "http://www.renthall.no/",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "renthall.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.renthall.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "renthall.no",
+          "origin": "subunit_name_slug",
+          "url": "http://renthall.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "renthall-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://renthall-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.renthall-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.renthall-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://renthall-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthallas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://renthallas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthallas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.renthallas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthallas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.renthallas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthallas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://renthallas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall.as",
+          "origin": "subunit_name_slug",
+          "url": "https://renthall.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.renthall.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.renthall.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall.as",
+          "origin": "subunit_name_slug",
+          "url": "http://renthall.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "renthall.com",
+          "origin": "subunit_name_slug",
+          "url": "https://renthall.com/",
+          "final_url": "https://renthall.com/",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "org": "988456292",
+      "name": "STYREGUIDEN AS",
+      "before": "https://www.styreguiden.no",
+      "after": "https://styreguiden.no",
+      "failure_section": null,
+      "failure_errors": [],
+      "diagnostics": []
+    }
+  ]
+}
