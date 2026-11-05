@@ -2,6 +2,7 @@ from ..workers import offload
 import asyncio
 import time
 import ssl
+import errno
 from dataclasses import dataclass, replace
 from urllib.parse import urlsplit, urljoin, urlunsplit
 from urllib.robotparser import RobotFileParser
@@ -23,6 +24,31 @@ def transport_failure_code(exc):
             return 'website_tls_error'
         exc = exc.__cause__ or exc.__context__
     return 'website_connect_error'
+
+
+def retryable_transport(exc):
+    """Retry only temporary transport failures, never TLS validation or NXDOMAIN."""
+    if getattr(exc, 'retry_exhausted', False) or getattr(exc, 'http_status', 0) >= 400:
+        return False
+    if isinstance(exc, SourceFailure):
+        if exc.code in {'dns_timeout', 'dns_servfail'}:
+            return True
+        if exc.code not in {'website_timeout', 'website_connect_error'}:
+            return False
+    if transport_failure_code(exc) == 'website_tls_error':
+        return False
+    seen=set()
+    while exc is not None and id(exc) not in seen:
+        seen.add(id(exc))
+        if isinstance(exc, (TimeoutError, httpx.TimeoutException, ConnectionResetError, ConnectionRefusedError)):
+            return True
+        if isinstance(exc, OSError) and (exc.errno in {errno.ECONNRESET, errno.ECONNREFUSED}
+                or getattr(exc,'winerror',None) in {64,1225,10054,10061}):
+            return True
+        if any(s in str(exc).casefold() for s in ('connection reset','connection refused','peer reset')):
+            return True
+        exc=exc.__cause__ or exc.__context__
+    return False
 
 
 @dataclass
@@ -56,6 +82,11 @@ class WebsiteHttp:
             by_org[org] = by_org.get(org, 0) + 1
         return await (self.resolver or policy.resolve_public)(host, port)
 
+    async def retry_pause(self):
+        self.budget.check()
+        await asyncio.sleep(min(1.5, max(0, self.budget.deadline-time.monotonic())))
+        self.budget.check()
+
     async def precheck(self, candidate, org):
         if candidate.origin == 'registry_website' or not self.config.dns_precheck:
             return
@@ -69,19 +100,40 @@ class WebsiteHttp:
             if host not in self.dns_cache:
                 self.budget.check()
                 self.dns_lookups += 1
-                try:
-                    ips = await asyncio.wait_for(self.resolve(host, 443, org), timeout=min(3, max(.001, self.budget.deadline-time.monotonic())))
-                    self.dns_cache[host] = policy.check_ips(ips)
-                except (TimeoutError, OSError):
-                    self.dns_cache[host] = 'dns_unavailable'
-                except SourceFailure as exc:
-                    self.dns_cache[host] = exc.code if exc.code in {'no_such_domain', 'ssrf'} else 'dns_unavailable'
+                for attempt in range(2 if self.config.website_transient_retry else 1):
+                    try:
+                        ips = await asyncio.wait_for(self.resolve(host,443,org),
+                            timeout=min(12 if attempt else 3,max(.001,self.budget.deadline-time.monotonic())))
+                        self.dns_cache[host]=policy.check_ips(ips)
+                        break
+                    except (TimeoutError,OSError,SourceFailure) as exc:
+                        if not attempt and self.config.website_transient_retry and retryable_transport(exc):
+                            self.attempts.setdefault(org,[]).append({'domain':candidate.domain,'url':candidate.url,
+                                'reason':'transient_dns_retry','exception_class':type(exc).__name__,'message':str(exc),'retry_timeout_seconds':12})
+                            await self.retry_pause()
+                            continue
+                        self.dns_cache[host] = exc.code if isinstance(exc,SourceFailure) and exc.code in {'no_such_domain','ssrf','dns_servfail'} else 'dns_unavailable'
+                        break
             result = self.dns_cache[host]
             if isinstance(result, str):
                 raise SourceFailure(result)
             policy.check_ips(result)
 
     async def raw(self, url, org, domains, xml=False, obey_robots=False, allow_redirects=False):
+        for attempt in range(2 if self.config.website_transient_retry else 1):
+            try:
+                return await self._raw(url,org,domains,xml,obey_robots,allow_redirects,
+                                       request_timeout=12 if attempt else 8)
+            except SourceFailure as exc:
+                if attempt or not self.config.website_transient_retry or not retryable_transport(exc):
+                    exc.retry_exhausted=True
+                    raise
+                self.attempts.setdefault(org,[]).append({'url':url,'reason':'transient_transport_retry',
+                    'failure_code':exc.code,'exception_class':type(exc.__cause__ or exc).__name__,
+                    'message':str(exc.__cause__ or exc),'retry_timeout_seconds':12})
+                await self.retry_pause()
+
+    async def _raw(self, url, org, domains, xml=False, obey_robots=False, allow_redirects=False, request_timeout=8):
         domains = set(domains)
         url = policy.validate_url(url, domains)
         for hop in range(4):
@@ -98,7 +150,10 @@ class WebsiteHttp:
                     self.budget.check()
                     gate.next_start = time.monotonic() + self.config.website_politeness_seconds
                 registry_requests = sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)
-                company_cap = min(self.config.website_request_cap + int(org in self.activity_extra),max(0,self.config.website_total_request_cap-registry_requests))
+                # Preserve a reserved activity request for explicitly lower caps,
+                # while the new per-company ceiling remains a hard 16.
+                company_cap = min(16,self.config.website_request_cap + int(org in self.activity_extra),
+                                  max(0,self.config.website_total_request_cap-registry_requests))
                 if self.counts.get(org, 0) >= company_cap:
                     raise SourceFailure("website_budget_exhausted")
                 event = self.budget.reserve(url, parts.hostname, org)
@@ -109,8 +164,8 @@ class WebsiteHttp:
                 chunks = []
                 try:
                     remaining = self.budget.deadline - time.monotonic()
-                    async with asyncio.timeout(min(8, max(.001, remaining))):
-                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=min(8, max(.001, remaining)), follow_redirects=False) as stream:
+                    async with asyncio.timeout(min(request_timeout, max(.001, remaining))):
+                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=min(request_timeout, max(.001, remaining)), follow_redirects=False) as stream:
                             chunks = []
                             size = 0
                             event["status"] = stream.status_code
@@ -144,12 +199,18 @@ class WebsiteHttp:
                             return response
                 except (TimeoutError, httpx.TimeoutException) as exc:
                     event["error"] = type(exc).__name__
-                    raise SourceFailure("website_timeout") from exc
+                    event['exception_message']=str(exc)
+                    failure=SourceFailure('website_timeout')
+                    failure.http_status=event.get('status') or 0
+                    raise failure from exc
                 except (httpx.NetworkError, httpx.ProtocolError) as exc:
                     event["error"] = type(exc).__name__
                     code = transport_failure_code(exc)
                     event["failure_code"] = code
-                    raise SourceFailure(code) from exc
+                    event['exception_message']=str(exc)
+                    failure=SourceFailure(code)
+                    failure.http_status=event.get('status') or 0
+                    raise failure from exc
                 except asyncio.CancelledError:
                     event["error"] = "deadline"
                     raise
@@ -211,7 +272,7 @@ class WebsiteHttp:
                   ('http', 'www.' + host), ('http', host)]
         notes = self.attempts.setdefault(org, [])
         transport_errors = {'website_tls_error', 'website_connect_error', 'website_timeout',
-                            'dns_timeout', 'dns_error', 'dns_unavailable', 'no_such_domain'}
+                            'dns_timeout', 'dns_error', 'dns_servfail', 'dns_unavailable', 'no_such_domain'}
         stop_errors = {'robots', 'robots_unavailable', 'block_page', 'ssrf', 'url_refused',
                        'budget_exhausted', 'website_budget_exhausted', 'deadline'}
         failed_transport = False

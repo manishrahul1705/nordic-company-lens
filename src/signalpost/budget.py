@@ -28,13 +28,17 @@ def finalisation_estimates(companies, site):
 class Budget:
     def __init__(self, config):
         self.start = time.monotonic()
-        self.total_seconds = config.time_budget_seconds
         companies = 0
         try:
             from .io.input_adapter import read
             companies = len(read(config.organisations).unique)
         except (OSError, ValueError):
             pass
+        # Hard ceilings scale continuously with distinct normalized inputs.
+        # Lower user limits remain effective; overrides cannot lift the ceiling.
+        self.hard_request_cap = 18 * companies
+        self.hard_time_cap_seconds = 24 * companies
+        self.total_seconds = min(config.time_budget_seconds, self.hard_time_cap_seconds)
         self.finalise_estimate, self.site_estimate = finalisation_estimates(companies, config.site_dir is not None)
         # Crawl until budget - max(finalisation + site, 10%). If that leaves too
         # little time to crawl, drop the optional site reserve first, then cap
@@ -49,7 +53,7 @@ class Budget:
             reserve = min(max(self.finalise_estimate, MIN_RESERVE_FRACTION * total), MAX_RESERVE_FRACTION * total)
         crawl_seconds = max(0.0, min(total - reserve, total * config.deadline_fraction))
         self.deadline = self.start + crawl_seconds
-        self.cap = config.max_requests if config.max_requests is not None else 20 * companies
+        self.cap = min(config.max_requests, self.hard_request_cap) if config.max_requests is not None else self.hard_request_cap
         self.events = []
         self.by_host = Counter()
 

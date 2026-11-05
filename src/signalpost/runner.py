@@ -563,7 +563,10 @@ async def _run(config, client=None):
     size, output_limited, minimum_exceeded = await offload(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
     report = await offload(build,result,inputs,budget,config,warnings,time.monotonic() - budget.start)
     report['limits']['max_requests']=budget.cap
-    report['request_budget_basis']='20 per unique normalized input' if config.max_requests is None else 'explicit override'
+    report['limits']['time_budget_seconds']=budget.total_seconds
+    report['limits']['hard_max_requests']=budget.hard_request_cap
+    report['limits']['hard_time_budget_seconds']=budget.hard_time_cap_seconds
+    report['request_budget_basis']='18 per unique normalized input; explicit lower limits honored'
     report['measured_request_projection']={'baseline':'1000-company retained-features run',
         'baseline_mean_http':5.975,'projected_http':round(5.975*len(inputs.unique)),
         'note':'Projection from a measured sample; source pagination/retries and feed changes can differ.'}

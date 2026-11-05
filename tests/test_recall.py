@@ -35,7 +35,10 @@ def test_dns_no_http_and_cached_failure(tmp_path, failure, code):
                 assert exc.value.code==code
             assert http.dns_lookups==(1 if failure=='private' else 2)
     asyncio.run(run())
-    assert dns==(['missing.no'] if failure=='private' else ['missing.no', 'www.missing.no']) and not calls
+    expected=(['missing.no'] if failure=='private' else
+              ['missing.no','missing.no','www.missing.no','www.missing.no'] if failure=='dns_timeout' else
+              ['missing.no','www.missing.no'])
+    assert dns==expected and not calls
 
 
 def test_dns_cap_sixty_four_and_ssrf_recheck(tmp_path):

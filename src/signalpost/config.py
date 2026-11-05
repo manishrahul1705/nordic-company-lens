@@ -30,13 +30,15 @@ class Config(BaseModel):
     wikidata: bool = True
     dns_precheck: bool = True
     registry_declared: bool = False
-    website_suffix_contact_proof: bool = False
+    website_suffix_contact_proof: bool = True
     website_domain_location_proof: bool = False
+    website_transient_retry: bool = True
+    website_suffix_contact_rescue: bool = False
     website_stop_after_verified: bool = True
     nav_rank_candidates: bool = True
     public_activity: bool = False
     registry_changes: bool = True
-    website_request_cap: int = Field(default=14, ge=0, le=18)
+    website_request_cap: int = Field(default=16, ge=0, le=18)
     website_total_request_cap: int = Field(default=18, ge=0)
     website_politeness_seconds: float = Field(default=1, ge=1)
     website_user_agent: str = "SignalpostAgent/1.0 (+https://github.com/manishrahul1705/nordic-company-lens)"

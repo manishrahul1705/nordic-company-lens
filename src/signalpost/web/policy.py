@@ -77,6 +77,8 @@ async def resolve_public(host, port=443):
     except socket.gaierror as exc:
         if exc.errno in {socket.EAI_NONAME, getattr(socket, 'EAI_NODATA', socket.EAI_NONAME)}:
             raise SourceFailure("no_such_domain") from exc
+        if exc.errno in {socket.EAI_AGAIN, 11002}:
+            raise SourceFailure('dns_servfail') from exc
         raise SourceFailure("dns_error") from exc
     except OSError as exc:
         raise SourceFailure("dns_error") from exc
