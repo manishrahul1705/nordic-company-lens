@@ -124,7 +124,7 @@ def enforce(envelopes, blobs, bulk):
             proof.reasons['withholding_reason'] = 'ambiguous: group/shared site; no exact company ownership proof'
             row.run.sections['website'] = 'ambiguous'
             if 'website' in row.modules:
-                row.modules['website'].state = 'ambiguous'
+                row.modules['website'].state = 'source_error'
         for claim in row.claims:
             if claim is proof:
                 continue
