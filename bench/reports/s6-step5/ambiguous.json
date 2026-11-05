@@ -1,0 +1,2600 @@
+{
+  "off": 26,
+  "on": 107,
+  "entered": 89,
+  "left": 8,
+  "retained": 18,
+  "entered_previous_states": {
+    "failed": 45,
+    "not_available": 44
+  },
+  "departed_to": {
+    "available": 5,
+    "failed": 3
+  },
+  "cause": "All 89 entrants have a MEDIUM suffix-free-name observation with insufficient independent registered contacts or unsuitable domain. These are withheld claims, not 89 newly established ownership conflicts. Ambiguous takes precedence over budget/source failure in final state selection.",
+  "examples": [
+    {
+      "org": "989252968",
+      "name": "MARIA LOUISE AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "marialouise.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "marialouise.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "935450233",
+      "name": "FLUVIO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "fluvio.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "995748983",
+      "name": "MAAEMO AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "maaemo.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "934404688",
+      "name": "SEROTONIC AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "serotonic.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "serotonic.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "921810229",
+      "name": "KLINEVO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "klinevo.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "914582660",
+      "name": "SERIVA AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "nipa-as.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "registry_email",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "seriva.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "929074009",
+      "name": "MULLIGAN INDOOR GOLF AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "mulligangolf.no",
+          "level": "MEDIUM",
+          "points": 2,
+          "signals": [
+            "legal_name_without_suffix",
+            "street"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "968468235",
+      "name": "HÅRSTUA AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "harstua.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "haarstua.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "922069212",
+      "name": "KARLSEN AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "karlsen.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "domenia.no",
+          "level": "REJECT",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "foreign_orgnr"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "934244443",
+      "name": "KLET AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "klet.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "928430359",
+      "name": "OLMHEIM AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "olmheim.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "886757972",
+      "name": "PRIME CARGO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "primecargo.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_email",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "935641403",
+      "name": "CAPORUM AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "caporum.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "caporum.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "931975552",
+      "name": "VERA INVEST AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "verainvest.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "999536999",
+      "name": "EMAGINE AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "emagine.org",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    }
+  ],
+  "all_entrants": [
+    {
+      "org": "989252968",
+      "name": "MARIA LOUISE AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "marialouise.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "marialouise.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "935450233",
+      "name": "FLUVIO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "fluvio.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "995748983",
+      "name": "MAAEMO AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "maaemo.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "934404688",
+      "name": "SEROTONIC AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "serotonic.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "serotonic.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "921810229",
+      "name": "KLINEVO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "klinevo.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "914582660",
+      "name": "SERIVA AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "nipa-as.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "registry_email",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "seriva.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "929074009",
+      "name": "MULLIGAN INDOOR GOLF AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "mulligangolf.no",
+          "level": "MEDIUM",
+          "points": 2,
+          "signals": [
+            "legal_name_without_suffix",
+            "street"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "968468235",
+      "name": "HÅRSTUA AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "harstua.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "haarstua.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "922069212",
+      "name": "KARLSEN AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "karlsen.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "domenia.no",
+          "level": "REJECT",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "foreign_orgnr"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "934244443",
+      "name": "KLET AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "klet.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "928430359",
+      "name": "OLMHEIM AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "olmheim.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "886757972",
+      "name": "PRIME CARGO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "primecargo.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_email",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "935641403",
+      "name": "CAPORUM AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "caporum.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "caporum.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "931975552",
+      "name": "VERA INVEST AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "verainvest.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "999536999",
+      "name": "EMAGINE AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "emagine.org",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "913258460",
+      "name": "PEPLAN AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "peplan.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "926128507",
+      "name": "GLOA AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "betongbygg.no",
+          "level": "LOW",
+          "points": 4,
+          "signals": [
+            "street",
+            "postcode_city"
+          ],
+          "origin": "registry_email",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "gloa.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "928354709",
+      "name": "ALOHA AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "aloha.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "aloha.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "836491742",
+      "name": "SJAND AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "sjand.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "921961022",
+      "name": "GREEN BUSINESS AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "greenbusiness.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "greenbusiness.com",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "insufficient_owner_proof"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "989304410",
+      "name": "EMIS AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "isimarkets.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "930239070",
+      "name": "PERMOBIL AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "permobil.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "permobil.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "980910857",
+      "name": "THE ORCHARD AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "theorchard.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_email",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "930014397",
+      "name": "NORGESSTILLAS AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "norgesstillas.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "935073359",
+      "name": "NEUPHAI AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "neuphai.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "925787884",
+      "name": "PALLIDUS AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "pallidus.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "pallidus.com",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "917685991",
+      "name": "NORDIC CREDIT RATING AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "nordiccreditrating.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_email",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "nordiccreditrating.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "984611927",
+      "name": "VECO INTERNATIONAL AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "veco-international.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "935180678",
+      "name": "RENEFFEKT AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "reneffekt.no",
+          "level": "MEDIUM",
+          "points": 2,
+          "signals": [
+            "legal_name_without_suffix",
+            "email"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "888951482",
+      "name": "OVTUN EIENDOM AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "ovtun.no",
+          "level": "MEDIUM",
+          "points": 4,
+          "signals": [
+            "legal_name_without_suffix",
+            "street",
+            "postcode_city"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "933547000",
+      "name": "BYGGOM AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "montasje-service.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "979870795",
+      "name": "RYSTEG AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "rysteg.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "928764125",
+      "name": "CLIPS AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "domeneporten.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "clips.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "998236002",
+      "name": "SCENE MIDT AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "scenemidt.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "921484623",
+      "name": "FGLIDES AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "fglides.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "976645677",
+      "name": "VARD AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "vard.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "vardas.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "insufficient_owner_proof"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "928753581",
+      "name": "NAVMAR AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "navmar.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_email",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "919893389",
+      "name": "HANSEBU AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "hansebu.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "965530819",
+      "name": "EVENTMAKER AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "eventmaker.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "929089464",
+      "name": "VITROTECH NUF",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "vitrotech.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "930219665",
+      "name": "LIZZI AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "betongsentrum.no",
+          "level": "REJECT",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "foreign_orgnr"
+        },
+        {
+          "domain": "lizzi.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "988863262",
+      "name": "CHRISTHO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "veinor.no",
+          "level": "REJECT",
+          "points": 0,
+          "signals": [],
+          "origin": "registry_email",
+          "reason": "foreign_orgnr"
+        },
+        {
+          "domain": "christho.org",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "934407253",
+      "name": "FLAVEURIA AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "flaveuria.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "flaveuria.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "977107385",
+      "name": "INDRE SALTEN OPPLÆRINGSKONTOR AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "isok.no",
+          "level": "MEDIUM",
+          "points": 6,
+          "signals": [
+            "legal_name_without_suffix",
+            "street",
+            "postcode_city",
+            "email"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "931326201",
+      "name": "SALTI AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "salti.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "919681101",
+      "name": "MOUNTAINSPORT AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "mountainsport.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "925547530",
+      "name": "HANCHE AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "hanche.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "929481070",
+      "name": "SNAPPY AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "snappysoftware.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "996233391",
+      "name": "MUFFINS AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "muffins.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "robots",
+          "muffins.no: access refused"
+        ]
+      ]
+    },
+    {
+      "org": "988236756",
+      "name": "BYGGTEMA AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "byggtema.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "byggtema.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "933769917",
+      "name": "LAV4HD AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "lav4hd.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "939882480",
+      "name": "FAMILIEN BRYNILDSENS LEGAT STI",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "brynildsenslegat.no",
+          "level": "MEDIUM",
+          "points": 2,
+          "signals": [
+            "legal_name_without_suffix",
+            "email"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "998407257",
+      "name": "GRAVITONIA AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "gravitonia.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "935214599",
+      "name": "COOL RACING AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "coolracing.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "cool-racing.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "932858843",
+      "name": "TION AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "tion.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "tion.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "934012674",
+      "name": "HAND AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "hand.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "930595950",
+      "name": "HGB INVEST AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "hgb-invest.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "927661683",
+      "name": "LAU CAPITAL AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "lau.com.cn",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "994986740",
+      "name": "SVANANESET AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "svananeset.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "982189071",
+      "name": "SOLBERGBYGG AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "solbergbygg.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "926338730",
+      "name": "ESPACE AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "espace.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "935486807",
+      "name": "NORTH TRAVEL AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "northtravel.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "north-travel.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "971558415",
+      "name": "DANSEINFORMASJONEN STI",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "danseinfo.no",
+          "level": "MEDIUM",
+          "points": 8,
+          "signals": [
+            "legal_name_without_suffix",
+            "street",
+            "postcode_city",
+            "phone",
+            "email"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "danseinfo.no",
+          "level": "MEDIUM",
+          "points": 8,
+          "signals": [
+            "legal_name_without_suffix",
+            "street",
+            "postcode_city",
+            "phone",
+            "email"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "929942167",
+      "name": "ZIWEI AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "ziwei.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "929269314",
+      "name": "EDVIN AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "edvin.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "edvinas.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "928354318",
+      "name": "OKC INVEST AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "okcinvest.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "924828099",
+      "name": "ECOFRIC AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "ecofric.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "983643647",
+      "name": "HULDREHEIM AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "huldreheim.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "936428215",
+      "name": "SHIFTBORN STUDIOS AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "shiftborn-studios.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "927671174",
+      "name": "RUMLESKAFT AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "rumleskaft.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "933399443",
+      "name": "ARCHISYS AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "archisys.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "986927646",
+      "name": "AQUAFARM EQUIPMENT AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "aquafarm.no",
+          "level": "MEDIUM",
+          "points": 4,
+          "signals": [
+            "legal_name_without_suffix",
+            "street",
+            "postcode_city"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "aquafarmequipment.com",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "990702861",
+      "name": "AARHUS TRANSPORT AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "aarhus-transport.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "983485731",
+      "name": "ADVOKATENE STORGATA 2 ANS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "advs2.no",
+          "level": "MEDIUM",
+          "points": 8,
+          "signals": [
+            "legal_name_without_suffix",
+            "street",
+            "postcode_city",
+            "phone",
+            "email"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "930202894",
+      "name": "NORLANDIA ENGA BARNEHAGE AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "norlandiabarnehagene.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "829604922",
+      "name": "FIXIC AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "fixic.shop",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "993484407",
+      "name": "DRØBAK MONTESSORI UNGDOMSSKOLE AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "drobakmontessori.no",
+          "level": "MEDIUM",
+          "points": 8,
+          "signals": [
+            "legal_name_without_suffix",
+            "street",
+            "postcode_city",
+            "phone",
+            "email"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "935809207",
+      "name": "DKS CAPITAL AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "dkscapital.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "984133715",
+      "name": "OSLOBILUTLEIE.NO AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "oslobilutleie.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "926045571",
+      "name": "LINEOS AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "insightsoftware.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "996929515",
+      "name": "SAPIDUS AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "sapidus.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "912493296",
+      "name": "KINDRA AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "ourkindra.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "930476587",
+      "name": "VIREMENT AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "virement.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "924517476",
+      "name": "VIDDEX AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "brandbucket.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "org": "941235905",
+      "name": "MOBAKK AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "mobakk.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "mobakk.com",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "986028269",
+      "name": "ZINZINO AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "zinzino.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_email",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        },
+        {
+          "domain": "zinzino.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "965835156",
+      "name": "AVIAREPS AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "aviareps.se",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    },
+    {
+      "org": "910608193",
+      "name": "KAEFER ENERGY AS",
+      "off": "not_available",
+      "proofs": [
+        {
+          "domain": "kaefer.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "registry_website",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ]
+      ]
+    },
+    {
+      "org": "833912682",
+      "name": "ELTEK AS",
+      "off": "failed",
+      "proofs": [
+        {
+          "domain": "eltek.no",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "subunit_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain"
+        }
+      ],
+      "errors": [
+        [
+          "website_source_unavailable",
+          "A candidate source could not be checked"
+        ],
+        [
+          "website_budget_exhausted",
+          "Website work ended at configured budget"
+        ]
+      ]
+    }
+  ]
+}

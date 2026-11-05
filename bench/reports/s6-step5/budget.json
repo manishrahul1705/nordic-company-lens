@@ -1,0 +1,47 @@
+{
+  "off": {
+    "website_company_error_codes": {
+      "website_candidates": 999,
+      "website_source_unavailable": 471,
+      "website_budget_exhausted": 103,
+      "block_page": 1,
+      "robots_unavailable": 12,
+      "http_blocked": 3,
+      "robots": 27,
+      "no_localized_proof": 1
+    },
+    "website_request_error_classes": {
+      "ConnectError": 207,
+      "TimeoutError": 299,
+      "ReadError": 7,
+      "RemoteProtocolError": 3,
+      "body_cap": 3,
+      "ConnectTimeout": 3
+    },
+    "company_request_cap_exhausted": 103,
+    "company_time_budget_exhausted": 0,
+    "global_request_budget_exhausted": 0
+  },
+  "on": {
+    "website_company_error_codes": {
+      "website_candidates": 999,
+      "website_source_unavailable": 382,
+      "website_budget_exhausted": 102,
+      "block_page": 1,
+      "robots_unavailable": 10,
+      "http_blocked": 3,
+      "robots": 32,
+      "no_localized_proof": 1
+    },
+    "website_request_error_classes": {
+      "ConnectError": 240,
+      "TimeoutError": 244,
+      "ReadError": 3,
+      "RemoteProtocolError": 5,
+      "body_cap": 2
+    },
+    "company_request_cap_exhausted": 102,
+    "company_time_budget_exhausted": 0,
+    "global_request_budget_exhausted": 0
+  }
+}

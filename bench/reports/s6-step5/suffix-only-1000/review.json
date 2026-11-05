@@ -1,0 +1,603 @@
+{
+  "comparison": "flags-OFF 1000 20261105T101038069339Z-ee6674c",
+  "run": "bench\\runs\\20261105T115231407579Z-73d7902",
+  "new_items": [
+    {
+      "org": "934929187",
+      "company": "KOIE ARKITEKTUR AS",
+      "kind": "website",
+      "url": "https://www.koiearkitektur.no",
+      "value": {
+        "final_url": "https://www.koiearkitektur.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_without_suffix_and_two_contacts",
+        "proof_page_url": "https://www.koiearkitektur.no/",
+        "signals": [
+          "legal_name_without_suffix",
+          "name_derived_domain",
+          "street",
+          "postcode_city"
+        ],
+        "points": 4,
+        "candidate_origin": "subunit_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "new",
+      "sources": [
+        {
+          "url": "https://www.koiearkitektur.no/",
+          "sha256": "03f1cb34716a198a011aaf4bcc097cc56822cf7f4a2fdf6961e68ae9b1de3d53",
+          "proof_excerpt": "ref=\"\">\n<meta charset=\"utf-8\" />\n<title>Koie Arkitektur</title>\n<meta http-equiv=\"Accept-CH\" content=\"Sec-CH-UA-Platform-Version, Sec-CH-UA-Model\" /><link rel=\"icon\" type=\"image/x-icon\" href=\"https://images.squarespace-cdn.com/content/v1/6798bfddb8d86f273676f570/5fa2add5-6638-4dab-97ea-572bddd0cd30/",
+          "title": "Koie Arkitektur",
+          "visible_excerpt": "0 Hopp til innhold Prosjekter Om Koie Prosjekter Om Koie Prosjekter Om Koie Koie tar den ´lille arkitekturen´ på alvor. Kontorets prosjekter bygger videre på det som allerede er, reparerer der det er behov og legger til der det mangler. Alltid ut fra en bevissthet om å ikke tilføye mer enn nødvendig Koie tror på en arkitektur som finner verdi i det oversette, det ufullstendige og det glemte. Kontoret arbeider i grenselandet mellom arkitektur og design, drevet av en søken etter å skape prosjekter som betyr noe for de menneskene som skal bruke dem GENERASJONSBOLIG HYTTE GON EIDGATA: TRANSFORMASJON AV UTHUS EIDGATA: ÅPEN GARASJE OSLOKOLLEGA: NYDALEN FABRIKKER NESODDEN Koie Arkitektur Kontor: Kongegata 29, 3256 Larvik Post: Eidgata 15A, 3264 Larvik telefon: +47 41 23 96 65 hei@koiearkitektur.no"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "New Koie Arkitektur site: Kongegata 29, 3256 Larvik matches registry office; postal Eidgata 15A, 3264 Larvik also agrees. Instagram koie_arkitektur is linked from the same site and matches its brand."
+    },
+    {
+      "org": "934929187",
+      "company": "KOIE ARKITEKTUR AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/koie_arkitektur",
+      "value": {
+        "url": "https://www.instagram.com/koie_arkitektur",
+        "platform": "instagram.com"
+      },
+      "previous_review_verdict": "new",
+      "sources": [
+        {
+          "url": "https://www.koiearkitektur.no/",
+          "sha256": "03f1cb34716a198a011aaf4bcc097cc56822cf7f4a2fdf6961e68ae9b1de3d53",
+          "proof_excerpt": "<a\n            href=\"https://www.instagram.com/koie_arkitektur\"\n            target=\"_blank\"\n            class=\"sqs-svg-icon--wrapper instagram-unauth\"\n            aria-label=\"Instagram\"\n          >",
+          "title": "Koie Arkitektur",
+          "visible_excerpt": "0 Hopp til innhold Prosjekter Om Koie Prosjekter Om Koie Prosjekter Om Koie Koie tar den ´lille arkitekturen´ på alvor. Kontorets prosjekter bygger videre på det som allerede er, reparerer der det er behov og legger til der det mangler. Alltid ut fra en bevissthet om å ikke tilføye mer enn nødvendig Koie tror på en arkitektur som finner verdi i det oversette, det ufullstendige og det glemte. Kontoret arbeider i grenselandet mellom arkitektur og design, drevet av en søken etter å skape prosjekter som betyr noe for de menneskene som skal bruke dem GENERASJONSBOLIG HYTTE GON EIDGATA: TRANSFORMASJON AV UTHUS EIDGATA: ÅPEN GARASJE OSLOKOLLEGA: NYDALEN FABRIKKER NESODDEN Koie Arkitektur Kontor: Kongegata 29, 3256 Larvik Post: Eidgata 15A, 3264 Larvik telefon: +47 41 23 96 65 hei@koiearkitektur.no"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "New Koie Arkitektur site: Kongegata 29, 3256 Larvik matches registry office; postal Eidgata 15A, 3264 Larvik also agrees. Instagram koie_arkitektur is linked from the same site and matches its brand."
+    },
+    {
+      "org": "915118305",
+      "company": "HEIANE LEGESENTER AS",
+      "kind": "website",
+      "url": "https://heianelegesenter.no",
+      "value": {
+        "final_url": "https://heianelegesenter.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_without_suffix_and_two_contacts",
+        "proof_page_url": "https://heianelegesenter.no/",
+        "signals": [
+          "legal_name_without_suffix",
+          "name_derived_domain",
+          "street",
+          "postcode_city"
+        ],
+        "points": 4,
+        "candidate_origin": "subunit_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://heianelegesenter.no/",
+          "sha256": "400929b4c5118d93916b3558503034a4b5dc981e94aceee0b35246773ce65bbc",
+          "proof_excerpt": "ument.documentElement);</script>\n<title>Heiane Legesenter</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />\n<link rel=\"alternate\" type=\"application/rss+xml\"",
+          "title": "Heiane Legesenter",
+          "visible_excerpt": "Skip to content Menu Slik bestiller du Slik bestiller du Heimebesøk Attestar og sjukemeldingar Om Helsenorge Tilsette Vaksine Ymse kopi Heiane Legesenter Bestille time Heiane legesenter oppmodar om å bestilla vanlege legetimar via Helsenorge.no . ; bruk tenesta «Bestill Time». Kostnadsfritt OBS! Legetime som hastar i dag, må avtalast på telefon, tlf 53 00 62 62 Om behov for legetilsyn utenom opningstider ring legevakt 116 117 Er det akutt og står om liv, ring 113 Petroleumslege og Sjømannslege Det kan utstedast offshoreattest og sjømannsattest ved legesenteret Mere info Åpningstider Måndag-torsdag: 08.00-15.00 Fredag: 08.00-14.00 Lørdag: Stengt Søndag: Stengt Telefontid Alle dager: kl. 08.15–11.30 Mandag-torsdag 13:00-14:00 Fredag 12:30-13:00 MERK : Krever pålogging Legetime Resepter Andre henvendelser Postadresse: Heiane legesenter, Rundehaugen 19, 5412 Stord Nettside av Grieg Medialog AS"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "990012288",
+      "company": "TB MASKIN AS",
+      "kind": "website",
+      "url": "https://www.tbmaskin.no",
+      "value": {
+        "final_url": "https://www.tbmaskin.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://www.tbmaskin.no/",
+        "signals": [
+          "exact_legal_name",
+          "street",
+          "postcode_city",
+          "phone"
+        ],
+        "points": 8,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "new",
+      "sources": [
+        {
+          "url": "https://www.tbmaskin.no/",
+          "sha256": "e7901ccaa4fc9fab3fa6dc47435dde4eb0c112fc748b458c7b9726b55f02a2ba",
+          "proof_excerpt": "SKIN</div>\n\t\t\t\t<div class=\"pageText\"><p>TB Maskin AS&nbsp;er leverand&oslash;r av industrimaskiner fra ledende produsenter som ROCCIA, ERMAKSAN, VOORTMAN, ERBEND, HSG, ROLLERI, FASTECH, MEP SAWS, L&Ouml;WER, BOECK, WATERJET CORP. &amp; THIEL TECHNIEK BV. TB Maskin AS&nbsp;tilbyr h&oslash;ykvalitetsp",
+          "title": "TB Maskin - Kantpresser, Laserskjærer & Tynnplate maskiner",
+          "visible_excerpt": "Slyngrensing 3D Printer Logistikk-systemer Gjengemaskiner Brukte maskiner Vibrasjonstromler Robot avgrading AI Rør- og profilmaskiner Strukturstål & Bjelkebearbeiding Nitrogengeneratorer VELKOMMEN TIL TB MASKIN TB Maskin AS er leverandør av industrimaskiner fra ledende produsenter som ROCCIA, ERMAKSAN, VOORTMAN, ERBEND, HSG, ROLLERI, FASTECH, MEP SAWS, LÖWER, BOECK, WATERJET CORP. & THIEL TECHNIEK BV. TB Maskin AS tilbyr høykvalitetsprodukter innenfor en rekke områder som kantpresser, kantpresseverktøy, båndsager, sagemaskiner, vannskjæring, platevalse, slipemaskiner, platesakser, overflatebehandling, tromling, vibrasjonsslipemaskiner, slyngrensemaskiner & primer, reolsystemer Kontakt TB Maskin Nyheter 04. November 2026 / Nyhet Cobot-assistert kantpressing Når kan robotassistert kantpressing være aktuelt for din produksjon? 14. October 2026 / Nyhet Zeman ENVISION: 3D-skanning Færre målinger og bedre kontroll ved automatisert bjelkeproduksjon. 09. October 2026 / Nyhet AI for bedre laserskjæring HSGs AI CutPilot analyserer snittflater og foreslår justeringer av skjæreparametere. Se flere nyheter Våre linker Produkter Nyheter Leverandører Service Kontakt oss Kataloger Miljøansvar Våre produkter Platemaskiner Vannskjærer Platevalser Plateknekker Slipe- & Avgrademaskiner Sagemaskiner Slyngrensing 3D Printer Våre produkter Logistikk-systemer Gjengemaskiner Brukte maskiner Vibrasjonstromler Robot avgrading AI Rør- og profilmaskiner Strukturstål & Bjelkebearbeiding Nitrogengeneratorer Kontakt TB Maskin AS Svend Haugs gate 11, 3013 Drammen Tel: +47 32 81 60 90 Email: thomas.bech@tbmaskin.no Personvernerklæring Copyright © TB Maskin AS Getynet CSM. Webdesign og programmering: Dcode"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "www authority variant of existing TB Maskin site. Exact TB Maskin AS, Svend Haugs gate 11, 3013 Drammen and registered phone 32816090 agree."
+    },
+    {
+      "org": "926065173",
+      "company": "THE LAB RETRIEVER AS",
+      "kind": "website",
+      "url": "https://thelabretriever.com",
+      "value": {
+        "final_url": "https://thelabretriever.com",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://thelabretriever.com/policies/privacy-policy",
+        "signals": [
+          "exact_legal_name",
+          "postcode_city"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://thelabretriever.com/policies/privacy-policy",
+          "sha256": "5db5a6b093da93c584e0f5b6a471ec2b23afd3a9b84b9ecf9f96be9a79e0a815",
+          "proof_excerpt": "> [Re: Privacy Compliance Officer] <br> The Lab Retriever AS, Lundekorken 34, 1396 Billingstad, Norway\n    </div>\n  </div>\n</div>\n\n    </main>\n\n    <div id=\"shopify-section-footer\" class=\"shopify-section\">\n<style>\n  .site-footer__hr {\n    border-bottom: 1px solid #a9bfcd;\n  }\n\n  .site-footer p,\n  .s",
+          "title": "Privacy policy\n– TheLabRetriever",
+          "visible_excerpt": "out you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below. Additionally, if you are a European resident we note that we are processing your information in order to fulfill contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above. Additionally, please note that your information will be transferred outside of Europe, including to Canada and the United States. Data retention When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information. Changes We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons. [[INSERT IF AGE RESTRICTION IS REQUIRED]] Minors The Site is not intended for individuals under the age of [[INSERT AGE]] . Contact us For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e‑mail at thelabretriever@outlook.com or by mail using the details provided below: TheLabRetriever [Re: Privacy Compliance Officer] The Lab Retriever AS, Lundekorken 34, 1396 Billingstad, Norway We take pride in dogs Dog owners love their dog(s) and want the best for them. Your dog needs to have fun and training their IQ will reduce stress. Get discounts and new designs Subscribe Quick links Privacy Policy Refund Policy Terms of Service Facebook Instagram © 2026, TheLabRetriever Powered by Shopify"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "926065173",
+      "company": "THE LAB RETRIEVER AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/The-Lab-Retriever-107894350774301",
+      "value": {
+        "url": "https://www.facebook.com/The-Lab-Retriever-107894350774301",
+        "platform": "facebook.com"
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://thelabretriever.com/",
+          "sha256": "ba28c5000f2862529592de918bc966f893a4a90ad431e7b95b28327b6646ce00",
+          "proof_excerpt": "<a class=\"social-icons__link\" href=\"https://www.facebook.com/The-Lab-Retriever-107894350774301\" aria-describedby=\"a11y-external-message\">",
+          "title": "The Lab Retriever\n– TheLabRetriever",
+          "visible_excerpt": "rice $34.99 Sale price $34.99 Regular price $54.99 Unit price per Sold out Pet Smart GPS Tracker Regular price $9.99 Sale price $9.99 Regular price $24.99 Unit price per Sold out Dog Toys Stuffed Squeaking Toy Regular price $1.18 Sale price $1.18 Regular price $15.00 Unit price per Sold out IQ Treat Ball - Make Your Dog Work For The Treats Regular price $39.99 Sale price $39.99 Regular price $59.99 Unit price per Sold out Portable Water Bottle Regular price from $19.99 Sale price from $19.99 Regular price $24.99 Unit price per Sold out Tooth Cleaning Dog Toothbrush Regular price $17.18 Sale price $17.18 Regular price $34.99 Unit price per Sold out Reusable Pet Hair Remover Regular price $13.26 Sale price $13.26 Regular price $47.99 Unit price per Sold out Funny Simulation Pet Dog Toys Regular price $4.84 Sale price $4.84 Regular price $24.99 Unit price per Sold out Flying Saucer Dog Game Regular price $18.18 Sale price $18.18 Regular price $54.99 Unit price per Sold out It’s a Brain Workout Your dog’s brain needs daily stimulation to avoid premature aging. Lower Stress Statistically, dogs who are aren’t getting enough mental stimulation are likely to suffer from stress. It’s a Brain Workout Your dog’s brain needs daily stimulation to avoid premature aging. Lower Stress Statistically, dogs who are aren’t getting enough mental stimulation are likely to suffer from stress. We take pride in dogs Dog owners love their dog(s) and want the best for them. Your dog needs to have fun and training their IQ will reduce stress. Get discounts and new designs Subscribe Quick links Privacy Policy Refund Policy Terms of Service Facebook Instagram © 2026, TheLabRetriever Powered by Shopify"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "926065173",
+      "company": "THE LAB RETRIEVER AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/thelabretriever",
+      "value": {
+        "url": "https://www.instagram.com/thelabretriever",
+        "platform": "instagram.com"
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://thelabretriever.com/",
+          "sha256": "ba28c5000f2862529592de918bc966f893a4a90ad431e7b95b28327b6646ce00",
+          "proof_excerpt": "<a class=\"social-icons__link\" href=\"https://www.instagram.com/thelabretriever/\" aria-describedby=\"a11y-external-message\">",
+          "title": "The Lab Retriever\n– TheLabRetriever",
+          "visible_excerpt": "rice $34.99 Sale price $34.99 Regular price $54.99 Unit price per Sold out Pet Smart GPS Tracker Regular price $9.99 Sale price $9.99 Regular price $24.99 Unit price per Sold out Dog Toys Stuffed Squeaking Toy Regular price $1.18 Sale price $1.18 Regular price $15.00 Unit price per Sold out IQ Treat Ball - Make Your Dog Work For The Treats Regular price $39.99 Sale price $39.99 Regular price $59.99 Unit price per Sold out Portable Water Bottle Regular price from $19.99 Sale price from $19.99 Regular price $24.99 Unit price per Sold out Tooth Cleaning Dog Toothbrush Regular price $17.18 Sale price $17.18 Regular price $34.99 Unit price per Sold out Reusable Pet Hair Remover Regular price $13.26 Sale price $13.26 Regular price $47.99 Unit price per Sold out Funny Simulation Pet Dog Toys Regular price $4.84 Sale price $4.84 Regular price $24.99 Unit price per Sold out Flying Saucer Dog Game Regular price $18.18 Sale price $18.18 Regular price $54.99 Unit price per Sold out It’s a Brain Workout Your dog’s brain needs daily stimulation to avoid premature aging. Lower Stress Statistically, dogs who are aren’t getting enough mental stimulation are likely to suffer from stress. It’s a Brain Workout Your dog’s brain needs daily stimulation to avoid premature aging. Lower Stress Statistically, dogs who are aren’t getting enough mental stimulation are likely to suffer from stress. We take pride in dogs Dog owners love their dog(s) and want the best for them. Your dog needs to have fun and training their IQ will reduce stress. Get discounts and new designs Subscribe Quick links Privacy Policy Refund Policy Terms of Service Facebook Instagram © 2026, TheLabRetriever Powered by Shopify"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "993919675",
+      "company": "FEIE- OG TILSYNSTJENESTER AS",
+      "kind": "website",
+      "url": "https://www.tilsyn.no",
+      "value": {
+        "final_url": "https://www.tilsyn.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "jsonld_vatid",
+        "proof_page_url": "https://www.tilsyn.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://www.tilsyn.no/",
+          "sha256": "ef01f788008a2ca3cc2a6e3d52627320d6554daf950846b7ce8dde6175d0ba78",
+          "proof_excerpt": "AS. Alle rettigheter reservert. Org.nr. 993 919 675</p><div class=\"flex gap-6\"><a href=\"/ordbok\" class=\"text-white/60 hover:text-secondary transition-",
+          "title": "Feier i Oslo | Profesjonell feiing & tilsyn | Feie- og…",
+          "visible_excerpt": "y) Asker/Bærum Gamle Ringeriksveien 42, 1357 Bekkestua (Brannstasjonen) Send forespørsel Velg hva du trenger hjelp med, se pris og send oss en forespørsel. Vi bekrefter pris og tidspunkt før oppdraget avtales. Steg 1 av 3 – Tjenester og pris Tjenester og pris Adresse og kontakt Ønsket tidspunkt og oppsummering Velg tjenester Du kan velge flere. Alle oppgitte priser er inkl. mva. og inkluderer kjøring, bom og parkering. Videokontroll av skorstein 3 000 kr Velg eventuelt rapporttype og ekstra skorsteinsløp. Valgte tillegg vises i summen. Feiing av skorstein Fra 2 500 kr Enebolig 2 500 kr, bygård 3 000 kr. Ekstra løp koster 1 000 kr i enebolig og 1 500 kr i bygård. Prisen inkluderer kjøring, bom og parkering. Rengjøring av ildsted 2 500 kr Velg ildstedstype. Kakkelovn har et tillegg på 500 kr. Rens av vifte Pris avtales Tilgang påvirker prisen. Oppgi om du har takstige/taktrinn, eller om det kan være behov for lift eller annen adkomst. Pris avklares før oppdraget bekreftes. Ildstedskontroll 2 500 kr Ildstedskontroll. Du kan legge ved bilde av ildstedet eller tilkoblingen. Kontroll/salg av slokkeutstyr Pris avtales Kontroll eller salg av slokkeutstyr. Pris avklares før oppdraget avtales. Usikker på hva jeg trenger – ønsker veiledning Du kan sende forespørsel uten å velge en bestemt tjeneste. Pris avklares etter kontakt. Prisoppsummering Alle viste priser inkl. mva. Velg tjenester for å se pris. Alle oppgitte priser er inkl. mva. og inkluderer kjøring, bom og parkering. For tjenester uten fastpris avtales prisen før oppdraget bekreftes. Neste Feie og tilsynstjenester AS © 2026 Feie og tilsynstjenester AS. Alle rettigheter reservert. Org.nr. 993 919 675 Ordbok Personvern Vilkår"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "983520944",
+      "company": "SPINELL FRISØR AS",
+      "kind": "website",
+      "url": "https://www.spinellfrisor.no",
+      "value": {
+        "final_url": "https://www.spinellfrisor.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://www.spinellfrisor.no/",
+        "signals": [
+          "exact_legal_name",
+          "email"
+        ],
+        "points": 4,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://www.spinellfrisor.no/",
+          "sha256": "a7118a5513018834cf8588a3a87540c87f62147460c6a8beee88987103ffb512",
+          "proof_excerpt": "s=\"pb-3\"><h2 class=\"mb-3\">Velkommen til Spinell Frisør AS på Frekhaug Senter</h2><p>Spinell Frisør har flotte lokaler i 2 etasje på Frekhaug Senter i Meland/Alver kommune - bare 3 minutter fra Nordhordlandsbroen. For dere som har behov for heis opptil 2 etasje- så finner dere den ved inngangen til H",
+          "title": "Spinell Frisør",
+          "visible_excerpt": "Hjem Behandlinger Galleri Online booking Om Kontakt Book time Avbestillingsvilkår • Informasjonskapselpolicy • Personvernerklæring Spinell Frisør Havnevegen 3 Holsnøy, Alver Kommune 5918 Frekhaug Senter post@spinellfrisor.no 94148886 Finn oss på Timma Hjem Behandlinger Galleri Online booking Om Kontakt Book time Fagkunnskap er min stolthet,40 års erfaring dame & herrefag. Med lang erfaring i frisørfaget - er jeg god på kjemiske behandlinger: striper, farge,strukturomformingen etc. Å følge med på trender og teknikker innen klipp og fargebehandlinger er alltid gøy! Book time Velkommen til Spinell Frisør AS på Frekhaug Senter Spinell Frisør har flotte lokaler i 2 etasje på Frekhaug Senter i Meland/Alver kommune - bare 3 minutter fra Nordhordlandsbroen. For dere som har behov for heis opptil 2 etasje- så finner dere den ved inngangen til Helsenaustet legekontor. Book time Våre behandlinger Farge Opplev en fargeendring som fremhever din personlighet og stil. Book time Striper Sikre et naturlig lys med vakre striper tilpasset ditt hår. Book time Klipp Få en frisyre tilpasset deg og ditt ønske. Book time Følg oss på https://www.instagram.com/spinellfrisor https://www.facebook.com/spinellfrisor/ Spinell Frisør Havnevegen 3 Holsnøy, Alver Kommune 5918 Frekhaug Senter post@spinellfrisor.no 94148886 Finn oss på Timma Avbestillingsvilkår • Informasjonskapselpolicy • Personvernerklæring Opphavsrett © Spinell Frisør 2026 Levert av Timma Pro"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "930832707",
+      "company": "DOGLEG AS",
+      "kind": "website",
+      "url": "https://dogleg.no",
+      "value": {
+        "final_url": "https://dogleg.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_without_suffix_and_two_contacts",
+        "proof_page_url": "https://dogleg.no/",
+        "signals": [
+          "legal_name_without_suffix",
+          "name_derived_domain",
+          "street",
+          "postcode_city"
+        ],
+        "points": 4,
+        "candidate_origin": "subunit_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://dogleg.no/",
+          "sha256": "c4469cf23cccc00c9fb96d744e96fba30a7cb50bcc64fc19c90b1c2391d05e44",
+          "proof_excerpt": "e=\"theme-color\" content=\"\" />\n\n\t\t<title>Dogleg</title>\n\n\t\t<link rel=\"icon\"       href=\"/assets/favicon.png\"        />\n\t\t<link rel=\"canonical\"  href=\"https://dogleg.no\"                 />\n\t\t<link rel=\"stylesheet\" href=\"/dist/app.css?v=f8c5nvoc4ic\" /><script type=\"module\" src=\"/dist/app.js?v=f8c5nvoc4",
+          "title": "Dogleg",
+          "visible_excerpt": "Dogleg Project Venture Info Dogleg is an industrial design studio based in Oslo. We approach industrial design with an open mind, much like navigating a dogleg turn, where the path is uncertain. Project 1: Eligent The wall socket is one of the most manufactured objects in the built environment, and one of the least considered. Project 2: REV Ocean Beachlander How do you build a craft for protecting the ocean through exploration, without adding to the very problem it's meant to help solve? Project 3: Twine Task Chair A chair that anyone can understand is a chair anyone can repair. See all our projects Venture Through Dogleg Venture, we invest resources in developing ideas we believe in, both in our own projects and in client projects. Read More Applied (Working title) Eligent Dogleg Hegdehaugsveien 3, 0352 Oslo business@dogleg.no All rights reserved 2026"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "997790952",
+      "company": "HILLEREN PROSJEKTERING AS",
+      "kind": "website",
+      "url": "https://hillerenprosjektering.no",
+      "value": {
+        "final_url": "https://hillerenprosjektering.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_without_suffix_and_two_contacts",
+        "proof_page_url": "https://hillerenprosjektering.no/",
+        "signals": [
+          "legal_name_without_suffix",
+          "name_derived_domain",
+          "street",
+          "postcode_city",
+          "phone"
+        ],
+        "points": 6,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://hillerenprosjektering.no/",
+          "sha256": "8b8836ed9e1a94692effa95ddb849f0a1bb3573bb066bf256d63da70e7b61ce4",
+          "proof_excerpt": "Math - https://rankmath.com/ -->\n<title>Hilleren Prosjektering | Arkitekt i Bergen</title>\n<link data-rocket-prefetch href=\"https://policy.app.cookieinformation.com\" rel=\"dns-prefetch\">\n<link crossorigin data-rocket-preload as=\"font\" href=\"https://hillerenprosjektering.no/wp-content/uploads/elemento",
+          "title": "Hilleren Prosjektering | Arkitekt i Bergen",
+          "visible_excerpt": "esign og kompetent fagkunnskap. K o n t a k t o s s Tjenester 01 Arkitektur God arkitektur er mer enn bare estetikk 02 Byggesøknader Erfaren i byggesøknader, dispensasjoner, klager og dialog med kommuner 03 Prosjektering Helhetlig arkitekturplanlegging med presis detaljplanlegging 04 Prosjektledelse Prosjektledelse omfatter hele prosjektforløpet fra start til slutt 05 Interiørarkitektur Interiørarkitektur sikrer trivsel og funksjon fra innsiden og ut Om oss Hilleren Prosjektering har eksistert siden 2004 og har opp igjennom årene hatt en jevn vekst. Vi var den gangen en byggmesterbedrift som også tok hånd om tegninger og søknader i tiltaksklasse 1 og 2. Vi har hatt mange saker pågående samtidig og etter hvert som tiden gikk har vi fått større og større prosjekter. Større i antall enheter og mer komplekse. I dag er vi totalt 7 ansatte og jobber mye med boligfelt, men også med enkeltsaker for privatkunden. Les om oss Års erfaring 0 Pågående prosjekter 0 + Samarbeidspartnere 0 + Antall ansatte 0 Kundetilfredshet 0 % Samarbeidspartnere Utforsk noen av våre tidligere prosjekter Fyrtårnet i vest Spennende arkitekttegnet tomannsbolig på utfordrende tomt Lyshovden Borettslag Bovieran Falkum Nytt boligfelt i Teigebyen, Nannestad for å avtale en konsultasjon og motta et detaljert prisoverslag skreddersydd for ditt unike prosjektbehov og budsjett K o n t a k t o s s Kontakt oss i dag Meny Forside Tjenester Våre prosjekter Karriere Om oss Kontakt Tjenester Arkitektur Byggesøknader Prosjektering Prosjektledelse Interiørarkitektur Finn oss Hillerenveien 114 5174 Mathopen, Bergen Kontakt oss 55 50 03 60 post@hillerenprosjektering.no Følg oss: Personvern © Alle rettigheter reservert.2026"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "997790952",
+      "company": "HILLEREN PROSJEKTERING AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/HillerenProsjekteringAS",
+      "value": {
+        "url": "https://www.facebook.com/HillerenProsjekteringAS",
+        "platform": "facebook.com"
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://hillerenprosjektering.no/",
+          "sha256": "8b8836ed9e1a94692effa95ddb849f0a1bb3573bb066bf256d63da70e7b61ce4",
+          "proof_excerpt": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon- elementor-animation-grow elementor-repeater-item-fac13cb\" href=\"https://www.facebook.com/HillerenProsjekteringAS\" target=\"_blank\">",
+          "title": "Hilleren Prosjektering | Arkitekt i Bergen",
+          "visible_excerpt": "esign og kompetent fagkunnskap. K o n t a k t o s s Tjenester 01 Arkitektur God arkitektur er mer enn bare estetikk 02 Byggesøknader Erfaren i byggesøknader, dispensasjoner, klager og dialog med kommuner 03 Prosjektering Helhetlig arkitekturplanlegging med presis detaljplanlegging 04 Prosjektledelse Prosjektledelse omfatter hele prosjektforløpet fra start til slutt 05 Interiørarkitektur Interiørarkitektur sikrer trivsel og funksjon fra innsiden og ut Om oss Hilleren Prosjektering har eksistert siden 2004 og har opp igjennom årene hatt en jevn vekst. Vi var den gangen en byggmesterbedrift som også tok hånd om tegninger og søknader i tiltaksklasse 1 og 2. Vi har hatt mange saker pågående samtidig og etter hvert som tiden gikk har vi fått større og større prosjekter. Større i antall enheter og mer komplekse. I dag er vi totalt 7 ansatte og jobber mye med boligfelt, men også med enkeltsaker for privatkunden. Les om oss Års erfaring 0 Pågående prosjekter 0 + Samarbeidspartnere 0 + Antall ansatte 0 Kundetilfredshet 0 % Samarbeidspartnere Utforsk noen av våre tidligere prosjekter Fyrtårnet i vest Spennende arkitekttegnet tomannsbolig på utfordrende tomt Lyshovden Borettslag Bovieran Falkum Nytt boligfelt i Teigebyen, Nannestad for å avtale en konsultasjon og motta et detaljert prisoverslag skreddersydd for ditt unike prosjektbehov og budsjett K o n t a k t o s s Kontakt oss i dag Meny Forside Tjenester Våre prosjekter Karriere Om oss Kontakt Tjenester Arkitektur Byggesøknader Prosjektering Prosjektledelse Interiørarkitektur Finn oss Hillerenveien 114 5174 Mathopen, Bergen Kontakt oss 55 50 03 60 post@hillerenprosjektering.no Følg oss: Personvern © Alle rettigheter reservert.2026"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "992868775",
+      "company": "ALFA LAGERHOTELL AS",
+      "kind": "website",
+      "url": "https://alfalagerhotell.no",
+      "value": {
+        "final_url": "https://alfalagerhotell.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://alfalagerhotell.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "subunit_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "new",
+      "sources": [
+        {
+          "url": "https://alfalagerhotell.no/",
+          "sha256": "2b295f7e1798be78e3788ada8b7054af0ec8be8c02190e5939012310c816faa8",
+          "proof_excerpt": "orbeholdt.</span>\n        <span>Org.nr: 992 868 775</span>\n      </div>\n    </div>\n  </footer>\n\n\n  <!-- Scroll-to-top -->\n  <button class=\"scroll-top\"",
+          "title": "Alfa Lagerhotell – Et hjem for alt",
+          "visible_excerpt": "ilsyn. 📋 Leieforhold og oppsigelse ▼ Kun én måneds oppsigelsestid , gjeldende fra den 1. i påfølgende måned. Send oppsigelse via e-post til post@alfalagerhotell.no. Boden skal tømmes og rengjøres ved utflytting — kostnader ved manglende rydding belastes leietaker. Fremleie av bod er ikke tillatt. 🚫 Hva kan ikke lagres? ▼ Vi tillater ikke lagring av matvarer , sterkt luktende gjenstander eller væsker . Dette er for å hindre uhell som kan gå utover andre leietakere. Husk at om innholdet i din bod skader andres ting, kan vedkommendes forsikringsselskap kreve regress av skadeforvolder. Galleri Se lageret Klimaregulerte lokaler, god belysning og lett tilkomst for bil og henger. Kontakt oss Vi hjelper deg gjerne Lurer du på noe, eller vil du leie en bod? Ta kontakt — vi svarer raskt og ordner det meste! 📞 Telefon 952 06 588 (Geir) · 906 19 616 (Freddy) ✉️ E-post post@alfalagerhotell.no 📍 Adresse Knarrevikveien 60, 4638 Kristiansand 🕐 Betjent tilstedeværelse Tirsdag 17:00 – 19:00 Torsdag 17:00 – 19:00 Tilgang til lageret 07:00 – 21:00 (alle dager) Send oss en melding Navn E-post Telefon (valgfritt) Ønsket bodstørrelse (valgfritt) — Velg størrelse — Liten bod (ca. 6,5 m³) – kr 490/mnd Medium bod (ca. 10 m³) – kr 890/mnd Stor bod (ca. 17 m³) – kr 1490/mnd Usikker – ønsker råd Melding Send melding Alfa Lager hotell Sørlandets rimeligste lagerhotell siden vi åpnet dørene. Klimaregulert, 24/7 overvåket og alltid med kundens beste i fokus. Navigasjon Om oss Priser og boder Praktisk info Galleri Kontakt Kontakt 952 06 588 (Geir) 906 19 616 (Freddy) post@alfalagerhotell.no Knarrevikveien 60 4638 Kristiansand © 2025 Alfa Lagerhotell A/S. Alle rettigheter forbeholdt. Org.nr: 992 868 775 ↑"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Apex authority variant of existing Alfa Lagerhotell site. Exact own footer organisation number 992868775 and Knarrevikveien 60, 4638 Kristiansand agree."
+    },
+    {
+      "org": "990342555",
+      "company": "NORDSTRAND KULTURSKOLE AS",
+      "kind": "website",
+      "url": "https://www.nordstrandkulturskole.no",
+      "value": {
+        "final_url": "https://www.nordstrandkulturskole.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_without_suffix_and_two_contacts",
+        "proof_page_url": "https://www.nordstrandkulturskole.no/",
+        "signals": [
+          "legal_name_without_suffix",
+          "name_derived_domain",
+          "phone",
+          "email"
+        ],
+        "points": 4,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://www.nordstrandkulturskole.no/",
+          "sha256": "3b9657fe6fb47b2e5d6f270e3b660a9f5340359b129cb957b0491ff8a57196f2",
+          "proof_excerpt": "a333.chunk.min.css.map*/</style>\n<title>Nordstrand kulturskole | Kurs | Oslo</title>\n  <meta name=\"description\" content=\"Nordstrand kulturskole tilbyr kurs innen musikk, teater og tegne- og malekurs med høy kvalitet og lang erfaring.\"/>\n  <link rel=\"canonical\" href=\"https://www.nordstrandkulturskole",
+          "title": "Nordstrand kulturskole | Kurs | Oslo",
+          "visible_excerpt": "arell, akryl, blyant og kull. For barn fra 8-14 år. Se kurs -> 🎶 Kurs for voksne Individuell musikkundervisning tilpasset ditt nivå. Gitar, piano, sang, fiolin, trommer og mer. Se kurs -> Hvorfor velge oss? ​​ Vi har mange års erfaring med tilrettelegging og kurs innenfor kunst og kultur med dyktige lærere. Dyktige lærere Pedagogisk utdanning, profesjonelle utøvere med bred erfaring. 🧑‍🏫 🏠 Tre steder Kastellet skole, Munkerud skole og Lambertseter fritidsklubb ⭐️ Siden 2004 Over 20 år som en viktig kulturinstitusjon i bydel Nordstrand. 🎪 Konserter & forestillinger Elevkonserter og teaterforestillinger hvert semester. Elevkonserter og forestillinger ​ ​ Hvert semester arrangerer vi konserter og forestillinger der elevene får vise hva de har lært. \" Mestringsfølelse over å ha lært et nytt grep på gitaren, sunget en tone man ikke trodde man klarte, eller stått foran mange mennesker på en scene – det er noe helt spesielt. Våre elever utvikler seg både musikalsk og personlig – flere har gått videre til høyere musikkutdanning. Klar for å starte? ​ ​ Påmelding er uforpliktende. Vi kontakter deg for å avtale time og finne det perfekte kurset. Meld deg på nå ​​ Eller kontakt oss direkte: post@nordstrandkulturskole.no 45 89 01 00 ​​​ ​ ​ ​ Kreativitet, mestring og fellesskap siden 2004. ​ ​ ​ ​​ ​ INFORMASJON Priser & reglement Om oss Påmelding Personvernerklæring ​ ​ ​​ ​ KURS ​ Musikkurs Teater & musikkteater Tegne- og malekurs Kurs for voksne ​ ​​ ​ KONTAKT post@nordstrandkulturskole.no Tlf: 45 89 01 00 Laila Angell, leder ​ UNDERVISNINGSSTEDER Kastellet skole Munkerud skole Lambertseter fritidsklubb ​ © 2026 Nordstrand Kulturskole. Alle rettigheter reservert. ​ ​ bottom of page"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "990342555",
+      "company": "NORDSTRAND KULTURSKOLE AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/nordstrandkulturskole",
+      "value": {
+        "url": "https://www.facebook.com/nordstrandkulturskole",
+        "platform": "facebook.com"
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://www.nordstrandkulturskole.no/",
+          "sha256": "3b9657fe6fb47b2e5d6f270e3b660a9f5340359b129cb957b0491ff8a57196f2",
+          "proof_excerpt": "<a data-testid=\"linkElement\" href=\"https://www.facebook.com/nordstrandkulturskole/\" target=\"_blank\" class=\"twXk19\" aria-label=\"Facebook - Hvit Circle\">",
+          "title": "Nordstrand kulturskole | Kurs | Oslo",
+          "visible_excerpt": "arell, akryl, blyant og kull. For barn fra 8-14 år. Se kurs -> 🎶 Kurs for voksne Individuell musikkundervisning tilpasset ditt nivå. Gitar, piano, sang, fiolin, trommer og mer. Se kurs -> Hvorfor velge oss? ​​ Vi har mange års erfaring med tilrettelegging og kurs innenfor kunst og kultur med dyktige lærere. Dyktige lærere Pedagogisk utdanning, profesjonelle utøvere med bred erfaring. 🧑‍🏫 🏠 Tre steder Kastellet skole, Munkerud skole og Lambertseter fritidsklubb ⭐️ Siden 2004 Over 20 år som en viktig kulturinstitusjon i bydel Nordstrand. 🎪 Konserter & forestillinger Elevkonserter og teaterforestillinger hvert semester. Elevkonserter og forestillinger ​ ​ Hvert semester arrangerer vi konserter og forestillinger der elevene får vise hva de har lært. \" Mestringsfølelse over å ha lært et nytt grep på gitaren, sunget en tone man ikke trodde man klarte, eller stått foran mange mennesker på en scene – det er noe helt spesielt. Våre elever utvikler seg både musikalsk og personlig – flere har gått videre til høyere musikkutdanning. Klar for å starte? ​ ​ Påmelding er uforpliktende. Vi kontakter deg for å avtale time og finne det perfekte kurset. Meld deg på nå ​​ Eller kontakt oss direkte: post@nordstrandkulturskole.no 45 89 01 00 ​​​ ​ ​ ​ Kreativitet, mestring og fellesskap siden 2004. ​ ​ ​ ​​ ​ INFORMASJON Priser & reglement Om oss Påmelding Personvernerklæring ​ ​ ​​ ​ KURS ​ Musikkurs Teater & musikkteater Tegne- og malekurs Kurs for voksne ​ ​​ ​ KONTAKT post@nordstrandkulturskole.no Tlf: 45 89 01 00 Laila Angell, leder ​ UNDERVISNINGSSTEDER Kastellet skole Munkerud skole Lambertseter fritidsklubb ​ © 2026 Nordstrand Kulturskole. Alle rettigheter reservert. ​ ​ bottom of page"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "990342555",
+      "company": "NORDSTRAND KULTURSKOLE AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/nordstrandkulturskole",
+      "value": {
+        "url": "https://www.instagram.com/nordstrandkulturskole",
+        "platform": "instagram.com"
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://www.nordstrandkulturskole.no/",
+          "sha256": "3b9657fe6fb47b2e5d6f270e3b660a9f5340359b129cb957b0491ff8a57196f2",
+          "proof_excerpt": "<a data-testid=\"linkElement\" href=\"https://www.instagram.com/nordstrandkulturskole/?hl=nb\" target=\"_blank\" class=\"twXk19\" aria-label=\"Instagram - Hvit Circle\">",
+          "title": "Nordstrand kulturskole | Kurs | Oslo",
+          "visible_excerpt": "arell, akryl, blyant og kull. For barn fra 8-14 år. Se kurs -> 🎶 Kurs for voksne Individuell musikkundervisning tilpasset ditt nivå. Gitar, piano, sang, fiolin, trommer og mer. Se kurs -> Hvorfor velge oss? ​​ Vi har mange års erfaring med tilrettelegging og kurs innenfor kunst og kultur med dyktige lærere. Dyktige lærere Pedagogisk utdanning, profesjonelle utøvere med bred erfaring. 🧑‍🏫 🏠 Tre steder Kastellet skole, Munkerud skole og Lambertseter fritidsklubb ⭐️ Siden 2004 Over 20 år som en viktig kulturinstitusjon i bydel Nordstrand. 🎪 Konserter & forestillinger Elevkonserter og teaterforestillinger hvert semester. Elevkonserter og forestillinger ​ ​ Hvert semester arrangerer vi konserter og forestillinger der elevene får vise hva de har lært. \" Mestringsfølelse over å ha lært et nytt grep på gitaren, sunget en tone man ikke trodde man klarte, eller stått foran mange mennesker på en scene – det er noe helt spesielt. Våre elever utvikler seg både musikalsk og personlig – flere har gått videre til høyere musikkutdanning. Klar for å starte? ​ ​ Påmelding er uforpliktende. Vi kontakter deg for å avtale time og finne det perfekte kurset. Meld deg på nå ​​ Eller kontakt oss direkte: post@nordstrandkulturskole.no 45 89 01 00 ​​​ ​ ​ ​ Kreativitet, mestring og fellesskap siden 2004. ​ ​ ​ ​​ ​ INFORMASJON Priser & reglement Om oss Påmelding Personvernerklæring ​ ​ ​​ ​ KURS ​ Musikkurs Teater & musikkteater Tegne- og malekurs Kurs for voksne ​ ​​ ​ KONTAKT post@nordstrandkulturskole.no Tlf: 45 89 01 00 Laila Angell, leder ​ UNDERVISNINGSSTEDER Kastellet skole Munkerud skole Lambertseter fritidsklubb ​ © 2026 Nordstrand Kulturskole. Alle rettigheter reservert. ​ ​ bottom of page"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    },
+    {
+      "org": "912829197",
+      "company": "CCHANGE AS",
+      "kind": "website",
+      "url": "https://www.cchange.no",
+      "value": {
+        "final_url": "https://www.cchange.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_without_suffix_and_two_contacts",
+        "proof_page_url": "https://www.cchange.no/",
+        "signals": [
+          "legal_name_without_suffix",
+          "name_derived_domain",
+          "street",
+          "postcode_city"
+        ],
+        "points": 4,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "previous_review_verdict": "correct",
+      "sources": [
+        {
+          "url": "https://www.cchange.no/",
+          "sha256": "645e112e7e8049d2cdbe6b46ac6c8c26942537a3b9e407c102e959ff043f066f",
+          "proof_excerpt": "v><a href=\"mailto:team@cchange.no\">team@cchange.no</a></div><div>Øvre Slottsgate 3<br />0157 Oslo\n</div></div><div class=\"Layout-module-scss-module__gVkirq__siteFooterColumn\"><img src=\"/assets/images/blue-logo.svg\"/></div><div class=\"Layout-module-scss-module__gVkirq__siteFooterColumn\"><div><a href=",
+          "title": "Transformations that matter",
+          "visible_excerpt": "What we do How we work News Fractal Change About Transformations that matter Create the shifts you want to see - for an equitable and thriving world We need a radically different approach to respond to the challenges of our time. But how do we transform at the scale, speed and depth that is called for? After decades in the field of sustainability, we recognize that how we implement solutions is as important as the solutions themselves. And it all starts with you. When you and your team work strategically to shift unsustainable patterns across systems and cultures, and show up with courage and creativity to create a world where people and nature thrive, the results can be extraordinary. We have seen it happen. Our values- and research-based approach brings together the practical, political, and personal spheres of transformation. This represents a fractal approach to scaling transformations for sustainability. How we work Let’s work together to foster transformations that enable people, communities, organizations, and nature to thrive together at every scale. What we do Join our flagship program in 2027 to grow your transformational leadership, shift systems and cultures, and create lasting change. Learn more and sign up We'd love to talk to you! Get in touch team@cchange.no Øvre Slottsgate 3 0157 Oslo News and events LinkedIn Instagram"
+        }
+      ],
+      "verdict": "correct",
+      "review_note": "Same exact company, linked profile, and identity contacts as inspected in ownership-review.json; the new captured source and claim span were rechecked."
+    }
+  ],
+  "removed_items": [
+    {
+      "org": "914283116",
+      "company": "BALDER APOTEK AS",
+      "url": "https://www.instagram.com/balderapotek"
+    },
+    {
+      "org": "914283116",
+      "company": "BALDER APOTEK AS",
+      "url": "https://balderapotek.no"
+    },
+    {
+      "org": "934982762",
+      "company": "ARKIDAL AS",
+      "url": "https://www.youtube.com/@arkidal"
+    },
+    {
+      "org": "934982762",
+      "company": "ARKIDAL AS",
+      "url": "https://www.arkidal.no"
+    },
+    {
+      "org": "934982762",
+      "company": "ARKIDAL AS",
+      "url": "https://www.facebook.com/arkidal"
+    },
+    {
+      "org": "990012288",
+      "company": "TB MASKIN AS",
+      "url": "https://tbmaskin.no"
+    },
+    {
+      "org": "933458032",
+      "company": "MOTORSYKLISTEN AS",
+      "url": "https://motorsyklisten.as"
+    },
+    {
+      "org": "938092516",
+      "company": "OSLO CHAMBER OF COMMERCE",
+      "url": "https://chamber.no"
+    },
+    {
+      "org": "938092516",
+      "company": "OSLO CHAMBER OF COMMERCE",
+      "url": "https://www.instagram.com/oslochamberofcommerce"
+    },
+    {
+      "org": "938092516",
+      "company": "OSLO CHAMBER OF COMMERCE",
+      "url": "https://www.linkedin.com/company/oslo-chamber-of-commerce"
+    },
+    {
+      "org": "989916319",
+      "company": "ELEKTROKOMPETANSE AS",
+      "url": "https://elektrokompetanse.com"
+    },
+    {
+      "org": "996979660",
+      "company": "VALDRESMEIERIET AS",
+      "url": "https://www.valdresmeieriet.no"
+    },
+    {
+      "org": "992868775",
+      "company": "ALFA LAGERHOTELL AS",
+      "url": "https://www.alfalagerhotell.no"
+    },
+    {
+      "org": "920542158",
+      "company": "TECTRAP AS",
+      "url": "https://www.tectrap.com"
+    },
+    {
+      "org": "995445611",
+      "company": "GS ELEKTRO GJØVIK AS",
+      "url": "https://gsel.no"
+    },
+    {
+      "org": "990412375",
+      "company": "BERGEN VAKTMESTERTJENESTER AS",
+      "url": "https://bnv.no"
+    }
+  ],
+  "summary": {
+    "new_url_items": 17,
+    "kinds": {
+      "website": 11,
+      "social": 6
+    },
+    "correct": 17,
+    "wrong": 0,
+    "unsure": 0,
+    "decision": "ROLLBACK suffix ON trial: news/activity dropped from 231 to 230 despite zero wrong-company items."
+  }
+}

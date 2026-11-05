@@ -1,0 +1,20 @@
+{
+  "final": {
+    "passed": 859,
+    "failed": 0,
+    "seconds": 147.93,
+    "command": "uv run --frozen pytest -q --basetemp scratch/s65/pytest-network -o cache_dir=scratch/s65/pytest-cache",
+    "credentials": "NAV/API/search selectors removed",
+    "network": "Allowed for existing official-source smoke tests"
+  },
+  "initial_sandbox_attempt": {
+    "passed": 857,
+    "failed": 2,
+    "seconds": 174.63,
+    "failures": [
+      "tests/test_evaluator_cli_and_site.py::test_evaluator_cli_direct_invocation_and_site_generation",
+      "tests/test_evaluator_cli_and_site.py::test_evaluator_shapes_union_contract_reference"
+    ],
+    "reason": "Official-source smoke tests could not produce complete sections under the network restriction; no implementation edits were needed."
+  }
+}

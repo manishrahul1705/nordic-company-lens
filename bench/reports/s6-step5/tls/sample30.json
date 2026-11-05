@@ -1,0 +1,2577 @@
+{
+  "seed": 20261105,
+  "sample_population_companies": 206,
+  "source_run": "bench\\runs\\20261105T101038069339Z-ee6674c",
+  "started_at": "2026-11-05T11:40:58.519418+00:00",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "truststore": "0.10.5",
+  "certifi": "2026.07.22",
+  "credentials": "benchmark environment stripped; no credentials or search",
+  "method": "Same failed HTTPS URL; direct connection, verified TLS, no redirects, 8 second cap; HTTP response and 2xx counted separately. Historical logs omit messages; fresh default retry captures full exception chain.",
+  "items": [
+    {
+      "org": "918004440",
+      "url": "https://tudaleiendom.no/robots.txt",
+      "historical_event": {
+        "url": "https://tudaleiendom.no/robots.txt",
+        "host": "tudaleiendom.no",
+        "organisation_number": "918004440",
+        "attempt_started": 310.625,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 6782
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to tudaleiendom.no:443 after 3031 ms: Could not connect to server",
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "998535611",
+      "url": "https://skistad.com/robots.txt",
+      "historical_event": {
+        "url": "https://skistad.com/robots.txt",
+        "host": "skistad.com",
+        "organisation_number": "998535611",
+        "attempt_started": 491.0319999998901,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_tls_error",
+        "runtime_ms": 2000
+      },
+      "results": {
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "('A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.',)",
+              "repr": "ConnectError(\"('A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.',)\")"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "('A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.',)",
+              "repr": "ConnectError(SSLCertVerificationError('A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.'))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "('A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.',)",
+              "repr": "SSLCertVerificationError('A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.')"
+            }
+          ],
+          "category": "certificate verification"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(\"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)\")"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)\"))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)",
+              "repr": "SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)\")"
+            }
+          ],
+          "category": "certificate verification"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 35,
+          "stderr": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - The received certificate has expired.",
+          "category": "certificate verification"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(\"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)\")"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)\"))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)",
+              "repr": "SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'skistad.com'. (_ssl.c:1010)\")"
+            }
+          ],
+          "category": "certificate verification"
+        }
+      }
+    },
+    {
+      "org": "990702861",
+      "url": "https://aarhus-transport.no/robots.txt",
+      "historical_event": {
+        "url": "https://aarhus-transport.no/robots.txt",
+        "host": "aarhus-transport.no",
+        "organisation_number": "990702861",
+        "attempt_started": 428.79699999978766,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 7985
+      },
+      "results": {
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to aarhus-transport.no:443 after 3014 ms: Could not connect to server",
+          "category": "connection/protocol"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "998077028",
+      "url": "https://innovationsupport.com/robots.txt",
+      "historical_event": {
+        "url": "https://innovationsupport.com/robots.txt",
+        "host": "innovationsupport.com",
+        "organisation_number": "998077028",
+        "attempt_started": 145.875,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8063
+      },
+      "results": {
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8010 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectTimeout",
+              "message": "",
+              "repr": "ConnectTimeout('')"
+            },
+            {
+              "class": "httpcore.ConnectTimeout",
+              "message": "",
+              "repr": "ConnectTimeout(TimeoutError())"
+            },
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "Cancelled via cancel scope 215380b47d0; reason: deadline exceeded",
+              "repr": "CancelledError('Cancelled via cancel scope 215380b47d0; reason: deadline exceeded')"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "919893389",
+      "url": "https://hansebu.no/robots.txt",
+      "historical_event": {
+        "url": "https://hansebu.no/robots.txt",
+        "host": "hansebu.no",
+        "organisation_number": "919893389",
+        "attempt_started": 141.7029999999795,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 7047
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to hansebu.no:443 after 3058 ms: Could not connect to server",
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "984597665",
+      "url": "https://nore.as/robots.txt",
+      "historical_event": {
+        "url": "https://nore.as/robots.txt",
+        "host": "nore.as",
+        "organisation_number": "984597665",
+        "attempt_started": 364.7349999998696,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8015
+      },
+      "results": {
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to nore.as:443 after 3051 ms: Could not connect to server",
+          "category": "connection/protocol"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "915261000",
+      "url": "https://paletten-restaurant.no/robots.txt",
+      "historical_event": {
+        "url": "https://paletten-restaurant.no/robots.txt",
+        "host": "paletten-restaurant.no",
+        "organisation_number": "915261000",
+        "attempt_started": 256.75,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8000
+      },
+      "results": {
+        "certifi": {
+          "transport_success": true,
+          "http_status": 404,
+          "http_2xx": false,
+          "category": "HTTP response"
+        },
+        "curl": {
+          "transport_success": true,
+          "http_status": 404,
+          "http_2xx": false,
+          "exit_code": 0,
+          "stderr": "",
+          "category": "HTTP response"
+        },
+        "default": {
+          "transport_success": true,
+          "http_status": 404,
+          "http_2xx": false,
+          "category": "HTTP response"
+        },
+        "truststore": {
+          "transport_success": true,
+          "http_status": 404,
+          "http_2xx": false,
+          "category": "HTTP response"
+        }
+      }
+    },
+    {
+      "org": "933814106",
+      "url": "https://knarbergbm.no/robots.txt",
+      "historical_event": {
+        "url": "https://knarbergbm.no/robots.txt",
+        "host": "knarbergbm.no",
+        "organisation_number": "933814106",
+        "attempt_started": 180.625,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_tls_error",
+        "runtime_ms": 735
+      },
+      "results": {
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 35,
+          "stderr": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - The Local Security Authority cannot be contacted",
+          "category": "other TLS"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        }
+      }
+    },
+    {
+      "org": "985464405",
+      "url": "https://hande-energy.no/robots.txt",
+      "historical_event": {
+        "url": "https://hande-energy.no/robots.txt",
+        "host": "hande-energy.no",
+        "organisation_number": "985464405",
+        "attempt_started": 316.2029999999795,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 735
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "",
+              "repr": "ConnectError('')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "",
+              "repr": "ConnectError(BrokenResourceError())"
+            },
+            {
+              "class": "anyio.BrokenResourceError",
+              "message": "",
+              "repr": "BrokenResourceError()"
+            },
+            {
+              "class": "builtins.ConnectionResetError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "ConnectionResetError(22, 'The specified network name is no longer available', None, 64, None)"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "OSError(22, 'The specified network name is no longer available', None, 64, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "",
+              "repr": "ConnectError('')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "",
+              "repr": "ConnectError(BrokenResourceError())"
+            },
+            {
+              "class": "anyio.BrokenResourceError",
+              "message": "",
+              "repr": "BrokenResourceError()"
+            },
+            {
+              "class": "builtins.ConnectionResetError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "ConnectionResetError(22, 'The specified network name is no longer available', None, 64, None)"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "OSError(22, 'The specified network name is no longer available', None, 64, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "",
+              "repr": "ConnectError('')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "",
+              "repr": "ConnectError(BrokenResourceError())"
+            },
+            {
+              "class": "anyio.BrokenResourceError",
+              "message": "",
+              "repr": "BrokenResourceError()"
+            },
+            {
+              "class": "builtins.ConnectionResetError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "ConnectionResetError(22, 'The specified network name is no longer available', None, 64, None)"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "OSError(22, 'The specified network name is no longer available', None, 64, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 35,
+          "stderr": "curl: (35) Recv failure: Connection was reset",
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "988236756",
+      "url": "https://www.byggtema.no/robots.txt",
+      "historical_event": {
+        "url": "https://www.byggtema.no/robots.txt",
+        "host": "www.byggtema.no",
+        "organisation_number": "988236756",
+        "attempt_started": 231.21899999980815,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8000
+      },
+      "results": {
+        "truststore": {
+          "transport_success": true,
+          "http_status": 200,
+          "http_2xx": true,
+          "category": "HTTP response"
+        },
+        "certifi": {
+          "transport_success": true,
+          "http_status": 200,
+          "http_2xx": true,
+          "category": "HTTP response"
+        },
+        "curl": {
+          "transport_success": true,
+          "http_status": 200,
+          "http_2xx": true,
+          "exit_code": 0,
+          "stderr": "",
+          "category": "HTTP response"
+        },
+        "default": {
+          "transport_success": true,
+          "http_status": 200,
+          "http_2xx": true,
+          "category": "HTTP response"
+        }
+      }
+    },
+    {
+      "org": "921044186",
+      "url": "https://raptorinvest.com/robots.txt",
+      "historical_event": {
+        "url": "https://raptorinvest.com/robots.txt",
+        "host": "raptorinvest.com",
+        "organisation_number": "921044186",
+        "attempt_started": 310.0629999998491,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8000
+      },
+      "results": {
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8008 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "934609441",
+      "url": "https://www.hugedomains.com/domain_profile.cfm",
+      "historical_event": {
+        "url": "https://www.hugedomains.com/domain_profile.cfm",
+        "host": "www.hugedomains.com",
+        "organisation_number": "934609441",
+        "attempt_started": 341.7029999999795,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 454
+      },
+      "results": {
+        "curl": {
+          "transport_success": true,
+          "http_status": 302,
+          "http_2xx": false,
+          "exit_code": 0,
+          "stderr": "",
+          "category": "HTTP response"
+        },
+        "default": {
+          "transport_success": true,
+          "http_status": 302,
+          "http_2xx": false,
+          "category": "HTTP response"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "",
+              "repr": "ConnectError('')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "",
+              "repr": "ConnectError(BrokenResourceError())"
+            },
+            {
+              "class": "anyio.BrokenResourceError",
+              "message": "",
+              "repr": "BrokenResourceError()"
+            },
+            {
+              "class": "builtins.ConnectionResetError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "ConnectionResetError(22, 'The specified network name is no longer available', None, 64, None)"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "[WinError 64] The specified network name is no longer available",
+              "repr": "OSError(22, 'The specified network name is no longer available', None, 64, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": true,
+          "http_status": 302,
+          "http_2xx": false,
+          "category": "HTTP response"
+        }
+      }
+    },
+    {
+      "org": "928736032",
+      "url": "https://rebr.com/robots.txt",
+      "historical_event": {
+        "url": "https://rebr.com/robots.txt",
+        "host": "rebr.com",
+        "organisation_number": "928736032",
+        "attempt_started": 342.64099999982864,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_tls_error",
+        "runtime_ms": 812
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 35,
+          "stderr": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - The Local Security Authority cannot be contacted",
+          "category": "other TLS"
+        }
+      }
+    },
+    {
+      "org": "997357094",
+      "url": "https://www.pebo.no/robots.txt",
+      "historical_event": {
+        "url": "https://www.pebo.no/robots.txt",
+        "host": "www.pebo.no",
+        "organisation_number": "997357094",
+        "attempt_started": 391.9849999998696,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8000
+      },
+      "results": {
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8015 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "989252968",
+      "url": "https://marialouise.no/robots.txt",
+      "historical_event": {
+        "url": "https://marialouise.no/robots.txt",
+        "host": "marialouise.no",
+        "organisation_number": "989252968",
+        "attempt_started": 41.25,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 6203
+      },
+      "results": {
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to marialouise.no:443 after 3030 ms: Could not connect to server",
+          "category": "connection/protocol"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "935868475",
+      "url": "https://studiomano.no/robots.txt",
+      "historical_event": {
+        "url": "https://studiomano.no/robots.txt",
+        "host": "studiomano.no",
+        "organisation_number": "935868475",
+        "attempt_started": 119.92199999978766,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 7235
+      },
+      "results": {
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to studiomano.no:443 after 3038 ms: Could not connect to server",
+          "category": "connection/protocol"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "998008123",
+      "url": "https://nere.no/robots.txt",
+      "historical_event": {
+        "url": "https://nere.no/robots.txt",
+        "host": "nere.no",
+        "organisation_number": "998008123",
+        "attempt_started": 433.5779999999795,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 7985
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8002 milliseconds",
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "929481070",
+      "url": "https://snappysoftware.com/",
+      "historical_event": {
+        "url": "https://snappysoftware.com/",
+        "host": "snappysoftware.com",
+        "organisation_number": "929481070",
+        "attempt_started": 228.7029999999795,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8016
+      },
+      "results": {
+        "truststore": {
+          "transport_success": true,
+          "http_status": 301,
+          "http_2xx": false,
+          "category": "HTTP response"
+        },
+        "certifi": {
+          "transport_success": true,
+          "http_status": 301,
+          "http_2xx": false,
+          "category": "HTTP response"
+        },
+        "curl": {
+          "transport_success": true,
+          "http_status": 301,
+          "http_2xx": false,
+          "exit_code": 0,
+          "stderr": "",
+          "category": "HTTP response"
+        },
+        "default": {
+          "transport_success": true,
+          "http_status": 301,
+          "http_2xx": false,
+          "category": "HTTP response"
+        }
+      }
+    },
+    {
+      "org": "921484623",
+      "url": "https://fglides.no/robots.txt",
+      "historical_event": {
+        "url": "https://fglides.no/robots.txt",
+        "host": "fglides.no",
+        "organisation_number": "921484623",
+        "attempt_started": 132.9529999999795,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 7094
+      },
+      "results": {
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to fglides.no:443 after 3100 ms: Could not connect to server",
+          "category": "connection/protocol"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "996929515",
+      "url": "https://sapidus.com/robots.txt",
+      "historical_event": {
+        "url": "https://sapidus.com/robots.txt",
+        "host": "sapidus.com",
+        "organisation_number": "996929515",
+        "attempt_started": 454.46899999980815,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8078
+      },
+      "results": {
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8013 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectTimeout",
+              "message": "",
+              "repr": "ConnectTimeout('')"
+            },
+            {
+              "class": "httpcore.ConnectTimeout",
+              "message": "",
+              "repr": "ConnectTimeout(TimeoutError())"
+            },
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "Cancelled via cancel scope 215380b5270; reason: deadline exceeded",
+              "repr": "CancelledError('Cancelled via cancel scope 215380b5270; reason: deadline exceeded')"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "833912682",
+      "url": "https://eltek.no/robots.txt",
+      "historical_event": {
+        "url": "https://eltek.no/robots.txt",
+        "host": "eltek.no",
+        "organisation_number": "833912682",
+        "attempt_started": 489.67199999978766,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8031
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 7,
+          "stderr": "curl: (7) Failed to connect to eltek.no:443 after 3038 ms: Could not connect to server",
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "929002733",
+      "url": "https://hvalermarinepark.no/robots.txt",
+      "historical_event": {
+        "url": "https://hvalermarinepark.no/robots.txt",
+        "host": "hvalermarinepark.no",
+        "organisation_number": "929002733",
+        "attempt_started": 87.07799999997951,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8079
+      },
+      "results": {
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8012 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "927211033",
+      "url": "https://highcamp.com/robots.txt",
+      "historical_event": {
+        "url": "https://highcamp.com/robots.txt",
+        "host": "highcamp.com",
+        "organisation_number": "927211033",
+        "attempt_started": 217.04699999978766,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_tls_error",
+        "runtime_ms": 1313
+      },
+      "results": {
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(\"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)\")"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)\"))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)",
+              "repr": "SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)\")"
+            }
+          ],
+          "category": "certificate verification"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 60,
+          "stderr": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - The target principal name is incorrect.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl failed to verify the legitimacy of the server and therefore could not\r\nestablish a secure connection to it. To learn more about this situation and\r\nhow to fix it, please visit the webpage mentioned above.",
+          "category": "certificate verification"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(\"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)\")"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)",
+              "repr": "ConnectError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)\"))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)",
+              "repr": "SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'highcamp.com'. (_ssl.c:1010)\")"
+            }
+          ],
+          "category": "certificate verification"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "(\"The certificate's CN name does not match the passed value.\",)",
+              "repr": "ConnectError('(\"The certificate\\'s CN name does not match the passed value.\",)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "(\"The certificate's CN name does not match the passed value.\",)",
+              "repr": "ConnectError(SSLCertVerificationError(\"The certificate's CN name does not match the passed value.\"))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "(\"The certificate's CN name does not match the passed value.\",)",
+              "repr": "SSLCertVerificationError(\"The certificate's CN name does not match the passed value.\")"
+            }
+          ],
+          "category": "certificate verification"
+        }
+      }
+    },
+    {
+      "org": "930476587",
+      "url": "https://virement.no/robots.txt",
+      "historical_event": {
+        "url": "https://virement.no/robots.txt",
+        "host": "virement.no",
+        "organisation_number": "930476587",
+        "attempt_started": 442.21899999980815,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_connect_error",
+        "runtime_ms": 6938
+      },
+      "results": {
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8004 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError('All connection attempts failed')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "All connection attempts failed",
+              "repr": "ConnectError(OSError('All connection attempts failed'))"
+            },
+            {
+              "class": "builtins.OSError",
+              "message": "All connection attempts failed",
+              "repr": "OSError('All connection attempts failed')"
+            },
+            {
+              "class": "builtins.ConnectionRefusedError",
+              "message": "[WinError 1225] The remote computer refused the network connection",
+              "repr": "ConnectionRefusedError(22, 'The remote computer refused the network connection', None, 1225, None)"
+            }
+          ],
+          "category": "connection/protocol"
+        }
+      }
+    },
+    {
+      "org": "889806192",
+      "url": "https://xn--sjteknikk-m8a.no/robots.txt",
+      "historical_event": {
+        "url": "https://xn--sjteknikk-m8a.no/robots.txt",
+        "host": "xn--sjteknikk-m8a.no",
+        "organisation_number": "889806192",
+        "attempt_started": 223.5779999999795,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_tls_error",
+        "runtime_ms": 2500
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "ConnectError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLError",
+              "message": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)",
+              "repr": "SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')"
+            }
+          ],
+          "category": "other TLS"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 35,
+          "stderr": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - The Local Security Authority cannot be contacted",
+          "category": "other TLS"
+        }
+      }
+    },
+    {
+      "org": "936621716",
+      "url": "https://melingbygg.no/robots.txt",
+      "historical_event": {
+        "url": "https://melingbygg.no/robots.txt",
+        "host": "melingbygg.no",
+        "organisation_number": "936621716",
+        "attempt_started": 389.25,
+        "status": null,
+        "error": "ConnectError",
+        "section": "website",
+        "failure_code": "website_tls_error",
+        "runtime_ms": 907
+      },
+      "results": {
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "('A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.',)",
+              "repr": "ConnectError(\"('A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.',)\")"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "('A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.',)",
+              "repr": "ConnectError(SSLCertVerificationError('A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.'))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "('A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.',)",
+              "repr": "SSLCertVerificationError('A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.')"
+            }
+          ],
+          "category": "certificate verification"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
+              "repr": "ConnectError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
+              "repr": "SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')"
+            }
+          ],
+          "category": "certificate verification"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 60,
+          "stderr": "curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - The certificate chain was issued by an authority that is not trusted.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl failed to verify the legitimacy of the server and therefore could not\r\nestablish a secure connection to it. To learn more about this situation and\r\nhow to fix it, please visit the webpage mentioned above.",
+          "category": "certificate verification"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
+              "repr": "ConnectError('[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')"
+            },
+            {
+              "class": "httpcore.ConnectError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
+              "repr": "ConnectError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)'))"
+            },
+            {
+              "class": "ssl.SSLCertVerificationError",
+              "message": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
+              "repr": "SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')"
+            }
+          ],
+          "category": "certificate verification"
+        }
+      }
+    },
+    {
+      "org": "912342409",
+      "url": "https://faune.com/robots.txt",
+      "historical_event": {
+        "url": "https://faune.com/robots.txt",
+        "host": "faune.com",
+        "organisation_number": "912342409",
+        "attempt_started": 361.79699999978766,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8016
+      },
+      "results": {
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8012 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "936276075",
+      "url": "https://mbergum.com/robots.txt",
+      "historical_event": {
+        "url": "https://mbergum.com/robots.txt",
+        "host": "mbergum.com",
+        "organisation_number": "936276075",
+        "attempt_started": 44.562999999849126,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8640
+      },
+      "results": {
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8010 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "981130243",
+      "url": "https://ffs.no/robots.txt",
+      "historical_event": {
+        "url": "https://ffs.no/robots.txt",
+        "host": "ffs.no",
+        "organisation_number": "981130243",
+        "attempt_started": 240.73499999986961,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8015
+      },
+      "results": {
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8008 milliseconds",
+          "category": "timeout"
+        }
+      }
+    },
+    {
+      "org": "995612461",
+      "url": "https://propel.com/robots.txt",
+      "historical_event": {
+        "url": "https://propel.com/robots.txt",
+        "host": "propel.com",
+        "organisation_number": "995612461",
+        "attempt_started": 437.4849999998696,
+        "status": null,
+        "error": "TimeoutError",
+        "section": "website",
+        "runtime_ms": 8140
+      },
+      "results": {
+        "truststore": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "certifi": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "",
+              "repr": "CancelledError()"
+            }
+          ],
+          "category": "timeout"
+        },
+        "curl": {
+          "transport_success": false,
+          "http_status": 0,
+          "http_2xx": false,
+          "exit_code": 28,
+          "stderr": "curl: (28) Connection timed out after 8003 milliseconds",
+          "category": "timeout"
+        },
+        "default": {
+          "transport_success": false,
+          "exceptions": [
+            {
+              "class": "httpx.ConnectTimeout",
+              "message": "",
+              "repr": "ConnectTimeout('')"
+            },
+            {
+              "class": "httpcore.ConnectTimeout",
+              "message": "",
+              "repr": "ConnectTimeout(TimeoutError())"
+            },
+            {
+              "class": "builtins.TimeoutError",
+              "message": "",
+              "repr": "TimeoutError()"
+            },
+            {
+              "class": "asyncio.exceptions.CancelledError",
+              "message": "Cancelled via cancel scope 215380b60d0; reason: deadline exceeded",
+              "repr": "CancelledError('Cancelled via cancel scope 215380b60d0; reason: deadline exceeded')"
+            }
+          ],
+          "category": "timeout"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "default": {
+      "transport_success": 4,
+      "http_2xx": 1,
+      "categories": {
+        "timeout": 12,
+        "certificate verification": 3,
+        "connection/protocol": 8,
+        "HTTP response": 4,
+        "other TLS": 3
+      }
+    },
+    "truststore": {
+      "transport_success": 3,
+      "http_2xx": 1,
+      "categories": {
+        "connection/protocol": 11,
+        "certificate verification": 3,
+        "timeout": 10,
+        "HTTP response": 3,
+        "other TLS": 3
+      }
+    },
+    "certifi": {
+      "transport_success": 4,
+      "http_2xx": 1,
+      "categories": {
+        "connection/protocol": 10,
+        "certificate verification": 3,
+        "timeout": 10,
+        "HTTP response": 4,
+        "other TLS": 3
+      }
+    },
+    "curl": {
+      "transport_success": 4,
+      "http_2xx": 1,
+      "categories": {
+        "connection/protocol": 9,
+        "certificate verification": 3,
+        "timeout": 11,
+        "HTTP response": 4,
+        "other TLS": 3
+      }
+    }
+  },
+  "finished_at": "2026-11-05T11:43:40.642996+00:00",
+  "curl_version": "curl 8.21.0 Windows, Schannel; direct connections; no insecure option",
+  "source_report_sha256": "129aec77e4a26b380e36f38d8bedbc25623070c0e98a2b1e47350ca6936d448f",
+  "exception_class_counts": {
+    "default": {
+      "builtins.TimeoutError": 11,
+      "httpx.ConnectError": 14,
+      "HTTP response": 4,
+      "httpx.ConnectTimeout": 1
+    },
+    "truststore": {
+      "httpx.ConnectError": 17,
+      "httpx.ConnectTimeout": 1,
+      "HTTP response": 3,
+      "builtins.TimeoutError": 9
+    },
+    "certifi": {
+      "httpx.ConnectError": 16,
+      "builtins.TimeoutError": 9,
+      "HTTP response": 4,
+      "httpx.ConnectTimeout": 1
+    }
+  }
+}
