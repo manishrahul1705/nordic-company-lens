@@ -243,7 +243,7 @@ class Proof:
     token: str = ""
 
 
-def score(page, org, context, origin, leaders):
+def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_location=False):
     if domain(page.url) in DIRECTORIES | SOCIAL or is_directory_record(page.url):
         return Proof('REJECT', reason='directory_or_marketplace')
     raw = page.raw.lower()
@@ -329,13 +329,13 @@ def score(page, org, context, origin, leaders):
     label=compact(extract(page.url).domain)
     derived=label in {compact(base_name),compact(base_name)+'as',compact(base_name)+'asa'} and len(compact(base_name))>=4
     contacts=[s for s in signals if s in {'street','postcode_city','phone','email'}]
-    if exact_base and derived and len(contacts)>=2:
+    if suffix_contact and exact_base and derived and len(contacts)>=2:
         return Proof('VERIFIED','legal_name_without_suffix_and_two_contacts',
                      ['legal_name_without_suffix','name_derived_domain',*contacts],2*len(contacts),token=base_name)
     generic = GENERIC | {'company', 'business', 'services', 'consulting', 'gruppe', 'gruppen', 'norge', 'norway', 'nordic'}
     distinctive = (len(compact(base_name)) >= 6 and base_name.split()
                    and not all(word in generic for word in base_name.split()))
-    if distinctive and label == compact(base_name):
+    if domain_location and distinctive and label == compact(base_name):
         location_text = normalized(page.owner_text)
         for key in ('postcode', 'municipality'):
             location = normalized(context.get(key))
@@ -343,6 +343,6 @@ def score(page, org, context, origin, leaders):
             if valid_location and re.search(r'(?<!\w)' + re.escape(location) + r'(?!\w)', location_text):
                 return Proof('VERIFIED', 'domain_legal_name_and_registry_location',
                              ['exact_legal_domain', 'registry_' + key], 4, token=str(context[key]))
-    if exact_base:
+    if suffix_contact and exact_base:
         return Proof('MEDIUM','signals',['legal_name_without_suffix',*contacts],2*len(contacts),reason='name_without_suffix_insufficient_contacts_or_domain',token=base_name)
     return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))

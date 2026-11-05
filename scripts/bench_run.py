@@ -50,6 +50,8 @@ def benchmark_environment(search=False, environment=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--size', choices=(20, 100, 1000), type=int, default=100)
+    parser.add_argument('--website-suffix-contact-proof',action='store_true')
+    parser.add_argument('--website-domain-location-proof',action='store_true')
     parser.add_argument('--search', action='store_true', help='Explicit paid Brave comparison; requires terminal environment variables')
     parser.add_argument('--nav-index-path',type=Path,help='Explicit fixture override for stale/malformed index benchmarks')
     args = parser.parse_args()
@@ -92,6 +94,8 @@ def main():
                '--report', str(destination / 'report.json'), '--site-dir', str(destination / 'site'),
                '--state-dir', str(state), '--websites', '--hiring', '--public-activity',
                '--run-id', 'bench-' + stamp, '--expected-count', str(args.size)]
+    if args.website_suffix_contact_proof: command.append('--website-suffix-contact-proof')
+    if args.website_domain_location_proof: command.append('--website-domain-location-proof')
     if args.search:
         # User-authorized comparison: at most one $0.005 query per company.
         command.extend(['--search-max-queries',str(args.size),'--max-cost-usd',str(args.size*.005)])
@@ -101,6 +105,8 @@ def main():
                  'started_at': datetime.now(timezone.utc).isoformat(), 'command': command,
                  'input_sha256': hashes,
                  'search_enabled': args.search,
+                 'website_suffix_contact_proof':args.website_suffix_contact_proof,
+                 'website_domain_location_proof':args.website_domain_location_proof,
                  'credentials': ('Only Brave provider/key retained in child environment; values never recorded' if args.search
                                  else 'API key variables, NAV_API_TOKEN and search/model selectors removed')}
     execution_path = destination / 'execution.json'

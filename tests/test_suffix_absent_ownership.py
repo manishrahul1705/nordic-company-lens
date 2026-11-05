@@ -8,7 +8,7 @@ from tests.test_websites import OUR,OTHER,execute_web,html
 
 def evaluate(body,context=None,url='https://example.no/'):
     context={'name':'Example AS','phone':'12345678','email':'office@example.no',**(context or {})}
-    return score(Page(body.encode(),url),OUR,context,'legal_name_slug',[])
+    return score(Page(body.encode(),url),OUR,context,'legal_name_slug',[],suffix_contact=True)
 
 
 def test_suffix_absent_requires_two_contacts_and_name_derived_domain():
@@ -45,7 +45,7 @@ def test_suffix_proof_publishes_registry_evidence_and_matching_social(tmp_path,m
     def custom(org):return {**original(org),'navn':'Example AS','telefon':'12345678','epostadresse':'office@example.no'}
     monkeypatch.setattr(websites,'entity',custom)
     body=html('12345678 office@example.no',title='Example',extra='<footer><a href="https://facebook.com/example">Facebook</a></footer>').replace('<header>Example AS</header>','<header>Example</header>')
-    _,row,_,_=execute_web(tmp_path,monkeypatch,body=body)
+    _,row,_,_=execute_web(tmp_path,monkeypatch,body=body,website_suffix_contact_proof=True)
     c=next(c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available')
     assert c['value']['proof_type']=='legal_name_without_suffix_and_two_contacts'
     assert any(e['source_class']=='official_registry' and e['id'] in c['evidence_ids'] for e in row['evidence'])

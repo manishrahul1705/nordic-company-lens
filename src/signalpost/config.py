@@ -30,6 +30,8 @@ class Config(BaseModel):
     wikidata: bool = True
     dns_precheck: bool = True
     registry_declared: bool = False
+    website_suffix_contact_proof: bool = False
+    website_domain_location_proof: bool = False
     website_stop_after_verified: bool = True
     nav_rank_candidates: bool = True
     public_activity: bool = False

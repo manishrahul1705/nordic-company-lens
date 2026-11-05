@@ -7,7 +7,7 @@ from tests.test_websites import OUR, OTHER, execute_web, html
 
 def evaluate(body, name='Northlight AS', url='https://northlight.no/', **context):
     context={'name':name, **context}
-    proof=score(Page(body.encode(),url),OUR,context,'legal_name_slug',[])
+    proof=score(Page(body.encode(),url),OUR,context,'legal_name_slug',[],domain_location=True)
     return proof, context
 
 @pytest.mark.parametrize('body,ctx', [
@@ -47,7 +47,7 @@ def test_location_proof_publishes_local_span_and_registry_evidence(tmp_path,monk
     original=websites.entity
     monkeypatch.setattr(websites,'entity',lambda org:{**original(org),'navn':'Example AS','forretningsadresse':{'kommune':'BERGEN','postnummer':'5000'}})
     body=html('Office in Bergen',title='Welcome').replace('<header>Example AS</header>','')
-    _,row,_,_=execute_web(tmp_path,monkeypatch,body=body)
+    _,row,_,_=execute_web(tmp_path,monkeypatch,body=body,website_domain_location_proof=True)
     proof=next(c for c in row['claims'] if c['field']=='official_website')
     assert proof['value']['proof_type']=='domain_legal_name_and_registry_location'
     assert any(e['source_class']=='official_registry' and e['id'] in proof['evidence_ids'] for e in row['evidence'])

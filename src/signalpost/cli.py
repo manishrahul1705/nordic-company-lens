@@ -39,6 +39,8 @@ def main(argv=None):
     command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=True,
                          help='Publish narrowly verified registry changes (default on; disable with --no-registry-changes)')
     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')
+    command.add_argument("--website-suffix-contact-proof", action="store_true", help="Enable experimental suffix-free name plus two registry contacts")
+    command.add_argument("--website-domain-location-proof", action="store_true", help="Enable experimental exact legal-name domain plus registry location")
     command.add_argument("--website-request-cap", type=int, default=14)
     command.add_argument('--website-total-request-cap',type=int,default=18)
     command.add_argument('--hiring',action='store_true')

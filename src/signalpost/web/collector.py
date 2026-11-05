@@ -79,9 +79,9 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     if candidate_brand:
         candidate_brand = html.unescape(candidate_brand).strip()
     else:
-        parts = [html.unescape(p).strip() for p in re.split(r"\s+[|–-]\s+", page.title) if p.strip()]
+        parts = [html.unescape(p).strip() for p in re.split(r"\s+[|â€“-]\s+", page.title) if p.strip()]
         if parts:
-            generic_store_words = {"nettbutikk", "fiskeutstyr", "båtutstyr", "butikk", "webshop", "forside", "hjem", "velkommen", "home", "shop", "online"}
+            generic_store_words = {"nettbutikk", "fiskeutstyr", "bÃ¥tutstyr", "butikk", "webshop", "forside", "hjem", "velkommen", "home", "shop", "online"}
             p0_lower = parts[0].lower()
             if any(w in p0_lower for w in generic_store_words) and len(parts) > 1:
                 candidate_brand = parts[-1]
@@ -91,8 +91,8 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     if not candidate_brand:
         return None
 
-    cleaned_brand = re.sub(r"\s*[-–|:]?\s*(?:org(?:anisasjons)?\.?\s*nr\.?|organisasjonsnummer)\s*[:.]?\s*\d{9}\b.*$", "", candidate_brand, flags=re.I).strip(" .,-")
-    cleaned_brand = re.sub(r"\s*[-–|:]\s*(?:nettbutikk|butikk|webshop|forside|hjem|velkommen|home|shop|store)\b.*$", "", cleaned_brand, flags=re.I).strip(" .,-")
+    cleaned_brand = re.sub(r"\s*[-â€“|:]?\s*(?:org(?:anisasjons)?\.?\s*nr\.?|organisasjonsnummer)\s*[:.]?\s*\d{9}\b.*$", "", candidate_brand, flags=re.I).strip(" .,-")
+    cleaned_brand = re.sub(r"\s*[-â€“|:]\s*(?:nettbutikk|butikk|webshop|forside|hjem|velkommen|home|shop|store)\b.*$", "", cleaned_brand, flags=re.I).strip(" .,-")
     norm_b = legal_name(cleaned_brand)
     generic_brands = {
         "home", "hjem", "welcome", "velkommen", "kontakt", "contact",
@@ -103,8 +103,8 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     is_generic_tagline = (
         re.search(r"\b(?:din|ditt)\s+\w+", cleaned_brand, re.I) is not None
         or re.search(r"\b(?:kontakt|contact)\b", cleaned_brand, re.I) is not None
-        or re.search(r"\b(?:vilk[aå]r|betingelser|privacy|personvern)\b", cleaned_brand, re.I) is not None
-        or (re.search(r"\bi\s+[A-ZÆØÅa-zæøå]{3,}\b", cleaned_brand) is not None and len(cleaned_brand.split()) > 3)
+        or re.search(r"\b(?:vilk[aÃ¥]r|betingelser|privacy|personvern)\b", cleaned_brand, re.I) is not None
+        or (re.search(r"\bi\s+[A-ZÃ†Ã˜Ã…a-zÃ¦Ã¸Ã¥]{3,}\b", cleaned_brand) is not None and len(cleaned_brand.split()) > 3)
     )
     if (cleaned_brand and len(cleaned_brand) <= 100 and "\ufffd" not in cleaned_brand
             and norm_b not in generic_brands
@@ -138,7 +138,7 @@ def publish(section, response, org, field, value, locator, span):
 
 
 def followup_links(page):
-    patterns = [r'kontakt|contact',r'om[- ]oss|about',r'personvern|privacy|vilk[åa]r|terms|impressum']
+    patterns = [r'kontakt|contact',r'om[- ]oss|about',r'personvern|privacy|vilk[Ã¥a]r|terms|impressum']
     ranked=[]
     for link in page.links:
         text=urlsplit(link.href).path+' '+link.text
@@ -266,7 +266,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 continue
             page = await offload(Page,response.body,response.url)
             checked.add(candidate.domain)
-            proof = await offload(candidate_proof,page,org,context,candidate,leaders)
+            proof = await offload(candidate_proof,page,org,context,candidate,leaders,http.config)
             pages.append((response, page))
             best = (proof, response, page)
             if proof.level == "BLOCKED":
@@ -277,7 +277,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                     checked_response = await http.get(refresh_proof, org, candidate.domain, proved)
                     if checked_response.status == 200:
                         checked_page = await offload(Page, checked_response.body, checked_response.url)
-                        checked_proof = await offload(candidate_proof, checked_page, org, context, candidate, leaders)
+                        checked_proof = await offload(candidate_proof, checked_page, org, context, candidate, leaders, http.config)
                         if checked_proof.level == 'VERIFIED':
                             pages.append((checked_response, checked_page))
                             best = (checked_proof, checked_response, checked_page)
@@ -306,7 +306,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                     if extra.status != 200:
                         continue
                     extra_page = await offload(Page, extra.body, extra.url)
-                    extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders)
+                    extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders, http.config)
                     if extra_proof.level == 'BLOCKED':
                         continue
                     pages.append((extra, extra_page))
@@ -478,10 +478,12 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
                 contact_seen.add((kind, contact.casefold()))
 
 
-def candidate_proof(page,org,context,candidate,leaders):
-    proof=score(page,org,context,candidate.origin,leaders)
+def candidate_proof(page,org,context,candidate,leaders,config=None):
+    options = dict(suffix_contact=getattr(config,"website_suffix_contact_proof",False),
+                   domain_location=getattr(config,"website_domain_location_proof",False))
+    proof=score(page,org,context,candidate.origin,leaders,**options)
     if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
-        unit=score(page,candidate.subunit_orgnr,context,candidate.origin,leaders)
+        unit=score(page,candidate.subunit_orgnr,context,candidate.origin,leaders,**options)
         if unit.level=='VERIFIED':return unit
     return proof
 
