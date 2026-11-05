@@ -6,8 +6,39 @@ from signalpost.web.proof import score
 from signalpost.web.html import Page
 from signalpost.web.collector import followup_links
 from signalpost.web import policy
+from signalpost.web.fetcher import transport_failure_code
 from signalpost.budget import SourceFailure
 from tests.test_websites import execute_web, html, OUR, OTHER
+from tests.test_registry import config
+
+
+def test_tls_failure_classification_does_not_overclassify_connect_errors():
+    assert transport_failure_code(httpx.ConnectError('peer reset')) == 'website_connect_error'
+    assert transport_failure_code(httpx.ConnectError('TLS certificate verify failed')) == 'website_tls_error'
+
+
+def test_http_error_at_apex_does_not_trigger_transport_fallback(tmp_path):
+    from signalpost.web.fetcher import WebsiteHttp
+    from signalpost.web.candidates import Candidate
+    from signalpost.budget import Budget
+    from signalpost.sources.blobstore import BlobStore
+
+    requests=[]
+    def response(request):
+        requests.append(str(request.url))
+        if request.url.path=='/robots.txt':
+            return httpx.Response(200,text='User-agent: *\nAllow: /')
+        return httpx.Response(503, text='unavailable')
+    async def resolver(host, port):
+        return ['93.184.216.34']
+    cfg=config(tmp_path,[OUR],websites=True)
+    async def execute():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:
+            http=WebsiteHttp(client,cfg,Budget(cfg),BlobStore(cfg.state_dir),resolver)
+            with pytest.raises(SourceFailure,match='website_http_5xx'):
+                await http.candidate(Candidate('https://example.no/','example.no','registry_website'),OUR)
+    asyncio.run(execute())
+    assert requests==['https://example.no/robots.txt','https://example.no/']
 
 
 def test_registry_declared_is_not_available_to_guesses():
@@ -59,7 +90,12 @@ def test_plaintext_fallback_and_registry_timeout_retry(tmp_path,monkeypatch):
         if request.url.scheme=='https':raise httpx.ConnectError('TLS failed',request=request)
         return httpx.Response(200,text='User-agent: *\nAllow: /' if request.url.path=='/robots.txt' else html())
     _,row,requests,_=execute_web(tmp_path/'http',monkeypatch,response=response)
-    assert next(c for c in row['claims'] if c['field']=='official_website')['value']['final_url']=='http://example.no'
+    claim=next(c for c in row['claims'] if c['field']=='official_website')
+    assert claim['value']['final_url']=='http://www.example.no'
+    assert claim['value']['transport_scheme']=='http'
+    assert any(e['source_url'].startswith('http://') for e in row['evidence'] if e['id'] in claim['evidence_ids'])
+    attempts=[(httpx.URL(url).scheme,httpx.URL(url).host) for url in requests if httpx.URL(url).path=='/robots.txt']
+    assert attempts[:3]==[('https','example.no'),('https','www.example.no'),('http','www.example.no')]
     counts=0
     def once(request):
         nonlocal counts

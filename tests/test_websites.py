@@ -162,7 +162,23 @@ def test_redirect_www_and_unrelated(tmp_path, monkeypatch):
         return httpx.Response(301, headers={"location": "https://other.no/"})
     _, row, requests, _ = execute_web(tmp_path / "other", monkeypatch, response=unrelated)
     assert not any(c["field"] == "official_website" for c in row["claims"])
-    assert not any("other.no" in url for url in requests)
+    assert any("other.no" in url for url in requests)  # nominated redirect still needs final-host proof
+
+
+def test_cross_registrable_redirect_requires_final_host_ownership_proof(tmp_path, monkeypatch):
+    def response(request):
+        if request.url.host == 'example.no':
+            return httpx.Response(301, headers={'location':'https://other.no/'})
+        if request.url.host == 'other.no' and request.url.path == '/robots.txt':
+            return httpx.Response(200, text='User-agent: *\nAllow: /')
+        if request.url.host == 'other.no':
+            return httpx.Response(200, text=html('Org.nr '+OUR))
+        return httpx.Response(404)
+    _, row, requests, _ = execute_web(tmp_path/'cross-redirect', monkeypatch, response=response)
+    claim=next(c for c in row['claims'] if c['field']=='official_website')
+    assert claim['value']['final_url']=='https://other.no'
+    assert claim['value']['proof_page_url']=='https://other.no/'
+    assert any('other.no' in url for url in requests)
 
 
 def test_social_and_registry_social(tmp_path, monkeypatch):

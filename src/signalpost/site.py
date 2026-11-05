@@ -126,6 +126,10 @@ def evidence_panel(claim, records, shared=False):
             parts.append(f'<p><a href="#evidence-{esc(eid)}">Additional supporting source {i + 1}</a></p>')
             continue
         sha = e['content_sha256']
+        scheme_note = ''
+        if claim['field'] == 'official_website' and e['source_class'] == 'company_owned':
+            scheme = urlsplit(e['source_url']).scheme.upper()
+            scheme_note = f'<span class="transport-scheme">[{esc(scheme)}]</span> '
         parts.append('<div class="evidence-record"><dl class="values">'
                      f'<dt>Source / class</dt><dd>{esc(e["source_class"])}</dd>'
                      f'<dt>Source link</dt><dd>{link(e["source_url"])}</dd>'
@@ -136,7 +140,7 @@ def evidence_panel(claim, records, shared=False):
                      f'<button type="button" data-copy="{esc(sha)}">Copy full hash</button></dd>'
                      f'<dt>Extraction method / version</dt><dd>{esc(e["extraction_method"])}</dd>'
                      f'<dt>Locator</dt><dd>{esc(e["locator"])}</dd></dl>'
-                     f'<blockquote class="excerpt">{excerpt_html(e["claim_span"], claim["value"])}</blockquote></div>')
+                     f'<blockquote class="excerpt">{scheme_note}{excerpt_html(e["claim_span"], claim["value"])}</blockquote></div>')
     if claim['availability'] == 'available' and not parts:
         raise ValueError('Available fact has no evidence')
     v = claim.get('value')

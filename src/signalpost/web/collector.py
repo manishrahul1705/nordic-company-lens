@@ -257,6 +257,9 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
         best = None
         try:
             response = await http.candidate(candidate, org, proved)
+            if domain(response.url) != candidate.domain:
+                from dataclasses import replace
+                candidate = replace(candidate, url=response.url, domain=domain(response.url))
             if response.status in (401, 403, 429):
                 raise SourceFailure("http_blocked", f"HTTP {response.status}")
             if not 200 <= response.status < 300:
@@ -498,7 +501,8 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else page.name_span(proof.token)
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")
-    value = {"final_url": root_url, "identity_level": proof.level, "proof_type": proof.proof_type,
+    value = {"final_url": root_url, "transport_scheme": p.scheme,
+             "identity_level": proof.level, "proof_type": proof.proof_type,
              "proof_page_url": response.url, "signals": proof.signals, "points": proof.points,
              "candidate_origin": candidate.origin, "relationship_note": "group_site" if proof.other_orgnrs else None,
              "other_orgnrs": proof.other_orgnrs}

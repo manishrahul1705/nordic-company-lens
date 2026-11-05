@@ -33,9 +33,9 @@ def test_dns_no_http_and_cached_failure(tmp_path, failure, code):
             for org in [OUR, '993578843']:
                 with pytest.raises(SourceFailure) as exc: await http.candidate(Candidate('https://missing.no/','missing.no','legal_name_slug'),org)
                 assert exc.value.code==code
-            assert http.dns_lookups==(2 if failure in {'no_such_domain', 'empty'} else 1)
+            assert http.dns_lookups==(1 if failure=='private' else 2)
     asyncio.run(run())
-    assert dns==(['missing.no', 'www.missing.no'] if failure in {'no_such_domain', 'empty'} else ['missing.no']) and not calls
+    assert dns==(['missing.no'] if failure=='private' else ['missing.no', 'www.missing.no']) and not calls
 
 
 def test_dns_cap_sixty_four_and_ssrf_recheck(tmp_path):

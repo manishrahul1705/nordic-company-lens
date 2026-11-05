@@ -21,6 +21,17 @@ def test_carried_fact_shows_last_successful_check():
     assert 'Last successfully checked:' in markup and '2026-10-01' in markup
 
 
+def test_website_source_excerpt_records_http_scheme():
+    from signalpost.site import evidence_panel
+    claim={'id':'a'*64,'field':'official_website','family':'website','value':{'final_url':'http://example.no'},
+           'availability':'available','evidence_ids':['b'*64]}
+    evidence={'id':'b'*64,'source_url':'http://example.no/','source_class':'company_owned',
+              'retrieved_at':'2026-11-05T00:00:00Z','effective_at':None,'content_sha256':'c'*64,
+              'extraction_method':'signalpost.website.v1','locator':'identity-proof:923609016',
+              'claim_span':'Org.nr 923609016'}
+    assert '[HTTP]' in evidence_panel(claim,{evidence['id']:evidence})
+
+
 class Markup(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
