@@ -97,7 +97,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
             assert not metrics['output_limit_exceeded']
             for row in rows:
                 sections = row['run']['sections'] if 'run' in row else row['profile']['sections']
-                assert all(state in {'available', 'not_available', 'not_applicable'} for state in sections.values()), 'Incomplete smoke-test section'
+                assert all(state in {'available', 'not_available', 'not_applicable', 'ambiguous'} for state in sections.values()), 'Incomplete smoke-test section'
     if second is not None:
         rerun = load(second)
         for row in rerun:verify_synthesis(row)

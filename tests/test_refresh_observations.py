@@ -118,3 +118,26 @@ def test_newly_checked_page_is_coverage_but_addition_on_checked_page_is_material
     assert not any(c.field == contact.field for c in fresh.changes)
     assert any(c.get('field') == contact.field and c['reason'] == 'newly_checked_supporting_page'
                for c in fresh.run.refresh['observation_changes'])
+
+
+def test_transient_website_failure_keeps_evidence_as_stale_without_change(tmp_path, monkeypatch):
+    from tests.test_websites import execute_web
+    from signalpost.models.envelope import Envelope, Error
+    from signalpost.models.shapes import serialize
+    from signalpost.refresh.diff import apply
+    from signalpost.sources.blobstore import BlobStore
+    _, raw, _, cfg = execute_web(tmp_path, monkeypatch)
+    old = Envelope.model_validate(raw)
+    current = old.model_copy(deep=True)
+    current.changes=[]
+    current.claims=[c for c in current.claims if c.family!='website']
+    current.run.sections['website']='failed'
+    current.run.completed_at='2026-11-05T12:00:00Z'
+    current.errors.append(Error(section='website',code='website_timeout',message='fixture timeout'))
+    prior_claim=next(c for c in old.claims if c.field=='official_website')
+    apply(current, serialize(old,'union'), BlobStore(cfg.state_dir))
+    carried=next(c for c in current.claims if c.field=='official_website')
+    assert carried.carried_forward and carried.stale_since==current.run.completed_at
+    assert carried.value==prior_claim.value and carried.evidence_ids==prior_claim.evidence_ids
+    assert any(e.id in {r for r in carried.evidence_ids} for e in current.evidence)
+    assert current.changes==[] and current.run.refresh['observation_changes']==[]

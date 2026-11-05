@@ -127,16 +127,17 @@ def test_xss_is_text_and_bad_urls_are_not_links(tmp_path):
 def test_site_error_is_isolated_and_reported(tmp_path, monkeypatch):
     cfg = config(tmp_path / 'run', ['923609016'])
     _, before = execute(cfg)
-    cfg.site_dir = tmp_path / 'site'
+    failed_cfg = config(tmp_path / 'failed-run', ['923609016'])
+    failed_cfg.site_dir = tmp_path / 'site'
     def fail(*args, **kwargs): raise RuntimeError('forced template error')
     monkeypatch.setattr('signalpost.site.profile', fail)
-    report, after = execute(cfg)
+    report, after = execute(failed_cfg)
     assert report['site']['state'] == 'failed' and report['site']['error'] == 'RuntimeError'
-    assert report['site'] == json.loads(cfg.report.read_text(encoding='utf8'))['site']
+    assert report['site'] == json.loads(failed_cfg.report.read_text(encoding='utf8'))['site']
     # Retrieval/run timestamps are allowed to change; site errors cannot change facts or synthesis.
     assert before[0]['claims'] == after[0]['claims'] or [(c['id'], c['value']) for c in before[0]['claims']] == [(c['id'], c['value']) for c in after[0]['claims']]
     assert before[0]['run']['synthesis'] == after[0]['run']['synthesis']
-    assert not (cfg.site_dir / 'index.html').exists()
+    assert not (failed_cfg.site_dir / 'index.html').exists()
 
 
 def test_cli_site_failure_keeps_exit_zero(tmp_path, monkeypatch):

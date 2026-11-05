@@ -14,6 +14,7 @@ class Claim(Model):
     family: str
     reporting_period: dict | None = None
     carried_forward: bool = False
+    stale_since: str | None = None
     first_observed_at: str
     last_observed_at: str
     reasons: dict[str, str] = Field(default_factory=dict)

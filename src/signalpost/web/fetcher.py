@@ -80,7 +80,9 @@ class WebsiteHttp:
             self.dns_metrics['dns_lookups'] = self.dns_metrics.get('dns_lookups', 0) + 1
             by_org = self.dns_metrics.setdefault('dns_by_company', {})
             by_org[org] = by_org.get(org, 0) + 1
-        return await (self.resolver or policy.resolve_public)(host, port)
+        remaining = max(.001, self.budget.deadline-time.monotonic())
+        async with asyncio.timeout(remaining):
+            return await (self.resolver or policy.resolve_public)(host, port)
 
     async def retry_pause(self):
         self.budget.check()

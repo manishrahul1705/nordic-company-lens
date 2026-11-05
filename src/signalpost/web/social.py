@@ -239,7 +239,10 @@ def drop_shared(envelopes, blobs=None):
                     for ref in claim.evidence_ids:
                         e=evidence.get(ref)
                         if not e:continue
-                        if e.source_class=='wikidata':allowed=True;break
+                        if e.source_class=='wikidata':
+                            allowed=(target.rstrip('/') in {str(x).rstrip('/') for x in envelope.run.refresh.get('website',{}).get('observed_social_profiles',[])}
+                                     or matches_profile(target,names))
+                            if allowed:break
                         try:
                             page=Page((blobs.directory/e.content_sha256).read_bytes(),e.source_url)
                             if target in attributed(page,proof,context):allowed=True;break

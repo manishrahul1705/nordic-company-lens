@@ -6,11 +6,13 @@ from contextvars import ContextVar
 from urllib.parse import urlsplit, urlunsplit
 import httpx
 import tldextract
+import dns.asyncresolver
 from httpcore._backends.auto import AutoBackend
 from ..budget import SourceFailure
 
 extract = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None, include_psl_private_domains=True)
 DNS_ORG = ContextVar('signalpost_dns_org', default='__shared__')
+DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS = 2.0
 SOCIAL = {"facebook.com", "instagram.com", "linkedin.com", "x.com", "twitter.com", "youtube.com", "tiktok.com"}
 DIRECTORIES = {"proff.no", "proff.com", "proff.dk", "proff.se", "gulesider.no", "1881.no", "purehelp.no", "finn.no", "fb.me", "fb.com", "youtu.be", "lnkd.in", "t.co", "threads.net"}
 # These services reproduce registry identity/contact data; a matching company
@@ -70,19 +72,49 @@ def check_ips(ips):
 
 
 async def resolve_public(host, port=443):
+    failure = None
     try:
         records = await asyncio.wait_for(asyncio.get_running_loop().getaddrinfo(host, port, type=socket.SOCK_STREAM), timeout=8)
     except asyncio.TimeoutError as exc:
-        raise SourceFailure("dns_timeout") from exc
+        failure = SourceFailure("dns_timeout"); failure.__cause__ = exc
     except socket.gaierror as exc:
         if exc.errno in {socket.EAI_NONAME, getattr(socket, 'EAI_NODATA', socket.EAI_NONAME)}:
-            raise SourceFailure("no_such_domain") from exc
-        if exc.errno in {socket.EAI_AGAIN, 11002}:
-            raise SourceFailure('dns_servfail') from exc
-        raise SourceFailure("dns_error") from exc
+            failure = SourceFailure("no_such_domain")
+        elif exc.errno in {socket.EAI_AGAIN, 11002}:
+            failure = SourceFailure('dns_servfail')
+        else:
+            failure = SourceFailure("dns_error")
+        failure.__cause__ = exc
     except OSError as exc:
-        raise SourceFailure("dns_error") from exc
-    return check_ips(list(dict.fromkeys(item[4][0] for item in records)))
+        failure = SourceFailure("dns_error"); failure.__cause__ = exc
+    else:
+        return check_ips(list(dict.fromkeys(item[4][0] for item in records)))
+
+    # A second independent resolution is useful for intermittent resolver
+    # failures and NXDOMAIN. This is DNS-only and does not consume HTTP budget.
+    answers = []
+    for server in ('1.1.1.1', '8.8.8.8'):
+        try:
+            resolver = dns.asyncresolver.Resolver(configure=False)
+            resolver.nameservers = [server]
+            resolver.timeout = DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS
+            resolver.lifetime = DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS
+            async with asyncio.timeout(DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS):
+                results = await asyncio.gather(*(
+                    resolver.resolve(host, record_type, raise_on_no_answer=False,
+                                     search=False, lifetime=DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS)
+                    for record_type in ('A', 'AAAA')), return_exceptions=True)
+            for result in results:
+                if isinstance(result, Exception):
+                    continue  # Includes NXDOMAIN and blocked/filtered UDP/53.
+                answers.extend(str(item) for item in result)
+        except Exception:
+            # Secondary DNS is best-effort. A blocked resolver must not become
+            # a new failure mode or generate a separate user-facing warning.
+            continue
+    if answers:
+        return check_ips(list(dict.fromkeys(answers)))
+    raise failure
 
 
 class PublicNetworkBackend:
@@ -100,7 +132,11 @@ class PublicNetworkBackend:
             self.dns_metrics['dns_lookups'] = self.dns_metrics.get('dns_lookups', 0) + 1
             by_org = self.dns_metrics.setdefault('dns_by_company', {})
             org = DNS_ORG.get();by_org[org] = by_org.get(org, 0) + 1
-        ips = await resolve_public(host, port)
+        connect_timeout = timeout.get('connect_timeout') if isinstance(timeout, dict) else timeout
+        if not isinstance(connect_timeout, (int, float)) or connect_timeout <= 0:
+            connect_timeout = 8.0
+        async with asyncio.timeout(connect_timeout):
+            ips = await resolve_public(host, port)
         ips.sort(key=lambda ip: ipaddress.ip_address(ip).version)
         last = None
         for ip in ips:

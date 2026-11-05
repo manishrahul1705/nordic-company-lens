@@ -1,6 +1,7 @@
 """Recorded SPARQL-shape fixtures are synthetic, not real-company assertions."""
 import asyncio
 import json
+import hashlib
 from pathlib import Path
 
 import httpx
@@ -82,6 +83,22 @@ def test_malformed_or_foreign_identity_cannot_inject_candidate():
     for binding in data['results']['bindings']:binding['item']['value']='https://evil.test/entity/Q123'
     assert parse(json.dumps(data).encode(),{ORG})==[]
     assert parse(b'{"results":{"bindings":[{"org":null,"item":[]}]}}',{ORG})==[]
+
+
+def test_wikidata_social_requires_site_link_or_matching_exact_org_handle(tmp_path):
+    cfg=config(tmp_path,[ORG],websites=True,wikidata=True);blobs=BlobStore(cfg.state_dir)
+    index={'records':{ORG:[{'org':ORG,'item':'https://www.wikidata.org/wiki/Q123456','property':'P2013',
+             'value':'unrelated-shared-parent','sha':hashlib.sha256(BODY).hexdigest(),'retrieved_at':utc_now(),'locator':'/fixture'}]},
+           'metrics':{'social_published':0}}
+    blobs.put(BODY)
+    row=placeholder(ORG,'test',utc_now());section=Section()
+    add(section,Source('https://data.brreg.no',b'Example AS','b'*64,utc_now()),ORG,'identity','identity.legal_name','Example AS','/')
+    row.claims=section.claims
+    publish_social(index,ORG,row,blobs)
+    assert not any(c.field.startswith('social_profile.') for c in row.claims)
+    row.run.refresh['website']={'observed_social_profiles':['https://www.facebook.com/unrelated-shared-parent']}
+    publish_social(index,ORG,row,blobs)
+    assert any(c.value['url']=='https://www.facebook.com/unrelated-shared-parent' for c in row.claims if c.field.startswith('social_profile.'))
 
 
 @pytest.mark.parametrize('failure',['timeout','malformed'])

@@ -7,6 +7,7 @@ import pytest
 from signalpost.budget import Budget, SourceFailure
 from signalpost.sources.blobstore import BlobStore
 from signalpost.web.fetcher import WebsiteHttp, retryable_transport
+from signalpost.web import policy
 from signalpost.web.policy import resolve_public
 from tests.test_registry import config, execute, numbers
 from tests.test_websites import OUR
@@ -106,6 +107,10 @@ def test_system_dns_temporary_error_is_distinct_from_nxdomain(monkeypatch):
         loop=asyncio.get_running_loop()
         async def fail(*args,**kwargs):raise socket.gaierror(socket.EAI_AGAIN,'temporary failure')
         monkeypatch.setattr(loop,'getaddrinfo',fail)
+        class BlockedResolver:
+            def __init__(self, configure=False):self.nameservers=[]
+            async def resolve(self,*args,**kwargs):raise policy.dns.exception.Timeout()
+        monkeypatch.setattr(policy.dns.asyncresolver,'Resolver',BlockedResolver)
         with pytest.raises(SourceFailure) as error:await resolve_public('example.no')
         assert error.value.code=='dns_servfail'
     asyncio.run(run())

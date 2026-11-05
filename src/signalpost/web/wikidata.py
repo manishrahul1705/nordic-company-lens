@@ -113,15 +113,18 @@ def publish_social(index, org, envelope, blobs):
              'subunits':[c.value for c in envelope.claims if c.field.startswith('subunits.unit.') and c.availability=='available']}
     names=company_names(context);section=Section()
     existing={c.value.get('url') for c in envelope.claims if c.field.startswith('social_profile.') and c.availability=='available'}
+    website_links = {str(url).rstrip('/') for url in envelope.run.refresh.get('website', {}).get('observed_social_profiles', [])}
     for record in index['records'].get(org,[]):
         url=social_url(record)
-        if not url or url in existing or not matches_profile(url,names):continue
+        site_linked = bool(url and any(str(link).rstrip('/') == url.rstrip('/') for link in website_links))
+        if record.get('org') != org or not url or url in existing or (not site_linked and not matches_profile(url,names)):continue
         body=(blobs.directory/record['sha']).read_bytes()
         source=Source(record['item'],body,record['sha'],record['retrieved_at'],'Wikidata SPARQL; CC0')
         add(section,source,org,'website','social_profile.'+digest(url)[:20],
             {'url':url,'platform':domain(url),'source':'Wikidata','licence':'CC0','item_url':record['item']},
             record['locator'],source_class='wikidata',method='signalpost.wikidata.social.v1')
-        section.claims[-1].reasons['relationship']='Wikidata exact P2333 organisation number and matching company handle'
+        section.claims[-1].reasons['relationship']=('linked from the verified company website' if site_linked else
+            'Wikidata exact P2333 organisation number and matching company handle')
         existing.add(url);index['metrics']['social_published']+=1
     envelope.claims.extend(section.claims)
     evidence={e.id:e for e in envelope.evidence};evidence.update({e.id:e for e in section.evidence});envelope.evidence=list(evidence.values())

@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "nordic-company-lens"
 version = "2.0.0"
 requires-python = ">=3.12"
-dependencies = ["httpx>=0.28,<1", "pydantic>=2.12,<3", "tldextract>=5.3,<6"]
+dependencies = ["httpx>=0.28,<1", "pydantic>=2.12,<3", "tldextract>=5.3,<6", "dnspython>=2.7,<3"]
 
 [project.scripts]
 signalpost = "signalpost.cli:main"

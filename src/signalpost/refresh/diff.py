@@ -3,6 +3,7 @@ from ..models.evidence import Evidence, canonical, utc_now
 from ..models.envelope import Change
 
 CHECKED={'available','not_available','not_applicable'}
+TRANSIENT_FAILURES={'website_timeout','website_connect_error','dns_timeout','dns_servfail','dns_error','dns_unavailable','no_such_domain','timeout','connection_reset','connection_refused'}
 
 def newly_supported_field(field):
     from ..sources.registry_fields import EXTRA,GROUPS
@@ -53,11 +54,13 @@ def apply(envelope, previous, blobs):
     envelope.run.refresh["mode"] = "refresh"
     old_sections=previous.get('run',{}).get('sections',old.get('sections',{}))
     failed = {family for family,state in envelope.run.sections.items() if state not in CHECKED or old_sections.get(family) not in CHECKED}
+    transient_failed = {e.section for e in envelope.errors if e.code in TRANSIENT_FAILURES}
+    failed |= transient_failed
     for family in failed:
         before=old_sections.get(family); after=envelope.run.sections.get(family)
         old_values=canonical([c.value for c in old_claims.values() if c.family==family and c.availability=='available'])
         new_values=canonical([c.value for c in envelope.claims if c.family==family and c.availability=='available'])
-        if before!=after or old_values!=new_values:
+        if (before!=after or old_values!=new_values) and family not in transient_failed:
             reasons=sorted({e.code for e in envelope.errors if e.section==family})
             envelope.run.refresh['observation_changes'].append({'section':family,'previous_state':before,'current_state':after,'reason':','.join(reasons) or 'section_not_successfully_checked_in_both_runs'})
     identity_conflict = any(e.section == 'identity' and e.code == 'wrong_company' for e in envelope.errors)
@@ -77,7 +80,8 @@ def apply(envelope, previous, blobs):
                         continue  # Current-run live proof is mandatory for every ad.
                 if family == 'website' and envelope.run.refresh.get('website', {}).get('refuted_previous_website'):
                     continue  # Do not carry forward a discredited website that was refuted with foreign orgnr.
-                carried = claim.model_copy(update={"carried_forward": True})
+                carried = claim.model_copy(update={"carried_forward": True,
+                    "stale_since": envelope.run.completed_at if family in transient_failed else claim.stale_since})
                 available.setdefault(carried.field,carried)
         retained = list(available.values())
         if retained:

@@ -34,6 +34,25 @@ def foreign_entity_page(page, org, name, check_ids=True):
     return False
 
 
+def group_site_has_own_proof(pages, org, name, registry_contacts):
+    """Allow a shared/group host only with a direct, exact subject signal."""
+    compact = lambda value: re.sub(r'[^a-z0-9]+', '', str(value).casefold())
+    normalized_name = legal_name(name)
+    contacts = {compact(value) for value in registry_contacts if compact(value)}
+    for page in pages:
+        text = page.visible + ' ' + ' '.join(str(v) for v in page.meta.values()) + ' ' + ' '.join(
+            str(v) for body in page.jsonld for v in (body if isinstance(body, list) else [body])
+            if isinstance(v, dict) for v in (v.get('name'), v.get('alternateName')) if v)
+        if org in orgnrs(page.owner_text):
+            return True
+        # Registry contact plus the exact legal-name stem may be split across
+        # visible text and metadata on the same fetched site.
+        normalized_text = legal_name(text)
+        if normalized_name and normalized_name in normalized_text and any(contact in compact(text) for contact in contacts):
+            return True
+    return False
+
+
 def enforce(envelopes, blobs, bulk):
     """Recheck final output, including carried-forward claims, without requests."""
     from .html import Page
@@ -90,11 +109,25 @@ def enforce(envelopes, blobs, bulk):
             if cache[key] is not None:
                 proof_pages.append(cache[key])
         group = group or any(len(orgnrs(p.visible + ' ' + json.dumps(p.jsonld))) >= 3 for p in proof_pages)
+        group = group or any(foreign_entity_page(p, org, name) for p in proof_pages)
         if group:
             # Do not mutate proof.value: claim IDs hash the supported value.
             proof.reasons['relationship'] = 'group_site'
         removed = []
+        registry_contacts = [c.value for c in row.claims if c.field.startswith(('contact.email.', 'contact.phone.'))
+                             and c.availability == 'available' and any(
+                                 evidence.get(ref) and evidence[ref].source_class == 'official_registry'
+                                 for ref in c.evidence_ids)]
+        if group and not group_site_has_own_proof(proof_pages, org, name, registry_contacts):
+            removed.append(proof)
+            proof.reasons['relationship'] = 'group_site'
+            proof.reasons['withholding_reason'] = 'ambiguous: group/shared site; no exact company ownership proof'
+            row.run.sections['website'] = 'ambiguous'
+            if 'website' in row.modules:
+                row.modules['website'].state = 'ambiguous'
         for claim in row.claims:
+            if claim is proof:
+                continue
             source_pages = None
             if group and claim.field.startswith(('social_profile.', 'registry_social.', 'website_description.', 'public_brand')):
                 removed.append(claim)
@@ -126,7 +159,9 @@ def enforce(envelopes, blobs, bulk):
             'group_site': group, 'other_registry_owners': sorted(owners.get(host, set()) - {org}),
             'historical_shared_domain_nominations': nominated_others,
             'shared_domain_index_available': nominations is not None,
-            'withheld_fields': sorted(fields)}
+            'withheld_fields': sorted(fields),
+            'website_status': 'ambiguous' if proof in removed else 'available',
+            'website_reason': 'group/shared site' if proof in removed else None}
         for family in {'activity', 'hiring'}:
             if any(c.family == family for c in removed) and not any(c.family == family and c.availability == 'available' for c in row.claims):
                 row.run.sections[family] = 'not_applicable'
