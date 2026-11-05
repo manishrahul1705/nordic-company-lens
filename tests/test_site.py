@@ -146,7 +146,8 @@ def test_cli_site_failure_keeps_exit_zero(tmp_path, monkeypatch):
     cfg = config(tmp_path / 'run', ['923609016'])
     monkeypatch.setattr('sys.argv', ['signalpost', 'run', '--organisations', str(cfg.organisations),
                          '--output', str(cfg.output), '--report', str(cfg.report), '--state-dir', str(cfg.state_dir),
-                         '--site-dir', str(tmp_path / 'site')])
+                         '--site-dir', str(tmp_path / 'site'), '--no-websites', '--no-hiring',
+                         '--no-public-activity'])
     def fail(*args, **kwargs): raise RuntimeError('forced template error')
     monkeypatch.setattr('signalpost.site.profile', fail)
     with respx.mock(assert_all_called=False) as router:

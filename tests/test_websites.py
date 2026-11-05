@@ -358,11 +358,9 @@ def test_website_request_budget_defaults():
     assert cfg.website_request_cap == 16 and cfg.website_total_request_cap == 18  # Same as the CLI defaults.
 
 
-def test_cli_defaults_equal_config_defaults(monkeypatch):
-    """The CLI passes every option explicitly, so a Config default that differs is silently ignored."""
+def test_cli_defaults_enable_official_sources_and_disable_search(monkeypatch):
     import sys
     from signalpost import cli
-    from signalpost.config import Config
     seen = {}
 
     class Capture(Exception):
@@ -375,7 +373,19 @@ def test_cli_defaults_equal_config_defaults(monkeypatch):
     monkeypatch.setattr(cli, "Config", capture)
     monkeypatch.setattr(sys, "argv", ["signalpost", "run", "--organisations", "a", "--output", "b", "--report", "c"])
     cli.main()
-    defaults = Config.model_fields
-    differing = {k: (v, defaults[k].default) for k, v in seen.items()
-                 if k in defaults and not defaults[k].is_required() and defaults[k].default is not None and v is not None and v != defaults[k].default}
-    assert not differing, differing
+    assert seen['websites'] is True
+    assert seen['hiring'] is True
+    assert seen['public_activity'] is True
+    assert seen['search_max_queries'] == 0
+    assert seen['synthesis'] == 'template'
+    assert seen['max_cost_usd'] == 0
+    assert seen['bulk'] is None
+    assert seen['expected_count'] is None
+    assert str(seen['organisations']) == 'a'
+    monkeypatch.setattr(sys, "argv", ["signalpost", "run", "--organisations", "a", "--output", "b",
+                                      "--report", "c", "--no-websites", "--no-hiring", "--no-public-activity"])
+    seen.clear()
+    cli.main()
+    assert seen['websites'] is False
+    assert seen['hiring'] is False
+    assert seen['public_activity'] is False

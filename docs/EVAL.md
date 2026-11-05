@@ -18,11 +18,11 @@ NAV uses a separate connection pool and an adaptive time cap of min(900 seconds,
 ## Live registry smoke check
 
 ```sh
-uv run signalpost run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --output out/smoke.jsonl --report out/smoke-report.json --expected-count 20 --time-budget-seconds 180
+uv run signalpost run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --output out/smoke.jsonl --report out/smoke-report.json --expected-count 20 --time-budget-seconds 180 --no-websites --no-hiring --no-public-activity
 uv run python scripts/verify_output.py --first out/smoke.jsonl --organisations tests/fixtures/ci20.jsonl --count 20 --state-dir state --report out/smoke-report.json --require-clean
 ```
 
-The public fixtures provide bulk identity rows; roles, subunits and accounts are requested live. Websites and NAV are disabled in this command. The runner should emit an envelope for every input record even when sources fail. The separate `--require-clean` verifier is stricter: it checks section success, exceptions, deadlines, warnings, membership, evidence and output bounds. Network failures can therefore fail verification despite a successful runner exit.
+The public fixtures provide bulk identity rows; roles, subunits and accounts are requested live. Website, NAV and public-activity checks are explicitly disabled for this smoke command. The runner should emit an envelope for every input record even when sources fail. The separate `--require-clean` verifier is stricter: it checks section success, exceptions, deadlines, warnings, membership, evidence and output bounds. Network failures can therefore fail verification despite a successful runner exit.
 
 GitHub Actions defines Ubuntu `tests` and `live-20` jobs using frozen installation. See the [Actions page](https://github.com/manishrahul1705/nordic-company-lens/actions) for results after the repository is pushed. Local validation does not establish hosted CI success or official evaluator acceptance.
 

@@ -69,7 +69,8 @@ def test_cli_accepts_reference_runner_flag_names_and_writes_both_files(tmp_path,
     profiles=tmp_path/'profiles.jsonl'
     monkeypatch.setattr('sys.argv',['signalpost','run','--organisations',str(cfg.organisations),
         '--output',str(cfg.output),'--profiles-output',str(profiles),'--report',str(cfg.report),
-        '--state-dir',str(cfg.state_dir),'--run-id','kit-call','--expected-count','1'])
+        '--state-dir',str(cfg.state_dir),'--run-id','kit-call','--expected-count','1',
+        '--no-websites','--no-hiring','--no-public-activity'])
     with respx.mock(assert_all_called=False) as router:
         router.get(url__regex=r'https://data\.brreg\.no/.*').mock(side_effect=handler())
         assert main()==0
@@ -83,5 +84,5 @@ def test_profile_temporary_cannot_overwrite_input(tmp_path,monkeypatch):
     inp=tmp_path/'profiles.jsonl.tmp';inp.write_text('923609016',encoding='utf8')
     monkeypatch.setattr('sys.argv',['signalpost','run','--organisations',str(inp),
         '--output',str(tmp_path/'out.jsonl'),'--profiles-output',str(tmp_path/'profiles.jsonl'),
-        '--report',str(tmp_path/'report.json')])
+        '--report',str(tmp_path/'report.json'),'--no-websites','--no-hiring','--no-public-activity'])
     assert main()==1 and inp.read_text(encoding='utf8')=='923609016'

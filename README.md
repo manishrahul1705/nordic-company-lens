@@ -10,17 +10,25 @@ Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/). From this repository
 uv sync --frozen
 ```
 
-## Run
+## Official run
 
-This command uses the included company inputs and registry fixture. It includes all seven evaluator flags and enables website, hiring and public-activity research:
+Put one Norwegian organisation number on each line in `orgnrs.txt`, then run this command from the repository root:
 
 ```sh
-uv run --frozen signalpost run --organisations bench/inputs/100/batch.jsonl --bulk bench/inputs/100/registry.csv --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --state-dir out/state --run-id nordic-company-lens --expected-count 100 --websites --hiring --public-activity --site-dir out/site --synthesis template --search-max-queries 0 --max-cost-usd 0
+uv run --frozen signalpost run --organisations orgnrs.txt --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --state-dir out/state --site-dir out/site
 ```
 
-For your own batch, replace the input paths and set `--expected-count` to its record count. The seven evaluator flags are `--organisations`, `--bulk`, `--output`, `--profiles-output`, `--report`, `--run-id` and `--expected-count`. Omit `--bulk` for live registry lookup. Source research requires internet access; the offline tests use local fixtures.
+This is the supported clean-checkout command: it needs no credentials and no `--bulk` file. The runner uses live official BRREG APIs for registry identity, roles, subunits and accounts. The input count is read automatically. Blank lines are retained as invalid input records, so each line produces one envelope and one profile.
 
-Input accepts organisation-number JSONL, JSON lists/objects or plain lines. Identifiers are normalized and checksum-validated. Output preserves input order and duplicates; duplicate companies share research. Invalid inputs retain explicit failed envelopes. Add `--previous prior.jsonl` for refresh, or `--deduplicate` to request unique output identifiers.
+Website research, NAV hiring checks, public activity and template synthesis are on by default. Paid search defaults to zero queries, and provider cost defaults to $0. Use `--no-websites`, `--no-hiring` or `--no-public-activity` to opt out of those sources. `--expected-count` is optional and is normally unnecessary.
+
+Source research requires internet access. The `bench/inputs` files are for reproducible project benchmarks and are not needed for an official run.
+
+## Run
+
+To run the bundled benchmark instead, use its frozen input and registry snapshot and pass an explicit expected count. See [the Step 7 benchmark record](bench/reports/s6-step7/SCOREBOARD.md).
+
+Input accepts plain text with one orgnr per line, JSONL strings/numbers, JSONL objects with an `organisation_number` field, JSON lists, or an object with an `organisation_numbers` list. Identifiers are normalized and checksum-validated. Output preserves input order and duplicates; duplicate companies share research. Invalid inputs retain explicit failed envelopes. Add `--previous prior.jsonl` for refresh, or `--deduplicate` to request unique output identifiers. See [the exact input/output contract](OUTPUT_CONTRACT.md).
 
 ## Outputs
 
@@ -44,9 +52,18 @@ Code and documentation use the [MIT licence](LICENSE). NAV, company websites and
 
 Wikidata's CC0 structured data is queried by exact Norwegian organisation number for website nominations and name-matched social identifiers. Website nominations still need live ownership proof; Wikidata failures do not prevent registry or website research. Wikidata social claims identify their item URL and licence.
 
-## Cost
+## Sources, licences and cost
 
-The command above has **$0 provider cost**, uses no LLM and makes no paid search calls. Compute, storage and network costs are excluded. Summaries use deterministic templates. `--synthesis` accepts `template` (default) or `auto`, which also uses templates. `llm` is rejected with a CLI argument error. Optional Brave search requires both `SIGNALPOST_SEARCH_PROVIDER=brave` and `BRAVE_SEARCH_API_KEY` in the environment, plus a positive `--max-cost-usd` budget. It is off by default and disabled in the command above by `--search-max-queries 0`. It issues at most one query per active-looking company still without a verified site, estimates $0.005 per query, and treats results only as ownership-proof candidates. Keys are never written to run outputs.
+| Source or service | Use in the official run | Licence / access terms | Provider cost |
+|---|---|---|---:|
+| Brønnøysundregistrene (BRREG) | Company identity, roles, subunits and accounts through the live official API | NLOD 2.0; attribute Brønnøysundregistrene | $0 |
+| NAV public job feed | Candidate discovery and live verification of active job details | Public feed; [NAV reuse terms](https://arbeidsplassen.nav.no/vilkar-api) | $0 |
+| Wikidata | Supplementary website/social nominations by exact orgnr | CC0; retain item attribution in claim provenance | $0 |
+| Company websites | Ownership proof and company-published descriptions, social links and activity | Robots.txt and site access rules are followed; no open licence is inferred | $0 |
+| Paid search | Disabled; maximum queries defaults to `0` | No provider is called | $0 |
+| Language models | None; summaries use deterministic templates | No model provider is called | $0 |
+
+The command has **$0 provider cost**. Compute, storage and network costs are excluded. `--synthesis` accepts `template` (default) or `auto`, which both use templates; `llm` is rejected. Optional Brave search requires both `SIGNALPOST_SEARCH_PROVIDER=brave` and `BRAVE_SEARCH_API_KEY`, plus a positive `--max-cost-usd` budget. If explicitly enabled, it estimates $0.005 per query and only nominates ownership-proof candidates. Keys are never written to run outputs.
 
 ## Limitations and checks
 

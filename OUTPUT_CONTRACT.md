@@ -1,10 +1,18 @@
 # Output contract
 
-The command in README.md emits exactly one JSONL envelope and one raw profile
-per input record, preserving order and duplicates. For plain text and JSONL,
-blank or spaces-only lines are invalid records too. A final newline terminates
-the last record; an empty file contains zero records. Whitespace within and
-around organisation numbers is normalized before checksum validation.
+The `--organisations` input in README.md accepts either of these formats:
+
+- Plain text: one organisation number per line, for example `923609016`.
+- JSONL: one organisation number string/number per line, or one JSON object per
+  line with the exact field name `organisation_number` (for example
+  `{"organisation_number":"923609016"}`).
+
+It also accepts a JSON list or a JSON object with an `organisation_numbers`
+list. The command emits exactly one JSONL envelope and one raw profile per
+input record, preserving order and duplicates. In plain text and JSONL, blank
+or spaces-only lines are invalid records too. A final newline terminates the
+last record; an empty file contains zero records. Whitespace within and around
+organisation numbers is normalized before checksum validation.
 
 Invalid numbers (including blank strings and invalid checksums) have failed
 sections and `invalid_orgnr` errors. A checksum-valid number that the registry

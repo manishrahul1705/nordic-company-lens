@@ -31,11 +31,13 @@ def main(argv=None):
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
     command.add_argument("--emit-duplicates", action="store_true", default=True)
     command.add_argument('--deduplicate', dest='emit_duplicates', action='store_false')
-    command.add_argument("--websites", action="store_true")
+    command.add_argument("--websites", action=argparse.BooleanOptionalAction, default=True,
+                         help='Research ownership-verified company websites (default on; disable with --no-websites)')
     command.add_argument('--no-dns-precheck', dest='dns_precheck', action='store_false')
     command.add_argument('--no-website-stop-after-verified', dest='website_stop_after_verified', action='store_false')
     command.add_argument('--no-nav-rank-candidates', dest='nav_rank_candidates', action='store_false')
-    command.add_argument('--public-activity', action='store_true')
+    command.add_argument('--public-activity', action=argparse.BooleanOptionalAction, default=True,
+                         help='Research bounded company-site public activity (default on; disable with --no-public-activity)')
     command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=True,
                          help='Publish narrowly verified registry changes (default on; disable with --no-registry-changes)')
     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')
@@ -44,13 +46,15 @@ def main(argv=None):
     command.add_argument('--website-transient-retry', action=argparse.BooleanOptionalAction, default=True)
     command.add_argument("--website-request-cap", type=int, default=16)
     command.add_argument('--website-total-request-cap',type=int,default=18)
-    command.add_argument('--hiring',action='store_true')
+    command.add_argument('--hiring', action=argparse.BooleanOptionalAction, default=True,
+                         help='Check current NAV jobs (default on; disable with --no-hiring)')
     command.add_argument('--nav-index-path',type=Path)
     command.add_argument('--nav-index-max-age-days',type=float,default=30)
     command.add_argument('--nav-historical-snapshot', action='store_true', default=False,
                          help='Allow older indexed NAV advertisements with explicit historical snapshot dating')
     command.add_argument('--allow-system-sleep',dest='prevent_system_sleep',action='store_false',default=True)
-    command.add_argument('--search-max-queries',type=int)
+    command.add_argument('--search-max-queries', type=int, default=0,
+                         help='Maximum paid search queries (default 0; search is off)')
     command.add_argument('--search-max-cost-usd',type=float,default=5.)
     command.add_argument('--search-unit-price-usd',type=float,default=.005)
     command.add_argument('--synthesis',choices=('auto','template'),default='template')

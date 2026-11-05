@@ -31,6 +31,7 @@ def test_evaluator_cli_direct_invocation_and_site_generation(tmp_path):
         "--expected-count", "20",
         "--time-budget-seconds", "30",
         "--workers", "4",
+        "--no-websites", "--no-hiring", "--no-public-activity",
     ]
 
     exit_code = main(argv)
@@ -99,6 +100,7 @@ def test_evaluator_shapes_union_contract_reference(tmp_path):
             "--expected-count", "20",
             "--time-budget-seconds", "30",
             "--workers", "4",
+            "--no-websites", "--no-hiring", "--no-public-activity",
         ]
         exit_code = main(argv)
         assert exit_code == 0
