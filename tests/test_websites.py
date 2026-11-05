@@ -228,7 +228,9 @@ def test_high_needs_registry_and_strong_signal():
     ctx = {"name": "Example AS", "street": ["Example gate 1"], "municipality": "OSLO"}
     assert score(page, OUR, ctx, "registry_website", []).level == "VERIFIED"
     assert score(page, OUR, ctx, "legal_name_slug", []).level == "VERIFIED"
-    assert score(Page(html("OSLO").encode(), "https://example.no/"), OUR, ctx, "registry_website", []).level == "MEDIUM"
+    result = score(Page(html("OSLO").encode(), "https://example.no/"), OUR, ctx, "registry_website", [])
+    assert result.level == 'VERIFIED' and result.proof_type == 'domain_legal_name_and_registry_location'
+    assert score(Page(html("OSLO").encode(), "https://unrelated.no/"), OUR, ctx, "registry_website", []).level == "MEDIUM"
 
 
 def test_body_cap_and_company_cap(tmp_path, monkeypatch):

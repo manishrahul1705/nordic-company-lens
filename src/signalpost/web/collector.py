@@ -491,7 +491,8 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=proof.token if proof.level=='VERIFIED' else org
-    contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts'}
+    contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
+                    'domain_legal_name_and_registry_location'}
     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else page.name_span(proof.token)
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")

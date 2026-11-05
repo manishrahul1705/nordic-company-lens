@@ -1,0 +1,242 @@
+{
+  "new_items": [
+    {
+      "org": "991368000",
+      "name": "RALSTON BAU AS",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://ralstonbau.com",
+        "identity_level": "VERIFIED",
+        "proof_type": "domain_legal_name_and_registry_location",
+        "proof_page_url": "https://ralstonbau.com/en",
+        "signals": [
+          "exact_legal_domain",
+          "registry_municipality"
+        ],
+        "points": 4,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "sources": [
+        {
+          "url": "https://ralstonbau.com/en",
+          "sha256": "dadf30e833971dc337a6bc92ad647bf2ec8f6aea5ba661452f6ac62a70508252",
+          "locator": "identity-proof:BERGEN",
+          "span": "<a target=\"_self\" href=\"mailto:studio@ralstonbau.com\" class=\"jssocials-share-link\">",
+          "title": "Home | \tRalston Bau",
+          "text": "Cases Space Object Program Practice Big picture People Scenario Form Studio Profile Practice Publications Academia Honors Contact English Français Norsk Irregular Notes Big picture People Scenario Form Space Object Program Profile Practice Publications Academia Honors Contact Independent design studio decoding the complexity of our world, connecting people and our common spaces through regenerative practice. Ralston Bau takes ideas into action and complex questions into essential objects. Dale Rural design centre Crafting privacy Architectural furniture Paper chandelier Food tools Paris Staging gastronomy Bergen Bioregion Institute Annecy Alibi to meet Oslo Parkour space Dale, Moscow Caring urban lighting Saint-Nazaire Harbour city break Essential Håg Maritime collections Wind shaped Stavanger Gastronomical entrance Paris Sur un Arbre Perché Trays for sharing Kirkenes Wild hospitality Paperwall Curators Oslo Activating the hood Bergen Bioregion Vestland Ideal Lab Amsterdam Urban prototyping Sustainability network Idealist Institute Marseille Connected street Sogn og Fjordane Glacier wayfinding Dale The Cycle of Mutation Encyclopedia of essential knowledge Ideal Village Grenoble Ephemeral University Co-working tables Marseille Mr Moderni San Antonio Ubiquity hotel The Irregular Notes is a newsletter sharing the Ralston Bau studio research and interventions. It is, as the name says, sent out irregularly two to four times per year. We take our General Data Protection Regulation (GDPR) obligations seriously and strive to ensure that your personal data is securely held at all times. We do not use cookies and will never disclose your information to third parties and use your email address only for sending the Irregular Notes."
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "410b625015cade2da3e1a1467e36350c74a9ca1a1c4a3bf4fd08ed52179031cc",
+          "locator": "row:991368000/column:stiftelsesdato",
+          "span": "odukt, møbel og interiør design.\",false,,,2012-03-08,,false,100000.00,100000,Aksjekapital,,NOK,,,2012-03-08,,,,,,,,,,\r\n",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page=0",
+          "sha256": "5dd76156a0cd93756f84330965dcbcda709d57e0ded5932e32ca549b03328aaa",
+          "locator": "/_embedded/underenheter/0",
+          "span": "\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2025-12-10\",\"registreringsdatoEnhetsregisteret\":\"2007-06-26\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/991368000/roller",
+          "sha256": "56113c02fca9bea4ce7b3b164ac45d084a03f267964cc99327d9a35d7102c686",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": "\"REVISORGRUPPEN FJORDANE AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"839223692\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhets",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/991368000",
+          "sha256": "0f5e01263c449fd3884eb001b23440b04e27d42715e1d6cb2ffff9eb41ff85bd",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": "ad\":0.00,\"aarsresultat\":382155.00,\"totalresultat\":382155.00,\"finansresultat\":{\"nettoFinans\":22479.00,\"finansinntekt\":{\"sumFinansinntekter\":24863.00},\"finanskostnad\":{\"annenRentekostnad\":764.00,\"sumFinanskostnad\":2384.00}},\"driftsresultat\":{\"driftsresultat\":359677.00,\"driftsinntekter\":{\"salgsinntekte",
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "Ralston Bau name/domain and Bergen match registry. Independent retained /en/about contact source states NO-991368000 MVA and Damsgaardsveien 227 / N-5160 Bergen. Home description, studio contact paragraph and Murmur project describe the same studio."
+    },
+    {
+      "org": "991368000",
+      "name": "RALSTON BAU AS",
+      "field": "website_description.meta_description.12a38318ae288ab9",
+      "value": {
+        "text": "Independent design studio decoding the complexity of our world, connecting people and our common spaces through regenerative practice. Ralston Bau takes ideas into action – and complex questions into essential objects.",
+        "kind": "meta_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "771499d7388c6fb663eec10cca37dbe5e1e116585731ca04bcbb4ab12fa67a96"
+      },
+      "sources": [
+        {
+          "url": "https://ralstonbau.com/en",
+          "sha256": "dadf30e833971dc337a6bc92ad647bf2ec8f6aea5ba661452f6ac62a70508252",
+          "locator": "meta:description@content",
+          "span": "<a target=\"_self\" href=\"mailto:studio@ralstonbau.com\" class=\"jssocials-share-link\">",
+          "title": "Home | \tRalston Bau",
+          "text": "Cases Space Object Program Practice Big picture People Scenario Form Studio Profile Practice Publications Academia Honors Contact English Français Norsk Irregular Notes Big picture People Scenario Form Space Object Program Profile Practice Publications Academia Honors Contact Independent design studio decoding the complexity of our world, connecting people and our common spaces through regenerative practice. Ralston Bau takes ideas into action and complex questions into essential objects. Dale Rural design centre Crafting privacy Architectural furniture Paper chandelier Food tools Paris Staging gastronomy Bergen Bioregion Institute Annecy Alibi to meet Oslo Parkour space Dale, Moscow Caring urban lighting Saint-Nazaire Harbour city break Essential Håg Maritime collections Wind shaped Stavanger Gastronomical entrance Paris Sur un Arbre Perché Trays for sharing Kirkenes Wild hospitality Paperwall Curators Oslo Activating the hood Bergen Bioregion Vestland Ideal Lab Amsterdam Urban prototyping Sustainability network Idealist Institute Marseille Connected street Sogn og Fjordane Glacier wayfinding Dale The Cycle of Mutation Encyclopedia of essential knowledge Ideal Village Grenoble Ephemeral University Co-working tables Marseille Mr Moderni San Antonio Ubiquity hotel The Irregular Notes is a newsletter sharing the Ralston Bau studio research and interventions. It is, as the name says, sent out irregularly two to four times per year. We take our General Data Protection Regulation (GDPR) obligations seriously and strive to ensure that your personal data is securely held at all times. We do not use cookies and will never disclose your information to third parties and use your email address only for sending the Irregular Notes."
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "410b625015cade2da3e1a1467e36350c74a9ca1a1c4a3bf4fd08ed52179031cc",
+          "locator": "row:991368000/column:stiftelsesdato",
+          "span": "odukt, møbel og interiør design.\",false,,,2012-03-08,,false,100000.00,100000,Aksjekapital,,NOK,,,2012-03-08,,,,,,,,,,\r\n",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page=0",
+          "sha256": "5dd76156a0cd93756f84330965dcbcda709d57e0ded5932e32ca549b03328aaa",
+          "locator": "/_embedded/underenheter/0",
+          "span": "\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2025-12-10\",\"registreringsdatoEnhetsregisteret\":\"2007-06-26\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/991368000/roller",
+          "sha256": "56113c02fca9bea4ce7b3b164ac45d084a03f267964cc99327d9a35d7102c686",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": "\"REVISORGRUPPEN FJORDANE AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"839223692\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhets",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/991368000",
+          "sha256": "0f5e01263c449fd3884eb001b23440b04e27d42715e1d6cb2ffff9eb41ff85bd",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": "ad\":0.00,\"aarsresultat\":382155.00,\"totalresultat\":382155.00,\"finansresultat\":{\"nettoFinans\":22479.00,\"finansinntekt\":{\"sumFinansinntekter\":24863.00},\"finanskostnad\":{\"annenRentekostnad\":764.00,\"sumFinanskostnad\":2384.00}},\"driftsresultat\":{\"driftsresultat\":359677.00,\"driftsinntekter\":{\"salgsinntekte",
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "Ralston Bau name/domain and Bergen match registry. Independent retained /en/about contact source states NO-991368000 MVA and Damsgaardsveien 227 / N-5160 Bergen. Home description, studio contact paragraph and Murmur project describe the same studio."
+    },
+    {
+      "org": "991368000",
+      "name": "RALSTON BAU AS",
+      "field": "website_description.about_paragraph.e542d98922ed75fb",
+      "value": {
+        "text": "For any request or order, please contact us at studio@ralstonbau.com",
+        "kind": "about_paragraph",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "771499d7388c6fb663eec10cca37dbe5e1e116585731ca04bcbb4ab12fa67a96"
+      },
+      "sources": [
+        {
+          "url": "https://ralstonbau.com/en/about",
+          "sha256": "4409128aa00739ffd929fc157295512f2292406864723033960bacb625cff989",
+          "locator": "visible:p:first",
+          "span": "<a href=\"https://www.facebook.com/ralstonbau\" target=\"_blank\">",
+          "title": "Contact | \tRalston Bau",
+          "text": "Cases Space Object Program Practice Big picture People Scenario Form Studio Profile Practice Publications Academia Honors Contact English Français Norsk Irregular Notes Big picture People Scenario Form Space Object Program Profile Practice Publications Academia Honors Contact Contact For any request or order, please contact us at studio@ralstonbau.com RALSTON BAU Damsgårdsveien 227 N-5160 Bergen, Norway +47 48 123 115 73-75 La Canebière F-13001 Marseille, France +33 (0)6 0920 1898 studio@ralstonbau.com Org. nr. NO-991368000 MVA The Irregular Notes is a newsletter sharing the Ralston Bau studio research and interventions. It is, as the name says, sent out irregularly two to four times per year. We take our General Data Protection Regulation (GDPR) obligations seriously and strive to ensure that your personal data is securely held at all times. We do not use cookies and will never disclose your information to third parties and use your email address only for sending the Irregular Notes."
+        },
+        {
+          "url": "https://ralstonbau.com/en",
+          "sha256": "dadf30e833971dc337a6bc92ad647bf2ec8f6aea5ba661452f6ac62a70508252",
+          "locator": "identity-proof:BERGEN",
+          "span": "<a target=\"_self\" href=\"mailto:studio@ralstonbau.com\" class=\"jssocials-share-link\">",
+          "title": "Home | \tRalston Bau",
+          "text": "Cases Space Object Program Practice Big picture People Scenario Form Studio Profile Practice Publications Academia Honors Contact English Français Norsk Irregular Notes Big picture People Scenario Form Space Object Program Profile Practice Publications Academia Honors Contact Independent design studio decoding the complexity of our world, connecting people and our common spaces through regenerative practice. Ralston Bau takes ideas into action and complex questions into essential objects. Dale Rural design centre Crafting privacy Architectural furniture Paper chandelier Food tools Paris Staging gastronomy Bergen Bioregion Institute Annecy Alibi to meet Oslo Parkour space Dale, Moscow Caring urban lighting Saint-Nazaire Harbour city break Essential Håg Maritime collections Wind shaped Stavanger Gastronomical entrance Paris Sur un Arbre Perché Trays for sharing Kirkenes Wild hospitality Paperwall Curators Oslo Activating the hood Bergen Bioregion Vestland Ideal Lab Amsterdam Urban prototyping Sustainability network Idealist Institute Marseille Connected street Sogn og Fjordane Glacier wayfinding Dale The Cycle of Mutation Encyclopedia of essential knowledge Ideal Village Grenoble Ephemeral University Co-working tables Marseille Mr Moderni San Antonio Ubiquity hotel The Irregular Notes is a newsletter sharing the Ralston Bau studio research and interventions. It is, as the name says, sent out irregularly two to four times per year. We take our General Data Protection Regulation (GDPR) obligations seriously and strive to ensure that your personal data is securely held at all times. We do not use cookies and will never disclose your information to third parties and use your email address only for sending the Irregular Notes."
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "410b625015cade2da3e1a1467e36350c74a9ca1a1c4a3bf4fd08ed52179031cc",
+          "locator": "row:991368000/column:stiftelsesdato",
+          "span": "odukt, møbel og interiør design.\",false,,,2012-03-08,,false,100000.00,100000,Aksjekapital,,NOK,,,2012-03-08,,,,,,,,,,\r\n",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page=0",
+          "sha256": "5dd76156a0cd93756f84330965dcbcda709d57e0ded5932e32ca549b03328aaa",
+          "locator": "/_embedded/underenheter/0",
+          "span": "\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2025-12-10\",\"registreringsdatoEnhetsregisteret\":\"2007-06-26\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/991368000/roller",
+          "sha256": "56113c02fca9bea4ce7b3b164ac45d084a03f267964cc99327d9a35d7102c686",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": "\"REVISORGRUPPEN FJORDANE AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"839223692\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhets",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/991368000",
+          "sha256": "0f5e01263c449fd3884eb001b23440b04e27d42715e1d6cb2ffff9eb41ff85bd",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": "ad\":0.00,\"aarsresultat\":382155.00,\"totalresultat\":382155.00,\"finansresultat\":{\"nettoFinans\":22479.00,\"finansinntekt\":{\"sumFinansinntekter\":24863.00},\"finanskostnad\":{\"annenRentekostnad\":764.00,\"sumFinanskostnad\":2384.00}},\"driftsresultat\":{\"driftsresultat\":359677.00,\"driftsinntekter\":{\"salgsinntekte",
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "Ralston Bau name/domain and Bergen match registry. Independent retained /en/about contact source states NO-991368000 MVA and Damsgaardsveien 227 / N-5160 Bergen. Home description, studio contact paragraph and Murmur project describe the same studio."
+    },
+    {
+      "org": "991368000",
+      "name": "RALSTON BAU AS",
+      "field": "website_description.og_description.d7ae8120a222cde8",
+      "value": {
+        "text": "Crafting privacy : Murmur collection  Floor modules - Grounded, Hovering Table module - Modesty Ceiling lighting - Elevated Open space divider made with ash wood, textile and metal  Exhibition Norwegian Presence - Milan",
+        "kind": "og_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "771499d7388c6fb663eec10cca37dbe5e1e116585731ca04bcbb4ab12fa67a96"
+      },
+      "sources": [
+        {
+          "url": "https://ralstonbau.com/en/cases/murmur",
+          "sha256": "cdbff39a67e13daafa4be11bf5bbb69ce7b015c8578380102892fb5d2f2ea76e",
+          "locator": "meta:og:description@content",
+          "span": "<meta property=\"og:description\" content=\"Crafting privacy : Murmur collection  Floor modules - Grounded, Hovering Table module - Modesty Ceiling lighting - Elevated Open space divider made with ash wood, textile and metal  Exhibition Norwegian Presence - Milan\" />",
+          "title": "Crafting privacy | \tRalston Bau",
+          "text": "Cases Space Object Program Practice Big picture People Scenario Form Studio Profile Practice Publications Academia Honors Contact English Français Norsk Irregular Notes Big picture People Scenario Form Space Object Program Profile Practice Publications Academia Honors Contact Crafting privacy Represented by GOOD Murmur collection Floor modules - Grounded, Hovering Table module - Modesty Ceiling lighting - Elevated Open space divider made with ash wood, textile and metal Exhibition Norwegian Presence - Milan Open workspaces are adaptive, social and space efficient, perfect for creative sharing and social interaction. At the same time many people find these spaces distractive. Objects in living spaces are active agents that can enhance our energy or take it away. The Murmurs are designed to follow our activity patterns and create a healthy and friendly environment. Together with Good Design in Marseille - France, we committed to make a collection entirely from fossil-free materials. Co-workers We met people in different kinds of open spaces in Oslo, Marseille, Paris, Amsterdam who shared their thoughts, needs and rituals within their co-working spaces. We tested the first ideas of the Murmur with simple models in co-working spaces in Oslo and Marseille. Out of the observations and feedbacks we discovered three major insights: Living modular rooms give the experience of a new space. Nature and randomness brings life and value to rooms. Visual confidentiality and echo sound-absorption provide privacy and social distancing, in open spaces. Private in the communs Beginning 2017, we tested the first ideas of the Murmur with simple models in co-working spaces in Oslo and Marseille. Out of the observations and feedbacks we discovered three major insights: Living modular rooms give the experience of a new space. Nature and randomness brings life and value to rooms. Visual confidentiality and echo sound-absorption provide a needed privacy in open spaces. From the immersive process, point-of-views where extracted, like: \"an engaged Community Manager who had a former unfulfilling career, is busy juggling the daily space management with anticipating future content, needs changeable rooms and big light furniture that doesn't get lost, store away without taking space and effortlessly adapt and bring value to any type of event and member, because a successful co-working space is one that is alive and experienced as a new space from one hour to the next, at the same time as it provides individual privacy.\" Based on those conclusions, we tested several scenarios and the essence was integrated in MurMur, an extension of ourself in spaces, protecting your thoughts and activities visually and offering a more serene acoustic environment, in any space or situation. Murmur Murmur is enhancing the visual confidentiality requested by people. It also includes the most healthy collection of materials, with Norwegian regional wool fabric, solid ash wood, and a design principle allowing anybody to fix and upgrade Murmur on its own way. The handles to move the Murmur also serves as hangers, hiding bags and jackets within. The pattern for the textile is open source so that it can be tailored with local materials and patterns so that each can get its own personality and adapt to the interior it is used in. Context The Irregular Notes is a newsletter sharing the Ralston Bau studio research and interventions. It is, as the name says, sent out irregularly two to four times per year. We take our General Data Protection Regulation (GDPR) obligations seriously and strive to ensure that your personal data is securely held at all times. We do not use cookies and will never disclose your information to third parties and use your email address only for sending the Irregular Notes."
+        },
+        {
+          "url": "https://ralstonbau.com/en",
+          "sha256": "dadf30e833971dc337a6bc92ad647bf2ec8f6aea5ba661452f6ac62a70508252",
+          "locator": "identity-proof:BERGEN",
+          "span": "<a target=\"_self\" href=\"mailto:studio@ralstonbau.com\" class=\"jssocials-share-link\">",
+          "title": "Home | \tRalston Bau",
+          "text": "Cases Space Object Program Practice Big picture People Scenario Form Studio Profile Practice Publications Academia Honors Contact English Français Norsk Irregular Notes Big picture People Scenario Form Space Object Program Profile Practice Publications Academia Honors Contact Independent design studio decoding the complexity of our world, connecting people and our common spaces through regenerative practice. Ralston Bau takes ideas into action and complex questions into essential objects. Dale Rural design centre Crafting privacy Architectural furniture Paper chandelier Food tools Paris Staging gastronomy Bergen Bioregion Institute Annecy Alibi to meet Oslo Parkour space Dale, Moscow Caring urban lighting Saint-Nazaire Harbour city break Essential Håg Maritime collections Wind shaped Stavanger Gastronomical entrance Paris Sur un Arbre Perché Trays for sharing Kirkenes Wild hospitality Paperwall Curators Oslo Activating the hood Bergen Bioregion Vestland Ideal Lab Amsterdam Urban prototyping Sustainability network Idealist Institute Marseille Connected street Sogn og Fjordane Glacier wayfinding Dale The Cycle of Mutation Encyclopedia of essential knowledge Ideal Village Grenoble Ephemeral University Co-working tables Marseille Mr Moderni San Antonio Ubiquity hotel The Irregular Notes is a newsletter sharing the Ralston Bau studio research and interventions. It is, as the name says, sent out irregularly two to four times per year. We take our General Data Protection Regulation (GDPR) obligations seriously and strive to ensure that your personal data is securely held at all times. We do not use cookies and will never disclose your information to third parties and use your email address only for sending the Irregular Notes."
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "sha256": "410b625015cade2da3e1a1467e36350c74a9ca1a1c4a3bf4fd08ed52179031cc",
+          "locator": "row:991368000/column:stiftelsesdato",
+          "span": "odukt, møbel og interiør design.\",false,,,2012-03-08,,false,100000.00,100000,Aksjekapital,,NOK,,,2012-03-08,,,,,,,,,,\r\n",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page=0",
+          "sha256": "5dd76156a0cd93756f84330965dcbcda709d57e0ded5932e32ca549b03328aaa",
+          "locator": "/_embedded/underenheter/0",
+          "span": "\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2025-12-10\",\"registreringsdatoEnhetsregisteret\":\"2007-06-26\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991368000&size=1000&page",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/991368000/roller",
+          "sha256": "56113c02fca9bea4ce7b3b164ac45d084a03f267964cc99327d9a35d7102c686",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": "\"REVISORGRUPPEN FJORDANE AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"839223692\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhets",
+          "title": ""
+        },
+        {
+          "url": "https://data.brreg.no/regnskapsregisteret/regnskap/991368000",
+          "sha256": "0f5e01263c449fd3884eb001b23440b04e27d42715e1d6cb2ffff9eb41ff85bd",
+          "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+          "span": "ad\":0.00,\"aarsresultat\":382155.00,\"totalresultat\":382155.00,\"finansresultat\":{\"nettoFinans\":22479.00,\"finansinntekt\":{\"sumFinansinntekter\":24863.00},\"finanskostnad\":{\"annenRentekostnad\":764.00,\"sumFinanskostnad\":2384.00}},\"driftsresultat\":{\"driftsresultat\":359677.00,\"driftsinntekter\":{\"salgsinntekte",
+          "title": ""
+        }
+      ],
+      "manual_verdict": "CORRECT_COMPANY",
+      "manual_reason": "Ralston Bau name/domain and Bergen match registry. Independent retained /en/about contact source states NO-991368000 MVA and Damsgaardsveien 227 / N-5160 Bergen. Home description, studio contact paragraph and Murmur project describe the same studio."
+    }
+  ],
+  "wrong_company": 0,
+  "decision": "KEEP",
+  "accepted_trial_proofs": 1,
+  "correct_company": 1,
+  "precision": 1.0,
+  "limitation": "The matched municipality on the homepage is a project location, not an office address. Independent contact-page orgnr confirms this specific company. No coverage gain; one case is not broad precision evidence.",
+  "tests": "854 passed in 179.92s"
+}

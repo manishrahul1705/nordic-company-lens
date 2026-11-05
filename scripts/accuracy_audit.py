@@ -639,7 +639,7 @@ def audit_website_claim(
     all_structural_orgnrs = visible_orgnrs | owner_orgnrs | meta_orgnrs | json_ids
 
     # 2. Check for script-only occurrence
-    if ptype != 'legal_name_and_registry_contact' and orgnr_pat.search(body) and org not in all_structural_orgnrs:
+    if ptype not in {'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts','domain_legal_name_and_registry_location'} and orgnr_pat.search(body) and org not in all_structural_orgnrs:
         return "INCORRECT", f"Orgnr {org} found only in script tags or invisible markup, not in company-identifying page context", None
 
     # 3. If another distinct company owns the footer/header brand context
@@ -684,6 +684,25 @@ def audit_website_claim(
                     is_legitimate_group = True
         if not is_legitimate_group:
             return "INCORRECT", f"Multi-entity list or directory table containing multiple organisation numbers ({len(all_structural_orgnrs)} found)", None
+
+    if ptype == 'domain_legal_name_and_registry_location':
+        from signalpost.web.candidates import GENERIC
+        ctx = context or {}
+        base = legal_name(ctx.get('name'))
+        generic = GENERIC | {'company', 'business', 'services', 'consulting', 'gruppe', 'gruppen', 'norge', 'norway', 'nordic'}
+        if (len(compact(base)) < 6 or not base.split() or all(w in generic for w in base.split())
+                or compact(extract(page.url).domain) != compact(base)):
+            return 'INCORRECT', 'Domain must equal a distinctive legal name of at least six characters', None
+        if (owner_orgnrs | meta_orgnrs | json_ids) - {org}:
+            return 'INCORRECT', 'Conflicting owner identifier', None
+        normalize = lambda v: ' '.join(re.findall(r'\w+', str(v or '').casefold()))
+        owner = normalize(page.owner_text)
+        for key in ('postcode', 'municipality'):
+            location = normalize(ctx.get(key))
+            usable = bool(re.fullmatch(r'\d{4}', location)) if key == 'postcode' else len(location) >= 3
+            if usable and re.search(r'(?<!\w)' + re.escape(location) + r'(?!\w)', owner):
+                return 'CORRECT', 'Exact legal-name domain and visible registry ' + key, url
+        return 'INCORRECT', 'Registry municipality/postcode not visible in ownership context', None
 
     if ptype in {'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts'}:
         ctx = context or {}
