@@ -101,6 +101,28 @@ def test_wikidata_social_requires_site_link_or_matching_exact_org_handle(tmp_pat
     assert any(c.value['url']=='https://www.facebook.com/unrelated-shared-parent' for c in row.claims if c.field.startswith('social_profile.'))
 
 
+def test_wikidata_social_accepts_verified_domain_and_declared_brand_aliases(tmp_path):
+    cfg=config(tmp_path,[ORG],websites=True,wikidata=True);blobs=BlobStore(cfg.state_dir);blobs.put(BODY)
+    index={'records':{ORG:[
+        {'org':ORG,'item':'https://www.wikidata.org/wiki/Q123456','property':'P2013','value':'declaredbrand',
+         'sha':hashlib.sha256(BODY).hexdigest(),'retrieved_at':utc_now(),'locator':'/brand'},
+        {'org':ORG,'item':'https://www.wikidata.org/wiki/Q123456','property':'P2003','value':'verifieddomain',
+         'sha':hashlib.sha256(BODY).hexdigest(),'retrieved_at':utc_now(),'locator':'/domain'}]},
+        'metrics':{'social_published':0}}
+    row=placeholder(ORG,'test',utc_now());section=Section()
+    source=Source('https://data.brreg.no',b'Unrelated Legal AS','c'*64,utc_now())
+    add(section,source,ORG,'identity','identity.legal_name','Unrelated Legal AS','/')
+    add(section,source,ORG,'website','public_brand','Declared Brand','/brand')
+    add(section,source,ORG,'website','official_website',{'final_url':'https://verifieddomain.no/',
+        'identity_level':'VERIFIED'},'/website')
+    row.claims=section.claims
+    publish_social(index,ORG,row,blobs)
+    from signalpost.web.social import drop_shared
+    drop_shared([row],blobs)
+    urls={c.value['url'] for c in row.claims if c.field.startswith('social_profile.')}
+    assert urls=={'https://www.facebook.com/declaredbrand','https://www.instagram.com/verifieddomain'}
+
+
 @pytest.mark.parametrize('failure',['timeout','malformed'])
 def test_unavailable_source_does_not_fail_agent_discovery(tmp_path,failure):
     cfg=config(tmp_path,[ORG],websites=True,wikidata=True)

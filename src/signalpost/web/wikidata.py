@@ -13,7 +13,7 @@ from ..models.evidence import digest, utc_now
 from ..sources.extract import Section, Source, add
 from ..workers import offload
 from .policy import normalize_url, domain, SOCIAL, DIRECTORIES, FREE_MAIL
-from .social import matches_profile, company_names, profile_url
+from .social import matches_profile, company_names, profile_url, context_for_envelope
 
 ENDPOINT='https://query.wikidata.org/sparql'
 AGENT='NordicCompanyLens/2.0 (https://github.com/manishrahul1705/nordic-company-lens)'
@@ -109,8 +109,7 @@ def social_url(record):
 
 
 def publish_social(index, org, envelope, blobs):
-    context={'name':next((c.value for c in envelope.claims if c.field=='identity.legal_name' and c.availability=='available'),''),
-             'subunits':[c.value for c in envelope.claims if c.field.startswith('subunits.unit.') and c.availability=='available']}
+    context=context_for_envelope(envelope)
     names=company_names(context);section=Section()
     existing={c.value.get('url') for c in envelope.claims if c.field.startswith('social_profile.') and c.availability=='available'}
     website_links = {str(url).rstrip('/') for url in envelope.run.refresh.get('website', {}).get('observed_social_profiles', [])}

@@ -93,6 +93,24 @@ def company_names(context):
                        *(u.get('name') for u in context.get('subunits', []))] if n]
 
 
+def context_for_envelope(envelope):
+    """Name aliases justified by a verified company site and its metadata."""
+    claims=envelope.claims
+    context={'name':next((c.value for c in claims if c.field=='identity.legal_name' and c.availability=='available'),''),
+             'subunits':[c.value for c in claims if c.field.startswith('subunits.unit.') and c.availability=='available'],
+             'registered_brands':[c.value for c in claims if c.field=='public_brand' and c.availability=='available' and isinstance(c.value,str)]}
+    website=next((c for c in claims if c.field=='official_website' and c.availability=='available'),None)
+    if website and website.value.get('identity_level') in {'VERIFIED','HIGH'}:
+        host=urlsplit(str(website.value.get('final_url',''))).hostname or ''
+        try:
+            from .policy import extract
+            label=extract(host).domain
+            if label:context['registered_brands'].append(label)
+        except (TypeError,ValueError):
+            pass
+    return context
+
+
 def name_matches(value, names):
     """Whole handle/name equality, allowing legal suffix and trailing profile ID."""
     value = unquote(str(value or '')).lstrip('@')
@@ -211,8 +229,7 @@ def drop_shared(envelopes, blobs=None):
                 owners.setdefault(url, set()).add(envelope.organisation_number)
     for envelope in envelopes:
         removed = []
-        context={'name':next((c.value for c in envelope.claims if c.field=='identity.legal_name' and c.availability=='available'),''),
-                 'subunits':[c.value for c in envelope.claims if c.field.startswith('subunits.unit.') and c.availability=='available']}
+        context=context_for_envelope(envelope)
         names=company_names(context)
         proof=next((c.value for c in envelope.claims if c.field=='official_website' and c.availability=='available'),{})
         evidence={e.id:e for e in envelope.evidence}
