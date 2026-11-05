@@ -1,0 +1,21 @@
+{
+  "core_algorithm_files_unchanged_from_kept_commit": {
+    "src/signalpost/web/fetcher.py": true,
+    "src/signalpost/web/proof.py": true,
+    "src/signalpost/web/collector.py": true,
+    "src/signalpost/web/policy.py": true,
+    "src/signalpost/budget.py": true,
+    "src/signalpost/runner.py": true
+  },
+  "suffix_contact_proof_default": true,
+  "domain_location_default": false,
+  "transient_retry_default": true,
+  "rescue_config_removed": true,
+  "website_request_cap": 16,
+  "website_total_request_cap": 18,
+  "global_http_cap_at1000": 18000,
+  "effective_time_budget_seconds_at1000": 2400,
+  "hard_time_cap_seconds_at1000": 24000,
+  "kept_tests_passed": 885,
+  "all_benchmark_outputs_complete": true
+}

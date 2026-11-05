@@ -1,0 +1,225 @@
+diff --git a/scripts/bench_run.py b/scripts/bench_run.py
+index 0d8d2a3..cb0f964 100644
+--- a/scripts/bench_run.py
++++ b/scripts/bench_run.py
+@@ -107,6 +107,10 @@ def main():
+                  'search_enabled': args.search,
+                  'website_suffix_contact_proof':args.website_suffix_contact_proof,
+                  'website_domain_location_proof':args.website_domain_location_proof,
++                 'website_suffix_contact_rescue': True,
++                 'website_transient_retry': False,
++                 'website_request_cap': 14,
++                 'ablation': 'Step 4 alone on 2351e57; original suffix OFF, original transport/caps',
+                  'credentials': ('Only Brave provider/key retained in child environment; values never recorded' if args.search
+                                  else 'API key variables, NAV_API_TOKEN and search/model selectors removed')}
+     execution_path = destination / 'execution.json'
+diff --git a/src/signalpost/cli.py b/src/signalpost/cli.py
+index 27a094d..c4d4d80 100644
+--- a/src/signalpost/cli.py
++++ b/src/signalpost/cli.py
+@@ -41,6 +41,7 @@ def main(argv=None):
+     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')
+     command.add_argument("--website-suffix-contact-proof", action="store_true", help="Enable experimental suffix-free name plus two registry contacts")
+     command.add_argument("--website-domain-location-proof", action="store_true", help="Enable experimental exact legal-name domain plus registry location")
++    command.add_argument('--website-suffix-contact-rescue',action=argparse.BooleanOptionalAction,default=True)
+     command.add_argument("--website-request-cap", type=int, default=14)
+     command.add_argument('--website-total-request-cap',type=int,default=18)
+     command.add_argument('--hiring',action='store_true')
+diff --git a/src/signalpost/config.py b/src/signalpost/config.py
+index ff33b52..789b786 100644
+--- a/src/signalpost/config.py
++++ b/src/signalpost/config.py
+@@ -32,6 +32,7 @@ class Config(BaseModel):
+     registry_declared: bool = False
+     website_suffix_contact_proof: bool = False
+     website_domain_location_proof: bool = False
++    website_suffix_contact_rescue: bool = True
+     website_stop_after_verified: bool = True
+     nav_rank_candidates: bool = True
+     public_activity: bool = False
+diff --git a/src/signalpost/web/collector.py b/src/signalpost/web/collector.py
+index 03f93c9..582f81a 100644
+--- a/src/signalpost/web/collector.py
++++ b/src/signalpost/web/collector.py
+@@ -12,7 +12,7 @@ from ..sources.extract import Section, Source, add, missing, response_source
+ from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC
+ from .html import Page
+ from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
+-from .proof import score, phone, extract_entity_cards, find_containing_card
++from .proof import score, phone, extract_entity_cards, find_containing_card, rescue_suffix_host
+ from .social import discover, profile_url, attributed, observed_profiles, matches_profile, company_names
+ 
+ 
+@@ -319,6 +319,14 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
+                     ranks = {'REJECT': -1, 'BLOCKED': -1, 'LOW': 0, 'MEDIUM': 1, 'REGISTRY_DECLARED': 2, 'HIGH': 3, 'VERIFIED': 4}
+                     if ranks[extra_proof.level] > ranks[best[0].level]:
+                         best = (extra_proof, extra, extra_page)
++            if (getattr(http.config,'website_suffix_contact_rescue',False)
++                    and best[0].level not in {'VERIFIED','REJECT','BLOCKED'}):
++                rescued=await offload(rescue_suffix_host,[p for _,p in pages],org,context,candidate.origin,leaders)
++                if rescued:
++                    rescued_proof,name_index,contact_index,contact_token=rescued
++                    rescued_proof.contact_response,rescued_proof.contact_page=pages[contact_index]
++                    rescued_proof.contact_token=contact_token
++                    best=(rescued_proof,*pages[name_index])
+             proof, response, page = best
+             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
+             is_prev_domain = bool(refresh_candidate and (candidate is refresh_candidate or candidate.domain == refresh_candidate.domain or domain(response.url) == refresh_candidate.domain))
+@@ -497,6 +505,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
+     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
+     matched=proof.token if proof.level=='VERIFIED' else org
+     contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
++                    'legal_name_without_suffix_and_registry_contact',
+                     'domain_legal_name_and_registry_location'}
+     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else page.name_span(proof.token)
+     if not span:
+@@ -509,6 +518,15 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
+     if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
+         value['matched_via_subunit']=matched
+     publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
++    if proof.proof_type=='legal_name_without_suffix_and_registry_contact':
++        # Attach contact evidence to the SAME identity claim. Its name and contact
++        # may occur on different pages, so retain both exact captured sources.
++        identity=section.claims[-1]
++        supporting=Section()
++        publish(supporting,proof.contact_response,org,'official_website',value,
++                'registry-contact:'+proof.contact_token,proof.contact_page.name_span(proof.contact_token))
++        section.evidence.extend(supporting.evidence)
++        identity.evidence_ids.extend(supporting.claims[0].evidence_ids)
+     if candidate.origin in {'registry_email', 'subunit_registry_email'}:
+         section.claims[-1].reasons['discovery_method'] = 'registry email domain'
+     if candidate.origin in {'nav_employer_homepage', 'subunit_nav_employer_homepage'}:
+diff --git a/src/signalpost/web/proof.py b/src/signalpost/web/proof.py
+index 76100cc..1d819d5 100644
+--- a/src/signalpost/web/proof.py
++++ b/src/signalpost/web/proof.py
+@@ -346,3 +346,56 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
+     if suffix_contact and exact_base:
+         return Proof('MEDIUM','signals',['legal_name_without_suffix',*contacts],2*len(contacts),reason='name_without_suffix_insufficient_contacts_or_domain',token=base_name)
+     return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))
++
++
++def rescue_suffix_host(pages, org, context, origin, leaders):
++    """Join a suffix-free name and observed registry contact on one exact host.
++
++    A registry email domain alone is not proof: an address at that domain must
++    actually appear in a fetched page. All existing rejection guards still apply.
++    Return the name-page/contact-page indexes and contact token for provenance.
++    """
++    if not pages:
++        return None
++    host=urlsplit(pages[0].url).hostname
++    selected=[(i,p) for i,p in enumerate(pages) if urlsplit(p.url).hostname==host]
++    evaluated=[(i,p,score(p,org,context,origin,leaders,suffix_contact=True)) for i,p in selected]
++    if any(proof.level in {'REJECT','BLOCKED'} for _,_,proof in evaluated):
++        return None
++    base=legal_name(context.get('name'))
++    label=compact(extract(pages[0].url).domain)
++    if not base:
++        return None
++    name=next(((i,p) for i,p,proof in evaluated if 'legal_name_without_suffix' in proof.signals
++               and p.name_span(base)),None)
++    if name is None:
++        return None
++    expected_phone=re.sub(r'\D','',str(context.get('phone') or ''))
++    expected_phone=expected_phone[-8:] if len(expected_phone)>=8 else ''
++    expected_email=str(context.get('email') or '').strip().casefold()
++    email_domain=expected_email.rsplit('@',1)[-1] if '@' in expected_email else ''
++    address_pattern=r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
++    for contact_index,page,_ in evaluated:
++        numbers=[m.group().strip() for m in re.finditer(
++            r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)',page.visible)]
++        numbers += [link.href[4:] for link in page.links if link.href.startswith('tel:')]
++        matches=[]
++        for number in numbers:
++            if expected_phone and re.sub(r'\D','',number)[-8:]==expected_phone:
++                matches.append(('phone',number))
++        addresses=re.findall(address_pattern,page.visible)
++        addresses += [link.href[7:].split('?',1)[0] for link in page.links if link.href.startswith('mailto:')]
++        for address in addresses:
++            value=address.casefold()
++            if expected_email and value==expected_email:
++                matches.append(('email',address))
++            elif email_domain==domain(page.url) and value.rsplit('@',1)[-1]==email_domain:
++                matches.append(('email_domain',address))
++        for signal,token in matches:
++            if not page.name_span(token):
++                continue
++            derived=['name_derived_domain'] if label in {compact(base),compact(base)+'as',compact(base)+'asa'} else []
++            proof=Proof('VERIFIED','legal_name_without_suffix_and_registry_contact',
++                        ['legal_name_without_suffix',*derived,signal],4,token=base)
++            return proof,name[0],contact_index,token
++    return None
+diff --git a/tests/test_suffix_contact_rescue.py b/tests/test_suffix_contact_rescue.py
+new file mode 100644
+index 0000000..20a4b37
+--- /dev/null
++++ b/tests/test_suffix_contact_rescue.py
+@@ -0,0 +1,67 @@
++import pytest
++
++from signalpost.web.html import Page
++from signalpost.web.proof import rescue_suffix_host
++from tests.test_websites import OUR, OTHER, execute_web, html
++
++
++def pages(*bodies):
++    return [Page(body.encode(),'https://example.no/'+str(i)) for i,body in enumerate(bodies)]
++
++
++@pytest.mark.parametrize('contact,context,signal',[
++    ('Call +47 12 34 56 78',{'phone':'0047 12345678'},'phone'),
++    ('office@example.no',{'email':'office@example.no'},'email'),
++    ('sales@example.no',{'email':'office@example.no'},'email_domain'),
++])
++def test_suffix_rescue_uses_contact_on_another_page_of_same_host(contact,context,signal):
++    pp=pages('<title>Example</title>', '<footer>'+contact+'</footer>')
++    result=rescue_suffix_host(pp,OUR,{'name':'Example AS',**context},'legal_name_slug',[])
++    assert result and result[0].proof_type=='legal_name_without_suffix_and_registry_contact'
++    assert signal in result[0].signals
++    assert result[1]==0 and result[2]==1
++
++
++@pytest.mark.parametrize('body',[
++    '<h1>Example</h1><p>Example road 1, 0123 Oslo</p>',
++    '<h1>Example</h1><p>not-office@example.no.evil.com</p>',
++    '<h1>Example</h1><p>office@example.no.evil.com</p>',
++    '<h1>Example</h1><p>123456789</p>',
++])
++def test_name_or_address_and_partial_contacts_do_not_rescue(body):
++    assert rescue_suffix_host(pages(body),OUR,{'name':'Example AS','phone':'12345678','email':'office@example.no'},'legal_name_slug',[]) is None
++
++
++def test_rescue_does_not_combine_subdomains_or_foreign_owner():
++    ctx={'name':'Example AS','phone':'12345678'}
++    pp=pages('<h1>Example</h1>')+[Page(b'<footer>12345678</footer>','https://other.example.no/contact')]
++    assert rescue_suffix_host(pp,OUR,ctx,'legal_name_slug',[]) is None
++    assert rescue_suffix_host(pages('<h1>Example</h1>','<footer>12345678 Org.nr '+OTHER+'</footer>'),OUR,ctx,'legal_name_slug',[]) is None
++
++
++def test_registry_contact_in_visible_cms_article_is_eligible():
++    pp=pages('<title>Example</title>','<article><h1>Contact us</h1><p>12 34 56 78</p></article>')
++    result=rescue_suffix_host(pp,OUR,{'name':'Example AS','phone':'12345678'},'registry_website',[])
++    assert result and result[2]==1
++
++
++def test_registered_contact_can_prove_a_non_name_domain_but_not_a_parked_site():
++    pp=[Page(b'<h1>Example</h1><footer>12345678</footer>','https://unrelated.no/')]
++    assert rescue_suffix_host(pp,OUR,{'name':'Example AS','phone':'12345678'},'registry_website',[]) is not None
++    assert rescue_suffix_host(pages('<h1>Example</h1>','<footer>12345678 this domain is for sale</footer>'),OUR,{'name':'Example AS','phone':'12345678'},'legal_name_slug',[]) is None
++
++
++def test_rescue_publishes_name_and_contact_page_evidence(tmp_path,monkeypatch):
++    def response(request):
++        if request.url.path=='/robots.txt':return __import__('httpx').Response(200,text='User-agent: *\nAllow: /')
++        if request.url.host!='example.no':return __import__('httpx').Response(404,text='missing')
++        body=html('',title='Example',extra='<a href="/kontakt">Contact</a>').replace('<header>Example AS</header>','<header>Example</header>')
++        if request.url.path=='/kontakt':body='<title>Contact</title><footer>12 34 56 78</footer>'
++        elif request.url.path!='/':return __import__('httpx').Response(404,text='missing')
++        return __import__('httpx').Response(200,text=body)
++    _,row,_,_=execute_web(tmp_path,monkeypatch,response=response,
++        website_suffix_contact_proof=False,website_suffix_contact_rescue=True)
++    claim=next(c for c in row['claims'] if c['field']=='official_website')
++    assert claim['value']['proof_type']=='legal_name_without_suffix_and_registry_contact'
++    ev=[e for e in row['evidence'] if e['id'] in claim['evidence_ids'] and e['source_class']=='company_owned']
++    assert {e['source_url'] for e in ev}=={'https://example.no/','https://example.no/kontakt'}

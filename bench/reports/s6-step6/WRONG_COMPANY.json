@@ -1,0 +1,27 @@
+{
+  "company": "ZINZINO AS",
+  "org": "986028269",
+  "source_url": "https://www.zinzino.com/site/no/nb-no/om-oss/investor-relations",
+  "sha256": "3df986b553e8fdf183e2578c84403fce993f41ad1629bfe6a2d4b477cd448711",
+  "registry_email": "economy@zinzino.com",
+  "rescue_contact": "shares@zinzino.com",
+  "other_entity_explicitly_named": "ZINZINO AB (PUBL.)",
+  "excerpts": [
+    "6, 08:00 Last ned Se mer Press releases 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 ZINZINO AB (PUBL.): PRELIMINARY SALES REPORT OCTOBER 2026 04. november 2026, 09:00 Åpne ZINZINO AB (PUBL): Zinzino launches fermented botanical supplements for morning, day and evening 26. oktober 2026, 09:00 Åpne Se mer The stock Se mer Zinzino Interim Report Q2 2026",
+    "orth's regulations for providing information to the market and investors. Tapper Partners AB is the Certified Adviser for Zinzino AB. Certified Adviser: The Company’s Certified Adviser is Tapper Partners AB Phone: +46 (0)70 44 010 98 E-mail: ca@tapperpartners.se Why invest in Zinzino A clear global strategy with a growth-driven, future-proof business model Zinzino is one of Europ",
+    "ability approach, targets and 2023 performance. Download the report IR Contact Elizabeta Sekulovska shares@zinzino.com +46 (0)763 066 954 Fredrik Nielsen shares@zinzino.com +46 (0)707 900 174 Certified Adviser All companies whose shares are to be traded on the Nasdaq First North Premier Growth Market have a certified adviser who guides and supports the company throu",
+    "t pt-3\"><h4>Elizabeta Sekulovska</h4><p>shares@zinzino.com</p><p>+46 (0)763 066 954</p></div></div></div></div><div class=\"block staffblock col-lg-6 c"
+  ],
+  "verdict": "wrong-company investor contact and descriptions",
+  "wrong_claims_in_combined": 4,
+  "action": "Step4 reverted; no allowlist, blacklist, or ad-hoc company exception added.",
+  "ablation": {
+    "source_url": "https://www.zinzino.com/site/in/en-gb/about/investor-relations",
+    "sha256": "bd95e4784112fd9f2697f7e237b9e314fcf487dad6f92d19a12700a5d4aeca39",
+    "proof_excerpt": "t pt-3\"><h4>Elizabeta Sekulovska</h4><p>shares@zinzino.com</p><p>+46 (0)763 066 954</p></div></div></div></div><div class=\"block staffblock col-lg-6 c",
+    "wrong_company_count": 1,
+    "wrong_claim_count": 4,
+    "observed_site_market_path": "/site/in/en-gb",
+    "interpretation": "Observed redirect/market path only; no unverified geolocation cause is asserted."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "steps1-3": {
+    "passed": 885,
+    "seconds": 265.53,
+    "initial_failures": [
+      "DNS lookup-count expectation updated for the requested timeout retry",
+      "Reserved activity request below an explicit lower cap restored inside the hard ceiling16"
+    ],
+    "focused_after_fix": 55
+  },
+  "combined_final": {
+    "passed": 896,
+    "seconds": 262.63,
+    "command": "uv run --frozen pytest -q --basetemp scratch/s66-tests-final -p no:cacheprovider"
+  },
+  "step4_only": {
+    "full_suite_passed_before_contact_scope_clarification": 869,
+    "full_suite_seconds": 196.84,
+    "final_rescue_focused_passed": 11,
+    "note": "Final helper is byte-identical to the helper covered by combined full suite; the ablation retains baseline transport, suffix OFF, and old budgets."
+  },
+  "search_enabled": false,
+  "credentials": "API/NAV/search/model credentials stripped for live-source smoke tests",
+  "final_kept_runtime": {
+    "restored_by": "2f7b06e",
+    "kept_implementation": "7dbcd26",
+    "suite_passed": 885,
+    "seconds": 301.89,
+    "command": "uv run --frozen pytest -q --basetemp scratch/s66-kept-final -p no:cacheprovider",
+    "configuration_cleanup": "Removed unused rejected-rescue field and CLI/benchmark switches after rollback. No retained fetch/proof/budget algorithm change."
+  }
+}

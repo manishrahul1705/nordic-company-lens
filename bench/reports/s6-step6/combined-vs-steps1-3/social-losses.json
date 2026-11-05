@@ -1,0 +1,1796 @@
+{
+  "lost_companies": [
+    {
+      "org": "912189465",
+      "company": "LUCKY VIEW AS",
+      "previous_website": "https://www.luckyview.no",
+      "current_website": null,
+      "website_state": "failed",
+      "reasons": [
+        "dns_timeout",
+        "dns_unavailable",
+        "no_such_domain",
+        "transient_dns_retry",
+        "transient_transport_retry"
+      ],
+      "diagnostics": [
+        {
+          "domain": "luckyview.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "luckyview-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyviewas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "lucky-viewas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "url": "https://luckyview.no/",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview.no",
+          "origin": "subunit_name_slug",
+          "url": "https://luckyview.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "luckyview.no",
+          "url": "https://www.luckyview.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.luckyview.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "luckyview.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.luckyview.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "url": "http://luckyview.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview.no",
+          "origin": "subunit_name_slug",
+          "url": "http://luckyview.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "domain": "luckyview-as.no",
+          "url": "https://luckyview-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://luckyview-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.luckyview-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.luckyview-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://luckyview-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyviewas.no",
+          "url": "https://luckyviewas.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyviewas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://luckyviewas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyviewas.no",
+          "url": "https://www.luckyviewas.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyviewas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.luckyviewas.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "luckyviewas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.luckyviewas.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "luckyviewas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://luckyviewas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.as",
+          "url": "https://luckyview.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview.as",
+          "origin": "subunit_name_slug",
+          "url": "https://luckyview.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.as",
+          "url": "https://www.luckyview.as/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.luckyview.as/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "luckyview.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.luckyview.as/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "luckyview.as",
+          "origin": "subunit_name_slug",
+          "url": "http://luckyview.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.com",
+          "url": "https://luckyview.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview.com",
+          "origin": "subunit_name_slug",
+          "url": "https://luckyview.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.com",
+          "url": "https://www.luckyview.com/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "luckyview.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.luckyview.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.luckyview.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "luckyview.com",
+          "origin": "subunit_name_slug",
+          "url": "http://luckyview.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lucky-view.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.no",
+          "url": "https://www.lucky-view.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "lucky-view.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lucky-view.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lucky-view.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lucky-view.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view-as.no",
+          "url": "https://lucky-view-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "lucky-view-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lucky-view-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "lucky-view-as.no",
+          "url": "https://www.lucky-view-as.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "lucky-view-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lucky-view-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "lucky-view-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lucky-view-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "lucky-view-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lucky-view-as.no/",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "lucky-viewas.no",
+          "url": "https://lucky-viewas.no/",
+          "reason": "transient_dns_retry",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "lucky-viewas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lucky-viewas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-viewas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lucky-viewas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-viewas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lucky-viewas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-viewas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lucky-viewas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.as",
+          "origin": "subunit_name_slug",
+          "url": "https://lucky-view.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lucky-view.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lucky-view.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.as",
+          "origin": "subunit_name_slug",
+          "url": "http://lucky-view.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.com",
+          "origin": "subunit_name_slug",
+          "url": "https://lucky-view.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lucky-view.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lucky-view.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lucky-view.com",
+          "origin": "subunit_name_slug",
+          "url": "http://lucky-view.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "997790952",
+      "company": "HILLEREN PROSJEKTERING AS",
+      "previous_website": "https://hillerenprosjektering.no",
+      "current_website": null,
+      "website_state": "failed",
+      "reasons": [
+        "dns_timeout",
+        "no_such_domain",
+        "transient_transport_retry"
+      ],
+      "diagnostics": [
+        {
+          "domain": "hillerenprosjektering.no",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "url": "https://hillerenprosjektering.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "hillerenprosjektering.no",
+          "origin": "registry_website",
+          "url": "https://hillerenprosjektering.no/",
+          "reason": "dns_timeout"
+        },
+        {
+          "url": "https://www.hillerenprosjektering.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "hillerenprosjektering.no",
+          "origin": "registry_website",
+          "url": "https://www.hillerenprosjektering.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.no",
+          "origin": "registry_website",
+          "url": "http://www.hillerenprosjektering.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.no",
+          "origin": "registry_website",
+          "url": "http://hillerenprosjektering.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://hillerenprosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hillerenprosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hillerenprosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://hillerenprosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://hillerenprosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hillerenprosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hillerenprosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://hillerenprosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "https://hillerenprosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hillerenprosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hillerenprosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "http://hillerenprosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "https://hillerenprosjektering.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hillerenprosjektering.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hillerenprosjektering.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hillerenprosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "http://hillerenprosjektering.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.no",
+          "origin": "subunit_name_slug",
+          "url": "https://hilleren-prosjektering.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hilleren-prosjektering.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hilleren-prosjektering.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.no",
+          "origin": "subunit_name_slug",
+          "url": "http://hilleren-prosjektering.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://hilleren-prosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hilleren-prosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hilleren-prosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://hilleren-prosjektering-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://hilleren-prosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hilleren-prosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hilleren-prosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjekteringas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://hilleren-prosjekteringas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "https://hilleren-prosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hilleren-prosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hilleren-prosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.as",
+          "origin": "subunit_name_slug",
+          "url": "http://hilleren-prosjektering.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "https://hilleren-prosjektering.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.hilleren-prosjektering.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.hilleren-prosjektering.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hilleren-prosjektering.com",
+          "origin": "subunit_name_slug",
+          "url": "http://hilleren-prosjektering.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "918486666",
+      "company": "ANTISINK AS",
+      "previous_website": "https://www.antisink.no",
+      "current_website": null,
+      "website_state": "not_available",
+      "reasons": [
+        "no_such_domain"
+      ],
+      "diagnostics": [
+        {
+          "domain": "antisink.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisinkas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.no",
+          "origin": "subunit_name_slug",
+          "url": "https://antisink.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.antisink.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.antisink.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.no",
+          "origin": "subunit_name_slug",
+          "url": "http://antisink.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://antisink-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.antisink-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.antisink-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://antisink-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisinkas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://antisinkas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisinkas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.antisinkas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisinkas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.antisinkas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisinkas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://antisinkas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.as",
+          "origin": "subunit_name_slug",
+          "url": "https://antisink.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.antisink.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.antisink.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.as",
+          "origin": "subunit_name_slug",
+          "url": "http://antisink.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.com",
+          "origin": "subunit_name_slug",
+          "url": "https://antisink.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.antisink.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.antisink.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "antisink.com",
+          "origin": "subunit_name_slug",
+          "url": "http://antisink.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "821962242",
+      "company": "LAKSESYSTEMER AS",
+      "previous_website": "https://laksesystemer.no",
+      "current_website": null,
+      "website_state": "not_available",
+      "reasons": [
+        "no_such_domain"
+      ],
+      "diagnostics": [
+        {
+          "domain": "laksesystemer.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemeras.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.no",
+          "origin": "subunit_name_slug",
+          "url": "https://laksesystemer.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.laksesystemer.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.laksesystemer.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.no",
+          "origin": "subunit_name_slug",
+          "url": "http://laksesystemer.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://laksesystemer-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.laksesystemer-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.laksesystemer-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://laksesystemer-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemeras.no",
+          "origin": "subunit_name_slug",
+          "url": "https://laksesystemeras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemeras.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.laksesystemeras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemeras.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.laksesystemeras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemeras.no",
+          "origin": "subunit_name_slug",
+          "url": "http://laksesystemeras.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.as",
+          "origin": "subunit_name_slug",
+          "url": "https://laksesystemer.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.laksesystemer.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.laksesystemer.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.as",
+          "origin": "subunit_name_slug",
+          "url": "http://laksesystemer.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.com",
+          "origin": "subunit_name_slug",
+          "url": "https://laksesystemer.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.laksesystemer.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.laksesystemer.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "laksesystemer.com",
+          "origin": "subunit_name_slug",
+          "url": "http://laksesystemer.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "968545337",
+      "company": "LEFDAL INSTALLASJON AS",
+      "previous_website": "https://lefdal.no",
+      "current_website": null,
+      "website_state": "failed",
+      "reasons": [
+        "dns_timeout",
+        "insufficient_owner_proof",
+        "no_such_domain",
+        "transient_transport_retry",
+        "website_timeout"
+      ],
+      "diagnostics": [
+        {
+          "domain": "lefdal.no",
+          "origin": "registry_email",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.no",
+          "reason": "dns_timeout",
+          "page": "http://www.lefdalinstallasjon.no/om-oss"
+        },
+        {
+          "domain": "lefdalinstallasjon.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_name_slug",
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "lefdalinstallasjon-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjonas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjonas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal.no",
+          "origin": "registry_email",
+          "url": "https://lefdal.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal.no",
+          "origin": "registry_email",
+          "url": "https://www.lefdal.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal.no",
+          "origin": "registry_email",
+          "url": "http://www.lefdal.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal.no",
+          "origin": "registry_email",
+          "url": "http://lefdal.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdalinstallasjon.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "url": "https://www.lefdalinstallasjon.no/robots.txt",
+          "reason": "transient_transport_retry",
+          "failure_code": "website_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "lefdalinstallasjon.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdalinstallasjon.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "lefdalinstallasjon.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdalinstallasjon.no/",
+          "final_url": "http://www.lefdalinstallasjon.no/",
+          "status": 200
+        },
+        {
+          "url": "http://www.lefdalinstallasjon.no/om-oss",
+          "reason": "transient_transport_retry",
+          "failure_code": "dns_timeout",
+          "exception_class": "TimeoutError",
+          "message": "",
+          "retry_timeout_seconds": 12
+        },
+        {
+          "domain": "lefdalinstallasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdalinstallasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdalinstallasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdalinstallasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdalinstallasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdalinstallasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdalinstallasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdalinstallasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdalinstallasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdalinstallasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdalinstallasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdalinstallasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdalinstallasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdalinstallasjon.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdalinstallasjon.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdalinstallasjon.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdalinstallasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdalinstallasjon.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdal-installasjon.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdal-installasjon.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdal-installasjon.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdal-installasjon.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdal-installasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdal-installasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdal-installasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdal-installasjon-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdal-installasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdal-installasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdal-installasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjonas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdal-installasjonas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdal-installasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdal-installasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdal-installasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.as",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdal-installasjon.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "https://lefdal-installasjon.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.lefdal-installasjon.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.lefdal-installasjon.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "lefdal-installasjon.com",
+          "origin": "subunit_name_slug",
+          "url": "http://lefdal-installasjon.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    },
+    {
+      "org": "925201049",
+      "company": "SIDDIS GELATO AS",
+      "previous_website": "https://www.siddisgelatostavanger.com",
+      "current_website": null,
+      "website_state": "failed",
+      "reasons": [
+        "no_such_domain"
+      ],
+      "diagnostics": [
+        {
+          "domain": "siddisgelatostavanger.com",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatoas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato-as.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelatoas.no",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.as",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.com",
+          "origin": "subunit_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatostavanger.com",
+          "origin": "registry_website",
+          "url": "https://siddisgelatostavanger.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatostavanger.com",
+          "origin": "registry_website",
+          "url": "https://www.siddisgelatostavanger.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatostavanger.com",
+          "origin": "registry_website",
+          "url": "http://www.siddisgelatostavanger.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatostavanger.com",
+          "origin": "registry_website",
+          "url": "http://siddisgelatostavanger.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.no",
+          "origin": "subunit_name_slug",
+          "url": "https://siddisgelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddisgelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddisgelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.no",
+          "origin": "subunit_name_slug",
+          "url": "http://siddisgelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://siddisgelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddisgelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddisgelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://siddisgelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://siddisgelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddisgelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddisgelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://siddisgelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.as",
+          "origin": "subunit_name_slug",
+          "url": "https://siddisgelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddisgelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddisgelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.as",
+          "origin": "subunit_name_slug",
+          "url": "http://siddisgelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.com",
+          "origin": "subunit_name_slug",
+          "url": "https://siddisgelato.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddisgelato.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddisgelato.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddisgelato.com",
+          "origin": "subunit_name_slug",
+          "url": "http://siddisgelato.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.no",
+          "origin": "subunit_name_slug",
+          "url": "https://siddis-gelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddis-gelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddis-gelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.no",
+          "origin": "subunit_name_slug",
+          "url": "http://siddis-gelato.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://siddis-gelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddis-gelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddis-gelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato-as.no",
+          "origin": "subunit_name_slug",
+          "url": "http://siddis-gelato-as.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://siddis-gelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddis-gelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddis-gelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelatoas.no",
+          "origin": "subunit_name_slug",
+          "url": "http://siddis-gelatoas.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.as",
+          "origin": "subunit_name_slug",
+          "url": "https://siddis-gelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.as",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddis-gelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.as",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddis-gelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.as",
+          "origin": "subunit_name_slug",
+          "url": "http://siddis-gelato.as/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.com",
+          "origin": "subunit_name_slug",
+          "url": "https://siddis-gelato.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.com",
+          "origin": "subunit_name_slug",
+          "url": "https://www.siddis-gelato.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.com",
+          "origin": "subunit_name_slug",
+          "url": "http://www.siddis-gelato.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "siddis-gelato.com",
+          "origin": "subunit_name_slug",
+          "url": "http://siddis-gelato.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    }
+  ],
+  "numeric_drop": 1,
+  "noise_band": 4,
+  "exemption_used": false,
+  "reason": "Step4 already fails wrong-company gate. Numerical band alone is insufficient; not every recorded loss is transient."
+}

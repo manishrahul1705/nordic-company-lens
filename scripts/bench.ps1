@@ -5,8 +5,6 @@ param(
     [switch]$SuffixContactProof,
     [switch]$NoSuffixContactProof,
     [switch]$NoTransientRetry,
-    [switch]$SuffixContactRescue,
-    [switch]$NoSuffixContactRescue,
     [int]$WebsiteRequestCap = 16,
     [switch]$DomainLocationProof
 )
@@ -21,8 +19,6 @@ try {
     if ($SuffixContactProof) { $benchArgs += '--website-suffix-contact-proof' }
     if ($NoSuffixContactProof) { $benchArgs += '--no-website-suffix-contact-proof' }
     if ($NoTransientRetry) { $benchArgs += '--no-website-transient-retry' }
-    if ($SuffixContactRescue) { $benchArgs += '--website-suffix-contact-rescue' }
-    if ($NoSuffixContactRescue) { $benchArgs += '--no-website-suffix-contact-rescue' }
     $benchArgs += @('--website-request-cap', $WebsiteRequestCap)
     if ($DomainLocationProof) { $benchArgs += '--website-domain-location-proof' }
     uv run --frozen python scripts/bench_run.py @benchArgs

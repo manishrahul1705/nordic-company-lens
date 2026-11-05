@@ -1,0 +1,25 @@
+{
+  "items": 283,
+  "by_field": {
+    "official_website": 33,
+    "website_description": 96,
+    "contact": 118,
+    "public_brand": 13,
+    "social_profile": 21,
+    "dated_item": 2
+  },
+  "verdicts": {
+    "correct": 254,
+    "unsure": 25,
+    "wrong": 4
+  },
+  "wrong_company_count": 1,
+  "wrong_claim_count": 4,
+  "decision": "ROLLBACK step4",
+  "retained_runtime": "steps1-3 commit7dbcd26, restored by2f7b06e",
+  "description_source_value_checks": {
+    "checked": 96,
+    "unmatched": [],
+    "qualification": "A verbatim source match does not cure wrong-company scope; final manual verdicts remain authoritative."
+  }
+}
