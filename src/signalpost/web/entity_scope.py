@@ -37,7 +37,7 @@ def foreign_entity_page(page, org, name, check_ids=True):
 def group_site_has_own_proof(pages, org, name, registry_contacts):
     """Allow a shared/group host only with a direct, exact subject signal."""
     compact = lambda value: re.sub(r'[^a-z0-9]+', '', str(value).casefold())
-    normalized_name = legal_name(name)
+    normalized_name = ' '.join(re.findall(r'\w+', str(name).casefold()))
     contacts = {compact(value) for value in registry_contacts if compact(value)}
     for page in pages:
         text = page.visible + ' ' + ' '.join(str(v) for v in page.meta.values()) + ' ' + ' '.join(
@@ -47,10 +47,18 @@ def group_site_has_own_proof(pages, org, name, registry_contacts):
             return True
         # Registry contact plus the exact legal-name stem may be split across
         # visible text and metadata on the same fetched site.
-        normalized_text = legal_name(text)
-        if normalized_name and normalized_name in normalized_text and any(contact in compact(text) for contact in contacts):
+        normalized_text = ' '.join(re.findall(r'\w+', text.casefold()))
+        exact_name = bool(normalized_name and re.search(r'(?<!\w)' + re.escape(normalized_name) + r'(?!\w)', normalized_text))
+        if exact_name and any(contact in compact(text) for contact in contacts):
             return True
     return False
+
+
+def registered_contact_values(claims, evidence):
+    return [c.value for c in claims if c.field in {'identity.registered_email', 'identity.registered_phone'}
+            and c.availability == 'available' and any(
+                evidence.get(ref) and evidence[ref].source_class == 'official_registry'
+                for ref in c.evidence_ids)]
 
 
 def enforce(envelopes, blobs, bulk):
@@ -114,10 +122,7 @@ def enforce(envelopes, blobs, bulk):
             # Do not mutate proof.value: claim IDs hash the supported value.
             proof.reasons['relationship'] = 'group_site'
         removed = []
-        registry_contacts = [c.value for c in row.claims if c.field.startswith(('contact.email.', 'contact.phone.'))
-                             and c.availability == 'available' and any(
-                                 evidence.get(ref) and evidence[ref].source_class == 'official_registry'
-                                 for ref in c.evidence_ids)]
+        registry_contacts = registered_contact_values(row.claims, evidence)
         if group and not group_site_has_own_proof(proof_pages, org, name, registry_contacts):
             removed.append(proof)
             proof.reasons['relationship'] = 'group_site'
