@@ -191,7 +191,7 @@ class Stream:
             if not valid(org):return True
             employer=ad.get('employer') or {}
             homepage=str(employer.get('homepage') or employer.get('url') or ad.get('employerHomepage') or ad.get('homepage') or '').strip() or None
-            value={'uuid':uuid,'employer_orgnr':org,'status':entry['status'],'title':ad.get('title') or None,
+            value={'uuid':uuid,'employer_orgnr':org,'title':ad.get('title') or None,
                    'location':[{'municipality':x.get('municipal'),'city':x.get('city')} for x in ad.get('workLocations',[])] or None,
                    'published':ad['published'],'expires':ad['expires'],'occupation_categories':ad.get('occupationCategories') or None,
                    'url':'https://arbeidsplassen.nav.no/stillinger/stilling/'+uuid}

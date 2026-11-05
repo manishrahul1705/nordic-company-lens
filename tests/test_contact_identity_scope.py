@@ -20,11 +20,11 @@ def test_description_append_preserves_identity_for_contacts(monkeypatch):
         section.claims.append(SimpleNamespace(value={'text':'Description'}))
     def contacts(section, org, claim, pages, **kwargs):
         assert claim is captured[0]
-        assert claim.value['relationship_note'] is None
+        assert claim.value['relationship_note']=='group_site'
     monkeypatch.setattr(descriptions, 'extract', describe)
     monkeypatch.setattr(collector, 'extract_contacts_and_social', contacts)
     monkeypatch.setattr(collector, 'extract_public_brand', lambda *args: None)
-    proof = Proof('VERIFIED', 'orgnr_on_page', token=org)
+    proof = Proof('VERIFIED', 'orgnr_on_page', other_orgnrs=['988258229'], token=org)
     candidate = Candidate('https://example.no/', 'example.no', 'registry_website')
     http = SimpleNamespace(accepted_pages={}, attempts={})
     envelope = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))

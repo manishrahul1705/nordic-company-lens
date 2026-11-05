@@ -46,7 +46,7 @@ def validate(data):
     return data
 
 
-def load(path=DEFAULT_PATH,max_age_days=30,now=None,allow_historical_snapshot=False):
+def load(path=DEFAULT_PATH,max_age_days=21,now=None,allow_historical_snapshot=False):
     try:
         # Bound both compressed and expanded input before parsing untrusted files.
         if path.stat().st_size>2_000_000:raise SourceFailure('index_size_invalid')

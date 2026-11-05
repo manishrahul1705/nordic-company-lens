@@ -16,7 +16,7 @@ class Inputs:
 
 
 def read(path: Path) -> Inputs:
-    text = path.read_text(encoding="utf-8-sig")
+    text = path.read_text(encoding="utf-8-sig").strip()
     rows = []
     metadata = {}
     if not text:
@@ -24,10 +24,6 @@ def read(path: Path) -> Inputs:
     else:
         try:
             body = json.loads(text)
-            # Plain/JSONL records preserve blank input lines too. A terminal
-            # newline terminates the last record; it does not add another one.
-            if len(text.splitlines()) > 1 and not isinstance(body, (list, dict)):
-                raise json.JSONDecodeError("line records", text, 0)
             if isinstance(body, dict) and "organisation_numbers" in body:
                 values = body["organisation_numbers"]
                 if not isinstance(values, list):
@@ -58,10 +54,9 @@ def read(path: Path) -> Inputs:
                         values.append(org_val)
             else:
                 values = []
-                lines = text.split("\n")  # Preserve U+2028/U+2029 inside JSON strings.
-                if lines[-1] == "":
-                    lines.pop()
-                for line in lines:
+                for line in text.split("\n"):  # splitlines() would also split inside JSON strings on U+2028/U+2029.
+                    if not line.strip():
+                        continue
                     try:
                         values.append(json.loads(line))
                     except json.JSONDecodeError:

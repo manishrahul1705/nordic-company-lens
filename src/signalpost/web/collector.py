@@ -434,10 +434,7 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
         if domain(source_response.url) != target_domain:
             continue
         cards = extract_entity_cards(source_page.raw) if is_group else []
-        from .entity_scope import foreign_entity_page
-        if foreign_entity_page(source_page, org, context.get('name'), check_ids=not is_group):
-            continue
-        for url, source_span in ({} if is_group else attributed(source_page, web_val, context)).items():
+        for url, source_span in attributed(source_page, web_val, context).items():
             if url not in social_seen:
                 if is_group:
                     p_path = urlsplit(url).path.rstrip("/").lower()
@@ -504,12 +501,10 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else page.name_span(proof.token)
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")
-    from .proof import orgnrs
-    group_site = bool(proof.other_orgnrs) or any(len(orgnrs(p.visible)) >= 3 for _, p in pages)
     value = {"final_url": root_url, "transport_scheme": p.scheme,
              "identity_level": proof.level, "proof_type": proof.proof_type,
              "proof_page_url": response.url, "signals": proof.signals, "points": proof.points,
-             "candidate_origin": candidate.origin, "relationship_note": "group_site" if group_site else None,
+             "candidate_origin": candidate.origin, "relationship_note": "group_site" if proof.other_orgnrs else None,
              "other_orgnrs": proof.other_orgnrs}
     if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
         value['matched_via_subunit']=matched
@@ -531,10 +526,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     from .descriptions import extract as descriptions
     accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
     identity_claim = section.claims[-1]
-    from .entity_scope import foreign_entity_page
-    safe_pages = [(r, p) for r, p in accepted_domain_pages if not foreign_entity_page(p, org, context.get('name'))]
-    if value.get('relationship_note') != 'group_site':
-        descriptions(section, org, identity_claim, safe_pages)
+    descriptions(section, org, identity_claim, accepted_domain_pages)
     extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope)
     brand = extract_public_brand(page, context.get("name"))
     if brand:

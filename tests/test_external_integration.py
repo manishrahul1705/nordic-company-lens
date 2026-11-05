@@ -26,14 +26,14 @@ def test_external_sources_strict_replay(tmp_path):
     assert claims['official_website']['identity_level']=='VERIFIED'
     assert claims['official_website']['relationship_note']=='group_site'
     assert any(key.startswith('contact.email.') for key in claims)
-    assert not any(key.startswith('social_profile.') for key in claims)
+    assert any(key.startswith('social_profile.') for key in claims)
     assert 'sibling@zephyrsynthetic.no' not in claims.values()
     assert not any(isinstance(value,dict) and 'sibling-synthetic' in str(value.get('url','')) for value in claims.values())
-    assert not any(key.startswith('website_description.') for key in claims)
+    assert any(key.startswith('website_description.') for key in claims)
     jobs = [value for key,value in claims.items() if key.startswith('hiring.job.')]
     assert {job['employer_orgnr'] for job in jobs} == {'923609016','993578843'}
     activity = [value for key,value in claims.items() if key.startswith('dated_item.')]
-    assert activity == []  # Group-site activity cannot describe the subsidiary.
+    assert len(activity)==1 and activity[0]['date_source']=='pubDate'
     assert 'official_website' not in published(first[1])
     assert first[2]['run']['sections']['accounts']=='failed'
     assert not published(first[-1])

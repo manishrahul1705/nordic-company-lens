@@ -134,7 +134,7 @@ def test_boundary_21_days_plus_1sec_stale(tmp_path):
     assert age > 21.0
 
     # In historical snapshot mode, prefetch marks mode and dating
-    cfg = config(tmp_path, [ORG], hiring=True, nav_index_path=path, nav_historical_snapshot=True, nav_index_max_age_days=21)
+    cfg = config(tmp_path, [ORG], hiring=True, nav_index_path=path, nav_historical_snapshot=True)
     index, result, calls = asyncio.run(run_nav(cfg, path, now=fixed_now))
     assert index.metrics['source_mode'] == 'historical_snapshot'
     assert result.state == 'available'
@@ -151,7 +151,7 @@ def test_boundary_22_days_stale(tmp_path):
     with pytest.raises(SourceFailure, match='index_stale'):
         load(path, max_age_days=21, now=fixed_now)
 
-    cfg = config(tmp_path, [ORG], hiring=True, nav_index_path=path, nav_index_max_age_days=21)
+    cfg = config(tmp_path, [ORG], hiring=True, nav_index_path=path)
     index, result, calls = asyncio.run(run_nav(cfg, path, now=fixed_now))
     assert index.metrics['source_mode'] == 'full_feed_fallback'
     assert index.metrics['index_fallback_reason'] == 'index_stale'
@@ -331,7 +331,7 @@ def test_boundary_historical_snapshot_mode_absence_unsupported(tmp_path):
     # Index with NO ads for ORG
     path, data = artifact(tmp_path, ads=[], built_at=built.isoformat())
 
-    cfg = config(tmp_path, [ORG], hiring=True, nav_index_path=path, nav_historical_snapshot=True, nav_index_max_age_days=21)
+    cfg = config(tmp_path, [ORG], hiring=True, nav_index_path=path, nav_historical_snapshot=True)
     index, result, calls = asyncio.run(run_nav(cfg, path, now=fixed_now))
     assert index.metrics['source_mode'] == 'historical_snapshot'
     assert not result.claims

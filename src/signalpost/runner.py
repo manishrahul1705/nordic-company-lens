@@ -550,8 +550,6 @@ async def _run(config, client=None):
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     from .web.social import drop_shared
     await offload(drop_shared, list(envelopes.values()), blobs)
-    from .web.entity_scope import enforce as enforce_entity_scope
-    await offload(enforce_entity_scope, list(envelopes.values()), blobs, bulk)
     progress.stage_update("Cited Synthesis", "running")
     synthesis_service=SynthesisService()
     for envelope in envelopes.values():

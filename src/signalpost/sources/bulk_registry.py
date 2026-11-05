@@ -33,13 +33,6 @@ def snapshot_hash(path, budget):
     return sha.hexdigest()
 
 
-class RegistryRows(dict):
-    """Selected evidence rows plus domain ownership across the whole snapshot."""
-    def __init__(self):
-        super().__init__()
-        self.domain_owners = {}
-
-
 def load(path: Path, wanted: set[str], blobs, budget):
     # Hash in chunks and index only requested rows. Per-claim blobs retain exact CSV
     # header + raw selected record, not the multi-gigabyte nationwide body.
@@ -47,7 +40,7 @@ def load(path: Path, wanted: set[str], blobs, budget):
     with path.open("rb") as check:
         compressed = check.read(2) == b"\x1f\x8b"
     opener = gzip.open if compressed else open
-    found = RegistryRows()
+    found = {}
     with opener(path, "rt", encoding="utf-8-sig", newline="") as handle:
         sample = handle.read(16384)
         handle.seek(0)
@@ -73,18 +66,11 @@ def load(path: Path, wanted: set[str], blobs, budget):
         header = "".join(captured)
         captured.clear()
         org_index = next(i for i, name in enumerate(fields) if name.casefold() == 'organisasjonsnummer')
-        website_index = next((i for i, name in enumerate(fields) if name.casefold() == 'hjemmeside'), None)
-        from ..web.policy import domain, normalize_url
         for values in reader:
             budget.check()
             raw = "".join(captured)
             captured.clear()
             org = values[org_index] if len(values) > org_index else None
-            if org and website_index is not None and len(values) > website_index:
-                url = normalize_url(values[website_index])
-                host = domain(url) if url else ''
-                if host:
-                    found.domain_owners.setdefault(host, set()).add(org)
             if org in wanted:
                 # Avoid allocating a full dictionary for every nationwide row.
                 # Preserve DictReader's selected-row semantics and exact bytes.

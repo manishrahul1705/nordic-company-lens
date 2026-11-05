@@ -21,7 +21,6 @@ blobs/
 *.csv
 *.gz
 !src/signalpost/data/nav_index.json.gz
-!src/signalpost/data/registry_domains.json.gz
 *.pdf
 !tests/fixtures/**/*.jsonl
 !tests/fixtures/**/*.csv

@@ -78,10 +78,10 @@ def test_load_version_age_counts_and_personal_text_schema(tmp_path):
     path,data=artifact(tmp_path)
     assert load(path)[0]==data
     with pytest.raises(SourceFailure,match='index_missing'):load(tmp_path/'missing')
-    old={**data,'built_at':(datetime.now(timezone.utc)-timedelta(days=31)).isoformat()}
+    old={**data,'built_at':(datetime.now(timezone.utc)-timedelta(days=22)).isoformat()}
     write(path,old)
     with pytest.raises(SourceFailure,match='index_stale'):load(path)
-    assert load(path,max_age_days=32)[0]==old
+    assert load(path,max_age_days=23)[0]==old
     with pytest.raises(SourceFailure,match='index_version_invalid'):validate({**data,'schema_version':2})
     with pytest.raises(SourceFailure,match='index_ad_schema_invalid'):
         validate({**data,'ads':[{**data['ads'][0],'description':'must never ship'}]})
