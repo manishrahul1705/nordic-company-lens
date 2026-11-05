@@ -1,0 +1,40 @@
+{
+  "commit": "53da26f43e9bb9b1e36457fb8e70c5c5f2de7bd2",
+  "working_tree_dirty": true,
+  "size": 100,
+  "started_at": "2026-11-05T08:49:45.446950+00:00",
+  "command": [
+    "signalpost",
+    "run",
+    "--organisations",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261105T084945443709Z-53da26f\\inputs\\batch.jsonl",
+    "--bulk",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261105T084945443709Z-53da26f\\inputs\\registry.csv",
+    "--output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261105T084945443709Z-53da26f\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261105T084945443709Z-53da26f\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261105T084945443709Z-53da26f\\report.json",
+    "--site-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261105T084945443709Z-53da26f\\site",
+    "--state-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261105T084945443709Z-53da26f\\state",
+    "--websites",
+    "--hiring",
+    "--public-activity",
+    "--run-id",
+    "bench-20261105T084945443709Z",
+    "--expected-count",
+    "100"
+  ],
+  "input_sha256": {
+    "batch.jsonl": "54f5c4254b5d61a969ed6ec5969fab905e45d947f920a8f8cdcb71e575b159f7",
+    "registry.csv": "2721de541081cc0ce500276b9579ad29b60d1d07462cc5e20e2b881b767a1e15"
+  },
+  "search_enabled": false,
+  "credentials": "API key variables, NAV_API_TOKEN and search/model selectors removed",
+  "exit_code": 0,
+  "wall_seconds": 102.53725649998523,
+  "finished_at": "2026-11-05T08:51:27.983857+00:00"
+}

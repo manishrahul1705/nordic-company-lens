@@ -1,0 +1,151 @@
+diff --git a/src/signalpost/web/collector.py b/src/signalpost/web/collector.py
+index e28a25e..c936a95 100644
+--- a/src/signalpost/web/collector.py
++++ b/src/signalpost/web/collector.py
+@@ -147,19 +147,18 @@ def followup_links(page):
+     return list(dict.fromkeys(url for _,url in sorted(ranked,key=lambda x:x[0])))
+ 
+ 
+-# Pages where Norwegian companies state their organisation number. They are tried
+-# after the links found on the home page; proof rules apply to them unchanged.
+-FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/impressum', '/privacy-policy', '/personvern', '/om', '/about', '/contact', '/privacy', '/personvernerklaering')
+-FOLLOWUP_PAGES = 3
++# Bounded ownership search; the initial page counts toward the eight-page cap.
++FALLBACK_PROOF_PATHS = ('/', '/kontakt', '/kontakt-oss', '/om-oss', '/about', '/personvern', '/vilkar', '/impressum')
++FOLLOWUP_PAGES = 7
+ 
+ 
+ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
+     base = urlsplit(base_url)
+     fixed = [urlunsplit((base.scheme, base.netloc, path, '', '')) for path in FALLBACK_PROOF_PATHS]
+     targets = []
+-    for target in followup_links(page) + fixed:
++    for target in fixed:
+         target = normalize_url(target)
+-        if target and target not in targets:
++        if target and target.rstrip('/') != page.url.rstrip('/') and target not in targets:
+             targets.append(target)
+     return targets[:limit]
+ 
+@@ -269,11 +268,13 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
+             proof = await offload(candidate_proof,page,org,context,candidate,leaders)
+             pages.append((response, page))
+             best = (proof, response, page)
++            proof_pages_checked = 1
+             if proof.level == "BLOCKED":
+                 raise SourceFailure("block_page")
+             if (candidate is refresh_candidate and refresh_proof and refresh_proof != response.url
+-                    and domain(refresh_proof) == candidate.domain and proof.level != 'REJECT'):
++                    and domain(refresh_proof) == candidate.domain and proof.level not in {'REJECT', 'VERIFIED'}):
+                 try:
++                    proof_pages_checked += 1
+                     checked_response = await http.get(refresh_proof, org, candidate.domain, proved)
+                     if checked_response.status == 200:
+                         checked_page = await offload(Page, checked_response.body, checked_response.url)
+@@ -285,12 +286,11 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
+                 except SourceFailure as exc:
+                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
+                                      'reason': exc.code, 'page': refresh_proof})
+-            # Owner conflicts on any checked page cannot be rescued by another
+-            # page on that domain. Up to three same-domain proof pages are checked.
++            # Stop at the first proof, within eight pages and the existing host budget.
+             if proof.reason != 'foreign_orgnr':
+                 seen = {response.url}
+-                for position,target in enumerate(proof_page_targets(page, response.url, limit=FOLLOWUP_PAGES+3)):
+-                    if position>=FOLLOWUP_PAGES and best[0].level=='VERIFIED':
++                for target in proof_page_targets(page, response.url, limit=8-proof_pages_checked):
++                    if best[0].level=='VERIFIED':
+                         break
+                     if target in seen or domain(target) != domain(response.url):
+                         continue
+diff --git a/tests/test_contact_article_ownership.py b/tests/test_contact_article_ownership.py
+index ed60c93..237161b 100644
+--- a/tests/test_contact_article_ownership.py
++++ b/tests/test_contact_article_ownership.py
+@@ -39,10 +39,11 @@ def test_exact_name_street_abbreviations_keep_house_number(street,shown):
+     assert score(page,OUR,ctx,'registry_website',[]).level!='VERIFIED'
+ 
+ 
+-def test_only_three_extra_proof_targets_are_added():
++def test_seven_followups_complete_the_eight_page_owner_search():
+     page=Page(b'<h1>Example AS</h1>','https://example.no/')
+-    assert len(proof_page_targets(page,page.url,limit=6))==6
+-    assert 'https://example.no/impressum' in proof_page_targets(page,page.url,limit=6)
++    assert proof_page_targets(page,page.url)==[
++        'https://example.no/'+path for path in
++        ('kontakt','kontakt-oss','om-oss','about','personvern','vilkar','impressum')]
+ 
+ 
+ def test_navigation_partners_do_not_hide_own_bounded_contact_section():
+diff --git a/tests/test_previous_website_nomination.py b/tests/test_previous_website_nomination.py
+index 790b807..7cc0f31 100644
+--- a/tests/test_previous_website_nomination.py
++++ b/tests/test_previous_website_nomination.py
+@@ -4,7 +4,7 @@ from signalpost.web.candidates import Candidate
+ from tests.test_websites import execute_web, html, FILL, OTHER
+ 
+ 
+-def test_refresh_revalidates_known_proof_before_rediscovery_without_changing_ids(tmp_path, monkeypatch):
++def test_refresh_stops_at_new_homepage_proof_before_old_contact_page(tmp_path, monkeypatch):
+     monkeypatch.setattr(collector, 'generate', lambda context: [Candidate('https://brand.no', 'brand.no', 'legal_name_slug')])
+     def source(request):
+         if request.url.path == '/robots.txt':
+@@ -23,8 +23,9 @@ def test_refresh_revalidates_known_proof_before_rediscovery_without_changing_ids
+     _, second, requests, _ = execute_web(tmp_path / 'second', monkeypatch, website=None,
+                                          response=updated_home, previous=cfg.output)
+     new = next(c for c in second['claims'] if c['field'] == 'official_website')
+-    assert new['id'] == old['id'] and new['value'] == old['value'] and not new['carried_forward']
+-    assert 'https://brand.no/kontakt' in requests
++    assert new['value']['proof_page_url'].rstrip('/') == 'https://brand.no'
++    assert new['value']['identity_level'] == 'VERIFIED' and not new['carried_forward']
++    assert 'https://brand.no/kontakt' not in requests
+     def foreign(request):
+         return httpx.Response(200, text='User-agent: *\nAllow: /' if request.url.path == '/robots.txt' else html('Org nr ' + OTHER))
+     _, rejected, rejected_requests, _ = execute_web(tmp_path / 'foreign', monkeypatch, website=None,
+diff --git a/tests/test_recall.py b/tests/test_recall.py
+index 60bf15e..cfa4388 100644
+--- a/tests/test_recall.py
++++ b/tests/test_recall.py
+@@ -56,8 +56,8 @@ def test_candidate_order_and_stop_after_verified(tmp_path, monkeypatch):
+     report,row,requests,_=execute_web(tmp_path,monkeypatch)
+     assert row['run']['sections']['website']=='available'
+     assert not any('exampleas' in url or 'example.com' in url for url in requests)
+-    assert len([url for url in requests if 'data.brreg.no' not in url])==5
+-    assert report['dns_precheck_lookups']==0 and report['dns_lookups']==5
++    assert len([url for url in requests if 'data.brreg.no' not in url])==2
++    assert report['dns_precheck_lookups']==0 and report['dns_lookups']==2
+ 
+ 
+ def test_name_tokens_suffixes_and_transliteration():
+@@ -128,7 +128,7 @@ def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
+         return httpx.Response(200,text=html())
+     report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=8,website_total_request_cap=12)
+     assert row['run']['sections']['activity']=='available'
+-    assert len([u for u in requests if 'data.brreg.no' not in u])==7
++    assert len([u for u in requests if 'data.brreg.no' not in u])==4
+     env=Envelope.model_validate(row)
+     sentence=next(s for s in env.run.synthesis.sections.changes if s.text.startswith('Latest dated'))
+     assert sentence_error(sentence,env) is None
+diff --git a/tests/test_strict_site_ownership.py b/tests/test_strict_site_ownership.py
+index d9a1597..4b33620 100644
+--- a/tests/test_strict_site_ownership.py
++++ b/tests/test_strict_site_ownership.py
+@@ -52,8 +52,10 @@ def test_parent_group_without_exact_orgnr_rejected():
+     assert proof('<head><title>Parent Group</title></head><h1>Example AS</h1><a href="tel:12345678">Call</a>', {'name':'Example AS','phone':'12345678'}).level=='REJECT'
+ 
+ 
+-def test_foreign_contact_page_refutes_verified_homepage(tmp_path, monkeypatch):
++def test_verified_homepage_stops_proof_discovery(tmp_path, monkeypatch):
++    fetched=[]
+     def response(request):
++        fetched.append(request.url.path)
+         if request.url.path=='/robots.txt':
+             return httpx.Response(200,text='User-agent: *\nAllow: /')
+         if request.url.host not in {'example.no', 'www.example.no'}:
+@@ -64,4 +66,5 @@ def test_foreign_contact_page_refutes_verified_homepage(tmp_path, monkeypatch):
+             return httpx.Response(200,text=html('Org.nr '+OUR))
+         return httpx.Response(404)
+     _,row,_,_=execute_web(tmp_path,monkeypatch,response=response)
+-    assert not any(c['field']=='official_website' and c['availability']=='available' for c in row['claims'])
++    assert any(c['field']=='official_website' and c['availability']=='available' for c in row['claims'])
++    assert '/kontakt' not in fetched
