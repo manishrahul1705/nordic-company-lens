@@ -76,7 +76,8 @@ def response_source(response):
 
 def decode(response, family):
     if response.status in (404, 410):
-        return None, missing(family, "not_in_registry" if family == "identity" else "not_available", state="not_available")
+        return None, missing(family, "not_in_registry" if family == "identity" else "not_available",
+                             state="not_applicable" if family == "identity" else "not_available")
     if response.status in (401, 403, 429):
         return None, missing(family, "http_blocked", f"HTTP {response.status}", "blocked")
     if response.status != 200:

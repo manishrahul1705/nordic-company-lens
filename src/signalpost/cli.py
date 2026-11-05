@@ -46,7 +46,7 @@ def main(argv=None):
     command.add_argument('--website-total-request-cap',type=int,default=18)
     command.add_argument('--hiring',action='store_true')
     command.add_argument('--nav-index-path',type=Path)
-    command.add_argument('--nav-index-max-age-days',type=float,default=21)
+    command.add_argument('--nav-index-max-age-days',type=float,default=30)
     command.add_argument('--nav-historical-snapshot', action='store_true', default=False,
                          help='Allow older indexed NAV advertisements with explicit historical snapshot dating')
     command.add_argument('--allow-system-sleep',dest='prevent_system_sleep',action='store_false',default=True)

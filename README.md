@@ -15,7 +15,7 @@ uv sync --frozen
 This command uses the included company inputs and registry fixture. It includes all seven evaluator flags and enables website, hiring and public-activity research:
 
 ```sh
-uv run signalpost run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --run-id nordic-company-lens --expected-count 20 --websites --hiring --public-activity --site-dir out/site --synthesis template --search-max-queries 0 --max-cost-usd 0
+uv run --frozen signalpost run --organisations bench/inputs/100/batch.jsonl --bulk bench/inputs/100/registry.csv --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --state-dir out/state --run-id nordic-company-lens --expected-count 100 --websites --hiring --public-activity --site-dir out/site --synthesis template --search-max-queries 0 --max-cost-usd 0
 ```
 
 For your own batch, replace the input paths and set `--expected-count` to its record count. The seven evaluator flags are `--organisations`, `--bulk`, `--output`, `--profiles-output`, `--report`, `--run-id` and `--expected-count`. Omit `--bulk` for live registry lookup. Source research requires internet access; the offline tests use local fixtures.
