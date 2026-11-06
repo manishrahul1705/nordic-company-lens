@@ -1,0 +1,38 @@
+{
+  "organisation_number": "913672682",
+  "before_sections": {
+    "identity": "available",
+    "roles": "available",
+    "subunits": "available",
+    "accounts": "available",
+    "website": "available",
+    "hiring": "not_available",
+    "activity": "failed"
+  },
+  "after_sections": {
+    "identity": "available",
+    "roles": "available",
+    "subunits": "available",
+    "accounts": "available",
+    "website": "available",
+    "hiring": "not_available",
+    "activity": "not_available"
+  },
+  "before_activity_errors": [
+    {
+      "section": "activity",
+      "code": "website_timeout",
+      "message": "website_timeout"
+    }
+  ],
+  "observations": [
+    {
+      "section": "activity",
+      "previous_state": "failed",
+      "current_state": "not_available",
+      "reason": "section_not_successfully_checked_in_both_runs"
+    }
+  ],
+  "changes": [],
+  "reason": "First-ever news timeout followed by a successful checked absence, not a new company fact"
+}

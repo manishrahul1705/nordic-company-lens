@@ -1,0 +1,89 @@
+{
+  "runtime_commit": "d8388d65d69b2902b2182c8d53f2a58538750bec",
+  "final_css_commit": "f23451f",
+  "input_sha256": "e42b962027dd5839e6c9b0ba396481421fa7ec07ef9ccf6d82cb898e01848a8b",
+  "runs": [
+    {
+      "run": 1,
+      "wall_seconds": 256.71577709999997,
+      "credentials_absent": true,
+      "commit": "d8388d65d69b2902b2182c8d53f2a58538750bec",
+      "runtime_ms": 250532,
+      "requests": 999,
+      "emitted_envelopes": 103,
+      "changes": 0,
+      "observation_changes": 0,
+      "deadline_hits": 0,
+      "warnings": [],
+      "max_requests_per_company": 18,
+      "profiles": 103
+    },
+    {
+      "run": 2,
+      "wall_seconds": 246.07346529999998,
+      "credentials_absent": true,
+      "commit": "d8388d65d69b2902b2182c8d53f2a58538750bec",
+      "runtime_ms": 239891,
+      "requests": 1001,
+      "emitted_envelopes": 103,
+      "changes": 0,
+      "observation_changes": 1,
+      "deadline_hits": 0,
+      "warnings": [],
+      "max_requests_per_company": 18,
+      "profiles": 103
+    },
+    {
+      "run": 3,
+      "wall_seconds": 250.89215679999998,
+      "credentials_absent": true,
+      "commit": "d8388d65d69b2902b2182c8d53f2a58538750bec",
+      "runtime_ms": 245484,
+      "requests": 998,
+      "emitted_envelopes": 103,
+      "changes": 0,
+      "observation_changes": 0,
+      "deadline_hits": 0,
+      "warnings": [],
+      "max_requests_per_company": 18,
+      "profiles": 103
+    }
+  ],
+  "strict_pair": [
+    2,
+    3
+  ],
+  "strict_verifier": {
+    "lines": 103,
+    "schema_valid": true,
+    "published_claims": 7683,
+    "source_blobs_verified": 337,
+    "synthesis_companies": 103,
+    "synthesis_sentences": 712,
+    "synthesis_unverified_values": 0,
+    "rerun_lines": 103,
+    "identical_claim_ids": true,
+    "changes": 0,
+    "observation_changes": 0
+  },
+  "brief_sentences": {
+    "what": 203,
+    "changes": 103,
+    "unknowns": 373
+  },
+  "full_suite": {
+    "passed": 967,
+    "failed": 0,
+    "seconds": 328.84
+  },
+  "site": {
+    "profile_pages": 101,
+    "largest_profile_bytes": 140364,
+    "external_requests": 0
+  },
+  "raw_evidence_path": "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\cache\\s6-step9-utc",
+  "notes": [
+    "Run 1 to 2 includes one honest recovery from first-run news timeout; only pair 2 to 3 passes strict zero-observation assertions.",
+    "Final CSS wrapping was separately rendered and checked without changing envelope output."
+  ]
+}

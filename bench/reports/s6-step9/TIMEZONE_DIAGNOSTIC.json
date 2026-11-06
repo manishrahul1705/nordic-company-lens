@@ -1,0 +1,423 @@
+{
+  "source_commit": "8c6f89d",
+  "diagnostic_pair": "bench/cache/s6-step9-final",
+  "reason": "Equivalent BRREG publication instants spelled as UTC and local offsets",
+  "changes": [
+    {
+      "organisation_number": "937978200",
+      "field": "registry_change.3eb4c40743e78c290f347675",
+      "previous": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T16:00:26.998Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/poststed",
+        "operation": "replace",
+        "new_value": "TØNSBERG"
+      },
+      "current": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T17:00:26.998+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/poststed",
+        "operation": "replace",
+        "new_value": "TØNSBERG"
+      }
+    },
+    {
+      "organisation_number": "937978200",
+      "field": "registry_change.7f30555186d9709527bdc3e8",
+      "previous": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T16:00:26.998Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/kommune",
+        "operation": "replace",
+        "new_value": "TØNSBERG"
+      },
+      "current": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T17:00:26.998+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/kommune",
+        "operation": "replace",
+        "new_value": "TØNSBERG"
+      }
+    },
+    {
+      "organisation_number": "937978200",
+      "field": "registry_change.95bff591040189bb73cecb55",
+      "previous": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T16:00:26.998Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/postnummer",
+        "operation": "replace",
+        "new_value": "3101"
+      },
+      "current": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T17:00:26.998+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/postnummer",
+        "operation": "replace",
+        "new_value": "3101"
+      }
+    },
+    {
+      "organisation_number": "937978200",
+      "field": "registry_change.a085b7eb99ceeab3918f4862",
+      "previous": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T16:00:26.998Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/adresse/1",
+        "operation": "replace",
+        "new_value": "Postboks 414"
+      },
+      "current": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T17:00:26.998+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/adresse/1",
+        "operation": "replace",
+        "new_value": "Postboks 414"
+      }
+    },
+    {
+      "organisation_number": "937978200",
+      "field": "registry_change.b67ef4e96c5985659dee80d8",
+      "previous": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T16:00:26.998Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/kommunenummer",
+        "operation": "replace",
+        "new_value": "3905"
+      },
+      "current": {
+        "company_orgnr": "937978200",
+        "event_id": 25408979,
+        "date": "2026-10-31T17:00:26.998+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25408979&size=1&includeChanges=true",
+        "title": "Registered postal address changed",
+        "changed_field": "/postadresse/kommunenummer",
+        "operation": "replace",
+        "new_value": "3905"
+      }
+    },
+    {
+      "organisation_number": "918789995",
+      "field": "registry_change.cb275844a07dde464c6b0d10",
+      "previous": {
+        "company_orgnr": "918789995",
+        "event_id": 23770507,
+        "date": "2026-02-02T12:05:12.301Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23770507&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Jonas Lies veg 9"
+      },
+      "current": {
+        "company_orgnr": "918789995",
+        "event_id": 23770507,
+        "date": "2026-02-02T13:05:12.301+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23770507&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Jonas Lies veg 9"
+      }
+    },
+    {
+      "organisation_number": "927908999",
+      "field": "registry_change.49a5def0212e6af865e03d6d",
+      "previous": {
+        "company_orgnr": "927908999",
+        "event_id": 24202646,
+        "date": "2026-04-23T06:35:10.591Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24202646&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Børsteveien 11"
+      },
+      "current": {
+        "company_orgnr": "927908999",
+        "event_id": 24202646,
+        "date": "2026-04-23T08:35:10.591+02:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24202646&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Børsteveien 11"
+      }
+    },
+    {
+      "organisation_number": "927908999",
+      "field": "registry_change.c231864ef03a9ba25701b2f8",
+      "previous": {
+        "company_orgnr": "927908999",
+        "event_id": 24202646,
+        "date": "2026-04-23T06:35:10.591Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24202646&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/postnummer",
+        "operation": "replace",
+        "new_value": "0585"
+      },
+      "current": {
+        "company_orgnr": "927908999",
+        "event_id": 24202646,
+        "date": "2026-04-23T08:35:10.591+02:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24202646&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/postnummer",
+        "operation": "replace",
+        "new_value": "0585"
+      }
+    },
+    {
+      "organisation_number": "825403442",
+      "field": "registry_change.2b10d7589d63b10cc17326f0",
+      "previous": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T22:00:11.637Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/kommune",
+        "operation": "replace",
+        "new_value": "LARVIK"
+      },
+      "current": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T23:00:11.637+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/kommune",
+        "operation": "replace",
+        "new_value": "LARVIK"
+      }
+    },
+    {
+      "organisation_number": "825403442",
+      "field": "registry_change.3c544255dc8694d5ed3ee780",
+      "previous": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T22:00:11.637Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/kommunenummer",
+        "operation": "replace",
+        "new_value": "3909"
+      },
+      "current": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T23:00:11.637+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/kommunenummer",
+        "operation": "replace",
+        "new_value": "3909"
+      }
+    },
+    {
+      "organisation_number": "825403442",
+      "field": "registry_change.d207839bd6475e034b2aefce",
+      "previous": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T22:00:11.637Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/postnummer",
+        "operation": "replace",
+        "new_value": "3260"
+      },
+      "current": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T23:00:11.637+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/postnummer",
+        "operation": "replace",
+        "new_value": "3260"
+      }
+    },
+    {
+      "organisation_number": "825403442",
+      "field": "registry_change.dc7379077de18edbebf3adf3",
+      "previous": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T22:00:11.637Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/poststed",
+        "operation": "replace",
+        "new_value": "LARVIK"
+      },
+      "current": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T23:00:11.637+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/poststed",
+        "operation": "replace",
+        "new_value": "LARVIK"
+      }
+    },
+    {
+      "organisation_number": "825403442",
+      "field": "registry_change.e5d45410e7a7bbb374211b8e",
+      "previous": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T22:00:11.637Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Bergslia 36A"
+      },
+      "current": {
+        "company_orgnr": "825403442",
+        "event_id": 22189542,
+        "date": "2025-10-26T23:00:11.637+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22189542&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Bergslia 36A"
+      }
+    },
+    {
+      "organisation_number": "982165105",
+      "field": "registry_change.83d56d66c073109a0cdb41cf",
+      "previous": {
+        "company_orgnr": "982165105",
+        "event_id": 23804251,
+        "date": "2026-02-09T23:35:27.677Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23804251&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/1",
+        "operation": "replace",
+        "new_value": "Drammensveien 130"
+      },
+      "current": {
+        "company_orgnr": "982165105",
+        "event_id": 23804251,
+        "date": "2026-02-10T00:35:27.677+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23804251&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/1",
+        "operation": "replace",
+        "new_value": "Drammensveien 130"
+      }
+    },
+    {
+      "organisation_number": "982165105",
+      "field": "registry_change.eb63fa83d4e55e3b5da4d031",
+      "previous": {
+        "company_orgnr": "982165105",
+        "event_id": 23804251,
+        "date": "2026-02-09T23:35:27.677Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23804251&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Inngang B12"
+      },
+      "current": {
+        "company_orgnr": "982165105",
+        "event_id": 23804251,
+        "date": "2026-02-10T00:35:27.677+01:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23804251&size=1&includeChanges=true",
+        "title": "Registered business address changed",
+        "changed_field": "/forretningsadresse/adresse/0",
+        "operation": "replace",
+        "new_value": "Inngang B12"
+      }
+    },
+    {
+      "organisation_number": "923701656",
+      "field": "registry_change.227afa5f3c0100fd0fcfed8f",
+      "previous": {
+        "company_orgnr": "923701656",
+        "event_id": 22181456,
+        "date": "2025-10-21T10:40:13.381Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22181456&size=1&includeChanges=true",
+        "title": "Registered name changed",
+        "changed_field": "/navn",
+        "operation": "replace",
+        "new_value": "A-M. LASSESEN"
+      },
+      "current": {
+        "company_orgnr": "923701656",
+        "event_id": 22181456,
+        "date": "2025-10-21T12:40:13.381+02:00",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22181456&size=1&includeChanges=true",
+        "title": "Registered name changed",
+        "changed_field": "/navn",
+        "operation": "replace",
+        "new_value": "A-M. LASSESEN"
+      }
+    }
+  ]
+}

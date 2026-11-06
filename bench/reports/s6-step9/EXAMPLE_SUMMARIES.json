@@ -1,0 +1,591 @@
+[
+  {
+    "organisation_number": "913672682",
+    "company": "A-HJORT AS",
+    "brief": {
+      "what": [
+        {
+          "text": "A-HJORT AS is based in Hamar and registered under Retail sale of watches and jewellery (NACE 47.770), with NOK 1,694,907 in revenue in FY2025.",
+          "claim_ids": [
+            "ba4ba20f8d32ae27b0dfdf4925847e0454bd35e2354f42915878e1a610eb0c61",
+            "9692c8de50721d199d415cd620d2796d2bb417efeb89b70faab884d4a7383087",
+            "42362b5c3054151071964175b337a6930a97fa97440733b55a6fe0cd4fac939a",
+            "52770e490879e426a45c6d3555fd05875057b286a5337f9560fe70a610ce4fd0"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        },
+        {
+          "text": "Registered activity: «Salg av smykker via internett og annen beslektet virksomhet.».",
+          "claim_ids": [
+            "e291064e02199e6aa537b3ca55b37d7886fb60563133cd103d13803577624058"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        }
+      ],
+      "changes": [
+        {
+          "text": "No changes since 2026-11-06.",
+          "claim_ids": [
+            "b3ead4dfd42b6887292bc199475375ef890f1aa581c2d8ef50a7b5c5dd4d32ec"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        }
+      ],
+      "unknowns": [
+        {
+          "text": "News and activity: not found (no supported items in the checked sources).",
+          "claim_ids": [
+            "cde6767b7edbe3cdaf84e54b21db14a946403ebd47ecd13b3f0f65c9e6a42e31"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        },
+        {
+          "text": "Jobs: not found (no supported items in the checked sources).",
+          "claim_ids": [
+            "3ba41addd616b85016815b142c3b78a2c4338761bb17ae28004900f4fbdafabe"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        }
+      ],
+      "context_claims": [
+        {
+          "id": "b3ead4dfd42b6887292bc199475375ef890f1aa581c2d8ef50a7b5c5dd4d32ec",
+          "field": "snapshot.refresh",
+          "value": {
+            "mode": "refresh",
+            "previous_completed_at": "2026-11-06T07:44:24.392029Z",
+            "changes": 0
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "cde6767b7edbe3cdaf84e54b21db14a946403ebd47ecd13b3f0f65c9e6a42e31",
+          "field": "snapshot.section.activity",
+          "value": {
+            "state": "not_available",
+            "reasons": [],
+            "stale": null
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "3ba41addd616b85016815b142c3b78a2c4338761bb17ae28004900f4fbdafabe",
+          "field": "snapshot.section.hiring",
+          "value": {
+            "state": "not_available",
+            "reasons": [],
+            "stale": null
+          },
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "field": "identity.legal_name",
+        "value": "A-HJORT AS",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "0e450a23b54261c203b16691c377cb47fcd43dd640f70759f6323a8f99e5e9a9"
+        ],
+        "id": "ba4ba20f8d32ae27b0dfdf4925847e0454bd35e2354f42915878e1a610eb0c61",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:16.553637Z",
+        "last_observed_at": "2026-11-06T07:45:29.357330Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.municipality",
+        "value": "HAMAR",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "ae251f561b641184213634f8e26da7a19484ea1e8de852bb445ab7f07f9ef8b6"
+        ],
+        "id": "9692c8de50721d199d415cd620d2796d2bb417efeb89b70faab884d4a7383087",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:16.553637Z",
+        "last_observed_at": "2026-11-06T07:45:29.357330Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.registered_activity",
+        "value": [
+          "Salg av smykker via internett og annen beslektet virksomhet."
+        ],
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e15ff3ba865a1e1bd300d0cca7bf5c1f41f62afc480be8895488b4599fe920cc"
+        ],
+        "id": "e291064e02199e6aa537b3ca55b37d7886fb60563133cd103d13803577624058",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:16.553637Z",
+        "last_observed_at": "2026-11-06T07:45:29.357330Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.nace1",
+        "value": {
+          "beskrivelse": "Detaljhandel med ur, klokker og smykker",
+          "kode": "47.770"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "de961e878801338d5680112af48168723735057e063d7856eeb9a0a8f6e9e5d3"
+        ],
+        "id": "42362b5c3054151071964175b337a6930a97fa97440733b55a6fe0cd4fac939a",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:16.553637Z",
+        "last_observed_at": "2026-11-06T07:45:29.357330Z",
+        "reasons": {}
+      },
+      {
+        "field": "accounts.revenue",
+        "value": 1694907.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "3fcd07cc53bc7040c32b42e4134fb24d838aa55cc4582b9cfbcdfff9842bf07f",
+          "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+          "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa"
+        ],
+        "id": "52770e490879e426a45c6d3555fd05875057b286a5337f9560fe70a610ce4fd0",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:23.695683Z",
+        "last_observed_at": "2026-11-06T07:45:36.520688Z",
+        "reasons": {
+          "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+        }
+      }
+    ],
+    "change_claims": [],
+    "evidence": [
+      {
+        "id": "0e450a23b54261c203b16691c377cb47fcd43dd640f70759f6323a8f99e5e9a9",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/913672682",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:29.357330Z",
+        "content_sha256": "252ac23fe09c0b8d0df48811ba8c0aa04b4695327e5218d626a20ead0ae73cb0",
+        "claim_span": "d ur, klokker og smykker\",\"kode\":\"47.770\"},\"navn\":\"A-HJORT AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"913672682\",\"paategninger\":[],\"postadresse\":{\"adresse\":[\"",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "ae251f561b641184213634f8e26da7a19484ea1e8de852bb445ab7f07f9ef8b6",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/913672682",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:29.357330Z",
+        "content_sha256": "252ac23fe09c0b8d0df48811ba8c0aa04b4695327e5218d626a20ead0ae73cb0",
+        "claim_span": ":[\"v/Flyt Revisjon AS\",\"Vangsvegen 73\"],\"kommune\":\"HAMAR\",\"kommunenummer\":\"3403\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2317\",\"poststed\":\"HAMAR\"},\"fravalgRevisjonDato\":\"2014-07-16\",\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Private aksjese",
+        "locator": "/forretningsadresse/kommune",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "e15ff3ba865a1e1bd300d0cca7bf5c1f41f62afc480be8895488b4599fe920cc",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/913672682",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:29.357330Z",
+        "content_sha256": "252ac23fe09c0b8d0df48811ba8c0aa04b4695327e5218d626a20ead0ae73cb0",
+        "claim_span": "tsregisteret/api/enheter/913672682\"}},\"aktivitet\":[\"Salg av smykker via internett og annen beslektet virksomhet.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"v/Flyt Revisjon AS\",\"Vangsvegen 73\"],\"kommune\":\"HAMAR\",\"kommunenummer\":\"3403\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2317\",\"po",
+        "locator": "/aktivitet",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "de961e878801338d5680112af48168723735057e063d7856eeb9a0a8f6e9e5d3",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/913672682",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:29.357330Z",
+        "content_sha256": "252ac23fe09c0b8d0df48811ba8c0aa04b4695327e5218d626a20ead0ae73cb0",
+        "claim_span": "onkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med ur, klokker og smykker\",\"kode\":\"47.770\"},\"navn\":\"A-HJORT AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"",
+        "locator": "/naeringskode1",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+        "source_url": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-06T07:45:36.522764Z",
+        "content_sha256": "ce6d8aa88fe1ef79694971db30a737b193f61e44fe0a59c82472a07c8571cd9a",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 3,546.3\nProfit for the period 510.4\n",
+        "locator": "pdf:page145:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf#pdf_sha256=fe379ce4f1ee133068b59c82fd1a7e25bc72c1459ba9e91a02d6621f2466414a",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa",
+        "source_url": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-06T07:45:36.524268Z",
+        "content_sha256": "5652a2bd722a20e705e83c494e24f37dd598c522e1600fc78e32a7ee222795a0",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 53\nNet income (loss) 4,063\n",
+        "locator": "pdf:page176:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf#pdf_sha256=c0e145933ff95654d05faed3b45b2eab327aa9d5ff712eeac5adad22f528f7ba",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3fcd07cc53bc7040c32b42e4134fb24d838aa55cc4582b9cfbcdfff9842bf07f",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/913672682",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:36.520688Z",
+        "content_sha256": "969693fd7823330ce4cd0525638e950de20e825616d09104b8d7c7bb2b7be8ec",
+        "claim_span": "{\"salgsinntekter\":1694907.00,\"sumDriftsinntekter\":1694907.00},\"driftskostnad\":{\"sumDriftskostnad\":1754734.00}}}}]",
+        "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        }
+      }
+    ]
+  },
+  {
+    "organisation_number": "932790858",
+    "company": "A-DVENTURES AS",
+    "brief": {
+      "what": [
+        {
+          "text": "A-DVENTURES AS is based in Oslo, with NOK 0 in revenue in FY2025.",
+          "claim_ids": [
+            "01930dfd92ca1c92adefa5b8c1c5d75a981d44b2c9bc1f895e2f94421d8bb280",
+            "b7891e47ef6e1cddedb8eec42e1a4f7bec383b2a9bca1657cdbb99aa739b4035",
+            "6a8d3e2ec579997ba75553e709a02579dfedbadae80cd2a60018b95d7d5f0dcb"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        },
+        {
+          "text": "Registered activity: «Investering i aksjer og verdipapirer.».",
+          "claim_ids": [
+            "1500ce8290b4a62c1aa60adce67da4a79c5ce796bc8dff7f4a0c2d429bc9914e"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        }
+      ],
+      "changes": [
+        {
+          "text": "No changes since 2026-11-06.",
+          "claim_ids": [
+            "0b4d26fa4948859c2a0df3fb15bee1b6fb731d7c2c9d296e93b18876d28d5674"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        }
+      ],
+      "unknowns": [
+        {
+          "text": "News and activity: not found (no_verified_website).",
+          "claim_ids": [
+            "58174e858cbc8d442bdfe38a8d9170573f4c8e8439141db979afca8e31683c49"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        },
+        {
+          "text": "Jobs: not found (no supported items in the checked sources).",
+          "claim_ids": [
+            "fb673c9195ae5dcbc8dfe0480997ba99d1cd9a9b9c13e423b6f427b1a722f1c9"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        },
+        {
+          "text": "Website and social: not found (robots).",
+          "claim_ids": [
+            "bbd3619a5cfe76a7d5d041bac921df6d20ed2980f9d5eeccee413cda3042435e"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null
+        }
+      ],
+      "context_claims": [
+        {
+          "id": "0b4d26fa4948859c2a0df3fb15bee1b6fb731d7c2c9d296e93b18876d28d5674",
+          "field": "snapshot.refresh",
+          "value": {
+            "mode": "refresh",
+            "previous_completed_at": "2026-11-06T07:44:24.190251Z",
+            "changes": 0
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "58174e858cbc8d442bdfe38a8d9170573f4c8e8439141db979afca8e31683c49",
+          "field": "snapshot.section.activity",
+          "value": {
+            "state": "not_available",
+            "reasons": [
+              "no_verified_website"
+            ],
+            "stale": null
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "fb673c9195ae5dcbc8dfe0480997ba99d1cd9a9b9c13e423b6f427b1a722f1c9",
+          "field": "snapshot.section.hiring",
+          "value": {
+            "state": "not_available",
+            "reasons": [],
+            "stale": null
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "bbd3619a5cfe76a7d5d041bac921df6d20ed2980f9d5eeccee413cda3042435e",
+          "field": "snapshot.section.website",
+          "value": {
+            "state": "not_available",
+            "reasons": [
+              "robots"
+            ],
+            "stale": null
+          },
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "field": "identity.legal_name",
+        "value": "A-DVENTURES AS",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "f1c639ee8e41b290223dbf17f1612f2281eddab6dff70c20a5b898f1b7c2b9d5"
+        ],
+        "id": "01930dfd92ca1c92adefa5b8c1c5d75a981d44b2c9bc1f895e2f94421d8bb280",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:15.805007Z",
+        "last_observed_at": "2026-11-06T07:45:28.571964Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.municipality",
+        "value": "OSLO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "4777fd3c6829c13efcda23b807fa17722a749f0a6a0a503645a44317c5f71133"
+        ],
+        "id": "b7891e47ef6e1cddedb8eec42e1a4f7bec383b2a9bca1657cdbb99aa739b4035",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:15.805007Z",
+        "last_observed_at": "2026-11-06T07:45:28.571964Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.registered_activity",
+        "value": [
+          "Investering i aksjer og verdipapirer."
+        ],
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "702372df419001545ae678b6fadaa1db93009fd7ce838e33e56feed1855eed29"
+        ],
+        "id": "1500ce8290b4a62c1aa60adce67da4a79c5ce796bc8dff7f4a0c2d429bc9914e",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:15.805007Z",
+        "last_observed_at": "2026-11-06T07:45:28.571964Z",
+        "reasons": {}
+      },
+      {
+        "field": "accounts.revenue",
+        "value": 0.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "99c3d6d0630877a7ec39db27ba6f90a16670c0154b23e758fb0c0d3a14885fc5",
+          "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+          "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa"
+        ],
+        "id": "6a8d3e2ec579997ba75553e709a02579dfedbadae80cd2a60018b95d7d5f0dcb",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T07:36:20.770927Z",
+        "last_observed_at": "2026-11-06T07:45:33.866894Z",
+        "reasons": {
+          "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+        }
+      }
+    ],
+    "change_claims": [],
+    "evidence": [
+      {
+        "id": "f1c639ee8e41b290223dbf17f1612f2281eddab6dff70c20a5b898f1b7c2b9d5",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/932790858",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:28.571964Z",
+        "content_sha256": "021eb70a0b30f99c1a6716078c36de5e130a033e6944b0bbc4e57c8235a9339b",
+        "claim_span": "{\"beskrivelse\":\"Uoppgitt\",\"kode\":\"00.000\"},\"navn\":\"A-DVENTURES AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"932790858\",\"paategninger\":[],\"registreringsdatoEnhet",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4777fd3c6829c13efcda23b807fa17722a749f0a6a0a503645a44317c5f71133",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/932790858",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:28.571964Z",
+        "content_sha256": "021eb70a0b30f99c1a6716078c36de5e130a033e6944b0bbc4e57c8235a9339b",
+        "claim_span": "De Villiers\",\"Theodor Løvstads vei 38\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"0286\",\"poststed\":\"OSLO\"},\"fravalgRevisjonBeslutningsDato\":\"2024-01-03\",\"fravalgRevisjonDato\":\"2024-01-09\",\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[{\"fraDato\":\"2024",
+        "locator": "/forretningsadresse/kommune",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "702372df419001545ae678b6fadaa1db93009fd7ce838e33e56feed1855eed29",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/932790858",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:28.571964Z",
+        "content_sha256": "021eb70a0b30f99c1a6716078c36de5e130a033e6944b0bbc4e57c8235a9339b",
+        "claim_span": "tsregisteret/api/enheter/932790858\"}},\"aktivitet\":[\"Investering i aksjer og verdipapirer.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"c/o Alistair De Villiers\",\"Theodor Løvstads vei 38\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"0286\",\"poststed\":",
+        "locator": "/aktivitet",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+        "source_url": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-06T07:45:33.886434Z",
+        "content_sha256": "ce6d8aa88fe1ef79694971db30a737b193f61e44fe0a59c82472a07c8571cd9a",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 3,546.3\nProfit for the period 510.4\n",
+        "locator": "pdf:page145:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf#pdf_sha256=fe379ce4f1ee133068b59c82fd1a7e25bc72c1459ba9e91a02d6621f2466414a",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa",
+        "source_url": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-06T07:45:33.886434Z",
+        "content_sha256": "5652a2bd722a20e705e83c494e24f37dd598c522e1600fc78e32a7ee222795a0",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 53\nNet income (loss) 4,063\n",
+        "locator": "pdf:page176:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf#pdf_sha256=c0e145933ff95654d05faed3b45b2eab327aa9d5ff712eeac5adad22f528f7ba",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "99c3d6d0630877a7ec39db27ba6f90a16670c0154b23e758fb0c0d3a14885fc5",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/932790858",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-06T07:45:33.866894Z",
+        "content_sha256": "888914ed3675544de322b835af2b1a03b0fce1597cac8c6fda4aaeefaf649900",
+        "claim_span": "kter\":{\"salgsinntekter\":0.00,\"sumDriftsinntekter\":0.00},\"driftskostnad\":{}}}}]",
+        "locator": "/1/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        }
+      }
+    ]
+  }
+]
