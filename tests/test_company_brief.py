@@ -24,7 +24,7 @@ def test_dated_no_change_and_stale_note_are_recomputed(tmp_path):
     row.run.sections['website'] = 'available'
     result = generate(row)
     assert result.brief.changes[0].text == 'No changes since 2026-11-05.'
-    assert any('stale' in s.text and 'dns_timeout' in s.text and '2026-11-06' in s.text for s in result.brief.unknowns)
+    assert any('stale' in s.text and "the source couldn't be reached during the run" in s.text and '2026-11-06' in s.text for s in result.brief.unknowns)
     changed = result.brief.model_copy(deep=True)
     changed.changes[0].text = 'No changes since 2026-11-01.'
     with pytest.raises(ValueError, match='Unsupported company brief'):
@@ -67,3 +67,30 @@ def test_writer_rejects_a_forged_brief(tmp_path):
     with pytest.raises(ValueError, match='Unsupported company brief'):
         write(tmp_path / 'forged.jsonl', [row], 'union', BlobStore(cfg.state_dir))
     assert not (tmp_path / 'forged.jsonl').exists()
+
+
+@pytest.mark.parametrize('code,words', [
+    ('no_verified_website','no verified company website was found'),
+    ('robots','the website blocks automated access (robots.txt)'),
+    ('website_timeout',"the source couldn't be reached during the run"),
+    ('dns_servfail',"the source couldn't be reached during the run"),
+    ('group_site','only a shared group website was found'),
+    ('ambiguous',"a match couldn't be confirmed for this exact company"),
+    ('unrecognised_internal_code','the source did not provide a supported result'),
+])
+def test_unknown_reasons_are_plain_english_with_identical_citations(tmp_path, code, words):
+    from signalpost.models.envelope import Error
+    from signalpost.models.evidence import digest
+    row,_=envelope(tmp_path)
+    row.run.sections['website']='failed'
+    row.errors=[e for e in row.errors if e.section!='website']+[Error(section='website',code=code,message='Test')]
+    result=generate(row)
+    sentence=next(s for s in result.brief.unknowns if s.text.startswith('Website and social:'))
+    assert words in sentence.text
+    assert '(' + code + ')' not in sentence.text
+    info={'state':'failed','reasons':[code],'stale':None}
+    assert sentence.claim_ids==[digest(['snapshot-context',row.organisation_number,'snapshot.section.website',info])]
+    validate(result.brief,result,row)
+    forged=result.brief.model_copy(deep=True)
+    next(s for s in forged.unknowns if s.text.startswith('Website and social:')).text=f'Website and social: failed ({code}).'
+    with pytest.raises(ValueError):validate(forged,result,row)
