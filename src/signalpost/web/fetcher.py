@@ -205,7 +205,7 @@ class WebsiteHttp:
                     failure=SourceFailure('website_timeout')
                     failure.http_status=event.get('status') or 0
                     raise failure from exc
-                except (httpx.NetworkError, httpx.ProtocolError) as exc:
+                except (httpx.NetworkError, httpx.ProtocolError, ssl.SSLError, ConnectionError) as exc:
                     event["error"] = type(exc).__name__
                     code = transport_failure_code(exc)
                     event["failure_code"] = code

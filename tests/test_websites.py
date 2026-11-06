@@ -288,12 +288,14 @@ def test_registered_network_failure_carries_previous_proof(tmp_path, monkeypatch
     assert next(c for c in second['claims'] if c['field'] == 'official_website')['carried_forward']
 
 
-def test_slug_timeout_is_failed_not_checked_absence(tmp_path, monkeypatch):
+def test_speculative_slug_timeout_does_not_fail_section(tmp_path, monkeypatch):
     def offline(request):
         raise httpx.ReadTimeout("timeout", request=request)
     _, row, _, _ = execute_web(tmp_path, monkeypatch, response=offline, website="")
-    assert row['run']['sections']['website'] == 'failed'
-    assert any(e['code']=='website_source_unavailable' for e in row['errors'])
+    assert row['run']['sections']['website'] == 'not_available'
+    assert not any(e['code']=='website_source_unavailable' for e in row['errors'])
+    attempts=json.loads(next(e['message'] for e in row['errors'] if e['code']=='website_candidates'))
+    assert any(a.get('candidate_not_reachable') for a in attempts)
 
 
 def test_document_title_excludes_svg_titles():

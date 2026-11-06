@@ -86,3 +86,35 @@ def test_proof_page_order_preserves_legacy_links_then_common_paths():
     assert targets[:3]==['https://exampleservices.no/kontakt','https://exampleservices.no/about','https://exampleservices.no/om-oss']
     assert targets.index('https://exampleservices.no/about') < targets.index('https://exampleservices.no/personvern')
     assert len(targets)<=7
+
+
+@pytest.mark.parametrize('origin,expected',[
+    ('legal_name_slug','not_available'),('registry_email','not_available'),
+    ('subunit_registry_email','not_available'),('registry_website','failed'),
+    ('subunit_registry_website','failed'),('wikidata_website','failed'),
+    ('previous_verified','failed')])
+@pytest.mark.parametrize('code',['dns_timeout','dns_servfail','no_such_domain','website_tls_error','website_connect_error','website_timeout'])
+def test_candidate_transport_failure_only_fails_strong_sources(tmp_path,monkeypatch,origin,expected,code):
+    from signalpost.web import collector
+    from tests.test_websites import execute_web
+    candidate=Candidate('https://example.com/','example.com',origin)
+    monkeypatch.setattr(collector,'generate',lambda context:[candidate])
+    if origin=='previous_verified':
+        monkeypatch.setattr(collector,'previous_nomination',lambda *args:(candidate,None))
+    async def fail(self,*args,**kwargs):raise SourceFailure(code)
+    monkeypatch.setattr(WebsiteHttp,'candidate',fail)
+    _,row,_,_=execute_web(tmp_path,monkeypatch)
+    assert row['run']['sections']['website']==expected
+    assert not any(c['field']=='official_website' for c in row['claims'])
+
+
+
+def test_unwrapped_ssl_error_on_speculative_candidate_is_not_section_exception(tmp_path,monkeypatch):
+    import ssl
+    from signalpost.web import collector
+    from tests.test_websites import execute_web
+    monkeypatch.setattr(collector,'generate',lambda context:[Candidate('https://example.com/','example.com','legal_name_slug')])
+    def response(request):raise ssl.SSLError('TLS handshake failed')
+    _,row,_,_=execute_web(tmp_path,monkeypatch,response=response,website_transient_retry=False)
+    assert row['run']['sections']['website']=='not_available'
+    assert not any(e['code']=='section_exception' for e in row['errors'])

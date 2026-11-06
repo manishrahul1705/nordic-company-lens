@@ -16,6 +16,8 @@ from .proof import score, phone, extract_entity_cards, find_containing_card
 from .social import discover, profile_url, attributed, observed_profiles, matches_profile, company_names
 
 
+STRONG_CANDIDATE_ORIGINS = frozenset({'registry_website', 'subunit_registry_website', 'wikidata_website'})
+
 def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
     raw = xml_body.decode('utf-8', errors='replace')
     if re.search(r'<!\s*(?:DOCTYPE|ENTITY)', raw, re.I): return []
@@ -248,7 +250,6 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
     source_unavailable = False
     registry_failed = False
     refresh_failed = False
-    fetchable_failures = set()
     checked = set()
     refuted_previous_website = False
     from .brands import actual_names,candidates as brand_candidates
@@ -443,22 +444,22 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                             break
                     except SourceFailure: pass
         except SourceFailure as exc:
-            is_authoritative = candidate.origin in {'registry_website', 'subunit_registry_website'} or (refresh_candidate and candidate.domain == refresh_candidate.domain)
-            known_source = candidate.origin in {'registry_website', 'subunit_registry_website', 'registry_email', 'subunit_registry_email', 'nav_employer_homepage'} or (refresh_candidate and candidate.domain == refresh_candidate.domain)
+            is_authoritative = candidate.origin in STRONG_CANDIDATE_ORIGINS or (refresh_candidate and candidate.domain == refresh_candidate.domain)
+            known_source = is_authoritative
             absent_guess = exc.code == 'no_such_domain' and not known_source
-            if not absent_guess and exc.code in {'website_timeout','website_connect_error','website_tls_error','website_http_5xx','dns_timeout','dns_error','dns_servfail','dns_unavailable','body_cap','no_such_domain','redirect_limit','content_type'}:
+            if known_source and not absent_guess and exc.code in {'website_timeout','website_connect_error','website_tls_error','website_http_5xx','dns_timeout','dns_error','dns_servfail','dns_unavailable','body_cap','no_such_domain','redirect_limit','content_type'}:
                 source_unavailable = True
-                fetchable_failures.add(candidate.domain)
                 if known_source:
                     registry_failed = True
                 if refresh_candidate and candidate.domain == refresh_candidate.domain:
                     refresh_failed = True
-            attempts.append({"domain": candidate.domain,'origin':candidate.origin, "level": "BLOCKED" if exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"} else "LOW", "reason": exc.code})
+            attempts.append({"domain": candidate.domain,'origin':candidate.origin, "level": "BLOCKED" if exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"} else "LOW", "reason": exc.code, "candidate_not_reachable": not known_source and exc.code in {"website_timeout","website_connect_error","website_tls_error","dns_timeout","dns_error","dns_servfail","dns_unavailable","no_such_domain"}})
             if exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"}:
                 blocked = blocked or is_authoritative
                 section.errors.append(Error(section="website", code=exc.code, message=f"{candidate.domain}: access refused"))
             if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
-                budget_hit = exc.code
+                # Exhausting speculative discovery cannot invalidate a checked absence.
+                budget_hit = exc.code if is_authoritative else None
                 break
     unique = {}
     for result in successes:
@@ -475,7 +476,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
             envelope.run.refresh.setdefault('website', {})['refuted_previous_website'] = True
             section.errors.append(Error(section='website', code='foreign_orgnr_on_previous_domain',
                                         message=f'Previous website {refresh_candidate.domain} refuted by foreign organization number'))
-        section.state = 'ambiguous' if len(choices)>1 or ambiguous else 'blocked' if blocked else 'failed' if registry_failed or refresh_failed or (fetchable_failures and not checked) or budget_hit else 'not_available'
+        section.state = 'ambiguous' if len(choices)>1 or ambiguous else 'blocked' if blocked else 'failed' if registry_failed or refresh_failed or budget_hit else 'not_available'
         if source_unavailable:
             section.errors.append(Error(section="website", code="website_source_unavailable", message="A candidate source could not be checked"))
         if budget_hit:

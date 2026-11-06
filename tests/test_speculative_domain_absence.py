@@ -13,8 +13,8 @@ from signalpost.web.candidates import Candidate
     ([], [], 'not_available'),
     (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
     (['registry_website'], ['no_such_domain'], 'failed'),
-    (['registry_email'], ['no_such_domain'], 'failed'),
-    (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+    (['registry_email'], ['no_such_domain'], 'not_available'),
+    (['nav_employer_homepage'], ['website_timeout'], 'not_available'),
     (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
 ])
 def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
