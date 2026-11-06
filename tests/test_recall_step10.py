@@ -55,6 +55,11 @@ def test_registry_tier_b_rejects_explicit_different_copyright_owner():
     assert score(p,ORG,CONTEXT,'registry_website',[],nominated_contacts=True).reason=='different_legal_entity'
 
 
+def test_corporate_parent_mention_does_not_override_own_publisher():
+    p=page('Example AS Call 12345678. Eies av konsernet Different AS. <footer>Copyright 2026 Example AS</footer>')
+    assert score(p,ORG,CONTEXT,'registry_website',[],nominated_contacts=True).level=='VERIFIED'
+
+
 def test_any_registered_subunit_id_can_prove_parent_site():
     context={**CONTEXT,'subunits':[{'orgnr':SUB,'name':'Trading Shop'}]}
     proof=candidate_proof(page('Trading Shop Org nr '+SUB),ORG,context,Candidate('https://example.no','example.no','registry_email'),[],SimpleNamespace())

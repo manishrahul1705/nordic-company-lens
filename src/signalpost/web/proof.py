@@ -255,6 +255,8 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
     for label in re.findall(r'(?:copyright|\u00a9|owned by|utgitt av|eies av)\s*(?:\u00a9\s*)?(?:20\d\d\s*)?([^|<>\n]{1,100}?\b(?:AS|ASA|AB|Ltd|GmbH|Oy)\b)', page.owner_text, re.I):
         if re.search(r'web levert av|website by|design|nettside|utviklet av',label,re.I):continue
         label = re.split(r'owned by|utgitt av|eies av',label,flags=re.I)[-1]
+        # Corporate share ownership is not the site's publisher identity.
+        if re.match(r'\s*(?:konsernet|gruppen|the group)\b',label,re.I):continue
         label = re.sub(r'copyright|all rights reserved|all[e]? rettigheter reservert|\b(?:19|20)\d\d(?:\s*[-\u2013]\s*(?:19|20)\d\d)?\b',' ',label,flags=re.I)
         normalized = ' '.join(re.findall(r'\w+', label.casefold()))
         if normalized not in expected:
