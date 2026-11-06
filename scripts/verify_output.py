@@ -52,7 +52,32 @@ def ids(rows):
     return {r["organisation_number"]: sorted(c["id"] for c in (r if "claims" in r else r["profile"])["claims"]) for r in rows}
 
 
-def verify(first, state_dir, count, organisations=None, report=None, require_clean=False, second=None):
+def section_summary(rows):
+    """Report optional-source problems honestly, including preserved stale states."""
+    issues=[]
+    for row in rows:
+        data=row if 'claims' in row else row['profile']
+        sections=row['run']['sections'] if 'run' in row else data['sections']
+        refresh=row['run']['refresh'] if 'run' in row else data['refresh']
+        stale=refresh.get('stale_sections',{})
+        for family,state in sections.items():
+            if state not in {'failed','blocked'} and family not in stale:continue
+            reasons=[]
+            for e in data.get('errors',[]):
+                if e['section']!=family:continue
+                if e['code']=='website_candidates':
+                    try:
+                        codes=sorted({d['reason'] for d in json.loads(e['message']) if d.get('reason')})
+                        reasons.append({'code':e['code'],'candidate_failure_reasons':codes})
+                        continue
+                    except (TypeError,ValueError):pass
+                reasons.append({'code':e['code'],'message':e['message'][:240]})
+            issues.append({'organisation_number':row['organisation_number'],'section':family,'state':state,
+                           'stale':stale.get(family),'reasons':reasons})
+    return issues
+
+
+def verify(first, state_dir, count, organisations=None, report=None, require_clean=False, second=None, clean_sections=None):
     rows = load(first)
     assert len(rows) == count, f"Expected {count}, got {len(rows)}"
     repeated={}
@@ -93,6 +118,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                 assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
+    issues=section_summary(rows)
+    if require_clean:result['failed_or_stale_sections']=issues
     if report is not None:
         metrics = json.loads(report.read_text(encoding='utf8'))
         assert metrics['emitted_envelopes'] == len(rows)
@@ -103,7 +130,11 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
             assert not metrics['output_limit_exceeded']
             for row in rows:
                 sections = row['run']['sections'] if 'run' in row else row['profile']['sections']
-                assert all(state in {'available', 'not_available', 'not_applicable', 'ambiguous'} for state in sections.values()), 'Incomplete smoke-test section'
+                selected=set(sections) if clean_sections is None else set(clean_sections)
+                assert selected<=set(sections), 'Required clean sections missing from output'
+                assert all(sections[family] in {'available', 'not_available', 'not_applicable', 'ambiguous'} for family in selected), 'Incomplete smoke-test section'
+                refresh=row['run']['refresh'] if 'run' in row else row['profile']['refresh']
+                assert not selected & set(refresh.get('stale_sections',{})), 'Stale required smoke-test section'
     if second is not None:
         rerun = load(second)
         for row in rerun:verify_synthesis(row)
@@ -127,8 +158,11 @@ def main():
     parser.add_argument('--organisations', type=Path)
     parser.add_argument('--report', type=Path)
     parser.add_argument('--require-clean', action='store_true')
+    parser.add_argument('--clean-sections', nargs='+', choices=['identity','roles','accounts','subunits','website','hiring','activity'],
+                        help='Limit --require-clean section health checks; all schema/evidence and global safety checks remain strict')
     args = parser.parse_args()
-    print(json.dumps(verify(args.first, args.state_dir, args.count, args.organisations, args.report, args.require_clean, args.second)))
+    if args.clean_sections and not args.require_clean:parser.error('--clean-sections requires --require-clean')
+    print(json.dumps(verify(args.first, args.state_dir, args.count, args.organisations, args.report, args.require_clean, args.second,args.clean_sections)))
 
 
 if __name__ == "__main__":

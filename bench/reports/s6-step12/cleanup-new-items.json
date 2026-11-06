@@ -1,0 +1,231 @@
+[
+  {
+    "organisation_number": "823147112",
+    "company": "KN ELEKTRO AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://knelektro.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "legal_name_and_registry_contact",
+      "proof_page_url": "https://knelektro.no/",
+      "signals": [
+        "exact_legal_name",
+        "street",
+        "postcode_city"
+      ],
+      "points": 6,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "f77779e0e10dd8209ac7f237dbe017f2fa670a842f0a86ea64b1f28c753d6f4a",
+        "source_url": "https://knelektro.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-06T10:20:33.454145Z",
+        "content_sha256": "0d73181d11d3769980bbe77e3407bf981ba35067424e17b37699e577636256d6",
+        "claim_span": "or-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><b>OM KN ELEKTRO AS</b></p>\n<p>KN Elektro AS har lang erfaring innen ulike elektriske installasjoner og er veldig opptatt av deg som kunde. Vi ønsker å levere de beste produktene og tjenestene til enhver tid.</p>\n<p>Våre ansatte har lang erfaring og alle nødvendige ",
+        "locator": "identity-proof:823147112",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct: exact KN Elektro AS identity plus registered Roresanden 109, 4885 Grimstad; Insite Media AS is explicitly credited as the website developer, not publisher."
+  },
+  {
+    "organisation_number": "823147112",
+    "company": "KN ELEKTRO AS",
+    "field": "social_profile.19b491ae8376e3f94d32",
+    "value": {
+      "url": "https://www.facebook.com/KN-Elektro-As-104194150969215",
+      "platform": "facebook.com"
+    },
+    "evidence": [
+      {
+        "id": "733e565bb1bba050d54c547bb663cab612effeca793ae58f25f5a85072a6345c",
+        "source_url": "https://knelektro.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-06T10:20:33.454145Z",
+        "content_sha256": "0d73181d11d3769980bbe77e3407bf981ba35067424e17b37699e577636256d6",
+        "claim_span": "a property=\"article:publisher\" content=\"https://www.facebook.com/KN-Elektro-As-104194150969215\" />\n\t<meta property=\"article:modified_time\" content=\"2026-08-14T18:03:09+00:00\" />\n\t<meta property=\"og:image\" content=\"https://knelektro.no/wp-content/uploads/2020/03/Slider001-scaled.jpg\" />\n\t<meta proper",
+        "locator": "company-link:https://www.facebook.com/KN-Elektro-As-104194150969215",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct: publisher metadata on the verified KN Elektro site nominates this company-named Facebook profile; it is not a share link or agency credit."
+  },
+  {
+    "organisation_number": "968386085",
+    "company": "LOFOTPOSTEN AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.lofotposten.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "legal_name_and_registry_contact",
+      "proof_page_url": "https://www.lofotposten.no/",
+      "signals": [
+        "exact_legal_name",
+        "phone"
+      ],
+      "points": 4,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "52eb56eff47283485f561b022be7327992edb3165fb574ff9cf99901290eddad",
+        "source_url": "https://www.lofotposten.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-06T10:20:33.454145Z",
+        "content_sha256": "da13acf672a6c5ab38f965875788619db48276b6de2da4d8e734025355a1dfe0",
+        "claim_span": "4000</li>\n                <li>Utgitt av Lofotposten AS</li>\n        <li>\n            <a href=\"/vis/annonseinnstillinger\">Personverninnstillinger</a>\n        </li>\n    </ul>\n    <p>Alt innhold og tilhørende data på våre nettsider er underlagt opphavsrett og kan ikke brukes uten samtykke. Dette gjelde",
+        "locator": "identity-proof:968386085",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct: footer explicitly says Utgitt av Lofotposten AS and the registry phone matches; generic publisher-prefix fix prevents the own publisher being treated as foreign."
+  },
+  {
+    "organisation_number": "926490060",
+    "company": "CONTROL SOLUTIONS AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.control-solutions.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://www.control-solutions.no/",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "bb3cb850f8bbc78a8134e3cc45148d252664fc8464267035eba6804054603d60",
+        "source_url": "https://www.control-solutions.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-06T10:20:33.454145Z",
+        "content_sha256": "67ae30ad9f39cdb75b0636851cd40a3e8586be594200ae841cee88cc23c64497",
+        "claim_span": ";white-space:pre-wrap;\" class=\"\">Org.nr 926 490 060  •  Design av <a href=\"https://www.visuella.as\">VISUELLA</a></p></div>\n\n\n  \n<style id=\"container-s",
+        "locator": "identity-proof:926490060",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct: publisher footer shows own organisation number 926 490 060 and business contact/address; title CONTROL SOLUTION AS is a singular/plural spelling variant of registered CONTROL SOLUTIONS AS, with the same AS legal form."
+  },
+  {
+    "organisation_number": "926490060",
+    "company": "CONTROL SOLUTIONS AS",
+    "field": "social_profile.d6ed8e08a0a64f44813c",
+    "value": {
+      "url": "https://www.facebook.com/ControlSolutionsAS",
+      "platform": "facebook.com"
+    },
+    "evidence": [
+      {
+        "id": "9cab6d9999871425f2d6dbcbbcda455a7bc969c8a9cd115c4fc3b89a4d40083d",
+        "source_url": "https://www.control-solutions.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-06T10:20:33.454145Z",
+        "content_sha256": "67ae30ad9f39cdb75b0636851cd40a3e8586be594200ae841cee88cc23c64497",
+        "claim_span": "<a class=\"icon icon--fill  header-icon header-icon-border-shape-circle header-icon-border-style-outline\"  style=\"box-shadow: 0px 0px 0px 1px inset\" href=\"https://www.facebook.com/ControlSolutionsAS\" target=\"_blank\" aria-label=\"Facebook\">",
+        "locator": "company-link:https://www.facebook.com/ControlSolutionsAS",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct: ControlSolutionsAS Facebook link appears in the header of the own-orgnr-verified site and matches the legal name."
+  },
+  {
+    "organisation_number": "926490060",
+    "company": "CONTROL SOLUTIONS AS",
+    "field": "social_profile.1d253c5e5136668f8fdf",
+    "value": {
+      "url": "https://www.instagram.com/control_solution_as",
+      "platform": "instagram.com"
+    },
+    "evidence": [
+      {
+        "id": "178565a4cf2213f013e995cfebdc5022a079a9788ce2b529a8bcbcb4bd30b339",
+        "source_url": "https://www.control-solutions.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-06T10:20:33.454145Z",
+        "content_sha256": "67ae30ad9f39cdb75b0636851cd40a3e8586be594200ae841cee88cc23c64497",
+        "claim_span": "<a class=\"icon icon--fill  header-icon header-icon-border-shape-circle header-icon-border-style-outline\"  style=\"box-shadow: 0px 0px 0px 1px inset\" href=\"https://www.instagram.com/control_solution_as/\" target=\"_blank\" aria-label=\"Instagram\">",
+        "locator": "company-link:https://www.instagram.com/control_solution_as",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct: control_solution_as Instagram link is in the same verified header and matches the declared singular brand/title spelling."
+  },
+  {
+    "organisation_number": "995445611",
+    "company": "GS ELEKTRO GJØVIK AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://gsel.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://gsel.no/",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "d7d165ac55e6fa6c976031ba0431379eca25fced75fec2ce42f8e35ebc294012",
+        "source_url": "https://gsel.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-06T10:20:33.454145Z",
+        "content_sha256": "7067372dca68291c82f7a6c6a15a3b3158b537a12d45a522bf48994571d6202d",
+        "claim_span": "TRO<span>GJØVIK AS</span></a><p>Org.nr. 995 445 611</p><p>© 2026 GS Elektro Gjøvik AS</p></div></footer><!--$--><!--/$--><div hidden=\"\"><!--$--><div h",
+        "locator": "identity-proof:995445611",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct: footer explicitly names GS Elektro Gj?vik AS and own organisation number 995 445 611; split GS ELEKTRO / GJ?VIK AS HTML nodes form the complete publisher identity. Registry output remains unchanged."
+  }
+]

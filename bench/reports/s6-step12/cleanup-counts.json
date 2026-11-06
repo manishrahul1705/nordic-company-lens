@@ -1,0 +1,42 @@
+{
+  "method": "generic veto recheck on reviewed Step 11 envelopes and captured Step 11 pages only; no HTTP, no replacement candidates, no new timing measurement",
+  "before": {
+    "identity": 1000,
+    "roles": 997,
+    "subunits": 774,
+    "accounts": 999,
+    "website": 103,
+    "hiring": 3,
+    "activity": 236,
+    "social": 41,
+    "location_profiles": 997
+  },
+  "after": {
+    "identity": 1000,
+    "roles": 997,
+    "subunits": 774,
+    "accounts": 999,
+    "website": 107,
+    "hiring": 3,
+    "activity": 236,
+    "social": 43,
+    "location_profiles": 997
+  },
+  "old_claim_ids_removed": 0,
+  "rechecked_failed_company_candidates": 42,
+  "previous_website_guard_bodies_checked": 104,
+  "previous_website_guard_vetoes": 0,
+  "missing_previous_website_bodies": [
+    {
+      "organisation_number": "911691248",
+      "url": "https://www.pederistad.no/",
+      "sha256": "58470eb16cd4ccb2b42a170fbc21c405bada197e2071da426d6652f5ddb8c6a9",
+      "new_common_guard_veto": null,
+      "body_missing": true,
+      "assessment": "historical claim preserved unchanged; not revalidated"
+    }
+  ],
+  "new_websites_reviewed": 4,
+  "new_social_urls_reviewed": 3,
+  "wrong_company_additions": 0
+}

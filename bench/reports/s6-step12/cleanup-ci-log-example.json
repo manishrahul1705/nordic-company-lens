@@ -1,0 +1,23 @@
+{
+  "lines": 1,
+  "schema_valid": true,
+  "published_claims": 9,
+  "source_blobs_verified": 2,
+  "synthesis_companies": 1,
+  "synthesis_sentences": 4,
+  "synthesis_unverified_values": 0,
+  "failed_or_stale_sections": [
+    {
+      "organisation_number": "923609016",
+      "section": "website",
+      "state": "failed",
+      "stale": null,
+      "reasons": [
+        {
+          "code": "dns_timeout",
+          "message": "Public source timed out"
+        }
+      ]
+    }
+  ]
+}

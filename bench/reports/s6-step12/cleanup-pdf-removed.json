@@ -1,0 +1,11 @@
+{
+  "pypdf_importable": false,
+  "annual_module_importable": false,
+  "pdftext_module_importable": false,
+  "runtime_requirements": [
+    "dnspython<3,>=2.7",
+    "httpx<1,>=0.28",
+    "pydantic<3,>=2.12",
+    "tldextract<6,>=5.3"
+  ]
+}

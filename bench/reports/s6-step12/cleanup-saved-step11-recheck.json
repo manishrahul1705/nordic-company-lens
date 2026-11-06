@@ -1,0 +1,955 @@
+{
+  "method": "generic veto recheck on reviewed Step 11 envelopes and captured Step 11 pages only; no HTTP, no replacement candidates, no new timing measurement",
+  "lost_published_claims": [],
+  "baseline_website_guards": [
+    {
+      "organisation_number": "919653477",
+      "url": "https://vokser.no/",
+      "sha256": "f56fd223756a1a8b4336d1158757c398166410d3864afb621f171078ee4de028",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "986739874",
+      "url": "https://www.aasbetong.no/",
+      "sha256": "610f46940f54b205a83485fefae46c97212e6695ad5a012236ac23751d3012ec",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "995748983",
+      "url": "https://maaemo.no/",
+      "sha256": "2d8bef62f1cbfbab81942901a50f4c734510b1edf02278853c5e183ad19a7434",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "922767459",
+      "url": "https://skoglundmaskin.no/",
+      "sha256": "effe7793871e5c869e9ad768c473444b460d25ebbd23de38c1c39bf3c5726c1c",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "929074009",
+      "url": "https://www.mulligangolf.no/",
+      "sha256": "4e829afa242df5b6098a096046f93a0b714eb9a69a115e69b0963ea38a666f27",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "999656099",
+      "url": "https://netad24.com/",
+      "sha256": "0eeb5780b7a6d10889d5562d6bbfdae729edb61166c9bf225f42eed5289acf0f",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "999656099",
+      "url": "https://netad24.com/",
+      "sha256": "0eeb5780b7a6d10889d5562d6bbfdae729edb61166c9bf225f42eed5289acf0f",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "914248906",
+      "url": "https://www.indigoboom.no/",
+      "sha256": "58cf1dd57c4aa2b05658d66b3c954adcb2a7e57dbc0c3db0ed420da13fccaf28",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "920918204",
+      "url": "https://stoaautorep.no/",
+      "sha256": "3fe70271651328f7285e8e9fc70128cd599dcc282035f62209e7be234c98009a",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "991368000",
+      "url": "https://ralstonbau.com/en",
+      "sha256": "dadf30e833971dc337a6bc92ad647bf2ec8f6aea5ba661452f6ac62a70508252",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "913876954",
+      "url": "https://www.orjeregnskap.no/",
+      "sha256": "05df976c37f7929b6a537d841e9338c3a915ec3c04b720f49a7c59f4b6728fc0",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "886757972",
+      "url": "https://www.primecargo.no/",
+      "sha256": "8cf11bc8a7276ad3637ccf164838f361d80f54c4d3eb5c5c1b100248c64957ac",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "928657523",
+      "url": "https://www.vivify.no/",
+      "sha256": "fbff3887e941345d05ea359aeef9f63bcbf87eaca8c61da83561891d94185f2d",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "932925982",
+      "url": "https://udelt.no/",
+      "sha256": "fb96d74e405521043ce50ca0e3a861421e702a16b5bb2954d3d4cf752d16d41e",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "970979026",
+      "url": "https://konseptbygg.no/kontakt.html",
+      "sha256": "59cb87d007f092b49fd0a6fad3b9f70c0118ff8a0629699cf642aad2a51f860f",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "987564911",
+      "url": "https://naringsokonomi.no/om-oss",
+      "sha256": "55df987c5f756296230eefa47db7979d9a6669e8afc2074ee7d31a777cde0406",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "936629466",
+      "url": "https://closva.com/",
+      "sha256": "486947f3d09b2300f1968c47f08e4c9d675802e231e09829ffe2bdc6e4941f0c",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "934929187",
+      "url": "https://www.koiearkitektur.no/",
+      "sha256": "2a95b22fa2db3e62349962e8c5c7468e447140db65d7738ebfa5fa228880b071",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "924912758",
+      "url": "https://www.borgbierstube.no/borg-bierstube-om-oss",
+      "sha256": "87b36d690b279023577b2c93fb9eab3f0a38a539d9efbc737150e98f2b9b990d",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "931069373",
+      "url": "https://www.fjeldeteknikk.no/personvern",
+      "sha256": "31fa7a4518f497d37be35f0fc02e6146acac4b87adb2395c698efd3039034dcc",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "911885875",
+      "url": "https://objectfront.no/",
+      "sha256": "7116b28cbb6741f6b2458b8a708ae8b326739291cc2dfe4a36bac2d3cdcb6e3d",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "932448459",
+      "url": "https://romerikevvs.no/",
+      "sha256": "dbea2050b2f94a90dd5632dc9cf662e4f43157d2cc4553416393dc275f2f20a8",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "893948112",
+      "url": "https://norskpublikumsutvikling.no/",
+      "sha256": "cc6bcb414d031453236a9728f3a1a26ab0074691a6e89782fbd89992697e99ba",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "994382217",
+      "url": "https://www.formosa.no/",
+      "sha256": "49bbbfeeccc6d925752c0c481ae858acda7cdecbad514b25aa1eed77b2871722",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "915118305",
+      "url": "https://heianelegesenter.no/",
+      "sha256": "6dde56750e07879fd9bcd90868c8818243a0f594a6190ee0672d78ad1c312bbc",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "935180678",
+      "url": "https://reneffekt.no/",
+      "sha256": "f5721f064edee1d3bf72d9615d1475b814265b9f0fb13f8c67b0f05972ad3911",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "936855865",
+      "url": "https://jakii.no/pages/contact",
+      "sha256": "8cb1125c8012a7c04cc51955aab0baa9bc0bfedd050b48448c9286fde83584ba",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "914283116",
+      "url": "https://balderapotek.no/kundeservice/",
+      "sha256": "56cd6c0f2d6d37ff2d2d3a4447cfc5f6bb6cc90bdf330722aefe2096d4bf8a68",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "983478999",
+      "url": "https://medietidsskrift.no/",
+      "sha256": "3b3b38a341b782c46a307b36461099aff234f43aa39041d5f884c0ff01a342c7",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "919276843",
+      "url": "https://www.holaugpukkverk.no/",
+      "sha256": "7f7a66ac1ce49cf4266c3cc0089097ec839c5843b57f1b4d14ff6988022cbbfa",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "997024311",
+      "url": "https://www.geonord.no/",
+      "sha256": "69167b4d3d8575e6ffeeda59337fece3643c9efeb432c87da76a80dbc230bc6c",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "987895276",
+      "url": "https://www.conplan.no/",
+      "sha256": "7cbaf8066371612a3ffbcecf2c532096b608b799e88105ed923f9f3ae6249bb6",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "934982762",
+      "url": "https://www.arkidal.no/",
+      "sha256": "e62784c7a2aeb532d208ff17483c771f87ce2e82a8c741192e6ec880c2c5771c",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "998236002",
+      "url": "https://www.scenemidt.no/",
+      "sha256": "1af0d40c19265a4c24626c86195a3dffc00346c47f0a7a8f4097e929afadf6b4",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "934620011",
+      "url": "https://ensure-it.eu/",
+      "sha256": "498f269a7ccee4c0c2c18dfce894e0ff77a729c7c185df2dc8a72d7de248e742",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "993372277",
+      "url": "https://realokonomi.no/",
+      "sha256": "403d6df4f3a0ed668e4fa5c64fbdb206abaa89479f6493f59ab339dd164c6304",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "924458100",
+      "url": "https://www.cannonball.no/",
+      "sha256": "13e1ae1a7f1667cd784895d19b4065d9fc06bba9d87e3d56eea9b008958b07cf",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "993014591",
+      "url": "https://storendyreklinikk.no/",
+      "sha256": "bcf4cf40449c33681aac2deee6b9edbad36cf63895e1b808049e2ab6f1ca7771",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "990012288",
+      "url": "https://tbmaskin.no/",
+      "sha256": "e7901ccaa4fc9fab3fa6dc47435dde4eb0c112fc748b458c7b9726b55f02a2ba",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "911691248",
+      "url": "https://www.pederistad.no/",
+      "sha256": "58470eb16cd4ccb2b42a170fbc21c405bada197e2071da426d6652f5ddb8c6a9",
+      "new_common_guard_veto": null,
+      "body_missing": true,
+      "assessment": "historical claim preserved unchanged; not revalidated"
+    },
+    {
+      "organisation_number": "811888672",
+      "url": "https://www.fusamek.no/",
+      "sha256": "eccda0ff8ccec0dca4651a8293b0ccaf54b3f94c89b728be6783ba480d60901e",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "951734543",
+      "url": "https://www.dodge.no/",
+      "sha256": "83d85e1afbb4b99041ef7f9cc97f8a97d10c5d78ca6b87cc6594cb7c1b4d4b6f",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "971349743",
+      "url": "https://muho.no/",
+      "sha256": "3e9fd317d0696f60642112078b8656d52263f0c75530f197a1bf5ab68e7f92ca",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "999329969",
+      "url": "https://x2.no/",
+      "sha256": "92263f46d41939f67b5c32d1c3057c2e45334f6d7cf71dae7cfe52975f6636b4",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "977107385",
+      "url": "https://isok.no/",
+      "sha256": "5f1af7d80c148e0097b7812c6b37ddfbc8f79861f68ec1587cec40f29e2fb6e5",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "923998012",
+      "url": "https://www.askoy24.no/",
+      "sha256": "485240174865faad68402d7b9f687c70520e14192b3cddcf8f2235960693166b",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "912189465",
+      "url": "https://www.luckyview.no/",
+      "sha256": "9ffd57da61da5ee4cc9b769a7eff8afb959bf8c5d37a1d4afb4ca29afb607ea5",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "980973549",
+      "url": "https://skogli.no/",
+      "sha256": "672465f4da573b004b99f3e6ae8400d0253a78c59219d414e2f188136419ff7a",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "938092516",
+      "url": "https://chamber.no/",
+      "sha256": "60c5d5783c2fa7c7cdcaa338338a3b7fb570b24c69ee94eddac410db5d498058",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "929481070",
+      "url": "https://snappy.no/About",
+      "sha256": "afe617be30f620087f8ffd0ab14cf28d94730bb982b160172631481293553c96",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "996979660",
+      "url": "https://www.valdresmeieriet.no/",
+      "sha256": "62acfbdd302116ce99069b4d860239304c912dd8a4e168ac7effae6b6a7f8e53",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "993919675",
+      "url": "https://www.tilsyn.no/",
+      "sha256": "a6bd8bb8dae1ffa0f8dfa6b114fa8a48fbe2194883107cfc8a2bb66ee705b118",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "939882480",
+      "url": "https://www.brynildsenslegat.no/",
+      "sha256": "02b9b569a7c78a2121d4bc84b277bc7bf42c3d38f0b73f3df7a9956ac77607c1",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "983520944",
+      "url": "https://www.spinellfrisor.no/",
+      "sha256": "a7118a5513018834cf8588a3a87540c87f62147460c6a8beee88987103ffb512",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "922828172",
+      "url": "https://www.tensio.no/no/kunde/kontakt-oss",
+      "sha256": "605e52d26f633ebbb6e4ac580f283418b6b1014c7fd0ad890283a740f42d3572",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "997897668",
+      "url": "https://www.quickminds.net/",
+      "sha256": "a1ff36671c796421655176dc9d93d9d1708651697c8d7291b412c34a74f4cc77",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "997897668",
+      "url": "https://www.quickminds.net/about-us",
+      "sha256": "3bfc6056b33acddd743e5e005344206fa7455fa60e9b1457dedc2c31793ad993",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "995654539",
+      "url": "https://www.takstmaaleng.no/",
+      "sha256": "e7eba5a5a9fcf38708f661104c5807c1a328c9a24f24a56752cef596353e3847",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "930832707",
+      "url": "https://dogleg.no/",
+      "sha256": "6f8a3b471eafa324bcf93bb2f72477741639a3a1d0050d71a36f674dd4015fea",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "989145509",
+      "url": "https://www.tangerin.no/",
+      "sha256": "3f38c0aef11b50bfce63602732efa4c454a864a4b2ae79e2c207b2c6551c1d27",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "930166030",
+      "url": "https://plump.no/",
+      "sha256": "6c59f3cd147b09809a764f789a2f38fd456c753ea815db242b346eb85c3d39a2",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "913485750",
+      "url": "https://www.handelsskolen.no/",
+      "sha256": "dfd422b20597ecaadf1561b78cf45aa99a7b61764a2cdd109630750a8da797a9",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "918000143",
+      "url": "https://www.ren-teknikk.no/",
+      "sha256": "030f91fb32dd6934491310f84deba6bc6e27c90ede41cac49638735d1c2879b2",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "997790952",
+      "url": "https://hillerenprosjektering.no/",
+      "sha256": "d0cd3a496aed33096620ef167950f7107536d77a9ed7bfe44b70a2ba8ad68407",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "992868775",
+      "url": "https://alfalagerhotell.no/",
+      "sha256": "2b295f7e1798be78e3788ada8b7054af0ec8be8c02190e5939012310c816faa8",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "917283109",
+      "url": "https://clbygg.no/",
+      "sha256": "f01aa19051530d9d5be05da8f1a9d190ddfde277049d8751819da27ef0d1e132",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "931613294",
+      "url": "https://mwap.no/",
+      "sha256": "85d509283a230d982bba75fc571e7ac09a6e454a09b9623eee7d9f3a0ceebe8b",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "918486666",
+      "url": "https://www.antisink.no/contact-us",
+      "sha256": "6b473b8002bcff0f1d49277e06bd15d93e71a6e123135334d1cdbc89cbb04812",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "934289099",
+      "url": "https://www.northgrey.no/",
+      "sha256": "db380804a11d39a2ff70ea0df560162b6a2fe6382aa88e1a932e8c72d1b9ad80",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "922187991",
+      "url": "http://www.ulsteinminilager.no/",
+      "sha256": "cf7f5f93e3e1f8f3a1f1eb173a9bb8b421c8622d71ea23e89e44f168cb124a83",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "982388449",
+      "url": "https://idestova.no/",
+      "sha256": "c3baaac28e960c58b102036b16fa96f9966bd115197d2be6021f4cb28790a9f3",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "920358411",
+      "url": "https://larszachariassen.no/",
+      "sha256": "d2027c49e84feeec55f19dfdb1037f21073d0d8a3184873b16df54d9625a562e",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "912667758",
+      "url": "https://eimealt.no/",
+      "sha256": "d6284a346d106f9c597634a0e66aea8e7cce3bbd0c90bce0ced052b6a476fd14",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "936094112",
+      "url": "https://nuve.no/",
+      "sha256": "1dd8d48b9606857f073f9b0a3bcc67619fbddac8b14a4dcf561f8ec39941ac9a",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "971558415",
+      "url": "https://danseinfo.no/",
+      "sha256": "d7f6cfd67cdf3a71871012946dc4c420e5059eb7c0b188553f5dc5595f4c14cc",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "821962242",
+      "url": "https://laksesystemer.no/",
+      "sha256": "6d966ff296acace9c775ae618fffad369ef8110ad29f5371a8da9bad5ab117d2",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "968545337",
+      "url": "https://lefdal.no/",
+      "sha256": "fe49c2eae440ee84127531f4995c289877f67e7eced81af1adbd404108cfd711",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "925201049",
+      "url": "https://www.siddisgelatostavanger.com/",
+      "sha256": "7e804dd5b461b910ba9ffb194940b2593a78d829c5f38f676399d5aaeabe72a7",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "924688696",
+      "url": "https://stillasfordeg.no/",
+      "sha256": "b24a3e6280d752248ea8a8ee37ce1bcdb62003464f972f3ce29b714610063042",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "993312479",
+      "url": "https://www.nordicsmarthouse.no/",
+      "sha256": "de8b1f2a56a62b60eeee342c0ab86a966b4a174a16a67e6478be52e041e5a294",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "984633718",
+      "url": "https://www.buoybakeri.no/",
+      "sha256": "a9e139936a7ec14a973eab34055bb17a1f78a9ce3c568cef6832d0ff44291792",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "987002808",
+      "url": "https://bridgetech.tv/",
+      "sha256": "452e1bbf0e87e5e713ac198f103100232ed7b622caa7f26288394471e1b9df09",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "935861144",
+      "url": "https://www.d-production.no/",
+      "sha256": "fca0c90a419693ab0d4ea59166849eb00b0911faa417cc872bc42de6944086cb",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "952785052",
+      "url": "https://www.nsnl.no/",
+      "sha256": "6b60daadc4420bdfc04ec049341b39e34add931881e77d73b69befaee6bb111d",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "976758218",
+      "url": "https://vselement.no/",
+      "sha256": "6559d2b89210e8c2303f4ffcf77243b923aaaa24e066ff24b738086ca4e9bc3a",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "921596154",
+      "url": "https://bike2work.no/",
+      "sha256": "2af7d554fd57d92c745260269959c00a5d2e059f5c2c8e9270a7c32c0317c969",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "971492325",
+      "url": "https://www.folkenborgmuseum.no/",
+      "sha256": "4054623a302e1d6d48380a8fdc4db7f0d8c0cae27d502f7e0b4bfbe4ff7296ec",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "980362779",
+      "url": "https://renthall.no/",
+      "sha256": "b74e31e5ada977e0de54f8d127b6bb346e156dfffdd0e989ba977f2eb9142fb3",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "917329435",
+      "url": "https://www.ankermann.no/contact-1",
+      "sha256": "705489e73f3881bdae3c3fa80a877ab809d9ff0eaa11b02407e5881c1b7b23bf",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "960213912",
+      "url": "https://rosenlundbarnehage.no/",
+      "sha256": "b4c7012ae038f41957f9d2e7337ef0889905a05d2a1dcb37b8120495714317ad",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "986927646",
+      "url": "https://aquafarm.no/",
+      "sha256": "1c647ac1a9c6e8b12af348c3639789613911bb90a51dfce30cf9aefb10d697eb",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "988456292",
+      "url": "https://styreguiden.no/",
+      "sha256": "99f153b75f569e8098594a55f9779b902c454de9832cd408b5a83969378e6810",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "993484407",
+      "url": "https://drobakmontessori.no/",
+      "sha256": "096f5dddfebf93161c8e06cf2b49044db62388867592d28e32542e9626d0535c",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "990033897",
+      "url": "https://eqi.no/",
+      "sha256": "41259e6a18412d65b2920ca9966a90a7f00d757aedce3f7b5d058f1383049acc",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "984133715",
+      "url": "https://oslobilutleie.no/",
+      "sha256": "0e2731b761140e9b6a7a267087c3992d5195bae2850da1b78f1aa73c09e0655f",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "816077842",
+      "url": "https://www.vinstratannlegesenter.no/",
+      "sha256": "b0c36c86a6ce6bb0359eed68f93492614ca3cca772c551e00dd5a3a6f5fb7815",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "996929515",
+      "url": "https://sapidus.no/",
+      "sha256": "85c6214909c4043ca54eefc5d915d1b48e40cab6c15de24958f28386ce506f18",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "831447842",
+      "url": "https://alliansepsykologklinikk.no/index.html",
+      "sha256": "03f0edc96fedb1527c771dc67797a164d4c2d3c038644fcfaa02af62b62f87fb",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "990412375",
+      "url": "https://bnv.no/",
+      "sha256": "9a161887826d5a6620115b3cde7de3d161aafb9ad0b9e1f092cbd72353219f2b",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "995520982",
+      "url": "https://kanobutikken.no/",
+      "sha256": "11b9e935437150ffac3e13223efb6b89d8267f76ccb7473df9f1dbfa54a89ac0",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "990342555",
+      "url": "https://www.nordstrandkulturskole.no/",
+      "sha256": "3b9657fe6fb47b2e5d6f270e3b660a9f5340359b129cb957b0491ff8a57196f2",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "927152630",
+      "url": "https://www.hyggetannhelse.no/",
+      "sha256": "68b331eb92af53bb8011b68ec46211a24cfefd0f6887ab46dbc27abc533fce9d",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "939725709",
+      "url": "https://sagarr.no/",
+      "sha256": "f05196d6071f8b1ebc4da44dd38a531024e1c2fd9c5bbe0b89ee15b184b9322f",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "912829197",
+      "url": "https://www.cchange.no/",
+      "sha256": "645e112e7e8049d2cdbe6b46ac6c8c26942537a3b9e407c102e959ff043f066f",
+      "new_common_guard_veto": null
+    },
+    {
+      "organisation_number": "981058771",
+      "url": "https://storhamarsenteret.no/",
+      "sha256": "a83353bebc33ea5f13fe46bc1f44eaa00fa76dbfd6a7df4a7ca8c3c56564d363",
+      "new_common_guard_veto": null
+    }
+  ],
+  "assessments": [
+    {
+      "organisation_number": "916729774",
+      "company": "FIKO EIENDOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "882749762",
+      "company": "NOTEK HOLDING AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "926698435",
+      "company": "UPPSTAD VVS AVDELING HOVDEN AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "912492575",
+      "company": "HAUGESUND ELEKTRISKE FORRETNING AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "975822567",
+      "company": "MESEL EIENDOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "968468235",
+      "company": "HÅRSTUA AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "823147112",
+      "company": "KN ELEKTRO AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 1,
+      "recovered_website": {
+        "final_url": "https://knelektro.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://knelektro.no/",
+        "signals": [
+          "exact_legal_name",
+          "street",
+          "postcode_city"
+        ],
+        "points": 6,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "organisation_number": "993327182",
+      "company": "NORWEGIAN BUSINESS PAVILIONS AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "982801559",
+      "company": "HUSFLIDEN HAMAR BUNAD AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "915015743",
+      "company": "INVENSYS AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "928354709",
+      "company": "ALOHA AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "921961022",
+      "company": "GREEN BUSINESS AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "942633475",
+      "company": "ØRSHALL AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "968386085",
+      "company": "LOFOTPOSTEN AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 1,
+      "recovered_website": {
+        "final_url": "https://www.lofotposten.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://www.lofotposten.no/",
+        "signals": [
+          "exact_legal_name",
+          "phone"
+        ],
+        "points": 4,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "organisation_number": "933547000",
+      "company": "BYGGOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "926490060",
+      "company": "CONTROL SOLUTIONS AS",
+      "changed_guards_rechecked": 2,
+      "verified_hosts": 1,
+      "recovered_website": {
+        "final_url": "https://www.control-solutions.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.control-solutions.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "organisation_number": "993452858",
+      "company": "SV ASFALT OG EIENDOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "996744744",
+      "company": "NORCON NORWAY AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "999530095",
+      "company": "7OCEAN HOLDING AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "932763559",
+      "company": "FOLVENGAARD AQUA AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "933458032",
+      "company": "MOTORSYKLISTEN AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "986665358",
+      "company": "FALSEN TRANSPORT AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "988863262",
+      "company": "CHRISTHO AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "985868972",
+      "company": "FOSS-EIK EIENDOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "881637642",
+      "company": "AMEDIA SALG OG MARKED AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "913737474",
+      "company": "TØN HOLDING AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "912383555",
+      "company": "TRANSPORTSENTRALEN HARSTAD SA",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "998873851",
+      "company": "LUNA EIENDOM MO AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "980166635",
+      "company": "GYLDENLØVE EIENDOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "971173459",
+      "company": "LINDÅS NÆRSENTER AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "981063635",
+      "company": "BRA BO EIENDOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "932350963",
+      "company": "HARØ PROSJEKT AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "931863509",
+      "company": "SK BYGG & BETONG AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "989665537",
+      "company": "EKÅS EIENDOM AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "921366086",
+      "company": "MODULBRYGGEN AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "934500644",
+      "company": "SANDØ AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "995445611",
+      "company": "GS ELEKTRO GJØVIK AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 1,
+      "recovered_website": {
+        "final_url": "https://gsel.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://gsel.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "organisation_number": "824357552",
+      "company": "BALSFJORD NÆRINGSUTVIKLING AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "986028269",
+      "company": "ZINZINO AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "983244858",
+      "company": "EVOLVE AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "971521570",
+      "company": "NORDRE FOLLO RENSEANLEGG IKS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    },
+    {
+      "organisation_number": "998535611",
+      "company": "SKISTAD AS",
+      "changed_guards_rechecked": 1,
+      "verified_hosts": 0
+    }
+  ]
+}
