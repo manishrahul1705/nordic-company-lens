@@ -100,6 +100,7 @@ def test_single_pdf_request_is_bounded_and_never_retried(tmp_path):
     def reserve(*args):
         events.append({});return events[-1]
     def handler(request):
+        assert request.headers['Accept']=='application/pdf,application/octet-stream'
         calls.append(str(request.url));return httpx.Response(503,content=b'x'*101)
     async def exercise():
         async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:

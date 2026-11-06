@@ -40,7 +40,7 @@ class Http:
             event=self.budget.reserve(url,host,org);begin=time.monotonic()
             try:
                 timeout=min(self.config.request_timeout,max(.001,self.budget.deadline-time.monotonic()))
-                async with self.client.stream('GET',url,timeout=timeout,follow_redirects=False) as response:
+                async with self.client.stream('GET',url,headers={'Accept':'application/pdf,application/octet-stream'},timeout=timeout,follow_redirects=False) as response:
                     event['status']=response.status_code
                     if response.is_redirect:raise SourceFailure('url_refused')
                     chunks=[];size=0
