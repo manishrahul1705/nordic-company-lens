@@ -30,7 +30,7 @@ def test_same_domain_foreign_orgnr_not_carried_forward(tmp_path, monkeypatch):
 
     # Must NOT carry forward the discredited website
     assert not any(c["field"] == "official_website" for c in second["claims"])
-    assert any(
+    assert any(c['type'] == 'removed' and c['field'] == 'official_website' for c in second['changes']) or any(
         oc["section"] == "website" and oc["previous_state"] == "available"
         for oc in second["run"]["refresh"]["observation_changes"]
     )

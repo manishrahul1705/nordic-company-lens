@@ -44,8 +44,8 @@ def main(argv=None):
     command.add_argument("--website-suffix-contact-proof", action=argparse.BooleanOptionalAction, default=True, help="Suffix-free name plus two registry contacts (default on)")
     command.add_argument("--website-domain-location-proof", action="store_true", help="Enable experimental exact legal-name domain plus registry location")
     command.add_argument('--website-transient-retry', action=argparse.BooleanOptionalAction, default=True)
-    command.add_argument("--website-request-cap", type=int, default=16)
-    command.add_argument('--website-total-request-cap',type=int,default=18)
+    command.add_argument("--website-request-cap", type=int, default=40)
+    command.add_argument('--website-total-request-cap',type=int,default=40)
     command.add_argument('--hiring', action=argparse.BooleanOptionalAction, default=True,
                          help='Check current NAV jobs (default on; disable with --no-hiring)')
     command.add_argument('--nav-index-path',type=Path)

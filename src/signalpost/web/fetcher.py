@@ -153,8 +153,8 @@ class WebsiteHttp:
                     gate.next_start = time.monotonic() + self.config.website_politeness_seconds
                 registry_requests = sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)
                 # Preserve a reserved activity request for explicitly lower caps,
-                # while the new per-company ceiling remains a hard 16.
-                company_cap = min(16,self.config.website_request_cap + int(org in self.activity_extra),
+                # within the pooled global limit and hard 40/company ceiling.
+                company_cap = min(40,self.config.website_request_cap + int(org in self.activity_extra),
                                   max(0,self.config.website_total_request_cap-registry_requests))
                 if self.counts.get(org, 0) >= company_cap:
                     raise SourceFailure("website_budget_exhausted")
@@ -278,14 +278,16 @@ class WebsiteHttp:
         stop_errors = {'robots', 'robots_unavailable', 'block_page', 'ssrf', 'url_refused',
                        'budget_exhausted', 'website_budget_exhausted', 'deadline'}
         failed_transport = False
+        from .candidates import RECOVERY
+        nominated = candidate.origin in RECOVERY
         last = None
         for position, (scheme, authority) in enumerate(trials):
             # A normal HTTP response from the apex (including 4xx/5xx) does
             # not trigger transport fallback. The www/HTTP sequence is for
             # apex transport failures such as TLS, connection or DNS errors.
-            if position == 1 and not failed_transport:
+            if position == 1 and not failed_transport and not nominated:
                 break
-            if scheme == 'http' and not failed_transport:
+            if scheme == 'http' and not failed_transport and not nominated:
                 break
             target = urlunsplit((scheme, authority, p.path or '/', '', ''))
             try:

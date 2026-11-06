@@ -31,9 +31,10 @@ class Budget:
         companies = 0
         try:
             from .io.input_adapter import read
-            companies = len(read(config.organisations).unique)
+            self.input_orgs = set(read(config.organisations).unique)
+            companies = len(self.input_orgs)
         except (OSError, ValueError):
-            pass
+            self.input_orgs = set()
         # Hard ceilings scale continuously with distinct normalized inputs.
         # Lower user limits remain effective; overrides cannot lift the ceiling.
         self.hard_request_cap = 18 * companies
@@ -56,6 +57,7 @@ class Budget:
         self.cap = min(config.max_requests, self.hard_request_cap) if config.max_requests is not None else self.hard_request_cap
         self.events = []
         self.by_host = Counter()
+        self.by_company = Counter()
 
     def seconds_left(self):
         return self.start + self.total_seconds - time.monotonic()
@@ -68,7 +70,10 @@ class Budget:
         self.check()
         if len(self.events) >= self.cap:
             raise SourceFailure("budget_exhausted")
+        if org in self.input_orgs and self.by_company[org] >= 40:
+            raise SourceFailure('company_budget_exhausted')
         event = {"url": url, "host": host, "organisation_number": org, "attempt_started": time.monotonic() - self.start, "status": None, "error": None}
         self.events.append(event)
         self.by_host[host] += 1
+        self.by_company[org] += 1
         return event

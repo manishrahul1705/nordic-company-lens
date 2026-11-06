@@ -31,6 +31,7 @@ class Page(HTMLParser):
         self.visible_parts = []
         self.owner_parts = []
         self.brand_parts = []
+        self.identity_headings = []
         self.title = ""
         self.meta = {}
         self.jsonld = []
@@ -57,10 +58,11 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = {key: value or "" for key, value in attrs}
-        context = tag in {"header", "footer", "nav"} or attrs.get("role") in {"contentinfo", "banner", "navigation"} or any(word in (attrs.get("id", "") + " " + attrs.get("class", "")).lower() for word in ("footer", "header", "navigation"))
+        context = tag in {"header", "footer", "nav"} or attrs.get("role") in {"contentinfo", "banner", "navigation"} or any(word in (attrs.get("id", "") + " " + attrs.get("class", "")).lower() for word in ("footer", "header", "navigation", "social"))
         if tag not in {"meta", "link", "img", "br", "hr", "input", "source", "area", "base", "embed", "wbr"}:
             hidden = "hidden" in attrs or attrs.get("aria-hidden") == "true" or any(x in attrs.get("style", "").replace(" ", "").lower() for x in ("display:none", "visibility:hidden"))
-            self.stack.append((tag, context, hidden))
+            excluded = bool(re.search(r'(?:social[-_]?share|share[-_]?button|sharer|agency[-_]?credit|site[-_]?credit|employee|staff[-_]?profile)', attrs.get('class','') + ' ' + attrs.get('id',''), re.I))
+            self.stack.append((tag, context, hidden, excluded))
         if tag == "meta":
             self.meta[attrs.get("property") or attrs.get("name") or ""] = attrs.get("content", "")
         if tag == "a":
@@ -76,6 +78,7 @@ class Page(HTMLParser):
                         break
             self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, any(x[1] for x in self.stack) and not any(x[0] == "article" or x[2] for x in self.stack))
             self._anchor.template_context = any(x[1] for x in self.stack)
+            self._anchor.excluded_context = any(x[0]=='article' or x[2] or x[3] for x in self.stack)
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._script = ""
         if tag == 'p' and not any(x[2] for x in self.stack):
@@ -111,6 +114,8 @@ class Page(HTMLParser):
             self.visible_parts.append(data)
             if not any(x[0] in {"article", "pre", "code"} for x in self.stack):
                 self.owner_parts.append(data)
+                if any(x[0] == 'h1' for x in self.stack):
+                    self.identity_headings.append(data)
                 if any(x[0] in {'header','footer'} or x[1] for x in self.stack):
                     self.brand_parts.append(data)
             line, col = self.getpos()

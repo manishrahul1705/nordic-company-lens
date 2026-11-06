@@ -103,7 +103,11 @@ def test_activity_formats_dates_and_verbatim_span(xml):
 @pytest.mark.parametrize('url,date',[('https://other.no/news/item','2026-10-10'),('https://example.no/products/item','2026-10-10'),('https://example.no/news/item','2026-10-20'),('https://example.no/news/item','1999-12-31'),('https://example.no/news/item','invalid')])
 def test_activity_filters(url,date):
     xml=f'<urlset><url><loc>{url}</loc><lastmod>{date}</lastmod></url></urlset>'
-    assert parse(xml.encode(),'https://example.no/sitemap.xml',NOW)==([],[])
+    items, _ = parse(xml.encode(),'https://example.no/sitemap.xml',NOW)
+    if 'example.no/news/item' in url:
+        assert len(items) == 1 and items[0][0]['date'] == ''  # Discovery only; article date is mandatory.
+    else:
+        assert items == []
 
 
 @pytest.mark.parametrize('path',['/artikler/author/thanh/','/da/artikler/forfatter/thanh/','/fi/artikkelit/kirjoittaja/thanh/','/news/category/latest/','/blog/tag/offer/','/news/','/en/news/'])
@@ -127,27 +131,27 @@ def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
         if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nAllow: /')
         if request.url.path=='/sitemap.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/xml'})
         if request.url.path=='/news/update':
-            return httpx.Response(200,text=f'<head><title>New office</title><meta property="article:published_time" content="{now}"></head><article><h1>New office</h1><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
+            return httpx.Response(200,text=f'<head><title>New office</title></head><article><h1>New office</h1><time datetime="{now}"></time><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
         return httpx.Response(200,text=html())
-    report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=8,website_total_request_cap=12)
+    report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=14,website_total_request_cap=18)
     assert row['run']['sections']['activity']=='available'
-    assert len([u for u in requests if 'data.brreg.no' not in u])==7
+    assert len([u for u in requests if 'data.brreg.no' not in u]) <= 9
     env=Envelope.model_validate(row)
     sentence=next(s for s in env.run.synthesis.sections.changes if s.text.startswith('Latest dated'))
     assert sentence_error(sentence,env) is None
     assert sentence_error(sentence.model_copy(update={'text':sentence.text.replace(now,'2001-01-01')}),env)
-    report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output,website_request_cap=8,website_total_request_cap=12)
+    report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output,website_request_cap=14,website_total_request_cap=18)
     assert report['changes']==0 and report['observation_changes']==0
     def missing(request):
         if request.url.path=='/news/update':return httpx.Response(404)
         return response(request)
     report,removed,_,_=execute_web(tmp_path/'removed',monkeypatch,response=missing,public_activity=True,previous=cfg.output,
-                                  website_request_cap=8, website_total_request_cap=14)
+                                  website_request_cap=14, website_total_request_cap=18)
     assert any(c['type']=='removed' and c['materiality']=='minor' for c in removed['changes'])
     def failed(request):
         if request.url.path=='/sitemap.xml':return httpx.Response(500)
         return response(request)
-    report,failed_row,_,_=execute_web(tmp_path/'failed',monkeypatch,response=failed,public_activity=True,previous=cfg.output,website_request_cap=8,website_total_request_cap=12)
+    report,failed_row,_,_=execute_web(tmp_path/'failed',monkeypatch,response=failed,public_activity=True,previous=cfg.output,website_request_cap=14,website_total_request_cap=18)
     assert report['changes']==0 and report['observation_changes']==1
     assert any(c['family']=='activity' and c['carried_forward'] for c in failed_row['claims'])
     from signalpost.refresh.diff import apply

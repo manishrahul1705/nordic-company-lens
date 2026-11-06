@@ -156,6 +156,8 @@ def fact(claim, records):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
     label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
+    if claim['field'] == 'identity.registered_address':
+        label = 'Registered business address'
     if claim['family'] in {'roles', 'subunits', 'hiring'} and isinstance(claim['value'], dict):
         v = claim['value']
         label = v.get('title') or v.get('name') or {'roles': 'Registered role', 'subunits': 'Registered workplace', 'hiring': 'Job advertisement'}[claim['family']]
@@ -361,6 +363,12 @@ def profile(row, title):
                'financials' if family == 'accounts' else 'people' if family == 'roles' else
                'hiring' if family == 'hiring' else 'activity' if family == 'activity' else 'what-it-does')
         buckets[key].append(c)
+    from .locations import registered_location
+    from .models.claim import Claim
+    business_location = registered_location([Claim.model_validate(c) for c in claims])
+    if business_location:
+        buckets['what-it-does'] = [c for c in buckets['what-it-does'] if c['id'] != business_location.id]
+        buckets['locations'].append(claim_map[business_location.id])
     for key, label, family in GROUPS:
         areas = {'what-it-does': ('brief', 'Company brief'),
                  'financials': ('financials', 'Latest financials'),
@@ -375,6 +383,8 @@ def profile(row, title):
         items=[c for c in items if not c['field'].startswith(('roles.detail.','subunits.detail.'))]
         if key == 'activity': items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         state = row['run']['sections'].get(family, 'not_applicable')
+        if key == 'locations' and business_location and state in {'not_available','not_applicable'}:
+            state = 'available'
         dated_registry = registry_events(row) if key == 'activity' else []
         public_state = 'available' if dated_registry and state in {'not_applicable','not_available'} else state
         body += f'<section id="{key}"><h2>{label} {chip(public_state)}</h2>'

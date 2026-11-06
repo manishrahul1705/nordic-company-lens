@@ -36,10 +36,15 @@ def project(envelope):
     for c in claims:
         if not c.field.startswith('subunits.unit.') or not isinstance(c.value,dict):continue
         v=c.value;raw=v.get('raw') or v
-        locations.append({'organisation_number':v.get('organisation_number'),'name':v.get('name'),
+        locations.append({'organisation_number':v.get('organisation_number'),'name':v.get('name'), 'type':'workplace',
                           'address':raw.get('beliggenhetsadresse') or raw.get('postadresse') or v.get('address'),
                           'industry':raw.get('naeringskode1') or v.get('nace') or v.get('industry'),
                           'employees':raw.get('antallAnsatte') if 'antallAnsatte' in raw else v.get('employees')})
+    from .locations import registered_location
+    business = registered_location(envelope.claims)
+    if business:
+        locations.append({'organisation_number':envelope.organisation_number,'name':'Registered business address',
+                          'type':'registered_business_address','address':business.value,'industry':None,'employees':None})
     account_claims = [c for c in claims if c.family == 'accounts']
     financials = []
     if account_claims:
@@ -75,9 +80,13 @@ def project(envelope):
     records={e.id:e for e in envelope.evidence};evidence={}
     for module,family in MODULES.items():
         selected=[c for c in claims if c.family==family]
+        if module == 'locations' and business:
+            selected = selected + [business]
         ids=list(dict.fromkeys(eid for c in selected for eid in c.evidence_ids))
         primary=records[ids[0]] if ids else None
         state=envelope.run.sections.get(family,'not_applicable')
+        if module == 'locations' and business and state in {'not_available','not_applicable'}:
+            state = 'available'
         # No collection zero or empty list is invented when work did not complete.
         payload=values[module] if selected else None
         if not selected and state=='not_available' and module in {'roles','locations','hiring','activity'}:

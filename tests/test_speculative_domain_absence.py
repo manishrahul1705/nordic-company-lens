@@ -28,7 +28,7 @@ def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, 
         raise SourceFailure(failures[candidate.domain])
 
     http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
-    env = SimpleNamespace(claims=[], run=SimpleNamespace(refresh={}))
+    env = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
     result = asyncio.run(collector.fetch('923609016', env, None, http))
     assert result.state == expected
     diagnostics = next(e for e in result.errors if e.code == 'website_candidates')

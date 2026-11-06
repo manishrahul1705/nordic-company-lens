@@ -47,6 +47,9 @@ def main():
                 '</section><section class="company"><h2>Other AS</h2><p>Org.nr. 999592236</p></section></body>')
         html = html.replace('<body>', '<body><footer>').replace('</body>', '<p>' + 'Synthetic fixture content for testing company attribution and source extraction. ' * 8 + '</p></footer></body>')
         add(f'https://{host}/', html, 503 if org == '999592236' else 200, 'text/html')
+        if org == '999592236':
+            add(f'http://{host}/robots.txt', 'User-agent: *\nAllow: /', kind='text/plain')
+            add(f'http://{host}/', html, 503, 'text/html')
         add(f'https://{host}/sitemap.xml', '', 404, 'application/xml')
         for path in ['/feed.xml', '/rss.xml']:
             if host != 'zephyrsynthetic.no':

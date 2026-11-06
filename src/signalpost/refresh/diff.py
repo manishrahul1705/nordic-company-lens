@@ -133,7 +133,11 @@ def apply(envelope, previous, blobs):
                 if family=='hiring':
                     from ..sources.nav import timestamp
                     from datetime import datetime,timezone
-                    expires=timestamp(claim.value.get('expires'))
+                    if claim.field.startswith('hiring.site_job.'):
+                        from ..web.jobs import job_date
+                        expires=job_date(claim.value.get('expires'), expiry=True)
+                    else:
+                        expires=timestamp(claim.value.get('expires'))
                     if expires is None or expires<=datetime.now(timezone.utc) or claim.value.get('uuid') in envelope.run.refresh.get('hiring',{}).get('known_closed_jobs',[]):
                         continue
                     if envelope.run.refresh.get('hiring',{}).get('closure_requires_live_detail'):

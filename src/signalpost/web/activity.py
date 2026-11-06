@@ -48,21 +48,14 @@ def article(body, url, now, feed_date=None):
     if not title or len(title) > 200 or re.search(r'^(?:se flere nyheter|see more news|nyheter|news|aktuelt|arkiv|archive)$', title, re.I):
         return None
     candidates = [(v, 'datePublished') for obj in page.jsonld for v in json_values(obj, 'datePublished') if isinstance(v, str)]
-    candidates.append((page.meta.get('article:published_time'), 'article:published_time'))
     candidates.extend((v, 'article_time') for v in re.findall(r'<time\b[^>]*datetime\s*=\s*[\'\"]([^\'\"]+)', content, re.I))
-    header = re.search(r'<header\b[^>]*>(.*?)</header\s*>', content, re.I | re.S)
-    if header:
-        candidates.extend((v, 'article_header') for v in re.findall(r'\b\d{4}-\d{2}-\d{2}\b', re.sub('<[^>]+>', ' ', header[1])))
-    if feed_date:
-        candidates.append(feed_date)
     for token, origin in candidates:
         date = dated(token, now)
         if not date:
             continue
-        # Feed dates retain their own XML evidence; all other dates must occur
-        # in the fetched article, whose body and title have just been checked.
+        # Publication dates must occur in the fetched article itself.
         position = raw.find(token) if token else -1
-        if position < 0 and origin not in {'pubDate', 'published'}:
+        if position < 0:
             continue
         span = raw[max(0, position - 40):position + len(token) + 40] if position >= 0 else None
         return ({'title': title, 'title_source': 'article_page', 'url': url, 'date': date,
@@ -82,29 +75,17 @@ async def publish_articles(section, items, org, proof, http, checked, discovery_
         if response.status != 200 or domain(response.url) != root:
             continue
         checked.add(response.url)
-        # Only actual feed publication dates may supplement the article page.
-        feed_date = (value['date'], value['date_source']) if value['date_source'] in {'pubDate', 'published'} else None
-        result = await offload(article, response.body, response.url, datetime.now(timezone.utc), feed_date)
+        result = await offload(article, response.body, response.url, datetime.now(timezone.utc))
         if not result:
             continue
         actual, article_span = result
         if scope and not mentions_company(actual['title'],proof.value.get('company_scope_names', [])):
             continue
         actual.update(identity_level=proof.value['identity_level'], identity_claim_id=proof.id)
-        if article_span is None and discovery_response is None:
-            continue
         if article_span is None:
-            article_span = Page(response.body, response.url).name_span(actual['title'])
-            if not article_span:
-                continue
+            continue
         add(section, response_source(response), org, 'activity', 'dated_item.' + digest(actual['url'])[:20],
             actual, '/article', span=article_span, effective=actual['date'], source_class='company_owned', method='signalpost.activity.article.v1')
-        if feed_date and actual['date_source'] in {'pubDate', 'published'} and discovery_response is not None:
-            date_proof = Section()
-            add(date_proof, response_source(discovery_response), org, 'activity', section.claims[-1].field,
-                actual, locator, span=span, effective=actual['date'], source_class='company_owned', method='signalpost.activity.feed.v1')
-            section.evidence.extend(date_proof.evidence)
-            section.claims[-1].evidence_ids.extend(date_proof.claims[0].evidence_ids)
     if section.claims:
         section.state = 'available'
 
@@ -153,7 +134,9 @@ def parse(body, source_url, now):
         if re.fullmatch(r'/(?:[a-z]{2}/)?(?:nyheter|news|aktuelt|presse|blogg|blog|artikler|artikkel|arkiv)/?', urlsplit(url).path, re.I): continue
         field = next((f for f in ('lastmod', 'pubDate', 'published', 'updated') if values.get(f)), None)
         date = dated(values.get(field), now) if field else None
-        if date is None: continue
+        # Sitemap/feed dates rank nominations only; the fetched article must
+        # carry datePublished or a time tag before anything is published.
+        if date is None: date = ''
         title = values.get('title')
         origin = 'feed title'
         if tag == 'url':
@@ -162,7 +145,7 @@ def parse(body, source_url, now):
         if not title or len(title) > 200: continue
         # Conservatively require one bounded verbatim span containing every
         # reported item token. Long or transformed values are abstentions.
-        needles = [html.escape(url, quote=False), values[field]]
+        needles = [html.escape(url, quote=False)] + ([values[field]] if field else [])
         if tag != 'url': needles.append(html.escape(title, quote=False))
         ranges = []
         for token in needles:
@@ -181,6 +164,8 @@ def parse(body, source_url, now):
 
 async def fetch(org, envelope, http, pages):
     proof = next((c for c in envelope.claims if c.field == 'official_website' and c.availability == 'available'), None)
+    if proof and proof.value.get('content_allowed') is False:
+        return missing('activity', 'website_link_only', state='not_applicable')
     if not proof or proof.carried_forward or proof.value.get('identity_level') not in {'VERIFIED', 'HIGH', 'REGISTRY_DECLARED'}:
         website_state=envelope.run.sections.get('website')
         if website_state in {'failed','blocked','ambiguous'}:
@@ -219,29 +204,34 @@ async def fetch(org, envelope, http, pages):
         homepage.rstrip('/') + '/news-sitemap.xml',
         homepage.rstrip('/') + '/feed/'
     ]
-    urls = sorted(set(feeds))[:1] or sorted(set(maps))[:1] or fallback_maps[:1]
+    urls = [(url,0) for url in dict.fromkeys(sorted(set(maps))[:1] + sorted(set(feeds))[:1] +
+            ([fallback_maps[0]] if not maps else []) + ([fallback_maps[-1]] if not feeds else []))]
     section = Section(state='not_available')
     checked=set()
     maximum = http.config.website_request_cap + 1
     http.activity_extra.add(org)
     try:
-        for level in range(2):
+        seen = set()
+        for _ in range(4):
             if not urls: break
-            target = urls[0]
+            target,level = urls.pop(0)
+            if target in seen:continue
+            seen.add(target)
             if http.counts.get(org, 0) >= maximum: raise SourceFailure('website_budget_exhausted')
             response = await http.get(target, org, root, xml=True)
             if response.status in {200,404,410}:checked.add(response.url)
-            if response.status in {404, 410}: break
+            if response.status in {404, 410}: continue
             if response.status in {401, 403, 429}: raise SourceFailure('http_blocked')
             if response.status != 200: raise SourceFailure('activity_fetch_error')
-            items, children = await offload(parse,response.body,response.url,datetime.now(timezone.utc))
-            if children:
-                urls = children[:1] if level == 0 else []
-                if level == 1: raise SourceFailure('activity_sitemap_depth')
+            try:
+                items, children = await offload(parse,response.body,response.url,datetime.now(timezone.utc))
+            except (ValueError, ET.ParseError):
                 continue
-            await publish_articles(section, items, org, proof, http, checked, response)
+            if children:
+                if level == 0: urls.extend((child,1) for child in children[:1])
+                continue
+            await publish_articles(section, items[:2], org, proof, http, checked, response)
             if section.claims: section.state = 'available'
-            break
         if not section.claims:
             return await fetch_html(org, proof, http, pages, checked)
         return section

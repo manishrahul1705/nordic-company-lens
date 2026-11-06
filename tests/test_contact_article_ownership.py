@@ -36,7 +36,8 @@ def test_exact_name_street_abbreviations_keep_house_number(street,shown):
     assert score(page,OUR,ctx,'registry_website',[]).level=='VERIFIED'
     assert score(page,OUR,{'name':'Different AS','street':[street]},'registry_website',[]).level!='VERIFIED'
     ctx['street']=[street+'B']
-    assert score(page,OUR,ctx,'registry_website',[]).level!='VERIFIED'
+    assert score(page,OUR,ctx,'legal_name_slug',[]).level!='VERIFIED'
+    assert score(page,OUR,ctx,'registry_website',[]).proof_type=='registry_declared_name_tier_a'
 
 
 def test_only_three_extra_proof_targets_are_added():

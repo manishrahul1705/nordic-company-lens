@@ -5,7 +5,7 @@ param(
     [switch]$SuffixContactProof,
     [switch]$NoSuffixContactProof,
     [switch]$NoTransientRetry,
-    [int]$WebsiteRequestCap = 16,
+    [int]$WebsiteRequestCap = 40,
     [switch]$DomainLocationProof
 )
 $ErrorActionPreference = 'Stop'

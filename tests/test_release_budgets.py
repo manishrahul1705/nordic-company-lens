@@ -9,6 +9,6 @@ def test_derived_budget_uses_unique_inputs_and_override(tmp_path):
     assert time_cap(cfg)==900
     report,rows=execute(cfg)
     assert len(rows)==3 and report['limits']['max_requests']==36
-    assert report['request_budget_basis']=='18 per unique normalized input; explicit lower limits honored'
+    assert report['request_budget_basis']=='Pooled 18 per unique normalized input globally, up to 40 per company; explicit lower limits honored'
     assert report['measured_request_projection']['projected_http']==12
     assert Budget(config(tmp_path/'override',['923609016'],max_requests=7)).cap==7

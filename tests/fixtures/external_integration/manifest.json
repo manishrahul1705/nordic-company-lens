@@ -1,54 +1,54 @@
 {
   "description": "SYNTHETIC: no real company facts; fixed observation 2026-10-15T10:00:00Z",
   "fixtures": [
-{
+    {
       "url": "https://zephyrsynthetic.no/om-oss",
       "method": "GET",
       "status_code": 404,
       "headers": {
-            "content-type": "text/html"
+        "content-type": "text/html"
       },
       "content_sha256": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
       "blob_file": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
       "metadata_complete": true,
       "repeatable": true
-},
-{
+    },
+    {
       "url": "https://zephyrsynthetic.no/kontakt-oss",
       "method": "GET",
       "status_code": 404,
       "headers": {
-            "content-type": "text/html"
+        "content-type": "text/html"
       },
       "content_sha256": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
       "blob_file": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
       "metadata_complete": true,
       "repeatable": true
-},
-{
+    },
+    {
       "url": "https://zephyrsynthetic.no/kontakt",
       "method": "GET",
       "status_code": 404,
       "headers": {
-            "content-type": "text/html"
+        "content-type": "text/html"
       },
       "content_sha256": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
       "blob_file": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
       "metadata_complete": true,
       "repeatable": true
-},
-{
+    },
+    {
       "url": "https://zephyrsynthetic.no/news/launch",
       "method": "GET",
       "status_code": 200,
       "headers": {
-            "content-type": "text/html"
+        "content-type": "text/html"
       },
       "content_sha256": "46883f6f3cb94078031aa60fc2b524d77d0eac8e648385c4f1e30ff7591c0e91",
       "blob_file": "46883f6f3cb94078031aa60fc2b524d77d0eac8e648385c4f1e30ff7591c0e91",
       "metadata_complete": true,
       "repeatable": true
-},
+    },
     {
       "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
       "method": "GET",
@@ -418,6 +418,42 @@
       },
       "content_sha256": "9c5f102ca9edcbf23361c76cd799bfde26e79e30b341d7e2610e517429f7577e",
       "blob_file": "9c5f102ca9edcbf23361c76cd799bfde26e79e30b341d7e2610e517429f7577e",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "http://ambersynthetic.no/robots.txt",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "text/plain"
+      },
+      "content_sha256": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "blob_file": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "http://ambersynthetic.no/",
+      "method": "GET",
+      "status_code": 503,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "content_sha256": "a3feb81f9af3d3c00836bf3f7da585d692a2628d259c907ae72f85f9d532ab4c",
+      "blob_file": "a3feb81f9af3d3c00836bf3f7da585d692a2628d259c907ae72f85f9d532ab4c",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://zephyrsynthetic.no/about",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "content_sha256": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
+      "blob_file": "e3ebaa16dd9d9b9fc107c42183fb6cf9d22927e1af03dbbdfa0ccc38e4e4ac31",
       "metadata_complete": true,
       "repeatable": true
     }

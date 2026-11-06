@@ -264,7 +264,7 @@ class Stream:
                     if self.checked.get(uuid)!=version(record):incomplete.update(affected)
             for org,row in self.previous.items():
                 for c in row.get('claims',row.get('profile',{}).get('claims',[])):
-                    if c.get('family')=='hiring' and c.get('availability')=='available' and isinstance(c.get('value'),dict):
+                    if c.get('family')=='hiring' and c.get('field','').startswith('hiring.job.') and c.get('availability')=='available' and isinstance(c.get('value'),dict):
                         uuid=c['value'].get('uuid')
                         if uuid in self.active and org not in self.classify(self.active[uuid])[1]:incomplete.add(org)
             index.metrics['name_unusable_companies']=len(unusable)

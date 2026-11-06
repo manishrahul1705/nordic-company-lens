@@ -45,5 +45,5 @@ def test_zinzino_foreign_page_never_attaches_contacts_or_descriptions(tmp_path, 
         f'<meta name="description" content="Zinzino {form} provides shareholder and investor relations information worldwide.">'
         '<a href="mailto:shares@example.no">Investor contact</a>'))
     _, row, _, _ = execute_web(tmp_path, monkeypatch, body)
-    assert any(c['field'] == 'official_website' for c in row['claims'])
+    assert not any(c['field'] == 'official_website' for c in row['claims'])
     assert not any(c['field'].startswith(('contact.', 'website_description.')) for c in row['claims'])

@@ -9,7 +9,8 @@ def test_candidate_source_priority_and_subunit_names():
         'subunits':[{'orgnr':'993578843','name':'Branchbrand AS','website':'branch.no','email':'a@branchmail.no'}]})
     assert [c.origin for c in nominations[:5]] == ['registry_website','registry_email','nav_employer_homepage','subunit_registry_website','subunit_registry_email']
     assert next(c for c in nominations if c.domain=='branchbrand.no').subunit_orgnr=='993578843'
-    assert any(c.domain=='distinctive-as.no' for c in nominations)
+    assert any(c.domain=='distinctive.no' for c in nominations)
+    assert len([c for c in nominations if c.origin.endswith('name_slug')]) <= 4
 
 
 def test_legal_forms_spelling_and_suffixes():

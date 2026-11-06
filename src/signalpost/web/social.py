@@ -74,9 +74,11 @@ def organization_social(page,context=None,scope=None):
 
 def discover(page,context=None,*,same_as=True):
     found = {}
+    contact = bool(re.search(r'/(?:kontakt(?:-oss)?|contact(?:-us)?|impressum)(?:/|$)', urlsplit(page.url).path, re.I))
     for link in page.links:
         url = profile_url(link.href)
-        if url and link.owned_context:
+        excluded = getattr(link, 'excluded_context', False) or bool(re.search(r'website by|designed by|utviklet av|nettside av', link.text, re.I))
+        if url and not excluded and (link.owned_context or contact):
             found.setdefault(url, link.span)
     if same_as:
         for url,span in organization_social(page,context).items():found.setdefault(url,span)

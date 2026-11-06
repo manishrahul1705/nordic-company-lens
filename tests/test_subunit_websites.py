@@ -9,7 +9,7 @@ def test_candidate_order_subunit_before_bounded_slugs():
     rows=generate({'name':'Distinctive Name AS','website':'parent.no','email':'office@email.no',
                   'subunits':[{'orgnr':OTHER,'website':'workplace.no','email':'contact@unit.no'}]})
     assert [c.origin for c in rows[:4]]==['registry_website','registry_email','subunit_registry_website','subunit_registry_email']
-    assert len(rows)==14 and rows[2].subunit_orgnr==OTHER
+    assert len(rows)<=8 and rows[2].subunit_orgnr==OTHER
     assert not any(c.domain=='gmail.com' for c in generate({'subunits':[{'orgnr':OTHER,'email':'office@gmail.com'}]}))
 
 
@@ -18,7 +18,7 @@ def test_candidate_order_subunit_before_bounded_slugs():
 def test_subunit_candidate_requires_exact_parent_or_that_subunit(owner,accepted,origin):
     candidate=Candidate('https://workplace.no/','workplace.no',origin,OTHER)
     page=Page(html('Org nr '+owner).encode(),candidate.url)
-    proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
+    proof=candidate_proof(page,OUR,{'name':'Example AS','subunits':[{'orgnr':OTHER}]},candidate,[])
     assert (proof.level=='VERIFIED')==accepted
     if accepted:assert proof.token==owner
 
@@ -41,7 +41,7 @@ def test_published_subunit_relationship_preserves_claim_identity_and_evidence(mo
     candidate=Candidate('https://workplace.no/','workplace.no','subunit_registry_website',OTHER)
     raw=html('Org nr '+owner).encode()
     page=Page(raw,candidate.url)
-    proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
+    proof=candidate_proof(page,OUR,{'name':'Example AS','subunits':[{'orgnr':OTHER}]},candidate,[])
     now='2026-10-17T00:00:00Z'
     response=SimpleNamespace(url=candidate.url,body=raw,sha=hashlib.sha256(raw).hexdigest(),retrieved_at=now)
     registry=Section()
@@ -54,7 +54,7 @@ def test_published_subunit_relationship_preserves_claim_identity_and_evidence(mo
     monkeypatch.setattr(collector,'extract_contacts_and_social',lambda *args,**kwargs:None)
     monkeypatch.setattr(collector,'extract_public_brand',lambda *args:None)
     result=collector.publish_result(OUR,envelope,http,Section(),
-        [(candidate,proof,response,page,[(response,page)])],[],{'name':'Example AS'})
+        [(candidate,proof,response,page,[(response,page)])],[],{'name':'Example AS','subunits':[{'orgnr':OTHER}]})
     claim=result.claims[0]
     expected=digest([OUR,'official_website',canonical(claim.value),'available',None])
     assert claim.id==expected

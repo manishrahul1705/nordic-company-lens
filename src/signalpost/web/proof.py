@@ -241,9 +241,10 @@ class Proof:
     other_orgnrs: list[str] = field(default_factory=list)
     reason: str = ""
     token: str = ""
+    subject_orgnr: str = ''
 
 
-def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_location=False):
+def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_location=False, nominated_contacts=False):
     if domain(page.url) in DIRECTORIES | SOCIAL or is_directory_record(page.url):
         return Proof('REJECT', reason='directory_or_marketplace')
     raw = page.raw.lower()
@@ -257,6 +258,21 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
         return Proof("BLOCKED", reason="block_page")
     if any(x in raw for x in ("this domain is for sale", "domenet er til salgs", "domain is parked", "buy this domain", "sedo.com/search")):
         return Proof("REJECT", reason="parked")
+    if re.search(r'\b(?:is parked|in parked|not set up yet|registrert domene|default (?:web ?site|page)|welcome to nginx|apache2? (?:debian|ubuntu) default|index of /)\b', page.title + ' ' + page.visible, re.I):
+        return Proof('REJECT', reason='hosting_default')
+    if nominated_contacts or origin == 'registry_website':
+        if re.search(r'\b(?:default (?:web ?site|page)|welcome to nginx|apache2? (?:debian|ubuntu) default|index of /|domain (?:has been|is) registered|domenet er (?:parkert|registrert))\b', page.title + ' ' + page.visible, re.I):
+            return Proof('REJECT', reason='hosting_default')
+        from .entity_scope import foreign_entity_page
+        identity_text = page.title + ' ' + page.meta.get('og:site_name','') + ' ' + ' '.join(page.identity_headings)
+        legal_identity = ' '.join(re.findall(r'\w+', identity_text.casefold()))
+        expected_names = [context.get('name'), *[u.get('name') for u in context.get('subunits', [])]]
+        own_brand = any((name := legal_name(n)) and re.search(r'(?<!\w)' + re.escape(name) + r'(?!\w)', legal_identity) for n in expected_names)
+        if not own_brand and re.search(r'\b[A-ZÆØÅ][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*){0,5}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)\b', identity_text):
+            return Proof('REJECT', reason='different_legal_entity')
+        allowed = set(context.get('allowed_orgnrs', {org}))
+        if foreign_entity_page(page, org, context.get('name'), check_ids=False):
+            return Proof('REJECT', reason='different_legal_entity')
     visible = orgnrs(page.owner_text)
     meta = orgnrs(" ".join(page.meta.values()))
     json_ids = set()
@@ -271,10 +287,14 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
                 elif isinstance(value, dict):
                     json_ids |= orgnrs(value.get("value", ""))
     all_ids = visible | meta | json_ids
-    others = sorted(all_ids - {org})
+    allowed = set(context.get('allowed_orgnrs', {org}))
+    others = sorted(all_ids - allowed)
     owner_ids = orgnrs(' '.join(page.brand_parts)) | json_ids
-    if owner_ids - {org}:
-        return Proof('REJECT', other_orgnrs=sorted(owner_ids - {org}), reason='foreign_orgnr')
+    if owner_ids - allowed:
+        return Proof('REJECT', other_orgnrs=sorted(owner_ids - allowed), reason='foreign_orgnr')
+    if org not in all_ids and not others and (subjects := all_ids & allowed):
+        subject = sorted(subjects)[0]
+        return Proof('VERIFIED', 'registered_subunit_orgnr', token=subject, subject_orgnr=subject)
     if not others and contact_section_number(page,org,context):
         return Proof('VERIFIED','contact_section_orgnr',token=org)
     if org in all_ids:
@@ -311,7 +331,8 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
     address_text=normalized_address(page.owner_text)
     if any(s and len(str(s)) > 4 and re.search(r'(?<!\w)'+re.escape(normalized_address(s))+r'(?!\w)',address_text) for s in streets):
         signals.append('street')
-    if context.get('postcode') and context.get('city') and str(context['postcode']) in owner_text and normalized(context['city']) in owner_text:
+    city = context.get('city') or context.get('municipality')
+    if context.get('postcode') and city and str(context['postcode']) in owner_text and normalized(city) in owner_text:
         signals.append('postcode_city')
     expected_phone = phone(context.get('phone'))
     page_phones = {phone(link.href[4:]) for link in page.links if link.href.startswith('tel:')}
@@ -325,10 +346,47 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
     if exact_name and len(signals) >= 2:
         return Proof('VERIFIED', 'legal_name_and_registry_contact', signals, 2 * len(signals), token=str(context['name']))
     base_name=legal_name(context.get('name'))
-    exact_base=bool(base_name and re.search(r'(?<!\w)'+re.escape(normalized(base_name))+r'(?!\w)',owner_text))
+    independent_name_text = owner_text
+    for value in [context.get('email'), *[s for s in streets if s]]:
+        if value:
+            independent_name_text = independent_name_text.replace(normalized(value), ' ')
+    exact_base=bool(base_name and re.search(r'(?<!\w)'+re.escape(normalized(base_name))+r'(?!\w)',independent_name_text))
     label=compact(extract(page.url).domain)
     derived=label in {compact(base_name),compact(base_name)+'as',compact(base_name)+'asa'} and len(compact(base_name))>=4
     contacts=[s for s in signals if s in {'street','postcode_city','phone','email'}]
+    declared = origin == 'registry_website'
+    if declared and (exact_name or exact_base):
+        return Proof('VERIFIED', 'registry_declared_name_tier_a', ['registry_declared_domain', 'legal_name'], 4,
+                     token=str(context['name']) if exact_name else base_name)
+    if declared:
+        holder = next((name for name in leaders if isinstance(name,str) and len(name.split()) >= 2 and
+                       re.search(r'(?<!\w)' + re.escape(normalized(name)) + r'(?!\w)', owner_text)), None)
+        if contacts or holder:
+            token = str(context.get('email') or '') if 'email' in contacts else str(holder) if holder else str(context.get('postcode')) if 'postcode_city' in contacts else ''
+            if not token and 'street' in contacts:
+                token = next((str(s) for s in streets if s and normalized_address(s) in address_text), '')
+            if not token and 'phone' in contacts:
+                token = next((m.group() for m in re.finditer(r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)', page.owner_text) if phone(m.group())==expected_phone), str(context.get('phone')))
+            return Proof('VERIFIED', 'registry_declared_hard_contact_tier_b', ['registry_declared_domain', *contacts, *(['registered_role_holder'] if holder else [])], 4, token=token)
+    # A uniqueness query against the public registry, not uniqueness in the input batch.
+    if exact_base and context.get('unique_registry_core') and len(compact(base_name)) >= 5 and label == compact(base_name):
+        if extract(page.url).suffix == 'no' or ('street' in contacts and context.get('postcode') and str(context['postcode']) in owner_text):
+            from .entity_scope import foreign_entity_page
+            if not foreign_entity_page(page, org, context.get('name'), check_ids=False):
+                return Proof('VERIFIED', 'unique_legal_core_domain', ['registry_unique_legal_core','exact_legal_domain','legal_name',*contacts], 4, token=base_name)
+    if nominated_contacts:
+        categories = set()
+        if exact_name or exact_base: categories.add('legal_name')
+        if 'phone' in contacts: categories.add('registry_phone')
+        if 'email' in contacts: categories.add('registry_email')
+        if 'street' in contacts or 'postcode_city' in contacts: categories.add('registry_address')
+        if len(categories) >= 2:
+            token = str(context.get('name') if exact_name else base_name) if exact_name or exact_base else ''
+            if not token and 'registry_email' in categories:token = email
+            if not token and 'registry_phone' in categories:
+                token = next((m.group() for m in re.finditer(r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)', page.owner_text) if phone(m.group())==expected_phone), str(context.get('phone')))
+            return Proof('VERIFIED', 'nominated_two_independent_signals', sorted(categories),
+                         2 * len(categories), token=token)
     if suffix_contact and exact_base and derived and len(contacts)>=2:
         return Proof('VERIFIED','legal_name_without_suffix_and_two_contacts',
                      ['legal_name_without_suffix','name_derived_domain',*contacts],2*len(contacts),token=base_name)

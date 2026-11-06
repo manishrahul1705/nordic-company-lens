@@ -52,7 +52,7 @@ class Candidates:
         for parent,row in self.previous.items():
             if parent not in scopes:continue
             for c in row.get('claims',row.get('profile',{}).get('claims',[])):
-                if c.get('family')=='hiring' and c.get('availability')=='available' and isinstance(c.get('value'),dict):
+                if c.get('family')=='hiring' and c.get('field','').startswith('hiring.job.') and c.get('availability')=='available' and isinstance(c.get('value'),dict):
                     uuid=c['value'].get('uuid')
                     try:uuid=str(UUID(uuid))
                     except (ValueError,TypeError,AttributeError):continue
@@ -85,7 +85,7 @@ class Candidates:
         if parent in self.previous:
             row=self.previous[parent]
             for c in row.get('claims',row.get('profile',{}).get('claims',[])):
-                if c.get('family')=='hiring' and c.get('availability')=='available' and isinstance(c.get('value'),dict):
+                if c.get('family')=='hiring' and c.get('field','').startswith('hiring.job.') and c.get('availability')=='available' and isinstance(c.get('value'),dict):
                     uuid=c['value'].get('uuid')
                     try:uuid=str(UUID(uuid))
                     except (ValueError,TypeError,AttributeError):continue

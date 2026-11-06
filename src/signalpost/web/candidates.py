@@ -6,6 +6,8 @@ from ..sources.bulk_registry import column
 
 FORMS = r"\b(?:as|asa|ans|da|enk|nuf|sa|ba|ks|iks|sti)\b$"
 GENERIC = {"holding", "invest", "eiendom", "bygg", "service", "consult", "regnskap", "transport", "og"}
+NOMINATED = {'registry_website', 'registry_email', 'subunit_registry_website', 'subunit_registry_email'}
+RECOVERY = NOMINATED | {'nav_employer_homepage', 'subunit_nav_employer_homepage', 'annual_report'}
 
 
 @dataclass(frozen=True)
@@ -49,6 +51,24 @@ def legal_name_slugs(name):
     return list(dict.fromkeys(slugs))
 
 
+def bounded_variants(name):
+    """Four nominations, preserving words before dropping generic business words."""
+    if re.search(r'\b(?:holding|invest\w*|kapital|sameiet|borettslag)\b|eiendom[- ]holding', str(name or ''), re.I):
+        return []
+    words = legal_name(name).split()
+    if not words or all(w in GENERIC for w in words):
+        return []
+    variants = []
+    for replacements in (('ae', 'o', 'a'), ('e', 'oe', 'aa')):
+        for selected in (words, [w for w in words if w not in GENERIC]):
+            converted = [w.replace('æ', replacements[0]).replace('ø', replacements[1]).replace('å', replacements[2]) for w in selected]
+            for separator in ('', '-'):
+                label = separator.join(converted)
+                if len(label) >= 4:
+                    variants.append(label.encode('idna').decode('ascii') + '.no')
+    return list(dict.fromkeys(variants))[:4]
+
+
 def context_from_bulk(row):
     return {"name": column(row, "navn")[0], "website": column(row, "hjemmeside")[0],
             "email": column(row, "epostadresse")[0], "phone": column(row, "telefon")[0],
@@ -87,10 +107,18 @@ def generate(context):
         if '@' in email:add(email.rsplit('@',1)[1],'subunit_registry_email',unit['orgnr'])
     for url in context.get('wikidata_homepages', []):
         add(url, 'wikidata_website')
+    for url in context.get('annual_report_domains', []):
+        add(url, 'annual_report')
+    # Parent spelling is never starved by dozens of branch-name variants.
+    sources = [(bounded_variants(context.get('name')), 'legal_name_slug', None)]
     for unit in context.get('subunits', []):
-        for slug in legal_name_slugs(legal_name(unit.get('name'))):
-            add(slug, 'subunit_name_slug', unit['orgnr'])
-    name = legal_name(context.get("name"))
-    for slug in legal_name_slugs(name):
-        add(slug, "legal_name_slug")
+        trading = re.split(r'\b(?:avd|avdeling)\b', str(unit.get('name') or ''), flags=re.I)[0].strip(' .-')
+        sources.append((bounded_variants(trading), 'subunit_name_slug', unit['orgnr']))
+    variants = [(values[i], origin, unit) for i in range(4) for values, origin, unit in sources if i < len(values)]
+    guessed = 0
+    for url, origin, unit in variants:
+        before = len(output)
+        add(url, origin, unit)
+        guessed += len(output) > before
+        if guessed == 4:break
     return output[:32]

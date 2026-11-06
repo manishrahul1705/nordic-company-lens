@@ -9,7 +9,7 @@ from ..models.envelope import Error
 from ..models.evidence import digest
 import xml.etree.ElementTree as ET
 from ..sources.extract import Section, Source, add, missing, response_source
-from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC
+from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC, NOMINATED, RECOVERY
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card
@@ -149,7 +149,7 @@ def followup_links(page):
 
 # Pages where Norwegian companies state their organisation number. They are tried
 # after the links found on the home page; proof rules apply to them unchanged.
-FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/impressum', '/privacy-policy', '/personvern', '/om', '/about', '/contact', '/privacy', '/personvernerklaering')
+FALLBACK_PROOF_PATHS = ('/kontakt', '/om-oss', '/about', '/personvern', '/impressum', '/kontakt-oss', '/privacy-policy', '/om', '/contact', '/privacy', '/personvernerklaering')
 FOLLOWUP_PAGES = 3
 
 
@@ -188,13 +188,13 @@ def previous_nomination(previous, context, units):
 
 async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
-    units={c.value['organisation_number']:{'name': c.value.get('name')} for c in envelope.claims
+    units={c.value['organisation_number']:{'name': c.value.get('name'), 'address':c.value.get('address')} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
     for c in envelope.claims:
         if c.availability!='available' or not c.field.startswith('subunits.detail.'):continue
         _,_,unit,field=c.field.split('.',3)
-        if unit in units and field in {'registered_website','registered_email'}:
-            units[unit]['website' if field=='registered_website' else 'email']=c.value
+        if unit in units and field in {'registered_website','registered_email','registered_phone','registered_mobile'}:
+            units[unit][{'registered_website':'website','registered_email':'email','registered_phone':'phone','registered_mobile':'mobile'}[field]]=c.value
     context['subunits']=[{'orgnr':unit,**data} for unit,data in units.items()]
     nav_homepages = list(context.get('nav_homepages') or [])
     active_nav = nav_index or getattr(http, 'nav_index', None)
@@ -220,6 +220,8 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 sub = emp_org if (emp_org and emp_org != org and emp_org in units) else None
                 nav_homepages.append({'url': hp, 'subunit_orgnr': sub})
     context['nav_homepages'] = nav_homepages
+    from .recall import annual_domains
+    context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
     from .wikidata import websites
     context['wikidata_homepages'] = websites(getattr(http, 'wikidata_index', {'records':{}}), org)
     from .search import active_for_search
@@ -245,6 +247,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     fetchable_failures = set()
     checked = set()
     refuted_previous_website = False
+    uniqueness_checked = False
     async def nominations():
         for candidate in candidates:yield candidate
         search=getattr(http,'search',None)
@@ -256,8 +259,15 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
         pages = []
         best = None
         try:
+            from .recall import shared_owners
+            owners = shared_owners(candidate.domain) | set(getattr(http, 'domain_owners', {}).get(candidate.domain, []))
+            if len(owners - {org}) >= 2:
+                attempts.append({'domain':candidate.domain,'origin':candidate.origin,'level':'REJECT','reason':'shared_registry_domain'})
+                ambiguous = True
+                continue
             response = await http.candidate(candidate, org, proved)
-            if domain(response.url) != candidate.domain:
+            redirected = domain(response.url) != candidate.domain
+            if redirected:
                 from dataclasses import replace
                 candidate = replace(candidate, url=response.url, domain=domain(response.url))
             if response.status in (401, 403, 429):
@@ -268,8 +278,21 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 attempts.append({"domain": candidate.domain, "level": "LOW", "reason": f"http_{response.status}"})
                 continue
             page = await offload(Page,response.body,response.url)
+            from .recall import redirect_names_company, prove_unique_core
+            if redirected and not redirect_names_company(page, org, context):
+                attempts.append({'domain':candidate.domain,'origin':candidate.origin,'level':'REJECT','reason':'redirect_without_company_identity','title':page.title})
+                continue
             checked.add(candidate.domain)
             proof = await offload(candidate_proof,page,org,context,candidate,leaders,http.config)
+            if proof.level in {'LOW','MEDIUM'} and not uniqueness_checked:
+                from .policy import extract
+                from .social import compact
+                core = legal_name(context.get('name'))
+                if len(compact(core)) >= 5 and extract(page.url).domain == compact(core):
+                    if redirect_names_company(page, org, context):
+                        uniqueness_checked = True
+                        section.evidence.extend(await prove_unique_core(org,context,http))
+                        proof = await offload(candidate_proof,page,org,context,candidate,leaders,http.config)
             pages.append((response, page))
             best = (proof, response, page)
             if proof.level == "BLOCKED":
@@ -290,9 +313,11 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                                      'reason': exc.code, 'page': refresh_proof})
             # Owner conflicts on any checked page cannot be rescued by another
             # page on that domain. Up to three same-domain proof pages are checked.
-            if proof.reason != 'foreign_orgnr':
+            vetoes = {'foreign_orgnr','different_legal_entity','hosting_default','parked','shared_registry_domain'}
+            if proof.reason not in vetoes:
                 seen = {response.url}
-                for position,target in enumerate(proof_page_targets(page, response.url, limit=FOLLOWUP_PAGES+3)):
+                limit = 5 if candidate.origin in RECOVERY else FOLLOWUP_PAGES+3
+                for position,target in enumerate(proof_page_targets(page, response.url, limit=limit)):
                     if position>=FOLLOWUP_PAGES and best[0].level=='VERIFIED':
                         break
                     if target in seen or domain(target) != domain(response.url):
@@ -313,14 +338,14 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                     if extra_proof.level == 'BLOCKED':
                         continue
                     pages.append((extra, extra_page))
-                    if extra_proof.reason == 'foreign_orgnr':
+                    if extra_proof.reason in vetoes:
                         best = (extra_proof, extra, extra_page)
                         break
                     ranks = {'REJECT': -1, 'BLOCKED': -1, 'LOW': 0, 'MEDIUM': 1, 'REGISTRY_DECLARED': 2, 'HIGH': 3, 'VERIFIED': 4}
                     if ranks[extra_proof.level] > ranks[best[0].level]:
                         best = (extra_proof, extra, extra_page)
             proof, response, page = best
-            attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
+            attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason, 'title':page.title, 'proof_page_url':response.url})
             is_prev_domain = bool(refresh_candidate and (candidate is refresh_candidate or candidate.domain == refresh_candidate.domain or domain(response.url) == refresh_candidate.domain))
             if is_prev_domain and (proof.reason == "foreign_orgnr" or (proof.level == "REJECT" and proof.reason == "foreign_orgnr")):
                 refuted_previous_website = True
@@ -486,11 +511,18 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 
 def candidate_proof(page,org,context,candidate,leaders,config=None):
     options = dict(suffix_contact=getattr(config,"website_suffix_contact_proof",False),
-                   domain_location=getattr(config,"website_domain_location_proof",False))
+                   domain_location=getattr(config,"website_domain_location_proof",False),
+                   nominated_contacts=candidate.origin in NOMINATED)
+    context = {**context, 'allowed_orgnrs':{org, *[u['orgnr'] for u in context.get('subunits', [])]}}
     proof=score(page,org,context,candidate.origin,leaders,**options)
     if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
-        unit=score(page,candidate.subunit_orgnr,context,candidate.origin,leaders,**options)
-        if unit.level=='VERIFIED':return unit
+        unit_context = next((u for u in context.get('subunits', []) if u['orgnr']==candidate.subunit_orgnr), {})
+        address = unit_context.get('address') or {}
+        unit_context = {**context, **unit_context, 'street':address.get('adresse'), 'postcode':address.get('postnummer'), 'city':address.get('poststed'), 'municipality':address.get('kommune')}
+        unit=score(page,candidate.subunit_orgnr,unit_context,candidate.origin,leaders,**options)
+        if unit.level=='VERIFIED':
+            unit.subject_orgnr = candidate.subunit_orgnr
+            return unit
     return proof
 
 
@@ -498,10 +530,11 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     candidate, proof, response, page, pages = choices[0]
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
-    matched=proof.token if proof.level=='VERIFIED' else org
+    matched=getattr(proof,'subject_orgnr',None) or org
     contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
-                    'domain_legal_name_and_registry_location'}
-    span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else page.name_span(proof.token)
+                    'domain_legal_name_and_registry_location','nominated_two_independent_signals',
+                    'registry_declared_name_tier_a','registry_declared_hard_contact_tier_b','unique_legal_core_domain'}
+    span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else (page.name_span(proof.token) or page.span_for(proof.token))
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")
     from .proof import orgnrs
@@ -511,7 +544,9 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
              "proof_page_url": response.url, "signals": proof.signals, "points": proof.points,
              "candidate_origin": candidate.origin, "relationship_note": "group_site" if group_site else None,
              "other_orgnrs": proof.other_orgnrs}
-    if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
+    value['publication_tier'] = 'B' if proof.proof_type == 'registry_declared_hard_contact_tier_b' else 'A'
+    value['content_allowed'] = value['publication_tier'] == 'A'
+    if matched != org and matched in {u['orgnr'] for u in context.get('subunits', [])}:
         value['matched_via_subunit']=matched
     publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
     if candidate.origin in {'registry_email', 'subunit_registry_email'}:
@@ -525,9 +560,17 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         section.claims[-1].evidence_ids.extend(sorted(refs))
     # HIGH combines page signals with authoritative registry/roles facts.
     if proof.level in {"HIGH",'REGISTRY_DECLARED'} or proof.proof_type in contact_proofs:
-        registry_refs = [e for e in envelope.evidence if e.source_class == "official_registry"]
+        registry_refs = [e for e in envelope.evidence + section.evidence if e.source_class == "official_registry"]
+        registry_refs = list({e.id:e for e in registry_refs}.values())
         section.evidence.extend(registry_refs)
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)
+    if not value['content_allowed']:
+        section.claims = [c for c in section.claims if c.field == 'official_website']
+        section.state = 'available'
+        http.accepted_pages[org] = []
+        envelope.run.refresh['website'] = {'checked_urls':sorted({r.url for r,_ in pages}), 'publication_tier':'B','content_allowed':False}
+        section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
+        return section
     from .descriptions import extract as descriptions
     accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
     identity_claim = section.claims[-1]

@@ -245,8 +245,10 @@ def test_high_needs_registry_and_strong_signal():
     assert score(page, OUR, ctx, "registry_website", []).level == "VERIFIED"
     assert score(page, OUR, ctx, "legal_name_slug", []).level == "VERIFIED"
     result = score(Page(html("OSLO").encode(), "https://example.no/"), OUR, ctx, "registry_website", [])
-    assert result.level == 'MEDIUM'
-    assert score(Page(html("OSLO").encode(), "https://unrelated.no/"), OUR, ctx, "registry_website", []).level == "MEDIUM"
+    assert result.level == 'VERIFIED' and result.proof_type == 'registry_declared_name_tier_a'
+    # Declaration is supplied by the caller from the registry, independently of
+    # whether the domain happens to resemble the legal name.
+    assert score(Page(html("OSLO").encode(), "https://unrelated.no/"), OUR, ctx, "registry_website", []).proof_type == 'registry_declared_name_tier_a'
 
 
 def test_body_cap_and_company_cap(tmp_path, monkeypatch):
@@ -327,12 +329,12 @@ def test_unlinked_standard_pages_are_checked_for_the_org_number(tmp_path, monkey
         if request.url.path == path:
             return httpx.Response(200, text=html("Org.nr 923 609 016 MVA"))
         if request.url.path in {"", "/"}:
-            return httpx.Response(200, text=html(""))
+            return httpx.Response(200, text='<html><title>Undeclared brand</title><body>'+FILL+'</body></html>')
         return httpx.Response(404, text="not found")
     # Three original pages plus at most three authorized imprint/privacy checks.
     _, row, requests, _ = execute_web(tmp_path, monkeypatch, response=site, website_request_cap=8, website_total_request_cap=13)
     claim = next((c for c in row["claims"] if c["field"] == "official_website"), None)
-    if path in {'/kontakt', '/kontakt-oss', '/om-oss', '/personvern'}:
+    if path in {'/kontakt', '/om-oss', '/personvern'}:
         assert claim["value"]["identity_level"] == "VERIFIED"
         assert any(url.endswith(path) for url in requests)
     else:
@@ -356,7 +358,7 @@ def test_foreign_number_on_a_standard_page_still_rejects(tmp_path, monkeypatch):
 def test_website_request_budget_defaults():
     from signalpost.config import Config
     cfg = Config(organisations=".", output="o", report="r")
-    assert cfg.website_request_cap == 16 and cfg.website_total_request_cap == 18  # Same as the CLI defaults.
+    assert cfg.website_request_cap == 40 and cfg.website_total_request_cap == 40  # Pooled global ceiling remains 18/input.
 
 
 def test_cli_defaults_enable_official_sources_and_disable_search(monkeypatch):

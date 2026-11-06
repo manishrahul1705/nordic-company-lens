@@ -399,7 +399,7 @@ def section(envelope,index,blobs,previous=None,now=None):
         elif envelope.run.sections.get('subunits') not in {'available','not_available','not_applicable'}:
             result.state='failed'; result.errors.append(Error(section='hiring',code='subunit_index_incomplete',message='Legal-entity match checked; branch coverage is unknown'))
     old=previous.get('claims',previous.get('profile',{}).get('claims',[])) if previous else []
-    old_jobs=[c['value']['uuid'] for c in old if c.get('family')=='hiring' and c.get('availability')=='available' and isinstance(c.get('value'),dict)]
+    old_jobs=[c['value']['uuid'] for c in old if c.get('family')=='hiring' and c.get('field','').startswith('hiring.job.') and c.get('availability')=='available' and isinstance(c.get('value'),dict)]
     cached=index.metrics.get('source_mode') in {'declared_index','historical_snapshot'}
     closure_evidence={}
     for uuid in old_jobs:

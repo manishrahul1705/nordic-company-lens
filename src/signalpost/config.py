@@ -37,8 +37,8 @@ class Config(BaseModel):
     nav_rank_candidates: bool = True
     public_activity: bool = False
     registry_changes: bool = True
-    website_request_cap: int = Field(default=16, ge=0, le=18)
-    website_total_request_cap: int = Field(default=18, ge=0)
+    website_request_cap: int = Field(default=40, ge=0, le=40)
+    website_total_request_cap: int = Field(default=40, ge=0, le=40)
     website_politeness_seconds: float = Field(default=1, ge=1)
     website_user_agent: str = "SignalpostAgent/1.0 (+https://github.com/manishrahul1705/nordic-company-lens)"
     hiring: bool = False

@@ -29,7 +29,7 @@ def projected(claim):
     if field.startswith('subunits.unit.'):
         address=value.get('address') or {}
         return ', '.join(text(x) for x in [value.get('name'),address.get('kommune') or address.get('poststed')] if x)
-    if field.startswith('hiring.job.'):return value['title']
+    if field.startswith(('hiring.job.','hiring.site_job.')):return value['title']
     if field.endswith('.old') or field.endswith('.new'):
         if field.startswith('roles.') and isinstance(value,list):return '; '.join(text(x.get('name')) for x in value if isinstance(x,dict) and x.get('name'))
         return text(value)
@@ -105,7 +105,7 @@ def generate(envelope):
         if claim.field=='official_website':add('scale','Official website',claim)
         if claim.field.startswith('social_profile.') and examples['social']<2:
             add('scale','Social profile',claim);examples['social']+=1
-        if claim.field.startswith('hiring.job.') and examples['ads']<3:
+        if claim.field.startswith(('hiring.job.','hiring.site_job.')) and examples['ads']<3:
             add('scale','Verified active ad',claim);examples['ads']+=1
         if claim.field.startswith('roles.role.') and claim.value.get('inactive') is not True:
             role=(claim.value.get('role_type') or {}).get('kode')
@@ -126,7 +126,7 @@ def generate(envelope):
         board=[c for c in claims if c.family=='roles' and isinstance(c.value,dict) and
             (c.value.get('group_type') or {}).get('kode')=='STYR' and (c.value.get('role_type') or {}).get('kode') in {'LEDE','NEST','MEDL'} and c.value.get('inactive') is not True]
         if len({c.id for c in board})>1:count('leadership','Registered board members',board,'board_members')
-    ads=[c for c in claims if c.family=='hiring' and c.field.startswith('hiring.job.') and not c.carried_forward]
+    ads=[c for c in claims if c.family=='hiring' and c.field.startswith(('hiring.job.','hiring.site_job.')) and not c.carried_forward]
     listed={cid for s in result.sections.scale if s.text.startswith('Verified active ad: ') for cid in s.claim_ids}
     if any(c.id not in listed for c in ads):count('scale','Verified active ads found',ads,'active_ads')
     for event in envelope.changes:

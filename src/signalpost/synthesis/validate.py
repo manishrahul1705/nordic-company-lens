@@ -152,7 +152,7 @@ def sentence_error(sentence,envelope):
         def matches(claim):
             if not getattr(claim,'family',None):return False
             if sentence.record_type=='workplaces':return claim.family=='subunits' and claim.field.startswith('subunits.unit.')
-            if sentence.record_type=='active_ads':return claim.family=='hiring' and claim.field.startswith('hiring.job.') and not claim.carried_forward
+            if sentence.record_type=='active_ads':return claim.family=='hiring' and claim.field.startswith(('hiring.job.','hiring.site_job.')) and not claim.carried_forward
             if sentence.record_type=='board_members':
                 return claim.family=='roles' and isinstance(claim.value,dict) and (claim.value.get('group_type') or {}).get('kode')=='STYR' and (claim.value.get('role_type') or {}).get('kode') in {'LEDE','NEST','MEDL'} and claim.value.get('inactive') is not True
             return False

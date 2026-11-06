@@ -88,6 +88,7 @@ def enforce(envelopes, blobs, bulk):
         value = proof.value
         host = domain(value.get('final_url', ''))
         nominated_others = sorted(set((nominations or {}).get(host, [])) - {org})
+        shared_veto = len(set(nominated_others) | (owners.get(host, set()) - {org})) >= 2
         group = nominations is None or value.get('relationship_note') == 'group_site' or bool(owners.get(host, set()) - {org}) or bool(nominated_others)
         evidence = {e.id: e for e in row.evidence}
         def pages(claim):
@@ -123,7 +124,9 @@ def enforce(envelopes, blobs, bulk):
             proof.reasons['relationship'] = 'group_site'
         removed = []
         registry_contacts = registered_contact_values(row.claims, evidence)
-        if group and not group_site_has_own_proof(proof_pages, org, name, registry_contacts):
+        units = {c.value['organisation_number'] for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
+        subject = value.get('matched_via_subunit') if value.get('matched_via_subunit') in units else org
+        if group and (shared_veto or not group_site_has_own_proof(proof_pages, subject, name, registry_contacts)):
             removed.append(proof)
             proof.reasons['relationship'] = 'group_site'
             proof.reasons['withholding_reason'] = 'ambiguous: group/shared site; no exact company ownership proof'
@@ -132,6 +135,9 @@ def enforce(envelopes, blobs, bulk):
                 row.modules['website'].state = 'source_error'
         for claim in row.claims:
             if claim is proof:
+                continue
+            if value.get('content_allowed') is False and claim.family=='website':
+                removed.append(claim)
                 continue
             source_pages = None
             if group and claim.field.startswith(('social_profile.', 'registry_social.', 'website_description.', 'public_brand')):

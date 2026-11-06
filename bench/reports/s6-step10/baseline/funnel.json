@@ -1,0 +1,855 @@
+{
+  "run": "bench\\runs\\20261106T055741582104Z-1909653",
+  "companies": 1000,
+  "definitions": "Categories overlap. Domains are registrable domains. Resolves is observed positive only (HTTP status or request-sent marker); absent DNS telemetry is not called NXDOMAIN. Fetched OK excludes robots. Proof failure is fetched 200 without verified proof. No network requests.",
+  "counts": {
+    "registry_homepage": {
+      "companies_present": 107,
+      "domains_present": 107,
+      "resolved_observed_domains": 91,
+      "fetched_ok_domains": 80,
+      "proof_passed_domains": 26,
+      "proof_failed_domains": 54,
+      "group_withheld_domains": 0,
+      "resolved_observed_companies": 91,
+      "fetched_ok_companies": 80,
+      "proof_passed_companies": 26,
+      "proof_failed_companies": 54,
+      "group_withheld_companies": 0
+    },
+    "registry_email": {
+      "companies_present": 189,
+      "domains_present": 189,
+      "resolved_observed_domains": 150,
+      "fetched_ok_domains": 129,
+      "proof_passed_domains": 31,
+      "proof_failed_domains": 98,
+      "group_withheld_domains": 0,
+      "resolved_observed_companies": 150,
+      "fetched_ok_companies": 129,
+      "proof_passed_companies": 31,
+      "proof_failed_companies": 98,
+      "group_withheld_companies": 0
+    },
+    "subunit": {
+      "companies_present": 155,
+      "domains_present": 167,
+      "resolved_observed_domains": 129,
+      "fetched_ok_domains": 109,
+      "proof_passed_domains": 31,
+      "proof_failed_domains": 78,
+      "group_withheld_domains": 0,
+      "resolved_observed_companies": 125,
+      "fetched_ok_companies": 108,
+      "proof_passed_companies": 31,
+      "proof_failed_companies": 77,
+      "group_withheld_companies": 0
+    },
+    "guessed": {
+      "companies_present": 941,
+      "domains_present": 10455,
+      "resolved_observed_domains": 383,
+      "fetched_ok_domains": 276,
+      "proof_passed_domains": 43,
+      "proof_failed_domains": 233,
+      "group_withheld_domains": 1,
+      "resolved_observed_companies": 276,
+      "fetched_ok_companies": 247,
+      "proof_passed_companies": 43,
+      "proof_failed_companies": 205,
+      "group_withheld_companies": 1
+    }
+  },
+  "proof_failure_reasons": {
+    "registry_homepage": {
+      "insufficient_owner_proof": 18,
+      "name_without_suffix_insufficient_contacts_or_domain": 20,
+      "foreign_orgnr": 15,
+      "no_proof_diagnostic": 1
+    },
+    "registry_email": {
+      "insufficient_owner_proof": 47,
+      "block_page": 1,
+      "foreign_orgnr": 24,
+      "name_without_suffix_insufficient_contacts_or_domain": 24,
+      "parent_group_without_exact_orgnr": 1,
+      "no_proof_diagnostic": 1
+    },
+    "subunit": {
+      "insufficient_owner_proof": 37,
+      "name_without_suffix_insufficient_contacts_or_domain": 21,
+      "parent_group_without_exact_orgnr": 1,
+      "foreign_orgnr": 19
+    },
+    "guessed": {
+      "insufficient_owner_proof": 108,
+      "name_without_suffix_insufficient_contacts_or_domain": 99,
+      "foreign_orgnr": 21,
+      "parked": 2,
+      "body_cap": 2,
+      "website_budget_exhausted": 1
+    }
+  },
+  "sample_30": [
+    {
+      "organisation_number": "829604922",
+      "company": "FIXIC AS",
+      "category": "guessed",
+      "domain": "fixic.shop",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://fixic.shop/",
+          "title": "Home - Fixic"
+        },
+        {
+          "url": "https://fixic.shop/privacy-policy/",
+          "title": "Privacy Policy - Fixic"
+        }
+      ]
+    },
+    {
+      "organisation_number": "999656099",
+      "company": "NETAD AS",
+      "category": "subunit",
+      "domain": "netad24.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://netad24.com/",
+          "title": "netad24 | Publisher Affiliate Marketing Company"
+        },
+        {
+          "url": "https://netad24.com/80-2/",
+          "title": "Contact Us | netad24"
+        },
+        {
+          "url": "https://netad24.com/53-2/",
+          "title": "About-us | netad24"
+        },
+        {
+          "url": "https://netad24.com/privacy-policy/",
+          "title": "Privacy Policy | netad24"
+        }
+      ]
+    },
+    {
+      "organisation_number": "980411575",
+      "company": "LOGOS AS",
+      "category": "subunit",
+      "domain": "lyse.net",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "http://www.lyse.net/",
+          "title": "www.lyse.net in parked"
+        },
+        {
+          "url": "http://www.lyse.net/kontakt",
+          "title": "www.lyse.net in parked"
+        },
+        {
+          "url": "http://www.lyse.net/kontakt-oss",
+          "title": "www.lyse.net in parked"
+        },
+        {
+          "url": "http://www.lyse.net/om-oss",
+          "title": "www.lyse.net in parked"
+        },
+        {
+          "url": "http://www.lyse.net/impressum",
+          "title": "www.lyse.net in parked"
+        },
+        {
+          "url": "http://www.lyse.net/privacy-policy",
+          "title": "www.lyse.net in parked"
+        },
+        {
+          "url": "http://www.lyse.net/personvern",
+          "title": "www.lyse.net in parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "971173459",
+      "company": "LINDÅS NÆRSENTER AS",
+      "category": "guessed",
+      "domain": "lindasnaersenter.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.lindasnaersenter.no/",
+          "title": "Nærsenter på Lindås | Lindås Nærsenter | Vestland"
+        },
+        {
+          "url": "https://www.lindasnaersenter.no/kontaktoss",
+          "title": "Kontakt oss | Lindås Nærsenter"
+        },
+        {
+          "url": "https://www.lindasnaersenter.no/omoss",
+          "title": "Om oss | Lindås Nærsenter"
+        },
+        {
+          "url": "https://www.lindasnaersenter.no/personvernerklæring",
+          "title": "Personvernerklæring | Lindås Nærsenter | Vestland"
+        }
+      ]
+    },
+    {
+      "organisation_number": "934500644",
+      "company": "SANDØ AS",
+      "category": "guessed",
+      "domain": "sando.no",
+      "reason": "foreign_orgnr",
+      "pages": [
+        {
+          "url": "https://sando.no/",
+          "title": "Bunadsølv og smykker | Gullsmed Sando"
+        }
+      ]
+    },
+    {
+      "organisation_number": "991247610",
+      "company": "ROLIDBAKKEN FUS BARNEHAGE AS",
+      "category": "registry_email",
+      "domain": "tryggebarnehager.no",
+      "reason": "foreign_orgnr",
+      "pages": [
+        {
+          "url": "https://tryggebarnehager.no/",
+          "title": "Trygge barnehager"
+        }
+      ]
+    },
+    {
+      "organisation_number": "965530819",
+      "company": "EVENTMAKER AS",
+      "category": "guessed",
+      "domain": "eventmaker.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "http://www.eventmaker.no/",
+          "title": "www.eventmaker.no"
+        },
+        {
+          "url": "http://www.eventmaker.no/kontakt",
+          "title": "www.eventmaker.no"
+        },
+        {
+          "url": "http://www.eventmaker.no/kontakt-oss",
+          "title": "www.eventmaker.no"
+        },
+        {
+          "url": "http://www.eventmaker.no/om-oss",
+          "title": "www.eventmaker.no"
+        },
+        {
+          "url": "http://www.eventmaker.no/impressum",
+          "title": "www.eventmaker.no"
+        },
+        {
+          "url": "http://www.eventmaker.no/privacy-policy",
+          "title": "www.eventmaker.no"
+        },
+        {
+          "url": "http://www.eventmaker.no/personvern",
+          "title": "www.eventmaker.no"
+        }
+      ]
+    },
+    {
+      "organisation_number": "998162564",
+      "company": "NORWEGIAN SCAFFOLD GROUP AS",
+      "category": "guessed",
+      "domain": "fjordstillas.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://fjordstillas.no/",
+          "title": "Få stillas tilbud hos | Fjord Stillas AS"
+        },
+        {
+          "url": "https://fjordstillas.no/kontakt-oss",
+          "title": "Kontakt oss | Fjord Stillas AS"
+        },
+        {
+          "url": "https://fjordstillas.no/om-oss",
+          "title": "Om oss | Fjord Stillas AS"
+        }
+      ]
+    },
+    {
+      "organisation_number": "927671174",
+      "company": "RUMLESKAFT AS",
+      "category": "guessed",
+      "domain": "rumleskaft.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "http://www.rumleskaft.no/",
+          "title": "www.rumleskaft.no is parked"
+        },
+        {
+          "url": "http://www.rumleskaft.no/kontakt",
+          "title": "www.rumleskaft.no is parked"
+        },
+        {
+          "url": "http://www.rumleskaft.no/kontakt-oss",
+          "title": "www.rumleskaft.no is parked"
+        },
+        {
+          "url": "http://www.rumleskaft.no/om-oss",
+          "title": "www.rumleskaft.no is parked"
+        },
+        {
+          "url": "http://www.rumleskaft.no/impressum",
+          "title": "www.rumleskaft.no is parked"
+        },
+        {
+          "url": "http://www.rumleskaft.no/privacy-policy",
+          "title": "www.rumleskaft.no is parked"
+        },
+        {
+          "url": "http://www.rumleskaft.no/personvern",
+          "title": "www.rumleskaft.no is parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "834141582",
+      "company": "OWER TRAFIKKSKOLE AS",
+      "category": "guessed",
+      "domain": "owertrafikkskole.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://owertrafikkskole.no/",
+          "title": "owertrafikkskole.no – registrert domene"
+        },
+        {
+          "url": "https://owertrafikkskole.no/kontakt",
+          "title": "owertrafikkskole.no – registrert domene"
+        },
+        {
+          "url": "https://owertrafikkskole.no/kontakt-oss",
+          "title": "owertrafikkskole.no – registrert domene"
+        },
+        {
+          "url": "https://owertrafikkskole.no/om-oss",
+          "title": "owertrafikkskole.no – registrert domene"
+        },
+        {
+          "url": "https://owertrafikkskole.no/impressum",
+          "title": "owertrafikkskole.no – registrert domene"
+        },
+        {
+          "url": "https://owertrafikkskole.no/privacy-policy",
+          "title": "owertrafikkskole.no – registrert domene"
+        },
+        {
+          "url": "https://owertrafikkskole.no/personvern",
+          "title": "owertrafikkskole.no – registrert domene"
+        }
+      ]
+    },
+    {
+      "organisation_number": "983244858",
+      "company": "EVOLVE AS",
+      "category": "guessed",
+      "domain": "evolve.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://evolve.com/",
+          "title": "Evolve | Authentic Vacation Rental Homes You Can Count On"
+        },
+        {
+          "url": "https://evolve.com/contact",
+          "title": "Contact Evolve - Vacation Rental Support for Owners & Guests"
+        },
+        {
+          "url": "https://evolve.com/terms",
+          "title": "Evolve | Terms & Conditions for Use of Evolve.com"
+        },
+        {
+          "url": "https://evolve.com/privacy",
+          "title": "Evolve Privacy Policy"
+        }
+      ]
+    },
+    {
+      "organisation_number": "932799901",
+      "company": "M&S EIENDOM AS",
+      "category": "guessed",
+      "domain": "mseiendom.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "http://www.mseiendom.com/",
+          "title": "www.mseiendom.com is parked"
+        },
+        {
+          "url": "http://www.mseiendom.com/kontakt",
+          "title": "www.mseiendom.com is parked"
+        },
+        {
+          "url": "http://www.mseiendom.com/kontakt-oss",
+          "title": "www.mseiendom.com is parked"
+        },
+        {
+          "url": "http://www.mseiendom.com/om-oss",
+          "title": "www.mseiendom.com is parked"
+        },
+        {
+          "url": "http://www.mseiendom.com/impressum",
+          "title": "www.mseiendom.com is parked"
+        },
+        {
+          "url": "http://www.mseiendom.com/privacy-policy",
+          "title": "www.mseiendom.com is parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "999656099",
+      "company": "NETAD AS",
+      "category": "guessed",
+      "domain": "netad.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://netad.no/",
+          "title": "Netad is coming soon"
+        }
+      ]
+    },
+    {
+      "organisation_number": "988836311",
+      "company": "KAIKANTEN GRYLLEFJORD AS",
+      "category": "subunit",
+      "domain": "kaikanten.no",
+      "reason": "foreign_orgnr",
+      "pages": [
+        {
+          "url": "https://kaikanten.no/",
+          "title": "Kaikanten – Byens beste pizza"
+        },
+        {
+          "url": "https://kaikanten.no/personvernerklaering/",
+          "title": "Personvernerklæring – Kaikanten"
+        }
+      ]
+    },
+    {
+      "organisation_number": "935666481",
+      "company": "HVALEN STUDIO AS",
+      "category": "guessed",
+      "domain": "hvalenstudio.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://hvalenstudio.no/",
+          "title": "Hvalen Studio — Management, musikk, design"
+        },
+        {
+          "url": "https://hvalenstudio.no/omoss",
+          "title": "Om oss — Hvalen Studio"
+        }
+      ]
+    },
+    {
+      "organisation_number": "928035212",
+      "company": "MEDIA CITY DRAMMEN AS",
+      "category": "guessed",
+      "domain": "mediacitydrammen.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "http://www.mediacitydrammen.no/",
+          "title": "www.mediacitydrammen.no is parked"
+        },
+        {
+          "url": "http://www.mediacitydrammen.no/kontakt",
+          "title": "www.mediacitydrammen.no is parked"
+        },
+        {
+          "url": "http://www.mediacitydrammen.no/kontakt-oss",
+          "title": "www.mediacitydrammen.no is parked"
+        },
+        {
+          "url": "http://www.mediacitydrammen.no/om-oss",
+          "title": "www.mediacitydrammen.no is parked"
+        },
+        {
+          "url": "http://www.mediacitydrammen.no/impressum",
+          "title": "www.mediacitydrammen.no is parked"
+        },
+        {
+          "url": "http://www.mediacitydrammen.no/privacy-policy",
+          "title": "www.mediacitydrammen.no is parked"
+        },
+        {
+          "url": "http://www.mediacitydrammen.no/personvern",
+          "title": "www.mediacitydrammen.no is parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "993327182",
+      "company": "NORWEGIAN BUSINESS PAVILIONS AS",
+      "category": "subunit",
+      "domain": "messetjeneste.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://messetjeneste.no/",
+          "title": "Messetjeneste | Messetjeneste | Vi realiserer kreative ideer"
+        },
+        {
+          "url": "https://messetjeneste.no/kontakt-oss/",
+          "title": "Messetjeneste | Kontakt oss"
+        },
+        {
+          "url": "https://messetjeneste.no/kontakt-oss/send-filer/",
+          "title": "Messetjeneste | Send filer"
+        },
+        {
+          "url": "https://messetjeneste.no/om-oss/",
+          "title": "Messetjeneste | Om oss"
+        },
+        {
+          "url": "https://messetjeneste.no/om-oss/bemasterplus/",
+          "title": "Messetjeneste | beMaster+"
+        },
+        {
+          "url": "https://messetjeneste.no/om-oss/ifes/",
+          "title": "Messetjeneste | IFES"
+        },
+        {
+          "url": "https://messetjeneste.no/om-oss/miljoefyrtaarn/",
+          "title": "Messetjeneste | Miljøfyrtårn"
+        }
+      ]
+    },
+    {
+      "organisation_number": "933372332",
+      "company": "REMOTE ROBOTIC SYSTEMS AS",
+      "category": "guessed",
+      "domain": "remoteroboticsystems.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "http://www.remoteroboticsystems.no/",
+          "title": "www.remoteroboticsystems.no is parked"
+        },
+        {
+          "url": "http://www.remoteroboticsystems.no/kontakt",
+          "title": "www.remoteroboticsystems.no is parked"
+        },
+        {
+          "url": "http://www.remoteroboticsystems.no/kontakt-oss",
+          "title": "www.remoteroboticsystems.no is parked"
+        },
+        {
+          "url": "http://www.remoteroboticsystems.no/om-oss",
+          "title": "www.remoteroboticsystems.no is parked"
+        },
+        {
+          "url": "http://www.remoteroboticsystems.no/impressum",
+          "title": "www.remoteroboticsystems.no is parked"
+        },
+        {
+          "url": "http://www.remoteroboticsystems.no/privacy-policy",
+          "title": "www.remoteroboticsystems.no is parked"
+        },
+        {
+          "url": "http://www.remoteroboticsystems.no/personvern",
+          "title": "www.remoteroboticsystems.no is parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "921186924",
+      "company": "UNIME AS",
+      "category": "guessed",
+      "domain": "unime.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "http://unime.no/",
+          "title": "unime.no is parked"
+        },
+        {
+          "url": "http://unime.no/kontakt",
+          "title": "unime.no is parked"
+        },
+        {
+          "url": "http://unime.no/kontakt-oss",
+          "title": "unime.no is parked"
+        },
+        {
+          "url": "http://unime.no/om-oss",
+          "title": "unime.no is parked"
+        },
+        {
+          "url": "http://unime.no/impressum",
+          "title": "unime.no is parked"
+        },
+        {
+          "url": "http://unime.no/privacy-policy",
+          "title": "unime.no is parked"
+        },
+        {
+          "url": "http://unime.no/personvern",
+          "title": "unime.no is parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "996927903",
+      "company": "BONO SANDVIKSBODER AS",
+      "category": "registry_email",
+      "domain": "backe.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://backe.no/",
+          "title": "Backe – entreprenør og eiendomsutvikler"
+        },
+        {
+          "url": "https://backe.no/kontaktinformasjon",
+          "title": "Kontaktinformasjon | Backe"
+        }
+      ]
+    },
+    {
+      "organisation_number": "922154635",
+      "company": "SKATTEKISTEN AS",
+      "category": "guessed",
+      "domain": "skattekisten.no",
+      "reason": "foreign_orgnr",
+      "pages": [
+        {
+          "url": "https://skattekisten.no/",
+          "title": "Skattekisten - Gull, Sølv og Edelstener"
+        }
+      ]
+    },
+    {
+      "organisation_number": "955010477",
+      "company": "AL ULLERUDTOPPEN BORETTSLAG",
+      "category": "registry_email",
+      "domain": "usbl.no",
+      "reason": "foreign_orgnr",
+      "pages": [
+        {
+          "url": "https://www.usbl.no/",
+          "title": "Boligbyggelag, forretningsfører og boligutvikler | Usbl"
+        }
+      ]
+    },
+    {
+      "organisation_number": "912493296",
+      "company": "KINDRA AS",
+      "category": "guessed",
+      "domain": "ourkindra.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://ourkindra.com/",
+          "title": "Vaginal Health & Sexual Wellness | Kindra"
+        },
+        {
+          "url": "https://ourkindra.com/pages/contact",
+          "title": "Contact\n – Kindra"
+        },
+        {
+          "url": "https://ourkindra.com/policies/privacy-policy",
+          "title": "Privacy policy\n – Kindra"
+        },
+        {
+          "url": "https://ourkindra.com/pages/privacy-policy",
+          "title": "Privacy Policy\n – Kindra"
+        },
+        {
+          "url": "https://ourkindra.com/pages/terms-conditions",
+          "title": "Terms of Service\n – Kindra"
+        }
+      ]
+    },
+    {
+      "organisation_number": "922753768",
+      "company": "SØRLIE HOLDING AS",
+      "category": "guessed",
+      "domain": "sorlieholding.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "http://www.sorlieholding.no/",
+          "title": "www.sorlieholding.no is not set up yet"
+        }
+      ]
+    },
+    {
+      "organisation_number": "927661683",
+      "company": "LAU CAPITAL AS",
+      "category": "guessed",
+      "domain": "lau.com.cn",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "http://lau.com.cn/index.lcl.html",
+          "title": "Lau Capital"
+        }
+      ]
+    },
+    {
+      "organisation_number": "915884482",
+      "company": "FINNMARK RENSEFISK AS",
+      "category": "guessed",
+      "domain": "rensefiskgruppen.no",
+      "reason": "foreign_orgnr",
+      "pages": [
+        {
+          "url": "https://rensefiskgruppen.no/",
+          "title": "Rensefiskgruppen – Rensefisk for dine merder"
+        }
+      ]
+    },
+    {
+      "organisation_number": "833912682",
+      "company": "ELTEK AS",
+      "category": "guessed",
+      "domain": "eltek.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "http://www.eltek.no/",
+          "title": "www.eltek.no is parked"
+        },
+        {
+          "url": "http://www.eltek.no/kontakt",
+          "title": "www.eltek.no is parked"
+        },
+        {
+          "url": "http://www.eltek.no/kontakt-oss",
+          "title": "www.eltek.no is parked"
+        },
+        {
+          "url": "http://www.eltek.no/om-oss",
+          "title": "www.eltek.no is parked"
+        },
+        {
+          "url": "http://www.eltek.no/impressum",
+          "title": "www.eltek.no is parked"
+        },
+        {
+          "url": "http://www.eltek.no/privacy-policy",
+          "title": "www.eltek.no is parked"
+        },
+        {
+          "url": "http://www.eltek.no/personvern",
+          "title": "www.eltek.no is parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "925547530",
+      "company": "HANCHE AS",
+      "category": "guessed",
+      "domain": "hanche.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "http://www.hanche.no/",
+          "title": "www.hanche.no is parked"
+        },
+        {
+          "url": "http://www.hanche.no/kontakt",
+          "title": "www.hanche.no is parked"
+        },
+        {
+          "url": "http://www.hanche.no/kontakt-oss",
+          "title": "www.hanche.no is parked"
+        },
+        {
+          "url": "http://www.hanche.no/om-oss",
+          "title": "www.hanche.no is parked"
+        },
+        {
+          "url": "http://www.hanche.no/impressum",
+          "title": "www.hanche.no is parked"
+        },
+        {
+          "url": "http://www.hanche.no/privacy-policy",
+          "title": "www.hanche.no is parked"
+        },
+        {
+          "url": "http://www.hanche.no/personvern",
+          "title": "www.hanche.no is parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "919092734",
+      "company": "SMEDGATA 45 OG 49 AS",
+      "category": "subunit",
+      "domain": "sabinum.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "http://www.sabinum.no/",
+          "title": "www.sabinum.no in parked"
+        },
+        {
+          "url": "http://www.sabinum.no/kontakt",
+          "title": "www.sabinum.no in parked"
+        },
+        {
+          "url": "http://www.sabinum.no/kontakt-oss",
+          "title": "www.sabinum.no in parked"
+        },
+        {
+          "url": "http://www.sabinum.no/om-oss",
+          "title": "www.sabinum.no in parked"
+        },
+        {
+          "url": "http://www.sabinum.no/impressum",
+          "title": "www.sabinum.no in parked"
+        },
+        {
+          "url": "http://www.sabinum.no/privacy-policy",
+          "title": "www.sabinum.no in parked"
+        },
+        {
+          "url": "http://www.sabinum.no/personvern",
+          "title": "www.sabinum.no in parked"
+        }
+      ]
+    },
+    {
+      "organisation_number": "998236002",
+      "company": "SCENE MIDT AS",
+      "category": "subunit",
+      "domain": "scenemidt.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.scenemidt.no/",
+          "title": "Scene Midt - Scene Midt"
+        },
+        {
+          "url": "https://www.scenemidt.no/kontakt/",
+          "title": "Kontakt - Scene Midt"
+        },
+        {
+          "url": "https://www.scenemidt.no/om-oss/",
+          "title": "Om oss - Scene Midt"
+        }
+      ]
+    }
+  ],
+  "published_websites_audited": 83,
+  "social_missing_observed_links": 56
+}

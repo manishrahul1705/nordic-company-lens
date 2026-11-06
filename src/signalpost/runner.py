@@ -431,6 +431,16 @@ async def _run(config, client=None):
                         if config.public_activity and website_http.accepted_pages.get(org) and envelope.run.sections.get("activity") != "available":
                             from .web.activity import fetch as fetch_activity
                             await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
+            if config.hiring and config.websites and website_http.accepted_pages.get(org):
+                from .web.jobs import fetch as company_jobs
+                from .sources.extract import Section
+                async with website_semaphore:
+                    jobs = await company_jobs(envelope, website_http)
+                current = [c for c in envelope.claims if c.family=='hiring' and c.availability=='available']
+                if jobs.claims or jobs.errors:
+                    state = 'available' if current or jobs.claims else 'failed'
+                    update(envelope,'hiring',Section(state=state,claims=current+jobs.claims,evidence=jobs.evidence,
+                           errors=[e for e in envelope.errors if e.section=='hiring']+jobs.errors))
         except asyncio.CancelledError:
             raise
         except SourceFailure as exc:
@@ -458,6 +468,8 @@ async def _run(config, client=None):
         http = Http(active_client, config, budget, blobs)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
         website_http.nav_index = nav_index
+        website_http.registry_http = http
+        website_http.domain_owners = getattr(bulk, 'domain_owners', {})
         website_http.wikidata_index = wikidata_index
         from .web.search import Search
         website_http.search=Search(active_client,config,budget)
@@ -585,7 +597,7 @@ async def _run(config, client=None):
     report['limits']['time_budget_seconds']=budget.total_seconds
     report['limits']['hard_max_requests']=budget.hard_request_cap
     report['limits']['hard_time_budget_seconds']=budget.hard_time_cap_seconds
-    report['request_budget_basis']='18 per unique normalized input; explicit lower limits honored'
+    report['request_budget_basis']='Pooled 18 per unique normalized input globally, up to 40 per company; explicit lower limits honored'
     report['measured_request_projection']={'baseline':'1000-company retained-features run',
         'baseline_mean_http':5.975,'projected_http':round(5.975*len(inputs.unique)),
         'note':'Projection from a measured sample; source pagination/retries and feed changes can differ.'}

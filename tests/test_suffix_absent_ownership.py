@@ -47,7 +47,7 @@ def test_suffix_proof_publishes_registry_evidence_and_matching_social(tmp_path,m
     body=html('12345678 office@example.no',title='Example',extra='<footer><a href="https://facebook.com/example">Facebook</a></footer>').replace('<header>Example AS</header>','<header>Example</header>')
     _,row,_,_=execute_web(tmp_path,monkeypatch,body=body,website_suffix_contact_proof=True)
     c=next(c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available')
-    assert c['value']['proof_type']=='legal_name_without_suffix_and_two_contacts'
+    assert c['value']['proof_type']=='registry_declared_name_tier_a'
     assert any(e['source_class']=='official_registry' and e['id'] in c['evidence_ids'] for e in row['evidence'])
 
 

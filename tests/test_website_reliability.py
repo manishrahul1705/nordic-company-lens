@@ -36,7 +36,7 @@ def test_http_error_at_apex_does_not_trigger_transport_fallback(tmp_path):
         async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:
             http=WebsiteHttp(client,cfg,Budget(cfg),BlobStore(cfg.state_dir),resolver)
             with pytest.raises(SourceFailure,match='website_http_5xx'):
-                await http.candidate(Candidate('https://example.no/','example.no','registry_website'),OUR)
+                await http.candidate(Candidate('https://example.no/','example.no','legal_name_slug'),OUR)
     asyncio.run(execute())
     assert requests==['https://example.no/robots.txt','https://example.no/']
 
@@ -45,7 +45,8 @@ def test_registry_declared_is_not_available_to_guesses():
     body=html('Distinctive street 12',title='Distinctive Services')
     context={'name':'Distinctive Enterprise AS','street':['Distinctive street 12']}
     proof=score(Page(body.encode(),'https://example.no/'),OUR,context,'registry_website',[])
-    assert proof.level=='LOW'  # A partial brand plus address cannot prove ownership.
+    assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_hard_contact_tier_b'
+    assert score(Page(body.encode(),'https://example.no/'),OUR,context,'legal_name_slug',[]).level=='LOW'
     assert score(Page(body.encode(),'https://example.no/'),OUR,context,'registry_email',[]).level!='REGISTRY_DECLARED'
     assert score(Page(html('Org.nr '+OTHER,title='Distinctive').encode(),'https://example.no/'),OUR,context,'registry_website',[]).level=='REJECT'
     assert score(Page(html('',title='Holding').encode(),'https://example.no/'),OUR,{'name':'Holding AS'},'registry_website',[]).level!='REGISTRY_DECLARED'
