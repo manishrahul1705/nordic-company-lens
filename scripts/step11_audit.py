@@ -7,7 +7,8 @@ from signalpost.web.html import Page
 from signalpost.web.candidates import legal_name
 from signalpost.web.round2 import real_page,unique_eligible
 from signalpost.web.proof import score
-from signalpost.web.policy import domain
+from signalpost.web.policy import domain,extract
+from signalpost.web.social import compact
 
 OUT=Path('bench/reports/s6-step11')
 PREVIOUS=Path('bench/cache/s6-step11-baseline')
@@ -38,7 +39,7 @@ def saved_unique_review():
         context={'name':values.get('identity.legal_name'),'street':address.get('adresse'),'postcode':address.get('postnummer'),
                  'municipality':address.get('kommune'),'city':address.get('poststed'),'phone':values.get('identity.registered_phone'),
                  'email':values.get('identity.registered_email'),'nace':(values.get('identity.nace1') or {}).get('kode')}
-        leaders=[c['value'].get('name') for c in row['claims'] if c['family']=='roles' and isinstance(c['value'],dict) and c['value'].get('name')]
+        leaders=[c['value'].get('name') for c in row['claims'] if c['family']=='roles' and isinstance(c['value'],dict) and isinstance(c['value'].get('name'),str) and (c['value'].get('role_type') or {}).get('kode') in {'DAGL','LEDE'}]
         uniqueness=False;query_sha=None
         for evidence in row['evidence']:
             if '/api/enheter?navn=' not in evidence['source_url']:continue
@@ -86,11 +87,13 @@ def inventory(run):
             rules=[]
             if entry['origin']=='registry_email':rules.append('A')
             if entry['origin'].startswith('subunit_registry_'):rules.append('B')
-            if entry.get('unique_candidate'):rules.append('C')
+            label=extract(entry['domain'])
+            core=compact(legal_name(name))
+            if entry.get('unique_candidate') or (label.suffix=='no' and label.domain==core and len(core)>=5):rules.append('C')
             if 'discovered_proof_targets' in entry:rules.append('D')
             for rule in rules:
                 f=funnel[rule];f['candidates']+=1;f['fetched']+=bool(entry.get('fetched'))
-                accepted=website is not None and domain(website['value']['final_url'])==entry['domain']
+                accepted=website is not None and (domain(website['value']['final_url'])==entry.get('final_domain',entry['domain']) or (entry.get('accepted') and website['value']['candidate_origin']==entry['origin']))
                 if rule=='C':accepted=accepted and website['value']['proof_type']=='unique_no_corroborated'
                 if rule=='D':accepted=accepted and website['value']['proof_page_url'] in entry.get('discovered_proof_targets',[])
                 f['accepted']+=accepted
@@ -98,9 +101,11 @@ def inventory(run):
         for key in ['candidates','fetched']:funnel['E'][key]+=jobs.get(key,0)
         funnel['E']['accepted']+=sum(c['field'].startswith('hiring.site_job.') and c['availability']=='available' for c in row['claims'])
         if website and not any(c['field']=='official_website' for c in old['claims']):
-            funnel['F']['candidates']+=len(row['run']['refresh'].get('website',{}).get('observed_social_profiles',[]))
+            funnel['F']['candidates']+=1
             funnel['F']['fetched']+=1
-            funnel['F']['accepted']+=sum(c['field'].startswith(('social_profile.','dated_item.')) and c['availability']=='available' for c in row['claims'])
+            found=sum(c['field'].startswith(('social_profile.','dated_item.')) and c['availability']=='available' for c in row['claims'])
+            funnel['F']['accepted']+=bool(found)
+            funnel['F']['accepted_items']+=found
     (OUT/'new-items.json').write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     (OUT/'funnel.json').write_text(json.dumps({k:dict(v) for k,v in funnel.items()},indent=2)+'\n',encoding='utf8')
     print({'items':len(items),'counts':summarize(run)},flush=True)

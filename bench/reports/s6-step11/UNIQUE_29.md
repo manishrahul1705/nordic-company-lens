@@ -20,7 +20,7 @@ Saved Step10 bodies and recorded complete registry-name queries only. No new req
 | EVENTMAKER AS / 965530819 | http://www.eventmaker.no | False | frameset_placeholder |
 | FLAVEURIA AS / 934407253 | https://flaveuria.no | False | approved name / corroboration / complete registry uniqueness missing |
 | ASKØY24 AS / 923998012 | https://www.askoy24.no | True | none |
-| SNAPPY AS / 929481070 | https://snappy.no | True | none |
+| SNAPPY AS / 929481070 | https://snappy.no | False | approved name / corroboration / complete registry uniqueness missing |
 | BYGGTEMA AS / 988236756 | https://www.byggtema.no | False | approved name / corroboration / complete registry uniqueness missing |
 | TENSIO AS / 922828172 | https://www.tensio.no | True | none |
 | ANTISINK AS / 918486666 | https://www.antisink.no | True | none |

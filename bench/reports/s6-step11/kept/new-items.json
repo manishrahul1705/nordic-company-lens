@@ -1,0 +1,883 @@
+[
+  {
+    "organisation_number": "999656099",
+    "company": "NETAD AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://netad24.com",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "registry_declared_name_tier_a",
+      "proof_page_url": "https://netad24.com/",
+      "signals": [
+        "registry_declared_domain",
+        "legal_name"
+      ],
+      "points": 4,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "02aff52335520d65af8f7a851bec116d2a5404cfb98c7226a27ec1049134a306",
+        "source_url": "https://netad24.com/",
+        "source_class": "company_owned",
+        "content_sha256": "0eeb5780b7a6d10889d5562d6bbfdae729edb61166c9bf225f42eed5289acf0f",
+        "claim_span": "/ul><div id=\"footer-info\">© 2013 - 2023 Netad AS | Publisher Affiliate Marketing Company</div>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</footer>\n\t\t</div>\n\n\n\t</div>\n\n\t<script type=\"speculationrules\">\n{\"prefetch\":[{\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"\\/*\"},{\"not\":{\"href_matches\":[\"\\/wp-*.php\",\"\\/wp-",
+        "retrieved_at": "2026-11-06T10:21:25.461555Z",
+        "locator": "identity-proof:999656099"
+      },
+      {
+        "id": "f358c64940c3e18d1220cafa5ab970dd92dab18b5776ad9c7b7e0be3b241fa33",
+        "source_url": "https://netad24.com/",
+        "source_class": "company_owned",
+        "content_sha256": "0eeb5780b7a6d10889d5562d6bbfdae729edb61166c9bf225f42eed5289acf0f",
+        "claim_span": "/ul><div id=\"footer-info\">© 2013 - 2023 Netad AS | Publisher Affiliate Marketing Company</div>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</footer>\n\t\t</div>\n\n\n\t</div>\n\n\t<script type=\"speculationrules\">\n{\"prefetch\":[{\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"\\/*\"},{\"not\":{\"href_matches\":[\"\\/wp-*.php\",\"\\/wp-",
+        "retrieved_at": "2026-11-06T10:21:25.461555Z",
+        "locator": "/norwegian-entity"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Footer explicitly publishes as Netad AS; registry email uses netad24.com. Historical affiliate-marketing copy differs from current property NACE, but the legal publisher is exact.",
+    "kept": true
+  },
+  {
+    "organisation_number": "991368000",
+    "company": "RALSTON BAU AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://ralstonbau.com",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "registry_declared_name_tier_a",
+      "proof_page_url": "https://ralstonbau.com/en",
+      "signals": [
+        "registry_declared_domain",
+        "legal_name"
+      ],
+      "points": 4,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "99ebcbc5d6e3288eb195ee7e0a9b85073e7df2ecbca2cf102b47b781a6989f8d",
+        "source_url": "https://ralstonbau.com/en",
+        "source_class": "company_owned",
+        "content_sha256": "dadf30e833971dc337a6bc92ad647bf2ec8f6aea5ba661452f6ac62a70508252",
+        "claim_span": "ose-up-400x400.jpg\">\n\n\n\n\n<title>Home | \tRalston Bau</title>\n\n\n<script src=\"https://ralstonbau.com/assets/vendor/jquery-3.3.1.min.js\"></script>\n<script src=\"https://ralstonbau.com/assets/vendor/hammer.min.js\"></script>\n<script src=\"https://ralstonbau.com/assets/vendor/js.cookie-2.2.0.min.js\"></script",
+        "retrieved_at": "2026-11-06T10:21:31.585111Z",
+        "locator": "identity-proof:991368000"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Same Ralston Bau site as baseline; design studio identity and registered domain, with retained Norwegian about/contact evidence. Proof page changed.",
+    "kept": true
+  },
+  {
+    "organisation_number": "886757972",
+    "company": "PRIME CARGO AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.primecargo.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "registry_declared_name_tier_a",
+      "proof_page_url": "https://www.primecargo.no/",
+      "signals": [
+        "registry_declared_domain",
+        "legal_name"
+      ],
+      "points": 4,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "9f10ac3137c5305d5fb19a9a44b5af7224a30c8331d48bdfd13bd6412cec8206",
+        "source_url": "https://www.primecargo.no/",
+        "source_class": "company_owned",
+        "content_sha256": "8cf11bc8a7276ad3637ccf164838f361d80f54c4d3eb5c5c1b100248c64957ac",
+        "claim_span": "icon\" href=\"/favicon.ico\" />\n    <title>Prime Cargo - Norges mest fleksible logistikkpartner</title>\n    <meta name=\"description\" content=\"Prime Cargo tilbyr fleksible logistikkløsninger med 44 000 m², AutoStore, spedisjon og fortolling. Vi finner alltid en løsning.\" />\n    <meta name=\"author\" conte",
+        "retrieved_at": "2026-11-06T10:21:33.303902Z",
+        "locator": "identity-proof:886757972"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Prime Cargo identity in title/metadata, registry email post@primecargo.no and logistics offering. No conflicting publisher. The captured root is metadata-heavy.",
+    "kept": true
+  },
+  {
+    "organisation_number": "987564911",
+    "company": "NÆRINGSØKONOMI AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://naringsokonomi.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://naringsokonomi.no/om-oss",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "8ee2d8715fb3ffa2c3dd17a85d596b01da39d2dbfcc598de476a993466a70d77",
+        "source_url": "https://naringsokonomi.no/om-oss",
+        "source_class": "company_owned",
+        "content_sha256": "55df987c5f756296230eefa47db7979d9a6669e8afc2074ee7d31a777cde0406",
+        "claim_span": "text-align: center;\">Foretaksregisteret 987 564 911 MVA</p></div> </div> <div id=\"m1461\" class=\"module autospacer\"></div> </div> <div class=\"col col-m",
+        "retrieved_at": "2026-11-06T10:21:36.054174Z",
+        "locator": "identity-proof:987564911"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Own organisation number 987564911, Næringsøkonomi AS and Tvetenveien 154 on the about page. Existing site, changed proof.",
+    "kept": true
+  },
+  {
+    "organisation_number": "924912758",
+    "company": "BORG BIERSTUBE AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.borgbierstube.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "legal_name_and_registry_contact",
+      "proof_page_url": "https://www.borgbierstube.no/borg-bierstube-om-oss",
+      "signals": [
+        "exact_legal_name",
+        "street",
+        "postcode_city"
+      ],
+      "points": 6,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "b1188417ec8405cb07118499cc57a408719ed50472fe9edfe1444d577ada8ef5",
+        "source_url": "https://www.borgbierstube.no/borg-bierstube-om-oss",
+        "source_class": "company_owned",
+        "content_sha256": "87b36d690b279023577b2c93fb9eab3f0a38a539d9efbc737150e98f2b9b990d",
+        "claim_span": "oter_wrapp\"><div class=\"heading-footer\">BORG BIERSTUBE AS</div><div class=\"div-block-7\"><div class=\"div-block-8\"><div class=\"head-kat _1\">RESTURANT</div><a href=\"/borg-bierstube-meny-mat\" class=\"link-footer\">VÅR MENY</a><a href=\"/borg-bierstube-bestill-na\" class=\"link-footer top\">BESTILL PLASS</a></",
+        "retrieved_at": "2026-11-06T10:21:46.112501Z",
+        "locator": "identity-proof:924912758"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Borg Bierstube AS in footer and Torget 6, 1707 Sarpsborg. Existing site, changed proof.",
+    "kept": true
+  },
+  {
+    "organisation_number": "994382217",
+    "company": "FORMOSA AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.formosa.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://www.formosa.no/",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "5fc702c3ac1cd6b86b6fde0ee689c9a7fbb8117f43b369f8f82e85c3cbd83e17",
+        "source_url": "https://www.formosa.no/",
+        "source_class": "company_owned",
+        "content_sha256": "49bbbfeeccc6d925752c0c481ae858acda7cdecbad514b25aa1eed77b2871722",
+        "claim_span": "ref=\"https://gmpg.org/xfn/11\">\n\n\t<title>Formosa AS &#8211; Din DrayTek spesialist i Norge</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />\n<link rel=\"alter",
+        "retrieved_at": "2026-11-06T10:22:03.085429Z",
+        "locator": "identity-proof:994382217"
+      },
+      {
+        "id": "3aa58ef04150c0fd155eb0d978749cda3bedec5e257d70df2ed210bcd4753bc9",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=formosa&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "298c8ac77de687836201f97d3a998cb29de9d0a3c06254b9dcda6026a8865d16",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/994382217\"}},\"aktivitet\":[\"Import og handel med dataprodukter, utvikling og drift av IT løsninger\",\"samt kursvirksomhet.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Voll terrasse 58\"],\"kommune\":\"BÆRUM\",\"kommune",
+        "retrieved_at": "2026-11-06T10:22:09.638745Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Formosa AS in title and company copy; registered director Katarina Leopax appears. Complete official uniqueness query.",
+    "kept": true
+  },
+  {
+    "organisation_number": "914283116",
+    "company": "BALDER APOTEK AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://balderapotek.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://balderapotek.no/kundeservice/",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "11000abfb9485ab1ca27b477599af2dcc6ac5349978c50b4485e87b767d09b71",
+        "source_url": "https://balderapotek.no/kundeservice/",
+        "source_class": "company_owned",
+        "content_sha256": "56cd6c0f2d6d37ff2d2d3a4447cfc5f6bb6cc90bdf330722aefe2096d4bf8a68",
+        "claim_span": ">**********</span>ek.no</span>, org.nr: 914 283 116, og betegnes i det følgende som selger/selgeren.</p>\n<p>Kjøper er den forbrukeren som foretar best",
+        "retrieved_at": "2026-11-06T10:22:03.689776Z",
+        "locator": "identity-proof:914283116"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Individual seller identity and own organisation number 914283116 on customer-service terms.",
+    "kept": true
+  },
+  {
+    "organisation_number": "914283116",
+    "company": "BALDER APOTEK AS",
+    "field": "social_profile.36037fa4ee88caee10e9",
+    "value": {
+      "url": "https://www.instagram.com/balderapotek",
+      "platform": "instagram.com"
+    },
+    "evidence": [
+      {
+        "id": "6730cc2c48f2c7296cf5d0513ec47dbd31375a6846329a3af09ca987e5efc4cd",
+        "source_url": "https://balderapotek.no/",
+        "source_class": "company_owned",
+        "content_sha256": "13dc28a09562aad7eb12b91ce7fff7d5e294710983e0dee12613a0a9fd6af7fe",
+        "claim_span": "<a href=\"https://www.instagram.com/balderapotek/\" target=\"_blank\">",
+        "retrieved_at": "2026-11-06T10:21:52.383572Z",
+        "locator": "company-link:https://www.instagram.com/balderapotek"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Balderapotek Instagram handle is linked by that same verified pharmacy, matching its brand.",
+    "kept": true
+  },
+  {
+    "organisation_number": "993372277",
+    "company": "REAL ØKONOMI AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://realokonomi.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://realokonomi.no/",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "8ab523e8db3cff18e762f254b40da8d5590def2d7f91a85d8d5350402c329e12",
+        "source_url": "https://realokonomi.no/",
+        "source_class": "company_owned",
+        "content_sha256": "403d6df4f3a0ed668e4fa5c64fbdb206abaa89479f6493f59ab339dd164c6304",
+        "claim_span": ".com/wordpress/plugins/seo/ -->\n\t<title>Real Økonomi | Trygge regnskapstjenester</title>\n\t<meta name=\"description\" content=\"Real Økonomi er et autorisert regnskapskontor i Knarvik som tilbyr regnskap, lønn, årsoppgjør og rådgivning. Vi hjelper deg med økonomistyring, kvalitet og trygghet i alle ledd",
+        "retrieved_at": "2026-11-06T10:21:57.640241Z",
+        "locator": "identity-proof:993372277"
+      },
+      {
+        "id": "55bf0e30d59d6faa5d69db93f4625f8c60f030261b445cc71562f6f9fad6c480",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=real+%C3%B8konomi&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "bacf6bc5aca6e480169bdf7ff9dfa49523f4ed65b3be1e77d5b19b437745fde1",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/993372277\"}},\"aktivitet\":[\"Regnskap, økonomisk rådgivning og det som derunder hører naturlig til.\"],\"antallAnsatte\":6,\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Landbrukshuset\",\"Kvassnesvegen 15\"],\"kommune\":\"ALV",
+        "retrieved_at": "2026-11-06T10:22:07.731146Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Real Økonomi AS in footer, registered municipality Alver and Kvassnesvegen 15. Postcode changed on site (5916 vs registry 5914), so postcode is not the corroboration.",
+    "kept": true
+  },
+  {
+    "organisation_number": "924458100",
+    "company": "CANNONBALL AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.cannonball.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://www.cannonball.no/",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "b890aa14c1594a6200428c3369f61f36a19ed4626103bf2783e10aee21e3fd9e",
+        "source_url": "https://www.cannonball.no/",
+        "source_class": "company_owned",
+        "content_sha256": "13e1ae1a7f1667cd784895d19b4065d9fc06bba9d87e3d56eea9b008958b07cf",
+        "claim_span": "/www.cannonball.no/xmlrpc.php\">\n\n<title>Cannonball</title>\n<meta name=\"dc.title\" content=\"Cannonball\">\n<meta name=\"dc.description\" content=\"Premium Destination Management\">\n<meta name=\"dc.relation\" content=\"https://www.cannonball.no/\">\n<meta name=\"dc.source\" content=\"https://www.cannonball.no/\">\n<me",
+        "retrieved_at": "2026-11-06T10:22:02.669350Z",
+        "locator": "identity-proof:924458100"
+      },
+      {
+        "id": "3791179b42fcb1b659cc7ff8e9e5754a9648e33924c1041841ba79b397eb003a",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=cannonball&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "725ddaec2721aa0152b2af653c1b0e3cc58740b54d5fe0cb8c83c8c53da69d4d",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/924458100\"}},\"aktivitet\":[\"Reklame, eventbyrå, PR, servering/salg av mat og drikke, innleie av\",\"transporttjenester, utleie av personell, investering i aksjer og\",\"eiendom, kjøp og salg av varer, konsulentvirksomhet, drif",
+        "retrieved_at": "2026-11-06T10:22:09.325841Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Cannonball brand, exact .no core, registered Bergen and Flyplassvegen 535. Complete uniqueness query; no other publisher. Website describes travel services, unlike the broad current advertising NACE.",
+    "kept": true
+  },
+  {
+    "organisation_number": "923998012",
+    "company": "ASKØY24 AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.askoy24.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://www.askoy24.no/",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "fb42e19020eeda8dc68f7fb5334c15510f043cf1076627616d908b96fc511d22",
+        "source_url": "https://www.askoy24.no/",
+        "source_class": "company_owned",
+        "content_sha256": "485240174865faad68402d7b9f687c70520e14192b3cddcf8f2235960693166b",
+        "claim_span": "       <title>Lokale nyheter fra Askøy. Askøy24 gir deg siste nytt på nyheter, sport, kultur, næringsliv og mennesker på Askøy.</title>\n                <meta name=\"title\" content=\"Lokale nyheter fra Askøy. Askøy24 gir deg siste nytt på nyheter, sport, kultur, næringsliv og mennesker på Askøy.\">\n    ",
+        "retrieved_at": "2026-11-06T10:22:24.023720Z",
+        "locator": "identity-proof:923998012"
+      },
+      {
+        "id": "e9e7759ca875d16bcd90ada0703a91ad17b3b427976514a70bcabd618591d3f7",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=ask%C3%B8y24&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "defd8eeb41fb218e4d654f878b7281aee211e85009e471994cf1325cd3f97efb",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/923998012\"}},\"aktivitet\":[\"Produksjon av avis.\"],\"antallAnsatte\":17,\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Storebotn 9B\"],\"kommune\":\"ASKØY\",\"kommunenummer\":\"4627\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":",
+        "retrieved_at": "2026-11-06T10:22:29.794536Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Askøy24 newspaper brand and Storebotn 9B / 5309 Kleppestø match registered publisher, complete uniqueness query; no conflicting publisher found.",
+    "kept": true
+  },
+  {
+    "organisation_number": "929481070",
+    "company": "SNAPPY AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://snappy.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://snappy.no/About",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "dbc631a30bd20de04c9ba35fd02bfec4530e698b559a10d793c09762c641b327",
+        "source_url": "https://snappy.no/About",
+        "source_class": "company_owned",
+        "content_sha256": "afe617be30f620087f8ffd0ab14cf28d94730bb982b160172631481293553c96",
+        "claim_span": "KmnuJ7YNc8oiS3byX\"}--><!--bl:2--><title>Snappy AS</title><!--/bl:2--><!--bl:3--><!--/bl:3--><!--Blazor:{\"prerenderId\":\"7e008fe8d3774762827f8a0d632f8c05\"}-->\r\n</head>\r\n<body>\r\n<!--Blazor:{\"sequence\":1,\"type\":\"server\",\"prerenderId\":\"e752bc611ffb41f0b7754c6c17d3309c\",\"descriptor\":\"CfDJ8Ne/naRr0MFHlyNxs",
+        "retrieved_at": "2026-11-06T10:22:26.582088Z",
+        "locator": "identity-proof:929481070"
+      },
+      {
+        "id": "2358ca6e5509616b9f22e7c184cedc9ae50ffb7c32a9f18a4372aa36cf5a2923",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=snappy&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "0d73577093c505a52a1e033c69f65fce8396584e1b36fa28415a0cbafce56db6",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/929481070\"}},\"aktivitet\":[\"Applikasjonsutvikling, nettstedsadministrasjon, skylagring,\",\"nettstedstjenester, applikasjonstjenester.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"c/o Nothing Hill\",\"Dr. Palmstrøms ",
+        "retrieved_at": "2026-11-06T10:22:30.805443Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Snappy AS title, registered director Christoffer Beddari Kristiansen and Kirkenes in company about copy.",
+    "kept": true
+  },
+  {
+    "organisation_number": "929481070",
+    "company": "SNAPPY AS",
+    "field": "social_profile.fa9de00680d49f7af0f2",
+    "value": {
+      "url": "https://twitter.com/snappy_as",
+      "platform": "twitter.com"
+    },
+    "evidence": [
+      {
+        "id": "c713abd4bdd236d7c9596197ef8c512bac2d9fab8bcb43dcf98175d333f3121f",
+        "source_url": "https://snappy.no/kontakt",
+        "source_class": "company_owned",
+        "content_sha256": "ca6b20ff94409ac0e34e1ea6a80573b9be557d0d155be9802e44ae8269977a2b",
+        "claim_span": "<a type=\"button\" href=\"https://twitter.com/snappy_as/\" class=\"mud-button-root mud-fab mud-fab-primary mud-fab-size-large mud-ripple\" style=\"color: #1DA1F2\">",
+        "retrieved_at": "2026-11-06T10:22:31.608654Z",
+        "locator": "company-link:https://twitter.com/snappy_as"
+      }
+    ],
+    "verdict": "correct",
+    "review": "snappy_as Twitter link appears on the verified Snappy company about page and matches its identity.",
+    "kept": true
+  },
+  {
+    "organisation_number": "929481070",
+    "company": "SNAPPY AS",
+    "field": "social_profile.13ed129849bf4c541e53",
+    "value": {
+      "url": "https://www.instagram.com/snappy_as",
+      "platform": "instagram.com"
+    },
+    "evidence": [
+      {
+        "id": "b3d63653d3ea4e82a59e7f52bcb1d9c8f7434ca86eeff204e4c12c2c78d0f588",
+        "source_url": "https://snappy.no/kontakt",
+        "source_class": "company_owned",
+        "content_sha256": "ca6b20ff94409ac0e34e1ea6a80573b9be557d0d155be9802e44ae8269977a2b",
+        "claim_span": "<a type=\"button\" href=\"https://www.instagram.com/snappy_as/\" class=\"mud-button-root mud-fab mud-fab-tertiary mud-fab-size-large mud-ripple\" style=\"color: #C13584\">",
+        "retrieved_at": "2026-11-06T10:22:31.608654Z",
+        "locator": "company-link:https://www.instagram.com/snappy_as"
+      }
+    ],
+    "verdict": "correct",
+    "review": "snappy_as Instagram link appears on the same verified company page.",
+    "kept": true
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.tensio.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://www.tensio.no/no/kunde/kontakt-oss",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "wikidata_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "ec6304be7b2509f225c0150477db6143f8e989d9abf1881f033588a76e25ef31",
+        "source_url": "https://www.tensio.no/no/kunde/kontakt-oss",
+        "source_class": "company_owned",
+        "content_sha256": "605e52d26f633ebbb6e4ac580f283418b6b1014c7fd0ad890283a740f42d3572",
+        "claim_span": "<title>Kontaktinformasjon for kunder av Tensio</title><meta name=\"description\" content=\"Her finner du informasjon om hvordan kontakte oss i Tensio. Vi kan nås på telefon eller elektronisk via skjema på siden her.\"/><link rel=\"manifest\" href=\"/manifest.webmanifest\"/><meta name=\"version\" content=\"0.1.",
+        "retrieved_at": "2026-11-06T10:22:34.277763Z",
+        "locator": "identity-proof:922828172"
+      },
+      {
+        "id": "d62f175c258a2256a33f71881f89cfca262d97b7e8d2fbbdf6f560291299113e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=tensio&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "7151ad2ffec5db41ab662e1de155db909c3a831ab8e504069ccdb80eabf83c55",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/922828172\"}},\"aktivitet\":[\"Selskapet skal være holdingselskap og konsernspiss i et selvstendig\",\"nettkonsern. Selskapets formål er å eie aksjer i selskaper som driver\",\"virksomhet knyttet til distribusjon av elektrisitet ",
+        "retrieved_at": "2026-11-06T10:22:39.763780Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Tensio exact .no identity and registry-wide uniqueness. Registered Stjørdal appears in its service municipality selector, not an office address: a weak but expressly allowed municipality signal. No conflicting owner on captured pages; this does not establish a subsidiary as a separate publisher.",
+    "kept": true
+  },
+  {
+    "organisation_number": "992868775",
+    "company": "ALFA LAGERHOTELL AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://alfalagerhotell.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://alfalagerhotell.no/",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "5cda8e60b44070f63d0591cc0b6fb808cfdd8eb8cf023bdc22afe2ad8d20065c",
+        "source_url": "https://alfalagerhotell.no/",
+        "source_class": "company_owned",
+        "content_sha256": "2b295f7e1798be78e3788ada8b7054af0ec8be8c02190e5939012310c816faa8",
+        "claim_span": "orbeholdt.</span>\n        <span>Org.nr: 992 868 775</span>\n      </div>\n    </div>\n  </footer>\n\n\n  <!-- Scroll-to-top -->\n  <button class=\"scroll-top\"",
+        "retrieved_at": "2026-11-06T10:22:39.405837Z",
+        "locator": "identity-proof:992868775"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Own organisation number 992868775, Alfa Lagerhotell A/S and Knarrevikveien 60 in footer. Existing site changes apex/www URL.",
+    "kept": true
+  },
+  {
+    "organisation_number": "918486666",
+    "company": "ANTISINK AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.antisink.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://www.antisink.no/contact-us",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "93e8b7b72ac8e296354bd0c5c53b95e4ddf90ea6445fac0eb161f87c6fee00ea",
+        "source_url": "https://www.antisink.no/contact-us",
+        "source_class": "company_owned",
+        "content_sha256": "6b473b8002bcff0f1d49277e06bd15d93e71a6e123135334d1cdbc89cbb04812",
+        "claim_span": "r/></div><div class=\"contact-info-text\">918486666</div></div></div></div><div class=\"hero-media\"><img src=\"https://cdn.prod.website-files.com/6a8c0c11",
+        "retrieved_at": "2026-11-06T10:22:48.021393Z",
+        "locator": "identity-proof:918486666"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Contact page explicitly names ANTISINK AS and organisation number 918486666.",
+    "kept": true
+  },
+  {
+    "organisation_number": "918486666",
+    "company": "ANTISINK AS",
+    "field": "social_profile.bb0742ac6ef7aca0047a",
+    "value": {
+      "url": "https://www.instagram.com/antisink_systems",
+      "platform": "instagram.com"
+    },
+    "evidence": [
+      {
+        "id": "d448618d5fec4821af35a518d9969e3ec92c82a078b4f48a6ad2cc261b7cd7cc",
+        "source_url": "https://www.antisink.no/",
+        "source_class": "company_owned",
+        "content_sha256": "dfbea03c79c50db15ef0309632fe7a6d9700946a5bb3b94e8604a9a56fb18b86",
+        "claim_span": "<a href=\"https://www.instagram.com/antisink_systems/\" target=\"_blank\" class=\"footer-social-link w-inline-block\">",
+        "retrieved_at": "2026-11-06T10:22:45.397523Z",
+        "locator": "company-link:https://www.instagram.com/antisink_systems"
+      }
+    ],
+    "verdict": "correct",
+    "review": "antisink_systems Instagram is a footer link; verified company declares Antisink Systems as its brand.",
+    "kept": true
+  },
+  {
+    "organisation_number": "918486666",
+    "company": "ANTISINK AS",
+    "field": "social_profile.7f3132bba63574468739",
+    "value": {
+      "url": "https://no.linkedin.com/company/antisink-as",
+      "platform": "linkedin.com"
+    },
+    "evidence": [
+      {
+        "id": "f65b7d54225cfe237e37a2245ae66a8c0d329b3d5ea646c28ea98758c84f3c20",
+        "source_url": "https://www.antisink.no/",
+        "source_class": "company_owned",
+        "content_sha256": "dfbea03c79c50db15ef0309632fe7a6d9700946a5bb3b94e8604a9a56fb18b86",
+        "claim_span": "<a href=\"https://no.linkedin.com/company/antisink-as\" target=\"_blank\" class=\"footer-social-link w-inline-block\">",
+        "retrieved_at": "2026-11-06T10:22:45.397523Z",
+        "locator": "company-link:https://no.linkedin.com/company/antisink-as"
+      }
+    ],
+    "verdict": "correct",
+    "review": "antisink-as LinkedIn is an owned link with the exact company name.",
+    "kept": true
+  },
+  {
+    "organisation_number": "934289099",
+    "company": "NORTH GREY AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.northgrey.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://www.northgrey.no/",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "7d3efb9a1961ceba6df636c5895d6ac2d15438b46a2678103e57114d2e3a79d9",
+        "source_url": "https://www.northgrey.no/",
+        "source_class": "company_owned",
+        "content_sha256": "db380804a11d39a2ff70ea0df560162b6a2fe6382aa88e1a932e8c72d1b9ad80",
+        "claim_span": "r-events:auto;clip:auto}</style>\n<title>North Grey |  Global Security Solutions</title>\n  <meta name=\"description\" content=\"Global Security Solutions with Discretion and Precision\n\nElite, intelligence-led protection for individuals and organizations operating in high-risk environments—worldwide.\"/>\n",
+        "retrieved_at": "2026-11-06T10:22:49.414929Z",
+        "locator": "identity-proof:934289099"
+      },
+      {
+        "id": "28938f2ad577be614c3e05eaedbe27b540f8619dacd20cac43750aa7dcce7ad3",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=north+grey&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "3f70ee0c5d3126cee20e84f937c0358cc9e6f4f3d05e0b9e212f0c2d848bd7b3",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/934289099\"}},\"aktivitet\":[\"Rådgivning og tjenester innenfor sikkerhet og beredskap.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"C. J. Hambros plass 2C\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"land\":\"Norge\",\"l",
+        "retrieved_at": "2026-11-06T10:22:56.418841Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "North Grey exact .no identity, C. J. Hambros plass 2C and Oslo match registry; security offering matches company industry. No foreign publisher.",
+    "kept": true
+  },
+  {
+    "organisation_number": "922187991",
+    "company": "ULSTEIN MINILAGER AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "http://www.ulsteinminilager.no",
+      "transport_scheme": "http",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "http://www.ulsteinminilager.no/",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "ba89c0388722b5bb87765d1b5baba5e825ddb331e71bbbd8f214c81fa8661541",
+        "source_url": "http://www.ulsteinminilager.no/",
+        "source_class": "company_owned",
+        "content_sha256": "cf7f5f93e3e1f8f3a1f1eb173a9bb8b421c8622d71ea23e89e44f168cb124a83",
+        "claim_span": "d>\n\t\t<meta charset=\"utf-8\" />\r\n\t\t<title>Ulstein Minilager</title>\r\n\t\t<meta name=\"author\" content=\"Arild Gautestad\" />\n\t\t<meta name=\"generator\" content=\"Incomedia WebSite X5 Pro 2026.3.5 - www.websitex5.com\" />\n\t\t<meta property=\"og:locale\" content=\"no_NO\" />\n\t\t<meta property=\"og:type\" content=\"websit",
+        "retrieved_at": "2026-11-06T10:23:33.238696Z",
+        "locator": "identity-proof:922187991"
+      },
+      {
+        "id": "98bf7ceb974c398813e8433602f992ccf20c32f22afa351f1af4690ef20a0d1a",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=ulstein+minilager&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "4d68658e77334f1e7c28557e574ccdb143f487b8d33e02640e2a84b900828975",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/922187991\"}},\"aktivitet\":[\"Utleie av næringsarealer til næringsliv og privatpersoner.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Joakimbakken 25\"],\"kommune\":\"ULSTEIN\",\"kommunenummer\":\"1516\",\"land\":\"Norge\",\"lan",
+        "retrieved_at": "2026-11-06T10:23:38.237838Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Ulstein Minilager genuine storage site with Ulsteinvik locality, exact .no name and complete uniqueness query. Plain HTTP is recorded. Physical storage address differs from registered address; no claim of equality.",
+    "kept": true
+  },
+  {
+    "organisation_number": "924688696",
+    "company": "STILLASFORDEG AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://stillasfordeg.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://stillasfordeg.no/",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "a0050466fe04483123931f57449cf891dac4ef7127a6564255529c3c93cb9757",
+        "source_url": "https://stillasfordeg.no/",
+        "source_class": "company_owned",
+        "content_sha256": "b24a3e6280d752248ea8a8ee37ce1bcdb62003464f972f3ce29b714610063042",
+        "claim_span": "tor\" content=\"Framer b6e2e7c\">\r\n\t<title>Stillasfordeg AS</title>\r\n    <meta name=\"description\" content=\"Lei stillas i Ålesund og omegn. Vi tilbyr trygg og fleksibel stillasutleie med eller uten montering. Rask levering og gode priser.\">\r\n    <meta name=\"framer-search-index\" content=\"https://framerus",
+        "retrieved_at": "2026-11-06T10:23:05.678763Z",
+        "locator": "identity-proof:924688696"
+      },
+      {
+        "id": "0d9de609fc4756deb12eeff7be1ffde267eed5d1b71ce26c233ca9e3cd52b7f5",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=stillasfordeg&size=1000",
+        "source_class": "official_registry",
+        "content_sha256": "07d85e495da948cb69461fb88f9e0601b64b274ae3f74b8e95b6d039145d3a5c",
+        "claim_span": "[{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/924688696\"}},\"aktivitet\":[\"Stillasmontering, stillasutleie, fasadevedlikehold, takarbeid.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Bjønnadalvegen 11A\"],\"kommune\":\"ÅLESUND\",\"kommunenummer\":\"1508\",\"land\":\"Norg",
+        "retrieved_at": "2026-11-06T10:23:12.007279Z",
+        "locator": "/_embedded/enheter"
+      }
+    ],
+    "verdict": "correct",
+    "review": "StillasForDeg AS title and company copy, registered Ålesund, exact .no domain and uniqueness. Some leftover English roofing-template prose is a content-quality limitation; substantive scaffolding content and company identity are present.",
+    "kept": true
+  },
+  {
+    "organisation_number": "917329435",
+    "company": "ANKERMANN AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://www.ankermann.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://www.ankermann.no/contact-1",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "7766239d4ec4234cb4828025f74c54822d27a0017ad693be083808f2b40febae",
+        "source_url": "https://www.ankermann.no/contact-1",
+        "source_class": "company_owned",
+        "content_sha256": "705489e73f3881bdae3c3fa80a877ab809d9ff0eaa11b02407e5881c1b7b23bf",
+        "claim_span": ": pre-wrap;\">Ankermann AS -&nbsp;&nbsp;Org nr: NO 917 329 435 MVA</p><p style=\"text-align: center; white-space: pre-wrap;\">E-mail: <a href=\"mailto:ank",
+        "retrieved_at": "2026-11-06T10:23:33.796034Z",
+        "locator": "identity-proof:917329435"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Ankermann AS and own organisation number 917329435 on contact page, matching minibus business.",
+    "kept": true
+  },
+  {
+    "organisation_number": "990412375",
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "field": "official_website",
+    "value": {
+      "final_url": "https://bnv.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://bnv.no/",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "evidence": [
+      {
+        "id": "75d5c17e5f9bc0831cbd0527b0cd7ecb915c9bd6da2e99ffd91f945bfd2f0c31",
+        "source_url": "https://bnv.no/",
+        "source_class": "company_owned",
+        "content_sha256": "9a161887826d5a6620115b3cde7de3d161aafb9ad0b9e1f092cbd72353219f2b",
+        "claim_span": "tertjenester AS<br />\n</strong>Org.nr.: 990 412 375<br />\nEidsvågveien 150, 5105 Eidsvåg<br />\nTelefon: <a href=\"tel:+4790101021\">90 10 10 21</a><br /",
+        "retrieved_at": "2026-11-06T10:23:43.236326Z",
+        "locator": "identity-proof:990412375"
+      }
+    ],
+    "verdict": "correct",
+    "review": "Bergen Vaktmestertjenester AS, own 990412375 and registered street are explicit. PHM Group footer is acknowledged; existing site remains exact-entity proved and group content guard applies.",
+    "kept": true
+  }
+]

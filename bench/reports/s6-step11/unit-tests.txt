@@ -1,0 +1,24 @@
+..F..................................................................... [ 59%]
+..................................................                       [100%]
+================================== FAILURES ===================================
+_ test_email_declaration_requires_name_in_approved_identity[<img src="logo.svg" alt="Example">-Welcome] _
+
+body = '<img src="logo.svg" alt="Example">', title = 'Welcome'
+
+    @pytest.mark.parametrize('body,title',[
+        ('<h1>Example</h1>','Welcome'),('<footer>Example</footer>','Welcome'),
+        ('<img src="logo.svg" alt="Example">','Welcome'),('<meta property="og:site_name" content="Example">','Welcome'),('', 'Example'),
+    ])
+    def test_email_declaration_requires_name_in_approved_identity(body,title):
+        p=page(body,title=title);candidate=Candidate(p.url,'example.no','registry_email')
+        result=candidate_proof(p,ORG,CONTEXT,candidate,[])
+>       assert result.level=='VERIFIED' and result.proof_type=='registry_declared_name_tier_a'
+E       AssertionError: assert ('LOW' == 'VERIFIED'
+E
+E         - VERIFIED
+E         + LOW)
+
+tests\test_recall_step11.py:25: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_recall_step11.py::test_email_declaration_requires_name_in_approved_identity[<img src="logo.svg" alt="Example">-Welcome]
+1 failed, 121 passed in 11.44s
