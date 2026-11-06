@@ -12,4 +12,4 @@ Manual review of every group/shared-site case emitted in benchmark 2 (`1909653`)
 
 Verdict: 0 wrong-company website items among these five; 4 retained exact-orgnr sites and 1 correctly withheld. The older Step 7 Wullum site was removed because its proof did not meet the Step 8 group-site exception.
 
-A separate scan of all 83 available proof pages found no page with three or more distinct 9-digit org numbers. The only proof excerpt with a different org number is CNC Norway: it lists Brukte Maskiner Norge (920224725) alongside CNC Norway AS (925310492); the site's own exact number is explicit, so it remains eligible.
+A scan of rendered visible text from all 83 available proof-page bodies found no page with three or more checksum-valid org numbers. CNC Norway is the only page with another org number in visible proof text: it lists Brukte Maskiner Norge (920224725) alongside CNC Norway AS (925310492). CNC Norway's own exact number is explicit, so it remains eligible.
