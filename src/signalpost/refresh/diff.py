@@ -13,6 +13,8 @@ def transient_sections(envelope, old_claims):
     reasons = {}
     attempts = []
     for error in envelope.errors:
+        if error.section == 'activity' and error.code in {'registry_change_http_429', 'registry_change_http_500', 'registry_change_http_502', 'registry_change_http_503', 'registry_change_http_504'}:
+            reasons.setdefault('activity', set()).add(error.code)
         if error.code in TRANSIENT_FAILURES:
             reasons.setdefault(error.section, set()).add(error.code)
         if error.section == 'website' and error.code == 'website_candidates':

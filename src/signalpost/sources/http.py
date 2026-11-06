@@ -35,7 +35,7 @@ class Http:
 
     async def get(self, url, org):
         host = allow(url)
-        attempts = 3 if "/regnskapsregisteret/" in url else 2
+        attempts = 1 if '/api/oppdateringer/' in url else 3 if "/regnskapsregisteret/" in url else 2
         for attempt in range(attempts):
             self.budget.check()
             response = None

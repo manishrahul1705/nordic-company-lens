@@ -168,12 +168,12 @@ def fact(claim, records):
     content = value_html(v) if available else '<p>' + esc(UNKNOWN.get(claim['availability'], 'Unknown.')) + '</p>'
     if available and claim['field'].startswith('registry_change.'):
         from .sources.registry_changes import sentence as registry_sentence
-        label = v['title']
+        label = 'Registry announcement: ' + v['title']
         wording = registry_sentence(v)
         original_time = 'Registry publication time: ' + v['date'] + ' (not effective date).'
         if v.get('date_source') and original_time in wording:
             wording = wording.replace(original_time, v['date_source'] + ': ' + v['date'] + '.')
-        content = '<p>' + esc(wording) + '</p><p>' + link(v['url'], 'Registry event') + '</p>'
+        content = '<p>' + esc(wording) + '</p><p>' + link(v['url'], 'Registry announcement') + '</p>'
     if available and claim['field'] == 'official_website' and isinstance(v, dict) and v.get('matched_via_subunit'):
         content = '<p class="relationship-note">Website of registered subunit ' + esc(v['matched_via_subunit']) + '</p>' + content
     if title:

@@ -25,7 +25,20 @@ def timestamp(value):
     return parsed.astimezone(timezone.utc)
 
 
+def window_start(now):
+    try: return now.replace(year=now.year - 2)
+    except ValueError: return now.replace(year=now.year - 2, day=28)
+
+
 def field_label(path):
+    labels = {
+        '/sisteInnsendteAarsregnskap': 'Latest submitted annual accounts year updated',
+        '/vedtektsdato': 'Registered articles date changed',
+        '/kapital/innfortDato': 'Share capital registration date updated',
+        '/registreringsdatoAntallAnsatteEnhetsregisteret': 'Employee information registration date updated (Enhetsregisteret)',
+        '/registreringsdatoAntallAnsatteNAVAaregisteret': 'Employee information registration date updated (NAV Aa register)',
+    }
+    if path in labels: return labels[path]
     if path == '/navn': return 'Registered name changed'
     if path == '/kapital/belop': return 'Registered share capital changed'
     if path == '/forretningsadresse' or path.startswith('/forretningsadresse/'):
@@ -38,7 +51,6 @@ def field_label(path):
 def sentence(value):
     detail = value['title']
     if 'changed_field' in value:
-        detail += ' (' + value['changed_field'] + ')'
         if 'new_value' in value:
             detail += ': ' + json.dumps(value['new_value'], ensure_ascii=False, sort_keys=True)
         else:
@@ -96,10 +108,14 @@ def extract(event, response, locator, org, endpoint, scope=None):
     section = Section(state='not_available')
     source = response_source(response)
     event_id = event['oppdateringsid']
+    now = timestamp(response.retrieved_at)
+    if not window_start(now) <= timestamp(event['dato']) <= now:
+        return section
     # Equivalent offset/UTC spellings are the same registry publication instant.
     # Keep the original response bytes as evidence; normalize only the claim value.
     published = timestamp(event['dato']).isoformat().replace('+00:00', 'Z')
     common = {'company_orgnr': org, 'event_id': event_id, 'date': published,
+              'kind': 'Registry announcement',
               'date_source': DATE_LABEL,
               'url': BASE + 'oppdateringer/' + endpoint + '?' + urlencode(
                   {'oppdateringsid': event_id, 'size': 1, 'includeChanges': 'true'})}
@@ -109,6 +125,7 @@ def extract(event, response, locator, org, endpoint, scope=None):
         if event.get('endringstype') != 'Endring': return section
         changes = event.get('endringer', [])
         if not isinstance(changes, list): raise SourceFailure('registry_change_invalid_payload')
+        seen = set()
         for index, change in enumerate(changes):
             path = change.get('path', '')
             label = field_label(path)
@@ -117,7 +134,10 @@ def extract(event, response, locator, org, endpoint, scope=None):
                 raise SourceFailure('registry_change_missing_value')
             value = {**common, 'title': label, 'changed_field': path, 'operation': change['op']}
             if change['op'] != 'remove': value['new_value'] = change['value']
-            add(section, source, org, 'activity', PREFIX + digest(['entity', event_id, index])[:24],
+            key = digest(['entity', event_id, path, change['op'], change.get('value')])
+            if key in seen: continue
+            seen.add(key)
+            add(section, source, org, 'activity', PREFIX + key[:24],
                 value, locator + '/endringer/' + str(index), method=METHOD)
     elif event.get('endringstype') in {'Ny', 'Sletting'}:
         unit = event['organisasjonsnummer']
@@ -182,10 +202,20 @@ async def pages(http, endpoint, numbers, since, until):
 async def fetch_batch(envelopes, http, blobs, until):
     """One run-local acquisition, shared by the entire batch; errors stay explicit."""
     now = timestamp(until)
-    try: since = now.replace(year=now.year - 2)
-    except ValueError: since = now.replace(year=now.year - 2, day=28)
+    since = window_start(now)
     since = since.isoformat().replace('+00:00', 'Z')
     result = {org: Section(state='not_available') for org in envelopes}
+    # Shared batch acquisition must never spend more than two requests per
+    # input on registry announcements, including subunit pages. No hidden retry.
+    original_http = http
+    class BoundedFeed:
+        calls = 0
+        async def get(self, *args):
+            if self.calls >= 2 * len(envelopes):
+                raise SourceFailure('registry_change_request_cap')
+            self.calls += 1
+            return await original_http.get(*args)
+    http = BoundedFeed()
     scopes, owners = {}, {}
     for org, envelope in envelopes.items():
         try:
@@ -217,6 +247,11 @@ async def fetch_batch(envelopes, http, blobs, until):
                 for org in affected:
                     result[org].state = 'failed'
                     result[org].errors.extend(missing('activity', code).errors)
+    for section in result.values():
+        unique = {c.id: c for c in section.claims}
+        section.claims = sorted(unique.values(), key=lambda c: (c.value['date'], c.field), reverse=True)[:10]
+        used = {eid for c in section.claims for eid in c.evidence_ids}
+        section.evidence = list({e.id: e for e in section.evidence if e.id in used}.values())
     return result
 
 

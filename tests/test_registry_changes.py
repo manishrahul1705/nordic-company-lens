@@ -47,7 +47,7 @@ def extract(e):
 
 
 @pytest.mark.parametrize('utc,offset', [
-    ('2026-10-31T16:00:26.998Z', '2026-10-31T17:00:26.998+01:00'),
+    ('2026-10-10T16:00:26.998Z', '2026-10-10T18:00:26.998+02:00'),
     ('2026-04-23T06:35:10.591Z', '2026-04-23T08:35:10.591+02:00'),
     ('2026-09-01T12:30:00Z', '2026-09-01T14:30:00+02:00')])
 def test_equivalent_publication_offsets_keep_claim_ids_and_original_evidence(utc, offset):
@@ -73,9 +73,9 @@ def test_named_fields_have_exact_values_and_publication_evidence(path):
     assert section.evidence[0].extraction_method == rc.METHOD
 
 
-@pytest.mark.parametrize('changes', [[], [{'op': 'replace', 'path': '/sisteInnsendteAarsregnskap', 'value': '2025'}],
+@pytest.mark.parametrize('changes', [[],
     [{'op': 'replace', 'path': '/antallAnsatte', 'value': 40}], [{'op': 'replace', 'path': '/naeringskode1', 'value': {}}],
-    [{'op': 'replace', 'path': '/kapital/innfortDato', 'value': '2026-01-01'}]])
+    [{'op': 'replace', 'path': '/unknownField', 'value': '2026-01-01'}]])
 def test_bare_or_excluded_update_never_publishes(changes):
     assert not extract(event(endringer=changes)).claims
 
@@ -259,3 +259,65 @@ def test_unchecked_website_news_records_its_own_diagnostic():
     assert result.state == 'failed'
     assert env.run.refresh['activity']['website_news'] == {
         'state': 'failed', 'complete': False, 'reason': 'website_check_incomplete'}
+
+
+def test_future_event_is_rejected():
+    assert not extract(event(dato='2026-10-19T00:00:00Z')).claims
+
+
+@pytest.mark.parametrize('date,accepted', [('2024-10-18T07:00:00Z',True),('2024-10-18T06:59:59Z',False)])
+def test_twenty_four_month_window(date,accepted):
+    assert bool(extract(event(dato=date)).claims) is accepted
+
+
+def test_new_registration_outside_window_and_unknown_type_never_invent_events():
+    assert not extract(event(endringstype='Ny',dato='2020-01-01T00:00:00Z')).claims
+    assert not extract(event(endringstype='Ukjent')).claims
+
+
+@pytest.mark.parametrize('path,label', [
+    ('/sisteInnsendteAarsregnskap','Latest submitted annual accounts year updated'),
+    ('/registreringsdatoAntallAnsatteNAVAaregisteret','Employee information registration date updated (NAV Aa register)'),
+    ('/vedtektsdato','Registered articles date changed')])
+def test_explicit_registry_fields_are_not_invented_business_events(path,label):
+    c=extract(event(endringer=[{'op':'replace','path':path,'value':'2025'}])).claims[0]
+    assert c.value['title']==label and c.value['kind']=='Registry announcement'
+    assert path not in rc.sentence(c.value)
+    assert 'Board' not in rc.sentence(c.value)
+
+
+def test_duplicate_changes_and_reordered_changes_keep_stable_ids():
+    x={'op':'replace','path':'/navn','value':'New name AS'}
+    y={'op':'replace','path':'/sisteInnsendteAarsregnskap','value':'2025'}
+    a=extract(event(endringer=[x,y,x]));b=extract(event(endringer=[y,x]))
+    assert len(a.claims)==2
+    assert {c.id for c in a.claims}=={c.id for c in b.claims}
+
+
+def test_batch_max_ten_claims_deduplicated_with_evidence():
+    class Http:
+        async def get(self,url,org):
+            data=[event(oppdateringsid=n,dato=f'2026-09-{n:02d}T00:00:00Z') for n in range(1,16)]
+            return response({'page':{'number':0,'size':1000,'totalElements':15,'totalPages':1},'_embedded':{'oppdaterteEnheter':data}})
+    result=asyncio.run(rc.fetch_batch({ORG:envelope()},Http(),None,NOW))[ORG]
+    assert result.state=='available' and len(result.claims)==10
+    assert min(c.value['date'] for c in result.claims)=='2026-09-06T00:00:00Z'
+    assert {e.id for e in result.evidence}=={eid for c in result.claims for eid in c.evidence_ids}
+
+
+@pytest.mark.parametrize('code',['timeout','network_error','registry_change_http_503','registry_change_http_429'])
+def test_failed_registry_refresh_keeps_previous_events_and_evidence_stale(tmp_path,code):
+    from signalpost.sources.blobstore import BlobStore
+    from signalpost.refresh.diff import apply
+    from signalpost.sources.extract import missing
+    from signalpost.models.shapes import serialize
+    blobs=BlobStore(tmp_path);e=event();r=response({'event':e});blobs.put(r.body)
+    old=envelope();section=rc.extract(e,r,'/event',ORG,'enheter');update(old,'activity',section)
+    current=old.model_copy(deep=True);current.run.completed_at='2026-10-19T07:00:00Z'
+    update(current,'activity',missing('activity',code))
+    apply(current,serialize(old,'union'),blobs)
+    carried=[c for c in current.claims if c.family=='activity']
+    assert [c.id for c in carried]==[c.id for c in old.claims if c.family=='activity']
+    assert all(c.carried_forward and c.stale_since for c in carried)
+    assert set(e.id for e in old.evidence)<=set(e.id for e in current.evidence)
+    assert not current.changes and not current.run.refresh['observation_changes']
