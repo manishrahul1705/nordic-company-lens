@@ -18,6 +18,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--clone',type=Path,default=Path('bench/cache/s6-step10-official'))
     parser.add_argument('--prepare-only',action='store_true')
+    parser.add_argument('--input',type=Path,help='Explicit fresh cohort; default retains the historical official sample')
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[1]
     target=(root/args.clone).resolve()
@@ -26,7 +27,7 @@ def main():
     env['UV_CACHE_DIR']=str(root/'.uv-cache-task')
     if not target.exists():
         subprocess.run(['git','clone','--local','--no-hardlinks',str(root),str(target)],cwd=root,env=env,check=True)
-    source=root/'bench/reports/s6-step8/official_orgnrs.txt'
+    source=(root/args.input).resolve() if args.input else root/'bench/reports/s6-step8/official_orgnrs.txt'
     if not (target/'orgnrs.txt').exists():shutil.copyfile(source,target/'orgnrs.txt')
     records=target/'validation';records.mkdir(exist_ok=True)
     if args.prepare_only:return

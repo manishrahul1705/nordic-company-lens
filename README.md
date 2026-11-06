@@ -12,6 +12,8 @@ uv sync --frozen
 
 ## Official run
 
+For the release checklist, measured coverage, fresh random smoke test and known limits, see [SUBMISSION.md](SUBMISSION.md). The latest fresh random check emitted all103 outputs twice with zero company changes, but its strict pairwise verifier failed on one activity-section recovery (failed ? not_available). See the [exact release result](bench/reports/release/RESULTS.md); this is not reported as a clean strict pair.
+
 The command writes a static offline site to `out/site`. Open `out/site/index.html` directly: search the directory by company name or organisation number, open a company, or compare two or three companies. The comparison URL preserves the selection; share that link together with the generated site folder. Source buttons show captured excerpts, URLs, retrieval dates and reporting periods. No CDN or web server is required. At narrow widths comparison cards stack vertically.
 
 Each company has a three-part cited brief: what it is and does, previous versus current changes (or a dated no-change notice), and missing or stale sections with their reasons. Citations to run states/dates are explicitly labeled **Run metadata**, while factual citations open the original external evidence. A transient failed refresh retains supported prior facts with a stale note.
@@ -26,7 +28,7 @@ This is the supported clean-checkout command: it needs no credentials and no `--
 
 Website research, NAV hiring checks, public activity and template synthesis are on by default. Paid search defaults to zero queries, and provider cost defaults to $0. Use `--no-websites`, `--no-hiring` or `--no-public-activity` to opt out of those sources. `--expected-count` is optional and is normally unnecessary.
 
-Requests use a pooled global ceiling of 1,800 per 100 distinct normalized input records, with at most 40 attributed to any one company. Lower configured limits and the existing time caps still apply. Registry-declared websites require the legal name or hard registry corroboration; sites corroborated only by a contact or role-holder publish a website link without site content. Registered subunit identifiers can establish ownership. Shared domains, conflicting owners, parked pages and directories are withheld. Exact-name-only and contact-only two-signal publication were rejected in the Step 10 audit; guessed domains retain the stronger existing ownership proof.
+Requests use a pooled global ceiling of 1,800 per 100 distinct normalized input records, with at most 40 attributed to any one company. The default run time limit is 2,400 seconds, also bounded by a hard 24 seconds per distinct normalized input (40 minutes per 100). Lower configured limits remain effective. Registry-declared websites require the legal name or hard registry corroboration; sites corroborated only by a contact or role-holder publish a website link without site content. Registered subunit identifiers can establish ownership. Shared domains, conflicting owners, parked pages and directories are withheld. Exact-name-only and contact-only two-signal publication were rejected in the Step 10 audit; guessed domains retain the stronger existing ownership proof.
 
 Verified sites can supply individual active, dated job postings, including linked supported ATS pages. Careers landing pages are not jobs. Feeds and sitemaps discover articles, but each published article needs its own publication date. Registered business addresses are typed separately from workplaces and duplicate addresses are suppressed.
 
@@ -46,7 +48,7 @@ Input accepts plain text with one orgnr per line, JSONL strings/numbers, JSONL o
 - `out/profiles.jsonl`: separate evaluator-compatible raw profiles from the same verified facts.
 - `out/report.json`: membership, source states, errors, requests, budgets, timing and cost.
 - `out/site/`: optional static searchable company profiles with evidence excerpts. Open `index.html` locally. Site generation may be skipped if remaining time is insufficient.
-- `state/`: local evidence bodies, caches and progress. Keep the matching state when verifying evidence or carrying facts forward.
+- `out/state/` (for the command above): local evidence bodies, caches and progress. Keep the matching state when verifying evidence or carrying facts forward.
 
 Exit zero means output was written for parsed input records. Inspect report warnings and source states: `complete` does not mean every source succeeded. Missing or unavailable facts remain explicit, without invented evidence. Refresh distinguishes supported company changes from source failures and retains original provenance for carried-forward facts.
 
@@ -79,8 +81,8 @@ The command has **$0 provider cost**. Compute, storage and network costs are exc
 
 ## Limitations and checks
 
-Strict identity rules and bounded discovery can miss genuine websites, jobs and activity. Bulk data and the bundled NAV index can age; stale or unusable indexes trigger feed fallback. API failures, robots restrictions, timeouts and budget caps leave explicit incomplete states. Website research has no browser renderer. Unknown trading names can escape NAV discovery, and name matching alone never proves employer identity. Financial comparisons abstain when entity, period, currency or units are incompatible. Source-reported text is not an independent assessment, and cited templates do not provide general semantic fact verification.
+Strict identity rules and bounded discovery can miss genuine websites, jobs and activity. Bulk data and the bundled NAV index can age; stale or unusable indexes trigger feed fallback. API failures, robots restrictions, timeouts and budget caps leave explicit incomplete states. Website research has no browser renderer. Scanned PDFs are not used; annual-report PDF discovery was removed after a failed recall trial. Small companies often have no discoverable, provably owned website. Unknown trading names can escape NAV discovery, and name matching alone never proves employer identity. Financial comparisons abstain when entity, period, currency or units are incompatible. Source-reported text is not an independent assessment, and cited templates do not provide general semantic fact verification.
 
-No coverage, performance or official evaluator score is claimed here. Run `uv run pytest -q` for the offline suite. The [evaluation guide](docs/EVAL.md) documents smoke checks and output verification. See also [schema](docs/DATA_SCHEMA.md), [agent loop](docs/AGENT.md), [refresh](docs/REFRESH.md) and [limitations](docs/LIMITATIONS.md).
+Local coverage and timing measurements are recorded in [SUBMISSION.md](SUBMISSION.md); they are not an official evaluator score. Run `uv run pytest -q` for the offline suite. The [evaluation guide](docs/EVAL.md) documents smoke checks and output verification. See also [schema](docs/DATA_SCHEMA.md), [agent loop](docs/AGENT.md), [refresh](docs/REFRESH.md) and [limitations](docs/LIMITATIONS.md).
 
 Step 13 keeps brand-domain discovery bounded to four actual-use nominations per company, tried only after stronger candidates fail; a brand match never proves ownership. One end-of-run retry may revisit the top three transient-failure candidates within the original pooled caps. Financial output retains every distinct company fiscal year returned, roles include all registered role types, and profiles show distinct typed postal addresses alongside workplaces and business addresses. Dated article publication remains tied to dates on fetched article pages.

@@ -1,0 +1,66 @@
+[
+  {
+    "organisation_number": "913381742",
+    "removed": [
+      {
+        "field": "activity.section",
+        "value": null,
+        "availability": "failed",
+        "confidence": 0.0,
+        "evidence_ids": [],
+        "id": "cf7c95df21137d2352fdaf3bab3be196ce2d80eaf33be7d6a83bf9fcf4fc1af4",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T13:35:37.654340Z",
+        "last_observed_at": "2026-11-06T13:35:37.654340Z",
+        "reasons": {}
+      }
+    ],
+    "added": [
+      {
+        "field": "activity.section",
+        "value": null,
+        "availability": "not_available",
+        "confidence": 0.0,
+        "evidence_ids": [],
+        "id": "1066645f12ec7713b10f9594fb54e2fa59c1361c26497169365de9084625ee62",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-06T13:37:57.865635Z",
+        "last_observed_at": "2026-11-06T13:37:57.865635Z",
+        "reasons": {}
+      }
+    ],
+    "observations": [
+      {
+        "section": "activity",
+        "previous_state": "failed",
+        "current_state": "not_available",
+        "reason": "section_not_successfully_checked_in_both_runs"
+      }
+    ],
+    "previous_errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"aapool.no\", \"level\": \"VERIFIED\", \"points\": 6, \"signals\": [\"exact_legal_name\", \"street\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"A & A Pool AS | Lang og bred erfaring som bassengleverandÃ¸r\", \"proof_page_url\": \"https://www.aapool.no/\"}, {\"domain\": \"aapool.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://aapool.no/\", \"final_url\": \"https://www.aapool.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_connect_error",
+        "message": "website_connect_error"
+      }
+    ],
+    "current_errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"aapool.no\", \"level\": \"VERIFIED\", \"points\": 6, \"signals\": [\"exact_legal_name\", \"street\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"A & A Pool AS | Lang og bred erfaring som bassengleverandÃ¸r\", \"proof_page_url\": \"https://www.aapool.no/\"}, {\"domain\": \"aapool.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://aapool.no/\", \"final_url\": \"https://www.aapool.no/\", \"status\": 200}]"
+      }
+    ]
+  }
+]

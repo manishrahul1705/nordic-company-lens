@@ -1,0 +1,66 @@
+{
+  "input_rows": 103,
+  "emitted_envelopes": 103,
+  "counts_by_state": {
+    "complete": 100,
+    "submission_error": 3
+  },
+  "requests": 654,
+  "requests_per_company": 6.242718446601942,
+  "shared_requests": 11,
+  "changes": 0,
+  "observation_changes": 0,
+  "deadline_hits": 0,
+  "warnings": [],
+  "limits": {
+    "max_requests": 1854,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2400.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "hard_max_requests": 1854,
+    "hard_time_budget_seconds": 2472
+  },
+  "search": {
+    "status": "not configured",
+    "queries": 0,
+    "estimated_usd": 0.0,
+    "provider": null,
+    "companies_queried": 0,
+    "unit_price_usd": 0.005,
+    "price_note": "estimate at configured unit price; one query per company; no free credit assumed",
+    "budget_usd": 0.0,
+    "errors": 0,
+    "cap_skips": 0,
+    "inactive_skips": 0,
+    "result_domains": 0
+  },
+  "cost_usd": null,
+  "hiring": null,
+  "website_second_pass": {
+    "eligible": 1,
+    "attempted": 1,
+    "candidates": 1,
+    "candidates_fetched": 0,
+    "recovered": 0,
+    "requests": 4,
+    "seconds": 35.375,
+    "companies": [
+      {
+        "organisation_number": "913819365",
+        "details": {
+          "candidates": [
+            "aeiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.375
+        }
+      }
+    ],
+    "unexpected_failures": 0
+  }
+}

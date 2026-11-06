@@ -1,0 +1,450 @@
+{
+  "selection": "SystemRandom sample from eight random accessible BRREG pages (page 1..99; API search-result window)",
+  "pages": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=30",
+      "sha256": "ec884140eb92e16e142a9ba40f328dcfc3d2a34575a577fd1d7525606de9a733",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=72",
+      "sha256": "8576e9f3bceec17a441c943e7769a9042ea77bc73b8c669dda7033f724ffb521",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=66",
+      "sha256": "a587ebcda3348661ce6f1170f654d09af7abfe0bd3fe404d11a996d25cb68807",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=56",
+      "sha256": "a404e5150af2cfc0576fc910c97f8ff43812ed987f3485d25cf64cddd48de35f",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=18",
+      "sha256": "3a40bf81903f2f47887bb09602c4765a15e73547d16bc9e8d90fd14bcc2384c2",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=7",
+      "sha256": "b8787a4eeb7f038cfa915c1d4f79bbcb66c82a1af443fc34ffcff03004a211a6",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=78",
+      "sha256": "4f80f7499826c8dea906c80bf98bf7ebd432d97e3d6aff440f6d3a860b8498cf",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=53",
+      "sha256": "edf8a53248149bc4fc89eb5c219ec4b6633180f13622d9253af8e9319a49109c",
+      "records": 100
+    }
+  ],
+  "excluded_identifier_count": 6699,
+  "eligible_records": 799,
+  "input_sha256": "aa4a2176651c8d05c38f97919733a2c4625117eb1f4925036bef8e13dfe49289",
+  "companies": [
+    {
+      "organisation_number": "926810405",
+      "name": "A1 TRANSPORT SIVANTHARAJAH SIVALINGAM"
+    },
+    {
+      "organisation_number": "998750520",
+      "name": "ABELS GATE 22 AS"
+    },
+    {
+      "organisation_number": "931472658",
+      "name": "A.Z MANAFA"
+    },
+    {
+      "organisation_number": "979559534",
+      "name": "ABELAND ARNE GEIR"
+    },
+    {
+      "organisation_number": "925880191",
+      "name": "ABRAHAM INVEST AS"
+    },
+    {
+      "organisation_number": "914290147",
+      "name": "A.THORHEIM CONSULTING"
+    },
+    {
+      "organisation_number": "935178916",
+      "name": "ABD AL HAK BYGG & VEDLIKEHOLD"
+    },
+    {
+      "organisation_number": "913819365",
+      "name": "A+ EIENDOM AS"
+    },
+    {
+      "organisation_number": "913140125",
+      "name": "1B1 GROUP AS"
+    },
+    {
+      "organisation_number": "935303249",
+      "name": "ABCDEF KAPITAL AS"
+    },
+    {
+      "organisation_number": "921646445",
+      "name": "1963 EIRIK DAHL"
+    },
+    {
+      "organisation_number": "936655904",
+      "name": "A+ WORDS AS"
+    },
+    {
+      "organisation_number": "915119433",
+      "name": "3D-COMPONENTS AS"
+    },
+    {
+      "organisation_number": "914164826",
+      "name": "A&S SERVICEHJEM - AGNIESZKA SMARGOL"
+    },
+    {
+      "organisation_number": "994348590",
+      "name": "A & A - HOLDING AS"
+    },
+    {
+      "organisation_number": "919993790",
+      "name": "1814 BOLIG AS"
+    },
+    {
+      "organisation_number": "929618998",
+      "name": "ABELSETH INVESTUM"
+    },
+    {
+      "organisation_number": "927397900",
+      "name": "3D FOTO AGDER AS"
+    },
+    {
+      "organisation_number": "979681631",
+      "name": "ABCFRES WALDO ZIENER"
+    },
+    {
+      "organisation_number": "923790489",
+      "name": "1975 HOLDING AS"
+    },
+    {
+      "organisation_number": "934445848",
+      "name": "ABRAHAM TAXI AS"
+    },
+    {
+      "organisation_number": "838307922",
+      "name": "1875 INFORMATION SERVICES AS"
+    },
+    {
+      "organisation_number": "934523148",
+      "name": "A&S EIENDOM AS"
+    },
+    {
+      "organisation_number": "990601062",
+      "name": "ABRAHAM KOMMUNIKASJON"
+    },
+    {
+      "organisation_number": "932437503",
+      "name": "A&O CONSULTING OÜ"
+    },
+    {
+      "organisation_number": "931631802",
+      "name": "9GRANDCOLLECTIVE - UNDER MAGNUS KRISTOFFER HERMANSEN"
+    },
+    {
+      "organisation_number": "926089064",
+      "name": "A1 DRIFT AS"
+    },
+    {
+      "organisation_number": "991472630",
+      "name": "ABRA EIENDOM AS"
+    },
+    {
+      "organisation_number": "993581755",
+      "name": "A.U. BYGG AS"
+    },
+    {
+      "organisation_number": "929844025",
+      "name": "ABDALLAH HULAIYEL"
+    },
+    {
+      "organisation_number": "937459211",
+      "name": "A.T HOLDING AS"
+    },
+    {
+      "organisation_number": "996441857",
+      "name": "A.T. KEARNEY G.M.B.H"
+    },
+    {
+      "organisation_number": "936365442",
+      "name": "19 EIGHTYSIX VENTURES AS"
+    },
+    {
+      "organisation_number": "994492780",
+      "name": "A.W. FABER-CASTELL VERTRIEB GMBH"
+    },
+    {
+      "organisation_number": "936924972",
+      "name": "ABRAHAM ANDERSON ENK"
+    },
+    {
+      "organisation_number": "932430541",
+      "name": "97004 BAKER HUGHES TANANGER NORGE."
+    },
+    {
+      "organisation_number": "830064192",
+      "name": "905 SØRENSEN"
+    },
+    {
+      "organisation_number": "996416828",
+      "name": "A.T. KEARNEY OY"
+    },
+    {
+      "organisation_number": "824615152",
+      "name": "1852 BÅT OG MOTOR AS"
+    },
+    {
+      "organisation_number": "912055744",
+      "name": "1912 TOP HOLDING AS"
+    },
+    {
+      "organisation_number": "988804029",
+      "name": "3D FUNCTIONAL SCIENCE Ola Eriksrud"
+    },
+    {
+      "organisation_number": "992402938",
+      "name": "911PARTYPHONE"
+    },
+    {
+      "organisation_number": "921610637",
+      "name": "ABELNES MARINA HØVDING AS"
+    },
+    {
+      "organisation_number": "934592875",
+      "name": "3D SCANDINAVIA AS"
+    },
+    {
+      "organisation_number": "980327000",
+      "name": "911-TJENESTEN AS"
+    },
+    {
+      "organisation_number": "935748992",
+      "name": "A.SELJEÅS AS"
+    },
+    {
+      "organisation_number": "996428397",
+      "name": "A.T.KEARNEY B.V."
+    },
+    {
+      "organisation_number": "916177097",
+      "name": "3D NORGE AS"
+    },
+    {
+      "organisation_number": "922559716",
+      "name": "92 KOPPER KAFFE FILMPRODUKSJON ANS"
+    },
+    {
+      "organisation_number": "998571421",
+      "name": "ABP ELEKTRO HOLDING AS"
+    },
+    {
+      "organisation_number": "927078015",
+      "name": "3D-NORD STENHAUG"
+    },
+    {
+      "organisation_number": "930150266",
+      "name": "3D MUSIC INSTRUMENTS BY RICARDO SIMIAN DIAZ"
+    },
+    {
+      "organisation_number": "925243566",
+      "name": "95 HOLDING AS"
+    },
+    {
+      "organisation_number": "835905292",
+      "name": "9068LYNGEN AS"
+    },
+    {
+      "organisation_number": "925077755",
+      "name": "ABRAHA"
+    },
+    {
+      "organisation_number": "985693897",
+      "name": "ABCHORT ATHANASIOS CHORTATOS"
+    },
+    {
+      "organisation_number": "970359281",
+      "name": "ABRAHAM S GRIMSTVEDT"
+    },
+    {
+      "organisation_number": "935247292",
+      "name": "91 CAPITAL AS"
+    },
+    {
+      "organisation_number": "926089056",
+      "name": "A1 LIVING AS"
+    },
+    {
+      "organisation_number": "988144401",
+      "name": "ABRA SNEKKERSERVICE Oddmund Abrahamsen"
+    },
+    {
+      "organisation_number": "920415458",
+      "name": "3D VISUALISERING OG DESIGN AS"
+    },
+    {
+      "organisation_number": "915419011",
+      "name": "A1 UNDERVISNINGSTJENESTER AS"
+    },
+    {
+      "organisation_number": "988380342",
+      "name": "ABRAHAM FJELLI"
+    },
+    {
+      "organisation_number": "913381742",
+      "name": "A & A POOL AS"
+    },
+    {
+      "organisation_number": "918973036",
+      "name": "A.TRANSPORT ABDINASIR ADEN MAHAMED"
+    },
+    {
+      "organisation_number": "938581819",
+      "name": "3D VASK AS KONKURSBO"
+    },
+    {
+      "organisation_number": "918306684",
+      "name": "A&S HOLDING AS"
+    },
+    {
+      "organisation_number": "937282621",
+      "name": "ABRACADABRA - IDEELL FORENING"
+    },
+    {
+      "organisation_number": "936277942",
+      "name": "ABEL REGNSKAP AS"
+    },
+    {
+      "organisation_number": "996428443",
+      "name": "A.T.KEARNEY B.V."
+    },
+    {
+      "organisation_number": "915959253",
+      "name": "A&T RENHOLD THARSAN KUNASINGAM"
+    },
+    {
+      "organisation_number": "919308680",
+      "name": "ABCDREAMS KARINE GRAN"
+    },
+    {
+      "organisation_number": "937002491",
+      "name": "A & A EIENDOMSDRIFT AS"
+    },
+    {
+      "organisation_number": "918897194",
+      "name": "3D GENERALIST HENSVOLD"
+    },
+    {
+      "organisation_number": "935842174",
+      "name": "ABRACADABRA CAPITAL AS"
+    },
+    {
+      "organisation_number": "930618357",
+      "name": "A&R DAFAALLA"
+    },
+    {
+      "organisation_number": "829203502",
+      "name": "ABRAHAM Z. VOLLAN"
+    },
+    {
+      "organisation_number": "922941556",
+      "name": "ABDALLA TRANSPORT"
+    },
+    {
+      "organisation_number": "912203824",
+      "name": "A1 TRAFIKKSKOLE AS"
+    },
+    {
+      "organisation_number": "937590148",
+      "name": "ABD AL-HAMEED BUDTJENESTE"
+    },
+    {
+      "organisation_number": "922980837",
+      "name": "ABELSNES"
+    },
+    {
+      "organisation_number": "926335405",
+      "name": "ABRA PRODUCTIONS"
+    },
+    {
+      "organisation_number": "923138080",
+      "name": "ABR PARTNERS AS"
+    },
+    {
+      "organisation_number": "925685445",
+      "name": "ABDELGHANI DENTAL"
+    },
+    {
+      "organisation_number": "921643810",
+      "name": "ABCB AS"
+    },
+    {
+      "organisation_number": "923799753",
+      "name": "1982 DIANA TIARI"
+    },
+    {
+      "organisation_number": "991309926",
+      "name": "3DESIGN FALANA"
+    },
+    {
+      "organisation_number": "913750985",
+      "name": "ABD HOLDING AS"
+    },
+    {
+      "organisation_number": "929102800",
+      "name": "ABRAHAM GEBREMEDHN"
+    },
+    {
+      "organisation_number": "983414001",
+      "name": "ABCL BENDEK MAARTMANN-MOE"
+    },
+    {
+      "organisation_number": "926488732",
+      "name": "A.T.CHRISTENSEN HOLDING AS"
+    },
+    {
+      "organisation_number": "929916921",
+      "name": "A.Z BASHIR MANAGEMENT"
+    },
+    {
+      "organisation_number": "990837546",
+      "name": "ABCONOR AS"
+    },
+    {
+      "organisation_number": "938776997",
+      "name": "8THB AS"
+    },
+    {
+      "organisation_number": "928252418",
+      "name": "ABELONE TORP"
+    },
+    {
+      "organisation_number": "993350990",
+      "name": "1975 STIAN AAGAARD"
+    },
+    {
+      "organisation_number": "935208831",
+      "name": "ABDELAZIZ NASSIRI"
+    },
+    {
+      "organisation_number": "914081041",
+      "name": "ABEL UTVIKLING AS"
+    },
+    {
+      "organisation_number": "924119020",
+      "name": "18KEM INNLANDET"
+    },
+    {
+      "organisation_number": "925053236",
+      "name": "A1 BILVERKSTED AS"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "organisation_number": "913819365",
+    "section": "website",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "code": "website_candidates",
+        "candidate_failure_reasons": [
+          "no_such_domain",
+          "transient_transport_retry",
+          "website_timeout"
+        ]
+      }
+    ]
+  },
+  {
+    "organisation_number": "913819365",
+    "section": "activity",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "organisation_number": "927397900",
+    "section": "activity",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "organisation_number": "992402938",
+    "section": "website",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "code": "website_candidates",
+        "candidate_failure_reasons": [
+          "no_such_domain"
+        ]
+      }
+    ]
+  },
+  {
+    "organisation_number": "992402938",
+    "section": "activity",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "organisation_number": "927078015",
+    "section": "website",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "code": "website_candidates",
+        "candidate_failure_reasons": [
+          "no_such_domain"
+        ]
+      }
+    ]
+  },
+  {
+    "organisation_number": "927078015",
+    "section": "activity",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "organisation_number": "921643810",
+    "section": "activity",
+    "state": "failed",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "organisation_number": "991309926",
+    "section": "website",
+    "state": "blocked",
+    "stale": null,
+    "reasons": [
+      {
+        "code": "robots_unavailable",
+        "message": "falanafurniture.no: access refused"
+      },
+      {
+        "code": "website_candidates",
+        "candidate_failure_reasons": [
+          "no_such_domain",
+          "robots_unavailable"
+        ]
+      }
+    ]
+  }
+]
