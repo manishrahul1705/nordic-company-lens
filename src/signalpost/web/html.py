@@ -165,7 +165,14 @@ class Page(HTMLParser):
                 return self.raw[max(0,index-40):max(0,index-40)+300]
         match = pattern.search(self.raw)
         if not match:
-            return None
+            # Ownership scoring normalizes punctuation and separate text nodes.
+            # Localize that same name rather than returning document-opening
+            # markup when a legal name contains dots, hyphens or inline tags.
+            words=re.findall(r'\w+',token)
+            if not words:return None
+            separator=r'(?:[^\w]|<[^>]{1,200}>|&[\w#]+;){1,120}'
+            match=re.search(r'(?<!\w)'+separator.join(re.escape(w) for w in words)+r'(?!\w)',self.raw,re.I)
+            if not match:return None
         return self.raw[max(0, match.start() - 40):max(0, match.start() - 40) + 300]
 
     def proof_span(self, org):

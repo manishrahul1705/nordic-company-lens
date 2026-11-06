@@ -16,7 +16,7 @@ def plain_reason(code):
         return 'no verified company website was found'
     if 'robots' in code:
         return 'the website blocks automated access (robots.txt)'
-    if any(word in code for word in ('timeout', 'dns', 'connect', 'reset', 'servfail', 'tls')):
+    if code == 'no_such_domain' or any(word in code for word in ('timeout', 'dns', 'connect', 'reset', 'servfail', 'tls')):
         return "the source couldn't be reached during the run"
     if any(word in code for word in ('group', 'shared')):
         return 'only a shared group website was found'

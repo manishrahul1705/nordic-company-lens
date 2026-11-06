@@ -60,6 +60,12 @@ def test_corporate_parent_mention_does_not_override_own_publisher():
     assert score(p,ORG,CONTEXT,'registry_website',[],nominated_contacts=True).level=='VERIFIED'
 
 
+def test_normalized_name_proof_excerpt_localizes_punctuation_and_inline_tags():
+    p=page('<footer>Example.<span>No</span> AS</footer>')
+    span=p.name_span('example no')
+    assert span and 'Example.<span>No</span>' in span and span in p.raw
+
+
 def test_any_registered_subunit_id_can_prove_parent_site():
     context={**CONTEXT,'subunits':[{'orgnr':SUB,'name':'Trading Shop'}]}
     proof=candidate_proof(page('Trading Shop Org nr '+SUB),ORG,context,Candidate('https://example.no','example.no','registry_email'),[],SimpleNamespace())

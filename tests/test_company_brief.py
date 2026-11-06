@@ -74,6 +74,7 @@ def test_writer_rejects_a_forged_brief(tmp_path):
     ('robots','the website blocks automated access (robots.txt)'),
     ('website_timeout',"the source couldn't be reached during the run"),
     ('dns_servfail',"the source couldn't be reached during the run"),
+    ('no_such_domain',"the source couldn't be reached during the run"),
     ('group_site','only a shared group website was found'),
     ('ambiguous',"a match couldn't be confirmed for this exact company"),
     ('unrecognised_internal_code','the source did not provide a supported result'),

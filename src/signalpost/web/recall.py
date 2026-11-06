@@ -53,4 +53,3 @@ def redirect_names_company(page, org, context):
     text = ' '.join(re.findall(r'\w+', (page.title + ' ' + page.owner_text).casefold()))
     return any((core := legal_name(name)) and re.search(r'(?<!\w)' + re.escape(core) + r'(?!\w)', text)
                for name in [context.get('name'), *[u.get('name') for u in context.get('subunits', [])]])
-
