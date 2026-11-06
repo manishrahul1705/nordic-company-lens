@@ -280,7 +280,8 @@ def test_registered_network_failure_carries_previous_proof(tmp_path, monkeypatch
     def offline(request):
         raise httpx.ConnectError("offline", request=request)
     report, second, _, _ = execute_web(tmp_path / "second", monkeypatch, response=offline, previous=cfg.output)
-    assert second['run']['sections']['website'] == 'failed'
+    assert second['run']['sections']['website'] == 'available'
+    assert second['run']['refresh']['stale_sections']['website']['attempt_state'] == 'failed'
     assert report['changes'] == 0
     assert next(c for c in second['claims'] if c['field'] == 'official_website')['carried_forward']
 

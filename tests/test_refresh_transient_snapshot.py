@@ -70,12 +70,37 @@ def test_website_failure_restores_dependent_activity_absence(tmp_path):
     assert not current.changes and not current.run.refresh['observation_changes']
 
 
+def test_guessed_404_does_not_override_transient_failure_of_an_absent_section(tmp_path):
+    previous, blobs = snapshot(tmp_path, 'not_available')
+    current = previous.model_copy(deep=True)
+    update(current, 'website', missing('website', 'website_source_unavailable'))
+    current.errors.append(Error(section='website', code='website_candidates', message=json.dumps([
+        {'domain': 'guessed.no', 'reason': 'http_404'},
+        {'domain': 'another.no', 'reason': 'dns_timeout'}])))
+    apply(current, serialize(previous, 'union'), blobs)
+    assert current.run.sections['website'] == 'not_available'
+    assert current.run.refresh['stale_sections']['website']['failure_codes'] == ['dns_timeout']
+    assert not current.changes and not current.run.refresh['observation_changes']
+
+
 def test_first_attempt_has_no_snapshot_to_restore(tmp_path):
     current, blobs = snapshot(tmp_path)
     update(current, 'website', missing('website', 'dns_timeout'))
     apply(current, None, blobs)
     assert current.run.sections['website'] == 'failed'
     assert 'stale_sections' not in current.run.refresh
+
+
+def test_prior_available_state_without_supported_claims_cannot_restore(tmp_path):
+    previous, blobs = snapshot(tmp_path)
+    current = previous.model_copy(deep=True)
+    current.claims = []
+    update(current, 'website', missing('website', 'website_timeout'))
+    prior = serialize(previous, 'union')
+    prior['claims'] = []  # Equivalent to support removed by strict identity validation.
+    apply(current, prior, blobs)
+    assert current.run.sections['website'] == 'failed'
+    assert not current.run.refresh['stale_sections']
 
 
 @pytest.mark.parametrize('reason', ['http_404', 'http_410', 'gone'])

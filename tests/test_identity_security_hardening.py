@@ -420,7 +420,8 @@ def test_transient_website_error_with_verified_identity_preserves_claims(tmp_pat
     rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
     row = rows[0]
     assert row["run"]["sections"]["identity"] == "available"
-    assert row["run"]["sections"]["website"] == "failed"
+    assert row["run"]["sections"]["website"] == "available"
+    assert row["run"]["refresh"]["stale_sections"]["website"]["attempt_state"] == "failed"
     carried_web = [c for c in row["claims"] if c["family"] == "website" and c.get("carried_forward")]
     assert any(c["field"] == "official_website" for c in carried_web)
 

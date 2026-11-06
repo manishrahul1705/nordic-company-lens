@@ -28,7 +28,7 @@ def transient_sections(envelope, old_claims):
     old_site = old_claims.get('official_website')
     old_domain = domain(old_site.value['final_url']) if old_site and old_site.availability == 'available' else None
     gone = any(a.get('reason') in {'http_404', 'http_410', 'gone'} and
-               (not old_domain or domain(a.get('page') or a.get('url') or a.get('domain', '')) == old_domain) and
+               old_domain is not None and domain(a.get('page') or a.get('url') or a.get('domain', '')) == old_domain and
                not str(a.get('page') or a.get('url', '')).endswith('/robots.txt') for a in attempts)
     refuted = envelope.run.refresh.get('website', {}).get('refuted_previous_website')
     if gone or refuted or any(e.section == 'website' and e.code == 'foreign_orgnr_on_previous_domain' for e in envelope.errors):
@@ -94,6 +94,8 @@ def apply(envelope, previous, blobs):
         attempted = envelope.run.sections.get(family)
         if identity_conflict or before not in {'available', 'not_available', 'ambiguous'} or attempted not in {'failed', 'blocked'}:
             continue
+        if before == 'available' and not any(c.family == family and c.availability == 'available' for c in old_claims.values()):
+            continue  # Strict identity validation may deliberately remove prior claims.
         restored.add(family)
         envelope.run.refresh['stale_sections'][family] = {
             'previous_state': before, 'attempt_state': attempted,
