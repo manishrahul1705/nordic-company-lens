@@ -96,7 +96,10 @@ def extract(event, response, locator, org, endpoint, scope=None):
     section = Section(state='not_available')
     source = response_source(response)
     event_id = event['oppdateringsid']
-    common = {'company_orgnr': org, 'event_id': event_id, 'date': event['dato'],
+    # Equivalent offset/UTC spellings are the same registry publication instant.
+    # Keep the original response bytes as evidence; normalize only the claim value.
+    published = timestamp(event['dato']).isoformat().replace('+00:00', 'Z')
+    common = {'company_orgnr': org, 'event_id': event_id, 'date': published,
               'date_source': DATE_LABEL,
               'url': BASE + 'oppdateringer/' + endpoint + '?' + urlencode(
                   {'oppdateringsid': event_id, 'size': 1, 'includeChanges': 'true'})}

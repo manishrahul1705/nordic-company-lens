@@ -46,6 +46,19 @@ def extract(e):
     return rc.extract(e, response({'event': e}), '/event', ORG, 'enheter')
 
 
+@pytest.mark.parametrize('utc,offset', [
+    ('2026-10-31T16:00:26.998Z', '2026-10-31T17:00:26.998+01:00'),
+    ('2026-04-23T06:35:10.591Z', '2026-04-23T08:35:10.591+02:00'),
+    ('2026-09-01T12:30:00Z', '2026-09-01T14:30:00+02:00')])
+def test_equivalent_publication_offsets_keep_claim_ids_and_original_evidence(utc, offset):
+    first, second = extract(event(dato=utc)), extract(event(dato=offset))
+    assert first.claims[0].id == second.claims[0].id
+    assert first.claims[0].value == second.claims[0].value
+    assert first.evidence[0].content_sha256 != second.evidence[0].content_sha256
+    assert second.evidence[0].content_sha256 == response({'event': event(dato=offset)}).sha
+    assert extract(event(dato='2026-09-01T12:31:00Z')).claims[0].id != extract(event(dato='2026-09-01T12:30:00Z')).claims[0].id
+
+
 @pytest.mark.parametrize('path', ['/navn', '/kapital/belop', '/forretningsadresse/adresse/0', '/postadresse', '/postadresse/postnummer'])
 def test_named_fields_have_exact_values_and_publication_evidence(path):
     e = event(endringer=[{'op': 'replace', 'path': path, 'value': 0}])

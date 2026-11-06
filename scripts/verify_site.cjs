@@ -19,8 +19,16 @@ const fs=require('fs');const path=require('path');const {pathToFileURL}=require(
    }
    if(kind==='company'){
     await page.screenshot({path:path.join(shots,`summary-${width}.png`),fullPage:false});
+    await page.locator('.summary').screenshot({path:path.join(shots,`brief-${width}.png`)});
     await page.locator('button[data-toggle^="source-"]').first().click();
     if(!(await page.locator('.evidence:not([hidden])').first().innerText()).includes('Retrieved at'))throw Error('Source panel missing retrieval');
+    const sourceAudit=await page.evaluate(()=>{
+      const buttons=[...document.querySelectorAll('button[data-toggle^="source-"]')];
+      for(const button of buttons){const panel=document.getElementById(button.dataset.toggle);if(panel?.hidden)button.click();}
+      return [...document.querySelectorAll('[data-source]')].filter(p=>p.dataset.loaded && p.textContent.includes('could not be loaded')).length;
+    });
+    if(sourceAudit)throw Error('Fact source failed to resolve');
+    await page.locator('.evidence:not([hidden])').first().screenshot({path:path.join(shots,`source-${width}.png`)});
    }
    if(kind==='compare'){
     if(await page.locator('.compare-card').count()!==3)throw Error('Shareable compare failed');
@@ -34,6 +42,16 @@ const fs=require('fs');const path=require('path');const {pathToFileURL}=require(
    await page.screenshot({path:path.join(shots,`${kind}-${width}.png`),fullPage:false});
    results.push({width,kind,overflow,errors:[...errors],external:[...external]});
   }
+  // Every generated company page, including its unexpanded sections, must fit.
+  let profilesChecked=0;
+  for(const record of records){
+   await page.goto(pathToFileURL(path.join(root,'c',record.orgnr+'.html')).href);
+   const size=await page.evaluate(()=>({page:document.documentElement.scrollWidth,viewport:innerWidth}));
+   if(size.page>size.viewport)throw Error('Horizontal overflow: '+record.orgnr+' at '+width);
+   profilesChecked++;
+  }
+  results.push({width,profilesChecked,errors:[...errors],external:[...external]});
+  if(errors.length || external.length)throw Error('Offline profile traversal failed');
   await context.close();
  }
  await browser.close();fs.writeFileSync(path.join(shots,'../browser-check.json'),JSON.stringify(results,null,2));console.log(JSON.stringify(results,null,2));
