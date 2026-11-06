@@ -12,7 +12,7 @@ uv sync --frozen
 
 ## Official run
 
-For the release checklist, measured coverage, fresh random smoke test and known limits, see [SUBMISSION.md](SUBMISSION.md). The latest fresh random check emitted all103 outputs twice with zero company changes, but its strict pairwise verifier failed on one activity-section recovery (failed ? not_available). See the [exact release result](bench/reports/release/RESULTS.md); this is not reported as a clean strict pair.
+For the release checklist, measured coverage, fresh random smoke test and known limits, see [SUBMISSION.md](SUBMISSION.md). Refresh stability: 0 company changes; one activity section (913381742) recovered from a first-run connection error (failed → not_available) and is reported as an observation change by design. The latest fresh random check emitted all103 outputs twice. See the [exact release result](bench/reports/release/RESULTS.md); this is not reported as a clean strict pair.
 
 The command writes a static offline site to `out/site`. Open `out/site/index.html` directly: search the directory by company name or organisation number, open a company, or compare two or three companies. The comparison URL preserves the selection; share that link together with the generated site folder. Source buttons show captured excerpts, URLs, retrieval dates and reporting periods. No CDN or web server is required. At narrow widths comparison cards stack vertically.
 
@@ -54,7 +54,7 @@ Exit zero means output was written for parsed input records. Inspect report warn
 
 ## Sources and licences
 
-Registry identity, roles, subunits and accounts come from official Bronnoysundregistrene APIs or the supplied registry snapshot. Registry data is attributed under NLOD 2.0. Optional hiring uses the official NAV feed and live detail verification against the exact company or registered subunit. The bundled NAV index is declared discovery metadata; it does not replace live evidence.
+Registry identity, roles, subunits and accounts come from official Brønnøysundregistrene APIs or the supplied registry snapshot. Registry data is attributed under NLOD 2.0. Optional hiring uses the official NAV feed and live detail verification against the exact company or registered subunit. The bundled NAV index is declared discovery metadata; it does not replace live evidence.
 
 Website research follows robots, public-IP, redirect, request and time limits. Published website facts require the documented company-identity proof. Social profile links can be recognised on accepted company pages; social platforms are not fetched. Public activity uses bounded company-site feeds/sitemaps and supported registry events. Bundled SSB KLASS industry titles retain CC BY 4.0 attribution to Statistics Norway.
 

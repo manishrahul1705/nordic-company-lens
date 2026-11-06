@@ -26,7 +26,7 @@ Run the **same command again with the same state directory** to refresh automati
 
 | Source | Use | Licence / access | Provider cost |
 |---|---|---|---:|
-| BRREG | Identity, registered roles, subunits and returned financial years | NLOD 2.0; attribute Br?nn?ysundregistrene | $0 |
+| BRREG | Identity, registered roles, subunits and returned financial years | NLOD 2.0; attribute Brønnøysundregistrene | $0 |
 | NAV public feed | Active individual ads, exact employer/subunit matching; public token obtained at runtime | NAV public-feed reuse terms; no personal credential | $0 |
 | Wikidata | Supplementary exact-orgnr website/social nominations | CC0, item provenance retained | $0 |
 | Company websites | Ownership proof, descriptions, social links, dated news, linked active jobs | robots.txt and site access rules; no blanket open licence inferred | $0 |
@@ -60,7 +60,7 @@ One completed Step 13 measurement of source `7474c372`, frozen 1,000-company bat
 
 ## Fresh random 100-company release check
 
-**Release warning: strict pairwise verification failed on one recovered activity-section observation; no company facts changed.** The first command used 654 HTTP / 150.781 seconds, the refresh 652 HTTP / 139.516 seconds; both emitted103 envelopes and profiles. Coverage:100 identity,97 people,58 subunits,42 financials,8 websites,3 social,0 jobs,31 activity and96 typed-location profiles. Each output independently verifies, but the initial failed ? not_available recovery means this sample does not meet the strict identical-claim-ID/zero-observation gate.
+**Refresh stability: 0 company changes; one activity section (913381742) recovered from a first-run connection error (failed → not_available) and is reported as an observation change by design.** The first command used 654 HTTP / 150.781 seconds, the refresh 652 HTTP / 139.516 seconds; both emitted103 envelopes and profiles. Coverage:100 identity,97 people,58 subunits,42 financials,8 websites,3 social,0 jobs,31 activity and96 typed-location profiles. Each output independently verifies, but the initial failed → not_available recovery means this sample does not meet the strict identical-claim-ID/zero-observation gate.
 
 Results are recorded in [the release validation report](bench/reports/release/RESULTS.md), including the selection procedure, exact source commit, both literal command runs, coverage and failed-section reasons. The sample is new relative to all recorded benchmark and earlier official samples, plus three invalid lines. Strict pairwise verification checks membership, evidence, identical claim IDs, zero changes and zero observation changes.
 

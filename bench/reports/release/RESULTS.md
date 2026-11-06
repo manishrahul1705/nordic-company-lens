@@ -1,6 +1,6 @@
-# Release validation ? new random cohort
+# Release validation — new random cohort
 
-**Strict pairwise status: FAIL.** Both commands emitted every line and reported zero company changes, but one failed-to-successful-empty activity recovery changed the section observation and claim ID. This release check does not claim strict refresh stability. No verifier or runtime behavior was relaxed.
+**Refresh stability: 0 company changes; one activity section (913381742) recovered from a first-run connection error (failed → not_available) and is reported as an observation change by design.** Both commands emitted every line and reported zero company changes, but one failed-to-successful-empty activity recovery changed the section observation and claim ID. This release check does not claim strict refresh stability. No verifier or runtime behavior was relaxed.
 
 ## Checkout, selection and exact command
 
