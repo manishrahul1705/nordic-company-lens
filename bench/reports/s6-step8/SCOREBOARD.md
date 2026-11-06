@@ -2,6 +2,8 @@
 
 Work stayed on `main`, starting from the submitted Step 8 code `1909653`. No push. Search was OFF and credentials were removed in both final benchmark runs. The two failed-network runs are excluded.
 
+The refresh churn recorded here was resolved and revalidated in [Step 8b](../s6-step8b/RESULTS.md): the final strict same-command pair passed with identical claim IDs and zero observation changes.
+
 ## Coverage and runtime
 
 | Section | Step 7 baseline | Final full fallback run 2 | Final full fallback run 3 |

@@ -2,6 +2,8 @@
 
 Fresh local clone of commit `1909653` with `uv sync --frozen`; application credential, search, and model environment variables were removed. `NAV_API_TOKEN` was absent. The 100 valid IDs were random records from the public BRREG Enhetsregister API and are not present in `bench/inputs`; the file also contains `NOT-AN-ORGNR`, `123456789`, and a whitespace-only line. Input SHA-256: e42b962027dd5839e6c9b0ba396481421fa7ec07ef9ccf6d82cb898e01848a8b.
 
+The historical refresh limitation below was resolved in [Step 8b](../../s6-step8b/RESULTS.md), whose final fresh-clone pair passed the unchanged strict verifier with zero observation changes.
+
 The exact README command was run twice without modification and used the same state folder:
 
 ```sh

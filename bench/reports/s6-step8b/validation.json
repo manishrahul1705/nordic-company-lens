@@ -1,0 +1,61 @@
+{
+  "source_commit": "1290c34a148acceb4616247910297c465f247d1b",
+  "input_sha256": "e42b962027dd5839e6c9b0ba396481421fa7ec07ef9ccf6d82cb898e01848a8b",
+  "runs": [
+    {
+      "run": 1,
+      "wall_seconds": 235.3136542,
+      "credentials_absent": true,
+      "commit": "1290c34a148acceb4616247910297c465f247d1b",
+      "runtime_ms": 230828,
+      "requests": 1000,
+      "emitted_envelopes": 103,
+      "changes": 0,
+      "observation_changes": 0,
+      "deadline_hits": 0,
+      "warnings": [],
+      "max_requests_per_company": 18,
+      "profiles": 103
+    },
+    {
+      "run": 2,
+      "wall_seconds": 224.4870857,
+      "credentials_absent": true,
+      "commit": "1290c34a148acceb4616247910297c465f247d1b",
+      "runtime_ms": 219016,
+      "requests": 998,
+      "emitted_envelopes": 103,
+      "changes": 0,
+      "observation_changes": 0,
+      "deadline_hits": 0,
+      "warnings": [],
+      "max_requests_per_company": 18,
+      "profiles": 103
+    }
+  ],
+  "strict_verifier": {
+    "lines": 103,
+    "schema_valid": true,
+    "published_claims": 7683,
+    "source_blobs_verified": 337,
+    "synthesis_companies": 103,
+    "synthesis_sentences": 712,
+    "synthesis_unverified_values": 0,
+    "rerun_lines": 103,
+    "identical_claim_ids": true,
+    "changes": 0,
+    "observation_changes": 0
+  },
+  "stale_sections": 0,
+  "stale_companies": 0,
+  "stale_sections_by_family": {},
+  "stale_prior_states": {},
+  "full_suite": {
+    "passed": 959,
+    "failed": 0,
+    "seconds": 288.34,
+    "command": "uv run --frozen pytest -q --basetemp .pytestroot-step8b-final-1290 -p no:cacheprovider"
+  },
+  "focused_tests": 29,
+  "raw_evidence_path": "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\cache\\s6-step8b-final"
+}
