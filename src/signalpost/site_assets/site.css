@@ -1789,6 +1789,7 @@ a[href] { display: inline-block; max-width: 100%; box-sizing: border-box; vertic
 
 /* Step 9: contain long source values and stack dense tables on small screens. */
 main, header, section, article, .filters, .summary, .fact, .compare-cell { min-width: 0; }
+main p, main summary { overflow-wrap: anywhere; }
 input, select { max-width: 100%; min-width: 0; }
 pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .brief-part { border-left: 3px solid var(--accent); padding: 0 0 0 16px; margin: 20px 0; }
