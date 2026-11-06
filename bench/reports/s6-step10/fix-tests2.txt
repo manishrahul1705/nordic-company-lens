@@ -1,163 +1,163 @@
-.............................F...........                                [100%]
-================================== FAILURES ===================================
-_____________________ test_external_sources_strict_replay _____________________
-
-tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0')
-
-    def test_external_sources_strict_replay(tmp_path):
-        root = Path('tests/fixtures/external_integration')
-        async def execute(label):
-            target = tmp_path / label
-            await run_production_replay(
-                input_path=root/'batch.txt', output_envelopes=target/'envelopes.jsonl',
-                output_report=target/'report.json', state_dir=target/'state',
-                manifest_path=root/'manifest.json', fixtures_dir=root/'blobs',
-                websites=True, hiring=True, public_activity=True, workers=1,
-                observation_time='2026-10-15T10:00:00Z')
-            return [json.loads(line) for line in (target/'envelopes.jsonl').read_text().splitlines()]
->       first = asyncio.run(execute('first'))
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-tests\test_external_integration.py:20: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
-    return runner.run(main)
-           ^^^^^^^^^^^^^^^^
-..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
-    return self._loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
-    return future.result()
-           ^^^^^^^^^^^^^^^
-tests\test_external_integration.py:13: in execute
-    await run_production_replay(
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-input_path = WindowsPath('tests/fixtures/external_integration/batch.txt')
-output_envelopes = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0/first/envelopes.jsonl')
-output_report = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0/first/report.json')
-state_dir = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0/first/state')
-manifest_path = WindowsPath('tests/fixtures/external_integration/manifest.json')
-fixture_envelopes = None
-fixtures_dir = WindowsPath('tests/fixtures/external_integration/blobs')
-bulk = None, websites = True, hiring = True, public_activity = True, workers = 1
-mode = 'strict', observation_time = '2026-10-15T10:00:00Z'
-
-    async def run_production_replay(
-        input_path: Path,
-        output_envelopes: Path,
-        output_report: Path,
-        state_dir: Path = Path("state"),
-        manifest_path: Path | None = None,
-        fixture_envelopes: Path | None = None,
-        fixtures_dir: Path | None = None,
-        bulk: Path | None = None,
-        websites: bool = True,
-        hiring: bool = False,
-        public_activity: bool = False,
-        workers: int = 4,
-        mode: str = "strict",
-        observation_time: str | None = None,
-    ) -> dict:
-        """Executes the actual Signalpost production runner using the offline recorded transport."""
-        blobs_dir = fixtures_dir or (state_dir / "blobs")
-        is_strict = (mode.lower() == "strict")
-    
-        if manifest_path and manifest_path.exists():
-            fixtures = load_fixtures_from_manifest(manifest_path, blobs_dir)
-            print(f"Loaded {len(fixtures)} recorded fixtures from manifest {manifest_path.name}")
-        elif fixture_envelopes and fixture_envelopes.exists():
-            fixtures = build_fixture_map_from_envelopes(fixture_envelopes, blobs_dir)
-            print(f"Indexed {len(fixtures)} historical URL fixtures from {fixture_envelopes.name}")
-        else:
-            fixtures = []
-            print("Warning: No fixture manifest or envelope source provided for replay.")
-    
-        output_envelopes.parent.mkdir(parents=True, exist_ok=True)
-        output_report.parent.mkdir(parents=True, exist_ok=True)
-    
-        config = Config(
-            organisations=input_path,
-            output=output_envelopes,
-            report=output_report,
-            state_dir=state_dir,
-            bulk=bulk,
-            websites=websites,
-            hiring=hiring,
-            public_activity=public_activity,
-            registry_changes=False,  # Historical R2 transport fixtures have no change-feed responses.
-            wikidata=False,  # Offline replay only requests its explicitly recorded sources.
-            workers=workers,
-            time_budget_seconds=120,
-            website_politeness_seconds=1,
-            # Offline fixtures exercise three ownership pages plus feed/article proof.
-            website_request_cap=8,
-            website_total_request_cap=12,
-            nav_index_path=state_dir / "no-live-discovery-index.json.gz",
-        )
-    
-        transport = RecordedResponseTransport(blobs_dir=blobs_dir, fixture_map=fixtures, strict=is_strict)
-        # HTTP replay must not depend on live DNS or wall-clock ad expiry. Only
-        # explicitly declared fixture hosts receive a synthetic public address.
-        hosts = {urlparse(url).hostname for _, url in transport.fixtures}
-        async def fixture_dns(host, port=443):
-            from signalpost.budget import SourceFailure
-            if host not in hosts:
-                raise SourceFailure("no_such_domain")
-            return ["93.184.216.34"]
-    
-        with ExitStack() as stack:
-            stack.enter_context(patch("signalpost.web.policy.resolve_public", fixture_dns))
-            if observation_time:
-                at = datetime.fromisoformat(observation_time.replace("Z", "+00:00"))
-                if at.tzinfo is None:
-                    raise ValueError("observation_time requires a timezone")
-                at = at.astimezone(timezone.utc)
-                class ReplayDateTime(datetime):
-                    @classmethod
-                    def now(cls, tz=None):
-                        return at.astimezone(tz) if tz else at.replace(tzinfo=None)
-                # Patch imported clock references only inside this offline command.
-                for module in list(sys.modules.values()):
-                    if getattr(module, "__name__", "").startswith("signalpost."):
-                        if getattr(module, "utc_now", None):
-                            stack.enter_context(patch.object(module, "utc_now", lambda: at.isoformat().replace("+00:00", "Z")))
-                        if getattr(module, "datetime", None) is datetime:
-                            stack.enter_context(patch.object(module, "datetime", ReplayDateTime))
-            async with httpx.AsyncClient(transport=transport, trust_env=False) as client:
-                report = await runner_run(config, client=client)
-    
-        if transport.has_failures():
-            reasons = []
-            if transport.missing_fixtures:
-                reasons.append(f"{len(transport.missing_fixtures)} missing fixture(s)")
-                for m in transport.missing_fixtures:
-                    logger.error("Missing fixture: method=%s url=%s reason=%s", m[0], m[1], m[2])
-            if transport.corrupt_fixtures:
-                reasons.append(f"{len(transport.corrupt_fixtures)} corrupt fixture(s)")
-                for c in transport.corrupt_fixtures:
-                    logger.error("Corrupt fixture: method=%s url=%s reason=%s", c[0], c[1], c[2])
-            if transport.mismatched_fixtures:
-                reasons.append(f"{len(transport.mismatched_fixtures)} mismatched fixture(s)")
-                for mm in transport.mismatched_fixtures:
-                    logger.error("Mismatched fixture: method=%s url=%s reason=%s", mm[0], mm[1], mm[2])
-            if transport.exhausted_fixtures:
-                reasons.append(f"{len(transport.exhausted_fixtures)} exhausted sequence(s)")
-                for ef in transport.exhausted_fixtures:
-                    logger.error("Exhausted sequence: method=%s url=%s reason=%s", ef[0], ef[1], ef[2])
-            if is_strict and transport.incomplete_records:
-                reasons.append(f"{len(transport.incomplete_records)} incomplete metadata record(s) in strict mode")
-                for inc in transport.incomplete_records:
-                    logger.error("Incomplete metadata: %s", inc)
->           raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
-E           scripts.production_replay.ReplayFixtureError: Production replay failed: 1 missing fixture(s)
-
-scripts\production_replay.py:449: ReplayFixtureError
----------------------------- Captured stdout call -----------------------------
-Loaded 37 recorded fixtures from manifest manifest.json
------------------------------- Captured log call ------------------------------
-WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for GET https://zephyrsynthetic.no/about
-ERROR    production_replay:production_replay.py:432 Missing fixture: method=GET url=https://zephyrsynthetic.no/about reason=No recorded fixture for GET https://zephyrsynthetic.no/about
-=========================== short test summary info ===========================
-FAILED tests/test_external_integration.py::test_external_sources_strict_replay
-1 failed, 40 passed in 25.41s
+.............................F...........                                [100%]
+================================== FAILURES ===================================
+_____________________ test_external_sources_strict_replay _____________________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0')
+
+    def test_external_sources_strict_replay(tmp_path):
+        root = Path('tests/fixtures/external_integration')
+        async def execute(label):
+            target = tmp_path / label
+            await run_production_replay(
+                input_path=root/'batch.txt', output_envelopes=target/'envelopes.jsonl',
+                output_report=target/'report.json', state_dir=target/'state',
+                manifest_path=root/'manifest.json', fixtures_dir=root/'blobs',
+                websites=True, hiring=True, public_activity=True, workers=1,
+                observation_time='2026-10-15T10:00:00Z')
+            return [json.loads(line) for line in (target/'envelopes.jsonl').read_text().splitlines()]
+>       first = asyncio.run(execute('first'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_external_integration.py:20:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_external_integration.py:13: in execute
+    await run_production_replay(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input_path = WindowsPath('tests/fixtures/external_integration/batch.txt')
+output_envelopes = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0/first/envelopes.jsonl')
+output_report = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0/first/report.json')
+state_dir = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes8/test_external_sources_strict_r0/first/state')
+manifest_path = WindowsPath('tests/fixtures/external_integration/manifest.json')
+fixture_envelopes = None
+fixtures_dir = WindowsPath('tests/fixtures/external_integration/blobs')
+bulk = None, websites = True, hiring = True, public_activity = True, workers = 1
+mode = 'strict', observation_time = '2026-10-15T10:00:00Z'
+
+    async def run_production_replay(
+        input_path: Path,
+        output_envelopes: Path,
+        output_report: Path,
+        state_dir: Path = Path("state"),
+        manifest_path: Path | None = None,
+        fixture_envelopes: Path | None = None,
+        fixtures_dir: Path | None = None,
+        bulk: Path | None = None,
+        websites: bool = True,
+        hiring: bool = False,
+        public_activity: bool = False,
+        workers: int = 4,
+        mode: str = "strict",
+        observation_time: str | None = None,
+    ) -> dict:
+        """Executes the actual Signalpost production runner using the offline recorded transport."""
+        blobs_dir = fixtures_dir or (state_dir / "blobs")
+        is_strict = (mode.lower() == "strict")
+
+        if manifest_path and manifest_path.exists():
+            fixtures = load_fixtures_from_manifest(manifest_path, blobs_dir)
+            print(f"Loaded {len(fixtures)} recorded fixtures from manifest {manifest_path.name}")
+        elif fixture_envelopes and fixture_envelopes.exists():
+            fixtures = build_fixture_map_from_envelopes(fixture_envelopes, blobs_dir)
+            print(f"Indexed {len(fixtures)} historical URL fixtures from {fixture_envelopes.name}")
+        else:
+            fixtures = []
+            print("Warning: No fixture manifest or envelope source provided for replay.")
+
+        output_envelopes.parent.mkdir(parents=True, exist_ok=True)
+        output_report.parent.mkdir(parents=True, exist_ok=True)
+
+        config = Config(
+            organisations=input_path,
+            output=output_envelopes,
+            report=output_report,
+            state_dir=state_dir,
+            bulk=bulk,
+            websites=websites,
+            hiring=hiring,
+            public_activity=public_activity,
+            registry_changes=False,  # Historical R2 transport fixtures have no change-feed responses.
+            wikidata=False,  # Offline replay only requests its explicitly recorded sources.
+            workers=workers,
+            time_budget_seconds=120,
+            website_politeness_seconds=1,
+            # Offline fixtures exercise three ownership pages plus feed/article proof.
+            website_request_cap=8,
+            website_total_request_cap=12,
+            nav_index_path=state_dir / "no-live-discovery-index.json.gz",
+        )
+
+        transport = RecordedResponseTransport(blobs_dir=blobs_dir, fixture_map=fixtures, strict=is_strict)
+        # HTTP replay must not depend on live DNS or wall-clock ad expiry. Only
+        # explicitly declared fixture hosts receive a synthetic public address.
+        hosts = {urlparse(url).hostname for _, url in transport.fixtures}
+        async def fixture_dns(host, port=443):
+            from signalpost.budget import SourceFailure
+            if host not in hosts:
+                raise SourceFailure("no_such_domain")
+            return ["93.184.216.34"]
+
+        with ExitStack() as stack:
+            stack.enter_context(patch("signalpost.web.policy.resolve_public", fixture_dns))
+            if observation_time:
+                at = datetime.fromisoformat(observation_time.replace("Z", "+00:00"))
+                if at.tzinfo is None:
+                    raise ValueError("observation_time requires a timezone")
+                at = at.astimezone(timezone.utc)
+                class ReplayDateTime(datetime):
+                    @classmethod
+                    def now(cls, tz=None):
+                        return at.astimezone(tz) if tz else at.replace(tzinfo=None)
+                # Patch imported clock references only inside this offline command.
+                for module in list(sys.modules.values()):
+                    if getattr(module, "__name__", "").startswith("signalpost."):
+                        if getattr(module, "utc_now", None):
+                            stack.enter_context(patch.object(module, "utc_now", lambda: at.isoformat().replace("+00:00", "Z")))
+                        if getattr(module, "datetime", None) is datetime:
+                            stack.enter_context(patch.object(module, "datetime", ReplayDateTime))
+            async with httpx.AsyncClient(transport=transport, trust_env=False) as client:
+                report = await runner_run(config, client=client)
+
+        if transport.has_failures():
+            reasons = []
+            if transport.missing_fixtures:
+                reasons.append(f"{len(transport.missing_fixtures)} missing fixture(s)")
+                for m in transport.missing_fixtures:
+                    logger.error("Missing fixture: method=%s url=%s reason=%s", m[0], m[1], m[2])
+            if transport.corrupt_fixtures:
+                reasons.append(f"{len(transport.corrupt_fixtures)} corrupt fixture(s)")
+                for c in transport.corrupt_fixtures:
+                    logger.error("Corrupt fixture: method=%s url=%s reason=%s", c[0], c[1], c[2])
+            if transport.mismatched_fixtures:
+                reasons.append(f"{len(transport.mismatched_fixtures)} mismatched fixture(s)")
+                for mm in transport.mismatched_fixtures:
+                    logger.error("Mismatched fixture: method=%s url=%s reason=%s", mm[0], mm[1], mm[2])
+            if transport.exhausted_fixtures:
+                reasons.append(f"{len(transport.exhausted_fixtures)} exhausted sequence(s)")
+                for ef in transport.exhausted_fixtures:
+                    logger.error("Exhausted sequence: method=%s url=%s reason=%s", ef[0], ef[1], ef[2])
+            if is_strict and transport.incomplete_records:
+                reasons.append(f"{len(transport.incomplete_records)} incomplete metadata record(s) in strict mode")
+                for inc in transport.incomplete_records:
+                    logger.error("Incomplete metadata: %s", inc)
+>           raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
+E           scripts.production_replay.ReplayFixtureError: Production replay failed: 1 missing fixture(s)
+
+scripts\production_replay.py:449: ReplayFixtureError
+---------------------------- Captured stdout call -----------------------------
+Loaded 37 recorded fixtures from manifest manifest.json
+------------------------------ Captured log call ------------------------------
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for GET https://zephyrsynthetic.no/about
+ERROR    production_replay:production_replay.py:432 Missing fixture: method=GET url=https://zephyrsynthetic.no/about reason=No recorded fixture for GET https://zephyrsynthetic.no/about
+=========================== short test summary info ===========================
+FAILED tests/test_external_integration.py::test_external_sources_strict_replay
+1 failed, 40 passed in 25.41s

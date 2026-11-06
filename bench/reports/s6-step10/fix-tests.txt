@@ -1,41 +1,41 @@
-...................................................................F.... [ 59%]
-..................................................                       [100%]
-================================== FAILURES ===================================
-______________ test_activity_live_pipeline_synthesis_and_refresh ______________
-
-tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes7/test_activity_live_pipeline_sy0')
-monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001969F5895E0>
-
-    def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
-        from signalpost.models.envelope import Envelope
-        from signalpost.synthesis.validate import sentence_error
-        now=datetime.now(timezone.utc).date().isoformat()
-        xml=f'<urlset><url><loc>https://example.no/news/update</loc><lastmod>{now}</lastmod></url></urlset>'
-        def response(request):
-            if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nAllow: /')
-            if request.url.path=='/sitemap.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/xml'})
-            if request.url.path=='/news/update':
-                return httpx.Response(200,text=f'<head><title>New office</title></head><article><h1>New office</h1><time datetime="{now}"></time><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
-            return httpx.Response(200,text=html())
-        report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=8,website_total_request_cap=12)
-        assert row['run']['sections']['activity']=='available'
-        assert len([u for u in requests if 'data.brreg.no' not in u]) <= 9
-        env=Envelope.model_validate(row)
-        sentence=next(s for s in env.run.synthesis.sections.changes if s.text.startswith('Latest dated'))
-        assert sentence_error(sentence,env) is None
-        assert sentence_error(sentence.model_copy(update={'text':sentence.text.replace(now,'2001-01-01')}),env)
-        report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output,website_request_cap=8,website_total_request_cap=12)
-        assert report['changes']==0 and report['observation_changes']==0
-        def missing(request):
-            if request.url.path=='/news/update':return httpx.Response(404)
-            return response(request)
-        report,removed,_,_=execute_web(tmp_path/'removed',monkeypatch,response=missing,public_activity=True,previous=cfg.output,
-                                      website_request_cap=8, website_total_request_cap=14)
->       assert any(c['type']=='removed' and c['materiality']=='minor' for c in removed['changes'])
-E       assert False
-E        +  where False = any(<generator object test_activity_live_pipeline_synthesis_and_refresh.<locals>.<genexpr> at 0x000001969F6A28E0>)
-
-tests\test_recall.py:150: AssertionError
-=========================== short test summary info ===========================
-FAILED tests/test_recall.py::test_activity_live_pipeline_synthesis_and_refresh
-1 failed, 121 passed in 26.33s
+...................................................................F.... [ 59%]
+..................................................                       [100%]
+================================== FAILURES ===================================
+______________ test_activity_live_pipeline_synthesis_and_refresh ______________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-fixes7/test_activity_live_pipeline_sy0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001969F5895E0>
+
+    def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
+        from signalpost.models.envelope import Envelope
+        from signalpost.synthesis.validate import sentence_error
+        now=datetime.now(timezone.utc).date().isoformat()
+        xml=f'<urlset><url><loc>https://example.no/news/update</loc><lastmod>{now}</lastmod></url></urlset>'
+        def response(request):
+            if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nAllow: /')
+            if request.url.path=='/sitemap.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/xml'})
+            if request.url.path=='/news/update':
+                return httpx.Response(200,text=f'<head><title>New office</title></head><article><h1>New office</h1><time datetime="{now}"></time><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
+            return httpx.Response(200,text=html())
+        report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=8,website_total_request_cap=12)
+        assert row['run']['sections']['activity']=='available'
+        assert len([u for u in requests if 'data.brreg.no' not in u]) <= 9
+        env=Envelope.model_validate(row)
+        sentence=next(s for s in env.run.synthesis.sections.changes if s.text.startswith('Latest dated'))
+        assert sentence_error(sentence,env) is None
+        assert sentence_error(sentence.model_copy(update={'text':sentence.text.replace(now,'2001-01-01')}),env)
+        report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output,website_request_cap=8,website_total_request_cap=12)
+        assert report['changes']==0 and report['observation_changes']==0
+        def missing(request):
+            if request.url.path=='/news/update':return httpx.Response(404)
+            return response(request)
+        report,removed,_,_=execute_web(tmp_path/'removed',monkeypatch,response=missing,public_activity=True,previous=cfg.output,
+                                      website_request_cap=8, website_total_request_cap=14)
+>       assert any(c['type']=='removed' and c['materiality']=='minor' for c in removed['changes'])
+E       assert False
+E        +  where False = any(<generator object test_activity_live_pipeline_synthesis_and_refresh.<locals>.<genexpr> at 0x000001969F6A28E0>)
+
+tests\test_recall.py:150: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_recall.py::test_activity_live_pipeline_synthesis_and_refresh
+1 failed, 121 passed in 26.33s

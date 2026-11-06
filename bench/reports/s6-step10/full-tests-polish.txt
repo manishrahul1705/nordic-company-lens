@@ -1,126 +1,126 @@
-........................................................................ [  7%]
-........................................................................ [ 14%]
-...F.................................................................... [ 21%]
-........................................................................ [ 28%]
-........................................................................ [ 35%]
-........................................................................ [ 42%]
-........................................................................ [ 50%]
-........................................................................ [ 57%]
-........................................................................ [ 64%]
-........................................................................ [ 71%]
-........................................................................ [ 78%]
-........................................................................ [ 85%]
-........................................................................ [ 93%]
-......................................................................   [100%]
-================================== FAILURES ===================================
-_______________ test_evaluator_shapes_union_contract_reference ________________
-
-tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0')
-
-    def test_evaluator_shapes_union_contract_reference(tmp_path):
-        """
-        Proves that all three supported envelope shapes (union, contract, reference)
-        can be emitted and verified cleanly through the CLI.
-        """
-        ci20_input = Path("tests/fixtures/ci20.jsonl")
-        ci20_bulk = Path("tests/fixtures/ci20.csv")
-    
-        for shape in ("contract", "reference"):
-            shape_dir = tmp_path / shape
-            shape_dir.mkdir()
-            out_envelopes = shape_dir / f"envelopes_{shape}.jsonl"
-            out_report = shape_dir / f"report_{shape}.json"
-            state_dir = shape_dir / "state"
-    
-            argv = [
-                "run",
-                "--organisations", str(ci20_input),
-                "--bulk", str(ci20_bulk),
-                "--output", str(out_envelopes),
-                "--report", str(out_report),
-                "--state-dir", str(state_dir),
-                "--envelope-shape", shape,
-                "--expected-count", "20",
-                "--time-budget-seconds", "30",
-                "--workers", "4",
-                "--no-websites", "--no-hiring", "--no-public-activity",
-            ]
-            exit_code = main(argv)
-            assert exit_code == 0
-    
->           result = verify(
-                first=out_envelopes,
-                state_dir=state_dir,
-                count=20,
-                organisations=ci20_input,
-                report=out_report,
-                require_clean=True,
-            )
-
-tests\test_evaluator_cli_and_site.py:108: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-first = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0/reference/envelopes_reference.jsonl')
-state_dir = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0/reference/state')
-count = 20, organisations = WindowsPath('tests/fixtures/ci20.jsonl')
-report = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0/reference/report_reference.json')
-require_clean = True, second = None
-
-    def verify(first, state_dir, count, organisations=None, report=None, require_clean=False, second=None):
-        rows = load(first)
-        assert len(rows) == count, f"Expected {count}, got {len(rows)}"
-        repeated={}
-        for row in rows:
-            org=row['organisation_number']
-            if org in repeated:assert row==repeated[org], 'Duplicate input rows have inconsistent envelopes'
-            repeated[org]=row
-        if organisations is not None:
-            inputs=read(organisations)
-            expected=inputs.rows
-            if report is not None and json.loads(report.read_text(encoding='utf8')).get('emit_duplicates') is False:
-                expected=inputs.unique
-            assert [r['organisation_number'] for r in rows] == expected, 'Membership/order differs from input'
-        seen, published = set(), 0
-        @lru_cache(maxsize=8)
-        def stored_body(sha):
-            return decode_body((state_dir/'blobs'/sha).read_bytes())
-        synthesis_companies=synthesis_sentences=0
-        for row in rows:
-            companies,sentences=verify_synthesis(row)
-            synthesis_companies+=companies;synthesis_sentences+=sentences
-            data = row if "claims" in row else row["profile"]
-            evidence = {e["id"]: e for e in data["evidence"]}
-            for claim in data["claims"]:
-                if claim["availability"] != "available":
-                    assert claim["value"] is None
-                    continue
-                published += 1
-                assert claim["evidence_ids"]
-                for ref in claim["evidence_ids"]:
-                    e = evidence[ref]
-                    assert e["source_url"] and e["retrieved_at"].endswith("Z") and e["locator"] and e["extraction_method"]
-                    sha = e["content_sha256"]
-                    if sha not in seen:
-                        assert hashlib.sha256((state_dir / "blobs" / sha).read_bytes()).hexdigest() == sha
-                        seen.add(sha)
-                    body = stored_body(sha)
-                    assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
-        result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
-        result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
-        if report is not None:
-            metrics = json.loads(report.read_text(encoding='utf8'))
-            assert metrics['emitted_envelopes'] == len(rows)
-            assert metrics['schema_validated'] and metrics['membership_validated']
-            if require_clean:
-                assert metrics['input_readable'] and not metrics['invalid_inputs'] and not metrics['warnings']
->               assert metrics['handled_exceptions'] == metrics['unhandled_exceptions'] == metrics['deadline_hits'] == 0
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-E               AssertionError
-
-scripts\verify_output.py:102: AssertionError
----------------------------- Captured stdout call -----------------------------
-{"emitted_envelopes": 20, "invalid_inputs": [], "requests": 62, "runtime_ms": 7218, "changes": 0, "observation_changes": 0, "deadline_hits": 0, "warnings": []}
-{"emitted_envelopes": 20, "invalid_inputs": [], "requests": 12, "runtime_ms": 25656, "changes": 0, "observation_changes": 0, "deadline_hits": 20, "warnings": []}
-=========================== short test summary info ===========================
-FAILED tests/test_evaluator_cli_and_site.py::test_evaluator_shapes_union_contract_reference
-1 failed, 1005 passed in 281.77s (0:04:41)
+........................................................................ [  7%]
+........................................................................ [ 14%]
+...F.................................................................... [ 21%]
+........................................................................ [ 28%]
+........................................................................ [ 35%]
+........................................................................ [ 42%]
+........................................................................ [ 50%]
+........................................................................ [ 57%]
+........................................................................ [ 64%]
+........................................................................ [ 71%]
+........................................................................ [ 78%]
+........................................................................ [ 85%]
+........................................................................ [ 93%]
+......................................................................   [100%]
+================================== FAILURES ===================================
+_______________ test_evaluator_shapes_union_contract_reference ________________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0')
+
+    def test_evaluator_shapes_union_contract_reference(tmp_path):
+        """
+        Proves that all three supported envelope shapes (union, contract, reference)
+        can be emitted and verified cleanly through the CLI.
+        """
+        ci20_input = Path("tests/fixtures/ci20.jsonl")
+        ci20_bulk = Path("tests/fixtures/ci20.csv")
+
+        for shape in ("contract", "reference"):
+            shape_dir = tmp_path / shape
+            shape_dir.mkdir()
+            out_envelopes = shape_dir / f"envelopes_{shape}.jsonl"
+            out_report = shape_dir / f"report_{shape}.json"
+            state_dir = shape_dir / "state"
+
+            argv = [
+                "run",
+                "--organisations", str(ci20_input),
+                "--bulk", str(ci20_bulk),
+                "--output", str(out_envelopes),
+                "--report", str(out_report),
+                "--state-dir", str(state_dir),
+                "--envelope-shape", shape,
+                "--expected-count", "20",
+                "--time-budget-seconds", "30",
+                "--workers", "4",
+                "--no-websites", "--no-hiring", "--no-public-activity",
+            ]
+            exit_code = main(argv)
+            assert exit_code == 0
+
+>           result = verify(
+                first=out_envelopes,
+                state_dir=state_dir,
+                count=20,
+                organisations=ci20_input,
+                report=out_report,
+                require_clean=True,
+            )
+
+tests\test_evaluator_cli_and_site.py:108:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+first = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0/reference/envelopes_reference.jsonl')
+state_dir = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0/reference/state')
+count = 20, organisations = WindowsPath('tests/fixtures/ci20.jsonl')
+report = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-polishfull/test_evaluator_shapes_union_co0/reference/report_reference.json')
+require_clean = True, second = None
+
+    def verify(first, state_dir, count, organisations=None, report=None, require_clean=False, second=None):
+        rows = load(first)
+        assert len(rows) == count, f"Expected {count}, got {len(rows)}"
+        repeated={}
+        for row in rows:
+            org=row['organisation_number']
+            if org in repeated:assert row==repeated[org], 'Duplicate input rows have inconsistent envelopes'
+            repeated[org]=row
+        if organisations is not None:
+            inputs=read(organisations)
+            expected=inputs.rows
+            if report is not None and json.loads(report.read_text(encoding='utf8')).get('emit_duplicates') is False:
+                expected=inputs.unique
+            assert [r['organisation_number'] for r in rows] == expected, 'Membership/order differs from input'
+        seen, published = set(), 0
+        @lru_cache(maxsize=8)
+        def stored_body(sha):
+            return decode_body((state_dir/'blobs'/sha).read_bytes())
+        synthesis_companies=synthesis_sentences=0
+        for row in rows:
+            companies,sentences=verify_synthesis(row)
+            synthesis_companies+=companies;synthesis_sentences+=sentences
+            data = row if "claims" in row else row["profile"]
+            evidence = {e["id"]: e for e in data["evidence"]}
+            for claim in data["claims"]:
+                if claim["availability"] != "available":
+                    assert claim["value"] is None
+                    continue
+                published += 1
+                assert claim["evidence_ids"]
+                for ref in claim["evidence_ids"]:
+                    e = evidence[ref]
+                    assert e["source_url"] and e["retrieved_at"].endswith("Z") and e["locator"] and e["extraction_method"]
+                    sha = e["content_sha256"]
+                    if sha not in seen:
+                        assert hashlib.sha256((state_dir / "blobs" / sha).read_bytes()).hexdigest() == sha
+                        seen.add(sha)
+                    body = stored_body(sha)
+                    assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
+        result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
+        result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
+        if report is not None:
+            metrics = json.loads(report.read_text(encoding='utf8'))
+            assert metrics['emitted_envelopes'] == len(rows)
+            assert metrics['schema_validated'] and metrics['membership_validated']
+            if require_clean:
+                assert metrics['input_readable'] and not metrics['invalid_inputs'] and not metrics['warnings']
+>               assert metrics['handled_exceptions'] == metrics['unhandled_exceptions'] == metrics['deadline_hits'] == 0
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError
+
+scripts\verify_output.py:102: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"emitted_envelopes": 20, "invalid_inputs": [], "requests": 62, "runtime_ms": 7218, "changes": 0, "observation_changes": 0, "deadline_hits": 0, "warnings": []}
+{"emitted_envelopes": 20, "invalid_inputs": [], "requests": 12, "runtime_ms": 25656, "changes": 0, "observation_changes": 0, "deadline_hits": 20, "warnings": []}
+=========================== short test summary info ===========================
+FAILED tests/test_evaluator_cli_and_site.py::test_evaluator_shapes_union_contract_reference
+1 failed, 1005 passed in 281.77s (0:04:41)
