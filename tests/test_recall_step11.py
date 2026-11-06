@@ -44,6 +44,11 @@ def test_prefix_as_publisher_is_not_the_email_domain_subject():
     assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_email'),[]).reason=='different_legal_entity'
 
 
+@pytest.mark.parametrize('label',['Utgitt av Example AS','All rettigheter reservert - Example AS'])
+def test_own_publisher_prefix_is_not_another_legal_entity(label):
+    assert real_page(page('<footer>'+label+'</footer>'),CONTEXT) is None
+
+
 def test_board_member_and_auditor_do_not_establish_website_ownership():
     from signalpost.web.round2 import registered_leaders
     claims=[SimpleNamespace(family='roles',value={'name':name,'role_type':{'kode':role}})

@@ -50,7 +50,8 @@ def real_page(page,context):
         position=footer.find(value)
         if re.search(r'levert|design|utvikl|powered|nettside|laget av|partner|medlem',footer[max(0,position-70):position],re.I):continue
         value=re.sub(r'^(?:Copyright\s*)?(?:\u00a9\s*)?(?:20\d\d\s*[-:]?\s*)?','',value,flags=re.I).strip(' \t\n|.,')
-        if re.fullmatch(r'[\wÆØÅæøå& .-]{2,85}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)',value) and compact(value) not in {compact(n) for n in expected}:
+        own_footer=any(re.search(r'(?<!\w)'+re.escape(n)+r'(?!\w)',normalized(value)) for n in expected)
+        if re.fullmatch(r'[\wÆØÅæøå& .-]{2,85}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)',value) and not own_footer:
             return 'different_legal_entity'
     return None
 
