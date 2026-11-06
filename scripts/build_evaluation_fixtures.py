@@ -55,6 +55,8 @@ def main():
             if host != 'zephyrsynthetic.no':
                 add(f'https://{host}{path}', '', 404, 'application/xml')
     add('https://zephyrsynthetic.no/feed.xml', '<rss><channel><item><title>Synthetic launch</title><link>https://zephyrsynthetic.no/news/launch</link><pubDate>Wed, 14 Oct 2026 12:00:00 GMT</pubDate></item></channel></rss>', kind='application/rss+xml')
+    # Optional privacy proof comes after the legacy linked/contact/about pages.
+    add('https://zephyrsynthetic.no/personvern', 'Not found', 404, 'text/html')
     nav = 'https://pam-stilling-feed.nav.no'
     token = '.'.join(base64.urlsafe_b64encode(x).decode().rstrip('=') for x in [b'{"alg":"HS256"}', b'{"sub":"synthetic-fixture"}', b'synthetic-signature'])
     add(nav+'/api/publicToken', token, kind='text/plain')

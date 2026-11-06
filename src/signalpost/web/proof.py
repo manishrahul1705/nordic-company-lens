@@ -1,4 +1,5 @@
 import re
+import json
 from urllib.parse import urlsplit
 from dataclasses import dataclass, field
 from ..identity.orgnr import valid
@@ -17,6 +18,57 @@ def orgnrs(text):
         if valid(digits):
             result.add(digits)
     return result
+
+
+def hidden_owner_ids(page, context):
+    """Read explicit site-owner identifiers, never customer IDs or analytics numbers."""
+    from html import unescape
+    found = set()
+    keys = {'orgnr', 'organisasjonsnummer', 'organizationnumber', 'organisationnumber', 'vatid', 'taxid'}
+    own_keys = {'organization', 'organisation', 'businessinfo', 'business', 'companyinfo', 'siteowner'}
+    def walk(node, owner=False):
+        if isinstance(node, list):
+            return  # lists commonly contain clients, products or other companies
+        if not isinstance(node, dict): return
+        types = node.get('@type', [])
+        types = types if isinstance(types, list) else [types]
+        explicit = owner or any(t in {'Organization', 'LocalBusiness', 'Corporation'} for t in types)
+        if explicit and isinstance(node.get('legalName') or node.get('name'), str):
+            named = legal_name(node.get('legalName') or node.get('name')) == legal_name(context.get('name'))
+            for key, value in node.items():
+                if key.casefold().replace('_', '') in keys and isinstance(value, (str, int)):
+                    numbers = orgnrs(str(value))
+                    if named:
+                        found.update(numbers)
+                    else:
+                        found.update(numbers - set(context.get('allowed_orgnrs', ())))
+        for key, value in node.items():
+            if key.casefold() in {'customers','clients','partners','products','employees','provider','publisher','parentorganization','suborganization'}:
+                continue
+            if isinstance(value, dict): walk(value, key.casefold() in own_keys)
+    for match in re.finditer(r'<script\b[^>]*>(.*?)</script\s*>', page.raw, re.I | re.S):
+        content = unescape(match[1]).strip()
+        try:
+            # Plain JSON, or a JSON object assigned to a window CMS variable.
+            start = content.find('{')
+            if start >= 0:
+                prefix = content[:start].strip()
+                if prefix and not re.fullmatch(r'(?:(?:var|let|const)\s+)?(?:window\.)?[A-Za-z_$][\w.$]*\s*=\s*', prefix):
+                    continue
+                node, _ = json.JSONDecoder().raw_decode(content[start:])
+                walk(node)
+        except (ValueError, TypeError, RecursionError):
+            continue
+    # Hidden footer templates still need the exact legal identity and an
+    # explicitly labelled identifier. A number in arbitrary raw HTML is not proof.
+    expected = legal_name(context.get('name'))
+    for match in re.finditer(r'<footer\b[^>]*>(.*?)</footer\s*>', page.raw, re.I | re.S):
+        text = unescape(re.sub(r'<[^>]+>', ' ', match[1]))
+        if (expected and re.search(r'(?<!\w)'+re.escape(expected)+r'(?!\w)', legal_name(text))
+                and not re.search(r'\b(?:customer|client|partner|kunde|referanse)',text,re.I)
+                and re.search(r'org(?:anisasjons)?\.?\s*(?:nr|nummer)|vat|tax\s*id', text, re.I)):
+            found.update(orgnrs(text))
+    return found
 
 
 def phone(value):
@@ -302,10 +354,11 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
                     json_ids |= orgnrs(normalized)
                 elif isinstance(value, dict):
                     json_ids |= orgnrs(value.get("value", ""))
-    all_ids = visible | meta | json_ids
+    hidden_ids = hidden_owner_ids(page, {**context, 'allowed_orgnrs': context.get('allowed_orgnrs', {org})})
+    all_ids = visible | meta | json_ids | hidden_ids
     allowed = set(context.get('allowed_orgnrs', {org}))
     others = sorted(all_ids - allowed)
-    owner_ids = orgnrs(' '.join(page.brand_parts)) | json_ids
+    owner_ids = orgnrs(' '.join(page.brand_parts)) | json_ids | hidden_ids
     if owner_ids - allowed:
         return Proof('REJECT', other_orgnrs=sorted(owner_ids - allowed), reason='foreign_orgnr')
     if org not in all_ids and not others and (subjects := all_ids & allowed):
@@ -330,7 +383,7 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
                     is_valid_group = True
             if not is_valid_group:
                 return Proof("REJECT", other_orgnrs=others, reason="unverified_multi_entity_site")
-        return Proof("VERIFIED", "jsonld_vatid" if org in json_ids else "orgnr_on_page", other_orgnrs=others, token=org)
+        return Proof("VERIFIED", "jsonld_vatid" if org in json_ids else "raw_owner_identifier" if org in hidden_ids and org not in visible | meta else "orgnr_on_page", other_orgnrs=others, token=org)
     if others:
         return Proof("REJECT", other_orgnrs=others, reason="foreign_orgnr")
     def normalized(value):

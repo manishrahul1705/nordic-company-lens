@@ -52,21 +52,23 @@ def legal_name_slugs(name):
 
 
 def bounded_variants(name):
-    """Four nominations, preserving words before dropping generic business words."""
-    if re.search(r'\b(?:holding|invest\w*|kapital|sameiet|borettslag)\b|eiendom[- ]holding', str(name or ''), re.I):
-        return []
-    words = legal_name(name).split()
+    """Eight name nominations, with .no spellings before .com; never proof."""
+    forms = {'as','asa','ans','da','enk','sa','nuf'}
+    words = [w for w in legal_name(name).split() if w not in forms]
+    without_holding = [w for w in words if w != 'holding']
+    if len(without_holding) >= 2:
+        words = without_holding
     if not words or all(w in GENERIC for w in words):
         return []
-    variants = []
-    for replacements in (('ae', 'o', 'a'), ('e', 'oe', 'aa')):
-        for selected in (words, [w for w in words if w not in GENERIC]):
-            converted = [w.replace('æ', replacements[0]).replace('ø', replacements[1]).replace('å', replacements[2]) for w in selected]
-            for separator in ('', '-'):
-                label = separator.join(converted)
-                if len(label) >= 4:
-                    variants.append(label.encode('idna').decode('ascii') + '.no')
-    return list(dict.fromkeys(variants))[:4]
+    labels = []
+    for replacements in (('ae','o','a'), ('ae','oe','aa'), ('e','o','a')):
+        converted = [w.replace('\u00e6',replacements[0]).replace('\u00f8',replacements[1]).replace('\u00e5',replacements[2]) for w in words]
+        for separator in ('','-'):
+            label = separator.join(converted)
+            if len(label) >= 4:
+                labels.append(label.encode('idna').decode('ascii'))
+    labels = list(dict.fromkeys(labels))
+    return [label+'.'+suffix for suffix in ('no','com') for label in labels][:8]
 
 
 def context_from_bulk(row):
@@ -114,11 +116,11 @@ def generate(context):
     for unit in context.get('subunits', []):
         trading = re.split(r'\b(?:avd|avdeling)\b', str(unit.get('name') or ''), flags=re.I)[0].strip(' .-')
         sources.append((bounded_variants(trading), 'subunit_name_slug', unit['orgnr']))
-    variants = [(values[i], origin, unit) for i in range(4) for values, origin, unit in sources if i < len(values)]
+    variants = [(values[i], origin, unit) for i in range(8) for values, origin, unit in sources if i < len(values)]
     guessed = 0
     for url, origin, unit in variants:
         before = len(output)
         add(url, origin, unit)
         guessed += len(output) > before
-        if guessed == 4:break
+        if guessed == 8:break
     return output[:32]

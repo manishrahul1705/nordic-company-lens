@@ -159,7 +159,7 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
     targets = []
     for target in followup_links(page) + fixed:
         target = normalize_url(target)
-        if target and target not in targets:
+        if target and urlsplit(target).hostname == base.hostname and target not in targets:
             targets.append(target)
     return targets[:limit]
 
@@ -344,13 +344,20 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
             vetoes = {'foreign_orgnr','different_legal_entity','hosting_default','parked','shared_registry_domain','placeholder','frameset_placeholder','provider_industry_mismatch'}
             if proof.reason not in vetoes:
                 seen = {response.url}
-                limit = 5
+                limit = 5  # Preserve the previous selection before adding pages.
                 targets=proof_page_targets(page,response.url,limit=limit)
                 if proof.level!='VERIFIED' and getattr(http.config,'website_proof_discovery',True):
                     from .round2 import proof_targets
                     original=set(targets)
                     targets=await proof_targets(page,response.url,http,org,targets)
                     entry['discovered_proof_targets']=[u for u in targets if u not in original]
+                # Never let a new path displace an old linked/sitemap/fixed
+                # target. The existing stop-after-proof and pooled caps apply.
+                previous_targets=list(targets)
+                additions=[u for u in proof_page_targets(page,response.url,limit=32)
+                           if u not in previous_targets][:2]
+                targets=previous_targets+additions
+                entry['additional_proof_targets']=additions
                 for position,target in enumerate(targets):
                     if position>=FOLLOWUP_PAGES and best[0].level=='VERIFIED':
                         break

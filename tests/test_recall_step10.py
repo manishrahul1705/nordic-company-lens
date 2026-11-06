@@ -73,14 +73,14 @@ def test_any_registered_subunit_id_can_prove_parent_site():
 
 
 @pytest.mark.parametrize('name',['Example Holding AS','Example Invest AS','Kapital Example AS','Sameiet Solsiden','Sol Borettslag'])
-def test_investment_and_housing_names_skip_guesses(name):
-    assert not bounded_variants(name)
+def test_company_type_names_still_have_bounded_nominations(name):
+    assert 0 < len(bounded_variants(name)) <= 8
 
 
 def test_guess_limit_and_trading_name_interleaving():
     candidates=generate({'name':'Ærlig Ørn AS','subunits':[{'orgnr':SUB,'name':'Unique Trading Shop'}]})
     guessed=[c for c in candidates if c.origin in {'legal_name_slug','subunit_name_slug'}]
-    assert len(guessed)<=4
+    assert len(guessed)<=8
     assert any(c.origin=='subunit_name_slug' for c in guessed)
     assert any('aerlig' in c.domain or 'erlig' in c.domain for c in guessed)
 
