@@ -1,5 +1,7 @@
 # Website and social review
 
+**Final precision amendment:** Permobil.com and Gravitonia.com are now withheld as ambiguous (group website). All 25 declared-name Tier A sites were rechecked; 23 retain. [Complete final re-check](FINAL_GROUP_PRECISION.md).
+
 Reviewed against saved response bodies, exact company registry facts and the published link. No social platform was fetched. `correct` is attribution under the requested proof rules, not an independent audit of all statements made on a site.
 
 The five explicit different-entity findings below reject the unique-name-only and contact-only two-signal sub-rules and tighten Tier B publisher checks. Default/parked/frameset pages also demonstrate why name-only acceptance is unsafe. Retained wrong-company findings: **0**.
@@ -10,7 +12,7 @@ The five explicit different-entity findings below reject the unique-name-only an
 |---|---|---|---|---|---|
 | MAAEMO AS / 995748983 | https://maaemo.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | MULLIGAN INDOOR GOLF AS / 929074009 | https://www.mulligangolf.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
-| PERMOBIL AS / 930239070 | https://www.permobil.com | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
+| PERMOBIL AS / 930239070 | https://www.permobil.com | A | unsure | no | Non-.no brand-only site; no Norwegian entity or registered corroboration in captured pages. Group website. |
 | NORSK PUBLIKUMSUTVIKLING / 893948112 | https://norskpublikumsutvikling.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | RENEFFEKT AS / 935180678 | https://reneffekt.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | SCENE MIDT AS / 998236002 | https://www.scenemidt.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
@@ -19,7 +21,7 @@ The five explicit different-entity findings below reject the unique-name-only an
 | INDRE SALTEN OPPLÆRINGSKONTOR AS / 977107385 | https://isok.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | SKOGLI HELSE OG REHABILITERINGSSENTER AS / 980973549 | https://skogli.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | FAMILIEN BRYNILDSENS LEGAT STI / 939882480 | https://www.brynildsenslegat.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
-| GRAVITONIA AS / 998407257 | https://gravitonia.com | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
+| GRAVITONIA AS / 998407257 | https://gravitonia.com | A | unsure | no | Non-.no brand-only site; no Norwegian entity or registered corroboration in captured pages. Group website. |
 | QUICKMINDS AS / 997897668 | https://www.quickminds.net | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | TANGERIN AS / 989145509 | https://www.tangerin.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | HANDELSSKOLEN AS / 913485750 | https://www.handelsskolen.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
@@ -38,7 +40,7 @@ The five explicit different-entity findings below reject the unique-name-only an
 | CCHANGE AS / 912829197 | https://www.cchange.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | STORHAMARSENTERET AS / 981058771 | https://storhamarsenteret.no | A | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 
-Tier A: 25 websites; Tier B: 4 trial websites, 3 retained. Permobil is accepted by the specifically requested registry-declaration + legal-core rule; its global brand alone does not establish separate foreign subsidiaries. No new Permobil social or dated-news claim was published. Tier B content is suppressed in both collection and final carried-forward publication.
+Tier A: 25 trial websites, 23 retained after the final group-site amendment; Tier B: 4 trial websites, 3 retained. Permobil and Gravitonia are withheld; Quickminds retains its independently captured Norwegian legal identity. No new Permobil social or dated-news claim was published. Tier B content is suppressed in both collection and final carried-forward publication.
 
 ## New website companies or changed URLs, including rejected trials
 
@@ -53,7 +55,7 @@ Tier A: 25 websites; Tier B: 4 trial websites, 3 retained. Permobil is accepted 
 | HUSFLIDEN HAMAR BUNAD AS / 982801559 | https://husflidenhamar.no | nominated_two_independent_signals | wrong | no | The footer names Husfliden Hamar AS, not Husfliden Hamar Bunad AS; shared contacts cannot establish exact entity. |
 | INVENSYS AS / 915015743 | https://invensys.no | unique_legal_core_domain | unsure | no | Rule removed in full after its wrong-company result; no stronger identity proof is asserted for this item. |
 | ALOHA AS / 928354709 | http://aloha.no | unique_legal_core_domain | wrong | no | The page title explicitly names Down The Line AS, not Aloha AS. |
-| PERMOBIL AS / 930239070 | https://www.permobil.com | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
+| PERMOBIL AS / 930239070 | https://www.permobil.com | registry_declared_name_tier_a | unsure | no | Non-.no brand-only site; no Norwegian entity or registered corroboration in captured pages. Group website. |
 | FORMOSA AS / 994382217 | https://www.formosa.no | unique_legal_core_domain | unsure | no | Rule removed in full after its wrong-company result; no stronger identity proof is asserted for this item. |
 | PALLIDUS AS / 925787884 | https://pallidus.no | unique_legal_core_domain | unsure | no | Rule removed in full after its wrong-company result; no stronger identity proof is asserted for this item. |
 | RENEFFEKT AS / 935180678 | https://reneffekt.no | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
@@ -76,7 +78,7 @@ Tier A: 25 websites; Tier B: 4 trial websites, 3 retained. Permobil is accepted 
 | SNAPPY AS / 929481070 | https://snappy.no | unique_legal_core_domain | unsure | no | Rule removed in full after its wrong-company result; no stronger identity proof is asserted for this item. |
 | BYGGTEMA AS / 988236756 | https://www.byggtema.no | unique_legal_core_domain | unsure | no | Rule removed in full after its wrong-company result; no stronger identity proof is asserted for this item. |
 | FAMILIEN BRYNILDSENS LEGAT STI / 939882480 | https://www.brynildsenslegat.no | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
-| GRAVITONIA AS / 998407257 | https://gravitonia.com | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
+| GRAVITONIA AS / 998407257 | https://gravitonia.com | registry_declared_name_tier_a | unsure | no | Non-.no brand-only site; no Norwegian entity or registered corroboration in captured pages. Group website. |
 | TENSIO AS / 922828172 | https://www.tensio.no | unique_legal_core_domain | unsure | no | Rule removed in full after its wrong-company result; no stronger identity proof is asserted for this item. |
 | QUICKMINDS AS / 997897668 | https://www.quickminds.net | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | HANDELSSKOLEN AS / 913485750 | https://www.handelsskolen.no | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
@@ -102,7 +104,7 @@ Tier A: 25 websites; Tier B: 4 trial websites, 3 retained. Permobil is accepted 
 | SAPIDUS AS / 996929515 | https://sapidus.no | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 | STORHAMARSENTERET AS / 981058771 | https://storhamarsenteret.no | registry_declared_name_tier_a | correct | yes | Exact registry declaration plus complete legal-name core on the captured site, as required by amended Tier A. |
 
-The machine-readable inventory also includes metadata/proof changes on existing website URLs. The kept snapshot has 24 new website companies and 12 baseline website losses: net +12. These counts are a saved-output policy projection, not a second crawl.
+The machine-readable inventory also includes metadata/proof changes on existing website URLs. Before the final group-site amendment, the kept snapshot had 24 new website companies and 12 baseline website losses: net +12. The amendment withholds two additions: now 22 new companies, 12 losses, net +10 (93 websites). These counts are a saved-output policy projection, not a second crawl.
 
 ## Every new social URL
 

@@ -1,12 +1,14 @@
 # S6 Step 10 — recall trial and precision gate
 
+**Final submission precision amendment:** Permobil.com and Gravitonia.com are now withheld as ambiguous, reason "group website". All 25 declared-name Tier A sites were rechecked; 23 retain. The website count becomes **93**; social40, activity235, jobs3 and location profiles997 are unchanged. The historical 95-site projection and verifier record below predate this amendment. No new crawl. [Final review of all 25](FINAL_GROUP_PRECISION.md).
+
 **KEEP the tiered nominated-site improvements, recovery, subunit discovery, social/news discovery, typed locations and pooled budget. ROLLBACK unique-name-only acceptance and contact-only two-signal acceptance. Tighten explicit publisher checks.** Search stayed OFF; credential variables were stripped; no push.
 
 One complete 1000-company crawl was run, on `2851a42`. The earlier `3305684` attempt stopped at 635 completed companies and never produced final output; it is excluded from coverage. Its last heartbeat was 08:48:08 UTC and no process remained. No cause beyond process termination was established.
 
 The kept column below applies the final publication guard to that crawl's saved evidence. **It is an offline policy projection, not another measured crawl of the final code.** It tests no replacement candidates. The 120+ target was reached by the rejected trial but **not** by the kept output.
 
-| Section / metric | Baseline | Measured trial | Kept saved-evidence projection | Decision |
+| Section / metric | Baseline | Measured trial | Saved projection before final group guard | Decision |
 |---|---:|---:|---:|---|
 | Identity | 1000 | 1000 | 1000 | KEEP |
 | People | 997 | 997 | 997 | KEEP |
@@ -34,7 +36,7 @@ The explicit different-entity cases were ALOHA AS → Down The Line AS; NORWEGIA
 
 All 29 unique-name-only websites and all three contact-only two-signal websites were removed, including apparently plausible ones. The corresponding derived social, descriptions, contacts and company-site activity were removed with them. There are no per-company exceptions. Tier B's foreign copyright owner is vetoed; agency credits and a statement about corporate share ownership do not override a site's own publisher identity.
 
-The trial had 25 registry-declared Tier A sites and four Tier B sites; **25 and three** remain. The kept 95 websites comprise 25 declared-name Tier A, 67 existing stronger-proof Tier A and three link-only Tier B. All newly applied declared tiers were reviewed, including existing URLs whose proof changed. Every new social URL was reviewed: 27 trial additions, 13 retained. There are 24 new website companies and 12 baseline website losses, net +12. The retained site/handle review has zero wrong-company findings; this is a finite evidence review, not a guarantee of universal accuracy. [Complete website/social review](REVIEW.md), [source excerpts and hashes](new-items.json).
+The trial had 25 registry-declared Tier A sites and four Tier B sites; **25 and three** remain. Before the final group guard, the 95 websites comprised 25 declared-name Tier A, 67 existing stronger-proof Tier A and three link-only Tier B. All newly applied declared tiers were reviewed, including existing URLs whose proof changed. Every new social URL was reviewed: 27 trial additions, 13 retained. There are 24 new website companies and 12 baseline website losses, net +12. The retained site/handle review has zero wrong-company findings; this is a finite evidence review, not a guarantee of universal accuracy. [Complete website/social review](REVIEW.md), [source excerpts and hashes](new-items.json).
 
 All 250 new typed address items reuse the exact unchanged parent registry address claim already present in the baseline. They add presentation, not inferred workplaces. Shared/c/o addresses remain explicitly registered addresses. Their individual rows, claim IDs and source locators were checked. [Location review](LOCATION_REVIEW.md), [evidence](new-locations.json).
 

@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 from ..sources.extract import Section, Source, add, missing, response_source
 from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC, NOMINATED, RECOVERY
 from .html import Page
-from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
+from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL, extract
 from .proof import score, phone, extract_entity_cards, find_containing_card
 from .social import discover, profile_url, attributed, observed_profiles, matches_profile, company_names
 
@@ -518,6 +518,10 @@ def candidate_proof(page,org,context,candidate,leaders,config=None):
 
 def publish_result(org,envelope,http,section,choices,attempts,context):
     candidate, proof, response, page, pages = choices[0]
+    from .entity_scope import unproven_global_site
+    if proof.proof_type=='registry_declared_name_tier_a' and unproven_global_site([p for _,p in pages],org,context,response.url):
+        envelope.run.refresh.setdefault('website',{}).update(website_reason='group website',group_site=True)
+        return missing('website','group_site','group website',state='ambiguous')
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=getattr(proof,'subject_orgnr',None) or org
@@ -539,6 +543,18 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     if matched != org and matched in {u['orgnr'] for u in context.get('subunits', [])}:
         value['matched_via_subunit']=matched
     publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
+    if proof.proof_type=='registry_declared_name_tier_a' and extract(response.url).suffix!='no':
+        # A fetched About page may supply the Norwegian legal identity even
+        # when the selected homepage proof was only the shorter brand name.
+        # Retain that support so the final/carry-forward guard sees it too.
+        for support_response,support_page in pages:
+            support_span=support_page.name_span(str(context.get('name') or ''))
+            if support_span and not unproven_global_site([support_page],org,context,support_response.url):
+                support=Section()
+                add(support,response_source(support_response),org,'website','website_entity_scope_support',context['name'],
+                    '/norwegian-entity',span=support_span,source_class='company_owned')
+                section.evidence.extend(support.evidence)
+                section.claims[-1].evidence_ids.extend(e.id for e in support.evidence)
     if candidate.origin in {'registry_email', 'subunit_registry_email'}:
         section.claims[-1].reasons['discovery_method'] = 'registry email domain'
     if candidate.origin in {'nav_employer_homepage', 'subunit_nav_employer_homepage'}:

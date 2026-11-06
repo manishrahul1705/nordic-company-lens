@@ -61,6 +61,36 @@ def registered_contact_values(claims, evidence):
                 for ref in c.evidence_ids)]
 
 
+def unproven_global_site(pages, org, context, url):
+    """A non-.no brand alone cannot identify the Norwegian group subsidiary."""
+    from .policy import extract
+    from .proof import phone, normalized_address, score
+    if extract(url).suffix == 'no':return False
+    normalize=lambda value:' '.join(re.findall(r'\w+',str(value or '').casefold()))
+    own=normalize(context.get('name'))
+    norwegian_owner=False
+    foreign_owner=False
+    streets=context.get('street') or []
+    if isinstance(streets,str):streets=[streets]
+    for page in pages:
+        if org in orgnrs(page.owner_text+' '+json.dumps(page.jsonld)):
+            return False
+        email=str(context.get('email') or '').strip().casefold()
+        if email and (email in page.owner_text.casefold() or any(l.href.casefold().split('?')[0]=='mailto:'+email for l in page.links)):
+            return False
+        expected=phone(context.get('phone'))
+        numbers=[l.href[4:] for l in page.links if l.href.startswith('tel:')]
+        numbers+=re.findall(r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)',page.owner_text)
+        if expected and expected in {phone(v) for v in numbers}:return False
+        address=normalized_address(page.owner_text)
+        if any(s and len(str(s))>4 and re.search(r'(?<!\w)'+re.escape(normalized_address(s))+r'(?!\w)',address) for s in streets):return False
+        foreign_owner = foreign_owner or score(page,org,context,'legal_name_slug',[]).reason=='different_legal_entity' or foreign_entity_page(page,org,context.get('name'),check_ids=False)
+        publisher=normalize(page.owner_text)
+        if own and re.search(r'\b(?:as|asa|nuf|sa|sti|iks|ans|da|enk)\b$',own) and re.search(r'(?<!\w)'+re.escape(own)+r'(?!\w)',publisher):
+            norwegian_owner=True
+    return foreign_owner or not norwegian_owner
+
+
 def enforce(envelopes, blobs, bulk):
     """Recheck final output, including carried-forward claims, without requests."""
     from .html import Page
@@ -126,15 +156,21 @@ def enforce(envelopes, blobs, bulk):
             proof.reasons['relationship'] = 'group_site'
         removed = []
         registry_contacts = registered_contact_values(row.claims, evidence)
+        address=next((c.value for c in row.claims if c.field=='identity.registered_address' and c.availability=='available'),{}) or {}
+        context={'name':name,'street':address.get('adresse'),
+                 'email':next((c.value for c in row.claims if c.field=='identity.registered_email' and c.availability=='available'),None),
+                 'phone':next((c.value for c in row.claims if c.field=='identity.registered_phone' and c.availability=='available'),None)}
+        global_site=value.get('proof_type')=='registry_declared_name_tier_a' and unproven_global_site(proof_pages,org,context,value.get('final_url',''))
+        group = group or global_site
         units = {c.value['organisation_number'] for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
         subject = value.get('matched_via_subunit') if value.get('matched_via_subunit') in units else org
         from .proof import score
         unit_names = [{'orgnr':c.value['organisation_number'],'name':c.value.get('name')} for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)]
         owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity' for p in proof_pages)
-        if rejected_trial or owner_conflict or (group and (shared_veto or not group_site_has_own_proof(proof_pages, subject, name, registry_contacts))):
+        if global_site or rejected_trial or owner_conflict or (group and (shared_veto or not group_site_has_own_proof(proof_pages, subject, name, registry_contacts))):
             removed.append(proof)
             proof.reasons['relationship'] = 'group_site'
-            proof.reasons['withholding_reason'] = 'ambiguous: group/shared site; no exact company ownership proof'
+            proof.reasons['withholding_reason'] = 'ambiguous: group website' if global_site else 'ambiguous: group/shared site; no exact company ownership proof'
             row.run.sections['website'] = 'ambiguous'
             if 'website' in row.modules:
                 row.modules['website'].state = 'source_error'
@@ -180,7 +216,7 @@ def enforce(envelopes, blobs, bulk):
             'shared_domain_index_available': nominations is not None,
             'withheld_fields': sorted(fields),
             'website_status': 'ambiguous' if proof in removed else 'available',
-            'website_reason': 'group/shared site' if proof in removed else None}
+            'website_reason': ('group website' if global_site else 'group/shared site') if proof in removed else None}
         for family in {'activity', 'hiring'}:
             if any(c.family == family for c in removed) and not any(c.family == family and c.availability == 'available' for c in row.claims):
                 row.run.sections[family] = 'not_applicable'
