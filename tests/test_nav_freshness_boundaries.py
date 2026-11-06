@@ -197,14 +197,18 @@ def test_boundary_offline_network_failure_unavailable_mode(tmp_path):
     assert any(e.section == 'hiring' for e in result.errors)
 
 
-# 8. Public token failure -> Blocked mode (never falsely reports zero hiring)
-def test_boundary_public_token_failure_blocked_mode(tmp_path):
+# 8. Public token and unverifiable public page -> failed mode, never zero hiring
+def test_boundary_public_token_failure_and_unverifiable_page_fail_closed(tmp_path):
     path, data = artifact(tmp_path)
     cfg = config(tmp_path, [ORG], hiring=True, nav_index_path=path)
     index, result, calls = asyncio.run(run_nav(cfg, path, token_ok=False))
-    assert index.blocked is True
-    assert result.state == 'blocked'
+    assert index.reason == 'token_unavailable'
+    assert index.blocked is False  # An indexed candidate exists, but the public page did not verify.
+    assert index.metrics['public_page_fallback_attempted'] is True
+    assert index.metrics['public_page_fallback_verified'] == 0
+    assert result.state == 'failed'
     assert result.state != 'not_available'
+    assert not result.claims
     assert any(e.code == 'token_unavailable' for e in result.errors)
 
 
