@@ -1,0 +1,23 @@
+........................................................................ [  7%]
+...................F
+================================== FAILURES ===================================
+_ test_exact_name_street_abbreviations_keep_house_number[Storgaten 12-Storgt. 12] _
+
+street = 'Storgaten 12', shown = 'Storgt. 12'
+
+    @pytest.mark.parametrize('street,shown', [('Storgaten 12','Storgt. 12'),('Elveveien 32','Elvevn. 32'),
+                                           ('Dronning Eufemias gate 23','Dronning Eufemias gt. 23')])
+    def test_exact_name_street_abbreviations_keep_house_number(street,shown):
+        ctx={'name':'Example AS','street':[street]}
+        page=Page(('<h1>Example AS</h1><footer>'+shown+'</footer>').encode(),'https://example.no/')
+        assert score(page,OUR,ctx,'registry_website',[]).level=='VERIFIED'
+>       assert score(page,OUR,{'name':'Different AS','street':[street]},'registry_website',[]).level!='VERIFIED'
+E       AssertionError: assert 'VERIFIED' != 'VERIFIED'
+E        +  where 'VERIFIED' = Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Storgaten 12', subject_orgnr='').level
+E        +    where Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Storgaten 12', subject_orgnr='') = score(<signalpost.web.html.Page object at 0x00000253BCB54950>, '923609016', {'name': 'Different AS', 'street': ['Storgaten 12']}, 'registry_website', [])
+
+tests\test_contact_article_ownership.py:37: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_contact_article_ownership.py::test_exact_name_street_abbreviations_keep_house_number[Storgaten 12-Storgt. 12]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 91 passed in 10.44s

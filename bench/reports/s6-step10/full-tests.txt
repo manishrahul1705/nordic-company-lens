@@ -1,0 +1,1269 @@
+........................................................................ [  7%]
+...................FFF.............................................FF... [ 14%]
+.................................F...................................... [ 21%]
+........................................................................ [ 28%]
+........................................................................ [ 36%]
+........................................................................ [ 43%]
+........................................................................ [ 50%]
+......FFF........F...................................................... [ 57%]
+........................................................................ [ 64%]
+........................................F............................... [ 72%]
+FFFFF......................................................FFFFFF....... [ 79%]
+........F..FF........F.....F............................................ [ 86%]
+..........................................F.....................F.....F. [ 93%]
+.............................................................            [100%]
+================================== FAILURES ===================================
+_ test_exact_name_street_abbreviations_keep_house_number[Storgaten 12-Storgt. 12] _
+
+street = 'Storgaten 12', shown = 'Storgt. 12'
+
+    @pytest.mark.parametrize('street,shown', [('Storgaten 12','Storgt. 12'),('Elveveien 32','Elvevn. 32'),
+                                           ('Dronning Eufemias gate 23','Dronning Eufemias gt. 23')])
+    def test_exact_name_street_abbreviations_keep_house_number(street,shown):
+        ctx={'name':'Example AS','street':[street]}
+        page=Page(('<h1>Example AS</h1><footer>'+shown+'</footer>').encode(),'https://example.no/')
+        assert score(page,OUR,ctx,'registry_website',[]).level=='VERIFIED'
+>       assert score(page,OUR,{'name':'Different AS','street':[street]},'registry_website',[]).level!='VERIFIED'
+E       AssertionError: assert 'VERIFIED' != 'VERIFIED'
+E        +  where 'VERIFIED' = Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Storgaten 12', subject_orgnr='').level
+E        +    where Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Storgaten 12', subject_orgnr='') = score(<signalpost.web.html.Page object at 0x000001FD01792750>, '923609016', {'name': 'Different AS', 'street': ['Storgaten 12']}, 'registry_website', [])
+
+tests\test_contact_article_ownership.py:37: AssertionError
+_ test_exact_name_street_abbreviations_keep_house_number[Elveveien 32-Elvevn. 32] _
+
+street = 'Elveveien 32', shown = 'Elvevn. 32'
+
+    @pytest.mark.parametrize('street,shown', [('Storgaten 12','Storgt. 12'),('Elveveien 32','Elvevn. 32'),
+                                           ('Dronning Eufemias gate 23','Dronning Eufemias gt. 23')])
+    def test_exact_name_street_abbreviations_keep_house_number(street,shown):
+        ctx={'name':'Example AS','street':[street]}
+        page=Page(('<h1>Example AS</h1><footer>'+shown+'</footer>').encode(),'https://example.no/')
+        assert score(page,OUR,ctx,'registry_website',[]).level=='VERIFIED'
+>       assert score(page,OUR,{'name':'Different AS','street':[street]},'registry_website',[]).level!='VERIFIED'
+E       AssertionError: assert 'VERIFIED' != 'VERIFIED'
+E        +  where 'VERIFIED' = Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Elveveien 32', subject_orgnr='').level
+E        +    where Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Elveveien 32', subject_orgnr='') = score(<signalpost.web.html.Page object at 0x000001FD0235A9C0>, '923609016', {'name': 'Different AS', 'street': ['Elveveien 32']}, 'registry_website', [])
+
+tests\test_contact_article_ownership.py:37: AssertionError
+_ test_exact_name_street_abbreviations_keep_house_number[Dronning Eufemias gate 23-Dronning Eufemias gt. 23] _
+
+street = 'Dronning Eufemias gate 23', shown = 'Dronning Eufemias gt. 23'
+
+    @pytest.mark.parametrize('street,shown', [('Storgaten 12','Storgt. 12'),('Elveveien 32','Elvevn. 32'),
+                                           ('Dronning Eufemias gate 23','Dronning Eufemias gt. 23')])
+    def test_exact_name_street_abbreviations_keep_house_number(street,shown):
+        ctx={'name':'Example AS','street':[street]}
+        page=Page(('<h1>Example AS</h1><footer>'+shown+'</footer>').encode(),'https://example.no/')
+        assert score(page,OUR,ctx,'registry_website',[]).level=='VERIFIED'
+>       assert score(page,OUR,{'name':'Different AS','street':[street]},'registry_website',[]).level!='VERIFIED'
+E       AssertionError: assert 'VERIFIED' != 'VERIFIED'
+E        +  where 'VERIFIED' = Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Dronning Eufemias gate 23', subject_orgnr='').level
+E        +    where Proof(level='VERIFIED', proof_type='registry_declared_hard_contact_tier_b', signals=['registry_declared_domain', 'street'], points=4, other_orgnrs=[], reason='', token='Dronning Eufemias gate 23', subject_orgnr='') = score(<signalpost.web.html.Page object at 0x000001FD7FCEB500>, '923609016', {'name': 'Different AS', 'street': ['Dronning Eufemias gate 23']}, 'registry_website', [])
+
+tests\test_contact_article_ownership.py:37: AssertionError
+__________ test_evaluator_cli_direct_invocation_and_site_generation ___________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_cli_direct_invo0')
+
+    def test_evaluator_cli_direct_invocation_and_site_generation(tmp_path):
+        """
+        Proves that:
+        1. Signalpost CLI can be directly invoked with options (e.g. without explicit 'run' subcommand).
+        2. Emits valid envelopes, report, and generates complete offline site.
+        3. Output passes strict independent verification (schema, hashes, verbatim spans, synthesis).
+        4. Profile HTML files stay within the 250 KB budget gate.
+        """
+        ci20_input = Path("tests/fixtures/ci20.jsonl")
+        ci20_bulk = Path("tests/fixtures/ci20.csv")
+        out_envelopes = tmp_path / "envelopes.jsonl"
+        out_report = tmp_path / "report.json"
+        out_site = tmp_path / "site"
+        state_dir = tmp_path / "state"
+    
+        # Invocation with direct flags (no 'run' prefix)
+        argv = [
+            "--organisations", str(ci20_input),
+            "--bulk", str(ci20_bulk),
+            "--output", str(out_envelopes),
+            "--report", str(out_report),
+            "--site-dir", str(out_site),
+            "--state-dir", str(state_dir),
+            "--expected-count", "20",
+            "--time-budget-seconds", "30",
+            "--workers", "4",
+            "--no-websites", "--no-hiring", "--no-public-activity",
+        ]
+    
+        exit_code = main(argv)
+        assert exit_code == 0, f"CLI direct invocation failed with code {exit_code}"
+    
+        # Verify report metrics
+        assert out_report.exists()
+        report_data = json.loads(out_report.read_text(encoding="utf-8"))
+        assert report_data["emitted_envelopes"] == 20
+        assert len(report_data["invalid_inputs"]) == 0
+        assert report_data["deadline_hits"] == 0
+    
+        # Verify output integrity via scripts/verify_output
+>       result = verify(
+            first=out_envelopes,
+            state_dir=state_dir,
+            count=20,
+            organisations=ci20_input,
+            report=out_report,
+            require_clean=True,
+        )
+
+tests\test_evaluator_cli_and_site.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+first = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_cli_direct_invo0/envelopes.jsonl')
+state_dir = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_cli_direct_invo0/state')
+count = 20, organisations = WindowsPath('tests/fixtures/ci20.jsonl')
+report = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_cli_direct_invo0/report.json')
+require_clean = True, second = None
+
+    def verify(first, state_dir, count, organisations=None, report=None, require_clean=False, second=None):
+        rows = load(first)
+        assert len(rows) == count, f"Expected {count}, got {len(rows)}"
+        repeated={}
+        for row in rows:
+            org=row['organisation_number']
+            if org in repeated:assert row==repeated[org], 'Duplicate input rows have inconsistent envelopes'
+            repeated[org]=row
+        if organisations is not None:
+            inputs=read(organisations)
+            expected=inputs.rows
+            if report is not None and json.loads(report.read_text(encoding='utf8')).get('emit_duplicates') is False:
+                expected=inputs.unique
+            assert [r['organisation_number'] for r in rows] == expected, 'Membership/order differs from input'
+        seen, published = set(), 0
+        @lru_cache(maxsize=8)
+        def stored_body(sha):
+            return decode_body((state_dir/'blobs'/sha).read_bytes())
+        synthesis_companies=synthesis_sentences=0
+        for row in rows:
+            companies,sentences=verify_synthesis(row)
+            synthesis_companies+=companies;synthesis_sentences+=sentences
+            data = row if "claims" in row else row["profile"]
+            evidence = {e["id"]: e for e in data["evidence"]}
+            for claim in data["claims"]:
+                if claim["availability"] != "available":
+                    assert claim["value"] is None
+                    continue
+                published += 1
+                assert claim["evidence_ids"]
+                for ref in claim["evidence_ids"]:
+                    e = evidence[ref]
+                    assert e["source_url"] and e["retrieved_at"].endswith("Z") and e["locator"] and e["extraction_method"]
+                    sha = e["content_sha256"]
+                    if sha not in seen:
+                        assert hashlib.sha256((state_dir / "blobs" / sha).read_bytes()).hexdigest() == sha
+                        seen.add(sha)
+                    body = stored_body(sha)
+                    assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
+        result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
+        result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
+        if report is not None:
+            metrics = json.loads(report.read_text(encoding='utf8'))
+            assert metrics['emitted_envelopes'] == len(rows)
+            assert metrics['schema_validated'] and metrics['membership_validated']
+            if require_clean:
+                assert metrics['input_readable'] and not metrics['invalid_inputs'] and not metrics['warnings']
+                assert metrics['handled_exceptions'] == metrics['unhandled_exceptions'] == metrics['deadline_hits'] == 0
+                assert not metrics['output_limit_exceeded']
+                for row in rows:
+                    sections = row['run']['sections'] if 'run' in row else row['profile']['sections']
+>                   assert all(state in {'available', 'not_available', 'not_applicable', 'ambiguous'} for state in sections.values()), 'Incomplete smoke-test section'
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                   AssertionError: Incomplete smoke-test section
+
+scripts\verify_output.py:106: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"emitted_envelopes": 20, "invalid_inputs": [], "requests": 142, "runtime_ms": 6047, "changes": 0, "observation_changes": 0, "deadline_hits": 0, "warnings": []}
+_______________ test_evaluator_shapes_union_contract_reference ________________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_shapes_union_co0')
+
+    def test_evaluator_shapes_union_contract_reference(tmp_path):
+        """
+        Proves that all three supported envelope shapes (union, contract, reference)
+        can be emitted and verified cleanly through the CLI.
+        """
+        ci20_input = Path("tests/fixtures/ci20.jsonl")
+        ci20_bulk = Path("tests/fixtures/ci20.csv")
+    
+        for shape in ("contract", "reference"):
+            shape_dir = tmp_path / shape
+            shape_dir.mkdir()
+            out_envelopes = shape_dir / f"envelopes_{shape}.jsonl"
+            out_report = shape_dir / f"report_{shape}.json"
+            state_dir = shape_dir / "state"
+    
+            argv = [
+                "run",
+                "--organisations", str(ci20_input),
+                "--bulk", str(ci20_bulk),
+                "--output", str(out_envelopes),
+                "--report", str(out_report),
+                "--state-dir", str(state_dir),
+                "--envelope-shape", shape,
+                "--expected-count", "20",
+                "--time-budget-seconds", "30",
+                "--workers", "4",
+                "--no-websites", "--no-hiring", "--no-public-activity",
+            ]
+            exit_code = main(argv)
+            assert exit_code == 0
+    
+>           result = verify(
+                first=out_envelopes,
+                state_dir=state_dir,
+                count=20,
+                organisations=ci20_input,
+                report=out_report,
+                require_clean=True,
+            )
+
+tests\test_evaluator_cli_and_site.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+first = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_shapes_union_co0/contract/envelopes_contract.jsonl')
+state_dir = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_shapes_union_co0/contract/state')
+count = 20, organisations = WindowsPath('tests/fixtures/ci20.jsonl')
+report = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_evaluator_shapes_union_co0/contract/report_contract.json')
+require_clean = True, second = None
+
+    def verify(first, state_dir, count, organisations=None, report=None, require_clean=False, second=None):
+        rows = load(first)
+        assert len(rows) == count, f"Expected {count}, got {len(rows)}"
+        repeated={}
+        for row in rows:
+            org=row['organisation_number']
+            if org in repeated:assert row==repeated[org], 'Duplicate input rows have inconsistent envelopes'
+            repeated[org]=row
+        if organisations is not None:
+            inputs=read(organisations)
+            expected=inputs.rows
+            if report is not None and json.loads(report.read_text(encoding='utf8')).get('emit_duplicates') is False:
+                expected=inputs.unique
+            assert [r['organisation_number'] for r in rows] == expected, 'Membership/order differs from input'
+        seen, published = set(), 0
+        @lru_cache(maxsize=8)
+        def stored_body(sha):
+            return decode_body((state_dir/'blobs'/sha).read_bytes())
+        synthesis_companies=synthesis_sentences=0
+        for row in rows:
+            companies,sentences=verify_synthesis(row)
+            synthesis_companies+=companies;synthesis_sentences+=sentences
+            data = row if "claims" in row else row["profile"]
+            evidence = {e["id"]: e for e in data["evidence"]}
+            for claim in data["claims"]:
+                if claim["availability"] != "available":
+                    assert claim["value"] is None
+                    continue
+                published += 1
+                assert claim["evidence_ids"]
+                for ref in claim["evidence_ids"]:
+                    e = evidence[ref]
+                    assert e["source_url"] and e["retrieved_at"].endswith("Z") and e["locator"] and e["extraction_method"]
+                    sha = e["content_sha256"]
+                    if sha not in seen:
+                        assert hashlib.sha256((state_dir / "blobs" / sha).read_bytes()).hexdigest() == sha
+                        seen.add(sha)
+                    body = stored_body(sha)
+                    assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
+        result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
+        result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
+        if report is not None:
+            metrics = json.loads(report.read_text(encoding='utf8'))
+            assert metrics['emitted_envelopes'] == len(rows)
+            assert metrics['schema_validated'] and metrics['membership_validated']
+            if require_clean:
+                assert metrics['input_readable'] and not metrics['invalid_inputs'] and not metrics['warnings']
+                assert metrics['handled_exceptions'] == metrics['unhandled_exceptions'] == metrics['deadline_hits'] == 0
+                assert not metrics['output_limit_exceeded']
+                for row in rows:
+                    sections = row['run']['sections'] if 'run' in row else row['profile']['sections']
+>                   assert all(state in {'available', 'not_available', 'not_applicable', 'ambiguous'} for state in sections.values()), 'Incomplete smoke-test section'
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                   AssertionError: Incomplete smoke-test section
+
+scripts\verify_output.py:106: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"emitted_envelopes": 20, "invalid_inputs": [], "requests": 142, "runtime_ms": 5610, "changes": 0, "observation_changes": 0, "deadline_hits": 0, "warnings": []}
+_____________________ test_external_sources_strict_replay _____________________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_external_sources_strict_r0')
+
+    def test_external_sources_strict_replay(tmp_path):
+        root = Path('tests/fixtures/external_integration')
+        async def execute(label):
+            target = tmp_path / label
+            await run_production_replay(
+                input_path=root/'batch.txt', output_envelopes=target/'envelopes.jsonl',
+                output_report=target/'report.json', state_dir=target/'state',
+                manifest_path=root/'manifest.json', fixtures_dir=root/'blobs',
+                websites=True, hiring=True, public_activity=True, workers=1,
+                observation_time='2026-10-15T10:00:00Z')
+            return [json.loads(line) for line in (target/'envelopes.jsonl').read_text().splitlines()]
+>       first = asyncio.run(execute('first'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_external_integration.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_external_integration.py:13: in execute
+    await run_production_replay(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input_path = WindowsPath('tests/fixtures/external_integration/batch.txt')
+output_envelopes = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_external_sources_strict_r0/first/envelopes.jsonl')
+output_report = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_external_sources_strict_r0/first/report.json')
+state_dir = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_external_sources_strict_r0/first/state')
+manifest_path = WindowsPath('tests/fixtures/external_integration/manifest.json')
+fixture_envelopes = None
+fixtures_dir = WindowsPath('tests/fixtures/external_integration/blobs')
+bulk = None, websites = True, hiring = True, public_activity = True, workers = 1
+mode = 'strict', observation_time = '2026-10-15T10:00:00Z'
+
+    async def run_production_replay(
+        input_path: Path,
+        output_envelopes: Path,
+        output_report: Path,
+        state_dir: Path = Path("state"),
+        manifest_path: Path | None = None,
+        fixture_envelopes: Path | None = None,
+        fixtures_dir: Path | None = None,
+        bulk: Path | None = None,
+        websites: bool = True,
+        hiring: bool = False,
+        public_activity: bool = False,
+        workers: int = 4,
+        mode: str = "strict",
+        observation_time: str | None = None,
+    ) -> dict:
+        """Executes the actual Signalpost production runner using the offline recorded transport."""
+        blobs_dir = fixtures_dir or (state_dir / "blobs")
+        is_strict = (mode.lower() == "strict")
+    
+        if manifest_path and manifest_path.exists():
+            fixtures = load_fixtures_from_manifest(manifest_path, blobs_dir)
+            print(f"Loaded {len(fixtures)} recorded fixtures from manifest {manifest_path.name}")
+        elif fixture_envelopes and fixture_envelopes.exists():
+            fixtures = build_fixture_map_from_envelopes(fixture_envelopes, blobs_dir)
+            print(f"Indexed {len(fixtures)} historical URL fixtures from {fixture_envelopes.name}")
+        else:
+            fixtures = []
+            print("Warning: No fixture manifest or envelope source provided for replay.")
+    
+        output_envelopes.parent.mkdir(parents=True, exist_ok=True)
+        output_report.parent.mkdir(parents=True, exist_ok=True)
+    
+        config = Config(
+            organisations=input_path,
+            output=output_envelopes,
+            report=output_report,
+            state_dir=state_dir,
+            bulk=bulk,
+            websites=websites,
+            hiring=hiring,
+            public_activity=public_activity,
+            registry_changes=False,  # Historical R2 transport fixtures have no change-feed responses.
+            wikidata=False,  # Offline replay only requests its explicitly recorded sources.
+            workers=workers,
+            time_budget_seconds=120,
+            website_politeness_seconds=1,
+            # Offline fixtures exercise three ownership pages plus feed/article proof.
+            website_request_cap=8,
+            website_total_request_cap=12,
+            nav_index_path=state_dir / "no-live-discovery-index.json.gz",
+        )
+    
+        transport = RecordedResponseTransport(blobs_dir=blobs_dir, fixture_map=fixtures, strict=is_strict)
+        # HTTP replay must not depend on live DNS or wall-clock ad expiry. Only
+        # explicitly declared fixture hosts receive a synthetic public address.
+        hosts = {urlparse(url).hostname for _, url in transport.fixtures}
+        async def fixture_dns(host, port=443):
+            from signalpost.budget import SourceFailure
+            if host not in hosts:
+                raise SourceFailure("no_such_domain")
+            return ["93.184.216.34"]
+    
+        with ExitStack() as stack:
+            stack.enter_context(patch("signalpost.web.policy.resolve_public", fixture_dns))
+            if observation_time:
+                at = datetime.fromisoformat(observation_time.replace("Z", "+00:00"))
+                if at.tzinfo is None:
+                    raise ValueError("observation_time requires a timezone")
+                at = at.astimezone(timezone.utc)
+                class ReplayDateTime(datetime):
+                    @classmethod
+                    def now(cls, tz=None):
+                        return at.astimezone(tz) if tz else at.replace(tzinfo=None)
+                # Patch imported clock references only inside this offline command.
+                for module in list(sys.modules.values()):
+                    if getattr(module, "__name__", "").startswith("signalpost."):
+                        if getattr(module, "utc_now", None):
+                            stack.enter_context(patch.object(module, "utc_now", lambda: at.isoformat().replace("+00:00", "Z")))
+                        if getattr(module, "datetime", None) is datetime:
+                            stack.enter_context(patch.object(module, "datetime", ReplayDateTime))
+            async with httpx.AsyncClient(transport=transport, trust_env=False) as client:
+                report = await runner_run(config, client=client)
+    
+        if transport.has_failures():
+            reasons = []
+            if transport.missing_fixtures:
+                reasons.append(f"{len(transport.missing_fixtures)} missing fixture(s)")
+                for m in transport.missing_fixtures:
+                    logger.error("Missing fixture: method=%s url=%s reason=%s", m[0], m[1], m[2])
+            if transport.corrupt_fixtures:
+                reasons.append(f"{len(transport.corrupt_fixtures)} corrupt fixture(s)")
+                for c in transport.corrupt_fixtures:
+                    logger.error("Corrupt fixture: method=%s url=%s reason=%s", c[0], c[1], c[2])
+            if transport.mismatched_fixtures:
+                reasons.append(f"{len(transport.mismatched_fixtures)} mismatched fixture(s)")
+                for mm in transport.mismatched_fixtures:
+                    logger.error("Mismatched fixture: method=%s url=%s reason=%s", mm[0], mm[1], mm[2])
+            if transport.exhausted_fixtures:
+                reasons.append(f"{len(transport.exhausted_fixtures)} exhausted sequence(s)")
+                for ef in transport.exhausted_fixtures:
+                    logger.error("Exhausted sequence: method=%s url=%s reason=%s", ef[0], ef[1], ef[2])
+            if is_strict and transport.incomplete_records:
+                reasons.append(f"{len(transport.incomplete_records)} incomplete metadata record(s) in strict mode")
+                for inc in transport.incomplete_records:
+                    logger.error("Incomplete metadata: %s", inc)
+>           raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
+E           scripts.production_replay.ReplayFixtureError: Production replay failed: 2 missing fixture(s)
+
+scripts\production_replay.py:449: ReplayFixtureError
+---------------------------- Captured stdout call -----------------------------
+Loaded 35 recorded fixtures from manifest manifest.json
+------------------------------ Captured log call ------------------------------
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for GET http://ambersynthetic.no/robots.txt
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for GET http://ambersynthetic.no/
+ERROR    production_replay:production_replay.py:432 Missing fixture: method=GET url=http://ambersynthetic.no/robots.txt reason=No recorded fixture for GET http://ambersynthetic.no/robots.txt
+ERROR    production_replay:production_replay.py:432 Missing fixture: method=GET url=http://ambersynthetic.no/ reason=No recorded fixture for GET http://ambersynthetic.no/
+_______ test_activity_filters[https://example.no/news/item-2026-10-20] ________
+
+url = 'https://example.no/news/item', date = '2026-10-20'
+
+    @pytest.mark.parametrize('url,date',[('https://other.no/news/item','2026-10-10'),('https://example.no/products/item','2026-10-10'),('https://example.no/news/item','2026-10-20'),('https://example.no/news/item','1999-12-31'),('https://example.no/news/item','invalid')])
+    def test_activity_filters(url,date):
+        xml=f'<urlset><url><loc>{url}</loc><lastmod>{date}</lastmod></url></urlset>'
+>       assert parse(xml.encode(),'https://example.no/sitemap.xml',NOW)==([],[])
+E       AssertionError: assert ([({'title': ...-10-20')], []) == ([], [])
+E         
+E         At index 0 diff: [({'title': 'item', 'title_source': 'title from URL', 'url': 'https://example.no/news/item', 'date': '', 'date_source': 'lastmod', 'identity_level': None}, '/url/0', 'https://example.no/news/item</loc><lastmod>2026-10-20')] != []
+E         Use -v to get more diff
+
+tests\test_recall.py:106: AssertionError
+_______ test_activity_filters[https://example.no/news/item-1999-12-31] ________
+
+url = 'https://example.no/news/item', date = '1999-12-31'
+
+    @pytest.mark.parametrize('url,date',[('https://other.no/news/item','2026-10-10'),('https://example.no/products/item','2026-10-10'),('https://example.no/news/item','2026-10-20'),('https://example.no/news/item','1999-12-31'),('https://example.no/news/item','invalid')])
+    def test_activity_filters(url,date):
+        xml=f'<urlset><url><loc>{url}</loc><lastmod>{date}</lastmod></url></urlset>'
+>       assert parse(xml.encode(),'https://example.no/sitemap.xml',NOW)==([],[])
+E       AssertionError: assert ([({'title': ...-12-31')], []) == ([], [])
+E         
+E         At index 0 diff: [({'title': 'item', 'title_source': 'title from URL', 'url': 'https://example.no/news/item', 'date': '', 'date_source': 'lastmod', 'identity_level': None}, '/url/0', 'https://example.no/news/item</loc><lastmod>1999-12-31')] != []
+E         Use -v to get more diff
+
+tests\test_recall.py:106: AssertionError
+_________ test_activity_filters[https://example.no/news/item-invalid] _________
+
+url = 'https://example.no/news/item', date = 'invalid'
+
+    @pytest.mark.parametrize('url,date',[('https://other.no/news/item','2026-10-10'),('https://example.no/products/item','2026-10-10'),('https://example.no/news/item','2026-10-20'),('https://example.no/news/item','1999-12-31'),('https://example.no/news/item','invalid')])
+    def test_activity_filters(url,date):
+        xml=f'<urlset><url><loc>{url}</loc><lastmod>{date}</lastmod></url></urlset>'
+>       assert parse(xml.encode(),'https://example.no/sitemap.xml',NOW)==([],[])
+E       AssertionError: assert ([({'title': ...nvalid')], []) == ([], [])
+E         
+E         At index 0 diff: [({'title': 'item', 'title_source': 'title from URL', 'url': 'https://example.no/news/item', 'date': '', 'date_source': 'lastmod', 'identity_level': None}, '/url/0', 'https://example.no/news/item</loc><lastmod>invalid')] != []
+E         Use -v to get more diff
+
+tests\test_recall.py:106: AssertionError
+______________ test_activity_live_pipeline_synthesis_and_refresh ______________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_activity_live_pipeline_sy0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD01E30FB0>
+
+    def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
+        from signalpost.models.envelope import Envelope
+        from signalpost.synthesis.validate import sentence_error
+        now=datetime.now(timezone.utc).date().isoformat()
+        xml=f'<urlset><url><loc>https://example.no/news/update</loc><lastmod>{now}</lastmod></url></urlset>'
+        def response(request):
+            if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nAllow: /')
+            if request.url.path=='/sitemap.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/xml'})
+            if request.url.path=='/news/update':
+                return httpx.Response(200,text=f'<head><title>New office</title><meta property="article:published_time" content="{now}"></head><article><h1>New office</h1><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
+            return httpx.Response(200,text=html())
+        report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=8,website_total_request_cap=12)
+>       assert row['run']['sections']['activity']=='available'
+E       AssertionError: assert 'failed' == 'available'
+E         
+E         - available
+E         + failed
+
+tests\test_recall.py:133: AssertionError
+_____________ test_derived_budget_uses_unique_inputs_and_override _____________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_derived_budget_uses_uniqu0')
+
+    def test_derived_budget_uses_unique_inputs_and_override(tmp_path):
+        cfg=config(tmp_path/'auto',['923609016','923609016','bad'])
+        assert Budget(cfg).cap==36 and cfg.time_budget_seconds==2400
+        assert time_cap(cfg)==900
+        report,rows=execute(cfg)
+        assert len(rows)==3 and report['limits']['max_requests']==36
+>       assert report['request_budget_basis']=='18 per unique normalized input; explicit lower limits honored'
+E       AssertionError: assert 'Pooled 18 pe...imits honored' == '18 per uniqu...imits honored'
+E         
+E         - 18 per unique normalized input; explicit lower limits honored
+E         + Pooled 18 per unique normalized input globally, up to 40 per company; explicit lower limits honored
+E         ? +++++++                              +++++++++++++++++++++++++++++++
+
+tests\test_release_budgets.py:12: AssertionError
+____ test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[AB] ____
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_zinzino_foreign_page_neve0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD02177A70>
+form = 'AB'
+
+    @pytest.mark.parametrize('form', ['AB', 'ASA', 'Ltd', 'GmbH', 'Oy'])
+    def test_zinzino_foreign_page_never_attaches_contacts_or_descriptions(tmp_path, monkeypatch, form):
+        import tests.test_websites as fixtures
+        original = fixtures.entity
+        def zinzino(org):
+            data = original(org)
+            data['navn'] = 'Zinzino AS'
+            return data
+        monkeypatch.setattr(fixtures, 'entity', zinzino)
+        body = html(title=f'Zinzino {form}', extra=(
+            f'<meta name="description" content="Zinzino {form} provides shareholder and investor relations information worldwide.">'
+            '<a href="mailto:shares@example.no">Investor contact</a>'))
+        _, row, _, _ = execute_web(tmp_path, monkeypatch, body)
+>       assert any(c['field'] == 'official_website' for c in row['claims'])
+E       assert False
+E        +  where False = any(<generator object test_zinzino_foreign_page_never_attaches_contacts_or_descriptions.<locals>.<genexpr> at 0x000001FD02AA8040>)
+
+tests\test_s67_group_scope.py:48: AssertionError
+___ test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[ASA] ____
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_zinzino_foreign_page_neve1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD025621B0>
+form = 'ASA'
+
+    @pytest.mark.parametrize('form', ['AB', 'ASA', 'Ltd', 'GmbH', 'Oy'])
+    def test_zinzino_foreign_page_never_attaches_contacts_or_descriptions(tmp_path, monkeypatch, form):
+        import tests.test_websites as fixtures
+        original = fixtures.entity
+        def zinzino(org):
+            data = original(org)
+            data['navn'] = 'Zinzino AS'
+            return data
+        monkeypatch.setattr(fixtures, 'entity', zinzino)
+        body = html(title=f'Zinzino {form}', extra=(
+            f'<meta name="description" content="Zinzino {form} provides shareholder and investor relations information worldwide.">'
+            '<a href="mailto:shares@example.no">Investor contact</a>'))
+        _, row, _, _ = execute_web(tmp_path, monkeypatch, body)
+>       assert any(c['field'] == 'official_website' for c in row['claims'])
+E       assert False
+E        +  where False = any(<generator object test_zinzino_foreign_page_never_attaches_contacts_or_descriptions.<locals>.<genexpr> at 0x000001FD034357D0>)
+
+tests\test_s67_group_scope.py:48: AssertionError
+___ test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[Ltd] ____
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_zinzino_foreign_page_neve2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD02408050>
+form = 'Ltd'
+
+    @pytest.mark.parametrize('form', ['AB', 'ASA', 'Ltd', 'GmbH', 'Oy'])
+    def test_zinzino_foreign_page_never_attaches_contacts_or_descriptions(tmp_path, monkeypatch, form):
+        import tests.test_websites as fixtures
+        original = fixtures.entity
+        def zinzino(org):
+            data = original(org)
+            data['navn'] = 'Zinzino AS'
+            return data
+        monkeypatch.setattr(fixtures, 'entity', zinzino)
+        body = html(title=f'Zinzino {form}', extra=(
+            f'<meta name="description" content="Zinzino {form} provides shareholder and investor relations information worldwide.">'
+            '<a href="mailto:shares@example.no">Investor contact</a>'))
+        _, row, _, _ = execute_web(tmp_path, monkeypatch, body)
+>       assert any(c['field'] == 'official_website' for c in row['claims'])
+E       assert False
+E        +  where False = any(<generator object test_zinzino_foreign_page_never_attaches_contacts_or_descriptions.<locals>.<genexpr> at 0x000001FD02AABAC0>)
+
+tests\test_s67_group_scope.py:48: AssertionError
+___ test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[GmbH] ___
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_zinzino_foreign_page_neve3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD02560410>
+form = 'GmbH'
+
+    @pytest.mark.parametrize('form', ['AB', 'ASA', 'Ltd', 'GmbH', 'Oy'])
+    def test_zinzino_foreign_page_never_attaches_contacts_or_descriptions(tmp_path, monkeypatch, form):
+        import tests.test_websites as fixtures
+        original = fixtures.entity
+        def zinzino(org):
+            data = original(org)
+            data['navn'] = 'Zinzino AS'
+            return data
+        monkeypatch.setattr(fixtures, 'entity', zinzino)
+        body = html(title=f'Zinzino {form}', extra=(
+            f'<meta name="description" content="Zinzino {form} provides shareholder and investor relations information worldwide.">'
+            '<a href="mailto:shares@example.no">Investor contact</a>'))
+        _, row, _, _ = execute_web(tmp_path, monkeypatch, body)
+>       assert any(c['field'] == 'official_website' for c in row['claims'])
+E       assert False
+E        +  where False = any(<generator object test_zinzino_foreign_page_never_attaches_contacts_or_descriptions.<locals>.<genexpr> at 0x000001FD01BCE260>)
+
+tests\test_s67_group_scope.py:48: AssertionError
+____ test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[Oy] ____
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_zinzino_foreign_page_neve4')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD01BA3E00>
+form = 'Oy'
+
+    @pytest.mark.parametrize('form', ['AB', 'ASA', 'Ltd', 'GmbH', 'Oy'])
+    def test_zinzino_foreign_page_never_attaches_contacts_or_descriptions(tmp_path, monkeypatch, form):
+        import tests.test_websites as fixtures
+        original = fixtures.entity
+        def zinzino(org):
+            data = original(org)
+            data['navn'] = 'Zinzino AS'
+            return data
+        monkeypatch.setattr(fixtures, 'entity', zinzino)
+        body = html(title=f'Zinzino {form}', extra=(
+            f'<meta name="description" content="Zinzino {form} provides shareholder and investor relations information worldwide.">'
+            '<a href="mailto:shares@example.no">Investor contact</a>'))
+        _, row, _, _ = execute_web(tmp_path, monkeypatch, body)
+>       assert any(c['field'] == 'official_website' for c in row['claims'])
+E       assert False
+E        +  where False = any(<generator object test_zinzino_foreign_page_never_attaches_contacts_or_descriptions.<locals>.<genexpr> at 0x000001FD03179A40>)
+
+tests\test_s67_group_scope.py:48: AssertionError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins0-errors0-not_available] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD01791520>
+origins = [], errors = [], expected = 'not_available'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+    
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+    
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:224: in fetch
+    context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:37: in offload
+    async def offload(fn,*args,**kwargs):return await _run(SOURCE_POOL,fn,args,kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:34: in _run
+    return await asyncio.get_running_loop().run_in_executor(pool,context.run,call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:29: in call
+    try:return fn(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], run=namespace(refresh={})), blobs = None
+
+    def annual_domains(envelope, blobs):
+        """Scan retained account/report text only; no PDF/report download is made."""
+        from ..sources.text import decode_body
+        refs = {r for c in envelope.claims if c.family == 'accounts' for r in c.evidence_ids}
+        seen = set(); result = []
+>       for e in envelope.evidence:
+                 ^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'evidence'
+
+src\signalpost\web\recall.py:29: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins1-errors1-not_available] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD0179C860>
+origins = ['legal_name_slug', 'legal_name_slug']
+errors = ['no_such_domain', 'no_such_domain'], expected = 'not_available'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+    
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+    
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:224: in fetch
+    context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:37: in offload
+    async def offload(fn,*args,**kwargs):return await _run(SOURCE_POOL,fn,args,kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:34: in _run
+    return await asyncio.get_running_loop().run_in_executor(pool,context.run,call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:29: in call
+    try:return fn(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], run=namespace(refresh={})), blobs = None
+
+    def annual_domains(envelope, blobs):
+        """Scan retained account/report text only; no PDF/report download is made."""
+        from ..sources.text import decode_body
+        refs = {r for c in envelope.claims if c.family == 'accounts' for r in c.evidence_ids}
+        seen = set(); result = []
+>       for e in envelope.evidence:
+                 ^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'evidence'
+
+src\signalpost\web\recall.py:29: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins2-errors2-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD0179E090>
+origins = ['registry_website'], errors = ['no_such_domain'], expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+    
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+    
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:224: in fetch
+    context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:37: in offload
+    async def offload(fn,*args,**kwargs):return await _run(SOURCE_POOL,fn,args,kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:34: in _run
+    return await asyncio.get_running_loop().run_in_executor(pool,context.run,call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:29: in call
+    try:return fn(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], run=namespace(refresh={})), blobs = None
+
+    def annual_domains(envelope, blobs):
+        """Scan retained account/report text only; no PDF/report download is made."""
+        from ..sources.text import decode_body
+        refs = {r for c in envelope.claims if c.family == 'accounts' for r in c.evidence_ids}
+        seen = set(); result = []
+>       for e in envelope.evidence:
+                 ^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'evidence'
+
+src\signalpost\web\recall.py:29: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins3-errors3-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD0179E8A0>
+origins = ['registry_email'], errors = ['no_such_domain'], expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+    
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+    
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:224: in fetch
+    context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:37: in offload
+    async def offload(fn,*args,**kwargs):return await _run(SOURCE_POOL,fn,args,kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:34: in _run
+    return await asyncio.get_running_loop().run_in_executor(pool,context.run,call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:29: in call
+    try:return fn(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], run=namespace(refresh={})), blobs = None
+
+    def annual_domains(envelope, blobs):
+        """Scan retained account/report text only; no PDF/report download is made."""
+        from ..sources.text import decode_body
+        refs = {r for c in envelope.claims if c.family == 'accounts' for r in c.evidence_ids}
+        seen = set(); result = []
+>       for e in envelope.evidence:
+                 ^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'evidence'
+
+src\signalpost\web\recall.py:29: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins4-errors4-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD01CDF4D0>
+origins = ['nav_employer_homepage'], errors = ['website_timeout']
+expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+    
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+    
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:224: in fetch
+    context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:37: in offload
+    async def offload(fn,*args,**kwargs):return await _run(SOURCE_POOL,fn,args,kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:34: in _run
+    return await asyncio.get_running_loop().run_in_executor(pool,context.run,call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:29: in call
+    try:return fn(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], run=namespace(refresh={})), blobs = None
+
+    def annual_domains(envelope, blobs):
+        """Scan retained account/report text only; no PDF/report download is made."""
+        from ..sources.text import decode_body
+        refs = {r for c in envelope.claims if c.family == 'accounts' for r in c.evidence_ids}
+        seen = set(); result = []
+>       for e in envelope.evidence:
+                 ^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'evidence'
+
+src\signalpost\web\recall.py:29: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins5-errors5-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD0179F920>
+origins = ['legal_name_slug', 'registry_website']
+errors = ['no_such_domain', 'website_connect_error'], expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+    
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+    
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:224: in fetch
+    context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:37: in offload
+    async def offload(fn,*args,**kwargs):return await _run(SOURCE_POOL,fn,args,kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:34: in _run
+    return await asyncio.get_running_loop().run_in_executor(pool,context.run,call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:29: in call
+    try:return fn(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], run=namespace(refresh={})), blobs = None
+
+    def annual_domains(envelope, blobs):
+        """Scan retained account/report text only; no PDF/report download is made."""
+        from ..sources.text import decode_body
+        refs = {r for c in envelope.claims if c.family == 'accounts' for r in c.evidence_ids}
+        seen = set(); result = []
+>       for e in envelope.evidence:
+                 ^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'evidence'
+
+src\signalpost\web\recall.py:29: AttributeError
+______________ test_candidate_order_subunit_before_bounded_slugs ______________
+
+    def test_candidate_order_subunit_before_bounded_slugs():
+        rows=generate({'name':'Distinctive Name AS','website':'parent.no','email':'office@email.no',
+                      'subunits':[{'orgnr':OTHER,'website':'workplace.no','email':'contact@unit.no'}]})
+        assert [c.origin for c in rows[:4]]==['registry_website','registry_email','subunit_registry_website','subunit_registry_email']
+>       assert len(rows)==14 and rows[2].subunit_orgnr==OTHER
+E       AssertionError: assert (6 == 14)
+E        +  where 6 = len([Candidate(url='https://parent.no/', domain='parent.no', origin='registry_website', subunit_orgnr=None), Candidate(url...didate(url='https://distinctive-name.no/', domain='distinctive-name.no', origin='legal_name_slug', subunit_orgnr=None)])
+
+tests\test_subunit_websites.py:12: AssertionError
+_ test_subunit_candidate_requires_exact_parent_or_that_subunit[993578843-True-subunit_registry_website] _
+
+owner = '993578843', accepted = True, origin = 'subunit_registry_website'
+
+    @pytest.mark.parametrize('origin', ['subunit_registry_website', 'subunit_registry_email'])
+    @pytest.mark.parametrize('owner,accepted',[(OUR,True),(OTHER,True),('988258229',False),('',False)])
+    def test_subunit_candidate_requires_exact_parent_or_that_subunit(owner,accepted,origin):
+        candidate=Candidate('https://workplace.no/','workplace.no',origin,OTHER)
+        page=Page(html('Org nr '+owner).encode(),candidate.url)
+        proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
+>       assert (proof.level=='VERIFIED')==accepted
+E       AssertionError: assert ('REJECT' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + REJECT) == True
+
+tests\test_subunit_websites.py:22: AssertionError
+_ test_subunit_candidate_requires_exact_parent_or_that_subunit[993578843-True-subunit_registry_email] _
+
+owner = '993578843', accepted = True, origin = 'subunit_registry_email'
+
+    @pytest.mark.parametrize('origin', ['subunit_registry_website', 'subunit_registry_email'])
+    @pytest.mark.parametrize('owner,accepted',[(OUR,True),(OTHER,True),('988258229',False),('',False)])
+    def test_subunit_candidate_requires_exact_parent_or_that_subunit(owner,accepted,origin):
+        candidate=Candidate('https://workplace.no/','workplace.no',origin,OTHER)
+        page=Page(html('Org nr '+owner).encode(),candidate.url)
+        proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
+>       assert (proof.level=='VERIFIED')==accepted
+E       AssertionError: assert ('REJECT' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + REJECT) == True
+
+tests\test_subunit_websites.py:22: AssertionError
+_ test_published_subunit_relationship_preserves_claim_identity_and_evidence[993578843] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD02A09D90>
+owner = '993578843'
+
+    @pytest.mark.parametrize('owner', [OUR, OTHER])
+    def test_published_subunit_relationship_preserves_claim_identity_and_evidence(monkeypatch, owner):
+        import hashlib
+        from types import SimpleNamespace
+        from signalpost.web import collector, descriptions
+        from signalpost.sources.extract import Section, Source, add
+        from signalpost.models.claim import Claim
+        from signalpost.models.evidence import canonical, digest
+        from signalpost.site import fact
+    
+        candidate=Candidate('https://workplace.no/','workplace.no','subunit_registry_website',OTHER)
+        raw=html('Org nr '+owner).encode()
+        page=Page(raw,candidate.url)
+        proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
+        now='2026-10-17T00:00:00Z'
+        response=SimpleNamespace(url=candidate.url,body=raw,sha=hashlib.sha256(raw).hexdigest(),retrieved_at=now)
+        registry=Section()
+        body=b'{"organisasjonsnummer":"993578843","overordnetEnhet":"923609016"}'
+        source=Source('https://data.brreg.no/enhetsregisteret/api/underenheter',body,hashlib.sha256(body).hexdigest(),now)
+        add(registry,source,OUR,'subunits','subunits.unit.'+OTHER,{'organisation_number':OTHER},'/organisasjonsnummer')
+        envelope=SimpleNamespace(claims=registry.claims,evidence=registry.evidence,run=SimpleNamespace(refresh={}))
+        http=SimpleNamespace(accepted_pages={},attempts={})
+        monkeypatch.setattr(descriptions,'extract',lambda *args:None)
+        monkeypatch.setattr(collector,'extract_contacts_and_social',lambda *args,**kwargs:None)
+        monkeypatch.setattr(collector,'extract_public_brand',lambda *args:None)
+        result=collector.publish_result(OUR,envelope,http,Section(),
+            [(candidate,proof,response,page,[(response,page)])],[],{'name':'Example AS'})
+        claim=result.claims[0]
+        expected=digest([OUR,'official_website',canonical(claim.value),'available',None])
+        assert claim.id==expected
+        assert len(result.claims)==1 and claim.availability=='available'
+        Claim.model_validate(claim.model_dump(mode='json'))
+        records={e.id:e.model_dump(mode='json') for e in result.evidence}
+        markup=fact(claim.model_dump(mode='json'),records)
+        if owner==OTHER:
+>           assert claim.reasons['relationship']=='Website of registered subunit '+OTHER
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           KeyError: 'relationship'
+
+tests\test_subunit_websites.py:66: KeyError
+______ test_suffix_proof_publishes_registry_evidence_and_matching_social ______
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_suffix_proof_publishes_re0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD025BF020>
+
+    def test_suffix_proof_publishes_registry_evidence_and_matching_social(tmp_path,monkeypatch):
+        import tests.test_websites as websites
+        original=websites.entity
+        def custom(org):return {**original(org),'navn':'Example AS','telefon':'12345678','epostadresse':'office@example.no'}
+        monkeypatch.setattr(websites,'entity',custom)
+        body=html('12345678 office@example.no',title='Example',extra='<footer><a href="https://facebook.com/example">Facebook</a></footer>').replace('<header>Example AS</header>','<header>Example</header>')
+        _,row,_,_=execute_web(tmp_path,monkeypatch,body=body,website_suffix_contact_proof=True)
+        c=next(c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available')
+>       assert c['value']['proof_type']=='legal_name_without_suffix_and_two_contacts'
+E       AssertionError: assert 'registry_dec...d_name_tier_a' == 'legal_name_w..._two_contacts'
+E         
+E         - legal_name_without_suffix_and_two_contacts
+E         + registry_declared_name_tier_a
+
+tests\test_suffix_absent_ownership.py:50: AssertionError
+______________ test_candidate_source_priority_and_subunit_names _______________
+
+    def test_candidate_source_priority_and_subunit_names():
+        nominations = generate({'website':'registry.no', 'email':'a@email.no',
+            'nav_homepages':[{'url':'nav.no'}], 'name':'Distinctive AS',
+            'subunits':[{'orgnr':'993578843','name':'Branchbrand AS','website':'branch.no','email':'a@branchmail.no'}]})
+        assert [c.origin for c in nominations[:5]] == ['registry_website','registry_email','nav_employer_homepage','subunit_registry_website','subunit_registry_email']
+        assert next(c for c in nominations if c.domain=='branchbrand.no').subunit_orgnr=='993578843'
+>       assert any(c.domain=='distinctive-as.no' for c in nominations)
+E       assert False
+E        +  where False = any(<generator object test_candidate_source_priority_and_subunit_names.<locals>.<genexpr> at 0x000001FD01BF5BE0>)
+
+tests\test_website_candidate_expansion.py:12: AssertionError
+_____________ test_same_domain_foreign_orgnr_not_carried_forward ______________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_same_domain_foreign_orgnr0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD0296DAF0>
+
+    def test_same_domain_foreign_orgnr_not_carried_forward(tmp_path, monkeypatch):
+        # Run 1: Verified website
+        _, first, _, cfg1 = execute_web(tmp_path / "run1", monkeypatch, body=html(f"Org nr {OUR}"))
+        assert any(c["field"] == "official_website" and c["availability"] == "available" for c in first["claims"])
+    
+        # Run 2: Same domain now displays foreign orgnr, followed by budget exhaustion
+        def foreign_response(request):
+            if request.url.path == "/robots.txt":
+                return httpx.Response(200, text="User-agent: *\nAllow: /")
+            # Same domain displays foreign orgnr
+            return httpx.Response(200, text=html(f"Org nr {OTHER}"))
+    
+        _, second, _, _ = execute_web(
+            tmp_path / "run2", monkeypatch, response=foreign_response,
+            previous=cfg1.output, website_request_cap=2
+        )
+    
+        # Must NOT carry forward the discredited website
+        assert not any(c["field"] == "official_website" for c in second["claims"])
+>       assert any(
+            oc["section"] == "website" and oc["previous_state"] == "available"
+            for oc in second["run"]["refresh"]["observation_changes"]
+        )
+E       assert False
+E        +  where False = any(<generator object test_same_domain_foreign_orgnr_not_carried_forward.<locals>.<genexpr> at 0x000001FD0155A670>)
+
+tests\test_website_ownership_safety.py:33: AssertionError
+______________ test_corporate_group_website_not_falsely_refuted _______________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step10-suite6/test_corporate_group_website_n0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FD0213BFB0>
+
+    def test_corporate_group_website_not_falsely_refuted(tmp_path, monkeypatch):
+        group_html = html(footer=f"Org.nr {OUR}", extra=f"<div>Part of Example Group. Sibling org: {OTHER}. Holding org: {OUR}.</div>")
+        _, row, _, _ = execute_web(tmp_path, monkeypatch, body=group_html)
+        claim = next((c for c in row["claims"] if c["field"] == "official_website"), None)
+>       assert claim is not None
+E       assert None is not None
+
+tests\test_website_ownership_safety.py:163: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_contact_article_ownership.py::test_exact_name_street_abbreviations_keep_house_number[Storgaten 12-Storgt. 12]
+FAILED tests/test_contact_article_ownership.py::test_exact_name_street_abbreviations_keep_house_number[Elveveien 32-Elvevn. 32]
+FAILED tests/test_contact_article_ownership.py::test_exact_name_street_abbreviations_keep_house_number[Dronning Eufemias gate 23-Dronning Eufemias gt. 23]
+FAILED tests/test_evaluator_cli_and_site.py::test_evaluator_cli_direct_invocation_and_site_generation
+FAILED tests/test_evaluator_cli_and_site.py::test_evaluator_shapes_union_contract_reference
+FAILED tests/test_external_integration.py::test_external_sources_strict_replay
+FAILED tests/test_recall.py::test_activity_filters[https://example.no/news/item-2026-10-20]
+FAILED tests/test_recall.py::test_activity_filters[https://example.no/news/item-1999-12-31]
+FAILED tests/test_recall.py::test_activity_filters[https://example.no/news/item-invalid]
+FAILED tests/test_recall.py::test_activity_live_pipeline_synthesis_and_refresh
+FAILED tests/test_release_budgets.py::test_derived_budget_uses_unique_inputs_and_override
+FAILED tests/test_s67_group_scope.py::test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[AB]
+FAILED tests/test_s67_group_scope.py::test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[ASA]
+FAILED tests/test_s67_group_scope.py::test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[Ltd]
+FAILED tests/test_s67_group_scope.py::test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[GmbH]
+FAILED tests/test_s67_group_scope.py::test_zinzino_foreign_page_never_attaches_contacts_or_descriptions[Oy]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins0-errors0-not_available]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins1-errors1-not_available]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins2-errors2-failed]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins3-errors3-failed]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins4-errors4-failed]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins5-errors5-failed]
+FAILED tests/test_subunit_websites.py::test_candidate_order_subunit_before_bounded_slugs
+FAILED tests/test_subunit_websites.py::test_subunit_candidate_requires_exact_parent_or_that_subunit[993578843-True-subunit_registry_website]
+FAILED tests/test_subunit_websites.py::test_subunit_candidate_requires_exact_parent_or_that_subunit[993578843-True-subunit_registry_email]
+FAILED tests/test_subunit_websites.py::test_published_subunit_relationship_preserves_claim_identity_and_evidence[993578843]
+FAILED tests/test_suffix_absent_ownership.py::test_suffix_proof_publishes_registry_evidence_and_matching_social
+FAILED tests/test_website_candidate_expansion.py::test_candidate_source_priority_and_subunit_names
+FAILED tests/test_website_ownership_safety.py::test_same_domain_foreign_orgnr_not_carried_forward
+FAILED tests/test_website_ownership_safety.py::test_corporate_group_website_not_falsely_refuted
+30 failed, 967 passed in 254.23s (0:04:14)

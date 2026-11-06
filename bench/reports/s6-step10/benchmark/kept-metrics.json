@@ -1,0 +1,47 @@
+{
+  "source_run": "bench\\runs\\20261106T085057525871Z-2851a42",
+  "baseline": "bench\\runs\\20261106T055741582104Z-1909653",
+  "kept_code": "5f1c5e1",
+  "projection": "No second crawl; unsafe rules removed from saved output; no replacement candidates tested",
+  "sections": {
+    "identity": 1000,
+    "roles": 997,
+    "subunits": 774,
+    "accounts": 999,
+    "website": 95,
+    "hiring": 3,
+    "activity": 235
+  },
+  "website_companies": 95,
+  "social_companies": 40,
+  "typed_location_profiles": 997,
+  "proof_types": {
+    "orgnr_on_page": 29,
+    "jsonld_vatid": 6,
+    "registry_declared_name_tier_a": 25,
+    "legal_name_without_suffix_and_two_contacts": 9,
+    "legal_name_and_registry_contact": 23,
+    "registry_declared_hard_contact_tier_b": 3
+  },
+  "request_statistics": {
+    "requests": 6412,
+    "requests_per_company": 6.374,
+    "amortized_requests_per_company": 6.412,
+    "max_requests_per_company": 33,
+    "shared_requests": 38,
+    "dns_fallback_attempts": 5385,
+    "dns_fallback_successes": 10,
+    "dns_fallback_seconds": 2358.002
+  },
+  "nav": {
+    "public_token_calls": [
+      {
+        "status": 200
+      }
+    ],
+    "detail_requests": 11,
+    "feed_pages": 6,
+    "feed_complete": true,
+    "mode": "declared_index"
+  }
+}

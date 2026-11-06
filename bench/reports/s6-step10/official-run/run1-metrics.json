@@ -1,0 +1,27 @@
+{
+  "emitted_envelopes": 103,
+  "requests": 661,
+  "runtime_ms": 121344,
+  "changes": 0,
+  "observation_changes": 0,
+  "deadline_hits": 0,
+  "warnings": [],
+  "max_requests_per_company": 23,
+  "requests_per_company": 6.300970873786408,
+  "amortized_requests_per_company": 6.41747572815534,
+  "invalid_inputs": [
+    "NOT-AN-ORGNR",
+    "123456789",
+    ""
+  ],
+  "limits": {
+    "max_requests": 1854,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2400.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "hard_max_requests": 1854,
+    "hard_time_budget_seconds": 2472
+  }
+}
