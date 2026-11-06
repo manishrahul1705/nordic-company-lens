@@ -144,6 +144,14 @@ def enforce(envelopes, blobs, bulk):
                 if cache[key] is not None:
                     yield cache[key]
         proof_pages = list(pages(proof))
+        from .round2 import registered_leaders, normalized
+        # Do not revive the rejected email/contact-only or all-board-member
+        # trial through an automatic previous snapshot.
+        if value.get('proof_type')=='registry_declared_hard_contact_tier_b':
+            rejected_trial = rejected_trial or value.get('candidate_origin') in {'registry_email','subunit_registry_email','subunit_registry_website'}
+            if set(value.get('signals',[])) <= {'registry_declared_domain','registered_role_holder'}:
+                leaders=registered_leaders(row.claims)
+                rejected_trial = rejected_trial or not any(normalized(n) in normalized(p.owner_text) for n in leaders for p in proof_pages)
         for e in row.evidence:
             path = urlsplit(e.source_url).path.rstrip('/')
             if e.source_class != 'company_owned' or domain(e.source_url) != host:

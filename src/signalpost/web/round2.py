@@ -15,6 +15,12 @@ PROOF_PATH=re.compile(r'kontakt|contact|om[-_/]?oss|about|personvern|privacy|imp
 def normalized(value):return ' '.join(re.findall(r'\w+',str(value or '').casefold()))
 
 
+def registered_leaders(claims):
+    return [c.value['name'] for c in claims if c.family=='roles' and isinstance(c.value,dict)
+            and isinstance(c.value.get('name'),str) and not c.value.get('inactive')
+            and (c.value.get('role_type') or {}).get('kode') in {'DAGL','LEDE'}]
+
+
 def identity_text(page):
     return ' '.join([page.title,str(page.meta.get('og:site_name','')),*page.identity_headings,*page.logo_names,*page.footer_parts])
 
@@ -33,6 +39,8 @@ def real_page(page,context):
     # Plain footer company names are publisher identity too, not just copyright.
     expected={normalized(n) for n in [context.get('name'),*[u.get('name') for u in context.get('subunits',[])]] if n}
     for value in [page.title,*page.identity_headings,str(page.meta.get('og:site_name',''))]:
+        for entity in re.findall(r'\bAS\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*){0,4}',value):
+            if compact(entity) not in {compact(n) for n in expected}:return 'different_legal_entity'
         for entity in re.findall(r'\b[A-ZÆØÅ0-9][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ0-9][\wÆØÅæøå&.-]*){0,5}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)\b',value):
             actual=normalized(entity)
             if not any(compact(name)==compact(actual) or name.endswith(' '+actual) for name in expected):return 'different_legal_entity'
@@ -68,6 +76,9 @@ def declared_score(page,org,context,origin,leaders,options,enabled=True):
     declared=score(identity_page,org,context,'registry_website',leaders,**options)
     if declared.level=='VERIFIED' and declared.proof_type=='registry_declared_name_tier_a' and not named(page,context.get('name')):
         declared=score(page,org,{**context,'name':''},'registry_website',leaders,**options)
+    # The Step 11 review found shared addresses on unrelated email-domain sites.
+    # Keep the name-based declaration rule; retire its contact-only extension.
+    if declared.proof_type=='registry_declared_hard_contact_tier_b':return original
     if declared.level=='VERIFIED':declared.rule='A' if origin=='registry_email' else 'B'
     return declared if declared.level=='VERIFIED' else original
 

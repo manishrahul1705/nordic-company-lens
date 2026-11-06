@@ -236,7 +236,8 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
     if refresh_candidate:
         candidates = [refresh_candidate] + [c for c in candidates if c.url != refresh_candidate.url]
-    leaders = [c.value.get("name") for c in envelope.claims if c.family == "roles" and isinstance(c.value, dict) and c.value.get("name")]
+    from .round2 import registered_leaders
+    leaders = registered_leaders(envelope.claims)
     proved = set()
     successes = []
     attempts = []

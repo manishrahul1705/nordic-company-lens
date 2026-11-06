@@ -33,10 +33,43 @@ def test_email_body_name_alone_does_not_establish_declared_identity():
 
 def test_email_link_only_and_provider_mismatch():
     p=page('Call 12345678')
-    assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_email'),[]).proof_type=='registry_declared_hard_contact_tier_b'
+    assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_email'),[]).level!='VERIFIED'
     p=page('<h1>Example</h1>',title='Example regnskapskontor')
     assert candidate_proof(p,ORG,{**CONTEXT,'nace':'47.100'},Candidate(p.url,'example.no','registry_email'),[]).reason=='provider_industry_mismatch'
     assert candidate_proof(p,ORG,{**CONTEXT,'nace':'69.201'},Candidate(p.url,'example.no','registry_email'),[]).level=='VERIFIED'
+
+
+def test_prefix_as_publisher_is_not_the_email_domain_subject():
+    p=page('<h1>AS Betongbygg</h1> Call 12345678')
+    assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_email'),[]).reason=='different_legal_entity'
+
+
+def test_board_member_and_auditor_do_not_establish_website_ownership():
+    from signalpost.web.round2 import registered_leaders
+    claims=[SimpleNamespace(family='roles',value={'name':name,'role_type':{'kode':role}})
+            for name,role in [('Director Name','DAGL'),('Chair Name','LEDE'),('Shared Founder','MEDL'),('Audit Firm','REVI')]]
+    assert registered_leaders(claims)==['Director Name','Chair Name']
+
+
+@pytest.mark.parametrize('origin,signals',[
+    ('registry_email',['registry_declared_domain','street','postcode']),
+    ('registry_website',['registry_declared_domain','registered_role_holder']),
+])
+def test_rejected_contact_trials_cannot_return_from_previous_snapshot(tmp_path,origin,signals):
+    from signalpost.web.entity_scope import enforce
+    from signalpost.runner import placeholder,update
+    from signalpost.sources.blobstore import BlobStore
+    from signalpost.sources.extract import Source,Section,add
+    blobs=BlobStore(tmp_path);row=placeholder(ORG,'test','2026-11-06T00:00:00Z',('identity','website'))
+    body=b'<html><title>Another brand</title><main>Shared Founder, CTO. Shared street 1, 0123.</main></html>'
+    source=Source('https://anotherbrand.no',body,blobs.put(body),'2026-11-06T00:00:00Z')
+    identity=Section();add(identity,source,ORG,'identity','identity.legal_name','Example AS','/name');update(row,'identity',identity)
+    role=Section();add(role,source,ORG,'roles','roles.person',{'name':'Shared Founder','role_type':{'kode':'MEDL'}},'/role');update(row,'roles',role)
+    website=Section();add(website,source,ORG,'website','official_website',{'final_url':source.url,'proof_type':'registry_declared_hard_contact_tier_b','candidate_origin':origin,'signals':signals},'/website',source_class='company_owned')
+    website.claims[0].carried_forward=True;update(row,'website',website)
+    enforce([row],blobs,SimpleNamespace(domain_owners={}))
+    assert row.run.sections['website']=='ambiguous'
+    assert not any(c.field=='official_website' for c in row.claims)
 
 
 @pytest.mark.parametrize('body',['<h1>Example</h1> Coming soon','<h1>Example</h1> This domain is for sale',
