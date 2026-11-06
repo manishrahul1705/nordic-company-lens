@@ -369,7 +369,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
             is_authoritative = candidate.origin in {'registry_website', 'subunit_registry_website'} or (refresh_candidate and candidate.domain == refresh_candidate.domain)
             known_source = candidate.origin in {'registry_website', 'subunit_registry_website', 'registry_email', 'subunit_registry_email', 'nav_employer_homepage'} or (refresh_candidate and candidate.domain == refresh_candidate.domain)
             absent_guess = exc.code == 'no_such_domain' and not known_source
-            if not absent_guess and exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error','dns_servfail','dns_unavailable','body_cap','no_such_domain','redirect_limit','content_type'}:
+            if not absent_guess and exc.code in {'website_timeout','website_connect_error','website_tls_error','website_http_5xx','dns_timeout','dns_error','dns_servfail','dns_unavailable','body_cap','no_such_domain','redirect_limit','content_type'}:
                 source_unavailable = True
                 fetchable_failures.add(candidate.domain)
                 if known_source:

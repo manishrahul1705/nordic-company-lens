@@ -3,7 +3,39 @@ from ..models.evidence import Evidence, canonical, utc_now
 from ..models.envelope import Change
 
 CHECKED={'available','not_available','not_applicable'}
-TRANSIENT_FAILURES={'website_timeout','website_connect_error','dns_timeout','dns_servfail','dns_error','dns_unavailable','no_such_domain','timeout','connection_reset','connection_refused'}
+TRANSIENT_FAILURES={'website_timeout','website_connect_error','website_tls_error','dns_timeout','dns_servfail','dns_error','dns_unavailable','no_such_domain','timeout','network_error','connection_reset','connection_refused'}
+
+
+def transient_sections(envelope, old_claims):
+    """Read transport diagnostics without treating HTTP/ownership proof as a timeout."""
+    import json
+    from ..web.policy import domain
+    reasons = {}
+    attempts = []
+    for error in envelope.errors:
+        if error.code in TRANSIENT_FAILURES:
+            reasons.setdefault(error.section, set()).add(error.code)
+        if error.section == 'website' and error.code == 'website_candidates':
+            try:
+                records = json.loads(error.message)
+            except (ValueError, TypeError):
+                continue
+            if isinstance(records, list):
+                attempts.extend(r for r in records if isinstance(r, dict))
+    for attempt in attempts:
+        if attempt.get('reason') in TRANSIENT_FAILURES:
+            reasons.setdefault('website', set()).add(attempt['reason'])
+    old_site = old_claims.get('official_website')
+    old_domain = domain(old_site.value['final_url']) if old_site and old_site.availability == 'available' else None
+    gone = any(a.get('reason') in {'http_404', 'http_410', 'gone'} and
+               (not old_domain or domain(a.get('page') or a.get('url') or a.get('domain', '')) == old_domain) and
+               not str(a.get('page') or a.get('url', '')).endswith('/robots.txt') for a in attempts)
+    refuted = envelope.run.refresh.get('website', {}).get('refuted_previous_website')
+    if gone or refuted or any(e.section == 'website' and e.code == 'foreign_orgnr_on_previous_domain' for e in envelope.errors):
+        reasons.pop('website', None)
+    if 'website' in reasons and any(e.section == 'activity' and e.code == 'website_check_incomplete' for e in envelope.errors):
+        reasons.setdefault('activity', set()).update(reasons['website'])
+    return reasons
 
 def newly_supported_field(field):
     from ..sources.registry_fields import EXTRA,GROUPS
@@ -53,8 +85,32 @@ def apply(envelope, previous, blobs):
     envelope.run.refresh["previous_run_id"] = previous.get("run_id", previous.get("run", {}).get("run_id"))
     envelope.run.refresh["mode"] = "refresh"
     old_sections=previous.get('run',{}).get('sections',old.get('sections',{}))
+    identity_conflict = any(e.section == 'identity' and e.code == 'wrong_company' for e in envelope.errors)
+    transient_reasons = transient_sections(envelope, old_claims)
+    restored = set()
+    envelope.run.refresh['stale_sections'] = {}
+    for family, reasons in transient_reasons.items():
+        before = old_sections.get(family)
+        attempted = envelope.run.sections.get(family)
+        if identity_conflict or before not in {'available', 'not_available', 'ambiguous'} or attempted not in {'failed', 'blocked'}:
+            continue
+        restored.add(family)
+        envelope.run.refresh['stale_sections'][family] = {
+            'previous_state': before, 'attempt_state': attempted,
+            'failed_attempt_at': envelope.run.completed_at, 'failure_codes': sorted(reasons),
+            'attempt_refresh': envelope.run.refresh.get(family, {})}
+        envelope.run.sections[family] = before
+        envelope.claims = [c for c in envelope.claims if c.family != family] + [
+            c.model_copy(update={'carried_forward': True, 'stale_since': envelope.run.completed_at})
+            for c in old_claims.values() if c.family == family]
+        if family in previous_refresh:
+            import copy
+            envelope.run.refresh[family] = copy.deepcopy(previous_refresh[family])
+    envelope.run.refresh['observed_claim_ids'] = sorted(known_ids | {
+        c.id for c in envelope.claims if c.availability == 'available'})
     failed = {family for family,state in envelope.run.sections.items() if state not in CHECKED or old_sections.get(family) not in CHECKED}
-    transient_failed = {e.section for e in envelope.errors if e.code in TRANSIENT_FAILURES}
+    transient_failed = restored | {family for family in transient_reasons
+                                   if envelope.run.sections.get(family) in {'failed', 'blocked'}}
     failed |= transient_failed
     for family in failed:
         before=old_sections.get(family); after=envelope.run.sections.get(family)
@@ -63,8 +119,9 @@ def apply(envelope, previous, blobs):
         if (before!=after or old_values!=new_values) and family not in transient_failed:
             reasons=sorted({e.code for e in envelope.errors if e.section==family})
             envelope.run.refresh['observation_changes'].append({'section':family,'previous_state':before,'current_state':after,'reason':','.join(reasons) or 'section_not_successfully_checked_in_both_runs'})
-    identity_conflict = any(e.section == 'identity' and e.code == 'wrong_company' for e in envelope.errors)
     for family in failed:
+        if family in restored:
+            continue
         if identity_conflict or (family == 'identity' and any(e.section == 'identity' and e.code == 'wrong_company' for e in envelope.errors)):
             continue
         available = {c.field: c for c in envelope.claims if c.family == family and c.availability == "available"}
@@ -88,6 +145,7 @@ def apply(envelope, previous, blobs):
             envelope.claims = [c for c in envelope.claims if c.family != family] + retained
     new_claims = {c.field: c for c in envelope.claims}
     for scoped_family in ('website','activity'):
+        if scoped_family in restored:continue
         checked_urls = envelope.run.refresh.get(scoped_family, {}).get('checked_urls')
         if checked_urls is None or envelope.run.sections.get(scoped_family) not in {'available','not_available'}:continue
         for field, claim in old_claims.items():

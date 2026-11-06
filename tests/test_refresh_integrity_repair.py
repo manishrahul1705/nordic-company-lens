@@ -77,9 +77,9 @@ def test_refresh_oversized_response_preserves_claims_and_sets_failed(tmp_path, m
     assert not any(ch["type"] == "removed" and ch["field"].startswith("contact.") for ch in row.get("changes", []))
 
 
-def test_refresh_dns_nxdomain_preserves_claims_and_sets_failed(tmp_path, monkeypatch):
+def test_refresh_dns_nxdomain_preserves_previous_state_as_stale(tmp_path, monkeypatch):
     """[state_classification & claim_carry_forward]
-    DNS NXDOMAIN (no_such_domain) during refresh must be classified as 'failed',
+    DNS NXDOMAIN during refresh must retain the previous state as stale,
     retaining prior claims with carried_forward=True, rather than producing false removals.
     """
     dns_fail = False
@@ -121,7 +121,8 @@ def test_refresh_dns_nxdomain_preserves_claims_and_sets_failed(tmp_path, monkeyp
     rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
     row = rows[0]
 
-    assert row["run"]["sections"]["website"] == "failed"
+    assert row["run"]["sections"]["website"] == "available"
+    assert row["run"]["refresh"]["stale_sections"]["website"]["attempt_state"] == "failed"
     carried = [c for c in row["claims"] if c["family"] == "website" and c.get("carried_forward")]
     assert any(c["field"] == "official_website" for c in carried)
     assert not any(ch["type"] == "removed" for ch in row.get("changes", []))
@@ -129,7 +130,7 @@ def test_refresh_dns_nxdomain_preserves_claims_and_sets_failed(tmp_path, monkeyp
 
 def test_refresh_transient_dns_failure_preserves_claims(tmp_path, monkeypatch):
     """[state_classification & claim_carry_forward]
-    Transient DNS timeout or error must set section state to 'failed' and carry forward claims.
+    Transient DNS timeout or error must retain the previous state and stale claims.
     """
     dns_fail = False
     async def mock_dns(host, port=443):
@@ -170,7 +171,8 @@ def test_refresh_transient_dns_failure_preserves_claims(tmp_path, monkeypatch):
     rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
     row = rows[0]
 
-    assert row["run"]["sections"]["website"] == "failed"
+    assert row["run"]["sections"]["website"] == "available"
+    assert row["run"]["refresh"]["stale_sections"]["website"]["attempt_state"] == "failed"
     carried = [c for c in row["claims"] if c["family"] == "website" and c.get("carried_forward")]
     assert any(c["field"] == "official_website" for c in carried)
     assert not any(ch["type"] == "removed" for ch in row.get("changes", []))
@@ -354,7 +356,8 @@ def test_refresh_subunit_website_inaccessible_carries_forward(tmp_path, monkeypa
     rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
     row = rows[0]
 
-    assert row["run"]["sections"]["website"] == "failed"
+    assert row["run"]["sections"]["website"] == "available"
+    assert row["run"]["refresh"]["stale_sections"]["website"]["attempt_state"] == "failed"
     carried = [c for c in row["claims"] if c["family"] == "website" and c.get("carried_forward")]
     assert any(c["field"] == "official_website" for c in carried)
     assert not any(ch["type"] == "removed" and ch["field"] == "official_website" for ch in row.get("changes", []))
@@ -363,7 +366,7 @@ def test_refresh_subunit_website_inaccessible_carries_forward(tmp_path, monkeypa
 def test_refresh_checked_low_candidate_does_not_mask_verified_site_timeout(tmp_path, monkeypatch):
     """[state_classification & claim_carry_forward]
     When a non-matching candidate returns HTTP 200 (LOW proof) and the true verified candidate
-    times out, the section state must be 'failed', not 'not_available'.
+    times out, retain the prior verified state and record the failed attempt as stale.
     """
     async def public_dns(host, port=443):
         return ["93.184.216.34"]
@@ -419,7 +422,8 @@ def test_refresh_checked_low_candidate_does_not_mask_verified_site_timeout(tmp_p
     rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
     row = rows[0]
 
-    assert row["run"]["sections"]["website"] == "failed"
+    assert row["run"]["sections"]["website"] == "available"
+    assert row["run"]["refresh"]["stale_sections"]["website"]["attempt_state"] == "failed"
     carried = [c for c in row["claims"] if c["family"] == "website" and c.get("carried_forward")]
     assert any(c["field"] == "official_website" for c in carried)
     assert not any(ch["type"] == "removed" for ch in row.get("changes", []))

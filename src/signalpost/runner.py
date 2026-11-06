@@ -80,6 +80,8 @@ async def isolate(envelope, family, call):
 
 
 def finalize(envelope, old, blobs, budget, began, verify_identity=False):
+    envelope.completed_at = utc_now()
+    envelope.run.completed_at = envelope.completed_at
     for family in envelope.run.sections:
         if any(e.section == family and e.code == "not_started" for e in envelope.errors):
             update(envelope, family, missing(family, "deadline"))
@@ -102,8 +104,6 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
         envelope.errors.append(Error(section="refresh", code="previous_invalid", message=type(exc).__name__))
         envelope.changes = []
         envelope.run.refresh = {"mode": "baseline", "previous_rejected": True}
-    envelope.completed_at = utc_now()
-    envelope.run.completed_at = envelope.completed_at
     envelope.run.legal_identity = {c.field.removeprefix("identity."): c.value for c in envelope.claims if c.family == "identity"}
     failures = any(s == "failed" for s in envelope.run.sections.values())
     envelope.state = "submission_error" if any(m.state == "submission_error" for m in envelope.modules.values()) else "complete"
