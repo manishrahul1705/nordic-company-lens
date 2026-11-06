@@ -1,0 +1,38 @@
+{
+  "run": "bench\\runs\\20261106T142139712906Z-29a30a5",
+  "sections": {
+    "identity": 1000,
+    "roles": 997,
+    "subunits": 774,
+    "accounts": 999,
+    "activity": 999,
+    "hiring": 3,
+    "website": 105,
+    "social": 42
+  },
+  "registry_claims": 2901,
+  "registry_companies": 999,
+  "new_registry_claims": 2370,
+  "new_registry_companies": 993,
+  "registry_http": 15,
+  "registry_http_statuses": {
+    "200": 15
+  },
+  "labels": {
+    "Latest submitted annual accounts year updated": 993,
+    "Registered articles date changed": 86,
+    "Registered share capital changed": 37,
+    "Share capital registration date updated": 37,
+    "Employee information registration date updated (NAV Aa register)": 628,
+    "Employee information registration date updated (Enhetsregisteret)": 626,
+    "New registered workplace": 103,
+    "Registered business address changed": 299,
+    "Registered name changed": 22,
+    "Registered postal address changed": 67,
+    "Workplace removed": 3
+  },
+  "total_http": 6819,
+  "max_http_per_company": 40,
+  "deadlines": 0,
+  "warnings": []
+}
