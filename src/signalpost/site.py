@@ -43,7 +43,9 @@ def link(value, label=None):
 
 
 def chip(state):
-    return f'<span class="chip {esc(state)}">{esc(state.replace("_", " "))}</span>'
+    labels = {'available': 'Found', 'not_available': 'Not found', 'failed': "Couldn't check",
+              'ambiguous': 'Withheld', 'blocked': 'Blocked', 'not_applicable': 'Not applicable'}
+    return f'<span class="chip {esc(state)}">{esc(labels.get(state, state.replace("_", " ")))}</span>'
 
 
 def anchor(claim):
@@ -184,7 +186,7 @@ def fact(claim, records):
         parts.append(f"Currency: {period.get('currency') or 'Unknown'}")
         if period.get('unit'): parts.append(f"Unit: {period['unit']}")
         content += '<p class="financial-meta muted">' + esc(' · '.join(parts)) + '</p>'
-    panel = bool(claim.get('evidence_ids') or available)
+    panel = True
     if panel:
         content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Check the evidence</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
     if claim['family'] == 'accounts':
@@ -295,13 +297,36 @@ def profile(row, title):
     from .synthesis.brief import select
     overview = select(synthesis, claims)
     body += '<section class="summary"><h2>Cited summary</h2>'
-    body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
+    brief = synthesis.get('brief')
+    if brief:
+        contexts = {c['id']: c for c in brief.get('context_claims', [])}
+        for key, heading in [('what', 'What the company is and does'), ('changes', 'What changed since the previous run'), ('unknowns', "What's still unknown")]:
+            body += '<div class="brief-part"><h3>' + esc(heading) + '</h3>'
+            for s in brief[key]:
+                cites = []
+                for cid in s['claim_ids']:
+                    if cid in contexts:
+                        ident = 'context-' + cid[:16]
+                        cites.append(f'<button class="citation" data-toggle="{ident}" aria-controls="{ident}" aria-expanded="false">[source]</button>')
+                    else:
+                        target = anchor(claim_map[cid]) if cid in claim_map else 'change-' + cid
+                        cites.append(f'<a class="citation" href="#{esc(target)}">[source]</a>')
+                body += '<p>' + esc(s['text']) + ' ' + ' '.join(cites) + '</p>'
+                for cid in s['claim_ids']:
+                    if cid in contexts:
+                        context = contexts[cid]
+                        body += f'<div class="evidence" id="context-{cid[:16]}" hidden><p>Run metadata (not an external source)</p><p>Claim ID: <code>{cid}</code></p><pre>{esc(json.dumps(context["value"], ensure_ascii=False, indent=2))}</pre></div>'
+            body += '</div>'
+    else:
+        body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
     remaining = [s for s in sentences if s not in overview]
     if remaining:
         body += '<button type="button" aria-expanded="false" aria-controls="full-summary" data-toggle="full-summary">Show full cited summary</button><div id="full-summary" hidden>'
         body += ''.join(sentence_html(s, claim_map, change_ids) for s in remaining) + '</div>'
     unknowns = synthesis.get('sections', {}).get('unknowns', [])
     if unknowns:
+        if brief:
+            body += '<details class="additional-unknowns"><summary>More detail on missing fields</summary>'
         targets = {'identity': 'what-it-does', 'what_it_does': 'what-it-does',
                    'scale': 'financials', 'accounts': 'financials',
                    'leadership': 'people', 'roles': 'people',
@@ -321,7 +346,11 @@ def profile(row, title):
                 body += '<p class="muted">Reason: ' + esc(reason) + '</p>'
             body += '<a href="#' + esc(target) + '">Review source status</a></li>'
         body += '</ul></div>'
+        if brief:
+            body += '</details>'
     body += '</section>'
+    for family, meta in row['run'].get('refresh', {}).get('stale_sections', {}).items():
+        body += '<aside class="stale stale-refresh"><strong>Stale refresh · ' + esc(family) + '</strong><p>Kept the previous ' + esc(meta['previous_state'].replace('_', ' ')) + ' snapshot. Refresh failed on ' + esc(meta['failed_attempt_at']) + ': ' + esc(', '.join(meta.get('failure_codes', []))) + '.</p></aside>'
     buckets = {key: [] for key, _, _ in GROUPS}
     for c in claims:
         f = c['field']; family = c['family']
@@ -542,7 +571,11 @@ def profile(row, title):
         body += f'<p class="muted">{esc(mode_note)}</p>'
 
     for c in support:
-        body += f'<div id="change-{esc(c["id"])}">{esc(value_text(c))}</div>'
+        body += f'<details id="change-{esc(c["id"])}"><summary>{esc(c["field"])}: {esc(value_text(c["value"]))}</summary>'
+        for eid in c.get('evidence_ids', []):
+            e = records[eid]
+            body += '<div class="evidence-record"><p>' + link(e['source_url']) + '</p><p>Retrieved: ' + esc(e['retrieved_at']) + '</p><p>Reporting period: ' + esc(value_text(e.get('reporting_period'))) + '</p><blockquote>' + esc(e['claim_span']) + '</blockquote></div>'
+        body += '</details>'
 
     # Source availability & observation changes subsection
     observations = row['run'].get('refresh', {}).get('observation_changes', [])
@@ -601,7 +634,6 @@ def company_payload(row):
             for item in value:yield from leaves(item)
         elif value is not None:yield str(value)
     for claim in row['claims']:
-        if not claim.get('evidence_ids') and claim['availability']!='available':continue
         # Validate the entire evidence set before writing any file.
         evidence_panel(claim,evidence)
         referenced.update(claim['evidence_ids'])
@@ -611,6 +643,8 @@ def company_payload(row):
                       'values':list(leaves(v)), 'value':v, 'reporting_period':claim.get('reporting_period'),
                       'identity_level':v.get('identity_level') if isinstance(v,dict) else None})
         facts[-1]['confidence'] = claim.get('confidence')
+        facts[-1]['reasons'] = sorted({e.get('code') for e in row.get('errors', []) if e.get('section') == claim['family'] and e.get('code') != 'website_candidates'})
+        facts[-1]['stale_since'] = claim.get('stale_since')
     if len({c['id'][:16] for c in row['claims']}) != len(row['claims']):
         raise ValueError('Conflicting local fact anchors')
     # Records from one response share source metadata. Store it once without losing fields.
@@ -891,7 +925,7 @@ def compare_page(title):
     body += '<section class="filters compare-inputs-grid" aria-label="Company selectors">'
     for i in range(4):
         body += f'<label>Company {i + 1}<input type="search" id="company-{i}" list="company-options" autocomplete="off" placeholder="Enter company name or orgnr..."></label>'
-    body += '<div class="compare-actions"><button type="button" id="clear-compare" class="btn-clear-filters">Clear all</button></div>'
+    body += '<div class="compare-actions"><button type="button" id="clear-compare" class="btn-clear-filters">Clear all</button><button type="button" id="share-compare">Copy comparison link</button></div>'
     body += '</section><datalist id="company-options"></datalist>'
     body += '<p id="compare-status" role="status" class="compare-status"></p>'
     body += '<div id="comparison" class="comparison"></div>'

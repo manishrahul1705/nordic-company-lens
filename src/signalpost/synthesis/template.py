@@ -167,4 +167,8 @@ def generate(envelope):
         if not getattr(result.sections,key):
             result.sections.unknowns.append(Unknown(family=key,state='not_available',reason='No supported claims are available for this section.'))
     for unknown in result.sections.unknowns:unknown.text=unknown_text(unknown,envelope)
-    return validate_synthesis(result,envelope)
+    result = validate_synthesis(result,envelope)
+    from .company_brief import generate as generate_brief, validate as validate_brief
+    result.brief = validate_brief(generate_brief(result, envelope), result, envelope)
+    result.generator.version = '4'
+    return result

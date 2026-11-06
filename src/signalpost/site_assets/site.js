@@ -4,7 +4,7 @@
   const byId = new Map(records.map(r => [r.orgnr, r]));
   const fold = text => String(text ?? '').toLowerCase().replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const element = (tag, text, cls) => { const e = document.createElement(tag); if(text != null) e.textContent = text; if(cls) e.className = cls; return e; };
-  const stateChip = state => element('span', String(state).replace(/_/g,' '), 'chip '+state);
+  const stateChip = state => element('span', ({available:'Found',not_available:'Not found',failed:"Couldn't check",ambiguous:'Withheld',blocked:'Blocked',not_applicable:'Not applicable'})[state] || String(state).replace(/_/g,' '), 'chip '+state);
   const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : String(value);
 
   const globalDialog = document.getElementById('global-search-dialog');
@@ -156,6 +156,10 @@
       return;
     }
     panel.replaceChildren();
+    if(!fact.evidence_ids.length) {
+      panel.append(element('p', 'No external evidence: ' + (fact.reasons?.join(', ') || 'this section has no supported value') + '.'));
+    }
+    if(fact.stale_since) panel.append(element('p', 'Stale: failed refresh on ' + fact.stale_since + '.', 'stale'));
     for(const id of fact.evidence_ids) {
       const e = evidence.get(id);
       if(!e) continue;
@@ -257,8 +261,14 @@
   function revealFact() {
     const target = document.getElementById(location.hash.slice(1));
     if(!target) return;
+    if(target.tagName === 'DETAILS') target.open = true;
     for(let parent = target.parentElement; parent; parent = parent.parentElement) {
       if(parent.tagName === 'DETAILS') parent.open = true;
+    }
+    const panel = target.querySelector('[data-source]');
+    if(panel) {
+      showEvidence(panel); panel.hidden = false;
+      target.querySelector('[data-toggle]')?.setAttribute('aria-expanded', 'true');
     }
     if(target.scrollIntoView) target.scrollIntoView();
   }
@@ -1143,6 +1153,11 @@
 
     const inputs = [0, 1, 2, 3].map(i => document.getElementById('company-' + i));
     const clearBtn = document.getElementById('clear-compare');
+    document.getElementById('share-compare')?.addEventListener('click', async () => {
+      const status = document.getElementById('compare-status');
+      try { await navigator.clipboard.writeText(location.href); status.textContent = 'Comparison link copied. Share it with this offline site folder.'; }
+      catch { status.textContent = 'Copy the address bar link to share this comparison with the offline site folder.'; }
+    });
 
     const fields = [
       ['area_brief', 'Company brief', 'identity'],

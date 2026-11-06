@@ -52,6 +52,13 @@ class ChangeClaim(Model):
     evidence_ids: list[str]
 
 
+class Brief(Model):
+    what: list[Sentence] = Field(default_factory=list)
+    changes: list[Sentence] = Field(default_factory=list)
+    unknowns: list[Sentence] = Field(default_factory=list)
+    context_claims: list[ChangeClaim] = Field(default_factory=list)
+
+
 class Synthesis(Model):
     mode: Literal['template','llm'] = 'template'
     language: Literal['en'] = 'en'
@@ -60,3 +67,4 @@ class Synthesis(Model):
     checks: Checks = Field(default_factory=Checks)
     generator: Generator
     change_claims: list[ChangeClaim] = Field(default_factory=list)
+    brief: Brief | None = None

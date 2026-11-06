@@ -84,6 +84,7 @@ def apply(envelope, previous, blobs):
     new_evidence = {x.id: x for x in envelope.evidence}
     envelope.run.refresh["previous_run_id"] = previous.get("run_id", previous.get("run", {}).get("run_id"))
     envelope.run.refresh["mode"] = "refresh"
+    envelope.run.refresh['previous_completed_at'] = previous.get('run', {}).get('completed_at', previous.get('completed_at'))
     old_sections=previous.get('run',{}).get('sections',old.get('sections',{}))
     identity_conflict = any(e.section == 'identity' and e.code == 'wrong_company' for e in envelope.errors)
     transient_reasons = transient_sections(envelope, old_claims)

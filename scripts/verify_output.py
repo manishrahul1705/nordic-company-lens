@@ -21,12 +21,18 @@ def verify_synthesis(row):
     raw=row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')
     if raw is None:return 0,0
     synthesis=Synthesis.model_validate(raw)
+    from signalpost.models.envelope import Error
     envelope=SimpleNamespace(organisation_number=row['organisation_number'], claims=[Claim.model_validate(c) for c in data['claims']],
+        errors=[Error.model_validate(e) for e in data.get('errors', [])],
         evidence=[Evidence.model_validate(e) for e in data['evidence']],changes=[Change.model_validate(c) for c in data['changes']],
         run=SimpleNamespace(refresh=row['run']['refresh'] if 'run' in row else data['refresh'],
+                            sections=row['run']['sections'] if 'run' in row else data['sections'],
                             completed_at=row['run']['completed_at'] if 'run' in row else row['completed_at']))
     sentences=[s for key in SECTIONS for s in getattr(synthesis.sections,key)]
     assert all(sentence_error(s,envelope) is None for s in sentences),'Unverified synthesis sentence'
+    if synthesis.brief is not None:
+        from signalpost.synthesis.company_brief import validate as validate_brief
+        validate_brief(synthesis.brief, synthesis, envelope)
     assert synthesis.summary==' '.join(s.text for s in sentences),'Summary differs from checked sentences'
     assert synthesis.checks.sentences==synthesis.checks.cited==len(sentences) and synthesis.checks.values_verified
     assert synthesis.change_claims==change_claims(envelope),'Change citations differ from source events'

@@ -12,6 +12,10 @@ uv sync --frozen
 
 ## Official run
 
+The command writes a static offline site to `out/site`. Open `out/site/index.html` directly: search the directory by company name or organisation number, open a company, or compare two or three companies. The comparison URL preserves the selection; share that link together with the generated site folder. Source buttons show captured excerpts, URLs, retrieval dates and reporting periods. No CDN or web server is required. At narrow widths comparison cards stack vertically.
+
+Each company has a three-part cited brief: what it is and does, previous versus current changes (or a dated no-change notice), and missing or stale sections with their reasons. Citations to run states/dates are explicitly labeled **Run metadata**, while factual citations open the original external evidence. A transient failed refresh retains supported prior facts with a stale note.
+
 Put one Norwegian organisation number on each line in `orgnrs.txt`, then run this command from the repository root:
 
 ```sh

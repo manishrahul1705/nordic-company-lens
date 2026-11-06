@@ -1786,3 +1786,26 @@ button, input, select, nav a { min-height: 40px; }
 /* Accessibility floors override smaller legacy component variants. */
 button, input, select, a[href] { min-height: 40px !important; min-width: 40px !important; }
 a[href] { display: inline-block; max-width: 100%; box-sizing: border-box; vertical-align: middle; }
+
+/* Step 9: contain long source values and stack dense tables on small screens. */
+main, header, section, article, .filters, .summary, .fact, .compare-cell { min-width: 0; }
+input, select { max-width: 100%; min-width: 0; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.brief-part { border-left: 3px solid var(--accent); padding: 0 0 0 16px; margin: 20px 0; }
+.brief-part h3 { margin-bottom: 8px; }
+.citation { font-size: 12px; }
+.stale-refresh { padding: 16px; border: 1px solid #b45309; border-radius: 8px; margin: 16px 0; }
+.compare-actions { flex-wrap: wrap; gap: 8px; }
+@media (max-width: 600px) {
+  .filters, .search-box, .hiring-results, .compare-inputs-grid, .comparison { grid-template-columns: minmax(0, 1fr); }
+  .table-responsive { overflow: visible; }
+  table, tbody, thead, tr, th, td { min-width: 0 !important; max-width: 100%; }
+  table:not(.financial-table), table:not(.financial-table) tbody, table:not(.financial-table) tr,
+  table:not(.financial-table) th, table:not(.financial-table) td { display: block; width: auto; overflow-wrap: anywhere; }
+  table:not(.financial-table) thead { display: none; }
+  td, th { white-space: normal !important; }
+  .values { grid-template-columns: minmax(0, 1fr); }
+  .values dd { margin-left: 0; }
+  .evidence-explorer-header, .freshness-banner, .change-card-header, .hiring-card-header, .hiring-card-footer { flex-wrap: wrap; }
+  .export-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+}
