@@ -29,21 +29,7 @@ def test_dns_failure_rechecks_public_resolvers_without_http(monkeypatch):
     assert not any(address.startswith(('10.','127.','192.168.')) for address in result)
 
 
-def test_fast_nxdomain_skips_public_resolvers(monkeypatch):
-    def unexpected(*args, **kwargs):
-        raise AssertionError('public resolver must not run after fast NXDOMAIN')
-    monkeypatch.setattr(policy.dns.asyncresolver, 'Resolver', unexpected)
-    async def run():
-        async def nxdomain(*args, **kwargs): raise socket.gaierror(socket.EAI_NONAME, 'synthetic NXDOMAIN')
-        monkeypatch.setattr(asyncio.get_running_loop(),'getaddrinfo',nxdomain)
-        with pytest.raises(SourceFailure) as caught:
-            await policy.resolve_public('missing.example',443)
-        return caught.value
-    error=asyncio.run(run())
-    assert error.code=='no_such_domain'
-
-
-def test_registered_nxdomain_candidate_uses_one_public_resolver(monkeypatch):
+def test_fast_nxdomain_rechecks_public_resolvers(monkeypatch):
     calls=[]
     class Resolver:
         def __init__(self, configure=False): self.nameservers=[]
@@ -51,7 +37,23 @@ def test_registered_nxdomain_candidate_uses_one_public_resolver(monkeypatch):
             calls.append((self.nameservers[0],record_type))
             return ['93.184.216.34'] if record_type=='A' else []
     monkeypatch.setattr(policy.dns.asyncresolver,'Resolver',Resolver)
-    state=policy.DNSFallbackBudget();state.register_nxdomain_candidate('org','named.example')
+    async def run():
+        async def nxdomain(*args, **kwargs): raise socket.gaierror(socket.EAI_NONAME, 'synthetic NXDOMAIN')
+        monkeypatch.setattr(asyncio.get_running_loop(),'getaddrinfo',nxdomain)
+        return await policy.resolve_public('missing.example',443)
+    assert asyncio.run(run())==['93.184.216.34']
+    assert {server for server,_ in calls}=={'1.1.1.1','8.8.8.8'}
+
+
+def test_nxdomain_fallback_is_not_limited_to_registered_candidates(monkeypatch):
+    calls=[]
+    class Resolver:
+        def __init__(self, configure=False): self.nameservers=[]
+        async def resolve(self, host, record_type, **kwargs):
+            calls.append((self.nameservers[0],record_type))
+            return ['93.184.216.34'] if record_type=='A' else []
+    monkeypatch.setattr(policy.dns.asyncresolver,'Resolver',Resolver)
+    state=policy.DNSFallbackBudget()
     token=policy.DNS_FALLBACK_STATE.set(state)
     async def run():
         policy.DNS_ORG.set('org')
@@ -60,8 +62,28 @@ def test_registered_nxdomain_candidate_uses_one_public_resolver(monkeypatch):
         return await policy.resolve_public('named.example',443)
     try:
         assert asyncio.run(run())==['93.184.216.34']
-        assert {server for server,_ in calls}=={'1.1.1.1'}
+        assert {server for server,_ in calls}=={'1.1.1.1','8.8.8.8'}
         assert state.metrics()['dns_fallback_successes']==1
+    finally:
+        policy.DNS_FALLBACK_STATE.reset(token)
+
+
+def test_positive_dns_answers_are_cached_for_the_run(monkeypatch):
+    state=policy.DNSFallbackBudget();token=policy.DNS_FALLBACK_STATE.set(state);calls=[]
+    async def run():
+        policy.DNS_ORG.set('cache-company')
+        loop=asyncio.get_running_loop()
+        async def resolved(*args,**kwargs):
+            calls.append(args[0])
+            return [(0,0,0,'',('93.184.216.34',443))]
+        monkeypatch.setattr(loop,'getaddrinfo',resolved)
+        first=await policy.resolve_public('cache.example',443)
+        second=await policy.resolve_public('cache.example',443)
+        return first,second
+    try:
+        first,second=asyncio.run(run())
+        assert first==second==['93.184.216.34']
+        assert calls==['cache.example']
     finally:
         policy.DNS_FALLBACK_STATE.reset(token)
 
@@ -101,16 +123,12 @@ def test_fallback_budget_is_cumulative_per_company(monkeypatch):
             async def servfail(*args, **kwargs): raise socket.gaierror(socket.EAI_AGAIN,'synthetic SERVFAIL')
             monkeypatch.setattr(asyncio.get_running_loop(),'getaddrinfo',servfail)
             # Simulate that earlier candidate failures used the company's cap.
-            state.elapsed_by_company['company-one']=3.99
+            state.elapsed_by_company['company-one']=9.99
             with pytest.raises(SourceFailure):
                 await policy.resolve_public('next.example',443)
         asyncio.run(run())
-        assert state.metrics()['dns_fallback_max_seconds_per_company'] <= 4.0
+        assert state.metrics()['dns_fallback_max_seconds_per_company'] <= policy.DNS_FALLBACK_COMPANY_CAP_SECONDS
         assert state.attempts_by_company.get('company-one',0)==0
-        state.register_nxdomain_candidate('company-one','one.example')
-        state.register_nxdomain_candidate('company-one','two.example')
-        state.register_nxdomain_candidate('company-one','three.example')
-        assert not state.register_nxdomain_candidate('company-one','fourth.example')
     finally:
         policy.DNS_FALLBACK_STATE.reset(token)
 

@@ -290,6 +290,41 @@ class NavHttp:
             return token_from(body.decode('utf8',errors='replace')) if status==200 else None
         except Exception: return None
 
+    async def get_public_ad_page(self, uuid, companies=()):
+        """Fetch one exact public NAV ad page without an Authorization header."""
+        from uuid import UUID
+        uuid=str(UUID(uuid))
+        url='https://arbeidsplassen.nav.no/stillinger/stilling/'+uuid
+        event=self.budget.reserve(url,'arbeidsplassen.nav.no','__nav_prefetch__')
+        event['section']='hiring_public_page_fallback'
+        event['fallback_for']='NAV public feed token unavailable'
+        self.index.metrics['requests']+=1
+        self.index.metrics['public_page_fallback_requests']=self.index.metrics.get('public_page_fallback_requests',0)+1
+        self.index.metrics['detail_requests']=self.index.metrics.get('detail_requests',0)+1
+        by_company=self.index.metrics.setdefault('detail_requests_by_company',{})
+        for org in companies:by_company[org]=by_company.get(org,0)+1
+        began=time.monotonic()
+        try:
+            remaining=max(.001,self.budget.deadline-time.monotonic())
+            async with asyncio.timeout(min(self.config.nav_request_timeout,remaining)):
+                response=await self.client.get(url,headers={'Accept':'text/html','User-Agent':self.config.website_user_agent},
+                    follow_redirects=False,timeout=min(self.config.nav_request_timeout,remaining))
+            event['status']=response.status_code
+            if response.status_code in {301,302,303,307,308}:raise SourceFailure('nav_public_page_redirect_refused')
+            if response.status_code!=200:raise SourceFailure('nav_public_page_http_'+str(response.status_code))
+            body=response.content
+            if len(body)>2_000_000:raise SourceFailure('nav_public_page_body_cap')
+            event['decoded_body_bytes']=len(body)
+            return body,utc_now()
+        except SourceFailure as exc:
+            event['error']=exc.code
+            raise
+        except (TimeoutError,httpx.HTTPError) as exc:
+            event['error']=type(exc).__name__
+            raise SourceFailure('nav_public_page_network_error') from None
+        finally:
+            event['runtime_ms']=round((time.monotonic()-began)*1000)
+
     def save(self):
         try:
             self.cache_path.parent.mkdir(parents=True,exist_ok=True)

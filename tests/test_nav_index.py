@@ -74,6 +74,57 @@ def test_cached_credentials_fallback_and_detail_denial(tmp_path,monkeypatch,deta
     assert index.reason==('token_unavailable' if detail_denied else 'complete')
 
 
+@pytest.mark.parametrize(('page_employer','published'),[(ORG,True),(OTHER,False)])
+def test_public_page_fallback_verifies_indexed_active_ad_without_token(tmp_path,monkeypatch,page_employer,published):
+    from uuid import UUID as UUIDType
+    monkeypatch.delenv('NAV_API_TOKEN',raising=False)
+    path,_=artifact(tmp_path)
+    cfg=config(tmp_path,[ORG],hiring=True,nav_index_path=path,nav_max_details=4)
+    now=datetime.now(timezone.utc)
+    record={'id':str(UUIDType(UUID)),'title':'Rareone Analyst','status':'ACTIVE',
+        'published':(now-timedelta(days=1)).isoformat(),'expires':(now+timedelta(days=10)).isoformat(),
+        'employer':{'orgnr':page_employer,'name':'Rareone AS'},'locationList':[],'occupationCategories':[]}
+    payload='1:'+json.dumps(record,separators=(',',':'))
+    page='<html><h1>Rareone Analyst</h1><script>self.__next_f.push('+json.dumps([1,payload])+');</script></html>'
+    calls=[]
+    def response(request):
+        calls.append((request.url.host,request.url.path,request.headers.get('authorization')))
+        if request.url.path=='/api/publicToken':return httpx.Response(503,text='unavailable')
+        if request.url.host=='arbeidsplassen.nav.no':return httpx.Response(200,text=page)
+        raise AssertionError(request.url)
+    index=Index();blobs=BlobStore(cfg.state_dir)
+    async def names():return {ORG:{'Rareone AS'}}
+    names.initial_names={ORG:{'Rareone AS'}}
+    async def gate():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:
+            await prefetch(client,cfg,Budget(cfg),blobs,index,names)
+    asyncio.run(gate())
+    row=placeholder(ORG,'test',utc_now(),('identity','roles','subunits','accounts','hiring'))
+    row.run.sections['subunits']='not_available'
+    result=section(row,index,blobs)
+    claims=[c for c in result.claims if c.family=='hiring' and c.availability=='available']
+    assert index.reason=='token_unavailable' and not index.blocked
+    if published:
+        assert index.metrics['public_page_fallback_verified']==1
+        assert len(claims)==1 and claims[0].value['employer_orgnr']==ORG
+    else:
+        assert not claims
+        assert index.metrics['public_page_fallback_failures']['nav_public_page_employer_mismatch']==1
+    assert any(host=='arbeidsplassen.nav.no' and auth is None for host,_,auth in calls)
+    assert sum(path=='/api/publicToken' for _,path,_ in calls)==1
+
+
+def test_public_page_parser_returns_exact_employer_for_scope_check():
+    from signalpost.sources.nav_public_page import parse_public_ad_page
+    now=datetime.now(timezone.utc)
+    page_data={'id':UUID,'title':'Rareone Analyst','status':'ACTIVE',
+        'published':(now-timedelta(days=1)).isoformat(),'expires':(now+timedelta(days=10)).isoformat(),
+        'employer':{'orgnr':OTHER,'name':'Other AS'}}
+    payload='1:'+json.dumps(page_data,separators=(',',':'))
+    page='<h1>Rareone Analyst</h1><script>self.__next_f.push('+json.dumps([1,payload])+');</script>'
+    assert parse_public_ad_page(page.encode(),UUID)['employer']['orgnr']==OTHER
+
+
 def test_load_version_age_counts_and_personal_text_schema(tmp_path):
     path,data=artifact(tmp_path)
     assert load(path)[0]==data

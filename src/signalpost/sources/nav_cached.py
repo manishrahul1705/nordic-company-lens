@@ -196,6 +196,72 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
             except SourceFailure as retry:
                 if retry.code=='token_unavailable':index.blocked=True;index.reason='token_unavailable'
                 raise
+
+    async def verify_indexed_ads_on_public_pages():
+        """Keep positive indexed ads only when their public NAV page proves them."""
+        from .nav_public_page import parse_public_ad_page
+        now_dt=now or datetime.now(timezone.utc)
+        index.metrics.update({'public_page_fallback_attempted':True,
+                              'public_page_fallback_candidates':len(state.discovered),
+                              'public_page_fallback_verified':0,
+                              'public_page_fallback_failures':{}})
+        # With no matching indexed ads the source remains blocked. A positive
+        # candidate can still be individually published if its page verifies.
+        index.blocked=not bool(state.discovered)
+        for uuid in sorted(state.discovered):
+            if index.metrics.get('detail_requests',0)>=index.metrics.get('detail_request_cap',0):
+                index.metrics['public_page_fallback_stopped']='detail_request_cap'
+                break
+            affected=state.affected.get(uuid,set())
+            indexed=state.members.get(uuid)
+            if not affected or not indexed:
+                continue
+            try:
+                raw_page,retrieved=await http.get_public_ad_page(uuid,companies=affected)
+                record=parse_public_ad_page(raw_page,uuid)
+                if record is None:
+                    raise SourceFailure('nav_public_page_unverified')
+                org=record['employer']['orgnr']
+                if org!=indexed['employer_orgnr'] or not any(org in state.scopes.get(parent,set()) for parent in affected):
+                    raise SourceFailure('nav_public_page_employer_mismatch')
+                expires=timestamp(record['expires']);published=timestamp(record['published'])
+                normalized={'ad_content':record}
+                body=json.dumps(normalized,ensure_ascii=False,separators=(',',':'),sort_keys=True).encode('utf-8')
+                sha=await nav_offload(blobs.put,body)
+                source_url='https://arbeidsplassen.nav.no/stillinger/stilling/'+uuid
+                provenance={'verification':'public_ad_page_fallback','public_page_sha256':__import__('hashlib').sha256(raw_page).hexdigest(),
+                            'indexed_candidate_version':data['index_version']}
+                if record['status']!='ACTIVE' or expires<=now_dt:
+                    index.live_closed.add(uuid);index.closed.add(uuid)
+                    index.closure_proofs[uuid]=(sha,source_url,retrieved,'/ad_content/status' if record['status']!='ACTIVE' else '/ad_content/expires',
+                                                 record['status'] if record['status']!='ACTIVE' else record['expires'],provenance)
+                    index.metrics['public_page_fallback_verified']+=1
+                    continue
+                if published>now_dt:
+                    raise SourceFailure('nav_public_page_future_ad')
+                location=[]
+                for item in record.get('locationList') or []:
+                    if isinstance(item,dict):
+                        location.append({'municipality':item.get('municipal') or item.get('municipality'),
+                                         'city':item.get('city')})
+                value={'uuid':uuid,'employer_orgnr':org,'status':'ACTIVE','title':record['title'],
+                       'location':location or None,'published':record['published'],'expires':record['expires'],
+                       'occupation_categories':record.get('occupationCategories') or None,
+                       'url':source_url,
+                       'availability':{'location':'available' if location else 'not_available',
+                                       'occupation_categories':'available' if record.get('occupationCategories') else 'not_available'}}
+                ad=Ad(value,sha,source_url,retrieved,None,None,None,None,provenance)
+                for parent in affected:
+                    index.ads.setdefault(parent,[]).append(ad)
+                index.ads.setdefault(org,[]).append(ad)
+                index.closed.discard(uuid)
+                index.metrics['public_page_fallback_verified']+=1
+            except asyncio.CancelledError:
+                raise
+            except Exception as exc:
+                code=exc.code if isinstance(exc,SourceFailure) else type(exc).__name__
+                failures=index.metrics['public_page_fallback_failures']
+                failures[code]=failures.get(code,0)+1
     mode='historical_snapshot' if historical_snapshot else 'declared_index'
     index.metrics.update({'source_mode':mode,'index_version':data['index_version'],'index_built_at':data['built_at'],
         'index_age_days':age,'index_compressed_bytes':path.stat().st_size,'index_ads':data['ads_count'],
@@ -322,7 +388,10 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                     token=None
             from_environment=bool(token)
             token=token or await http.public_token()
-            if not token:index.blocked=True;index.reason='token_unavailable';return index
+            if not token:
+                index.reason='token_unavailable'
+                await verify_indexed_ads_on_public_pages()
+                return index
             header_task=asyncio.create_task(headers())
             tasks=[header_task,asyncio.create_task(prepare())]+[asyncio.create_task(worker()) for _ in range(config.nav_concurrency)]
             url=data['cursor'];seen=set();feed_began=time.monotonic()
@@ -373,9 +442,9 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
         index.incomplete_orgs=incomplete
         index.coverage_ready=feed_done and header_done and state.ready
         index.complete=index.coverage_ready and not incomplete and not index.blocked
-        if not index.blocked and not feed_done:
+        if not index.blocked and not feed_done and not index.metrics.get('public_page_fallback_attempted'):
             index.metrics['failure_cause']=index.reason;index.reason='forward_feed_incomplete'
-        elif not index.blocked and not index.complete:
+        elif not index.blocked and not index.complete and not index.metrics.get('public_page_fallback_attempted'):
             index.metrics['failure_cause']=index.reason;index.reason='detail_unverified'
         total=time.monotonic()-began
         parent_ids=set(state.scopes)

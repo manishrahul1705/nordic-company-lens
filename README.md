@@ -63,6 +63,8 @@ Wikidata's CC0 structured data is queried by exact Norwegian organisation number
 | Paid search | Disabled; maximum queries defaults to `0` | No provider is called | $0 |
 | Language models | None; summaries use deterministic templates | No model provider is called | $0 |
 
+No personal NAV credential is required. When `NAV_API_TOKEN` is unset, the runner retrieves NAV's published public token from `https://pam-stilling-feed.nav.no/api/publicToken` and keeps it in memory for that run; it is never logged or written to output or state.
+
 The command has **$0 provider cost**. Compute, storage and network costs are excluded. `--synthesis` accepts `template` (default) or `auto`, which both use templates; `llm` is rejected. Optional Brave search requires both `SIGNALPOST_SEARCH_PROVIDER=brave` and `BRAVE_SEARCH_API_KEY`, plus a positive `--max-cost-usd` budget. If explicitly enabled, it estimates $0.005 per query and only nominates ownership-proof candidates. Keys are never written to run outputs.
 
 ## Limitations and checks

@@ -91,11 +91,6 @@ class WebsiteHttp:
 
     async def precheck(self, candidate, org):
         host = urlsplit(candidate.url).hostname
-        if candidate.origin in {'registry_website','registry_email','subunit_registry_website',
-                                'subunit_registry_email','legal_name_slug','subunit_name_slug'}:
-            fallback_state = policy.DNS_FALLBACK_STATE.get()
-            if fallback_state is not None:
-                fallback_state.register_nxdomain_candidate(org,host)
         if candidate.origin == 'registry_website' or not self.config.dns_precheck:
             return
         dns_cap = 74 if candidate.origin == 'search_brave' else 64
