@@ -1,0 +1,32 @@
+{
+  "source": "bench\\cache\\s6-step12-cleanup-step11-recheck",
+  "method": "Step 12 reviewed saved-evidence projection; not a live baseline rerun",
+  "sections": {
+    "identity": 1000,
+    "roles": 997,
+    "subunits": 774,
+    "accounts": 999,
+    "website": 107,
+    "hiring": 3,
+    "activity": 236,
+    "social": 43,
+    "location_profiles": 997
+  },
+  "published_claims_by_family": {
+    "identity": 28716,
+    "subunits": 6527,
+    "roles": 11803,
+    "accounts": 62584,
+    "activity": 610,
+    "hiring": 3,
+    "website": 781
+  },
+  "historical_missing_blob": "58470eb16cd4ccb2b42a170fbc21c405bada197e2071da426d6652f5ddb8c6a9",
+  "depth_notes": {
+    "financial_years": "Existing latest fields and history fields already carry exact fiscal periods; Step 13 removes the three-year cap, without duplicate aliases.",
+    "roles": "All role types were already extracted; Step 13 removes exact duplicate source entries only. Website proof remains restricted to director/chair, never all role holders.",
+    "locations": "Postal claims were already present; Step 13 exposes distinct typed places using those claims, with no new downloads or duplicate fact aliases.",
+    "articles": "Remove discovery/output item caps, retain article-side dates and source proof, preserve verified partial items on a later budget/fetch failure.",
+    "social": "Existing every-platform extraction/attribution remains unchanged; newly proved sites feed that existing path."
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "organisation_number": "999536999",
+    "company": "EMAGINE AS",
+    "nomination": {
+      "domain": "prodata.com",
+      "name": "PRODATA CONSULT AS",
+      "source": "registered_subunit",
+      "evidence_ids": [
+        "ff18d4f31c24ce93d68035d177dba809e227ba9904e687b715d81771bd8b49fc"
+      ]
+    },
+    "observed_proof": [
+      {
+        "domain": "prodata.com",
+        "origin": "brand_name",
+        "subunit_orgnr": null,
+        "fetched": true,
+        "accepted": false,
+        "discovered_proof_targets": [],
+        "proof_pages_fetched": 3,
+        "proof_type": "signals",
+        "rule": null,
+        "reason": "insufficient_owner_proof"
+      }
+    ]
+  },
+  {
+    "organisation_number": "928764125",
+    "company": "CLIPS AS",
+    "nomination": {
+      "domain": "domeneporten.no",
+      "name": "Domeneporten",
+      "source": "fetched_company_identity",
+      "evidence_ids": [
+        "f42e9fa57eb172436d950f2f16fa4d56dc8a2876af5ebd9927d0aba3e8f50610"
+      ]
+    },
+    "observed_proof": [
+      {
+        "domain": "domeneporten.no",
+        "origin": "brand_name",
+        "subunit_orgnr": null,
+        "fetched": true,
+        "accepted": false,
+        "discovered_proof_targets": [],
+        "proof_type": "signals",
+        "rule": null,
+        "reason": "name_without_suffix_insufficient_contacts_or_domain"
+      }
+    ]
+  },
+  {
+    "organisation_number": "996744744",
+    "company": "NORCON NORWAY AS",
+    "nomination": {
+      "domain": "norcon.com",
+      "name": "NORCON",
+      "source": "registered_subunit",
+      "evidence_ids": [
+        "557a53cd39ac6e053f645f58a7427a59356afcf469eb8b8bb105d54648931b29"
+      ]
+    },
+    "observed_proof": [
+      {
+        "domain": "norcon.com",
+        "origin": "brand_name",
+        "subunit_orgnr": null,
+        "fetched": true,
+        "accepted": false,
+        "discovered_proof_targets": [],
+        "proof_type": "signals",
+        "rule": null,
+        "reason": "insufficient_owner_proof"
+      }
+    ]
+  },
+  {
+    "organisation_number": "929481070",
+    "company": "SNAPPY AS",
+    "nomination": {
+      "domain": "snappysoftware.com",
+      "name": "SNAPPY SOFTWARE",
+      "source": "registered_subunit",
+      "evidence_ids": [
+        "665cc0e52de53ced9c1f332b175bc673e999cb9411fc6e336939f7e6375ee528"
+      ]
+    },
+    "observed_proof": [
+      {
+        "domain": "snappysoftware.com",
+        "origin": "brand_name",
+        "subunit_orgnr": null,
+        "fetched": true,
+        "accepted": false,
+        "discovered_proof_targets": [],
+        "proof_pages_fetched": 5,
+        "proof_type": "signals",
+        "rule": null,
+        "reason": "name_without_suffix_insufficient_contacts_or_domain"
+      }
+    ]
+  },
+  {
+    "organisation_number": "919280204",
+    "company": "NESFJELLET PROSJEKTUTVIKLING AS",
+    "nomination": {
+      "domain": "hotellnesbyen.com",
+      "name": "HOTELL NESBYEN",
+      "source": "registered_subunit",
+      "evidence_ids": [
+        "9836b61348d73d88f75023d1a605a4e0c81d166af00e2f0e49c1a7c395fbd90e"
+      ]
+    },
+    "observed_proof": [
+      {
+        "domain": "hotellnesbyen.com",
+        "origin": "brand_name",
+        "subunit_orgnr": null,
+        "fetched": true,
+        "accepted": false
+      }
+    ]
+  },
+  {
+    "organisation_number": "986028269",
+    "company": "ZINZINO AS",
+    "nomination": {
+      "domain": "inspirechangeinlife.com",
+      "name": "Inspire Change in Life",
+      "source": "fetched_company_identity",
+      "evidence_ids": [
+        "27bbe0f8deecce8287c4a91e3de475fe4cafddc2541d1a2edc0148c1236850ab"
+      ]
+    },
+    "observed_proof": [
+      {
+        "domain": "inspirechangeinlife.com",
+        "origin": "brand_name",
+        "subunit_orgnr": null,
+        "fetched": true,
+        "accepted": false
+      }
+    ]
+  }
+]

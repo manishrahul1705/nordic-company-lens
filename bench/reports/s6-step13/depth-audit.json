@@ -1,0 +1,41 @@
+{
+  "role_records_by_code": {
+    "DAGL": 651,
+    "LEDE": 988,
+    "VARA": 305,
+    "REGN": 700,
+    "MEDL": 1025,
+    "REVI": 368,
+    "FF\u00d8R": 66,
+    "REPR": 1,
+    "KONT": 2,
+    "HFOR": 6,
+    "BEST": 1,
+    "DTPR": 13,
+    "INNH": 2,
+    "BOBE": 3,
+    "DTSO": 6,
+    "NEST": 1
+  },
+  "companies_by_financial_year_count": {
+    "3": 859,
+    "1": 80,
+    "2": 60,
+    "0": 1
+  },
+  "reported_fiscal_years": [
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+  ],
+  "maximum_years_observed": 3,
+  "brand_nomination_source_counts": {
+    "exact_nav_employer": 4,
+    "registered_subunit": 48,
+    "fetched_company_identity": 72
+  },
+  "brand_host_http_requests": 61,
+  "brand_host_request_attribution": "Website HTTP events on the newly nominated brand registrable hosts; includes redirects/proof pages and can overlap second-pass requests."
+}

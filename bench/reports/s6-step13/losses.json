@@ -1,0 +1,61 @@
+[
+  {
+    "organisation_number": "911691248",
+    "company": "ISTAD ART SOLUTION NORWAY NUF",
+    "previous": {
+      "final_url": "https://www.pederistad.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "registry_declared_hard_contact_tier_b",
+      "proof_page_url": "https://www.pederistad.no/",
+      "signals": [
+        "registry_declared_domain",
+        "registered_role_holder"
+      ],
+      "points": 4,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "B",
+      "content_allowed": false
+    },
+    "state": "ambiguous",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+      }
+    ]
+  },
+  {
+    "organisation_number": "929481070",
+    "company": "SNAPPY AS",
+    "previous": {
+      "final_url": "https://snappy.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "unique_no_corroborated",
+      "proof_page_url": "https://snappy.no/About",
+      "signals": [
+        "registry_unique_name",
+        "name_in_identity",
+        "registry_corroboration"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "state": "ambiguous",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"snappy.no\", \"level\": \"MEDIUM\", \"points\": 0, \"signals\": [\"legal_name_without_suffix\"], \"origin\": \"legal_name_slug\", \"reason\": \"name_without_suffix_insufficient_contacts_or_domain\", \"title\": \" Snappy.no\", \"proof_page_url\": \"https://snappy.no/\"}, {\"domain\": \"snappysoftware.no\", \"origin\": \"subunit_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappy-software.no\", \"origin\": \"subunit_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.no\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappysoftware.com\", \"level\": \"MEDIUM\", \"points\": 0, \"signals\": [\"legal_name_without_suffix\"], \"origin\": \"brand_name\", \"reason\": \"name_without_suffix_insufficient_contacts_or_domain\", \"title\": \"Snappy Fax Software - Snappy Software\", \"proof_page_url\": \"https://www.snappysoftware.com/\"}, {\"domain\": \"snappyno.com\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappy.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://snappy.no/\", \"final_url\": \"https://snappy.no/\", \"status\": 200}, {\"domain\": \"snappysoftware.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://snappysoftware.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappysoftware.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://www.snappysoftware.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappysoftware.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://www.snappysoftware.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappysoftware.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://snappysoftware.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappy-software.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://snappy-software.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappy-software.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://www.snappy-software.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappy-software.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://www.snappy-software.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappy-software.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://snappy-software.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.no\", \"origin\": \"brand_name\", \"url\": \"https://snappyno.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.no\", \"origin\": \"brand_name\", \"url\": \"https://www.snappyno.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.no\", \"origin\": \"brand_name\", \"url\": \"http://www.snappyno.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.no\", \"origin\": \"brand_name\", \"url\": \"http://snappyno.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappysoftware.com\", \"origin\": \"brand_name\", \"url\": \"https://snappysoftware.com/\", \"final_url\": \"https://www.snappysoftware.com/\", \"status\": 200}, {\"domain\": \"snappyno.com\", \"origin\": \"brand_name\", \"url\": \"https://snappyno.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.com\", \"origin\": \"brand_name\", \"url\": \"https://www.snappyno.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.com\", \"origin\": \"brand_name\", \"url\": \"http://www.snappyno.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"snappyno.com\", \"origin\": \"brand_name\", \"url\": \"http://snappyno.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ]
+  }
+]

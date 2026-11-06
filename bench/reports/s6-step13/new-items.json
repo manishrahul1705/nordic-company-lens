@@ -1,0 +1,1881 @@
+[
+  {
+    "organisation_number": "823147112",
+    "company": "KN ELEKTRO AS",
+    "family": "website",
+    "field": "website_description.og_description.b40b2adbc01cb9ca",
+    "value": {
+      "text": "97 17 10 29 post@knelektro.no Roresanden 109,4885 Grimstad Har du spørsmål eller ønsker å bestille våre tjenester? Legg igjen telefonummer eller epost så tar vi kontakt med deg! Jan Olav Knutsen Daglig leder / installatør Mob: 97 17 10 29 jan.olav@knelektro.no Odd Anton Nilsen Prosjektleder / elektr",
+      "kind": "og_description",
+      "self_description": true,
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "80f2dd5c47acc9ebfed45e7bbce54c9f69f0dbc923bf0ccd909c294cae347fe6"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "7c084630bc2616ca918afae77897f1a42cbc82630f6bc751629fe3d1ed0ffac1",
+        "source_url": "https://knelektro.no/kontakt/",
+        "source_class": "company_owned",
+        "content_sha256": "97ae609ba54698f0d048fb3581d0173829cfa663c69aedeef610ed7d68247801",
+        "claim_span": "<meta property=\"og:description\" content=\"97 17 10 29 post@knelektro.no Roresanden 109,4885 Grimstad Har du spørsmål eller ønsker å bestille våre tjenester? Legg igjen telefonummer eller epost så tar vi kontakt med deg! Jan Olav Knutsen Daglig leder / installatør Mob: 97 17 10 29 jan.olav@knelektro.n",
+        "locator": "meta:og:description@content",
+        "retrieved_at": "2026-11-06T12:59:33.190911Z",
+        "reporting_period": null
+      },
+      {
+        "id": "f77779e0e10dd8209ac7f237dbe017f2fa670a842f0a86ea64b1f28c753d6f4a",
+        "source_url": "https://knelektro.no/",
+        "source_class": "company_owned",
+        "content_sha256": "0d73181d11d3769980bbe77e3407bf981ba35067424e17b37699e577636256d6",
+        "claim_span": "or-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><b>OM KN ELEKTRO AS</b></p>\n<p>KN Elektro AS har lang erfaring innen ulike elektriske installasjoner og er veldig opptatt av deg som kunde. Vi ønsker å levere de beste produktene og tjenestene til enhver tid.</p>\n<p>Våre ansatte har lang erfaring og alle nødvendige ",
+        "locator": "identity-proof:823147112",
+        "retrieved_at": "2026-11-06T12:59:31.326361Z",
+        "reporting_period": null
+      },
+      {
+        "id": "d43d5eb3f7b4643b8852fc980851351f84a9ac688b4c71741fa99e815c570580",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "content_sha256": "5bb447ff2a53cc92058eaaee05792e441b0b95b229c2e88fea762b41745e585a",
+        "claim_span": "823147112,KN ELEKTRO AS,AS,Aksjeselskap,43.210,Elektrisk installasjonsarbeid,,,,,,,true,,2026-10-12,2026-10-10,,,,,,,,,,,,Roresanden 109,GRIMSTAD,4885,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,2019-07-31,2019-07-08,true,2019-07-01,2019-08-22,,,false,,true,2019-07-31,false,false,,fa",
+        "locator": "row:823147112/column:navn",
+        "retrieved_at": "2026-11-06T12:58:50.569765Z",
+        "reporting_period": null
+      },
+      {
+        "id": "43539496c85d198e5c5630b2b1836da6ef03a3302b28f2c0cb176786a3312859",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "content_sha256": "5bb447ff2a53cc92058eaaee05792e441b0b95b229c2e88fea762b41745e585a",
+        "claim_span": ",,,,,,true,,2026-10-12,2026-10-10,,,,,,,,,,,,Roresanden 109,GRIMSTAD,4885,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,2019-07-31,2019-07-08,true,2019-07-01,2019-08-22,,,false,,true,2019-07-31,false,false,,false,,false,,false,,,,,,,Bokmål,2019-07-08,\"Elektrisk installasjonsarbeid, sal",
+        "locator": "row:823147112/column:forretningsadresse.kommune",
+        "retrieved_at": "2026-11-06T12:58:50.569765Z",
+        "reporting_period": null
+      },
+      {
+        "id": "88c1395b4539e5cad7f70df492853704b8a268dc4a4bb3b051647d05c8eca573",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "content_sha256": "5bb447ff2a53cc92058eaaee05792e441b0b95b229c2e88fea762b41745e585a",
+        "claim_span": "llasjonsarbeid,,,,,,,true,,2026-10-12,2026-10-10,,,,,,,,,,,,Roresanden 109,GRIMSTAD,4885,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,2019-07-31,2019-07-08,true,2019-07-01,2019-08-22,,,false,,true,2019-07-31,false,false,,false,,false,,false,,,,,,,Bokmål,2019-07-08,\"Elektrisk installas",
+        "locator": "row:823147112/columns:forretningsadresse.*",
+        "retrieved_at": "2026-11-06T12:58:50.569765Z",
+        "reporting_period": null
+      },
+      {
+        "id": "458aa740dd99d746cf5698220d0f41ee745ad76280c5c4ce071be9117d734443",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "content_sha256": "5bb447ff2a53cc92058eaaee05792e441b0b95b229c2e88fea762b41745e585a",
+        "claim_span": "organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns",
+        "locator": "row:823147112/columns:postadresse.*",
+        "retrieved_at": "2026-11-06T12:58:50.569765Z",
+        "reporting_period": null
+      },
+      {
+        "id": "f39f3fcbb91950ca409c68d089efe850305d525d623b9ba67a7cc23e6386dcc7",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/823159102\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/823147112\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Roresanden 109\"],\"kommune\":\"GRIMSTAD\",\"kommunenummer\":\"4202\",\"land\":\"Norge\",\"la",
+        "locator": "/_embedded/underenheter/0",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      },
+      {
+        "id": "e25048ece2b72555b1cc1f8e783b83c16cb821496335e9f50d46826cb9a63140",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": ":\"43.210\"},\"navn\":\"KN ELEKTRO AS\",\"oppstartsdato\":\"2019-08-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"823159102",
+        "locator": "/_embedded/underenheter/0/oppstartsdato",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      },
+      {
+        "id": "faf4d26e4650d591e87aa9c3b078acb1a2de31af17fcdfcb82bb82f2c98dcaf3",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": ":\"2026-10-10\",\"registreringsdatoEnhetsregisteret\":\"2019-08-05\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0\"}},\"page\":{\"number\":0,\"size\":1000,\"totalElemen",
+        "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      },
+      {
+        "id": "7f18ba3ea34ee79c4da876eea67b18fcbb2c9561435bcdf564b01f811db86f99",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": ",\"oppstartsdato\":\"2019-08-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"823159102\",\"overordnetEnhet\":\"823147112\",\"",
+        "locator": "/_embedded/underenheter/0/organisasjonsform",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      },
+      {
+        "id": "b7c330e423fa0a64399d9382274590a6f614ca82ed87404784219926f95b0e6e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": "oststed\":\"GRIMSTAD\"},\"harRegistrertAntallAnsatte\":true,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Elektrisk installasjonsarbeid\",\"kode\":\"43.210\"},\"navn\":\"KN ELEKTRO AS\",\"oppstartsdato\":\"2019-08-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/org",
+        "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      },
+      {
+        "id": "3fb18150951132b96a2d2aa19a6d453fe67aef96e1d7156ceb01561b3fea3c2a",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": "gisteret\":\"2019-08-05\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0\"}},\"page\":{\"number\":0,\"size\":1000,\"totalElements\":1,\"totalPages\":1}}",
+        "locator": "/_embedded/underenheter/0/registrertIMvaregisteret",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      },
+      {
+        "id": "baf1a90e343395dd90c367e3235a82d2c1628fc335f48665250773903bff1599",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": ",\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2026-10-12\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2026-10-10\",\"registreringsdatoEnhetsregisteret\":\"2019-08-05\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregiste",
+        "locator": "/_embedded/underenheter/0/registreringsdatoAntallAnsatteEnhetsregisteret",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      },
+      {
+        "id": "23bc29d6191ae657821f65ff53f131b700d508e980705a61c9f1f0e75d134f30",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page=0",
+        "source_class": "official_registry",
+        "content_sha256": "db2eab86726607e25211843eaf1ea69c0ad743ea8b0a960802618d004f16146d",
+        "claim_span": "\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2026-10-10\",\"registreringsdatoEnhetsregisteret\":\"2019-08-05\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823147112&size=1000&page",
+        "locator": "/_embedded/underenheter/0/registreringsdatoAntallAnsatteNAVAaregisteret",
+        "retrieved_at": "2026-11-06T12:59:01.736301Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct KN Elektro contact-page metadata; exact own footer/company address. This is a truncated metadata self-description, not a new registry activity description."
+  },
+  {
+    "organisation_number": "823147112",
+    "company": "KN ELEKTRO AS",
+    "family": "website",
+    "field": "contact.email.e9c127427643df9d6a09",
+    "value": "jan.olav@knelektro.no",
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "68c3fb9bb25bb83527c8186d92a6586a539359a43b9b269c3fd668e600a025ba",
+        "source_url": "https://knelektro.no/kontakt/",
+        "source_class": "company_owned",
+        "content_sha256": "97ae609ba54698f0d048fb3581d0173829cfa663c69aedeef610ed7d68247801",
+        "claim_span": "<a style=\"color: #383838\" href=\"mailto:jan.olav@knelektro.no\">",
+        "locator": "contact:jan.olav@knelektro.no",
+        "retrieved_at": "2026-11-06T12:59:33.190911Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct company-published staff email on KN Elektro contact page, under its own footer. No claim that it is a registry email."
+  },
+  {
+    "organisation_number": "823147112",
+    "company": "KN ELEKTRO AS",
+    "family": "website",
+    "field": "contact.email.4ecde82dadd25e17bd75",
+    "value": "odd.anton@knelektro.no",
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "e3eada7a1899a00bf685c4aa3a03fa638c253bc1782e49de2c9b6cfe27018e1c",
+        "source_url": "https://knelektro.no/kontakt/",
+        "source_class": "company_owned",
+        "content_sha256": "97ae609ba54698f0d048fb3581d0173829cfa663c69aedeef610ed7d68247801",
+        "claim_span": "<a style=\"color: #383838\" href=\"mailto:odd.anton@knelektro.no\">",
+        "locator": "contact:odd.anton@knelektro.no",
+        "retrieved_at": "2026-11-06T12:59:33.190911Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct company-published staff email on KN Elektro contact page, under its own footer. No claim that it is a registry email."
+  },
+  {
+    "organisation_number": "936629466",
+    "company": "CLOSVA AS",
+    "family": "activity",
+    "field": "dated_item.5caaebbca94f93a77909",
+    "value": {
+      "title": "Andreas blir kommersiell direktør og investor i Closva",
+      "title_source": "article_page",
+      "url": "https://closva.com/no/artikler/andreas-rasmussen-blir-med-i-closva",
+      "date": "2026-10-09",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "b9813a7346116757340de1972668509ac6408e7daee707b89cf18c2dc570e9ff",
+        "source_url": "https://closva.com/no/artikler/andreas-rasmussen-blir-med-i-closva",
+        "source_class": "company_owned",
+        "content_sha256": "b836016c8b96ec5eb92586950814ec5b795b7b76cea7f003d6ba74f2f3ea5a73",
+        "claim_span": "perty=\"article:published_time\" content=\"2026-10-09\" />\n    <meta name=\"twitter:card\" conte",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T12:59:41.909844Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Closva AS publication; Norwegian and Danish pages both explicitly name owner Closva AS, orgnr 936629466. Language editions are distinct article URLs of two announcements, not four independent transactions."
+  },
+  {
+    "organisation_number": "936629466",
+    "company": "CLOSVA AS",
+    "family": "activity",
+    "field": "dated_item.5bd990fa461a5aac6772",
+    "value": {
+      "title": "Andreas bliver Chief Commercial Officer og investor i Closva",
+      "title_source": "article_page",
+      "url": "https://closva.com/dk/artikler/andreas-rasmussen-bliver-en-del-af-closva",
+      "date": "2026-10-09",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "beee07ebdeb22c3d620ceaf628445c3e4a74b567d0e819255aa45c669c4bce34",
+        "source_url": "https://closva.com/dk/artikler/andreas-rasmussen-bliver-en-del-af-closva",
+        "source_class": "company_owned",
+        "content_sha256": "1b137cae93c106da7ac56c898269ed93baccb65125b730cae2126cc14973e2d5",
+        "claim_span": "perty=\"article:published_time\" content=\"2026-10-09\" />\n    <meta name=\"twitter:card\" conte",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T12:59:43.358592Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Closva AS publication; Norwegian and Danish pages both explicitly name owner Closva AS, orgnr 936629466. Language editions are distinct article URLs of two announcements, not four independent transactions."
+  },
+  {
+    "organisation_number": "936629466",
+    "company": "CLOSVA AS",
+    "family": "activity",
+    "field": "dated_item.6e2c1a1c8d023dd16bec",
+    "value": {
+      "title": "Global Pivot Equity kjøper 15 % av Closva",
+      "title_source": "article_page",
+      "url": "https://closva.com/no/artikler/global-pivot-equity-investerer-i-closva",
+      "date": "2026-09-27",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "61f1c8766803043c04a6c53544310f60bc083fdd0b9af5c7081f440bbed90fe5",
+        "source_url": "https://closva.com/no/artikler/global-pivot-equity-investerer-i-closva",
+        "source_class": "company_owned",
+        "content_sha256": "1dd9c3bbdec14f80ef44e99b0e4e0251f0329e9782556a7dc9bc31085d2cd9a8",
+        "claim_span": "perty=\"article:published_time\" content=\"2026-09-27\" />\n    <meta name=\"twitter:card\" conte",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T12:59:44.592314Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Closva AS publication; Norwegian and Danish pages both explicitly name owner Closva AS, orgnr 936629466. Language editions are distinct article URLs of two announcements, not four independent transactions."
+  },
+  {
+    "organisation_number": "936629466",
+    "company": "CLOSVA AS",
+    "family": "activity",
+    "field": "dated_item.e3f6904c734b799a3dfe",
+    "value": {
+      "title": "Global Pivot Equity køber en ejerandel på 15 % i Closva",
+      "title_source": "article_page",
+      "url": "https://closva.com/dk/artikler/global-pivot-equity-investerer-i-closva",
+      "date": "2026-09-27",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "f7c12bb2c2d673a6471e9bd7ca95c3e7264bd0b94c4845d157de34dfa7a59353",
+        "source_url": "https://closva.com/dk/artikler/global-pivot-equity-investerer-i-closva",
+        "source_class": "company_owned",
+        "content_sha256": "f816112dba8369300d36d313e6995f47c8d943bf64f6ae74a98b9012b0f1c3ac",
+        "claim_span": "perty=\"article:published_time\" content=\"2026-09-27\" />\n    <meta name=\"twitter:card\" conte",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T12:59:45.759457Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Closva AS publication; Norwegian and Danish pages both explicitly name owner Closva AS, orgnr 936629466. Language editions are distinct article URLs of two announcements, not four independent transactions."
+  },
+  {
+    "organisation_number": "968386085",
+    "company": "LOFOTPOSTEN AS",
+    "family": "website",
+    "field": "contact.phone.fe27aa7df44c3058f450",
+    "value": "+4777604512",
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "6ca64747d2b8ea435ef3c14e164d1b8ff49dcfcacccba8bf0e0b6fa2738e5169",
+        "source_url": "https://www.lofotposten.no/vis/info/kontakt-kundesenteret",
+        "source_class": "company_owned",
+        "content_sha256": "07f22f26b154515db4fca2290b35e2129ff1ceda46bd3e713790f34a31981921",
+        "claim_span": "3>Kontakt kundesenteret</h3><p>Telefon: 77 60 45 12</p><p>Åpningstider: mandag til fredag 08:00 - 15:30</p><p><a class=\"share-links\" href=\"/vis/info/q",
+        "locator": "contact:+4777604512",
+        "retrieved_at": "2026-11-06T12:59:53.623869Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Lofotposten-published customer-service number, not its registry/main-office telephone; publisher footer explicitly names Lofotposten AS."
+  },
+  {
+    "organisation_number": "926490060",
+    "company": "CONTROL SOLUTIONS AS",
+    "family": "website",
+    "field": "contact.email.d653dd53597ef686f348",
+    "value": "Richard@control-solutions.no",
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "50baf4988ecd494c90f4e928dd6f94be3607612aac93cb5dbac71b726c2e2b35",
+        "source_url": "https://www.control-solutions.no/kontakt",
+        "source_class": "company_owned",
+        "content_sha256": "61ced57a10820e4f7583de319bfb8744712148491826af0da78187b61aa686e8",
+        "claim_span": "<a href=\"mailto:Richard@control-solutions.no\">",
+        "locator": "contact:Richard@control-solutions.no",
+        "retrieved_at": "2026-11-06T12:59:57.887931Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct staff mailto link on Control Solutions contact page, whose footer carries own orgnr 926490060."
+  },
+  {
+    "organisation_number": "926490060",
+    "company": "CONTROL SOLUTIONS AS",
+    "family": "website",
+    "field": "contact.email.0ae20c33905bb2e94b97",
+    "value": "Thomas@control-solutions.no",
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "f2000264ee146fa87ea82117db505ded373be3c72019ae033fa7e4f897f5ec53",
+        "source_url": "https://www.control-solutions.no/kontakt",
+        "source_class": "company_owned",
+        "content_sha256": "61ced57a10820e4f7583de319bfb8744712148491826af0da78187b61aa686e8",
+        "claim_span": "<a href=\"mailto:Thomas@control-solutions.no\">",
+        "locator": "contact:Thomas@control-solutions.no",
+        "retrieved_at": "2026-11-06T12:59:57.887931Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct staff mailto link on Control Solutions contact page, whose footer carries own orgnr 926490060."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.bc7523d8dec282548abd",
+    "value": {
+      "title": "Sotutslipp fra vedfyrt pizzaovn og feierens rolle i…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/sotutslipp-fra-vedfyrt-pizzaovn-og-feierens-rolle-i-brannforebygging",
+      "date": "2026-09-20",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "57e9c594d224470d0086d275876fc1698658501592416198d3e5fa561cb6b1a9",
+        "source_url": "https://www.tilsyn.no/nyheter/sotutslipp-fra-vedfyrt-pizzaovn-og-feierens-rolle-i-brannforebygging",
+        "source_class": "company_owned",
+        "content_sha256": "73d020c51723d9ea55755ee00b3b5b2b2813e2330d141445d05e4917843505c1",
+        "claim_span": "le-i-brannforebygging\",\"datePublished\":\"2026-09-20T07:09:03.124Z\",\"dateModified\":\"2026-09-20T07:09:03.12",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:37.939043Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.e7578a5a846fa8451f44",
+    "value": {
+      "title": "Skorsteinsblokkering på grunn av fuglereir – betydning for…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/skorsteinsblokkering-pa-grunn-av-fuglereir-betydning-for-brannforebygging-og-fei",
+      "date": "2026-08-19",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "bba691c6841a97bca159627c136e1b062a5fc2709156d01bbffc4e3f82ce2a58",
+        "source_url": "https://www.tilsyn.no/nyheter/skorsteinsblokkering-pa-grunn-av-fuglereir-betydning-for-brannforebygging-og-fei",
+        "source_class": "company_owned",
+        "content_sha256": "405360a7ba32edd535654fcb91b588219c6edab9204287b20f0410b5107fe52a",
+        "claim_span": "annforebygging-og-fei\",\"datePublished\":\"2026-08-19T18:03:09.572Z\",\"dateModified\":\"2026-08-19T18:03:09.57",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:39.366905Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.52a4d275acc6dc4a3733",
+    "value": {
+      "title": "Røykutvikling i peis – hendelse i Tomm Murstadbakken, Oslo…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-peis-hendelse-i-tomm-murstadbakken-oslo",
+      "date": "2026-02-23",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "d5df6c6483e19be5b7777f47685399d9ba27ef01214106e45081c10c4e080706",
+        "source_url": "https://www.tilsyn.no/nyheter/roykutvikling-i-peis-hendelse-i-tomm-murstadbakken-oslo",
+        "source_class": "company_owned",
+        "content_sha256": "f26021c3090a1fcd8a8ea03a7ccdd7b700cf37c0e99f7294cbc6d897e942e4d5",
+        "claim_span": "mm-murstadbakken-oslo\",\"datePublished\":\"2026-02-23T19:06:04.520Z\",\"dateModified\":\"2026-02-23T19:06:04.52",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:40.759760Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.6874f952187f72f148e4",
+    "value": {
+      "title": "Røykutvikling i kjeller – forebygging og feierens rolle |…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-forebygging-og-feierens-rolle",
+      "date": "2026-02-23",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "3818b207441853ee4fafbf0786a2cc507aec0666a55b08df918a5f0d7b851b0e",
+        "source_url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-forebygging-og-feierens-rolle",
+        "source_class": "company_owned",
+        "content_sha256": "114c7ea5de6736881f9f91d77570cd1d1f1377f758eaa6626e896c2459a2c739",
+        "claim_span": "ing-og-feierens-rolle\",\"datePublished\":\"2026-02-23T19:02:01.416Z\",\"dateModified\":\"2026-02-23T19:02:01.41",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:42.220852Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.26c159f4aacbc64269cc",
+    "value": {
+      "title": "Pipebrann i Schwensens gate, St. Hanshaugen –…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/pipebrann-i-schwensens-gate-st-hanshaugen-brannforebygging-og-feierens-rolle",
+      "date": "2026-02-23",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "daf034e32434c17ef4d4b4fabbe3e522d46b81c1d79b3fa9d96368b5c31503fe",
+        "source_url": "https://www.tilsyn.no/nyheter/pipebrann-i-schwensens-gate-st-hanshaugen-brannforebygging-og-feierens-rolle",
+        "source_class": "company_owned",
+        "content_sha256": "6fcbdac48b7c7c1a0dc08d4a44c897e2630aa2c9747707ba0388b66ae2a9bea4",
+        "claim_span": "ing-og-feierens-rolle\",\"datePublished\":\"2026-02-23T18:59:04.747Z\",\"dateModified\":\"2026-02-23T18:59:04.74",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:43.624228Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.abe8e46d380a5c952524",
+    "value": {
+      "title": "Røykutvikling i kjeller på Grünerløkka – brannforebygging…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-pa-gr-nerlokka-brannforebygging-og-feierens-rolle",
+      "date": "2026-02-21",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "85996df72da3c38d09915df9389493ed583c021fdc0e502bbd5ef9f81157e3ad",
+        "source_url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-pa-gr-nerlokka-brannforebygging-og-feierens-rolle",
+        "source_class": "company_owned",
+        "content_sha256": "a84d34ad05d01813401942fe17a6e8fa7bec144bca359491b788076dc8e04c55",
+        "claim_span": "ing-og-feierens-rolle\",\"datePublished\":\"2026-02-21T05:25:21.271Z\",\"dateModified\":\"2026-02-21T05:25:21.27",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:45.010529Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.7b5613bec366fe1ef183",
+    "value": {
+      "title": "Pipebranner i Asker og Bærum – brannvesenets innsats og…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/pipebranner-i-asker-og-baerum-brannvesenets-innsats-og-feierens-rolle-i-brannfor",
+      "date": "2026-02-20",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "d177b7f391d89b9632b345c276ec8dc984734543c7ace16b33e669cd2b0c1f20",
+        "source_url": "https://www.tilsyn.no/nyheter/pipebranner-i-asker-og-baerum-brannvesenets-innsats-og-feierens-rolle-i-brannfor",
+        "source_class": "company_owned",
+        "content_sha256": "43a3e2cd95169329cf977340cb306af494650ba65cec1baf7db078d0e23eb93c",
+        "claim_span": "rens-rolle-i-brannfor\",\"datePublished\":\"2026-02-20T12:09:12.299Z\",\"dateModified\":\"2026-02-20T12:09:12.29",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:46.569527Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.485c80058f6beee812e3",
+    "value": {
+      "title": "Pipebrann i Ekebergveien: Branninnsats og brannforebygging…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/pipebrann-i-ekebergveien-branninnsats-og-brannforebygging",
+      "date": "2026-02-20",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "8676c69cb29c0440b74abf494898d4384d378334f46c3f3b54cf6fe756c73dd8",
+        "source_url": "https://www.tilsyn.no/nyheter/pipebrann-i-ekebergveien-branninnsats-og-brannforebygging",
+        "source_class": "company_owned",
+        "content_sha256": "746700491dbd59dc7e9708745ad78cb461ca1076feaa0419aeb20aed04699d72",
+        "claim_span": "s-og-brannforebygging\",\"datePublished\":\"2026-02-20T12:10:31.046Z\",\"dateModified\":\"2026-02-20T12:10:31.04",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:47.972634Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.2912784ffd86e74bebc2",
+    "value": {
+      "title": "Hvordan håndtere pipebrann og viktigheten av…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/hvordan-handtere-pipebrann-og-viktigheten-av-brannforebygging-ved-skorsteinen",
+      "date": "2026-02-20",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "88c12f97fac8eb46d87e692e9d7e6dda030d3f373145be98212e6a420848df94",
+        "source_url": "https://www.tilsyn.no/nyheter/hvordan-handtere-pipebrann-og-viktigheten-av-brannforebygging-ved-skorsteinen",
+        "source_class": "company_owned",
+        "content_sha256": "2c53f99c11d0b48169e7e31ec2d86a1ae7f6f68ff126e1cfdfe85be696ea7c29",
+        "claim_span": "gging-ved-skorsteinen\",\"datePublished\":\"2026-02-20T09:56:46.860Z\",\"dateModified\":\"2026-02-20T09:56:46.86",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:49.407119Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "993919675",
+    "company": "FEIE- OG TILSYNSTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.3aa8450c7a028171422c",
+    "value": {
+      "title": "Bilbrann på Prinsdal: Viktigheten av brannsikkerhet og…",
+      "title_source": "article_page",
+      "url": "https://www.tilsyn.no/nyheter/bilbrann-pa-prinsdal-viktigheten-av-brannsikkerhet-og-feierens-rolle-i-forebyggi",
+      "date": "2026-02-20",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "25aef52b3022882ed84f5e23f7e954fc5680c85d2592be1eae0b1e3342ec7e84",
+        "source_url": "https://www.tilsyn.no/nyheter/bilbrann-pa-prinsdal-viktigheten-av-brannsikkerhet-og-feierens-rolle-i-forebyggi",
+        "source_class": "company_owned",
+        "content_sha256": "97b7f23175f452be34d90e7aa637a14536d7c3cf2c407ddd467123f41a99281c",
+        "claim_span": "ens-rolle-i-forebyggi\",\"datePublished\":\"2026-02-20T09:59:06.620Z\",\"dateModified\":\"2026-02-20T09:59:06.62",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:51.045360Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct self-published safety/news article on Feie- og Tilsynstjenester AS site; footer names own 993919675. Publication date is on article. This does not assert that this company or its staff attended the described fire incident."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.3aeed9c919a7ee8ce54e",
+    "value": {
+      "title": "Nye lærlinger på plass i Tensio",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/nye-laerlinger-pa-plass-i-tensio",
+      "date": "2026-10-30",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "6fa4b69347dcf8655c798522819a3d36fec84fc18e28fd247d6784a9857c24e4",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/nye-laerlinger-pa-plass-i-tensio",
+        "source_class": "company_owned",
+        "content_sha256": "bf04aa76988f31378c08d83399c8eee006f3c6a652cc2b334a3ef0d9236a3aae",
+        "claim_span": "sio\",\"inLanguage\":\"no\",\"datePublished\":\"2026-10-30T07:30:56Z\",\"dateModified\":\"2026-11-03T07:31:19Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:39.601764Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.5665bba45ffffa287531",
+    "value": {
+      "title": "Nettleia øker fra 1. januar 2027",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/nettleia-oker-fra-1-januar",
+      "date": "2026-10-30",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "633f59f1b1af2d19ae16b5b06e92e49803c16196602aaa06d78a064863872d26",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/nettleia-oker-fra-1-januar",
+        "source_class": "company_owned",
+        "content_sha256": "6846f3df0c7b083e95ef91592ba5da20a4d9597419fe2a877c3aa54c52b92247",
+        "claim_span": "uar\",\"inLanguage\":\"no\",\"datePublished\":\"2026-10-30T09:11:34Z\",\"dateModified\":\"2026-10-31T05:46:55Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:40.725073Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.1b259ba4eafcdc3f19b5",
+    "value": {
+      "title": "Hva gjør du hvis både strøm, mobil og internett forsvinner?",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/hva-gjor-du-hvis-bade-strom-mobil-og-internett-forsvinner",
+      "date": "2026-10-23",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "e3d4875e64cfab38cc76629760b4f6f9d2dd6092b94b3055fe32926612f472b0",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/hva-gjor-du-hvis-bade-strom-mobil-og-internett-forsvinner",
+        "source_class": "company_owned",
+        "content_sha256": "cec486e72946f4a9ef9fa397d89016109d35d95c6987c1cbeaf66aefb666e731",
+        "claim_span": "ner\",\"inLanguage\":\"no\",\"datePublished\":\"2026-10-23T11:10:58Z\",\"dateModified\":\"2026-10-23T11:38:05Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:41.863487Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.cd8442f635e9f5ff3a0a",
+    "value": {
+      "title": "Åpen dag: 125-årsjubileum strøm og trikk i Trondheim",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/apen-dag-125-arsjubileum-strom-og-trikk-i-trondheim",
+      "date": "2026-10-16",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "de477517462ac5edd30a06c32dca00d07f3165d794a9685afa69a608b0f0bbff",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/apen-dag-125-arsjubileum-strom-og-trikk-i-trondheim",
+        "source_class": "company_owned",
+        "content_sha256": "f04798bd8d8c8effbc3bfac66cdb43e50927090d4613e696798a7a798101057d",
+        "claim_span": "eim\",\"inLanguage\":\"no\",\"datePublished\":\"2026-10-16T06:08:45Z\",\"dateModified\":\"2026-10-16T08:14:16Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:42.987801Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.eb0a195527d20330072b",
+    "value": {
+      "title": "Elsikkerhetsdagen - Ta elsjekken hjemme",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-2026-ta-elsjekken-hjemme",
+      "date": "2026-10-14",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "6dc1ae3b307a98731268fb54dd7523a827ed68e1cd914fb4a729936e8613f5b5",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-2026-ta-elsjekken-hjemme",
+        "source_class": "company_owned",
+        "content_sha256": "9b119558200ae1f6323b1b6571367594e86966df02274bc67f0ac7ee0a50f10f",
+        "claim_span": "mme\",\"inLanguage\":\"no\",\"datePublished\":\"2026-10-14T13:20:10Z\",\"dateModified\":\"2026-10-14T13:23:17Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:44.119428Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.74f3faa72e613415b163",
+    "value": {
+      "title": "Mulig streik i strømsektoren - Trøndelag kan bli berørt",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/mulig-streik-i-stromsektoren-trondelag-kan-bli-berort",
+      "date": "2026-08-25",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "9de6ee308a9117c8d2b104a9940b8323de41a2ef5a17b68bc8e706ed06515f58",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/mulig-streik-i-stromsektoren-trondelag-kan-bli-berort",
+        "source_class": "company_owned",
+        "content_sha256": "44dd9051489930f52b413468429baf70dd749ef8da87377c51d333a1ce4b22e2",
+        "claim_span": "ort\",\"inLanguage\":\"no\",\"datePublished\":\"2026-08-25T15:17:14Z\",\"dateModified\":\"2026-10-08T05:08:45Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:45.278607Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.1f6eec18122f8bd8bf0e",
+    "value": {
+      "title": "Strømforsyningen 2035: Hva er det plass til av industri- og samfunnsutvikling?",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/stromforsyningen-2035-hva-er-det-plass-til-av-industri-og-samfunnsutvikling",
+      "date": "2026-08-11",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "11be6b35b5519df5c48baf794e3eac7f1a151551e81f00b1036930b34a0358f9",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/stromforsyningen-2035-hva-er-det-plass-til-av-industri-og-samfunnsutvikling",
+        "source_class": "company_owned",
+        "content_sha256": "16694de4a0b8819fbd3c3cea5dfeb7396dd4aa651860349468c0e798c4a81392",
+        "claim_span": "ing\",\"inLanguage\":\"no\",\"datePublished\":\"2026-08-11T09:52:18Z\",\"dateModified\":\"2026-08-12T06:51:48Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:46.409656Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.e8fe54c2bb8fb789cc30",
+    "value": {
+      "title": "Status Norgespris ved inngangen høsten",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-hosten",
+      "date": "2026-08-11",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "8dd31827141285de09e2a5b4d000f88d950208755469f02995716182a7c87181",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-hosten",
+        "source_class": "company_owned",
+        "content_sha256": "59337ad6710c4200aa57122eebb28ba947db54d178b2fdcff6c3b6db359653bd",
+        "claim_span": "ten\",\"inLanguage\":\"no\",\"datePublished\":\"2026-08-11T09:29:11Z\",\"dateModified\":\"2026-08-11T10:53:42Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:47.749102Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.003d7ffb296ec4862e36",
+    "value": {
+      "title": "Skal du flytte for å studere? Husk å ta over strømabonnementet",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/skal-du-flytte-for-a-studere-husk-a-ta-over-stromabonnementet",
+      "date": "2026-08-05",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "065fff8f854d32a542212bd7ec1682557673250036dbc3013cc17efd2e43c226",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/skal-du-flytte-for-a-studere-husk-a-ta-over-stromabonnementet",
+        "source_class": "company_owned",
+        "content_sha256": "bd7031bdba8577e4662d2de7ee807696575139e5ddcc3aefd2e9b68047b56e64",
+        "claim_span": "tet\",\"inLanguage\":\"no\",\"datePublished\":\"2026-08-05T08:43:32Z\",\"dateModified\":\"2026-08-05T09:02:21Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:48.905829Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.e63d2ad68974f83a33e3",
+    "value": {
+      "title": "Elsikkerhetsdagen - Ta elsjekken hjemme",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-ta-elsjekken-hjemme",
+      "date": "2025-10-14",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "7b36901926a229727099fbeb832b7c1fe292b90bd4f87ed36b0481e9d3729d1a",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-ta-elsjekken-hjemme",
+        "source_class": "company_owned",
+        "content_sha256": "5d2dc178280b7c8a2093d77ec49fc8199d5911a44343906fe8416ce9a234b8c6",
+        "claim_span": "mme\",\"inLanguage\":\"no\",\"datePublished\":\"2025-10-14T13:12:24Z\",\"dateModified\":\"2026-07-02T11:40:35Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:50.038896Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.feb2b523a93029d7bcda",
+    "value": {
+      "title": "Tensio endrer nettleieprisene fra 1. juli",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/prisendringer-nettleie-fra-1-juli-2026",
+      "date": "2026-06-01",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "466cc0f0d7fbdb0315261b413dd58b92730f806893041a782da1642878595377",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/prisendringer-nettleie-fra-1-juli-2026",
+        "source_class": "company_owned",
+        "content_sha256": "1f9dc56daed5ec88cf71a3647070afdba0e009dd33d73c834b685336f61c241d",
+        "claim_span": "026\",\"inLanguage\":\"no\",\"datePublished\":\"2026-06-01T06:09:34Z\",\"dateModified\":\"2026-06-25T07:17:24Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:51.500676Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.7d58cf093adca0e5fb43",
+    "value": {
+      "title": "Regjeringen gjør viktige beredskapsgrep for Trøndelag",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/regjeringen-gjor-viktige-beredskapsgrep-for-trondelag",
+      "date": "2026-06-18",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "53c4f007496604e3e05a303f955f50521bb1b67f462e77d9dd987a6e81b071dc",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/regjeringen-gjor-viktige-beredskapsgrep-for-trondelag",
+        "source_class": "company_owned",
+        "content_sha256": "e9eee6cf857d8e0ba6141660fc6f527c3a23c23ceece13e3372733625d17c5f4",
+        "claim_span": "lag\",\"inLanguage\":\"no\",\"datePublished\":\"2026-06-18T16:00:02Z\",\"dateModified\":\"2026-06-18T16:31:53Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:52.633552Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.5f993d7c46ea95d9667b",
+    "value": {
+      "title": "Forbered deg på lyn og torden",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/forbered-deg-pa-lyn-og-torden",
+      "date": "2026-06-09",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "fc35bcf1099a50822e977aafe25afb9d6ad9322e7ef739fb5dfc85296dc652c3",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/forbered-deg-pa-lyn-og-torden",
+        "source_class": "company_owned",
+        "content_sha256": "af90ce021b8092dd4ad77b009fe3c8409563050b1c39417199ed60bdccbb77d7",
+        "claim_span": "den\",\"inLanguage\":\"no\",\"datePublished\":\"2026-06-09T09:20:43Z\",\"dateModified\":\"2026-06-09T10:18:24Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:53.892088Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.d0e57de35dcdd29af19a",
+    "value": {
+      "title": "Tensio gjennomfører droneflyging langs høyspentlinjer i Trøndelag",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/tensio-gjennomforer-droneflyging-langs-hoyspentlinjer-i-trondelag",
+      "date": "2026-05-04",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "8bc8bde36e1802029dfd60c68d7eb04f2d2b9b128abe214c3995926152adb606",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/tensio-gjennomforer-droneflyging-langs-hoyspentlinjer-i-trondelag",
+        "source_class": "company_owned",
+        "content_sha256": "675ccb199393f051f7d14ca138f3367d0ea78701c1bd58b8357fba480916a038",
+        "claim_span": "lag\",\"inLanguage\":\"no\",\"datePublished\":\"2026-05-04T06:07:38Z\",\"dateModified\":\"2026-05-04T07:16:28Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:55.230225Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.6868c462e75682cc1615",
+    "value": {
+      "title": "Status Norgespris ved inngangen til mai",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-mai",
+      "date": "2026-04-24",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "6a67632afa16cc9cac3e18ab3277ecb330611379c9e82a4a6164a3ea0501b58a",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-mai",
+        "source_class": "company_owned",
+        "content_sha256": "37aa600ac378cde5926b154baf8cab3028a95ff2906f9ca265279ddb7069f410",
+        "claim_span": "mai\",\"inLanguage\":\"no\",\"datePublished\":\"2026-04-24T12:46:54Z\",\"dateModified\":\"2026-04-24T13:38:45Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:56.488306Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.556eb343ba358bdea872",
+    "value": {
+      "title": "Vår i lufta – men hva ligger i bakken?",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/var-i-lufta-men-hva-ligger-i-bakken",
+      "date": "2026-04-20",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "953e8b8b2703964bb5e4e904db1de26378dcad0c4748e9fc9517a943b6f9d56b",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/var-i-lufta-men-hva-ligger-i-bakken",
+        "source_class": "company_owned",
+        "content_sha256": "772be5ab7265fc8f1a7b0bd216b156a638f0be34ded241e4623529d4340edbcc",
+        "claim_span": "ken\",\"inLanguage\":\"no\",\"datePublished\":\"2026-04-20T10:36:36Z\",\"dateModified\":\"2026-04-20T11:55:02Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:57.621701Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.5c933e4c11855916f19d",
+    "value": {
+      "title": "Mange strømbrudd i Trøndelag  – kan vedvare over flere døgn (mars 2025)",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/mange-strombrudd-i-trondelag-kan-vedvare-over-flere-dogn",
+      "date": "2025-03-06",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "06ffe90dba34a9442b88a3aa3d388ee2ea4a4e165c52c3f4b08789ea6db80985",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/mange-strombrudd-i-trondelag-kan-vedvare-over-flere-dogn",
+        "source_class": "company_owned",
+        "content_sha256": "fd0244806d01bcbc9d213d7e43a8dc962c4d15358e8218c10606bbc11601ec14",
+        "claim_span": "ogn\",\"inLanguage\":\"no\",\"datePublished\":\"2025-03-06T04:53:39Z\",\"dateModified\":\"2026-03-31T15:52:18Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:00:58.908615Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.e6ff4b0e4d51c26eef03",
+    "value": {
+      "title": "Ekstremværet Amy - oppdatering lørdag kveld",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/ekstremvaeret-amy-oppdatering-lordag-kveld",
+      "date": "2025-10-04",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "220181fe7bb02909b0528008e3727c7e71c7475f0c0592da0b042bffbac25ebe",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/ekstremvaeret-amy-oppdatering-lordag-kveld",
+        "source_class": "company_owned",
+        "content_sha256": "f6f0e091e1aadfca705466ed1602dd5e0c9d7df9ca2157797d63202e4bdecc5d",
+        "claim_span": "eld\",\"inLanguage\":\"no\",\"datePublished\":\"2025-10-04T14:32:19Z\",\"dateModified\":\"2026-03-31T15:53:49Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:00.038587Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.53038f806d0bf4b8635a",
+    "value": {
+      "title": "Års- og bærekraftrapport 2025 - Tensio konsern",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/ars-og-baerekraftrapport-2025",
+      "date": "2026-03-26",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "47ae94e84936ad0f4a40d50b8a645e8b2effa31996c03003690756bb37b05e72",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/ars-og-baerekraftrapport-2025",
+        "source_class": "company_owned",
+        "content_sha256": "cedf0bdf254e8379832c5bb1fdc30a32cd88224f6b377e0a271053da8e4ce11c",
+        "claim_span": "025\",\"inLanguage\":\"no\",\"datePublished\":\"2026-03-26T14:29:29Z\",\"dateModified\":\"2026-03-26T15:19:45Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:01.168501Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.e1abac710a1356273f24",
+    "value": {
+      "title": "Trenger tiltak for raskere elektrifisering",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/trenger-tiltak-for-raskere-elektrifisering",
+      "date": "2024-04-04",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "b25890dd1713754317ff7c94ee8b50f7595322d3f9687134fa13016c62c524b6",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/trenger-tiltak-for-raskere-elektrifisering",
+        "source_class": "company_owned",
+        "content_sha256": "ebde67f2110a2ceea8985fa5a754088c56c595e4add00e1d2ccf5482ec1dcdef",
+        "claim_span": "ing\",\"inLanguage\":\"no\",\"datePublished\":\"2024-04-04T09:50:40Z\",\"dateModified\":\"2026-03-17T07:12:59Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:02.562386Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.30c111ff29e15679b88e",
+    "value": {
+      "title": "Status Norgespris i midten av mars",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-i-midten-av-mars",
+      "date": "2026-03-13",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "00e3794b1ea52331d8ac5b0eab17e77ee6f40e319c08b02129adcb58824cc6b8",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-i-midten-av-mars",
+        "source_class": "company_owned",
+        "content_sha256": "632d852937d7e044c255b358ff1854ff092e4df20ea9ca3bd2c871d00f46f5fa",
+        "claim_span": "ars\",\"inLanguage\":\"no\",\"datePublished\":\"2026-03-13T10:03:44Z\",\"dateModified\":\"2026-03-13T14:43:04Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:03.729853Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.733b5ca9c34214d8c108",
+    "value": {
+      "title": "Langsiktig skogrydding for et mer robust Trøndelag",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/skogrydding-for-en-mer-motstandsdyktig-stromforsyning",
+      "date": "2026-03-05",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "4e29d2765e20b0a3ce7dc9b571ce8e47f65d8e135976176b8cc0a70836482a85",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/skogrydding-for-en-mer-motstandsdyktig-stromforsyning",
+        "source_class": "company_owned",
+        "content_sha256": "8599a2efc96d22b591ba472f166e24c00517f2e941a936381509a8bf2b7dca7c",
+        "claim_span": "ing\",\"inLanguage\":\"no\",\"datePublished\":\"2026-03-05T08:57:53Z\",\"dateModified\":\"2026-03-05T14:08:04Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:04.841956Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.6030439877e998d44cfb",
+    "value": {
+      "title": "Spenningens helter - Tensio kommer på tv-skjermen neste år",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/spenningens-helter",
+      "date": "2025-12-05",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "b00d4813ac665c4cc8e1e019af8cfbf8ab823c33ffccb93ca8c0e264a800e74d",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/spenningens-helter",
+        "source_class": "company_owned",
+        "content_sha256": "800fd0e557eb7786b86b04101a1a9ac879f5371b4f69588aba0026daea1254db",
+        "claim_span": "ter\",\"inLanguage\":\"no\",\"datePublished\":\"2025-12-05T07:11:40Z\",\"dateModified\":\"2026-02-16T19:38:47Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:05.964510Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.90659a383fb3c151fa37",
+    "value": {
+      "title": "Ny tv-serie om strømforsyningens helter",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/ny-tv-serie-om-stromforsyningens-helter",
+      "date": "2026-02-02",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "9da652c92c397bd619ccc8e0263d37855309cdeae7a386602431bdd10eec87fc",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/ny-tv-serie-om-stromforsyningens-helter",
+        "source_class": "company_owned",
+        "content_sha256": "b314e8b6fb3a8e5e4918bb85806aefc24f7fef4c09b897191530fcce9c3fdfda",
+        "claim_span": "ter\",\"inLanguage\":\"no\",\"datePublished\":\"2026-02-02T08:19:19Z\",\"dateModified\":\"2026-02-16T19:38:18Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:07.281779Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "family": "activity",
+    "field": "dated_item.d8a305b839a5c69e95fc",
+    "value": {
+      "title": "Status Norgespris ved inngangen til februar",
+      "title_source": "article_page",
+      "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-februar",
+      "date": "2026-01-28",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "55394dedaaa7bac4f17f10608e35632dfec90ae31fac02d0504679734254cb45",
+        "source_url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-februar",
+        "source_class": "company_owned",
+        "content_sha256": "f9a9abc09a595cf4f3ccd3452348730e2c5dc765c39f8f0fdbc101db676bf801",
+        "claim_span": "uar\",\"inLanguage\":\"no\",\"datePublished\":\"2026-01-28T07:20:00Z\",\"dateModified\":\"2026-01-28T19:17:27Z\",",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:08.423716Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct publication on the already verified Tensio corporate site. Group/customer/operational topics remain dated article titles; no subsidiary employment, group financial amount or incident involvement is inferred as a parent-company fact."
+  },
+  {
+    "organisation_number": "927661683",
+    "company": "LAU CAPITAL AS",
+    "family": "roles",
+    "field": "roles.role.575ed796e5f1fc8b535331fb.0",
+    "value": {
+      "role_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"
+          }
+        },
+        "beskrivelse": "Styrets leder",
+        "kode": "LEDE"
+      },
+      "name": "Albert Ølnes",
+      "entity_organisation_number": null,
+      "inactive": false,
+      "group_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+          }
+        },
+        "beskrivelse": "Styre",
+        "kode": "STYR"
+      },
+      "last_changed": "2026-11-06",
+      "from_date": null
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "904bfd9b25e683abea9c6eed89580bc9ed5c6a95ee2f10440920b15cb005cd82",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/927661683/roller",
+        "source_class": "official_registry",
+        "content_sha256": "31064580f19b8ef00ab0c391a4b5ac5cf1f28052f11bd816f307b0031e280db8",
+        "claim_span": "\":[{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1955-03-06\",\"navn\":{\"etternavn\":\"Ølnes\",\"fornavn\":\"Albert\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE\"}},\"beskrivelse\":\"Styrets leder\",\"kode\":\"LEDE\"}}",
+        "locator": "/rollegrupper/0/roller/0",
+        "retrieved_at": "2026-11-06T12:59:58.693884Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct official LAU CAPITAL AS chair record for Albert Ølnes. Role/person unchanged; the registered group last_changed date is now 2026-11-06. This is a source-metadata update, not a newly discovered chair."
+  },
+  {
+    "organisation_number": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "family": "activity",
+    "field": "dated_item.5dfba8c0fd7f53268a43",
+    "value": {
+      "title": "How Bridge probes are integral to effective OTT delivery",
+      "title_source": "article_page",
+      "url": "https://bridgetech.tv/how-bridge-probes-are-integral-to-effective-ott-delivery/",
+      "date": "2023-03-10",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "d6c21ef2691a48cf967eda39aeaa203ccedc5c747e7d7b9c0aacdffa21e77fd7",
+        "source_url": "https://bridgetech.tv/how-bridge-probes-are-integral-to-effective-ott-delivery/",
+        "source_class": "company_owned",
+        "content_sha256": "cac92d1429d0b33c6fc8f5f2eee76d9d9ed04b925c604ed070b0c26406f57720",
+        "claim_span": "perty=\"article:published_time\" content=\"2023-03-10T13:02:23+00:00\" />\n\t<meta property=\"article:modified_t",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:20.271524Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Bridge Technologies publication; article footer carries own VAT NO987002808MVA and Oslo address. Historical article, not a new 2026 event or an assertion about another publisher."
+  },
+  {
+    "organisation_number": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "family": "activity",
+    "field": "dated_item.3636d4a4c9e86c914104",
+    "value": {
+      "title": "There’s nothing sus about our approach to sustainability",
+      "title_source": "article_page",
+      "url": "https://bridgetech.tv/theres-nothing-sus-about-our-approach-to-sustainability/",
+      "date": "2023-08-04",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "fddad035409e1b40e655ecc43cd68fa9351463c4b976813339b3409366f634ab",
+        "source_url": "https://bridgetech.tv/theres-nothing-sus-about-our-approach-to-sustainability/",
+        "source_class": "company_owned",
+        "content_sha256": "5689e1e88e229522aa0e7b53afbe9ae7baa81006dfd71333dac5e382960b4d4c",
+        "claim_span": "perty=\"article:published_time\" content=\"2023-08-04T10:58:10+00:00\" />\n\t<meta property=\"article:modified_t",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:22.799019Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Bridge Technologies publication; article footer carries own VAT NO987002808MVA and Oslo address. Historical article, not a new 2026 event or an assertion about another publisher."
+  },
+  {
+    "organisation_number": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "family": "activity",
+    "field": "dated_item.5579617da27443cc371e",
+    "value": {
+      "title": "Why and how we celebrate our business partners",
+      "title_source": "article_page",
+      "url": "https://bridgetech.tv/why-and-how-we-celebrate-our-business-partners/",
+      "date": "2023-07-13",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "24e51fd03ff8477efaacbffdbaf2afc4eb87209de9b820cb1091723b21461d93",
+        "source_url": "https://bridgetech.tv/why-and-how-we-celebrate-our-business-partners/",
+        "source_class": "company_owned",
+        "content_sha256": "d19a85cd472ed17885046e4f26a9b4438e5e97245812cfd5bdd25ab7ed30ac22",
+        "claim_span": "perty=\"article:published_time\" content=\"2023-07-13T08:41:43+00:00\" />\n\t<meta property=\"og:image\" content=",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:25.571479Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Bridge Technologies publication; article footer carries own VAT NO987002808MVA and Oslo address. Historical article, not a new 2026 event or an assertion about another publisher."
+  },
+  {
+    "organisation_number": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "family": "activity",
+    "field": "dated_item.fd563cad239350d36c56",
+    "value": {
+      "title": "Bridge Technologies January Blog Post",
+      "title_source": "article_page",
+      "url": "https://bridgetech.tv/bridge-technologies-january-blog-post-3/",
+      "date": "2023-01-24",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "370391544a1a8cb2c74c834b38e6342d44863895e700847507c7fa19d282db12",
+        "source_url": "https://bridgetech.tv/bridge-technologies-january-blog-post-3/",
+        "source_class": "company_owned",
+        "content_sha256": "a95c16cc71dac50d90396513d659f0760f0818616bc80d06b6d0ba6dcd275564",
+        "claim_span": "perty=\"article:published_time\" content=\"2023-01-24T12:34:27+00:00\" />\n\t<meta property=\"og:image\" content=",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:28.371564Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Bridge Technologies publication; article footer carries own VAT NO987002808MVA and Oslo address. Historical article, not a new 2026 event or an assertion about another publisher."
+  },
+  {
+    "organisation_number": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "family": "activity",
+    "field": "dated_item.674a272ad9ec5424d6f8",
+    "value": {
+      "title": "Bridge Technologies December Blog Post",
+      "title_source": "article_page",
+      "url": "https://bridgetech.tv/bridge-technologies-december-blog-post-4/",
+      "date": "2022-12-20",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "97af39956f7e672e75d4e1ffceaa195726fe4916031db47e4e2c05f1c98aa882",
+        "source_url": "https://bridgetech.tv/bridge-technologies-december-blog-post-4/",
+        "source_class": "company_owned",
+        "content_sha256": "0ff7bbd6e1eb7c72ac3f00f1ba216a019c050ae3030db994306da12c9102583a",
+        "claim_span": "perty=\"article:published_time\" content=\"2022-12-20T12:22:14+00:00\" />\n\t<meta property=\"og:image\" content=",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:31.126482Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Bridge Technologies publication; article footer carries own VAT NO987002808MVA and Oslo address. Historical article, not a new 2026 event or an assertion about another publisher."
+  },
+  {
+    "organisation_number": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "family": "activity",
+    "field": "dated_item.036015160ba1d3da5368",
+    "value": {
+      "title": "SatMagazine: Year in Review 2022",
+      "title_source": "article_page",
+      "url": "https://bridgetech.tv/satmagazine-year-in-review-2022/",
+      "date": "2022-12-15",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "a766c7c450c3a558e8ff7a0ea5a7c60a21621182c83abb2b0d74d7794d46b4f1",
+        "source_url": "https://bridgetech.tv/satmagazine-year-in-review-2022/",
+        "source_class": "company_owned",
+        "content_sha256": "f49f0aeb5e6ad0b2a2cd72526345cf36b60f356e665c04f4d6f6f54559d5a3d2",
+        "claim_span": "perty=\"article:published_time\" content=\"2022-12-15T10:17:44+00:00\" />\n\t<meta property=\"og:image\" content=",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:41.505535Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Bridge Technologies publication; article footer carries own VAT NO987002808MVA and Oslo address. Historical article, not a new 2026 event or an assertion about another publisher."
+  },
+  {
+    "organisation_number": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "family": "activity",
+    "field": "dated_item.87d39d18e7bd4ea5c5b4",
+    "value": {
+      "title": "Blog: How to define a unique solution for broadcast creatives and engineers",
+      "title_source": "article_page",
+      "url": "https://bridgetech.tv/blog-how-to-define-a-unique-solution-for-broadcast-creatives-and-engineers/",
+      "date": "2022-12-08",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "218522c026ddda09d1d2b9add337ee49c71b4b63e719960458815405220ba1af",
+        "source_url": "https://bridgetech.tv/blog-how-to-define-a-unique-solution-for-broadcast-creatives-and-engineers/",
+        "source_class": "company_owned",
+        "content_sha256": "ea8efd40c94792089b495ad54f6804121c03d48d8f634c803f661bedd892046e",
+        "claim_span": "perty=\"article:published_time\" content=\"2022-12-08T23:40:24+00:00\" />\n\t<meta property=\"article:modified_t",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:44.321958Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct Bridge Technologies publication; article footer carries own VAT NO987002808MVA and Oslo address. Historical article, not a new 2026 event or an assertion about another publisher."
+  },
+  {
+    "organisation_number": "952785052",
+    "company": "NASJONALT SENTER FOR NORDLANDSHEST /LYNGSHEST AS",
+    "family": "website",
+    "field": "official_website",
+    "value": {
+      "final_url": "http://www.nsnl.no",
+      "transport_scheme": "http",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "http://www.nsnl.no/",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "688c5345fd62e6bde9d136fed5be3de04bd12b819f2d5590c557494e3c68b34c",
+        "source_url": "http://www.nsnl.no/",
+        "source_class": "company_owned",
+        "content_sha256": "fafa1ae537b406d16f206cc472f04599e74fec29580851c32ff3952dc3c78751",
+        "claim_span": "/div>\n\t\t\t\t\t\t<div class=\"phone\">Org.nr.: 952 785 052</div>\n\t\t\t\t\t\t<div class=\"phone\">Konto: 47507590728</div>\n\t\t\t\t\t</div>\n\t\t\t\t</address>\r\n\t\t\t\t\t\t\t</div>\r",
+        "locator": "identity-proof:952785052",
+        "retrieved_at": "2026-11-06T13:01:10.506750Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct unchanged-company website under plaintext HTTP with own orgnr 952785052 and full legal name; scheme/proof transport changed, not a newly discovered company site. Developer CustomPublish AS is explicitly credited as developer."
+  },
+  {
+    "organisation_number": "952785052",
+    "company": "NASJONALT SENTER FOR NORDLANDSHEST /LYNGSHEST AS",
+    "family": "website",
+    "field": "website_description.meta_description.dbe8cde0045fadb9",
+    "value": {
+      "text": "Kontortid: 08.00 - 15.30 mandag - fredag.",
+      "kind": "meta_description",
+      "self_description": true,
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "7c9980e494db5c02636761ea517439a6186ab53e56a2c646cb87610d31a0a9c7"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "2ffc94b1789763ec67957d447c31b58160c62d6e103cb6b7344b416662e956b4",
+        "source_url": "http://www.nsnl.no/kontakt-oss.449713.no.html",
+        "source_class": "company_owned",
+        "content_sha256": "0e328606edcc0a00598ab7b02d8df29e9130bbc10d212f941acb85aff5ed1de3",
+        "claim_span": "<meta name=\"description\" content=\"Kontortid: 08.00 - 15.30 mandag - fredag.\" />",
+        "locator": "meta:description@content",
+        "retrieved_at": "2026-11-06T13:01:11.800878Z",
+        "reporting_period": null
+      },
+      {
+        "id": "688c5345fd62e6bde9d136fed5be3de04bd12b819f2d5590c557494e3c68b34c",
+        "source_url": "http://www.nsnl.no/",
+        "source_class": "company_owned",
+        "content_sha256": "fafa1ae537b406d16f206cc472f04599e74fec29580851c32ff3952dc3c78751",
+        "claim_span": "/div>\n\t\t\t\t\t\t<div class=\"phone\">Org.nr.: 952 785 052</div>\n\t\t\t\t\t\t<div class=\"phone\">Konto: 47507590728</div>\n\t\t\t\t\t</div>\n\t\t\t\t</address>\r\n\t\t\t\t\t\t\t</div>\r",
+        "locator": "identity-proof:952785052",
+        "retrieved_at": "2026-11-06T13:01:10.506750Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct company-published office-hour metadata on NSNL contact page with own full name and 952785052; not a newly inferred activity description."
+  },
+  {
+    "organisation_number": "952785052",
+    "company": "NASJONALT SENTER FOR NORDLANDSHEST /LYNGSHEST AS",
+    "family": "website",
+    "field": "contact.email.a36fb46393289f7ec8a9",
+    "value": "Stall@nsnl.no",
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "194501d0d97a9ec37e1c157b756839c7e7fdc7abef73c70e3a5312d308891451",
+        "source_url": "http://www.nsnl.no/",
+        "source_class": "company_owned",
+        "content_sha256": "fafa1ae537b406d16f206cc472f04599e74fec29580851c32ff3952dc3c78751",
+        "claim_span": "og bestiller ønsket tidsrom.  Send til: Stall@nsnl.no  så reserverer vi fortløpende dersom det er ledig i ønsket tidsrom.  \r\n</p>\r\n\t</header>\r\n</artic",
+        "locator": "contact:Stall@nsnl.no",
+        "retrieved_at": "2026-11-06T13:01:10.506750Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct NSNL stable-booking email explicitly published on own-orgnr page, not a registry contact or another entity’s employee."
+  },
+  {
+    "organisation_number": "990412375",
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.340323b78352ff35130c",
+    "value": {
+      "title": "Hva gjør en vaktmester i et borettslag? | Guide for styret",
+      "title_source": "article_page",
+      "url": "https://bnv.no/nyheter/hva-gjor-en-vaktmester-i-et-borettslag/",
+      "date": "2026-10-13",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "63d7a7de565841f42521f944fe3ec937976e39ff63b4e349b6c5242f0bc8f786",
+        "source_url": "https://bnv.no/nyheter/hva-gjor-en-vaktmester-i-et-borettslag/",
+        "source_class": "company_owned",
+        "content_sha256": "39bc3884151b846db19219ae7dd8b045e58bcf0989a0c429081fc92b6fcb8b89",
+        "claim_span": "perty=\"article:published_time\" content=\"2026-10-13T16:45:07+00:00\" /><meta property=\"article:modified_tim",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:47.934729Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct dedicated Bergen Vaktmestertjenester AS publication with own 990412375 in footer. PHM Group branding is disclosed, not reused as another entity’s company fact. Open-application page is an article only, never counted as an ACTIVE job ad."
+  },
+  {
+    "organisation_number": "990412375",
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.fe34c7f4c00b51f8470b",
+    "value": {
+      "title": "Belegningsstein i Helleveien",
+      "title_source": "article_page",
+      "url": "https://bnv.no/nyheter/helleveien-belegningsstein/",
+      "date": "2024-11-04",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "c8e040cd42a56ce8f2b04abeb7ce9856c83e54c5e481c07faef28591ffcbffff",
+        "source_url": "https://bnv.no/nyheter/helleveien-belegningsstein/",
+        "source_class": "company_owned",
+        "content_sha256": "cdc18f57aa9e9ff73743551fb78d8b24968263fa4e70421e11f717e22095f90d",
+        "claim_span": "perty=\"article:published_time\" content=\"2024-11-04T08:16:04+00:00\" /><meta property=\"article:modified_tim",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:49.471022Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct dedicated Bergen Vaktmestertjenester AS publication with own 990412375 in footer. PHM Group branding is disclosed, not reused as another entity’s company fact. Open-application page is an article only, never counted as an ACTIVE job ad."
+  },
+  {
+    "organisation_number": "990412375",
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "family": "activity",
+    "field": "dated_item.a412ae50a63501df9701",
+    "value": {
+      "title": "Åpen jobbsøknad",
+      "title_source": "article_page",
+      "url": "https://bnv.no/nyheter/apne-jobbsoknad/",
+      "date": "2024-11-01",
+      "date_source": "datePublished",
+      "identity_level": "VERIFIED",
+      "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+    },
+    "reporting_period": null,
+    "evidence": [
+      {
+        "id": "c584e0b6f11de43de94a45b00f16277cd2dd6af9f5627def3abb3fbe08faec6a",
+        "source_url": "https://bnv.no/nyheter/apne-jobbsoknad/",
+        "source_class": "company_owned",
+        "content_sha256": "777307a2f9ab2cc33a25e7299678d3a0d3863ec046bc5ddd6378ea873bda0e8a",
+        "claim_span": "perty=\"article:published_time\" content=\"2024-11-01T12:57:06+00:00\" /><meta property=\"article:modified_tim",
+        "locator": "/article",
+        "retrieved_at": "2026-11-06T13:01:51.038378Z",
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "review": "Correct dedicated Bergen Vaktmestertjenester AS publication with own 990412375 in footer. PHM Group branding is disclosed, not reused as another entity’s company fact. Open-application page is an article only, never counted as an ACTIVE job ad."
+  }
+]

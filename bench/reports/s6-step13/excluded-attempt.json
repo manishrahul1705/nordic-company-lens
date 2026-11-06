@@ -1,0 +1,9 @@
+{
+  "run": "20261106T124647536248Z-073bc14",
+  "source_commit": "073bc14",
+  "completed_outputs": false,
+  "counted_as_coverage_measurement": false,
+  "error": "Envelope duplicate claim fields before output serialization",
+  "reproduced_fix": "Deduplicate article aliases on the final redirected URL",
+  "raw_run_preserved": true
+}

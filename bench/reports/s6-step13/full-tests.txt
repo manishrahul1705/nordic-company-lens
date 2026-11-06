@@ -1,0 +1,382 @@
+........................................................................ [  6%]
+........................................................................ [ 13%]
+........................................................................ [ 19%]
+........................................................................ [ 26%]
+........................................................................ [ 32%]
+........................................................................ [ 39%]
+........................................................................ [ 46%]
+........................................................................ [ 52%]
+........................................................................ [ 59%]
+........................................................................ [ 65%]
+........................................................................ [ 72%]
+........................................................................ [ 79%]
+..........FFFFFF........................................................ [ 85%]
+........................................................................ [ 92%]
+........................................................................ [ 98%]
+............                                                             [100%]
+================================== FAILURES ===================================
+_ test_absent_guesses_do_not_hide_known_source_failures[origins0-errors0-not_available] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002A8011DAE70>
+origins = [], errors = [], expected = 'not_available'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:255: in fetch
+    brand_names=actual_names(envelope,context,http.blobs) if retry_candidates is None else []
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], evidence=[], run=namespace(refresh={'recall_round2': {'candidates': []}}))
+context = {'name': 'Example AS', 'nace': '', 'subunits': [], 'nav_homepages': [], ...}
+blobs = None
+
+    def actual_names(envelope,context,blobs):
+        result=[];legal=compact(legal_name(context.get('name')))
+        for c in envelope.claims:
+            if c.availability=='available' and c.field.startswith('subunits.unit.') and isinstance(c.value,dict):
+                name=c.value.get('name')
+                if compact(legal_name(name))!=legal:result.append((name,'registered_subunit',c.evidence_ids))
+>       allowed={envelope.organisation_number,*[u['orgnr'] for u in context.get('subunits',[])]}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'organisation_number'
+
+src\signalpost\web\brands.py:30: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins1-errors1-not_available] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002A8011D8050>
+origins = ['legal_name_slug', 'legal_name_slug']
+errors = ['no_such_domain', 'no_such_domain'], expected = 'not_available'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:255: in fetch
+    brand_names=actual_names(envelope,context,http.blobs) if retry_candidates is None else []
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], evidence=[], run=namespace(refresh={'recall_round2': {'candidates': []}}))
+context = {'name': 'Example AS', 'nace': '', 'subunits': [], 'nav_homepages': [], ...}
+blobs = None
+
+    def actual_names(envelope,context,blobs):
+        result=[];legal=compact(legal_name(context.get('name')))
+        for c in envelope.claims:
+            if c.availability=='available' and c.field.startswith('subunits.unit.') and isinstance(c.value,dict):
+                name=c.value.get('name')
+                if compact(legal_name(name))!=legal:result.append((name,'registered_subunit',c.evidence_ids))
+>       allowed={envelope.organisation_number,*[u['orgnr'] for u in context.get('subunits',[])]}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'organisation_number'
+
+src\signalpost\web\brands.py:30: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins2-errors2-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002A8011D9130>
+origins = ['registry_website'], errors = ['no_such_domain'], expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:255: in fetch
+    brand_names=actual_names(envelope,context,http.blobs) if retry_candidates is None else []
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], evidence=[], run=namespace(refresh={'recall_round2': {'candidates': []}}))
+context = {'name': 'Example AS', 'nace': '', 'subunits': [], 'nav_homepages': [], ...}
+blobs = None
+
+    def actual_names(envelope,context,blobs):
+        result=[];legal=compact(legal_name(context.get('name')))
+        for c in envelope.claims:
+            if c.availability=='available' and c.field.startswith('subunits.unit.') and isinstance(c.value,dict):
+                name=c.value.get('name')
+                if compact(legal_name(name))!=legal:result.append((name,'registered_subunit',c.evidence_ids))
+>       allowed={envelope.organisation_number,*[u['orgnr'] for u in context.get('subunits',[])]}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'organisation_number'
+
+src\signalpost\web\brands.py:30: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins3-errors3-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002A8001F5670>
+origins = ['registry_email'], errors = ['no_such_domain'], expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:255: in fetch
+    brand_names=actual_names(envelope,context,http.blobs) if retry_candidates is None else []
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], evidence=[], run=namespace(refresh={'recall_round2': {'candidates': []}}))
+context = {'name': 'Example AS', 'nace': '', 'subunits': [], 'nav_homepages': [], ...}
+blobs = None
+
+    def actual_names(envelope,context,blobs):
+        result=[];legal=compact(legal_name(context.get('name')))
+        for c in envelope.claims:
+            if c.availability=='available' and c.field.startswith('subunits.unit.') and isinstance(c.value,dict):
+                name=c.value.get('name')
+                if compact(legal_name(name))!=legal:result.append((name,'registered_subunit',c.evidence_ids))
+>       allowed={envelope.organisation_number,*[u['orgnr'] for u in context.get('subunits',[])]}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'organisation_number'
+
+src\signalpost\web\brands.py:30: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins4-errors4-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002A801B38560>
+origins = ['nav_employer_homepage'], errors = ['website_timeout']
+expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:255: in fetch
+    brand_names=actual_names(envelope,context,http.blobs) if retry_candidates is None else []
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], evidence=[], run=namespace(refresh={'recall_round2': {'candidates': []}}))
+context = {'name': 'Example AS', 'nace': '', 'subunits': [], 'nav_homepages': [], ...}
+blobs = None
+
+    def actual_names(envelope,context,blobs):
+        result=[];legal=compact(legal_name(context.get('name')))
+        for c in envelope.claims:
+            if c.availability=='available' and c.field.startswith('subunits.unit.') and isinstance(c.value,dict):
+                name=c.value.get('name')
+                if compact(legal_name(name))!=legal:result.append((name,'registered_subunit',c.evidence_ids))
+>       allowed={envelope.organisation_number,*[u['orgnr'] for u in context.get('subunits',[])]}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'organisation_number'
+
+src\signalpost\web\brands.py:30: AttributeError
+_ test_absent_guesses_do_not_hide_known_source_failures[origins5-errors5-failed] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002A801B39C10>
+origins = ['legal_name_slug', 'registry_website']
+errors = ['no_such_domain', 'website_connect_error'], expected = 'failed'
+
+    @pytest.mark.parametrize('origins,errors,expected', [
+        ([], [], 'not_available'),
+        (['legal_name_slug', 'legal_name_slug'], ['no_such_domain', 'no_such_domain'], 'not_available'),
+        (['registry_website'], ['no_such_domain'], 'failed'),
+        (['registry_email'], ['no_such_domain'], 'failed'),
+        (['nav_employer_homepage'], ['website_timeout'], 'failed'),
+        (['legal_name_slug', 'registry_website'], ['no_such_domain', 'website_connect_error'], 'failed'),
+    ])
+    def test_absent_guesses_do_not_hide_known_source_failures(monkeypatch, origins, errors, expected):
+        candidates = [Candidate(f'https://candidate{i}.no', f'candidate{i}.no', origin)
+                      for i, origin in enumerate(origins)]
+        failures = {candidate.domain: error for candidate, error in zip(candidates, errors)}
+        monkeypatch.setattr(collector, 'generate', lambda context: candidates)
+        monkeypatch.setattr(collector, 'registry_context', lambda *args: ({'name': 'Example AS'}, None, None))
+
+        async def candidate(candidate, org, proved):
+            raise SourceFailure(failures[candidate.domain])
+
+        http = SimpleNamespace(blobs=None, attempts={}, candidate=candidate)
+        env = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+>       result = asyncio.run(collector.fetch('923609016', env, None, http))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_speculative_domain_absence.py:32:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\web\collector.py:255: in fetch
+    brand_names=actual_names(envelope,context,http.blobs) if retry_candidates is None else []
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelope = namespace(claims=[], evidence=[], run=namespace(refresh={'recall_round2': {'candidates': []}}))
+context = {'name': 'Example AS', 'nace': '', 'subunits': [], 'nav_homepages': [], ...}
+blobs = None
+
+    def actual_names(envelope,context,blobs):
+        result=[];legal=compact(legal_name(context.get('name')))
+        for c in envelope.claims:
+            if c.availability=='available' and c.field.startswith('subunits.unit.') and isinstance(c.value,dict):
+                name=c.value.get('name')
+                if compact(legal_name(name))!=legal:result.append((name,'registered_subunit',c.evidence_ids))
+>       allowed={envelope.organisation_number,*[u['orgnr'] for u in context.get('subunits',[])]}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'types.SimpleNamespace' object has no attribute 'organisation_number'
+
+src\signalpost\web\brands.py:30: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins0-errors0-not_available]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins1-errors1-not_available]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins2-errors2-failed]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins3-errors3-failed]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins4-errors4-failed]
+FAILED tests/test_speculative_domain_absence.py::test_absent_guesses_do_not_hide_known_source_failures[origins5-errors5-failed]
+6 failed, 1086 passed in 258.90s (0:04:18)
