@@ -71,6 +71,9 @@ async def publish_articles(section, items, org, proof, http, checked, discovery_
         if scope and not (urlsplit(value['url']).path.startswith(scope+'/')):
             continue
         response = await http.get(value['url'], org, root)
+        # Distinct feed aliases may redirect to one article. Deduplicate on the
+        # effective URL too, before generating its stable claim field.
+        if response.url in checked:continue
         if response.status in {200, 404, 410}:
             checked.add(response.url)
         if response.status != 200 or domain(response.url) != root:

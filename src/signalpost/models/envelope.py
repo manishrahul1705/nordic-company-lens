@@ -98,7 +98,9 @@ class Envelope(Model):
         if len(ids) != len(self.evidence):
             raise ValueError("Duplicate evidence IDs")
         if len({c.field for c in self.claims}) != len(self.claims):
-            raise ValueError("Duplicate claim fields")
+            from collections import Counter
+            duplicates=sorted(k for k,n in Counter(c.field for c in self.claims).items() if n>1)
+            raise ValueError("Duplicate claim fields for "+self.organisation_number+": "+', '.join(duplicates[:10]))
         for claim in self.claims:
             if set(claim.evidence_ids) - ids:
                 raise ValueError("Dangling claim evidence")

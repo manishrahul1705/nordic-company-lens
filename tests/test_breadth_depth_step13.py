@@ -150,3 +150,15 @@ def test_activity_discovery_does_not_truncate_eleven_supported_candidates():
     from signalpost.web.activity import parse_html
     body=''.join(f'<article><a href="/news/item-{n}">Headline {n}</a><time datetime="2026-01-01">Jan</time></article>' for n in range(12)).encode()
     assert len(parse_html(body,'https://example.no/news',datetime.now(timezone.utc)))==12
+
+
+def test_article_alias_redirects_publish_one_canonical_claim(tmp_path):
+    from signalpost.web.activity import publish_articles
+    body=b'<html><title>New office</title><main><h1>New office</h1><time datetime="2026-01-01">January</time><p>Our own company announces its new office and services in Norway. This is a genuine dated news article about our work.</p></main></html>'
+    blobs=BlobStore(tmp_path)
+    class Http:
+        async def get(self,*args,**kwargs):return Response(body,200,'https://example.no/news/canonical','2026-11-06T00:00:00Z',blobs.put(body))
+    proof=SimpleNamespace(value={'final_url':'https://example.no','identity_level':'VERIFIED'},id='proof')
+    section=Section();items=[({'url':'https://example.no/news/'+name},'/item','') for name in ['alias-a','alias-b']]
+    asyncio.run(publish_articles(section,items,ORG,proof,Http(),set()))
+    assert len(section.claims)==1 and section.claims[0].value['url']=='https://example.no/news/canonical'
