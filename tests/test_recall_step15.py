@@ -118,3 +118,21 @@ def test_unwrapped_ssl_error_on_speculative_candidate_is_not_section_exception(t
     _,row,_,_=execute_web(tmp_path,monkeypatch,response=response,website_transient_retry=False)
     assert row['run']['sections']['website']=='not_available'
     assert not any(e['code']=='section_exception' for e in row['errors'])
+
+
+@pytest.mark.parametrize('origin,expected',[
+    ('legal_name_slug','not_available'),('registry_email','not_available'),
+    ('nav_employer_homepage','not_available'),('registry_website','blocked'),
+    ('wikidata_website','blocked')])
+@pytest.mark.parametrize('code',['http_blocked','robots','robots_unavailable','block_page'])
+def test_speculative_access_refusal_stays_candidate_scoped(tmp_path,monkeypatch,origin,expected,code):
+    from signalpost.web import collector
+    from tests.test_websites import execute_web
+    monkeypatch.setattr(collector,'generate',lambda context:[Candidate('https://example.com/','example.com',origin)])
+    async def fail(self,*args,**kwargs):raise SourceFailure(code)
+    monkeypatch.setattr(WebsiteHttp,'candidate',fail)
+    _,row,_,_=execute_web(tmp_path,monkeypatch)
+    assert row['run']['sections']['website']==expected
+    assert any(e['code']==code for e in row['errors']) == (expected=='blocked')
+    attempts=json.loads(next(e['message'] for e in row['errors'] if e['code']=='website_candidates'))
+    assert attempts[0]['candidate_not_reachable'] == (expected=='not_available')

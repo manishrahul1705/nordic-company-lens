@@ -1,0 +1,1247 @@
+[
+  {
+    "org": "912823970",
+    "name": "MYNT OG EIENDOM BESSAKER AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"myntogeiendombessaker.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"mynt-og-eiendom-bessaker.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://myntogeiendombessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.myntogeiendombessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.myntogeiendombessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://myntogeiendombessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://mynt-og-eiendom-bessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.mynt-og-eiendom-bessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.mynt-og-eiendom-bessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://mynt-og-eiendom-bessaker.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.com\", \"url\": \"https://myntogeiendombessaker.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"myntogeiendombessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://myntogeiendombessaker.com/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"myntogeiendombessaker.com\", \"url\": \"https://www.myntogeiendombessaker.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"myntogeiendombessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.myntogeiendombessaker.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.myntogeiendombessaker.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"myntogeiendombessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://myntogeiendombessaker.com/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"mynt-og-eiendom-bessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://mynt-og-eiendom-bessaker.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.mynt-og-eiendom-bessaker.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.mynt-og-eiendom-bessaker.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mynt-og-eiendom-bessaker.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://mynt-og-eiendom-bessaker.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "myntogeiendombessaker.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "mynt-og-eiendom-bessaker.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "myntogeiendombessaker.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "mynt-og-eiendom-bessaker.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "myntogeiendombessaker.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "917998787",
+    "name": "DRAGEHAUGEN VERDI AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"dragehaugenverdi.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"dragehaugen-verdi.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://dragehaugenverdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.dragehaugenverdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.dragehaugenverdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://dragehaugenverdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://dragehaugen-verdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.dragehaugen-verdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.dragehaugen-verdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://dragehaugen-verdi.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.com\", \"url\": \"https://dragehaugenverdi.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"dragehaugenverdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://dragehaugenverdi.com/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"dragehaugenverdi.com\", \"url\": \"https://www.dragehaugenverdi.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"dragehaugenverdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.dragehaugenverdi.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.dragehaugenverdi.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugenverdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://dragehaugenverdi.com/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"dragehaugen-verdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://dragehaugen-verdi.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.dragehaugen-verdi.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.dragehaugen-verdi.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"dragehaugen-verdi.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://dragehaugen-verdi.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "dragehaugenverdi.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "dragehaugen-verdi.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "dragehaugenverdi.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "dragehaugen-verdi.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "dragehaugenverdi.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "936276075",
+    "name": "M BERGUM AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"mbergum.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mbergum.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"m-bergum.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mbergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://mbergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mbergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.mbergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mbergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.mbergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mbergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://mbergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://m-bergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.no\", \"url\": \"https://www.m-bergum.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"m-bergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.m-bergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.m-bergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://m-bergum.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"mbergum.com\", \"url\": \"https://mbergum.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"url\": \"https://mbergum.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"ConnectTimeout\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"mbergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://mbergum.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"mbergum.com\", \"url\": \"https://www.mbergum.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"url\": \"https://www.mbergum.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"ConnectTimeout\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"mbergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.mbergum.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.mbergum.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"mbergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.mbergum.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://mbergum.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"mbergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://mbergum.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"m-bergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://m-bergum.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.m-bergum.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.m-bergum.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"m-bergum.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://m-bergum.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "mbergum.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "m-bergum.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "mbergum.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "m-bergum.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "mbergum.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "997768728",
+    "name": "SELMAN EIENDOM AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"selmaneiendom.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.no\", \"origin\": \"subunit_name_slug\", \"level\": \"LOW\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"selman-eiendom.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.no\", \"origin\": \"subunit_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.com\", \"origin\": \"subunit_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.com\", \"origin\": \"subunit_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://selmaneiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.selmaneiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.selmaneiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://selmaneiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.no\", \"url\": \"https://sarpsborgdagligvare.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"sarpsborgdagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://sarpsborgdagligvare.no/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"sarpsborgdagligvare.no\", \"url\": \"https://www.sarpsborgdagligvare.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"sarpsborgdagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://www.sarpsborgdagligvare.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://www.sarpsborgdagligvare.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://sarpsborgdagligvare.no/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"selman-eiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://selman-eiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.selman-eiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.selman-eiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://selman-eiendom.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://sarpsborg-dagligvare.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"https://www.sarpsborg-dagligvare.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://www.sarpsborg-dagligvare.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.no\", \"origin\": \"subunit_name_slug\", \"url\": \"http://sarpsborg-dagligvare.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://selmaneiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.selmaneiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.selmaneiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selmaneiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://selmaneiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"https://sarpsborgdagligvare.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"https://www.sarpsborgdagligvare.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"http://www.sarpsborgdagligvare.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborgdagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"http://sarpsborgdagligvare.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://selman-eiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.selman-eiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.selman-eiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"selman-eiendom.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://selman-eiendom.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"https://sarpsborg-dagligvare.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"https://www.sarpsborg-dagligvare.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"http://www.sarpsborg-dagligvare.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sarpsborg-dagligvare.com\", \"origin\": \"subunit_name_slug\", \"url\": \"http://sarpsborg-dagligvare.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "selmaneiendom.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sarpsborgdagligvare.no",
+          "origin": "subunit_name_slug",
+          "subunit_orgnr": "886249322",
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "selman-eiendom.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sarpsborg-dagligvare.no",
+          "origin": "subunit_name_slug",
+          "subunit_orgnr": "886249322",
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "selmaneiendom.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sarpsborgdagligvare.com",
+          "origin": "subunit_name_slug",
+          "subunit_orgnr": "886249322",
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "selman-eiendom.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sarpsborg-dagligvare.com",
+          "origin": "subunit_name_slug",
+          "subunit_orgnr": "886249322",
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sarpsborgdagligvare.no",
+          "origin": "subunit_name_slug",
+          "subunit_orgnr": "886249322",
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "935180759",
+    "name": "NESSET BLIKK AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"nessetblikk.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"nesset-blikk.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://nessetblikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nessetblikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.nessetblikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://nessetblikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://nesset-blikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nesset-blikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.nesset-blikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://nesset-blikk.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.com\", \"url\": \"https://nessetblikk.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"nessetblikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://nessetblikk.com/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"nessetblikk.com\", \"url\": \"https://www.nessetblikk.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"nessetblikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nessetblikk.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.nessetblikk.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nessetblikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://nessetblikk.com/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"nesset-blikk.com\", \"url\": \"https://nesset-blikk.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"nesset-blikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://nesset-blikk.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nesset-blikk.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.nesset-blikk.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nesset-blikk.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://nesset-blikk.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "nessetblikk.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "nesset-blikk.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "nessetblikk.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "nesset-blikk.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "nessetblikk.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "829363712",
+    "name": "JONSSON BYGG AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"jonssonbygg.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_tls_error\"}, {\"domain\": \"jonsson-bygg.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonssonbygg.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_http_5xx\"}, {\"domain\": \"jonsson-bygg.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonssonbygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jonssonbygg.no/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"jonssonbygg.no\", \"url\": \"https://www.jonssonbygg.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"jonssonbygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jonssonbygg.no/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"jonssonbygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jonssonbygg.no/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"jonssonbygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://jonssonbygg.no/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"jonsson-bygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jonsson-bygg.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonsson-bygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jonsson-bygg.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonsson-bygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jonsson-bygg.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonsson-bygg.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://jonsson-bygg.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://jonssonbygg.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"dns_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"jonssonbygg.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jonssonbygg.com/\", \"final_url\": \"https://www.jonssonbygg.com/\", \"status\": 500}, {\"domain\": \"jonsson-bygg.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jonsson-bygg.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonsson-bygg.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jonsson-bygg.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonsson-bygg.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jonsson-bygg.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jonsson-bygg.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://jonsson-bygg.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "jonssonbygg.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "jonsson-bygg.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "jonssonbygg.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "jonsson-bygg.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "jonssonbygg.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "jonssonbygg.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "932386933",
+    "name": "GULBIS HOLDING AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"gulbisholding.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"gulbis-holding.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.no\", \"url\": \"https://gulbisholding.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"gulbisholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://gulbisholding.no/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"gulbisholding.no\", \"url\": \"https://www.gulbisholding.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"gulbisholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.gulbisholding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.gulbisholding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://gulbisholding.no/\", \"reason\": \"dns_unavailable\"}, {\"domain\": \"gulbis-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://gulbis-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.gulbis-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.gulbis-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://gulbis-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://gulbisholding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.gulbisholding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.gulbisholding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbisholding.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://gulbisholding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://gulbis-holding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.gulbis-holding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.gulbis-holding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"gulbis-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://gulbis-holding.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "gulbisholding.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "gulbis-holding.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "gulbisholding.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "gulbis-holding.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "gulbisholding.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "915483976",
+    "name": "A.Y INVEST AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"ayinvest.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ayinvest.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"a-y-invest.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ayinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://ayinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ayinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.ayinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ayinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.ayinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ayinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://ayinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://a-y-invest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.no\", \"url\": \"https://www.a-y-invest.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"a-y-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.a-y-invest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.a-y-invest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://a-y-invest.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://ayinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ayinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://ayinvest.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.ayinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ayinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.ayinvest.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.ayinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"ConnectTimeout\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ayinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.ayinvest.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://ayinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ayinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://ayinvest.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"a-y-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://a-y-invest.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.a-y-invest.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.a-y-invest.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"a-y-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://a-y-invest.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "ayinvest.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "a-y-invest.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "ayinvest.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "a-y-invest.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "ayinvest.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "921678851",
+    "name": "H1 CAPITAL AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"h1capital.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1-capital.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1capital.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_tls_error\"}, {\"domain\": \"h1holdings.co.za\", \"origin\": \"legal_name_slug\", \"level\": \"REJECT\", \"reason\": \"redirect_without_company_identity\", \"title\": \"H1 Holdings\"}, {\"domain\": \"h1capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://h1capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1capital.no\", \"url\": \"https://www.h1capital.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"h1capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.h1capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.h1capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://h1capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1-capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://h1-capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1-capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.h1-capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1-capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.h1-capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1-capital.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://h1-capital.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"h1capital.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://h1capital.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"h1capital.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.h1capital.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"h1capital.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.h1capital.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"h1capital.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://h1capital.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"h1-capital.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://h1-capital.com/\", \"final_url\": \"https://h1holdings.co.za/\", \"status\": 200}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "h1capital.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "h1-capital.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "h1capital.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "h1-capital.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": false
+        },
+        {
+          "domain": "h1capital.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "989171984",
+    "name": "SAG HOLDING AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"sagholding.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sag-holding.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sagholding.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"url_refused\"}, {\"domain\": \"sag-holding.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"sagholding.no\", \"url\": \"https://sagholding.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"sagholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://sagholding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sagholding.no\", \"url\": \"https://www.sagholding.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"sagholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.sagholding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sagholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.sagholding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sagholding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://sagholding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sag-holding.no\", \"url\": \"https://sag-holding.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"sag-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://sag-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sag-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.sag-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sag-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.sag-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sag-holding.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://sag-holding.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sagholding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://sagholding.com/\", \"reason\": \"url_refused\"}, {\"url\": \"https://sag-holding.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"sag-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://sag-holding.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"sag-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.sag-holding.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"sag-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.sag-holding.com/\", \"reason\": \"no_such_domain\"}, {\"url\": \"http://sag-holding.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"ConnectTimeout\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"sag-holding.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://sag-holding.com/\", \"reason\": \"website_timeout\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "sagholding.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sag-holding.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sagholding.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sag-holding.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sag-holding.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "995243822",
+    "name": "CASIS AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"casis.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"casis.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"casis.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://casis.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"casis.no\", \"url\": \"https://www.casis.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"casis.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.casis.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"casis.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.casis.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"casis.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://casis.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://casis.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"ConnectTimeout\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"casis.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://casis.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.casis.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"casis.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.casis.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.casis.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"casis.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.casis.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://casis.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"casis.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://casis.com/\", \"reason\": \"website_timeout\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "casis.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "casis.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "casis.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "931708694",
+    "name": "CO2-TRANSPORT AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"co2transport.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2transport.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"co2-transport.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://co2transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.co2transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.co2transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://co2transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://co2-transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.co2-transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.co2-transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://co2-transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2transport.com\", \"url\": \"https://co2transport.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"url\": \"https://co2transport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"co2transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://co2transport.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.co2transport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"ConnectTimeout\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"co2transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.co2transport.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.co2transport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"co2transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.co2transport.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://co2transport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"co2transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://co2transport.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"co2-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://co2-transport.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.co2-transport.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.co2-transport.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"co2-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://co2-transport.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "co2transport.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "co2-transport.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "co2transport.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "co2-transport.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "co2transport.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "921044186",
+    "name": "RAPTOR INVEST AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"raptorinvest.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptorinvest.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"raptor-invest.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptorinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://raptorinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptorinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.raptorinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptorinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.raptorinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptorinvest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://raptorinvest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://raptor-invest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.raptor-invest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.raptor-invest.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://raptor-invest.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://raptorinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"raptorinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://raptorinvest.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.raptorinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"raptorinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.raptorinvest.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.raptorinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"ConnectTimeout\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"raptorinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.raptorinvest.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://raptorinvest.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"raptorinvest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://raptorinvest.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"raptor-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://raptor-invest.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.raptor-invest.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.raptor-invest.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"raptor-invest.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://raptor-invest.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "raptorinvest.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "raptor-invest.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "raptorinvest.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "raptor-invest.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "raptorinvest.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "812753932",
+    "name": "TIME 2 TRADE AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "robots",
+        "message": "time-2-trade.com: access refused"
+      },
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"time2trade.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time-2-trade.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time2trade.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"time-2-trade.com\", \"origin\": \"legal_name_slug\", \"level\": \"BLOCKED\", \"reason\": \"robots\"}, {\"domain\": \"time2trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://time2trade.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time2trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.time2trade.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time2trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.time2trade.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time2trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://time2trade.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time-2-trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://time-2-trade.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time-2-trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.time-2-trade.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time-2-trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.time-2-trade.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"time-2-trade.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://time-2-trade.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://time2trade.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"time2trade.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://time2trade.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.time2trade.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"time2trade.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.time2trade.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.time2trade.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"time2trade.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.time2trade.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://time2trade.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"time2trade.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://time2trade.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"time-2-trade.com\", \"url\": \"https://time-2-trade.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"time-2-trade.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://time-2-trade.com/\", \"reason\": \"robots\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "time2trade.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "time-2-trade.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "time2trade.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "time-2-trade.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "time2trade.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "921443234",
+    "name": "PROMO TRANSPORT AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"promotransport.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promotransport.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"promo-transport.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promotransport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://promotransport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promotransport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.promotransport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promotransport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.promotransport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promotransport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://promotransport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://promo-transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.promo-transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.promo-transport.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://promo-transport.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://promotransport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"promotransport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://promotransport.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.promotransport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"promotransport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.promotransport.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.promotransport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"promotransport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.promotransport.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://promotransport.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"promotransport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://promotransport.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"promo-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://promo-transport.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.promo-transport.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.promo-transport.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"promo-transport.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://promo-transport.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "promotransport.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "promo-transport.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "promotransport.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "promo-transport.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "promotransport.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "912342409",
+    "name": "FAUNE AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"faune.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"faune.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"faune.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://faune.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"faune.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.faune.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"faune.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.faune.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"faune.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://faune.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://faune.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"faune.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://faune.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.faune.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"faune.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.faune.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.faune.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"faune.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.faune.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://faune.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"faune.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://faune.com/\", \"reason\": \"website_timeout\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "faune.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "faune.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "faune.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "919931477",
+    "name": "SEA TRUCK HOLDING AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "section_exception",
+        "message": "SSLError"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "seatruck.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sea-truck.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "seatruck.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "sea-truck.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "832761362",
+    "name": "RENHOLD & SERVICE AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"fruits.co\", \"origin\": \"legal_name_slug\", \"level\": \"REJECT\", \"reason\": \"redirect_without_company_identity\", \"title\": \"renholdservice.no | fruits\"}, {\"domain\": \"resolve.no\", \"origin\": \"legal_name_slug\", \"level\": \"REJECT\", \"reason\": \"redirect_without_company_identity\", \"title\": \"Resolve\"}, {\"domain\": \"renholdservice.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_http_5xx\"}, {\"domain\": \"renhold-service.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"renholdservice.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://renholdservice.no/\", \"final_url\": \"https://www.fruits.co/en/domain/renholdservice.no\", \"status\": 200}, {\"domain\": \"renhold-service.no\", \"url\": \"https://renhold-service.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"renhold-service.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://renhold-service.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"renhold-service.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.renhold-service.no/\", \"final_url\": \"https://resolve.no/\", \"status\": 200}, {\"domain\": \"renholdservice.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://renholdservice.com/\", \"reason\": \"website_http_5xx\"}, {\"domain\": \"renhold-service.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://renhold-service.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"renhold-service.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.renhold-service.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"renhold-service.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.renhold-service.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"renhold-service.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://renhold-service.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "renholdservice.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": false
+        },
+        {
+          "domain": "renhold-service.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": false
+        },
+        {
+          "domain": "renholdservice.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "renhold-service.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "renholdservice.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "933593037",
+    "name": "JOCO CONSULTING AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "robots_unavailable",
+        "message": "jococonsulting.com: access refused"
+      },
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"jococonsulting.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"joco-consulting.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jococonsulting.com\", \"origin\": \"legal_name_slug\", \"level\": \"BLOCKED\", \"reason\": \"robots_unavailable\"}, {\"domain\": \"joco-consulting.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"jococonsulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jococonsulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jococonsulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jococonsulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jococonsulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jococonsulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jococonsulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://jococonsulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"joco-consulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://joco-consulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"joco-consulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.joco-consulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"joco-consulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.joco-consulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"joco-consulting.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://joco-consulting.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jococonsulting.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jococonsulting.com/\", \"reason\": \"robots_unavailable\"}, {\"domain\": \"joco-consulting.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://joco-consulting.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"joco-consulting.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.joco-consulting.com/\", \"reason\": \"website_tls_error\"}, {\"url\": \"http://www.joco-consulting.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"joco-consulting.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.joco-consulting.com/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://joco-consulting.com/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"joco-consulting.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://joco-consulting.com/\", \"reason\": \"website_timeout\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "jococonsulting.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "joco-consulting.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "jococonsulting.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "joco-consulting.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "joco-consulting.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "914718139",
+    "name": "STIAN IVERSEN HOLDING AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"stianiversen.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"stian-iversen.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stianiversen.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stianiversen.no\", \"url\": \"https://stianiversen.no/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"url\": \"https://stianiversen.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"stianiversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://stianiversen.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.stianiversen.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"stianiversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.stianiversen.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.stianiversen.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"stianiversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.stianiversen.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://stianiversen.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"stianiversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://stianiversen.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"stian-iversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://stian-iversen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.stian-iversen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.stian-iversen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://stian-iversen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stianiversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://stianiversen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stianiversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.stianiversen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stianiversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.stianiversen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stianiversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://stianiversen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://stian-iversen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.stian-iversen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.stian-iversen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"stian-iversen.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://stian-iversen.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "stianiversen.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "stian-iversen.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "stianiversen.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "stian-iversen.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "stianiversen.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "989245929",
+    "name": "CAGRO AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"cagro.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"cagro.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_tls_error\"}, {\"domain\": \"cagro.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://cagro.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"cagro.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.cagro.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"cagro.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.cagro.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"cagro.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://cagro.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"cagro.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://cagro.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"cagro.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.cagro.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"cagro.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.cagro.com/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"cagro.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://cagro.com/\", \"reason\": \"website_tls_error\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "cagro.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "cagro.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "cagro.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  },
+  {
+    "org": "989232401",
+    "name": "NORE AUTO HOLDING AS",
+    "previous": "not_available",
+    "current": "failed",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"noreauto.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_connect_error\"}, {\"domain\": \"nore-auto.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"noreauto.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\"}, {\"domain\": \"noreauto.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://noreauto.no/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"noreauto.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.noreauto.no/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"noreauto.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.noreauto.no/\", \"reason\": \"website_connect_error\"}, {\"domain\": \"noreauto.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://noreauto.no/\", \"reason\": \"website_connect_error\"}, {\"domain\": \"nore-auto.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://nore-auto.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nore-auto.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.nore-auto.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://nore-auto.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"noreauto.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://noreauto.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"noreauto.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.noreauto.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"noreauto.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.noreauto.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"noreauto.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://noreauto.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://nore-auto.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nore-auto.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.nore-auto.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"nore-auto.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://nore-auto.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ],
+    "candidates": {
+      "candidates": [
+        {
+          "domain": "noreauto.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "nore-auto.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "noreauto.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "nore-auto.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "noreauto.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  }
+]

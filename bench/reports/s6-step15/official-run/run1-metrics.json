@@ -1,0 +1,23 @@
+{
+  "input_rows": 103,
+  "emitted_envelopes": 103,
+  "requests": 755,
+  "changes": 0,
+  "observation_changes": 0,
+  "deadline_hits": 0,
+  "warnings": [],
+  "schema_validated": true,
+  "membership_validated": true,
+  "envelopes": 103,
+  "profiles": 103,
+  "wall_seconds": 204.51499999989755,
+  "http_requests": 755,
+  "standalone_verifier": {
+    "exit_code": 0,
+    "lines": 103,
+    "published_claims": 6104,
+    "source_blobs_verified": 318,
+    "synthesis_sentences": 703,
+    "synthesis_unverified_values": 0
+  }
+}

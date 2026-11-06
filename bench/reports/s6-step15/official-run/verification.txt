@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\Manish\Downloads\nordic-company-lens\bench\cache\s6-step15-state-official\scripts\verify_output.py", line 169, in <module>
+    main()
+  File "C:\Users\Manish\Downloads\nordic-company-lens\bench\cache\s6-step15-state-official\scripts\verify_output.py", line 165, in main
+    print(json.dumps(verify(args.first, args.state_dir, args.count, args.organisations, args.report, args.require_clean, args.second,args.clean_sections)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manish\Downloads\nordic-company-lens\bench\cache\s6-step15-state-official\scripts\verify_output.py", line 143, in verify
+    assert ids(rerun) == ids(rows), "Claim IDs differ"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Claim IDs differ

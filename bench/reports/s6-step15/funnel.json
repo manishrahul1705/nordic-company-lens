@@ -1,0 +1,30 @@
+{
+  "run": "bench\\runs\\20261106T142139712906Z-29a30a5",
+  "source_commit": "4d3abf58d0bb46cc2edc9bfce53b458a655165c9",
+  "published_websites": 105,
+  "without_website": 895,
+  "first_loss_counts": {
+    "DNS fail": 381,
+    "vetoed": 164,
+    "fetched but no proof": 99,
+    "no candidate": 184,
+    "fetch fail or timeout": 45,
+    "budget exhausted": 1,
+    "robots": 21
+  },
+  "gate_combined": 283,
+  "http_total": 6819,
+  "mean_attributed_http_per_company": 6.779,
+  "mean_amortized_http_per_company": 6.819,
+  "max_http_per_company": 40,
+  "shared_http": 40,
+  "original_first_loss_counts": {
+    "DNS fail": 381,
+    "vetoed": 160,
+    "fetched but no proof": 103,
+    "no candidate": 184,
+    "fetch fail or timeout": 45,
+    "budget exhausted": 1,
+    "robots": 21
+  }
+}

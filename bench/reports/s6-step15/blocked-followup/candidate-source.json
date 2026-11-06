@@ -1,0 +1,8 @@
+{
+  "base_commit": "5506e98c6e8a6ce98eebbae09e832d0a58dd2b3b",
+  "validation": "Fresh local clone plus exactly the two pending tested files, before conditional commit; no runtime changes during execution.",
+  "sha256": {
+    "src/signalpost/web/collector.py": "46f7adab4c3c89426b71d0dbe775a8950d29bcfa1c121d256564e4c6e467246d",
+    "tests/test_recall_step15.py": "772c3ca6d47f49545358fef047cf528de8c973b7217cd563426211afa48ecaef"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "observations": [
+    {
+      "run": 2,
+      "organisation_number": "993350990",
+      "section": "website",
+      "previous_state": "blocked",
+      "current_state": "not_available",
+      "reason": "website_candidates"
+    }
+  ],
+  "cause": "1975.no: first run apex HTTP returned 429 after www HTTP 404; second run both HTTP variants returned 404. HTTPS variants had TLS failures in both runs.",
+  "source_url": "http://1975.no/"
+}

@@ -1,0 +1,571 @@
+[
+  {
+    "organisation_number": "926089056",
+    "company": "A1 LIVING AS",
+    "observation_changes": [
+      {
+        "section": "website",
+        "previous_state": "ambiguous",
+        "current_state": "not_available",
+        "reason": "website_candidates"
+      }
+    ],
+    "attempts": {
+      "1": [
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "atom.com",
+          "level": "MEDIUM",
+          "points": 0,
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "name_without_suffix_insufficient_contacts_or_domain",
+          "title": "A1Living.com — Premium Domain For Sale | Atom",
+          "proof_page_url": "https://www.atom.com/name/A1Living"
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "https://a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "http://a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "https://a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "http://a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.com",
+          "origin": "legal_name_slug",
+          "url": "https://a1living.com/",
+          "final_url": "https://www.atom.com/name/A1Living",
+          "status": 200
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "https://a1-living.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.a1-living.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.a1-living.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "http://a1-living.com/",
+          "reason": "no_such_domain"
+        }
+      ],
+      "2": [
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "atom.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "http_blocked",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "https://a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.no",
+          "origin": "legal_name_slug",
+          "url": "http://a1living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "https://a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.no",
+          "origin": "legal_name_slug",
+          "url": "http://a1-living.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1living.com",
+          "origin": "legal_name_slug",
+          "url": "https://a1living.com/",
+          "final_url": "https://www.atom.com/name/A1Living",
+          "status": 403
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "https://a1-living.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.a1-living.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.a1-living.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "a1-living.com",
+          "origin": "legal_name_slug",
+          "url": "http://a1-living.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    }
+  },
+  {
+    "organisation_number": "993350990",
+    "company": "1975 STIAN AAGAARD",
+    "observation_changes": [
+      {
+        "section": "website",
+        "previous_state": "blocked",
+        "current_state": "not_available",
+        "reason": "website_candidates"
+      }
+    ],
+    "attempts": {
+      "1": [
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "level": "BLOCKED",
+          "reason": "http_blocked",
+          "candidate_not_reachable": false
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "https://1975.no/",
+          "reason": "website_tls_error"
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "https://www.1975.no/",
+          "reason": "website_tls_error"
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "http://www.1975.no/",
+          "final_url": "http://www.1975.no/",
+          "status": 404
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "http://1975.no/",
+          "final_url": "http://1975.no/",
+          "status": 429
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        }
+      ],
+      "2": [
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "http_404",
+          "candidate_not_reachable": false
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain",
+          "candidate_not_reachable": true
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "https://1975.no/",
+          "reason": "website_tls_error"
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "https://www.1975.no/",
+          "reason": "website_tls_error"
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "http://www.1975.no/",
+          "final_url": "http://www.1975.no/",
+          "status": 404
+        },
+        {
+          "domain": "1975.no",
+          "origin": "registry_website",
+          "url": "http://1975.no/",
+          "final_url": "http://1975.no/",
+          "status": 404
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://1975stianaagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.no",
+          "origin": "legal_name_slug",
+          "url": "http://1975-stian-aagaard.no/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975stianaagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://1975stianaagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://www.1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "1975-stian-aagaard.com",
+          "origin": "legal_name_slug",
+          "url": "http://1975-stian-aagaard.com/",
+          "reason": "no_such_domain"
+        }
+      ]
+    }
+  }
+]

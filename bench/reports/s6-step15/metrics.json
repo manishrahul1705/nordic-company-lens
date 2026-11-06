@@ -1,0 +1,64 @@
+{
+  "run": "bench\\runs\\20261106T183808924157Z-1db7047",
+  "before": {
+    "identity": 1000,
+    "roles": 997,
+    "subunits": 774,
+    "accounts": 999,
+    "activity": 999,
+    "hiring": 3,
+    "website": 105,
+    "social": 42
+  },
+  "after": {
+    "identity": 1000,
+    "roles": 997,
+    "subunits": 774,
+    "accounts": 999,
+    "activity": 999,
+    "hiring": 3,
+    "website": 110,
+    "social": 44
+  },
+  "http": 8666,
+  "mean_attributed": 8.626,
+  "mean_amortized": 8.666,
+  "max_company": 40,
+  "deadlines": 0,
+  "warnings": [],
+  "funnel": {
+    "B_candidates": 3877,
+    "B_fetched": 342,
+    "C_pages_fetched": 588,
+    "E_candidates": 129,
+    "E_fetched": 70,
+    "existing_candidates": 296,
+    "existing_fetched": 79
+  },
+  "accepted_before_final_guard": {
+    "B": 52,
+    "E": 14,
+    "existing": 53
+  },
+  "kept_by_lever_overlapping": {
+    "B": 51,
+    "existing": 47,
+    "E": 12,
+    "C": 13
+  },
+  "new_company_websites": 5,
+  "new_social_urls": 5,
+  "changed_website_values": 0,
+  "wall_seconds": 1002.1100435999688,
+  "source_commit": "1db70477f679df3e03e29280897e314a43de6485",
+  "second_pass": {
+    "eligible": 50,
+    "attempted": 49,
+    "candidates": 59,
+    "candidates_fetched": 2,
+    "recovered": 0,
+    "requests": 175,
+    "seconds": 167.422,
+    "unexpected_failures": 0
+  }
+}

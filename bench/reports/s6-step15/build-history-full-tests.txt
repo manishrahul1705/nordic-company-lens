@@ -1,0 +1,151 @@
+........................................................................ [  6%]
+........................................................................ [ 12%]
+........................................................................ [ 19%]
+........................................................................ [ 25%]
+........................................................................ [ 32%]
+........................................................................ [ 38%]
+........................................................................ [ 44%]
+........................................................................ [ 51%]
+........................................................................ [ 57%]
+........................................................................ [ 64%]
+........................................................................ [ 70%]
+............................................FF.......................... [ 76%]
+........................................................................ [ 83%]
+........................................................................ [ 89%]
+.........................F.............................................. [ 96%]
+..............................F............                              [100%]
+================================== FAILURES ===================================
+_____ test_every_site_timeout_preserves_100_outputs_and_hard_caps[False] ______
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step15-full/test_every_site_timeout_preser0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000270008C2D80>
+advance_clock = False
+
+    @pytest.mark.parametrize('advance_clock', [False, True])
+    def test_every_site_timeout_preserves_100_outputs_and_hard_caps(tmp_path, monkeypatch, advance_clock):
+        from signalpost.runner import run
+        from signalpost.web import policy
+        from signalpost.web.fetcher import WebsiteHttp
+        async def public(*args): return ['93.184.216.34']
+        async def no_delay(self): pass
+        monkeypatch.setattr(policy, 'resolve_public', public)
+        monkeypatch.setattr(WebsiteHttp, 'retry_pause', no_delay)
+        cfg = config(tmp_path, numbers(100), websites=True, time_budget_seconds=999999).model_copy(
+            update={'website_politeness_seconds': 0})
+        import time
+        from types import SimpleNamespace
+        from signalpost import budget as budget_module
+        began = time.monotonic()
+        clock = [began]
+        if advance_clock:
+            monkeypatch.setattr(budget_module, 'time', SimpleNamespace(monotonic=lambda: clock[0]))
+        def respond(request):
+            if request.url.host == 'data.brreg.no': return handler()(request)
+            if advance_clock:
+                clock[0] += 12
+            raise httpx.ReadTimeout('synthetic all-sites timeout', request=request)
+        async def invoke():
+            async with httpx.AsyncClient(transport=httpx.MockTransport(respond)) as client:
+                return await run(cfg, client=client)
+        report = asyncio.run(invoke())
+        rows = [json.loads(line) for line in cfg.output.read_text().splitlines()]
+        assert len(rows) == 100
+        assert report['requests'] <= 1800
+        assert report['limits']['hard_time_budget_seconds'] == 2400
+>       assert max(r['operations']['requests'] for r in rows) <= 18
+E       assert 20 <= 18
+E        +  where 20 = max(<generator object test_every_site_timeout_preserves_100_outputs_and_hard_caps.<locals>.<genexpr> at 0x00000270002F41E0>)
+
+tests\test_s67_compliance.py:109: AssertionError
+______ test_every_site_timeout_preserves_100_outputs_and_hard_caps[True] ______
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step15-full/test_every_site_timeout_preser1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002707F9F4A40>
+advance_clock = True
+
+    @pytest.mark.parametrize('advance_clock', [False, True])
+    def test_every_site_timeout_preserves_100_outputs_and_hard_caps(tmp_path, monkeypatch, advance_clock):
+        from signalpost.runner import run
+        from signalpost.web import policy
+        from signalpost.web.fetcher import WebsiteHttp
+        async def public(*args): return ['93.184.216.34']
+        async def no_delay(self): pass
+        monkeypatch.setattr(policy, 'resolve_public', public)
+        monkeypatch.setattr(WebsiteHttp, 'retry_pause', no_delay)
+        cfg = config(tmp_path, numbers(100), websites=True, time_budget_seconds=999999).model_copy(
+            update={'website_politeness_seconds': 0})
+        import time
+        from types import SimpleNamespace
+        from signalpost import budget as budget_module
+        began = time.monotonic()
+        clock = [began]
+        if advance_clock:
+            monkeypatch.setattr(budget_module, 'time', SimpleNamespace(monotonic=lambda: clock[0]))
+        def respond(request):
+            if request.url.host == 'data.brreg.no': return handler()(request)
+            if advance_clock:
+                clock[0] += 12
+            raise httpx.ReadTimeout('synthetic all-sites timeout', request=request)
+        async def invoke():
+            async with httpx.AsyncClient(transport=httpx.MockTransport(respond)) as client:
+                return await run(cfg, client=client)
+        report = asyncio.run(invoke())
+        rows = [json.loads(line) for line in cfg.output.read_text().splitlines()]
+        assert len(rows) == 100
+        assert report['requests'] <= 1800
+        assert report['limits']['hard_time_budget_seconds'] == 2400
+>       assert max(r['operations']['requests'] for r in rows) <= 18
+E       assert 20 <= 18
+E        +  where 20 = max(<generator object test_every_site_timeout_preserves_100_outputs_and_hard_caps.<locals>.<genexpr> at 0x00000270005186C0>)
+
+tests\test_s67_compliance.py:109: AssertionError
+___________________ test_legal_forms_spelling_and_suffixes ____________________
+
+    def test_legal_forms_spelling_and_suffixes():
+        slugs=legal_name_slugs(legal_name('Bj�rk �sen �gir ASA'))
+>       assert {'bjorkasenaegir.no','bjorkasenaegir-as.no','bjorkasenaegiras.no','bjorkasenaegir.as','bjorkasenaegir.com','bjoerkaasenaegir.no'} <= set(slugs)
+E       AssertionError: assert {'bjoerkaasen...enaegiras.no'} <= {'bj-rk-sen-g...r-as.no', ...}
+E
+E         Extra items in the left set:
+E         'bjorkasenaegir.no'
+E         'bjorkasenaegir.as'
+E         'bjorkasenaegir.com'
+E         'bjorkasenaegir-as.no'
+E         'bjoerkaasenaegir.no'
+E         'bjorkasenaegiras.no'
+
+tests\test_website_candidate_expansion.py:18: AssertionError
+__ test_unlinked_standard_pages_are_checked_for_the_org_number[/personvern] ___
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step15-full/test_unlinked_standard_pages_a4')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000027000FA6C30>
+path = '/personvern'
+
+    @pytest.mark.parametrize("path", ["/kontakt", "/kontakt-oss", "/om-oss", "/om", "/personvern", "/personvernerklaering"])
+    def test_unlinked_standard_pages_are_checked_for_the_org_number(tmp_path, monkeypatch, path):
+        """The home page has no links and no number; the number is on a standard page."""
+        def site(request):
+            if request.url.path == "/robots.txt":
+                return httpx.Response(200, text="User-agent: *\nAllow: /")
+            if request.url.host != "example.no":
+                return httpx.Response(404, text="not found")
+            if request.url.path == path:
+                return httpx.Response(200, text=html("Org.nr 923 609 016 MVA"))
+            if request.url.path in {"", "/"}:
+                return httpx.Response(200, text='<html><title>Undeclared brand</title><body>'+FILL+'</body></html>')
+            return httpx.Response(404, text="not found")
+        # Three original pages plus at most three authorized imprint/privacy checks.
+        _, row, requests, _ = execute_web(tmp_path, monkeypatch, response=site, website_request_cap=8, website_total_request_cap=13)
+        claim = next((c for c in row["claims"] if c["field"] == "official_website"), None)
+        if path in {'/kontakt', '/om-oss', '/personvern'}:
+>           assert claim["value"]["identity_level"] == "VERIFIED"
+                   ^^^^^^^^^^^^^^
+E           TypeError: 'NoneType' object is not subscriptable
+
+tests\test_websites.py:338: TypeError
+=========================== short test summary info ===========================
+FAILED tests/test_s67_compliance.py::test_every_site_timeout_preserves_100_outputs_and_hard_caps[False]
+FAILED tests/test_s67_compliance.py::test_every_site_timeout_preserves_100_outputs_and_hard_caps[True]
+FAILED tests/test_website_candidate_expansion.py::test_legal_forms_spelling_and_suffixes
+FAILED tests/test_websites.py::test_unlinked_standard_pages_are_checked_for_the_org_number[/personvern]
+4 failed, 1119 passed in 359.94s (0:05:59)

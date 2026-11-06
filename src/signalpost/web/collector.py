@@ -453,10 +453,11 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     registry_failed = True
                 if refresh_candidate and candidate.domain == refresh_candidate.domain:
                     refresh_failed = True
-            attempts.append({"domain": candidate.domain,'origin':candidate.origin, "level": "BLOCKED" if exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"} else "LOW", "reason": exc.code, "candidate_not_reachable": not known_source and exc.code in {"website_timeout","website_connect_error","website_tls_error","dns_timeout","dns_error","dns_servfail","dns_unavailable","no_such_domain"}})
+            attempts.append({"domain": candidate.domain,'origin':candidate.origin, "level": "BLOCKED" if is_authoritative and exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"} else "LOW", "reason": exc.code, "candidate_not_reachable": not known_source and exc.code in {"website_timeout","website_connect_error","website_tls_error","dns_timeout","dns_error","dns_servfail","dns_unavailable","no_such_domain","robots","robots_unavailable","http_blocked","block_page"}})
             if exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"}:
                 blocked = blocked or is_authoritative
-                section.errors.append(Error(section="website", code=exc.code, message=f"{candidate.domain}: access refused"))
+                if is_authoritative:
+                    section.errors.append(Error(section="website", code=exc.code, message=f"{candidate.domain}: access refused"))
             if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
                 # Exhausting speculative discovery cannot invalidate a checked absence.
                 budget_hit = exc.code if is_authoritative else None

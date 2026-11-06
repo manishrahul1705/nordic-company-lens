@@ -1,0 +1,34 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_____________________ test_external_sources_strict_replay _____________________
+tests\test_external_integration.py:20: in test_external_sources_strict_replay
+    first = asyncio.run(execute('first'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_external_integration.py:13: in execute
+    await run_production_replay(
+scripts\production_replay.py:449: in run_production_replay
+    raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
+E   scripts.production_replay.ReplayFixtureError: Production replay failed: 1 missing fixture(s)
+---------------------------- Captured stdout call -----------------------------
+Loaded 38 recorded fixtures from manifest manifest.json
+------------------------------ Captured log call ------------------------------
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for GET https://zephyrsynthetic.no/personvern
+ERROR    production_replay:production_replay.py:432 Missing fixture: method=GET url=https://zephyrsynthetic.no/personvern reason=No recorded fixture for GET https://zephyrsynthetic.no/personvern
+________ test_about_page_norwegian_entity_support_survives_final_guard ________
+tests\test_final_group_website.py:63: in test_about_page_norwegian_entity_support_survives_final_guard
+    proof=next(c for c in row['claims'] if c['field']=='official_website')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   StopIteration
+=========================== short test summary info ===========================
+FAILED tests/test_external_integration.py::test_external_sources_strict_replay
+FAILED tests/test_final_group_website.py::test_about_page_norwegian_entity_support_survives_final_guard
+2 failed in 14.40s
