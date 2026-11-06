@@ -38,11 +38,19 @@ def real_page(page,context):
     if re.search(r'\b(?:this domain|domenet)\b.{0,50}\b(?:sale|parked|parkert|registrert)\b',text,re.I):return 'placeholder'
     # Plain footer company names are publisher identity too, not just copyright.
     expected={normalized(n) for n in [context.get('name'),*[u.get('name') for u in context.get('subunits',[])]] if n}
+    from .proof import orgnrs
+    own_ids=set(context.get('allowed_orgnrs',()))
+    joined_footer=normalized(' '.join(page.footer_parts))
+    split_own_footer=bool(own_ids and orgnrs(' '.join(page.brand_parts))<=own_ids and orgnrs(' '.join(page.brand_parts))
+        and any(re.search(r'(?<!\w)'+re.escape(n)+r'(?!\w)',joined_footer) for n in expected))
+    joined_headings=normalized(' '.join(page.identity_headings))
+    split_own_heading=split_own_footer and joined_headings in expected
     for value in [page.title,*page.identity_headings,str(page.meta.get('og:site_name',''))]:
-        for entity in re.findall(r'\bAS\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*){0,4}',value):
+        for entity in re.findall(r'(?:^|[|—–:])\s*(AS\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*){0,4})',value):
             if compact(entity) not in {compact(n) for n in expected}:return 'different_legal_entity'
         for entity in re.findall(r'\b[A-ZÆØÅ0-9][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ0-9][\wÆØÅæøå&.-]*){0,5}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)\b',value):
             actual=normalized(entity)
+            if split_own_heading and value in page.identity_headings and any(n.endswith(' '+actual) for n in expected):continue
             if not any(compact(name)==compact(actual) or name.endswith(' '+actual) for name in expected):return 'different_legal_entity'
     footer=' '.join(page.footer_parts)
     for value in page.footer_parts:
@@ -51,6 +59,9 @@ def real_page(page,context):
         if re.search(r'levert|design|utvikl|powered|nettside|laget av|partner|medlem',footer[max(0,position-70):position],re.I):continue
         value=re.sub(r'^(?:Copyright\s*)?(?:\u00a9\s*)?(?:20\d\d\s*[-:]?\s*)?','',value,flags=re.I).strip(' \t\n|.,')
         own_footer=any(re.search(r'(?<!\w)'+re.escape(n)+r'(?!\w)',normalized(value)) for n in expected)
+        # A line-broken own legal name is not a new publisher. Require both
+        # the complete adjacent name and its exact owner identifier.
+        if split_own_footer and any(n.endswith(' '+normalized(value)) for n in expected):own_footer=True
         if re.fullmatch(r'[\wÆØÅæøå& .-]{2,85}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)',value) and not own_footer:
             return 'different_legal_entity'
     return None

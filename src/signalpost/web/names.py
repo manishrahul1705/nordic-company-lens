@@ -33,6 +33,8 @@ def proof_context(page,org,context):
     # repair. A customer/article reference to our orgnr cannot trigger it.
     if orgnrs(' '.join(page.brand_parts))!={org}:return context
     names=[page.title,' '.join(page.identity_headings)]
+    for value in list(names):
+        names+=re.findall(r'\b[A-ZÆØÅ][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*){0,5}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)\b',value)
     for part in page.footer_parts:
         names+=re.findall(r'\b[A-ZÆØÅ][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*){0,5}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)\b',part)
     for name in names:

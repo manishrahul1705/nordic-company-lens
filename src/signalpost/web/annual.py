@@ -18,7 +18,13 @@ async def nominate(org,envelope,http,seen):
     if getattr(http.budget,'by_company',{}).get(org,0)>=36:meta['state']='budget_reserved_for_proof';return []
     meta.update(attempted=True,year=max(years));url=URL+org+'/'+meta['year'];meta['url']=url
     try:
-        response=await official.download_once(url,org)
+        gate=getattr(http,'pdf_download_gate',None)
+        if gate is None:http.pdf_download_gate=gate=asyncio.Semaphore(1)
+        async with gate:
+            if getattr(http,'pdf_rate_limited',False):
+                meta.update(attempted=False,state='run_rate_limited');return []
+            response=await official.download_once(url,org)
+            if response.status==429:http.pdf_rate_limited=True
         meta.update(status=response.status,sha256=response.sha)
         if response.status!=200:meta['state']='http_'+str(response.status);return []
         if not response.body.startswith(b'%PDF'):meta['state']='not_pdf';return []

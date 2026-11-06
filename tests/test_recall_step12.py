@@ -49,6 +49,39 @@ def test_own_number_does_not_override_another_copyright_publisher():
     assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_website'),[]).level=='REJECT'
 
 
+def test_own_as_suffix_in_title_is_not_a_prefix_as_company():
+    p=page(f'<footer>Example AS Org.nr {ORG}</footer>','Contact — Example AS Mini Bus Transportation in Norway')
+    assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_website'),[]).level=='VERIFIED'
+
+
+def test_title_prefix_allows_own_number_backed_singular_plural_variant():
+    p=page(f'<footer>Org.nr {ORG}</footer>','Ta uforpliktende kontakt! — CONTROL SOLUTION AS')
+    assert candidate_proof(p,ORG,{**CONTEXT,'name':'Control Solutions AS'},Candidate(p.url,'example.no','legal_name_slug'),[]).level=='VERIFIED'
+
+
+def test_first_pdf_429_stops_remaining_downloads_for_the_run():
+    class Official:
+        calls=0
+        async def download_once(self,*args):
+            self.calls+=1;return SimpleNamespace(status=429,sha='a'*64)
+    official=Official();http=SimpleNamespace(registry_http=official,budget=SimpleNamespace(by_company={}))
+    def row():return SimpleNamespace(claims=[SimpleNamespace(family='accounts',reporting_period={'fiscal_year':'2025'})],run=SimpleNamespace(refresh={}))
+    first,second=row(),row()
+    async def check():
+        assert not await nominate(ORG,first,http,set())
+        assert not await nominate(OTHER,second,http,set())
+    asyncio.run(check());assert official.calls==1
+    assert second.run.refresh['recall_round3']['annual']['state']=='run_rate_limited'
+
+
+def test_split_own_legal_name_in_footer_needs_exact_owner_number():
+    p=page(f'<h1>GS ELEKTRO</h1><h1>GJØVIK AS</h1><footer><span>GS ELEKTRO</span><span>GJØVIK AS</span>Org.nr {ORG} © 2026 GS Elektro Gjøvik AS</footer>','')
+    result=candidate_proof(p,ORG,{**CONTEXT,'name':'GS ELEKTRO GJ\ufffdVIK AS'},Candidate(p.url,'example.no','registry_email'),[])
+    assert result.level=='VERIFIED' and result.proof_type=='orgnr_on_page'
+    p=page(f'<h1>Example AS</h1><footer><span>Other</span><span>AB</span>Org.nr {OTHER}</footer>')
+    assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_email'),[]).level=='REJECT'
+
+
 def pdf(text=None):
     writer=PdfWriter();p=writer.add_blank_page(width=612,height=792)
     if text:
