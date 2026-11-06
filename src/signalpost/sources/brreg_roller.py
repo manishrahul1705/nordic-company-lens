@@ -21,8 +21,12 @@ def extract(org,response):
         raise SourceFailure("wrong_company", "Roles parent does not match requested company")
     section = Section()
     seen = {}
+    exact_seen=set()
     for group_index, group in enumerate(data.get("rollegrupper", [])):
         for role_index, item in enumerate(group.get("roller", [])):
+            exact=digest(canonical([group.get('type'),item]))
+            if exact in exact_seen:continue
+            exact_seen.add(exact)
             person = item.get("person") or {}
             entity = item.get("enhet") or {}
             name = person.get("navn") or {}

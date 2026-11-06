@@ -8,6 +8,7 @@ def address_key(address):
     street = address.get('adresse') or address.get('street') or []
     if isinstance(street, list):street = ' '.join(str(v) for v in street)
     street = normalized_address(street)
+    street = re.sub(r'^(?:pb|p b|postbok|postboks|postbox|boks)\s*(\d+)\b',r'postboks \1',street)
     postcode = re.sub(r'\D', '', str(address.get('postnummer') or address.get('postcode') or ''))
     return (street, postcode) if street and postcode else None
 

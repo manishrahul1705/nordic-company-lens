@@ -77,8 +77,6 @@ def extract(org,response,blobs):
             continue
         seen_years.add(year)
         selected.append((idx, row, year, end, period))
-        if len(selected) == 3:
-            break
     calibration = []
     calibration_added = False
     for item_idx, (idx, rec, year, end, period) in enumerate(selected):

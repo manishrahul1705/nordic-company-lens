@@ -66,6 +66,7 @@ def article(body, url, now, feed_date=None):
 async def publish_articles(section, items, org, proof, http, checked, discovery_response=None):
     root = domain(proof.value['final_url'])
     for value, locator, span in items:
+        if value['url'] in checked:continue
         scope = proof.value.get('company_path_scope')
         if scope and not (urlsplit(value['url']).path.startswith(scope+'/')):
             continue
@@ -159,7 +160,7 @@ def parse(body, source_url, now):
         items.append(({'title': title, 'title_source': origin, 'url': url, 'date': date,
                        'date_source': field, 'identity_level': None}, f'/{tag}/{n}', span))
     unique = {item[0]['url']: item for item in sorted(items, key=lambda x: (x[0]['date'], x[0]['url']))}
-    return sorted(unique.values(), key=lambda x: (x[0]['date'], x[0]['url']), reverse=True)[:10], []
+    return sorted(unique.values(), key=lambda x: (x[0]['date'], x[0]['url']), reverse=True), []
 
 
 async def fetch(org, envelope, http, pages):
@@ -230,12 +231,16 @@ async def fetch(org, envelope, http, pages):
             if children:
                 if level == 0: urls.extend((child,1) for child in children[:1])
                 continue
-            await publish_articles(section, items[:2], org, proof, http, checked, response)
+            await publish_articles(section, items, org, proof, http, checked, response)
             if section.claims: section.state = 'available'
         if not section.claims:
             return await fetch_html(org, proof, http, pages, checked)
         return section
     except SourceFailure as exc:
+        if section.claims:
+            from ..models.envelope import Error
+            section.state='available';section.errors.append(Error(section='activity',code=exc.code,message='Additional article checks incomplete; verified articles retained'))
+            return section
         return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked'} else 'failed')
     except (ValueError, ET.ParseError):
         return await fetch_html(org, proof, http, pages, checked)
@@ -319,7 +324,7 @@ def parse_html(body, source_url, now):
         items.append(({'title': title, 'title_source': 'article link', 'url': url,
                        'date': date, 'date_source': 'datetime', 'identity_level': None},
                       f'/article/{n}', block[start:end]))
-    return items[:10]
+    return items
 
 
 async def fetch_html(org, proof, http, pages, checked):
@@ -334,7 +339,7 @@ async def fetch_html(org, proof, http, pages, checked):
     targets.extend(urljoin(proof.value['final_url']+'/', path) for path in ('nyheter', 'aktuelt', 'news', 'presse', 'blogg'))
     targets = [u for u in dict.fromkeys(map(normalize_url, targets)) if u and domain(u) == root]
     try:
-        for target in targets[:2]:
+        for target in targets:
             response = await http.get(target, org, root)
             if response.status != 200:
                 continue
@@ -343,7 +348,10 @@ async def fetch_html(org, proof, http, pages, checked):
             await publish_articles(section, items, org, proof, http, checked)
             if section.claims:
                 section.state = 'available'
-                break
         return section
     except SourceFailure as exc:
+        if section.claims:
+            from ..models.envelope import Error
+            section.state='available';section.errors.append(Error(section='activity',code=exc.code,message='Additional article checks incomplete; verified articles retained'))
+            return section
         return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked'} else 'failed')

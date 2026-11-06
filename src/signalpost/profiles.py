@@ -45,6 +45,22 @@ def project(envelope):
     if business:
         locations.append({'organisation_number':envelope.organisation_number,'name':'Registered business address',
                           'type':'registered_business_address','address':business.value,'industry':None,'employees':None})
+    # Postal addresses are already supported individual registry claims. Expose
+    # each distinct place without duplicating a workplace/business address.
+    from .locations import address_key
+    seen_addresses={address_key(p['address']) for p in locations if address_key(p['address'])}
+    postal_locations=[]
+    for c in claims:
+        parent=c.field=='identity.postal_address'
+        branch=c.field.startswith('subunits.detail.') and c.field.endswith('.postal_address')
+        if not (parent or branch) or not isinstance(c.value,dict):continue
+        key=address_key(c.value)
+        if not key or key in seen_addresses:continue
+        seen_addresses.add(key)
+        postal_locations.append(c)
+        number=envelope.organisation_number if parent else c.field.split('.')[2]
+        locations.append({'organisation_number':number,'name':'Registered postal address' if parent else 'Subunit postal address',
+                          'type':'registered_postal_address' if parent else 'subunit_postal_address','address':c.value,'industry':None,'employees':None})
     account_claims = [c for c in claims if c.family == 'accounts']
     financials = []
     if account_claims:
@@ -82,10 +98,11 @@ def project(envelope):
         selected=[c for c in claims if c.family==family]
         if module == 'locations' and business:
             selected = selected + [business]
+        if module == 'locations':selected=selected+postal_locations
         ids=list(dict.fromkeys(eid for c in selected for eid in c.evidence_ids))
         primary=records[ids[0]] if ids else None
         state=envelope.run.sections.get(family,'not_applicable')
-        if module == 'locations' and business and state in {'not_available','not_applicable'}:
+        if module == 'locations' and (business or postal_locations) and state in {'not_available','not_applicable'}:
             state = 'available'
         # No collection zero or empty list is invented when work did not complete.
         payload=values[module] if selected else None

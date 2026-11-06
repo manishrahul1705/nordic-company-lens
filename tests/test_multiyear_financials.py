@@ -142,7 +142,7 @@ def test_2_two_year_statement_extracts_both_years(tmp_path):
 # -------------------------------------------------------------------------
 # Test 3: Three-year statements (extracts up to 3 years)
 # -------------------------------------------------------------------------
-def test_3_three_year_statement_extracts_up_to_three_years(tmp_path):
+def test_3_statement_extracts_all_available_years(tmp_path):
     org = "923609016"
     store = BlobStore(tmp_path / "blobs")
     rows = [
@@ -155,12 +155,12 @@ def test_3_three_year_statement_extracts_up_to_three_years(tmp_path):
 
     sec = regnskap.extract(org, resp, store)
 
-    # 3 latest distinct fiscal years should be extracted: 2025 (latest), 2024, 2023. 2022 capped.
+    # Every distinct year returned by the official response is retained.
     years_extracted = {c.reporting_period["fiscal_year"] for c in sec.claims if c.reporting_period}
     assert "2025" in years_extracted
     assert "2024" in years_extracted
     assert "2023" in years_extracted
-    assert "2022" not in years_extracted, "Must cap at 3 fiscal years"
+    assert "2022" in years_extracted, "Do not discard available fiscal years"
 
     # Verify claim values
     assert next(c for c in sec.claims if c.field == "accounts.revenue").value == 5000000.0

@@ -186,7 +186,7 @@ def previous_nomination(previous, context, units):
     return Candidate(url, domain(url), value['candidate_origin'], branch), proof_url
 
 
-async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
+async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_candidates=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     context['nace']=next((str(c.value.get('kode','')) for c in envelope.claims if c.field=='identity.nace1' and isinstance(c.value,dict)),'')
     round2=envelope.run.refresh.setdefault('recall_round2',{'candidates':[]})
@@ -233,6 +233,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
     candidates = generate(context)
+    if retry_candidates is not None:candidates=list(retry_candidates)
     refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
     if refresh_candidate:
         candidates = [refresh_candidate] + [c for c in candidates if c.url != refresh_candidate.url]
@@ -250,17 +251,27 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     fetchable_failures = set()
     checked = set()
     refuted_previous_website = False
+    from .brands import actual_names,candidates as brand_candidates
+    brand_names=actual_names(envelope,context,http.blobs) if retry_candidates is None else []
+    brand_support={}
     async def nominations():
         for candidate in candidates:yield candidate
+        if not successes and retry_candidates is None:
+            earlier=envelope.run.refresh.get('brand_candidates',[])
+            remaining=max(0,4-len(earlier))
+            for candidate,support in brand_candidates(brand_names,{c.domain for c in candidates}|{c['domain'] for c in earlier})[:remaining]:
+                brand_support[candidate.domain]=support
+                envelope.run.refresh.setdefault('brand_candidates',[]).append({'domain':candidate.domain,**support})
+                yield candidate
         search=getattr(http,'search',None)
-        if not successes and search:
+        if not successes and search and retry_candidates is None:
             existing={c.domain for c in candidates}
             for candidate in await search.nominate(org,context,http):
                 if candidate.domain not in existing:yield candidate
     async for candidate in nominations():
         pages = []
         best = None
-        entry={'domain':candidate.domain,'origin':candidate.origin,'fetched':False,'accepted':False}
+        entry={'domain':candidate.domain,'origin':candidate.origin,'subunit_orgnr':candidate.subunit_orgnr,'fetched':False,'accepted':False}
         round2['candidates'].append(entry)
         try:
             from .recall import shared_owners
@@ -272,6 +283,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
             response = await http.candidate(candidate, org, proved)
             redirected = domain(response.url) != candidate.domain
             if redirected:
+                if candidate.domain in brand_support:brand_support[domain(response.url)]=brand_support[candidate.domain]
                 from dataclasses import replace
                 candidate = replace(candidate, url=response.url, domain=domain(response.url))
             if response.status in (401, 403, 429):
@@ -289,8 +301,19 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 continue
             checked.add(candidate.domain)
             proof = await offload(candidate_proof,page,org,context,candidate,leaders,http.config)
+            if retry_candidates is None and proof.level in {'VERIFIED','HIGH','MEDIUM'}:
+                from .round2 import named
+                if named(page,context.get('name')):
+                    for name in [page.meta.get('og:site_name'),*re.split(r'\s+[|–—]\s+',page.title)]:
+                        if name and legal_name(name)!=legal_name(context.get('name')):
+                            span=page.name_span(name) or page.span_for(name)
+                            if span and len(span)<=300 and span in response.body.decode('utf8',errors='replace'):
+                                support=Section()
+                                add(support,response_source(response),org,'website','brand_nomination',name,'/brand-nomination',span=span,source_class='company_owned')
+                                section.evidence+=support.evidence
+                                brand_names.append((name,'fetched_company_identity',[e.id for e in support.evidence]))
             from .round2 import unique_eligible,unique_registry
-            if proof.level in {'LOW','MEDIUM'} and getattr(http.config,'website_unique_no',True) and unique_eligible(page,context,leaders):
+            if candidate.origin!='brand_name' and proof.level in {'LOW','MEDIUM'} and getattr(http.config,'website_unique_no',True) and unique_eligible(page,context,leaders):
                 entry['unique_candidate']=True
                 support=await unique_registry(org,context,http)
                 if support:
@@ -346,7 +369,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                         continue
                     extra_page = await offload(Page, extra.body, extra.url)
                     extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders, http.config)
-                    if extra_proof.level in {'LOW','MEDIUM'} and getattr(http.config,'website_unique_no',True) and unique_eligible(extra_page,context,leaders):
+                    if candidate.origin!='brand_name' and extra_proof.level in {'LOW','MEDIUM'} and getattr(http.config,'website_unique_no',True) and unique_eligible(extra_page,context,leaders):
                         entry['unique_candidate']=True
                         support=await unique_registry(org,context,http)
                         if support:
@@ -384,7 +407,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                         break
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
-            if proof.level != 'REJECT' and not successes and http.counts.get(org, 0) + 2 <= http.discovery_cap(org):
+            if retry_candidates is None and proof.level != 'REJECT' and not successes and http.counts.get(org, 0) + 2 <= http.discovery_cap(org):
                 legal_nm = context.get('name')
                 brand_nm = context.get('brand')
                 metrics = getattr(http, 'discovery_metrics', None)
@@ -452,7 +475,14 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
             section.errors.append(Error(section="website", code=budget_hit, message="Website work ended at configured budget"))
         section.errors.append(Error(section="website", code="website_candidates", message=json.dumps(attempts+http.attempts.get(org,[]), ensure_ascii=False)))
         return section
-    return await offload(publish_result,org,envelope,http,section,choices,attempts,context)
+    result=await offload(publish_result,org,envelope,http,section,choices,attempts,context)
+    if choices[0][0].origin=='brand_name':
+        support=brand_support.get(choices[0][0].domain,{})
+        refs=support.get('evidence_ids',[])
+        for claim in result.claims:
+            if claim.field=='official_website':claim.evidence_ids+=refs
+        result.evidence.extend(e for e in envelope.evidence if e.id in refs)
+    return result
 
 
 def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None):

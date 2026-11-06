@@ -425,7 +425,8 @@ async def _run(config, client=None):
                     and isinstance(c.value, dict) and c.value.get("employer_homepage")
                     for c in envelope.claims
                 )
-                if has_nav_hp:
+                has_nav_ad=any(c.family=='hiring' and c.availability=='available' and isinstance(c.value,dict) and c.value.get('employer_orgnr') for c in envelope.claims)
+                if has_nav_hp or has_nav_ad:
                     async with website_semaphore:
                         await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), nav_index))
                         if config.public_activity and website_http.accepted_pages.get(org) and envelope.run.sections.get("activity") != "available":
@@ -510,6 +511,9 @@ async def _run(config, client=None):
             pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
             if stuck:
                 warnings.append(f"{stuck} company tasks did not stop within {CANCEL_GRACE_SECONDS}s of cancellation; unfinished sections are reported as deadline")
+            if config.websites and not stuck:
+                from .web.second_pass import run as second_pass
+                dns_metrics['website_second_pass']=await second_pass(envelopes,website_http,bulk,prior,nav_index,isolate,update)
             if config.registry_changes:
                 from .sources import registry_changes
                 eligible = {org: envelopes[org] for org in sorted(valid_orgs)
