@@ -245,6 +245,8 @@ class Proof:
 
 
 def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_location=False, nominated_contacts=False):
+    from .names import proof_context,same_name
+    context=proof_context(page,org,context)
     if domain(page.url) in DIRECTORIES | SOCIAL or is_directory_record(page.url):
         return Proof('REJECT', reason='directory_or_marketplace')
     raw = page.raw.lower()
@@ -259,7 +261,7 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
         if re.match(r'\s*(?:konsernet|gruppen|the group)\b',label,re.I):continue
         label = re.sub(r'copyright|all rights reserved|all[e]? rettigheter reservert|\b(?:19|20)\d\d(?:\s*[-\u2013]\s*(?:19|20)\d\d)?\b',' ',label,flags=re.I)
         normalized = ' '.join(re.findall(r'\w+', label.casefold()))
-        if normalized not in expected:
+        if not any(same_name(name,normalized,orgnrs(' '.join(page.brand_parts))=={org}) for name in expected):
             return Proof('REJECT', reason='different_legal_entity')
     is_active_challenge = (
         any(x in raw for x in ("cf-chl-", "cf-turnstile", "verify you are human", "checking your browser"))

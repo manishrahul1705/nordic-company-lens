@@ -33,6 +33,29 @@ class Http:
         self.client, self.config, self.budget, self.blobs = client, config, budget, blobs
         self.semaphores = {host: asyncio.Semaphore(config.host_concurrency) for host in ALLOWED_HOSTS}
 
+    async def download_once(self,url,org,max_bytes=8*1024*1024):
+        """One bounded official document request; no implicit retry."""
+        host=allow(url);self.budget.check()
+        async with self.semaphores[host]:
+            event=self.budget.reserve(url,host,org);begin=time.monotonic()
+            try:
+                timeout=min(self.config.request_timeout,max(.001,self.budget.deadline-time.monotonic()))
+                async with self.client.stream('GET',url,timeout=timeout,follow_redirects=False) as response:
+                    event['status']=response.status_code
+                    if response.is_redirect:raise SourceFailure('url_refused')
+                    chunks=[];size=0
+                    async for chunk in response.aiter_bytes():
+                        self.budget.check();size+=len(chunk)
+                        if size>max_bytes:raise SourceFailure('body_cap')
+                        chunks.append(chunk)
+                    body=b''.join(chunks)
+                sha=await offload(self.blobs.put,body);event['content_sha256']=sha
+                return Response(body,response.status_code,url,utc_now(),sha)
+            except (httpx.HTTPError,SourceFailure) as exc:
+                event['error']=getattr(exc,'code',type(exc).__name__)
+                raise SourceFailure(getattr(exc,'code','network_error')) from exc
+            finally:event['runtime_ms']=round((time.monotonic()-begin)*1000)
+
     async def get(self, url, org):
         host = allow(url)
         attempts = 3 if "/regnskapsregisteret/" in url else 2

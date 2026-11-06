@@ -279,7 +279,10 @@ class WebsiteHttp:
                        'budget_exhausted', 'website_budget_exhausted', 'deadline'}
         failed_transport = False
         from .candidates import RECOVERY
-        nominated = candidate.origin in RECOVERY
+        from .candidates import legal_name
+        from .social import compact
+        exact_no = policy.extract(candidate.domain).suffix=='no' and policy.extract(candidate.domain).domain==compact(legal_name(getattr(self,'company_names',{}).get(org)))
+        nominated = candidate.origin in RECOVERY or exact_no
         last = None
         for position, (scheme, authority) in enumerate(trials):
             # A normal HTTP response from the apex (including 4xx/5xx) does

@@ -12,7 +12,7 @@ DECLARED={'registry_email','subunit_registry_email','subunit_registry_website'}
 PROOF_PATH=re.compile(r'kontakt|contact|om[-_/]?oss|about|personvern|privacy|impressum|vilk[aå]r|terms',re.I)
 
 
-def normalized(value):return ' '.join(re.findall(r'\w+',str(value or '').casefold()))
+from .names import normalized
 
 
 def registered_leaders(claims):
@@ -65,6 +65,8 @@ def provider_mismatch(page,context):
 
 
 def declared_score(page,org,context,origin,leaders,options,enabled=True):
+    from .names import proof_context
+    context=proof_context(page,org,context)
     veto=real_page(page,context)
     if veto:return Proof('REJECT',reason=veto)
     if origin in DECLARED and provider_mismatch(page,context):return Proof('REJECT',reason='provider_industry_mismatch')

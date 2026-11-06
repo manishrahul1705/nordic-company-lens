@@ -189,6 +189,8 @@ def previous_nomination(previous, context, units):
 async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     context['nace']=next((str(c.value.get('kode','')) for c in envelope.claims if c.field=='identity.nace1' and isinstance(c.value,dict)),'')
+    if not hasattr(http,'company_names'):http.company_names={}
+    http.company_names[org]=context.get('name')
     round2=envelope.run.refresh.setdefault('recall_round2',{'candidates':[]})
     units={c.value['organisation_number']:{'name': c.value.get('name'), 'address':c.value.get('address')} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
@@ -252,6 +254,9 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     refuted_previous_website = False
     async def nominations():
         for candidate in candidates:yield candidate
+        if not successes:
+            from .annual import nominate
+            for candidate in await nominate(org,envelope,http,{c.domain for c in candidates}):yield candidate
         search=getattr(http,'search',None)
         if not successes and search:
             existing={c.domain for c in candidates}
@@ -261,6 +266,9 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
         pages = []
         best = None
         entry={'domain':candidate.domain,'origin':candidate.origin,'fetched':False,'accepted':False}
+        from .social import compact
+        entry['exact_no_recovery'] = (candidate.origin not in RECOVERY and extract(candidate.domain).suffix=='no'
+            and extract(candidate.domain).domain==compact(legal_name(context.get('name'))))
         round2['candidates'].append(entry)
         try:
             from .recall import shared_owners
@@ -283,6 +291,8 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 continue
             page = await offload(Page,response.body,response.url)
             entry['fetched']=True
+            from .names import proof_context
+            entry['comparison_name_repaired']=proof_context(page,org,context).get('name')!=context.get('name')
             from .recall import redirect_names_company
             if redirected and not redirect_names_company(page, org, context):
                 attempts.append({'domain':candidate.domain,'origin':candidate.origin,'level':'REJECT','reason':'redirect_without_company_identity','title':page.title})
@@ -534,7 +544,7 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 def candidate_proof(page,org,context,candidate,leaders,config=None):
     options = dict(suffix_contact=getattr(config,"website_suffix_contact_proof",False),
                    domain_location=getattr(config,"website_domain_location_proof",False),
-                   nominated_contacts=candidate.origin in NOMINATED)
+                   nominated_contacts=candidate.origin in NOMINATED|{'annual_report'})
     context = {**context, 'allowed_orgnrs':{org, *[u['orgnr'] for u in context.get('subunits', [])]}}
     from .round2 import declared_score
     enabled=getattr(config,'website_email_declaration',True) if candidate.origin=='registry_email' else getattr(config,'website_subunit_declaration',True)
