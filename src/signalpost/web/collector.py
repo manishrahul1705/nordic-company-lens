@@ -247,7 +247,6 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
     fetchable_failures = set()
     checked = set()
     refuted_previous_website = False
-    uniqueness_checked = False
     async def nominations():
         for candidate in candidates:yield candidate
         search=getattr(http,'search',None)
@@ -278,21 +277,12 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None):
                 attempts.append({"domain": candidate.domain, "level": "LOW", "reason": f"http_{response.status}"})
                 continue
             page = await offload(Page,response.body,response.url)
-            from .recall import redirect_names_company, prove_unique_core
+            from .recall import redirect_names_company
             if redirected and not redirect_names_company(page, org, context):
                 attempts.append({'domain':candidate.domain,'origin':candidate.origin,'level':'REJECT','reason':'redirect_without_company_identity','title':page.title})
                 continue
             checked.add(candidate.domain)
             proof = await offload(candidate_proof,page,org,context,candidate,leaders,http.config)
-            if proof.level in {'LOW','MEDIUM'} and not uniqueness_checked:
-                from .policy import extract
-                from .social import compact
-                core = legal_name(context.get('name'))
-                if len(compact(core)) >= 5 and extract(page.url).domain == compact(core):
-                    if redirect_names_company(page, org, context):
-                        uniqueness_checked = True
-                        section.evidence.extend(await prove_unique_core(org,context,http))
-                        proof = await offload(candidate_proof,page,org,context,candidate,leaders,http.config)
             pages.append((response, page))
             best = (proof, response, page)
             if proof.level == "BLOCKED":
@@ -533,7 +523,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     matched=getattr(proof,'subject_orgnr',None) or org
     contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
                     'domain_legal_name_and_registry_location','nominated_two_independent_signals',
-                    'registry_declared_name_tier_a','registry_declared_hard_contact_tier_b','unique_legal_core_domain'}
+                    'registry_declared_name_tier_a','registry_declared_hard_contact_tier_b'}
     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else (page.name_span(proof.token) or page.span_for(proof.token))
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")

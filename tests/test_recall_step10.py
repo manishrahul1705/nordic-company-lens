@@ -11,7 +11,7 @@ from signalpost.web.collector import candidate_proof
 from signalpost.web.candidates import Candidate
 from signalpost.web.social import attributed
 from signalpost.web.jobs import active_job
-from signalpost.web.recall import annual_domains, redirect_names_company, prove_unique_core
+from signalpost.web.recall import annual_domains, redirect_names_company
 from signalpost.sources.blobstore import BlobStore
 from signalpost.sources.http import Response
 from signalpost.budget import Budget, SourceFailure
@@ -50,6 +50,11 @@ def test_email_nomination_requires_two_independent_categories():
     assert address_only.level!='VERIFIED'  # Street + postcode are one address category.
 
 
+def test_registry_tier_b_rejects_explicit_different_copyright_owner():
+    p=page('Call 12345678 <footer>Copyright Different Group AS</footer>')
+    assert score(p,ORG,CONTEXT,'registry_website',[],nominated_contacts=True).reason=='different_legal_entity'
+
+
 def test_any_registered_subunit_id_can_prove_parent_site():
     context={**CONTEXT,'subunits':[{'orgnr':SUB,'name':'Trading Shop'}]}
     proof=candidate_proof(page('Trading Shop Org nr '+SUB),ORG,context,Candidate('https://example.no','example.no','registry_email'),[],SimpleNamespace())
@@ -69,29 +74,12 @@ def test_guess_limit_and_trading_name_interleaving():
     assert any('aerlig' in c.domain or 'erlig' in c.domain for c in guessed)
 
 
-def test_unique_name_is_registry_confirmed_and_non_no_needs_street_postcode():
+def test_unique_name_alone_is_rejected_after_wrong_company_audit():
     context={**CONTEXT,'unique_registry_core':True}
-    assert score(page('Example'),ORG,context,'legal_name_slug',[]).proof_type=='unique_legal_core_domain'
+    assert score(page('Example'),ORG,context,'legal_name_slug',[]).level!='VERIFIED'
     assert score(page('Example',url='https://example.com'),ORG,context,'legal_name_slug',[]).level!='VERIFIED'
-    assert score(page('Example Example gate 1 0123 OSLO',url='https://example.com'),ORG,context,'legal_name_slug',[]).level=='VERIFIED'
-    assert score(page('Example'),ORG,CONTEXT,'legal_name_slug',[]).level!='VERIFIED'
-
-
-def test_uniqueness_query_must_be_complete_and_include_only_this_core(tmp_path):
-    blobs=BlobStore(tmp_path);calls=[]
-    class Registry:
-        extra=False
-        async def get(self,url,org):
-            calls.append(url)
-            rows=[{'organisasjonsnummer':ORG,'navn':'Example AS'}]+([{'organisasjonsnummer':OTHER,'navn':'Example ASA'}] if self.extra else [])
-            body=json.dumps({'_embedded':{'enheter':rows},'page':{'totalPages':1,'totalElements':len(rows)}}).encode()
-            return Response(body,200,url,'2026-11-06T00:00:00Z',blobs.put(body))
-    registry=Registry();context=dict(CONTEXT)
-    assert asyncio.run(prove_unique_core(ORG,context,SimpleNamespace(registry_http=registry)))
-    assert context['unique_registry_core']
-    registry.extra=True
-    assert not asyncio.run(prove_unique_core(ORG,dict(CONTEXT),SimpleNamespace(registry_http=registry)))
-    assert len(calls)==2
+    assert score(page('Example 12345678 office@example.no'),ORG,context,'registry_email',[],nominated_contacts=True).level=='VERIFIED'
+    assert score(page('12345678 office@example.no'),ORG,context,'registry_email',[],nominated_contacts=True).level!='VERIFIED'
 
 
 def test_redirect_requires_company_identity_not_only_a_phone():

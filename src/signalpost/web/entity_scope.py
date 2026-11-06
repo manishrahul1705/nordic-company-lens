@@ -86,6 +86,8 @@ def enforce(envelopes, blobs, bulk):
         if proof is None:
             continue
         value = proof.value
+        rejected_trial = value.get('proof_type') == 'unique_legal_core_domain' or (
+            value.get('proof_type') == 'nominated_two_independent_signals' and 'legal_name' not in value.get('signals', []))
         host = domain(value.get('final_url', ''))
         nominated_others = sorted(set((nominations or {}).get(host, [])) - {org})
         shared_veto = len(set(nominated_others) | (owners.get(host, set()) - {org})) >= 2
@@ -126,7 +128,10 @@ def enforce(envelopes, blobs, bulk):
         registry_contacts = registered_contact_values(row.claims, evidence)
         units = {c.value['organisation_number'] for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
         subject = value.get('matched_via_subunit') if value.get('matched_via_subunit') in units else org
-        if group and (shared_veto or not group_site_has_own_proof(proof_pages, subject, name, registry_contacts)):
+        from .proof import score
+        unit_names = [{'orgnr':c.value['organisation_number'],'name':c.value.get('name')} for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)]
+        owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity' for p in proof_pages)
+        if rejected_trial or owner_conflict or (group and (shared_veto or not group_site_has_own_proof(proof_pages, subject, name, registry_contacts))):
             removed.append(proof)
             proof.reasons['relationship'] = 'group_site'
             proof.reasons['withholding_reason'] = 'ambiguous: group/shared site; no exact company ownership proof'
@@ -135,6 +140,9 @@ def enforce(envelopes, blobs, bulk):
                 row.modules['website'].state = 'source_error'
         for claim in row.claims:
             if claim is proof:
+                continue
+            if proof in removed and (claim.family=='website' or (claim.family in {'activity','hiring'} and any(evidence[r].source_class=='company_owned' for r in claim.evidence_ids if r in evidence))):
+                removed.append(claim)
                 continue
             if value.get('content_allowed') is False and claim.family=='website':
                 removed.append(claim)

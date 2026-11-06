@@ -48,6 +48,24 @@ def inventory(root, previous, current):
             result.append({'organisation_number':row['organisation_number'],'company':name,'field':c['field'],'value':c['value'],
                            'evidence':[evidence[e] for e in c['evidence_ids'] if e in evidence], 'verdict':'pending'})
     (root/'new-items.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    old_profiles={r['organisation_number']:r for r in map(json.loads,(previous/'profiles.jsonl').read_text(encoding='utf8').splitlines())}
+    new_profiles=list(map(json.loads,(current/'profiles.jsonl').read_text(encoding='utf8').splitlines()))
+    locations=[]
+    for profile in new_profiles:
+        org=profile['organisation_number']
+        def values(p):
+            section=(p.get('evidence') or {}).get('locations') or {}
+            return (section.get('value') or {}).get('locations') or []
+        previous_values=values(old_profiles.get(org,{}))
+        previous_addresses={json.dumps(v.get('address'),sort_keys=True,ensure_ascii=False) for v in previous_values}
+        for value in values(profile):
+            if value.get('type')=='registered_business_address' and json.dumps(value['address'],sort_keys=True,ensure_ascii=False) not in previous_addresses:
+                row=next(r for r in after if r['organisation_number']==org)
+                claim=next(c for c in row['claims'] if c['field']=='identity.registered_address')
+                evidence={e['id']:e for e in row['evidence']}
+                locations.append({'organisation_number':org,'value':value,'claim_id':claim['id'],
+                                  'evidence':[evidence[e] for e in claim['evidence_ids']], 'verdict':'pending'})
+    (root/'new-locations.json').write_text(json.dumps(locations,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     print({'review_items':len(result)})
 
 

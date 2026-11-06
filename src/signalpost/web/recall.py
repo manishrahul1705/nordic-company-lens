@@ -54,27 +54,3 @@ def redirect_names_company(page, org, context):
     return any((core := legal_name(name)) and re.search(r'(?<!\w)' + re.escape(core) + r'(?!\w)', text)
                for name in [context.get('name'), *[u.get('name') for u in context.get('subunits', [])]])
 
-
-async def prove_unique_core(org, context, http):
-    """Require a complete public-registry query, never just input-batch uniqueness."""
-    from urllib.parse import urlencode
-    from .candidates import legal_name
-    from ..sources.extract import Section, add, response_source
-    core = legal_name(context.get('name'))
-    if not core or not getattr(http, 'registry_http', None):return []
-    try:
-        url = 'https://data.brreg.no/enhetsregisteret/api/enheter?' + urlencode({'navn':core,'size':1000})
-        response = await http.registry_http.get(url, org)
-        if response.status != 200:return []
-        data = json.loads(response.body)
-        if data.get('page', {}).get('totalPages', 2) > 1:return []
-        entries = data.get('_embedded', {}).get('enheter', [])
-        if data.get('page', {}).get('totalElements') != len(entries):return []
-        matches = {str(r.get('organisasjonsnummer')) for r in entries if legal_name(r.get('navn')) == core}
-        if matches != {org}:return []
-        support = Section()
-        add(support,response_source(response),org,'website','registry_name_uniqueness',{'core':core,'matches':sorted(matches)},'/_embedded/enheter')
-        context['unique_registry_core'] = True
-        return support.evidence
-    except Exception:
-        return []

@@ -248,6 +248,17 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
     if domain(page.url) in DIRECTORIES | SOCIAL or is_directory_record(page.url):
         return Proof('REJECT', reason='directory_or_marketplace')
     raw = page.raw.lower()
+    # A registry nomination or shared contact cannot override an explicit
+    # copyright/publisher naming another legal entity on the same page.
+    expected = {' '.join(re.findall(r'\w+', str(n or '').casefold())) for n in
+                [context.get('name'), *[u.get('name') for u in context.get('subunits', [])]]}
+    for label in re.findall(r'(?:copyright|\u00a9|owned by|utgitt av|eies av)\s*(?:\u00a9\s*)?(?:20\d\d\s*)?([^|<>\n]{1,100}?\b(?:AS|ASA|AB|Ltd|GmbH|Oy)\b)', page.owner_text, re.I):
+        if re.search(r'web levert av|website by|design|nettside|utviklet av',label,re.I):continue
+        label = re.split(r'owned by|utgitt av|eies av',label,flags=re.I)[-1]
+        label = re.sub(r'copyright|all rights reserved|all[e]? rettigheter reservert|\b(?:19|20)\d\d(?:\s*[-\u2013]\s*(?:19|20)\d\d)?\b',' ',label,flags=re.I)
+        normalized = ' '.join(re.findall(r'\w+', label.casefold()))
+        if normalized not in expected:
+            return Proof('REJECT', reason='different_legal_entity')
     is_active_challenge = (
         any(x in raw for x in ("cf-chl-", "cf-turnstile", "verify you are human", "checking your browser"))
         or bool(re.search(r'\b(?:captcha|challenge|security check|sikkerhetskontroll)\b', page.title, re.I))
@@ -368,19 +379,13 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
             if not token and 'phone' in contacts:
                 token = next((m.group() for m in re.finditer(r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)', page.owner_text) if phone(m.group())==expected_phone), str(context.get('phone')))
             return Proof('VERIFIED', 'registry_declared_hard_contact_tier_b', ['registry_declared_domain', *contacts, *(['registered_role_holder'] if holder else [])], 4, token=token)
-    # A uniqueness query against the public registry, not uniqueness in the input batch.
-    if exact_base and context.get('unique_registry_core') and len(compact(base_name)) >= 5 and label == compact(base_name):
-        if extract(page.url).suffix == 'no' or ('street' in contacts and context.get('postcode') and str(context['postcode']) in owner_text):
-            from .entity_scope import foreign_entity_page
-            if not foreign_entity_page(page, org, context.get('name'), check_ids=False):
-                return Proof('VERIFIED', 'unique_legal_core_domain', ['registry_unique_legal_core','exact_legal_domain','legal_name',*contacts], 4, token=base_name)
     if nominated_contacts:
         categories = set()
         if exact_name or exact_base: categories.add('legal_name')
         if 'phone' in contacts: categories.add('registry_phone')
         if 'email' in contacts: categories.add('registry_email')
         if 'street' in contacts or 'postcode_city' in contacts: categories.add('registry_address')
-        if len(categories) >= 2:
+        if 'legal_name' in categories and len(categories) >= 2:
             token = str(context.get('name') if exact_name else base_name) if exact_name or exact_base else ''
             if not token and 'registry_email' in categories:token = email
             if not token and 'registry_phone' in categories:
