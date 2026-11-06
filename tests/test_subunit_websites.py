@@ -14,13 +14,14 @@ def test_candidate_order_subunit_before_bounded_slugs():
 
 
 @pytest.mark.parametrize('origin', ['subunit_registry_website', 'subunit_registry_email'])
-@pytest.mark.parametrize('owner,accepted',[(OUR,True),(OTHER,True),('988258229',False),('',False)])
+@pytest.mark.parametrize('owner,accepted',[(OUR,True),(OTHER,True),('988258229',False),('',True)])
 def test_subunit_candidate_requires_exact_parent_or_that_subunit(owner,accepted,origin):
     candidate=Candidate('https://workplace.no/','workplace.no',origin,OTHER)
     page=Page(html('Org nr '+owner).encode(),candidate.url)
     proof=candidate_proof(page,OUR,{'name':'Example AS','subunits':[{'orgnr':OTHER}]},candidate,[])
     assert (proof.level=='VERIFIED')==accepted
-    if accepted:assert proof.token==owner
+    if accepted and owner:assert proof.token==owner
+    if accepted and not owner:assert proof.proof_type=='registry_declared_name_tier_a'
 
 
 @pytest.mark.parametrize('email', ['office@online.no', 'name@yahoo.co.uk', 'name@broadpark.no'])

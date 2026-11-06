@@ -34,6 +34,11 @@ class Config(BaseModel):
     website_domain_location_proof: bool = False
     website_transient_retry: bool = True
     website_stop_after_verified: bool = True
+    website_email_declaration: bool = True
+    website_subunit_declaration: bool = True
+    website_unique_no: bool = True
+    website_proof_discovery: bool = True
+    website_linked_board_jobs: bool = True
     nav_rank_candidates: bool = True
     public_activity: bool = False
     registry_changes: bool = True

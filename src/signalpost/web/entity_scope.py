@@ -68,25 +68,32 @@ def unproven_global_site(pages, org, context, url):
     if extract(url).suffix == 'no':return False
     normalize=lambda value:' '.join(re.findall(r'\w+',str(value or '').casefold()))
     own=normalize(context.get('name'))
+    subjects=[context,*context.get('subunits',[])]
+    names=[normalize(s.get('name')) for s in subjects if s.get('name')]
+    allowed={org,*[s['orgnr'] for s in context.get('subunits',[]) if s.get('orgnr')]}
     norwegian_owner=False
     foreign_owner=False
     streets=context.get('street') or []
     if isinstance(streets,str):streets=[streets]
+    else:streets=list(streets)
+    for unit in context.get('subunits',[]):
+        extra=(unit.get('address') or {}).get('adresse') or []
+        streets+=extra if isinstance(extra,list) else [extra]
     for page in pages:
-        if org in orgnrs(page.owner_text+' '+json.dumps(page.jsonld)):
+        if allowed & orgnrs(page.owner_text+' '+json.dumps(page.jsonld)):
             return False
-        email=str(context.get('email') or '').strip().casefold()
-        if email and (email in page.owner_text.casefold() or any(l.href.casefold().split('?')[0]=='mailto:'+email for l in page.links)):
+        emails={str(s.get('email') or '').strip().casefold() for s in subjects}-{''}
+        if any(email in page.owner_text.casefold() or any(l.href.casefold().split('?')[0]=='mailto:'+email for l in page.links) for email in emails):
             return False
-        expected=phone(context.get('phone'))
+        expected={phone(s.get('phone') or s.get('mobile')) for s in subjects}-{None}
         numbers=[l.href[4:] for l in page.links if l.href.startswith('tel:')]
         numbers+=re.findall(r'(?<!\d)(?:(?:\+47|0047)[ .-]*)?(?:\d[ .()-]*){8}(?!\d)',page.owner_text)
-        if expected and expected in {phone(v) for v in numbers}:return False
+        if expected & {phone(v) for v in numbers}:return False
         address=normalized_address(page.owner_text)
         if any(s and len(str(s))>4 and re.search(r'(?<!\w)'+re.escape(normalized_address(s))+r'(?!\w)',address) for s in streets):return False
         foreign_owner = foreign_owner or score(page,org,context,'legal_name_slug',[]).reason=='different_legal_entity' or foreign_entity_page(page,org,context.get('name'),check_ids=False)
         publisher=normalize(page.owner_text)
-        if own and re.search(r'\b(?:as|asa|nuf|sa|sti|iks|ans|da|enk)\b$',own) and re.search(r'(?<!\w)'+re.escape(own)+r'(?!\w)',publisher):
+        if any(re.search(r'\b(?:as|asa|nuf|sa|sti|iks|ans|da|enk)\b$',name) and re.search(r'(?<!\w)'+re.escape(name)+r'(?!\w)',publisher) for name in names):
             norwegian_owner=True
     return foreign_owner or not norwegian_owner
 
@@ -160,6 +167,13 @@ def enforce(envelopes, blobs, bulk):
         context={'name':name,'street':address.get('adresse'),
                  'email':next((c.value for c in row.claims if c.field=='identity.registered_email' and c.availability=='available'),None),
                  'phone':next((c.value for c in row.claims if c.field=='identity.registered_phone' and c.availability=='available'),None)}
+        context['subunits']=[{'orgnr':c.value['organisation_number'],**c.value} for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)]
+        for claim in row.claims:
+            if not claim.field.startswith('subunits.detail.') or claim.availability!='available':continue
+            _,_,number,field=claim.field.split('.',3)
+            if field not in {'registered_email','registered_phone','registered_mobile'}:continue
+            for unit in context['subunits']:
+                if unit['orgnr']==number:unit[field.removeprefix('registered_')]=claim.value
         global_site=value.get('proof_type')=='registry_declared_name_tier_a' and unproven_global_site(proof_pages,org,context,value.get('final_url',''))
         group = group or global_site
         units = {c.value['organisation_number'] for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}

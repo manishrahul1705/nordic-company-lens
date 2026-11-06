@@ -289,7 +289,8 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
     visible = orgnrs(page.owner_text)
     meta = orgnrs(" ".join(page.meta.values()))
     json_ids = set()
-    for body in page.jsonld:
+    from .social import organization_objects
+    for body in [node for document in page.jsonld for node in organization_objects(document,own_only=True)]:
         for key in ("vatID", "taxID", "identifier"):
             for value in json_values(body, key, exclude_person=True):
                 # NO123456789MVA is permitted only inside an explicit identifier

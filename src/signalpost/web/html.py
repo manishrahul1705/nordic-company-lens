@@ -32,6 +32,8 @@ class Page(HTMLParser):
         self.owner_parts = []
         self.brand_parts = []
         self.identity_headings = []
+        self.footer_parts = []
+        self.logo_names = []
         self.title = ""
         self.meta = {}
         self.jsonld = []
@@ -58,6 +60,8 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = {key: value or "" for key, value in attrs}
+        if tag=='img' and attrs.get('alt') and not any(x[2] for x in self.stack) and 'hidden' not in attrs and attrs.get('aria-hidden')!='true' and not re.search(r'display\s*:\s*none|visibility\s*:\s*hidden',attrs.get('style',''),re.I) and 'logo' in (' '.join(attrs.get(k,'') for k in ('class','id','src'))).casefold():
+            self.logo_names.append(attrs['alt'])
         context = tag in {"header", "footer", "nav"} or attrs.get("role") in {"contentinfo", "banner", "navigation"} or any(word in (attrs.get("id", "") + " " + attrs.get("class", "")).lower() for word in ("footer", "header", "navigation", "social"))
         if tag not in {"meta", "link", "img", "br", "hr", "input", "source", "area", "base", "embed", "wbr"}:
             hidden = "hidden" in attrs or attrs.get("aria-hidden") == "true" or any(x in attrs.get("style", "").replace(" ", "").lower() for x in ("display:none", "visibility:hidden"))
@@ -112,6 +116,7 @@ class Page(HTMLParser):
             if self._paragraph:
                 self._paragraph['parts'].append(data)
             self.visible_parts.append(data)
+            if any(x[0]=='footer' for x in self.stack):self.footer_parts.append(data)
             if not any(x[0] in {"article", "pre", "code"} for x in self.stack):
                 self.owner_parts.append(data)
                 if any(x[0] == 'h1' for x in self.stack):

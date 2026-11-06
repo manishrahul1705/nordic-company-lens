@@ -468,6 +468,7 @@ async def _run(config, client=None):
         http = Http(active_client, config, budget, blobs)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
         website_http.nav_index = nav_index
+        website_http.registry_http = http
         website_http.domain_owners = getattr(bulk, 'domain_owners', {})
         website_http.wikidata_index = wikidata_index
         from .web.search import Search
