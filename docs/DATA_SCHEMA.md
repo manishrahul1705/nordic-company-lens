@@ -70,6 +70,8 @@ Run reports include membership/duplicate/invalid counts; terminal/availability c
 
 ## Synthesis
 
+Template version 4 adds `brief` with three cited sentence arrays: `what`, `changes` and `unknowns`. `brief.context_claims` contains deterministic citation records for run metadata (section states/reasons, stale attempts, prior snapshot dates and change-event values). These are explicitly labeled run metadata and have no fabricated external evidence. Factual sentences cite the original claims or old/new change support. Both the writer and the independent verifier recompute and compare every brief frame, context claim, ID, state and date. The existing detailed summary remains available separately.
+
 `run.synthesis` is mirrored in `profile.synthesis` without new root keys. Its fields are mode, language (en), summary, sections, checks, generator and change_claims. New runs emit mode `template`; `--synthesis auto` also uses templates. The model still accepts legacy `llm` records when reading existing output, but the CLI rejects `--synthesis llm`.
 
 Sections contain what_it_does, scale, leadership, changes sentence arrays, plus unknowns. A sentence has text, claim_ids, value_kind (reported/derived), optional count and record_type (workplaces/board_members/active_ads). Positive derived counts equal distinct cited available records of that type; the displayed count is checked too. Counts never enter `claims[]`. Workplace examples are limited to three, social URLs to two and distinct description excerpts to two; counts still cite all qualifying records. Unknowns contain family, explicit state, reason and optional field. Missing counts are not reported as zero.

@@ -57,3 +57,13 @@ def test_previous_to_current_role_summary_has_both_source_sides(tmp_path):
     ids = {c.id for c in row.run.synthesis.change_claims}
     assert any(len(set(s.claim_ids) & ids) == 2 for s in brief.changes)
     validate(brief, row.run.synthesis, row)
+
+
+def test_writer_rejects_a_forged_brief(tmp_path):
+    from signalpost.io.envelope_writer import write
+    from signalpost.sources.blobstore import BlobStore
+    row, cfg = envelope(tmp_path)
+    row.run.synthesis.brief.unknowns[0].text = 'All sources are complete.'
+    with pytest.raises(ValueError, match='Unsupported company brief'):
+        write(tmp_path / 'forged.jsonl', [row], 'union', BlobStore(cfg.state_dir))
+    assert not (tmp_path / 'forged.jsonl').exists()

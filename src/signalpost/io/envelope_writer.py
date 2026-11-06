@@ -66,6 +66,9 @@ def write(path: Path, envelopes, shape, blobs, max_output_mb=256):
         if envelope.run.synthesis is not None:
             from ..synthesis.validate import validate_synthesis
             envelope.run.synthesis=validate_synthesis(envelope.run.synthesis,envelope)
+            if envelope.run.synthesis.brief is not None:
+                from ..synthesis.company_brief import validate as validate_brief
+                validate_brief(envelope.run.synthesis.brief, envelope.run.synthesis, envelope)
             envelope.profile.synthesis=envelope.run.synthesis
         for evidence in envelope.evidence:
             sha = evidence.content_sha256
