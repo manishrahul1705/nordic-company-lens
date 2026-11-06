@@ -12,6 +12,95 @@ from ..budget import SourceFailure
 
 extract = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None, include_psl_private_domains=True)
 DNS_ORG = ContextVar('signalpost_dns_org', default='__shared__')
+class DNSFallbackBudget:
+    """Serialize and cap best-effort public DNS fallback time per company/run."""
+    def __init__(self):
+        self.elapsed_by_company = {}
+        self.attempts_by_company = {}
+        self.successful_domains_by_company = {}
+        self.nxdomain_candidates_by_company = {}
+        self.nxdomain_cache = {}
+        self._locks = {}
+
+    def register_nxdomain_candidate(self, company, host):
+        candidates = self.nxdomain_candidates_by_company.setdefault(company, set())
+        if host in candidates:
+            return True
+        if len(candidates) >= 3:
+            return False
+        candidates.add(host)
+        return True
+
+    def metrics(self):
+        elapsed = sum(self.elapsed_by_company.values())
+        return {'dns_fallback_attempts': sum(self.attempts_by_company.values()),
+                'dns_fallback_successes': sum(len(hosts) for hosts in self.successful_domains_by_company.values()),
+                'dns_fallback_seconds': round(elapsed, 3),
+                'dns_fallback_max_seconds_per_company': round(max(self.elapsed_by_company.values(), default=0), 3),
+                'dns_fallback_companies': len(self.attempts_by_company)}
+
+    async def resolve(self, host, port, failure):
+        company = DNS_ORG.get()
+        lock = self._locks.setdefault(company, asyncio.Lock())
+        async with lock:
+            cache_key = (company, host)
+            if failure.code == 'no_such_domain':
+                if host not in self.nxdomain_candidates_by_company.get(company, set()):
+                    raise failure
+                if cache_key in self.nxdomain_cache:
+                    cached = self.nxdomain_cache[cache_key]
+                    if cached:
+                        return list(cached)
+                    raise failure
+            remaining = max(0.0, 4.0 - self.elapsed_by_company.get(company, 0.0))
+            if remaining <= 0.01:
+                raise failure
+            started = asyncio.get_running_loop().time()
+            self.attempts_by_company[company] = self.attempts_by_company.get(company, 0) + 1
+            answers = []
+            try:
+                remaining = max(0.0, 4.0 - self.elapsed_by_company.get(company, 0.0))
+                if failure.code == 'no_such_domain':
+                    servers = ('1.1.1.1',)
+                    per_resolver = min(1.0, remaining)
+                else:
+                    servers = ('1.1.1.1', '8.8.8.8')
+                    per_resolver = min(DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS, remaining)
+                resolvers = []
+                for server in servers:
+                    resolver = dns.asyncresolver.Resolver(configure=False)
+                    resolver.nameservers = [server]
+                    resolver.timeout = per_resolver
+                    resolver.lifetime = per_resolver
+                    resolvers.append(resolver)
+                async def query(resolver):
+                    async with asyncio.timeout(per_resolver):
+                        return await asyncio.gather(*(
+                            resolver.resolve(host, record_type, raise_on_no_answer=False,
+                                             search=False, lifetime=per_resolver)
+                            for record_type in ('A', 'AAAA')), return_exceptions=True)
+                results_by_resolver = await asyncio.gather(*(query(r) for r in resolvers), return_exceptions=True)
+                for results in results_by_resolver:
+                    if isinstance(results, Exception):
+                        continue
+                    for result in results:
+                        if not isinstance(result, Exception):
+                            answers.extend(str(item) for item in result)
+                if answers:
+                    checked = check_ips(list(dict.fromkeys(answers)))
+                    self.successful_domains_by_company.setdefault(company, set()).add(host)
+                    if failure.code == 'no_such_domain':
+                        self.nxdomain_cache[cache_key] = tuple(checked)
+                    return checked
+                if failure.code == 'no_such_domain':
+                    self.nxdomain_cache[cache_key] = None
+                raise failure
+            finally:
+                elapsed = asyncio.get_running_loop().time() - started
+                self.elapsed_by_company[company] = min(4.0, self.elapsed_by_company.get(company, 0.0) + elapsed)
+
+
+DNS_FALLBACK_STATE = ContextVar('signalpost_dns_fallback_state', default=None)
 DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS = 2.0
 SOCIAL = {"facebook.com", "instagram.com", "linkedin.com", "x.com", "twitter.com", "youtube.com", "tiktok.com"}
 DIRECTORIES = {"proff.no", "proff.com", "proff.dk", "proff.se", "gulesider.no", "1881.no", "purehelp.no", "finn.no", "fb.me", "fb.com", "youtu.be", "lnkd.in", "t.co", "threads.net"}
@@ -90,31 +179,12 @@ async def resolve_public(host, port=443):
     else:
         return check_ips(list(dict.fromkeys(item[4][0] for item in records)))
 
-    # A second independent resolution is useful for intermittent resolver
-    # failures and NXDOMAIN. This is DNS-only and does not consume HTTP budget.
-    answers = []
-    for server in ('1.1.1.1', '8.8.8.8'):
-        try:
-            resolver = dns.asyncresolver.Resolver(configure=False)
-            resolver.nameservers = [server]
-            resolver.timeout = DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS
-            resolver.lifetime = DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS
-            async with asyncio.timeout(DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS):
-                results = await asyncio.gather(*(
-                    resolver.resolve(host, record_type, raise_on_no_answer=False,
-                                     search=False, lifetime=DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS)
-                    for record_type in ('A', 'AAAA')), return_exceptions=True)
-            for result in results:
-                if isinstance(result, Exception):
-                    continue  # Includes NXDOMAIN and blocked/filtered UDP/53.
-                answers.extend(str(item) for item in result)
-        except Exception:
-            # Secondary DNS is best-effort. A blocked resolver must not become
-            # a new failure mode or generate a separate user-facing warning.
-            continue
-    if answers:
-        return check_ips(list(dict.fromkeys(answers)))
-    raise failure
+    if failure.code not in {'dns_timeout', 'dns_servfail', 'no_such_domain'}:
+        raise failure
+    state = DNS_FALLBACK_STATE.get()
+    if state is None:
+        state = DNSFallbackBudget()
+    return await state.resolve(host, port, failure)
 
 
 class PublicNetworkBackend:

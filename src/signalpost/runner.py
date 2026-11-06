@@ -160,10 +160,17 @@ def write_report(path, report):
 async def run(config, client=None):
     from .monitor import LoopMonitor
     from .power import SystemAwake
-    with SystemAwake(config.prevent_system_sleep) as power:
-        monitor=LoopMonitor();monitor.start()
-        try:report=await _run(config,client)
-        finally:lag=await monitor.stop()
+    from .web.policy import DNSFallbackBudget, DNS_FALLBACK_STATE
+    dns_fallback_state = DNSFallbackBudget()
+    dns_fallback_token = DNS_FALLBACK_STATE.set(dns_fallback_state)
+    try:
+        with SystemAwake(config.prevent_system_sleep) as power:
+            monitor=LoopMonitor();monitor.start()
+            try:report=await _run(config,client)
+            finally:lag=await monitor.stop()
+    finally:
+        DNS_FALLBACK_STATE.reset(dns_fallback_token)
+    report.update(dns_fallback_state.metrics())
     report['event_loop']=lag
     report['system_awake_request']=power.result
     try:
