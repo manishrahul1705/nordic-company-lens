@@ -17,12 +17,13 @@ def pointer(document,path):
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('run',type=Path);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('run',type=Path)
+    parser.add_argument('--state-dir',type=Path);args=parser.parse_args()
     out=Path('bench/reports/s6-step20');gleif=[];awards=[];parents=[];counts=collections.Counter();states=collections.Counter()
     companies=collections.defaultdict(set);absent=[];source_states=collections.Counter();cache={}
     def body(sha):
         if sha not in cache:
-            b=(args.run/'state/blobs'/sha).read_bytes();assert hashlib.sha256(b).hexdigest()==sha;cache[sha]=b
+            b=((args.state_dir or args.run/'state')/'blobs'/sha).read_bytes();assert hashlib.sha256(b).hexdigest()==sha;cache[sha]=b
         return cache[sha]
     for line in (args.run/'envelopes.jsonl').open(encoding='utf-8'):
         row=json.loads(line);org=row['organisation_number'];name=next((c['value'] for c in row['claims'] if c['field']=='identity.legal_name' and c['availability']=='available'),org)

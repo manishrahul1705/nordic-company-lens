@@ -175,3 +175,37 @@ def test_ted_xml_overrides_shared_json_accept_header_and_is_budgeted(tmp_path):
             assert r.status==200 and fetch.calls==1
     asyncio.run(go())
     assert len(events)==1 and events[0]['status']==200
+
+
+@pytest.mark.parametrize('status',[406,503])
+def test_optional_ted_error_never_fails_registry_or_verified_website(tmp_path,monkeypatch,status):
+    import httpx
+    from tests.test_websites import execute_web,html
+    def dispatch(request):
+        if request.url.host=='api.gleif.org':
+            return httpx.Response(200,json={'data':[],'meta':{'pagination':{'lastPage':1}}})
+        if request.url.host=='api.ted.europa.eu':
+            return httpx.Response(200,json={'notices':[{'publication-number':'1-2026','notice-type':'can-standard','winner-identifier':[ORG]}],'totalNoticeCount':1})
+        if request.url.host=='ted.europa.eu':return httpx.Response(status,text='Optional source unavailable')
+        if request.url.path=='/robots.txt':return httpx.Response(200,text='User-agent: *\nAllow: /')
+        return httpx.Response(200,text=html())
+    report,row,_,_=execute_web(tmp_path,monkeypatch,response=dispatch,official_extra_sources=True)
+    assert row['run']['sections']['identity']=='available'
+    assert row['run']['sections']['roles']=='available'
+    assert row['run']['sections']['subunits'] in {'available','not_available'}
+    assert row['run']['sections']['accounts']=='not_available'
+    assert row['run']['sections']['website']=='available'
+    assert row['run']['refresh']['official_extra']['TED']=='not_available_fetch_failed'
+    assert not any(c['field'].startswith('procurement_award.') for c in row['claims'])
+    assert report['deadline_hits']==0
+
+
+def test_failed_ted_fetch_retains_previous_award_and_evidence():
+    from tests.test_registry_changes import envelope
+    old=envelope();section=award_extract(response(xml(),'https://ted.europa.eu/en/notice/1-2026/xml'),'1-2026',ORG,date(2026,11,7))
+    old.claims+=section.claims;old.evidence+=section.evidence
+    current=envelope();current.run.refresh['official_extra']={'TED':'not_available_fetch_failed'}
+    retain_failed(current,old.model_dump(mode='json'))
+    awards=[c for c in current.claims if c.field.startswith('procurement_award.')]
+    assert len(awards)==1 and awards[0].id==section.claims[0].id and awards[0].carried_forward
+    assert set(awards[0].evidence_ids)<={e.id for e in current.evidence}
