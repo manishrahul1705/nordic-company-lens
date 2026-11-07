@@ -283,7 +283,9 @@ def explorer_cells(c, records):
 def deferred_registry_ids(row):
     items=[c for c in row['claims'] if c['field'].startswith('registry_change.')]
     items.sort(key=lambda c:(str((c.get('value') or {}).get('date','')),c['field']),reverse=True)
-    return {c['id'] for c in items[10:]}
+    awards=[c for c in row['claims'] if c['field'].startswith('procurement_award.')]
+    awards.sort(key=lambda c:(str(c['value'].get('date','')),c['field']),reverse=True)
+    return {c['id'] for c in items[10:]+awards[2:]}
 
 
 def profile(row, title):
@@ -447,7 +449,7 @@ def profile(row, title):
         if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
         if details:
-            body += '<details><summary>'+('Additional registry announcements (' if key=='activity' else 'Additional official attributes (')+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
+            body += '<details><summary>'+(('Additional sourced activity (' if any(c['field'].startswith('procurement_award.') for c in details) else 'Additional registry announcements (') if key=='activity' else 'Additional official attributes (')+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
         body += '</section>'
         if key in {'online', 'financials', 'people', 'locations', 'activity'}:
             body += '</section>'
@@ -687,8 +689,8 @@ def company_payload(row):
              if c['field'].startswith(('roles.detail.','subunits.detail.'))]
     from .sources.registry_changes import sentence as registry_sentence
     deferred=deferred_registry_ids(row)
-    details.extend({'id':c['id'][:16],'field':'Registry announcement: '+c['value']['title'],
-                    'value':registry_sentence(c['value']),'availability':c['availability'],'group':'activity'}
+    details.extend({'id':c['id'][:16],'field':('Public procurement award: ' if c['field'].startswith('procurement_award.') else 'Registry announcement: ')+c['value']['title'],
+                    'value':(c['value'] if c['field'].startswith('procurement_award.') else registry_sentence(c['value'])),'availability':c['availability'],'group':'activity'}
                    for c in row['claims'] if c['id'] in deferred)
     name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
     all_records = {e['id']: e for e in row['evidence']}
