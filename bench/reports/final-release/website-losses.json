@@ -1,0 +1,181 @@
+[
+  {
+    "orgnr": "911691248",
+    "name": "ISTAD ART SOLUTION NORWAY NUF",
+    "old_website": {
+      "final_url": "https://www.pederistad.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "registry_declared_hard_contact_tier_b",
+      "proof_page_url": "https://www.pederistad.no/",
+      "signals": [
+        "registry_declared_domain",
+        "registered_role_holder"
+      ],
+      "points": 4,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "B",
+      "content_allowed": false
+    },
+    "state": "ambiguous",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_link_only",
+        "message": "website_link_only"
+      }
+    ],
+    "website_metadata": {
+      "checked_urls": [
+        "https://www.pederistad.no/",
+        "https://www.pederistad.no/kontakt.html"
+      ],
+      "publication_tier": "B",
+      "content_allowed": false,
+      "entity_scope": {
+        "group_site": false,
+        "other_registry_owners": [],
+        "historical_shared_domain_nominations": [],
+        "shared_domain_index_available": true,
+        "withheld_fields": [
+          "official_website"
+        ],
+        "website_status": "ambiguous",
+        "website_reason": "group/shared site"
+      }
+    },
+    "candidate_metadata": {
+      "candidates": [
+        {
+          "domain": "pederistad.no",
+          "origin": "registry_website",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.pederistad.no/impressum",
+            "https://www.pederistad.no/kontakt-oss"
+          ],
+          "proof_pages_fetched": 2,
+          "proof_type": "registry_declared_hard_contact_tier_b",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    }
+  },
+  {
+    "orgnr": "990412375",
+    "name": "BERGEN VAKTMESTERTJENESTER AS",
+    "old_website": {
+      "final_url": "https://bnv.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "proof_page_url": "https://bnv.no/",
+      "signals": [],
+      "points": 0,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "state": "not_available",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"bnv.no\", \"level\": \"REJECT\", \"points\": 0, \"signals\": [], \"origin\": \"registry_email\", \"reason\": \"foreign_orgnr\", \"title\": \"Personvernerklæring - Bergen Vaktmestertjenester\", \"proof_page_url\": \"https://bnv.no/personvernerklaering/\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bnv.no\", \"origin\": \"registry_email\", \"url\": \"https://bnv.no/\", \"final_url\": \"https://bnv.no/\", \"status\": 200}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"url\": \"https://www.vaktmestertjenester-i-bergen.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "no_verified_website",
+        "message": "no_verified_website"
+      }
+    ],
+    "website_metadata": null,
+    "candidate_metadata": {
+      "candidates": [
+        {
+          "domain": "bnv.no",
+          "origin": "registry_email",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": false,
+          "additional_proof_targets": [
+            "https://bnv.no/about",
+            "https://bnv.no/personvern"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "",
+          "rule": null,
+          "reason": "foreign_orgnr"
+        },
+        {
+          "domain": "bergenvaktmestertjenester.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "bergen-vaktmestertjenester.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "bergenvaktmestertjenester.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "bergen-vaktmestertjenester.com",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "vaktmestertjenesteribergen.no",
+          "origin": "brand_name",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "vaktmestertjenester-i-bergen.no",
+          "origin": "brand_name",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "vaktmestertjenesteribergen.com",
+          "origin": "brand_name",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "vaktmestertjenester-i-bergen.com",
+          "origin": "brand_name",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        }
+      ]
+    }
+  }
+]

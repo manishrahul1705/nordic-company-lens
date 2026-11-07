@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "python",
+    "scripts/verify_output.py",
+    "--first",
+    "bench/runs/20261107T094159020873Z-39a7314/envelopes.jsonl",
+    "--organisations",
+    "bench/runs/20261107T094159020873Z-39a7314/inputs/batch.jsonl",
+    "--count",
+    "1000",
+    "--state-dir",
+    "bench/runs/20261107T094159020873Z-39a7314/state",
+    "--report",
+    "bench/runs/20261107T094159020873Z-39a7314/report.json"
+  ]
+}

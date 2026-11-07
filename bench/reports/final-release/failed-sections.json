@@ -1,0 +1,91 @@
+[
+  {
+    "orgnr": "923998012",
+    "name": "ASKØY24 AS",
+    "section": "hiring",
+    "errors": [
+      {
+        "section": "hiring",
+        "code": "company_careers_website_budget_exhausted",
+        "message": "Company careers coverage incomplete"
+      }
+    ]
+  },
+  {
+    "orgnr": "980973549",
+    "name": "SKOGLI HELSE OG REHABILITERINGSSENTER AS",
+    "section": "hiring",
+    "errors": [
+      {
+        "section": "hiring",
+        "code": "company_careers_website_budget_exhausted",
+        "message": "Company careers coverage incomplete"
+      }
+    ]
+  },
+  {
+    "orgnr": "922828172",
+    "name": "TENSIO AS",
+    "section": "hiring",
+    "errors": [
+      {
+        "section": "hiring",
+        "code": "company_careers_website_budget_exhausted",
+        "message": "Company careers coverage incomplete"
+      }
+    ]
+  },
+  {
+    "orgnr": "981130243",
+    "name": "FAST FOOD SERVICE NORGE AS",
+    "section": "website",
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"ffs.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_timeout\", \"candidate_not_reachable\": false}, {\"domain\": \"fastfoodservicenorge.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"fast-food-service-norge.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"fastfoodservicenorge.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"fast-food-service-norge.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"url\": \"https://ffs.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ffs.no\", \"origin\": \"registry_website\", \"url\": \"https://ffs.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.ffs.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ffs.no\", \"origin\": \"registry_website\", \"url\": \"https://www.ffs.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.ffs.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ffs.no\", \"origin\": \"registry_website\", \"url\": \"http://www.ffs.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://ffs.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ffs.no\", \"origin\": \"registry_website\", \"url\": \"http://ffs.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"fastfoodservicenorge.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://fastfoodservicenorge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fastfoodservicenorge.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.fastfoodservicenorge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fastfoodservicenorge.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.fastfoodservicenorge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fastfoodservicenorge.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://fastfoodservicenorge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://fast-food-service-norge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.fast-food-service-norge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.fast-food-service-norge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://fast-food-service-norge.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fastfoodservicenorge.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://fastfoodservicenorge.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fastfoodservicenorge.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.fastfoodservicenorge.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fastfoodservicenorge.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.fastfoodservicenorge.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fastfoodservicenorge.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://fastfoodservicenorge.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://fast-food-service-norge.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.fast-food-service-norge.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.fast-food-service-norge.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"fast-food-service-norge.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://fast-food-service-norge.com/\", \"reason\": \"no_such_domain\"}]"
+      }
+    ]
+  },
+  {
+    "orgnr": "987002808",
+    "name": "BRIDGE TECHNOLOGIES CO AS",
+    "section": "hiring",
+    "errors": [
+      {
+        "section": "hiring",
+        "code": "company_careers_website_budget_exhausted",
+        "message": "Company careers coverage incomplete"
+      }
+    ]
+  },
+  {
+    "orgnr": "940572355",
+    "name": "STIFTELSEN NATIONALFONDET TIL FREMME AV SOCIALØKONOMISK OPPLYSNINGSARBEIDE",
+    "section": "website",
+    "errors": [
+      {
+        "section": "website",
+        "code": "section_exception",
+        "message": "UnicodeError"
+      }
+    ]
+  },
+  {
+    "orgnr": "926077422",
+    "name": "NRP ANAXO NORDIC M2",
+    "section": "accounts",
+    "errors": [
+      {
+        "section": "accounts",
+        "code": "source_error",
+        "message": "HTTP 500"
+      }
+    ]
+  }
+]

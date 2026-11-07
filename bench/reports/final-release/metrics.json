@@ -1,0 +1,67 @@
+{
+  "run": "bench\\runs\\20261107T094159020873Z-39a7314",
+  "runtime_commit": "39a7314299c181187ee1f07af7fa75eaa631ad9c",
+  "sections": {
+    "identity": {
+      "available": 1000
+    },
+    "roles": {
+      "available": 997,
+      "not_available": 3
+    },
+    "subunits": {
+      "available": 774,
+      "not_available": 226
+    },
+    "accounts": {
+      "available": 999,
+      "failed": 1
+    },
+    "website": {
+      "not_available": 766,
+      "ambiguous": 121,
+      "available": 108,
+      "blocked": 3,
+      "failed": 2
+    },
+    "hiring": {
+      "not_available": 993,
+      "available": 3,
+      "failed": 4
+    },
+    "activity": {
+      "available": 1000
+    }
+  },
+  "social_companies": 44,
+  "GLEIF_companies": 32,
+  "TED_companies": 6,
+  "facts": 166207,
+  "facts_by_family": {
+    "identity": 31170,
+    "subunits": 6907,
+    "roles": 17806,
+    "accounts": 97416,
+    "activity": 12095,
+    "hiring": 3,
+    "website": 810
+  },
+  "HTTP": 8589,
+  "mean_HTTP": 8.589,
+  "max_HTTP": 40,
+  "wall_seconds": 1017.3147984000389,
+  "deadlines": 0,
+  "warnings": [],
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 1002,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 347378526,
+    "largest_profile_data_bytes": 827614,
+    "largest_profile_bytes": 242744
+  },
+  "profiles_path": "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261107T094159020873Z-39a7314\\profiles.jsonl",
+  "exit_code": 0
+}

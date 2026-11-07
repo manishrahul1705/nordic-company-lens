@@ -1,0 +1,28 @@
+{
+  "status_counts": [
+    {
+      "host": "api.gleif.org",
+      "status": 200,
+      "error": null,
+      "count": 14
+    },
+    {
+      "host": "api.ted.europa.eu",
+      "status": 200,
+      "error": null,
+      "count": 10
+    },
+    {
+      "host": "ted.europa.eu",
+      "status": 200,
+      "error": null,
+      "count": 75
+    }
+  ],
+  "metrics": {
+    "requests": 99,
+    "gleif_companies": 32,
+    "parent_LEIs_batched": 2,
+    "tender_notices_nominated": 75
+  }
+}
