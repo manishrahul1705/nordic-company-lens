@@ -5,12 +5,12 @@
   const fold = text => String(text ?? '').toLowerCase().replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const element = (tag, text, cls) => { const e = document.createElement(tag); if(text != null) e.textContent = text; if(cls) e.className = cls; return e; };
   const stateChip = state => element('span', ({available:'Found',not_available:'Not found',failed:"Couldn't check",ambiguous:'Withheld',blocked:'Blocked',not_applicable:'Not applicable'})[state] || String(state).replace(/_/g,' '), 'chip '+state);
-  const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : String(value);
+  const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : Array.isArray(value) ? value.map(format).join(', ') : typeof value === 'object' ? Object.entries(value).filter(([key])=>key!=='birth_date').map(([key,v])=>key.replace(/_/g,' ')+': '+format(v)).join('; ') : String(value);
 
   const globalDialog = document.getElementById('global-search-dialog');
   const globalInput = document.getElementById('global-search-input');
   const globalResults = document.getElementById('global-search-results');
-  const companyPrefix = document.body.dataset.page === 'profile' ? '' : 'c/';
+  const companyPrefix = document.body.dataset.page === 'profile' ? '' : document.body.dataset.page==='evidence' ? '../c/' : 'c/';
   function globalSearch() {
     globalResults.replaceChildren();
     const query = fold(globalInput.value).trim();
@@ -184,7 +184,7 @@
       pair('Registry identifier', e.source_identifier);
       pair('Retrieved at (UTC)', e.retrieved_at);
       const period = e.reporting_period || fact.reporting_period;
-      pair('Effective / reporting date', e.effective_at || (period ? JSON.stringify(period) : 'Unknown'));
+      pair('Effective / reporting date', e.effective_at || (period ? format(period) : 'Unknown'));
       const hash = element('div');
       const code = element('code', e.content_sha256.slice(0, 16) + '…');
       code.title = e.content_sha256;
@@ -244,7 +244,7 @@
     const article = element('article', null, 'fact');
     article.id = 'fact-' + fact.id;
     article.append(element('h3', fact.field), stateChip(fact.availability));
-    article.append(element('pre', fact.value == null ? 'Unknown' : JSON.stringify(fact.value, null, 2)));
+    article.append(element('p', format(fact.value)));
     const button = element('button', 'Source');
     button.type = 'button';
     button.dataset.toggle = 'source-' + fact.id;
@@ -283,12 +283,12 @@
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
     document.documentElement.dataset.theme = currentTheme;
-    themeToggle.textContent = currentTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    themeToggle.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
     themeToggle.addEventListener('click', () => {
       const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
       document.documentElement.dataset.theme = nextTheme;
       try { localStorage.setItem('signalpost_theme', nextTheme); } catch {}
-      themeToggle.textContent = nextTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+      themeToggle.textContent = nextTheme === 'dark' ? 'Light' : 'Dark';
     });
   }
 
@@ -402,7 +402,7 @@
     if(initialParams.get('incomplete') === '1' && filterInc) filterInc.checked = true;
 
     // View initialization
-    const reqView = initialParams.get('view') || (window.location.hash === '#directory' ? 'directory' : 'dashboard');
+    const reqView = initialParams.get('view') || (window.location.hash === '#directory' ? 'directory' : 'directory');
     switchView(reqView);
 
     function updateQueryParams(overrides = {}) {
@@ -685,6 +685,7 @@
             starBtn.dataset.watchlist = r.orgnr;
             starBtn.setAttribute('aria-label', (isSaved ? 'Remove from' : 'Add to') + ' watchlist');
             heading.append(' ', starBtn);
+            card.append(element('div', r.name.slice(0,1), 'avatar'));
             card.append(heading);
             card.append(element('p', r.orgnr + ' · ' + (r.municipality || 'Unknown municipality')));
             card.append(element('p', r.industry_en || r.industry_no || 'Industry unknown'));
@@ -695,6 +696,7 @@
             }
             card.append(badges);
             card.append(element('p', 'Revenue: ' + format(r.revenue) + ' · Employees: ' + format(r.employees)));
+            const compare=element('button','Add to compare');compare.type='button';compare.dataset.compareAdd=r.orgnr;card.append(compare);
             results.append(card);
           }
           const pct = ((selected.length / records.length) * 100).toFixed(1);
@@ -1229,7 +1231,14 @@
           draw();
         });
         header.append(h2, removeBtn);
+        header.prepend(element('div',r.name.slice(0,1),'avatar'));
+        header.append(element('p',r.orgnr+' ? '+(r.municipality||'Municipality not reported'),'muted'));
         card.append(header);
+        const summary=element('div',null,'compare-summary');
+        for(const [key,label] of [['revenue','Revenue'],['annual_result','Annual result'],['employees','Registered employees']]) {
+          const cell=element('div');cell.append(element('small',label));const value=element('a',format(r[key])+(key==='employees'?'':' '+(r.currency||'')));value.href='c/'+r.orgnr+'.html#'+(r.anchors[key]||'main');cell.append(value,element('small',key==='employees'?'Checked '+String(r.last_checked).slice(0,10):'FY '+(r.fiscal_year||'not reported')));summary.append(cell);
+        }
+        card.append(summary);
 
         for(const [key, label, family] of fields) {
           const cell = element('div', null, 'compare-cell');
@@ -1581,4 +1590,31 @@
   if (statusDot && records.length) {
     statusDot.className = 'status-dot completed';
   }
+
+  // Presentation-only enhancements: local evidence, navigation and comparison.
+  const drawer=element('dialog',null,'evidence-drawer');drawer.id='evidence-drawer';drawer.setAttribute('aria-label','Source evidence');document.body.append(drawer);
+  let opener=null;
+  const close=()=>drawer.close();
+  drawer.addEventListener('close',()=>opener?.focus());
+  drawer.addEventListener('click',event=>{const r=drawer.getBoundingClientRect();if(event.target===drawer&&(event.clientX<r.left||event.clientY<r.top||event.clientX>r.right||event.clientY>r.bottom))close();});
+  function openDrawer(id,context) {
+    const f=facts.get(id);if(!f&&!context)return false;
+    drawer.replaceChildren();const button=element('button','Close','drawer-close');button.type='button';button.setAttribute('aria-label','Close evidence');button.addEventListener('click',close);drawer.append(button,element('p','The evidence behind the fact','eyebrow'));
+    if(context){const copy=context.cloneNode(true);copy.removeAttribute('id');copy.hidden=false;drawer.append(copy);}
+    else {drawer.append(element('h2',f.field.replace(/^(identity|accounts)\./,'').replace(/_/g,' ')),element('p',format(f.value),'drawer-fact-value'));const panel=element('div');panel.dataset.source=id;showEvidence(panel);drawer.append(panel);}
+    drawer.showModal();return true;
+  }
+  document.addEventListener('click',event=>{
+    const receipt=event.target.closest('[data-receipt]');
+    const cite=event.target.closest('a.citation[href^="#fact-"],a[aria-label^="Source fact"][href^="#fact-"]');
+    const sourceButton=event.target.closest('button[data-toggle^="source-"]');
+    const metadata=event.target.closest('button.citation[data-toggle^="context-"]');
+    const id=receipt?.dataset.receipt||cite?.hash?.slice(6)||sourceButton?.dataset.toggle?.slice(7);
+    if(id||metadata){opener=receipt||cite||sourceButton||metadata;if(openDrawer(id,metadata?document.getElementById(metadata.dataset.toggle):null)){event.preventDefault();event.stopImmediatePropagation();}}
+  },true);
+  document.querySelectorAll('[data-search]').forEach(button=>button.addEventListener('click',()=>{const input=document.getElementById('search');if(input){input.value=button.dataset.search;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus();}}));
+  let compareIds=[];try{compareIds=JSON.parse(localStorage.getItem('signalpost_compare')||'[]').filter(id=>byId.has(id)).slice(0,4);}catch{}
+  function compareBadge(){const node=document.getElementById('compare-count');if(node)node.textContent=compareIds.length?'('+compareIds.length+')':'';const a=document.getElementById('nav-compare');if(a&&compareIds.length)a.href=(['profile','evidence'].includes(document.body.dataset.page)?'../':'')+'compare.html?companies='+compareIds.join(',');}
+  document.addEventListener('click',event=>{const button=event.target.closest('[data-compare-add]');if(!button)return;const id=button.dataset.compareAdd;if(!compareIds.includes(id)&&compareIds.length<4)compareIds.push(id);try{localStorage.setItem('signalpost_compare',JSON.stringify(compareIds));}catch{}button.textContent='Added to compare';compareBadge();});compareBadge();
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('reveal-ready');observer.unobserve(entry.target);}}),{threshold:.03});document.querySelectorAll('.profile-main>section').forEach(section=>observer.observe(section));}
 })();

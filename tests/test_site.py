@@ -99,7 +99,11 @@ def test_site_membership_evidence_citations_and_determinism(tmp_path, shape):
     for claim in row.claims:
         if claim.availability == 'available':
             assert 'fact-' + claim.id[:16] in markup.ids
-            assert 'source-' + claim.id[:16] in markup.ids
+            receipt = next(attrs for tag,attrs in markup.tags if tag=='a' and attrs.get('data-receipt')==claim.id[:16])
+            target,fragment = receipt['href'].split('#',1)
+            receipt_path=(out/'c'/target).resolve()
+            assert receipt_path.is_file()
+            assert 'id="'+fragment+'"' in receipt_path.read_text(encoding='utf8')
             for eid in claim.evidence_ids:
                 e = next(e for e in row.evidence if e.id == eid)
                 assert evidence[eid]['content_sha256'] == e.content_sha256
@@ -137,7 +141,9 @@ def test_xss_is_text_and_bad_urls_are_not_links(tmp_path):
         assert '<script>alert' not in text and '<img src=x' not in text
         assert not any(tag == 'img' for tag, _ in markup.tags)
         assert all(not url.lower().startswith('javascript:') for url in markup.links)
-        assert all('src' in attrs for tag, attrs in markup.tags if tag == 'script')
+        assert all('src' in attrs or attrs.get('id') == 'theme-boot' for tag, attrs in markup.tags if tag == 'script')
+        from signalpost.site import THEME_BOOT
+        assert text.count('<script id="theme-boot">'+THEME_BOOT+'</script>') == 1
     js = (out / 'data/index.js').read_text(encoding='utf8')
     assert '</script>' not in js and '<\\/script>' in js
     detail = (out / f'c/{row.organisation_number}.data.js').read_text(encoding='utf8')

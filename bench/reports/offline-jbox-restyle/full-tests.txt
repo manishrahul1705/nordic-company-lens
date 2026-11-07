@@ -1,0 +1,122 @@
+........................................................................ [  5%]
+........................................................................ [ 11%]
+........................................................................ [ 17%]
+........................................................................ [ 23%]
+........................................................................ [ 28%]
+........................................................................ [ 34%]
+........................................................................ [ 40%]
+........................................................................ [ 46%]
+........................................................................ [ 52%]
+........................................................................ [ 57%]
+........................................................................ [ 63%]
+........................................................................ [ 69%]
+........................................................................ [ 75%]
+........................................................................ [ 81%]
+........................................................................ [ 86%]
+.....................F.................................................. [ 92%]
+........................................................................ [ 98%]
+....................                                                     [100%]
+================================== FAILURES ===================================
+______ test_theme_storage_denied_keeps_initialization_and_toggle_working ______
+
+    def test_theme_storage_denied_keeps_initialization_and_toggle_working():
+        node = shutil.which('node')
+        if not node:
+            pytest.skip('Node unavailable: JavaScript execution requires Node')
+        source = Path('src/signalpost/site_assets/site.js').read_text(encoding='utf-8')
+        theme = source.split('// Theme toggle',1)[1].split('// Pre-process indexed records',1)[0]
+        script = '''
+    const assert = require('node:assert/strict');
+    let clicked;
+    const button = {textContent:'', addEventListener:(_, fn)=>clicked=fn};
+    const document = {getElementById:()=>button, documentElement:{dataset:{}}};
+    const window = {matchMedia:()=>({matches:true})};
+    const localStorage = {getItem(){throw Error('SecurityError')},setItem(){throw Error('QuotaExceededError')}};
+    ''' + theme + '''
+    assert.equal(document.documentElement.dataset.theme, 'dark');
+    clicked();
+    assert.equal(document.documentElement.dataset.theme, 'light');
+    assert.ok(button.textContent.includes('Dark'));
+    '''
+>       subprocess.run([node,'-e',script],check=True,capture_output=True,text=True)
+
+tests\test_theme_storage.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = None, check = True
+popenargs = (['C:\\Program Files\\nodejs\\node.EXE', '-e', "\nconst assert = require('node:assert/strict');\nlet clicked;\nconst b...\nassert.equal(document.documentElement.dataset.theme, 'light');\nassert.ok(button.textContent.includes('Dark'));\n"],)
+kwargs = {'text': True, 'stdout': -1, 'stderr': -1}
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout (seconds) is given and the process takes too long,
+         a TimeoutExpired exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Program Files\\nodejs\\node.EXE', '-e', "\nconst assert = require('node:assert/strict');\nlet clicked;\nconst button = {textContent:'', addEventListener:(_, fn)=>clicked=fn};\nconst document = {getElementById:()=>button, documentElement:{dataset:{}}};\nconst window = {matchMedia:()=>({matches:true})};\nconst localStorage = {getItem(){throw Error('SecurityError')},setItem(){throw Error('QuotaExceededError')}};\n\n  const themeToggle = document.getElementById('theme-toggle');\n  if(themeToggle) {\n    let savedTheme = null;\n    try { savedTheme = localStorage.getItem('signalpost_theme'); } catch {}\n    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;\n    const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');\n    document.documentElement.dataset.theme = currentTheme;\n    themeToggle.textContent = currentTheme === 'dark' ? 'Dark' : 'Light';\n    themeToggle.addEventListener('click', () => {\n      const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';\n      document.documentElement.dataset.theme = nextTheme;\n      try { localStorage.setItem('signalpost_theme', nextTheme); } catch {}\n      themeToggle.textContent = nextTheme === 'dark' ? 'Dark' : 'Light';\n    });\n  }\n\n  \nassert.equal(document.documentElement.dataset.theme, 'dark');\nclicked();\nassert.equal(document.documentElement.dataset.theme, 'light');\nassert.ok(button.textContent.includes('Dark'));\n"]' returned non-zero exit status 1.
+
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:571: CalledProcessError
+=========================== short test summary info ===========================
+FAILED tests/test_theme_storage.py::test_theme_storage_denied_keeps_initialization_and_toggle_working
+1 failed, 1243 passed in 322.80s (0:05:22)

@@ -1,5 +1,7 @@
 """Offline, deterministic profile presentation. Never modifies source envelopes."""
 import html
+import hashlib
+import base64
 import json
 import re
 from datetime import datetime
@@ -9,12 +11,14 @@ from urllib.parse import urlsplit
 from .models.shapes import validate
 from .synthesis.nace import english_title
 
-CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'"
+THEME_BOOT = "document.documentElement.classList.add('js');try{document.documentElement.dataset.theme=localStorage.getItem('signalpost_theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme='light'}"
+THEME_HASH = base64.b64encode(hashlib.sha256(THEME_BOOT.encode()).digest()).decode()
+CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-" + THEME_HASH + "'; base-uri 'none'; form-action 'none'"
 ASSETS = Path(__file__).with_name('site_assets')
-GROUPS = [('what-it-does', 'What it does', 'identity'), ('online', 'Online presence', 'website'),
-          ('financials', 'Financials', 'accounts'), ('people', 'People', 'roles'),
-          ('hiring', 'Hiring', 'hiring'), ('locations', 'Locations', 'subunits'),
-          ('activity', 'Public activity', 'activity')]
+GROUPS = [('what-it-does', 'Overview', 'identity'), ('people', 'People', 'roles'),
+          ('financials', 'Financials', 'accounts'), ('locations', 'Locations', 'subunits'),
+          ('online', 'Website & social', 'website'), ('hiring', 'Jobs', 'hiring'),
+          ('activity', 'Activity', 'activity')]
 UNKNOWN = {'not_available': 'Checked; no information found within the source scope.',
            'failed': 'Check incomplete because a source or request budget was unavailable.',
            'blocked': 'Source access was refused by policy or robots.txt.',
@@ -80,8 +84,10 @@ def value_text(value):
         return 'Unknown'
     if isinstance(value, bool):
         return 'Yes' if value else 'No'
-    if isinstance(value, (dict, list)):
-        return json.dumps(value, ensure_ascii=False, sort_keys=True)
+    if isinstance(value, dict):
+        return '; '.join(k.replace('_',' ').capitalize()+': '+value_text(v) for k,v in value.items() if k!='birth_date')
+    if isinstance(value, list):
+        return ', '.join(value_text(v) for v in value)
     return str(value)
 
 
@@ -152,7 +158,7 @@ def evidence_panel(claim, records, shared=False):
     return ''.join(parts)
 
 
-def fact(claim, records):
+def fact(claim, records, fallback=None):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
     label = claim.get('reasons',{}).get('label') or claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
@@ -195,6 +201,10 @@ def fact(claim, records):
     panel = True
     if panel:
         content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Check the evidence</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
+    if fallback:
+        old=f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Check the evidence</button>'
+        content=content.replace(old,f'<a class="source-button" data-receipt="{esc(local_id)}" href="{esc(fallback)}">Source <span aria-hidden="true">&#8599;</span></a>')
+        content=content.replace(f'<div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>','')
     if claim['family'] == 'accounts':
         return f'<tr id="{esc(anchor(claim))}"><th scope="row">{esc(label)} {chip(claim["availability"])}</th><td>{content}</td></tr>'
     return f'<article class="fact" id="{esc(anchor(claim))}"><h3>{esc(label)} {chip(claim["availability"])}</h3>{content}</article>'
@@ -214,19 +224,19 @@ def page(title, body, prefix='', kind='profile', company_data=None):
     return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<meta http-equiv="Content-Security-Policy" content="{esc(CSP)}">'
-            f'<title>{esc(title)}</title><link rel="stylesheet" href="{prefix}assets/site.css">'
+            f'<title>{esc(title)}</title><script id="theme-boot">{THEME_BOOT}</script><link rel="stylesheet" href="{prefix}assets/site.css">'
             f'<script src="{prefix}data/index.js" defer></script>'
             + (f'<script src="{esc(company_data)}" defer></script>' if company_data else '') +
             f'<script src="{prefix}assets/site.js" defer></script>'
             f'</head><body data-page="{kind}"><a class="skip" href="#main">Skip to content</a>'
-            f'<nav aria-label="Main"><a class="brand" href="{prefix}index.html">Signalpost</a>'
-            f'<a href="{prefix}index.html">Dashboard</a>'
-            f'<a href="{prefix}index.html#directory">Directory</a>'
-            f'<a href="{prefix}compare.html">Compare</a>'
-            '<button type="button" id="global-search-open">Search companies <kbd>Ctrl/⌘ K</kbd></button>'
+            f'<nav aria-label="Main"><a class="brand" href="{prefix}index.html"><svg aria-hidden="true" width="34" height="24" viewBox="0 0 34 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="23" cy="12" r="9"/></svg>Nordic Company Lens</a>'
+            f'<a href="{prefix}index.html">Search</a>'
+            f'<a href="{prefix}index.html?view=dashboard">Explore</a>'
+            f'<a href="{prefix}compare.html" id="nav-compare">Compare <span id="compare-count"></span></a>'
+            '<button type="button" id="global-search-open">Search <kbd>Ctrl/K</kbd></button>'
             f'<button type="button" id="status-toggle" class="status-toggle" aria-label="Toggle update status panel" aria-expanded="false" aria-controls="status-panel">'
             '<span id="status-dot" class="status-dot"></span> Update status</button>'
-            f'<button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Theme</button></nav>'
+            f'<button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Light / Dark</button></nav>'
             '<dialog id="global-search-dialog" aria-labelledby="global-search-heading">'
             '<h2 id="global-search-heading">Find a company</h2><label>Name or organisation number'
             '<input type="search" id="global-search-input" autocomplete="off"></label>'
@@ -260,7 +270,7 @@ def page(title, body, prefix='', kind='profile', company_data=None):
             '</div>'
             '<p id="status-snapshot-note" class="status-snapshot-note muted" hidden></p>'
             '</div></div>'
-            f'<main id="main">{body}</main><footer>Evidence first. Unknown values remain unknown.</footer></body></html>\n')
+            f'<main id="main">{body}</main><footer><a class="brand" href="{prefix}index.html">Nordic Company Lens</a><p>Norwegian company research. Every fact, traced to its source.</p><p>Evidence first. Unknown values remain unknown.</p><a href="{prefix}index.html#sources">Sources &amp; licences</a></footer></body></html>\n')
 
 
 EXPLORER_VISIBLE_ROWS = 50
@@ -288,7 +298,7 @@ def deferred_registry_ids(row):
     return {c['id'] for c in items[10:]+awards[2:]}
 
 
-def profile(row, title):
+def profile(row, title, source_routes=None):
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
     records = {e['id']: e for e in row['evidence']}
@@ -299,18 +309,20 @@ def profile(row, title):
     support = synthesis.get('change_claims') or []
     change_ids = {c['id'] for c in support}
     name = by_field.get('identity.legal_name', org)
-    body = f'<header><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button> <button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">⭐ Watchlist</button></p>'
+    body = f'<header class="company-hero"><div class="avatar" aria-hidden="true">{esc(str(name)[:1])}</div><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button> <button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">⭐ Watchlist</button></p>'
     for field in ('identity.organisation_form', 'identity.legal_form', 'identity.municipality'):
         if field in by_field:
             v = by_field[field]
             display = (str(v.get('beskrivelse') or '') + ' (' + str(v.get('kode') or '') + ')') if isinstance(v, dict) else value_text(v)
             body += '<p>' + esc(display) + '</p>'
     body += ''.join('<p><span class="chip">' + esc(c['field'].replace('identity.', '').replace('_', ' ')) + ': ' + esc(value_text(c['value'])) + '</span></p>' for c in claims if c['availability'] == 'available' and c['field'] in {'identity.bankrupt', 'identity.under_liquidation', 'identity.deleted'})
-    body += '<p>Last checked: <time>' + esc(display_time(row['run']['completed_at'])) + '</time></p></header>'
+    workplace_count=sum(c['field'].startswith('subunits.unit.') and c['availability']=='available' for c in claims)
+    body += '<p class="meta-capsule"><a href="#locations">Registered workplaces: '+str(workplace_count)+'</a></p>'
+    body += '<p>Last checked: <time>' + esc(display_time(row['run']['completed_at'])) + '</time></p></header><div class="profile-grid"><div class="profile-main">'
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
     overview = select(synthesis, claims)
-    body += '<section class="summary"><h2>Cited summary</h2>'
+    body += '<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'
     analyst = synthesis.get('analyst_brief')
     brief = ({'context_claims':analyst['context_claims'],'what':analyst['sentences'],'changes':[],'unknowns':[]} if analyst else synthesis.get('brief'))
     if brief:
@@ -331,14 +343,14 @@ def profile(row, title):
                 for cid in s['claim_ids']:
                     if cid in contexts:
                         context = contexts[cid]
-                        body += f'<div class="evidence" id="context-{cid[:16]}" hidden><p>Run metadata (not an external source)</p><p>Claim ID: <code>{cid}</code></p><pre>{esc(json.dumps(context["value"], ensure_ascii=False, indent=2))}</pre></div>'
+                        body += f'<div class="evidence" id="context-{cid[:16]}" hidden><p>Run metadata (not an external source)</p><p>Claim ID: <code>{cid}</code></p><pre>{esc(value_text(context["value"]))}</pre></div>'
             body += '</div>'
     else:
         body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
     remaining = [s for s in sentences if s not in overview]
     if remaining:
-        body += '<button type="button" aria-expanded="false" aria-controls="full-summary" data-toggle="full-summary">Show full cited summary</button><div id="full-summary" hidden>'
-        body += ''.join(sentence_html(s, claim_map, change_ids) for s in remaining) + '</div>'
+        body += '<details id="full-summary"><summary>Supporting detail: full cited summary</summary>'
+        body += ''.join(sentence_html(s, claim_map, change_ids) for s in remaining) + '</details>'
     unknowns = synthesis.get('sections', {}).get('unknowns', [])
     if unknowns:
         if brief:
@@ -367,8 +379,19 @@ def profile(row, title):
     body += '</section>'
     for family, meta in row['run'].get('refresh', {}).get('stale_sections', {}).items():
         body += '<aside class="stale stale-refresh"><strong>Stale refresh · ' + esc(family) + '</strong><p>Kept the previous ' + esc(meta['previous_state'].replace('_', ' ')) + ' snapshot. Refresh failed on ' + esc(meta['failed_attempt_at']) + ': ' + esc(', '.join(meta.get('failure_codes', []))) + '.</p></aside>'
+    gleif=[c for c in claims if c['field'].startswith('identity.gleif.')]
+    render=lambda c:fact(c,records,(source_routes or {}).get(c['id']))
+    if gleif:
+        body += '<section id="ownership" class="ledger-section"><h2>Ownership &amp; identifiers (GLEIF)</h2>'+''.join(render(c) for c in gleif)+'</section>'
+    headline=[('accounts.revenue','Revenue'),('accounts.net_result','Annual result'),('identity.employees','Registered employees')]
+    body += '<section class="overview-metrics" aria-label="Overview">'
+    for field,label in headline:
+        c=fields_map.get(field)
+        if c:body += '<div class="overview-card"><span class="eyebrow">'+label+'</span><p><a href="#'+anchor(c)+'">'+esc(value_text(c['value']))+'</a></p><small>'+esc(value_text((c.get('reporting_period') or {}).get('fiscal_year') or row['run']['completed_at'][:10]))+'</small></div>'
+    body += '</section>'
     buckets = {key: [] for key, _, _ in GROUPS}
     for c in claims:
+        if c['field'].startswith('identity.gleif.'):continue
         f = c['field']; family = c['family']
         key = ('what-it-does' if f.startswith('website_description.') else
                'locations' if family == 'subunits' else
@@ -441,19 +464,40 @@ def profile(row, title):
         if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'
         if not items or state != 'available': body += '<p>' + esc(UNKNOWN.get(state, 'No facts published in this section.')) + '</p>'
         if key == 'financials' and items:
+            chart=[c for c in items if c['availability']=='available' and isinstance(c['value'],(int,float)) and not isinstance(c['value'],bool) and c['field'].endswith(('.revenue','.net_result')) and not c['field'].startswith('accounts.consolidated.')]
+            if chart:
+                ceiling=max([abs(c['value']) for c in chart]+[1])
+                body += '<div class="financial-chart"><h3>Reported revenue and annual result</h3>'
+                for c in chart:
+                    period=c.get('reporting_period') or {};metric='Revenue' if c['field'].endswith('.revenue') else 'Annual result'
+                    body += '<div class="chart-row '+('result' if metric=='Annual result' else 'revenue')+'"><span>'+esc(metric+' '+str(period.get('fiscal_year','')))+'</span><meter min="0" max="'+str(ceiling)+'" value="'+str(abs(c['value']))+'" aria-label="'+esc(metric+' '+str(period.get('fiscal_year','')))+'"></meter><span><a href="#'+anchor(c)+'">'+esc(value_text(c['value'])+' '+str(period.get('currency') or ''))+'</a></span></div>'
+                body += '</div>'
+        if key == 'financials' and items:
             body += '<table class="financial-table"><caption>Reported financial facts</caption><thead><tr><th scope="col">Metric</th><th scope="col">Value and evidence</th></tr></thead><tbody>'
+        if key=='activity':
+            items.sort(key=lambda c: (0 if not c['field'].startswith(('registry_change.','procurement_award.')) else 1 if c['field'].startswith('registry_change.') else 2))
+        last_activity_group=None
         for i, c in enumerate(items):
+            if key=='activity':
+                group='Registry announcements' if c['field'].startswith('registry_change.') else 'Public procurement awards' if c['field'].startswith('procurement_award.') else 'Company-published news'
+                if group!=last_activity_group:body += '<h3 class="activity-group">'+group+'</h3>';last_activity_group=group
             if key == 'locations' and i == 10:
                 body += '<button type="button" aria-expanded="false" aria-controls="more-locations" data-toggle="more-locations">Show remaining workplaces</button><div id="more-locations" hidden>'
-            body += fact(c, records)
+            body += render(c)
         if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
         if details:
+            if source_routes:
+                body += '<noscript><p>Additional sourced facts: '+''.join('<a id="'+anchor(c)+'" href="'+esc(source_routes[c['id']])+'">'+esc(c['field'])+'</a> ' for c in details)+'</p></noscript>'
             body += '<details><summary>'+(('Additional sourced activity (' if any(c['field'].startswith('procurement_award.') for c in details) else 'Additional registry announcements (') if key=='activity' else 'Additional official attributes (')+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
         body += '</section>'
-        if key in {'online', 'financials', 'people', 'locations', 'activity'}:
+        if key in areas:
             body += '</section>'
 
+    body += '<section id="gaps"><h2>What we could not find</h2>'
+    for family,state in row['run']['sections'].items():
+        if state!='available':body += '<p>'+esc(family.replace('_',' ').capitalize())+': '+chip(state)+' Checked '+esc(row['run']['completed_at'][:10])+' - '+esc(UNKNOWN.get(state,'No supported value.'))+'</p>'
+    body += '</section><details class="technical-audit"><summary>Full timeline, refresh and audit trail</summary>'
     # 5. Verified Company Timeline (Dated business events)
     timeline_events = []
     founding_items = [
@@ -643,7 +687,8 @@ def profile(row, title):
                  f'<button type="button" id="explorer-show-all" data-hidden="{hidden}">Show the remaining {hidden} claims</button>')
     body += '</section>'
 
-    body += f'<p><a href="../index.html">Back to search</a> · <a href="../compare.html#{esc(org)}">Compare with…</a></p>'
+    body += f'<p><a href="../index.html">Back to search</a> · <a href="../compare.html?companies={esc(org)}">Compare with…</a></p>'
+    body += '</details></div><aside class="profile-sidebar"><h2>On this page</h2><nav aria-label="Company sections">'+''.join('<a href="#'+key+'">'+label+'</a>' for key,label in [('briefing','Company briefing')]+([('ownership','Ownership & identifiers (GLEIF)')] if gleif else [])+[(key,label) for key,label,_ in GROUPS]+[('gaps','Gaps')])+'</nav><h3>Data coverage</h3>'+''.join('<p>'+esc(f)+': '+chip(state)+'</p>' for f,state in row['run']['sections'].items())+'</aside></div>'
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
 
@@ -810,7 +855,16 @@ def index_page(records, title, skipped=()):
     for key in ('website', 'jobs', 'activity'):
         summary += f' · {sum(r["flags"][key] for r in records) / n * 100 if n else 0:.1f}% with {key}'
     summary += ' · Run date: ' + max((r['last_checked'] for r in records), default='Unknown')
-    body = f'<header><p class="eyebrow">Company research, with receipts</p><h1>{esc(title)}</h1><p id="cohort-summary">{esc(summary)}</p></header>'
+    verified=sum(r['claim_count'] for r in records)
+    websites=sum(r['flags']['website'] for r in records)
+    activity=sum(r['flags']['activity'] for r in records)
+    body = '<section class="home-hero"><div class="hero-copy"><p class="eyebrow">Norwegian company research</p><h1>Every fact, traced to its source.</h1><p>Search '+str(n)+' Norwegian companies, compare them side by side, and check the original source behind every number.</p><p id="cohort-summary">'+esc(summary)+'</p>'
+    body += '<div class="hero-search"><label class="visually-hidden" for="search">Search by name, organisation number, municipality or industry</label><input id="search" type="search" autocomplete="off" placeholder="Search by name, org. number, town or industry" aria-controls="search-autocomplete"><div id="search-autocomplete" class="autocomplete-dropdown" hidden></div></div><div class="try-chips"><span>Try:</span>'
+    for r in sorted(records,key=lambda r:r['claim_count'],reverse=True)[:3]:body += '<button type="button" data-search="'+esc(r['name'])+'">'+esc(r['name'])+'</button>'
+    body += '</div></div><div class="hero-stats">'
+    for number,label in [(n,'companies'),(verified,'verified claims'),(websites,'verified websites'),(activity,'companies with activity')]:body += '<div class="hero-stat"><strong>'+format(number,',')+'</strong><span>'+label+'</span></div>'
+    body += '</div></section>'
+
     if skipped:
         shown = ', '.join('<code>' + esc(str(x)[:40]) + '</code>' for x in skipped[:20])
         more = f' and {len(skipped) - 20} more' if len(skipped) > 20 else ''
@@ -875,14 +929,6 @@ def index_page(records, title, skipped=()):
     body += '<div id="directory"></div>'
     body += '<div class="export-bar" aria-label="Export directory data"><span class="export-label">Export Directory:</span> <button type="button" id="export-directory-csv" class="btn-export">Export CSV</button> <button type="button" id="export-directory-json" class="btn-export">Export JSON</button></div>'
     body += '<div class="saved-views-bar" aria-label="Saved views and watchlist"><span class="saved-views-label">Saved Views:</span><div id="saved-views-list" class="saved-views-list"></div><button type="button" id="save-current-view" class="btn-sm">💾 Save view</button><button type="button" id="clear-watchlist" class="btn-sm">Clear watchlist</button><span class="storage-notice muted">Stored locally in your browser.</span></div>'
-    body += '<div class="search-box">'
-    body += '<label for="search" class="visually-hidden">Search name, organisation number, or website</label>'
-    body += '<div class="search-input-wrapper">'
-    body += '<span class="search-icon" aria-hidden="true">🔍</span>'
-    body += '<input id="search" type="search" autocomplete="off" placeholder="Search by company name, orgnr, website, municipality..." aria-autocomplete="list" aria-controls="search-autocomplete">'
-    body += '<div id="search-autocomplete" class="autocomplete-dropdown" role="listbox" aria-label="Company suggestions" hidden></div>'
-    body += '</div></div>'
-
     body += '<section class="filters" aria-label="Company filters">'
     values_muni = sorted({str(r['municipality']) for r in records if r['municipality']})
     body += '<label>Municipality<select id="municipality"><option value="">All municipalities</option>' + ''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values_muni) + '<option value="Unknown">Unknown municipality</option></select></label>'
@@ -924,7 +970,7 @@ def index_page(records, title, skipped=()):
 
     body += '<div id="results" class="results">'
     for r in records:
-        body += f'<article class="company"><h2><a href="c/{esc(r["orgnr"])}.html">{esc(r["name"])}</a></h2><p>{esc(r["orgnr"])} · {esc(r["municipality"] or "Unknown municipality")}</p></article>'
+        body += '<article class="company no-js-company"><a href="c/'+esc(r['orgnr'])+'.html">'+esc(r['name'])+'</a> <small>'+esc(r['orgnr'])+'</small></article>'
     body += '</div><div class="pagination"><button id="previous" type="button">Previous</button><span id="page-label"></span><button id="next" type="button">Next</button></div>'
     body += '</section>'
 
@@ -947,10 +993,11 @@ def index_page(records, title, skipped=()):
     body += '<p>Zero results indicates no active job ads match your criteria in the evaluated cohort. This does not indicate zero employment.</p>'
     body += '</div>'
     body += '</section>'
+    body += '<section id="sources" class="sources-note"><h2>Sources &amp; licences</h2><p>BRREG: NLOD 2.0. NAV: public feed terms. Wikidata and GLEIF: CC0. TED: EU Publications Office reuse terms. Company websites: access under robots.txt; no open licence assumed.</p><p>Data checked '+esc(max((r['last_checked'][:10] for r in records),default='Unknown'))+'. No language model or search engine was used.</p></section>'
     return page(title, body, kind='index')
 
 
-def compare_page(title):
+def compare_page(title, records=()):
     body = '<header><p class="eyebrow">Side by side</p><h1>Compare companies</h1><p>Select up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.</p></header>'
     body += '<section class="filters compare-inputs-grid" aria-label="Company selectors">'
     for i in range(4):
@@ -959,7 +1006,46 @@ def compare_page(title):
     body += '</section><datalist id="company-options"></datalist>'
     body += '<p id="compare-status" role="status" class="compare-status"></p>'
     body += '<div id="comparison" class="comparison"></div>'
+    if records:
+        selected=[r for r in records if r['orgnr'] in {'922828172','919653477'}] or list(records[:2])
+        body += '<noscript><section><h2>Company comparison</h2><p>JavaScript enhances company selection; all company facts and receipts remain readable below.</p><div class="comparison">'
+        for r in selected:body += '<article class="compare-card"><h2><a href="c/'+esc(r['orgnr'])+'.html">'+esc(r['name'])+'</a></h2><p>'+esc(r['orgnr'])+'</p><p>Revenue: '+esc(value_text(r['revenue']))+'</p><p>Annual result: '+esc(value_text(r['annual_result']))+'</p><p>Employees: '+esc(value_text(r['employees']))+'</p></article>'
+        body += '</div></section></noscript>'
     return page('Compare · ' + title, body, kind='compare')
+
+
+def receipt_pages(row, title):
+    """Readable, bounded source receipts with every evidence record retained."""
+    org=row['organisation_number'];records={e['id']:e for e in row['evidence']}
+    chunks=[];current=[];size=0;parts_by_claim={}
+    for c in row['claims']:
+        label=c.get('reasons',{}).get('label') or c['field'].replace('_',' ')
+        fragments=[];part=''
+        for eid in c.get('evidence_ids',[]):
+            single={**c,'evidence_ids':[eid]}
+            fragment=evidence_panel(single,records)
+            if part and len((part+fragment).encode('utf-8'))>155000:fragments.append(part);part=''
+            part+=fragment
+        fragments.append(part)
+        for n,fragment in enumerate(fragments):
+            suffix='' if n==0 else '-'+str(n+1)
+            key=c['id']+suffix
+            entry='<article class="receipt" id="receipt-'+c['id'][:16]+suffix+'"><p class="eyebrow">The evidence behind the fact</p><h2>'+esc(label)+'</h2>'+value_html(c['value'])+fragment+'<p data-continuation="'+key+'"></p></article>'
+            length=len(entry.encode('utf-8'))
+            if current and size+length>200000:chunks.append(current);current=[];size=0
+            current.append((key,entry));size+=length
+            parts_by_claim.setdefault(c['id'],[]).append(key)
+    if current:chunks.append(current)
+    targets={key:'../e/'+org+'-'+str(i+1)+'.html#receipt-'+key[:16]+key[64:] for i,chunk in enumerate(chunks) for key,_ in chunk}
+    files={}
+    for i,chunk in enumerate(chunks):
+        body='<p><a href="../c/'+org+'.html">Back to company</a></p>'
+        for key,entry in chunk:
+            parts=parts_by_claim[key[:64]]
+            links=''.join('<a href="'+esc(targets[k])+'">Supporting sources '+str(n+1)+'</a> ' for n,k in enumerate(parts) if k!=key)
+            body+=entry.replace('<p data-continuation="'+key+'"></p>','<p>'+links+'</p>')
+        files['e/'+org+'-'+str(i+1)+'.html']=page('Sources - '+title,body,'../',kind='evidence')
+    return files,{cid:targets[keys[0]] for cid,keys in parts_by_claim.items()}
 
 
 def generate_site(input_path, out, title='Signalpost'):
@@ -979,17 +1065,19 @@ def generate_site(input_path, out, title='Signalpost'):
     records = [index_record(r) for r in rows]
     payload = json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
     js_payload = payload.replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
-    files = {'index.html': index_page(records, title, skipped), 'compare.html': compare_page(title),
+    files = {'index.html': index_page(records, title, skipped), 'compare.html': compare_page(title,records),
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
     for row in rows:
         org=row['organisation_number']
-        files['c/' + org + '.html'] = profile(row, title)
+        receipts,routes=receipt_pages(row,title)
+        files.update(receipts)
+        files['c/' + org + '.html'] = profile(row, title,routes)
         data=json.dumps(company_payload(row),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')
     # Render everything before writes: template errors cannot leave half a new site.
-    if any(len(content.encode('utf8')) >= 250_000 for path, content in files.items() if path.startswith('c/') and path.endswith('.html')):
+    if any(len(content.encode('utf8')) >= 250_000 for path, content in files.items() if path.endswith('.html')):
         raise ValueError('Profile page exceeds 250 KB gate')
     for filename, content in files.items():
         target = out / filename
@@ -997,5 +1085,7 @@ def generate_site(input_path, out, title='Signalpost'):
         target.write_text(content, encoding='utf8', newline='\n')
     sizes = {filename: len(content.encode('utf8')) for filename, content in files.items()}
     return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'skipped_invalid_identifiers': len(skipped), 'total_bytes': sum(sizes.values()),
+            'evidence_pages':sum(path.startswith('e/') and path.endswith('.html') for path in files),
+            'largest_page_bytes':max((size for path,size in sizes.items() if path.endswith('.html')),default=0),
             'largest_profile_data_bytes':max((size for path,size in sizes.items() if path.endswith('.data.js')),default=0),
-            'largest_profile_bytes': max((size for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')), default=0)}
+            'largest_profile_bytes': max((size for path, size in sizes.items() if path.endswith('.html')), default=0)}
