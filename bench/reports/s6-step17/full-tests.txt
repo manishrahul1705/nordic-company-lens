@@ -1,0 +1,42 @@
+........................................................................ [  5%]
+........................................................................ [ 11%]
+........................................................................ [ 17%]
+........................................................................ [ 23%]
+........................................................................ [ 29%]
+........................................................................ [ 35%]
+........................................................................ [ 41%]
+........................................................................ [ 47%]
+........................................................................ [ 53%]
+........................................................................ [ 59%]
+........................................................................ [ 65%]
+........................................................................ [ 71%]
+........................................................................ [ 77%]
+........................................................................ [ 83%]
+.........................................................F.............. [ 88%]
+........................................................................ [ 94%]
+..............................................................           [100%]
+================================== FAILURES ===================================
+______________ test_housing_cooperative_never_uses_parent_title _______________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step17-full/test_housing_cooperative_never0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001ADCD81F1A0>
+
+    def test_housing_cooperative_never_uses_parent_title(tmp_path,monkeypatch):
+        import copy
+        from signalpost.synthesis import nace as module
+        row,_=envelope(tmp_path)
+        claim=next(c for c in row.claims if c.field=='identity.nace1')
+        claim.value={'kode':'97.001','beskrivelse':'Aktiviteter i borettslag og boligsameier'}
+        assert english_title(claim.value,version_id=3218)=='Activities of housing cooperatives'
+        assert english_title(claim.value,version_id=30) is None
+        result=generate(row)
+        forbidden='Activities of households as employers of domestic personnel'
+        assert forbidden.casefold() not in result.summary.casefold()
+>       assert 'Activities of housing cooperatives (NACE 97.001)' in result.summary
+E       AssertionError: assert 'Activities of housing cooperatives (NACE 97.001)' in 'Example AS (org. 923609016) is a private limited company in Oslo, registered in 2020, working in activities of housin...tives. No company website could be verified. Company-only financial results were not available in the checked sources.'
+E        +  where 'Example AS (org. 923609016) is a private limited company in Oslo, registered in 2020, working in activities of housin...tives. No company website could be verified. Company-only financial results were not available in the checked sources.' = Synthesis(mode='template', language='en', summary='Example AS (org. 923609016) is a private limited company in Oslo, r...apshot.analyst.accounts', value={'state': 'not_available', 'stale': False, 'supported_fields': []}, evidence_ids=[])])).summary
+
+tests\test_synthesis_readability.py:152: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_synthesis_readability.py::test_housing_cooperative_never_uses_parent_title
+1 failed, 1213 passed in 278.91s (0:04:38)

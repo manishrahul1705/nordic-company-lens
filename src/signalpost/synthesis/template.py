@@ -170,5 +170,8 @@ def generate(envelope):
     result = validate_synthesis(result,envelope)
     from .company_brief import generate as generate_brief, validate as validate_brief
     result.brief = validate_brief(generate_brief(result, envelope), result, envelope)
-    result.generator.version = '4'
+    from .analyst import generate as analyst_generate, validate as analyst_validate
+    result.analyst_brief = analyst_validate(analyst_generate(envelope), envelope)
+    result.summary = ' '.join(s.text for s in result.analyst_brief.sentences)
+    result.generator.version = '5'
     return result

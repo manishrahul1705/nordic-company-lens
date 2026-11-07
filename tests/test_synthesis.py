@@ -19,7 +19,8 @@ def test_template_citations_unknowns_and_all_shapes(tmp_path):
     row,cfg=envelope(tmp_path)
     summary=row.run.synthesis
     assert summary.checks.sentences==summary.checks.cited>0 and summary.checks.values_verified
-    assert 'First observation' in summary.summary
+    assert 'First observation' not in summary.summary
+    assert any('First observation' in s.text for s in summary.sections.changes)
     assert any(item.family=='accounts' for item in summary.sections.unknowns)
     for shape in ('union','contract','reference'):
         result=serialize(row,shape);validate(result,shape)
@@ -81,7 +82,7 @@ def test_registered_activity_and_self_description_sources(tmp_path,monkeypatch):
     for key in descriptions[0]['evidence_ids']:
         item=evidence[key]
         assert item['claim_span'] in (cfg.state_dir/'blobs'/item['content_sha256']).read_text()
-    assert 'Website self-description' in body['run']['synthesis']['summary']
+    assert any('Website self-description' in s['text'] for s in body['run']['synthesis']['sections']['what_it_does'])
 
 
 def test_same_prior_snapshot_is_byte_identical_and_derived_text_not_a_change(tmp_path):
@@ -110,7 +111,7 @@ def test_registry_descriptions_have_exact_source_locators(tmp_path):
         claim=next(c for c in row.claims if c.field==field)
         assert claim.availability=='available'
         assert evidence[claim.evidence_ids[0]].locator==pointer
-        assert '«'+quote+'»' in row.run.synthesis.summary
+        assert '«'+quote+'»' in ' '.join(s.text for s in row.run.synthesis.sections.what_it_does)
 
 
 def test_changed_role_summary_links_both_original_evidence_sides(tmp_path):

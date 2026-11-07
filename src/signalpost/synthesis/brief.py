@@ -2,6 +2,8 @@
 
 
 def select(synthesis, claims, limit=8):
+    if synthesis.get('analyst_brief') is not None:
+        return synthesis['analyst_brief']['sentences'][:limit]
     sections = synthesis.get('sections', {})
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes')
                  for s in sections.get(key, [])]

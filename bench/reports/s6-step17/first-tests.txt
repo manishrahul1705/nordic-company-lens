@@ -1,0 +1,67 @@
+F........F.F...                                                          [100%]
+================================== FAILURES ===================================
+_______________ test_template_citations_unknowns_and_all_shapes _______________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step17-first2/test_template_citations_unknow0')
+
+    def test_template_citations_unknowns_and_all_shapes(tmp_path):
+        from signalpost.models.shapes import serialize,validate
+        row,cfg=envelope(tmp_path)
+        summary=row.run.synthesis
+        assert summary.checks.sentences==summary.checks.cited>0 and summary.checks.values_verified
+>       assert 'First observation' in summary.summary
+E       AssertionError: assert 'First observation' in 'Example AS (org. 923609016) is a private limited company in Oslo, registered in 2020, working in computer programming...ities. No company website could be verified. Company-only financial results were not available in the checked sources.'
+E        +  where 'Example AS (org. 923609016) is a private limited company in Oslo, registered in 2020, working in computer programming...ities. No company website could be verified. Company-only financial results were not available in the checked sources.' = Synthesis(mode='template', language='en', summary='Example AS (org. 923609016) is a private limited company in Oslo, r...apshot.analyst.accounts', value={'state': 'not_available', 'stale': False, 'supported_fields': []}, evidence_ids=[])])).summary
+
+tests\test_synthesis.py:22: AssertionError
+____________ test_registered_activity_and_self_description_sources ____________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step17-first2/test_registered_activity_and_s0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021A63D0F9E0>
+
+    def test_registered_activity_and_self_description_sources(tmp_path,monkeypatch):
+        from tests.test_websites import execute_web,html
+        _,body,_,cfg=execute_web(tmp_path,monkeypatch,body=html(extra='') .replace('<title>','<meta name="description" content="We make useful software for customers."><title>'))
+        descriptions=[c for c in body['claims'] if c['field'].startswith('website_description.')]
+        assert len(descriptions)==1 and descriptions[0]['value']['self_description']
+        evidence={e['id']:e for e in body['evidence']}
+        for key in descriptions[0]['evidence_ids']:
+            item=evidence[key]
+            assert item['claim_span'] in (cfg.state_dir/'blobs'/item['content_sha256']).read_text()
+>       assert 'Website self-description' in body['run']['synthesis']['summary']
+E       AssertionError: assert 'Website self-description' in 'Example AS (org. 923609016) is a private limited company in Oslo, registered in 2020, working in computer programming...ivities. Its verified website is example.no. Company-only financial results were not available in the checked sources.'
+
+tests\test_synthesis.py:84: AssertionError
+____________ test_registry_descriptions_have_exact_source_locators ____________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step17-first2/test_registry_descriptions_hav0')
+
+    def test_registry_descriptions_have_exact_source_locators(tmp_path):
+        import httpx
+        from tests.test_registry import entity
+        cfg=config(tmp_path,['923609016'])
+        def response(request):
+            if request.url.path.endswith('/923609016') and '/enhetsregisteret/' in request.url.path:
+                data=entity('923609016')
+                data.update(aktivitet=['Utvikling av programvare.'],vedtektsfestetFormaal='Drive programvareutvikling.')
+                return httpx.Response(200,json=data)
+            return handler()(request)
+        _,rows=execute(cfg,response)
+        row=Envelope.model_validate(rows[0]);evidence={e.id:e for e in row.evidence}
+        for field,pointer,quote in [('identity.registered_activity','/aktivitet','Utvikling av programvare.'),
+                                  ('identity.statutory_purpose','/vedtektsfestetFormaal','Drive programvareutvikling.')]:
+            claim=next(c for c in row.claims if c.field==field)
+            assert claim.availability=='available'
+            assert evidence[claim.evidence_ids[0]].locator==pointer
+>           assert '�'+quote+'�' in row.run.synthesis.summary
+E           assert (('�' + 'Utvikling av programvare.') + '�') in 'Example AS (org. 923609016) is a private limited company in Oslo, registered in 2020, working in computer programming...ling". No company website could be verified. Company-only financial results were not available in the checked sources.'
+E            +  where 'Example AS (org. 923609016) is a private limited company in Oslo, registered in 2020, working in computer programming...ling". No company website could be verified. Company-only financial results were not available in the checked sources.' = Synthesis(mode='template', language='en', summary='Example AS (org. 923609016) is a private limited company in Oslo, r...apshot.analyst.accounts', value={'state': 'not_available', 'stale': False, 'supported_fields': []}, evidence_ids=[])])).summary
+E            +    where Synthesis(mode='template', language='en', summary='Example AS (org. 923609016) is a private limited company in Oslo, r...apshot.analyst.accounts', value={'state': 'not_available', 'stale': False, 'supported_fields': []}, evidence_ids=[])])) = Run(run_id='fa4731ae04bb4ef79d4a963b23f71ab1', started_at='2026-11-07T05:16:33.537817Z', completed_at='2026-11-07T05:1...pshot.analyst.accounts', value={'state': 'not_available', 'stale': False, 'supported_fields': []}, evidence_ids=[])]))).synthesis
+E            +      where Run(run_id='fa4731ae04bb4ef79d4a963b23f71ab1', started_at='2026-11-07T05:16:33.537817Z', completed_at='2026-11-07T05:1...pshot.analyst.accounts', value={'state': 'not_available', 'stale': False, 'supported_fields': []}, evidence_ids=[])]))) = Envelope(organisation_number='923609016', run=Run(run_id='fa4731ae04bb4ef79d4a963b23f71ab1', started_at='2026-11-07T05...shot.analyst.accounts', value={'state': 'not_available', 'stale': False, 'supported_fields': []}, evidence_ids=[])])))).run
+
+tests\test_synthesis.py:113: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_synthesis.py::test_template_citations_unknowns_and_all_shapes
+FAILED tests/test_synthesis.py::test_registered_activity_and_self_description_sources
+FAILED tests/test_synthesis.py::test_registry_descriptions_have_exact_source_locators
+3 failed, 12 passed in 1.72s

@@ -33,11 +33,18 @@ def verify_synthesis(row):
     if synthesis.brief is not None:
         from signalpost.synthesis.company_brief import validate as validate_brief
         validate_brief(synthesis.brief, synthesis, envelope)
-    assert synthesis.summary==' '.join(s.text for s in sentences),'Summary differs from checked sentences'
+    primary=sentences
+    if synthesis.generator.version=='5':
+        assert synthesis.analyst_brief is not None,'Missing analyst brief'
+    if synthesis.analyst_brief is not None:
+        from signalpost.synthesis.analyst import validate as validate_analyst
+        validate_analyst(synthesis.analyst_brief,envelope)
+        primary=synthesis.analyst_brief.sentences
+    assert synthesis.summary==' '.join(s.text for s in primary),'Summary differs from checked sentences'
     assert synthesis.checks.sentences==synthesis.checks.cited==len(sentences) and synthesis.checks.values_verified
     assert synthesis.change_claims==change_claims(envelope),'Change citations differ from source events'
     if 'run' in row and 'profile' in row:assert row['profile'].get('synthesis')==raw,'Synthesis mirror differs'
-    return 1,len(sentences)
+    return 1,len(primary)
 
 
 def load(path):

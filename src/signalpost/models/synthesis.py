@@ -59,6 +59,15 @@ class Brief(Model):
     context_claims: list[ChangeClaim] = Field(default_factory=list)
 
 
+class AnalystSentence(Sentence):
+    sentence_type: Literal['a','b','c','d','e','f']
+
+
+class AnalystBrief(Model):
+    sentences: list[AnalystSentence] = Field(default_factory=list)
+    context_claims: list[ChangeClaim] = Field(default_factory=list)
+
+
 class Synthesis(Model):
     mode: Literal['template','llm'] = 'template'
     language: Literal['en'] = 'en'
@@ -68,3 +77,4 @@ class Synthesis(Model):
     generator: Generator
     change_claims: list[ChangeClaim] = Field(default_factory=list)
     brief: Brief | None = None
+    analyst_brief: AnalystBrief | None = None

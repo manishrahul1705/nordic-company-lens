@@ -202,4 +202,8 @@ def validate_synthesis(synthesis,envelope):
     synthesis.checks.dropped_sentences+=len(rejected)
     synthesis.checks.rejections.extend(rejected)
     synthesis.summary=' '.join(s.text for key in SECTIONS for s in getattr(synthesis.sections,key))
+    if synthesis.analyst_brief is not None:
+        from .analyst import validate
+        validate(synthesis.analyst_brief,envelope)
+        synthesis.summary=' '.join(s.text for s in synthesis.analyst_brief.sentences)
     return synthesis

@@ -299,10 +299,12 @@ def profile(row, title):
     from .synthesis.brief import select
     overview = select(synthesis, claims)
     body += '<section class="summary"><h2>Cited summary</h2>'
-    brief = synthesis.get('brief')
+    analyst = synthesis.get('analyst_brief')
+    brief = ({'context_claims':analyst['context_claims'],'what':analyst['sentences'],'changes':[],'unknowns':[]} if analyst else synthesis.get('brief'))
     if brief:
         contexts = {c['id']: c for c in brief.get('context_claims', [])}
         for key, heading in [('what', 'What the company is and does'), ('changes', 'What changed since the previous run'), ('unknowns', "What's still unknown")]:
+            if analyst and key!='what':continue
             body += '<div class="brief-part"><h3>' + esc(heading) + '</h3>'
             for s in brief[key]:
                 cites = []
