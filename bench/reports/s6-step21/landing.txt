@@ -1,0 +1,831 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="nb" xml:lang="nb">
+
+  <head>
+<meta charset="windows-1252"><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="keywords" content="Brønnøysundregistrene"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><link rel="stylesheet" href="//scf.brreg.no/css/normalize.min.css"/><link rel="stylesheet" href="//scf.brreg.no/css/bootstrap.min.css?v=2"/>
+<link rel="stylesheet" href="//scf.brreg.no/css/bootstrap-fix.css"/>
+<link
+        rel="stylesheet"
+        href="//scf.brreg.no/fonts/inter/inter.css"
+        crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="//scf.brreg.no/css/br.css?v=22">
+<link rel="stylesheet" href="//scf.brreg.no/css/framework.css?v=69">
+<script src="//scf.brreg.no/js/br.js?v=6" defer></script>
+<script id="frameworkScript" data-scf="//scf.brreg.no" data-www="https://www.brreg.no" data-rum="https://siem-apm-prd.app.brreg.no" data-env="prod" src="//scf.brreg.no/js/framework.js?v=66" defer></script>
+
+<link class="favicon" rel="apple-touch-icon" sizes="180x180" href="//scf.brreg.no/bilder/favicons/apple-touch-icon.png?v=2">
+<link class="favicon" rel="icon" type="image/png" sizes="32x32" href="//scf.brreg.no/bilder/favicons/favicon-32x32.png?v=2">
+<link class="favicon" rel="icon" type="image/png" sizes="16x16" href="//scf.brreg.no/bilder/favicons/favicon-16x16.png?v=2">
+<link class="favicon" rel="manifest" href="//scf.brreg.no/bilder/favicons/site.webmanifest?v=2">
+<link class="favicon" rel="mask-icon" href="//scf.brreg.no/bilder/favicons/safari-pinned-tab.svg?v=2" color="#5bbad5">
+<link class="favicon" rel="shortcut icon" href="//scf.brreg.no/bilder/favicons/favicon.ico?v=2">
+<meta class="favicon" name="msapplication-TileColor" content="#da532c">
+<meta class="favicon" name="msapplication-config" content="//scf.brreg.no/bilder/favicons/browserconfig.xml?v=2">
+<meta class="favicon" name="theme-color" content="#ffffff">
+
+<link class="favicon-dark" rel="apple-touch-icon" sizes="180x180" href="//scf.brreg.no/bilder/favicons-dark/apple-touch-icon.png">
+<link class="favicon-dark" rel="icon" type="image/png" sizes="32x32" href="//scf.brreg.no/bilder/favicons-dark/favicon-32x32.png">
+<link class="favicon-dark" rel="icon" type="image/png" sizes="16x16" href="//scf.brreg.no/bilder/favicons-dark/favicon-16x16.png">
+<link class="favicon-dark" rel="manifest" href="//scf.brreg.no/bilder/favicons-dark/site.webmanifest">
+<link class="favicon-dark" rel="mask-icon" href="//scf.brreg.no/bilder/favicons-dark/safari-pinned-tab.svg" color="#5bbad5">
+<link class="favicon-dark" rel="shortcut icon" href="//scf.brreg.no/bilder/favicons-dark/favicon.ico">
+<meta class="favicon-dark" name="msapplication-TileColor" content="#da532c">
+<meta class="favicon-dark" name="msapplication-config" content="//scf.brreg.no/bilder/favicons-dark/browserconfig.xml">
+<meta class="favicon-dark" name="theme-color" content="#ffffff">
+<meta name='ROBOTS' content='NOINDEX, NOFOLLOW'/>
+
+<title>Kunngjøringer - Brønnøysundregistrene</title>
+<script src="//scf.brreg.no/js/jquery-3.7.1.min.js"></script>
+<script src="//scf.brreg.no/js/bootstrap.min.js?v=2"></script>
+
+  </head>
+		<body id='centered-page'>
+<header class="prod main-header" lang="nb">
+    <div class="header-content">
+        <div class="shortcut-to-maincontent">
+            <a href="#maincontent" title="Hopp til innhold">Hopp til innhold</a>
+        </div>
+        <div class="header-logo">
+            <a href="https://www.brreg.no/"><img src="//scf.brreg.no/bilder/brreg_logo.svg" alt="Brønnøysundregistrene, snarvei til fremsiden"></a>
+        </div>
+        <div class="header-right">
+            <div class="header-language">
+                <div id="languageButtonHeader" role="button" tabindex="0" aria-expanded="false" aria-controls="languageHeader">
+                    <span lang="en">Language</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4.75C10.4142 4.75 10.75 5.08579 10.75 5.5V6.75H13.4825C13.494 6.74973 13.5055 6.74973 13.517 6.75H16C16.4142 6.75 16.75 7.08579 16.75 7.5C16.75 7.91421 16.4142 8.25 16 8.25H14.0516C13.4168 10.1925 12.3897 11.9567 11.0571 13.4469C11.2033 13.5787 11.3526 13.7073 11.5049 13.8325C11.8248 14.0957 11.8708 14.5683 11.6076 14.8882C11.3445 15.2081 10.8719 15.2541 10.552 14.991C10.3639 14.8363 10.1799 14.677 10 14.5133C8.77421 15.6289 7.35388 16.5401 5.78846 17.1923C5.40611 17.3516 4.96701 17.1708 4.80769 16.7885C4.64838 16.4061 4.82919 15.967 5.21154 15.8077C6.59596 15.2308 7.85392 14.4283 8.94293 13.4469C7.61037 11.9567 6.58314 10.1925 5.94834 8.25H4C3.58579 8.25 3.25 7.91421 3.25 7.5C3.25 7.08579 3.58579 6.75 4 6.75H9.25V5.5C9.25 5.08579 9.58579 4.75 10 4.75ZM12.4638 8.25C11.8992 9.78019 11.0594 11.1767 10 12.3783C8.94058 11.1767 8.10077 9.78018 7.53617 8.25H12.4638ZM15.5 9.75C15.7964 9.75 16.065 9.92455 16.1854 10.1954L20.1854 19.1954C20.3536 19.5739 20.1831 20.0171 19.8046 20.1854C19.4261 20.3536 18.9829 20.1831 18.8146 19.8046L17.9015 17.75H13.0985L12.1854 19.8046C12.0171 20.1831 11.5739 20.3536 11.1954 20.1854C10.8169 20.0171 10.6464 19.5739 10.8146 19.1954L14.8146 10.1954C14.935 9.92455 15.2036 9.75 15.5 9.75ZM15.5 12.3467L17.2348 16.25H13.7652L15.5 12.3467Z" fill="#23262A"/>
+                    </svg>
+                </div>
+                <div id="closeLanguageButton" class="close-button" hidden title="Lukk språkvalg" role="button" tabindex="0" aria-expanded="true" aria-controls="languageHeader">
+                    <div class="close-search-icon">
+                        <svg version="1.1" class="header-icon"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 46 46"
+                             xml:space="preserve">
+                            <g>
+                                <path class="st0" d="M1.5,46c-0.4,0-0.8-0.2-1.1-0.4C0.2,45.2,0,44.9,0,44.5s0.2-0.8,0.4-1.1L28,15.8c0.3-0.3,0.7-0.4,1.1-0.4
+                                    s0.8,0.2,1.1,0.4c0.6,0.6,0.6,1.5,0,2.1L2.6,45.5C2.3,45.8,1.9,46,1.5,46z"/>
+                            </g>
+                                                        <g>
+                                <path class="st0" d="M16.9,30.6c-0.4,0-0.8-0.2-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1L43.4,0.5C43.7,0.2,44.1,0,44.5,0s0.8,0.2,1.1,0.4
+                                    C45.8,0.7,46,1.1,46,1.5s-0.2,0.8-0.4,1.1L18,30.2C17.7,30.4,17.3,30.6,16.9,30.6z"/>
+                            </g>
+                                                        <g>
+                                <path class="st0" d="M44.5,46c-0.4,0-0.8-0.2-1.1-0.4L15.8,18c-0.6-0.6-0.6-1.5,0-2.1c0.3-0.3,0.7-0.4,1.1-0.4s0.8,0.2,1.1,0.4
+                                    l27.6,27.6c0.3,0.3,0.4,0.7,0.4,1.1c0,0.4-0.2,0.8-0.4,1.1C45.3,45.8,44.9,46,44.5,46z"/>
+                            </g>
+                                                        <g>
+                                <path class="st0" d="M29.1,30.6c-0.4,0-0.8-0.2-1.1-0.4L0.5,2.6C0.2,2.3,0,1.9,0,1.5s0.2-0.8,0.4-1.1S1.1,0,1.5,0s0.8,0.2,1.1,0.4
+                                    L30.2,28c0.3,0.3,0.4,0.7,0.4,1.1s-0.2,0.8-0.4,1.1C29.9,30.4,29.5,30.6,29.1,30.6z"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header-search-button">
+                <div id="searchButton" role="button" tabindex="0" aria-expanded="false" aria-controls="searchformHeader">
+                    <span>Søk</span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="header-icon" width="22">
+                        <path class="st0" d="M10.5 3.25C6.49594 3.25 3.25 6.49594 3.25 10.5C3.25 14.5041 6.49594 17.75 10.5 17.75C12.2319 17.75 13.8219 17.1427 15.0689 16.1295L20.4801 21.5407C20.773 21.8336 21.2478 21.8336 21.5407 21.5407C21.8336 21.2478 21.8336 20.773 21.5407 20.4801L16.1295 15.0689C17.1427 13.8219 17.75 12.2319 17.75 10.5C17.75 6.49594 14.5041 3.25 10.5 3.25ZM4.75 10.5C4.75 7.32436 7.32436 4.75 10.5 4.75C13.6756 4.75 16.25 7.32436 16.25 10.5C16.25 13.6756 13.6756 16.25 10.5 16.25C7.32436 16.25 4.75 13.6756 4.75 10.5Z"></path>
+                    </svg>
+                 </div>
+                <div id="closeSearchButton" class="close-button" hidden title="Lukk søk" role="button" tabindex="0" aria-expanded="true" aria-controls="searchformHeader">
+                    <div class="close-search-icon">
+                        <svg version="1.1" class="header-icon"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 46 46"
+                             xml:space="preserve">
+                            <g>
+                                <path class="st0" d="M1.5,46c-0.4,0-0.8-0.2-1.1-0.4C0.2,45.2,0,44.9,0,44.5s0.2-0.8,0.4-1.1L28,15.8c0.3-0.3,0.7-0.4,1.1-0.4
+                                    s0.8,0.2,1.1,0.4c0.6,0.6,0.6,1.5,0,2.1L2.6,45.5C2.3,45.8,1.9,46,1.5,46z"/>
+                            </g>
+                            <g>
+                                <path class="st0" d="M16.9,30.6c-0.4,0-0.8-0.2-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1L43.4,0.5C43.7,0.2,44.1,0,44.5,0s0.8,0.2,1.1,0.4
+                                    C45.8,0.7,46,1.1,46,1.5s-0.2,0.8-0.4,1.1L18,30.2C17.7,30.4,17.3,30.6,16.9,30.6z"/>
+                            </g>
+                            <g>
+                                <path class="st0" d="M44.5,46c-0.4,0-0.8-0.2-1.1-0.4L15.8,18c-0.6-0.6-0.6-1.5,0-2.1c0.3-0.3,0.7-0.4,1.1-0.4s0.8,0.2,1.1,0.4
+                                    l27.6,27.6c0.3,0.3,0.4,0.7,0.4,1.1c0,0.4-0.2,0.8-0.4,1.1C45.3,45.8,44.9,46,44.5,46z"/>
+                            </g>
+                            <g>
+                                <path class="st0" d="M29.1,30.6c-0.4,0-0.8-0.2-1.1-0.4L0.5,2.6C0.2,2.3,0,1.9,0,1.5s0.2-0.8,0.4-1.1S1.1,0,1.5,0s0.8,0.2,1.1,0.4
+                                    L30.2,28c0.3,0.3,0.4,0.7,0.4,1.1s-0.2,0.8-0.4,1.1C29.9,30.4,29.5,30.6,29.1,30.6z"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header-log-in-button">
+                <a id="loginButton" tabindex="0" href="https://person.brreg.no/nb/minside?header=1">
+                    <span>Min side</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 7.5C8.25 5.42893 9.92893 3.75 12 3.75C14.0711 3.75 15.75 5.42893 15.75 7.5C15.75 9.57107 14.0711 11.25 12 11.25C9.92893 11.25 8.25 9.57107 8.25 7.5ZM12 2.25C9.10051 2.25 6.75 4.60051 6.75 7.5C6.75 10.3995 9.10051 12.75 12 12.75C14.8995 12.75 17.25 10.3995 17.25 7.5C17.25 4.60051 14.8995 2.25 12 2.25ZM8.28769 17.2877C9.27225 16.3031 10.6076 15.75 12 15.75C13.3924 15.75 14.7277 16.3031 15.7123 17.2877C16.6969 18.2723 17.25 19.6076 17.25 21C17.25 21.4142 17.5858 21.75 18 21.75C18.4142 21.75 18.75 21.4142 18.75 21C18.75 19.2098 18.0388 17.4929 16.773 16.227C15.5071 14.9612 13.7902 14.25 12 14.25C10.2098 14.25 8.4929 14.9612 7.22703 16.227C5.96116 17.4929 5.25 19.2098 5.25 21C5.25 21.4142 5.58579 21.75 6 21.75C6.41421 21.75 6.75 21.4142 6.75 21C6.75 19.6076 7.30312 18.2723 8.28769 17.2877Z" fill="#23262A"/>
+                    </svg></a>
+            </div>
+            <div class="header-menu-button">
+                <div id="openMenuButton" role="button" tabindex="0" aria-expanded="false" aria-controls="mainMenu">
+                    <span>Meny</span>
+                    <div class="menuIcon"></div>
+                </div>
+                <div id="closeMenuButton" hidden role="button" tabindex="0" aria-expanded="true" aria-controls="mainMenu">
+                    <span>Meny</span>
+                    <div class="menuIcon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="searchformHeader" class="search-and-language search-and-language-hide">
+        <form name="headerSearchForm" action="https://www.brreg.no" method="get" accept-charset="UTF-8">
+            <h2>Søk</h2>
+            <br>
+            <div class="search-field-wrapper">
+                <input type="search" id="s" name="s" lang="no" xml:lang="no" placeholder="Søk i innhold" aria-label="Søk i innhold">
+                <button id="doSearchButton" type="submit" aria-label="Søk">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 3.25C6.49594 3.25 3.25 6.49594 3.25 10.5C3.25 14.5041 6.49594 17.75 10.5 17.75C12.2319 17.75 13.8219 17.1427 15.0689 16.1295L20.4801 21.5407C20.773 21.8336 21.2478 21.8336 21.5407 21.5407C21.8336 21.2478 21.8336 20.773 21.5407 20.4801L16.1295 15.0689C17.1427 13.8219 17.75 12.2319 17.75 10.5C17.75 6.49594 14.5041 3.25 10.5 3.25ZM4.75 10.5C4.75 7.32436 7.32436 4.75 10.5 4.75C13.6756 4.75 16.25 7.32436 16.25 10.5C16.25 13.6756 13.6756 16.25 10.5 16.25C7.32436 16.25 4.75 13.6756 4.75 10.5Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <input type="hidden" name="lang" value="nb">
+        </form>
+    </div>
+    <div id="languageHeader" class="search-and-language search-and-language-hide notranslate">
+        <div id="spraakVelger">
+            <h2>Velg språk</h2>
+            <br><br>
+        </div>
+    </div>
+    <div id="mobileMenuSection" class="nav-side" style="display: none;">
+        <ul>
+            <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4.75C10.4142 4.75 10.75 5.08579 10.75 5.5V6.75H13.4825C13.494 6.74973 13.5055 6.74973 13.517 6.75H16C16.4142 6.75 16.75 7.08579 16.75 7.5C16.75 7.91421 16.4142 8.25 16 8.25H14.0516C13.4168 10.1925 12.3897 11.9567 11.0571 13.4469C11.2033 13.5787 11.3526 13.7073 11.5049 13.8325C11.8248 14.0957 11.8708 14.5683 11.6076 14.8882C11.3445 15.2081 10.8719 15.2541 10.552 14.991C10.3639 14.8363 10.1799 14.677 10 14.5133C8.77421 15.6289 7.35388 16.5401 5.78846 17.1923C5.40611 17.3516 4.96701 17.1708 4.80769 16.7885C4.64838 16.4061 4.82919 15.967 5.21154 15.8077C6.59596 15.2308 7.85392 14.4283 8.94293 13.4469C7.61037 11.9567 6.58314 10.1925 5.94834 8.25H4C3.58579 8.25 3.25 7.91421 3.25 7.5C3.25 7.08579 3.58579 6.75 4 6.75H9.25V5.5C9.25 5.08579 9.58579 4.75 10 4.75ZM12.4638 8.25C11.8992 9.78019 11.0594 11.1767 10 12.3783C8.94058 11.1767 8.10077 9.78018 7.53617 8.25H12.4638ZM15.5 9.75C15.7964 9.75 16.065 9.92455 16.1854 10.1954L20.1854 19.1954C20.3536 19.5739 20.1831 20.0171 19.8046 20.1854C19.4261 20.3536 18.9829 20.1831 18.8146 19.8046L17.9015 17.75H13.0985L12.1854 19.8046C12.0171 20.1831 11.5739 20.3536 11.1954 20.1854C10.8169 20.0171 10.6464 19.5739 10.8146 19.1954L14.8146 10.1954C14.935 9.92455 15.2036 9.75 15.5 9.75ZM15.5 12.3467L17.2348 16.25H13.7652L15.5 12.3467Z" fill="#23262A"/>
+                </svg>
+                <div role="button" id="languageButtonMenu" tabindex="0" lang="en">Language</div>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="header-icon" width="22">
+                    <path class="st0" d="M10.5 3.25C6.49594 3.25 3.25 6.49594 3.25 10.5C3.25 14.5041 6.49594 17.75 10.5 17.75C12.2319 17.75 13.8219 17.1427 15.0689 16.1295L20.4801 21.5407C20.773 21.8336 21.2478 21.8336 21.5407 21.5407C21.8336 21.2478 21.8336 20.773 21.5407 20.4801L16.1295 15.0689C17.1427 13.8219 17.75 12.2319 17.75 10.5C17.75 6.49594 14.5041 3.25 10.5 3.25ZM4.75 10.5C4.75 7.32436 7.32436 4.75 10.5 4.75C13.6756 4.75 16.25 7.32436 16.25 10.5C16.25 13.6756 13.6756 16.25 10.5 16.25C7.32436 16.25 4.75 13.6756 4.75 10.5Z"></path>
+                </svg>
+                <div role="button" id="searchButtonMenu" tabindex="0">Søk</div>
+            </li>
+            <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 7.5C8.25 5.42893 9.92893 3.75 12 3.75C14.0711 3.75 15.75 5.42893 15.75 7.5C15.75 9.57107 14.0711 11.25 12 11.25C9.92893 11.25 8.25 9.57107 8.25 7.5ZM12 2.25C9.10051 2.25 6.75 4.60051 6.75 7.5C6.75 10.3995 9.10051 12.75 12 12.75C14.8995 12.75 17.25 10.3995 17.25 7.5C17.25 4.60051 14.8995 2.25 12 2.25ZM8.28769 17.2877C9.27225 16.3031 10.6076 15.75 12 15.75C13.3924 15.75 14.7277 16.3031 15.7123 17.2877C16.6969 18.2723 17.25 19.6076 17.25 21C17.25 21.4142 17.5858 21.75 18 21.75C18.4142 21.75 18.75 21.4142 18.75 21C18.75 19.2098 18.0388 17.4929 16.773 16.227C15.5071 14.9612 13.7902 14.25 12 14.25C10.2098 14.25 8.4929 14.9612 7.22703 16.227C5.96116 17.4929 5.25 19.2098 5.25 21C5.25 21.4142 5.58579 21.75 6 21.75C6.41421 21.75 6.75 21.4142 6.75 21C6.75 19.6076 7.30312 18.2723 8.28769 17.2877Z" fill="#23262A"/>
+                </svg>
+                <a href="https://person.brreg.no/nb/minside?header=1">Min side</a>
+            </li>
+        </ul>
+    </div>
+<nav id='mainMenu' aria-label='hovedmeny' class='main-nav nav-hide'><div class='nav-wrapper'><div class='nav-side'><ul><li><img aria-hidden='true' alt='' src='https://scf.brreg.no/bilder/meny/MegaphoneSpeaking.svg'> <a href='https://www.brreg.no/registersok/kunngjoringer/'>Kunngjøringer</a></li><li><img aria-hidden='true' alt='' src='https://scf.brreg.no/bilder/meny/Calendar.svg'> <a href='https://www.brreg.no/hvordan-kan-vi-hjelpe-deg/nar-blir-saken-min-behandlet/'>Saksbehandlingstid</a></li><li><img aria-hidden='true' alt='' src='https://scf.brreg.no/bilder/meny/PersonHeadset.svg'> <a href='https://www.brreg.no/hvordan-kan-vi-hjelpe-deg/'>Kontakt oss</a></li><li><img aria-hidden='true' alt='' src='https://scf.brreg.no/bilder/meny/Download.svg'> <a href='https://w2.brreg.no/eHandelPortal/ecomsys/'>Nettbutikk</a></li><li><img aria-hidden='true' alt='' src='https://scf.brreg.no/bilder/meny/DocPencil.svg'> <a href='https://www.brreg.no/bedrift/samordnet-registermelding/'>Samordnet registermelding</a></li><li><img aria-hidden='true' alt='' src='https://scf.brreg.no/bilder/meny/Newspaper.svg'> <a href='https://www.brreg.no/nyhetsarkiv/'>Nyheter</a></li><li><img aria-hidden='true' alt='' src='https://scf.brreg.no/bilder/meny/Brreg.svg'> <a href='https://www.brreg.no/om-oss/'>Om oss</a></li></ul></div><div class='nav-box-container'><a class='nav-box' href='https://www.brreg.no/registersok/'><span class='nav-box-title'>Registersøk</span></a><a class='nav-box' href='https://www.brreg.no/aksjeselskap/'><span class='nav-box-title'>Aksjeselskap</span><br>Registrere, endre, slette</a><a class='nav-box' href='https://www.brreg.no/enkeltpersonforetak/'><span class='nav-box-title'>Enkeltpersonforetak</span><br>Registrere, endre, slette</a><a class='nav-box' href='https://www.brreg.no/lag-og-foreninger/'><span class='nav-box-title'>Lag og forening</span><br>Registrere, endre, slette</a><a class='nav-box' href='https://www.brreg.no/andre-organisasjonsformer/'><span class='nav-box-title'>Flere organisasjonsformer</span></a><a class='nav-box' href='https://www.brreg.no/innsending-av-arsregnskap/'><span class='nav-box-title'>Årsregnskap</span><br>Innsending og forsinkelsesgebyr</a><a class='nav-box' href='https://www.brreg.no/tinglysing/'><span class='nav-box-title'>Tinglysing</span></a><a class='nav-box' href='https://www.brreg.no/jegerregisteret/'><span class='nav-box-title'>Jeger</span><br>Betaling og jegeravgiftskort</a><a class='nav-box' href='https://www.brreg.no/ektepakt/'><span class='nav-box-title'>Ektepaktveileder</span></a><a class='nav-box' href='https://www.brreg.no/offentlig-sektor/'><span class='nav-box-title'>Offentlig sektor</span></a><a class='nav-box' href='https://www.brreg.no/andre-tema/'><span class='nav-box-title'>Andre tema</span></a></div></div></nav>
+</header><div class='container normal-br-link'><div class='row'>
+	<div class="col-md-12">
+<ol class='breadcrumb'> 
+<li><a href='https://www.brreg.no'>Forsiden</a> </li> 
+		<li><a href='https://www.brreg.no/registersok/'>Registersøk</a></li><li><strong>Kunngjøringer</strong></li>
+	</ol>
+	</div>
+</div>
+</div>
+<main  id="maincontent">
+<div class='container'>	<div class="row">	<div id="pagecontent" class="col-lg-12" tabindex="-1">
+		<div class='page-header'><h1>Kunngjøringer</h1></div>
+                <script>
+                    const APPID = "kunngjoring"
+                    const WL_DEFAULT_LANGUAGE = "nb";
+                    const WL_SUPPORTED_LANGUAGES = ["nb", "en"];
+
+                    window.onload = function() {
+                        document.getElementsByTagName('body')[0].setAttribute("data-appid", APPID);
+                        document.getElementsByTagName('body')[0].setAttribute("data-supported-lang", WL_SUPPORTED_LANGUAGES);
+                    }
+
+                    addEventListener("brreg:lang-change", function(e) {
+                        let languageCode = WL_SUPPORTED_LANGUAGES.includes(e.language) ? e.language : WL_DEFAULT_LANGUAGE;
+                        let langChangeForm = document.getElementById("langChangeForm");
+                        let url = window.location.href;
+                        let urlWithoutParams = url.substr(url, url.indexOf("?"));
+                        let params = new URLSearchParams(window.location.search);
+                        if (params.has("spraak")) {
+                            params.delete("spraak");
+                            let paramString = (Array.from(params).length > 0 ? "?" : "") + params.toString();
+                            url = urlWithoutParams + paramString;
+                        }
+                        langChangeForm.setAttribute("action", url);
+                        document.getElementById("languageCode").value = languageCode;
+                        langChangeForm.submit();
+                    });
+                </script>
+                <form id="langChangeForm" method="POST">
+                    <input id="languageCode" type="hidden" name="spraak">
+                </form>
+
+<link rel='stylesheet' href='css/kunngjoring.css?v=6'>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+
+
+
+
+
+
+<script src="js/cal2.js?v=2">
+    /*
+     Xin's Popup calendar script-  Xin Yang (http://www.yxscripts.com/)
+     Script featured on/available at http://www.dynamicdrive.com/
+     This notice must stay intact for use
+     */
+</script>
+<script src="js/cal_conf2.js"></script>
+
+<script>
+    <!--
+    function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+        if (init == true) with (navigator) {
+            if ((appName == "Netscape") && (parseInt(appVersion) == 4)) {
+                document.MM_pgW = innerWidth;
+                document.MM_pgH = innerHeight;
+                onresize = MM_reloadPage;
+            }
+        }
+        else if (innerWidth != document.MM_pgW || innerHeight != document.MM_pgH) location.reload();
+    }
+    MM_reloadPage(true);
+    //-->
+</script>
+<script>
+    <!--
+
+    function MM_openBrWindow(theURL, winName, features) { //v2.0
+        window.open(theURL, winName, features);
+    }
+    //-->
+</script>
+<script>
+    <!--
+    function submit_orgnr(doc) {
+        if (doc.orgnr.value == "") {
+            displayError(doc.orgnr, "nrError", "Organisasjonsnummer, foretaksnavn eller fødselsnummer(D-nummer) mangler");
+            doc.orgnr.focus();
+            return false;
+        }
+        return true;
+    }
+
+    function autoFormatDate(obj) {
+        var formattedDate = obj.value;
+
+        var DAY = 0;
+        var MONTH = 1;
+        var YEAR = 2;
+        var VALID_DATE_PATTERN = /^\d{1,2}[^0-9]\d{1,2}[^0-9]\d{1,4}$/;
+        if(VALID_DATE_PATTERN.test(formattedDate)) {
+            var dateParts = formattedDate.split(/[^0-9]/);
+            if(dateParts[DAY].length == 1) {
+                formattedDate = "0" + dateParts[DAY];
+            } else {
+                formattedDate = dateParts[DAY];
+            }
+            if(dateParts[MONTH].length == 1) {
+                formattedDate += ".0" + dateParts[MONTH];
+            } else {
+                formattedDate += "." + dateParts[MONTH];
+            }
+            if(dateParts[YEAR].length == 1) {
+                formattedDate += ".200" + dateParts[YEAR];
+            } else if(dateParts[YEAR].length == 2) {
+                formattedDate += ".20" + dateParts[YEAR];
+            } else if(dateParts[YEAR].length == 4) {
+                formattedDate += "." + dateParts[YEAR];
+            } else {
+                formattedDate += "." + dateParts[YEAR];
+            }
+        } else {
+            
+            var dateAsDigits = obj.value.replace(/[^0-9]/g, "");
+            if(dateAsDigits.length == 8) {
+                formattedDate = dateAsDigits.substr(0,2) + "." +
+                    dateAsDigits.substr(2,2) + "." +
+                    dateAsDigits.substr(4,4) ;
+            } else if(dateAsDigits.length == 6) {
+                formattedDate = dateAsDigits.substr(0,2) + "." +
+                    dateAsDigits.substr(2,2) + ".20" +
+                    dateAsDigits.substr(4,2) ;
+            }
+        }
+        obj.value = formattedDate;
+    }
+
+    /**************************************************
+     -----------------------------------
+     doDateCheck(date1,date2)
+     -----------------------------------
+     DESCRIPTION:
+     Validates that at least date1 has a value.
+     Validates that date1 (and date2 if present) has a correct dateformat (dd.mm.yyyy)
+     Validates that date2(tildato) is after date1 (fradato)
+
+     PARAMETERS:
+     doc (contains date1 and date 2)
+     RETURNS:
+     False if one or more of the controls doesn't validate, true otherwise
+     ***************************************************/
+    function doDateCheck(doc) {
+        date1 = trim(doc.datoFra.value);
+        date2 = trim(doc.datoTil.value);
+//Get todays date as a string
+        var today = new Date();
+        var monthString = new String(today.getMonth() + 1);
+        if (monthString.length == 1) monthString = "0" + monthString;
+        todayString = today.getDate() + "." + monthString + "." + today.getFullYear();
+
+        if (date1 == "") {
+            displayError(doc.datoFra, "dateError", "Du må velge startdato");
+            doc.datoFra.focus();
+        } else if (validateDateFormat(date1)) {
+            if (!isDate2AfterDate1(date1, todayString)) {
+                displayError(doc.datoFra, "dateError", "Startdato kan ikke være senere enn dagens dato");
+                doc.datoFra.focus();
+            } else if (date2 != "") {
+                if (validateDateFormat(date2)) {
+                    if (isDate2AfterDate1(date1, date2)) {
+                        return true;
+                    } else {
+                        displayError(doc.datoTil, "dateError", "Sluttdato må være etter startdato");
+                        doc.datoTil.focus();
+                    }
+                } else {
+                    displayError(doc.datoTil, "dateError", "Feil format i datofelt (dd.mm.åååå)");
+                    doc.datoTil.focus();
+                }
+            } else {
+                return true;
+            }
+        } else {
+            displayError(doc.datoFra, "dateError", "Feil format i datofelt (dd.mm.åååå)");
+            doc.datoFra.focus();
+        }
+        return false;
+    }
+
+    /**************************************************
+     -----------------------------------
+     isDate2AfterDate1(date1, date2)
+     -----------------------------------
+     DESCRIPTION:
+     Checks if date2(tildato) is after date1(fradato)
+
+     PARAMETERS:
+     date1 - fradato
+     date2 - tildato
+     RETURNS:
+     True if date2 is after date1, otherwise false
+
+     !! from http://www.codingforums.com/archive/index.php/t-210164.html
+     ***************************************************/
+    function isDate2AfterDate1(date1, date2) {
+        var d1 = date1.split('.');
+        var d2 = date2.split('.');
+        var fromdate = Date.UTC(Number(d1[2]), Number(d1[1]) - 1, Number(d1[0]));
+        var todate = Date.UTC(Number(d2[2]), Number(d2[1]) - 1, Number(d2[0]));
+        if (todate < fromdate) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /************************************************
+     ---------------------------
+     validateDateFormat(strDate)
+     ---------------------------
+     DESCRIPTION:
+     Validates the format of a datestring
+     (2 digit day, 2 digit month, 4 digit year).
+     Date separator: .
+     Uses combination of regular expressions and
+     string parsing to validate date.
+     Ex. dd.mm.yyyy
+
+     PARAMETERS:
+     strValue - String to be tested for validity
+
+     RETURNS:
+     True if valid, otherwise false.
+
+     !! Modified version of script from http://rgagnon.com/jsdetails/js-0063.html
+
+     *************************************************/
+    function validateDateFormat(strDate) {
+        var objRegExp = /^\d{1,2}(\.)\d{1,2}\1\d{4}$/;
+        //Validate format
+        if (!objRegExp.test(strDate))
+            return false; //doesn't match pattern -> bad date
+        else {
+            var strSeparator = strDate.substring(2, 3);
+            var arrayDate = strDate.split(strSeparator); //01,02,2011 -- dd,mm,yyyy
+            //Table with months and corresponding number of days (except February)
+            var arrayLookup = { '01': 31, '03': 31,
+                '04': 30, '05': 31,
+                '06': 30, '07': 31,
+                '08': 31, '09': 30,
+                '10': 31, '11': 30,
+                '12': 31};
+            var intDay = parseInt(arrayDate[0], 10);
+            //check if month value and day value agree
+            if (arrayLookup[arrayDate[1]] != null) {
+                if (intDay <= arrayLookup[arrayDate[1]] && intDay != 0)
+                    return true; //found in lookup table -> good date
+            }
+            //Februar
+            var intMonth = parseInt(arrayDate[1], 10);
+            if (intMonth == 2) {
+                var intYear = parseInt(arrayDate[2]);
+                if (intDay > 0 && intDay < 29) {
+                    return true;
+                }
+                else if (intDay == 29) {
+                    if ((intYear % 4 == 0) && (intYear % 100 != 0) || (intYear % 400 == 0)) {
+                        // year div by 4 and ((not div by 100) or div by 400) -> ok
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    function trim(stringToTrim) {
+        return stringToTrim.replace(/^\s+|\s+$/g, "");
+    }
+
+    /**********************************************************
+     -----------------------------------------------------------
+     displayError(elementToOutline, errorTextElement, errorText)
+     -----------------------------------------------------------
+     DESCRIPTION:
+     Displays 'errorText' in element 'errorTextElement' and
+     outlines 'elementToOutline' with red border.
+
+     PARAMETERS:
+     elementToOutline - Element to outline
+     errorTextElement - Name of element to display errortext within
+     errorText - Text to display
+     **********************************************************/
+    function displayError(elementToOutline, errorTextElement, errorText) {
+        //Clear "old" errors (Removes the 'redborder' class and errortext)
+        var rrForm = document.getElementById("rr");
+        var form1 = document.getElementById("form1");
+        rrForm.datoTil.className = rrForm.datoTil.className.replace(/\b redborder\b/, '');
+        rrForm.datoFra.className = rrForm.datoFra.className.replace(/\b redborder\b/, '');
+        form1.orgnr.className = form1.orgnr.className.replace(/\b redborder\b/, '');
+        document.getElementById("nrError").innerHTML = "";
+        document.getElementById("dateError").innerHTML = "";
+        //Display new errortext
+        errorElement = document.getElementById(errorTextElement);
+        errorElement.className = 'redbold';
+        errorElement.innerHTML = errorText;
+        //Red border on element containing error
+        elementToOutline.classList.add("redborder");
+    }
+
+    function resetDates() {
+        $.datepicker._clearDate(this);
+    }
+
+    function resetOrgnr() {
+        $("#orgnr").val("");
+    }
+    //-->
+</script>
+
+<br>
+<noscript>
+    <h3>Du har ikke javascript påslått og vil miste noe funksjonalitet
+    </h3>
+</noscript>
+<script src="js/sel_options_common1.js"></script>
+<script src="js/sel_options.js?v=5"></script>
+<script src="js/sel_options_common2.js?v=4"></script>
+
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <script src="js/datepicker-no.js"></script>
+        
+<script>
+    $( function() {
+        var initDatoFra = "";
+        var initDatoTil = "";
+        $(".dato").datepicker();
+        $(".dato").datepicker("option", "dateFormat", "dd.mm.yy");
+        $("#datoFra").datepicker("setDate", initDatoFra);
+        $("#datoTil").datepicker("setDate", initDatoTil);
+    } );
+</script>
+
+<div class="w2-ingress">
+    Her kan du søke for å finne kunngjøringer om registrering av nye foretak, oppløsning, sletting og andre viktige endringer.
+</div>
+<p>
+    Du finner også opplysninger om åpning av gjeldsforhandling og konkursbehandling for privatpersoner.
+			Vi har kunngjøringer fra Foretaksregisteret, Regnskapsregisteret, Løsøreregisteret, Konkursregisteret,
+			Partiregisteret og Stiftelsestilsynet fra og med 1. november 1999.
+</p>
+
+<p class="luft"></p>
+
+<h2>Enkelt søk i kunngjøringer</h2>
+<p class="separator"></p>
+<p class="luft"></p>
+<form name="form1" id="form1" action="hent.jsp" onsubmit="return submit_orgnr(this)" method="post" autocomplete="off">
+     
+     <div class="form-group">
+        <label for="orgnr">
+            Organisasjonsnummer, foretaksnavn, fødselsnummer eller d-nummer
+        </label>
+        <input id="orgnr" name="orgnr" type="text" value="" class="form-control">
+     </div>
+     <div class="infobox">
+         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16 helptext-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
+         <span class="helptext">
+             Søker du på fødselsnummer eller d-nummer, må du logge inn gjennom ID-porten for å se søkeresultatet.
+         </span>
+    </div>
+     <div class="form-group">
+         <button class="br-button-2 br-button-2-main" type="submit">
+             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+</svg>
+             S&oslash;k
+         </button>
+         <input type="button" class="br-button-2 br-button-2-secondary" value="Nullstill søk" onclick="resetOrgnr()">
+        <label><input type="checkbox" id="slettedeChkBox" name="deleted" value="true" >Søk i slettede foretak</label>
+        <p id="nrError"></p>
+    </div>
+</form>
+
+<p class="luft"></p>
+
+<h2>Avansert søk i kunngjøringer</h2>
+<p class="separator"></p>
+<form name="rr" id="rr" action="kombisok.jsp" method="get" onsubmit="return doDateCheck(this)">
+
+    <p class="luft"></p>
+
+    
+    <p id="dateError"></p>
+    <div class="row">
+        <div class="col-sm-4">
+            <label for="datoFra">Fra dato</label> <span class="kunn-mandatory">*</span> (påkrevd)
+            <input id="datoFra" name="datoFra" class="form-control dato" type="text"
+                   placeholder="dd.mm.åååå" onblur="autoFormatDate(this)"
+                   autocomplete="off"
+            >
+        </div>
+        <div class="col-sm-4">
+            <label for="datoTil">Til dato</label>
+            <input id="datoTil" name="datoTil" class="form-control dato" type="text"
+                   placeholder="dd.mm.åååå" onblur="autoFormatDate(this)"
+                   autocomplete="off"
+            >
+        </div>
+    </div>
+
+    <p class="luft"></p>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="id_region">Velg landsdel</label>
+            <select id="id_region" name="id_region" class="form-control" onChange="OnChangeRegion()">
+                                            <option value="0">Hele landet</option>
+                                            <option value="100">Nord-Norge</option>
+                                            <option value="200">Midt-Norge</option>
+                                            <option value="300">Vestlandet</option>
+                                            <option value="400">&Oslash;stlandet</option>
+                                            <option value="500">S&oslash;rlandet</option>
+                                            <option value="600">Andre norske omr&aring;der</option>
+                                            <option value="999">Utenlands/ukjent adresse</option>
+                                  </select>
+                  
+            <label for="id_fylke">Velg fylke</label>
+            <select name="id_fylke" id="id_fylke" class="form-control" onChange="OnChangeFylke()">
+            </select>
+            <label for="id_kommune">Velg kommune</label>
+            <select name="id_kommune" id="id_kommune" class="form-control">
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="id_niva1">Velg kunngjøringstype</label>
+            <select id="id_niva1" name="id_niva1" class="form-control" onChange="OnChangeNiva1();showHide('bransjer',this.value);">
+                                        <option value="1">Alle kunngjøringer</option>
+                                        <option value="2">Nyregistrering</option>
+                                        <option value="3">Oppløsning/sletting</option>
+                                        <option value="6">Foretaksnavn</option>
+                                        <option value="9">Endringer</option>
+                                        <option value="51">Konkurs/tvangsavvikling</option>
+                                        <option value="62">Kreditorvarsel</option>
+                                        <option value="70">Godkjente årsregnskap</option>
+                                        <option value="71">Politiske partier</option>
+                                        <option value="76">Stiftelsestilsynet eller Finanstilsynet</option>
+                                        <option value="81">Gjeldsforhandling</option>
+                                        <option value="110">Rekonstruksjonsforhandling</option>
+                                        <option value="111">Godkjente mellombalanser</option>
+                                        <option value="112">Utenlandsk insolvensbehandling</option>
+                                       </select>
+                  
+            <label for="id_niva2">Velg underkategori 1</label>
+            <select name="id_niva2" id="id_niva2" class="form-control" onChange="OnChangeNiva2()">
+            </select>
+            <label for="id_niva3">Velg underkategori 2</label>
+            <select name="id_niva3" id="id_niva3" class="form-control">
+            </select>
+        </div>
+    </div>
+
+    
+    <div id="bransjer" style="display: none">
+        <p class="luft"></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="id_bransje1">Velg hovedbransje</label>
+                <select id="id_bransje1" name="id_bransje1" class="form-control" onChange="OnChangeBransje1()">
+					<option value="0">Alle bransjer</option>
+					<option value="65">A Jordbruk, skogbruk og fiske</option>
+					<option value="66">B Bergverksdrift og utvinning</option>
+					<option value="67">C Industri</option>
+					<option value="68">D Forsyning av elektrisitet, gass, damp og kjøleluft</option>
+					<option value="69">E Vannforsyning, avløps-, renovasjons- og oppryddingsvirksomhet</option>
+					<option value="70">F Bygge- og anleggsvirksomhet</option>
+					<option value="71">G Varehandel</option>
+					<option value="72">H Transport og lagring</option>
+					<option value="73">I Overnattings- og serveringsvirksomhet</option>
+					<option value="74">J Utgivelse, kringkasting, innholdsproduksjon og distribusjonsvirksomhet</option>
+					<option value="75">K Telekommunikasjon, dataprogrammering, konsulentvirksomhet, datainfrastruktur og andre tjenester tilknyttet informasjonsteknologi</option>
+					<option value="76">L Finansiell tjenesteyting</option>
+					<option value="77">M Eiendomsvirksomhet</option>
+					<option value="78">N Faglig, vitenskapelig og teknisk tjenesteyting</option>
+					<option value="79">O Forretningsmessig tjenesteyting</option>
+					<option value="80">P Offentlig administrasjon og forsvar, og trygdeordninger underlagt offentlig forvaltning</option>
+					<option value="81">Q Undervisning</option>
+					<option value="82">R Helse- og sosialtjenester</option>
+					<option value="83">S Kulturell virksomhet, idrett og fritidsaktiviteter</option>
+					<option value="84">T Annen tjenesteyting</option>
+					<option value="85">U Lønnet arbeid i private husholdninger og annen vareproduksjon og tjenesteyting i private husholdninger til eget bruk</option>
+					<option value="86">V Aktiviteter i internasjonale organisasjoner og organer</option>
+					</select>
+                  
+                <label for="id_bransje2">Velg bransje</label>
+                <select name="id_bransje2" id="id_bransje2" class="form-control" onChange="OnChangeBransje2()">
+                </select>
+                <label for="id_bransje3">Velg bransjegruppe</label>
+                <select name="id_bransje3" id="id_bransje3" class="form-control">
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <p class="luft"></p>
+
+    <button class="br-button-2 br-button-2-main" type="submit">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+</svg>
+        S&oslash;k
+    </button>
+    <input type="reset" class="br-button-2 br-button-2-secondary" value="Nullstill søk" onclick="resetDates()">
+</form>
+
+
+<p class="normal-br-link">
+    Du kan abonnere på kunngjøringer, 
+			<a href="https://www.brreg.no/produkter-og-tjenester/bestille-produkter/abonnement/abonnement-pa-kunngjoringer/">les mer om vilkår og hvordan du bestiller</a>.
+</p>
+
+
+<p class="luft"></p>
+
+<h2>Under kan du også finne</h2>
+<p class="separator"></p>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <a class="row br-service-button br-button btn btn-block top-buffer" href="kombisok.jsp?datoFra=07.11.2026"><div class="col-xs-10 br-service-button-content"><div class="row"><div class="col-xs-10 remove-padding">
+            <span class="br-button-title">Alle dagens kunngjøringer</span><p class="br-button-description"></p></div></div></div>
+        </a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <a class="row br-service-button br-button btn btn-block top-buffer" href="kredvarsel.jsp"><div class="col-xs-10 br-service-button-content"><div class="row"><div class="col-xs-10 remove-padding">
+            <span class="br-button-title">Aktive kreditorvarsler</span><p class="br-button-description"></p></div></div></div>
+        </a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <a class="row br-service-button br-button btn btn-block top-buffer" href="https://www.brreg.no/registersok/kunngjoringer/prospekter/">
+            <div class="col-xs-10 br-service-button-content"><div class="row"><div class="col-xs-10 remove-padding">
+                <span class="br-button-title">Registrerte prospekter</span><p class="br-button-description"></p></div></div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<br>
+<p class="normal-br-link">
+    Les mer
+    <a href="https://www.brreg.no/produkter-og-tjenester/om-kunngjoringer/">om kunngjøringer</a>
+        og
+    <a href="https://www.brreg.no/produkter-og-tjenester/om_sok/">hvordan du søker i kunngjøringer</a>.
+</p>
+
+    <script>
+        <!--
+        initRegion('', '', '');          // Default initialize comboboxes for Region and Fylke og Kommune
+        initNiva('', '', '');
+        initBransje('', '', '');
+
+        showHide('bransjer', '');
+
+        document.form1.orgnr.focus();
+        //-->
+    </script>
+
+    
+    </div>
+</div>
+</div>
+</main>
+<footer class="main-footer" lang="nb">
+    <div id="topLinkContainer" hidden>
+        <button title="Til toppen" id="topLink">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path d="M56 319.9L128 319.9v128.1c0 17.69 14.33 32.02 32 32.02h64c17.67 0 32-14.34 32-32.02V319.9l72-.0311c9.578 0 18.25-5.709 22.05-14.51c3.781-8.803 1.984-19.03-4.594-26l-136-144.1c-9.062-9.602-25.84-9.602-34.91 0l-136 144.1C31.97 286.3 30.17 296.6 33.95 305.4C37.75 314.2 46.42 319.9 56 319.9zM351.1 32H31.1C14.33 32 0 46.33 0 63.1C0 81.67 14.33 96 32 96h320C369.7 96 384 81.67 384 64C384 46.33 369.7 32 351.1 32z"/>
+            </svg>
+        </button>
+    </div>
+    <div class="footer-wrapper footer-links">
+        <div class="footer-row">
+            <div class="footer-element footer-top">
+                <img id="footerLogo" src="//scf.brreg.no/bilder/brregLogoHvit.svg" alt="logo Brønnøysundregistrene">
+                <br>
+                <span class="br-web-smaller">
+                    Organisasjonsnummer:
+                    <a href="https://virksomhet.brreg.no/oppslag/enheter/974760673">
+                        <span class="brreg-nowrap">974 760 673</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-element">
+                <ul>
+                    <li><a href="https://www.brreg.no/hvordan-kan-vi-hjelpe-deg/">Kontakt oss</a></li>
+                    <li><a href="https://www.brreg.no/driftsmeldinger/">Driftsmeldinger</a></li>
+                    <li><a href="https://www.brreg.no/om-oss/">Om oss</a></li>
+                    <li><a href="https://jobb.brreg.no/">Ledige stillinger</a></li>
+                </ul>
+            </div>
+            <div class="footer-element">
+                <ul>
+                    <li><a href="https://www.brreg.no/om-oss/vaer-oppmerksom-pa-svindelforsok/">Vær obs på svindel</a></li>
+                    <li><a href="https://forenkling.brreg.no/">Forenklingsbloggen</a></li>
+                    <li><a href="https://www.brreg.no/om-oss/pressetjenesten/">Presse</a></li>
+                    <li><a href="https://www.linkedin.com/company/bronnoysundregistrene/">Finn oss på LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-element">
+                <ul>
+                    <li><a href="https://www.brreg.no/bruke-data-fra-bronnoysundregistrene/">Bruke data fra oss</a></li>
+                    <li><a href="https://www.brreg.no/produkter-og-tjenester/rss-feed/">RSS</a></li>
+                    <li><a href="https://www.brreg.no/personvernerklaering/">Personvernerklæring</a></li>
+                    <li><a href="https://www.brreg.no/tilgjengelighetserklaeringer/">Tilgjengelighetserklæring</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+    
+

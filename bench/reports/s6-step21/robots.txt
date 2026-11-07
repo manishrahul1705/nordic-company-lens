@@ -1,0 +1,29 @@
+#
+# robots.txt for http://w2.brreg.no/
+#
+# $Id: robots.txt,v 1.0 2001/07/27 $
+#
+
+# exclude some datbase-generated pages
+User-agent: *
+Disallow: /kunngjoring/
+Disallow: /enhet/
+Disallow: /frivillighetsregisteret/
+Disallow: /motorvogn/
+Disallow: /tillatelser/
+Disallow: /reservasjon/
+Disallow: /oppgaveregisteret/
+Disallow: /oppslag/
+Disallow: /partireg/
+Disallow: /altbas/
+Disallow: /akvakulturregisteret/
+Disallow: /login/
+Disallow: /eHandelPortal/
+Disallow: /jegerregisteret/
+Disallow: /lisensjeger/
+Disallow: /lisensjegerstatistikk/
+Disallow: /jegerbetalingsinfo/
+Disallow: /ssi/
+Disallow: /bilder/
+Disallow: /cgi-bin/
+Disallow: *.cgi
