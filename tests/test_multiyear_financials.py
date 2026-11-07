@@ -340,9 +340,13 @@ def test_12_consolidated_vs_individual_filter(tmp_path):
     sec = regnskap.extract(org, resp, store)
     assert next(c for c in sec.claims if c.field == "accounts.revenue").value == 3000000.0
     assert next(c for c in sec.claims if c.field == "accounts.history.2024.revenue").value == 2000000.0
-    # Ensure KONSERN amounts were NOT extracted
+    # Group accounts are retained separately and never become company metrics.
     for c in sec.claims:
-        assert c.value != 99000000.0 and c.value != 99900000.0
+        if not c.field.startswith('accounts.consolidated.'):
+            assert c.value != 99000000.0 and c.value != 99900000.0
+    assert next(c for c in sec.claims if c.field=='accounts.consolidated.2024.revenue').value==99000000.0
+    assert next(c for c in sec.claims if c.field=='accounts.consolidated.2025.revenue').value==99900000.0
+    assert all(c.reporting_period['account_type']=='KONSERN' for c in sec.claims if c.field.startswith('accounts.consolidated.'))
 
 
 # -------------------------------------------------------------------------

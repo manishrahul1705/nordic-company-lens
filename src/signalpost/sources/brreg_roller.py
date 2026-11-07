@@ -4,6 +4,7 @@ import asyncio
 from .brreg_enhet import BASE
 from .extract import Section, add, finish, decode, response_source
 from ..models.evidence import digest, canonical
+from .fact_depth import birth_year,label
 
 
 async def fetch(org, http):
@@ -42,6 +43,14 @@ def extract(org,response):
             seen[key] = slot + 1
             add(section, response_source(response), org, "roles", f"roles.role.{key}.{slot}", entry,
                 f"/rollegrupper/{group_index}/roller/{role_index}", effective=entry["from_date"] or entry["last_changed"])
+            loc=f'/rollegrupper/{group_index}/roller/{role_index}'
+            extra={'birth_year':(birth_year(person.get('fodselsdato')),'/person/fodselsdato'),
+                   'person_deceased':(person.get('erDoed'),'/person/erDoed'),
+                   'resignation_date':(item.get('tilDato'),'/tilDato'),
+                   'insolvency_administrator':(item.get('bostyrer'),'/bostyrer')}
+            for field,(value,path) in extra.items():
+                if value is None:continue
+                add(section,response_source(response),org,'roles',f'roles.detail.{key}.{slot}.{field}',value,loc+path);label(section)
             for name,path in {'responsibility_share':('ansvarsandel',),'order':('rekkefolge',),
                               'elected_by':('valgtAv',),'entity_deleted':('enhet','erSlettet'),
                               'entity_approval_status':('enhet','godkjenningsstatus'),

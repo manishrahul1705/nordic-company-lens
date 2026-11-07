@@ -25,7 +25,7 @@ class Config(BaseModel):
     workers: int = Field(default=64, ge=1)
     request_timeout: float = Field(default=10, gt=0)
     official_batch_size: int = Field(default=1100, ge=1)
-    max_output_mb: float = Field(default=256, gt=0)
+    max_output_mb: float = Field(default=512, gt=0)
     websites: bool = False
     wikidata: bool = True
     dns_precheck: bool = True

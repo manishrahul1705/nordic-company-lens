@@ -41,10 +41,11 @@ def transient_sections(envelope, old_claims):
 
 def newly_supported_field(field):
     from ..sources.registry_fields import EXTRA,GROUPS
+    from ..sources.fact_depth import IDENTITY_EXTRA
     from ..sources.regnskap import PATHS
     legacy={'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}
-    return (field.startswith(('roles.detail.','subunits.detail.','accounts.history.')) or
-            field in {'identity.'+k for k in (*EXTRA,*GROUPS,'founding_date','vat_registration_date')} or
+    return (field.startswith(('roles.detail.','subunits.detail.','accounts.history.','accounts.statement.','accounts.additional.','accounts.consolidated.','identity.historical_name.')) or
+            field in {'identity.'+k for k in (*EXTRA,*GROUPS,*IDENTITY_EXTRA,'employee_count_disclosure','founding_date','vat_registration_date')} or
             field in {'accounts.'+k for k in PATHS.keys()-legacy})
 
 
@@ -153,6 +154,18 @@ def apply(envelope, previous, blobs):
         if retained:
             envelope.claims = [c for c in envelope.claims if c.family != family] + retained
     new_claims = {c.field: c for c in envelope.claims}
+    # A rolling annual-response window does not withdraw an older supported statement.
+    # Retain only dated historical facts, with their original values and evidence;
+    # current-period values still replace them normally when actually returned.
+    if 'accounts' not in failed and not identity_conflict:
+        returned={(c.reporting_period.get('account_type'),c.reporting_period.get('fiscal_year'))
+                  for c in envelope.claims if c.family=='accounts' and c.availability=='available' and c.reporting_period}
+        for field,c in old_claims.items():
+            if field in new_claims or c.availability!='available' or not field.startswith(('accounts.statement.','accounts.additional.','accounts.consolidated.','accounts.history.')):continue
+            period=c.reporting_period or {};scope=(period.get('account_type'),period.get('fiscal_year'))
+            if not scope[1] or scope in returned or not any(kind==scope[0] for kind,year in returned):continue
+            carried=c.model_copy(update={'carried_forward':True,'reasons':{**c.reasons,'history':'Previously supported period outside current response window; original evidence retained'}})
+            envelope.claims.append(carried);new_claims[field]=carried
     for scoped_family in ('website','activity'):
         if scoped_family in restored:continue
         checked_urls = envelope.run.refresh.get(scoped_family, {}).get('checked_urls')

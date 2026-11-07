@@ -1,0 +1,25 @@
+{
+  "before_available_claims": {
+    "identity": 28716,
+    "roles": 11803,
+    "subunits": 6527,
+    "accounts": 62584
+  },
+  "after_available_claims": {
+    "identity": 31007,
+    "roles": 17806,
+    "subunits": 6907,
+    "accounts": 97416
+  },
+  "new_claims": {
+    "identity": 2291,
+    "roles": 6003,
+    "accounts": 34832,
+    "subunits": 380
+  },
+  "lost_legacy_claims": [],
+  "changed_legacy_claim_ids": [],
+  "estimated_envelope_bytes_without_rebuilding_synthesis": 324786650,
+  "HTTP_requests": 0,
+  "note": "Re-extraction uses only source blobs cited by each existing family; original run untouched. Calibration writes only existing local calibration snippets."
+}

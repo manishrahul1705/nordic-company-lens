@@ -155,7 +155,7 @@ def evidence_panel(claim, records, shared=False):
 def fact(claim, records):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
-    label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
+    label = claim.get('reasons',{}).get('label') or claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
     if claim['field'] == 'identity.registered_address':
         label = 'Registered business address'
     if claim['family'] in {'roles', 'subunits', 'hiring'} and isinstance(claim['value'], dict):

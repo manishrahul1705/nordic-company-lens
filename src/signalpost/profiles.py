@@ -61,35 +61,38 @@ def project(envelope):
         number=envelope.organisation_number if parent else c.field.split('.')[2]
         locations.append({'organisation_number':number,'name':'Registered postal address' if parent else 'Subunit postal address',
                           'type':'registered_postal_address' if parent else 'subunit_postal_address','address':c.value,'industry':None,'employees':None})
-    account_claims = [c for c in claims if c.family == 'accounts']
+    account_claims = [c for c in claims if c.family == 'accounts' and not c.field.startswith('accounts.consolidated.')]
     financials = []
-    if account_claims:
-        latest_claims = [c for c in account_claims if not c.field.startswith('accounts.history.') and c.field != 'accounts.latest']
-        if latest_claims:
-            period = latest_claims[0].reporting_period or {}
-            financials.append({'record_id': None, 'account_type': period.get('account_type'),
-                               'period': {'fraDato': period.get('period_start'), 'tilDato': period.get('period_end')},
-                               'currency': period.get('currency'), 'unit': period.get('unit'), **{key: value('accounts.' + field) for key, field in FINANCIAL.items()}})
-        prior_claims = [c for c in account_claims if c.field.startswith('accounts.history.')]
-        prior_years = sorted({c.field.split('.')[2] for c in prior_claims}, reverse=True)
-        for y in prior_years:
-            y_claims = [c for c in prior_claims if c.field.split('.')[2] == y]
-            period = y_claims[0].reporting_period or {}
-            financials.append({'record_id': None, 'account_type': period.get('account_type'),
-                               'period': {'fraDato': period.get('period_start'), 'tilDato': period.get('period_end')},
-                               'currency': period.get('currency'), 'unit': period.get('unit'), **{key: value(f'accounts.history.{y}.{field}') for key, field in FINANCIAL.items()}})
-        if len(financials) >= 2:
-            from .sources.financial_comparability import compare_periods
-            comp_res = compare_periods(financials[0], financials[1], org=envelope.organisation_number, metric='revenue')
-            financials[0]['comparability_with_prior'] = {
-                'comparable': comp_res.comparable,
-                'reason_codes': comp_res.reason_codes,
-                'growth_rate': comp_res.growth_rate,
-                'nominal_change': comp_res.nominal_change
-            }
+    years=sorted({str((c.reporting_period or {}).get('fiscal_year')) for c in account_claims if (c.reporting_period or {}).get('fiscal_year')},reverse=True)
+    for y in years:
+        selected=[c for c in account_claims if str((c.reporting_period or {}).get('fiscal_year'))==y]
+        period=selected[0].reporting_period or {}
+        amounts={c.field.rsplit('.',1)[-1]:c.value for c in selected}
+        financials.append({'record_id':None,'account_type':period.get('account_type'),
+                          'period':{'fraDato':period.get('period_start'),'tilDato':period.get('period_end')},
+                          'currency':period.get('currency'),'unit':period.get('unit'),
+                          **{key:amounts.get(field) for key,field in FINANCIAL.items()}})
+    if len(financials)>=2:
+        from .sources.financial_comparability import compare_periods
+        comp=compare_periods(financials[0],financials[1],org=envelope.organisation_number,metric='revenue')
+        financials[0]['comparability_with_prior']={'comparable':comp.comparable,'reason_codes':comp.reason_codes,'growth_rate':comp.growth_rate,'nominal_change':comp.nominal_change}
+    consolidated=[]
+    for y in sorted({c.field.split('.')[2] for c in claims if c.field.startswith('accounts.consolidated.')},reverse=True):
+        selected=[c for c in claims if c.field.startswith('accounts.consolidated.'+y+'.')]
+        period=selected[0].reporting_period or {}
+        consolidated.append({'account_type':'KONSERN','period':{'fraDato':period.get('period_start'),'tilDato':period.get('period_end')},
+                             'currency':period.get('currency'),'unit':period.get('unit'),
+                             **{c.field.split('.',3)[3]:c.value for c in selected}})
+    # Include every same-year company amount/statement attribute without mixing group accounts.
+    for record in financials:
+        year=str((record.get('period') or {}).get('tilDato') or '')[:4]
+        for c in account_claims:
+            if str((c.reporting_period or {}).get('fiscal_year'))!=year:continue
+            if c.field.startswith(('accounts.statement.','accounts.additional.')):record[c.field.split('.',3)[3]]=c.value
+            else:record.setdefault(c.field.rsplit('.',1)[-1],c.value)
     website=value('official_website')
     values={'registry_live':registry if registry['organisation_number'] else None,
-            'financials':{'records':financials} if financials else None,
+            'financials':{'records':financials,'consolidated_records':consolidated} if financials or consolidated else None,
             'roles':{'roles':roles} if roles else None,'locations':{'locations':locations} if locations else None,
             'website':website,'hiring':{'jobs':[c.value for c in claims if c.family=='hiring']} or None,
             'activity':{'items':[c.value for c in claims if c.family=='activity']} or None}
@@ -120,11 +123,12 @@ def project(envelope):
                           'effective_at':primary.effective_at if primary else None}
     # Lossless value/provenance index; module views never add facts absent here.
     verified=[{'id':c.id,'field':c.field,'value':c.value,'evidence_ids':c.evidence_ids} for c in claims]
+    detailed=[{**v,'family':c.family,'reporting_period':c.reporting_period,'label':c.reasons.get('label',c.field.rsplit('.',1)[-1].replace('_',' ').capitalize())} for v,c in zip(verified,claims)]
     ids={eid for c in claims for eid in c.evidence_ids}
     provenance={eid:records[eid].model_dump(mode='json') for eid in sorted(ids)}
     return {'organisation_number':envelope.organisation_number,'name':value('identity.legal_name'),
             'municipality':value('identity.municipality'),'website':website.get('final_url') if isinstance(website,dict) else None,
-            'evidence':evidence,'verified_claims':verified,'source_records':provenance}
+            'evidence':evidence,'verified_claims':verified,'claims_by_section':{module:[c for c in detailed if c['family']==family] for module,family in MODULES.items()},'source_records':provenance}
 
 
 def write(path, envelopes):

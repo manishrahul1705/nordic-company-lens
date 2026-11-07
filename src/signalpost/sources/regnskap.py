@@ -56,6 +56,8 @@ def extract(org,response,blobs):
     if not indexed:
         add(section, response_source(response), org, "accounts", "accounts.latest", None, "/")
         section.errors.append(Error(section="accounts", code="entity_accounts_unavailable", message="Only consolidated or unknown account types returned; entity financials not published"))
+        from .fact_depth import accounts
+        accounts(section,org,data,response_source(response))
         return finish(section)
     indexed.sort(key=lambda pair: (str(get(pair[1], ("regnskapsperiode", "tilDato")) or ""), str(pair[1].get("journalnr") or ""), pair[0]), reverse=True)
     index, record = indexed[0]
@@ -106,4 +108,6 @@ def extract(org,response,blobs):
             if reporting["unit"] is None:
                 section.claims[-1].reasons["unit"] = "scale_not_declared_by_source_or_reviewed_openapi"
                 section.claims[-1].reasons["unit_crosscheck"] = "NOK_calibration_not_applied_to_other_or_missing_currencies"
+    from .fact_depth import accounts
+    accounts(section,org,data,response_source(response))
     return finish(section)

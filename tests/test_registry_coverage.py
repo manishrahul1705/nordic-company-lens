@@ -35,8 +35,11 @@ def test_subunit_and_role_details_preserve_core_records_and_locators(tmp_path):
          'person':{'navn':{'fornavn':'Example'},'fodselsdato':'2000-01-01'},'avregistrert':False}]}]})
     s=brreg_roller.extract(ORG,r)
     assert sum(c.field.startswith('roles.role.') for c in s.claims)==1
-    assert all(c.value==0 for c in s.claims if c.field.startswith('roles.detail.'))
-    assert not any('fodselsdato' in e.locator for e in s.evidence)
+    assert all(c.value==0 for c in s.claims if c.field.startswith('roles.detail.') and not c.field.endswith('.birth_year'))
+    born=next(c for c in s.claims if c.field.endswith('.birth_year'))
+    assert born.value==2000
+    assert next(e for e in s.evidence if e.id in born.evidence_ids).locator.endswith('/person/fodselsdato')
+    assert not any(c.value=='2000-01-01' for c in s.claims)
 
 
 def test_extra_accounts_are_reported_not_computed_and_keep_period(tmp_path):

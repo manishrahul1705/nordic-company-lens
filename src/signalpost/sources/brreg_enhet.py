@@ -3,6 +3,7 @@ from ..budget import SourceFailure
 import asyncio
 from .extract import Section, Source, add, finish, get, decode, response_source
 from .registry_fields import EXTRA,GROUPS,boolean
+from .fact_depth import hidden_range
 
 BASE = "https://data.brreg.no/enhetsregisteret/api/enheter/"
 FIELDS = {
@@ -26,7 +27,7 @@ def extract(org, data, source):
             add(section, source, org, 'identity', 'identity.' + field, data[key], '/' + key, effective=data[key])
     for field, path in FIELDS.items():
         value = get(data, path)
-        if field == "employees" and data.get("harRegistrertAntallAnsatte") is False:
+        if field == "employees" and (data.get("harRegistrertAntallAnsatte") is False or hidden_range(value)):
             value = None
         if field == "deleted" and value is not None:
             deleted_date, value = value, True
@@ -49,6 +50,8 @@ def extract(org, data, source):
         if isinstance(value,dict):value={k:value[k] for k in keys if k in value}
         if value in (None,{}):continue
         add(section,source,org,'identity','identity.'+field,value,'/'+key)
+    from .fact_depth import identity
+    identity(section,source,org,data)
     return finish(section)
 
 

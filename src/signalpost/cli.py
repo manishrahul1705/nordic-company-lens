@@ -68,7 +68,7 @@ def main(argv=None):
     for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 2400),
                                ("deadline-fraction", float, .85), ("max-cost-usd", float, 0),
                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
-                               ("official-batch-size", int, 1100), ("max-output-mb", float, 256)):
+                               ("official-batch-size", int, 1100), ("max-output-mb", float, 512)):
         command.add_argument("--" + flag, type=kind, default=default)
     args = vars(parser.parse_args(argv))
     action = args.pop("command")

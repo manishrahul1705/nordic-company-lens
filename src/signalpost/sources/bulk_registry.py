@@ -7,6 +7,7 @@ from .extract import Section, Source, add, finish
 from ..models.evidence import utc_now
 from ..budget import SourceFailure
 from .registry_fields import EXTRA,GROUPS,boolean
+from .fact_depth import hidden_range, IDENTITY_EXTRA, label
 
 ALIASES = {"organisasjonsnummer": "Organisasjonsnummer", "navn": "Navn", "antallAnsatte": "Antall ansatte",
            "konkurs": "Konkurs", "underAvvikling": "Under avvikling", "hjemmeside": "Hjemmeside",
@@ -114,7 +115,7 @@ def extract(org, row, source):
         value, actual = column(row, col)
         if value is not None and name == "employees":
             try:
-                value = int(value)
+                value = None if hidden_range(value) else int(value)
             except ValueError:
                 raise SourceFailure("malformed_employees")
             if str(column(row, "harRegistrertAntallAnsatte")[0]).casefold() == "false":
@@ -146,4 +147,12 @@ def extract(org, row, source):
         value={k:column(row,prefix+'.'+k)[0] for k in keys if column(row,prefix+'.'+k)[0] is not None}
         if not value:continue
         add(section,source,org,'identity','identity.'+field,value or None,f'row:{org}/columns:{prefix}.*')
+    for field,path in IDENTITY_EXTRA.items():
+        value,actual=column(row,'.'.join(path))
+        if value is None:continue
+        if field=='registry_annotations' and isinstance(value,str) and value.casefold() in {'true','false'}:value=boolean(value)
+        add(section,source,org,'identity','identity.'+field,value,f'row:{org}/column:{actual}');label(section)
+    raw,actual=column(row,'antallAnsatte')
+    if hidden_range(raw):
+        add(section,source,org,'identity','identity.employee_count_disclosure','Employee count not published (0?4 employees)',f'row:{org}/column:{actual}');label(section)
     return finish(section)
