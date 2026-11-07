@@ -1,0 +1,48 @@
+....................................................FF....F....          [100%]
+================================== FAILURES ===================================
+__________ test_twenty_four_month_window[2024-10-18T06:59:59Z-False] __________
+
+date = '2024-10-18T06:59:59Z', accepted = False
+
+    @pytest.mark.parametrize('date,accepted', [('2024-10-18T07:00:00Z',True),('2024-10-18T06:59:59Z',False)])
+    def test_twenty_four_month_window(date,accepted):
+>       assert bool(extract(event(dato=date)).claims) is accepted
+E       AssertionError: assert True is False
+E        +  where True = bool([Claim(field='registry_change.a71a0172abeb54a16903b520', value={'company_orgnr': '923609016', 'event_id': 10, 'date': ...alse, stale_since=None, first_observed_at='2026-10-18T07:00:00Z', last_observed_at='2026-10-18T07:00:00Z', reasons={})])
+E        +    where [Claim(field='registry_change.a71a0172abeb54a16903b520', value={'company_orgnr': '923609016', 'event_id': 10, 'date': ...alse, stale_since=None, first_observed_at='2026-10-18T07:00:00Z', last_observed_at='2026-10-18T07:00:00Z', reasons={})] = Section(state='available', claims=[Claim(field='registry_change.a71a0172abeb54a16903b520', value={'company_orgnr': '92...', source_identifier=None, effective_at=None, reporting_period=None, snapshot_body_base64=None)], errors=[], retries=0).claims
+E        +      where Section(state='available', claims=[Claim(field='registry_change.a71a0172abeb54a16903b520', value={'company_orgnr': '92...', source_identifier=None, effective_at=None, reporting_period=None, snapshot_body_base64=None)], errors=[], retries=0) = extract({'organisasjonsnummer': '923609016', 'oppdateringsid': 10, 'dato': '2024-10-18T06:59:59Z', 'endringstype': 'Endring', ...})
+E        +        where {'organisasjonsnummer': '923609016', 'oppdateringsid': 10, 'dato': '2024-10-18T06:59:59Z', 'endringstype': 'Endring', ...} = event(dato='2024-10-18T06:59:59Z')
+
+tests\test_registry_changes.py:272: AssertionError
+__ test_new_registration_outside_window_and_unknown_type_never_invent_events __
+
+    def test_new_registration_outside_window_and_unknown_type_never_invent_events():
+        assert not extract(event(endringstype='Ny',dato='2020-01-01T00:00:00Z')).claims
+>       assert not extract(event(endringstype='Ukjent')).claims
+E       AssertionError: assert not [Claim(field='registry_change.816e9443642ffa8e848261f9', value={'company_orgnr': '923609016', 'event_id': 10, 'date': ...alse, stale_since=None, first_observed_at='2026-10-18T07:00:00Z', last_observed_at='2026-10-18T07:00:00Z', reasons={})]
+E        +  where [Claim(field='registry_change.816e9443642ffa8e848261f9', value={'company_orgnr': '923609016', 'event_id': 10, 'date': ...alse, stale_since=None, first_observed_at='2026-10-18T07:00:00Z', last_observed_at='2026-10-18T07:00:00Z', reasons={})] = Section(state='available', claims=[Claim(field='registry_change.816e9443642ffa8e848261f9', value={'company_orgnr': '92...', source_identifier=None, effective_at=None, reporting_period=None, snapshot_body_base64=None)], errors=[], retries=0).claims
+E        +    where Section(state='available', claims=[Claim(field='registry_change.816e9443642ffa8e848261f9', value={'company_orgnr': '92...', source_identifier=None, effective_at=None, reporting_period=None, snapshot_body_base64=None)], errors=[], retries=0) = extract({'organisasjonsnummer': '923609016', 'oppdateringsid': 10, 'dato': '2026-09-01T12:30:00Z', 'endringstype': 'Ukjent', ...})
+E        +      where {'organisasjonsnummer': '923609016', 'oppdateringsid': 10, 'dato': '2026-09-01T12:30:00Z', 'endringstype': 'Ukjent', ...} = event(endringstype='Ukjent')
+
+tests\test_registry_changes.py:277: AssertionError
+____________ test_batch_max_ten_claims_deduplicated_with_evidence _____________
+
+    def test_batch_max_ten_claims_deduplicated_with_evidence():
+        class Http:
+            async def get(self,url,org):
+                data=[event(oppdateringsid=n,dato=f'2026-09-{n:02d}T00:00:00Z') for n in range(1,16)]
+                return response({'page':{'number':0,'size':1000,'totalElements':15,'totalPages':1},'_embedded':{'oppdaterteEnheter':data}})
+        result=asyncio.run(rc.fetch_batch({ORG:envelope()},Http(),None,NOW))[ORG]
+>       assert result.state=='available' and len(result.claims)==10
+E       AssertionError: assert ('available' == 'available'
+E         
+E           available and 15 == 10)
+E        +  where 15 = len([Claim(field='registry_change.92d7ae09f4cb6b30e35cd07d', value={'company_orgnr': '923609016', 'event_id': 15, 'date': ... stale_since=None, first_observed_at='2026-10-18T07:00:00Z', last_observed_at='2026-10-18T07:00:00Z', reasons={}), ...])
+E        +    where [Claim(field='registry_change.92d7ae09f4cb6b30e35cd07d', value={'company_orgnr': '923609016', 'event_id': 15, 'date': ... stale_since=None, first_observed_at='2026-10-18T07:00:00Z', last_observed_at='2026-10-18T07:00:00Z', reasons={}), ...] = Section(state='available', claims=[Claim(field='registry_change.92d7ae09f4cb6b30e35cd07d', value={'company_orgnr': '92...', source_identifier=None, effective_at=None, reporting_period=None, snapshot_body_base64=None)], errors=[], retries=0).claims
+
+tests\test_registry_changes.py:305: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_registry_changes.py::test_twenty_four_month_window[2024-10-18T06:59:59Z-False]
+FAILED tests/test_registry_changes.py::test_new_registration_outside_window_and_unknown_type_never_invent_events
+FAILED tests/test_registry_changes.py::test_batch_max_ten_claims_deduplicated_with_evidence
+3 failed, 60 passed in 2.36s

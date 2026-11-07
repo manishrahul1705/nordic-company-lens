@@ -26,8 +26,8 @@ def timestamp(value):
 
 
 def window_start(now):
-    try: return now.replace(year=now.year - 2)
-    except ValueError: return now.replace(year=now.year - 2, day=28)
+    try: return now.replace(year=now.year - 3)
+    except ValueError: return now.replace(year=now.year - 3, day=28)
 
 
 def field_label(path):
@@ -55,7 +55,7 @@ def sentence(value):
             detail += ': ' + json.dumps(value['new_value'], ensure_ascii=False, sort_keys=True)
         else:
             detail += ': field removed'
-    else:
+    elif 'subunit_orgnr' in value:
         detail += ': ' + value['subunit_orgnr']
         if value.get('start_date'):
             detail += '; registered start date ' + value['start_date']
@@ -122,8 +122,9 @@ def extract(event, response, locator, org, endpoint, scope=None):
     if endpoint == 'enheter':
         if event.get('organisasjonsnummer') != org:
             raise SourceFailure('registry_change_wrong_company')
-        if event.get('endringstype') != 'Endring': return section
-        changes = event.get('endringer', [])
+        kind=event.get('endringstype')
+        if kind not in {'Endring','Ny','Sletting','Ukjent'}:return section
+        changes = event.get('endringer', []) if kind=='Endring' else []
         if not isinstance(changes, list): raise SourceFailure('registry_change_invalid_payload')
         seen = set()
         for index, change in enumerate(changes):
@@ -139,12 +140,19 @@ def extract(event, response, locator, org, endpoint, scope=None):
             seen.add(key)
             add(section, source, org, 'activity', PREFIX + key[:24],
                 value, locator + '/endringer/' + str(index), method=METHOD)
-    elif event.get('endringstype') in {'Ny', 'Sletting'}:
+        if not section.claims:
+            labels={'Endring':'Registry update recorded','Ny':'Entity registration recorded',
+                    'Sletting':'Entity deletion recorded','Ukjent':'Registry event recorded (type unspecified)'}
+            value={**common,'title':labels[kind],'event_type':kind}
+            add(section,source,org,'activity',PREFIX+digest(['entity-record',event_id,kind])[:24],
+                value,locator,method=METHOD)
+    elif event.get('endringstype') in {'Ny', 'Sletting', 'Endring', 'Ukjent'}:
         unit = event['organisasjonsnummer']
         item, proof = scope[unit]
         if item.get('overordnetEnhet') != org:
             raise SourceFailure('registry_change_wrong_parent')
-        value = {**common, 'title': 'New registered workplace' if event['endringstype'] == 'Ny' else 'Workplace removed',
+        labels={'Ny':'New registered workplace','Sletting':'Workplace removed','Endring':'Workplace registry update recorded','Ukjent':'Workplace registry event recorded (type unspecified)'}
+        value = {**common, 'title': labels[event['endringstype']],
                  'subunit_orgnr': unit, 'event_type': event['endringstype']}
         if event['endringstype'] == 'Ny' and item.get('oppstartsdato'):
             # This is the separately reported start date, never the event date.
@@ -249,7 +257,7 @@ async def fetch_batch(envelopes, http, blobs, until):
                     result[org].errors.extend(missing('activity', code).errors)
     for section in result.values():
         unique = {c.id: c for c in section.claims}
-        section.claims = sorted(unique.values(), key=lambda c: (c.value['date'], c.field), reverse=True)[:10]
+        section.claims = sorted(unique.values(), key=lambda c: (c.value['date'], c.field), reverse=True)[:50]
         used = {eid for c in section.claims for eid in c.evidence_ids}
         section.evidence = list({e.id: e for e in section.evidence if e.id in used}.values())
     return result

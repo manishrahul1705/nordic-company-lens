@@ -76,8 +76,10 @@ def test_named_fields_have_exact_values_and_publication_evidence(path):
 @pytest.mark.parametrize('changes', [[],
     [{'op': 'replace', 'path': '/antallAnsatte', 'value': 40}], [{'op': 'replace', 'path': '/naeringskode1', 'value': {}}],
     [{'op': 'replace', 'path': '/unknownField', 'value': '2026-01-01'}]])
-def test_bare_or_excluded_update_never_publishes(changes):
-    assert not extract(event(endringer=changes)).claims
+def test_bare_or_excluded_update_publishes_only_record_fact(changes):
+    c=extract(event(endringer=changes)).claims[0]
+    assert c.value['title']=='Registry update recorded'
+    assert 'changed_field' not in c.value and 'new_value' not in c.value
 
 
 def test_removal_does_not_invent_new_or_old_value():
@@ -90,7 +92,7 @@ def test_wrong_entity_rejected():
     with pytest.raises(SourceFailure): extract(event(organisasjonsnummer=OTHER))
 
 
-@pytest.mark.parametrize('kind', ['Ny', 'Sletting'])
+@pytest.mark.parametrize('kind', ['Ny', 'Sletting', 'Endring', 'Ukjent'])
 def test_subunit_exact_parent_and_start_date(kind):
     proof = extract(event()).evidence[0]
     scope = {OTHER: ({'overordnetEnhet': ORG, 'oppstartsdato': '2025-04-01'}, proof)}
@@ -265,14 +267,17 @@ def test_future_event_is_rejected():
     assert not extract(event(dato='2026-10-19T00:00:00Z')).claims
 
 
-@pytest.mark.parametrize('date,accepted', [('2024-10-18T07:00:00Z',True),('2024-10-18T06:59:59Z',False)])
-def test_twenty_four_month_window(date,accepted):
+@pytest.mark.parametrize('date,accepted', [('2023-10-18T07:00:00Z',True),('2023-10-18T06:59:59Z',False)])
+def test_thirty_six_month_window(date,accepted):
     assert bool(extract(event(dato=date)).claims) is accepted
 
 
 def test_new_registration_outside_window_and_unknown_type_never_invent_events():
     assert not extract(event(endringstype='Ny',dato='2020-01-01T00:00:00Z')).claims
-    assert not extract(event(endringstype='Ukjent')).claims
+    c=extract(event(endringstype='Ukjent')).claims[0]
+    assert c.value['title']=='Registry event recorded (type unspecified)'
+    assert 'changed_field' not in c.value
+    assert c.id==extract(event(endringstype='Ukjent')).claims[0].id
 
 
 @pytest.mark.parametrize('path,label', [
@@ -294,14 +299,15 @@ def test_duplicate_changes_and_reordered_changes_keep_stable_ids():
     assert {c.id for c in a.claims}=={c.id for c in b.claims}
 
 
-def test_batch_max_ten_claims_deduplicated_with_evidence():
+def test_batch_max_fifty_claims_deduplicated_with_evidence():
     class Http:
         async def get(self,url,org):
-            data=[event(oppdateringsid=n,dato=f'2026-09-{n:02d}T00:00:00Z') for n in range(1,16)]
-            return response({'page':{'number':0,'size':1000,'totalElements':15,'totalPages':1},'_embedded':{'oppdaterteEnheter':data}})
+            from datetime import datetime,timedelta,timezone
+            data=[event(oppdateringsid=n,dato=(datetime(2026,8,1,tzinfo=timezone.utc)+timedelta(days=n-1)).isoformat().replace('+00:00','Z')) for n in range(1,61)]
+            return response({'page':{'number':0,'size':1000,'totalElements':60,'totalPages':1},'_embedded':{'oppdaterteEnheter':data}})
     result=asyncio.run(rc.fetch_batch({ORG:envelope()},Http(),None,NOW))[ORG]
-    assert result.state=='available' and len(result.claims)==10
-    assert min(c.value['date'] for c in result.claims)=='2026-09-06T00:00:00Z'
+    assert result.state=='available' and len(result.claims)==50
+    assert min(c.value['date'] for c in result.claims)=='2026-08-11T00:00:00Z'
     assert {e.id for e in result.evidence}=={eid for c in result.claims for eid in c.evidence_ids}
 
 

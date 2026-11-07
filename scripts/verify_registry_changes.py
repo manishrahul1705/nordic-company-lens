@@ -41,21 +41,28 @@ def check(row, claim, blobs):
         assert event['organisasjonsnummer'] == org and event['endringstype'] == 'Endring'
         change = pointer(document, ev['locator'])
         path = change['path']
-        assert path in {'/navn', '/kapital/belop', '/forretningsadresse', '/postadresse'} or path.startswith(('/forretningsadresse/', '/postadresse/'))
+        assert path in {'/navn', '/kapital/belop', '/forretningsadresse', '/postadresse', '/sisteInnsendteAarsregnskap', '/vedtektsdato', '/kapital/innfortDato', '/registreringsdatoAntallAnsatteEnhetsregisteret', '/registreringsdatoAntallAnsatteNAVAaregisteret'} or path.startswith(('/forretningsadresse/', '/postadresse/'))
         assert value['changed_field'] == path and value['operation'] == change['op']
         assert change['op'] in {'add', 'replace', 'remove'}
         if change['op'] == 'remove': assert 'new_value' not in value
         else: assert value['new_value'] == change['value']
-    else:
+    elif 'subunit_orgnr' in value:
         assert parsed.path.endswith('/oppdateringer/underenheter')
         assert event['organisasjonsnummer'] == value['subunit_orgnr']
-        assert event['endringstype'] == value['event_type'] in {'Ny', 'Sletting'}
+        assert event['endringstype'] == value['event_type'] in {'Ny', 'Sletting', 'Endring', 'Ukjent'}
         mappings = [pointer(doc, proof['locator']) for proof, doc in sources[1:]
                     if urlsplit(proof['source_url']).path.endswith('/api/underenheter')]
         matches = [m for m in mappings if m.get('organisasjonsnummer') == value['subunit_orgnr'] and m.get('overordnetEnhet') == org]
         assert matches, 'No exact-parent source proof'
         if 'start_date' in value:
             assert value['event_type'] == 'Ny' and any(m.get('oppstartsdato') == value['start_date'] for m in matches)
+    else:
+        assert parsed.path.endswith('/oppdateringer/enheter')
+        assert event['organisasjonsnummer']==org
+        labels={'Endring':'Registry update recorded','Ny':'Entity registration recorded','Sletting':'Entity deletion recorded','Ukjent':'Registry event recorded (type unspecified)'}
+        assert value['event_type']==event['endringstype']
+        assert value['title']==labels[event['endringstype']]
+        assert 'new_value' not in value
     assert parse_qs(urlsplit(value['url']).query)['oppdateringsid'] == [str(event['oppdateringsid'])]
     return {'org': org, 'claim_id': claim['id'], 'event_id': event['oppdateringsid'],
             'publication_time': event['dato'], 'source_url': ev['source_url'],

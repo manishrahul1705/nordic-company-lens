@@ -22,7 +22,12 @@ def money(value,currency="NOK"):
     amount=Decimal(str(value));absolute=abs(amount)
     for scale,word in [(Decimal('1000000000'),'billion'),(Decimal('1000000'),'million')]:
         if absolute>=scale:return currency+' '+format((amount/scale).quantize(Decimal('.1'),rounding=ROUND_HALF_UP),'f')+' '+word
-    return currency+' '+format(amount,',f').replace(',',' ').rstrip('0').rstrip('.') if amount.as_tuple().exponent<0 and '.' in format(amount,',f') else currency+' '+format(amount,',f').replace(',',' ')
+    return currency+' '+format(amount,',f').rstrip('0').rstrip('.') if amount.as_tuple().exponent<0 and '.' in format(amount,',f') else currency+' '+format(amount,',f')
+
+def english_list(items):
+    items=list(items)
+    return items[0] if len(items)==1 else ', '.join(items[:-1])+' and '+items[-1] if items else ''
+
 
 def number_claim(c):return c is not None and isinstance(c.value,(int,float)) and not isinstance(c.value,bool)
 
@@ -76,7 +81,7 @@ def generate(envelope):
         value=' '.join(str(x) for x in purpose.value) if isinstance(purpose.value,list) else str(purpose.value)
         value=' '.join(value.split()).strip().rstrip('.!?')
         if value and len(value.split())<25 and not re.search(r'[.!?]',value):
-            text+='; its registered purpose is "'+value+'"';used.append(purpose)
+            text+='; its registered purpose (in Norwegian) is \u00ab'+value+'\u00bb';used.append(purpose)
     add('a',text+'.',used)
     # Company-only annual amounts: no currency or unknown-scale conversion.
     financial=[c for c in claims if c.family=='accounts' and not c.field.startswith('accounts.consolidated.') and number_claim(c)
@@ -96,8 +101,8 @@ def generate(envelope):
             if revenue:size.append('it reported revenue of '+amount(revenue.value));used.append(revenue)
             if profit:size.append(('reported a loss of '+amount(abs(profit.value))) if profit.value<0 else ('an annual result of '+amount(profit.value)));used.append(profit)
         if size:
-            text='In FY'+year+', '+(' and '.join(size))
-            if not revenue:text='In FY'+year+', it '+(('reported a loss of '+amount(abs(profit.value))) if profit.value<0 else ('reported an annual result of '+amount(profit.value)))
+            text='In FY'+year+' '+(' and '.join(size))
+            if not revenue:text='In FY'+year+' it '+(('reported a loss of '+amount(abs(profit.value))) if profit.value<0 else ('reported an annual result of '+amount(profit.value)))
             prior=metric('revenue',str(int(year)-1)) if revenue else None
             comparable=False
             if prior and prior.value>0:
@@ -108,22 +113,21 @@ def generate(envelope):
                 comparable=ComparablePeriodGate().compare(obs(revenue),obs(prior),metric='revenue').comparable
             if comparable:
                 pct=((Decimal(str(revenue.value))-Decimal(str(prior.value)))/Decimal(str(prior.value))*100).quantize(Decimal('.1'),rounding=ROUND_HALF_UP)
-                text+='; revenue changed by '+format(pct,'+f')+'% from '+str(prior.reporting_period['fiscal_year']);used.append(prior)
+                if pct:
+                    text+=', revenue '+('rose ' if pct>0 else 'fell ')+format(abs(pct),'f')+'% from '+str(prior.reporting_period['fiscal_year']);used.append(prior)
             chosen=revenue or profit
             if chosen.reporting_period.get('unit') is None:text+=' ('+currency+'-denominated reported figures; source scale not declared, no conversion applied)'
-            employees=fields.get('identity.employees')
-            if number_claim(employees):text+='; it had '+str(employees.value)+' employees as registered';used.append(employees)
             add('b',text+'.',used,derived=bool(comparable))
-    if not size and number_claim(fields.get('identity.employees')):
-        c=fields['identity.employees'];add('b','It had '+str(c.value)+' employees as registered.',[c])
+    if number_claim(fields.get('identity.employees')):
+        c=fields['identity.employees'];add('b','It has '+format(c.value,',')+' registered employees.',[c])
     units={str(c.value.get('organisation_number')):c for c in claims if c.field.startswith('subunits.unit.') and isinstance(c.value,dict) and c.value.get('organisation_number')}
     if units:
         cities=sorted({str((c.value.get('address') or {}).get('kommune')).title() for c in units.values() if (c.value.get('address') or {}).get('kommune')},key=str.casefold)
-        text='The registry records list '+str(len(units))+' registered workplace'+('s' if len(units)!=1 else '')
+        text='It has '+('one' if len(units)==1 else str(len(units)))+' registered workplace'+('s' if len(units)!=1 else '')
         if cities:
-            named=cities[:3];location=', '.join(named)
-            if len(cities)>3:location+=' and '+str(len(cities)-3)+' more municipalities'
-            text+=' in '+location
+            named=cities[:3]
+            if len(cities)>3:named.append(str(len(cities)-3)+' more')
+            text+=', in '+english_list(named)
         if envelope.run.sections.get('subunits')!='available' or 'subunits' in envelope.run.refresh.get('stale_sections',{}):text+=' (coverage could not be fully refreshed)'
         add('c',text+'.',list(units.values()),derived=True,count=len(units))
     articles=sorted((c for c in claims if c.field.startswith('dated_item.') and isinstance(c.value,dict) and short_date(c.value.get('date'))),key=lambda c:(c.value['date'],c.field),reverse=True)
@@ -143,7 +147,7 @@ def generate(envelope):
             socialhost=(urlsplit(c.value.get('url','')).hostname or '').lower()
             label=next((v for k,v in PLATFORMS.items() if socialhost==k or socialhost.endswith('.'+k)),None)
             if label:platforms.setdefault(label,c)
-        if platforms:text+=', with verified profiles on '+', '.join(sorted(platforms));used.extend(platforms[k] for k in sorted(platforms))
+        if platforms:text+=', with verified profiles on '+english_list(sorted(platforms));used.extend(platforms[k] for k in sorted(platforms))
         add('e',text+'.',used)
     else:add('e','No company website could be verified.',[state_context('website')])
     gaps=[];used=[]

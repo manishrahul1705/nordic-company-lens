@@ -34,7 +34,7 @@ def verify_synthesis(row):
         from signalpost.synthesis.company_brief import validate as validate_brief
         validate_brief(synthesis.brief, synthesis, envelope)
     primary=sentences
-    if synthesis.generator.version=='5':
+    if synthesis.generator.version in {'5','6'}:
         assert synthesis.analyst_brief is not None,'Missing analyst brief'
     if synthesis.analyst_brief is not None:
         from signalpost.synthesis.analyst import validate as validate_analyst

@@ -1,5 +1,5 @@
 import pytest
-from signalpost.synthesis.analyst import generate, validate, money, major_event
+from signalpost.synthesis.analyst import generate, validate, money, major_event, english_list
 from tests.test_synthesis import envelope
 
 
@@ -9,7 +9,7 @@ def test_sparse_stable_cited_brief(tmp_path):
     assert first == generate(row)
     assert [s.sentence_type for s in first.sentences] == sorted(s.sentence_type for s in first.sentences)
     assert all(s.claim_ids for s in first.sentences)
-    assert 1 <= len(first.sentences) <= 6
+    assert 1 <= len(first.sentences) <= 7
     assert validate(first, row) == first
     first.sentences[0].text += ' Leading successful business.'
     with pytest.raises(ValueError): validate(first, row)
@@ -27,9 +27,31 @@ def test_only_explicit_major_fields(path):
 
 def test_money_rounding():
     assert money(50400000) == 'NOK 50.4 million'
-    assert money(1252) == 'NOK 1 252'
+    assert money(1252) == 'NOK 1,252'
     assert money(100.0) == 'NOK 100'
     assert money(4200000,'EUR') == 'EUR 4.2 million'
+    assert money(1000000)=='NOK 1.0 million'
+    assert english_list(['Facebook','LinkedIn'])=='Facebook and LinkedIn'
+    assert english_list(['Facebook','Instagram','LinkedIn'])=='Facebook, Instagram and LinkedIn'
+
+
+def test_polished_employee_footprint_and_norwegian_quote(tmp_path,monkeypatch):
+    row,_=envelope(tmp_path)
+    seed=next(c for c in row.claims if c.field=='identity.legal_name')
+    row.claims=[c for c in row.claims if not c.field.startswith('subunits.unit.') and c.field!='identity.employees']
+    for field,value,family in [('identity.employees',38,'identity'),
+        ('identity.statutory_purpose','Utvikle programvare.','identity'),
+        ('subunits.unit.test',{'organisation_number':'988258229','address':{'kommune':'OSLO'}},'subunits')]:
+        row.claims.append(seed.model_copy(update={'id':field,'field':field,'value':value,'family':family}))
+    row.run.sections['subunits']='available'
+    from signalpost.synthesis import validate as gate
+    original=gate.permitted
+    monkeypatch.setattr(gate,'permitted',lambda c,e: c.id==c.field or original(c,e))
+    brief=generate(row)
+    assert any(s.text=='It has 38 registered employees.' and s.claim_ids==['identity.employees'] for s in brief.sentences)
+    assert any(s.text=='It has one registered workplace, in Oslo.' for s in brief.sentences)
+    assert 'its registered purpose (in Norwegian) is \u00abUtvikle programvare\u00bb' in brief.sentences[0].text
+    assert brief==generate(row)
 
 
 @pytest.mark.parametrize('rich', [False, True])
@@ -72,7 +94,12 @@ def test_company_scope_loss_and_prior_year(tmp_path,currency):
     from unittest.mock import patch
     with patch.object(gate,'permitted',lambda c,e: True if c.id.startswith(('2024','2025')) else original(c,e)):
         text=' '.join(s.text for s in generate(row).sentences)
-        assert 'loss of '+currency+' 500 000' in text and '+100.0%' in text
+        assert 'loss of '+currency+' 500,000' in text and 'rose 100.0%' in text
+        prior=next(c for c in row.claims if c.id=='2024revenue')
+        prior.value=2000000
+        assert '0.0%' not in ' '.join(s.text for s in generate(row).sentences)
+        prior.value=4000000
+        assert 'fell 50.0%' in ' '.join(s.text for s in generate(row).sentences)
         assert ('NOK' not in text) if currency=='EUR' else ('EUR' not in text)
         row.claims=[c for c in row.claims if not c.id.startswith('2024')]
         assert '%' not in ' '.join(s.text for s in generate(row).sentences)
