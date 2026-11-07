@@ -1,0 +1,36 @@
+{
+  "run": "bench\\runs\\20261107T052914870839Z-acaca26",
+  "sentence_types": {
+    "a": 1000,
+    "b": 999,
+    "c": 774,
+    "e": 1000,
+    "f": 997,
+    "d": 152
+  },
+  "sentence_lengths": {
+    "5": 665,
+    "4": 205,
+    "6": 129,
+    "3": 1
+  },
+  "primary_sentences": 4922,
+  "mean_sentences": 4.922,
+  "claims": {
+    "identity": 31007,
+    "subunits": 6907,
+    "roles": 17806,
+    "accounts": 97416,
+    "activity": 2967,
+    "hiring": 3,
+    "website": 821
+  },
+  "total_claims": 156927,
+  "cohorts": {
+    "sparse": 890,
+    "medium": 100,
+    "rich": 10
+  },
+  "strict_rich_population": 6,
+  "rich_review_supplement": 4
+}

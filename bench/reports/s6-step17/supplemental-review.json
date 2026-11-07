@@ -1,0 +1,2247 @@
+[
+  {
+    "orgnr": "918049215",
+    "brief": {
+      "sentences": [
+        {
+          "text": "MENSTAD NÆRINGSPARK AS (org. 918049215) is a private limited company in Porsgrunn, founded in 2016, working in development of building projects; its registered purpose is \"Kjøp, utvikling og salg av fast eiendom, ytelse av entreprisetjenester innenfor bygg og anlegg, samt hva som ellers er naturlig i tilknytning til dette\".",
+          "claim_ids": [
+            "bc2dd4cbe655a0d6f077bd20c4360bdc4855b9a0b72d8b6a00ad45831d4b369d",
+            "3efc3e4e595939820ff98b1e9dffb1ac55b591b3c24af4f4c5670ef4ef2789aa",
+            "7ff668409edf2daead9303a0e1eb0e049a22e554fbb70fd673870da01e7bd18c",
+            "fbc222c454bea7f6d32e0bfcbc4dc2f9ffc8f52b88132c3b8176844cf13a2a49",
+            "75db1d2e1c22b242337b1665ffdf6faa63e32f0a1e13bcb4ec4050297e201bc6",
+            "c0896378fad38c5998be30c15a3f6eb8787c08ab4ded3a854973562a18cdf9b4",
+            "cab427a59fc9d087d58f1c2dcdf244e7cbc65322cd583506c4a251fd8a31690d"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "a"
+        },
+        {
+          "text": "In FY2025, it reported revenue of NOK 3.8 million and reported a loss of NOK 848 817; revenue changed by +2.5% from 2024.",
+          "claim_ids": [
+            "cbd80d5b8809ca9ac68e7cde5cd541e35b65586adf9bca718923f7b50441efe3",
+            "f97f02a8040c16579e46ffc4c46840d80613fc2e169fbb5aa4717d6fb4a4e0d8",
+            "d4b98446c0afd8f321390b1e1be0a6e10ef58451481a2e34bed603bf7fa788d8"
+          ],
+          "value_kind": "derived",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "b"
+        },
+        {
+          "text": "The registry records list 1 registered workplace in Porsgrunn.",
+          "claim_ids": [
+            "1609e8e031ec0ba5abb9addf2332c9e7d29b1e08df8f2d8f57ee5eaaf0d69779"
+          ],
+          "value_kind": "derived",
+          "count": 1,
+          "record_type": "workplaces",
+          "sentence_type": "c"
+        },
+        {
+          "text": "A registry announcement dated 31 Mar 2026 records a share capital change, according to the Brønnøysund Register.",
+          "claim_ids": [
+            "bfe6ca5ed48a258df98f9039cb07a3eb893a46ce45dccf1d7d6eb41304252264"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "d"
+        },
+        {
+          "text": "No company website could be verified.",
+          "claim_ids": [
+            "5fc1acc7e815d20ce7cf7021b65f648c2608d5458b5717d057009154dc8c49c1"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "e"
+        },
+        {
+          "text": "No active job ads were found in the checked sources.",
+          "claim_ids": [
+            "dc45c1b5242068418d7df157b4c87b3b0674e5e75d09f25dc58ead70daeacf12"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "f"
+        }
+      ],
+      "context_claims": [
+        {
+          "id": "3efc3e4e595939820ff98b1e9dffb1ac55b591b3c24af4f4c5670ef4ef2789aa",
+          "field": "snapshot.analyst.organisation_number",
+          "value": "918049215",
+          "evidence_ids": [
+            "14c7237b2a14e0bce1e8af4d578961cc65a57eb42b8947becfb79997647c7874"
+          ]
+        },
+        {
+          "id": "5fc1acc7e815d20ce7cf7021b65f648c2608d5458b5717d057009154dc8c49c1",
+          "field": "snapshot.analyst.website",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "dc45c1b5242068418d7df157b4c87b3b0674e5e75d09f25dc58ead70daeacf12",
+          "field": "snapshot.analyst.hiring",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "field": "identity.founding_date",
+        "value": "2016-10-19",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e2f3c946d255a119b6bce0eaac3db3752a68ba3ccfe569833cbf6b1adb595f77"
+        ],
+        "id": "75db1d2e1c22b242337b1665ffdf6faa63e32f0a1e13bcb4ec4050297e201bc6",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.807783Z",
+        "last_observed_at": "2026-11-07T05:29:15.807783Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.legal_name",
+        "value": "MENSTAD NÆRINGSPARK AS",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "14c7237b2a14e0bce1e8af4d578961cc65a57eb42b8947becfb79997647c7874"
+        ],
+        "id": "bc2dd4cbe655a0d6f077bd20c4360bdc4855b9a0b72d8b6a00ad45831d4b369d",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.807783Z",
+        "last_observed_at": "2026-11-07T05:29:15.807783Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.municipality",
+        "value": "PORSGRUNN",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e396da2f43e25baa7eb80bda6f0880b0143b4260a88aaa60b4fb1fba8f25fd54"
+        ],
+        "id": "fbc222c454bea7f6d32e0bfcbc4dc2f9ffc8f52b88132c3b8176844cf13a2a49",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.807783Z",
+        "last_observed_at": "2026-11-07T05:29:15.807783Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.statutory_purpose",
+        "value": "Kjøp, utvikling og salg av fast eiendom, ytelse av entreprisetjenester innenfor bygg og anlegg, samt hva som ellers er naturlig i tilknytning til dette.",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "8eeba5ecb7868b300322ed19a03127b8c4844f9ebac6510935c799ca2a0f7bcd"
+        ],
+        "id": "cab427a59fc9d087d58f1c2dcdf244e7cbc65322cd583506c4a251fd8a31690d",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.807783Z",
+        "last_observed_at": "2026-11-07T05:29:15.807783Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.organisation_form",
+        "value": {
+          "kode": "AS",
+          "beskrivelse": "Aksjeselskap"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "84b8339d0651a0d3d635be5a4a7639cd06c3774e520b839b0c142c73a6b4487d"
+        ],
+        "id": "7ff668409edf2daead9303a0e1eb0e049a22e554fbb70fd673870da01e7bd18c",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.807783Z",
+        "last_observed_at": "2026-11-07T05:29:15.807783Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.nace1",
+        "value": {
+          "kode": "68.120",
+          "beskrivelse": "Utvikling og salg av byggeprosjekter"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e42babe060f564a2b848401c03f5704f148659b2c806b9c25a5a05eef5e8026d"
+        ],
+        "id": "c0896378fad38c5998be30c15a3f6eb8787c08ab4ded3a854973562a18cdf9b4",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.807783Z",
+        "last_observed_at": "2026-11-07T05:29:15.807783Z",
+        "reasons": {}
+      },
+      {
+        "field": "subunits.unit.931483609",
+        "value": {
+          "organisation_number": "931483609",
+          "name": "MENSTAD NÆRINGSPARK AS",
+          "address": {
+            "adresse": [
+              "Ferjegata 5"
+            ],
+            "kommune": "PORSGRUNN",
+            "kommunenummer": "4001",
+            "land": "Norge",
+            "landkode": "NO",
+            "postnummer": "3921",
+            "poststed": "PORSGRUNN"
+          },
+          "nace": {
+            "beskrivelse": "Utvikling og salg av byggeprosjekter",
+            "kode": "68.120"
+          },
+          "employees": null
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "1a1d84acfe10827142055aa023592a828ef238bcc15a43b4ac42be249bbf06aa"
+        ],
+        "id": "1609e8e031ec0ba5abb9addf2332c9e7d29b1e08df8f2d8f57ee5eaaf0d69779",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:25.212758Z",
+        "last_observed_at": "2026-11-07T05:29:25.212758Z",
+        "reasons": {}
+      },
+      {
+        "field": "accounts.revenue",
+        "value": 3792073.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "c4c6f8cd2204565db63af46174be0b7d7993b19d4836a8697fc58c3f019571d0",
+          "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+          "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa"
+        ],
+        "id": "cbd80d5b8809ca9ac68e7cde5cd541e35b65586adf9bca718923f7b50441efe3",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:50.410423Z",
+        "last_observed_at": "2026-11-07T05:29:50.410423Z",
+        "reasons": {
+          "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+        }
+      },
+      {
+        "field": "accounts.net_result",
+        "value": -848817.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "ad8514822910eefabfbb91bce03deb039c79681427fc249ca65171c37207903e",
+          "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+          "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa"
+        ],
+        "id": "f97f02a8040c16579e46ffc4c46840d80613fc2e169fbb5aa4717d6fb4a4e0d8",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:50.410423Z",
+        "last_observed_at": "2026-11-07T05:29:50.410423Z",
+        "reasons": {
+          "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+        }
+      },
+      {
+        "field": "accounts.history.2024.revenue",
+        "value": 3699078.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "36c19acb03e47457e18913276ee5e5fb28eb6d8be2b3e3fbf717451dceb9e302",
+          "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+          "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa"
+        ],
+        "id": "d4b98446c0afd8f321390b1e1be0a6e10ef58451481a2e34bed603bf7fa788d8",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:50.410423Z",
+        "last_observed_at": "2026-11-07T05:29:50.410423Z",
+        "reasons": {
+          "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+        }
+      },
+      {
+        "field": "registry_change.cb58321f40c9b6af32b534e9",
+        "value": {
+          "company_orgnr": "918049215",
+          "event_id": 24071972,
+          "date": "2026-03-31T13:05:12.948000Z",
+          "kind": "Registry announcement",
+          "date_source": "registry publication time (not effective date)",
+          "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24071972&size=1&includeChanges=true",
+          "title": "Registered share capital changed",
+          "changed_field": "/kapital/belop",
+          "operation": "replace",
+          "new_value": 1200000.0
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "5131c4df59e436e46436cb6aa4a3d38148f508da2a7d88adf73be1d1959007cf"
+        ],
+        "id": "bfe6ca5ed48a258df98f9039cb07a3eb893a46ce45dccf1d7d6eb41304252264",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:36:35.067156Z",
+        "last_observed_at": "2026-11-07T05:36:35.067156Z",
+        "reasons": {}
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e2f3c946d255a119b6bce0eaac3db3752a68ba3ccfe569833cbf6b1adb595f77",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.807783Z",
+        "content_sha256": "eb697915607458b8dfc3186246ae54a5e1b448242fda843e198d5bbe4109aa21",
+        "claim_span": "01,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-11-14,2016-10-19,true,2019-03-01,2019-04-29,Utleier av bygg eller anlegg,2020-12-03,false,,true,2016-11-14,false,false,,false,,false,,false,,,,,,,Bokmål,2025-12-30,\"Kjøp, utvikling og salg av fast eiendom, ytelse av entreprisetjenester innenfor b",
+        "locator": "row:918049215/column:stiftelsesdato",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": "2016-10-19",
+        "reporting_period": null
+      },
+      {
+        "id": "14c7237b2a14e0bce1e8af4d578961cc65a57eb42b8947becfb79997647c7874",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.807783Z",
+        "content_sha256": "eb697915607458b8dfc3186246ae54a5e1b448242fda843e198d5bbe4109aa21",
+        "claim_span": "918049215,MENSTAD NÆRINGSPARK AS,AS,Aksjeselskap,68.120,Utvikling og salg av byggeprosjekter,,,,,,,false,,,,,,,,,,,,,,,Ferjegata 5,PORSGRUNN,3921,PORSGRUNN,4001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-11-14,2016-10-19,true,2019-03-01,2019-04-29,Utleier av bygg eller anlegg,2020-12-03,fals",
+        "locator": "row:918049215/column:navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "e396da2f43e25baa7eb80bda6f0880b0143b4260a88aaa60b4fb1fba8f25fd54",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.807783Z",
+        "content_sha256": "eb697915607458b8dfc3186246ae54a5e1b448242fda843e198d5bbe4109aa21",
+        "claim_span": "lg av byggeprosjekter,,,,,,,false,,,,,,,,,,,,,,,Ferjegata 5,PORSGRUNN,3921,PORSGRUNN,4001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-11-14,2016-10-19,true,2019-03-01,2019-04-29,Utleier av bygg eller anlegg,2020-12-03,false,,true,2016-11-14,false,false,,false,,false,,false,,,,,,,Bokmål,2025-1",
+        "locator": "row:918049215/column:forretningsadresse.kommune",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8eeba5ecb7868b300322ed19a03127b8c4844f9ebac6510935c799ca2a0f7bcd",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.807783Z",
+        "content_sha256": "eb697915607458b8dfc3186246ae54a5e1b448242fda843e198d5bbe4109aa21",
+        "claim_span": "4,false,false,,false,,false,,false,,,,,,,Bokmål,2025-12-30,\"Kjøp, utvikling og salg av fast eiendom, ytelse av entreprisetjenester innenfor bygg og anlegg, samt hva som ellers er naturlig i tilknytning til dette.\",\"Kjøp, utvikling og salg av fast eiendom, ytelse av entreprisetjenester innenfor bygg ",
+        "locator": "row:918049215/column:vedtektsfestetFormaal",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "84b8339d0651a0d3d635be5a4a7639cd06c3774e520b839b0c142c73a6b4487d",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.807783Z",
+        "content_sha256": "eb697915607458b8dfc3186246ae54a5e1b448242fda843e198d5bbe4109aa21",
+        "claim_span": "918049215,MENSTAD NÆRINGSPARK AS,AS,Aksjeselskap,68.120,Utvikling og salg av byggeprosjekter,,,,,,,false,,,,,,,,,,,,,,,Ferjegata 5,PORSGRUNN,3921,PORSGRUNN,4001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-11-14,2016-10-19,true,2019-03-01,2019-04-29,Utleier av bygg eller anlegg,2020-12-03,fals",
+        "locator": "row:918049215/columns:organisasjonsform.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "e42babe060f564a2b848401c03f5704f148659b2c806b9c25a5a05eef5e8026d",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.807783Z",
+        "content_sha256": "eb697915607458b8dfc3186246ae54a5e1b448242fda843e198d5bbe4109aa21",
+        "claim_span": "918049215,MENSTAD NÆRINGSPARK AS,AS,Aksjeselskap,68.120,Utvikling og salg av byggeprosjekter,,,,,,,false,,,,,,,,,,,,,,,Ferjegata 5,PORSGRUNN,3921,PORSGRUNN,4001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-11-14,2016-10-19,true,2019-03-01,2019-04-29,Utleier av bygg eller anlegg,2020-12-03,fals",
+        "locator": "row:918049215/columns:naeringskode1.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "1a1d84acfe10827142055aa023592a828ef238bcc15a43b4ac42be249bbf06aa",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918049215&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:25.212758Z",
+        "content_sha256": "fa4c83ea78203dfc18a0ee205c62ad532c018331fa18206182a78d17935892d5",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/931483609\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/918049215\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Ferjegata 5\"],\"kommune\":\"PORSGRUNN\",\"kommunenummer\":\"4001\",\"land\":\"Norge\",\"land",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+        "source_url": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-07T05:29:50.416880Z",
+        "content_sha256": "ce6d8aa88fe1ef79694971db30a737b193f61e44fe0a59c82472a07c8571cd9a",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 3,546.3\nProfit for the period 510.4\n",
+        "locator": "pdf:page145:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf#pdf_sha256=fe379ce4f1ee133068b59c82fd1a7e25bc72c1459ba9e91a02d6621f2466414a",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa",
+        "source_url": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-07T05:29:50.419924Z",
+        "content_sha256": "5652a2bd722a20e705e83c494e24f37dd598c522e1600fc78e32a7ee222795a0",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 53\nNet income (loss) 4,063\n",
+        "locator": "pdf:page176:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf#pdf_sha256=c0e145933ff95654d05faed3b45b2eab327aa9d5ff712eeac5adad22f528f7ba",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "c4c6f8cd2204565db63af46174be0b7d7993b19d4836a8697fc58c3f019571d0",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918049215",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:50.410423Z",
+        "content_sha256": "24c6c13c3377ac15ecd81ff8477ce9ea5221800e254d160f5d710e8e5b3ec491",
+        "claim_span": "745372.00,\"driftsinntekter\":{\"sumDriftsinntekter\":3792073.00},\"driftskostnad\":{\"sumDriftskostnad\":4537446.00}}}}]",
+        "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        }
+      },
+      {
+        "id": "ad8514822910eefabfbb91bce03deb039c79681427fc249ca65171c37207903e",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918049215",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:50.410423Z",
+        "content_sha256": "24c6c13c3377ac15ecd81ff8477ce9ea5221800e254d160f5d710e8e5b3ec491",
+        "claim_span": "dinaertResultatSkattekostnad\":0.00,\"aarsresultat\":-848817.00,\"totalresultat\":-848817.00,\"finansresultat\":{\"nettoFinans\":-103445.00,\"finansinntekt\":{\"sumFinansinntekter\":153991.00},\"finanskostnad\":{\"annenRentekostnad\":257436.00,\"sumFinanskostnad\":257436.00}},\"driftsresultat\":{\"driftsresultat\":-745372",
+        "locator": "/2/resultatregnskapResultat/aarsresultat",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        }
+      },
+      {
+        "id": "36c19acb03e47457e18913276ee5e5fb28eb6d8be2b3e3fbf717451dceb9e302",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918049215",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:50.410423Z",
+        "content_sha256": "24c6c13c3377ac15ecd81ff8477ce9ea5221800e254d160f5d710e8e5b3ec491",
+        "claim_span": "kter\":{\"salgsinntekter\":0.00,\"sumDriftsinntekter\":3699078.00},\"driftskostnad\":{\"sumDriftskostnad\":12276353.00}}}},{\"id\":6747056,\"journalnr\":\"2026457040\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"918049215\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato",
+        "locator": "/1/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2024-12-31",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        }
+      },
+      {
+        "id": "5131c4df59e436e46436cb6aa4a3d38148f508da2a7d88adf73be1d1959007cf",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=810363142%2C811888672%2C812190172%2C812717952%2C812753932%2C812869132%2C813668742%2C813785552%2C816077842%2C817098932%2C818807562%2C818880812%2C819849412%2C819952132%2C820411552%2C820445422%2C820688112%2C821962242%2C822291082%2C822707742%2C823147112%2C823568002%2C824357552%2C825795162%2C825986332%2C826563702%2C826969032%2C827418072%2C828095382%2C828565362%2C829363712%2C829604922%2C829622572%2C829695472%2C830103392%2C830576002%2C831074922%2C831447842%2C831494352%2C832196142%2C832761362%2C833122932%2C833894862%2C833912682%2C834141582%2C834144522%2C836146042%2C836233182%2C836440862%2C836491742%2C836686462%2C847367962%2C858855772%2C859178022%2C864358632%2C874495492%2C874698792%2C879309182%2C881637642%2C882749762%2C885259022%2C886674252%2C886757972%2C887820082%2C888349472%2C888375082%2C888951482%2C889146192%2C889204222%2C889244232%2C889244852%2C889320532%2C889806192%2C890573142%2C890688012%2C893948112%2C894516682%2C895989282%2C897523272%2C898872882%2C899100492%2C910217127%2C910484435%2C910608193%2C911599287%2C911604566%2C911624044%2C911683237%2C911691248%2C911691736%2C911702908%2C911703114%2C911881721%2C911885875%2C912052680%2C912085023%2C912166406%2C912172090%2C912189465%2C912342409%2C912363961%2C912383555%2C912385116%2C912492575%2C912493296%2C912507491%2C912667758%2C912697827%2C912809951%2C912823970%2C912829197%2C912972062%2C913147383%2C913158938%2C913258460%2C913285174%2C913321006%2C913485750%2C913705602%2C913718704%2C913737474%2C913772431%2C913794745%2C913876954%2C913886097%2C913949587%2C914000246%2C914056748%2C914084741%2C914185165%2C914189934%2C914206901%2C914248906%2C914277752%2C914283116%2C914335159%2C914468671%2C914507812%2C914582660%2C914718139%2C914723612%2C914752582%2C914797829%2C914896738%2C915015743%2C915042759%2C915075746%2C915097189%2C915118305%2C915216102%2C915261000%2C915279082%2C915483976%2C915523013%2C915577660%2C915707238%2C915884482%2C916049153%2C916099630%2C916108141%2C916115288%2C916126700%2C916162863%2C916188145%2C916213476%2C916224753%2C916455836%2C916467443%2C916498713%2C916545169%2C916672845%2C916721528%2C916729774%2C916757603%2C916766106%2C916774028%2C916800916%2C916896573%2C917144508%2C917283109%2C917329435%2C917543380%2C917685991%2C917816328%2C917965331%2C917998787%2C918000143%2C918004440%2C918035400%2C918046380%2C918049215%2C918197826%2C918270205%2C918328564%2C918407766%2C918431578%2C918486666%2C918531599%2C918555315%2C918562168&dato=2024-11-07T05%3A29%3A15.513Z&updatedBefore=2026-11-07T05%3A29%3A15.513Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:36:35.067156Z",
+        "content_sha256": "ce54e4f744725c96d50df632cc2e3c83cb14309a457d27fe73d27d6a3ae2f2ee",
+        "claim_span": "ath\":\"/kapital/innfortDato\",\"value\":\"2026-03-31\"},{\"op\":\"replace\",\"path\":\"/kapital/belop\",\"value\":1200000.0}],\"endringstype\":\"Endring\",\"oppdateringsid\":24071972,\"organisasjonsnummer\":\"918049215\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915015743\"}},\"dato\":\"2026",
+        "locator": "/_embedded/oppdaterteEnheter/862/endringer/2",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "note": "Major fields/dates and original EUR figures checked; undeclared scale retained, no currency conversion or unknown-unit percentage."
+  },
+  {
+    "orgnr": "936276075",
+    "brief": {
+      "sentences": [
+        {
+          "text": "M BERGUM AS (org. 936276075) is a private limited company in Nesodden, founded in 2025; its registered purpose is \"Investering i andre selskaper, finansielle instrumenter og alt som står i forbindelse med dette\".",
+          "claim_ids": [
+            "c750fcff83b323b86f344241c38d71c26da71e35c97bbc67abd77c18678c2973",
+            "3ade1dcb6403a4b71a622b0df15d20a4c6e49d0b0ea68b8b4135ff46fa68a702",
+            "5318a535256e2f1af55389ecc10194c65520c23ca995b6d944d7d26144689305",
+            "f4a30ca761d92137781483d5270a8fcd76bc04baf3deaad9788aa2d96e06fb1b",
+            "3b22c9cc5eabd635beb235687162c904d2644c44ee659be44f84104b08fca550",
+            "73b1e72fd0450df1929819163e6b85ea8da22229556155e1697e33030d9f6767"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "a"
+        },
+        {
+          "text": "In FY2025, it reported an annual result of NOK 474 998.",
+          "claim_ids": [
+            "6170cd8fd00f2ccc5393c20c0189fb6a009511b8414bd1dee042c652c40bf1f7"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "b"
+        },
+        {
+          "text": "The registry records list 1 registered workplace in Nesodden.",
+          "claim_ids": [
+            "0e5994cb6ba0f657b411e1d9b5b72e2a0c7000d3727acb4abe9033ebedfa8743"
+          ],
+          "value_kind": "derived",
+          "count": 1,
+          "record_type": "workplaces",
+          "sentence_type": "c"
+        },
+        {
+          "text": "A registry announcement dated 2 Dec 2025 records a business address change, according to the Brønnøysund Register.",
+          "claim_ids": [
+            "3439a8fd9e7817459953502068e936de0a595a0758cbaf0600eefbf4af5fda22"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "d"
+        },
+        {
+          "text": "No company website could be verified.",
+          "claim_ids": [
+            "027f50473306619b7aff5bb947580f0e37ddd4d645802ca63a4bbccb5e28b04e"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "e"
+        },
+        {
+          "text": "No active job ads were found in the checked sources.",
+          "claim_ids": [
+            "2100a7aec72aaa22364443c44a58273f46684108ba6d0cbce7fe7d6f3dab7480"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "f"
+        }
+      ],
+      "context_claims": [
+        {
+          "id": "3ade1dcb6403a4b71a622b0df15d20a4c6e49d0b0ea68b8b4135ff46fa68a702",
+          "field": "snapshot.analyst.organisation_number",
+          "value": "936276075",
+          "evidence_ids": [
+            "dfac14dd5b80f4feecea635bf95aa6735aa46607ecf8e65da882187afe96c8cf"
+          ]
+        },
+        {
+          "id": "027f50473306619b7aff5bb947580f0e37ddd4d645802ca63a4bbccb5e28b04e",
+          "field": "snapshot.analyst.website",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "2100a7aec72aaa22364443c44a58273f46684108ba6d0cbce7fe7d6f3dab7480",
+          "field": "snapshot.analyst.hiring",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "field": "identity.founding_date",
+        "value": "2025-09-24",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e6fa089971bf068ed4cd2101f63c2614cf6a549948e4a07182735aa97aa96e41"
+        ],
+        "id": "3b22c9cc5eabd635beb235687162c904d2644c44ee659be44f84104b08fca550",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.legal_name",
+        "value": "M BERGUM AS",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "dfac14dd5b80f4feecea635bf95aa6735aa46607ecf8e65da882187afe96c8cf"
+        ],
+        "id": "c750fcff83b323b86f344241c38d71c26da71e35c97bbc67abd77c18678c2973",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.municipality",
+        "value": "NESODDEN",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "ab410694664ec6c94f070cbf1836c58785f98ac8819f17d854dd22e31356073f"
+        ],
+        "id": "f4a30ca761d92137781483d5270a8fcd76bc04baf3deaad9788aa2d96e06fb1b",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.statutory_purpose",
+        "value": "Investering i andre selskaper, finansielle instrumenter og alt som står i forbindelse med dette.",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "1eae11afde572f5aa2e9c1421e4f46d72ca0bbe9d869d29008390db3356bfb31"
+        ],
+        "id": "73b1e72fd0450df1929819163e6b85ea8da22229556155e1697e33030d9f6767",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.organisation_form",
+        "value": {
+          "kode": "AS",
+          "beskrivelse": "Aksjeselskap"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "0ecf8e6dae64e6f6a4957b498d8c7ccc4882bc3b92437e0b6acad6b1f811aeb6"
+        ],
+        "id": "5318a535256e2f1af55389ecc10194c65520c23ca995b6d944d7d26144689305",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "subunits.unit.936697550",
+        "value": {
+          "organisation_number": "936697550",
+          "name": "M BERGUM AS",
+          "address": {
+            "adresse": [
+              "Julius Rosens vei 35"
+            ],
+            "kommune": "NESODDEN",
+            "kommunenummer": "3212",
+            "land": "Norge",
+            "landkode": "NO",
+            "postnummer": "1454",
+            "poststed": "FAGERSTRAND"
+          },
+          "nace": {
+            "beskrivelse": "Uoppgitt",
+            "kode": "00.000"
+          },
+          "employees": null
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "17e92ff28eec3c4538b7abd2b67a17abd557c99ac6c2ac8c10315ad75fcdc0dd"
+        ],
+        "id": "0e5994cb6ba0f657b411e1d9b5b72e2a0c7000d3727acb4abe9033ebedfa8743",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:25.282963Z",
+        "last_observed_at": "2026-11-07T05:29:25.282963Z",
+        "reasons": {}
+      },
+      {
+        "field": "accounts.net_result",
+        "value": 474998.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "2bb57e444b8cff226bec58444ac3e916d4946e7729eeb79bcff118f88879cd2b",
+          "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+          "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa"
+        ],
+        "id": "6170cd8fd00f2ccc5393c20c0189fb6a009511b8414bd1dee042c652c40bf1f7",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:50.641698Z",
+        "last_observed_at": "2026-11-07T05:29:50.641698Z",
+        "reasons": {
+          "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+        }
+      },
+      {
+        "field": "registry_change.f6bcc18cd383f9ee2e64c9c1",
+        "value": {
+          "company_orgnr": "936276075",
+          "event_id": 23447560,
+          "date": "2025-12-02T16:20:13.136000Z",
+          "kind": "Registry announcement",
+          "date_source": "registry publication time (not effective date)",
+          "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23447560&size=1&includeChanges=true",
+          "title": "Registered business address changed",
+          "changed_field": "/forretningsadresse/poststed",
+          "operation": "replace",
+          "new_value": "FAGERSTRAND"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "01a08c14cedcf9d64ae10d48c40cb84ecb2b2536dc86054d794d256719014d6f"
+        ],
+        "id": "3439a8fd9e7817459953502068e936de0a595a0758cbaf0600eefbf4af5fda22",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:36:38.860056Z",
+        "last_observed_at": "2026-11-07T05:36:38.860056Z",
+        "reasons": {}
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e6fa089971bf068ed4cd2101f63c2614cf6a549948e4a07182735aa97aa96e41",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "bd6bacfce2d01397b105bc3ef1ad4837c1f0d143c8d09c404a1545e3f3ed4766",
+        "claim_span": "12,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-30,2025-09-24,false,,,,,false,,true,2025-09-30,false,false,,false,,false,,false,,,,,,,Bokmål,2025-11-12,\"Investering i andre selskaper, finansielle instrumenter og alt som står i forbindelse med dette.\",\"Investering i andre selskaper, finansie",
+        "locator": "row:936276075/column:stiftelsesdato",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": "2025-09-24",
+        "reporting_period": null
+      },
+      {
+        "id": "dfac14dd5b80f4feecea635bf95aa6735aa46607ecf8e65da882187afe96c8cf",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "bd6bacfce2d01397b105bc3ef1ad4837c1f0d143c8d09c404a1545e3f3ed4766",
+        "claim_span": "936276075,M BERGUM AS,AS,Aksjeselskap,00.000,Uoppgitt,,,,,,,false,,,,,,,,,,,,,,,Julius Rosens vei 35,FAGERSTRAND,1454,NESODDEN,3212,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-30,2025-09-24,false,,,,,false,,true,2025-09-30,false,false,,false,,false,,false,,,,,,,Bokmål,2025-11-12,\"Investeri",
+        "locator": "row:936276075/column:navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "ab410694664ec6c94f070cbf1836c58785f98ac8819f17d854dd22e31356073f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "bd6bacfce2d01397b105bc3ef1ad4837c1f0d143c8d09c404a1545e3f3ed4766",
+        "claim_span": ",,false,,,,,,,,,,,,,,,Julius Rosens vei 35,FAGERSTRAND,1454,NESODDEN,3212,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-30,2025-09-24,false,,,,,false,,true,2025-09-30,false,false,,false,,false,,false,,,,,,,Bokmål,2025-11-12,\"Investering i andre selskaper, finansielle instrumenter og alt som ",
+        "locator": "row:936276075/column:forretningsadresse.kommune",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "1eae11afde572f5aa2e9c1421e4f46d72ca0bbe9d869d29008390db3356bfb31",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "bd6bacfce2d01397b105bc3ef1ad4837c1f0d143c8d09c404a1545e3f3ed4766",
+        "claim_span": "0,false,false,,false,,false,,false,,,,,,,Bokmål,2025-11-12,\"Investering i andre selskaper, finansielle instrumenter og alt som står i forbindelse med dette.\",\"Investering i andre selskaper, finansielle instrumenter og alt som står i forbindelse med dette.\",false,,,2025-09-30,2025-09-24,false,30000.0",
+        "locator": "row:936276075/column:vedtektsfestetFormaal",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "0ecf8e6dae64e6f6a4957b498d8c7ccc4882bc3b92437e0b6acad6b1f811aeb6",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "bd6bacfce2d01397b105bc3ef1ad4837c1f0d143c8d09c404a1545e3f3ed4766",
+        "claim_span": "936276075,M BERGUM AS,AS,Aksjeselskap,00.000,Uoppgitt,,,,,,,false,,,,,,,,,,,,,,,Julius Rosens vei 35,FAGERSTRAND,1454,NESODDEN,3212,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-30,2025-09-24,false,,,,,false,,true,2025-09-30,false,false,,false,,false,,false,,,,,,,Bokmål,2025-11-12,\"Investeri",
+        "locator": "row:936276075/columns:organisasjonsform.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "17e92ff28eec3c4538b7abd2b67a17abd557c99ac6c2ac8c10315ad75fcdc0dd",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=936276075&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:25.282963Z",
+        "content_sha256": "556cefb524424914a2641dca01c03433d4bfa6b8077a9575da55fb48ae365473",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936697550\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/936276075\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Julius Rosens vei 35\"],\"kommune\":\"NESODDEN\",\"kommunenummer\":\"3212\",\"land\":\"Norg",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d5898a844f4c0f76c2b3e0d350423028e79b25a3c4702714ba79b9cd9d7917d5",
+        "source_url": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-07T05:29:50.644355Z",
+        "content_sha256": "ce6d8aa88fe1ef79694971db30a737b193f61e44fe0a59c82472a07c8571cd9a",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 3,546.3\nProfit for the period 510.4\n",
+        "locator": "pdf:page145:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf#pdf_sha256=fe379ce4f1ee133068b59c82fd1a7e25bc72c1459ba9e91a02d6621f2466414a",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8bf2cff8f4879c56297299a7ff60405e26f02b4af0f2c56947bfe5fd90aaaffa",
+        "source_url": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf",
+        "source_class": "company_report",
+        "retrieved_at": "2026-11-07T05:29:50.647296Z",
+        "content_sha256": "5652a2bd722a20e705e83c494e24f37dd598c522e1600fc78e32a7ee222795a0",
+        "claim_span": "Amounts in NOK million\n2025\nOperating revenues 53\nNet income (loss) 4,063\n",
+        "locator": "pdf:page176:parent-income-statement:2025",
+        "extraction_method": "signalpost.pdf_calibration.v1",
+        "source_identifier": "https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf#pdf_sha256=c0e145933ff95654d05faed3b45b2eab327aa9d5ff712eeac5adad22f528f7ba",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "2bb57e444b8cff226bec58444ac3e916d4946e7729eeb79bcff118f88879cd2b",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/936276075",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:50.641698Z",
+        "content_sha256": "6d2e9bc476dc868b390bdb84b66dbe52811c3cda7b0e9b83084e6a9baa78bf86",
+        "claim_span": "dinaertResultatSkattekostnad\":0.00,\"aarsresultat\":474998.00,\"totalresultat\":474998.00,\"finansresultat\":{\"nettoFinans\":499998.00,\"finansinntekt\":{\"sumFinansinntekter\":499998.00},\"finanskostnad\":{}},\"driftsresultat\":{\"driftsresultat\":-25000.00,\"driftsinntekter\":{},\"driftskostnad\":{\"loennskostnad\":0.00",
+        "locator": "/0/resultatregnskapResultat/aarsresultat",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        }
+      },
+      {
+        "id": "01a08c14cedcf9d64ae10d48c40cb84ecb2b2536dc86054d794d256719014d6f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=935422116%2C935432014%2C935450233%2C935486807%2C935499984%2C935502993%2C935556139%2C935624088%2C935624401%2C935641403%2C935666481%2C935674948%2C935691850%2C935738237%2C935794595%2C935794897%2C935809207%2C935829437%2C935831601%2C935853664%2C935856507%2C935861144%2C935868475%2C935884152%2C935941016%2C935955033%2C935999820%2C936008593%2C936010067%2C936010695%2C936043380%2C936049192%2C936052304%2C936056687%2C936073840%2C936094112%2C936106536%2C936107362%2C936256295%2C936276075%2C936312055%2C936392946%2C936428215%2C936441440%2C936544525%2C936553214%2C936563139%2C936597386%2C936621716%2C936629466%2C936673066%2C936681514%2C936703445%2C936768873%2C936801005%2C936855865%2C938092516%2C938986673%2C939725709%2C939882480%2C940572355%2C941235905%2C942393679%2C942633475%2C943189145%2C943384150%2C946381373%2C947439332%2C948415534%2C948774402%2C948850532%2C950137169%2C950220317%2C951734543%2C952049070%2C952690744%2C952785052%2C953459450%2C954081311%2C955010477%2C955098498%2C956329132%2C956409071%2C956605059%2C957883303%2C958366620%2C958415079%2C959189412%2C959876959%2C960213912%2C960694503%2C961574110%2C962148204%2C963008090%2C963116128%2C964267952%2C964898278%2C965530819%2C965835156%2C966443960%2C967933635%2C968386085%2C968468235%2C968545337%2C970979026%2C971161531%2C971173459%2C971349743%2C971400862%2C971456299%2C971492325%2C971521570%2C971558415%2C974527197%2C974533537%2C975569306%2C975822567%2C975962121%2C976183193%2C976271157%2C976289862%2C976526368%2C976623797%2C976645677%2C976746651%2C976758218%2C976843878%2C976871448%2C976886534%2C977107385%2C977126150%2C977149312%2C977250293%2C977456436%2C978714854%2C979354843%2C979709803%2C979775288%2C979870795%2C979907168%2C979973969%2C980166635%2C980362779%2C980411575%2C980622444%2C980910857%2C980973549%2C981052765%2C981058771%2C981063635%2C981089022%2C981130243%2C981391594%2C981490363%2C981508734%2C981613171%2C982189071%2C982388449%2C982410851%2C982801559%2C983025498%2C983103030%2C983244858%2C983298176%2C983430570%2C983478999%2C983485731%2C983486703%2C983520944%2C983643647%2C983651526%2C983690262%2C983742149%2C983803997%2C983901840%2C983923089%2C983947859%2C983985378%2C984024290%2C984081332%2C984133715%2C984290535%2C984414978%2C984470835%2C984590881%2C984597665%2C984611927%2C984633718%2C984717865%2C984821115%2C984852487%2C985090572%2C985204381%2C985464405%2C985470944%2C985803722%2C985830355%2C985868972%2C985891346%2C986007458&dato=2024-11-07T05%3A29%3A15.513Z&updatedBefore=2026-11-07T05%3A29%3A15.513Z&includeChanges=true&size=1000&sort=id%2CASC&page=1",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:36:38.860056Z",
+        "content_sha256": "2eb317086f2d817e2c1bda7116d325d838e088a4ea8f3488d2be87e7858ea2e8",
+        "claim_span": "forretningsadresse/kommunenummer\",\"value\":\"3212\"},{\"op\":\"replace\",\"path\":\"/forretningsadresse/poststed\",\"value\":\"FAGERSTRAND\"},{\"op\":\"replace\",\"path\":\"/vedtektsdato\",\"value\":\"2025-11-12\"},{\"op\":\"replace\",\"path\":\"/navn\",\"value\":\"M BERGUM AS\"},{\"op\":\"replace\",\"path\":\"/aktivitet/0\",\"value\":\"står i forb",
+        "locator": "/_embedded/oppdaterteEnheter/32/endringer/5",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "note": "Major fields/dates and original EUR figures checked; undeclared scale retained, no currency conversion or unknown-unit percentage."
+  },
+  {
+    "orgnr": "921206232",
+    "brief": {
+      "sentences": [
+        {
+          "text": "EFKON GMBH NUF (org. 921206232) is a Norwegian branch of a foreign enterprise, registered in 2018, working in computer consultancy and computer facilities management activities.",
+          "claim_ids": [
+            "3c03c678afeab07090397a4a2fe662612e2cb6ad599b50afae60ebb0e1effff1",
+            "016828f9ad120bb1c118d79ff69f8c3f6f3f2aab97ddd1fdbf5fbaa67e934c7a",
+            "519462c636aa717debdb9db7ae9e41093cb2ef44a170b2c292cb2013f2c4e8bc",
+            "abf95e6cb53bc7ae5a5cd57aeb8baf8677a943f61487f2851306738c73c5611f",
+            "4552b4006e80906a3de2eef7801fb54310503e3fb7b9349d8026f58dab3bd5b8"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "a"
+        },
+        {
+          "text": "In FY2025, it reported revenue of EUR 30.4 million and an annual result of EUR 3.0 million (EUR-denominated reported figures; source scale not declared, no conversion applied).",
+          "claim_ids": [
+            "ff9a26d4cf8f5e71495d00f52d6e05d72a55e68f2d18d3164f1174229f1fc114",
+            "35273656ab93f49bf62300e2086ef05212b51e93fab7e20a9a70046f70191781"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "b"
+        },
+        {
+          "text": "The registry records list 1 registered workplace.",
+          "claim_ids": [
+            "95c244b932fc07d7a8d3b56ca402b219308b2f0a9da390f87385fb818f82279b"
+          ],
+          "value_kind": "derived",
+          "count": 1,
+          "record_type": "workplaces",
+          "sentence_type": "c"
+        },
+        {
+          "text": "A registry announcement dated 7 Sep 2026 records a postal address change, according to the Brønnøysund Register.",
+          "claim_ids": [
+            "a3c57c4dc28fd327a60e1f2000327b836d92bb45631292615c9a76bc8017ab5c"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "d"
+        },
+        {
+          "text": "No company website could be verified.",
+          "claim_ids": [
+            "e7215b8d7de11ecbd2054635738de529ce9dbd3decd69f02acefb1086e3d148d"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "e"
+        },
+        {
+          "text": "No active job ads were found in the checked sources.",
+          "claim_ids": [
+            "94634ec155f6c0531d664ae9c41bbf3ef8aa3a905d88130e038df8c54845b891"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "f"
+        }
+      ],
+      "context_claims": [
+        {
+          "id": "016828f9ad120bb1c118d79ff69f8c3f6f3f2aab97ddd1fdbf5fbaa67e934c7a",
+          "field": "snapshot.analyst.organisation_number",
+          "value": "921206232",
+          "evidence_ids": [
+            "437d1a31c82edf2c5bf59360fc904f639e3cb9997e6a669297b8c7bb07dd3147"
+          ]
+        },
+        {
+          "id": "e7215b8d7de11ecbd2054635738de529ce9dbd3decd69f02acefb1086e3d148d",
+          "field": "snapshot.analyst.website",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "94634ec155f6c0531d664ae9c41bbf3ef8aa3a905d88130e038df8c54845b891",
+          "field": "snapshot.analyst.hiring",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "field": "identity.legal_name",
+        "value": "EFKON GMBH NUF",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "437d1a31c82edf2c5bf59360fc904f639e3cb9997e6a669297b8c7bb07dd3147"
+        ],
+        "id": "3c03c678afeab07090397a4a2fe662612e2cb6ad599b50afae60ebb0e1effff1",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.841505Z",
+        "last_observed_at": "2026-11-07T05:29:15.841505Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.registration_date",
+        "value": "2018-08-21",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "f9f377bda991311c1e3d3778b158d6f6a43c4ea2c14dd6d333b570ce539ad40f"
+        ],
+        "id": "abf95e6cb53bc7ae5a5cd57aeb8baf8677a943f61487f2851306738c73c5611f",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.841505Z",
+        "last_observed_at": "2026-11-07T05:29:15.841505Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.organisation_form",
+        "value": {
+          "kode": "NUF",
+          "beskrivelse": "Norskregistrert utenlandsk foretak"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "ef6ab9c29123b5fd064a2f05f1882f81d36e161005b82c428417f1f0fa6c19f5"
+        ],
+        "id": "519462c636aa717debdb9db7ae9e41093cb2ef44a170b2c292cb2013f2c4e8bc",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.841505Z",
+        "last_observed_at": "2026-11-07T05:29:15.841505Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.nace1",
+        "value": {
+          "kode": "62.200",
+          "beskrivelse": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "2ea32f73127deaf7b8bf7025d0a6f1dc5f850e6daf53b9442270ea6a2d077607"
+        ],
+        "id": "4552b4006e80906a3de2eef7801fb54310503e3fb7b9349d8026f58dab3bd5b8",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.841505Z",
+        "last_observed_at": "2026-11-07T05:29:15.841505Z",
+        "reasons": {}
+      },
+      {
+        "field": "subunits.unit.921339887",
+        "value": {
+          "organisation_number": "921339887",
+          "name": "EFKON GMBH NUF",
+          "address": {
+            "adresse": [
+              "Dietrich-Keller-Strasse 20"
+            ],
+            "land": "Østerrike",
+            "landkode": "AT",
+            "poststed": "AT-8074 RAABA"
+          },
+          "nace": {
+            "beskrivelse": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer",
+            "kode": "62.200"
+          },
+          "employees": null
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "0d3385ec25ebf6d6fbfae95baf1a0839e8c0a7945c5585182dc70b4d85d04090"
+        ],
+        "id": "95c244b932fc07d7a8d3b56ca402b219308b2f0a9da390f87385fb818f82279b",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:27.241787Z",
+        "last_observed_at": "2026-11-07T05:29:27.241787Z",
+        "reasons": {}
+      },
+      {
+        "field": "accounts.revenue",
+        "value": 30436099.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e5a0d841d3202d361befba43179e5d004e3911de29461587301dcb0e83ebf145"
+        ],
+        "id": "ff9a26d4cf8f5e71495d00f52d6e05d72a55e68f2d18d3164f1174229f1fc114",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:54.195857Z",
+        "last_observed_at": "2026-11-07T05:29:54.195857Z",
+        "reasons": {
+          "unit": "scale_not_declared_by_source_or_reviewed_openapi",
+          "unit_crosscheck": "NOK_calibration_not_applied_to_other_or_missing_currencies"
+        }
+      },
+      {
+        "field": "accounts.net_result",
+        "value": 2957435.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "b6a90f71cfa83e85d400f290608235bfe65eb34be1ea3bc2804266b0e5277dd5"
+        ],
+        "id": "35273656ab93f49bf62300e2086ef05212b51e93fab7e20a9a70046f70191781",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:54.195857Z",
+        "last_observed_at": "2026-11-07T05:29:54.195857Z",
+        "reasons": {
+          "unit": "scale_not_declared_by_source_or_reviewed_openapi",
+          "unit_crosscheck": "NOK_calibration_not_applied_to_other_or_missing_currencies"
+        }
+      },
+      {
+        "field": "registry_change.0640d4e99d2d0b34a4196d28",
+        "value": {
+          "company_orgnr": "921206232",
+          "event_id": 25169516,
+          "date": "2026-09-07T12:10:12.578000Z",
+          "kind": "Registry announcement",
+          "date_source": "registry publication time (not effective date)",
+          "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25169516&size=1&includeChanges=true",
+          "title": "Registered postal address changed",
+          "changed_field": "/postadresse/adresse/0",
+          "operation": "replace",
+          "new_value": "c/o Vaak Regnskap AS"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "3bcb1c665277c3398767d3fbe4b162de5b9f7dc3beabc5ff845105ae9575603e"
+        ],
+        "id": "a3c57c4dc28fd327a60e1f2000327b836d92bb45631292615c9a76bc8017ab5c",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:36:36.219714Z",
+        "last_observed_at": "2026-11-07T05:36:36.219714Z",
+        "reasons": {}
+      }
+    ],
+    "evidence": [
+      {
+        "id": "437d1a31c82edf2c5bf59360fc904f639e3cb9997e6a669297b8c7bb07dd3147",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.841505Z",
+        "content_sha256": "6046aad52d079f22879e6945bda25d2342301d224072efc6cdc7d6286524f35b",
+        "claim_span": "921206232,EFKON GMBH NUF,NUF,Norskregistrert utenlandsk foretak,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,false,,,,,raymond.werner@no.gt.com,,,\"c/o Vaak Regnskap AS\nKirkegata 15\",OSLO,0153,OSLO,0301,Norge,NO,Dietrich-Keller-Strasse 20,AT",
+        "locator": "row:921206232/column:navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "f9f377bda991311c1e3d3778b158d6f6a43c4ea2c14dd6d333b570ce539ad40f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.841505Z",
+        "content_sha256": "6046aad52d079f22879e6945bda25d2342301d224072efc6cdc7d6286524f35b",
+        "claim_span": "rich-Keller-Strasse 20,AT-8074 RAABA,,,,Østerrike,AT,,,2025,2018-08-21,,true,2018-09-01,2018-08-27,,,false,,true,2018-08-21,false,false,,false,,false,,false,,,,,,,Bokmål,,,\"Leverandør av intelligente transportsystemer (ITS), bompasseringssystemer (ETC), samt håndhevelse, og telematikk, systemer til ",
+        "locator": "row:921206232/column:registreringsdatoenhetsregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": "2018-08-21",
+        "reporting_period": null
+      },
+      {
+        "id": "ef6ab9c29123b5fd064a2f05f1882f81d36e161005b82c428417f1f0fa6c19f5",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.841505Z",
+        "content_sha256": "6046aad52d079f22879e6945bda25d2342301d224072efc6cdc7d6286524f35b",
+        "claim_span": "921206232,EFKON GMBH NUF,NUF,Norskregistrert utenlandsk foretak,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,false,,,,,raymond.werner@no.gt.com,,,\"c/o Vaak Regnskap AS\nKirkegata 15\",OSLO,0153,OSLO,0301,Norge,NO,Dietrich-Keller-Strasse 20,AT",
+        "locator": "row:921206232/columns:organisasjonsform.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "2ea32f73127deaf7b8bf7025d0a6f1dc5f850e6daf53b9442270ea6a2d077607",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.841505Z",
+        "content_sha256": "6046aad52d079f22879e6945bda25d2342301d224072efc6cdc7d6286524f35b",
+        "claim_span": "06232,EFKON GMBH NUF,NUF,Norskregistrert utenlandsk foretak,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,false,,,,,raymond.werner@no.gt.com,,,\"c/o Vaak Regnskap AS\nKirkegata 15\",OSLO,0153,OSLO,0301,Norge,NO,Dietrich-Keller-Strasse 20,AT-807",
+        "locator": "row:921206232/columns:naeringskode1.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "0d3385ec25ebf6d6fbfae95baf1a0839e8c0a7945c5585182dc70b4d85d04090",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=921206232&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:27.241787Z",
+        "content_sha256": "3045c8b8ae786ad4bdbfe2614b7414b5b1efc3b7fae9a4e989fbbdea23da281a",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/921339887\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/921206232\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Dietrich-Keller-Strasse 20\"],\"land\":\"Østerrike\",\"landkode\":\"AT\",\"poststed\":\"AT-",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "e5a0d841d3202d361befba43179e5d004e3911de29461587301dcb0e83ebf145",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/921206232",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:54.195857Z",
+        "content_sha256": "2aa9b7148511cc8a696c2ce49b6a11bc3ecbcac05c5ad76b7954559a7f1f2c33",
+        "claim_span": "\"salgsinntekter\":19376016.00,\"sumDriftsinntekter\":30436099.00},\"driftskostnad\":{\"loennskostnad\":10424802.00,\"sumDriftskostnad\":29987390.00}}}}]",
+        "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "id": "b6a90f71cfa83e85d400f290608235bfe65eb34be1ea3bc2804266b0e5277dd5",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/921206232",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:54.195857Z",
+        "content_sha256": "2aa9b7148511cc8a696c2ce49b6a11bc3ecbcac05c5ad76b7954559a7f1f2c33",
+        "claim_span": "tResultatSkattekostnad\":-505064.00,\"aarsresultat\":2957435.00,\"totalresultat\":8454395.00,\"finansresultat\":{\"nettoFinans\":2003662.00,\"finansinntekt\":{\"sumFinansinntekter\":2003662.00},\"finanskostnad\":{}},\"driftsresultat\":{\"driftsresultat\":448709.00,\"driftsinntekter\":{\"salgsinntekter\":19376016.00,\"sumDr",
+        "locator": "/2/resultatregnskapResultat/aarsresultat",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "id": "3bcb1c665277c3398767d3fbe4b162de5b9f7dc3beabc5ff845105ae9575603e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220%2C923472134%2C923479732%2C923558330%2C923566031%2C923591079%2C923716416%2C923763058%2C923845488%2C923883819%2C923998012%2C924061847%2C924412615%2C924458100%2C924478101%2C924499613%2C924517476%2C924553871%2C924688696%2C924775793%2C924784091%2C924825464%2C924828099%2C924840439%2C924910275%2C924912758%2C925149365%2C925201049%2C925226009%2C925255475%2C925273422%2C925310492%2C925321419%2C925321605%2C925347531%2C925360376%2C925370525%2C925400467%2C925413763%2C925421391%2C925434264%2C925546739%2C925547530%2C925656348%2C925677264%2C925738328%2C925787884%2C925809462%2C925853488%2C925854689%2C925856363%2C925924601%2C926007866%2C926045571%2C926065173%2C926077422%2C926096974%2C926128507%2C926307487%2C926338730%2C926351184%2C926351370%2C926446843%2C926490060%2C926529870%2C926543962%2C926624717%2C926648306%2C926698435%2C926876155%2C926877720%2C926970348%2C927044390%2C927088584%2C927092026%2C927113872%2C927129159%2C927146487%2C927152630%2C927162121%2C927182173%2C927211033%2C927239620%2C927327481%2C927379384%2C927409593%2C927440466%2C927440725%2C927441217%2C927445034%2C927529319%2C927560429%2C927616084%2C927661683%2C927671174%2C927718650%2C927826550%2C927901722%2C927906694%2C927938197%2C927944979&dato=2024-11-07T05%3A29%3A15.513Z&updatedBefore=2026-11-07T05%3A29%3A15.513Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:36:36.219714Z",
+        "content_sha256": "524ab815ac3e0c8de6c1a39fc12b259eb81be118599606ec9756c1f85b038136",
+        "claim_span": "}},\"dato\":\"2026-09-07T12:10:12.578Z\",\"endringer\":[{\"op\":\"replace\",\"path\":\"/postadresse/adresse/0\",\"value\":\"c/o Vaak Regnskap AS\"}],\"endringstype\":\"Endring\",\"oppdateringsid\":25169516,\"organisasjonsnummer\":\"921206232\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/9244",
+        "locator": "/_embedded/oppdaterteEnheter/976/endringer/0",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "note": "Major fields/dates and original EUR figures checked; undeclared scale retained, no currency conversion or unknown-unit percentage."
+  },
+  {
+    "orgnr": "922645884",
+    "brief": {
+      "sentences": [
+        {
+          "text": "PREF 2020 AS (org. 922645884) is a private limited company in Oslo, founded in 2019, working in other investment companies, except captive companies.",
+          "claim_ids": [
+            "2c0a3de5c259c576aae039460304dd0352461dc2ba66d6236bafa8cb1ab47f9f",
+            "e3eca9e1ff8960da3ef196237328f76c6fc1e840d68e3ca25d1dd4aee8ae8422",
+            "89e519e893b014576d21b62cd7ebb2d86095811629eb5395d1b8c143fd0a127a",
+            "b8b1b7163e1fdc08717cb01c4be555fdc73ca02b7acdc44c0695cf7f9b26dad2",
+            "95120ec42a74435f8b399250934ab92d2d1522f1ba6bf3b90c8cb6fcd9f66d9d",
+            "87c94eee534e72154cabf701a641400d042f5c48dba5478bf8e78367be48d299"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "a"
+        },
+        {
+          "text": "In FY2025, it reported revenue of EUR 7.1 million and an annual result of EUR 6.9 million (EUR-denominated reported figures; source scale not declared, no conversion applied).",
+          "claim_ids": [
+            "65710089a7e60b6c9143fe6bc6804134e60438d157da17a90f94e4ab901a49aa",
+            "432849ba3a3931b153d8b1e5a44ddfd51da2b631d4b1bdb2d4fd15a6e13c561b"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "b"
+        },
+        {
+          "text": "The registry records list 1 registered workplace in Oslo.",
+          "claim_ids": [
+            "a9a8bd5e52e8767a8649d34093f59986f686465a0bf5300a3f21c16cb71da7e3"
+          ],
+          "value_kind": "derived",
+          "count": 1,
+          "record_type": "workplaces",
+          "sentence_type": "c"
+        },
+        {
+          "text": "No company website could be verified.",
+          "claim_ids": [
+            "0e460771433eb4ddd6a1987a03cc3239f6e2966a0096cb39deac14c19a358592"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "e"
+        },
+        {
+          "text": "No active job ads were found in the checked sources.",
+          "claim_ids": [
+            "ae3ab2130cdf97257bd2624cbf71754d228ca775464d85c84895d44c6821d279"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "f"
+        }
+      ],
+      "context_claims": [
+        {
+          "id": "e3eca9e1ff8960da3ef196237328f76c6fc1e840d68e3ca25d1dd4aee8ae8422",
+          "field": "snapshot.analyst.organisation_number",
+          "value": "922645884",
+          "evidence_ids": [
+            "6c0ad1e003e43bba0db15020dc57ed9b0b9b7079b347d716a8f5c10ed9a5b665"
+          ]
+        },
+        {
+          "id": "0e460771433eb4ddd6a1987a03cc3239f6e2966a0096cb39deac14c19a358592",
+          "field": "snapshot.analyst.website",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "ae3ab2130cdf97257bd2624cbf71754d228ca775464d85c84895d44c6821d279",
+          "field": "snapshot.analyst.hiring",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "field": "identity.founding_date",
+        "value": "2019-03-08",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "9f56da18d4f535456089740ba6391d6e9da27473a5e3b0326cf76aa3f25c50d5"
+        ],
+        "id": "95120ec42a74435f8b399250934ab92d2d1522f1ba6bf3b90c8cb6fcd9f66d9d",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.849330Z",
+        "last_observed_at": "2026-11-07T05:29:15.849330Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.legal_name",
+        "value": "PREF 2020 AS",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "6c0ad1e003e43bba0db15020dc57ed9b0b9b7079b347d716a8f5c10ed9a5b665"
+        ],
+        "id": "2c0a3de5c259c576aae039460304dd0352461dc2ba66d6236bafa8cb1ab47f9f",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.849330Z",
+        "last_observed_at": "2026-11-07T05:29:15.849330Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.municipality",
+        "value": "OSLO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "d68b48c43cdb7a8eac572eb2dc79a51c0a8c293c24147f1fcd153f7859afa912"
+        ],
+        "id": "b8b1b7163e1fdc08717cb01c4be555fdc73ca02b7acdc44c0695cf7f9b26dad2",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.849330Z",
+        "last_observed_at": "2026-11-07T05:29:15.849330Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.organisation_form",
+        "value": {
+          "kode": "AS",
+          "beskrivelse": "Aksjeselskap"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "6b178d963f76f57af71367fc65d047b5e097a0e8e2227544cc55c63860e897f7"
+        ],
+        "id": "89e519e893b014576d21b62cd7ebb2d86095811629eb5395d1b8c143fd0a127a",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.849330Z",
+        "last_observed_at": "2026-11-07T05:29:15.849330Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.nace1",
+        "value": {
+          "kode": "64.312",
+          "beskrivelse": "Alternative investeringsfond (aif) som ikke er verdipapirfond"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "86efa5ef925680638a138fa38c4043be19aa416624c6cce86335b8870c6c377b"
+        ],
+        "id": "87c94eee534e72154cabf701a641400d042f5c48dba5478bf8e78367be48d299",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:15.849330Z",
+        "last_observed_at": "2026-11-07T05:29:15.849330Z",
+        "reasons": {}
+      },
+      {
+        "field": "subunits.unit.929114167",
+        "value": {
+          "organisation_number": "929114167",
+          "name": "PREF 2020 AS",
+          "address": {
+            "adresse": [
+              "c/o Positron Capital",
+              "Ruseløkkveien 6"
+            ],
+            "kommune": "OSLO",
+            "kommunenummer": "0301",
+            "land": "Norge",
+            "landkode": "NO",
+            "postnummer": "0251",
+            "poststed": "OSLO"
+          },
+          "nace": {
+            "beskrivelse": "Alternative investeringsfond (aif) som ikke er verdipapirfond",
+            "kode": "64.312"
+          },
+          "employees": null
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "3fb889f329c0089e55a30399f0f6457737f7ad030a87ac7c353f0ee150467a0a"
+        ],
+        "id": "a9a8bd5e52e8767a8649d34093f59986f686465a0bf5300a3f21c16cb71da7e3",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:43.907804Z",
+        "last_observed_at": "2026-11-07T05:29:43.907804Z",
+        "reasons": {}
+      },
+      {
+        "field": "accounts.revenue",
+        "value": 7102622.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "0289515ac5a592b413d4978de9cb5ec1f60461d7df7ce7a42b25b2aec54dcf35"
+        ],
+        "id": "65710089a7e60b6c9143fe6bc6804134e60438d157da17a90f94e4ab901a49aa",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:30:55.868052Z",
+        "last_observed_at": "2026-11-07T05:30:55.868052Z",
+        "reasons": {
+          "unit": "scale_not_declared_by_source_or_reviewed_openapi",
+          "unit_crosscheck": "NOK_calibration_not_applied_to_other_or_missing_currencies"
+        }
+      },
+      {
+        "field": "accounts.net_result",
+        "value": 6945238.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "1ea3bd3ece6bb233646a242bc4cc3d281cf28e42e8f58e9e356d38f85f0bcfb9"
+        ],
+        "id": "432849ba3a3931b153d8b1e5a44ddfd51da2b631d4b1bdb2d4fd15a6e13c561b",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:30:55.868052Z",
+        "last_observed_at": "2026-11-07T05:30:55.868052Z",
+        "reasons": {
+          "unit": "scale_not_declared_by_source_or_reviewed_openapi",
+          "unit_crosscheck": "NOK_calibration_not_applied_to_other_or_missing_currencies"
+        }
+      }
+    ],
+    "evidence": [
+      {
+        "id": "9f56da18d4f535456089740ba6391d6e9da27473a5e3b0326cf76aa3f25c50d5",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.849330Z",
+        "content_sha256": "a1765c44ae756ac3cf6ca65bd01302dd0d1d907b9777ff161a111c8d4426747c",
+        "claim_span": "vesteringsfond (AIF) unntatt verdipapirfond,2025,2019-04-16,2019-03-08,false,,,,,false,,true,2019-04-16,false,false,,false,,false,,false,,,,,,,Bokmål,2025-06-05,\"Være et investeringsselskap som direkte eller indirekte investerer sin kapital i private equity fond, både ved å investere i nyetablerte f",
+        "locator": "row:922645884/column:stiftelsesdato",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": "2019-03-08",
+        "reporting_period": null
+      },
+      {
+        "id": "6c0ad1e003e43bba0db15020dc57ed9b0b9b7079b347d716a8f5c10ed9a5b665",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.849330Z",
+        "content_sha256": "a1765c44ae756ac3cf6ca65bd01302dd0d1d907b9777ff161a111c8d4426747c",
+        "claim_span": "922645884,PREF 2020 AS,AS,Aksjeselskap,64.312,Alternative investeringsfond (aif) som ikke er verdipapirfond,,,,,,,false,,,,,,,,,,,,,,,\"c/o Positron Capital\nRuseløkkveien 6\",OSLO,0251,OSLO,0301,Norge,NO,4500,Alternative investeringsfond (AIF) unntatt verdipapirfond,2025,2019-04-16,2019-03-08,false,,,",
+        "locator": "row:922645884/column:navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d68b48c43cdb7a8eac572eb2dc79a51c0a8c293c24147f1fcd153f7859afa912",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.849330Z",
+        "content_sha256": "a1765c44ae756ac3cf6ca65bd01302dd0d1d907b9777ff161a111c8d4426747c",
+        "claim_span": ",false,,,,,,,,,,,,,,,\"c/o Positron Capital\nRuseløkkveien 6\",OSLO,0251,OSLO,0301,Norge,NO,4500,Alternative investeringsfond (AIF) unntatt verdipapirfond,2025,2019-04-16,2019-03-08,false,,,,,false,,true,2019-04-16,false,false,,false,,false,,false,,,,,,,Bokmål,2025-06-05,\"Være et investeringsselskap so",
+        "locator": "row:922645884/column:forretningsadresse.kommune",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "6b178d963f76f57af71367fc65d047b5e097a0e8e2227544cc55c63860e897f7",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.849330Z",
+        "content_sha256": "a1765c44ae756ac3cf6ca65bd01302dd0d1d907b9777ff161a111c8d4426747c",
+        "claim_span": "922645884,PREF 2020 AS,AS,Aksjeselskap,64.312,Alternative investeringsfond (aif) som ikke er verdipapirfond,,,,,,,false,,,,,,,,,,,,,,,\"c/o Positron Capital\nRuseløkkveien 6\",OSLO,0251,OSLO,0301,Norge,NO,4500,Alternative investeringsfond (AIF) unntatt verdipapirfond,2025,2019-04-16,2019-03-08,false,,,",
+        "locator": "row:922645884/columns:organisasjonsform.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "86efa5ef925680638a138fa38c4043be19aa416624c6cce86335b8870c6c377b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:15.849330Z",
+        "content_sha256": "a1765c44ae756ac3cf6ca65bd01302dd0d1d907b9777ff161a111c8d4426747c",
+        "claim_span": "922645884,PREF 2020 AS,AS,Aksjeselskap,64.312,Alternative investeringsfond (aif) som ikke er verdipapirfond,,,,,,,false,,,,,,,,,,,,,,,\"c/o Positron Capital\nRuseløkkveien 6\",OSLO,0251,OSLO,0301,Norge,NO,4500,Alternative investeringsfond (AIF) unntatt verdipapirfond,2025,2019-04-16,2019-03-08,false,,,",
+        "locator": "row:922645884/columns:naeringskode1.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3fb889f329c0089e55a30399f0f6457737f7ad030a87ac7c353f0ee150467a0a",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=922645884&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:43.907804Z",
+        "content_sha256": "6ad92c976da1f4712190bb45d1143d154a0f281b7f4b81d507fbfff4cac379cf",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/929114167\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/922645884\"}},\"beliggenhetsadresse\":{\"adresse\":[\"c/o Positron Capital\",\"Ruseløkkveien 6\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "0289515ac5a592b413d4978de9cb5ec1f60461d7df7ce7a42b25b2aec54dcf35",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/922645884",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:30:55.868052Z",
+        "content_sha256": "9c4738e1ea3910f4bcf2141a422421c6f33cdc0552e7fbada5e53e27bdddf9f3",
+        "claim_span": "{\"salgsinntekter\":6603557.00,\"sumDriftsinntekter\":7102622.00},\"driftskostnad\":{\"loennskostnad\":8942.00,\"sumDriftskostnad\":198023.00}}}}]",
+        "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "id": "1ea3bd3ece6bb233646a242bc4cc3d281cf28e42e8f58e9e356d38f85f0bcfb9",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/922645884",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:30:55.868052Z",
+        "content_sha256": "9c4738e1ea3910f4bcf2141a422421c6f33cdc0552e7fbada5e53e27bdddf9f3",
+        "claim_span": "dinaertResultatSkattekostnad\":0.00,\"aarsresultat\":6945238.00,\"totalresultat\":6945238.00,\"finansresultat\":{\"nettoFinans\":40639.00,\"finansinntekt\":{\"sumFinansinntekter\":44291.00},\"finanskostnad\":{\"sumFinanskostnad\":3652.00}},\"driftsresultat\":{\"driftsresultat\":6904599.00,\"driftsinntekter\":{\"salgsinntek",
+        "locator": "/2/resultatregnskapResultat/aarsresultat",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      }
+    ],
+    "verdict": "correct",
+    "note": "Major fields/dates and original EUR figures checked; undeclared scale retained, no currency conversion or unknown-unit percentage."
+  },
+  {
+    "orgnr": "936106536",
+    "brief": {
+      "sentences": [
+        {
+          "text": "POLARDC DRA02 AS (org. 936106536) is a private limited company in Oslo, founded in 2025, working in computing infrastructure, data processing, hosting and related activities; its registered purpose is \"Datatjenester, herunder drift av datasentre og relatert virksomhet\".",
+          "claim_ids": [
+            "00d9df7093a4b3a70efe22a3f799945ef5b68d2e54fce5037b37e56c3a01a1c8",
+            "9d3fc98127d6a37b1af4b0e24e31507545728fe28e06e6a7c163e1a4b99e971e",
+            "20b5618ae60c183e8671773497d11bf0b5c9caca687817142d13a19e27f3f5da",
+            "2d2f1780bf5cf83f9442ab55a3d3187d26ec6e6f485220944d42801b9d6e387b",
+            "8420202bf9fda38b16bb5272a0ad3fc7fdebf39abc38ba252a22840b9d3eedfa",
+            "e28b066e4ce50e132ab54e09d4a7fd03c7cdfde517b00fbc256394a292f72273",
+            "3bf7e03c8283ffa1c36472e4a3f72b995dc3bfba641a88dadd6998b7e9f2da28"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "a"
+        },
+        {
+          "text": "In FY2025, it reported a loss of EUR 1.1 million (EUR-denominated reported figures; source scale not declared, no conversion applied).",
+          "claim_ids": [
+            "30c6385471b994f52ebfab8ec08038dd58a872ca6693101693112423bd115531"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "b"
+        },
+        {
+          "text": "The registry records list 1 registered workplace in Oslo.",
+          "claim_ids": [
+            "166887ad189a5c427920bc588a34e0a736c4ccd50d34806836451ffdf70f5046"
+          ],
+          "value_kind": "derived",
+          "count": 1,
+          "record_type": "workplaces",
+          "sentence_type": "c"
+        },
+        {
+          "text": "A registry announcement dated 2 Dec 2025 records a business address change, according to the Brønnøysund Register.",
+          "claim_ids": [
+            "9da4f32c01935b61c8089c4bc8c2004eef062881db05af1809da8b7bf37d4fdc"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "d"
+        },
+        {
+          "text": "No company website could be verified.",
+          "claim_ids": [
+            "ad51bf82343cbcafc54b09c36def33c8da3ae00f7d3a9a0f068ae9af462a40a5"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "e"
+        },
+        {
+          "text": "No active job ads were found in the checked sources.",
+          "claim_ids": [
+            "d55384a0b1e033658a7c8f3d9e845302ab63721799ddb20d1de36eb2ca9d6c10"
+          ],
+          "value_kind": "reported",
+          "count": null,
+          "record_type": null,
+          "sentence_type": "f"
+        }
+      ],
+      "context_claims": [
+        {
+          "id": "9d3fc98127d6a37b1af4b0e24e31507545728fe28e06e6a7c163e1a4b99e971e",
+          "field": "snapshot.analyst.organisation_number",
+          "value": "936106536",
+          "evidence_ids": [
+            "e96f5b0038ec190602a82a3b0a6a5bec28f6e0c38eb818ddb7dce1539bfb53ff"
+          ]
+        },
+        {
+          "id": "ad51bf82343cbcafc54b09c36def33c8da3ae00f7d3a9a0f068ae9af462a40a5",
+          "field": "snapshot.analyst.website",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        },
+        {
+          "id": "d55384a0b1e033658a7c8f3d9e845302ab63721799ddb20d1de36eb2ca9d6c10",
+          "field": "snapshot.analyst.hiring",
+          "value": {
+            "state": "not_available",
+            "stale": false,
+            "supported_fields": []
+          },
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "field": "identity.founding_date",
+        "value": "2025-08-26",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "a1c4683f76e401e87ad8889057d2977f5fc6730fad014bd93ec93d3389755c35"
+        ],
+        "id": "8420202bf9fda38b16bb5272a0ad3fc7fdebf39abc38ba252a22840b9d3eedfa",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.legal_name",
+        "value": "POLARDC DRA02 AS",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e96f5b0038ec190602a82a3b0a6a5bec28f6e0c38eb818ddb7dce1539bfb53ff"
+        ],
+        "id": "00d9df7093a4b3a70efe22a3f799945ef5b68d2e54fce5037b37e56c3a01a1c8",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.municipality",
+        "value": "OSLO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "d23f1156886c2c9fcd04d84076c374adee3c6a38fe8bfb4b613b6d128b4032e3"
+        ],
+        "id": "2d2f1780bf5cf83f9442ab55a3d3187d26ec6e6f485220944d42801b9d6e387b",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.statutory_purpose",
+        "value": "Datatjenester, herunder drift av datasentre og relatert virksomhet.",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "c16f1ab9c6652799a367aaed71bc7130462093a79a37aafd304e99968d963e8e"
+        ],
+        "id": "3bf7e03c8283ffa1c36472e4a3f72b995dc3bfba641a88dadd6998b7e9f2da28",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.organisation_form",
+        "value": {
+          "kode": "AS",
+          "beskrivelse": "Aksjeselskap"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "2c1a05c4cf1c73384a02011c77d8ea1804e7d7383e8720381876219273bee525"
+        ],
+        "id": "20b5618ae60c183e8671773497d11bf0b5c9caca687817142d13a19e27f3f5da",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "identity.nace1",
+        "value": {
+          "kode": "63.100",
+          "beskrivelse": "Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "f707e553713e365a9631987d084566c35b24d9e27748d0995c91656646f41cb5"
+        ],
+        "id": "e28b066e4ce50e132ab54e09d4a7fd03c7cdfde517b00fbc256394a292f72273",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:16.007875Z",
+        "last_observed_at": "2026-11-07T05:29:16.007875Z",
+        "reasons": {}
+      },
+      {
+        "field": "subunits.unit.936697321",
+        "value": {
+          "organisation_number": "936697321",
+          "name": "POLARDC DRA02 AS",
+          "address": {
+            "adresse": [
+              "c/o EconPartner AS",
+              "Grundingen 6"
+            ],
+            "kommune": "OSLO",
+            "kommunenummer": "0301",
+            "land": "Norge",
+            "landkode": "NO",
+            "postnummer": "0250",
+            "poststed": "OSLO"
+          },
+          "nace": {
+            "beskrivelse": "Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester",
+            "kode": "63.100"
+          },
+          "employees": null
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "4496fdc6dc3e68bf4c2d95c22bf1034aedc6b5667b1a68c64d1f52fe8e865bea"
+        ],
+        "id": "166887ad189a5c427920bc588a34e0a736c4ccd50d34806836451ffdf70f5046",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:29:45.548575Z",
+        "last_observed_at": "2026-11-07T05:29:45.548575Z",
+        "reasons": {}
+      },
+      {
+        "field": "accounts.net_result",
+        "value": -1140457.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "bdd412baf6286fc7687d2d40a875f10059be2b92ec2d27ce0437ec7e7a173113"
+        ],
+        "id": "30c6385471b994f52ebfab8ec08038dd58a872ca6693101693112423bd115531",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-08-26",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:31:02.132900Z",
+        "last_observed_at": "2026-11-07T05:31:02.132900Z",
+        "reasons": {
+          "unit": "scale_not_declared_by_source_or_reviewed_openapi",
+          "unit_crosscheck": "NOK_calibration_not_applied_to_other_or_missing_currencies"
+        }
+      },
+      {
+        "field": "registry_change.ed4083dda497950c6fd1774c",
+        "value": {
+          "company_orgnr": "936106536",
+          "event_id": 23446994,
+          "date": "2025-12-02T13:05:11.864000Z",
+          "kind": "Registry announcement",
+          "date_source": "registry publication time (not effective date)",
+          "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23446994&size=1&includeChanges=true",
+          "title": "Registered business address changed",
+          "changed_field": "/forretningsadresse/adresse/1",
+          "operation": "replace",
+          "new_value": "Grundingen 6"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "7733da61df25787791bec7d5a8c1b4db79161acbc64f1cdde64d90ad11a4c56e"
+        ],
+        "id": "9da4f32c01935b61c8089c4bc8c2004eef062881db05af1809da8b7bf37d4fdc",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T05:36:38.860056Z",
+        "last_observed_at": "2026-11-07T05:36:38.860056Z",
+        "reasons": {}
+      }
+    ],
+    "evidence": [
+      {
+        "id": "a1c4683f76e401e87ad8889057d2977f5fc6730fad014bd93ec93d3389755c35",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "da95b35ee051377b5c5e074a26a66f1e01e0c7a62258d06e9925355cd0652914",
+        "claim_span": "01,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-05,2025-08-26,false,,,,,false,,true,2025-09-05,false,false,,false,,false,,false,,,,,,,Bokmål,2026-08-24,\"Datatjenester, herunder drift av datasentre og relatert virksomhet.\",\"Datatjenester, herunder drift av datasentre og relatert virksomhet.\"",
+        "locator": "row:936106536/column:stiftelsesdato",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": "2025-08-26",
+        "reporting_period": null
+      },
+      {
+        "id": "e96f5b0038ec190602a82a3b0a6a5bec28f6e0c38eb818ddb7dce1539bfb53ff",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "da95b35ee051377b5c5e074a26a66f1e01e0c7a62258d06e9925355cd0652914",
+        "claim_span": "936106536,POLARDC DRA02 AS,AS,Aksjeselskap,63.100,\"Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester\",,,,,,,false,,,,,,,,,,,,,,,\"c/o EconPartner AS\nGrundingen 6\",OSLO,0250,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-05,2025-08-26,false,,,,,false,,true,2025-09-05,f",
+        "locator": "row:936106536/column:navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d23f1156886c2c9fcd04d84076c374adee3c6a38fe8bfb4b613b6d128b4032e3",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "da95b35ee051377b5c5e074a26a66f1e01e0c7a62258d06e9925355cd0652914",
+        "claim_span": ",,,,,,false,,,,,,,,,,,,,,,\"c/o EconPartner AS\nGrundingen 6\",OSLO,0250,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-05,2025-08-26,false,,,,,false,,true,2025-09-05,false,false,,false,,false,,false,,,,,,,Bokmål,2026-08-24,\"Datatjenester, herunder drift av datasentre og relatert virks",
+        "locator": "row:936106536/column:forretningsadresse.kommune",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "c16f1ab9c6652799a367aaed71bc7130462093a79a37aafd304e99968d963e8e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "da95b35ee051377b5c5e074a26a66f1e01e0c7a62258d06e9925355cd0652914",
+        "claim_span": "5,false,false,,false,,false,,false,,,,,,,Bokmål,2026-08-24,\"Datatjenester, herunder drift av datasentre og relatert virksomhet.\",\"Datatjenester, herunder drift av datasentre og relatert virksomhet.\",false,,,2025-09-05,2025-08-26,false,30000.00,3000,Aksjekapital,,NOK,,,2025-09-05,,,,,,,,,,\r\n",
+        "locator": "row:936106536/column:vedtektsfestetFormaal",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "2c1a05c4cf1c73384a02011c77d8ea1804e7d7383e8720381876219273bee525",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "da95b35ee051377b5c5e074a26a66f1e01e0c7a62258d06e9925355cd0652914",
+        "claim_span": "936106536,POLARDC DRA02 AS,AS,Aksjeselskap,63.100,\"Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester\",,,,,,,false,,,,,,,,,,,,,,,\"c/o EconPartner AS\nGrundingen 6\",OSLO,0250,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-05,2025-08-26,false,,,,,false,,true,2025-09-05,f",
+        "locator": "row:936106536/columns:organisasjonsform.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "f707e553713e365a9631987d084566c35b24d9e27748d0995c91656646f41cb5",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:16.007875Z",
+        "content_sha256": "da95b35ee051377b5c5e074a26a66f1e01e0c7a62258d06e9925355cd0652914",
+        "claim_span": "936106536,POLARDC DRA02 AS,AS,Aksjeselskap,63.100,\"Datainfrastruktur, -behandling, -lagring og tilknyttede tjenester\",,,,,,,false,,,,,,,,,,,,,,,\"c/o EconPartner AS\nGrundingen 6\",OSLO,0250,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-05,2025-08-26,false,,,,,false,,true,2025-09-05,f",
+        "locator": "row:936106536/columns:naeringskode1.*",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4496fdc6dc3e68bf4c2d95c22bf1034aedc6b5667b1a68c64d1f52fe8e865bea",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=936106536&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:29:45.548575Z",
+        "content_sha256": "d07d4013a54feb3d419bea22ff034f48544df255ccc7e34d0490ebfd1ec54409",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936697321\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/936106536\"}},\"beliggenhetsadresse\":{\"adresse\":[\"c/o EconPartner AS\",\"Grundingen 6\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"la",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "bdd412baf6286fc7687d2d40a875f10059be2b92ec2d27ce0437ec7e7a173113",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/936106536",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:31:02.132900Z",
+        "content_sha256": "cc08fcf1615eb66cb9771f9d95f8544bbd5c4a8928dad553c7f862c82a1b13e3",
+        "claim_span": "tResultatSkattekostnad\":-321666.00,\"aarsresultat\":-1140457.00,\"totalresultat\":-1140457.00,\"finansresultat\":{\"finansinntekt\":{},\"finanskostnad\":{}},\"driftsresultat\":{\"driftsresultat\":-1462123.00,\"driftsinntekter\":{},\"driftskostnad\":{\"loennskostnad\":0.00,\"sumDriftskostnad\":1462123.00}}}}]",
+        "locator": "/0/resultatregnskapResultat/aarsresultat",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-08-26",
+          "period_end": "2025-12-31",
+          "currency": "EUR",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "id": "7733da61df25787791bec7d5a8c1b4db79161acbc64f1cdde64d90ad11a4c56e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=935422116%2C935432014%2C935450233%2C935486807%2C935499984%2C935502993%2C935556139%2C935624088%2C935624401%2C935641403%2C935666481%2C935674948%2C935691850%2C935738237%2C935794595%2C935794897%2C935809207%2C935829437%2C935831601%2C935853664%2C935856507%2C935861144%2C935868475%2C935884152%2C935941016%2C935955033%2C935999820%2C936008593%2C936010067%2C936010695%2C936043380%2C936049192%2C936052304%2C936056687%2C936073840%2C936094112%2C936106536%2C936107362%2C936256295%2C936276075%2C936312055%2C936392946%2C936428215%2C936441440%2C936544525%2C936553214%2C936563139%2C936597386%2C936621716%2C936629466%2C936673066%2C936681514%2C936703445%2C936768873%2C936801005%2C936855865%2C938092516%2C938986673%2C939725709%2C939882480%2C940572355%2C941235905%2C942393679%2C942633475%2C943189145%2C943384150%2C946381373%2C947439332%2C948415534%2C948774402%2C948850532%2C950137169%2C950220317%2C951734543%2C952049070%2C952690744%2C952785052%2C953459450%2C954081311%2C955010477%2C955098498%2C956329132%2C956409071%2C956605059%2C957883303%2C958366620%2C958415079%2C959189412%2C959876959%2C960213912%2C960694503%2C961574110%2C962148204%2C963008090%2C963116128%2C964267952%2C964898278%2C965530819%2C965835156%2C966443960%2C967933635%2C968386085%2C968468235%2C968545337%2C970979026%2C971161531%2C971173459%2C971349743%2C971400862%2C971456299%2C971492325%2C971521570%2C971558415%2C974527197%2C974533537%2C975569306%2C975822567%2C975962121%2C976183193%2C976271157%2C976289862%2C976526368%2C976623797%2C976645677%2C976746651%2C976758218%2C976843878%2C976871448%2C976886534%2C977107385%2C977126150%2C977149312%2C977250293%2C977456436%2C978714854%2C979354843%2C979709803%2C979775288%2C979870795%2C979907168%2C979973969%2C980166635%2C980362779%2C980411575%2C980622444%2C980910857%2C980973549%2C981052765%2C981058771%2C981063635%2C981089022%2C981130243%2C981391594%2C981490363%2C981508734%2C981613171%2C982189071%2C982388449%2C982410851%2C982801559%2C983025498%2C983103030%2C983244858%2C983298176%2C983430570%2C983478999%2C983485731%2C983486703%2C983520944%2C983643647%2C983651526%2C983690262%2C983742149%2C983803997%2C983901840%2C983923089%2C983947859%2C983985378%2C984024290%2C984081332%2C984133715%2C984290535%2C984414978%2C984470835%2C984590881%2C984597665%2C984611927%2C984633718%2C984717865%2C984821115%2C984852487%2C985090572%2C985204381%2C985464405%2C985470944%2C985803722%2C985830355%2C985868972%2C985891346%2C986007458&dato=2024-11-07T05%3A29%3A15.513Z&updatedBefore=2026-11-07T05%3A29%3A15.513Z&includeChanges=true&size=1000&sort=id%2CASC&page=1",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-07T05:36:38.860056Z",
+        "content_sha256": "2eb317086f2d817e2c1bda7116d325d838e088a4ea8f3488d2be87e7858ea2e8",
+        "claim_span": "sadresse/adresse/0\",\"value\":\"c/o EconPartner AS\"},{\"op\":\"replace\",\"path\":\"/forretningsadresse/adresse/1\",\"value\":\"Grundingen 6\"},{\"op\":\"replace\",\"path\":\"/vedtektsdato\",\"value\":\"2025-10-06\"},{\"op\":\"replace\",\"path\":\"/navn\",\"value\":\"POLARDC DRA02 AS\"},{\"op\":\"replace\",\"path\":\"/aktivitet/0\",\"value\":\"Data",
+        "locator": "/_embedded/oppdaterteEnheter/31/endringer/2",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "verdict": "correct",
+    "note": "Major fields/dates and original EUR figures checked; undeclared scale retained, no currency conversion or unknown-unit percentage."
+  }
+]

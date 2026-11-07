@@ -1,0 +1,38 @@
+{
+  "requests": 8477,
+  "requests_per_company": 8.437,
+  "shared_requests": 40,
+  "amortized_requests_per_company": 8.477,
+  "max_requests_per_company": 40,
+  "deadline_hits": 0,
+  "warnings": [],
+  "synthesis": {
+    "companies": 1000,
+    "sentences": 9209,
+    "cited": 9209,
+    "dropped_sentences": 0
+  },
+  "llm": {
+    "calls": 0,
+    "cache_hits": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "estimated_usd": 0,
+    "fallbacks": 0
+  },
+  "search": {
+    "status": "not configured",
+    "queries": 0,
+    "estimated_usd": 0.0,
+    "provider": null,
+    "companies_queried": 0,
+    "unit_price_usd": 0.005,
+    "price_note": "estimate at configured unit price; one query per company; no free credit assumed",
+    "budget_usd": 0.0,
+    "errors": 0,
+    "cap_skips": 0,
+    "inactive_skips": 0,
+    "result_domains": 0
+  },
+  "cost_usd": null
+}
