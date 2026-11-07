@@ -1,0 +1,1895 @@
+{
+  "seed": 20261107,
+  "sampling": "Stratified random: 10 claims per family, distinct companies within each family; cover present new-field categories before filling randomly.",
+  "items": [
+    {
+      "organisation_number": "921108249",
+      "claim": {
+        "field": "identity.business_address_country_code",
+        "value": "NO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "ec06d462249499a17d48d2e661bfd85a2fefa0d0e3ab6d0c1d9bc9cf7ba6f612"
+        ],
+        "id": "9cd1d380f13d3ecc26550300d3cb642935a4b7358926aed10db9a00226e62405",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:28.176312Z",
+        "last_observed_at": "2026-11-07T00:00:28.176312Z",
+        "reasons": {
+          "label": "Business address country code"
+        }
+      },
+      "evidence": [
+        {
+          "id": "ec06d462249499a17d48d2e661bfd85a2fefa0d0e3ab6d0c1d9bc9cf7ba6f612",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:28.176312Z",
+          "content_sha256": "bc1a602ace9db0af35267d4705231d9cbc73df66c6e649972c13ef644b480b2f",
+          "claim_span": ",,,,,,,,,,,,Samvirkeveien 39,HAMARVIK,7263,FRØYA,5014,Norge,NO,2100,Private aksjeselskaper mv.,2025,2018-07-03,2018-06-05,true,2018-09-01,2018-10-03,,,false,,true,2018-07-03,false,false,,false,,false,,false,,,,,,,Bokmål,2018-06-05,Vedlikehold og Reparasjon samt mekanisk arbeid.,Vedlikehold og Repara",
+          "locator": "row:921108249/column:forretningsadresse.landkode",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "NO",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Business country NO matches the business-address column, not the postal address."
+    },
+    {
+      "organisation_number": "924828099",
+      "claim": {
+        "field": "identity.historical_name.f4a4dde8fe0f0129c01426cf",
+        "value": {
+          "navn": "UN17 CONSULT AS",
+          "fraDato": "2020-03-24 18:27:39",
+          "tilDato": "2020-04-22 16:44:44"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "a3a72e4fe1a89016c5908c23f17811e531af4d030bbcc28091d19705f3551b6e"
+        ],
+        "id": "0a8f02762f81be2b2cfeac922ea52c57922970fbf9a7bb1e557589b54b75047c",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:35.952866Z",
+        "last_observed_at": "2026-11-07T00:00:35.952866Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "a3a72e4fe1a89016c5908c23f17811e531af4d030bbcc28091d19705f3551b6e",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/924828099",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:35.952866Z",
+          "content_sha256": "56ba61545a1469453d95caa0075baf037b40a9f62f2457de9863693fdddbf118",
+          "claim_span": "steret/api/enheter/924828099\"}},\"historiskeNavn\":[{\"fraDato\":\"2020-03-24 18:27:39\",\"navn\":\"UN17 CONSULT AS\",\"tilDato\":\"2020-04-22 16:44:44\"}],\"navn\":\"ECOFRIC AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjese",
+          "locator": "/historiskeNavn/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2020-03-24 18:27:39",
+        "navn": "UN17 CONSULT AS",
+        "tilDato": "2020-04-22 16:44:44"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "ECOFRIC historical name UN17 CONSULT AS and both 2020 boundaries match this exact orgnr; not a different company."
+    },
+    {
+      "organisation_number": "998138558",
+      "claim": {
+        "field": "identity.postal_address_country_code",
+        "value": "NO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "f9168f9b28e6785dc7d269369cfa8036fa44a274ccec9b51403f7ee44653b937"
+        ],
+        "id": "3c729b6db029193434d55fe4e8eb810f454db653a63751e82486cc5537aa2605",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:29.352537Z",
+        "last_observed_at": "2026-11-07T00:00:29.352537Z",
+        "reasons": {
+          "label": "Postal address country code"
+        }
+      },
+      "evidence": [
+        {
+          "id": "f9168f9b28e6785dc7d269369cfa8036fa44a274ccec9b51403f7ee44653b937",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:29.352537Z",
+          "content_sha256": "7f94d5e8856daf034f61f619c5c0f15609f6d42c947d89476fe1f0f230f41cd2",
+          "claim_span": "Rådhusgata 14B\",KRISTIANSAND S,4611,KRISTIANSAND,4204,Norge,NO,Borgåsen 10A,GRIMSTAD,4885,GRIMSTAD,4202,Norge,NO,,,2025,2012-04-02,2011-06-21,false,,,,,false,,true,2012-04-02,false,false,,false,,false,,false,,,,,,,Bokmål,2012-03-07,Eierseksjonssameie.,Eierseksjonssameie.,false,,,,,false,,,,,,,,,,,,,",
+          "locator": "row:998138558/column:postadresse.landkode",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "NO",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Postal country NO copied separately from the business address."
+    },
+    {
+      "organisation_number": "995516926",
+      "claim": {
+        "field": "identity.registry_annotations",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "96b19990022416cdd1dc6ce36ac112778ccbed3187739d03a0ce59d0a59c15ba"
+        ],
+        "id": "90570316dd19e6954b5b623e44dc5e6eb7b176c9a7412b5785221572de8a496f",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:29.278982Z",
+        "last_observed_at": "2026-11-07T00:00:29.278982Z",
+        "reasons": {
+          "label": "Registry annotations"
+        }
+      },
+      "evidence": [
+        {
+          "id": "96b19990022416cdd1dc6ce36ac112778ccbed3187739d03a0ce59d0a59c15ba",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:29.278982Z",
+          "content_sha256": "2021273715595fb44dc437f672b0d995adc9b3aad849841e5ff0bc679766ee47",
+          "claim_span": "BYGG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,false,,,,,jarskoge@online.no,57 65 30 99,913 45 866,,,,,,,,Grønlund 2,LEIKANGER,6863,SOGNDAL,4640,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-05-15,2010-04-05,true,2010-05-01,2010-06-10,,,false,,true,2010-05-15,false,false,,false,,fa",
+          "locator": "row:995516926/column:paategninger",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "false",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Explicit paategninger=false in the selected CSV column; no missing flag default."
+    },
+    {
+      "organisation_number": "919931477",
+      "claim": {
+        "field": "identity.voluntary_vat_descriptions",
+        "value": "Utleier av bygg eller anlegg",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "50f570177ec7af17b520d468690a48e0ead04cb04867195d98d1b48587d50dfe"
+        ],
+        "id": "d2e72d9557c8ba918abf7bbf24a979673d11a4fd204d6d76507558d1b03e971b",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:28.143124Z",
+        "last_observed_at": "2026-11-07T00:00:28.143124Z",
+        "reasons": {
+          "label": "Voluntary VAT registration descriptions"
+        }
+      },
+      "evidence": [
+        {
+          "id": "50f570177ec7af17b520d468690a48e0ead04cb04867195d98d1b48587d50dfe",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:28.143124Z",
+          "content_sha256": "294b98a816ffc1c9f1286503d1f8b1eefa8cab4f51fb5cae5d89d5bb78ac816c",
+          "claim_span": "r mv.,2025,2017-11-22,2017-11-06,true,2018-03-01,2018-05-26,Utleier av bygg eller anlegg,2018-05-26,false,,true,2017-11-22,false,false,,false,,false,,false,,,,,,,Bokmål,2018-03-23,\"Direkte eller indirekte eie og leie/utleie av fast eiendom, eie av aksjer og annen form for deltakelse i andre selskape",
+          "locator": "row:919931477/column:frivilligMvaRegistrertBeskrivelser",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "Utleier av bygg eller anlegg",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Exact voluntary-VAT rental description retained; no broader VAT conclusion."
+    },
+    {
+      "organisation_number": "934929187",
+      "claim": {
+        "field": "identity.business_address_country_code",
+        "value": "NO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "2c3c1843cdae4965d7bb6054d800179c4efda1359eb1a6360b8cd497f257a55c"
+        ],
+        "id": "3afcf47b9b93eb13e665761fb7d0f5a3c08fee0a2db5e497b0977e15bad669cc",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:28.685902Z",
+        "last_observed_at": "2026-11-07T00:00:28.685902Z",
+        "reasons": {
+          "label": "Business address country code"
+        }
+      },
+      "evidence": [
+        {
+          "id": "2c3c1843cdae4965d7bb6054d800179c4efda1359eb1a6360b8cd497f257a55c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:28.685902Z",
+          "content_sha256": "d1c48b7f1865d7b664aea59eca836469d11e09f78240e48c9d27ff89edb5f6ed",
+          "claim_span": "11,2026-03-10,,,,,Eidgata 15A,LARVIK,3264,LARVIK,3909,Norge,NO,Kongegata 29,LARVIK,3256,LARVIK,3909,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-01-28,2025-01-20,true,2025-07-07,2025-07-08,,,false,,true,2025-01-28,false,false,,false,,false,,false,,,,,,,Bokmål,2025-01-20,\"Selge varer og tjenest",
+          "locator": "row:934929187/column:forretningsadresse.landkode",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "NO",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Business-address country NO at the selected row/column."
+    },
+    {
+      "organisation_number": "998407257",
+      "claim": {
+        "field": "identity.business_address_country_code",
+        "value": "NO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "6c06a35440c718e002d223f0f0d486be5230e7e5e45d60689415d1c114780d0c"
+        ],
+        "id": "07e3c497188a53894f51fd29a51b198bb5713479a16a908843d12c883080422c",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:29.360182Z",
+        "last_observed_at": "2026-11-07T00:00:29.360182Z",
+        "reasons": {
+          "label": "Business address country code"
+        }
+      },
+      "evidence": [
+        {
+          "id": "6c06a35440c718e002d223f0f0d486be5230e7e5e45d60689415d1c114780d0c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:29.360182Z",
+          "content_sha256": "5112435d77cbb1d6f4a5e6cedda16fa106be6875fd1236a39b5e703fb463b3a9",
+          "claim_span": "08 035,,,,,,,,Skotabergvegen 52,STORD,5411,STORD,4614,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-05-22,2012-05-03,false,,,,,false,,true,2012-05-22,false,false,,false,,false,,false,,,,,,,Bokmål,2012-05-03,\"Fremstilling/salg av produkter for elektronisk interaktiv underholding, generell progra",
+          "locator": "row:998407257/column:forretningsadresse.landkode",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "NO",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Business-address country NO; no website ownership inference."
+    },
+    {
+      "organisation_number": "929207157",
+      "claim": {
+        "field": "identity.registry_annotations",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "b77df99494b2dded0dfa023114c9dd237f0bc0fad55d17b2dba7ca8d90d5ed07"
+        ],
+        "id": "a64e21634ad9a0c0841fe3ad0fbbae51393618af156ea7734be64d63424eeca1",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:28.459719Z",
+        "last_observed_at": "2026-11-07T00:00:28.459719Z",
+        "reasons": {
+          "label": "Registry annotations"
+        }
+      },
+      "evidence": [
+        {
+          "id": "b77df99494b2dded0dfa023114c9dd237f0bc0fad55d17b2dba7ca8d90d5ed07",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:28.459719Z",
+          "content_sha256": "563200cc53d40f08ab080b03760a0cc27d33a7470f81fa47ef38de2151c9a2f6",
+          "claim_span": "Aksjeselskap,68.110,Kjøp og salg av egen fast eiendom,,,,,,,false,,,,,,,,,,,,,,,\"c/o Marius Snogdal Jensen\nLouises gate 26A\",OSLO,0169,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-05-12,2022-04-04,false,,,,,false,,true,2022-05-12,false,false,,false,,false,,false,,,,,,,Bokmål,2022-04-",
+          "locator": "row:929207157/column:paategninger",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "false",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Explicit registry-annotation flag false; not inferred from missing data."
+    },
+    {
+      "organisation_number": "971173459",
+      "claim": {
+        "field": "identity.business_address_country_code",
+        "value": "NO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "37a8c3318582e1f861cb700127a7649933b7e03377cd6c13fd7f13d7c2cd8e4c"
+        ],
+        "id": "28a45c470e698767b11c68e887ddec094affc90d8c4e5a93a67fecac46195134",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:28.913095Z",
+        "last_observed_at": "2026-11-07T00:00:28.913095Z",
+        "reasons": {
+          "label": "Business address country code"
+        }
+      },
+      "evidence": [
+        {
+          "id": "37a8c3318582e1f861cb700127a7649933b7e03377cd6c13fd7f13d7c2cd8e4c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:28.913095Z",
+          "content_sha256": "b1822cde23ff54750ab91caadff2c8eca749fc046808e79932fbcb550bef46bb",
+          "claim_span": " Montem AS\nC. Sundts gate 55\",BERGEN,5004,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1994-10-14,true,2006-09-01,2006-12-05,Utleier av bygg eller anlegg,2021-03-08,false,,true,1994-11-14,false,false,,false,,false,,false,,,,,,,Bokmål,2022-02-23,Eie og drive fast eiendom.,Eie ",
+          "locator": "row:971173459/column:forretningsadresse.landkode",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "NO",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Business country NO; the c/o address is not interpreted as a workplace."
+    },
+    {
+      "organisation_number": "983478999",
+      "claim": {
+        "field": "identity.business_address_country_code",
+        "value": "NO",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "615f3898f82c593bd729e90437fe6d1544158699f9cbf620bb507322aaf0f51a"
+        ],
+        "id": "67f54228602b0f85a97fc69218262d391d344de51eb6a7c195aecc1d870903ec",
+        "family": "identity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:29.011500Z",
+        "last_observed_at": "2026-11-07T00:00:29.011500Z",
+        "reasons": {
+          "label": "Business address country code"
+        }
+      },
+      "evidence": [
+        {
+          "id": "615f3898f82c593bd729e90437fe6d1544158699f9cbf620bb507322aaf0f51a",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:29.011500Z",
+          "content_sha256": "f5f0d8244bccf0e101def53f3f44175b1a56263a1556199b72ad2ab205581667",
+          "claim_span": "983478999,NORSK MEDIEHISTORISK FORENING,FLI,Forening/lag/innretning,94.992,Aktiviteter i andre medlemsorganisasjoner ellers,,,,,,,false,,,,www.mediehistorisk.no,,22 86 12 00,46860377,,,,,,,,\"c/o Mediebedriftenes Landsforening\nSkippergata 24\",OSLO,0154,OSLO,0301,Norge,NO,7000,Ideelle organisasjoner,2",
+          "locator": "row:983478999/column:forretningsadresse.landkode",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry.csv:sha256:b5b3462dc1a27dbf5383ee91508b6126f6ccf9b3b8c9e190dd31d601413e1850",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "NO",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Business country NO for this association, not an inferred operating location."
+    },
+    {
+      "organisation_number": "922661650",
+      "claim": {
+        "field": "roles.detail.28ae1a50613e00538a9f5ee2.0.birth_year",
+        "value": 1992,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "60544869f13197eb3591ffdd9040160a0ff48b85d1ecba9adea5ef4205d69132"
+        ],
+        "id": "261b9c6ccf6a12001cbd5ed086520fbedd9d6b14629077461ffccfdab98b97a5",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:34.742971Z",
+        "last_observed_at": "2026-11-07T00:01:34.742971Z",
+        "reasons": {
+          "label": "Birth year"
+        }
+      },
+      "evidence": [
+        {
+          "id": "60544869f13197eb3591ffdd9040160a0ff48b85d1ecba9adea5ef4205d69132",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/922661650/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:34.742971Z",
+          "content_sha256": "8b1a60e9254b533a1cccb176744a69a24d6cf2d8236caa715e6ca8b228c4202f",
+          "claim_span": "ert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1992-03-01\",\"navn\":{\"etternavn\":\"Hellerud\",\"fornavn\":\"Knut-Arvid\"}},\"rekkefolge\":1,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem\",\"kode\":\"MEDL\"}},{\"avregistrert\":fal",
+          "locator": "/rollegrupper/0/roller/1/person/fodselsdato",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "1992-03-01",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Knut-Arvid Hellerud, MEDL: 1992 is exactly the year of 1992-03-01."
+    },
+    {
+      "organisation_number": "921634544",
+      "claim": {
+        "field": "roles.detail.bece84e29b821643c2774040.0.insolvency_administrator",
+        "value": {
+          "navn": "Adv. Per Ove Sørholt",
+          "postadresse": {
+            "adresse": [
+              "Postboks 233"
+            ],
+            "landkode": "NO",
+            "postnummer": "7601",
+            "poststed": "LEVANGER"
+          },
+          "erDoed": false
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "a551b1e60f48a578209513b13b25b526f1268af57da625c1c67e7da42092b4e7"
+        ],
+        "id": "f361669c4f281619b675a372fd17f482f4087fbb1b9df332ca73d9b50cfe806b",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:02:10.976714Z",
+        "last_observed_at": "2026-11-07T00:02:10.976714Z",
+        "reasons": {
+          "label": "Registered insolvency administrator"
+        }
+      },
+      "evidence": [
+        {
+          "id": "a551b1e60f48a578209513b13b25b526f1268af57da625c1c67e7da42092b4e7",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/921634544/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:02:10.976714Z",
+          "content_sha256": "4943ca3871c8fdb5099c987fc2571cd3e7381314c4290c0bed56c7673ec74b88",
+          "claim_span": "GL\"}},{\"roller\":[{\"avregistrert\":false,\"bostyrer\":{\"navn\":\"Adv. Per Ove Sørholt\",\"postadresse\":{\"adresse\":[\"Postboks 233\"],\"landkode\":\"NO\",\"postnummer\":\"7601\",\"poststed\":\"LEVANGER\"},\"erDoed\":false},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rol",
+          "locator": "/rollegrupper/1/roller/0/bostyrer",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "navn": "Adv. Per Ove Sørholt",
+        "postadresse": {
+          "adresse": [
+            "Postboks 233"
+          ],
+          "landkode": "NO",
+          "postnummer": "7601",
+          "poststed": "LEVANGER"
+        },
+        "erDoed": false
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Adv. Per Ove S?rholt and professional postal address are the registered administrator; not a company workplace."
+    },
+    {
+      "organisation_number": "979354843",
+      "claim": {
+        "field": "roles.detail.d39e5f49850281d45fb9c3cf.0.person_deceased",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "c5fc8fbc73ad422b0082903d666bb57328be28b79d88fb27a05102c81436ea09"
+        ],
+        "id": "cf7112683f98a652fcc83074110d52f8e2de46f17df382b112dc86645cbdb6c6",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:02:34.125802Z",
+        "last_observed_at": "2026-11-07T00:02:34.125802Z",
+        "reasons": {
+          "label": "Registered as deceased"
+        }
+      },
+      "evidence": [
+        {
+          "id": "c5fc8fbc73ad422b0082903d666bb57328be28b79d88fb27a05102c81436ea09",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/979354843/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:02:34.125802Z",
+          "content_sha256": "25e028f885325e714eac1bea444edc8bdf1ff88ab2fc613c90bb70384767abd9",
+          "claim_span": "\"MEDL\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1972-02-27\",\"navn\":{\"etternavn\":\"Lutdal\",\"fornavn\":\"Rune\"}},\"rekkefolge\":4,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem\",\"kode\":\"MEDL\"}}],\"sistE",
+          "locator": "/rollegrupper/0/roller/4/person/erDoed",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": false,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Rune Lutdal: erDoed=false retained as a registry flag, not an independent life-status investigation."
+    },
+    {
+      "organisation_number": "952049070",
+      "claim": {
+        "field": "roles.detail.fe452ee8c152fb6aba826d04.0.birth_year",
+        "value": 1943,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "32990991cb3640b06a5dc9e5384c85c19488b13b7b3cd50ae1bffda732a673c8"
+        ],
+        "id": "92dcfe27a76373af261599c13c89b1da24b88ad42df0beac0ed2d301f296f0fb",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:08.078795Z",
+        "last_observed_at": "2026-11-07T00:03:08.078795Z",
+        "reasons": {
+          "label": "Birth year"
+        }
+      },
+      "evidence": [
+        {
+          "id": "32990991cb3640b06a5dc9e5384c85c19488b13b7b3cd50ae1bffda732a673c8",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/952049070/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:08.078795Z",
+          "content_sha256": "bd38533e8c73e609697fbb84b0399e3f73d682e88627c1aa17e20dc436589df0",
+          "claim_span": "ert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1943-01-19\",\"navn\":{\"etternavn\":\"Osvold\",\"fornavn\":\"Harald Otto\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE\"}},\"beskrivelse\":\"Styrets leder\",\"kode\":\"LEDE\"},\"valgtAv\":{\"_links\"",
+          "locator": "/rollegrupper/0/roller/0/person/fodselsdato",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "1943-01-19",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Harald Otto Osvold, LEDE: 1943 copied from 1943-01-19."
+    },
+    {
+      "organisation_number": "981508734",
+      "claim": {
+        "field": "roles.detail.2e8d3c3a9d1b5f6715b7d40b.0.person_deceased",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "30ec17d9aa61bf8650f256e502bec0a5caa4e5160f4ee6c191ee0ba147a597ad"
+        ],
+        "id": "62ba26798c821b3c441e5941c4cb298a875b7254795f37e65068f83e558f966c",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:10.600149Z",
+        "last_observed_at": "2026-11-07T00:01:10.600149Z",
+        "reasons": {
+          "label": "Registered as deceased"
+        }
+      },
+      "evidence": [
+        {
+          "id": "30ec17d9aa61bf8650f256e502bec0a5caa4e5160f4ee6c191ee0ba147a597ad",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/981508734/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:10.600149Z",
+          "content_sha256": "a19e522b58b6191bb6ee1220114cc91b6a3978175fd0c9924d72325a13c37bfe",
+          "claim_span": "\"A-AK\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1968-12-05\",\"navn\":{\"etternavn\":\"Støle\",\"fornavn\":\"Elisabeth\",\"mellomnavn\":\"Maråk\"}},\"rekkefolge\":5,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem",
+          "locator": "/rollegrupper/1/roller/5/person/erDoed",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": false,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Elisabeth Mar?k St?le: exact false erDoed flag on the selected member record."
+    },
+    {
+      "organisation_number": "992068434",
+      "claim": {
+        "field": "roles.detail.b226d1a85cbef7e04fd2f3e2.0.birth_year",
+        "value": 1964,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "7d90becad45d8128dc3f3bae9b04e9046811ba233141b80b7d67545f6fc445bd"
+        ],
+        "id": "c36421848fb8cda26f6a4245f58932d020bfe24beba431e4a120f884b3f74d02",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:02:34.642416Z",
+        "last_observed_at": "2026-11-07T00:02:34.642416Z",
+        "reasons": {
+          "label": "Birth year"
+        }
+      },
+      "evidence": [
+        {
+          "id": "7d90becad45d8128dc3f3bae9b04e9046811ba233141b80b7d67545f6fc445bd",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992068434/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:02:34.642416Z",
+          "content_sha256": "c651d7d34b69d4b206f88d8de57978977fc2499d60dde6117c2f3cc809a2d90d",
+          "claim_span": "ert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1964-12-05\",\"navn\":{\"etternavn\":\"Jensen\",\"fornavn\":\"Per Arne\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE\"}},\"beskrivelse\":\"Styrets leder\",\"kode\":\"LEDE\"}},{\"avregistrert\":false",
+          "locator": "/rollegrupper/0/roller/0/person/fodselsdato",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "1964-12-05",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Per Arne Jensen, LEDE: 1964 copied from 1964-12-05."
+    },
+    {
+      "organisation_number": "998349532",
+      "claim": {
+        "field": "roles.detail.ac7627ef52951a9d06e39622.0.person_deceased",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "857cc5394dd1f903c33f14e35e7880966f24659538d77837857719e75b3c1b38"
+        ],
+        "id": "225c0baca9a67daee177b29542a128a457cbc0355ac6f7502e7ed2cbb969d3fc",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:02:29.657560Z",
+        "last_observed_at": "2026-11-07T00:02:29.657560Z",
+        "reasons": {
+          "label": "Registered as deceased"
+        }
+      },
+      "evidence": [
+        {
+          "id": "857cc5394dd1f903c33f14e35e7880966f24659538d77837857719e75b3c1b38",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/998349532/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:02:29.657560Z",
+          "content_sha256": "0605adc9ef9201c4623d5b46c6ada9a31cd3a4560a719eae7153e21cd61042f4",
+          "claim_span": "\"LEDE\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1994-02-04\",\"navn\":{\"etternavn\":\"Kellerhals\",\"fornavn\":\"Ola\"}},\"rekkefolge\":1,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem\",\"kode\":\"MEDL\"}},{\"av",
+          "locator": "/rollegrupper/2/roller/1/person/erDoed",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": false,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Ola Kellerhals: exact false erDoed flag; no additional role assertion."
+    },
+    {
+      "organisation_number": "889806192",
+      "claim": {
+        "field": "roles.detail.845e768085c808c70b4a5a5e.0.person_deceased",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "b00411868c680d6dc80f434b01a7e2e5eb3a598c20dc12896a7ef6862e277696"
+        ],
+        "id": "b96a1f6918bd06674aa7809f6c4ae517a22e395752d355058cf4d0789dcf04e3",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:02:51.065855Z",
+        "last_observed_at": "2026-11-07T00:02:51.065855Z",
+        "reasons": {
+          "label": "Registered as deceased"
+        }
+      },
+      "evidence": [
+        {
+          "id": "b00411868c680d6dc80f434b01a7e2e5eb3a598c20dc12896a7ef6862e277696",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/889806192/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:02:51.065855Z",
+          "content_sha256": "f2934710398310bb921b26f88cf272fd7f10e12a9364a7627068724055990ee8",
+          "claim_span": "\"roller\":[{\"avregistrert\":true,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1968-10-19\",\"navn\":{\"etternavn\":\"Brekken\",\"fornavn\":\"Alf Bernt\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}}]",
+          "locator": "/rollegrupper/0/roller/0/person/erDoed",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": false,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Alf Bernt Brekken: erDoed=false is independent of avregistrert=true; no active-director claim added."
+    },
+    {
+      "organisation_number": "913772431",
+      "claim": {
+        "field": "roles.detail.8c15b302a9164ddd7e700c62.0.birth_year",
+        "value": 1960,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "f85a6383fa64fc19eb55a1d0f5540e4b84bd7097ac65fc7ca7a1c1e1d8343875"
+        ],
+        "id": "363286903d3761eb2106ef3937f8fb385f90cd9c2882267311bca96f97e3d345",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:29.794482Z",
+        "last_observed_at": "2026-11-07T00:03:29.794482Z",
+        "reasons": {
+          "label": "Birth year"
+        }
+      },
+      "evidence": [
+        {
+          "id": "f85a6383fa64fc19eb55a1d0f5540e4b84bd7097ac65fc7ca7a1c1e1d8343875",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/913772431/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:29.794482Z",
+          "content_sha256": "28b1e038038a72b5c1081280f3de74c2ff6aa8b7ff7bc553968ea752e96c6735",
+          "claim_span": "ert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1960-07-20\",\"navn\":{\"etternavn\":\"Stautland\",\"fornavn\":\"Kari\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE\"}},\"beskrivelse\":\"Styrets leder\",\"kode\":\"LEDE\"}},{\"avregistrert\":false,",
+          "locator": "/rollegrupper/1/roller/0/person/fodselsdato",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": "1960-07-20",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Kari Stautland, LEDE: 1960 copied from 1960-07-20."
+    },
+    {
+      "organisation_number": "995372614",
+      "claim": {
+        "field": "roles.detail.34490de2e7a315f947dca7f3.0.person_deceased",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "1a97094a7e1451f9dac21fd25f0be02bad8dd76455d187030c2abed7c413df61"
+        ],
+        "id": "fbbc403671f6294b997e4e4ba4f10982078b8da77e2a5f74f5ec6fd89301fb8e",
+        "family": "roles",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:05:07.484513Z",
+        "last_observed_at": "2026-11-07T00:05:07.484513Z",
+        "reasons": {
+          "label": "Registered as deceased"
+        }
+      },
+      "evidence": [
+        {
+          "id": "1a97094a7e1451f9dac21fd25f0be02bad8dd76455d187030c2abed7c413df61",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/995372614/roller",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:05:07.484513Z",
+          "content_sha256": "b810844e9e4e32038d8adbe99752ef9f3dce892e02803786609ccb02ef2197bc",
+          "claim_span": "\"MEDL\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1959-08-14\",\"navn\":{\"etternavn\":\"Hellesund\",\"fornavn\":\"Arvid\"}},\"rekkefolge\":4,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem\",\"kode\":\"MEDL\"}}],\"s",
+          "locator": "/rollegrupper/0/roller/4/person/erDoed",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": false,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Arvid Hellesund: exact false erDoed flag from the selected member."
+    },
+    {
+      "organisation_number": "985204381",
+      "claim": {
+        "field": "subunits.detail.985461678.historical_name.4a20461a61fe4d4d9f3f0026",
+        "value": {
+          "navn": "ELVEKRAFT AS",
+          "fraDato": "2009-08-27 20:34:21",
+          "tilDato": "2013-03-04 20:56:39"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "3ec8e23a64d2b2f703e5d588155fe4cee61af424e6221d2f558306c01d9c82a8"
+        ],
+        "id": "99a8a7531fc1e8f0d2fdfd6e11933a517f9ddee3303b8062c51cbc64bd3dc370",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:46.394591Z",
+        "last_observed_at": "2026-11-07T00:00:46.394591Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "3ec8e23a64d2b2f703e5d588155fe4cee61af424e6221d2f558306c01d9c82a8",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=985204381&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:46.394591Z",
+          "content_sha256": "0be9f1df86160e0d94f0f4beddfa1a862f72728cdb65088039ad60e6a853589d",
+          "claim_span": "POOL GRUPPEN AS\",\"tilDato\":\"2009-08-27 20:34:21\"},{\"fraDato\":\"2009-08-27 20:34:21\",\"navn\":\"ELVEKRAFT AS\",\"tilDato\":\"2013-03-04 20:56:39\"},{\"fraDato\":\"2013-03-04 20:56:39\",\"navn\":\"CLEMENS ELVEKRAFT AS\",\"tilDato\":\"2013-10-07 20:24:55\"}],\"hjemmeside\":\"www.clemenskraft.no\",\"naeringskode1\":{\"beskrivelse\"",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/1",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2009-08-27 20:34:21",
+        "navn": "ELVEKRAFT AS",
+        "tilDato": "2013-03-04 20:56:39"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "ELVEKRAFT AS 2009?2013 is a former name of subunit 985461678, not a historical parent-company assertion."
+    },
+    {
+      "organisation_number": "980973549",
+      "claim": {
+        "field": "subunits.detail.974830191.secondary_nace",
+        "value": {
+          "beskrivelse": "Drift av hoteller",
+          "kode": "55.100"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "ba92c5469f48e1b80117ed35c4dc7951fab68a95fefd9a6da47ed4fd2ed5be95"
+        ],
+        "id": "c549e39d4541a00d795c77386a168a6d659b39555c190a3a2dfc0f921f30907a",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:53.092361Z",
+        "last_observed_at": "2026-11-07T00:00:53.092361Z",
+        "reasons": {
+          "label": "Secondary registered industry"
+        }
+      },
+      "evidence": [
+        {
+          "id": "ba92c5469f48e1b80117ed35c4dc7951fab68a95fefd9a6da47ed4fd2ed5be95",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=980973549&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:53.092361Z",
+          "content_sha256": "51b2b7677b83df17f0dc91e92d5bc4bddb5869d7cb99b8d76c217f7b0237c346",
+          "claim_span": "else- og omsorg\",\"kode\":\"87.101\"},\"naeringskode2\":{\"beskrivelse\":\"Drift av hoteller\",\"kode\":\"55.100\"},\"navn\":\"SKOGLI HELSE OG REHABILITERINGSSENTER AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til ",
+          "locator": "/_embedded/underenheter/0/naeringskode2",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "beskrivelse": "Drift av hoteller",
+        "kode": "55.100"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Skogli subunit secondary NACE 55.100/hotel operations is explicitly naeringskode2, not replacement of the primary industry."
+    },
+    {
+      "organisation_number": "915042759",
+      "claim": {
+        "field": "subunits.detail.915056415.historical_name.eaa96e96f1e614806d488c12",
+        "value": {
+          "navn": "AHIDANE'S INTERIØR AS",
+          "fraDato": "2015-03-02 20:23:46",
+          "tilDato": "2024-10-24 14:37:14"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e6f322c1ba831868f5cbf9ef7a6a205ff6949dc8363403a5e14ff04e2c60c691"
+        ],
+        "id": "5e7ade01c99800dcd9e8076fd6903a38fd5a3efd7dff56e87af3ac9d11499152",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:05.626927Z",
+        "last_observed_at": "2026-11-07T00:01:05.626927Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "e6f322c1ba831868f5cbf9ef7a6a205ff6949dc8363403a5e14ff04e2c60c691",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915042759&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:05.626927Z",
+          "content_sha256": "7ed6f85ca4a195d7a336da2f737ab5a81e1a4daf04a186a8a043b66057e88943",
+          "claim_span": "rRegistrertAntallAnsatte\":false,\"historiskeNavn\":[{\"fraDato\":\"2015-03-02 20:23:46\",\"navn\":\"AHIDANE'S INTERIØR AS\",\"tilDato\":\"2024-10-24 14:37:14\"}],\"mobil\":\"930 66 841\",\"naeringskode1\":{\"beskrivelse\":\"Catering for arrangementer\",\"kode\":\"56.210\"},\"navn\":\"ATLAS CATERING AS\",\"oppstartsdato\":\"2015-03-01",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2015-03-02 20:23:46",
+        "navn": "AHIDANE'S INTERIØR AS",
+        "tilDato": "2024-10-24 14:37:14"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "AHIDANE'S INTERI?R AS and 2015?2024 boundaries belong to subunit 915056415."
+    },
+    {
+      "organisation_number": "929942167",
+      "claim": {
+        "field": "subunits.detail.985769915.historical_name.6eeb5d3fa7e3e122c017c4d2",
+        "value": {
+          "navn": "PALETTEN KINA RESTAURANT",
+          "fraDato": "2008-10-29 20:23:54",
+          "tilDato": "2015-05-27 20:15:01"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "50cd45b9f1133cceafa51817340f70b7c14f048b10487bd4638cd4ee19909832"
+        ],
+        "id": "b66088434b181a88a25fee6b07675fac668eb2c274d2d20c8ea57e5f6b4cc7ca",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:00.128844Z",
+        "last_observed_at": "2026-11-07T00:01:00.128844Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "50cd45b9f1133cceafa51817340f70b7c14f048b10487bd4638cd4ee19909832",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=929942167&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:00.128844Z",
+          "content_sha256": "982f5bad2632b9995d1ebc396abe2c6d07e549a7e74c1a3a8d02604234317b44",
+          "claim_span": "navn\":\"PALETTEN\",\"tilDato\":\"2008-10-29 20:23:54\"},{\"fraDato\":\"2008-10-29 20:23:54\",\"navn\":\"PALETTEN KINA RESTAURANT\",\"tilDato\":\"2015-05-27 20:15:01\"},{\"fraDato\":\"2015-05-27 20:15:01\",\"navn\":\"PALETTEN RESTAURANT AS\",\"tilDato\":\"2022-10-04 21:10:58\"}],\"naeringskode1\":{\"beskrivelse\":\"Drift av restaurant",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/2",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2008-10-29 20:23:54",
+        "navn": "PALETTEN KINA RESTAURANT",
+        "tilDato": "2015-05-27 20:15:01"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "PALETTEN KINA RESTAURANT and 2008?2015 boundaries belong to subunit 985769915."
+    },
+    {
+      "organisation_number": "916774028",
+      "claim": {
+        "field": "subunits.detail.989964631.historical_name.90781ea28c1916635b9209af",
+        "value": {
+          "navn": "REIDARS TRAFIKKSKOLE AS",
+          "fraDato": "2012-06-19 20:46:36",
+          "tilDato": "2016-12-06 20:07:43"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "4619b375984fca17866c1411e286a1ba4a4bbc3904a0cfaec3074fab9481b15a"
+        ],
+        "id": "ca1cc5569dddc3c2ca53e58167522480739ce089905d52c9b184f9eb13ae65b2",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:02.919977Z",
+        "last_observed_at": "2026-11-07T00:01:02.919977Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "4619b375984fca17866c1411e286a1ba4a4bbc3904a0cfaec3074fab9481b15a",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=916774028&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:02.919977Z",
+          "content_sha256": "df2a9de55d80d7410a3f43a12a11822720082f1ac8115e80a5f5e8667dc3f5f0",
+          "claim_span": "\":\"REIDAR SENUM\",\"tilDato\":\"2012-06-19 20:46:36\"},{\"fraDato\":\"2012-06-19 20:46:36\",\"navn\":\"REIDARS TRAFIKKSKOLE AS\",\"tilDato\":\"2016-12-06 20:07:43\"}],\"hjemmeside\":\"www.reidarstrafikkskole.no\",\"mobil\":\"90641520\",\"naeringskode1\":{\"beskrivelse\":\"Undervisning ved godkjente trafikkskoler\",\"kode\":\"85.531\"",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/1",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2012-06-19 20:46:36",
+        "navn": "REIDARS TRAFIKKSKOLE AS",
+        "tilDato": "2016-12-06 20:07:43"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "REIDARS TRAFIKKSKOLE AS and 2012?2016 boundaries belong to subunit 989964631."
+    },
+    {
+      "organisation_number": "997790952",
+      "claim": {
+        "field": "subunits.detail.997865456.historical_name.3d22958acd2a5aa7005b614e",
+        "value": {
+          "navn": "JOHANNESSEN EIENDOMSUTVIKLING AS",
+          "fraDato": "2012-01-21 15:00:22",
+          "tilDato": "2013-02-05 20:21:05"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "884dbe146fde320541e45bc054f0ba544aa7b572b6f5b0a7d813e8f5f166bac5"
+        ],
+        "id": "c6b2e914e852fbd4906379dadc0fe19b01632c20761fa2d6909e966fa232e760",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:56.809050Z",
+        "last_observed_at": "2026-11-07T00:00:56.809050Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "884dbe146fde320541e45bc054f0ba544aa7b572b6f5b0a7d813e8f5f166bac5",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=997790952&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:56.809050Z",
+          "content_sha256": "0c8e61577d4b5bf450e262e5599c691c4fd492dff1fffeee2f40842b855d0954",
+          "claim_span": "arRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2012-01-21 15:00:22\",\"navn\":\"JOHANNESSEN EIENDOMSUTVIKLING AS\",\"tilDato\":\"2013-02-05 20:21:05\"}],\"hjemmeside\":\"hillerenprosjektering.no\",\"mobil\":\"482 29 925\",\"naeringskode1\":{\"beskrivelse\":\"Arkitektvirksomhet\",\"kode\":\"71.110\"},\"navn\":\"HIL",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2012-01-21 15:00:22",
+        "navn": "JOHANNESSEN EIENDOMSUTVIKLING AS",
+        "tilDato": "2013-02-05 20:21:05"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "JOHANNESSEN EIENDOMSUTVIKLING AS and 2012?2013 boundaries belong to subunit 997865456."
+    },
+    {
+      "organisation_number": "926624717",
+      "claim": {
+        "field": "subunits.detail.925032247.historical_name.175557ab9036678527eaecb6",
+        "value": {
+          "navn": "SHADOWMAKER BJØRN SOLHEIM",
+          "fraDato": "2020-05-06 21:09:22",
+          "tilDato": "2021-02-22 21:08:49"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "a1aa1771103361b0da587fd067933b7810991a045ee6d0dd325a69eaf443043e"
+        ],
+        "id": "72afab12f1bea8a762c1604f186143bb6e1f83513037f0bf936218202b8f1e7b",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:04.305921Z",
+        "last_observed_at": "2026-11-07T00:01:04.305921Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "a1aa1771103361b0da587fd067933b7810991a045ee6d0dd325a69eaf443043e",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926624717&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:04.305921Z",
+          "content_sha256": "6acd7186cb5aef3f5507cd28b30d974e8e4707f4d0e62f8880408267e5852bd8",
+          "claim_span": "arRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2020-05-06 21:09:22\",\"navn\":\"SHADOWMAKER BJØRN SOLHEIM\",\"tilDato\":\"2021-02-22 21:08:49\"}],\"naeringskode1\":{\"beskrivelse\":\"Reklamebyråvirksomhet\",\"kode\":\"73.110\"},\"navn\":\"SHADOWMAKER AS\",\"oppstartsdato\":\"2020-05-01\",\"organisasjonsform\":{\"_",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2020-05-06 21:09:22",
+        "navn": "SHADOWMAKER BJØRN SOLHEIM",
+        "tilDato": "2021-02-22 21:08:49"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "SHADOWMAKER BJ?RN SOLHEIM and 2020?2021 boundaries belong to subunit 925032247."
+    },
+    {
+      "organisation_number": "993372277",
+      "claim": {
+        "field": "subunits.detail.972222720.historical_name.9be875dc24d39fa8c8557432",
+        "value": {
+          "navn": "MONSTAD JOHANNES REKNESKAPSKONTOR",
+          "fraDato": "1995-02-23 01:38:00",
+          "tilDato": "2008-12-13 14:51:12"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "65958b22864ba393649a7361250651ad589de9e942952bbc31894f31514e8e4b"
+        ],
+        "id": "f94beaf759bd01953eadc98d7ad9241da83093f759c080938101f49a882cd3f7",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:50.113463Z",
+        "last_observed_at": "2026-11-07T00:00:50.113463Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "65958b22864ba393649a7361250651ad589de9e942952bbc31894f31514e8e4b",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=993372277&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:50.113463Z",
+          "content_sha256": "95e1508f0275d1be970dcfcb33524a41442e9dd66f9303beb87c49fbb5441f20",
+          "claim_span": "arRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"1995-02-23 01:38:00\",\"navn\":\"MONSTAD JOHANNES REKNESKAPSKONTOR\",\"tilDato\":\"2008-12-13 14:51:12\"}],\"naeringskode1\":{\"beskrivelse\":\"Regnskapsføring og bokføring\",\"kode\":\"69.202\"},\"navn\":\"REAL ØKONOMI AS\",\"oppstartsdato\":\"1990-07-01\",\"organi",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "1995-02-23 01:38:00",
+        "navn": "MONSTAD JOHANNES REKNESKAPSKONTOR",
+        "tilDato": "2008-12-13 14:51:12"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "MONSTAD JOHANNES REKNESKAPSKONTOR and 1995?2008 boundaries belong to subunit 972222720."
+    },
+    {
+      "organisation_number": "822291082",
+      "claim": {
+        "field": "subunits.detail.922537607.historical_name.c5a3ed97947ad6f31c7d35a5",
+        "value": {
+          "navn": "CASA DI SAGA AS",
+          "fraDato": "2019-04-06 13:53:31",
+          "tilDato": "2026-07-21 12:30:54"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "6d5d1e8825519157e77955538dc096040438b7b8e3d37438c34bb2fcddc6bbf2"
+        ],
+        "id": "748e1c34cf5a4ccdb74d141b770124f93e1df531db1e864980c235d81a8b6e3a",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:08.310037Z",
+        "last_observed_at": "2026-11-07T00:01:08.310037Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "6d5d1e8825519157e77955538dc096040438b7b8e3d37438c34bb2fcddc6bbf2",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=822291082&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:08.310037Z",
+          "content_sha256": "76a44a88adcbf080749f3f9159a5428b1eaf2d3460908a3513a11840c59c10b6",
+          "claim_span": ":\"NFH 190203 AS\",\"tilDato\":\"2019-04-06 13:53:31\"},{\"fraDato\":\"2019-04-06 13:53:31\",\"navn\":\"CASA DI SAGA AS\",\"tilDato\":\"2026-07-21 12:30:54\"}],\"naeringskode1\":{\"beskrivelse\":\"Engroshandel med drikkevarer\",\"kode\":\"46.340\"},\"navn\":\"FAMSA ESTATE CO AS\",\"oppstartsdato\":\"2019-02-01\",\"organisasjonsform\":{\"",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/1",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "2019-04-06 13:53:31",
+        "navn": "CASA DI SAGA AS",
+        "tilDato": "2026-07-21 12:30:54"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "CASA DI SAGA AS and 2019?July 2026 boundaries belong to subunit 922537607; not an invented rename event."
+    },
+    {
+      "organisation_number": "990800480",
+      "claim": {
+        "field": "subunits.detail.971665009.historical_name.d81bddaf1a79cb2a1a9fb58b",
+        "value": {
+          "navn": "BERGMOEN SNEKKERVERKSTED ANS",
+          "fraDato": "1995-02-23 02:09:00",
+          "tilDato": "2007-02-03 14:46:50"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "8d855d804557e9037de0e2ad2dc34eeb251ce65a1b009f5b9aaa6b3b2db52d29"
+        ],
+        "id": "873695149a4535e871a35a64a57d059866467c7e98402264ff10ada303b23c37",
+        "family": "subunits",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:00:53.598573Z",
+        "last_observed_at": "2026-11-07T00:00:53.598573Z",
+        "reasons": {
+          "label": "Former registered name"
+        }
+      },
+      "evidence": [
+        {
+          "id": "8d855d804557e9037de0e2ad2dc34eeb251ce65a1b009f5b9aaa6b3b2db52d29",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=990800480&size=1000&page=0",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:00:53.598573Z",
+          "content_sha256": "de1b526196610224c02376652f531239e13c272531d51f69daee43a9db43a8e5",
+          "claim_span": "arRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"1995-02-23 02:09:00\",\"navn\":\"BERGMOEN SNEKKERVERKSTED ANS\",\"tilDato\":\"2007-02-03 14:46:50\"}],\"mobil\":\"90593231\",\"naeringskode1\":{\"beskrivelse\":\"Produksjon av andre bygningsartikler\",\"kode\":\"16.230\"},\"navn\":\"BERGMOEN SNEKKERVERKSTED AS\",\"o",
+          "locator": "/_embedded/underenheter/0/historiskeNavn/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "raw_value": {
+        "fraDato": "1995-02-23 02:09:00",
+        "navn": "BERGMOEN SNEKKERVERKSTED ANS",
+        "tilDato": "2007-02-03 14:46:50"
+      },
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "BERGMOEN SNEKKERVERKSTED ANS and 1995?2007 boundaries belong to subunit 971665009."
+    },
+    {
+      "organisation_number": "991450084",
+      "claim": {
+        "field": "accounts.additional.2023.tax_on_extraordinary_items",
+        "value": 0.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "1a9011f4052d202a93aa4679d741e6f8acda1580da57a6e0183d67bf44aa05df"
+        ],
+        "id": "247c47e0c4679555e7a44b945671f8acc3dd1d658ff67375570cc0e782499bd6",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:17.817010Z",
+        "last_observed_at": "2026-11-07T00:03:17.817010Z",
+        "reasons": {
+          "label": "Company tax on extraordinary items",
+          "unit": "scale_not_declared_by_source; no consolidated/company calibration inferred"
+        }
+      },
+      "evidence": [
+        {
+          "id": "1a9011f4052d202a93aa4679d741e6f8acda1580da57a6e0183d67bf44aa05df",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/991450084",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:17.817010Z",
+          "content_sha256": "a29241de6aa6b410ae7093890d34c10178b4688c4ce74bfe7b1ec669d4c88e8e",
+          "claim_span": "\":98487.00,\"skattekostnadEkstraordinaertResultat\":0.00,\"aarsresultat\":497446.00,\"totalresultat\":497446.00,\"finansresultat\":{\"nettoFinans\":621282.00,\"finansinntekt\":{\"sumFinansinntekter\":621320.00},\"finanskostnad\":{\"annenRentekostnad\":2.00,\"sumFinanskostnad\":38.00}},\"driftsresultat\":{\"driftsresultat\"",
+          "locator": "/0/resultatregnskapResultat/skattekostnadEkstraordinaertResultat",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2023-12-31",
+          "reporting_period": {
+            "fiscal_year": "2023",
+            "period_start": "2023-01-01",
+            "period_end": "2023-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": 0.0,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "Explicit 0.00 extraordinary-tax amount for SELSKAP FY2023, not a missing-value zero; scale remains undeclared."
+    },
+    {
+      "organisation_number": "922828172",
+      "claim": {
+        "field": "accounts.consolidated.2023.parent_company",
+        "value": true,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "c2a0c9246080e001b491f349af866f906b37feed424e41b456570f89af0f435b"
+        ],
+        "id": "d08a289d51b2636332498f6d0844964be0e34822dcf490b16f95a24b9f1ea7a4",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "KONSERN"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:18.317586Z",
+        "last_observed_at": "2026-11-07T00:03:18.317586Z",
+        "reasons": {
+          "label": "Consolidated parent company"
+        }
+      },
+      "evidence": [
+        {
+          "id": "c2a0c9246080e001b491f349af866f906b37feed424e41b456570f89af0f435b",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/922828172",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:18.317586Z",
+          "content_sha256": "5a627ee0ac94850106f6778e1a08ae921036c9c15b2d5f13cef6d2b6719b5190",
+          "claim_span": "\"922828172\",\"organisasjonsform\":\"AS\",\"morselskap\":true},\"regnskapsperiode\":{\"fraDato\":\"2023-01-01\",\"tilDato\":\"2023-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":fa",
+          "locator": "/0/virksomhet/morselskap",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2023-12-31",
+          "reporting_period": {
+            "fiscal_year": "2023",
+            "period_start": "2023-01-01",
+            "period_end": "2023-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "KONSERN"
+          }
+        }
+      ],
+      "raw_value": true,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "KONSERN FY2023 morselskap=true for exact orgnr 922828172; kept outside company-only records."
+    },
+    {
+      "organisation_number": "928350193",
+      "claim": {
+        "field": "accounts.statement.2023.account_type",
+        "value": "SELSKAP",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "65ac3a3b23dea0d5bc498d74f4565eb7ad672d8458debc3fe67b8987d0d8b3c7"
+        ],
+        "id": "c2ff62a6c7ef5efa52f0efee9161bfe523ed892e0a0adbdcc902ecd61466c2c0",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:05:41.820737Z",
+        "last_observed_at": "2026-11-07T00:05:41.820737Z",
+        "reasons": {
+          "label": "Company account type"
+        }
+      },
+      "evidence": [
+        {
+          "id": "65ac3a3b23dea0d5bc498d74f4565eb7ad672d8458debc3fe67b8987d0d8b3c7",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/928350193",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:05:41.820737Z",
+          "content_sha256": "58f9b53f05c1888fb86906e5c54c8e8ea9d869bee21ca066fa7e21828984db8b",
+          "claim_span": ":4976329,\"journalnr\":\"2024527117\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"928350193\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2023-01-01\",\"tilDato\":\"2023-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":",
+          "locator": "/0/regnskapstype",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2023-12-31",
+          "reporting_period": {
+            "fiscal_year": "2023",
+            "period_start": "2023-01-01",
+            "period_end": "2023-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": "SELSKAP",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "SELSKAP type from the 2023 statement for exact orgnr 928350193."
+    },
+    {
+      "organisation_number": "984597665",
+      "claim": {
+        "field": "accounts.statement.2025.period_start",
+        "value": "2025-01-01",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "2de9ccdae792dd873af9a62ec4d64d5c2c31a0a813186d9add7755f596c87da8"
+        ],
+        "id": "2f2ec2db60e6ceb7b30676852427a0606fedf05e71f7c3f32522952f5ae0f5ae",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:04:02.373147Z",
+        "last_observed_at": "2026-11-07T00:04:02.373147Z",
+        "reasons": {
+          "label": "Company period start"
+        }
+      },
+      "evidence": [
+        {
+          "id": "2de9ccdae792dd873af9a62ec4d64d5c2c31a0a813186d9add7755f596c87da8",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/984597665",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:04:02.373147Z",
+          "content_sha256": "94a3b0d18c0680c13f7c5b9d25ffc0b14ff5324eef4e40b776f33406becadb99",
+          "claim_span": "\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2025-01-01\",\"tilDato\":\"2025-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenA",
+          "locator": "/2/regnskapsperiode/fraDato",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2025-12-31",
+          "reporting_period": {
+            "fiscal_year": "2025",
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": "2025-01-01",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "FY2025 start 2025-01-01 at index 2, with matching 2025-12-31 end."
+    },
+    {
+      "organisation_number": "934012674",
+      "claim": {
+        "field": "accounts.statement.2025.period_start",
+        "value": "2025-01-01",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "41b840c4874bb3d29e735f973004e5e76ddd5e4c1cc0e2246ab754b2e41edef2"
+        ],
+        "id": "316ebb0016d543d320b0cf0c3e8a39c37c29b524c64fb82f65359c34ca7570aa",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:24.527360Z",
+        "last_observed_at": "2026-11-07T00:03:24.527360Z",
+        "reasons": {
+          "label": "Company period start"
+        }
+      },
+      "evidence": [
+        {
+          "id": "41b840c4874bb3d29e735f973004e5e76ddd5e4c1cc0e2246ab754b2e41edef2",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/934012674",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:24.527360Z",
+          "content_sha256": "557a8aea6830c4c4f0dc6dc27eb2b4307ee2be27824441171f1d0e9f2f05fd07",
+          "claim_span": ",\"morselskap\":true},\"regnskapsperiode\":{\"fraDato\":\"2025-01-01\",\"tilDato\":\"2025-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenA",
+          "locator": "/1/regnskapsperiode/fraDato",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2025-12-31",
+          "reporting_period": {
+            "fiscal_year": "2025",
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": "2025-01-01",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "FY2025 start 2025-01-01 at index 1, with matching 2025-12-31 end."
+    },
+    {
+      "organisation_number": "964898278",
+      "claim": {
+        "field": "accounts.statement.2025.audit_opt_out",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "d68394aad50a82bad46207864094bbfa102e42b2b5b268f0080b1632d6f49172"
+        ],
+        "id": "3a9d0540d66bc66c001d255eca08d266988ca0e33d4f094e08a0b1729cbee902",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:00.145758Z",
+        "last_observed_at": "2026-11-07T00:03:00.145758Z",
+        "reasons": {
+          "label": "Company audit opt out"
+        }
+      },
+      "evidence": [
+        {
+          "id": "d68394aad50a82bad46207864094bbfa102e42b2b5b268f0080b1632d6f49172",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/964898278",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:00.145758Z",
+          "content_sha256": "ada0cb4abf00363b99a99a2bd7febe3cb1d527d9bb1576ce4e8c2167680d2d90",
+          "claim_span": "ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":167452044.00,\"egenkapital\":{\"sumEgenkapital\":142150759.00,\"opptjentEgenkapital\":{\"sumOpptjentEgenkapital\":14",
+          "locator": "/3/revisjon/fravalgRevisjon",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2025-12-31",
+          "reporting_period": {
+            "fiscal_year": "2025",
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": false,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "FY2025 fravalgRevisjon=false at index 3; no audited=true inference."
+    },
+    {
+      "organisation_number": "921368348",
+      "claim": {
+        "field": "accounts.statement.2025.parent_company",
+        "value": false,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "d7c4d04738f67edf80da01f5d1c0533632930d548ff188c160cd55067a89ed7d"
+        ],
+        "id": "30730572d260af101d2ddede1baf902951b0bc44ab1649c918922ac7e9f35e6e",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:04:44.521925Z",
+        "last_observed_at": "2026-11-07T00:04:44.521925Z",
+        "reasons": {
+          "label": "Company parent company"
+        }
+      },
+      "evidence": [
+        {
+          "id": "d7c4d04738f67edf80da01f5d1c0533632930d548ff188c160cd55067a89ed7d",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/921368348",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:04:44.521925Z",
+          "content_sha256": "3f9ca39b4fedcf5eb1d32f9898c099052f90f96963e4e33728a532cfd611d6e2",
+          "claim_span": "\"921368348\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2025-01-01\",\"tilDato\":\"2025-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":tr",
+          "locator": "/2/virksomhet/morselskap",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2025-12-31",
+          "reporting_period": {
+            "fiscal_year": "2025",
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": false,
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "FY2025 morselskap=false copied directly; no inferred group structure."
+    },
+    {
+      "organisation_number": "889806192",
+      "claim": {
+        "field": "accounts.statement.2024.period_start",
+        "value": "2024-01-01",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "8d2da96c69db706a48a70b915e152b5a6b966047fc309a9071812f1dbe552afe"
+        ],
+        "id": "df863331c3b827996e1c68ece7f724bb11da096f324827aaa987aae2482396d4",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:03.969411Z",
+        "last_observed_at": "2026-11-07T00:03:03.969411Z",
+        "reasons": {
+          "label": "Company period start"
+        }
+      },
+      "evidence": [
+        {
+          "id": "8d2da96c69db706a48a70b915e152b5a6b966047fc309a9071812f1dbe552afe",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/889806192",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:03.969411Z",
+          "content_sha256": "9ad2550ec85cbf56564228bb46ec0a14aef9ae618f0ad7c755fb19aafcdf513a",
+          "claim_span": "\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2024-01-01\",\"tilDato\":\"2024-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenA",
+          "locator": "/1/regnskapsperiode/fraDato",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2024-12-31",
+          "reporting_period": {
+            "fiscal_year": "2024",
+            "period_start": "2024-01-01",
+            "period_end": "2024-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": "2024-01-01",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "FY2024 start 2024-01-01 at index 1, not mislabeled as the latest year."
+    },
+    {
+      "organisation_number": "986739874",
+      "claim": {
+        "field": "accounts.statement.2023.presentation_plan",
+        "value": "store",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "19806c837836df96697dfe2d611289095b94a839ebdc61f73808a3aa66294ebd"
+        ],
+        "id": "986ae6785672bf47e19aaabf15d080ac6d0ab8eb1faeb6b5c7648a4899b25400",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:01:13.210285Z",
+        "last_observed_at": "2026-11-07T00:01:13.210285Z",
+        "reasons": {
+          "label": "Company presentation plan"
+        }
+      },
+      "evidence": [
+        {
+          "id": "19806c837836df96697dfe2d611289095b94a839ebdc61f73808a3aa66294ebd",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/986739874",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:01:13.210285Z",
+          "content_sha256": "c6050fd4d35566a5351ce6adf4b1b0aa8daa242c87e5d4c704e7b6d48919d85b",
+          "claim_span": "OK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":30308140.00,\"egenkapital\":{\"sumEgenka",
+          "locator": "/0/oppstillingsplan",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2023-12-31",
+          "reporting_period": {
+            "fiscal_year": "2023",
+            "period_start": "2023-01-01",
+            "period_end": "2023-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": "store",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "FY2023 presentation-plan code store copied verbatim; not interpreted as business activity."
+    },
+    {
+      "organisation_number": "988384828",
+      "claim": {
+        "field": "accounts.statement.2023.account_type",
+        "value": "SELSKAP",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "87fc348c127b332f5480dcf2a4a914e6f2ddbeb6d9064d909252a97ccd5703ef"
+        ],
+        "id": "dc617176deed0fab814f6397986707d97ebdbcf6552ae31f5708af52124988d9",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:04:37.961319Z",
+        "last_observed_at": "2026-11-07T00:04:37.961319Z",
+        "reasons": {
+          "label": "Company account type"
+        }
+      },
+      "evidence": [
+        {
+          "id": "87fc348c127b332f5480dcf2a4a914e6f2ddbeb6d9064d909252a97ccd5703ef",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/988384828",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:04:37.961319Z",
+          "content_sha256": "92922c3bc2a0c578a002124ab2da13171814d7fc13635061736101921597bddf",
+          "claim_span": ":5022479,\"journalnr\":\"2024549878\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"988384828\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2023-01-01\",\"tilDato\":\"2023-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":",
+          "locator": "/0/regnskapstype",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2023-12-31",
+          "reporting_period": {
+            "fiscal_year": "2023",
+            "period_start": "2023-01-01",
+            "period_end": "2023-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "SELSKAP"
+          }
+        }
+      ],
+      "raw_value": "SELSKAP",
+      "machine_span_value_period_check": "pass",
+      "verdict": "correct",
+      "manual_review_note": "SELSKAP type from the 2023 statement for exact orgnr 988384828."
+    }
+  ]
+}

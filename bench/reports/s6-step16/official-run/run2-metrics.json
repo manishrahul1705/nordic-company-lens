@@ -1,0 +1,29 @@
+{
+  "input_rows": 103,
+  "emitted_envelopes": 103,
+  "changes": 0,
+  "observation_changes": 0,
+  "deadline_hits": 0,
+  "warnings": [],
+  "schema_validated": true,
+  "membership_validated": true,
+  "requests_per_company": 7.067961165048544,
+  "max_requests_per_company": 28,
+  "amortized_requests_per_company": 7.184466019417476,
+  "shared_requests": 12,
+  "limits": {
+    "max_requests": 1854,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2400.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "hard_max_requests": 1854,
+    "hard_time_budget_seconds": 2472
+  },
+  "number": 2,
+  "exit_code": 0,
+  "wall_seconds": 213.5460000000894,
+  "http_requests": 740,
+  "profiles": 103
+}

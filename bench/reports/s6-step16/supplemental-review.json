@@ -1,0 +1,204 @@
+{
+  "consolidated_amounts": [
+    {
+      "organisation_number": "988810029",
+      "claim": {
+        "field": "accounts.consolidated.2025.result_before_tax",
+        "value": 8754895.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "9e3c8468f70836434858434542aaf76c6fd46612dc39d5dd1ffe5d211f94dca1"
+        ],
+        "id": "413587bf16e60046eabb58734519484fd6ec7163d70e26456affffc7d2d17f73",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "KONSERN"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:03:57.596508Z",
+        "last_observed_at": "2026-11-07T00:03:57.596508Z",
+        "reasons": {
+          "label": "Consolidated result before tax",
+          "unit": "scale_not_declared_by_source; no consolidated/company calibration inferred"
+        }
+      },
+      "evidence": [
+        {
+          "id": "9e3c8468f70836434858434542aaf76c6fd46612dc39d5dd1ffe5d211f94dca1",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/988810029",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:03:57.596508Z",
+          "content_sha256": "41f6fc3ddfe6ce52df34d320243335e6423fb1dd003f7aa0a3ab511d76ceb5fe",
+          "claim_span": "apResultat\":{\"ordinaertResultatFoerSkattekostnad\":8754895.00,\"ordinaertResultatSkattekostnad\":3285006.00,\"aarsresultat\":5469889.00,\"finansresultat\":{\"nettoFinans\":-4277525.00,\"finansinntekt\":{\"sumFinansinntekter\":4759750.00},\"finanskostnad\":{\"annenRentekostnad\":8309088.00,\"sumFinanskostnad\":9037275.",
+          "locator": "/2/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2025-12-31",
+          "reporting_period": {
+            "fiscal_year": "2025",
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "KONSERN"
+          }
+        }
+      ],
+      "verdict": "correct",
+      "manual_review_note": "Exact consolidated numeric amount and fiscal period; source unit remains undeclared, no multiplier applied."
+    },
+    {
+      "organisation_number": "968545337",
+      "claim": {
+        "field": "accounts.consolidated.2024.inventories",
+        "value": 1330889.0,
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "d2594f04cf3ea8640e3ecef005d941b46288d0605456a5f4f985b68a93dc0549"
+        ],
+        "id": "4982d78e5cc9751d3249028e5554d5e2f9cdd900463ae4eb601382fff5846dc0",
+        "family": "accounts",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "KONSERN"
+        },
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:04:11.165499Z",
+        "last_observed_at": "2026-11-07T00:04:11.165499Z",
+        "reasons": {
+          "label": "Consolidated inventories",
+          "unit": "scale_not_declared_by_source; no consolidated/company calibration inferred"
+        }
+      },
+      "evidence": [
+        {
+          "id": "d2594f04cf3ea8640e3ecef005d941b46288d0605456a5f4f985b68a93dc0549",
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/968545337",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-07T00:04:11.165499Z",
+          "content_sha256": "9ebacab087f14978c155f7829cc9602f8ddfe2eba93082efb4ee4875e31dfb53",
+          "claim_span": "}},\"eiendeler\":{\"goodwill\":10618003.00,\"sumVarer\":1330889.00,\"sumFordringer\":84892965.00,\"sumBankinnskuddOgKontanter\":49021635.00,\"sumEiendeler\":147075939.00,\"omloepsmidler\":{\"sumOmloepsmidler\":135245489.00},\"anleggsmidler\":{\"sumAnleggsmidler\":11830450.00}},\"resultatregnskapResultat\":{\"ordinaertResu",
+          "locator": "/1/eiendeler/sumVarer",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": "2024-12-31",
+          "reporting_period": {
+            "fiscal_year": "2024",
+            "period_start": "2024-01-01",
+            "period_end": "2024-12-31",
+            "currency": "NOK",
+            "unit": null,
+            "account_type": "KONSERN"
+          }
+        }
+      ],
+      "verdict": "correct",
+      "manual_review_note": "Exact consolidated numeric amount and fiscal period; source unit remains undeclared, no multiplier applied."
+    }
+  ],
+  "additional_activity": [
+    {
+      "organisation_number": "922828172",
+      "claim": {
+        "field": "dated_item.90659a383fb3c151fa37",
+        "value": {
+          "title": "Ny tv-serie om strømforsyningens helter",
+          "title_source": "article_page",
+          "url": "https://www.tensio.no/no/kunde/nyheter/ny-tv-serie-om-stromforsyningens-helter",
+          "date": "2026-02-02",
+          "date_source": "datePublished",
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "9da652c92c397bd619ccc8e0263d37855309cdeae7a386602431bdd10eec87fc"
+        ],
+        "id": "9a8c5e3deef898b2e04f360d1b1e1d94f616d7ff7a9fd8a1ea5f074b34105366",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:05:24.271727Z",
+        "last_observed_at": "2026-11-07T00:05:24.271727Z",
+        "reasons": {}
+      },
+      "evidence": [
+        {
+          "id": "9da652c92c397bd619ccc8e0263d37855309cdeae7a386602431bdd10eec87fc",
+          "source_url": "https://www.tensio.no/no/kunde/nyheter/ny-tv-serie-om-stromforsyningens-helter",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-07T00:05:24.271727Z",
+          "content_sha256": "b314e8b6fb3a8e5e4918bb85806aefc24f7fef4c09b897191530fcce9c3fdfda",
+          "claim_span": "ter\",\"inLanguage\":\"no\",\"datePublished\":\"2026-02-02T08:19:19Z\",\"dateModified\":\"2026-02-16T19:38:18Z\",",
+          "locator": "/article",
+          "extraction_method": "signalpost.activity.article.v1",
+          "source_identifier": null,
+          "effective_at": "2026-02-02",
+          "reporting_period": null
+        }
+      ],
+      "verdict": "correct",
+      "manual_review_note": "Existing verified Tensio site; article-page title/datePublished match, no dateModified substitution or invented business event."
+    },
+    {
+      "organisation_number": "922828172",
+      "claim": {
+        "field": "dated_item.d8a305b839a5c69e95fc",
+        "value": {
+          "title": "Status Norgespris ved inngangen til februar",
+          "title_source": "article_page",
+          "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-februar",
+          "date": "2026-01-28",
+          "date_source": "datePublished",
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "55394dedaaa7bac4f17f10608e35632dfec90ae31fac02d0504679734254cb45"
+        ],
+        "id": "125517202323ea45b584580801d50036379c94d999fc99c25977560b7c02a87f",
+        "family": "activity",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T00:05:26.454901Z",
+        "last_observed_at": "2026-11-07T00:05:26.454901Z",
+        "reasons": {}
+      },
+      "evidence": [
+        {
+          "id": "55394dedaaa7bac4f17f10608e35632dfec90ae31fac02d0504679734254cb45",
+          "source_url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-februar",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-07T00:05:26.454901Z",
+          "content_sha256": "f9a9abc09a595cf4f3ccd3452348730e2c5dc765c39f8f0fdbc101db676bf801",
+          "claim_span": "uar\",\"inLanguage\":\"no\",\"datePublished\":\"2026-01-28T07:20:00Z\",\"dateModified\":\"2026-01-28T19:17:27Z\",",
+          "locator": "/article",
+          "extraction_method": "signalpost.activity.article.v1",
+          "source_identifier": null,
+          "effective_at": "2026-01-28",
+          "reporting_period": null
+        }
+      ],
+      "verdict": "correct",
+      "manual_review_note": "Existing verified Tensio site; article-page title/datePublished match, no dateModified substitution or invented business event."
+    }
+  ]
+}

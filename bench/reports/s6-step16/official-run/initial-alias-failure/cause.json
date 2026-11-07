@@ -1,0 +1,85 @@
+[
+  {
+    "organisation_number": "934592875",
+    "change_events": [
+      {
+        "field": "website_description.meta_description.5cf8caaba1b272f5",
+        "type": "removed"
+      },
+      {
+        "field": "website_description.og_description.5cf8caaba1b272f5",
+        "type": "removed"
+      }
+    ],
+    "observation_changes": [
+      {
+        "section": "website",
+        "field": "website_description.meta_description.6d0c5eee8ec8d6b6",
+        "claim_id": "4606e7d33742e67891d617becfb61b90051896f374984162766889979b23c4ee",
+        "previous_state": "unchecked_page",
+        "current_state": "available",
+        "reason": "newly_checked_supporting_page"
+      },
+      {
+        "section": "website",
+        "field": "website_description.og_description.6d0c5eee8ec8d6b6",
+        "claim_id": "23cac7a6905b7ac84498440ad54bf2018d826e381590fddf539154e54255e39e",
+        "previous_state": "unchecked_page",
+        "current_state": "available",
+        "reason": "newly_checked_supporting_page"
+      }
+    ],
+    "old_descriptions": [
+      {
+        "field": "website_description.meta_description.5cf8caaba1b272f5",
+        "id": "292a4fe63587a95bb0eaf1b411ec2c6eba4533a7c4cabf93d45cb4a92615c593",
+        "value": {
+          "text": "We maximize your sales and increase customer flow",
+          "kind": "meta_description",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "d37f53bc65cb21dd819d1e733d1204b4a88eaf2e7871def392eeb6f86e6941ba"
+        },
+        "primary_url": "https://3d-scandinavia.com/en"
+      },
+      {
+        "field": "website_description.og_description.5cf8caaba1b272f5",
+        "id": "1b812e7e820b5826f14c64a4537d1424a9f81d9b18b5b00c7807ebf0abbb54ac",
+        "value": {
+          "text": "We maximize your sales and increase customer flow",
+          "kind": "og_description",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "d37f53bc65cb21dd819d1e733d1204b4a88eaf2e7871def392eeb6f86e6941ba"
+        },
+        "primary_url": "https://3d-scandinavia.com/en"
+      }
+    ],
+    "new_descriptions": [
+      {
+        "field": "website_description.meta_description.6d0c5eee8ec8d6b6",
+        "id": "4606e7d33742e67891d617becfb61b90051896f374984162766889979b23c4ee",
+        "value": {
+          "text": "We maximize your sales and increase customer flow",
+          "kind": "meta_description",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "d37f53bc65cb21dd819d1e733d1204b4a88eaf2e7871def392eeb6f86e6941ba"
+        },
+        "primary_url": "https://www.3d-scandinavia.com/en"
+      },
+      {
+        "field": "website_description.og_description.6d0c5eee8ec8d6b6",
+        "id": "23cac7a6905b7ac84498440ad54bf2018d826e381590fddf539154e54255e39e",
+        "value": {
+          "text": "We maximize your sales and increase customer flow",
+          "kind": "og_description",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "d37f53bc65cb21dd819d1e733d1204b4a88eaf2e7871def392eeb6f86e6941ba"
+        },
+        "primary_url": "https://www.3d-scandinavia.com/en"
+      }
+    ]
+  }
+]

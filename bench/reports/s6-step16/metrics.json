@@ -1,0 +1,48 @@
+{
+  "run": "bench\\runs\\20261107T000025367438Z-42f3cbf",
+  "baseline": "bench\\runs\\20261106T183808924157Z-1db7047",
+  "claims_before": {
+    "identity": 28716,
+    "subunits": 6527,
+    "roles": 11803,
+    "accounts": 62584,
+    "activity": 2965,
+    "hiring": 3,
+    "website": 821
+  },
+  "claims_after": {
+    "identity": 31007,
+    "subunits": 6907,
+    "roles": 17806,
+    "accounts": 97416,
+    "activity": 2967,
+    "hiring": 3,
+    "website": 821
+  },
+  "total_before": 113419,
+  "total_after": 156927,
+  "new_fields_by_family": {
+    "identity": 2291,
+    "roles": 6003,
+    "subunits": 380,
+    "accounts": 34832
+  },
+  "websites": 110,
+  "social_companies": 44,
+  "activity_companies": 999,
+  "jobs": 3,
+  "http": 8484,
+  "http_baseline": 8666,
+  "http_increase_percent": -2.100161550888535,
+  "http_cap_2_percent": 8839,
+  "wall_seconds": 860.4432539001573,
+  "deadlines": 0,
+  "warnings": [],
+  "website_losses": [],
+  "request_stats": {
+    "requests_per_company": 8.443,
+    "max_requests_per_company": 40,
+    "amortized_requests_per_company": 8.484,
+    "shared_requests": 41
+  }
+}

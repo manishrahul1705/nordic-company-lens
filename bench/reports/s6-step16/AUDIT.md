@@ -70,3 +70,5 @@
 | subunits | `/_embedded/underenheter/*/respons_klasse` | 774 | "Underenhet"; "Underenhet" |
 
 Transport links/pagination/source IDs and already-output organisation scope are separately listed in audit.json; they do not satisfy the fact threshold. All examples retain exact source URL, locator and verified SHA-256 in that ledger.
+
+Interpretation: financial numeric paths missing for 19 companies are consolidated (KONSERN) records; their company-only metrics were already published. Currency/period values in reporting metadata were not standalone claims. Null/empty values do not count as unpublished facts. Birth dates are audited as raw source fields, but only their year is added to published claims.
