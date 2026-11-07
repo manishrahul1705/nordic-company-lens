@@ -65,6 +65,37 @@ def meaning(claim):
     return canonical(claim.value)
 
 
+def align_description_aliases(envelope, old_claims, old_evidence, current_evidence):
+    """Keep a fact's existing ID when only its verified page's transport alias changes."""
+    from urllib.parse import urlsplit
+    old_site=old_claims.get('official_website')
+    current_site=next((c for c in envelope.claims if c.field=='official_website'),None)
+    if not old_site or not current_site or old_site.availability!='available' or current_site.availability!='available' or meaning(old_site)!=meaning(current_site):return
+    def resource(claim,evidence):
+        if not claim.evidence_ids:return None
+        primary=evidence.get(claim.evidence_ids[0])
+        if not primary or primary.source_class!='company_owned':return None
+        parsed=urlsplit(primary.source_url)
+        if parsed.scheme not in {'http','https'} or parsed.port not in {None,443 if parsed.scheme=='https' else 80}:return None
+        host=(parsed.hostname or '').lower().rstrip('.')
+        if host.startswith('www.'):host=host[4:]
+        return host,parsed.path or '/',parsed.query
+    occupied={c.field for c in envelope.claims}
+    for current in envelope.claims:
+        if not current.field.startswith('website_description.') or current.availability!='available' or current.field in old_claims:continue
+        key=resource(current,current_evidence)
+        if key is None:continue
+        matches=[before for before in old_claims.values()
+                 if before.field.startswith('website_description.') and before.availability=='available'
+                 and before.field not in occupied and canonical(before.value)==canonical(current.value)
+                 and before.reporting_period==current.reporting_period and resource(before,old_evidence)==key]
+        if len(matches)!=1:continue
+        before=matches[0];occupied.remove(current.field);occupied.add(before.field)
+        # Full values/reporting inputs are identical, so this is also the exact prior ID formula.
+        current.field=before.field;current.id=before.id;current.first_observed_at=before.first_observed_at
+        current.reasons['source_alias']='Identical verified page/value through www/apex or HTTP scheme alias; existing fact ID retained'
+
+
 def apply(envelope, previous, blobs):
     envelope.run.refresh = {**envelope.run.refresh,"mode": "baseline" if previous is None else "refresh", "previous_run_id": None,'observation_changes':[]}
     if previous is None:
@@ -85,6 +116,7 @@ def apply(envelope, previous, blobs):
             item.claim_span = excerpt(base64.b64decode(item.snapshot_body_base64), locator=item.locator)
             item.snapshot_body_base64 = None
     new_evidence = {x.id: x for x in envelope.evidence}
+    align_description_aliases(envelope,old_claims,old_evidence,new_evidence)
     envelope.run.refresh["previous_run_id"] = previous.get("run_id", previous.get("run", {}).get("run_id"))
     envelope.run.refresh["mode"] = "refresh"
     envelope.run.refresh['previous_completed_at'] = previous.get('run', {}).get('completed_at', previous.get('completed_at'))
