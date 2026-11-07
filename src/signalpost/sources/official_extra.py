@@ -96,8 +96,11 @@ def award_extract(response,notice,org,now):
                'date':day.isoformat(),'notice_id':notice,'contract_id':contract_id,'company_orgnr':org,
                'matched_role':'winner' if winner_match else 'buyer','url':f'https://ted.europa.eu/en/notice/-/detail/{notice}'}
         # Only a single linked tender amount is attributable, never a notice total.
-        if winner_match and len(linked)==1:
-            amount=linked[0].find('cbc:PayableAmount',NS)
+        owned=[t for t in linked if any(organisations.get(x,{}).get('orgnr')==org for x in parties.get(text(t,'efac:TenderingParty/cbc:ID'),set()))]
+        priced=owned if winner_match else linked
+        if len(priced)==1:
+            amount=priced[0].find('cac:LegalMonetaryTotal/cbc:PayableAmount',NS)
+            if amount is None:amount=priced[0].find('cbc:PayableAmount',NS)
             if amount is not None and amount.text and amount.get('currencyID'):
                 from decimal import Decimal,InvalidOperation
                 try:
