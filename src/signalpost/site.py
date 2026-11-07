@@ -276,6 +276,12 @@ def explorer_cells(c, records):
             e.get('content_sha256', '') if e else '', span]
 
 
+def deferred_registry_ids(row):
+    items=[c for c in row['claims'] if c['field'].startswith('registry_change.')]
+    items.sort(key=lambda c:(str((c.get('value') or {}).get('date','')),c['field']),reverse=True)
+    return {c['id'] for c in items[10:]}
+
+
 def profile(row, title):
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
@@ -381,8 +387,9 @@ def profile(row, title):
             area, heading = areas[key]
             body += f'<section class="company-area" data-area="{area}"><h2>{heading}</h2>'
         items = buckets[key]
-        details=[c for c in items if c['field'].startswith(('roles.detail.','subunits.detail.'))]
-        items=[c for c in items if not c['field'].startswith(('roles.detail.','subunits.detail.'))]
+        deferred=deferred_registry_ids(row) if key=='activity' else set()
+        details=[c for c in items if c['field'].startswith(('roles.detail.','subunits.detail.')) or c['id'] in deferred]
+        items=[c for c in items if not c['field'].startswith(('roles.detail.','subunits.detail.')) and c['id'] not in deferred]
         if key == 'activity': items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         state = row['run']['sections'].get(family, 'not_applicable')
         if key == 'locations' and business_location and state in {'not_available','not_applicable'}:
@@ -436,7 +443,7 @@ def profile(row, title):
         if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
         if details:
-            body += '<details><summary>Additional official attributes ('+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
+            body += '<details><summary>'+('Additional registry announcements (' if key=='activity' else 'Additional official attributes (')+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
         body += '</section>'
         if key in {'online', 'financials', 'people', 'locations', 'activity'}:
             body += '</section>'
@@ -674,6 +681,11 @@ def company_payload(row):
     details=[{'id':c['id'][:16],'field':c['field'],'value':c['value'],'availability':c['availability'],
               'group':'people' if c['family']=='roles' else 'locations'} for c in row['claims']
              if c['field'].startswith(('roles.detail.','subunits.detail.'))]
+    from .sources.registry_changes import sentence as registry_sentence
+    deferred=deferred_registry_ids(row)
+    details.extend({'id':c['id'][:16],'field':'Registry announcement: '+c['value']['title'],
+                    'value':registry_sentence(c['value']),'availability':c['availability'],'group':'activity'}
+                   for c in row['claims'] if c['id'] in deferred)
     name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
     all_records = {e['id']: e for e in row['evidence']}
     payload = {'orgnr': row['organisation_number'], 'name': name,

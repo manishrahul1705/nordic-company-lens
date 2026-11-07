@@ -12,6 +12,27 @@ from tests.test_synthesis_readability import available
 from tests.test_registry import config, execute
 
 
+def test_fifty_announcements_keep_all_facts_and_source_links_offline(tmp_path):
+    from signalpost.site import normalize, profile, company_payload
+    row,_=envelope(tmp_path)
+    for n in range(50):
+        available(row,'registry_change.test'+str(n),{'title':'Registry update recorded',
+            'kind':'Registry announcement','date':'2026-10-01T00:00:00Z',
+            'url':'https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid='+str(n),
+            'event_type':'Endring','company_orgnr':row.organisation_number})
+        row.claims[-1].family='activity'
+    data=normalize(serialize(row,'union'))
+    html=profile(data,'Signalpost')
+    payload=company_payload(data)
+    extra=[c for c in payload['registry_details'] if c['group']=='activity']
+    assert len(extra)==40 and 'Additional registry announcements (40)' in html
+    for c in data['claims']:
+        if c['field'].startswith('registry_change.'):
+            assert ('fact-'+c['id'][:16] in html) or any(d['id']==c['id'][:16] for d in extra)
+    assert all(d['value'].startswith('Registry update recorded') for d in extra)
+    assert len(html.encode('utf-8'))<250000
+
+
 def test_carried_fact_shows_last_successful_check():
     from signalpost.site import fact
     claim={'id':'a'*64,'field':'identity.legal_name','family':'identity','value':'Example AS',

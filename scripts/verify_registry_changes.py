@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
 
@@ -34,7 +35,8 @@ def check(row, claim, blobs):
     assert parsed.scheme == 'https' and parsed.netloc == 'data.brreg.no'
     root = ev['locator'].split('/endringer/')[0]
     event = pointer(document, root)
-    assert event['oppdateringsid'] == value['event_id'] and event['dato'] == value['date']
+    assert event['oppdateringsid'] == value['event_id']
+    assert datetime.fromisoformat(event['dato'].replace('Z','+00:00')).astimezone(timezone.utc)==datetime.fromisoformat(value['date'].replace('Z','+00:00')).astimezone(timezone.utc)
     assert 'old_value' not in value and 'effective_date' not in value
     if 'changed_field' in value:
         assert parsed.path.endswith('/oppdateringer/enheter')
