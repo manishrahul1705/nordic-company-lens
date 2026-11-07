@@ -1,0 +1,39 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "envelopes": 103,
+      "profiles": 103,
+      "site": {
+        "state": "available",
+        "companies": 101,
+        "input_records": 103,
+        "pages": 103,
+        "skipped_invalid_identifiers": 2,
+        "total_bytes": 20256354,
+        "largest_profile_data_bytes": 397431,
+        "largest_profile_bytes": 189668
+      },
+      "deadlines": 0,
+      "warnings": []
+    },
+    {
+      "run": 2,
+      "envelopes": 103,
+      "profiles": 103,
+      "site": {
+        "state": "available",
+        "companies": 101,
+        "input_records": 103,
+        "pages": 103,
+        "skipped_invalid_identifiers": 2,
+        "total_bytes": 20258534,
+        "largest_profile_data_bytes": 397437,
+        "largest_profile_bytes": 189688
+      },
+      "deadlines": 0,
+      "warnings": []
+    }
+  ],
+  "identical_primary_briefings": 103
+}

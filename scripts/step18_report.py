@@ -14,10 +14,11 @@ def main():
     args=parser.parse_args()
     out=Path('bench/reports/s6-step18')
     baseline=Path('bench/runs/20261107T052914870839Z-acaca26')
-    old=set()
+    old=set();old_events=set()
     for line in (baseline/'envelopes.jsonl').open(encoding='utf-8'):
         row=json.loads(line)
         old.update(c['id'] for c in row['claims'] if c['availability']=='available' and c['field'].startswith('registry_change.'))
+        old_events.update((row['organisation_number'],c['value']['event_id']) for c in row['claims'] if c['availability']=='available' and c['field'].startswith('registry_change.'))
     counts=collections.Counter();types=collections.Counter();lengths=collections.Counter()
     briefs=[];events=[];examples=[];checks=[]
     example_orgs={'922828172','993919675','935180678','936855865','926077422','932386933'}
@@ -46,7 +47,9 @@ def main():
                 ev=[evidence[eid] for eid in c['evidence_ids']]
                 events.append({'organisation_number':org,'name':record['name'],'claim':c,'evidence':ev})
     rng=random.Random(20261108)
-    selected=rng.sample(events,20)
+    distinct={(e['organisation_number'],e['claim']['value']['event_id']):e for e in events
+              if (e['organisation_number'],e['claim']['value']['event_id']) not in old_events}
+    selected=rng.sample(list(distinct.values()),20)
     for item in selected:
         proof=check({'organisation_number':item['organisation_number'],'evidence':item['evidence']},item['claim'],args.run/'state/blobs')
         item['independent_check']=proof
@@ -58,7 +61,8 @@ def main():
     selected_briefs=rng.sample(briefs,10)
     report=json.loads((args.run/'report.json').read_text(encoding='utf-8'))
     metrics={'run':str(args.run),'claims':counts,'total_facts':sum(counts.values()),'registry_titles':types,
-        'registry_announcement_claims':sum(types.values()),'new_registry_claims':len(events),
+        'registry_announcement_claims':sum(types.values()),'new_registry_claims':len(events),'new_distinct_event_records':len(distinct),
+        'retained_previous_announcements':sum(types.values())-len(events),
         'primary_sentences':sum(k*v for k,v in lengths.items()),'sentence_lengths':lengths,
         'requests':report['requests'],'mean_requests':report['amortized_requests_per_company'],
         'max_requests':report['max_requests_per_company'],

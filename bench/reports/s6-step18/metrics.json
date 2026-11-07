@@ -1,0 +1,57 @@
+{
+  "run": "bench\\runs\\20261107T055939048854Z-f02417b",
+  "claims": {
+    "identity": 31007,
+    "subunits": 6907,
+    "roles": 17806,
+    "accounts": 97416,
+    "activity": 12080,
+    "hiring": 3,
+    "website": 813
+  },
+  "total_facts": 166032,
+  "registry_titles": {
+    "Latest submitted annual accounts year updated": 1006,
+    "Registry event recorded (type unspecified)": 990,
+    "Registry update recorded": 4580,
+    "Workplace registry update recorded": 2825,
+    "Registered articles date changed": 91,
+    "Registered share capital changed": 40,
+    "Share capital registration date updated": 40,
+    "Employee information registration date updated (NAV Aa register)": 838,
+    "Employee information registration date updated (Enhetsregisteret)": 838,
+    "New registered workplace": 174,
+    "Registered business address changed": 341,
+    "Registered name changed": 24,
+    "Entity registration recorded": 145,
+    "Registered postal address changed": 77,
+    "Workplace removed": 5,
+    "Entity deletion recorded": 3
+  },
+  "registry_announcement_claims": 12017,
+  "new_registry_claims": 9113,
+  "new_distinct_event_records": 8827,
+  "primary_sentences": 5048,
+  "sentence_lengths": {
+    "5": 566,
+    "4": 202,
+    "6": 210,
+    "7": 21,
+    "3": 1
+  },
+  "requests": 8467,
+  "mean_requests": 8.467,
+  "max_requests": 40,
+  "feed_requests": 16,
+  "deadlines": 0,
+  "warnings": [
+    "site generation failed: ValueError"
+  ],
+  "synthesis": {
+    "companies": 1000,
+    "sentences": 9208,
+    "cited": 9208,
+    "dropped_sentences": 0
+  },
+  "retained_previous_announcements": 2904
+}
