@@ -3,7 +3,6 @@ from ..budget import SourceFailure
 import asyncio
 from ..models.envelope import Error
 from .extract import Section, add, finish, decode, response_source, get
-from . import financial_units
 
 URL = "https://data.brreg.no/regnskapsregisteret/regnskap/"
 PATHS = {
@@ -79,8 +78,6 @@ def extract(org,response,blobs):
             continue
         seen_years.add(year)
         selected.append((idx, row, year, end, period))
-    calibration = []
-    calibration_added = False
     for item_idx, (idx, rec, year, end, period) in enumerate(selected):
         is_latest = (item_idx == 0)
         reporting = {"fiscal_year": year, "period_start": period.get("fraDato"), "period_end": end,
@@ -89,10 +86,6 @@ def extract(org,response,blobs):
         confirmed = reporting['unit'] is None and reporting['currency'] == 'NOK'
         if confirmed:
             reporting.update({'unit': 'NOK', 'source_unit': None, 'unit_basis': 'four_exact_parent_2025_ratios_within_0.995_1.005'})
-            if not calibration_added:
-                calibration = financial_units.evidence(blobs)
-                section.evidence.extend(calibration)
-                calibration_added = True
         for name, path in PATHS.items():
             value = get(rec, path)
             if value is None and name not in {'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}:
@@ -103,7 +96,8 @@ def extract(org,response,blobs):
             add(section, response_source(response), org, "accounts", field_name, value,
                 f"/{idx}/" + "/".join(path), reporting=reporting, effective=end, id_reporting=reported_identity)
             if confirmed:
-                section.claims[-1].evidence_ids.extend(e.id for e in calibration)
+                # Calibration describes the unit policy, not this company's
+                # reported amount. Cite only its exact registry response.
                 section.claims[-1].reasons['unit'] = 'whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier'
             if reporting["unit"] is None:
                 section.claims[-1].reasons["unit"] = "scale_not_declared_by_source_or_reviewed_openapi"

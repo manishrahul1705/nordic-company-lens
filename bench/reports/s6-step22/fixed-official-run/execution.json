@@ -1,0 +1,43 @@
+{
+  "commit": "b3fe202e8ae6a29ef8085af930d53f167969f918",
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "signalpost",
+    "run",
+    "--organisations",
+    "orgnrs.txt",
+    "--output",
+    "out/envelopes.jsonl",
+    "--profiles-output",
+    "out/profiles.jsonl",
+    "--report",
+    "out/report.json",
+    "--state-dir",
+    "out/state",
+    "--site-dir",
+    "out/site"
+  ],
+  "input_sha256": "bfb099ad3ca3a50b6edbd423687dd3dee3012f4ff13f648abf4f8276ffebc8ac",
+  "credentials": "Application credential/search environment removed; NAV public token may be fetched in memory",
+  "runs": [
+    {
+      "number": 1,
+      "exit_code": 0,
+      "wall_seconds": 336.3599999998696,
+      "http_requests": 788,
+      "changes": 0,
+      "observation_changes": 0
+    },
+    {
+      "number": 2,
+      "exit_code": 0,
+      "wall_seconds": 175.7039999999106,
+      "http_requests": 753,
+      "changes": 0,
+      "observation_changes": 0
+    }
+  ],
+  "verification_exit_code": 0
+}

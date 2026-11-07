@@ -71,7 +71,7 @@ The accounts schema does not give a normative scaling statement. Four exact-pare
 | [TOMRA annual report](https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf), parent p145, org 927124238 |0.999915405|0.999216301|
 | [Aker Solutions annual report](https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf), parent p176, org 913748174 |1.000000000|1.000246124|
 
-For explicit NOK currency and absent source unit, annotate whole NOK without multiplying any reported amount. Other/missing currencies stay unknown unless reported. Short factual calibration records are stored separately; source identifiers carry the original PDF SHA-256 and page locator. These records are extracted facts, not the original PDF body. This is empirical calibration, not universal API documentation.
+For explicit NOK currency and absent source unit, annotate whole NOK without multiplying any reported amount. Other/missing currencies stay unknown unless reported. Calibration is methodological context, not evidence for another company's amounts: account claims cite only their exact registry response. Historical short factual calibration records carry original PDF hashes/page locators; they are extracted facts, not original PDF bodies. This is empirical calibration, not universal API documentation.
 
 ## Models, dependencies and cost
 

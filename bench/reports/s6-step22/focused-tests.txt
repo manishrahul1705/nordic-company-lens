@@ -1,0 +1,30 @@
+........FF........................                                       [100%]
+================================== FAILURES ===================================
+_ test_own_publisher_prefix_is_not_another_legal_entity[Utgitt av Example AS] _
+
+label = 'Utgitt av Example AS'
+
+    @pytest.mark.parametrize('label',['Utgitt av Example AS','All rettigheter reservert - Example AS'])
+    def test_own_publisher_prefix_is_not_another_legal_entity(label):
+>       assert real_page(page('<footer>'+label+'</footer>'),CONTEXT) is None
+E       AssertionError: assert 'different_legal_entity' is None
+E        +  where 'different_legal_entity' = real_page(<signalpost.web.html.Page object at 0x0000018AB24DB170>, {'name': 'Example AS', 'phone': '12345678', 'email': 'office@example.no', 'street': ['Example gate 1'], ...})
+E        +    where <signalpost.web.html.Page object at 0x0000018AB24DB170> = page((('<footer>' + 'Utgitt av Example AS') + '</footer>'))
+
+tests\test_recall_step11.py:49: AssertionError
+_ test_own_publisher_prefix_is_not_another_legal_entity[All rettigheter reservert - Example AS] _
+
+label = 'All rettigheter reservert - Example AS'
+
+    @pytest.mark.parametrize('label',['Utgitt av Example AS','All rettigheter reservert - Example AS'])
+    def test_own_publisher_prefix_is_not_another_legal_entity(label):
+>       assert real_page(page('<footer>'+label+'</footer>'),CONTEXT) is None
+E       AssertionError: assert 'different_legal_entity' is None
+E        +  where 'different_legal_entity' = real_page(<signalpost.web.html.Page object at 0x0000018AB24DB4A0>, {'name': 'Example AS', 'phone': '12345678', 'email': 'office@example.no', 'street': ['Example gate 1'], ...})
+E        +    where <signalpost.web.html.Page object at 0x0000018AB24DB4A0> = page((('<footer>' + 'All rettigheter reservert - Example AS') + '</footer>'))
+
+tests\test_recall_step11.py:49: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_recall_step11.py::test_own_publisher_prefix_is_not_another_legal_entity[Utgitt av Example AS]
+FAILED tests/test_recall_step11.py::test_own_publisher_prefix_is_not_another_legal_entity[All rettigheter reservert - Example AS]
+2 failed, 32 passed in 2.43s

@@ -18,7 +18,7 @@ Claims contain `id`, `family`, `field`, `value`, `availability`, `confidence`, `
 
 Available facts require evidence. Checked absence can have source evidence; failures without a retrieved source have null placeholders and error records, without invented provenance.
 
-Evidence contains deterministic `id`, source_url, source_class, retrieved_at (UTC with Z), content_sha256, claim_span (verbatim, at most 300 characters), locator, versioned extraction_method, source_identifier, effective_at and reporting_period. Hashes cover the exact stored body at `state/blobs/<sha256>`. Bulk evidence hashes an exact header plus selected CSV record; its source identifier separately includes the whole archive hash. Financial calibration evidence uses short extracted fact records and identifiers containing the original PDF hashes/page locators.
+Evidence contains deterministic `id`, source_url, source_class, retrieved_at (UTC with Z), content_sha256, claim_span (verbatim, at most 300 characters), locator, versioned extraction_method, source_identifier, effective_at and reporting_period. Hashes cover the exact stored body at `state/blobs/<sha256>`. Bulk evidence hashes an exact header plus selected CSV record; its source identifier separately includes the whole archive hash. Financial claims cite their exact registry response; other companies' unit-calibration records are methodological context and are not attached as supporting evidence.
 
 Raw bodies are never serialized into current envelopes. Legacy embedded-body input is accepted for compatibility. Previous evidence metadata can be retained without retrieving its historical body again. Full independent hash verification needs the corresponding archived blobs.
 

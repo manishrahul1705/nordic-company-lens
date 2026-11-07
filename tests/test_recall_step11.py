@@ -49,6 +49,27 @@ def test_own_publisher_prefix_is_not_another_legal_entity(label):
     assert real_page(page('<footer>'+label+'</footer>'),CONTEXT) is None
 
 
+@pytest.mark.parametrize('subject,publisher',[
+    ('Example', 'Example Norge AS'),
+    ('Example AS', 'Example Norge AS'),
+    ('Example', 'Example AB'),
+])
+def test_complete_footer_publisher_cannot_only_contain_subject_core(subject,publisher):
+    assert real_page(page('<footer><p>'+publisher+'</p></footer>'),
+                     {**CONTEXT,'name':subject}) == 'different_legal_entity'
+
+
+def test_complete_footer_publisher_allows_exact_core_without_form():
+    assert real_page(page('<footer><p>Example AS</p></footer>'),
+                     {**CONTEXT,'name':'Example'}) is None
+
+
+def test_final_publisher_guard_preserves_own_number_title_variant():
+    p=page('<footer>Org.nr '+ORG+'</footer>',title='Example Solution AS')
+    assert real_page(p,{**CONTEXT,'name':'Example Solutions AS','allowed_orgnrs':{ORG}}) is None
+    assert real_page(p,{**CONTEXT,'name':'Example Solutions AS','allowed_orgnrs':{'000000000'}}) == 'different_legal_entity'
+
+
 def test_board_member_and_auditor_do_not_establish_website_ownership():
     from signalpost.web.round2 import registered_leaders
     claims=[SimpleNamespace(family='roles',value={'name':name,'role_type':{'kode':role}})

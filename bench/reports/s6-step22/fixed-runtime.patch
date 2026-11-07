@@ -1,0 +1,166 @@
+diff --git a/docs/DATA_SCHEMA.md b/docs/DATA_SCHEMA.md
+index 21e07a7a..3957e3a9 100644
+--- a/docs/DATA_SCHEMA.md
++++ b/docs/DATA_SCHEMA.md
+@@ -18,7 +18,7 @@ Claims contain `id`, `family`, `field`, `value`, `availability`, `confidence`, `
+ 
+ Available facts require evidence. Checked absence can have source evidence; failures without a retrieved source have null placeholders and error records, without invented provenance.
+ 
+-Evidence contains deterministic `id`, source_url, source_class, retrieved_at (UTC with Z), content_sha256, claim_span (verbatim, at most 300 characters), locator, versioned extraction_method, source_identifier, effective_at and reporting_period. Hashes cover the exact stored body at `state/blobs/<sha256>`. Bulk evidence hashes an exact header plus selected CSV record; its source identifier separately includes the whole archive hash. Financial calibration evidence uses short extracted fact records and identifiers containing the original PDF hashes/page locators.
++Evidence contains deterministic `id`, source_url, source_class, retrieved_at (UTC with Z), content_sha256, claim_span (verbatim, at most 300 characters), locator, versioned extraction_method, source_identifier, effective_at and reporting_period. Hashes cover the exact stored body at `state/blobs/<sha256>`. Bulk evidence hashes an exact header plus selected CSV record; its source identifier separately includes the whole archive hash. Financial claims cite their exact registry response; other companies' unit-calibration records are methodological context and are not attached as supporting evidence.
+ 
+ Raw bodies are never serialized into current envelopes. Legacy embedded-body input is accepted for compatibility. Previous evidence metadata can be retained without retrieving its historical body again. Full independent hash verification needs the corresponding archived blobs.
+ 
+diff --git a/docs/SOURCES.md b/docs/SOURCES.md
+index 5212f4ac..3046ccbd 100644
+--- a/docs/SOURCES.md
++++ b/docs/SOURCES.md
+@@ -71,7 +71,7 @@ The accounts schema does not give a normative scaling statement. Four exact-pare
+ | [TOMRA annual report](https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf), parent p145, org 927124238 |0.999915405|0.999216301|
+ | [Aker Solutions annual report](https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf), parent p176, org 913748174 |1.000000000|1.000246124|
+ 
+-For explicit NOK currency and absent source unit, annotate whole NOK without multiplying any reported amount. Other/missing currencies stay unknown unless reported. Short factual calibration records are stored separately; source identifiers carry the original PDF SHA-256 and page locator. These records are extracted facts, not the original PDF body. This is empirical calibration, not universal API documentation.
++For explicit NOK currency and absent source unit, annotate whole NOK without multiplying any reported amount. Other/missing currencies stay unknown unless reported. Calibration is methodological context, not evidence for another company's amounts: account claims cite only their exact registry response. Historical short factual calibration records carry original PDF hashes/page locators; they are extracted facts, not original PDF bodies. This is empirical calibration, not universal API documentation.
+ 
+ ## Models, dependencies and cost
+ 
+diff --git a/src/signalpost/sources/regnskap.py b/src/signalpost/sources/regnskap.py
+index 2de4bd75..829a65a1 100644
+--- a/src/signalpost/sources/regnskap.py
++++ b/src/signalpost/sources/regnskap.py
+@@ -3,7 +3,6 @@ from ..budget import SourceFailure
+ import asyncio
+ from ..models.envelope import Error
+ from .extract import Section, add, finish, decode, response_source, get
+-from . import financial_units
+ 
+ URL = "https://data.brreg.no/regnskapsregisteret/regnskap/"
+ PATHS = {
+@@ -79,8 +78,6 @@ def extract(org,response,blobs):
+             continue
+         seen_years.add(year)
+         selected.append((idx, row, year, end, period))
+-    calibration = []
+-    calibration_added = False
+     for item_idx, (idx, rec, year, end, period) in enumerate(selected):
+         is_latest = (item_idx == 0)
+         reporting = {"fiscal_year": year, "period_start": period.get("fraDato"), "period_end": end,
+@@ -89,10 +86,6 @@ def extract(org,response,blobs):
+         confirmed = reporting['unit'] is None and reporting['currency'] == 'NOK'
+         if confirmed:
+             reporting.update({'unit': 'NOK', 'source_unit': None, 'unit_basis': 'four_exact_parent_2025_ratios_within_0.995_1.005'})
+-            if not calibration_added:
+-                calibration = financial_units.evidence(blobs)
+-                section.evidence.extend(calibration)
+-                calibration_added = True
+         for name, path in PATHS.items():
+             value = get(rec, path)
+             if value is None and name not in {'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}:
+@@ -103,7 +96,8 @@ def extract(org,response,blobs):
+             add(section, response_source(response), org, "accounts", field_name, value,
+                 f"/{idx}/" + "/".join(path), reporting=reporting, effective=end, id_reporting=reported_identity)
+             if confirmed:
+-                section.claims[-1].evidence_ids.extend(e.id for e in calibration)
++                # Calibration describes the unit policy, not this company's
++                # reported amount. Cite only its exact registry response.
+                 section.claims[-1].reasons['unit'] = 'whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier'
+             if reporting["unit"] is None:
+                 section.claims[-1].reasons["unit"] = "scale_not_declared_by_source_or_reviewed_openapi"
+diff --git a/src/signalpost/web/entity_scope.py b/src/signalpost/web/entity_scope.py
+index a4848cb1..270a602f 100644
+--- a/src/signalpost/web/entity_scope.py
++++ b/src/signalpost/web/entity_scope.py
+@@ -187,8 +187,11 @@ def enforce(envelopes, blobs, bulk):
+         units = {c.value['organisation_number'] for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
+         subject = value.get('matched_via_subunit') if value.get('matched_via_subunit') in units else org
+         from .proof import score
++        from .round2 import real_page
+         unit_names = [{'orgnr':c.value['organisation_number'],'name':c.value.get('name')} for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)]
+-        owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity' for p in proof_pages)
++        owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity'
++                             or real_page(p,{'name':name,'subunits':unit_names,'allowed_orgnrs':{org,*units}}) == 'different_legal_entity'
++                             for p in proof_pages)
+         if global_site or rejected_trial or owner_conflict or (group and (shared_veto or not group_site_has_own_proof(proof_pages, subject, name, registry_contacts))):
+             removed.append(proof)
+             proof.reasons['relationship'] = 'group_site'
+diff --git a/src/signalpost/web/round2.py b/src/signalpost/web/round2.py
+index 303571a3..0fc460b7 100644
+--- a/src/signalpost/web/round2.py
++++ b/src/signalpost/web/round2.py
+@@ -31,6 +31,14 @@ def named(page,name):
+ 
+ 
+ def real_page(page,context):
++    from .names import proof_context
++    # Preserve the existing own-orgnr spelling/spacing repair when this guard
++    # is invoked directly during final carried-forward publication checks.
++    from .proof import orgnrs
++    allowed=set(context.get('allowed_orgnrs',()))
++    page_ids=orgnrs(' '.join(page.brand_parts))
++    if len(page_ids)==1 and page_ids<=allowed:
++        context=proof_context(page,next(iter(page_ids)),context)
+     text=page.title+' '+page.visible
+     if re.search(r'<frameset\b',page.raw,re.I):return 'frameset_placeholder'
+     if re.search(r'<iframe\b',page.raw,re.I) and len(' '.join(page.visible.split()))<100:return 'frameset_placeholder'
+@@ -62,8 +70,14 @@ def real_page(page,context):
+         # A line-broken own legal name is not a new publisher. Require both
+         # the complete adjacent name and its exact owner identifier.
+         if split_own_footer and any(n.endswith(' '+normalized(value)) for n in expected):own_footer=True
+-        if re.fullmatch(r'[\wÆØÅæøå& .-]{2,85}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)',value) and not own_footer:
+-            return 'different_legal_entity'
++        if re.fullmatch(r'[\wÆØÅæøå& .-]{2,85}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)',value):
++            # A complete publisher name must match the complete legal-name
++            # core, not merely contain it (Example != Example Norge AS).
++            publisher_name = re.sub(r'^(?:utgitt av|owned by|all rights reserved|all(?:e)? rettigheter reservert)\s*[-:|]?\s*', '', value, flags=re.I)
++            exact_core = normalized(legal_name(publisher_name)) in {
++                normalized(legal_name(n)) for n in expected}
++            if not exact_core and not (split_own_footer and own_footer):
++                return 'different_legal_entity'
+     return None
+ 
+ 
+diff --git a/tests/test_financial_units.py b/tests/test_financial_units.py
+index 1b8fb0dd..d87d08e8 100644
+--- a/tests/test_financial_units.py
++++ b/tests/test_financial_units.py
+@@ -26,6 +26,7 @@ def test_empirical_nok_unit_preserves_reported_values(tmp_path):
+         assert claim['reporting_period']['unit']==expected_unit
+         evidence={e['id']:e for e in row['evidence']}
+         calibration=[evidence[key] for key in claim['evidence_ids'] if evidence[key]['source_class']=='company_report']
+-        assert len(calibration)==(2 if currency=='NOK' else 0)
++        assert calibration == []  # Other companies' reports cannot support this amount.
++        assert all(evidence[key]['source_url'].endswith('/923609016') for key in claim['evidence_ids'])
+         for item in calibration:
+             assert item['claim_span'].encode() in (cfg.state_dir/'blobs'/item['content_sha256']).read_bytes()
+diff --git a/tests/test_recall_step11.py b/tests/test_recall_step11.py
+index 43f73bb1..59e7e356 100644
+--- a/tests/test_recall_step11.py
++++ b/tests/test_recall_step11.py
+@@ -49,6 +49,27 @@ def test_own_publisher_prefix_is_not_another_legal_entity(label):
+     assert real_page(page('<footer>'+label+'</footer>'),CONTEXT) is None
+ 
+ 
++@pytest.mark.parametrize('subject,publisher',[
++    ('Example', 'Example Norge AS'),
++    ('Example AS', 'Example Norge AS'),
++    ('Example', 'Example AB'),
++])
++def test_complete_footer_publisher_cannot_only_contain_subject_core(subject,publisher):
++    assert real_page(page('<footer><p>'+publisher+'</p></footer>'),
++                     {**CONTEXT,'name':subject}) == 'different_legal_entity'
++
++
++def test_complete_footer_publisher_allows_exact_core_without_form():
++    assert real_page(page('<footer><p>Example AS</p></footer>'),
++                     {**CONTEXT,'name':'Example'}) is None
++
++
++def test_final_publisher_guard_preserves_own_number_title_variant():
++    p=page('<footer>Org.nr '+ORG+'</footer>',title='Example Solution AS')
++    assert real_page(p,{**CONTEXT,'name':'Example Solutions AS','allowed_orgnrs':{ORG}}) is None
++    assert real_page(p,{**CONTEXT,'name':'Example Solutions AS','allowed_orgnrs':{'000000000'}}) == 'different_legal_entity'
++
++
+ def test_board_member_and_auditor_do_not_establish_website_ownership():
+     from signalpost.web.round2 import registered_leaders
+     claims=[SimpleNamespace(family='roles',value={'name':name,'role_type':{'kode':role}})

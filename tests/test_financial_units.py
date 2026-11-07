@@ -26,6 +26,7 @@ def test_empirical_nok_unit_preserves_reported_values(tmp_path):
         assert claim['reporting_period']['unit']==expected_unit
         evidence={e['id']:e for e in row['evidence']}
         calibration=[evidence[key] for key in claim['evidence_ids'] if evidence[key]['source_class']=='company_report']
-        assert len(calibration)==(2 if currency=='NOK' else 0)
+        assert calibration == []  # Other companies' reports cannot support this amount.
+        assert all(evidence[key]['source_url'].endswith('/923609016') for key in claim['evidence_ids'])
         for item in calibration:
             assert item['claim_span'].encode() in (cfg.state_dir/'blobs'/item['content_sha256']).read_bytes()

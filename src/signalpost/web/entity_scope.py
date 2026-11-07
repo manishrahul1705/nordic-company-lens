@@ -187,8 +187,11 @@ def enforce(envelopes, blobs, bulk):
         units = {c.value['organisation_number'] for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
         subject = value.get('matched_via_subunit') if value.get('matched_via_subunit') in units else org
         from .proof import score
+        from .round2 import real_page
         unit_names = [{'orgnr':c.value['organisation_number'],'name':c.value.get('name')} for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)]
-        owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity' for p in proof_pages)
+        owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity'
+                             or real_page(p,{'name':name,'subunits':unit_names,'allowed_orgnrs':{org,*units}}) == 'different_legal_entity'
+                             for p in proof_pages)
         if global_site or rejected_trial or owner_conflict or (group and (shared_veto or not group_site_has_own_proof(proof_pages, subject, name, registry_contacts))):
             removed.append(proof)
             proof.reasons['relationship'] = 'group_site'

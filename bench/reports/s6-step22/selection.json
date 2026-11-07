@@ -1,0 +1,451 @@
+{
+  "selection": "SystemRandom sample from eight random accessible BRREG pages (page 1..99; API search-result window)",
+  "pages": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=41",
+      "sha256": "1f6d70f099c05bca6b502f93ec63e0205e10d219cf4f35dc62b18d177bf1c048",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=10",
+      "sha256": "cc89237b6281df0099a417ea3e40ec4472cf714af5ffad996040975d73163b95",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=43",
+      "sha256": "d3ff9a6bc14f1880d3b6df32a0fefe855b72bd36ccb15123777a8479f04bbfad",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=9",
+      "sha256": "8c9cb95b5fd7902a91830bda61a3f6269fb2f7ccb3cec08ab3e08677fc4f9dd5",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=83",
+      "sha256": "af3fbf3632ccb4116f1f92f165e08e4c2dd9c3b2833a7c0776d1965de251296a",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=35",
+      "sha256": "61a028a9a572ef7d792f6fa2dc22e3c98d12d9bfb41ce7a318e5fc9bef2e1940",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=28",
+      "sha256": "059eea72ee7081f15fc82c2cff01ee13defa9268eab14c158ffb3c99579de581",
+      "records": 100
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=100&page=45",
+      "sha256": "b66f3f4b5b6c69c83335c3cf163638ea555a3734184e1374f07ec13a27a18708",
+      "records": 100
+    }
+  ],
+  "excluded_identifier_count": 8279,
+  "overlap_with_known": 0,
+  "eligible_records": 700,
+  "input_sha256": "bfb099ad3ca3a50b6edbd423687dd3dee3012f4ff13f648abf4f8276ffebc8ac",
+  "companies": [
+    {
+      "organisation_number": "933302970",
+      "name": "73 HOLDING AS"
+    },
+    {
+      "organisation_number": "835226972",
+      "name": "A. BEITRUSTEN HOLDING AS"
+    },
+    {
+      "organisation_number": "928040992",
+      "name": "A. BERGH INVEST AS"
+    },
+    {
+      "organisation_number": "919358556",
+      "name": "24 I NORDEN AB"
+    },
+    {
+      "organisation_number": "934485947",
+      "name": "2020 FINANS AS"
+    },
+    {
+      "organisation_number": "913843738",
+      "name": "7GENERATIONS AS"
+    },
+    {
+      "organisation_number": "993295035",
+      "name": "A-ZYM AS"
+    },
+    {
+      "organisation_number": "926099175",
+      "name": "722 BUGATTI OSLO AIRPORT CITY TOM RANUM"
+    },
+    {
+      "organisation_number": "838492002",
+      "name": "A-Å GRAFISK DESIGN & REKLAME AS"
+    },
+    {
+      "organisation_number": "994869086",
+      "name": "2.FLEKKEFJORD MS"
+    },
+    {
+      "organisation_number": "938222444",
+      "name": "2. GLEMMESTAD"
+    },
+    {
+      "organisation_number": "996261824",
+      "name": "7OCEAN AS"
+    },
+    {
+      "organisation_number": "997071956",
+      "name": "2 ROMERIKE ST GEORGS GILDE"
+    },
+    {
+      "organisation_number": "933551938",
+      "name": "A KLEISYS BYGG OG REPARASJON"
+    },
+    {
+      "organisation_number": "877188922",
+      "name": "A JONASSEN AS"
+    },
+    {
+      "organisation_number": "937182783",
+      "name": "ABVIK SP. Z.O.O."
+    },
+    {
+      "organisation_number": "926402781",
+      "name": "74 PROSJEKT 1 AS"
+    },
+    {
+      "organisation_number": "927801027",
+      "name": "2015-KULLET HOFFSVANGEN SKOLE"
+    },
+    {
+      "organisation_number": "937647948",
+      "name": "A KALVIK"
+    },
+    {
+      "organisation_number": "913343913",
+      "name": "A KAVLI EIENDOM AS"
+    },
+    {
+      "organisation_number": "928644278",
+      "name": "20 DEGREES HOLDING AS"
+    },
+    {
+      "organisation_number": "981106563",
+      "name": "ABW INTERNATIONAL BERGSTUEN-WENNERØD"
+    },
+    {
+      "organisation_number": "989186787",
+      "name": "7ERTSEN AS"
+    },
+    {
+      "organisation_number": "817254292",
+      "name": "A. KARAMIPOURSHAMSABADI"
+    },
+    {
+      "organisation_number": "922746516",
+      "name": "2119 ENGINEERING LIMITED"
+    },
+    {
+      "organisation_number": "932031353",
+      "name": "7FKONSULT AS"
+    },
+    {
+      "organisation_number": "922926336",
+      "name": "2226 EIENDOM AS"
+    },
+    {
+      "organisation_number": "932258935",
+      "name": "2017-KULLET HEMNES SENTRALSKOLE"
+    },
+    {
+      "organisation_number": "989079417",
+      "name": "7FJELL VENTURES AS"
+    },
+    {
+      "organisation_number": "933760561",
+      "name": "A KOWAL BYGG"
+    },
+    {
+      "organisation_number": "930077992",
+      "name": "A K INVEST AS"
+    },
+    {
+      "organisation_number": "920714935",
+      "name": "A. ANDERZÉN AS"
+    },
+    {
+      "organisation_number": "932470004",
+      "name": "2011-BARN ØVREBØ"
+    },
+    {
+      "organisation_number": "937305125",
+      "name": "7DAYS TAXI AS"
+    },
+    {
+      "organisation_number": "930910457",
+      "name": "ABUSLAND UTLEIE"
+    },
+    {
+      "organisation_number": "841564812",
+      "name": "A KARLSEN & SØNN AS"
+    },
+    {
+      "organisation_number": "932188511",
+      "name": "23 DEGREES RENEWABLE LTD"
+    },
+    {
+      "organisation_number": "813138972",
+      "name": "ABUS NORDIC"
+    },
+    {
+      "organisation_number": "930215104",
+      "name": "2016 KULLET I ETNEDAL"
+    },
+    {
+      "organisation_number": "928616436",
+      "name": "7DAY FLORA DOAN"
+    },
+    {
+      "organisation_number": "928855287",
+      "name": "2 X SKUM VED OG DIV."
+    },
+    {
+      "organisation_number": "930096393",
+      "name": "2323 MEDIA AS"
+    },
+    {
+      "organisation_number": "929910648",
+      "name": "7FJELL TAXI AS"
+    },
+    {
+      "organisation_number": "925798150",
+      "name": "2014-LAGET"
+    },
+    {
+      "organisation_number": "831120592",
+      "name": "A JOHANNESEN HOLDINGS AS"
+    },
+    {
+      "organisation_number": "996687449",
+      "name": "7START LTD NUF"
+    },
+    {
+      "organisation_number": "832911852",
+      "name": "A-MEDI RADISAVLJEVIC"
+    },
+    {
+      "organisation_number": "985872724",
+      "name": "A. BEYER EIENDOM AS"
+    },
+    {
+      "organisation_number": "929418875",
+      "name": "7S CAPITAL AS"
+    },
+    {
+      "organisation_number": "919773200",
+      "name": "2011-BARNA VED GRØTTE SKOLE"
+    },
+    {
+      "organisation_number": "989115502",
+      "name": "A. JENSET HOLDING AS"
+    },
+    {
+      "organisation_number": "931379232",
+      "name": "7ISH FILM AS"
+    },
+    {
+      "organisation_number": "930510408",
+      "name": "2009-KULLET HEMNES"
+    },
+    {
+      "organisation_number": "990632391",
+      "name": "A. JENSEN BLOMSTER AS"
+    },
+    {
+      "organisation_number": "925531413",
+      "name": "20TWENTY AS"
+    },
+    {
+      "organisation_number": "913036999",
+      "name": "7SENSE AGRITECH AS"
+    },
+    {
+      "organisation_number": "932468387",
+      "name": "A LANGE-NIELSEN"
+    },
+    {
+      "organisation_number": "933673227",
+      "name": "ABURO - ZULQARNAIN"
+    },
+    {
+      "organisation_number": "996687694",
+      "name": "A K J ENERGITEKNIK AKTIEBOLAG"
+    },
+    {
+      "organisation_number": "926511130",
+      "name": "2014-KULLET VED BEGBY SKOLE"
+    },
+    {
+      "organisation_number": "928330117",
+      "name": "22 HOLDING NUF"
+    },
+    {
+      "organisation_number": "925622672",
+      "name": "A KLINIKKEN AS"
+    },
+    {
+      "organisation_number": "911876442",
+      "name": "74 PICTURES AS"
+    },
+    {
+      "organisation_number": "835232182",
+      "name": "A. BERG DESIGN"
+    },
+    {
+      "organisation_number": "974214717",
+      "name": "A KALLAND MASKIN"
+    },
+    {
+      "organisation_number": "917357439",
+      "name": "21-5"
+    },
+    {
+      "organisation_number": "821804302",
+      "name": "2012-BARNA VED GRØTTE SKOLE"
+    },
+    {
+      "organisation_number": "997514718",
+      "name": "A-Å GRAFISK DESIGN & REKLAME SALAH SAMHAN ELRANTISSI"
+    },
+    {
+      "organisation_number": "937322631",
+      "name": "7CONSULT AS"
+    },
+    {
+      "organisation_number": "933196984",
+      "name": "A KLEIN HOLDING AS"
+    },
+    {
+      "organisation_number": "929558766",
+      "name": "A. HAAVE"
+    },
+    {
+      "organisation_number": "916629966",
+      "name": "2. LIER ST. GEORGS GILDE"
+    },
+    {
+      "organisation_number": "934153936",
+      "name": "2380 INVEST AS"
+    },
+    {
+      "organisation_number": "924278137",
+      "name": "7FJELL GLASSERVICE AS"
+    },
+    {
+      "organisation_number": "913139062",
+      "name": "ABUS-GRUPPEN NORDIC A/S"
+    },
+    {
+      "organisation_number": "918144390",
+      "name": "A L HAGERUP"
+    },
+    {
+      "organisation_number": "918272518",
+      "name": "A-Z BYGGESERVICE IDCZAK AS"
+    },
+    {
+      "organisation_number": "930809683",
+      "name": "A. BLOMSTRAND WEB-SIKKERHET"
+    },
+    {
+      "organisation_number": "937820143",
+      "name": "7COLOREDFLOWER STUDIO - VESTBØ"
+    },
+    {
+      "organisation_number": "983381359",
+      "name": "2 YOU REKLAMEBYRÅ DA"
+    },
+    {
+      "organisation_number": "987592702",
+      "name": "23. BERGEN GRUPPE AV NORGES SPEIDERFORBUND"
+    },
+    {
+      "organisation_number": "928690776",
+      "name": "A. HOVDA HOLDING AS"
+    },
+    {
+      "organisation_number": "938385491",
+      "name": "ABY MOBILITY AS"
+    },
+    {
+      "organisation_number": "934389786",
+      "name": "2012-BARN ØVREBØ"
+    },
+    {
+      "organisation_number": "917417806",
+      "name": "A KAPITAL AS"
+    },
+    {
+      "organisation_number": "933768589",
+      "name": "7B HALDORSEN"
+    },
+    {
+      "organisation_number": "933222101",
+      "name": "ABUVIK AS"
+    },
+    {
+      "organisation_number": "929618254",
+      "name": "22GRÅ ALTINPINAR"
+    },
+    {
+      "organisation_number": "937272634",
+      "name": "A-TRE ARILD PETTERSEN"
+    },
+    {
+      "organisation_number": "927492709",
+      "name": "A. HESSTVEDT CONSULTING"
+    },
+    {
+      "organisation_number": "814968952",
+      "name": "221 CONSULTING AS"
+    },
+    {
+      "organisation_number": "936271316",
+      "name": "A. BERG INNOVASJON & BÆREKRAFT FORENING"
+    },
+    {
+      "organisation_number": "919844523",
+      "name": "7ANALYTICS AS"
+    },
+    {
+      "organisation_number": "932599546",
+      "name": "2016-KULLET HEMNES SENTRALSKOLE"
+    },
+    {
+      "organisation_number": "932137046",
+      "name": "2012-KULLET E-KLASSEN VED PUS"
+    },
+    {
+      "organisation_number": "918398252",
+      "name": "A-Å REGNSKAP AS"
+    },
+    {
+      "organisation_number": "917630399",
+      "name": "22 AAMODT"
+    },
+    {
+      "organisation_number": "929236297",
+      "name": "ABUNAJEM LEGETJENESTER"
+    },
+    {
+      "organisation_number": "828450212",
+      "name": "ABUHANANA IBAIDA TAXI"
+    },
+    {
+      "organisation_number": "934284305",
+      "name": "ABUUKAR MUHUDIIN"
+    }
+  ]
+}

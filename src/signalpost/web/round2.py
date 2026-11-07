@@ -31,6 +31,14 @@ def named(page,name):
 
 
 def real_page(page,context):
+    from .names import proof_context
+    # Preserve the existing own-orgnr spelling/spacing repair when this guard
+    # is invoked directly during final carried-forward publication checks.
+    from .proof import orgnrs
+    allowed=set(context.get('allowed_orgnrs',()))
+    page_ids=orgnrs(' '.join(page.brand_parts))
+    if len(page_ids)==1 and page_ids<=allowed:
+        context=proof_context(page,next(iter(page_ids)),context)
     text=page.title+' '+page.visible
     if re.search(r'<frameset\b',page.raw,re.I):return 'frameset_placeholder'
     if re.search(r'<iframe\b',page.raw,re.I) and len(' '.join(page.visible.split()))<100:return 'frameset_placeholder'
@@ -62,8 +70,14 @@ def real_page(page,context):
         # A line-broken own legal name is not a new publisher. Require both
         # the complete adjacent name and its exact owner identifier.
         if split_own_footer and any(n.endswith(' '+normalized(value)) for n in expected):own_footer=True
-        if re.fullmatch(r'[\wÆØÅæøå& .-]{2,85}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)',value) and not own_footer:
-            return 'different_legal_entity'
+        if re.fullmatch(r'[\wÆØÅæøå& .-]{2,85}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)',value):
+            # A complete publisher name must match the complete legal-name
+            # core, not merely contain it (Example != Example Norge AS).
+            publisher_name = re.sub(r'^(?:utgitt av|owned by|all rights reserved|all(?:e)? rettigheter reservert)\s*[-:|]?\s*', '', value, flags=re.I)
+            exact_core = normalized(legal_name(publisher_name)) in {
+                normalized(legal_name(n)) for n in expected}
+            if not exact_core and not (split_own_footer and own_footer):
+                return 'different_legal_entity'
     return None
 
 
