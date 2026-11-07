@@ -1,0 +1,61 @@
+..F...F                                                                  [100%]
+================================== FAILURES ===================================
+______________ test_award_exact_role_value_window_and_stable_ids ______________
+
+    def test_award_exact_role_value_window_and_stable_ids():
+        def parse(body,org=ORG):return award_extract(response(body,'https://ted.europa.eu/en/notice/1-2026/xml'),'1-2026',org,date(2026,11,7))
+>       a=parse(xml());assert len(a.claims)==1
+          ^^^^^^^^^^^^
+
+tests\test_official_extra.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_official_extra.py:60: in parse
+    def parse(body,org=ORG):return award_extract(response(body,'https://ted.europa.eu/en/notice/1-2026/xml'),'1-2026',org,date(2026,11,7))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\sources\official_extra.py:105: in award_extract
+    add(section,response_source(response),org,'activity','procurement_award.'+digest([notice,contract_id,org])[:24],
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+section = Section(state='available', claims=[], evidence=[], errors=[], retries=0)
+source = Source(url='https://ted.europa.eu/en/notice/1-2026/xml', body=b'<ContractAwardNotice xmlns:cac="urn:oasis:names:specif...0e2ac83026079f97046b1bb307a379a2ebd59d283dcad723c3efbcb5b4184e5', retrieved_at='2026-11-07T00:00:00Z', identifier=None)
+org = '923609016', family = 'activity'
+field_name = 'procurement_award.95ef864ce639e528d344fd70'
+value = {'kind': 'Public procurement award', 'title': 'Bridge maintenance', 'buyer': ['Buyer'], 'award_date': '2026-10-01', ...}
+locator = '/ContractAwardNotice', reporting = None, availability = None
+effective = None
+span = '<ContractAwardNotice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="...e><efac:LotTender><cbc:ID>T</cbc:ID></efac:LotTender></efac:SettledContract></efac:NoticeResult></ContractAwardNotice>'
+source_class = 'TED', method = 'signalpost.official_extra.v1'
+id_reporting = None
+
+    def add(section, source, org, family, field_name, value, locator, reporting=None, availability=None, effective=None, span=None, source_class="official_registry", method="signalpost.registry.v1",id_reporting=None):
+        if value == "" or value == [] or value == {}:
+            value = None
+        state = availability or ("available" if value is not None else "not_available")
+>       evid = Evidence(id=digest([source.url, source.sha, locator, method]), source_url=source.url,
+                        source_class=source_class, retrieved_at=source.retrieved_at, content_sha256=source.sha,
+                        claim_span=span if span is not None else source.excerpt(value,locator), locator=locator, source_identifier=source.identifier,
+                        extraction_method=method,
+                        effective_at=effective, reporting_period=reporting)
+E       pydantic_core._pydantic_core.ValidationError: 1 validation error for Evidence
+E         Value error, Excerpt exceeds 300 characters [type=value_error, input_value={'id': '545b35b8682306552...reporting_period': None}, input_type=dict]
+E           For further information visit https://errors.pydantic.dev/2.14/v/value_error
+
+src\signalpost\sources\extract.py:40: ValidationError
+______ test_failed_gleif_preserves_previous_claim_and_original_evidence _______
+
+    def test_failed_gleif_preserves_previous_claim_and_original_evidence():
+        from tests.test_registry_changes import envelope
+        old=envelope();section=gleif_extract(record(),response({'data':[record()]}),'/data/0',ORG)
+        old.claims+=section.claims;old.evidence+=section.evidence
+        row=envelope();row.run.refresh['official_extra']={'gleif':'not_available_fetch_failed'}
+        retain_failed(row,old.model_dump(mode='json'))
+        assert {c.id for c in row.claims}=={c.id for c in old.claims}
+>       assert all(c.carried_forward for c in row.claims)
+E       assert False
+E        +  where False = all(<generator object test_failed_gleif_preserves_previous_claim_and_original_evidence.<locals>.<genexpr> at 0x00000267D743B700>)
+
+tests\test_official_extra.py:90: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_official_extra.py::test_award_exact_role_value_window_and_stable_ids
+FAILED tests/test_official_extra.py::test_failed_gleif_preserves_previous_claim_and_original_evidence
+2 failed, 5 passed in 0.72s

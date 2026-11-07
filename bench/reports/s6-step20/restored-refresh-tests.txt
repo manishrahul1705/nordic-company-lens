@@ -1,0 +1,62 @@
+.F...........................                                            [100%]
+================================== FAILURES ===================================
+_________ test_refresh_dns_nxdomain_preserves_previous_state_as_stale _________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-company-lens/.pytestroot-step20-restored-refresh/test_refresh_dns_nxdomain_pres0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016862BC4590>
+
+    def test_refresh_dns_nxdomain_preserves_previous_state_as_stale(tmp_path, monkeypatch):
+        """[state_classification & claim_carry_forward]
+        DNS NXDOMAIN during refresh must retain the previous state as stale,
+        retaining prior claims with carried_forward=True, rather than producing false removals.
+        """
+        dns_fail = False
+        async def mock_dns(host, port=443):
+            if dns_fail:
+                raise SourceFailure("no_such_domain")
+            return ["93.184.216.34"]
+        monkeypatch.setattr(policy, "resolve_public", mock_dns)
+    
+        baseline_cfg = config(tmp_path / "baseline", [OUR], websites=True).model_copy(
+            update={"website_politeness_seconds": 0}
+        )
+        def baseline_dispatch(request):
+            if request.url.host == "data.brreg.no":
+                return handler()(request)
+            if request.url.path == "/robots.txt":
+                return httpx.Response(200, text="User-agent: *\nAllow: /")
+            if request.url.host == "example.no":
+                return httpx.Response(200, text=html(extra='<a href="mailto:office@example.no">Email</a>'))
+            return httpx.Response(404, text="not found")
+    
+        with respx.mock(assert_all_called=False) as router:
+            router.route().mock(side_effect=baseline_dispatch)
+            asyncio.run(run(baseline_cfg))
+    
+        dns_fail = True
+        refresh_cfg = config(tmp_path / "refresh", [OUR], websites=True, previous=baseline_cfg.output).model_copy(
+            update={"website_politeness_seconds": 0}
+        )
+        def refresh_dispatch(request):
+            if request.url.host == "data.brreg.no":
+                return handler()(request)
+            return httpx.Response(404, text="not found")
+    
+        with respx.mock(assert_all_called=False) as router:
+            router.route().mock(side_effect=refresh_dispatch)
+            report = asyncio.run(run(refresh_cfg))
+    
+        rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
+        row = rows[0]
+    
+>       assert row["run"]["sections"]["website"] == "available"
+E       AssertionError: assert 'not_available' == 'available'
+E         
+E         - available
+E         + not_available
+E         ? ++++
+
+tests\test_refresh_integrity_repair.py:124: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_refresh_integrity_repair.py::test_refresh_dns_nxdomain_preserves_previous_state_as_stale
+1 failed, 28 passed in 35.42s

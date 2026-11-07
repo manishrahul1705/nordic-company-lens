@@ -1,0 +1,504 @@
+{
+  "metrics": {
+    "http_requests": 0,
+    "claim_count_unchanged": true,
+    "changed_claim_values": 14,
+    "seconds": 82.25,
+    "preserved_before": "bench\\runs\\20261107T073418068646Z-42def8c\\enrichment-continuation\\before-amounts",
+    "source_bytes_unchanged": true
+  },
+  "changes": [
+    {
+      "orgnr": "999536999",
+      "old_id": "0fbc28eb95d5f30844e5db5ac946f1c0add97102177fd005e3d49e688c6ce5bc",
+      "new_id": "94f563cabce6af24324cd36e139dffafd3ee3cb888b8a5b0f699b14091c10fc0",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "IT Consultancy Services - Contract Award",
+        "buyer": [
+          "NORGES BANK"
+        ],
+        "award_date": "2025-03-31",
+        "date": "2025-03-31",
+        "notice_id": "461448-2025",
+        "contract_id": "CON-0002",
+        "company_orgnr": "999536999",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/461448-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "IT Consultancy Services - Contract Award",
+        "buyer": [
+          "NORGES BANK"
+        ],
+        "award_date": "2025-03-31",
+        "date": "2025-03-31",
+        "notice_id": "461448-2025",
+        "contract_id": "CON-0002",
+        "company_orgnr": "999536999",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/461448-2025",
+        "value": 16000000.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "993919675",
+      "old_id": "9fe35e85bfd0ccdf902452872245111d1678918795c82e74e08fa153c5dcd7c4",
+      "new_id": "ec7e71247d61c2bf9240cd83a0f593083ba3633ec4843ca4b173166dd2fdcc32",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "(25081) Sweeping services",
+        "buyer": [
+          "Asker og Bærum Brann og Redning IKS"
+        ],
+        "award_date": "2025-05-09",
+        "date": "2025-05-09",
+        "notice_id": "341549-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "993919675",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/341549-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "(25081) Sweeping services",
+        "buyer": [
+          "Asker og Bærum Brann og Redning IKS"
+        ],
+        "award_date": "2025-05-09",
+        "date": "2025-05-09",
+        "notice_id": "341549-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "993919675",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/341549-2025",
+        "value": 8529600.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "968545337",
+      "old_id": "29dd849fa565e541ede528018b1888e5943cd6f9bb1a68ae2474170c02468b76",
+      "new_id": "05974291f4d86353a99effa42c070361067c99a318435d114be938f0980235dc",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Contract Contract 5204 ICT rooms and cabling.",
+        "buyer": [
+          "Helse Sør-Øst RHF"
+        ],
+        "award_date": "2026-03-26",
+        "date": "2026-03-26",
+        "notice_id": "295084-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "968545337",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/295084-2026"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Contract Contract 5204 ICT rooms and cabling.",
+        "buyer": [
+          "Helse Sør-Øst RHF"
+        ],
+        "award_date": "2026-03-26",
+        "date": "2026-03-26",
+        "notice_id": "295084-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "968545337",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/295084-2026",
+        "value": 138216513.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "b14e591582955df01bea23a3968506b6a676b054a510da8f538e4c62f553d36c",
+      "new_id": "0e5db61ebba312da6b0e5b1f580397d111c690c71619d490539075b5b219812f",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "COUNTY ROAD 552 Hatvik and Venjaneset ferry quays - Expansion of the ferry quay",
+        "buyer": [
+          "Vestland fylkeskommune"
+        ],
+        "award_date": "2026-09-21",
+        "date": "2026-09-21",
+        "notice_id": "690844-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/690844-2026"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "COUNTY ROAD 552 Hatvik and Venjaneset ferry quays - Expansion of the ferry quay",
+        "buyer": [
+          "Vestland fylkeskommune"
+        ],
+        "award_date": "2026-09-21",
+        "date": "2026-09-21",
+        "notice_id": "690844-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/690844-2026",
+        "value": 99586554.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "4f20921a2417bf206e41b08c2b1ad4a4f95a577f380d6bd61c3d10c30ca60f29",
+      "new_id": "5ca850df64704ea22d087dbf16438e609e62c1ed9055677f86f30f32b490a70d",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "New Sætre primary school - Turnkey contract",
+        "buyer": [
+          "Asker kommune"
+        ],
+        "award_date": "2026-06-03",
+        "date": "2026-06-03",
+        "notice_id": "418429-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/418429-2026"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "New Sætre primary school - Turnkey contract",
+        "buyer": [
+          "Asker kommune"
+        ],
+        "award_date": "2026-06-03",
+        "date": "2026-06-03",
+        "notice_id": "418429-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/418429-2026",
+        "value": 400000000.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "e766d31089a399de8d54beab386473b713ffad288bd9e77a416fb834e695a3fe",
+      "new_id": "87d98f42ead2b9f919772034dcd89688440d3c3391a5b3b97b40d74156541914",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Partnering contract - New building, renovation and alteration of Porsgrunn sixth form college.",
+        "buyer": [
+          "Telemark fylkeskommune"
+        ],
+        "award_date": "2026-04-24",
+        "date": "2026-04-24",
+        "notice_id": "320357-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/320357-2026"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Partnering contract - New building, renovation and alteration of Porsgrunn sixth form college.",
+        "buyer": [
+          "Telemark fylkeskommune"
+        ],
+        "award_date": "2026-04-24",
+        "date": "2026-04-24",
+        "notice_id": "320357-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/320357-2026",
+        "value": 6750000.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "86c831f12542c78968bcf6dad7fc0de210e2d7604ba40c74543f58b2f9b98c3e",
+      "new_id": "796aa626c8d8c880ac87427bfbf1e63b03d04b42b39353c22e3a0dddec0809d8",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Framework agreement for an electrical and telecommunications installer",
+        "buyer": [
+          "Bane NOR SF"
+        ],
+        "award_date": "2025-12-17",
+        "date": "2025-12-17",
+        "notice_id": "627000-2026",
+        "contract_id": "CON-0003",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/627000-2026"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Framework agreement for an electrical and telecommunications installer",
+        "buyer": [
+          "Bane NOR SF"
+        ],
+        "award_date": "2025-12-17",
+        "date": "2025-12-17",
+        "notice_id": "627000-2026",
+        "contract_id": "CON-0003",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/627000-2026",
+        "value": 12200000.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "b1978e8855c73ae8d3278dc2f306ee9f6c8a7febd1c6f8d75d2ec34c5bb58705",
+      "new_id": "06496ba36357dee5bcab44e85bde4a537b7a8cca2dac91035ce749f0a3cc3d79",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Contract award - Turnkey contract with interaction, Nye Fjell ungdomsskule",
+        "buyer": [
+          "Øygarden kommune"
+        ],
+        "award_date": "2025-09-25",
+        "date": "2025-09-25",
+        "notice_id": "741743-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/741743-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Contract award - Turnkey contract with interaction, Nye Fjell ungdomsskule",
+        "buyer": [
+          "Øygarden kommune"
+        ],
+        "award_date": "2025-09-25",
+        "date": "2025-09-25",
+        "notice_id": "741743-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/741743-2025",
+        "value": 39124000.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "ab342f7b20090ec39b0c3e8c29932a8ceea8a7130463d0f2a4768da09fefc3ef",
+      "new_id": "1ad4b788036d043c29742f1f1c19efa43db6c5d667e7d99efa53dd3c76a982b6",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Contract signing notice - turnkey contract ambulance station (BOP5)",
+        "buyer": [
+          "BOP5 AS",
+          "Sørlandet sykehus HF (SSHF)"
+        ],
+        "award_date": "2025-05-16",
+        "date": "2025-05-16",
+        "notice_id": "434277-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/434277-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Contract signing notice - turnkey contract ambulance station (BOP5)",
+        "buyer": [
+          "BOP5 AS",
+          "Sørlandet sykehus HF (SSHF)"
+        ],
+        "award_date": "2025-05-16",
+        "date": "2025-05-16",
+        "notice_id": "434277-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/434277-2025",
+        "value": 119000000.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "55b9a423cd72951ca197a0fa76b34fafc362384b52813f76e69ccfd88cdbc26e",
+      "new_id": "cdb338b67470d312a44e6de84d2d05b2cf53a5abff9d7e7e7b5d5605c03173f9",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "(25035) Ulsåk nursery with six departments, partnering contract",
+        "buyer": [
+          "Hemsedal kommune"
+        ],
+        "award_date": "2025-04-28",
+        "date": "2025-04-28",
+        "notice_id": "327030-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/327030-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "(25035) Ulsåk nursery with six departments, partnering contract",
+        "buyer": [
+          "Hemsedal kommune"
+        ],
+        "award_date": "2025-04-28",
+        "date": "2025-04-28",
+        "notice_id": "327030-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/327030-2025",
+        "value": 110865000.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "984024290",
+      "old_id": "3f95a881e92314b677594ecf747847b3235638fbe120f542e8e8c9a9e636cc06",
+      "new_id": "a90e3776eb312b3c2302fcfc672e397e45695a7b1ea373a2c99076f0fe85a761",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "E21 Construction work Kongshaugen (qualification phase)",
+        "buyer": [
+          "Ålesund kommune v/Vatn og Avløp"
+        ],
+        "award_date": "2025-04-04",
+        "date": "2025-04-04",
+        "notice_id": "288858-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/288858-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "E21 Construction work Kongshaugen (qualification phase)",
+        "buyer": [
+          "Ålesund kommune v/Vatn og Avløp"
+        ],
+        "award_date": "2025-04-04",
+        "date": "2025-04-04",
+        "notice_id": "288858-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "984024290",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/288858-2025",
+        "value": 420114235.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "971521570",
+      "old_id": "7f30a06d4270db86b24fbe024aa356189fb1dc27bc44c4e4fbc2d02f01e4206f",
+      "new_id": "500f6e54200956237d9e160811d7086f3b699a673d7d73279c9ec7ddbc7a20f6",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Nitrogen purification system, contract",
+        "buyer": [
+          "Nordre Follo Renseanlegg"
+        ],
+        "award_date": "2026-03-27",
+        "date": "2026-03-27",
+        "notice_id": "287502-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "971521570",
+        "matched_role": "buyer",
+        "url": "https://ted.europa.eu/en/notice/-/detail/287502-2026"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Nitrogen purification system, contract",
+        "buyer": [
+          "Nordre Follo Renseanlegg"
+        ],
+        "award_date": "2026-03-27",
+        "date": "2026-03-27",
+        "notice_id": "287502-2026",
+        "contract_id": "CON-0001",
+        "company_orgnr": "971521570",
+        "matched_role": "buyer",
+        "url": "https://ted.europa.eu/en/notice/-/detail/287502-2026",
+        "value": 1.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "971521570",
+      "old_id": "09032aff9155d34dd52bde11f767dffb23f4f4b999672d18470c0567b7ff17ab",
+      "new_id": "16cbfc2cc3a17d158786887af6a0a2df9544a5ffcfc19801f0db0aad49518997",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Engineering services, framework agreement",
+        "buyer": [
+          "Nordre Follo Renseanlegg"
+        ],
+        "award_date": "2025-09-11",
+        "date": "2025-09-11",
+        "notice_id": "640353-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "971521570",
+        "matched_role": "buyer",
+        "url": "https://ted.europa.eu/en/notice/-/detail/640353-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Engineering services, framework agreement",
+        "buyer": [
+          "Nordre Follo Renseanlegg"
+        ],
+        "award_date": "2025-09-11",
+        "date": "2025-09-11",
+        "notice_id": "640353-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "971521570",
+        "matched_role": "buyer",
+        "url": "https://ted.europa.eu/en/notice/-/detail/640353-2025",
+        "value": 1.0,
+        "currency": "NOK"
+      }
+    },
+    {
+      "orgnr": "971521570",
+      "old_id": "bab23231cb5988d0c7ae197056ceef76775419ca832bf5a12ec6b1dfa08f1005",
+      "new_id": "b9dc0e35afa5046e6641edd4f76e2861e25000bfc7fde4721afd14ba8f942230",
+      "old": {
+        "kind": "Public procurement award",
+        "title": "Engineering services, framework agreement",
+        "buyer": [
+          "Nordre Follo Renseanlegg"
+        ],
+        "award_date": "2025-09-11",
+        "date": "2025-09-11",
+        "notice_id": "640353-2025",
+        "contract_id": "CON-0002",
+        "company_orgnr": "971521570",
+        "matched_role": "buyer",
+        "url": "https://ted.europa.eu/en/notice/-/detail/640353-2025"
+      },
+      "new": {
+        "kind": "Public procurement award",
+        "title": "Engineering services, framework agreement",
+        "buyer": [
+          "Nordre Follo Renseanlegg"
+        ],
+        "award_date": "2025-09-11",
+        "date": "2025-09-11",
+        "notice_id": "640353-2025",
+        "contract_id": "CON-0002",
+        "company_orgnr": "971521570",
+        "matched_role": "buyer",
+        "url": "https://ted.europa.eu/en/notice/-/detail/640353-2025",
+        "value": 1.0,
+        "currency": "NOK"
+      }
+    }
+  ]
+}

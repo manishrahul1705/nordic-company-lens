@@ -1,0 +1,961 @@
+{
+  "run": "bench\\runs\\20261107T073418068646Z-42def8c",
+  "GLEIF_companies": 32,
+  "GLEIF_claims": 163,
+  "GLEIF_parent_claims": 3,
+  "tender_companies": 0,
+  "tender_claims": 0,
+  "website_states": {
+    "not_available": 764,
+    "ambiguous": 121,
+    "available": 110,
+    "blocked": 3,
+    "failed": 2
+  },
+  "declared_absence_companies": 7,
+  "facts_by_family": {
+    "identity": 31170,
+    "subunits": 6907,
+    "roles": 17806,
+    "accounts": 97416,
+    "activity": 12080,
+    "hiring": 3,
+    "website": 820
+  },
+  "facts": 166202,
+  "requests": 8587,
+  "max_requests": 40,
+  "mean_requests": 8.587,
+  "wall_seconds": 809.2629605000839,
+  "deadline_hits": 0,
+  "warnings": [],
+  "extra_metrics": {
+    "requests": 99,
+    "gleif_companies": 32,
+    "parent_LEIs_batched": 2,
+    "tender_notices_nominated": 75
+  },
+  "source_states": {
+    "gleif:not_available": 968,
+    "TED:not_available": 986,
+    "gleif:available": 32,
+    "TED:not_available_fetch_failed": 14
+  },
+  "extra_requests": [
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=810363142%2C811888672%2C812190172%2C812717952%2C812753932%2C812869132%2C813668742%2C813785552%2C816077842%2C817098932%2C818807562%2C818880812%2C819849412%2C819952132%2C820411552%2C820445422%2C820688112%2C821962242%2C822291082%2C822707742%2C823147112%2C823568002%2C824357552%2C825795162%2C825986332%2C826563702%2C826969032%2C827418072%2C828095382%2C828565362%2C829363712%2C829604922%2C829622572%2C829695472%2C830103392%2C830576002%2C831074922%2C831447842%2C831494352%2C832196142%2C832761362%2C833122932%2C833894862%2C833912682%2C834141582%2C834144522%2C836146042%2C836233182%2C836440862%2C836491742%2C836686462%2C847367962%2C858855772%2C859178022%2C864358632%2C874495492%2C874698792%2C879309182%2C881637642%2C882749762%2C885259022%2C886674252%2C886757972%2C887820082%2C888349472%2C888375082%2C888951482%2C889146192%2C889204222%2C889244232%2C889244852%2C889320532%2C889806192%2C890573142%2C890688012%2C893948112%2C894516682%2C895989282%2C897523272%2C898872882%2C899100492%2C910217127%2C910484435%2C910608193%2C911599287%2C911604566%2C911624044%2C911683237%2C911691248%2C911691736%2C911702908%2C911703114%2C911881721%2C911885875%2C912052680%2C912085023%2C912166406%2C912172090%2C912189465%2C912342409&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 542.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "d3aef8621c2e028f660d80d463319a7876b2db93aa956c4b1467a35a6e6880d1",
+      "runtime_ms": 937
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=912363961%2C912383555%2C912385116%2C912492575%2C912493296%2C912507491%2C912667758%2C912697827%2C912809951%2C912823970%2C912829197%2C912972062%2C913147383%2C913158938%2C913258460%2C913285174%2C913321006%2C913485750%2C913705602%2C913718704%2C913737474%2C913772431%2C913794745%2C913876954%2C913886097%2C913949587%2C914000246%2C914056748%2C914084741%2C914185165%2C914189934%2C914206901%2C914248906%2C914277752%2C914283116%2C914335159%2C914468671%2C914507812%2C914582660%2C914718139%2C914723612%2C914752582%2C914797829%2C914896738%2C915015743%2C915042759%2C915075746%2C915097189%2C915118305%2C915216102%2C915261000%2C915279082%2C915483976%2C915523013%2C915577660%2C915707238%2C915884482%2C916049153%2C916099630%2C916108141%2C916115288%2C916126700%2C916162863%2C916188145%2C916213476%2C916224753%2C916455836%2C916467443%2C916498713%2C916545169%2C916672845%2C916721528%2C916729774%2C916757603%2C916766106%2C916774028%2C916800916%2C916896573%2C917144508%2C917283109%2C917329435%2C917543380%2C917685991%2C917816328%2C917965331%2C917998787%2C918000143%2C918004440%2C918035400%2C918046380%2C918049215%2C918197826%2C918270205%2C918328564%2C918407766%2C918431578%2C918486666%2C918531599%2C918555315%2C918562168&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 543.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "417d515c5e044321d8da061926ec89584172897edda47656754b0fb17fe7258d",
+      "runtime_ms": 328
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 544.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "791b16ed354bc069b4f77f19515169982c89ed2201eb7a3fbe38f1016e18c903",
+      "runtime_ms": 500
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=923472134%2C923479732%2C923558330%2C923566031%2C923591079%2C923716416%2C923763058%2C923845488%2C923883819%2C923998012%2C924061847%2C924412615%2C924458100%2C924478101%2C924499613%2C924517476%2C924553871%2C924688696%2C924775793%2C924784091%2C924825464%2C924828099%2C924840439%2C924910275%2C924912758%2C925149365%2C925201049%2C925226009%2C925255475%2C925273422%2C925310492%2C925321419%2C925321605%2C925347531%2C925360376%2C925370525%2C925400467%2C925413763%2C925421391%2C925434264%2C925546739%2C925547530%2C925656348%2C925677264%2C925738328%2C925787884%2C925809462%2C925853488%2C925854689%2C925856363%2C925924601%2C926007866%2C926045571%2C926065173%2C926077422%2C926096974%2C926128507%2C926307487%2C926338730%2C926351184%2C926351370%2C926446843%2C926490060%2C926529870%2C926543962%2C926624717%2C926648306%2C926698435%2C926876155%2C926877720%2C926970348%2C927044390%2C927088584%2C927092026%2C927113872%2C927129159%2C927146487%2C927152630%2C927162121%2C927182173%2C927211033%2C927239620%2C927327481%2C927379384%2C927409593%2C927440466%2C927440725%2C927441217%2C927445034%2C927529319%2C927560429%2C927616084%2C927661683%2C927671174%2C927718650%2C927826550%2C927901722%2C927906694%2C927938197%2C927944979&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 545.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "412e11d557bf402c8c4cff14a449ef7df4d156c5bbf6780478a925f1aff12f7a",
+      "runtime_ms": 297
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=927949954%2C927977508%2C927992442%2C928035212%2C928066193%2C928152553%2C928168263%2C928202267%2C928316033%2C928329828%2C928350193%2C928354318%2C928354709%2C928421937%2C928430359%2C928463923%2C928487067%2C928502732%2C928522539%2C928556417%2C928647854%2C928651797%2C928657523%2C928736032%2C928753581%2C928764125%2C928823873%2C928854337%2C928938875%2C928985407%2C929002733%2C929021266%2C929036301%2C929074009%2C929089464%2C929098463%2C929114116%2C929205472%2C929207157%2C929237889%2C929269314%2C929283988%2C929354435%2C929399900%2C929456246%2C929481070%2C929548647%2C929611160%2C929756800%2C929817516%2C929911393%2C929942167%2C930006289%2C930012734%2C930014397%2C930015210%2C930039217%2C930045055%2C930164518%2C930166030%2C930168157%2C930202894%2C930205508%2C930219665%2C930219746%2C930239070%2C930316547%2C930380423%2C930476587%2C930536148%2C930595950%2C930607967%2C930681628%2C930740985%2C930774359%2C930804541%2C930832707%2C930882542%2C930883247%2C930884286%2C930888923%2C930893358%2C930917230%2C930996386%2C931011642%2C931025422%2C931067877%2C931069373%2C931094726%2C931137905%2C931321676%2C931326201%2C931338900%2C931371010%2C931417215%2C931556649%2C931613294%2C931635387%2C931708694%2C931745271&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 546.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "6538ffcc24bd1d68897eca6d119fc02c513eeb88daa51bf8214ebb96e819eb03",
+      "runtime_ms": 297
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=931762001%2C931824317%2C931863509%2C931890875%2C931975552%2C932060663%2C932087650%2C932133245%2C932146118%2C932264773%2C932299720%2C932336774%2C932345978%2C932350963%2C932386933%2C932448459%2C932495996%2C932535157%2C932540509%2C932611104%2C932742608%2C932747197%2C932750465%2C932763559%2C932799901%2C932858843%2C932885743%2C932925982%2C932986833%2C933001776%2C933024229%2C933031071%2C933058174%2C933147045%2C933162214%2C933170705%2C933195988%2C933241041%2C933241866%2C933252043%2C933270610%2C933320766%2C933372332%2C933374610%2C933378918%2C933380025%2C933399443%2C933458032%2C933547000%2C933585379%2C933593037%2C933662578%2C933762467%2C933769917%2C933784762%2C933814106%2C933818713%2C934012674%2C934080041%2C934178653%2C934244443%2C934250176%2C934270266%2C934289099%2C934301226%2C934370619%2C934404688%2C934407253%2C934500644%2C934515218%2C934582578%2C934605209%2C934609441%2C934617762%2C934620011%2C934750969%2C934861353%2C934871545%2C934882237%2C934907736%2C934929187%2C934938011%2C934940792%2C934982762%2C935073359%2C935082110%2C935159628%2C935180678%2C935180759%2C935181100%2C935189365%2C935213908%2C935214599%2C935229200%2C935268796%2C935311969%2C935315077%2C935321751%2C935327423%2C935381991&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 547.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "665025fae34b6ebb0bc1799dd84edfc7c0ce67fd9e2e99aaaf7a4003aa24a2bb",
+      "runtime_ms": 297
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=935422116%2C935432014%2C935450233%2C935486807%2C935499984%2C935502993%2C935556139%2C935624088%2C935624401%2C935641403%2C935666481%2C935674948%2C935691850%2C935738237%2C935794595%2C935794897%2C935809207%2C935829437%2C935831601%2C935853664%2C935856507%2C935861144%2C935868475%2C935884152%2C935941016%2C935955033%2C935999820%2C936008593%2C936010067%2C936010695%2C936043380%2C936049192%2C936052304%2C936056687%2C936073840%2C936094112%2C936106536%2C936107362%2C936256295%2C936276075%2C936312055%2C936392946%2C936428215%2C936441440%2C936544525%2C936553214%2C936563139%2C936597386%2C936621716%2C936629466%2C936673066%2C936681514%2C936703445%2C936768873%2C936801005%2C936855865%2C938092516%2C938986673%2C939725709%2C939882480%2C940572355%2C941235905%2C942393679%2C942633475%2C943189145%2C943384150%2C946381373%2C947439332%2C948415534%2C948774402%2C948850532%2C950137169%2C950220317%2C951734543%2C952049070%2C952690744%2C952785052%2C953459450%2C954081311%2C955010477%2C955098498%2C956329132%2C956409071%2C956605059%2C957883303%2C958366620%2C958415079%2C959189412%2C959876959%2C960213912%2C960694503%2C961574110%2C962148204%2C963008090%2C963116128%2C964267952%2C964898278%2C965530819%2C965835156%2C966443960&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 548.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "d9be7e290d608dd086864afaf7fb3a443fdc434b8823858b33c0f94aad5fafb0",
+      "runtime_ms": 281
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=967933635%2C968386085%2C968468235%2C968545337%2C970979026%2C971161531%2C971173459%2C971349743%2C971400862%2C971456299%2C971492325%2C971521570%2C971558415%2C974527197%2C974533537%2C975569306%2C975822567%2C975962121%2C976183193%2C976271157%2C976289862%2C976526368%2C976623797%2C976645677%2C976746651%2C976758218%2C976843878%2C976871448%2C976886534%2C977107385%2C977126150%2C977149312%2C977250293%2C977456436%2C978714854%2C979354843%2C979709803%2C979775288%2C979870795%2C979907168%2C979973969%2C980166635%2C980362779%2C980411575%2C980622444%2C980910857%2C980973549%2C981052765%2C981058771%2C981063635%2C981089022%2C981130243%2C981391594%2C981490363%2C981508734%2C981613171%2C982189071%2C982388449%2C982410851%2C982801559%2C983025498%2C983103030%2C983244858%2C983298176%2C983430570%2C983478999%2C983485731%2C983486703%2C983520944%2C983643647%2C983651526%2C983690262%2C983742149%2C983803997%2C983901840%2C983923089%2C983947859%2C983985378%2C984024290%2C984081332%2C984133715%2C984290535%2C984414978%2C984470835%2C984590881%2C984597665%2C984611927%2C984633718%2C984717865%2C984821115%2C984852487%2C985090572%2C985204381%2C985464405%2C985470944%2C985803722%2C985830355%2C985868972%2C985891346%2C986007458&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 549.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "651e5d9c5b66c375f34948698eb8dbffcb793232e719817d4dc262cd011ef97a",
+      "runtime_ms": 531
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=986028269%2C986610472%2C986665358%2C986739874%2C986765336%2C986927646%2C987002808%2C987038284%2C987326999%2C987454709%2C987564911%2C987650915%2C987719133%2C987895276%2C987902876%2C987909889%2C988119342%2C988185132%2C988236756%2C988384828%2C988456292%2C988460400%2C988508985%2C988715220%2C988810029%2C988836311%2C988863262%2C988882976%2C988944645%2C989028367%2C989049720%2C989088491%2C989113437%2C989127934%2C989139045%2C989145509%2C989147803%2C989160702%2C989168215%2C989171984%2C989174339%2C989175343%2C989195123%2C989222724%2C989232401%2C989238051%2C989243497%2C989245929%2C989248936%2C989251236%2C989252968%2C989304410%2C989338811%2C989476785%2C989607146%2C989665537%2C989916319%2C989962787%2C989970356%2C989986414%2C989987291%2C989991574%2C989997459%2C989998285%2C990012288%2C990033897%2C990134030%2C990342555%2C990412375%2C990459606%2C990515433%2C990574200%2C990632901%2C990702861%2C990800480%2C990860904%2C991247610%2C991271198%2C991368000%2C991380299%2C991415254%2C991448055%2C991450084%2C991483055%2C991603301%2C991687343%2C991718478%2C991807209%2C991843361%2C991883010%2C991969527%2C991978526%2C992023384%2C992068434%2C992107294%2C992123656%2C992170751%2C992174676%2C992238917%2C992259086&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 550.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "f842ec2c214bd9852b039c3a38ac0006957cfb7a6373b96bb163328537c88cde",
+      "runtime_ms": 500
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=992288973%2C992377518%2C992416084%2C992475765%2C992557613%2C992841052%2C992852011%2C992868775%2C993014591%2C993021180%2C993312479%2C993327182%2C993347728%2C993372277%2C993388025%2C993395919%2C993451452%2C993452858%2C993484407%2C993919675%2C993930849%2C994218875%2C994284088%2C994382217%2C994570757%2C994623710%2C994774050%2C994919482%2C994986740%2C995133687%2C995243822%2C995372614%2C995445611%2C995516926%2C995520982%2C995541432%2C995612461%2C995652935%2C995654539%2C995721686%2C995748983%2C995880423%2C996080544%2C996154343%2C996208591%2C996213420%2C996233391%2C996266737%2C996284212%2C996525627%2C996613593%2C996698920%2C996744744%2C996890759%2C996927903%2C996929515%2C996979660%2C997002695%2C997024311%2C997218442%2C997352572%2C997357094%2C997475968%2C997579208%2C997650859%2C997654528%2C997755502%2C997761979%2C997768728%2C997790952%2C997806425%2C997897668%2C997927885%2C998008123%2C998024684%2C998057736%2C998077028%2C998130530%2C998138558%2C998162564%2C998236002%2C998349532%2C998407257%2C998419271%2C998473195%2C998535611%2C998551587%2C998627885%2C998741238%2C998800439%2C998873851%2C998990793%2C999196462%2C999329969%2C999516386%2C999530095%2C999536999%2C999617433%2C999642519%2C999656099&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 551.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "9295ed1bedc13b01edb625b33161bf33dc71da42a3e7e8ce246e21639b71f5f2",
+      "runtime_ms": 515
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/direct-parent-relationship",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 552.4849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "50067151b6ab3f3241e528d81112be49284950d93474ebfe57742df1103eb3a4",
+      "runtime_ms": 250
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/ultimate-parent-relationship",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 553.5,
+      "status": 200,
+      "error": null,
+      "content_sha256": "62c34b891450094fca854a8f81b16288c8aa89426efeba13bb3d944109f15dd3",
+      "runtime_ms": 828
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/ultimate-parent-relationship",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 554.5,
+      "status": 200,
+      "error": null,
+      "content_sha256": "ccec5ccb63d3628e1ee87f75fc49e14875cddeb2f99947de278f995fd5cdc57f",
+      "runtime_ms": 250
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bsize%5D=200",
+      "host": "api.gleif.org",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 555.5,
+      "status": 200,
+      "error": null,
+      "content_sha256": "0b2ad528f671c0f301c64bb5041a100215753e0dcc16957d1c69685a18f527fa",
+      "runtime_ms": 282
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 555.7819999998901,
+      "status": 200,
+      "error": null,
+      "content_sha256": "9d047a3ec725bdad733054fbf51cce8e8cccab36486ad42b2d19dbb3a1c68f2d",
+      "runtime_ms": 1171
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 556.9529999999795,
+      "status": 200,
+      "error": null,
+      "content_sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+      "runtime_ms": 266
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 557.9529999999795,
+      "status": 200,
+      "error": null,
+      "content_sha256": "eefd455437507cec123554bcc44fb1f8b517904cca4a8ce128776acac2f0bfba",
+      "runtime_ms": 469
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 558.9529999999795,
+      "status": 200,
+      "error": null,
+      "content_sha256": "3a0676da2fadf71604e7d6dcdccdf965e8929bd3ca6e889b1c8b6fefd4343767",
+      "runtime_ms": 282
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 559.9689999998081,
+      "status": 200,
+      "error": null,
+      "content_sha256": "53f80301cb899e07cf729c3c17a28622fcf7204ced0d8b15fbc56378f22993d6",
+      "runtime_ms": 281
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 560.9689999998081,
+      "status": 200,
+      "error": null,
+      "content_sha256": "dac4b174d6784cdc22f60c3762a23e87c1cf657b58e80a7a97652005e4f98c03",
+      "runtime_ms": 328
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 561.9849999998696,
+      "status": 200,
+      "error": null,
+      "content_sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+      "runtime_ms": 281
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 563.0,
+      "status": 200,
+      "error": null,
+      "content_sha256": "95d1fa15151542fa258a7f78dbe5fe186af8d84dc5d5f98cf100ab96a4e2d921",
+      "runtime_ms": 750
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 564.0,
+      "status": 200,
+      "error": null,
+      "content_sha256": "dc3fb9e8261cd1cc3a7cf8e1502a1da5eaab36fb64c1e30ee4acaad9085a91f8",
+      "runtime_ms": 328
+    },
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "host": "api.ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 565.0,
+      "status": 200,
+      "error": null,
+      "content_sha256": "ac11bda283a14b1f849b757c02bd86cd07b35039818bfce95192b5f627ca1304",
+      "runtime_ms": 391
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/10384-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 565.3909999998286,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 656
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/112715-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 566.4069999998901,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 296
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/115235-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 567.4219999997877,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/116542-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 568.4069999998901,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/120822-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 569.4219999997877,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/138083-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 570.4069999998901,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/140390-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 571.4069999998901,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/150922-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 572.4219999997877,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/165606-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 573.4379999998491,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/173043-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 574.4379999998491,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/174478-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 575.4379999998491,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/187066-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 576.4379999998491,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/197558-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 577.4379999998491,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/198485-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 578.4379999998491,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/210972-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 579.4379999998491,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/228306-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 580.4529999999795,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/246735-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 581.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/247985-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 582.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/250458-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 583.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/261860-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 584.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/263789-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 585.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/271943-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 586.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/287502-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 587.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/288858-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 588.4689999998081,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 250
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/295084-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 589.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/313125-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 590.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/320357-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 591.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/327030-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 592.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/330396-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 593.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/335345-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 594.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/338506-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 595.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 250
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/341549-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 596.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/341842-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 597.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/354425-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 598.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/370861-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 599.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/387041-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 600.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/389874-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 601.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/390266-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 602.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/39027-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 603.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/397297-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 604.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/397515-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 605.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/418429-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 606.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/42374-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 607.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/42963-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 608.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/434277-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 609.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/461448-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 610.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/475312-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 611.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/486198-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 612.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/495785-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 613.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 250
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/510525-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 614.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/517910-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 615.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 265
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/528398-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 616.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 265
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/549796-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 617.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/574364-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 618.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/583218-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 619.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/627000-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 620.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/637605-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 621.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/640353-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 622.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 265
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/643444-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 623.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/690844-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 624.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/69164-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 625.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 250
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/69404-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 626.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/697888-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 627.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/698069-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 628.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/741466-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 629.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/741472-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 630.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/741743-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 631.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/744428-2024/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 632.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/745118-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 633.5,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/757744-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 634.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/766764-2026/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 635.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 265
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/780228-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 636.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/817875-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 637.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/834670-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 638.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/839756-2025/xml",
+      "host": "ted.europa.eu",
+      "organisation_number": "__official_extra__",
+      "attempt_started": 639.4849999998696,
+      "status": 406,
+      "error": "SourceFailure",
+      "runtime_ms": 234
+    }
+  ]
+}

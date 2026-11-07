@@ -1,0 +1,55 @@
+{
+  "new_websites": [
+    {
+      "orgnr": "970979026",
+      "claim": {
+        "field": "official_website",
+        "value": {
+          "final_url": "https://konseptbygg.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://konseptbygg.no/kontakt.html",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "registry_email",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "7228b8a7f33a952e4ae91a393244a6f2b03d242dce7c6a68e6be7c039b53c924"
+        ],
+        "id": "27b6b85c512cf33930d0c2010034772f975820c0e9c42ad08d2142c43d714a79",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-07T07:35:22.991236Z",
+        "last_observed_at": "2026-11-07T07:35:22.991236Z",
+        "reasons": {
+          "discovery_method": "registry email domain"
+        }
+      },
+      "evidence": [
+        {
+          "id": "7228b8a7f33a952e4ae91a393244a6f2b03d242dce7c6a68e6be7c039b53c924",
+          "source_url": "https://konseptbygg.no/kontakt.html",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-07T07:35:22.991236Z",
+          "content_sha256": "59cb87d007f092b49fd0a6fad3b9f70c0118ff8a0629699cf642aad2a51f860f",
+          "claim_span": "mer Konseptbygg Eiendom AS:</strong> NO 970 979 026<br>\n\t\t\t\t\t\t  </p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<form id=\"contact-form\">\n\t\t\t\t\t\t\t<h1>Send oss en melding</h1>\n\t",
+          "locator": "identity-proof:970979026",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    }
+  ],
+  "new_social": []
+}

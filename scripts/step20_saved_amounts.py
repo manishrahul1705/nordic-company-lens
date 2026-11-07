@@ -6,7 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import time
-from signalpost.models.envelope import Envelope
+from signalpost.models.envelope import Envelope,CompactProfile
 from signalpost.sources.http import Response
 from signalpost.sources.official_extra import award_extract
 from signalpost.sources.blobstore import BlobStore
@@ -46,6 +46,7 @@ async def main():
             row.claims=[c for c in row.claims if not c.field.startswith('procurement_award.')]+list(new.values())
             row.evidence=list({**records,**evidence}.values())
             row.run.synthesis=await service.summarize(row);row.profile.synthesis=row.run.synthesis
+        row.profile=CompactProfile(organisation_number=row.organisation_number,values={c.field:c.value for c in row.claims},evidence_ids=[e.id for e in row.evidence],synthesis=row.run.synthesis)
         rows.append(row)
     write(out/'envelopes.jsonl',rows,'union',BlobStore(base/'state'),512)
     write_profiles(out/'profiles.jsonl',rows)

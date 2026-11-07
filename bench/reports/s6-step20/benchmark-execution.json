@@ -1,0 +1,16 @@
+{
+  "commit": "8d329329f1e0be7a906da076a0f9e08ef91f6490",
+  "base": "bench\\runs\\20261107T073418068646Z-42def8c",
+  "type": "bounded optional-source continuation; not a second company crawl",
+  "original_requests": 8587,
+  "additional_requests": 99,
+  "source_seconds": 101.51600000006147,
+  "phase_wall_seconds": 286.03100000019185,
+  "cumulative_elapsed_seconds": 1355.5406380000059,
+  "original_global_cap": 18000,
+  "source_requests_cumulative": 198,
+  "source_cap_cumulative": 300,
+  "original_files_untouched": true,
+  "no_company_source_crawl": true,
+  "reason": "TED XML Accept header406 repair"
+}

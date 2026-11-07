@@ -1,0 +1,4685 @@
+[
+  {
+    "orgnr": "999536999",
+    "name": "EMAGINE AS",
+    "claim": {
+      "field": "identity.gleif.ultimate_parent",
+      "value": {
+        "name": "emagine Holding ApS",
+        "lei": "98450065463AB3C5CE22",
+        "relationship": "IS_ULTIMATELY_CONSOLIDATED_BY"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "b8fa3dfa673e78ed31c32c21fb5c19c559b58fd626028ae24c2b65991bba0e50",
+        "79dc8ac251a7c711cb73478964b1ac5b762d7e1f9a6da4c21a7304dcdeb001ab",
+        "1579509a4dc81f0dbde54b8a4a7ca3c6e319fab14633a369c5359d8e7952af0a"
+      ],
+      "id": "a4064285e9b8665fbfd80bd9789449d341df4242b8dc36b4415ee16ad3c9e319",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-07T07:52:21.423869Z",
+      "last_observed_at": "2026-11-07T07:52:21.423869Z",
+      "reasons": {
+        "label": "GLEIF ultimate parent"
+      }
+    },
+    "evidence": [
+      {
+        "id": "b8fa3dfa673e78ed31c32c21fb5c19c559b58fd626028ae24c2b65991bba0e50",
+        "source_url": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bsize%5D=200",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:21.423869Z",
+        "content_sha256": "0b2ad528f671c0f301c64bb5041a100215753e0dcc16957d1c69685a18f527fa",
+        "claim_span": "{\"type\":\"lei-records\",\"id\":\"98450065463AB3C5CE22\",\"attributes\":{\"lei\":\"98450065463AB3C5CE22\",\"entity\":{\"legalName\":{\"name\":\"emagine Holding ApS\",\"language\":\"da\"},\"otherNames\":[{\"name\":\"ApS KBUS 18 nr. 300\",\"language\":\"da\",\"type\":\"PREVIOUS_LEGAL_NAME\"}],\"transliteratedOtherNames\":[],\"legalAddress\":{\"",
+        "locator": "/data/0",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "79dc8ac251a7c711cb73478964b1ac5b762d7e1f9a6da4c21a7304dcdeb001ab",
+        "source_url": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/ultimate-parent-relationship",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:20.380172Z",
+        "content_sha256": "ccec5ccb63d3628e1ee87f75fc49e14875cddeb2f99947de278f995fd5cdc57f",
+        "claim_span": "{\"startNode\":{\"id\":\"1595OM7WUKE18GL7M831\",\"type\":\"LEI\"},\"endNode\":{\"id\":\"98450065463AB3C5CE22\",\"type\":\"LEI\"},\"type\":\"IS_ULTIMATELY_CONSOLIDATED_BY\",\"status\":\"ACTIVE\",\"periods\":[{\"startDate\":\"2022-12-11T23:00:00Z\",\"type\":\"RELATIONSHIP_PERIOD\"},{\"startDate\":\"2023-12-31T23:00:00Z\",\"endDate\":\"2024-12-30",
+        "locator": "/data/attributes/relationship",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "1579509a4dc81f0dbde54b8a4a7ca3c6e319fab14633a369c5359d8e7952af0a",
+        "source_url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=992288973%2C992377518%2C992416084%2C992475765%2C992557613%2C992841052%2C992852011%2C992868775%2C993014591%2C993021180%2C993312479%2C993327182%2C993347728%2C993372277%2C993388025%2C993395919%2C993451452%2C993452858%2C993484407%2C993919675%2C993930849%2C994218875%2C994284088%2C994382217%2C994570757%2C994623710%2C994774050%2C994919482%2C994986740%2C995133687%2C995243822%2C995372614%2C995445611%2C995516926%2C995520982%2C995541432%2C995612461%2C995652935%2C995654539%2C995721686%2C995748983%2C995880423%2C996080544%2C996154343%2C996208591%2C996213420%2C996233391%2C996266737%2C996284212%2C996525627%2C996613593%2C996698920%2C996744744%2C996890759%2C996927903%2C996929515%2C996979660%2C997002695%2C997024311%2C997218442%2C997352572%2C997357094%2C997475968%2C997579208%2C997650859%2C997654528%2C997755502%2C997761979%2C997768728%2C997790952%2C997806425%2C997897668%2C997927885%2C998008123%2C998024684%2C998057736%2C998077028%2C998130530%2C998138558%2C998162564%2C998236002%2C998349532%2C998407257%2C998419271%2C998473195%2C998535611%2C998551587%2C998627885%2C998741238%2C998800439%2C998873851%2C998990793%2C999196462%2C999329969%2C999516386%2C999530095%2C999536999%2C999617433%2C999642519%2C999656099&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:17.609266Z",
+        "content_sha256": "9295ed1bedc13b01edb625b33161bf33dc71da42a3e7e8ce246e21639b71f5f2",
+        "claim_span": "\",\"id\":\"1595OM7WUKE18GL7M831\",\"attributes\":{\"lei\":\"1595OM7WUKE18GL7M831\",\"entity\":{\"legalName\":{\"name\":\"EMAGINE AS\",\"language\":\"no\"},\"otherNames\":[],\"transliteratedOtherNames\":[],\"legalAddress\":{\"language\":\"no\",\"addressLines\":[\"Schweigaards gate 16B\"],\"addressNumber\":null,\"addressNumberWithinBuildin",
+        "locator": "/data/0/attributes/lei",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "raw_located_value": {
+      "type": "lei-records",
+      "id": "98450065463AB3C5CE22",
+      "attributes": {
+        "lei": "98450065463AB3C5CE22",
+        "entity": {
+          "legalName": {
+            "name": "emagine Holding ApS",
+            "language": "da"
+          },
+          "otherNames": [
+            {
+              "name": "ApS KBUS 18 nr. 300",
+              "language": "da",
+              "type": "PREVIOUS_LEGAL_NAME"
+            }
+          ],
+          "transliteratedOtherNames": [],
+          "legalAddress": {
+            "language": "da",
+            "addressLines": [
+              "Sydhavnsgade 16, 2."
+            ],
+            "addressNumber": null,
+            "addressNumberWithinBuilding": null,
+            "mailRouting": "C/O emagine Consulting A/S",
+            "city": "København SV",
+            "region": "DK-84",
+            "country": "DK",
+            "postalCode": "2450"
+          },
+          "headquartersAddress": {
+            "language": "da",
+            "addressLines": [
+              "Sydhavnsgade 16, 2."
+            ],
+            "addressNumber": null,
+            "addressNumberWithinBuilding": null,
+            "mailRouting": "C/O emagine Consulting A/S",
+            "city": "København SV",
+            "region": "DK-84",
+            "country": "DK",
+            "postalCode": "2450"
+          },
+          "registeredAt": {
+            "id": "RA000170",
+            "other": null
+          },
+          "registeredAs": "42019887",
+          "jurisdiction": "DK",
+          "category": "GENERAL",
+          "legalForm": {
+            "id": "H8VP",
+            "other": null
+          },
+          "associatedEntity": {
+            "lei": null,
+            "name": null
+          },
+          "status": "ACTIVE",
+          "expiration": {
+            "date": null,
+            "reason": null
+          },
+          "successorEntity": {
+            "lei": null,
+            "name": null
+          },
+          "successorEntities": [],
+          "creationDate": "2021-01-01T00:00:00Z",
+          "subCategory": null,
+          "otherAddresses": [
+            {
+              "fieldType": "TransliteratedOtherAddress",
+              "language": "da",
+              "type": "PREFERRED_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+              "addressLines": [
+                "Sydhavnsgade 16, 2."
+              ],
+              "mailRouting": "C/O emagine Consulting A/S",
+              "city": "Koebenhavn SV",
+              "region": "DK-84",
+              "country": "DK",
+              "postalCode": "2450"
+            },
+            {
+              "fieldType": "TransliteratedOtherAddress",
+              "language": "da",
+              "type": "PREFERRED_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+              "addressLines": [
+                "Sydhavnsgade 16, 2."
+              ],
+              "mailRouting": "C/O emagine Consulting A/S",
+              "city": "Koebenhavn SV",
+              "region": "DK-84",
+              "country": "DK",
+              "postalCode": "2450"
+            }
+          ],
+          "eventGroups": [
+            {
+              "groupType": "STANDALONE",
+              "events": [
+                {
+                  "validationDocuments": "SUPPORTING_DOCUMENTS",
+                  "validationReference": "https://datacvr.virk.dk/enhed/virksomhed/42019887",
+                  "effectiveDate": "2022-11-06T23:00:00Z",
+                  "recordedDate": "2023-08-16T15:03:03Z",
+                  "type": "CHANGE_LEGAL_NAME",
+                  "status": "COMPLETED"
+                }
+              ]
+            }
+          ]
+        },
+        "registration": {
+          "initialRegistrationDate": "2021-08-25T14:03:56Z",
+          "lastUpdateDate": "2026-08-03T10:20:58Z",
+          "status": "ISSUED",
+          "nextRenewalDate": "2027-09-03T07:09:47Z",
+          "managingLou": "98450045AN5EB5FDC780",
+          "corroborationLevel": "FULLY_CORROBORATED",
+          "validatedAt": {
+            "id": "RA000170",
+            "other": null
+          },
+          "validatedAs": "42019887",
+          "otherValidationAuthorities": []
+        },
+        "bic": null,
+        "mic": null,
+        "ocid": "dk/42019887",
+        "qcc": "QDKJF604J9",
+        "gem": null,
+        "spglobal": [
+          "1680266049"
+        ],
+        "conformityFlag": "CONFORMING"
+      },
+      "relationships": {
+        "managing-lou": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/managing-lou"
+          }
+        },
+        "lei-issuer": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/lei-issuer"
+          }
+        },
+        "field-modifications": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/field-modifications"
+          }
+        },
+        "direct-parent": {
+          "links": {
+            "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-parent-reporting-exception"
+          }
+        },
+        "ultimate-parent": {
+          "links": {
+            "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-parent-reporting-exception"
+          }
+        },
+        "direct-children": {
+          "links": {
+            "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-child-relationships",
+            "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-children"
+          }
+        },
+        "ultimate-children": {
+          "links": {
+            "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-child-relationships",
+            "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-children"
+          }
+        }
+      },
+      "links": {
+        "self": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22"
+      }
+    },
+    "raw_documents": [
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          },
+          "pagination": {
+            "currentPage": 1,
+            "perPage": 200,
+            "from": 1,
+            "to": 2,
+            "total": 2,
+            "lastPage": 1
+          }
+        },
+        "links": {
+          "first": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bnumber%5D=1&page%5Bsize%5D=200",
+          "last": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bnumber%5D=1&page%5Bsize%5D=200"
+        },
+        "data": [
+          {
+            "type": "lei-records",
+            "id": "98450065463AB3C5CE22",
+            "attributes": {
+              "lei": "98450065463AB3C5CE22",
+              "entity": {
+                "legalName": {
+                  "name": "emagine Holding ApS",
+                  "language": "da"
+                },
+                "otherNames": [
+                  {
+                    "name": "ApS KBUS 18 nr. 300",
+                    "language": "da",
+                    "type": "PREVIOUS_LEGAL_NAME"
+                  }
+                ],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "da",
+                  "addressLines": [
+                    "Sydhavnsgade 16, 2."
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": "C/O emagine Consulting A/S",
+                  "city": "København SV",
+                  "region": "DK-84",
+                  "country": "DK",
+                  "postalCode": "2450"
+                },
+                "headquartersAddress": {
+                  "language": "da",
+                  "addressLines": [
+                    "Sydhavnsgade 16, 2."
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": "C/O emagine Consulting A/S",
+                  "city": "København SV",
+                  "region": "DK-84",
+                  "country": "DK",
+                  "postalCode": "2450"
+                },
+                "registeredAt": {
+                  "id": "RA000170",
+                  "other": null
+                },
+                "registeredAs": "42019887",
+                "jurisdiction": "DK",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "H8VP",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2021-01-01T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "da",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                    "addressLines": [
+                      "Sydhavnsgade 16, 2."
+                    ],
+                    "mailRouting": "C/O emagine Consulting A/S",
+                    "city": "Koebenhavn SV",
+                    "region": "DK-84",
+                    "country": "DK",
+                    "postalCode": "2450"
+                  },
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "da",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                    "addressLines": [
+                      "Sydhavnsgade 16, 2."
+                    ],
+                    "mailRouting": "C/O emagine Consulting A/S",
+                    "city": "Koebenhavn SV",
+                    "region": "DK-84",
+                    "country": "DK",
+                    "postalCode": "2450"
+                  }
+                ],
+                "eventGroups": [
+                  {
+                    "groupType": "STANDALONE",
+                    "events": [
+                      {
+                        "validationDocuments": "SUPPORTING_DOCUMENTS",
+                        "validationReference": "https://datacvr.virk.dk/enhed/virksomhed/42019887",
+                        "effectiveDate": "2022-11-06T23:00:00Z",
+                        "recordedDate": "2023-08-16T15:03:03Z",
+                        "type": "CHANGE_LEGAL_NAME",
+                        "status": "COMPLETED"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "registration": {
+                "initialRegistrationDate": "2021-08-25T14:03:56Z",
+                "lastUpdateDate": "2026-08-03T10:20:58Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-09-03T07:09:47Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000170",
+                  "other": null
+                },
+                "validatedAs": "42019887",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "dk/42019887",
+              "qcc": "QDKJF604J9",
+              "gem": null,
+              "spglobal": [
+                "1680266049"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-parent-reporting-exception"
+                }
+              },
+              "direct-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-children"
+                }
+              },
+              "ultimate-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-children"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "5967007LIEEXZXID2W97",
+            "attributes": {
+              "lei": "5967007LIEEXZXID2W97",
+              "entity": {
+                "legalName": {
+                  "name": "AS EIDEFOSS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "911305631",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "1916-01-01T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2016-11-23T09:56:10Z",
+                "lastUpdateDate": "2026-05-05T07:22:23Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-03-06T11:11:00Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "911305631",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOC17Q8Y2",
+              "gem": null,
+              "spglobal": [
+                "49685044"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-parent-reporting-exception"
+                }
+              },
+              "direct-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-children"
+                }
+              },
+              "ultimate-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-children"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          }
+        },
+        "data": {
+          "type": "relationship-records",
+          "id": "1595OM7WUKE18GL7M831|LEI|IS_ULTIMATELY_CONSOLIDATED_BY|2|8d7300794eb76ff72a2fd54316ac3091cd987fd004668c2dcfb597b22c45c687|",
+          "attributes": {
+            "validFrom": "2026-05-05T16:00:00Z",
+            "validTo": null,
+            "relationship": {
+              "startNode": {
+                "id": "1595OM7WUKE18GL7M831",
+                "type": "LEI"
+              },
+              "endNode": {
+                "id": "98450065463AB3C5CE22",
+                "type": "LEI"
+              },
+              "type": "IS_ULTIMATELY_CONSOLIDATED_BY",
+              "status": "ACTIVE",
+              "periods": [
+                {
+                  "startDate": "2022-12-11T23:00:00Z",
+                  "type": "RELATIONSHIP_PERIOD"
+                },
+                {
+                  "startDate": "2023-12-31T23:00:00Z",
+                  "endDate": "2024-12-30T23:00:00Z",
+                  "type": "ACCOUNTING_PERIOD"
+                }
+              ]
+            },
+            "registration": {
+              "initialRegistrationDate": "2025-05-19T07:20:54Z",
+              "lastUpdateDate": "2026-05-05T08:04:28Z",
+              "status": "PUBLISHED",
+              "nextRenewalDate": "2027-05-19T07:20:54Z",
+              "managingLou": "98450045AN5EB5FDC780",
+              "corroborationLevel": "FULLY_CORROBORATED",
+              "corroborationDocuments": "ACCOUNTS_FILING",
+              "corroborationReference": null
+            },
+            "extension": {
+              "deletedAt": null
+            }
+          },
+          "relationships": {
+            "start-node": {
+              "links": {
+                "related": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831"
+              }
+            },
+            "end-node": {
+              "links": {
+                "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22"
+              }
+            }
+          }
+        }
+      },
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          },
+          "pagination": {
+            "currentPage": 1,
+            "perPage": 200,
+            "from": 1,
+            "to": 5,
+            "total": 5,
+            "lastPage": 1
+          }
+        },
+        "links": {
+          "first": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=992288973%2C992377518%2C992416084%2C992475765%2C992557613%2C992841052%2C992852011%2C992868775%2C993014591%2C993021180%2C993312479%2C993327182%2C993347728%2C993372277%2C993388025%2C993395919%2C993451452%2C993452858%2C993484407%2C993919675%2C993930849%2C994218875%2C994284088%2C994382217%2C994570757%2C994623710%2C994774050%2C994919482%2C994986740%2C995133687%2C995243822%2C995372614%2C995445611%2C995516926%2C995520982%2C995541432%2C995612461%2C995652935%2C995654539%2C995721686%2C995748983%2C995880423%2C996080544%2C996154343%2C996208591%2C996213420%2C996233391%2C996266737%2C996284212%2C996525627%2C996613593%2C996698920%2C996744744%2C996890759%2C996927903%2C996929515%2C996979660%2C997002695%2C997024311%2C997218442%2C997352572%2C997357094%2C997475968%2C997579208%2C997650859%2C997654528%2C997755502%2C997761979%2C997768728%2C997790952%2C997806425%2C997897668%2C997927885%2C998008123%2C998024684%2C998057736%2C998077028%2C998130530%2C998138558%2C998162564%2C998236002%2C998349532%2C998407257%2C998419271%2C998473195%2C998535611%2C998551587%2C998627885%2C998741238%2C998800439%2C998873851%2C998990793%2C999196462%2C999329969%2C999516386%2C999530095%2C999536999%2C999617433%2C999642519%2C999656099&filter%5Bentity.registeredAt%5D=RA000472&page%5Bnumber%5D=1&page%5Bsize%5D=200",
+          "last": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=992288973%2C992377518%2C992416084%2C992475765%2C992557613%2C992841052%2C992852011%2C992868775%2C993014591%2C993021180%2C993312479%2C993327182%2C993347728%2C993372277%2C993388025%2C993395919%2C993451452%2C993452858%2C993484407%2C993919675%2C993930849%2C994218875%2C994284088%2C994382217%2C994570757%2C994623710%2C994774050%2C994919482%2C994986740%2C995133687%2C995243822%2C995372614%2C995445611%2C995516926%2C995520982%2C995541432%2C995612461%2C995652935%2C995654539%2C995721686%2C995748983%2C995880423%2C996080544%2C996154343%2C996208591%2C996213420%2C996233391%2C996266737%2C996284212%2C996525627%2C996613593%2C996698920%2C996744744%2C996890759%2C996927903%2C996929515%2C996979660%2C997002695%2C997024311%2C997218442%2C997352572%2C997357094%2C997475968%2C997579208%2C997650859%2C997654528%2C997755502%2C997761979%2C997768728%2C997790952%2C997806425%2C997897668%2C997927885%2C998008123%2C998024684%2C998057736%2C998077028%2C998130530%2C998138558%2C998162564%2C998236002%2C998349532%2C998407257%2C998419271%2C998473195%2C998535611%2C998551587%2C998627885%2C998741238%2C998800439%2C998873851%2C998990793%2C999196462%2C999329969%2C999516386%2C999530095%2C999536999%2C999617433%2C999642519%2C999656099&filter%5Bentity.registeredAt%5D=RA000472&page%5Bnumber%5D=1&page%5Bsize%5D=200"
+        },
+        "data": [
+          {
+            "type": "lei-records",
+            "id": "1595OM7WUKE18GL7M831",
+            "attributes": {
+              "lei": "1595OM7WUKE18GL7M831",
+              "entity": {
+                "legalName": {
+                  "name": "EMAGINE AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Schweigaards gate 16B"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": "NO-03",
+                  "country": "NO",
+                  "postalCode": "0191"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Schweigaards gate 16B"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": "NO-03",
+                  "country": "NO",
+                  "postalCode": "0191"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "999536999",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2013-01-05T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2025-05-19T07:20:54Z",
+                "lastUpdateDate": "2026-05-05T08:03:23Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-19T07:20:54Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "999536999",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNONETU9D6",
+              "gem": null,
+              "spglobal": [
+                "1944169443"
+              ],
+              "conformityFlag": "NON_CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "relationship-record": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/ultimate-parent-relationship",
+                  "lei-record": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831/ultimate-parent"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/1595OM7WUKE18GL7M831"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "1595HHKLUR0C7WS80548",
+            "attributes": {
+              "lei": "1595HHKLUR0C7WS80548",
+              "entity": {
+                "legalName": {
+                  "name": "BREMO INVEST AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Steinsvikvegen 376"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "RÅDAL",
+                  "region": "NO-46",
+                  "country": "NO",
+                  "postalCode": "5239"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Steinsvikvegen 376"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "RÅDAL",
+                  "region": "NO-46",
+                  "country": "NO",
+                  "postalCode": "5239"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "997002695",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2011-05-12T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "no",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                    "addressLines": [
+                      "Steinsvikvegen 376"
+                    ],
+                    "city": "RAaDAL",
+                    "region": "NO-46",
+                    "country": "NO",
+                    "postalCode": "5239"
+                  },
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "no",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                    "addressLines": [
+                      "Steinsvikvegen 376"
+                    ],
+                    "city": "RAaDAL",
+                    "region": "NO-46",
+                    "country": "NO",
+                    "postalCode": "5239"
+                  }
+                ],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2023-11-21T11:23:06Z",
+                "lastUpdateDate": "2026-09-22T07:47:57Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-11-21T07:23:06Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "997002695",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNO3CRGDBV",
+              "gem": null,
+              "spglobal": [
+                "686150284"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/1595HHKLUR0C7WS80548/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/1595HHKLUR0C7WS80548/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/1595HHKLUR0C7WS80548/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/1595HHKLUR0C7WS80548/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/1595HHKLUR0C7WS80548/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/1595HHKLUR0C7WS80548"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "89450029LLHOH7SVPQ33",
+            "attributes": {
+              "lei": "89450029LLHOH7SVPQ33",
+              "entity": {
+                "legalName": {
+                  "name": "BRAAUM INVEST AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Nesgutua 7"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "BRANDBU",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "2760"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Nesgutua 7"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "BRANDBU",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "2760"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "998473195",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2012-05-29T10:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-08-26T18:45:23Z",
+                "lastUpdateDate": "2026-04-10T05:08:55Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-24T11:42:54Z",
+                "managingLou": "529900F6BNUR3RJ2WH29",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "998473195",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "no/998473195",
+              "qcc": "QNO63UABAD",
+              "gem": null,
+              "spglobal": [
+                "686094060"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/89450029LLHOH7SVPQ33/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/89450029LLHOH7SVPQ33/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/89450029LLHOH7SVPQ33/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/89450029LLHOH7SVPQ33/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/89450029LLHOH7SVPQ33/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/89450029LLHOH7SVPQ33"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "549300E6W16OY6NKC553",
+            "attributes": {
+              "lei": "549300E6W16OY6NKC553",
+              "entity": {
+                "legalName": {
+                  "name": "GRAVITONIA AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Skotabergvegen 52"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "STORD",
+                  "region": "NO-46",
+                  "country": "NO",
+                  "postalCode": "5411"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Skotabergvegen 52"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "STORD",
+                  "region": "NO-46",
+                  "country": "NO",
+                  "postalCode": "5411"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "998407257",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2012-05-03T10:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-08-03T14:31:00Z",
+                "lastUpdateDate": "2026-07-11T05:16:51Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-08-24T15:43:06Z",
+                "managingLou": "529900F6BNUR3RJ2WH29",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "998407257",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "no/998407257",
+              "qcc": "QNOA1VH3RX",
+              "gem": null,
+              "spglobal": [
+                "681858863"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300E6W16OY6NKC553/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300E6W16OY6NKC553/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300E6W16OY6NKC553/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/549300E6W16OY6NKC553/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/549300E6W16OY6NKC553/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/549300E6W16OY6NKC553"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "5493004DC33LPZJALH27",
+            "attributes": {
+              "lei": "5493004DC33LPZJALH27",
+              "entity": {
+                "legalName": {
+                  "name": "EML AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Risveien 1"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": "NO-03",
+                  "country": "NO",
+                  "postalCode": "0374"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Risveien 1"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": "NO-03",
+                  "country": "NO",
+                  "postalCode": "0374"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "997761979",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2011-12-20T10:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": [
+                  {
+                    "groupType": "STANDALONE",
+                    "events": [
+                      {
+                        "validationDocuments": "SUPPORTING_DOCUMENTS",
+                        "effectiveDate": "2022-10-11T21:00:00Z",
+                        "recordedDate": "2022-10-17T07:29:45Z",
+                        "type": "CHANGE_HQ_ADDRESS",
+                        "status": "COMPLETED"
+                      }
+                    ]
+                  },
+                  {
+                    "groupType": "STANDALONE",
+                    "events": [
+                      {
+                        "validationDocuments": "SUPPORTING_DOCUMENTS",
+                        "effectiveDate": "2022-10-11T21:00:00Z",
+                        "recordedDate": "2022-10-17T07:29:45Z",
+                        "type": "CHANGE_LEGAL_ADDRESS",
+                        "status": "COMPLETED"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "registration": {
+                "initialRegistrationDate": "2017-10-28T22:11:00Z",
+                "lastUpdateDate": "2026-09-22T05:07:38Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-11-05T10:49:38Z",
+                "managingLou": "529900F6BNUR3RJ2WH29",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "997761979",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "no/997761979",
+              "qcc": "QNOXRT65WY",
+              "gem": null,
+              "spglobal": [
+                "306613594"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5493004DC33LPZJALH27/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5493004DC33LPZJALH27/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5493004DC33LPZJALH27/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5493004DC33LPZJALH27/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5493004DC33LPZJALH27/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/5493004DC33LPZJALH27"
+            }
+          }
+        ]
+      }
+    ],
+    "verdict": "correct"
+  },
+  {
+    "orgnr": "923354220",
+    "name": "EIDEFOSS VANNKRAFT AS",
+    "claim": {
+      "field": "identity.gleif.direct_parent",
+      "value": {
+        "name": "AS EIDEFOSS",
+        "lei": "5967007LIEEXZXID2W97",
+        "relationship": "IS_DIRECTLY_CONSOLIDATED_BY",
+        "organisation_number": "911305631"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "de9472adf11cf6ba6c4b97f054d21348a9941be596ebad037d928a8bd62e3f52",
+        "e2f9636a9f11ca7a02b04fb0565d83220b734a5d2b6d8630fe481fb30faf0619",
+        "b98747a61c403dc2db7fba44ffac24188b586c3ecbec79291d26a9a346d72e55"
+      ],
+      "id": "3b693470157810c65eee170413f3348fdd2ca427f0e16c19f375e168eb90064e",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-07T07:52:21.423869Z",
+      "last_observed_at": "2026-11-07T07:52:21.423869Z",
+      "reasons": {
+        "label": "GLEIF direct parent"
+      }
+    },
+    "evidence": [
+      {
+        "id": "de9472adf11cf6ba6c4b97f054d21348a9941be596ebad037d928a8bd62e3f52",
+        "source_url": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bsize%5D=200",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:21.423869Z",
+        "content_sha256": "0b2ad528f671c0f301c64bb5041a100215753e0dcc16957d1c69685a18f527fa",
+        "claim_span": "{\"type\":\"lei-records\",\"id\":\"5967007LIEEXZXID2W97\",\"attributes\":{\"lei\":\"5967007LIEEXZXID2W97\",\"entity\":{\"legalName\":{\"name\":\"AS EIDEFOSS\",\"language\":\"no\"},\"otherNames\":[],\"transliteratedOtherNames\":[],\"legalAddress\":{\"language\":\"no\",\"addressLines\":[\"Edvard Storms veg 4\"],\"addressNumber\":null,\"address",
+        "locator": "/data/1",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "e2f9636a9f11ca7a02b04fb0565d83220b734a5d2b6d8630fe481fb30faf0619",
+        "source_url": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/direct-parent-relationship",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:18.369135Z",
+        "content_sha256": "50067151b6ab3f3241e528d81112be49284950d93474ebfe57742df1103eb3a4",
+        "claim_span": "{\"startNode\":{\"id\":\"984500BEBDCT8677B462\",\"type\":\"LEI\"},\"endNode\":{\"id\":\"5967007LIEEXZXID2W97\",\"type\":\"LEI\"},\"type\":\"IS_DIRECTLY_CONSOLIDATED_BY\",\"status\":\"ACTIVE\",\"periods\":[{\"startDate\":\"2019-08-21T00:00:00Z\",\"type\":\"RELATIONSHIP_PERIOD\"},{\"startDate\":\"2021-12-31T23:00:00Z\",\"endDate\":\"2022-12-30T2",
+        "locator": "/data/attributes/relationship",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b98747a61c403dc2db7fba44ffac24188b586c3ecbec79291d26a9a346d72e55",
+        "source_url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:10.546098Z",
+        "content_sha256": "791b16ed354bc069b4f77f19515169982c89ed2201eb7a3fbe38f1016e18c903",
+        "claim_span": "\",\"id\":\"984500BEBDCT8677B462\",\"attributes\":{\"lei\":\"984500BEBDCT8677B462\",\"entity\":{\"legalName\":{\"name\":\"EIDEFOSS VANNKRAFT AS\",\"language\":\"no\"},\"otherNames\":[],\"transliteratedOtherNames\":[],\"legalAddress\":{\"language\":\"no\",\"addressLines\":[\"Edvard Storms veg 4\"],\"addressNumber\":null,\"addressNumberWith",
+        "locator": "/data/4/attributes/lei",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "raw_located_value": {
+      "type": "lei-records",
+      "id": "5967007LIEEXZXID2W97",
+      "attributes": {
+        "lei": "5967007LIEEXZXID2W97",
+        "entity": {
+          "legalName": {
+            "name": "AS EIDEFOSS",
+            "language": "no"
+          },
+          "otherNames": [],
+          "transliteratedOtherNames": [],
+          "legalAddress": {
+            "language": "no",
+            "addressLines": [
+              "Edvard Storms veg 4"
+            ],
+            "addressNumber": null,
+            "addressNumberWithinBuilding": null,
+            "mailRouting": null,
+            "city": "VÅGÅ",
+            "region": "NO-34",
+            "country": "NO",
+            "postalCode": "2680"
+          },
+          "headquartersAddress": {
+            "language": "no",
+            "addressLines": [
+              "Edvard Storms veg 4"
+            ],
+            "addressNumber": null,
+            "addressNumberWithinBuilding": null,
+            "mailRouting": null,
+            "city": "VÅGÅ",
+            "region": "NO-34",
+            "country": "NO",
+            "postalCode": "2680"
+          },
+          "registeredAt": {
+            "id": "RA000472",
+            "other": null
+          },
+          "registeredAs": "911305631",
+          "jurisdiction": "NO",
+          "category": "GENERAL",
+          "legalForm": {
+            "id": "YI42",
+            "other": null
+          },
+          "associatedEntity": {
+            "lei": null,
+            "name": null
+          },
+          "status": "ACTIVE",
+          "expiration": {
+            "date": null,
+            "reason": null
+          },
+          "successorEntity": {
+            "lei": null,
+            "name": null
+          },
+          "successorEntities": [],
+          "creationDate": "1916-01-01T00:00:00Z",
+          "subCategory": null,
+          "otherAddresses": [],
+          "eventGroups": []
+        },
+        "registration": {
+          "initialRegistrationDate": "2016-11-23T09:56:10Z",
+          "lastUpdateDate": "2026-05-05T07:22:23Z",
+          "status": "ISSUED",
+          "nextRenewalDate": "2027-03-06T11:11:00Z",
+          "managingLou": "98450045AN5EB5FDC780",
+          "corroborationLevel": "FULLY_CORROBORATED",
+          "validatedAt": {
+            "id": "RA000472",
+            "other": null
+          },
+          "validatedAs": "911305631",
+          "otherValidationAuthorities": []
+        },
+        "bic": null,
+        "mic": null,
+        "ocid": null,
+        "qcc": "QNOC17Q8Y2",
+        "gem": null,
+        "spglobal": [
+          "49685044"
+        ],
+        "conformityFlag": "CONFORMING"
+      },
+      "relationships": {
+        "managing-lou": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/managing-lou"
+          }
+        },
+        "lei-issuer": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/lei-issuer"
+          }
+        },
+        "field-modifications": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/field-modifications"
+          }
+        },
+        "direct-parent": {
+          "links": {
+            "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-parent-reporting-exception"
+          }
+        },
+        "ultimate-parent": {
+          "links": {
+            "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-parent-reporting-exception"
+          }
+        },
+        "direct-children": {
+          "links": {
+            "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-child-relationships",
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-children"
+          }
+        },
+        "ultimate-children": {
+          "links": {
+            "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-child-relationships",
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-children"
+          }
+        }
+      },
+      "links": {
+        "self": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97"
+      }
+    },
+    "raw_documents": [
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          },
+          "pagination": {
+            "currentPage": 1,
+            "perPage": 200,
+            "from": 1,
+            "to": 2,
+            "total": 2,
+            "lastPage": 1
+          }
+        },
+        "links": {
+          "first": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bnumber%5D=1&page%5Bsize%5D=200",
+          "last": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bnumber%5D=1&page%5Bsize%5D=200"
+        },
+        "data": [
+          {
+            "type": "lei-records",
+            "id": "98450065463AB3C5CE22",
+            "attributes": {
+              "lei": "98450065463AB3C5CE22",
+              "entity": {
+                "legalName": {
+                  "name": "emagine Holding ApS",
+                  "language": "da"
+                },
+                "otherNames": [
+                  {
+                    "name": "ApS KBUS 18 nr. 300",
+                    "language": "da",
+                    "type": "PREVIOUS_LEGAL_NAME"
+                  }
+                ],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "da",
+                  "addressLines": [
+                    "Sydhavnsgade 16, 2."
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": "C/O emagine Consulting A/S",
+                  "city": "København SV",
+                  "region": "DK-84",
+                  "country": "DK",
+                  "postalCode": "2450"
+                },
+                "headquartersAddress": {
+                  "language": "da",
+                  "addressLines": [
+                    "Sydhavnsgade 16, 2."
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": "C/O emagine Consulting A/S",
+                  "city": "København SV",
+                  "region": "DK-84",
+                  "country": "DK",
+                  "postalCode": "2450"
+                },
+                "registeredAt": {
+                  "id": "RA000170",
+                  "other": null
+                },
+                "registeredAs": "42019887",
+                "jurisdiction": "DK",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "H8VP",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2021-01-01T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "da",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                    "addressLines": [
+                      "Sydhavnsgade 16, 2."
+                    ],
+                    "mailRouting": "C/O emagine Consulting A/S",
+                    "city": "Koebenhavn SV",
+                    "region": "DK-84",
+                    "country": "DK",
+                    "postalCode": "2450"
+                  },
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "da",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                    "addressLines": [
+                      "Sydhavnsgade 16, 2."
+                    ],
+                    "mailRouting": "C/O emagine Consulting A/S",
+                    "city": "Koebenhavn SV",
+                    "region": "DK-84",
+                    "country": "DK",
+                    "postalCode": "2450"
+                  }
+                ],
+                "eventGroups": [
+                  {
+                    "groupType": "STANDALONE",
+                    "events": [
+                      {
+                        "validationDocuments": "SUPPORTING_DOCUMENTS",
+                        "validationReference": "https://datacvr.virk.dk/enhed/virksomhed/42019887",
+                        "effectiveDate": "2022-11-06T23:00:00Z",
+                        "recordedDate": "2023-08-16T15:03:03Z",
+                        "type": "CHANGE_LEGAL_NAME",
+                        "status": "COMPLETED"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "registration": {
+                "initialRegistrationDate": "2021-08-25T14:03:56Z",
+                "lastUpdateDate": "2026-08-03T10:20:58Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-09-03T07:09:47Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000170",
+                  "other": null
+                },
+                "validatedAs": "42019887",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "dk/42019887",
+              "qcc": "QDKJF604J9",
+              "gem": null,
+              "spglobal": [
+                "1680266049"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-parent-reporting-exception"
+                }
+              },
+              "direct-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-children"
+                }
+              },
+              "ultimate-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-children"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "5967007LIEEXZXID2W97",
+            "attributes": {
+              "lei": "5967007LIEEXZXID2W97",
+              "entity": {
+                "legalName": {
+                  "name": "AS EIDEFOSS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "911305631",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "1916-01-01T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2016-11-23T09:56:10Z",
+                "lastUpdateDate": "2026-05-05T07:22:23Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-03-06T11:11:00Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "911305631",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOC17Q8Y2",
+              "gem": null,
+              "spglobal": [
+                "49685044"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-parent-reporting-exception"
+                }
+              },
+              "direct-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-children"
+                }
+              },
+              "ultimate-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-children"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          }
+        },
+        "data": {
+          "type": "relationship-records",
+          "id": "984500BEBDCT8677B462|LEI|IS_DIRECTLY_CONSOLIDATED_BY|4|050f2d87446f2654fe78d325d1101bf8f5c3ce5754df9019d6249826969c7bb7|",
+          "attributes": {
+            "validFrom": "2026-06-01T00:00:00Z",
+            "validTo": null,
+            "relationship": {
+              "startNode": {
+                "id": "984500BEBDCT8677B462",
+                "type": "LEI"
+              },
+              "endNode": {
+                "id": "5967007LIEEXZXID2W97",
+                "type": "LEI"
+              },
+              "type": "IS_DIRECTLY_CONSOLIDATED_BY",
+              "status": "ACTIVE",
+              "periods": [
+                {
+                  "startDate": "2019-08-21T00:00:00Z",
+                  "type": "RELATIONSHIP_PERIOD"
+                },
+                {
+                  "startDate": "2021-12-31T23:00:00Z",
+                  "endDate": "2022-12-30T23:00:00Z",
+                  "type": "ACCOUNTING_PERIOD"
+                }
+              ]
+            },
+            "registration": {
+              "initialRegistrationDate": "2025-04-09T08:32:59Z",
+              "lastUpdateDate": "2026-05-31T15:05:52Z",
+              "status": "PUBLISHED",
+              "nextRenewalDate": "2027-06-07T14:19:12Z",
+              "managingLou": "98450045AN5EB5FDC780",
+              "corroborationLevel": "FULLY_CORROBORATED",
+              "corroborationDocuments": "ACCOUNTS_FILING",
+              "corroborationReference": null
+            },
+            "extension": {
+              "deletedAt": null
+            }
+          },
+          "relationships": {
+            "start-node": {
+              "links": {
+                "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462"
+              }
+            },
+            "end-node": {
+              "links": {
+                "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97"
+              }
+            }
+          }
+        }
+      },
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          },
+          "pagination": {
+            "currentPage": 1,
+            "perPage": 200,
+            "from": 1,
+            "to": 8,
+            "total": 8,
+            "lastPage": 1
+          }
+        },
+        "links": {
+          "first": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220&filter%5Bentity.registeredAt%5D=RA000472&page%5Bnumber%5D=1&page%5Bsize%5D=200",
+          "last": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220&filter%5Bentity.registeredAt%5D=RA000472&page%5Bnumber%5D=1&page%5Bsize%5D=200"
+        },
+        "data": [
+          {
+            "type": "lei-records",
+            "id": "64881FIEW47I92B63I25",
+            "attributes": {
+              "lei": "64881FIEW47I92B63I25",
+              "entity": {
+                "legalName": {
+                  "name": "VOKSER AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Bygg 125",
+                    "Kirkegårdsveien 45"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "KONGSBERG",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3616"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Bygg 125",
+                    "Kirkegårdsveien 45"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "KONGSBERG",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3616"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "919653477",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2017-10-01T22:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "no",
+                    "type": "AUTO_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                    "addressLines": [
+                      "Bygg 125",
+                      "Kirkegardsveien 45"
+                    ],
+                    "city": "KONGSBERG",
+                    "region": "NO-30",
+                    "country": "NO",
+                    "postalCode": "3616"
+                  },
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "no",
+                    "type": "AUTO_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                    "addressLines": [
+                      "Bygg 125",
+                      "Kirkegardsveien 45"
+                    ],
+                    "city": "KONGSBERG",
+                    "region": "NO-30",
+                    "country": "NO",
+                    "postalCode": "3616"
+                  }
+                ],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2025-05-13T08:10:52Z",
+                "lastUpdateDate": "2026-03-15T23:05:34Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-12T22:00:00Z",
+                "managingLou": "485100001PLJJ09NZT59",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "919653477",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOH2G0A6X",
+              "gem": null,
+              "spglobal": [
+                "599087047"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "254900YV9NB0BMZ1PZ57",
+            "attributes": {
+              "lei": "254900YV9NB0BMZ1PZ57",
+              "entity": {
+                "legalName": {
+                  "name": "DAGLIGVARE HOLDING AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Dronning Mauds gate 3"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "0250"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Dronning Mauds gate 3"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "0250"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "921994435",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2018-12-10T23:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2021-02-08T13:34:27Z",
+                "lastUpdateDate": "2023-03-02T15:19:17Z",
+                "status": "LAPSED",
+                "nextRenewalDate": "2023-02-08T12:43:42Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "921994435",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOH6GB4DX",
+              "gem": null,
+              "spglobal": [
+                "703767606"
+              ],
+              "conformityFlag": "NON_CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "984500C4897A9A9B1O29",
+            "attributes": {
+              "lei": "984500C4897A9A9B1O29",
+              "entity": {
+                "legalName": {
+                  "name": "C&R HOLDING AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Nordvivegen 92A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OTTESTAD",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2312"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Nordvivegen 92A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OTTESTAD",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2312"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "918952071",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2017-04-25T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-12-28T15:49:53Z",
+                "lastUpdateDate": "2026-05-11T18:44:57Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2026-12-28T14:49:51Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "918952071",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOJQ8ACYE",
+              "gem": null,
+              "spglobal": [
+                "702196810"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "9845004ED8C448BUC162",
+            "attributes": {
+              "lei": "9845004ED8C448BUC162",
+              "entity": {
+                "legalName": {
+                  "name": "BJØRGEN INVEST AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Vidarheimsvegen 1D"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "TRONDHEIM",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "7021"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Vidarheimsvegen 1D"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "TRONDHEIM",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "7021"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "919690658",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2017-09-19T22:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-01-20T09:17:20Z",
+                "lastUpdateDate": "2024-01-20T09:30:06Z",
+                "status": "LAPSED",
+                "nextRenewalDate": "2024-01-20T09:17:20Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "919 690 658",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOU6XVTJF",
+              "gem": null,
+              "spglobal": [
+                "653324502"
+              ],
+              "conformityFlag": "NON_CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "984500BEBDCT8677B462",
+            "attributes": {
+              "lei": "984500BEBDCT8677B462",
+              "entity": {
+                "legalName": {
+                  "name": "EIDEFOSS VANNKRAFT AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "923354220",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2019-08-21T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-01-08T16:15:04Z",
+                "lastUpdateDate": "2026-05-31T15:03:22Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-06-07T14:19:12Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "923354220",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOTKAKNH0",
+              "gem": null,
+              "spglobal": [
+                "651678089"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "relationship-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/direct-parent-relationship",
+                  "lei-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/direct-parent"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "relationship-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/ultimate-parent-relationship",
+                  "lei-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/ultimate-parent"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "9845006E55BAA3EWD760",
+            "attributes": {
+              "lei": "9845006E55BAA3EWD760",
+              "entity": {
+                "legalName": {
+                  "name": "TENSIO AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Kjøpmannsgata 7A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "STJØRDAL",
+                  "region": "NO-50",
+                  "country": "NO",
+                  "postalCode": "7500"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Kjøpmannsgata 7A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "STJØRDAL",
+                  "region": "NO-50",
+                  "country": "NO",
+                  "postalCode": "7500"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "922828172",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2019-04-30T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2019-12-13T16:05:48Z",
+                "lastUpdateDate": "2026-05-08T08:32:47Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-24T10:03:09Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "922828172",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOSA8Q725",
+              "gem": null,
+              "spglobal": [
+                "648621094"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/ultimate-parent-reporting-exception"
+                }
+              },
+              "isins": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/isins"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "549300FFS3MPDQER5759",
+            "attributes": {
+              "lei": "549300FFS3MPDQER5759",
+              "entity": {
+                "legalName": {
+                  "name": "H1 CAPITAL AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Jacob Aalls gate 32"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": "NO-03",
+                  "country": "NO",
+                  "postalCode": "0364"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Åsta Kongsmorsgate 21"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "Hafrsfjord",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "4044"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "921678851",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2018-10-24T10:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": [
+                  {
+                    "groupType": "STANDALONE",
+                    "events": [
+                      {
+                        "validationDocuments": "SUPPORTING_DOCUMENTS",
+                        "effectiveDate": "2024-10-28T22:00:00Z",
+                        "recordedDate": "2024-10-29T08:14:03Z",
+                        "type": "CHANGE_HQ_ADDRESS",
+                        "status": "COMPLETED"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "registration": {
+                "initialRegistrationDate": "2019-08-02T14:32:00Z",
+                "lastUpdateDate": "2026-11-04T14:10:07Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-11-04T14:10:07Z",
+                "managingLou": "529900F6BNUR3RJ2WH29",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "921678851",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "no/921678851",
+              "qcc": "QNOAQCG4G5",
+              "gem": null,
+              "spglobal": [
+                "631846901"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "984500B60AD99FEKDC61",
+            "attributes": {
+              "lei": "984500B60AD99FEKDC61",
+              "entity": {
+                "legalName": {
+                  "name": "BENKEBU AS",
+                  "language": "no"
+                },
+                "otherNames": [
+                  {
+                    "name": "WIKTOR AS",
+                    "language": "no",
+                    "type": "PREVIOUS_LEGAL_NAME"
+                  }
+                ],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Reistadlia 28"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "REISTAD",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3425"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Reistadlia 28"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "REISTAD",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3425"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "920667872",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2018-01-31T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2019-05-03T15:56:19Z",
+                "lastUpdateDate": "2026-05-11T16:26:51Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-03T02:00:00Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "PARTIALLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "920667872",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNO4AXCCHD",
+              "gem": null,
+              "spglobal": [
+                "612963974"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61"
+            }
+          }
+        ]
+      }
+    ],
+    "verdict": "correct"
+  },
+  {
+    "orgnr": "923354220",
+    "name": "EIDEFOSS VANNKRAFT AS",
+    "claim": {
+      "field": "identity.gleif.ultimate_parent",
+      "value": {
+        "name": "AS EIDEFOSS",
+        "lei": "5967007LIEEXZXID2W97",
+        "relationship": "IS_ULTIMATELY_CONSOLIDATED_BY",
+        "organisation_number": "911305631"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "de9472adf11cf6ba6c4b97f054d21348a9941be596ebad037d928a8bd62e3f52",
+        "05bfa37ab4d3d2a090826ac8b903002e20bf8da69f64254b8a76c5cf2c9b27bd",
+        "b98747a61c403dc2db7fba44ffac24188b586c3ecbec79291d26a9a346d72e55"
+      ],
+      "id": "8d3c79a1d76bdc84db7c4148dd86c86a2462dcbe1781c8d706a1e7401414e8aa",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-07T07:52:21.423869Z",
+      "last_observed_at": "2026-11-07T07:52:21.423869Z",
+      "reasons": {
+        "label": "GLEIF ultimate parent"
+      }
+    },
+    "evidence": [
+      {
+        "id": "de9472adf11cf6ba6c4b97f054d21348a9941be596ebad037d928a8bd62e3f52",
+        "source_url": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bsize%5D=200",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:21.423869Z",
+        "content_sha256": "0b2ad528f671c0f301c64bb5041a100215753e0dcc16957d1c69685a18f527fa",
+        "claim_span": "{\"type\":\"lei-records\",\"id\":\"5967007LIEEXZXID2W97\",\"attributes\":{\"lei\":\"5967007LIEEXZXID2W97\",\"entity\":{\"legalName\":{\"name\":\"AS EIDEFOSS\",\"language\":\"no\"},\"otherNames\":[],\"transliteratedOtherNames\":[],\"legalAddress\":{\"language\":\"no\",\"addressLines\":[\"Edvard Storms veg 4\"],\"addressNumber\":null,\"address",
+        "locator": "/data/1",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "05bfa37ab4d3d2a090826ac8b903002e20bf8da69f64254b8a76c5cf2c9b27bd",
+        "source_url": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/ultimate-parent-relationship",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:19.373365Z",
+        "content_sha256": "62c34b891450094fca854a8f81b16288c8aa89426efeba13bb3d944109f15dd3",
+        "claim_span": "{\"startNode\":{\"id\":\"984500BEBDCT8677B462\",\"type\":\"LEI\"},\"endNode\":{\"id\":\"5967007LIEEXZXID2W97\",\"type\":\"LEI\"},\"type\":\"IS_ULTIMATELY_CONSOLIDATED_BY\",\"status\":\"ACTIVE\",\"periods\":[{\"startDate\":\"2019-08-21T00:00:00Z\",\"type\":\"RELATIONSHIP_PERIOD\"},{\"startDate\":\"2021-12-31T23:00:00Z\",\"endDate\":\"2022-12-30",
+        "locator": "/data/attributes/relationship",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b98747a61c403dc2db7fba44ffac24188b586c3ecbec79291d26a9a346d72e55",
+        "source_url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=200",
+        "source_class": "GLEIF",
+        "retrieved_at": "2026-11-07T07:52:10.546098Z",
+        "content_sha256": "791b16ed354bc069b4f77f19515169982c89ed2201eb7a3fbe38f1016e18c903",
+        "claim_span": "\",\"id\":\"984500BEBDCT8677B462\",\"attributes\":{\"lei\":\"984500BEBDCT8677B462\",\"entity\":{\"legalName\":{\"name\":\"EIDEFOSS VANNKRAFT AS\",\"language\":\"no\"},\"otherNames\":[],\"transliteratedOtherNames\":[],\"legalAddress\":{\"language\":\"no\",\"addressLines\":[\"Edvard Storms veg 4\"],\"addressNumber\":null,\"addressNumberWith",
+        "locator": "/data/4/attributes/lei",
+        "extraction_method": "signalpost.official_extra.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "raw_located_value": {
+      "type": "lei-records",
+      "id": "5967007LIEEXZXID2W97",
+      "attributes": {
+        "lei": "5967007LIEEXZXID2W97",
+        "entity": {
+          "legalName": {
+            "name": "AS EIDEFOSS",
+            "language": "no"
+          },
+          "otherNames": [],
+          "transliteratedOtherNames": [],
+          "legalAddress": {
+            "language": "no",
+            "addressLines": [
+              "Edvard Storms veg 4"
+            ],
+            "addressNumber": null,
+            "addressNumberWithinBuilding": null,
+            "mailRouting": null,
+            "city": "VÅGÅ",
+            "region": "NO-34",
+            "country": "NO",
+            "postalCode": "2680"
+          },
+          "headquartersAddress": {
+            "language": "no",
+            "addressLines": [
+              "Edvard Storms veg 4"
+            ],
+            "addressNumber": null,
+            "addressNumberWithinBuilding": null,
+            "mailRouting": null,
+            "city": "VÅGÅ",
+            "region": "NO-34",
+            "country": "NO",
+            "postalCode": "2680"
+          },
+          "registeredAt": {
+            "id": "RA000472",
+            "other": null
+          },
+          "registeredAs": "911305631",
+          "jurisdiction": "NO",
+          "category": "GENERAL",
+          "legalForm": {
+            "id": "YI42",
+            "other": null
+          },
+          "associatedEntity": {
+            "lei": null,
+            "name": null
+          },
+          "status": "ACTIVE",
+          "expiration": {
+            "date": null,
+            "reason": null
+          },
+          "successorEntity": {
+            "lei": null,
+            "name": null
+          },
+          "successorEntities": [],
+          "creationDate": "1916-01-01T00:00:00Z",
+          "subCategory": null,
+          "otherAddresses": [],
+          "eventGroups": []
+        },
+        "registration": {
+          "initialRegistrationDate": "2016-11-23T09:56:10Z",
+          "lastUpdateDate": "2026-05-05T07:22:23Z",
+          "status": "ISSUED",
+          "nextRenewalDate": "2027-03-06T11:11:00Z",
+          "managingLou": "98450045AN5EB5FDC780",
+          "corroborationLevel": "FULLY_CORROBORATED",
+          "validatedAt": {
+            "id": "RA000472",
+            "other": null
+          },
+          "validatedAs": "911305631",
+          "otherValidationAuthorities": []
+        },
+        "bic": null,
+        "mic": null,
+        "ocid": null,
+        "qcc": "QNOC17Q8Y2",
+        "gem": null,
+        "spglobal": [
+          "49685044"
+        ],
+        "conformityFlag": "CONFORMING"
+      },
+      "relationships": {
+        "managing-lou": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/managing-lou"
+          }
+        },
+        "lei-issuer": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/lei-issuer"
+          }
+        },
+        "field-modifications": {
+          "links": {
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/field-modifications"
+          }
+        },
+        "direct-parent": {
+          "links": {
+            "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-parent-reporting-exception"
+          }
+        },
+        "ultimate-parent": {
+          "links": {
+            "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-parent-reporting-exception"
+          }
+        },
+        "direct-children": {
+          "links": {
+            "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-child-relationships",
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-children"
+          }
+        },
+        "ultimate-children": {
+          "links": {
+            "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-child-relationships",
+            "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-children"
+          }
+        }
+      },
+      "links": {
+        "self": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97"
+      }
+    },
+    "raw_documents": [
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          },
+          "pagination": {
+            "currentPage": 1,
+            "perPage": 200,
+            "from": 1,
+            "to": 2,
+            "total": 2,
+            "lastPage": 1
+          }
+        },
+        "links": {
+          "first": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bnumber%5D=1&page%5Bsize%5D=200",
+          "last": "https://api.gleif.org/api/v1/lei-records?filter%5Blei%5D=5967007LIEEXZXID2W97%2C98450065463AB3C5CE22&page%5Bnumber%5D=1&page%5Bsize%5D=200"
+        },
+        "data": [
+          {
+            "type": "lei-records",
+            "id": "98450065463AB3C5CE22",
+            "attributes": {
+              "lei": "98450065463AB3C5CE22",
+              "entity": {
+                "legalName": {
+                  "name": "emagine Holding ApS",
+                  "language": "da"
+                },
+                "otherNames": [
+                  {
+                    "name": "ApS KBUS 18 nr. 300",
+                    "language": "da",
+                    "type": "PREVIOUS_LEGAL_NAME"
+                  }
+                ],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "da",
+                  "addressLines": [
+                    "Sydhavnsgade 16, 2."
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": "C/O emagine Consulting A/S",
+                  "city": "København SV",
+                  "region": "DK-84",
+                  "country": "DK",
+                  "postalCode": "2450"
+                },
+                "headquartersAddress": {
+                  "language": "da",
+                  "addressLines": [
+                    "Sydhavnsgade 16, 2."
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": "C/O emagine Consulting A/S",
+                  "city": "København SV",
+                  "region": "DK-84",
+                  "country": "DK",
+                  "postalCode": "2450"
+                },
+                "registeredAt": {
+                  "id": "RA000170",
+                  "other": null
+                },
+                "registeredAs": "42019887",
+                "jurisdiction": "DK",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "H8VP",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2021-01-01T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "da",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                    "addressLines": [
+                      "Sydhavnsgade 16, 2."
+                    ],
+                    "mailRouting": "C/O emagine Consulting A/S",
+                    "city": "Koebenhavn SV",
+                    "region": "DK-84",
+                    "country": "DK",
+                    "postalCode": "2450"
+                  },
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "da",
+                    "type": "PREFERRED_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                    "addressLines": [
+                      "Sydhavnsgade 16, 2."
+                    ],
+                    "mailRouting": "C/O emagine Consulting A/S",
+                    "city": "Koebenhavn SV",
+                    "region": "DK-84",
+                    "country": "DK",
+                    "postalCode": "2450"
+                  }
+                ],
+                "eventGroups": [
+                  {
+                    "groupType": "STANDALONE",
+                    "events": [
+                      {
+                        "validationDocuments": "SUPPORTING_DOCUMENTS",
+                        "validationReference": "https://datacvr.virk.dk/enhed/virksomhed/42019887",
+                        "effectiveDate": "2022-11-06T23:00:00Z",
+                        "recordedDate": "2023-08-16T15:03:03Z",
+                        "type": "CHANGE_LEGAL_NAME",
+                        "status": "COMPLETED"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "registration": {
+                "initialRegistrationDate": "2021-08-25T14:03:56Z",
+                "lastUpdateDate": "2026-08-03T10:20:58Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-09-03T07:09:47Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000170",
+                  "other": null
+                },
+                "validatedAs": "42019887",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "dk/42019887",
+              "qcc": "QDKJF604J9",
+              "gem": null,
+              "spglobal": [
+                "1680266049"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-parent-reporting-exception"
+                }
+              },
+              "direct-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/direct-children"
+                }
+              },
+              "ultimate-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22/ultimate-children"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/98450065463AB3C5CE22"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "5967007LIEEXZXID2W97",
+            "attributes": {
+              "lei": "5967007LIEEXZXID2W97",
+              "entity": {
+                "legalName": {
+                  "name": "AS EIDEFOSS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "911305631",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "1916-01-01T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2016-11-23T09:56:10Z",
+                "lastUpdateDate": "2026-05-05T07:22:23Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-03-06T11:11:00Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "911305631",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOC17Q8Y2",
+              "gem": null,
+              "spglobal": [
+                "49685044"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-parent-reporting-exception"
+                }
+              },
+              "direct-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/direct-children"
+                }
+              },
+              "ultimate-children": {
+                "links": {
+                  "relationship-records": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-child-relationships",
+                  "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97/ultimate-children"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          }
+        },
+        "data": {
+          "type": "relationship-records",
+          "id": "984500BEBDCT8677B462|LEI|IS_ULTIMATELY_CONSOLIDATED_BY|4|263ed02447da9ac5b0c18d71ec7afc2cb2f7936a329a793eab72754b3cd777da|",
+          "attributes": {
+            "validFrom": "2026-06-01T00:00:00Z",
+            "validTo": null,
+            "relationship": {
+              "startNode": {
+                "id": "984500BEBDCT8677B462",
+                "type": "LEI"
+              },
+              "endNode": {
+                "id": "5967007LIEEXZXID2W97",
+                "type": "LEI"
+              },
+              "type": "IS_ULTIMATELY_CONSOLIDATED_BY",
+              "status": "ACTIVE",
+              "periods": [
+                {
+                  "startDate": "2019-08-21T00:00:00Z",
+                  "type": "RELATIONSHIP_PERIOD"
+                },
+                {
+                  "startDate": "2021-12-31T23:00:00Z",
+                  "endDate": "2022-12-30T23:00:00Z",
+                  "type": "ACCOUNTING_PERIOD"
+                }
+              ]
+            },
+            "registration": {
+              "initialRegistrationDate": "2025-04-09T08:32:59Z",
+              "lastUpdateDate": "2026-05-31T15:05:52Z",
+              "status": "PUBLISHED",
+              "nextRenewalDate": "2027-06-07T14:19:12Z",
+              "managingLou": "98450045AN5EB5FDC780",
+              "corroborationLevel": "FULLY_CORROBORATED",
+              "corroborationDocuments": "ACCOUNTS_FILING",
+              "corroborationReference": null
+            },
+            "extension": {
+              "deletedAt": null
+            }
+          },
+          "relationships": {
+            "start-node": {
+              "links": {
+                "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462"
+              }
+            },
+            "end-node": {
+              "links": {
+                "related": "https://api.gleif.org/api/v1/lei-records/5967007LIEEXZXID2W97"
+              }
+            }
+          }
+        }
+      },
+      {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "2026-11-07T00:00:00Z"
+          },
+          "pagination": {
+            "currentPage": 1,
+            "perPage": 200,
+            "from": 1,
+            "to": 8,
+            "total": 8,
+            "lastPage": 1
+          }
+        },
+        "links": {
+          "first": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220&filter%5Bentity.registeredAt%5D=RA000472&page%5Bnumber%5D=1&page%5Bsize%5D=200",
+          "last": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918610650%2C918640967%2C918746781%2C918765662%2C918784438%2C918843582%2C918859632%2C918863877%2C918952071%2C918975934%2C919025131%2C919026324%2C919038438%2C919086815%2C919092734%2C919212101%2C919217081%2C919254254%2C919276843%2C919280204%2C919529180%2C919650826%2C919653477%2C919681101%2C919690658%2C919763477%2C919807393%2C919862904%2C919893389%2C919926546%2C919931477%2C919940972%2C919948493%2C919966289%2C920043356%2C920057217%2C920060641%2C920133428%2C920285716%2C920358411%2C920417892%2C920514502%2C920542158%2C920597122%2C920641504%2C920667872%2C920918204%2C920956718%2C921044186%2C921044577%2C921108249%2C921146795%2C921186924%2C921206232%2C921320868%2C921338732%2C921348401%2C921366086%2C921368348%2C921391005%2C921443234%2C921450737%2C921484623%2C921509502%2C921596154%2C921634544%2C921646542%2C921669259%2C921678851%2C921707924%2C921715528%2C921810229%2C921860609%2C921961022%2C921994435%2C922069212%2C922154635%2C922187991%2C922285632%2C922302812%2C922581169%2C922645884%2C922646481%2C922654875%2C922661650%2C922687552%2C922723664%2C922753768%2C922767459%2C922828172%2C922829551%2C922857873%2C922971684%2C923068805%2C923160485%2C923172874%2C923192352%2C923201661%2C923219137%2C923354220&filter%5Bentity.registeredAt%5D=RA000472&page%5Bnumber%5D=1&page%5Bsize%5D=200"
+        },
+        "data": [
+          {
+            "type": "lei-records",
+            "id": "64881FIEW47I92B63I25",
+            "attributes": {
+              "lei": "64881FIEW47I92B63I25",
+              "entity": {
+                "legalName": {
+                  "name": "VOKSER AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Bygg 125",
+                    "Kirkegårdsveien 45"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "KONGSBERG",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3616"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Bygg 125",
+                    "Kirkegårdsveien 45"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "KONGSBERG",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3616"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "919653477",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2017-10-01T22:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "no",
+                    "type": "AUTO_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                    "addressLines": [
+                      "Bygg 125",
+                      "Kirkegardsveien 45"
+                    ],
+                    "city": "KONGSBERG",
+                    "region": "NO-30",
+                    "country": "NO",
+                    "postalCode": "3616"
+                  },
+                  {
+                    "fieldType": "TransliteratedOtherAddress",
+                    "language": "no",
+                    "type": "AUTO_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                    "addressLines": [
+                      "Bygg 125",
+                      "Kirkegardsveien 45"
+                    ],
+                    "city": "KONGSBERG",
+                    "region": "NO-30",
+                    "country": "NO",
+                    "postalCode": "3616"
+                  }
+                ],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2025-05-13T08:10:52Z",
+                "lastUpdateDate": "2026-03-15T23:05:34Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-12T22:00:00Z",
+                "managingLou": "485100001PLJJ09NZT59",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "919653477",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOH2G0A6X",
+              "gem": null,
+              "spglobal": [
+                "599087047"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/64881FIEW47I92B63I25"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "254900YV9NB0BMZ1PZ57",
+            "attributes": {
+              "lei": "254900YV9NB0BMZ1PZ57",
+              "entity": {
+                "legalName": {
+                  "name": "DAGLIGVARE HOLDING AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Dronning Mauds gate 3"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "0250"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Dronning Mauds gate 3"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "0250"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "921994435",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2018-12-10T23:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2021-02-08T13:34:27Z",
+                "lastUpdateDate": "2023-03-02T15:19:17Z",
+                "status": "LAPSED",
+                "nextRenewalDate": "2023-02-08T12:43:42Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "921994435",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOH6GB4DX",
+              "gem": null,
+              "spglobal": [
+                "703767606"
+              ],
+              "conformityFlag": "NON_CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/254900YV9NB0BMZ1PZ57"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "984500C4897A9A9B1O29",
+            "attributes": {
+              "lei": "984500C4897A9A9B1O29",
+              "entity": {
+                "legalName": {
+                  "name": "C&R HOLDING AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Nordvivegen 92A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OTTESTAD",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2312"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Nordvivegen 92A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OTTESTAD",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2312"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "918952071",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2017-04-25T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-12-28T15:49:53Z",
+                "lastUpdateDate": "2026-05-11T18:44:57Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2026-12-28T14:49:51Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "918952071",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOJQ8ACYE",
+              "gem": null,
+              "spglobal": [
+                "702196810"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/984500C4897A9A9B1O29"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "9845004ED8C448BUC162",
+            "attributes": {
+              "lei": "9845004ED8C448BUC162",
+              "entity": {
+                "legalName": {
+                  "name": "BJØRGEN INVEST AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Vidarheimsvegen 1D"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "TRONDHEIM",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "7021"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Vidarheimsvegen 1D"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "TRONDHEIM",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "7021"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "919690658",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2017-09-19T22:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-01-20T09:17:20Z",
+                "lastUpdateDate": "2024-01-20T09:30:06Z",
+                "status": "LAPSED",
+                "nextRenewalDate": "2024-01-20T09:17:20Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "919 690 658",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOU6XVTJF",
+              "gem": null,
+              "spglobal": [
+                "653324502"
+              ],
+              "conformityFlag": "NON_CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/9845004ED8C448BUC162"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "984500BEBDCT8677B462",
+            "attributes": {
+              "lei": "984500BEBDCT8677B462",
+              "entity": {
+                "legalName": {
+                  "name": "EIDEFOSS VANNKRAFT AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Edvard Storms veg 4"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "VÅGÅ",
+                  "region": "NO-34",
+                  "country": "NO",
+                  "postalCode": "2680"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "923354220",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2019-08-21T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2020-01-08T16:15:04Z",
+                "lastUpdateDate": "2026-05-31T15:03:22Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-06-07T14:19:12Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "923354220",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOTKAKNH0",
+              "gem": null,
+              "spglobal": [
+                "651678089"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "relationship-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/direct-parent-relationship",
+                  "lei-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/direct-parent"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "relationship-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/ultimate-parent-relationship",
+                  "lei-record": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462/ultimate-parent"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/984500BEBDCT8677B462"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "9845006E55BAA3EWD760",
+            "attributes": {
+              "lei": "9845006E55BAA3EWD760",
+              "entity": {
+                "legalName": {
+                  "name": "TENSIO AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Kjøpmannsgata 7A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "STJØRDAL",
+                  "region": "NO-50",
+                  "country": "NO",
+                  "postalCode": "7500"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Kjøpmannsgata 7A"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "STJØRDAL",
+                  "region": "NO-50",
+                  "country": "NO",
+                  "postalCode": "7500"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "922828172",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2019-04-30T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2019-12-13T16:05:48Z",
+                "lastUpdateDate": "2026-05-08T08:32:47Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-24T10:03:09Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "922828172",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNOSA8Q725",
+              "gem": null,
+              "spglobal": [
+                "648621094"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/ultimate-parent-reporting-exception"
+                }
+              },
+              "isins": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760/isins"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/9845006E55BAA3EWD760"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "549300FFS3MPDQER5759",
+            "attributes": {
+              "lei": "549300FFS3MPDQER5759",
+              "entity": {
+                "legalName": {
+                  "name": "H1 CAPITAL AS",
+                  "language": "no"
+                },
+                "otherNames": [],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Jacob Aalls gate 32"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "OSLO",
+                  "region": "NO-03",
+                  "country": "NO",
+                  "postalCode": "0364"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Åsta Kongsmorsgate 21"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "Hafrsfjord",
+                  "region": null,
+                  "country": "NO",
+                  "postalCode": "4044"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "921678851",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2018-10-24T10:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": [
+                  {
+                    "groupType": "STANDALONE",
+                    "events": [
+                      {
+                        "validationDocuments": "SUPPORTING_DOCUMENTS",
+                        "effectiveDate": "2024-10-28T22:00:00Z",
+                        "recordedDate": "2024-10-29T08:14:03Z",
+                        "type": "CHANGE_HQ_ADDRESS",
+                        "status": "COMPLETED"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "registration": {
+                "initialRegistrationDate": "2019-08-02T14:32:00Z",
+                "lastUpdateDate": "2026-11-04T14:10:07Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-11-04T14:10:07Z",
+                "managingLou": "529900F6BNUR3RJ2WH29",
+                "corroborationLevel": "FULLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "921678851",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": "no/921678851",
+              "qcc": "QNOAQCG4G5",
+              "gem": null,
+              "spglobal": [
+                "631846901"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/549300FFS3MPDQER5759"
+            }
+          },
+          {
+            "type": "lei-records",
+            "id": "984500B60AD99FEKDC61",
+            "attributes": {
+              "lei": "984500B60AD99FEKDC61",
+              "entity": {
+                "legalName": {
+                  "name": "BENKEBU AS",
+                  "language": "no"
+                },
+                "otherNames": [
+                  {
+                    "name": "WIKTOR AS",
+                    "language": "no",
+                    "type": "PREVIOUS_LEGAL_NAME"
+                  }
+                ],
+                "transliteratedOtherNames": [],
+                "legalAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Reistadlia 28"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "REISTAD",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3425"
+                },
+                "headquartersAddress": {
+                  "language": "no",
+                  "addressLines": [
+                    "Reistadlia 28"
+                  ],
+                  "addressNumber": null,
+                  "addressNumberWithinBuilding": null,
+                  "mailRouting": null,
+                  "city": "REISTAD",
+                  "region": "NO-30",
+                  "country": "NO",
+                  "postalCode": "3425"
+                },
+                "registeredAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "registeredAs": "920667872",
+                "jurisdiction": "NO",
+                "category": "GENERAL",
+                "legalForm": {
+                  "id": "YI42",
+                  "other": null
+                },
+                "associatedEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "status": "ACTIVE",
+                "expiration": {
+                  "date": null,
+                  "reason": null
+                },
+                "successorEntity": {
+                  "lei": null,
+                  "name": null
+                },
+                "successorEntities": [],
+                "creationDate": "2018-01-31T00:00:00Z",
+                "subCategory": null,
+                "otherAddresses": [],
+                "eventGroups": []
+              },
+              "registration": {
+                "initialRegistrationDate": "2019-05-03T15:56:19Z",
+                "lastUpdateDate": "2026-05-11T16:26:51Z",
+                "status": "ISSUED",
+                "nextRenewalDate": "2027-05-03T02:00:00Z",
+                "managingLou": "98450045AN5EB5FDC780",
+                "corroborationLevel": "PARTIALLY_CORROBORATED",
+                "validatedAt": {
+                  "id": "RA000472",
+                  "other": null
+                },
+                "validatedAs": "920667872",
+                "otherValidationAuthorities": []
+              },
+              "bic": null,
+              "mic": null,
+              "ocid": null,
+              "qcc": "QNO4AXCCHD",
+              "gem": null,
+              "spglobal": [
+                "612963974"
+              ],
+              "conformityFlag": "CONFORMING"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/managing-lou"
+                }
+              },
+              "lei-issuer": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/lei-issuer"
+                }
+              },
+              "field-modifications": {
+                "links": {
+                  "related": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/field-modifications"
+                }
+              },
+              "direct-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/direct-parent-reporting-exception"
+                }
+              },
+              "ultimate-parent": {
+                "links": {
+                  "reporting-exception": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61/ultimate-parent-reporting-exception"
+                }
+              }
+            },
+            "links": {
+              "self": "https://api.gleif.org/api/v1/lei-records/984500B60AD99FEKDC61"
+            }
+          }
+        ]
+      }
+    ],
+    "verdict": "correct"
+  }
+]
