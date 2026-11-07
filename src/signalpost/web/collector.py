@@ -237,6 +237,8 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
     candidates = generate(context)
     if retry_candidates is not None:candidates=list(retry_candidates)
     refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
+    prior_data=(previous or {}) if not previous or 'claims' in previous else previous.get('profile',{})
+    previously_verified=any(c.get('field')=='official_website' and c.get('availability')=='available' and isinstance(c.get('value'),dict) and c['value'].get('identity_level')=='VERIFIED' for c in prior_data.get('claims',[]))
     if refresh_candidate:
         candidates = [refresh_candidate] + [c for c in candidates if c.url != refresh_candidate.url]
     from .round2 import registered_leaders
@@ -446,7 +448,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
         except SourceFailure as exc:
             is_authoritative = candidate.origin in STRONG_CANDIDATE_ORIGINS or (refresh_candidate and candidate.domain == refresh_candidate.domain)
             known_source = is_authoritative
-            declared_absent=known_source and exc.code=='no_such_domain' and getattr(exc,'declared_domain_absent',False)
+            declared_absent=not previously_verified and known_source and exc.code=='no_such_domain' and getattr(exc,'declared_domain_absent',False)
             if declared_absent:
                 envelope.run.refresh.setdefault('website',{}).setdefault('declared_absent_domains',[]).append(candidate.domain)
                 section.errors.append(Error(section='website',code='declared_domain_absent',message='declared domain does not exist'))
