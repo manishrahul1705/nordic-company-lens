@@ -155,3 +155,23 @@ def test_only_exact_children_get_parent_lookups_and_parent_leis_are_batched(tmp_
     assert metrics['requests']==len(events)==4 and metrics['gleif_companies']==1
     assert result[ORG].claims[-1].value['organisation_number']=='911305631'
     assert all(e['organisation_number']=='__official_extra__' for e in events)
+
+
+def test_ted_xml_overrides_shared_json_accept_header_and_is_budgeted(tmp_path):
+    import httpx,time
+    from signalpost.sources.blobstore import BlobStore
+    events=[]
+    class Budget:
+        deadline=time.monotonic()+30
+        def reserve(self,url,host,org):
+            event={'url':url,'organisation_number':org};events.append(event);return event
+    def dispatch(request):
+        assert request.headers['Accept']=='application/xml,text/xml'
+        return httpx.Response(200,text=xml())
+    async def go():
+        async with httpx.AsyncClient(headers={'Accept':'application/json'},transport=httpx.MockTransport(dispatch)) as client:
+            fetch=Fetcher(client,Budget(),BlobStore(tmp_path),1000)
+            r=await fetch.get('https://ted.europa.eu/en/notice/1-2026/xml')
+            assert r.status==200 and fetch.calls==1
+    asyncio.run(go())
+    assert len(events)==1 and events[0]['status']==200

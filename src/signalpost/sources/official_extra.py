@@ -141,7 +141,7 @@ class Fetcher:
         began=time.monotonic()
         try:
             async with asyncio.timeout(min(15,max(.001,self.budget.deadline-time.monotonic()))):
-                r=await self.client.request('POST' if payload else 'GET',url,json=payload,follow_redirects=False,timeout=15)
+                r=await self.client.request('POST' if payload else 'GET',url,json=payload,headers={'Accept':'application/xml,text/xml' if host=='ted.europa.eu' else 'application/json'},follow_redirects=False,timeout=15)
                 event['status']=r.status_code
                 if len(r.content)>4*1024*1024 or r.status_code!=200:raise SourceFailure('extra_http_'+str(r.status_code))
                 sha=await offload(self.blobs.put,r.content);event['content_sha256']=sha
