@@ -41,6 +41,7 @@ class Config(BaseModel):
     website_linked_board_jobs: bool = True
     nav_rank_candidates: bool = True
     public_activity: bool = False
+    official_extra_sources: bool = False
     registry_changes: bool = True
     website_request_cap: int = Field(default=40, ge=0, le=40)
     website_total_request_cap: int = Field(default=40, ge=0, le=40)

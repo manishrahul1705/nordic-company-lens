@@ -33,6 +33,7 @@ def transient_sections(envelope, old_claims):
                old_domain is not None and domain(a.get('page') or a.get('url') or a.get('domain', '')) == old_domain and
                not str(a.get('page') or a.get('url', '')).endswith('/robots.txt') for a in attempts)
     refuted = envelope.run.refresh.get('website', {}).get('refuted_previous_website')
+    refuted = refuted or old_domain in envelope.run.refresh.get('website',{}).get('declared_absent_domains',[])
     if gone or refuted or any(e.section == 'website' and e.code == 'foreign_orgnr_on_previous_domain' for e in envelope.errors):
         reasons.pop('website', None)
     if 'website' in reasons and any(e.section == 'activity' and e.code == 'website_check_incomplete' for e in envelope.errors):

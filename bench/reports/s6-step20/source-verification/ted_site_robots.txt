@@ -1,0 +1,56 @@
+User-Agent: *
+
+# Liferay sitemap url
+Sitemap: https://ted.europa.eu/en/sitemap.xml
+
+# Notices sitemap url
+Sitemap: https://ted.europa.eu/sitemap/notices/sitemap.xml
+
+# Disallow private pages
+Disallow: /*/my-dashboard
+Disallow: /*/preferences
+Disallow: /c/portal/login
+Disallow: /c/portal/login$
+Disallow: /ecas.ec.europa.eu/cas/logout.cgi
+
+# Disallow Liferay internal use patterns
+Disallow: /webdav/
+Disallow: /control_panel/
+Disallow: /group/
+Disallow: /user/
+Disallow: /web/
+Disallow: /documents/
+Disallow: /image/
+Disallow: /documents_and_media/
+Disallow: /api/jsonws/
+Disallow: /api/axis/
+Disallow: /api/liferay/
+Disallow: /api/secure/
+Disallow: /packages/*
+Disallow: /*/index
+Disallow: /apm/intake/
+
+# Disallow direct file urls
+Disallow: /*/release-calendar/-/download/*
+Disallow: /*/simap/contracts-awarded-by-eu-institutions/-/downloadCan/
+
+# Allow only default search result page, other urls are dynamic and depends of user inputs
+Allow: /*/search/result$
+Disallow: /*/search/result?
+
+# Force allowing of simap bulk download page
+Allow: /*/simap/xml-bulk-download
+
+# Force allowing SPA js
+Allow: /*/ted-v2@1.0.0/index
+Allow: /*/ted-v2-react-widget/index
+
+# copied bot rules from ted_v1
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: msnbot/bingbot
+Crawl-delay: 1

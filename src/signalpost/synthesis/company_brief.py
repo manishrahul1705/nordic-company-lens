@@ -12,6 +12,8 @@ STATES = {'not_available': 'not found', 'not_applicable': 'not applicable',
 def plain_reason(code):
     """Presentation only: original codes remain in the cited snapshot context."""
     code = str(code).casefold()
+    if code == 'declared_domain_absent':
+        return 'the declared domain does not exist'
     if code == 'no_verified_website':
         return 'no verified company website was found'
     if 'robots' in code:

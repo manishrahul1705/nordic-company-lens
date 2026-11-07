@@ -82,6 +82,12 @@ def generate(envelope):
         value=' '.join(value.split()).strip().rstrip('.!?')
         if value and len(value.split())<25 and not re.search(r'[.!?]',value):
             text+='; its registered purpose (in Norwegian) is \u00ab'+value+'\u00bb';used.append(purpose)
+    lei=fields.get('identity.gleif.lei')
+    if lei:
+        text+='; it is registered in GLEIF with LEI '+str(lei.value);used.append(lei)
+        parent=fields.get('identity.gleif.ultimate_parent') or fields.get('identity.gleif.direct_parent')
+        if parent:
+            text+=' and '+('ultimate parent ' if parent.field.endswith('ultimate_parent') else 'direct parent ')+parent.value['name'];used.append(parent)
     add('a',text+'.',used)
     # Company-only annual amounts: no currency or unknown-scale conversion.
     financial=[c for c in claims if c.family=='accounts' and not c.field.startswith('accounts.consolidated.') and number_claim(c)
@@ -137,6 +143,15 @@ def generate(envelope):
         events=sorted((c for c in claims if c.field.startswith('registry_change.') and isinstance(c.value,dict) and major_event(c.value) and short_date(c.value.get('date'))),key=lambda c:(c.value['date'],c.field),reverse=True)
         if events:
             c=events[0];add('d','A registry announcement dated '+short_date(c.value['date'])+' records '+major_event(c.value)+', according to the Br\u00f8nn\u00f8ysund Register.',[c])
+    awards=sorted((c for c in claims if c.field.startswith('procurement_award.') and short_date(c.value.get('date'))),key=lambda c:(c.value['date'],c.field),reverse=True)
+    if awards:
+        current=next((s for s in result.sentences if s.sentence_type=='d'),None)
+        existing={c.id:c for c in claims}
+        previous_date=max((str(existing[cid].value.get('date','')) for cid in current.claim_ids if cid in existing),default='') if current else ''
+        if awards[0].value['date']>previous_date[:10]:
+            result.sentences=[s for s in result.sentences if s.sentence_type!='d']
+            c=awards[0];role='supplier' if c.value['matched_role']=='winner' else 'buyer'
+            add('d','A public procurement award dated '+short_date(c.value['date'])+' names it as '+role+' for "'+c.value['title']+'".',[c])
     website=fields.get('official_website')
     if website:
         host=(urlsplit(website.value['final_url']).hostname or '').lower()

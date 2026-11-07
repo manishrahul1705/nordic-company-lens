@@ -446,7 +446,11 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
         except SourceFailure as exc:
             is_authoritative = candidate.origin in STRONG_CANDIDATE_ORIGINS or (refresh_candidate and candidate.domain == refresh_candidate.domain)
             known_source = is_authoritative
-            absent_guess = exc.code == 'no_such_domain' and not known_source
+            declared_absent=known_source and exc.code=='no_such_domain' and getattr(exc,'declared_domain_absent',False)
+            if declared_absent:
+                envelope.run.refresh.setdefault('website',{}).setdefault('declared_absent_domains',[]).append(candidate.domain)
+                section.errors.append(Error(section='website',code='declared_domain_absent',message='declared domain does not exist'))
+            absent_guess = exc.code == 'no_such_domain' and (not known_source or declared_absent)
             if known_source and not absent_guess and exc.code in {'website_timeout','website_connect_error','website_tls_error','website_http_5xx','dns_timeout','dns_error','dns_servfail','dns_unavailable','body_cap','no_such_domain','redirect_limit','content_type'}:
                 source_unavailable = True
                 if known_source:

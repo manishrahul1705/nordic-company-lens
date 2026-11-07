@@ -52,6 +52,10 @@ def claim_strings(claim):
 
 def permitted(claim,envelope):
     if getattr(claim,'family',None)=='activity':
+        if claim.field.startswith('procurement_award.'):
+            value=claim.value
+            evidence={e.id:e for e in envelope.evidence}
+            return bool(isinstance(value,dict) and value.get('company_orgnr')==envelope.organisation_number and claim.evidence_ids and all(eid in evidence for eid in claim.evidence_ids) and any(evidence[eid].source_url.startswith('https://ted.europa.eu/en/notice/') and evidence[eid].extraction_method=='signalpost.official_extra.v1' for eid in claim.evidence_ids))
         if claim.field.startswith('registry_change.'):
             from ..sources.registry_changes import permitted as registry_permitted
             return registry_permitted(claim, envelope)

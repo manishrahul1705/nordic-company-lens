@@ -32,6 +32,8 @@ Run the **same command again with the same state directory** to refresh automati
 | Company websites | Ownership proof, descriptions, social links, dated news, linked active jobs | robots.txt and site access rules; no blanket open licence inferred | $0 |
 | SSB KLASS | Bundled industry descriptions | CC BY 4.0 | $0 |
 | LLM / paid search | Disabled; deterministic cited templates | No provider called | $0 |
+| GLEIF | LEI/status/form/dates and explicit direct/ultimate parents | CC0 1.0; anonymous exact orgnr + RA000472 API, batched parent LEIs | $0 |
+| TED | Exact winner/buyer public procurement awards | EU Publications Office legal notice/Commission reuse policy; anonymous published-notice API and public XML | $0 |
 
 See [docs/SOURCES.md](docs/SOURCES.md) and [LICENSE](LICENSE) (code/documentation: MIT). Social destinations are not crawled. A brand/name match alone does not establish company ownership; ambiguous/shared/foreign group sites are withheld. Contact-only direct-registry Tier B sites publish a link without website content.
 
@@ -73,3 +75,5 @@ There is **no JavaScript rendering**; static HTML-only sites can be missed. Smal
 [Verify Signalpost](.github/workflows/ci.yml) runs locked installation, the full pytest suite and live-20. Its `--require-clean` verifier remains strict for identity, roles, accounts and subunits. Only optional website/social, hiring and activity failures/stale states are tolerated and summarized with reasons; schema, membership, evidence, citations and global operational checks remain strict. Local release execution is documented in the release report; no GitHub workflow was dispatched and nothing was pushed.
 
 Release checks: full suite **1,095 passed in267.75s**; exact local live-20 scoped verifier **passed**. The new random strict pair remains **failed**, as detailed above. No runtime feature or precision-rule changes were made in release preparation.
+
+Official extra sources need no personal key. All requests, including explicit-parent relationship proofs and batched parent LEIs, count in the existing pool. Doffin is excluded pending verified keyless API/terms; no application key or website scraping is used. See [source terms and matching policy](docs/SOURCES.md).

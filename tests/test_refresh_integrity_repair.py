@@ -77,10 +77,10 @@ def test_refresh_oversized_response_preserves_claims_and_sets_failed(tmp_path, m
     assert not any(ch["type"] == "removed" and ch["field"].startswith("contact.") for ch in row.get("changes", []))
 
 
-def test_refresh_dns_nxdomain_preserves_previous_state_as_stale(tmp_path, monkeypatch):
+def test_refresh_complete_nxdomain_marks_declared_domain_absent(tmp_path, monkeypatch):
     """[state_classification & claim_carry_forward]
-    DNS NXDOMAIN during refresh must retain the previous state as stale,
-    retaining prior claims with carried_forward=True, rather than producing false removals.
+    Step 20: every apex/www attempt returning NXDOMAIN proves absence.
+    Mixed DNS/transport failures still retain stale claims in separate tests.
     """
     dns_fail = False
     async def mock_dns(host, port=443):
@@ -121,11 +121,11 @@ def test_refresh_dns_nxdomain_preserves_previous_state_as_stale(tmp_path, monkey
     rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
     row = rows[0]
 
-    assert row["run"]["sections"]["website"] == "available"
-    assert row["run"]["refresh"]["stale_sections"]["website"]["attempt_state"] == "failed"
-    carried = [c for c in row["claims"] if c["family"] == "website" and c.get("carried_forward")]
-    assert any(c["field"] == "official_website" for c in carried)
-    assert not any(ch["type"] == "removed" for ch in row.get("changes", []))
+    assert row["run"]["sections"]["website"] == "not_available"
+    assert any(e['code']=='declared_domain_absent' and e['message']=='declared domain does not exist' for e in row['errors'])
+    assert 'example.no' in row['run']['refresh']['website']['declared_absent_domains']
+    assert not any(c['field']=='official_website' and c['availability']=='available' for c in row['claims'])
+    assert any(ch['type']=='removed' and ch['field']=='official_website' for ch in row['changes'])
 
 
 def test_refresh_transient_dns_failure_preserves_claims(tmp_path, monkeypatch):

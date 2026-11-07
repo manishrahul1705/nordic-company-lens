@@ -528,6 +528,20 @@ async def _run(config, client=None):
                     for org in eligible:
                         update(envelopes[org], 'activity', registry_changes.merge(
                             envelopes[org], missing('activity', 'registry_change_incomplete'), config.public_activity))
+            if config.official_extra_sources:
+                from .sources.official_extra import collect
+                eligible={org:envelopes[org] for org in sorted(valid_orgs) if envelopes[org].run.sections.get('identity')=='available'}
+                try:
+                    extra,metrics=await collect(eligible,active_client,budget,blobs)
+                    dns_metrics['official_extra']=metrics
+                    for org,section in extra.items():
+                        row=envelopes[org]
+                        row.claims.extend(section.claims);row.evidence.extend(section.evidence)
+                        from .sources.official_extra import retain_failed
+                        retain_failed(row,prior.get(org))
+                        if any(c.family=='activity' for c in section.claims):row.run.sections['activity']='available'
+                except Exception:
+                    dns_metrics['official_extra']={'state':'not_available_fetch_failed'}
             return pending
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,

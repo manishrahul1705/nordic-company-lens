@@ -38,6 +38,7 @@ def main(argv=None):
     command.add_argument('--no-nav-rank-candidates', dest='nav_rank_candidates', action='store_false')
     command.add_argument('--public-activity', action=argparse.BooleanOptionalAction, default=True,
                          help='Research bounded company-site public activity (default on; disable with --no-public-activity)')
+    command.add_argument('--official-extra-sources', action=argparse.BooleanOptionalAction, default=True, help='Anonymous exact-ID GLEIF/TED sources')
     command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=True,
                          help='Publish narrowly verified registry changes (default on; disable with --no-registry-changes)')
     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')

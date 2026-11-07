@@ -281,6 +281,7 @@ class WebsiteHttp:
         from .candidates import RECOVERY
         nominated = candidate.origin in RECOVERY
         last = None
+        failures=[]
         for position, (scheme, authority) in enumerate(trials):
             # A normal HTTP response from the apex (including 4xx/5xx) does
             # not trigger transport fallback. The www/HTTP sequence is for
@@ -297,11 +298,15 @@ class WebsiteHttp:
                               'final_url':response.url,'status':response.status})
                 if 200 <= response.status < 300 or response.status in {401,403,429}:
                     return response
+                failures.append('http_response')
                 last = SourceFailure('website_http_5xx' if response.status >= 500 else 'http_' + str(response.status))
             except SourceFailure as exc:
                 notes.append({'domain':candidate.domain,'origin':candidate.origin,'url':target,'reason':exc.code})
                 last = exc
+                failures.append(exc.code)
                 if exc.code in stop_errors:
                     raise
                 failed_transport |= exc.code in transport_errors
+        if last and len(failures)==len(trials) and set(failures)=={'no_such_domain'}:
+            last.declared_domain_absent=True
         raise last or SourceFailure('no_such_domain')

@@ -173,5 +173,5 @@ def generate(envelope):
     from .analyst import generate as analyst_generate, validate as analyst_validate
     result.analyst_brief = analyst_validate(analyst_generate(envelope), envelope)
     result.summary = ' '.join(s.text for s in result.analyst_brief.sentences)
-    result.generator.version = '6'
+    result.generator.version = '7'
     return result

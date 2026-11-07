@@ -163,6 +163,10 @@ def fact(claim, records):
         label = v.get('title') or v.get('name') or {'roles': 'Registered role', 'subunits': 'Registered workplace', 'hiring': 'Job advertisement'}[claim['family']]
     if claim['field'].startswith('website_description.'):
         label = "Company's own description"
+    if claim['field'].startswith('identity.gleif.'):
+        label=claim.get('reasons',{}).get('label','GLEIF '+claim['field'].rsplit('.',1)[-1].replace('_',' '))
+    if claim['field'].startswith('procurement_award.'):
+        label='Public procurement award'
     v = claim.get('value')
     title = english_title(v) if claim['field'].startswith('identity.nace') and isinstance(v, dict) else None
     content = value_html(v) if available else '<p>' + esc(UNKNOWN.get(claim['availability'], 'Unknown.')) + '</p>'
