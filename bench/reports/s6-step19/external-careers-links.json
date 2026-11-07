@@ -1,0 +1,83 @@
+[
+  {
+    "orgnr": "919653477",
+    "name": "VOKSER AS",
+    "url": "javascript:OneTrust.ToggleInfoDisplay();",
+    "text": "Innstillinger for informasjonskapsler",
+    "source": "https://vokser.no/aktuelt/b-corp-sertifisering",
+    "sha256": "958f2f8d70d2bd341f14ad62e86dab814757219bca239f0a94f04fa28932c852",
+    "audit_classification": "cookie-control false positive"
+  },
+  {
+    "orgnr": "968386085",
+    "name": "LOFOTPOSTEN AS",
+    "url": "https://www.amedia.no/jobb-hos-oss",
+    "text": "Karriere i Amedia",
+    "source": "https://www.lofotposten.no/vis/annonseinnstillinger",
+    "sha256": "4fbe44890db5d0ae012858cf2bd3983c0de7f3e00da16423e5cb2d5e946dc642",
+    "audit_classification": "group careers page, not exact-company proof"
+  },
+  {
+    "orgnr": "977107385",
+    "name": "INDRE SALTEN OPPLÆRINGSKONTOR AS",
+    "url": "https://karrierenordland.no/karriereveiledning-noe-for-deg/videregaende-opplaring-for-voksne-vov/fagbrev-som-voksen/fagbrev-pa-jobb/",
+    "text": "Fagbrev på jobb",
+    "source": "https://isok.no/ledige-laereplasser/",
+    "sha256": "20c87c5c35cdc00d43e772774aff41ed9bd0cada562c2862401994db7770201e",
+    "audit_classification": "training/information link, not an active vacancy"
+  },
+  {
+    "orgnr": "977107385",
+    "name": "INDRE SALTEN OPPLÆRINGSKONTOR AS",
+    "url": "https://karrierenordland.no/karriereveiledning-noe-for-deg/fag-og-svennebrev-som-voksen/praksiskandidatveien.102164.aspx",
+    "text": "Praksiskandidat",
+    "source": "https://isok.no/ledige-laereplasser/",
+    "sha256": "20c87c5c35cdc00d43e772774aff41ed9bd0cada562c2862401994db7770201e",
+    "audit_classification": "training/information link, not an active vacancy"
+  },
+  {
+    "orgnr": "977107385",
+    "name": "INDRE SALTEN OPPLÆRINGSKONTOR AS",
+    "url": "https://karrierenordland.no/",
+    "text": "Karriere Nordland",
+    "source": "https://isok.no/ledige-laereplasser/",
+    "sha256": "20c87c5c35cdc00d43e772774aff41ed9bd0cada562c2862401994db7770201e",
+    "audit_classification": "training/information link, not an active vacancy"
+  },
+  {
+    "orgnr": "977107385",
+    "name": "INDRE SALTEN OPPLÆRINGSKONTOR AS",
+    "url": "https://www.norskindustri.no/dette-jobber-vi-med/kompetanse/fagopplaring-i-norsk-industri/",
+    "text": "",
+    "source": "https://isok.no/om-oss/",
+    "sha256": "5a4cf948c0d3769906ccfc8f71ec487fa8fd0c9d565077ce3c8c9ccac3b5a02d",
+    "audit_classification": "training/information link, not an active vacancy"
+  },
+  {
+    "orgnr": "968545337",
+    "name": "LEFDAL INSTALLASJON AS",
+    "url": "https://www.finn.no/job/ad/469143760",
+    "text": "Senior prosjektleder",
+    "source": "https://www.lefdal.no/jobb-hos-oss/",
+    "sha256": "38ee941b05704efbcced8c9579903db113023d571863cbac8da0132f5648a17b",
+    "audit_classification": "individual third-party job ad; active/exact-employer proof not checked"
+  },
+  {
+    "orgnr": "968545337",
+    "name": "LEFDAL INSTALLASJON AS",
+    "url": "https://www.finn.no/job/ad/469355551",
+    "text": "Servicemontør",
+    "source": "https://www.lefdal.no/jobb-hos-oss/",
+    "sha256": "38ee941b05704efbcced8c9579903db113023d571863cbac8da0132f5648a17b",
+    "audit_classification": "individual third-party job ad; active/exact-employer proof not checked"
+  },
+  {
+    "orgnr": "939725709",
+    "name": "SAGA REGNSKAP OG RÅDGIVNING AS",
+    "url": "https://www.teamtailor.com/?utm_campaign=poweredby&utm_content=team.sagarr.no&utm_medium=referral&utm_source=career-site",
+    "text": "Karriereside\n\n      av Teamtailor",
+    "source": "https://team.sagarr.no/",
+    "sha256": "ac221a51ccf265e8bb8195942e4af6d1bf57516130838a5e3e424d3e24c18a4e",
+    "audit_classification": "ATS provider credit, not a job ad"
+  }
+]
