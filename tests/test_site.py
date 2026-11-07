@@ -141,9 +141,10 @@ def test_xss_is_text_and_bad_urls_are_not_links(tmp_path):
         assert '<script>alert' not in text and '<img src=x' not in text
         assert not any(tag == 'img' for tag, _ in markup.tags)
         assert all(not url.lower().startswith('javascript:') for url in markup.links)
-        assert all('src' in attrs or attrs.get('id') == 'theme-boot' for tag, attrs in markup.tags if tag == 'script')
-        from signalpost.site import THEME_BOOT
+        assert all('src' in attrs or attrs.get('id') in {'theme-boot','date-presentation'} for tag, attrs in markup.tags if tag == 'script')
+        from signalpost.site import THEME_BOOT,DATE_BOOT
         assert text.count('<script id="theme-boot">'+THEME_BOOT+'</script>') == 1
+        assert text.count('<script id="date-presentation">'+DATE_BOOT+'</script>') == 1
     js = (out / 'data/index.js').read_text(encoding='utf8')
     assert '</script>' not in js and '<\\/script>' in js
     detail = (out / f'c/{row.organisation_number}.data.js').read_text(encoding='utf8')

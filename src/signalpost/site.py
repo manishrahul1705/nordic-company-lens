@@ -2,6 +2,7 @@
 import html
 import hashlib
 import base64
+from html.parser import HTMLParser
 import json
 import re
 from datetime import datetime
@@ -13,7 +14,9 @@ from .synthesis.nace import english_title
 
 THEME_BOOT = "document.documentElement.classList.add('js');try{document.documentElement.dataset.theme=localStorage.getItem('signalpost_theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme='light'}"
 THEME_HASH = base64.b64encode(hashlib.sha256(THEME_BOOT.encode()).digest()).decode()
-CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-" + THEME_HASH + "'; base-uri 'none'; form-action 'none'"
+DATE_BOOT = "document.addEventListener('DOMContentLoaded',()=>{const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];const pattern=/(?<![\\d-])(\\d{4})-(\\d{2})-(\\d{2})(?:T\\d{2}:\\d{2}(?::\\d{2}(?:\\.\\d+)?)?(?:Z|[+-]\\d{2}:?\\d{2})?)?/g;function visit(root){if(root.nodeType===3){if(root.parentElement?.closest('script,style,textarea,#evidence-drawer'))return;const old=root.data,next=old.replace(pattern,(whole,y,m,d)=>+m>0&&+m<13?+d+' '+months[+m-1]+' '+y:whole);if(next!==old)root.data=next;return;}if(root.nodeType===1&&root.matches('script,style,textarea,#evidence-drawer'))return;for(const child of root.childNodes)visit(child);}visit(document.body);new MutationObserver(changes=>{for(const change of changes){if(change.type==='characterData')visit(change.target);else for(const node of change.addedNodes)visit(node);}}).observe(document.body,{childList:true,subtree:true,characterData:true});});"
+DATE_HASH = base64.b64encode(hashlib.sha256(DATE_BOOT.encode()).digest()).decode()
+CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-" + THEME_HASH + "' 'sha256-" + DATE_HASH + "'; base-uri 'none'; form-action 'none'"
 ASSETS = Path(__file__).with_name('site_assets')
 GROUPS = [('what-it-does', 'Overview', 'identity'), ('people', 'People', 'roles'),
           ('financials', 'Financials', 'accounts'), ('locations', 'Locations', 'subunits'),
@@ -91,11 +94,45 @@ def value_text(value):
     return str(value)
 
 
+MONTH_NAMES=('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
+DATE_PATTERN=re.compile(r'(?<![\d-])(\d{4}-\d{2}-\d{2})(?:T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:?\d{2})?)?')
+
+
 def display_time(value):
     try:
-        return datetime.fromisoformat(value.replace('Z', '+00:00')).strftime('%Y-%m-%d %H:%M UTC')
-    except (ValueError, AttributeError):
-        return str(value)
+        d=datetime.fromisoformat(str(value).replace('Z','+00:00'))
+        return str(d.day)+' '+MONTH_NAMES[d.month-1]+' '+str(d.year)
+    except (ValueError,AttributeError,TypeError):return str(value)
+
+
+def display_dates(text):
+    formatted=DATE_PATTERN.sub(lambda match:display_time(match.group(0)),str(text))
+    # Excerpts may split a timestamp across HTML nodes; times belong in the drawer.
+    return re.sub(r'T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:?\d{2})?', '', formatted)
+
+
+def display_markup_dates(markup):
+    # Change only presentation text, never attributes, source URLs or source data.
+    class Dates(HTMLParser):
+        def __init__(self):super().__init__(convert_charrefs=False);self.output=[];self.raw=0
+        def handle_starttag(self,tag,attrs):
+            self.output.append(self.get_starttag_text())
+            if tag in {'script','style'}:self.raw+=1
+        def handle_endtag(self,tag):
+            self.output.append('</'+tag+'>')
+            if tag in {'script','style'}:self.raw-=1
+        def handle_startendtag(self,tag,attrs):self.output.append(self.get_starttag_text())
+        def handle_data(self,data):self.output.append(data if self.raw else display_dates(data))
+        def handle_entityref(self,name):self.output.append('&'+name+';')
+        def handle_charref(self,name):self.output.append('&#'+name+';')
+        def handle_comment(self,data):self.output.append('<!--'+data+'-->')
+    parser=Dates();parser.feed(markup);return ''.join(parser.output)
+
+
+def avatar_letter(name):
+    return next((c for c in str(name) if c.isalpha()),next((c for c in str(name) if c.isdigit()),'?')).upper()
+
+
 
 
 def value_html(value):
@@ -189,7 +226,7 @@ def fact(claim, records, fallback=None):
     if title:
         content = '<p>English industry title: ' + esc(title) + '</p>' + content
     if claim.get('carried_forward'):
-        content = '<p class="stale">Previously supported; not freshly checked. Last successfully checked: ' + esc(display_time(claim.get('last_observed_at'))) + '.</p>' + content
+        content = '<p class="stale">Previously supported; not freshly checked. Last successfully checked: ' + '<time datetime="'+esc(claim.get('last_observed_at') or '')+'">'+esc(display_time(claim.get('last_observed_at'))) + '</time>.</p>' + content
     period = claim.get('reporting_period')
     if period:
         parts = []
@@ -221,16 +258,16 @@ def sentence_html(sentence, claim_map, change_ids):
 
 
 def page(title, body, prefix='', kind='profile', company_data=None):
+    body=display_markup_dates(body)
     return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<meta http-equiv="Content-Security-Policy" content="{esc(CSP)}">'
-            f'<title>{esc(title)}</title><script id="theme-boot">{THEME_BOOT}</script><link rel="stylesheet" href="{prefix}assets/site.css">'
+            f'<title>{esc(title)}</title><script id="theme-boot">{THEME_BOOT}</script><script id="date-presentation">{DATE_BOOT}</script><link rel="stylesheet" href="{prefix}assets/site.css">'
             f'<script src="{prefix}data/index.js" defer></script>'
             + (f'<script src="{esc(company_data)}" defer></script>' if company_data else '') +
             f'<script src="{prefix}assets/site.js" defer></script>'
             f'</head><body data-page="{kind}"><a class="skip" href="#main">Skip to content</a>'
             f'<nav aria-label="Main"><a class="brand" href="{prefix}index.html"><svg aria-hidden="true" width="34" height="24" viewBox="0 0 34 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="23" cy="12" r="9"/></svg>Nordic Company Lens</a>'
-            f'<a href="{prefix}index.html">Search</a>'
             f'<a href="{prefix}index.html?view=dashboard">Explore</a>'
             f'<a href="{prefix}compare.html" id="nav-compare">Compare <span id="compare-count"></span></a>'
             '<button type="button" id="global-search-open">Search <kbd>Ctrl/K</kbd></button>'
@@ -309,16 +346,23 @@ def profile(row, title, source_routes=None):
     support = synthesis.get('change_claims') or []
     change_ids = {c['id'] for c in support}
     name = by_field.get('identity.legal_name', org)
-    body = f'<header class="company-hero"><div class="avatar" aria-hidden="true">{esc(str(name)[:1])}</div><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button> <button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">⭐ Watchlist</button></p>'
-    for field in ('identity.organisation_form', 'identity.legal_form', 'identity.municipality'):
-        if field in by_field:
-            v = by_field[field]
-            display = (str(v.get('beskrivelse') or '') + ' (' + str(v.get('kode') or '') + ')') if isinstance(v, dict) else value_text(v)
-            body += '<p>' + esc(display) + '</p>'
-    body += ''.join('<p><span class="chip">' + esc(c['field'].replace('identity.', '').replace('_', ' ')) + ': ' + esc(value_text(c['value'])) + '</span></p>' for c in claims if c['availability'] == 'available' and c['field'] in {'identity.bankrupt', 'identity.under_liquidation', 'identity.deleted'})
+    colour=int(hashlib.sha256(str(org).encode()).hexdigest()[:8],16)%8
+    body=f'<header class="company-hero colour-{colour}"><div class="avatar" aria-hidden="true">{esc(avatar_letter(name))}</div><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><div class="metadata-pills">'
+    body+=f'<span class="meta-pill">Org. {esc(org)} <button type="button" class="copy-icon" data-copy="{esc(org)}" aria-label="Copy organisation number"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></svg></button></span>'
+    form=by_field.get('identity.organisation_form',by_field.get('identity.legal_form'))
+    if form:
+        label=(str(form.get('beskrivelse') or '')+' ('+str(form.get('kode') or '')+')') if isinstance(form,dict) else value_text(form)
+        body+='<span class="meta-pill">'+esc(label)+'</span>'
+    if by_field.get('identity.municipality'):body+='<span class="meta-pill">'+esc(str(by_field['identity.municipality']).title())+'</span>'
     workplace_count=sum(c['field'].startswith('subunits.unit.') and c['availability']=='available' for c in claims)
-    body += '<p class="meta-capsule"><a href="#locations">Registered workplaces: '+str(workplace_count)+'</a></p>'
-    body += '<p>Last checked: <time>' + esc(display_time(row['run']['completed_at'])) + '</time></p></header><div class="profile-grid"><div class="profile-main">'
+    body+='<a class="meta-pill" href="#locations">'+str(workplace_count)+(' registered workplace' if workplace_count==1 else ' registered workplaces')+'</a>'
+    body+='<span class="meta-pill">Checked '+esc(display_time(row['run']['completed_at']))+'</span></div>'
+    for flag,label,date_field in [('identity.bankrupt','Bankrupt','identity.bankruptcy_date'),('identity.under_liquidation','Under liquidation','identity.liquidation_date'),('identity.forced_dissolution','Under forced liquidation',None)]:
+        if by_field.get(flag) is True:
+            when=by_field.get(date_field) if date_field else None
+            body+='<p class="status-danger">'+label+(' since '+esc(display_time(when)) if when else '')+'</p>'
+            break
+    body+=f'<div class="company-header-actions"><a class="source-button" href="../compare.html?companies={esc(org)}">Compare</a><button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">Add to Watchlist</button></div></header><div class="profile-grid"><div class="profile-main">'
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
     overview = select(synthesis, claims)
@@ -1076,14 +1120,17 @@ def generate_site(input_path, out, title='Signalpost'):
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')
+    for asset in (ASSETS/'fonts').iterdir():
+        if asset.is_file():files['assets/fonts/'+asset.name]=asset.read_bytes()
     # Render everything before writes: template errors cannot leave half a new site.
     if any(len(content.encode('utf8')) >= 250_000 for path, content in files.items() if path.endswith('.html')):
         raise ValueError('Profile page exceeds 250 KB gate')
     for filename, content in files.items():
         target = out / filename
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(content, encoding='utf8', newline='\n')
-    sizes = {filename: len(content.encode('utf8')) for filename, content in files.items()}
+        if isinstance(content,bytes):target.write_bytes(content)
+        else:target.write_text(content, encoding='utf8', newline='\n')
+    sizes = {filename: len(content if isinstance(content,bytes) else content.encode('utf8')) for filename, content in files.items()}
     return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'skipped_invalid_identifiers': len(skipped), 'total_bytes': sum(sizes.values()),
             'evidence_pages':sum(path.startswith('e/') and path.endswith('.html') for path in files),
             'largest_page_bytes':max((size for path,size in sizes.items() if path.endswith('.html')),default=0),
