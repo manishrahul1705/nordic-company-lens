@@ -335,7 +335,10 @@ def deferred_registry_ids(row):
     return {c['id'] for c in items[10:]+awards[2:]}
 
 
-def profile(row, title, source_routes=None):
+def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
+    """inline_limit bounds facts rendered inline per section; the rest are
+    recorded in ``overflow`` (claim id -> section) and loaded from the company
+    data file, so very large companies still get a page under the size gate."""
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
     records = {e['id']: e for e in row['evidence']}
@@ -463,6 +466,9 @@ def profile(row, title, source_routes=None):
         deferred=deferred_registry_ids(row) if key=='activity' else set()
         details=[c for c in items if c['field'].startswith(('roles.detail.','subunits.detail.')) or c['id'] in deferred]
         items=[c for c in items if not c['field'].startswith(('roles.detail.','subunits.detail.')) and c['id'] not in deferred]
+        if inline_limit is not None and len(items)>inline_limit:
+            moved=items[inline_limit:];items=items[:inline_limit];details=details+moved
+            if overflow is not None:overflow.update({c['id']:key for c in moved})
         if key == 'activity': items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         state = row['run']['sections'].get(family, 'not_applicable')
         if key == 'locations' and business_location and state in {'not_available','not_applicable'}:
@@ -736,7 +742,7 @@ def profile(row, title, source_routes=None):
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
 
-def company_payload(row):
+def company_payload(row, overflow=None):
     evidence={e['id']:e for e in row['evidence']}
     referenced=set()
     facts=[]
@@ -781,6 +787,8 @@ def company_payload(row):
     details.extend({'id':c['id'][:16],'field':('Public procurement award: ' if c['field'].startswith('procurement_award.') else 'Registry announcement: ')+c['value']['title'],
                     'value':(c['value'] if c['field'].startswith('procurement_award.') else registry_sentence(c['value'])),'availability':c['availability'],'group':'activity'}
                    for c in row['claims'] if c['id'] in deferred)
+    details.extend({'id':c['id'][:16],'field':c['field'],'value':c['value'],'availability':c['availability'],'group':overflow[c['id']]}
+                   for c in row['claims'] if overflow and c['id'] in overflow and c['id'] not in deferred)
     name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
     all_records = {e['id']: e for e in row['evidence']}
     payload = {'orgnr': row['organisation_number'], 'name': name,
@@ -1092,6 +1100,30 @@ def receipt_pages(row, title):
     return files,{cid:targets[keys[0]] for cid,keys in parts_by_claim.items()}
 
 
+PAGE_GATE=250_000
+
+
+def compact_profile(row, title, source_routes=None):
+    """Last-resort page for an exceptionally large company: briefing and key
+    facts inline, every fact still reachable through its evidence pages."""
+    claims=row['claims'];org=row['organisation_number']
+    by_field={c['field']:c['value'] for c in claims if c['availability']=='available'}
+    name=by_field.get('identity.legal_name',org)
+    analyst=(row['run'].get('synthesis') or {}).get('analyst_brief') or {}
+    body='<header class="company-hero"><div class="avatar" aria-hidden="true">'+esc(avatar_letter(name))+'</div><p class="eyebrow">Company profile</p><h1>'+esc(name)+'</h1><div class="metadata-pills"><span class="meta-pill">Org. '+esc(org)+'</span></div></header>'
+    body+='<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'+''.join('<p>'+esc(s['text'])+'</p>' for s in analyst.get('sentences',[]))+'</section>'
+    body+='<section id="facts"><h2>Sourced facts</h2><p>This company has an exceptionally large public record, so its facts are listed with links to their evidence pages.</p><ul>'
+    routes=source_routes or {}
+    for c in claims:
+        if c['availability']!='available':continue
+        line=esc(c['field'].replace('_',' '))+': '+esc(value_text(c['value']))[:160]
+        target=routes.get(c['id'])
+        body+='<li>'+line+(' <a href="'+esc(target)+'">source</a>' if target else '')+'</li>'
+        if len(body.encode('utf8'))>PAGE_GATE-30_000:body+='<li>More facts are in the evidence pages.</li>';break
+    body+='</ul></section>'
+    return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
+
+
 def generate_site(input_path, out, title='Signalpost'):
     input_path, out = Path(input_path), Path(out)
     if input_path.resolve().is_relative_to(out.resolve()):
@@ -1111,19 +1143,29 @@ def generate_site(input_path, out, title='Signalpost'):
     js_payload = payload.replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     files = {'index.html': index_page(records, title, skipped), 'compare.html': compare_page(title,records),
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
+    oversized=[]
     for row in rows:
         org=row['organisation_number']
         receipts,routes=receipt_pages(row,title)
         files.update(receipts)
-        files['c/' + org + '.html'] = profile(row, title,routes)
-        data=json.dumps(company_payload(row),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
+        overflow={}
+        html=profile(row, title,routes)
+        # Very large companies: move the tail of each section into the lazily
+        # loaded data file instead of failing the whole site.
+        for limit in (40, 15, 5, 0):
+            if len(html.encode('utf8')) < PAGE_GATE:break
+            overflow={};html=profile(row,title,routes,inline_limit=limit,overflow=overflow)
+        if len(html.encode('utf8')) >= PAGE_GATE:
+            html=compact_profile(row,title,routes);oversized.append(org)
+        files['c/' + org + '.html'] = html
+        data=json.dumps(company_payload(row,overflow),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')
     for asset in (ASSETS/'fonts').iterdir():
         if asset.is_file():files['assets/fonts/'+asset.name]=asset.read_bytes()
     # Render everything before writes: template errors cannot leave half a new site.
-    if any(len(content.encode('utf8')) >= 250_000 for path, content in files.items() if path.endswith('.html')):
+    if any(len(content.encode('utf8')) >= PAGE_GATE for path, content in files.items() if path.endswith('.html')):
         raise ValueError('Profile page exceeds 250 KB gate')
     for filename, content in files.items():
         target = out / filename
@@ -1135,4 +1177,5 @@ def generate_site(input_path, out, title='Signalpost'):
             'evidence_pages':sum(path.startswith('e/') and path.endswith('.html') for path in files),
             'largest_page_bytes':max((size for path,size in sizes.items() if path.endswith('.html')),default=0),
             'largest_profile_data_bytes':max((size for path,size in sizes.items() if path.endswith('.data.js')),default=0),
-            'largest_profile_bytes': max((size for path, size in sizes.items() if path.endswith('.html')), default=0)}
+            'largest_profile_bytes': max((size for path, size in sizes.items() if path.endswith('.html')), default=0),
+            'compact_profiles': len(oversized)}

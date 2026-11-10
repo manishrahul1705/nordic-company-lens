@@ -436,3 +436,24 @@ def test_hiring_explorer_watchlist_and_financial_trend(tmp_path):
     assert 'btn-watchlist' in profile_html
     assert 'class="financial-trend-banner"' in profile_html
     assert 'Multi-year filing trend' in profile_html
+
+
+def test_very_large_company_compacts_instead_of_failing_the_site(tmp_path):
+    """A company with thousands of facts must not abort the whole offline site."""
+    from signalpost.site import normalize, profile, company_payload, PAGE_GATE
+    row,_=envelope(tmp_path)
+    for n in range(2500):
+        available(row,'subunits.unit.big'+str(n),{'name':'Avdeling '+str(n)+' '+'x'*60,
+            'organisation_number':str(900000000+n),'business_address':'Gate '+str(n)+', 0001 Oslo'})
+        row.claims[-1].family='subunits'
+    data=normalize(serialize(row,'union'))
+    assert len(profile(data,'Signalpost').encode('utf8'))>=PAGE_GATE  # reproduces the old failure
+    envelopes=tmp_path/'big.jsonl';envelopes.write_text(json.dumps(data)+'\n',encoding='utf-8')
+    metrics=generate_site(envelopes,tmp_path/'site')
+    page_bytes=(tmp_path/'site'/'c'/(data['organisation_number']+'.html')).read_bytes()
+    assert len(page_bytes)<PAGE_GATE and metrics['largest_profile_bytes']<PAGE_GATE
+    payload=(tmp_path/'site'/'c'/(data['organisation_number']+'.data.js')).read_text(encoding='utf-8')
+    # every subunit is still published: inline on the page or in the lazily loaded details
+    for c in data['claims']:
+        if c['field'].startswith('subunits.unit.big'):
+            assert c['id'][:16] in page_bytes.decode('utf8') or c['id'][:16] in payload
