@@ -72,3 +72,7 @@ scratch/
 /bench/reports/cc-proto/raw/
 !/bench/reports/cc-proto/candidates.jsonl
 /bench/reports/cc-proto/columnar-files.json
+
+# Bundled candidate and registry-count indexes are release inputs.
+!/data/cc_orgnr_index.json.gz
+!/data/shared_identifiers.json.gz

@@ -1,0 +1,72 @@
+src/signalpost/monitor.py:22:        self.worker_metrics=WorkerMetrics();self.metrics_token=METRICS.set(self.worker_metrics)
+src/signalpost/site_assets/fonts/PROVENANCE.json:7:    "upstream_source": "https://github.com/google/fonts/tree/main/ofl/inter",
+src/signalpost/site_assets/fonts/PROVENANCE.json:20:    "upstream_source": "https://github.com/google/fonts/tree/main/ofl/fraunces",
+src/signalpost/sources/nav.py:177:    async def get(self,raw,token=None,headers=None,secret=False,companies=(),persist=True):
+src/signalpost/sources/nav_cached.py:183:    token=None;from_environment=False;token_lock=asyncio.Lock()
+src/signalpost/sources/nav_cached.py:191:                if token==attempted and from_environment:
+src/signalpost/sources/nav_cached.py:192:                    token=await http.public_token();from_environment=False
+src/signalpost/sources/nav_cached.py:193:            if not token or token==attempted:
+src/signalpost/sources/nav_cached.py:381:            raw_token=os.environ.get('NAV_API_TOKEN')
+src/signalpost/sources/nav_cached.py:382:            token=token_from(raw_token)
+src/signalpost/sources/nav_cached.py:388:                    token=None
+src/signalpost/sources/nav_cached.py:390:            token=token or await http.public_token()
+src/signalpost/sources/nav_stream.py:298:            raw_token=os.environ.get('NAV_API_TOKEN')
+src/signalpost/sources/nav_stream.py:299:            token=token_from(raw_token)
+src/signalpost/sources/nav_stream.py:305:                    token=None
+src/signalpost/sources/nav_stream.py:307:            state.token=token or await http.public_token()
+src/signalpost/sources/nav_stream.py:331:                    state.token=await http.public_token();from_environment=False
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:334:        "43.22": "Plumbing, heat and air-conditioning installation",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:390:        "46.84": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:4271:        "43.22": "Plumbing, heat and air-conditioning installation",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:4289:        "43.221": "Plumbing installation",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:4347:        "46.84": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:4396:        "46.840": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:5335:        "43.22": "Plumbing, heat and air-conditioning installation",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:5393:        "46.74": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:9572:        "43.22": "Plumbing, heat and air-conditioning installation",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:9585:        "43.221": "Plumbing- and ventilation-installation",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:9657:        "46.74": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/nace-klass-2026-10-13.json:9727:        "46.740": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/ssb-sn2007-en-2026-10-13.json:7336:      "name": "Electrical, plumbing and other construction installation activities",
+src/signalpost/synthesis/data/ssb-sn2007-en-2026-10-13.json:7392:      "name": "Plumbing, heat and air-conditioning installation",
+src/signalpost/synthesis/data/ssb-sn2007-en-2026-10-13.json:7393:      "shortName": "Plumbing etc.",
+src/signalpost/synthesis/data/ssb-sn2007-en-2026-10-13.json:7496:      "name": "Plumbing- and ventilation-installation",
+src/signalpost/synthesis/data/ssb-sn2007-en-2026-10-13.json:7497:      "shortName": "Plumbing- and ventilation-install",
+src/signalpost/synthesis/data/ssb-sn2007-en-2026-10-13.json:8184:      "name": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/ssb-sn2007-en-2026-10-13.json:8744:      "name": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:6703:      "name": "Electrical, plumbing and other construction installation activities",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:6783:      "name": "Plumbing, heat and air-conditioning installation",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:6784:      "shortName": "Plumbing etc.",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:6927:      "name": "Plumbing installation",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:6928:      "shortName": "Plumbing installation",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:7471:      "name": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:7472:      "shortName": "W.sale of hardware, plumbing, heating equip. etc.",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:7863:      "name": "Wholesale of hardware, plumbing and heating equipment and supplies",
+src/signalpost/synthesis/data/ssb-sn2025-en-2026-10-13.json:7864:      "shortName": "W.sale of hardware, plumbing, heating equip. etc.",
+src/signalpost/web/additional_proof.py:24:        return Proof('VERIFIED','registry_email_on_site',['registry_email'],token=email)
+src/signalpost/web/additional_proof.py:32:            return Proof('VERIFIED','registry_phone_on_site',['registry_phone'],token=numbers[number])
+src/signalpost/web/additional_proof.py:55:            return Proof('VERIFIED','legal_name_masthead',['full_legal_name'],token=str(context['name']))
+src/signalpost/web/additional_proof.py:65:        return Proof('VERIFIED','unique_legal_name_domain',['unique_name_key','exact_no_domain'],token=next(iter(key.split())))
+src/signalpost/web/collector.py:326:                    proof=Proof('VERIFIED','unique_no_corroborated',['registry_unique_name','name_in_identity','registry_corroboration'],4,token=legal_name(context.get('name')))
+src/signalpost/web/collector.py:389:                            extra_proof=Proof('VERIFIED','unique_no_corroborated',['registry_unique_name','name_in_identity','registry_corroboration'],4,token=legal_name(context.get('name')))
+src/signalpost/web/policy.py:94:DIRECTORIES = {"proff.no", "proff.com", "proff.dk", "proff.se", "gulesider.no", "1881.no", "purehelp.no", "finn.no", "fb.me", "fb.com", "youtu.be", "lnkd.in", "t.co", "threads.net"}
+src/signalpost/web/policy.py:98:FREE_MAIL = {"gmail.com", "googlemail.com", "hotmail.com", "hotmail.no", "outlook.com", "live.com", "live.no", "yahoo.com", "yahoo.no", "online.no", "icloud.com", "me.com", "protonmail.com", "proton.me", "aol.com", "msn.com", "mail.com"}
+src/signalpost/web/proof.py:366:        return Proof('VERIFIED', 'registered_subunit_orgnr', token=subject, subject_orgnr=subject)
+src/signalpost/web/proof.py:368:        return Proof('VERIFIED','contact_section_orgnr',token=org)
+src/signalpost/web/proof.py:386:        return Proof("VERIFIED", "jsonld_vatid" if org in json_ids else "raw_owner_identifier" if org in hidden_ids and org not in visible | meta else "orgnr_on_page", other_orgnrs=others, token=org)
+src/signalpost/web/proof.py:416:        return Proof('VERIFIED', 'legal_name_and_registry_contact', signals, 2 * len(signals), token=str(context['name']))
+src/signalpost/web/proof.py:429:                     token=str(context['name']) if exact_name else base_name)
+src/signalpost/web/proof.py:439:            return Proof('VERIFIED', 'registry_declared_hard_contact_tier_b', ['registry_declared_domain', *contacts, *(['registered_role_holder'] if holder else [])], 4, token=token)
+src/signalpost/web/proof.py:452:                         2 * len(categories), token=token)
+src/signalpost/web/proof.py:455:                     ['legal_name_without_suffix','name_derived_domain',*contacts],2*len(contacts),token=base_name)
+src/signalpost/web/proof.py:466:                             ['exact_legal_domain', 'registry_' + key], 4, token=str(context[key]))
+src/signalpost/web/proof.py:472:        return Proof('MEDIUM','signals',['legal_name_without_suffix',*contacts],2*len(contacts),reason='name_without_suffix_insufficient_contacts_or_domain',token=base_name)
+src/signalpost/web/proof.py:473:    return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))
+src/signalpost/web/search.py:13:GENERIC_DOMAINS={'gulesider.no','proff.no','purehelp.no','1881.no','180.no',
+src/signalpost/web/search.py:18:                 'brreg.no','google.com','bing.com','duckduckgo.com'}
+src/signalpost/web/search.py:98:        any(g in host for g in ('gulesider','proff','purehelp','1881','linkedin','facebook'))):
+src/signalpost/web/search.py:137:            'domain': "proff.no",
+src/signalpost/web/search.py:138:            'url': f"https://proff.no/selskap/{slug}",
+src/signalpost/web/search.py:139:            'title': f"Proff: {clean}",
+src/signalpost/web/search.py:200:        key=os.environ.get('BRAVE_SEARCH_API_KEY')
+src/signalpost/web/social.py:24:    blocked = {'wix','squarespace','wordpress','shopify','webflow','jimdo','onecom','domeneshop','1881','gulesider','proff','purehelp'}
