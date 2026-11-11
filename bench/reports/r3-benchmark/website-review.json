@@ -1,0 +1,3150 @@
+[
+  {
+    "orgnr": "915015743",
+    "company": "INVENSYS AS",
+    "website": {
+      "value": {
+        "final_url": "https://invensys.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_masthead",
+        "proof_page_url": "https://invensys.no/",
+        "signals": [
+          "full_legal_name"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "29a5a43d6d701a1e954275123b2779e605e6a1172271eebf4ca39c7479aa6c7f",
+          "source_url": "https://invensys.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:14:33.787203Z",
+          "content_sha256": "09bfe7d5c3ae1c845867c3e7c871ef22462449174028b31661d89d58888fac01",
+          "claim_span": "ument.documentElement);</script>\n<title>Invensys AS</title>\n<meta name='robots' content='max-image-preview:large' />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" /><link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel=\"alternate\" type=\"applicatio",
+          "locator": "identity-proof:915015743",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"ebru.no\", \"level\": \"REJECT\", \"points\": 0, \"signals\": [], \"origin\": \"registry_website\", \"reason\": \"different_legal_entity\", \"title\": \"Hjem - Ebru Technologies AS\", \"proof_page_url\": \"https://www.ebru.no/\"}, {\"domain\": \"invensys.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"full_legal_name\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Invensys AS\", \"proof_page_url\": \"https://invensys.no/\"}, {\"domain\": \"ebru.no\", \"origin\": \"registry_website\", \"url\": \"https://ebru.no/\", \"final_url\": \"https://www.ebru.no/\", \"status\": 200}, {\"domain\": \"invensys.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://invensys.no/\", \"final_url\": \"https://invensys.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://invensys.no/",
+        "https://invensys.no/etterspor-et-sitat/",
+        "https://invensys.no/kontakt-oss/",
+        "https://invensys.no/om-oss/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "ebru.no",
+          "origin": "registry_website",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": false,
+          "proof_type": "",
+          "rule": null,
+          "reason": "different_legal_entity"
+        },
+        {
+          "domain": "invensys.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://invensys.no/om-oss",
+            "https://invensys.no/about"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "legal_name_masthead",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Solesvika 136"
+        ],
+        "kommune": "AUSTEVOLL",
+        "kommunenummer": "4625",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "5396",
+        "poststed": "VESTRE VINNESVÅG"
+      },
+      "identity.registered_website": "www.ebru.no",
+      "identity.registered_activity": [
+        "Konsulentvirksomhet tilknyttet informasjonsteknologi."
+      ],
+      "identity.registered_email": "runar.veivag@ebru.no",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 1000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2015-02-23"
+      }
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "Exact title/copyright but site gives Gronaasen 6, Tysnes; registry gives Solesvika 136, Austevoll and ebru.no. Name alone cannot resolve this.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "925787884",
+    "company": "PALLIDUS AS",
+    "website": {
+      "value": {
+        "final_url": "https://pallidus.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://pallidus.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "c22aebfdb566e7bb0f4e72e930fe487f83caac87dd85440c87c6bd16ed6655eb",
+          "source_url": "https://pallidus.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:14:26.581629Z",
+          "content_sha256": "04584341160b342e704323590974ed229106c6734070785861a0e487c170fe2d",
+          "claim_span": "t-seo-wordpress/ -->\n\t<title>Fremside - Pallidus</title>\n\t<meta name=\"description\" content=\"Velkommen til Pallidus, hjemmet til forfatteren av de bestselgende bøkene &quot;Blomsterhavet&quot; og &quot;Å berøre stjerner&quot;. Oppdag hva som gjør forfatterens skrivestil unik, med temaer som kjærlighe",
+          "locator": "identity-proof:925787884",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"pallidus.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Fremside - Pallidus\", \"proof_page_url\": \"https://pallidus.no/\"}, {\"domain\": \"pallidus.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://pallidus.no/\", \"final_url\": \"https://pallidus.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://pallidus.no/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "pallidus.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://pallidus.no/kontakt-oss",
+            "https://pallidus.no/privacy-policy"
+          ],
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Bjoavegen 1048"
+        ],
+        "kommune": "VINDAFJORD",
+        "kommunenummer": "1160",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "5584",
+        "poststed": "BJOA"
+      },
+      "identity.registered_activity": [
+        "Utleie av personal. Opplæringsvirksomhet. Møte og foredragsvirksomhet.",
+        "Forlagsvirksomhet."
+      ],
+      "identity.registered_in_vat": false,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 300,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2020-10-14"
+      }
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "Publisher/author brand fits registry publishing purpose, but only the unique-name/domain rule proves the entity; no exact entity identifier in saved proof.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "919086815",
+    "company": "AGNES BRYGGHUS AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.agnesbrygghus.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_masthead",
+        "proof_page_url": "https://www.agnesbrygghus.no/",
+        "signals": [
+          "full_legal_name"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "f9d4b8bd211a905adf44af8fb27477410c09f446c3f9f689dd2ccbdfc647a3ed",
+          "source_url": "https://www.agnesbrygghus.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:14:35.038989Z",
+          "content_sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861",
+          "claim_span": "width, initial-scale=1.0\" />\n    <title>Agnes Brygghus AS | Håndverksbryggeri i Stavern</title>\n    <meta\n      name=\"description\"\n      content=\"Agnes Brygghus AS er et lokalt bryggeri i Sjøparken i Stavern, med ølproduksjon og arrangementer knyttet til håndverksøl.\"\n    />\n    <meta name=\"author\" ",
+          "locator": "identity-proof:919086815",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"agnesbrygghus.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"full_legal_name\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Agnes Brygghus AS | Håndverksbryggeri i Stavern\", \"proof_page_url\": \"https://www.agnesbrygghus.no/\"}, {\"domain\": \"agnesbrygghus.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://agnesbrygghus.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"agnesbrygghus.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.agnesbrygghus.no/\", \"final_url\": \"https://www.agnesbrygghus.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.agnesbrygghus.no/",
+        "https://www.agnesbrygghus.no/about",
+        "https://www.agnesbrygghus.no/kontakt",
+        "https://www.agnesbrygghus.no/om-oss"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "agnesbrygghus.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.agnesbrygghus.no/kontakt-oss",
+            "https://www.agnesbrygghus.no/privacy-policy"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "legal_name_masthead",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Agnes Torg Sjøparken Larvik"
+        ],
+        "kommune": "LARVIK",
+        "kommunenummer": "3909",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "3290",
+        "poststed": "STAVERN"
+      },
+      "identity.registered_activity": [
+        "Bryggeri- og serveringsvirksomhet. Brygging av håndsverks øl."
+      ],
+      "identity.registered_email": "jau169@hotmail.com",
+      "identity.registered_mobile": "932 63 820",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 100,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2017-06-22"
+      }
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "Correct-looking name and Stavern metadata but empty JavaScript root; no visible ownership body was captured.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "823568002",
+    "company": "ADVOKAT ANDREWS",
+    "website": {
+      "value": {
+        "final_url": "https://www.advokatandrews.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://www.advokatandrews.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "e887501bec596d2c386f735cc59707dccc78391a84f1f1a537e0f90ecc75ab2d",
+          "source_url": "https://www.advokatandrews.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:14:45.458374Z",
+          "content_sha256": "d3448db7014e4d12bebff8f5bd7e1eebe26b9db6fa0b0a76cf688528b686e892",
+          "claim_span": "a333.chunk.min.css.map*/</style>\n<title>Advokatfirmaet Andrews - Din advokat i Moss og Østfold</title>\n  <meta name=\"description\" content=\"Advokatfirmaet Andrews tilbyr rådgivning, tvisteløsning og prosedyrebistand til klienter i Moss og Østfold. Våre advokater gir en gratis vurdering av din sak.\"/>",
+          "locator": "identity-proof:823568002",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"advokatandrews.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Advokatfirmaet Andrews - Din advokat i Moss og Østfold\", \"proof_page_url\": \"https://www.advokatandrews.no/\"}, {\"domain\": \"advokatandrews.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://advokatandrews.no/\", \"final_url\": \"https://www.advokatandrews.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.advokatandrews.no/",
+        "https://www.advokatandrews.no/personvernserklæring"
+      ],
+      "observed_social_profiles": [
+        "https://no.linkedin.com/company/advokat-andrews"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "advokatandrews.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.advokatandrews.no/impressum",
+            "https://www.advokatandrews.no/kontakt-oss"
+          ],
+          "proof_pages_fetched": 1,
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Vestbrynet 42"
+        ],
+        "kommune": "MOSS",
+        "kommunenummer": "3103",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1519",
+        "poststed": "MOSS"
+      },
+      "identity.registered_activity": [
+        "Advokattjenester."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": false,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "Andrews lawyer branding and Moss location are plausible; generic occupational label plus surname is insufficient exact-entity evidence.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "935829437",
+    "company": "NORDEN SECURITY AS",
+    "website": {
+      "value": {
+        "final_url": "https://nordensecurity.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_masthead",
+        "proof_page_url": "https://nordensecurity.no/",
+        "signals": [
+          "full_legal_name"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "ccbd3acb619c14c383691eda82cb27ff52fd6ee61308852130ab93243ac4eec1",
+          "source_url": "https://nordensecurity.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:14:55.448026Z",
+          "content_sha256": "1682bdd72742777a8b2c2dd315620bd5274a63ff650942e6d7b609cab860d393",
+          "claim_span": "width, initial-scale=1.0\" />\n    <title>Norden Security AS | Profesjonelle vakttjenester i Oslo</title>\n    <meta name=\"description\" content=\"Norden Security AS leverer pålitelige vakttjenester for bedrifter, eiendom og arrangementer i Oslo og omegn. Kontakt oss for et uforpliktende tilbud.\" />\n    ",
+          "locator": "identity-proof:935829437",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"nordensecurity.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"full_legal_name\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Norden Security AS | Profesjonelle vakttjenester i Oslo\", \"proof_page_url\": \"https://nordensecurity.no/\"}, {\"domain\": \"nordensecurity.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://nordensecurity.no/\", \"final_url\": \"https://nordensecurity.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://nordensecurity.no/",
+        "https://nordensecurity.no/about",
+        "https://nordensecurity.no/kontakt",
+        "https://nordensecurity.no/om-oss"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "nordensecurity.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://nordensecurity.no/kontakt-oss",
+            "https://nordensecurity.no/privacy-policy"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "legal_name_masthead",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Eikenga 13"
+        ],
+        "kommune": "OSLO",
+        "kommunenummer": "0301",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "0579",
+        "poststed": "OSLO"
+      },
+      "identity.registered_activity": [
+        "Private vakttjenester, tjenester tilknyttet vakttjenester."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 30000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2025-07-09"
+      }
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "AS title and Oslo metadata only; body is an empty JavaScript root.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "934407253",
+    "company": "FLAVEURIA AS",
+    "website": {
+      "value": {
+        "final_url": "https://flaveuria.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://flaveuria.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "711801f9d50dbd02697da597d85cf76a82173a8447b32505828b21cc90d7bd8d",
+          "source_url": "https://flaveuria.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:15:15.915112Z",
+          "content_sha256": "c95478158085249819f100b9f179078a24e9bab79159c0173c36232c350c9eee",
+          "claim_span": "<html>\n<head>\n<title>www.flaveuria.no</title>\n</head>\n<body>\n<font face=\"Arial\">\n<center>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<i>Her kommer:</i><br>\n<br>\n<b><i>www.flaveuria.no</i></b>\n</center>\n</font>\n</body>\n</html>\n",
+          "locator": "identity-proof:934407253",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"flaveuria.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"www.flaveuria.no\", \"proof_page_url\": \"https://flaveuria.no/\"}, {\"domain\": \"flaveuria.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://flaveuria.no/\", \"final_url\": \"https://flaveuria.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://flaveuria.no/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "flaveuria.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://flaveuria.no/kontakt-oss",
+            "https://flaveuria.no/privacy-policy"
+          ],
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Grorudveien 55"
+        ],
+        "kommune": "OSLO",
+        "kommunenummer": "0301",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "0976",
+        "poststed": "OSLO"
+      },
+      "identity.registered_activity": [
+        "Å ha eierinteresser i andre selskaper, samt virksomhet som står i",
+        "forbindelse med dette."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 399979.0,
+        "antallAksjer": 399979,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2025-08-28"
+      }
+    },
+    "review": {
+      "verdict": "wrong",
+      "reason": "Hosting placeholder: Her kommer: www.flaveuria.no. No company identity evidence.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "915279082",
+    "company": "TØMRER S. FAGERBEKK AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.sfagerbekk.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.sfagerbekk.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "fd8308a48289ba5d71d48c08ad13d7f059bd3d29406029924aafc297881eeed8",
+          "source_url": "https://www.sfagerbekk.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:15:30.533729Z",
+          "content_sha256": "bcf5842341270615a5237743691b3e76d4e38499ce35fc5a1fbc417647794bab",
+          "claim_span": "eien 180 • 7288 Soknedal<br>Org. nr. NO 915 279 082 MVA</p></div>\n\n\n  \n<style id=\"container-styles\">#block-yui_3_17_2_1_1582983667517_12337 {\n    \n   ",
+          "locator": "identity-proof:915279082",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://www.facebook.com/s.fagerbekk",
+          "platform": "facebook.com"
+        },
+        "field": "social_profile.327068f8cd8f565f365f",
+        "evidence": [
+          {
+            "id": "e37041d5c57436f6a22f6223c1cff12aee8dbb0b1d2ac3a8d1ba36ab7510edcb",
+            "source_url": "https://www.sfagerbekk.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:15:30.533729Z",
+            "content_sha256": "bcf5842341270615a5237743691b3e76d4e38499ce35fc5a1fbc417647794bab",
+            "claim_span": "<a class=\"icon icon--fill  header-icon header-icon-border-shape-none header-icon-border-style-outline\"  href=\"https://www.facebook.com/s.fagerbekk/\" target=\"_blank\" aria-label=\"Facebook\">",
+            "locator": "company-link:https://www.facebook.com/s.fagerbekk",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"sfagerbekk.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"cc_index\", \"reason\": \"\", \"title\": \"Tømrer S. Fagerbekk AS - tømrer i Soknedal siden 2010\", \"proof_page_url\": \"https://www.sfagerbekk.no/\"}, {\"domain\": \"sfagerbekk.no\", \"origin\": \"cc_index\", \"url\": \"https://sfagerbekk.no/\", \"final_url\": \"https://www.sfagerbekk.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.sfagerbekk.no/",
+        "https://www.sfagerbekk.no/kontakt"
+      ],
+      "observed_social_profiles": [
+        "https://www.facebook.com/s.fagerbekk"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "sfagerbekk.no",
+          "origin": "cc_index",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.sfagerbekk.no/kontakt-oss",
+            "https://www.sfagerbekk.no/privacy-policy"
+          ],
+          "proof_pages_fetched": 1,
+          "proof_type": "orgnr_on_page",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Haukdalsveien 180"
+        ],
+        "kommune": "MIDTRE GAULDAL",
+        "kommunenummer": "5027",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "7288",
+        "poststed": "SOKNEDAL"
+      },
+      "identity.registered_activity": [
+        "Tømring innen bygg og rehabilitering. Utvikling, kjøp og salg av",
+        "eiendom, samt ved aksjeeie eller på annen møte gjøre seg interessert i",
+        "annen virksomhet."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 100000.0,
+        "antallAksjer": 100,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2015-04-21"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact organisation number NO 915 279 082 MVA and matching Soknedal address on the saved company page.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "929481070",
+    "company": "SNAPPY AS",
+    "website": {
+      "value": {
+        "final_url": "https://snappy.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://snappy.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "942b5dc6ad42b97f6c9b0515ae34fc292985fbe8b7f5e3deb05c3de8338fecb1",
+          "source_url": "https://snappy.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:15:26.894156Z",
+          "content_sha256": "4996e9292457446fdd5a7e41fcfe5df8035cc10c21de9358c7081386ae8bcf14",
+          "claim_span": "nqsuMBQghW6holiC\"}--><!--bl:2--><title> Snappy.no</title><!--/bl:2--><!--bl:3--><!--/bl:3--><!--Blazor:{\"prerenderId\":\"5a6820f7ef7f469284783a23147860cd\"}-->\r\n</head>\r\n<body>\r\n<!--Blazor:{\"sequence\":1,\"type\":\"server\",\"prerenderId\":\"1c1450fa908f4c5c9ead5465a266e087\",\"descriptor\":\"CfDJ8Ne/naRr0MFHlyNxs",
+          "locator": "identity-proof:929481070",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://twitter.com/snappy_as",
+          "platform": "twitter.com"
+        },
+        "field": "social_profile.fa9de00680d49f7af0f2",
+        "evidence": [
+          {
+            "id": "7e333008047f8964e676e73d2639f77b35d319e073a7ed6e788a680627bfb9d8",
+            "source_url": "https://snappy.no/kontakt",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:15:32.780084Z",
+            "content_sha256": "99d219403022e257120a2bbbb9c95e1bd5691af8e9a2640aba5f12e9a07aa68a",
+            "claim_span": "<a type=\"button\" href=\"https://twitter.com/snappy_as/\" class=\"mud-button-root mud-fab mud-fab-primary mud-fab-size-large mud-ripple\" style=\"color: #1DA1F2\">",
+            "locator": "company-link:https://twitter.com/snappy_as",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.instagram.com/snappy_as",
+          "platform": "instagram.com"
+        },
+        "field": "social_profile.13ed129849bf4c541e53",
+        "evidence": [
+          {
+            "id": "4c82c2083ab5ae05f11dae8ef85c36bd40db868ff6c65a791a7e157871acf359",
+            "source_url": "https://snappy.no/kontakt",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:15:32.780084Z",
+            "content_sha256": "99d219403022e257120a2bbbb9c95e1bd5691af8e9a2640aba5f12e9a07aa68a",
+            "claim_span": "<a type=\"button\" href=\"https://www.instagram.com/snappy_as/\" class=\"mud-button-root mud-fab mud-fab-tertiary mud-fab-size-large mud-ripple\" style=\"color: #C13584\">",
+            "locator": "company-link:https://www.instagram.com/snappy_as",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"snappy.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \" Snappy.no\", \"proof_page_url\": \"https://snappy.no/\"}, {\"domain\": \"snappy.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://snappy.no/\", \"final_url\": \"https://snappy.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://snappy.no/",
+        "https://snappy.no/About",
+        "https://snappy.no/Contact_Us",
+        "https://snappy.no/kontakt"
+      ],
+      "observed_social_profiles": [
+        "https://twitter.com/snappy_as",
+        "https://www.instagram.com/snappy_as"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "snappy.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://snappy.no/personvern",
+            "https://snappy.no/impressum"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "c/o Nothing Hill",
+          "Dr. Palmstrøms vei 15"
+        ],
+        "kommune": "SØR-VARANGER",
+        "kommunenummer": "5605",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "9901",
+        "poststed": "KIRKENES"
+      },
+      "identity.registered_activity": [
+        "Applikasjonsutvikling, nettstedsadministrasjon, skylagring,",
+        "nettstedstjenester, applikasjonstjenester."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 34000.0,
+        "antallAksjer": 340,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2023-03-14"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Software business; Kirkenes/Dr Palmstroms vei/Nothing Hill agrees with the registry address. Inspect retained proof after narrowing.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "988236756",
+    "company": "BYGGTEMA AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.byggtema.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://www.byggtema.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "a5b8a7876b7ab59a32e962f410269b35cf854e2e881acef78dd8b454b2759402",
+          "source_url": "https://www.byggtema.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:15:38.510258Z",
+          "content_sha256": "d525d4cea0af0441f29c92b4f9c8e809478c7ded22b38d77fecb732e3cc23c53",
+          "claim_span": "gjen, eller kontakt oss på e-post: post@byggtema.no</span>\r\n\t\t\t<span class=\"c\">Vennligst fyll inn riktig Captcha.</span>\r\n\t\t</div>\r\n\t\t<fieldset>\r\n\t\t\t<div class=\"row-fluid\">\r\n\t\t\t\t<div class=\"control-group control-group-input span12\"><div class=\"controls\"><input type=\"text\" placeholder=\"Navn\" name=\"yo",
+          "locator": "identity-proof:988236756",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://www.facebook.com/Byggtema",
+          "platform": "facebook.com"
+        },
+        "field": "social_profile.5ef1849ac9c326c3ba9b",
+        "evidence": [
+          {
+            "id": "4ab337fdfc4db9c4ef33e8a129281f9a611082c98413a2b47602335376697dfd",
+            "source_url": "https://www.byggtema.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:15:38.510258Z",
+            "content_sha256": "d525d4cea0af0441f29c92b4f9c8e809478c7ded22b38d77fecb732e3cc23c53",
+            "claim_span": "<a class=\"fa fa-facebook\" href=\"https://www.facebook.com/Byggtema/\" title=\"Facebook\" >",
+            "locator": "company-link:https://www.facebook.com/Byggtema",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"byggtema.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Bygg-Tema AS\", \"proof_page_url\": \"https://www.byggtema.no/\"}, {\"domain\": \"byggtema.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://byggtema.no/\", \"final_url\": \"https://www.byggtema.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.byggtema.no/",
+        "https://www.byggtema.no/index.php/personvern"
+      ],
+      "observed_social_profiles": [
+        "https://www.facebook.com/Byggtema"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "byggtema.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.byggtema.no/personvern",
+            "https://www.byggtema.no/impressum"
+          ],
+          "proof_pages_fetched": 1,
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Skotselvveien 281"
+        ],
+        "kommune": "ØVRE EIKER",
+        "kommunenummer": "3314",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "3302",
+        "poststed": "HOKKSUND"
+      },
+      "identity.registered_activity": [
+        "Kjøp, salg og drift av fast eiendom, bygg/anleggsvirksomhet, kjøp og",
+        "salg av aksjer og valuta, kjøp og salg av maskiner og utstyr."
+      ],
+      "identity.registered_mobile": "95729393",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 33000.0,
+        "antallAksjer": 11000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2013-06-22"
+      }
+    },
+    "review": {
+      "verdict": "wrong",
+      "reason": "Bygg-Tema site identifies Finnsnes/Midt-Troms, while target BYGGTEMA is Hokksund/Ovre Eiker. Punctuation-collapsed names are not exact company identity.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "995654539",
+    "company": "TAKST MÅLENG AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.takstmaaleng.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://www.takstmaaleng.no/",
+        "signals": [
+          "exact_legal_name",
+          "street"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "46c41a8a4d51048222b2c997e8b880b0327a914b1532c33f0b180681ae8c6888",
+          "source_url": "https://www.takstmaaleng.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:16:56.633185Z",
+          "content_sha256": "4d41ce2532f2bde95f79605cce736911c6405fa0ab03fcfe2659e5bc7c9944ad",
+          "claim_span": "e>Din profesjonelle takstmann i Våler | Takst Måleng AS</title><meta name=\"keywords\" content=\"Takst Måleng AS\"><meta name=\"description\" content=\"Takst Måleng AS er et veletablert takseringsfirma med hovedbase i Våler. Vi har bred erfaring innen bygg og eiendom, og er sertifisert gjennom Norsk Takst.",
+          "locator": "identity-proof:995654539",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"takstmaleng.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\", \"candidate_not_reachable\": true}, {\"domain\": \"takst-maleng.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"takstmaaleng.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"exact_legal_name\", \"street\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Din profesjonelle takstmann i Våler | Takst Måleng AS\", \"proof_page_url\": \"https://www.takstmaaleng.no/\"}, {\"domain\": \"takstmaleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://takstmaleng.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"takstmaleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.takstmaleng.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.takstmaleng.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"takstmaleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.takstmaleng.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://takstmaleng.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"takstmaleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://takstmaleng.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"takst-maleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://takst-maleng.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"takst-maleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.takst-maleng.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"takst-maleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.takst-maleng.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"takst-maleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://takst-maleng.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"takstmaaleng.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://takstmaaleng.no/\", \"final_url\": \"https://www.takstmaaleng.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.takstmaaleng.no/",
+        "https://www.takstmaaleng.no/personvern"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "takstmaleng.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "takst-maleng.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "takstmaaleng.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.takstmaaleng.no/impressum",
+            "https://www.takstmaaleng.no/kontakt-oss"
+          ],
+          "proof_pages_fetched": 1,
+          "proof_type": "legal_name_and_registry_contact",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Folkestadhøgda 12"
+        ],
+        "kommune": "VÅLER",
+        "kommunenummer": "3114",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1592",
+        "poststed": "VÅLER I ØSTFOLD"
+      },
+      "identity.registered_activity": [
+        "Takseringsvirksomhet."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 100000.0,
+        "antallAksjer": 100,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2010-06-22"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Takst Maleng AS, Folkestadhogda 12, 1592 Valer and registered phone/contact support exact entity.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "916800916",
+    "company": "YOUSAFE AS",
+    "website": {
+      "value": {
+        "final_url": "https://yousafe.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_masthead",
+        "proof_page_url": "https://yousafe.no/",
+        "signals": [
+          "full_legal_name"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "7a82c25b5d38a021776ef95fa4e8307be5b1f20a8a324dfa6f75d97ed9be85b8",
+          "source_url": "https://yousafe.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:15:59.001164Z",
+          "content_sha256": "14807cab6274e3c55cb7839fafccdf779bb79356b9f8e86f066280cec8a30b51",
+          "claim_span": "tps://yousafe.no/xmlrpc.php\" />\n\t<title>YouSafe AS &#8211; YouSafe AS</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"YouSafe AS &raquo; Feed\" href=\"https://yousafe.no/feed/\" />\n<link rel=\"alternate\" type=\"application/rss+xml\" ",
+          "locator": "identity-proof:916800916",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "http://www.facebook.com/yousafeas",
+          "platform": "facebook.com"
+        },
+        "field": "social_profile.fba8874582758b3cf3a4",
+        "evidence": [
+          {
+            "id": "7fa109b994cabbbb79f8758e791fa6b6d772de27d74ebd12e7652fd42adf0de2",
+            "source_url": "https://yousafe.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:15:59.001164Z",
+            "content_sha256": "14807cab6274e3c55cb7839fafccdf779bb79356b9f8e86f066280cec8a30b51",
+            "claim_span": "<a href=\"http://www.facebook.com/yousafeas\">",
+            "locator": "company-link:http://www.facebook.com/yousafeas",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "not_available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "roles",
+        "code": "not_available",
+        "message": "not_available"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"yousafe.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"full_legal_name\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"YouSafe AS – YouSafe AS\", \"proof_page_url\": \"https://yousafe.no/\"}, {\"domain\": \"yousafe.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://yousafe.no/\", \"final_url\": \"https://yousafe.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://yousafe.no/",
+        "https://yousafe.no/contacts/",
+        "https://yousafe.no/om-oss/"
+      ],
+      "observed_social_profiles": [
+        "http://www.facebook.com/yousafeas"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "yousafe.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://yousafe.no/personvern",
+            "https://yousafe.no/impressum"
+          ],
+          "proof_pages_fetched": 2,
+          "proof_type": "legal_name_masthead",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {},
+    "review": {
+      "verdict": "doubtful",
+      "reason": "Exact legal masthead and alarm business, but AS name alone is insufficient after precision review.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "914507812",
+    "company": "STRAUMSNES UTVIKLING AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.icedrift.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_email_on_site",
+        "proof_page_url": "https://www.icedrift.no/om-oss/",
+        "signals": [
+          "registry_email"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "148ed4d315d0f3cd50545ed4490c06f858a72c459a5244bc2549eac945b32f8b",
+          "source_url": "https://www.icedrift.no/om-oss/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:16:19.776673Z",
+          "content_sha256": "6a8128ebc9ed42364fa606b1a9abdb63ab652db13cbc38c4af9b9f82269c9a51",
+          "claim_span": "post: <a href=\"mailto:arne@icedrift.no\">arne@icedrift.no</a>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"person\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"person__image\">\n\t\t\t\t\t\t\t\t<img width=\"500\" height=\"500\" src=\"https://www.icedrift.no/wp-content/uploads/2022/09/778A8399",
+          "locator": "identity-proof:914507812",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://www.facebook.com/Ice-Drift-As-262242123931235",
+          "platform": "facebook.com"
+        },
+        "field": "social_profile.0918d02697004c971c5b",
+        "evidence": [
+          {
+            "id": "8ebcf07070c61ee679536df1f6f3708c132e9916dea1640379a18571cfaa38c6",
+            "source_url": "https://www.icedrift.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:16:13.463239Z",
+            "content_sha256": "261dfdf854a9ed8cc67260500971faad0c95f4ae87005df8d12b6ad4de76d2b0",
+            "claim_span": "<a href=\"https://www.facebook.com/Ice-Drift-As-262242123931235/\" rel=\"noopener\" target=\"_blank\">",
+            "locator": "company-link:https://www.facebook.com/Ice-Drift-As-262242123931235",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.instagram.com/icedrift_as",
+          "platform": "instagram.com"
+        },
+        "field": "social_profile.02a19a887640dd3a0a61",
+        "evidence": [
+          {
+            "id": "f306c4538b003ef35e4916a3798639bf0e627ccd9568c05e6f1f12e0021966be",
+            "source_url": "https://www.icedrift.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:16:13.463239Z",
+            "content_sha256": "261dfdf854a9ed8cc67260500971faad0c95f4ae87005df8d12b6ad4de76d2b0",
+            "claim_span": "<a href=\"https://www.instagram.com/icedrift_as/\" rel=\"noopener\" target=\"_blank\">",
+            "locator": "company-link:https://www.instagram.com/icedrift_as",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "not_available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"icedrift.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"registry_email\"], \"origin\": \"registry_email\", \"reason\": \"\", \"title\": \"Om oss - Ice drift\", \"proof_page_url\": \"https://www.icedrift.no/om-oss/\"}, {\"domain\": \"icedrift.no\", \"origin\": \"registry_email\", \"url\": \"https://icedrift.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"icedrift.no\", \"origin\": \"registry_email\", \"url\": \"https://www.icedrift.no/\", \"final_url\": \"https://www.icedrift.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.icedrift.no/",
+        "https://www.icedrift.no/kontakt/",
+        "https://www.icedrift.no/om-oss/",
+        "https://www.icedrift.no/personvernvilkar/"
+      ],
+      "observed_social_profiles": [
+        "https://www.facebook.com/Ice-Drift-As-262242123931235",
+        "https://www.facebook.com/ytterenflerbrukshall",
+        "https://www.instagram.com/icedrift_as"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "icedrift.no",
+          "origin": "registry_email",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "discovered_proof_targets": [],
+          "additional_proof_targets": [
+            "https://www.icedrift.no/about",
+            "https://www.icedrift.no/personvern"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "registry_email_on_site",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Sikterigata 6"
+        ],
+        "kommune": "RANA",
+        "kommunenummer": "1833",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "8622",
+        "poststed": "MO I RANA"
+      },
+      "identity.registered_activity": [
+        "Eiendomsutvikling og salg av fast eiendom."
+      ],
+      "identity.registered_email": "arne@icedrift.no",
+      "identity.registered_mobile": "970 07 970",
+      "identity.registered_in_vat": false,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 30,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2014-11-24"
+      }
+    },
+    "review": {
+      "verdict": "wrong",
+      "reason": "arne@icedrift.no is the named Ice Drift manager on a staff list. Target is Straumsnes Utvikling; domain is registered to four entities. Staff email is not site ownership.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "928736032",
+    "company": "REBR AS",
+    "website": {
+      "value": {
+        "final_url": "https://rebr.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_masthead",
+        "proof_page_url": "https://rebr.no/",
+        "signals": [
+          "full_legal_name"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "eae00a7bad3704da9028f926b2302f2be71519eefeadf5b01a184bd4ff38c776",
+          "source_url": "https://rebr.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:16:14.549017Z",
+          "content_sha256": "abf7fc83ffb4f108bf25ebed18fe8262cfc645614c3ca1565e18ae7e98675cae",
+          "claim_span": "ice-width, initial-scale=1\">\n    <title>REBR AS — We build apps &amp; software</title>\n    <meta name=\"description\" content=\"REBR AS is a Norwegian software company building apps &amp; software — makers of been, a map-first travel tracker, and GetManna.\">\n    <meta name=\"theme-color\" content=\"#fbfbf",
+          "locator": "identity-proof:928736032",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"rebr.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"full_legal_name\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"REBR AS — We build apps & software\", \"proof_page_url\": \"https://rebr.no/\"}, {\"domain\": \"rebr.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://rebr.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"rebr.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.rebr.no/\", \"final_url\": \"https://rebr.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://rebr.no/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "rebr.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://rebr.no/kontakt-oss",
+            "https://rebr.no/privacy-policy"
+          ],
+          "proof_type": "legal_name_masthead",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Furutoppen 36"
+        ],
+        "kommune": "VESTBY",
+        "kommunenummer": "3216",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1553",
+        "poststed": "SON"
+      },
+      "identity.registered_activity": [
+        "Investere i aksjer, men vil også utføre noe konsulentarbeid innenfor",
+        "IT."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 30,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2022-02-15"
+      }
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "REBR AS title/copyright and software apps are plausible, but no independent registry contact/number proves exact entity.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "923354220",
+    "company": "EIDEFOSS VANNKRAFT AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.eidefossvannkraft.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://www.eidefossvannkraft.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "wikidata_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "390ef7e2cdd6cef9435af60208035958356a2295342761f7cbc211a0fef80afe",
+          "source_url": "https://www.eidefossvannkraft.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:16:29.224857Z",
+          "content_sha256": "67e97821ab2e9c02368345a2b53cac84b5c57d420233a39018efd537836c1571",
+          "claim_span": " Start common head elements -->\n\t<title>Eidefoss Vannkraft</title>\n\n\t<meta charset=\"utf-8\" />\n\t<meta name=\"Generator\" content=\"CMS\" data-ctdevice=\"name:generic, key: default\" data-ctchannel=\"default\" />\n\t<meta name=\"Keywords\" content=\"eidefoss,Vannkraft,Nedre Otta,nedre,tessa,midtre,øvre,Smådøla,ros",
+          "locator": "identity-proof:923354220",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"eidefossvannkraft.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"wikidata_website\", \"reason\": \"\", \"title\": \"Eidefoss Vannkraft\", \"proof_page_url\": \"https://www.eidefossvannkraft.no/\"}, {\"domain\": \"eidefossvannkraft.no\", \"origin\": \"wikidata_website\", \"url\": \"https://eidefossvannkraft.no/\", \"final_url\": \"https://www.eidefossvannkraft.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "activity_fetch_error",
+        "message": "activity_fetch_error"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.eidefossvannkraft.no/",
+        "https://www.eidefossvannkraft.no/diverse/personvern-og-informasjonskapsler-article222-988.html"
+      ],
+      "observed_social_profiles": [
+        "http://www.facebook.com/share.php"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "eidefossvannkraft.no",
+          "origin": "wikidata_website",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.eidefossvannkraft.no/impressum",
+            "https://www.eidefossvannkraft.no/kontakt-oss"
+          ],
+          "proof_pages_fetched": 1,
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Edvard Storms veg 4"
+        ],
+        "kommune": "VÅGÅ",
+        "kommunenummer": "3435",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "2680",
+        "poststed": "VÅGÅ"
+      },
+      "identity.registered_activity": [
+        "Produksjon av vannkraft."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 10000000.0,
+        "antallAksjer": 10000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2020-03-09"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Saved body explicitly identifies Eidefoss Vannkraft AS, 923 354 220, Vagaa address. Initial localized name proof understates the page evidence.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "979973969",
+    "company": "JAR HELSE AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.jarhelse.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.jarhelse.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "30e419808bfa57dfebe3a2964da566a37e17ee77e570e2c6025131f7c677b519",
+          "source_url": "https://www.jarhelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:16:57.399246Z",
+          "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+          "claim_span": "div><a href=\"#\" class=\"text-size-small\">99 09 20 10<br/></a><a href=\"#\" class=\"text-size-small\">kontakt@jarhelse.no<br/></a></div></div><div class=\"w-layout-grid footer11_social-list\"><a href=\"https://www.facebook.com/jarhelse\" class=\"footer11_social-link w-inline-block\"><div class=\"icon-embed-xsmal",
+          "locator": "identity-proof:979973969",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://www.facebook.com/jarhelse",
+          "platform": "facebook.com"
+        },
+        "field": "social_profile.c0f1d5fa2628f9772b9c",
+        "evidence": [
+          {
+            "id": "596be7a467a59bf782707aedb529690e9adb612bd2abe05edfce26a9cdc1ba12",
+            "source_url": "https://www.jarhelse.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:16:57.399246Z",
+            "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+            "claim_span": "<a href=\"https://www.facebook.com/jarhelse\" class=\"footer11_social-link w-inline-block\">",
+            "locator": "company-link:https://www.facebook.com/jarhelse",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.instagram.com/jarhelse",
+          "platform": "instagram.com"
+        },
+        "field": "social_profile.710179cd0e06ef175dc1",
+        "evidence": [
+          {
+            "id": "2a0b384abe4c41c9a70f91438f016b8b85bdc2206e8b6a5848c5f765e5f4b16f",
+            "source_url": "https://www.jarhelse.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:16:57.399246Z",
+            "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+            "claim_span": "<a href=\"https://www.instagram.com/jarhelse\" class=\"footer11_social-link w-inline-block\">",
+            "locator": "company-link:https://www.instagram.com/jarhelse",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"jarhelse.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"registry_phone\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Jar Helse\", \"proof_page_url\": \"https://www.jarhelse.no/\"}, {\"domain\": \"jarhelse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jarhelse.no/\", \"final_url\": \"https://www.jarhelse.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.jarhelse.no/",
+        "https://www.jarhelse.no/kontakt"
+      ],
+      "observed_social_profiles": [
+        "https://www.facebook.com/jarhelse",
+        "https://www.instagram.com/jarhelse"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "jarhelse.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.jarhelse.no/impressum",
+            "https://www.jarhelse.no/kontakt-oss"
+          ],
+          "proof_pages_fetched": 1,
+          "proof_type": "registry_phone_on_site",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Jarveien 1A"
+        ],
+        "kommune": "BÆRUM",
+        "kommunenummer": "3201",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1358",
+        "poststed": "JAR"
+      },
+      "identity.registered_activity": [
+        "Kiropraktor og akupunkturvirksomhet."
+      ],
+      "identity.registered_email": "eprmathi@online.no",
+      "identity.registered_phone": "67 14 50 15",
+      "identity.registered_mobile": "990 92 010",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 300000.0,
+        "antallAksjer": 1500,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2018-02-28"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Registered mobile 99092010 is the site contact, alongside Jar Helse and matching Jar postcode/address.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "935666481",
+    "company": "HVALEN STUDIO AS",
+    "website": {
+      "value": {
+        "final_url": "https://hvalenstudio.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_masthead",
+        "proof_page_url": "https://hvalenstudio.no/",
+        "signals": [
+          "full_legal_name"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "516fb6126ef405cdfd76f789800b6da72ba8ee6b3c0db5566dd0e74a14a1183b",
+          "source_url": "https://hvalenstudio.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:17:08.659345Z",
+          "content_sha256": "91b7c94742d350444fdcd22780d0e1e3d682d848fe5ea2b6da374778f99b3e32",
+          "claim_span": "en Studio\">\n        <address>\n          Hvalen Studio AS<br>\n          Thorvald Meyers gate 2A<br>\n          0555 Oslo\n        </address>\n      </div>\n\n      <div class=\"footer__col\">\n        <h4>Profiler</h4>\n        <ul>\n          <li><a href=\"/profiler#sjamel\">Even Sjamel</a></li>\n          <li><",
+          "locator": "identity-proof:935666481",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"hvalenstudio.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"full_legal_name\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Hvalen Studio — Management, musikk, design\", \"proof_page_url\": \"https://hvalenstudio.no/\"}, {\"domain\": \"hvalenstudio.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://hvalenstudio.no/\", \"final_url\": \"https://hvalenstudio.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://hvalenstudio.no/",
+        "https://hvalenstudio.no/omoss"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "hvalenstudio.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://hvalenstudio.no/impressum",
+            "https://hvalenstudio.no/kontakt-oss"
+          ],
+          "proof_pages_fetched": 2,
+          "proof_type": "legal_name_masthead",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Myrens verksted 3N"
+        ],
+        "kommune": "OSLO",
+        "kommunenummer": "0301",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "0476",
+        "poststed": "OSLO"
+      },
+      "identity.registered_activity": [
+        "Manager for skuespillere, musikere og andre kunstnere.",
+        "Markedsføring og reklame.",
+        "Utgivelse av musikk og lydopptak."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 30000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2025-06-12"
+      }
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "Hvalen Studio AS footer identifies a different street/postcode from current registry; name-only cannot resolve a move versus another entity.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "925273422",
+    "company": "OMJ ENTREPRENØR AS",
+    "website": {
+      "value": {
+        "final_url": "https://omj-entreprenor.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://omj-entreprenor.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "fe4002e6c86b88c83a03c1c68dc8d238bc7354e04bf3a9fe3fc208a7ff0ccc9c",
+          "source_url": "https://omj-entreprenor.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:17:13.046366Z",
+          "content_sha256": "73ddd9499802bfc4ee463ae727ff1a1224a36fd7427fc00ee728c75daf56ea50",
+          "claim_span": "<html>\n<head>\n<title>www.omj-entreprenor.no</title>\n</head>\n<body>\n<font face=\"Arial\">\n<center>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<i>Her kommer:</i><br>\n<br>\n<b><i>www.omj-entreprenor.no</i></b>\n</center>\n</font>\n</body>\n</html>\n",
+          "locator": "identity-proof:925273422",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"omjentreprenor.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"omj-entreprenor.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"www.omj-entreprenor.no\", \"proof_page_url\": \"https://omj-entreprenor.no/\"}, {\"domain\": \"omjentreprenor.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://omjentreprenor.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"omjentreprenor.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.omjentreprenor.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"omjentreprenor.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.omjentreprenor.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"omjentreprenor.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://omjentreprenor.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"omj-entreprenor.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://omj-entreprenor.no/\", \"final_url\": \"https://omj-entreprenor.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://omj-entreprenor.no/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "omjentreprenor.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": false,
+          "accepted": false
+        },
+        {
+          "domain": "omj-entreprenor.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://omj-entreprenor.no/kontakt-oss",
+            "https://omj-entreprenor.no/privacy-policy"
+          ],
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Vestsideveien 485"
+        ],
+        "kommune": "KONGSBERG",
+        "kommunenummer": "3303",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "3648",
+        "poststed": "PASSEBEKK"
+      },
+      "identity.registered_activity": [
+        "Anleggstjenester, graving, transport og va-anlegg."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 100,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2020-06-30"
+      }
+    },
+    "review": {
+      "verdict": "wrong",
+      "reason": "Hosting placeholder: Her kommer: www.omj-entreprenor.no. No company identity evidence.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "993347728",
+    "company": "TO-BE-MORE AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.tobemore.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_masthead",
+        "proof_page_url": "https://www.tobemore.no/kontakt/",
+        "signals": [
+          "full_legal_name"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "527cd76cfbbfbd34f8739b0c3c241d79d056e1bfee37a84b042b2de982c864ef",
+          "source_url": "https://www.tobemore.no/kontakt/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:17:29.915376Z",
+          "content_sha256": "b3f2fd296e3373f28b75748ba0175f593a79a8c701d385361f7e555834b7b0df",
+          "claim_span": "ress/plugins/seo/ -->\n\t<title>Kontakt | To-Be-More AS</title>\n\t<link rel=\"canonical\" href=\"https://www.tobemore.no/kontakt/\" />\n\t<meta property=\"og:locale\" content=\"nb_NO\" />\n\t<meta property=\"og:type\" content=\"article\" />\n\t<meta property=\"og:title\" content=\"Kontakt - To-Be-More AS\" />\n\t<meta propert",
+          "locator": "identity-proof:993347728",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://www.facebook.com/to-be-more-AS-85222791929",
+          "platform": "facebook.com"
+        },
+        "field": "social_profile.83d24ce97406c35313e0",
+        "evidence": [
+          {
+            "id": "6dff34d11d8c0cdfc2ad7eb047b24ea90508920be4af1b8f0d6b5e57cb64fe40",
+            "source_url": "https://www.tobemore.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:22.881179Z",
+            "content_sha256": "0c09b3bf0b661905dc39835c3c20f9ffdfc983b484a1daa3cecf001a64262b67",
+            "claim_span": "<a class=\"cnss-facebook\" target=\"_blank\" href=\"https://www.facebook.com/to-be-more-AS-85222791929/\" title=\"Facebook\" style=\"width:48px;height:48px;padding:8px 0;margin:5px;color: #ffffff;border-radius: 50%;\">",
+            "locator": "company-link:https://www.facebook.com/to-be-more-AS-85222791929",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.linkedin.com/company/to-be-more-as",
+          "platform": "linkedin.com"
+        },
+        "field": "social_profile.43cb8d0ed3b9ef880952",
+        "evidence": [
+          {
+            "id": "23d7de05288643017e3ed610cc3e531f2bc6f7ea3c00bf0216edbcc8018c270f",
+            "source_url": "https://www.tobemore.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:22.881179Z",
+            "content_sha256": "0c09b3bf0b661905dc39835c3c20f9ffdfc983b484a1daa3cecf001a64262b67",
+            "claim_span": "<a class=\"cnss-linkedin\" target=\"_blank\" href=\"https://www.linkedin.com/company/to-be-more-as/\" title=\"linkedin\" style=\"width:48px;height:48px;padding:8px 0;margin:5px;color: #ffffff;border-radius: 50%;\">",
+            "locator": "company-link:https://www.linkedin.com/company/to-be-more-as",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.instagram.com/tobemore_as",
+          "platform": "instagram.com"
+        },
+        "field": "social_profile.0ccb9228263768c97755",
+        "evidence": [
+          {
+            "id": "0a4b9c9aaea39d7ca8d33cca3536e0e7f3df4db20660ffa9b1ea47d0864782cb",
+            "source_url": "https://www.tobemore.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:22.881179Z",
+            "content_sha256": "0c09b3bf0b661905dc39835c3c20f9ffdfc983b484a1daa3cecf001a64262b67",
+            "claim_span": "<a class=\"cnss-instagram\" target=\"_blank\" href=\"https://www.instagram.com/tobemore_as/\" title=\"instagram\" style=\"width:48px;height:48px;padding:8px 0;margin:5px;color: #ffffff;border-radius: 50%;\">",
+            "locator": "company-link:https://www.instagram.com/tobemore_as",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.youtube.com/channel/UCzA897D8VuAaXTUakLPR81w",
+          "platform": "youtube.com"
+        },
+        "field": "social_profile.4f1bd2c32166e808fed3",
+        "evidence": [
+          {
+            "id": "38af70c0c6c6b21f85bb39530385dc56381259d4819e1f2258c9f67e65cdef00",
+            "source_url": "https://www.tobemore.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:22.881179Z",
+            "content_sha256": "0c09b3bf0b661905dc39835c3c20f9ffdfc983b484a1daa3cecf001a64262b67",
+            "claim_span": "re.no/#/schema/logo/image/\"},\"sameAs\":[\"https://www.youtube.com/channel/UCzA897D8VuAaXTUakLPR81w?view_as=subscriber\",\"https://www.facebook.com/to-be-more-AS-85222791929/\"]}]}</script>\n\t<!-- / Yoast SEO plugin. -->\n\n\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel='dns-prefetch' h",
+            "locator": "company-link:https://www.youtube.com/channel/UCzA897D8VuAaXTUakLPR81w",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"tobemore.no\", \"origin\": \"registry_website\", \"level\": \"REJECT\", \"reason\": \"redirect_without_company_identity\", \"title\": \"tobemore AS Storskjerm LED skjermer til alle formål\"}, {\"domain\": \"tobemore.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"full_legal_name\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Kontakt | To-Be-More AS\", \"proof_page_url\": \"https://www.tobemore.no/kontakt/\"}, {\"domain\": \"to-be-more.no\", \"origin\": \"registry_website\", \"url\": \"https://to-be-more.no/\", \"final_url\": \"https://www.tobemore.no/\", \"status\": 200}, {\"domain\": \"tobemore.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://tobemore.no/\", \"final_url\": \"https://www.tobemore.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "content_type",
+        "message": "content_type"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.tobemore.no/",
+        "https://www.tobemore.no/bestilling/kontakt-2/",
+        "https://www.tobemore.no/bestilling/om-oss/",
+        "https://www.tobemore.no/kontakt/"
+      ],
+      "observed_social_profiles": [
+        "https://www.facebook.com/to-be-more-AS-85222791929",
+        "https://www.instagram.com/tobemore_as",
+        "https://www.linkedin.com/company/to-be-more-as",
+        "https://www.youtube.com/channel/UCzA897D8VuAaXTUakLPR81w"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "to-be-more.no",
+          "origin": "registry_website",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": false
+        },
+        {
+          "domain": "tobemore.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "discovered_proof_targets": [
+            "https://www.tobemore.no/bestilling/kontakt-2/",
+            "https://www.tobemore.no/bestilling/om-oss/"
+          ],
+          "additional_proof_targets": [
+            "https://www.tobemore.no/about",
+            "https://www.tobemore.no/personvern"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "legal_name_masthead",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Gjellebekkstubben 10"
+        ],
+        "kommune": "LIER",
+        "kommunenummer": "3312",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "3420",
+        "poststed": "LIERSKOGEN"
+      },
+      "identity.registered_website": "www.to-be-more.no",
+      "identity.registered_activity": [
+        "Utleie til event og arrangement til kultur og idrett av store LED",
+        "skjermer. Samt delta i andre selskaper. Import og salg av store LED",
+        "skjermer."
+      ],
+      "identity.registered_email": "post@to-be-more.no",
+      "identity.registered_mobile": "90836811",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 121850.96,
+        "antallAksjer": 154,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2014-12-17"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact legal name plus registered mobile 90836811 for Morten Reffhaug in the contact page; LED/event activity agrees.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "999516386",
+    "company": "RISIKOKONSULENTEN AS",
+    "website": {
+      "value": {
+        "final_url": "https://risikokonsulenten.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://risikokonsulenten.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "e6b51136b6e77af0cc8d69f06db638e1d3e33699444f37198b83dd5e46c71679",
+          "source_url": "https://risikokonsulenten.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:17:38.091713Z",
+          "content_sha256": "9b2541c4a969711131cc675875c2ff5e01f285b2bc455e188271395b7b8d0b76",
+          "claim_span": "isikokonsulenten.no</a></p>\n<p>Telefon: +47 90873490</p>\n</div>\n\t\t</aside>\n\t</div><!-- .sidebar-main -->\n</div><!-- #secondary -->\n\n\n\t</div> <!-- ast-container -->\n\t</div><!-- #content -->\n\n\t\t<footer\n\t\tclass=\"site-footer\" id=\"colophon\" itemtype=\"https://schema.org/WPFooter\" itemscope=\"itemscope\" ite",
+          "locator": "identity-proof:999516386",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"inex.no\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"registry_email\", \"reason\": \"insufficient_owner_proof\", \"title\": \"www.inex.no\", \"proof_page_url\": \"https://inex.no/\"}, {\"domain\": \"risikokonsulenten.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"registry_phone\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"– For sikkerhets skyld –\", \"proof_page_url\": \"https://risikokonsulenten.no/\"}, {\"domain\": \"inex.no\", \"origin\": \"registry_email\", \"url\": \"https://inex.no/\", \"final_url\": \"https://inex.no/\", \"status\": 200}, {\"domain\": \"risikokonsulenten.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://risikokonsulenten.no/\", \"final_url\": \"https://risikokonsulenten.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://risikokonsulenten.no/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "inex.no",
+          "origin": "registry_email",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": false,
+          "discovered_proof_targets": [],
+          "additional_proof_targets": [
+            "https://inex.no/kontakt-oss",
+            "https://inex.no/privacy-policy"
+          ],
+          "proof_type": "signals",
+          "rule": null,
+          "reason": "insufficient_owner_proof"
+        },
+        {
+          "domain": "risikokonsulenten.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://risikokonsulenten.no/kontakt-oss",
+            "https://risikokonsulenten.no/privacy-policy"
+          ],
+          "proof_type": "registry_phone_on_site",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "c/o Fred Thomassen",
+          "Holstadveien 30"
+        ],
+        "kommune": "SARPSBORG",
+        "kommunenummer": "3105",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1747",
+        "poststed": "SKJEBERG"
+      },
+      "identity.registered_activity": [
+        "Konsulentvirksomhet innenfor sikkerhetsledelse, risikovurdering,",
+        "krisehåndtering og kontinuitet."
+      ],
+      "identity.registered_email": "fred@inex.no",
+      "identity.registered_mobile": "908 73 490",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 100,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2013-01-12"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Registered mobile 90873490, legal name Risikokonsulenten AS and named Fred Thomassen corroborate the same business.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "980622444",
+    "company": "LØRENSKOG BANDASJE AS",
+    "website": {
+      "value": {
+        "final_url": "https://loban.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://loban.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "cdc44e5ae799e0c93ccc145c609723919e2f2a0bd088097c86bf4ab31bffb55c",
+          "source_url": "https://loban.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:17:26.864562Z",
+          "content_sha256": "38bfeb5fdb58f78e7a539e8d6861ebdca83da0a6a076aebe96f0bb7c5aef2d07",
+          "claim_span": "g-title elementor-size-default\">Org.nr: 980 622 444</h5>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col-33 e",
+          "locator": "identity-proof:980622444",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://www.facebook.com/lorenskogbandasje",
+          "platform": "facebook.com"
+        },
+        "field": "social_profile.afac27376ac4ec5c53d7",
+        "evidence": [
+          {
+            "id": "316903e69363f3573a20bdf8f9087076210da00fedef44254b153e3c38abe55c",
+            "source_url": "https://loban.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:26.864562Z",
+            "content_sha256": "38bfeb5fdb58f78e7a539e8d6861ebdca83da0a6a076aebe96f0bb7c5aef2d07",
+            "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-caa6ece\" href=\"https://www.facebook.com/lorenskogbandasje\" target=\"_blank\">",
+            "locator": "company-link:https://www.facebook.com/lorenskogbandasje",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.instagram.com/lorenskogbandasje",
+          "platform": "instagram.com"
+        },
+        "field": "social_profile.1ead12a8bb1b8f9cd511",
+        "evidence": [
+          {
+            "id": "bfe33e4916c34b819430d588c4a70bb7b01f38b8210f6d914a1233562d1e944f",
+            "source_url": "https://loban.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:26.864562Z",
+            "content_sha256": "38bfeb5fdb58f78e7a539e8d6861ebdca83da0a6a076aebe96f0bb7c5aef2d07",
+            "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-2f2ad82\" href=\"https://www.instagram.com/lorenskogbandasje/\" target=\"_blank\">",
+            "locator": "company-link:https://www.instagram.com/lorenskogbandasje",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"loban.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"cc_index\", \"reason\": \"\", \"title\": \"Lørenskog Bandasje | Produkter for helse og velvære\", \"proof_page_url\": \"https://loban.no/\"}, {\"domain\": \"loban.no\", \"origin\": \"cc_index\", \"url\": \"https://loban.no/\", \"final_url\": \"https://loban.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://loban.no/",
+        "https://loban.no/kontakt",
+        "https://loban.no/personvernerklaering"
+      ],
+      "observed_social_profiles": [
+        "https://www.facebook.com/lorenskogbandasje",
+        "https://www.instagram.com/lorenskogbandasje"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "loban.no",
+          "origin": "cc_index",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://loban.no/impressum",
+            "https://loban.no/kontakt-oss"
+          ],
+          "proof_pages_fetched": 2,
+          "proof_type": "orgnr_on_page",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Skårersletta 18"
+        ],
+        "kommune": "LØRENSKOG",
+        "kommunenummer": "3222",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1473",
+        "poststed": "LØRENSKOG"
+      },
+      "identity.registered_activity": [
+        "Detaljhandel med bandasjevarer, hud- og kroppspleie."
+      ],
+      "identity.registered_phone": "67 91 96 72",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 110000.0,
+        "antallAksjer": 110,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2006-09-13"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact 980 622 444 and matching Skarersletta 18, Lorenskog retail business.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "927441217",
+    "company": "KERMIT TECH AS",
+    "website": {
+      "value": {
+        "final_url": "https://kermittech.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_legal_name_domain",
+        "proof_page_url": "https://kermittech.no/",
+        "signals": [
+          "unique_name_key",
+          "exact_no_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "64dd31211f4e99ac16466916820f960f293dea6304c5d89e2a8c373d4c498f1d",
+          "source_url": "https://kermittech.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:17:30.433887Z",
+          "content_sha256": "2bd935028f247f75a9e4591db2309acd8424334236d96db90a17e23ef7fb4bc4",
+          "claim_span": "ttech.no/script.js\" as=\"script\"/><title>Kermit Tech | Elevate Your Digital Experience</title><meta name=\"description\" content=\"Modern, high-converting digital solutions and tech consultancy.\"/><link rel=\"icon\" href=\"/icon.svg\" type=\"image/svg+xml\"/><meta name=\"next-size-adjust\" content=\"\"/><script s",
+          "locator": "identity-proof:927441217",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [
+      {
+        "value": {
+          "url": "https://linkedin.com/company/kermit-tech",
+          "platform": "linkedin.com"
+        },
+        "field": "social_profile.1e9b78220840ea3300c1",
+        "evidence": [
+          {
+            "id": "d1a05f62ebd6abaddc9c9e8ea4fe249f65243d2b5a2407be92420d2ced20a83f",
+            "source_url": "https://kermittech.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:30.433887Z",
+            "content_sha256": "2bd935028f247f75a9e4591db2309acd8424334236d96db90a17e23ef7fb4bc4",
+            "claim_span": "<a href=\"https://linkedin.com/company/kermit-tech\" target=\"_blank\" rel=\"noreferrer\" class=\"text-slate-400 transition-all duration-200 hover:scale-110 hover:text-slate-900\">",
+            "locator": "company-link:https://linkedin.com/company/kermit-tech",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "value": {
+          "url": "https://www.instagram.com/kermittech",
+          "platform": "instagram.com"
+        },
+        "field": "social_profile.0f5f0f68b377175ae050",
+        "evidence": [
+          {
+            "id": "4fa493aeb469ced6ceccb3c217083035aedd7ff2fbdccca42660bf6716829bd9",
+            "source_url": "https://kermittech.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:17:30.433887Z",
+            "content_sha256": "2bd935028f247f75a9e4591db2309acd8424334236d96db90a17e23ef7fb4bc4",
+            "claim_span": "<a href=\"https://www.instagram.com/kermittech\" target=\"_blank\" rel=\"noreferrer\" class=\"text-slate-400 transition-all duration-200 hover:scale-110 hover:text-slate-900\">",
+            "locator": "company-link:https://www.instagram.com/kermittech",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"kermittech.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"unique_name_key\", \"exact_no_domain\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Kermit Tech | Elevate Your Digital Experience\", \"proof_page_url\": \"https://kermittech.no/\"}, {\"domain\": \"kermittech.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://kermittech.no/\", \"final_url\": \"https://kermittech.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://kermittech.no/",
+        "https://kermittech.no/about",
+        "https://kermittech.no/contact"
+      ],
+      "observed_social_profiles": [
+        "https://linkedin.com/company/kermit-tech",
+        "https://www.instagram.com/kermittech"
+      ]
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "kermittech.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://kermittech.no/om-oss",
+            "https://kermittech.no/personvern"
+          ],
+          "proof_pages_fetched": 2,
+          "proof_type": "unique_legal_name_domain",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "L. P. Wettres vei 5"
+        ],
+        "kommune": "ASKER",
+        "kommunenummer": "3203",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1392",
+        "poststed": "VETTRE"
+      },
+      "identity.registered_activity": [
+        "Konsulentvirksomhet, rådgivning og opplæring innen",
+        "informasjonsteknologi. Online trening ved hjelp av videoer og",
+        "liveopplæring ved bruk av viedokonferanser."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 2,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2021-08-17"
+      }
+    },
+    "review": {
+      "verdict": "doubtful",
+      "reason": "Norwegian consultancy branding fits but unique name/domain alone cannot establish the exact registry entity.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "921320868",
+    "company": "KITCHEN & LIVING GROUP AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.kjokkenfronter.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.kjokkenfronter.no/om-oss/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "3e61e935d3a06b95197d192bb419aaac5bc28df0f97342a65537b765dc262d5b",
+          "source_url": "https://www.kjokkenfronter.no/om-oss/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:18:05.270191Z",
+          "content_sha256": "e53aa6a344158401628a5ee86ce85d262c0831798cc3468565bd3dba4a38586a",
+          "claim_span": ">post@kjokkenfronter.no</a><br>Org.nr.: 921 320 868</td><td><strong>Showroom Gjøvik<br></strong>Mjøskjøkken AS<br>Amsrudvegen 4<br>2827 Hunndalen<br><",
+          "locator": "identity-proof:921320868",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"kjokkenfronter.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"cc_index\", \"reason\": \"\", \"title\": \"Kjøkkenfronter.no – Kjokkenfronter.no\", \"proof_page_url\": \"https://www.kjokkenfronter.no/om-oss/\"}, {\"domain\": \"kjokkenfronter.no\", \"origin\": \"cc_index\", \"url\": \"https://kjokkenfronter.no/\", \"final_url\": \"https://www.kjokkenfronter.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.kjokkenfronter.no/",
+        "https://www.kjokkenfronter.no/om-oss/",
+        "https://www.kjokkenfronter.no/retningslinjer-for-personvern/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "kjokkenfronter.no",
+          "origin": "cc_index",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "discovered_proof_targets": [
+            "https://www.kjokkenfronter.no/om-oss/kjokkenfornyelse-pa-gjovik/"
+          ],
+          "additional_proof_targets": [
+            "https://www.kjokkenfronter.no/om-oss",
+            "https://www.kjokkenfronter.no/about"
+          ],
+          "proof_pages_fetched": 3,
+          "proof_type": "orgnr_on_page",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Amsrudvegen 4"
+        ],
+        "kommune": "GJØVIK",
+        "kommunenummer": "3407",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "2827",
+        "poststed": "HUNNDALEN"
+      },
+      "identity.registered_activity": [
+        "Salg av innredningsløsninger til B2C og B2B via nettbutikk og besøk",
+        "hos kunde. Montasje av kjøkken, garderober osv."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 3000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2018-09-08"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "About page explicitly says owned by Kitchen & Living Group AS with exact 921 320 868, matching Hunndalen address.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  },
+  {
+    "orgnr": "998008123",
+    "company": "NERE AS",
+    "website": {
+      "value": {
+        "final_url": "https://www.nere.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.nere.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "3a5c680a3de42f94402e3597d307766983137364ba50cfaeb66ebe76ec394bd6",
+          "source_url": "https://www.nere.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-11T19:17:49.938499Z",
+          "content_sha256": "a222234bb263e3b906ca6d4114e559a0f4ecc703d1538690dbc7bd408e3d799a",
+          "claim_span": "n style=\"font-size: 20px;\">918 60 715 / 971 28 141</span></div><br>\r\n            </article>\r\n    </section>\r\n\r\n                                    </div>\r\n                            </div>\r\n                        </div>\r\n                </div>\r\n            </div>\r\n            <!-- LayoutRow F&#xF8",
+          "locator": "identity-proof:998008123",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"nere.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [\"registry_phone\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"\", \"proof_page_url\": \"https://www.nere.no/\"}, {\"domain\": \"nere.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://nere.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"nere.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nere.no/\", \"final_url\": \"https://www.nere.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://www.nere.no/",
+        "https://www.nere.no/kontakt",
+        "https://www.nere.no/kontakt/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "nere.no",
+          "origin": "legal_name_slug",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [
+            "https://www.nere.no/personvern",
+            "https://www.nere.no/impressum"
+          ],
+          "proof_pages_fetched": 2,
+          "proof_type": "registry_phone_on_site",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Ola Fremstads vei 12"
+        ],
+        "kommune": "ØRLAND",
+        "kommunenummer": "5057",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "7160",
+        "poststed": "BJUGN"
+      },
+      "identity.registered_activity": [
+        "Utleie av bolig, lager og båter til privat personer og til selskaper",
+        "som trenger dette. I tilknytning til dette skal selskapet selge",
+        "vaktmester tjenester og annen entreprenør tjenester."
+      ],
+      "identity.registered_email": "2re.ness@online.no",
+      "identity.registered_mobile": "971 28 141",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 150,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2012-03-03"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Registered mobile 97128141 is the site contact; NERE AS and storage/boat services agree with registry business.",
+      "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+    }
+  }
+]

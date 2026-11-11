@@ -1,0 +1,242 @@
+{
+  "narrowed_runtime_commit": "7d38baa3914c994dddc664a20e89689f9b9d1bc6",
+  "live_candidate_commit": "18dde3ce17a0fd9f1911ce66899dba142be8046c",
+  "mode": "Conservative offline projection only; not a third live run",
+  "metrics": {
+    "websites": 107,
+    "social_companies": 48,
+    "jobs": 3,
+    "activity": 1000,
+    "facts": 165488
+  },
+  "new_websites_retained": 8,
+  "new_websites_by_proof": {
+    "orgnr_on_page": 3,
+    "legal_name_and_registry_contact": 1,
+    "registry_phone_on_site": 4
+  },
+  "new_websites_by_source": {
+    "cc_index": 3,
+    "legal_name_slug": 5
+  },
+  "new_social_profiles_retained": 10,
+  "new_social_companies_retained": 5,
+  "reviewed_website_gains": 23,
+  "reviewed_social_profiles": 58,
+  "retained_review_verdicts": {
+    "correct_websites": 8,
+    "correct_social_profiles": 10,
+    "wrong": 0,
+    "doubtful": 0
+  },
+  "projection_baseline_losses": [
+    {
+      "orgnr": "994382217",
+      "company": "FORMOSA AS",
+      "kind": "website_removed",
+      "url": "https://www.formosa.no",
+      "before_proof": "legal_name_masthead",
+      "rechecked_proofs": [
+        "signals:MEDIUM:name_without_suffix_insufficient_contacts_or_domain"
+      ],
+      "baseline_proof": {
+        "final_url": "https://www.formosa.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.formosa.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "923998012",
+      "company": "ASKØY24 AS",
+      "kind": "website_removed",
+      "url": "https://www.askoy24.no",
+      "before_proof": "unique_legal_name_domain",
+      "rechecked_proofs": [
+        "signals:MEDIUM:name_without_suffix_insufficient_contacts_or_domain"
+      ],
+      "baseline_proof": {
+        "final_url": "https://www.askoy24.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.askoy24.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "922828172",
+      "company": "TENSIO AS",
+      "kind": "website_removed",
+      "url": "https://www.tensio.no",
+      "before_proof": "unique_legal_name_domain",
+      "rechecked_proofs": [
+        "signals:LOW:insufficient_owner_proof",
+        "signals:MEDIUM:name_without_suffix_insufficient_contacts_or_domain"
+      ],
+      "baseline_proof": {
+        "final_url": "https://www.tensio.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.tensio.no/no/kunde/kontakt-oss",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "wikidata_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "934289099",
+      "company": "NORTH GREY AS",
+      "kind": "website_removed",
+      "url": "https://www.northgrey.no",
+      "before_proof": "unique_legal_name_domain",
+      "rechecked_proofs": [
+        "signals:MEDIUM:name_without_suffix_insufficient_contacts_or_domain"
+      ],
+      "baseline_proof": {
+        "final_url": "https://www.northgrey.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.northgrey.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "922187991",
+      "company": "ULSTEIN MINILAGER AS",
+      "kind": "website_removed",
+      "url": "http://www.ulsteinminilager.no",
+      "before_proof": "unique_legal_name_domain",
+      "rechecked_proofs": [
+        "signals:MEDIUM:name_without_suffix_insufficient_contacts_or_domain"
+      ],
+      "baseline_proof": {
+        "final_url": "http://www.ulsteinminilager.no",
+        "transport_scheme": "http",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "http://www.ulsteinminilager.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "924688696",
+      "company": "STILLASFORDEG AS",
+      "kind": "website_removed",
+      "url": "https://stillasfordeg.no",
+      "before_proof": "legal_name_masthead",
+      "rechecked_proofs": [
+        "signals:MEDIUM:name_without_suffix_insufficient_contacts_or_domain"
+      ],
+      "baseline_proof": {
+        "final_url": "https://stillasfordeg.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://stillasfordeg.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "917329435",
+      "company": "ANKERMANN AS",
+      "kind": "website_removed",
+      "url": "https://www.ankermann.no",
+      "before_proof": "legal_name_masthead",
+      "rechecked_proofs": [
+        "signals:MEDIUM:name_without_suffix_insufficient_contacts_or_domain"
+      ],
+      "baseline_proof": {
+        "final_url": "https://www.ankermann.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.ankermann.no/contact-1",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    }
+  ],
+  "tests": {
+    "passed": 1259,
+    "seconds": 374.14
+  },
+  "removed_files": [
+    "src/signalpost/web/search.py",
+    "tests/test_search.py",
+    "tests/test_optional_brave.py",
+    "tests/test_bench_search_environment.py"
+  ],
+  "limits": {
+    "per_company_http": 40,
+    "pooled_per_input": 18
+  },
+  "caveat": "Offline projection does not rerun registry uniqueness recovery, discover alternate candidates, regenerate summaries/profiles/site or measure final runtime. Seven baseline sites are conservatively withheld; this is not a measured seven-site runtime regression. Original live outputs remain untouched."
+}

@@ -1,0 +1,51 @@
+{
+  "websites": 106,
+  "social_companies": 43,
+  "jobs": 3,
+  "activity": 1000,
+  "facts": 165504,
+  "envelopes": 1000,
+  "profiles": 1000,
+  "http_total": 9493,
+  "http_mean": 9.493,
+  "http_attributed_mean": 9.343,
+  "http_max": 40,
+  "wall_seconds": 1105.4333481000067,
+  "deadline_hits": 0,
+  "warnings": [],
+  "site_warnings": [],
+  "exit_code": 0,
+  "commit": "abc33afc6f72258883da41478345b04784f30cb1",
+  "states": {
+    "identity": {
+      "available": 1000
+    },
+    "roles": {
+      "available": 997,
+      "not_available": 3
+    },
+    "subunits": {
+      "available": 774,
+      "not_available": 226
+    },
+    "accounts": {
+      "available": 999,
+      "failed": 1
+    },
+    "website": {
+      "not_available": 765,
+      "ambiguous": 120,
+      "available": 106,
+      "blocked": 5,
+      "failed": 4
+    },
+    "hiring": {
+      "not_available": 993,
+      "available": 3,
+      "failed": 4
+    },
+    "activity": {
+      "available": 1000
+    }
+  }
+}
