@@ -1,4 +1,12 @@
-﻿# Common Crawl prototype — measurement only
+# Columnar retry in progress ? 11 November 2026
+
+DuckDB/httpfs selected20,000 records from one nonempty Parquet file (part00129), after129 earlier files returned zero qualifying rows. At most two records per registered domain;12,709 selected domains. The raw selection is ignored. Query/settings and prior timestamp-conversion error are recorded in columnar-query.json.
+
+The user extended WARC work to12:05IST and the hard stop to12:30IST. Archive processing uses at most two concurrent exact byte-range requests, bounded30/60s backoff, and stores no WARC bytes. Successful range counts are separate from parser outcomes;210 early parser failures remain explicitly retained. A fixed-seed shuffle processes as much as fits, then the bounded20-site live review runs. Final results will replace this progress section; the following CDX outage is historical, not the columnar result.
+
+## Historical CDX attempt
+
+# Common Crawl prototype — measurement only
 
 ## Result: index unavailable (11 November 2026)
 

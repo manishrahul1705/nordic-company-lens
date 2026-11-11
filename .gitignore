@@ -71,3 +71,4 @@ scratch/
 # Common Crawl measurement cache (never store WARC bytes)
 /bench/reports/cc-proto/raw/
 !/bench/reports/cc-proto/candidates.jsonl
+/bench/reports/cc-proto/columnar-files.json

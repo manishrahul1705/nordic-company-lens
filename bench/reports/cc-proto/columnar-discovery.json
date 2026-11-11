@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://data.commoncrawl.org/cc-index/table/cc-main/warc/crawl=CC-MAIN-2026-43/subset=warc/",
+    "status": 404,
+    "bytes": 353,
+    "content_type": "application/xml",
+    "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>cc-index/table/cc-main/warc/crawl=CC-MAIN-2026-43/subset=warc/</Key><RequestId>GHQQXQ23Y0RYK55Z</RequestId><HostId>NzZQi/kUUCKJwar+QogLA8Ts8EOn1LEP3QBB4NOBFlaC/g6GMt/83tBdsqjnWKSPaeFUM68pL+JRGXwkbtI7qOzgACkC33Ym</HostId></Error>"
+  },
+  {
+    "url": "https://data.commoncrawl.org/?list-type=2&prefix=cc-index/table/cc-main/warc/crawl%3DCC-MAIN-2026-43/subset%3Dwarc/&max-keys=5",
+    "status": 200,
+    "bytes": 9330,
+    "content_type": "text/html",
+    "excerpt": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>Common Crawl Datasets</title>\n  <meta charset=\"utf-8\">\n  <meta name=\"description\" content=\"Browse and access Common Crawl datasets including web crawl archives, indexes, web graphs, and contributed research datasets hosted on Amazon S3.\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <link rel=\"canonical\" href=\"https://data.commoncrawl.org/\" />\n  <link href=\"https://data.commoncrawl.org/static/bucket.css\" rel=\"stylesheet\"/>\n  <style>\n    .intro {\n      font-size: 11pt;\n      line-height: 1.6;\n      margin: 1.5em 0 2.5em 0;\n      color: #555;\n      max-width: 900px;\n    }\n    .data-grid {\n      display: grid;\n    "
+  },
+  {
+    "url": "https://data.commoncrawl.org/crawl-data/CC-MAIN-2026-43/cc-index-table.paths.gz",
+    "status": 200,
+    "bytes": 2226,
+    "content_type": "binary/octet-stream",
+    "excerpt": "<gzip>"
+  }
+]
