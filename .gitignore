@@ -62,3 +62,7 @@ desktop.ini
 # Local reachability audits and cleanup working files
 scratch/
 .antigravity/
+
+# One-shot OSM measurement downloads and saved live bodies
+/bench/reports/osm-check/raw/
+!/bench/reports/osm-check/candidates.jsonl

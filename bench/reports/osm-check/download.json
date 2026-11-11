@@ -1,0 +1,32 @@
+{
+  "overpass_attempts": [
+    {
+      "host": "overpass-api.de",
+      "status": 502,
+      "error": "HTTPStatusError: 502 Bad Gateway"
+    },
+    {
+      "host": "overpass.kumi.systems",
+      "status": null,
+      "error": "ReadTimeout: The read operation timed out",
+      "client_timeout_seconds": 960
+    }
+  ],
+  "query_timeout_seconds": 900,
+  "fallback_pause_seconds": 60,
+  "attempt_date_utc": "2026-11-11",
+  "raw_response_note": "No successful response. The initial script did not persist the primary HTTP error body; fallback returned no body. No requests were repeated to recover error bodies.",
+  "bulk_source": "https://data.brreg.no/enhetsregisteret/api/underenheter/lastned/csv",
+  "universe_source": "https://builderr.ai/signalpost-company-universe-2025.jsonl.gz",
+  "supporting_downloads": "Each downloaded once and cached; not committed.",
+  "files": {
+    "subunits.csv.download": {
+      "bytes": 61848969,
+      "sha256": "88e1120d2e2b69a5bc900030efb1705bc210732ce547e6e058efc3b6b348e110"
+    },
+    "universe.jsonl.gz": {
+      "bytes": 12631607,
+      "sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    }
+  }
+}

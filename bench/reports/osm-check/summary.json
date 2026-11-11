@@ -1,0 +1,44 @@
+{
+  "status": "blocked_overpass_unavailable",
+  "query": "[out:json][timeout:900];area[\"ISO3166-1\"=\"NO\"][admin_level=2]->.a;(nwr[\"ref:NO:orgnr\"](area.a););out tags center;",
+  "attribution": "Copyright OpenStreetMap contributors; ODbL 1.0 https://opendatacommons.org/licenses/odbl/1-0/",
+  "brreg_licence": "NLOD 2.0; Bronnoysundregistrene",
+  "objects_with_orgnr_tag": null,
+  "objects_with_valid_orgnr": null,
+  "objects_with_valid_orgnr_and_website": null,
+  "objects_with_subunit_orgnr": null,
+  "website_objects_with_subunit_orgnr": null,
+  "distinct_subunit_numbers": null,
+  "distinct_parent_companies_with_website": null,
+  "batch100_match_count": null,
+  "batch100_matches": null,
+  "universe": {
+    "rows": 411160,
+    "distinct_companies": 411160,
+    "companies_with_osm_website": null,
+    "expected_per_1000": null
+  },
+  "live_review": {
+    "sample_size": 0,
+    "passed": null,
+    "reason": "No OSM candidates received; review not performed"
+  },
+  "overpass_attempts": [
+    {
+      "host": "overpass-api.de",
+      "status": 502,
+      "error": "HTTPStatusError: 502 Bad Gateway"
+    },
+    {
+      "host": "overpass.kumi.systems",
+      "status": null,
+      "error": "ReadTimeout: The read operation timed out",
+      "client_timeout_seconds": 960
+    }
+  ],
+  "limitations": [
+    "No successful OSM response received; no raw OSM JSON available to gzip.",
+    "Empty candidates.jsonl means unavailable measurement, not zero OSM candidates.",
+    "No additional Overpass query or Common Crawl work was performed."
+  ]
+}
