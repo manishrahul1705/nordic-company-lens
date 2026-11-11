@@ -1,0 +1,46 @@
+{
+  "url": "https://download.geofabrik.de/europe/norway-latest.osm.pbf",
+  "resolved_url": "https://download.geofabrik.de/europe/norway-261108.osm.pbf",
+  "http_last_modified": "Mon, 09 Nov 2026 00:58:22 GMT",
+  "download_note": "Initial transfer ended early; existing prefix retained and only missing bytes requested via disjoint ranges; no full duplicate download.",
+  "download_ranges": {
+    "url": "https://download.geofabrik.de/europe/norway-261108.osm.pbf",
+    "etag": "\"522b5538-65fcd7562010c\"",
+    "total": 1378571576,
+    "prefix_bytes": 982421017,
+    "ranges": [
+      [
+        982421017,
+        1180496295
+      ],
+      [
+        1180496296,
+        1378571575
+      ]
+    ],
+    "started_utc": "2026-11-11T04:36:42Z"
+  },
+  "bytes": 1378571576,
+  "sha256": "3c801f90aa88b248c755f873ad13b443fc5580e6885c865bfe83f06320bb3edf",
+  "header": {
+    "osmosis_replication_timestamp": "2026-11-08T21:21:00Z",
+    "osmosis_replication_sequence_number": "4965",
+    "generator": "osmium/1.16.0",
+    "timestamp": "2026-11-08T21:21:00Z"
+  },
+  "attribution": "© OpenStreetMap contributors",
+  "licence": "ODbL 1.0",
+  "download_and_hash_seconds": 1.906,
+  "extracted_objects": 11172,
+  "extracted_by_type": {
+    "node": 8396,
+    "way": 2572,
+    "relation": 204
+  },
+  "matching_callbacks_by_type": {
+    "node": 8396,
+    "way": 2572,
+    "relation": 204
+  },
+  "total_seconds": 64.297
+}
