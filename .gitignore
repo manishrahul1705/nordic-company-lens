@@ -67,3 +67,7 @@ scratch/
 /bench/reports/osm-check/raw/
 !/bench/reports/osm-check/candidates.jsonl
 !/bench/reports/osm-check/objects.jsonl
+
+# Common Crawl measurement cache (never store WARC bytes)
+/bench/reports/cc-proto/raw/
+!/bench/reports/cc-proto/candidates.jsonl
