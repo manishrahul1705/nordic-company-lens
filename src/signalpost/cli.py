@@ -54,10 +54,6 @@ def main(argv=None):
     command.add_argument('--nav-historical-snapshot', action='store_true', default=False,
                          help='Allow older indexed NAV advertisements with explicit historical snapshot dating')
     command.add_argument('--allow-system-sleep',dest='prevent_system_sleep',action='store_false',default=True)
-    command.add_argument('--search-max-queries', type=int, default=0,
-                         help='Maximum paid search queries (default 0; search is off)')
-    command.add_argument('--search-max-cost-usd',type=float,default=5.)
-    command.add_argument('--search-unit-price-usd',type=float,default=.005)
     command.add_argument('--synthesis',choices=('auto','template'),default='template')
     command.add_argument('--llm-max-calls',type=int,default=100)
     command.add_argument('--llm-max-cost-usd',type=float,default=.50)

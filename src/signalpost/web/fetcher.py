@@ -93,7 +93,7 @@ class WebsiteHttp:
         host = urlsplit(candidate.url).hostname
         if candidate.origin == 'registry_website' or not self.config.dns_precheck:
             return
-        dns_cap = 74 if candidate.origin == 'search_brave' else 64
+        dns_cap = 64
         if self.dns_counts.get(org, 0) >= dns_cap:
             raise SourceFailure('dns_unavailable')
         self.dns_counts[org] = self.dns_counts.get(org, 0) + 1

@@ -472,10 +472,6 @@ async def _run(config, client=None):
         website_http.registry_http = http
         website_http.domain_owners = getattr(bulk, 'domain_owners', {})
         website_http.wikidata_index = wikidata_index
-        from .web.search import Search
-        website_http.search=Search(active_client,config,budget)
-        search_metrics.update(website_http.search.metrics)
-        website_http.search.metrics=search_metrics
         # CSV omissions must not queue behind optional NAV startup or hundreds
         # of subunit requests. Use the same live identity extractor and budget.
         urgent = []

@@ -229,8 +229,6 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
     context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
     from .wikidata import websites
     context['wikidata_homepages'] = websites(getattr(http, 'wikidata_index', {'records':{}}), org)
-    from .search import active_for_search
-    context['active_for_search'] = active_for_search(envelope)
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")) and matches_profile(social,company_names(context)):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
@@ -267,11 +265,6 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                 brand_support[candidate.domain]=support
                 envelope.run.refresh.setdefault('brand_candidates',[]).append({'domain':candidate.domain,**support})
                 yield candidate
-        search=getattr(http,'search',None)
-        if not successes and search and retry_candidates is None:
-            existing={c.domain for c in candidates}
-            for candidate in await search.nominate(org,context,http):
-                if candidate.domain not in existing:yield candidate
     async for candidate in nominations():
         pages = []
         best = None

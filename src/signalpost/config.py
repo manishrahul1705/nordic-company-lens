@@ -60,9 +60,6 @@ class Config(BaseModel):
     nav_historical_snapshot: bool = False
     nav_now: datetime | None = None
     prevent_system_sleep: bool = True
-    search_max_queries: int | None = Field(default=None,ge=0)
-    search_max_cost_usd: float = Field(default=5,ge=0)
-    search_unit_price_usd: float = Field(default=.005,ge=0)
     synthesis: str = 'template'
     llm_max_calls: int = Field(default=100,ge=0)
     llm_max_cost_usd: float = Field(default=.50,ge=0)

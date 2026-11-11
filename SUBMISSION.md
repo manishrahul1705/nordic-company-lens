@@ -31,7 +31,7 @@ Run the **same command again with the same state directory** to refresh automati
 | Wikidata | Supplementary exact-orgnr website/social nominations | CC0, item provenance retained | $0 |
 | Company websites | Ownership proof, descriptions, social links, dated news, linked active jobs | robots.txt and site access rules; no blanket open licence inferred | $0 |
 | SSB KLASS | Bundled industry descriptions | CC BY 4.0 | $0 |
-| LLM / paid search | Disabled; deterministic cited templates | No provider called | $0 |
+| LLM / search engines | No integration; deterministic cited templates | No provider called | $0 |
 | GLEIF | LEI/status/form/dates and explicit direct/ultimate parents | CC0 1.0; anonymous exact orgnr + RA000472 API, batched parent LEIs | $0 |
 | TED | Exact winner/buyer public procurement awards | EU Publications Office legal notice/Commission reuse policy; anonymous published-notice API and public XML | $0 |
 | Doffin | **Not used** | Keyless supported API/access and reuse terms not verified | - |
@@ -97,4 +97,4 @@ Additional website proof can use the exact registered email visible in text or m
 
 On a company-verified site, bounded social profile discovery includes header/footer/navigation links, eligible Organization/LocalBusiness sameAs links and actual Facebook page-plugin hrefs. Share/intent links, posts, media, events, groups, platform homepages, LinkedIn non-company paths, profile.php, agency/builder/directory handles and hidden plugins are excluded. Shared/path-scoped attribution and cross-company shared-handle suppression remain in place; social platforms are not fetched.
 
-Operational ceilings are unchanged: at most 40 attributed HTTP requests per company, and a pooled ceiling of 18 requests per distinct normalized input (360 for 20 companies). Lower configured limits still apply. These additions contain no search-engine, directory, Norid or model-provider requests; optional pre-existing Brave search remains off by default.
+Operational ceilings are unchanged: at most 40 attributed HTTP requests per company, and a pooled ceiling of 18 requests per distinct normalized input (360 for 20 companies). Lower configured limits still apply. These additions contain no search-engine, directory, Norid or model-provider requests. There is no search-engine integration.

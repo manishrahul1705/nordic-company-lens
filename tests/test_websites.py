@@ -381,7 +381,7 @@ def test_cli_defaults_enable_official_sources_and_disable_search(monkeypatch):
     assert seen['websites'] is True
     assert seen['hiring'] is True
     assert seen['public_activity'] is True
-    assert seen['search_max_queries'] == 0
+    assert 'search_max_queries' not in seen
     assert seen['synthesis'] == 'template'
     assert seen['max_cost_usd'] == 0
     assert seen['bulk'] is None

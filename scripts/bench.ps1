@@ -1,7 +1,6 @@
 param(
     [ValidateSet(20, 100, 1000)]
     [int]$Size = 100,
-    [switch]$Search,
     [switch]$SuffixContactProof,
     [switch]$NoSuffixContactProof,
     [switch]$NoTransientRetry,
@@ -15,7 +14,6 @@ try {
     uv sync --frozen
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
     $benchArgs = @('--size', $Size)
-    if ($Search) { $benchArgs += '--search' }
     if ($SuffixContactProof) { $benchArgs += '--website-suffix-contact-proof' }
     if ($NoSuffixContactProof) { $benchArgs += '--no-website-suffix-contact-proof' }
     if ($NoTransientRetry) { $benchArgs += '--no-website-transient-retry' }
