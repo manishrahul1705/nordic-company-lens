@@ -223,10 +223,7 @@ def attributed(page, proof, context, *, same_as=True):
         and (urlsplit(page.url).path.rstrip('/') == scope or urlsplit(page.url).path.startswith(scope+'/'))}
     if scope and same_as:
         for url,span in organization_social(page,context,scope).items():found.setdefault(url,span)
-    verified = (proof.get('identity_level') == 'VERIFIED'
-                and domain(page.url) == domain(proof.get('final_url', ''))
-                and not proof.get('other_orgnrs') and not scope)
-    return {u:s for u,s in found.items() if profile_url(u) and (matches_profile(u, names) or (verified and not re.search(r'parent|group|gruppen', unquote(urlsplit(u).path), re.I)))}
+    return {u:s for u,s in found.items() if matches_profile(u, names)}
 
 
 def verified_site_names(page, proof, context):

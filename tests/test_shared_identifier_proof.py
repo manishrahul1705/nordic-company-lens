@@ -40,7 +40,7 @@ def test_mobile():
 
 def test_masthead():
     p=Page(b'<html><head><title>Example Unique AS</title></head><body>Welcome</body></html>','https://candidate.no')
-    assert score(p,ORG,CONTEXT,'cc_index',[]).proof_type=='legal_name_masthead'
+    assert score(p,ORG,CONTEXT,'cc_index',[]).level!='VERIFIED'
 
 def test_longer_name():
     p=Page(b'<html><head><title>Another Example Unique AS</title></head><body>Welcome</body></html>','https://candidate.no')
@@ -51,7 +51,7 @@ def test_other_orgnr_veto(html):
     assert proof(html+'<footer>Org.nr 970540334</footer>').level=='REJECT'
 
 def test_unique_domain(counts):
-    assert proof('Example Unique',url='https://example-unique.no').proof_type=='unique_legal_name_domain'
+    assert proof('Example Unique',url='https://example-unique.no').level!='VERIFIED'
     counts['name_keys']['example unique']=2
     assert proof('Example Unique',url='https://example-unique.no').level!='VERIFIED'
 
@@ -65,12 +65,14 @@ def test_social_exclusions(url):
 
 def test_verified_template_profile():
     p=Page(b'<footer><a href="https://facebook.com/tradingbrand">Facebook</a></footer>','https://candidate.no')
-    assert attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+    assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+    own=Page(b'<footer><a href="https://facebook.com/exampleunique">Facebook</a></footer>',p.url)
+    assert attributed(own,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
     assert not attributed(p,{'identity_level':'LOW','final_url':p.url},CONTEXT)
 
 def test_page_plugin():
-    p=Page(b'<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2Ftradingbrand"></iframe>','https://candidate.no')
-    assert 'https://facebook.com/tradingbrand' in attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+    p=Page(b'<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2Fexampleunique"></iframe>','https://candidate.no')
+    assert 'https://facebook.com/exampleunique' in attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
 
 def test_cc_candidates_are_ranked_not_proof(monkeypatch):
     monkeypatch.setattr(shared,'bundled',lambda _: {ORG:[{'domain':'archive.no'}]})
@@ -88,11 +90,11 @@ def test_normalization():
 
 def test_copyright_masthead():
     for marker in ('Copyright', chr(169)):
-        assert proof('<footer>'+marker+' 2026 Example Unique AS</footer>').proof_type=='legal_name_masthead'
+        assert proof('<footer>'+marker+' 2026 Example Unique AS</footer>').level!='VERIFIED'
 
 
 def test_postcode_masthead():
-    assert proof('<p>Example Unique AS</p><p>0123 Oslo</p>').proof_type=='legal_name_masthead'
+    assert proof('<p>Example Unique AS</p><p>0123 Oslo</p>').level!='VERIFIED'
 
 
 def test_longer_copyright_rejected():
@@ -123,3 +125,24 @@ def test_missing_counts_never_imply_unique(counts):
     counts.clear()
     assert proof('12 34 56 78 hello@example.no').level!='VERIFIED'
     assert proof('Example Unique',url='https://exampleunique.no').level!='VERIFIED'
+
+
+@pytest.mark.parametrize('body',['Her kommer: www.exampleunique.no','Contact post@exampleunique.no','www.exampleunique.no'])
+def test_domain_and_email_repetition_never_proves_unique_name(body):
+    assert proof(body,url='https://exampleunique.no').level!='VERIFIED'
+
+
+def test_blank_app_shell_masthead_is_not_ownership():
+    p=Page(b'<head><title>Example Unique AS</title></head><body><div id="root"></div></body>','https://candidate.no')
+    assert score(p,ORG,CONTEXT,'cc_index',[]).level!='VERIFIED'
+
+
+def test_shared_employee_email_cannot_identify_the_site_owner(counts):
+    counts['email_domains']['example.no']=4
+    assert proof('<div class="person">Employee <a href="mailto:hello@example.no">hello@example.no</a></div>').level!='VERIFIED'
+
+
+@pytest.mark.parametrize('handle',['johnsmith','creativeworks','otherbusiness'])
+def test_verified_site_footer_does_not_authorize_unrelated_accounts(handle):
+    p=Page(('<footer><a href="https://facebook.com/'+handle+'">Follow</a></footer>').encode(),'https://candidate.no')
+    assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
