@@ -77,7 +77,7 @@ def test_search_candidate_only_publishes_with_fetched_exact_orgnr(tmp_path,monke
     monkeypatch.setenv('SIGNALPOST_SEARCH_PROVIDER','brave')
     monkeypatch.setattr('signalpost.web.search.Brave',lambda *args:Fake())
     monkeypatch.setattr('signalpost.web.collector.generate',lambda context:[])
-    report,row,requests,cfg=execute_web(tmp_path,monkeypatch,body=html('Org nr '+ORG if proven else ''),website=None,max_cost_usd=1)
+    report,row,requests,cfg=execute_web(tmp_path,monkeypatch,body=html('Org nr '+ORG if proven else '', title='Example'),website=None,max_cost_usd=1)
     published=[c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available']
     assert bool(published)==proven
     assert report['search']['queries']==1

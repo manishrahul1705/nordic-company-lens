@@ -96,6 +96,11 @@ def declared_score(page,org,context,origin,leaders,options,enabled=True):
     if veto:return Proof('REJECT',reason=veto)
     if origin in DECLARED and provider_mismatch(page,context):return Proof('REJECT',reason='provider_industry_mismatch')
     original=score(page,org,context,origin,leaders,**options)
+    # Keep the established declaration label when the same page already met it.
+    if original.proof_type in {'registry_email_on_site','registry_phone_on_site','legal_name_masthead','unique_legal_name_domain'} and origin in DECLARED and enabled:
+        legacy = score(page,org,context,'registry_website',leaders,**options)
+        if legacy.proof_type == 'registry_declared_name_tier_a' and named(page,context.get('name')):
+            return legacy
     if original.level in {'VERIFIED','REJECT','BLOCKED'}:return original
     if origin not in DECLARED or not enabled:return original
     from copy import copy

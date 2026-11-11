@@ -71,7 +71,7 @@ def test_footer_formats(tmp_path, monkeypatch, number):
 
 def test_long_number_and_lei_excluded():
     assert not orgnrs("19236090160")
-    page = Page(html("", '<script type="application/ld+json">{"leiCode":"923609016"}</script>').encode(), "https://example.no/")
+    page = Page(html("", '<script type="application/ld+json">{"leiCode":"923609016"}</script>', title="Example").encode(), "https://example.no/")
     assert score(page, OUR, {"name": "Example AS"}, "legal_name_slug", []).level != "VERIFIED"
 
 

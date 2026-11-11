@@ -19,3 +19,9 @@ testpaths = ["tests"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/signalpost"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"data/shared_identifiers.json.gz" = "signalpost/data/shared_identifiers.json.gz"
+"data/cc_orgnr_index.json.gz" = "signalpost/data/cc_orgnr_index.json.gz"
+"data/SHARED_IDENTIFIERS_NOTICE.md" = "signalpost/data/SHARED_IDENTIFIERS_NOTICE.md"
+"data/CC_INDEX_NOTICE.md" = "signalpost/data/CC_INDEX_NOTICE.md"

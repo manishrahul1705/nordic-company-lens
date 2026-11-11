@@ -127,7 +127,7 @@ def registry_context(envelope, bulk, blobs):
     data = json.loads(body)
     address = data.get("forretningsadresse") or {}
     context = {"name": data.get("navn"), "website": data.get("hjemmeside"), "email": data.get("epostadresse"),
-               "phone": data.get("telefon"), "municipality": address.get("kommune"), "street": address.get("adresse"),
+               "phone": data.get("telefon"), "mobile": data.get("mobil"), "municipality": address.get("kommune"), "street": address.get("adresse"),
                "postcode": address.get("postnummer"), "city": address.get("poststed")}
     return context, Source(reference.source_url, body, reference.content_sha256, reference.retrieved_at), "/hjemmeside"
 
@@ -190,6 +190,7 @@ def previous_nomination(previous, context, units):
 
 async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_candidates=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
+    context['orgnr'] = org
     context['nace']=next((str(c.value.get('kode','')) for c in envelope.claims if c.field=='identity.nace1' and isinstance(c.value,dict)),'')
     round2=envelope.run.refresh.setdefault('recall_round2',{'candidates':[]})
     units={c.value['organisation_number']:{'name': c.value.get('name'), 'address':c.value.get('address')} for c in envelope.claims
@@ -604,7 +605,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=getattr(proof,'subject_orgnr',None) or org
-    contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
+    contact_proofs={'registry_email_on_site','registry_phone_on_site','legal_name_masthead','unique_legal_name_domain','legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
                     'domain_legal_name_and_registry_location','nominated_two_independent_signals',
                     'registry_declared_name_tier_a','registry_declared_hard_contact_tier_b','unique_no_corroborated'}
     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else (page.name_span(proof.token) or page.span_for(proof.token))

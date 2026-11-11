@@ -464,6 +464,10 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
             if valid_location and re.search(r'(?<!\w)' + re.escape(location) + r'(?!\w)', location_text):
                 return Proof('VERIFIED', 'domain_legal_name_and_registry_location',
                              ['exact_legal_domain', 'registry_' + key], 4, token=str(context[key]))
+    from .additional_proof import additional_proof
+    recovered = additional_proof(page, org, context)
+    if recovered:
+        return recovered
     if suffix_contact and exact_base:
         return Proof('MEDIUM','signals',['legal_name_without_suffix',*contacts],2*len(contacts),reason='name_without_suffix_insufficient_contacts_or_domain',token=base_name)
     return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))

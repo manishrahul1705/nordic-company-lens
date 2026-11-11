@@ -18,8 +18,11 @@ def profile_url(url):
     bits = [x for x in p.path.split("/") if x]
     if not bits:
         return None
-    lowered = [x.lower() for x in bits]
-    if any(x in {"share", "sharer", "sharer.php", "intent", "login", "explore", "hashtag", "search", "privacy", "watch", "p", "reel", "reels", "profile.php", "l.php", "dialog", "status", "statuses"} for x in lowered):
+    lowered = [unquote(x).lower() for x in bits]
+    if any(x in {"share", "sharer", "sharer.php", "intent", "login", "explore", "hashtag", "search", "privacy", "watch", "p", "reel", "reels", "profile.php", "l.php", "dialog", "status", "statuses", "posts", "videos", "photos", "events", "groups", "plugins"} for x in lowered):
+        return None
+    blocked = {'wix','squarespace','wordpress','shopify','webflow','jimdo','onecom','domeneshop','1881','gulesider','proff','purehelp'}
+    if any(any(compact(unquote(bit)) == brand + suffix for brand in blocked for suffix in ('','com','no','norge','official')) or re.search(r'(?:agency|byraa|webdesign)', compact(unquote(bit))) or compact(unquote(bit)) in {'home','other','design','agency'} for bit in bits):
         return None
     allowed = False
     if root == "linkedin.com":
@@ -80,9 +83,44 @@ def discover(page,context=None,*,same_as=True):
         excluded = getattr(link, 'excluded_context', False) or bool(re.search(r'website by|designed by|utviklet av|nettside av', link.text, re.I))
         if url and not excluded and (link.owned_context or contact):
             found.setdefault(url, link.span)
+    for url, span in facebook_plugins(page).items():
+        found.setdefault(url, span)
     if same_as:
         for url,span in organization_social(page,context).items():found.setdefault(url,span)
     return found
+
+
+
+def facebook_plugins(page):
+    from html.parser import HTMLParser
+    from urllib.parse import parse_qs
+    class Plugins(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.found = {}
+            self.stack = []
+        def handle_starttag(self, tag, attrs):
+            attrs = dict(attrs)
+            excluded = (tag in {'script','style','template','noscript','article'}
+                        or 'hidden' in attrs or attrs.get('aria-hidden') == 'true'
+                        or bool(re.search(r'display\s*:\s*none|visibility\s*:\s*hidden',attrs.get('style',''),re.I)))
+            if tag not in {'meta','link','img','br','hr','input','source','area','base','embed','wbr'}:
+                self.stack.append((tag,excluded))
+            if any(x[1] for x in self.stack):return
+            value = attrs.get('src','') if tag == 'iframe' else attrs.get('data-href','') if tag == 'div' and 'fb-page' in attrs.get('class','').split() else ''
+            if not value:return
+            if domain(value) == 'facebook.com' and urlsplit(value).path == '/plugins/page.php':
+                value = parse_qs(urlsplit(value).query).get('href',[''])[0]
+            if (url := profile_url(value)) and domain(url) == 'facebook.com':
+                self.found.setdefault(url,self.get_starttag_text()[:300])
+        def handle_endtag(self,tag):
+            for i in range(len(self.stack)-1,-1,-1):
+                if self.stack[i][0] == tag:
+                    self.stack = self.stack[:i]
+                    break
+    parser = Plugins()
+    parser.feed(page.raw)
+    return parser.found
 
 
 def compact(value):
@@ -185,7 +223,10 @@ def attributed(page, proof, context, *, same_as=True):
         and (urlsplit(page.url).path.rstrip('/') == scope or urlsplit(page.url).path.startswith(scope+'/'))}
     if scope and same_as:
         for url,span in organization_social(page,context,scope).items():found.setdefault(url,span)
-    return {u:s for u,s in found.items() if matches_profile(u, names)}
+    verified = (proof.get('identity_level') == 'VERIFIED'
+                and domain(page.url) == domain(proof.get('final_url', ''))
+                and not proof.get('other_orgnrs') and not scope)
+    return {u:s for u,s in found.items() if profile_url(u) and (matches_profile(u, names) or (verified and not re.search(r'parent|group|gruppen', unquote(urlsplit(u).path), re.I)))}
 
 
 def verified_site_names(page, proof, context):
