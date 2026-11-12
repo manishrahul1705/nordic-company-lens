@@ -1,0 +1,33 @@
+{
+  "claim_id_differences": [],
+  "analyst_brief_differences": [],
+  "company_changes": 0,
+  "observations": [
+    {
+      "orgnr": "897051982",
+      "final_website_state": "ambiguous",
+      "observations": [
+        {
+          "section": "website",
+          "previous_state": "ambiguous",
+          "current_state": "available",
+          "reason": "website_candidates"
+        }
+      ],
+      "scope": {
+        "group_site": true,
+        "other_registry_owners": [],
+        "historical_shared_domain_nominations": [
+          "897539012"
+        ],
+        "shared_domain_index_available": true,
+        "withheld_fields": [
+          "official_website"
+        ],
+        "website_status": "ambiguous",
+        "website_reason": "group/shared site"
+      }
+    }
+  ],
+  "note": "Group-site candidate accepted provisionally before final ownership scope guard is withheld again. Published IDs and briefings are unchanged; strict verifier reports this observation honestly, not a pass."
+}

@@ -1,0 +1,132 @@
+{
+  "runtime_commit": "35c43dd3f2c156f3e61fa5601191cdb3fafc1115",
+  "sample_seed": 20261112,
+  "runs": [
+    {
+      "run": 1,
+      "envelopes": 103,
+      "valid": 100,
+      "websites": 11,
+      "social": 6,
+      "jobs": 1,
+      "activity": 100,
+      "GLEIF_companies": 3,
+      "procurement_companies": 0,
+      "number": 1,
+      "exit_code": 0,
+      "wall_seconds": 111.56567159999395,
+      "requests": 904,
+      "changes": 0,
+      "observation_changes": 0,
+      "deadline_hits": 0,
+      "warnings": [],
+      "emitted_envelopes": 103,
+      "strict_verifier_exit_code": 0,
+      "facts": 16810,
+      "http_mean_per_100_valid": 9.04,
+      "http_max": 30,
+      "sections": {
+        "identity": {
+          "available": 100
+        },
+        "roles": {
+          "available": 100
+        },
+        "subunits": {
+          "available": 79,
+          "not_available": 21
+        },
+        "accounts": {
+          "available": 99,
+          "failed": 1
+        },
+        "website": {
+          "not_available": 79,
+          "available": 11,
+          "ambiguous": 10
+        },
+        "hiring": {
+          "not_available": 99,
+          "available": 1
+        },
+        "activity": {
+          "available": 100
+        }
+      }
+    },
+    {
+      "run": 2,
+      "envelopes": 103,
+      "valid": 100,
+      "websites": 11,
+      "social": 6,
+      "jobs": 1,
+      "activity": 100,
+      "GLEIF_companies": 3,
+      "procurement_companies": 0,
+      "number": 2,
+      "exit_code": 0,
+      "wall_seconds": 106.11658300000272,
+      "requests": 900,
+      "changes": 0,
+      "observation_changes": 1,
+      "deadline_hits": 0,
+      "warnings": [],
+      "emitted_envelopes": 103,
+      "strict_verifier_exit_code": 1,
+      "facts": 16810,
+      "http_mean_per_100_valid": 9.0,
+      "http_max": 30,
+      "sections": {
+        "identity": {
+          "available": 100
+        },
+        "roles": {
+          "available": 100
+        },
+        "subunits": {
+          "available": 79,
+          "not_available": 21
+        },
+        "accounts": {
+          "available": 99,
+          "failed": 1
+        },
+        "website": {
+          "not_available": 79,
+          "available": 11,
+          "ambiguous": 10
+        },
+        "hiring": {
+          "not_available": 99,
+          "available": 1
+        },
+        "activity": {
+          "available": 100
+        }
+      }
+    }
+  ],
+  "review_counts": {
+    "website": 11,
+    "social": 12,
+    "GLEIF": 15,
+    "job": 2,
+    "accounts": 10,
+    "identity": 10,
+    "registry_announcements": 10,
+    "roles": 10,
+    "subunits": 10
+  },
+  "briefings_reviewed": 10,
+  "briefing_sentences_reviewed": 21,
+  "final_wrong": 0,
+  "final_doubtful": 0,
+  "claim_ids_stable": true,
+  "all_103_briefings_stable": true,
+  "strict_pair_verifier_exit": 1,
+  "tests": {
+    "passed": 1297,
+    "seconds": 311.14
+  }
+}

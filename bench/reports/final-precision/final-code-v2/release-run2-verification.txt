@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\Manish\Downloads\nordic-company-lens-more-websites\bench\cache\final-precision-final-clone-v2\scripts\verify_output.py", line 176, in <module>
+    main()
+  File "C:\Users\Manish\Downloads\nordic-company-lens-more-websites\bench\cache\final-precision-final-clone-v2\scripts\verify_output.py", line 172, in main
+    print(json.dumps(verify(args.first, args.state_dir, args.count, args.organisations, args.report, args.require_clean, args.second,args.clean_sections)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manish\Downloads\nordic-company-lens-more-websites\bench\cache\final-precision-final-clone-v2\scripts\verify_output.py", line 154, in verify
+    assert observations == 0, f'Observation changes={observations}'
+           ^^^^^^^^^^^^^^^^^
+AssertionError: Observation changes=1
