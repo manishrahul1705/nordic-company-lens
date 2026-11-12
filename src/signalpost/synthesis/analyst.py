@@ -85,9 +85,9 @@ def generate(envelope):
     lei=fields.get('identity.gleif.lei')
     if lei:
         text+='; it is registered in GLEIF with LEI '+str(lei.value);used.append(lei)
-        parent=fields.get('identity.gleif.ultimate_parent') or fields.get('identity.gleif.direct_parent')
-        if parent:
-            text+=' and '+('ultimate parent ' if parent.field.endswith('ultimate_parent') else 'direct parent ')+parent.value['name'];used.append(parent)
+    parent=fields.get('identity.gleif.direct_parent') or fields.get('identity.gleif.ultimate_parent')
+    if parent and isinstance(parent.value,dict) and parent.value.get('name'):
+        text+='. It is owned by '+parent.value['name']+' (GLEIF)';used.append(parent)
     add('a',text+'.',used)
     # Company-only annual amounts: no currency or unknown-scale conversion.
     financial=[c for c in claims if c.family=='accounts' and not c.field.startswith('accounts.consolidated.') and number_claim(c)
@@ -136,22 +136,24 @@ def generate(envelope):
             text+=', in '+english_list(named)
         if envelope.run.sections.get('subunits')!='available' or 'subunits' in envelope.run.refresh.get('stale_sections',{}):text+=' (coverage could not be fully refreshed)'
         add('c',text+'.',list(units.values()),derived=True,count=len(units))
-    articles=sorted((c for c in claims if c.field.startswith('dated_item.') and isinstance(c.value,dict) and short_date(c.value.get('date'))),key=lambda c:(c.value['date'],c.field),reverse=True)
-    if articles:
-        c=articles[0];add('d','Its latest company-published article is "'+c.value['title'].rstrip('.')+'" ('+short_date(c.value['date'])+').',[c])
-    else:
-        events=sorted((c for c in claims if c.field.startswith('registry_change.') and isinstance(c.value,dict) and major_event(c.value) and short_date(c.value.get('date'))),key=lambda c:(c.value['date'],c.field),reverse=True)
-        if events:
-            c=events[0];add('d','A registry announcement dated '+short_date(c.value['date'])+' records '+major_event(c.value)+', according to the Br\u00f8nn\u00f8ysund Register.',[c])
-    awards=sorted((c for c in claims if c.field.startswith('procurement_award.') and short_date(c.value.get('date'))),key=lambda c:(c.value['date'],c.field),reverse=True)
-    if awards:
-        current=next((s for s in result.sentences if s.sentence_type=='d'),None)
-        existing={c.id:c for c in claims}
-        previous_date=max((str(existing[cid].value.get('date','')) for cid in current.claim_ids if cid in existing),default='') if current else ''
-        if awards[0].value['date']>previous_date[:10]:
-            result.sentences=[s for s in result.sentences if s.sentence_type!='d']
-            c=awards[0];role='supplier' if c.value['matched_role']=='winner' else 'buyer'
-            add('d','A public procurement award dated '+short_date(c.value['date'])+' names it as '+role+' for "'+c.value['title']+'".',[c])
+    # Newest significant event across all supported sources; buyer is not winner.
+    events=[]
+    for c in claims:
+        if not isinstance(c.value,dict) or not short_date(c.value.get('date')):continue
+        if c.field.startswith('dated_item.'):
+            wording='Its latest company-published article is "'+c.value['title'].rstrip('.')+'" ('+short_date(c.value['date'])+').'
+        elif c.field.startswith('registry_change.') and major_event(c.value):
+            wording='A registry announcement dated '+short_date(c.value['date'])+' records '+major_event(c.value)+', according to the Br\u00f8nn\u00f8ysund Register.'
+        elif c.field.startswith('procurement_award.'):
+            buyers=c.value.get('buyer') or []
+            buyers=[buyers] if isinstance(buyers,str) else buyers
+            if c.value.get('matched_role')=='winner' and buyers:
+                wording='It won a public contract from '+english_list(buyers)+' ('+short_date(c.value['date'])+', TED).'
+            else:wording='A public procurement award dated '+short_date(c.value['date'])+' names it as buyer for "'+c.value['title']+'" (TED).'
+        else:continue
+        events.append((str(c.value['date'])[:10],c.field,c,wording))
+    if events:
+        _,_,c,wording=max(events,key=lambda item:(item[0],item[1]));add('d',wording,[c])
     website=fields.get('official_website')
     if website:
         host=(urlsplit(website.value['final_url']).hostname or '').lower()
@@ -173,6 +175,17 @@ def generate(envelope):
     elif hiring in {'failed','blocked','ambiguous'}:gaps.append('hiring information could not be fully checked');used.append(state_context('hiring'))
     if gaps:
         text='; '.join(gaps);add('f',text[:1].upper()+text[1:]+'.',used)
+    # Collapse absent-source checklists only for genuinely sparse registry profiles.
+    external=any(c.field.startswith(('identity.gleif.','procurement_award.','dated_item.','hiring.job.','hiring.site_job.')) or c.family=='website' for c in claims)
+    if not external and not financial and not number_claim(fields.get('identity.employees')) and len(units)<=1:
+        first=[s for s in result.sentences if s.sentence_type=='a']
+        substantive=[s for s in result.sentences if s.sentence_type in {'c','d'}]
+        if len(substantive)>1:substantive=[s for s in substantive if s.sentence_type=='d']
+        gaps=[s for s in result.sentences if s.sentence_type in {'e','f'}]
+        if gaps:
+            combined=AnalystSentence(sentence_type='f',text='; '.join(s.text.rstrip('.') for s in gaps)+'.',claim_ids=list(dict.fromkeys(cid for s in gaps for cid in s.claim_ids)))
+            result.sentences=first+substantive+[combined]
+        else:result.sentences=(first+substantive)[:3]
     return result
 
 def validate(brief,envelope):
