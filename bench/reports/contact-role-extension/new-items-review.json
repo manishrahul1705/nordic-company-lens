@@ -1,0 +1,188 @@
+[
+  {
+    "orgnr": "920918204",
+    "company": "STOA AUTOREP AS",
+    "field": "contact.email.d6998a31fe1e264fda46",
+    "value": "kontor@stoaautorep.no",
+    "registered_email": null,
+    "registered_phone": "37 00 10 50",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "e1a2da68cdec977df2ff88d364661695ae983f432ffd263745b2a7c07855620f",
+        "source_url": "https://stoaautorep.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:56:31.643500Z",
+        "content_sha256": "ca8bac75921a8f2ad365857dca515f9f56b82a478481d53544d3f6443b19bf41",
+        "claim_span": "<a href=\"mailto:kontor@stoaautorep.no\">",
+        "locator": "contact:kontor@stoaautorep.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Corporate office address linked on the verified company homepage."
+    }
+  },
+  {
+    "orgnr": "968386085",
+    "company": "LOFOTPOSTEN AS",
+    "field": "contact.email.ff8d6f5c59b7504b1f33",
+    "value": "marked@lofotposten.no",
+    "registered_email": null,
+    "registered_phone": "76 06 78 00",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "aa4935b96179c0d87b80189c403999cc9dc4a8a15a11b10da6ba58753a52182e",
+        "source_url": "https://www.lofotposten.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:23.578936Z",
+        "content_sha256": "c64200cadceec03afdf92f5a0f97025c04973560d23949ee74ebca963dda0d67",
+        "claim_span": "<a href=\"mailto:marked@lofotposten.no\">",
+        "locator": "contact:marked@lofotposten.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Explicit newspaper marketing-department email on its homepage."
+    }
+  },
+  {
+    "orgnr": "926490060",
+    "company": "CONTROL SOLUTIONS AS",
+    "field": "contact.email.8c371407b1603945c7b4",
+    "value": "contact@control-solutions.no",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "cd64f389c5110926502354c569701f3c5224007496fdf3ecdea2f5b05d50e8d8",
+        "source_url": "https://www.control-solutions.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:39.038955Z",
+        "content_sha256": "8eb31cc7cd8f1518488508c93a17af2ad5ef2e4ea101ac12ad24fe23a1aa7e1b",
+        "claim_span": "ingsøy, Norway  •  (+47) 988 92 186  •  contact@control-solutions.no</p><p style=\"text-align:center;white-space:pre-wrap;\" class=\"\">Org.nr 926 490 060",
+        "locator": "contact:contact@control-solutions.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Corporate footer contact next to the exact company organisation number."
+    }
+  },
+  {
+    "orgnr": "923998012",
+    "company": "ASKØY24 AS",
+    "field": "contact.email.a67da261841e6f606de5",
+    "value": "marked@askoy24.no",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "bdc5f8a8817d9d240ef4fa26d1481fdb9ad8f4610fda2552882599d9098dabe5",
+        "source_url": "https://www.askoy24.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:58:21.951863Z",
+        "content_sha256": "0f52336df54b3422606e9c49f84891abf9058f68aedf2b1f80186638170e349a",
+        "claim_span": "r\"\n    style=\"\"\n    >\n    Ta kontakt på marked@askoy24.no for annonsering\n</p>\n\n\n\n        \n\n\n\n\n        \n\n        <time itemprop=\"datePublished\" dateti",
+        "locator": "contact:marked@askoy24.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Explicit homepage advertising/marketing contact for this publisher."
+    }
+  },
+  {
+    "orgnr": "989145509",
+    "company": "TANGERIN AS",
+    "field": "contact.email.ad4bafc8c1340eaa85b8",
+    "value": "invoice@tangerin.no",
+    "registered_email": "patrik@tangerin.no",
+    "registered_phone": null,
+    "registered_mobile": "924 98 450",
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "72095e981866b3e2f7c9ff927cbac0b227c0ace709f1fbe8ca985aab55f8f929",
+        "source_url": "https://www.tangerin.no/contact/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:59:48.127922Z",
+        "content_sha256": "56b6ea3447e0dc285ecb1b920ba4e06d8ffd8c9d673802c50987f0b28293f3dd",
+        "claim_span": "1162 OsloNORWAY Org. no. 989 145 509 MVAinvoice@tangerin.no Follow us at Linkedin\" />\n\t<meta property=\"og:url\" content=\"https://www.tangerin.no/contac",
+        "locator": "contact:invoice@tangerin.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Company invoice mailbox alongside legal name, address and organisation number on the contact page."
+    }
+  },
+  {
+    "orgnr": "920542158",
+    "company": "TECTRAP AS",
+    "field": "contact.email.f0714ae07a8b8361e48b",
+    "value": "contact@tectrap.com",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "fdae94243b025790c3bf9bd120c873a845829addc542d9768072ce3cda07b066",
+        "source_url": "https://www.tectrap.com/ian-robertson/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:22.963162Z",
+        "content_sha256": "bdf23ddb9fe89f3e2ee8551c1618688c24c1166c69c8ba19a5e154f5aebdaf79",
+        "claim_span": "<a class=\"email-link\" href=\"mailto:contact@tectrap.com?subject=Enquiry%20from%20tectrap.com\">",
+        "locator": "contact:contact@tectrap.com",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Functional enquiry mailbox on the verified company site; local part is contact, not a personal name."
+    }
+  }
+]

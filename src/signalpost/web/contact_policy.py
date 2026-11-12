@@ -9,7 +9,7 @@ from .candidates import legal_name
 from .policy import FREE_MAIL, extract
 from .proof import phone
 
-ROLES = frozenset("post postmottak firmapost info kontakt kundeservice service salg sales booking bestilling ordre regnskap faktura admin office hello hei mail support resepsjon".split())
+ROLES = frozenset("post postmottak firmapost info kontakt kundeservice service salg sales booking bestilling ordre regnskap faktura admin office hello hei mail support resepsjon contact kontor firma epost e-post hi enquiries inquiries orders order reservasjon drift teknisk marked marketing jobb jobs career karriere hr personal innkjop purchase accounts lonn bilag invoice".split())
 STAFF = re.compile(r'(?:^|[\s_/-])(?:staff|team|employee|employees|person|ansatt|ansatte|tilsette|medarbeider|medarbeidere|visittkort|ansattkort)(?:$|[\s_/-])', re.I)
 CONTACT = re.compile(r'contact|kontakt|footer|company.info|company.contact', re.I)
 GIVEN = frozenset('ole ola per jan anne kari lars knut bjorn bj\u00f8rn geir tor tore terje hans arne erik eirik tom odd svein morten rune rolf vidar anny edith john paul'.split())

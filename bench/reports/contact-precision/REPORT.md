@@ -36,3 +36,8 @@ A separate fixed-seed random sample of **20 retained contacts** was checked agai
 New regression cases cover every requested role, company/domain local, exact registered personal/free-mail email, personal/initial/concatenated email rejection, free-mail/foreign-domain rejection, staff cards/grids/paragraphs, registered and footer phone positives, staff-list negatives and carried-forward bypass. Existing integration/refresh tests passed unchanged (66 focused cases). No prior wrong-company regression fixtures or expectations were changed. Final full suite: **1,343 passed in 335.40 s** (`pytest.txt`). All 42 new publication-policy cases pass; existing fixtures and expectations are unchanged.
 
 Runtime files: `web/contact_policy.py` (publication predicates and captured HTML regions), `web/collector.py` (apply at extraction), `runner.py` (filter carried-forward contacts before publication guards). Supporting files: `tests/test_contact_publication_precision.py`, `scripts/replay_contact_precision.py`, `docs/SOURCES.md`, `IMPROVEMENT_LOG.md` and these reports. No dependency or lockfile changes. No ownership-proof source file was changed.
+
+
+## Subsequent allowlist extension
+
+The historical counts above are preserved. The requested role extension now retains 156 contacts (84 emails / 72 phones), including the functional TECTRAP contact mailbox. Personal-name rejection and proof logic are unchanged. See [the extension audit](../contact-role-extension/REPORT.md).

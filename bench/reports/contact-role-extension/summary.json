@@ -1,0 +1,48 @@
+{
+  "source_run": "bench\\runs\\news-contact-live",
+  "mode": "Offline filtering of existing cited contacts only; no additions, no requests, original artifacts unchanged. The source run contains the rejected news trial; this replay does not reapply news.",
+  "before": {
+    "facts": 350,
+    "by_type": {
+      "phone": 148,
+      "email": 202
+    },
+    "companies": 102
+  },
+  "after": {
+    "facts": 156,
+    "by_type": {
+      "phone": 72,
+      "email": 84
+    },
+    "companies": 89
+  },
+  "removed": 194,
+  "original_sample_kept": 13,
+  "original_sample_removed": 7,
+  "all_noncontact_claims_and_website_proofs": "unchanged: only publication predicates evaluated; no original envelopes rewritten",
+  "sample_seed": 20261112,
+  "previous_policy_after": {
+    "facts": 150,
+    "by_type": {
+      "phone": 72,
+      "email": 78
+    },
+    "companies": 87
+  },
+  "newly_retained": 6,
+  "newly_retained_review_sample": 6,
+  "manual_review": {
+    "new_items_total": 6,
+    "reviewed": 6,
+    "personal_emails": 0,
+    "wrong": 0,
+    "doubtful": 0,
+    "sample_note": "All newly retained items reviewed because fewer than 20 exist."
+  },
+  "tests": {
+    "passed": 1382,
+    "seconds": 398.89
+  },
+  "decision": "KEEP"
+}
