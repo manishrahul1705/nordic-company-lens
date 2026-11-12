@@ -148,6 +148,12 @@
     }
   }
 
+  function evidenceDate(value) {
+    if(!value) return 'Unknown';
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? String(value) : date.toLocaleString('en-GB', {day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'UTC'}) + ' UTC';
+  }
+
   function showEvidence(panel) {
     if(panel.dataset.loaded) return;
     const fact = facts.get(panel.dataset.source);
@@ -182,9 +188,9 @@
       pair('Claim confidence', fact.confidence);
       pair('Source link', sourceLink(e.source_url));
       pair('Registry identifier', e.source_identifier);
-      pair('Retrieved at (UTC)', e.retrieved_at);
+      pair('Retrieved at (UTC)', evidenceDate(e.retrieved_at));
       const period = e.reporting_period || fact.reporting_period;
-      pair('Effective / reporting date', e.effective_at || (period ? format(period) : 'Unknown'));
+      pair('Effective / reporting date', e.effective_at ? evidenceDate(e.effective_at) : (period ? format(period) : 'Unknown'));
       const hash = element('div');
       const code = element('code', e.content_sha256.slice(0, 16) + '…');
       code.title = e.content_sha256;
@@ -204,7 +210,14 @@
       } else {
         quote.textContent = e.claim_span;
       }
-      record.append(dl, quote);
+      // Keep the captured excerpt intact, but do not lead with registry JSON.
+      const rawStructured = /[{}]|"[\w_]+"\s*:/.test(e.claim_span);
+      if(rawStructured && match) {
+        const readable = element('blockquote', match, 'excerpt');
+        const original = element('details', null, 'evidence-original');
+        original.append(element('summary', 'Original source excerpt (verbatim)'), quote);
+        record.append(dl, readable, original);
+      } else record.append(dl, quote);
       panel.append(record);
     }
     panel.dataset.loaded = 'true';

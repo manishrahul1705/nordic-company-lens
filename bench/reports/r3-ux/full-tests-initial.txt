@@ -1,0 +1,102 @@
+........................................................................ [  5%]
+.........................F.............................................. [ 11%]
+........................................................................ [ 16%]
+........................................................................ [ 22%]
+...............................................................F........ [ 28%]
+........................................................................ [ 33%]
+........................................................................ [ 39%]
+........................................................................ [ 44%]
+........................................................................ [ 50%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+........................................................................ [ 67%]
+........................................................................ [ 73%]
+........................................................................ [ 78%]
+........................................................................ [ 84%]
+........................................................................ [ 89%]
+........................................................................ [ 95%]
+..........................................................               [100%]
+================================== FAILURES ===================================
+____________ test_forced_deadline_with_stalled_nav_reader_finishes ____________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1481/test_forced_deadline_with_stal0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BBFC0F2360>
+
+    def test_forced_deadline_with_stalled_nav_reader_finishes(tmp_path, monkeypatch):
+        async def stalled(client, config, budget, blobs, index, names_ready=None, previous=None):
+            index.started.set()
+            await asyncio.sleep(3600)  # Alive but never reads the queue.
+            return index
+        monkeypatch.setattr(nav, 'prefetch', stalled)
+        orgs = numbers(COMPANIES)
+        cfg = config(tmp_path, orgs, hiring=True, workers=16, time_budget_seconds=8, deadline_fraction=1)
+        report, rows, elapsed = bounded(cfg, 60)
+        membership(cfg, rows, orgs)
+>       assert elapsed < 8 + 5 + 3, elapsed  # Finalisation and Windows disk I/O are bounded.
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 18.264999999999418
+E       assert 18.264999999999418 < ((8 + 5) + 3)
+
+tests\test_cancellation_safety.py:75: AssertionError
+________ test_large_boolean_attribute_does_not_stall_link_localization ________
+
+    def test_large_boolean_attribute_does_not_stall_link_localization():
+        import subprocess
+        import sys
+        script = """
+    from signalpost.web.html import Page
+    from signalpost.web.social import discover
+    url = 'https://www.instagram.com/example'
+    body = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'
+    assert url in discover(Page(body.encode(), 'https://example.no/'))[url]
+    """
+>       subprocess.run([sys.executable, '-c', script], timeout=5, check=True, capture_output=True)
+
+tests\test_link_evidence_spans.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: 1 args: ['C:\\Users\\Manish\\Downloads\\nordic-company-l...>
+input = None, endtime = 35660.296, orig_timeout = 5
+
+    def _communicate(self, input, endtime, orig_timeout):
+        # Start reader threads feeding into a list hanging off of this
+        # object, unless they've already been started.
+        if self.stdout and not hasattr(self, "_stdout_buff"):
+            self._stdout_buff = []
+            self.stdout_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stdout, self._stdout_buff))
+            self.stdout_thread.daemon = True
+            self.stdout_thread.start()
+        if self.stderr and not hasattr(self, "_stderr_buff"):
+            self._stderr_buff = []
+            self.stderr_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stderr, self._stderr_buff))
+            self.stderr_thread.daemon = True
+            self.stderr_thread.start()
+    
+        if self.stdin:
+            self._stdin_write(input)
+    
+        # Wait for the reader threads, or time out.  If we time out, the
+        # threads remain reading and the fds left open in case the user
+        # calls communicate again.
+        if self.stdout is not None:
+            self.stdout_thread.join(self._remaining_time(endtime))
+            if self.stdout_thread.is_alive():
+>               raise TimeoutExpired(self.args, orig_timeout)
+E               subprocess.TimeoutExpired: Command '['C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\.venv\\Scripts\\python.exe', '-c', "\nfrom signalpost.web.html import Page\nfrom signalpost.web.social import discover\nurl = 'https://www.instagram.com/example'\nbody = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'\nassert url in discover(Page(body.encode(), 'https://example.no/'))[url]\n"]' timed out after 5 seconds
+
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1630: TimeoutExpired
+=========================== short test summary info ===========================
+FAILED tests/test_cancellation_safety.py::test_forced_deadline_with_stalled_nav_reader_finishes
+FAILED tests/test_link_evidence_spans.py::test_large_boolean_attribute_does_not_stall_link_localization
+2 failed, 1280 passed in 786.74s (0:13:06)
