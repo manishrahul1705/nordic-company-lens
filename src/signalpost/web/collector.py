@@ -570,22 +570,26 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
                 publish(section, source_response, org, "social_profile." + digest(url)[:20], {"url": url, "platform": domain(url)}, "company-link:" + url, source_span)
                 section.claims[-1].reasons['relationship'] = 'Company-owned profile linked from verified website'
                 social_seen.add(url)
+        from .contact_policy import Regions, email_allowed, phone_allowed
+        contact_regions = Regions(source_page, context)
         contacts = []
         for link in source_page.links:
             if link.href.startswith("tel:") and (number := phone(link.href[4:])):
                 contacts.append(("phone", number, link.span))
             if link.href.startswith("mailto:"):
                 address = link.href[7:].split("?", 1)[0].strip()
-                if address.rsplit("@", 1)[-1].lower() == target_domain:
+                if email_allowed(address, context, target_domain, contact_regions):
                     contacts.append(("email", address, link.span))
         for match in re.finditer(r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", source_page.visible):
             address = match.group()
-            if address.rsplit("@", 1)[-1].lower() == target_domain:
+            if email_allowed(address, context, target_domain, contact_regions):
                 contacts.append(("email", address, source_page.span_for(address)[:150]))
         for match in re.finditer(r"(?:telefon|tlf|phone)\s*:?\s*((?:\+47|0047)?[ .()0-9-]{8,20})", source_page.visible, re.I):
             if number := phone(match.group(1)):
                 contacts.append(("phone", number, source_page.span_for(match.group(1))[:150]))
         for kind, contact, source_span in contacts:
+            if kind == 'phone' and not phone_allowed(contact, source_page, context, source_span, contact_regions):
+                continue
             if (kind, contact.casefold()) not in contact_seen:
                 if is_group:
                     pos = source_page.raw.find(contact)

@@ -47,3 +47,8 @@ This is an **open pre-existing contact-policy issue**, not a zero-error contact 
 ## Final state
 
 Part A: **ROLLED BACK**. Part B: **SKIPPED**. No production code from this task remains. Existing proof rules, news rules and contact behavior are exactly the pre-task runtime. Reports, reproducible measurement scripts and the rejected patch are retained. The restored-code suite was interrupted at 33% when the user authorized the separate contact-email precision fix. Its partial output is retained as `pytest-restored-interrupted.txt`; it is not a passing full-suite result. The completed rejected-trial suite is 1,312 passed. The contact fix will receive its own full suite and offline report.
+
+
+## Subsequent contact precision fix
+
+The open staff-email issue above is addressed separately in [the contact precision report](../contact-precision/REPORT.md). Its offline re-check removes all five flagged personal emails and both flagged staff-list mobiles. The rejected news feature remains reverted.
