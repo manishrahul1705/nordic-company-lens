@@ -3,7 +3,7 @@ import html
 import json
 import asyncio
 import re
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlsplit, urlunsplit, unquote
 from ..budget import SourceFailure
 from ..models.envelope import Error
 from ..models.evidence import digest
@@ -166,6 +166,26 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
     return targets[:limit]
 
 
+MAX_PROOF_PAGES = 5  # Includes the candidate landing page, excludes robots/XML.
+
+
+def extra_proof_targets(pages, base_url, seen=()):
+    """Only links published on this site nominate the two deeper proof pages."""
+    patterns = (r'(?:salgs|kjops|kjop)[\s/_-]*(?:betingelser|vilkar)|vilkar|betingelser|terms',
+                r'personvern|privacy', r'kontakt|contact|impressum',
+                r'om[- /]oss|(?:^|[/\s])om(?:[/\s?#]|$)|about')
+    ranked = []
+    for page in pages:
+        for link in page.links:
+            url = normalize_url(link.href)
+            if not url or url in seen or urlsplit(url).hostname != urlsplit(base_url).hostname:
+                continue
+            text = unquote(urlsplit(url).path + ' ' + link.text).casefold().replace('?','o').replace('?','a').replace('?','ae')
+            rank = next((i for i, pattern in enumerate(patterns) if re.search(pattern,text)),None)
+            if rank is not None:ranked.append((rank,url))
+    return list(dict.fromkeys(url for _,url in sorted(ranked,key=lambda item:item[0])))[:2]
+
+
 def previous_nomination(previous, context, units):
     if not previous:
         return None, None
@@ -319,12 +339,16 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     proof=Proof('VERIFIED','unique_no_corroborated',['registry_unique_name','name_in_identity','registry_corroboration'],4,token=legal_name(context.get('name')))
                     proof.rule='C'
             pages.append((response, page))
+            proof_page_attempts = 1
+            proof_urls = {response.url}
             best = (proof, response, page)
             if proof.level == "BLOCKED":
                 raise SourceFailure("block_page")
             if (candidate is refresh_candidate and refresh_proof and refresh_proof != response.url
                     and domain(refresh_proof) == candidate.domain and proof.level != 'REJECT'):
                 try:
+                    proof_page_attempts += 1
+                    proof_urls.add(refresh_proof)
                     checked_response = await http.get(refresh_proof, org, candidate.domain, proved)
                     if checked_response.status == 200:
                         checked_page = await offload(Page, checked_response.body, checked_response.url)
@@ -337,30 +361,35 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
             # Owner conflicts on any checked page cannot be rescued by another
-            # page on that domain. Up to three same-domain proof pages are checked.
+            # page on that domain. Keep the existing checks before deeper linked pages.
             vetoes = {'foreign_orgnr','different_legal_entity','hosting_default','parked','shared_registry_domain','placeholder','frameset_placeholder','provider_industry_mismatch'}
             if proof.reason not in vetoes:
-                seen = {response.url}
-                limit = 5  # Preserve the previous selection before adding pages.
+                seen = set(proof_urls)
+                initially_verified = best[0].level == 'VERIFIED'
+                limit = 5  # Preserve the existing selection and order.
                 targets=proof_page_targets(page,response.url,limit=limit)
                 if proof.level!='VERIFIED' and getattr(http.config,'website_proof_discovery',True):
                     from .round2 import proof_targets
                     original=set(targets)
                     targets=await proof_targets(page,response.url,http,org,targets)
                     entry['discovered_proof_targets']=[u for u in targets if u not in original]
-                # Never let a new path displace an old linked/sitemap/fixed
-                # target. The existing stop-after-proof and pooled caps apply.
-                previous_targets=list(targets)
-                additions=[u for u in proof_page_targets(page,response.url,limit=32)
-                           if u not in previous_targets][:2]
-                targets=previous_targets+additions
-                entry['additional_proof_targets']=additions
-                for position,target in enumerate(targets):
-                    if position>=FOLLOWUP_PAGES and best[0].level=='VERIFIED':
+                existing_targets = targets[:FOLLOWUP_PAGES]
+                entry['additional_proof_targets'] = []
+                def bounded_targets():
+                    yield from existing_targets
+                    if best[0].level not in {'VERIFIED','REJECT','BLOCKED'}:
+                        additions = extra_proof_targets([p for _,p in pages],response.url,seen)
+                        entry['additional_proof_targets'] = additions
+                        yield from additions
+                        if not additions:
+                            yield from targets[FOLLOWUP_PAGES:]  # Existing fixed fallback, within the same total cap.
+                for target in bounded_targets():
+                    if proof_page_attempts >= MAX_PROOF_PAGES:
                         break
                     if target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
+                    proof_page_attempts += 1
                     try:
                         extra = await http.get(target, org, candidate.domain, proved)
                     except SourceFailure as exc:
@@ -391,6 +420,9 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     ranks = {'REJECT': -1, 'BLOCKED': -1, 'LOW': 0, 'MEDIUM': 1, 'REGISTRY_DECLARED': 2, 'HIGH': 3, 'VERIFIED': 4}
                     if ranks[extra_proof.level] > ranks[best[0].level]:
                         best = (extra_proof, extra, extra_page)
+                    if not initially_verified and best[0].level == 'VERIFIED':
+                        break
+            entry['proof_page_attempts_including_homepage'] = proof_page_attempts
             proof, response, page = best
             entry.update(proof_type=proof.proof_type,rule=getattr(proof,'rule',None),reason=proof.reason)
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason, 'title':page.title, 'proof_page_url':response.url})

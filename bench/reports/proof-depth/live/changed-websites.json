@@ -1,0 +1,506 @@
+[
+  {
+    "baseline": {
+      "orgnr": "915118305",
+      "company": "HEIANE LEGESENTER AS",
+      "website": {
+        "value": {
+          "final_url": "https://www.heianelegesenter.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "legal_name_without_suffix_and_two_contacts",
+          "proof_page_url": "https://www.heianelegesenter.no/",
+          "signals": [
+            "legal_name_without_suffix",
+            "name_derived_domain",
+            "street",
+            "postcode_city"
+          ],
+          "points": 4,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "facd012cf3a032cd6446cc97d8a77b7051d8ea684e8b4214ceb08d3ba17cc2b9",
+            "source_url": "https://www.heianelegesenter.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-12T04:41:18.672673Z",
+            "content_sha256": "33cd3ffa26dd5c62d4c5101a3e3e82f696e6f7f633833239884a269f32b8ce1e",
+            "claim_span": "ument.documentElement);</script>\n<title>Heiane Legesenter</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//heianelegesenter.no' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link href='https://fonts.gstatic.com' crossorigin rel='precon",
+            "locator": "identity-proof:915118305",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"heianelegesenter.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"legal_name_without_suffix\", \"name_derived_domain\", \"street\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Heiane Legesenter\", \"proof_page_url\": \"https://www.heianelegesenter.no/\"}, {\"domain\": \"heianelegesenter.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://heianelegesenter.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.heianelegesenter.no/\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"heianelegesenter.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.heianelegesenter.no/\", \"final_url\": \"https://www.heianelegesenter.no/\", \"status\": 200}]"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://www.heianelegesenter.no/"
+        ],
+        "observed_social_profiles": []
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "heianelegesenter.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [
+              "https://www.heianelegesenter.no/kontakt-oss",
+              "https://www.heianelegesenter.no/privacy-policy"
+            ],
+            "proof_type": "legal_name_without_suffix_and_two_contacts",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Rundehaugen 19"
+          ],
+          "kommune": "STORD",
+          "kommunenummer": "4614",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "5412",
+          "poststed": "STORD"
+        },
+        "identity.registered_activity": [
+          "Legetjeneste."
+        ],
+        "identity.registered_email": "e-stoerk@online.no",
+        "identity.registered_phone": "53 00 62 62",
+        "identity.registered_in_vat": false,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 40000.0,
+          "antallAksjer": 40,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2015-03-16"
+        }
+      }
+    },
+    "candidate": {
+      "orgnr": "915118305",
+      "company": "HEIANE LEGESENTER AS",
+      "website": {
+        "value": {
+          "final_url": "https://heianelegesenter.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "legal_name_without_suffix_and_two_contacts",
+          "proof_page_url": "https://heianelegesenter.no/",
+          "signals": [
+            "legal_name_without_suffix",
+            "name_derived_domain",
+            "street",
+            "postcode_city"
+          ],
+          "points": 4,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "05afaf2c88c385647a67a5519b8d402280c47867752327c427952c374947a9e6",
+            "source_url": "https://heianelegesenter.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-12T05:58:55.032671Z",
+            "content_sha256": "b9d802bcf67fc94d21445001f857c9dcd4300cc4c0db9a0444ac21ecb238d678",
+            "claim_span": "ument.documentElement);</script>\n<title>Heiane Legesenter</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />\n<link rel=\"alternate\" type=\"application/rss+xml\"",
+            "locator": "identity-proof:915118305",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"heianelegesenter.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"legal_name_without_suffix\", \"name_derived_domain\", \"street\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Heiane Legesenter\", \"proof_page_url\": \"https://heianelegesenter.no/\"}, {\"domain\": \"heianelegesenter.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://heianelegesenter.no/\", \"final_url\": \"https://heianelegesenter.no/\", \"status\": 200}]"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://heianelegesenter.no/"
+        ],
+        "observed_social_profiles": []
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "heianelegesenter.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [],
+            "proof_page_attempts_including_homepage": 4,
+            "proof_type": "legal_name_without_suffix_and_two_contacts",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Rundehaugen 19"
+          ],
+          "kommune": "STORD",
+          "kommunenummer": "4614",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "5412",
+          "poststed": "STORD"
+        },
+        "identity.registered_activity": [
+          "Legetjeneste."
+        ],
+        "identity.registered_email": "e-stoerk@online.no",
+        "identity.registered_phone": "53 00 62 62",
+        "identity.registered_in_vat": false,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 40000.0,
+          "antallAksjer": 40,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2015-03-16"
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "orgnr": "993014591",
+      "company": "STØREN DYREKLINIKK AS",
+      "website": {
+        "value": {
+          "final_url": "https://www.storendyreklinikk.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "legal_name_without_suffix_and_two_contacts",
+          "proof_page_url": "https://www.storendyreklinikk.no/",
+          "signals": [
+            "legal_name_without_suffix",
+            "name_derived_domain",
+            "street",
+            "postcode_city"
+          ],
+          "points": 4,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "1e7b117e736a09186bebd2e05923818e843656a18e893f4454a623e2af6eb964",
+            "source_url": "https://www.storendyreklinikk.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-12T04:41:47.809164Z",
+            "content_sha256": "bcf4cf40449c33681aac2deee6b9edbad36cf63895e1b808049e2ab6f1ca7771",
+            "claim_span": "\"nb\"><head><meta charset=\"utf-8\"><title>Støren Dyreklinikk</title><meta name=\"robots\" content=\"all\"><meta name=\"generator\" content=\"One.com Web Editor\"><meta http-equiv=\"Cache-Control\" content=\"must-revalidate, max-age=0, public\"><meta http-equiv=\"Expires\" content=\"-1\"><meta name=\"viewport\" content=",
+            "locator": "identity-proof:993014591",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [
+        {
+          "value": {
+            "url": "https://instagram.com/storendyreklinikk",
+            "platform": "instagram.com"
+          },
+          "field": "social_profile.425f8671dc2dfa9569e9",
+          "evidence": [
+            {
+              "id": "841675320728a3dc25048d847fdb3246d55e0815e6f8c27e8181ebf978efe853",
+              "source_url": "https://www.storendyreklinikk.no/",
+              "source_class": "company_owned",
+              "retrieved_at": "2026-11-12T04:41:47.809164Z",
+              "content_sha256": "bcf4cf40449c33681aac2deee6b9edbad36cf63895e1b808049e2ab6f1ca7771",
+              "claim_span": "<a href=\"https://instagram.com/storendyreklinikk/?fbclid=IwAR3P_ocf5b49g_g6898m1UglRK481AQjykeEq6qfRTugVnlTQ8hAWm-etwU\" target=\"_blank\" style=\"width:32px;height:32px\" aria-label=\"Besøk vår Instagram-profil\">",
+              "locator": "company-link:https://instagram.com/storendyreklinikk",
+              "extraction_method": "signalpost.website.v1",
+              "source_identifier": null,
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      ],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"storendyreklinikk.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"legal_name_without_suffix\", \"name_derived_domain\", \"street\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Støren Dyreklinikk\", \"proof_page_url\": \"https://www.storendyreklinikk.no/\"}, {\"domain\": \"storendyreklinikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://storendyreklinikk.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"storendyreklinikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.storendyreklinikk.no/\", \"final_url\": \"https://www.storendyreklinikk.no/\", \"status\": 200}]"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://www.storendyreklinikk.no/",
+          "https://www.storendyreklinikk.no/kontakt.html"
+        ],
+        "observed_social_profiles": [
+          "https://instagram.com/storendyreklinikk"
+        ]
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "storendyreklinikk.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [
+              "https://www.storendyreklinikk.no/impressum",
+              "https://www.storendyreklinikk.no/kontakt-oss"
+            ],
+            "proof_pages_fetched": 1,
+            "proof_type": "legal_name_without_suffix_and_two_contacts",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Spjeldbakkan 8"
+          ],
+          "kommune": "MIDTRE GAULDAL",
+          "kommunenummer": "5027",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "7290",
+          "poststed": "STØREN"
+        },
+        "identity.registered_activity": [
+          "Veterinærtjenester for dyr. Samt salg av for og utstyr til disse."
+        ],
+        "identity.registered_phone": "72 43 19 55",
+        "identity.registered_in_vat": true,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 100000.0,
+          "antallAksjer": 100,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2008-08-30"
+        }
+      }
+    },
+    "candidate": {
+      "orgnr": "993014591",
+      "company": "STØREN DYREKLINIKK AS",
+      "website": {
+        "value": {
+          "final_url": "https://storendyreklinikk.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "legal_name_without_suffix_and_two_contacts",
+          "proof_page_url": "https://storendyreklinikk.no/",
+          "signals": [
+            "legal_name_without_suffix",
+            "name_derived_domain",
+            "street",
+            "postcode_city"
+          ],
+          "points": 4,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "285a099612c699a7d879a80c57b78deae97b702269c468ae973d2cd7c73cf7b7",
+            "source_url": "https://storendyreklinikk.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-12T05:59:22.111367Z",
+            "content_sha256": "bcf4cf40449c33681aac2deee6b9edbad36cf63895e1b808049e2ab6f1ca7771",
+            "claim_span": "\"nb\"><head><meta charset=\"utf-8\"><title>Støren Dyreklinikk</title><meta name=\"robots\" content=\"all\"><meta name=\"generator\" content=\"One.com Web Editor\"><meta http-equiv=\"Cache-Control\" content=\"must-revalidate, max-age=0, public\"><meta http-equiv=\"Expires\" content=\"-1\"><meta name=\"viewport\" content=",
+            "locator": "identity-proof:993014591",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [
+        {
+          "value": {
+            "url": "https://instagram.com/storendyreklinikk",
+            "platform": "instagram.com"
+          },
+          "field": "social_profile.425f8671dc2dfa9569e9",
+          "evidence": [
+            {
+              "id": "6f03ebdbdfa1525ba7e979e8b0136bbc304b2d2cdf58992a8a4378233e49c6a2",
+              "source_url": "https://storendyreklinikk.no/",
+              "source_class": "company_owned",
+              "retrieved_at": "2026-11-12T05:59:22.111367Z",
+              "content_sha256": "bcf4cf40449c33681aac2deee6b9edbad36cf63895e1b808049e2ab6f1ca7771",
+              "claim_span": "<a href=\"https://instagram.com/storendyreklinikk/?fbclid=IwAR3P_ocf5b49g_g6898m1UglRK481AQjykeEq6qfRTugVnlTQ8hAWm-etwU\" target=\"_blank\" style=\"width:32px;height:32px\" aria-label=\"Besøk vår Instagram-profil\">",
+              "locator": "company-link:https://instagram.com/storendyreklinikk",
+              "extraction_method": "signalpost.website.v1",
+              "source_identifier": null,
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      ],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"storendyreklinikk.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"legal_name_without_suffix\", \"name_derived_domain\", \"street\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Støren Dyreklinikk\", \"proof_page_url\": \"https://storendyreklinikk.no/\"}, {\"domain\": \"storendyreklinikk.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://storendyreklinikk.no/\", \"final_url\": \"https://storendyreklinikk.no/\", \"status\": 200}]"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://storendyreklinikk.no/",
+          "https://storendyreklinikk.no/kontakt.html"
+        ],
+        "observed_social_profiles": [
+          "https://instagram.com/storendyreklinikk"
+        ]
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "storendyreklinikk.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [],
+            "proof_pages_fetched": 1,
+            "proof_page_attempts_including_homepage": 4,
+            "proof_type": "legal_name_without_suffix_and_two_contacts",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Spjeldbakkan 8"
+          ],
+          "kommune": "MIDTRE GAULDAL",
+          "kommunenummer": "5027",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "7290",
+          "poststed": "STØREN"
+        },
+        "identity.registered_activity": [
+          "Veterinærtjenester for dyr. Samt salg av for og utstyr til disse."
+        ],
+        "identity.registered_phone": "72 43 19 55",
+        "identity.registered_in_vat": true,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 100000.0,
+          "antallAksjer": 100,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2008-08-30"
+        }
+      }
+    }
+  }
+]
