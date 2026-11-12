@@ -64,3 +64,12 @@ def test_registry_only_size_workplace_and_major_event_stay_three_sentences(tmp_p
     text=' '.join(s.text for s in brief.sentences)
     assert '12 registered employees' in text and 'registered workplace' in text and 'registered name change' in text
     assert validate(brief,row)==brief
+
+
+def test_gleif_metadata_does_not_make_registry_only_brief_verbose(tmp_path,permit):
+    row,_=envelope(tmp_path)
+    add(row,'identity.gleif.lei','EXAMPLELEI')
+    brief=generate(row)
+    assert 2<=len(brief.sentences)<=3
+    assert 'registered in GLEIF with LEI EXAMPLELEI' in brief.sentences[0].text
+    assert validate(brief,row)==brief

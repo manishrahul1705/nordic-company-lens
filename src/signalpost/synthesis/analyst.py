@@ -176,7 +176,7 @@ def generate(envelope):
     if gaps:
         text='; '.join(gaps);add('f',text[:1].upper()+text[1:]+'.',used)
     # Collapse absent-source checklists only for genuinely sparse registry profiles.
-    external=any(c.field.startswith(('identity.gleif.','procurement_award.','dated_item.','hiring.job.','hiring.site_job.')) or c.family=='website' for c in claims)
+    external=any(c.field.startswith(('procurement_award.','dated_item.','hiring.job.','hiring.site_job.')) or c.family=='website' for c in claims)
     if not external:
         first=[s for s in result.sentences if s.sentence_type=='a']
         size=[s for s in result.sentences if s.sentence_type in {'b','c'}]

@@ -8,8 +8,8 @@ def main():
     global OUT, CLONE
     parser=argparse.ArgumentParser();parser.add_argument("--final",action="store_true");args=parser.parse_args()
     if args.final:
-        CLONE=ROOT/"bench/cache/final-precision-final-clone"
-        OUT=ROOT/"bench/reports/final-precision/final-code"
+        CLONE=ROOT/"bench/cache/final-precision-final-clone-v2"
+        OUT=ROOT/"bench/reports/final-precision/final-code-v2"
     OUT.mkdir(parents=True,exist_ok=True)
     env=dict(os.environ)
     for key in list(env):
