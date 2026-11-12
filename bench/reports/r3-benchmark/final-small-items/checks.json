@@ -1,0 +1,66 @@
+{
+  "mode": "Offline proof replay and local cache instrumentation; not another live benchmark",
+  "cache": {
+    "gzip_opens": {
+      "cc_orgnr_index.json.gz": 1,
+      "shared_identifiers.json.gz": 1
+    },
+    "calls": 100,
+    "concurrent_workers": 4,
+    "cache_info": {
+      "hits": 98,
+      "misses": 2,
+      "maxsize": 4,
+      "currsize": 2
+    },
+    "elapsed_seconds": 1.566916299998411,
+    "same_object_per_filename": true
+  },
+  "bnv_saved_pages": [
+    {
+      "url": "https://bnv.no/",
+      "sha256": "d4398964cb149cf0d8ffc5b781c68e14db38b479d421825b3a47783ffd9c5598",
+      "level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "reason": "",
+      "other_orgnrs": []
+    },
+    {
+      "url": "https://bnv.no/kontakt/",
+      "sha256": "e3230fd30303305766a3b9ec17d222c6f8c6b450bf28e3202bc287aa270278bc",
+      "level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "reason": "",
+      "other_orgnrs": []
+    },
+    {
+      "url": "https://bnv.no/om-oss/",
+      "sha256": "c322a866bab4f32952471dfe4b52c3e332f6123749f95e3172a2f87face3457d",
+      "level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "reason": "",
+      "other_orgnrs": []
+    },
+    {
+      "url": "https://bnv.no/personvernerklaering/",
+      "sha256": "076fc28c4cbcfb756b5ebaa3196df6d2c841fe00746c324dae92666fa0ee4d82",
+      "level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "reason": "",
+      "other_orgnrs": []
+    }
+  ],
+  "bnv_now_passes_ownership": true,
+  "release_wall_seconds_per_100_valid_companies": [
+    372.7661578999978,
+    254.72229920000245
+  ],
+  "release_total_lines": 103,
+  "release_valid_companies": 100,
+  "istad": {
+    "sha256": "204ee52edfc85ec7e08936232092cbc6351b4e8d96534264bd1bb9ca00183012",
+    "blob_exists": false,
+    "code_deletion_or_write_skip_found": false,
+    "cause": "Microsoft Defender quarantined this exact blob: event 1116 detection and 1117 successful quarantine, Trojan:Script/Wacatac.H!ml. See defender-events.json. No blob deletion or skip path found in production or the R3 measurement runner; storage behavior unchanged."
+  }
+}

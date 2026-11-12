@@ -1,0 +1,60 @@
+[
+  {
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "run": "r3-baseline",
+    "url": "https://bnv.no/",
+    "sha256": "fb28b97859ad3a78b42baef3c30a58c53e7fa877fb53dd082f31ed7467bed771",
+    "level": "VERIFIED",
+    "reason": "",
+    "other_orgnrs": [],
+    "foreign_id_excerpt": null
+  },
+  {
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "run": "r3-baseline",
+    "url": "https://bnv.no/personvernerklaering/",
+    "sha256": "f15cd5586257ab649baa0442e5af855e8cf733db4572ba25f4776a82cf4e8f00",
+    "level": "VERIFIED",
+    "reason": "",
+    "other_orgnrs": [],
+    "foreign_id_excerpt": null
+  },
+  {
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "run": "r3-corrected-live",
+    "url": "https://bnv.no/",
+    "sha256": "d4398964cb149cf0d8ffc5b781c68e14db38b479d421825b3a47783ffd9c5598",
+    "level": "VERIFIED",
+    "reason": "",
+    "other_orgnrs": [],
+    "foreign_id_excerpt": null
+  },
+  {
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "run": "r3-corrected-live",
+    "url": "https://bnv.no/personvernerklaering/",
+    "sha256": "076fc28c4cbcfb756b5ebaa3196df6d2c841fe00746c324dae92666fa0ee4d82",
+    "level": "VERIFIED",
+    "reason": "",
+    "other_orgnrs": [],
+    "foreign_id_excerpt": "<style>#stack-1788790775 > * {\n  --stack-gap: 1.5rem;\n}</style></div></div></div></div><div id=\"gap-943737207\" class=\"gap-element clearfix\" style=\"display:block; height:auto;\">\n<style>#gap-943737207 {"
+  },
+  {
+    "company": "ISTAD ART SOLUTION NORWAY NUF",
+    "condition": "Current homepage blob missing on disk despite HTTP 200 request log",
+    "sha256": "204ee52edfc85ec7e08936232092cbc6351b4e8d96534264bd1bb9ca00183012",
+    "blob_exists": false,
+    "website_after_final_guard": false,
+    "entity_scope": {
+      "group_site": false,
+      "other_registry_owners": [],
+      "historical_shared_domain_nominations": [],
+      "shared_domain_index_available": true,
+      "withheld_fields": [
+        "official_website"
+      ],
+      "website_status": "ambiguous",
+      "website_reason": "group/shared site"
+    }
+  }
+]

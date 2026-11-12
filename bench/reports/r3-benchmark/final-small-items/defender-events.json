@@ -1,0 +1,20 @@
+[
+    {
+        "event_id":  1117,
+        "time_utc":  "2026-11-12T04:57:52.0436957Z",
+        "blob_sha256":  "204ee52edfc85ec7e08936232092cbc6351b4e8d96534264bd1bb9ca00183012",
+        "threat":  "Trojan:Script/Wacatac.H!ml",
+        "action":  "Quarantine",
+        "source":  "Microsoft-Windows-Windows Defender/Operational",
+        "action_succeeded":  true
+    },
+    {
+        "event_id":  1116,
+        "time_utc":  "2026-11-12T04:53:00.4292051Z",
+        "blob_sha256":  "204ee52edfc85ec7e08936232092cbc6351b4e8d96534264bd1bb9ca00183012",
+        "threat":  "Trojan:Script/Wacatac.H!ml",
+        "action":  "Detected",
+        "source":  "Microsoft-Windows-Windows Defender/Operational",
+        "action_succeeded":  false
+    }
+]

@@ -3,6 +3,7 @@ import gzip
 import json
 import re
 import unicodedata
+import threading
 from functools import lru_cache
 from pathlib import Path
 
@@ -36,8 +37,18 @@ def phone_key(value):
     return n if len(n)==8 else ''
 
 
-@lru_cache(maxsize=4)
+_BUNDLE_LOCK = threading.RLock()
+
+
 def bundled(filename):
+    # lru_cache alone allows duplicate concurrent misses. Source workers must
+    # share a single initial decode of each bundled index, too.
+    with _BUNDLE_LOCK:
+        return _bundled(filename)
+
+
+@lru_cache(maxsize=4)
+def _bundled(filename):
     for path in (Path(__file__).resolve().parents[1]/'data'/filename, Path(__file__).resolve().parents[3]/'data'/filename):
         if path.exists():
             with gzip.open(path,'rt',encoding='utf8') as f: return json.load(f)
