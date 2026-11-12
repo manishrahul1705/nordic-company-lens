@@ -1,5 +1,7 @@
 # R3 paired benchmark and complete source review
 
+Latest completed live verification: **112 websites, 48 social companies, 3 jobs companies, 1,000 activity companies** on corrected runtime `81086a9`. [Measured comparison and release refresh result (strict pair FAIL)](#fresh-live-corrected-verification--12-november-2026) below supersede the historical offline projection as the current result.
+
 Runtime under review: main `abc33af` versus candidate `18dde3c`. Precision correction: `7d38baa`. Merge `cdb2d12` includes fix-large-company-site; search-engine removal is `fc26f04`. Nothing pushed; main and fix-large-company-site refs unchanged.
 
 ## Input and execution
@@ -127,3 +129,67 @@ uv run python scripts/r3_finalize_report.py
 ```
 
 Analyzer recreates the raw review inputs; run review after it to restore the manual verdict ledger. Manual verdicts in r3_review.py document this fixed cohort, never production exceptions. Projection is an analytical lower bound, not new evaluator profiles or a regenerated site.
+
+## Fresh live corrected verification — 12 November 2026
+
+The corrected runtime `81086a9` was run once with the same README command, frozen 1,000-company bytes and defaults, fresh empty state, no bulk and stripped credentials. Exit 0; 1,000 envelopes and profiles; input SHA-256 unchanged. These are live measurements, replacing the earlier projection as the current measured result. No production code changed during this verification.
+
+| Metric | Main `abc33af` | Corrected `81086a9` |
+|---|---:|---:|
+| Websites | 106 | 112 |
+| Social companies | 43 | 48 |
+| Jobs companies (NAV or company-site) | 3 | 3 |
+| Activity companies | 1000 | 1000 |
+| Distinct available facts | 165504 | 165602 |
+| HTTP total | 9493 | 9735 |
+| HTTP mean/input | 9.493 | 9.735 |
+| HTTP max/company | 40 | 40 |
+| Wall seconds, full process | 1105.433 | 2052.506 |
+| Deadline hits | 0 | 0 |
+| Site warnings | none | none |
+| All report warnings | none | none |
+| Envelopes / profiles | 1,000 / 1,000 | 1,000 / 1,000 |
+
+The full-process wall time includes site construction, output and shutdown, and is higher than the earlier run. `report.runtime_ms` is 1,165.922 s (baseline 806.765 s), before the full site/end-to-end interval; the generated site is 762,927,741 bytes versus 757,791,285. This is not an isolated CPU/network timing experiment: an unrelated pre-existing Common Crawl worker was observed and left untouched, and an initial offline envelope scan overlapped late publication. No speed improvement is claimed. Both source snapshots and all measured timings remain unchanged.
+
+### Baseline websites missing now
+
+Exactly two baseline website companies are missing. Neither loss reproduces as a difference between main and corrected ownership code on the same saved evidence. No R3 regression fix was necessary; existing vetoes were preserved.
+
+| Company | Orgnr | Baseline URL | Reason / replay |
+|---|---|---|---|
+| ISTAD ART SOLUTION NORWAY NUF | 911691248 | https://www.pederistad.no | Homepage HTTP 200 logged SHA `204ee52e…83012`, but that blob is absent from disk. The final link-only guard cannot read the registered-role-holder proof and withholds it. Reconstructing this missing-file condition on the original link-only claim with valid evidence IDs withholds the site in both runtimes. The cause of file disappearance is unresolved; it is not established as a live-content change or R3 code regression. |
+| BERGEN VAKTMESTERTJENESTER AS | 990412375 | https://bnv.no | New privacy-page bytes contain generated HTML `id="gap-943737207"`; the pre-existing raw identifier scan misreads this checksum-valid design ID as `foreign_orgnr`. Baseline privacy bytes lack it. Both main and corrected code accept the old page and reject the new page identically. This is a live-page-triggered pre-existing false positive, left open rather than weakening a veto in this verification. |
+
+The two runtime replay JSON files are identical. They record old/new body hashes and the raw element-ID excerpt; original responses and outputs were not edited. Peder Istad’s missing-body reconstruction is a diagnostic experiment, not a regenerated evaluator envelope.
+
+All seven highlighted sites are present live:
+
+| Company | Orgnr | Current URL | Proof |
+|---|---|---|---|
+| FORMOSA AS | 994382217 | https://www.formosa.no | unique_no_corroborated |
+| ASKØY24 AS | 923998012 | https://www.askoy24.no | unique_no_corroborated |
+| TENSIO AS | 922828172 | https://www.tensio.no | unique_no_corroborated |
+| NORTH GREY AS | 934289099 | https://www.northgrey.no | unique_no_corroborated |
+| ULSTEIN MINILAGER AS | 922187991 | http://www.ulsteinminilager.no | unique_no_corroborated |
+| STILLASFORDEG AS | 924688696 | https://stillasfordeg.no | unique_no_corroborated |
+| ANKERMANN AS | 917329435 | https://www.ankermann.no | orgnr_on_page |
+
+Heiane Legesenter and Støren Dyreklinikk changed apex to www; the registered domain and ownership rule are unchanged. Støren’s proof body hash is identical. These are not company losses.
+
+### Gains and review gate
+
+Eight gained websites and nine new social profiles (five newly social companies) match exact company/URL entries already reviewed correct in `REVIEW.md`. There were **zero previously unreviewed gains**, zero wrong and zero doubtful inherited items. The current proof excerpts and links are in [gain-review-input.json](live-verification/gain-review-input.json); [review-result.json](live-verification/review-result.json) records the gate. New website proofs: orgnr 3, legal-name-plus-contact 1, registry phone 4. Sources: cc_index 3, legal-name guesses 5. No social platform was fetched.
+
+### Fresh-clone release refresh pair
+
+A new isolated local clone of `81086a9` installed with `uv sync --frozen`, with both bundled gzip indexes present (954,922 and 8,676,502 bytes). It used `bench/reports/release/orgnrs.txt` (103 lines: 100 valid and three invalid inputs), copied to `orgnrs.txt`. The literal README command ran twice against the same new `out/state`; outputs were archived before the second run. Credentials were stripped.
+
+| Run | Exit | Envelopes / profiles | HTTP | Company changes | Observation changes | Strict verifier exit |
+|---|---:|---:|---:|---:|---:|---:|
+| 1 | 0 | 103 / 103 | 807 | 0 | 0 | 0 |
+| 2 | 0 | 103 / 103 | 749 | 0 | 5 | 1 |
+
+**Strict refresh-pair result: FAIL (`Claim IDs differ`), despite zero company changes.** A.U. Bygg AS (993581755) had a TimeoutError on `/kontakt-29389s.html` in run 1 and HTTP 200 on the same page in run 2. Five genuinely newly checked facts (two emails, one phone, two descriptions) produced five observation changes. The homepage bytes and company identity are unchanged. This transient network difference is preserved in [release-diagnosis.json](live-verification/release-diagnosis.json); no retries were run merely to obtain a passing pair. The unmodified verifier checks schemas, exact membership, stored body hashes, verbatim excerpts, synthesis, stable claim IDs and zero company/observation changes. See [execution](live-verification/release-execution.json) and the run verification logs. Both runs separately pass the unmodified schema/evidence verifier; the second standalone check is in `release-run2-evidence-verification.txt`. Only the strict refresh-pair stability check fails. No outputs, verifier assertions or test expectations were changed to make the gate pass.
+
+Full runtime suite: **1,259 passed in 658.85 s** (see [tests.json](live-verification/tests.json)). Measurement-only changes add release/loss replay scripts and extend job counting to include `hiring.site_job.*`, alongside `hiring.job.*`. Neither source runtime nor existing wrong-company tests changed. Main and fix-large-company-site refs remain untouched; nothing pushed.

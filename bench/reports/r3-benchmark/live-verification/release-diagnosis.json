@@ -1,0 +1,123 @@
+{
+  "company_changes": 0,
+  "strict_pair_status": "FAIL: Claim IDs differ",
+  "observation_changes": 5,
+  "differences": [
+    {
+      "orgnr": "993581755",
+      "company": "A.U. BYGG AS",
+      "observation_changes": [
+        {
+          "section": "website",
+          "field": "contact.email.11ec41ebfe238d1cd3c5",
+          "claim_id": "0d0da0f539d2e648c112617722aa45f64490bc9e7ed1b10098b80cea8e355b04",
+          "previous_state": "unchecked_page",
+          "current_state": "available",
+          "reason": "newly_checked_supporting_page"
+        },
+        {
+          "section": "website",
+          "field": "contact.email.f998ec68aad31e524ea4",
+          "claim_id": "f05454c462c3569cb8338ccccdf621647a51de310f747f6e9065a77ae73aa895",
+          "previous_state": "unchecked_page",
+          "current_state": "available",
+          "reason": "newly_checked_supporting_page"
+        },
+        {
+          "section": "website",
+          "field": "contact.phone.726aeba7ec91bb584669",
+          "claim_id": "b60d10e2d347d9a967d3bf7aed27d4e44d56544fbfb6aac999ae4528606bcc58",
+          "previous_state": "unchecked_page",
+          "current_state": "available",
+          "reason": "newly_checked_supporting_page"
+        },
+        {
+          "section": "website",
+          "field": "website_description.meta_description.27fcd848611c0fb8",
+          "claim_id": "74f3380f2bbfb3a5e09ff7499845e0c46c559e819dfa9b44e58e47dec3854249",
+          "previous_state": "unchecked_page",
+          "current_state": "available",
+          "reason": "newly_checked_supporting_page"
+        },
+        {
+          "section": "website",
+          "field": "website_description.og_description.27fcd848611c0fb8",
+          "claim_id": "868514b55f843033ca03bd3fef509b1c9e529ee70951a9167797453db40cb4e0",
+          "previous_state": "unchecked_page",
+          "current_state": "available",
+          "reason": "newly_checked_supporting_page"
+        }
+      ],
+      "removed_fields": [],
+      "added_claims": [
+        {
+          "field": "website_description.meta_description.27fcd848611c0fb8",
+          "value": {
+            "text": "A.U. Bygg AS\r\nOrg.nr 993 581 755 MVAAdresse Postboks 78232 Straumen\r\nTlf 481 19 072E-post post@aubygg.no\r\nMagne AlvestadDaglig lederTlf 481 19 072/909 69 145E-post magne@aubygg.no\r\nBen Inge AlvestadPr ...",
+            "kind": "meta_description",
+            "self_description": true,
+            "identity_level": "VERIFIED",
+            "identity_claim_id": "b70848b9ae0aaa3227ea6c658fc6bcef550645c60ef31769d3ca762ceccedfd5"
+          }
+        },
+        {
+          "field": "website_description.og_description.27fcd848611c0fb8",
+          "value": {
+            "text": "A.U. Bygg AS\r\nOrg.nr 993 581 755 MVAAdresse Postboks 78232 Straumen\r\nTlf 481 19 072E-post post@aubygg.no\r\nMagne AlvestadDaglig lederTlf 481 19 072/909 69 145E-post magne@aubygg.no\r\nBen Inge AlvestadPr ...",
+            "kind": "og_description",
+            "self_description": true,
+            "identity_level": "VERIFIED",
+            "identity_claim_id": "b70848b9ae0aaa3227ea6c658fc6bcef550645c60ef31769d3ca762ceccedfd5"
+          }
+        },
+        {
+          "field": "contact.email.f998ec68aad31e524ea4",
+          "value": "ben@aubygg.no"
+        },
+        {
+          "field": "contact.email.11ec41ebfe238d1cd3c5",
+          "value": "magne@aubygg.no"
+        },
+        {
+          "field": "contact.phone.726aeba7ec91bb584669",
+          "value": "+4747468234"
+        }
+      ],
+      "relevant_requests": [
+        {
+          "run": 1,
+          "url": "https://aubygg.no/kontakt-29389s.html",
+          "status": null,
+          "error": "TimeoutError",
+          "exception_message": "",
+          "content_sha256": null
+        },
+        {
+          "run": 1,
+          "url": "https://aubygg.no/kontakt",
+          "status": 404,
+          "error": null,
+          "exception_message": null,
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "run": 2,
+          "url": "https://aubygg.no/kontakt-29389s.html",
+          "status": 200,
+          "error": null,
+          "exception_message": null,
+          "content_sha256": "acfa5ed2c0c7f3e71802864168ed56a09e8360b3552e4b171a02fd5d3e9fc656"
+        },
+        {
+          "run": 2,
+          "url": "https://aubygg.no/kontakt",
+          "status": 404,
+          "error": null,
+          "exception_message": null,
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ],
+  "cause": "A.U. Bygg supporting contact page timed out in run 1, succeeded in run 2. Five newly checked supporting facts are correctly labelled observations; original outputs and strict verifier were not changed."
+}

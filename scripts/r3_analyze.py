@@ -30,7 +30,7 @@ def summarize(run):
             return {'value':c['value'],'field':c['field'],'evidence':refs}
         site=next((record(c) for c in claims if c['field']=='official_website'),None)
         social=[record(c) for c in claims if c['field'].startswith(('social_profile.','registry_social.'))]
-        jobs=[record(c) for c in claims if c['field'].startswith('hiring.job.')]
+        jobs=[record(c) for c in claims if c['field'].startswith(('hiring.job.','hiring.site_job.'))]
         activity=[c for c in claims if c.get('family')=='activity']
         for key,items in (('websites',site),('social_companies',social),('jobs',jobs),('activity',activity)):
             counts[key]+=bool(items)

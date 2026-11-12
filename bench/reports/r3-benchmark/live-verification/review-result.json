@@ -1,0 +1,161 @@
+{
+  "new_website_gains": 8,
+  "new_social_profile_additions": 9,
+  "newly_unreviewed_gains": 0,
+  "inherited_correct_verdicts": 17,
+  "wrong": 0,
+  "doubtful": 0,
+  "highlighted_baseline_sites_retained": [
+    {
+      "orgnr": "994382217",
+      "company": "FORMOSA AS",
+      "website": {
+        "final_url": "https://www.formosa.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.formosa.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "923998012",
+      "company": "ASKØY24 AS",
+      "website": {
+        "final_url": "https://www.askoy24.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.askoy24.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "922828172",
+      "company": "TENSIO AS",
+      "website": {
+        "final_url": "https://www.tensio.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.tensio.no/no/kunde/kontakt-oss",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "wikidata_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "934289099",
+      "company": "NORTH GREY AS",
+      "website": {
+        "final_url": "https://www.northgrey.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.northgrey.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "922187991",
+      "company": "ULSTEIN MINILAGER AS",
+      "website": {
+        "final_url": "http://www.ulsteinminilager.no",
+        "transport_scheme": "http",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "http://www.ulsteinminilager.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "924688696",
+      "company": "STILLASFORDEG AS",
+      "website": {
+        "final_url": "https://stillasfordeg.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://stillasfordeg.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "917329435",
+      "company": "ANKERMANN AS",
+      "website": {
+        "final_url": "https://www.ankermann.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.ankermann.no/contact-1",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    }
+  ],
+  "method": "Exact company and website/social URL lookup against committed REVIEW.md ledgers; every live gain had already been reviewed correct. Current ownership proof excerpts retained in gain-review-input.json. No prior doubtful/wrong item is inherited."
+}
