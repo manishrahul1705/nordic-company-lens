@@ -1,0 +1,43 @@
+{
+  "method": "Offline replay of final bookkeeping only; original saved pair is unchanged.",
+  "original_sha256": {
+    "bench\\cache\\final-precision-final-clone-v2\\validation\\run1\\envelopes.jsonl": "489634ab024fd09a8f18b0a8777a7bccb73c36474734c3f054e2d1274215ac4d",
+    "bench\\cache\\final-precision-final-clone-v2\\validation\\run2\\envelopes.jsonl": "cbd95388fcdd7cd3952ed4d3b6fe2f1fbd241453517575c6edf1c055df97342e"
+  },
+  "removed_observations": [
+    {
+      "orgnr": "897051982",
+      "before": [
+        {
+          "section": "website",
+          "previous_state": "ambiguous",
+          "current_state": "available",
+          "reason": "website_candidates"
+        }
+      ],
+      "after": []
+    }
+  ],
+  "strict_pair": {
+    "lines": 103,
+    "schema_valid": true,
+    "published_claims": 16810,
+    "source_blobs_verified": 416,
+    "synthesis_companies": 103,
+    "synthesis_sentences": 255,
+    "synthesis_unverified_values": 0,
+    "rerun_lines": 103,
+    "identical_claim_ids": true,
+    "changes": 0,
+    "observation_changes": 0
+  },
+  "second_run_evidence": {
+    "lines": 103,
+    "schema_valid": true,
+    "published_claims": 16810,
+    "source_blobs_verified": 416,
+    "synthesis_companies": 103,
+    "synthesis_sentences": 255,
+    "synthesis_unverified_values": 0
+  }
+}

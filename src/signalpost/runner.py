@@ -590,6 +590,9 @@ async def _run(config, client=None):
     await offload(drop_shared, list(envelopes.values()), blobs)
     from .web.entity_scope import enforce as enforce_entity_scope
     await offload(enforce_entity_scope, list(envelopes.values()), blobs, bulk)
+    from .refresh.diff import reconcile_final_observations
+    for org, envelope in envelopes.items():
+        await offload(reconcile_final_observations, envelope, prior.get(org))
     progress.stage_update("Cited Synthesis", "running")
     synthesis_service=SynthesisService()
     for envelope in envelopes.values():

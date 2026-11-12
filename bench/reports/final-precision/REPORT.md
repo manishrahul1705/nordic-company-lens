@@ -70,3 +70,7 @@ No company-specific exceptions were added. Regression fixtures cover unrelated p
 | 35c43dd, final sparse refinement | 111.57 / 904 | 106.12 / 900 | 11 / 6 | 0 company changes, 1 observation; IDs/briefings stable |
 
 Initial wrong/doubtful verdicts and all verifier failures remain retained. Final precision has zero retained wrong/doubtful reviewed items. The one accounts failed state and the one refresh diagnostic observation remain visible; no result was skipped or rewritten to produce a pass.
+
+## Subsequent refresh bookkeeping correction
+
+The historical failure above is preserved. A later final-state bookkeeping replay now passes the unchanged strict verifier with zero company and observation changes; no claims or guard decisions change. See [refresh bookkeeping report](../refresh-bookkeeping/REPORT.md).
