@@ -1,0 +1,46 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 16%]
+........................................................................ [ 21%]
+........................................................................ [ 27%]
+........................................................................ [ 32%]
+........................................................................ [ 38%]
+........................................................................ [ 43%]
+........................................................................ [ 49%]
+.....F.................................................................. [ 54%]
+........................................................................ [ 60%]
+........................................................................ [ 65%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 82%]
+........................................................................ [ 87%]
+........................................................................ [ 93%]
+........................................................................ [ 98%]
+...............                                                          [100%]
+================================== FAILURES ===================================
+______________ test_activity_live_pipeline_synthesis_and_refresh ______________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1501/test_activity_live_pipeline_sy0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000026425282DE0>
+
+    def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
+        from signalpost.models.envelope import Envelope
+        from signalpost.synthesis.validate import sentence_error
+        now=datetime.now(timezone.utc).date().isoformat()
+        xml=f'<urlset><url><loc>https://example.no/news/update</loc><lastmod>{now}</lastmod></url></urlset>'
+        def response(request):
+            if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nAllow: /')
+            if request.url.path=='/sitemap.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/xml'})
+            if request.url.path=='/news/update':
+                return httpx.Response(200,text=f'<head><title>New office</title></head><article><h1>New office</h1><time datetime="{now}"></time><p>' + 'The company opened a new office for its customers. ' * 4 + '</p></article>')
+            return httpx.Response(200,text=html())
+        report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True,website_request_cap=14,website_total_request_cap=18)
+        assert row['run']['sections']['activity']=='available'
+>       assert len([u for u in requests if 'data.brreg.no' not in u]) <= 9
+E       AssertionError: assert 10 <= 9
+E        +  where 10 = len(['https://example.no/robots.txt', 'https://example.no/', 'https://example.no/kontakt', 'https://example.no/om-oss', 'https://example.no/about', 'https://example.no/sitemap.xml', ...])
+
+tests\test_recall.py:138: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_recall.py::test_activity_live_pipeline_synthesis_and_refresh
+1 failed, 1310 passed in 324.47s (0:05:24)

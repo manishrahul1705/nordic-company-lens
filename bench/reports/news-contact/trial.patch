@@ -1,0 +1,240 @@
+--- a/src/signalpost/web/activity.py
++++ b/src/signalpost/web/activity.py
+@@ -166,7 +166,7 @@
+     return sorted(unique.values(), key=lambda x: (x[0]['date'], x[0]['url']), reverse=True), []
+ 
+ 
+-async def fetch(org, envelope, http, pages):
++async def fetch_existing(org, envelope, http, pages):
+     proof = next((c for c in envelope.claims if c.field == 'official_website' and c.availability == 'available'), None)
+     if proof and proof.value.get('content_allowed') is False:
+         return missing('activity', 'website_link_only', state='not_applicable')
+@@ -358,3 +358,9 @@
+             section.state='available';section.errors.append(Error(section='activity',code=exc.code,message='Additional article checks incomplete; verified articles retained'))
+             return section
+         return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked'} else 'failed')
++
++
++async def fetch(org, envelope, http, pages):
++    section = await fetch_existing(org, envelope, http, pages)
++    from .index_news import supplement
++    return await supplement(section, org, envelope, http, pages)
+--- a/src/signalpost/web/fetcher.py
++++ b/src/signalpost/web/fetcher.py
+@@ -3,6 +3,10 @@
+ import time
+ import ssl
+ import errno
++from contextvars import ContextVar
++
++# Optional per-task ceiling; supplementary discovery includes robots/redirects.
++extra_request_ceiling = ContextVar("extra_request_ceiling", default=None)
+ from dataclasses import dataclass, replace
+ from urllib.parse import urlsplit, urljoin, urlunsplit
+ from urllib.robotparser import RobotFileParser
+@@ -157,6 +161,9 @@
+                 company_cap = min(40,self.config.website_request_cap + int(org in self.activity_extra),
+                                   max(0,self.config.website_total_request_cap-registry_requests))
+                 if self.counts.get(org, 0) >= company_cap:
++                    raise SourceFailure("website_budget_exhausted")
++                extra_limit = extra_request_ceiling.get()
++                if extra_limit and extra_limit[0] == org and self.counts.get(org, 0) >= extra_limit[1]:
+                     raise SourceFailure("website_budget_exhausted")
+                 event = self.budget.reserve(url, parts.hostname, org)
+                 event["section"] = "website"
+--- a/src/signalpost/web/index_news.py
++++ b/src/signalpost/web/index_news.py
+@@ -0,0 +1,101 @@
++"""At most two supplementary same-domain feed/sitemap requests, candidates never events."""
++import html
++import calendar
++import re
++from datetime import datetime, timezone, timedelta
++from urllib.parse import urljoin, urlsplit
++import xml.etree.ElementTree as ET
++
++from ..budget import SourceFailure
++from ..models.evidence import digest
++from ..sources.extract import Section, add, response_source
++from ..workers import offload
++from .activity import parse
++from .fetcher import extra_request_ceiling
++from .html import Page
++from .policy import domain, normalize_url
++from .social import path_scope, company_names, mentions_company
++
++
++def entries(body, url, now):
++    items, children = parse(body, url, now)
++    cutoff=now.date().replace(year=now.year-2, day=min(now.day,calendar.monthrange(now.year-2,now.month)[1]))
++    return [(value, locator, span) for value, locator, span in items
++            if value['date'] and cutoff <=
++            datetime.fromisoformat(value['date']).date() <= now.date()
++            and not re.search(r'/(?:produkt[^/]*|products?|shop|kategori|category|tags?|archive|side|page)(?:/|$)',
++                              urlsplit(value['url']).path, re.I)], children
++
++
++def nominations(proof, pages, robots):
++    root = domain(proof.value['final_url']);feeds=[];maps=[]
++    for response, page in pages:
++        if domain(response.url) != root:continue
++        for tag in re.findall(r'<link\b[^>]*>', page.raw, re.I):
++            attrs={k.lower():html.unescape(v) for k,_,v in re.findall(r'([\w-]+)\s*=\s*([\'"])(.*?)\2', tag, re.S)}
++            if attrs.get('type','').lower() in {'application/rss+xml','application/atom+xml'} and 'alternate' in attrs.get('rel','').lower():
++                target=normalize_url(urljoin(response.url, attrs.get('href','')))
++                if target and domain(target)==root:feeds.append(target)
++    for origin, parser in sorted(robots.items()):
++        if domain(origin)==root:maps.extend(u for u in parser.site_maps() or [] if domain(u)==root)
++    base=proof.value['final_url'].split('?',1)[0].rstrip('/')
++    return list(dict.fromkeys(sorted(set(feeds))+sorted(set(maps))+[base+'/sitemap.xml',base+'/sitemap_index.xml']))
++
++
++async def supplement(section, org, envelope, http, pages):
++    if any(c.field.startswith('dated_item.') and c.availability=='available' for c in section.claims):
++        return section  # Existing verified article discovery already succeeded.
++    proof=next((c for c in envelope.claims if c.field=='official_website' and c.availability=='available'),None)
++    if not proof or proof.carried_forward or proof.value.get('identity_level')!='VERIFIED' or proof.value.get('content_allowed') is False:
++        return section
++    context={'name':next((c.value for c in envelope.claims if c.field=='identity.legal_name' and c.availability=='available'),''),
++             'subunits':[c.value for c in envelope.claims if c.field.startswith('subunits.unit.') and c.availability=='available']}
++    scope=path_scope(proof.value,context);root=domain(proof.value['final_url'])
++    targets=nominations(proof,pages,http.robots)
++    known={c.field for c in section.claims};count=sum(c.field.startswith('dated_item.') for c in section.claims)
++    checked=set(envelope.run.refresh.get('activity',{}).get('checked_urls',[]))
++    calls=0;started=http.counts.get(org,0)
++    ceiling_token=extra_request_ceiling.set((org,started+2))
++    http.activity_extra.add(org)
++    try:
++        while targets and calls<2 and http.counts.get(org,0)-started<2 and count<10:
++            target=targets.pop(0);calls+=1
++            response=await http.get(target,org,root,xml=True)
++            checked.add(response.url)
++            if response.status!=200 or domain(response.url)!=root:continue
++            try:items,children=await offload(entries,response.body,response.url,datetime.now(timezone.utc))
++            except (ValueError,ET.ParseError):continue
++            if children:
++                targets=children[:1]+targets
++                continue
++            for value,locator,span in items:
++                field='dated_item.'+digest(value['url'])[:20]
++                if field in known or count>=10:continue
++                if scope and (not urlsplit(value['url']).path.startswith(scope+'/') or not mentions_company(value['title'],company_names(context))):continue
++                title_response=None;title_span=None
++                if value.get('title_source')=='title from URL':
++                    if calls>=2 or http.counts.get(org,0)-started>=2:break
++                    calls+=1;title_response=await http.get(value['url'],org,root)
++                    checked.add(title_response.url)
++                    if title_response.status!=200 or domain(title_response.url)!=root:continue
++                    page=await offload(Page,title_response.body,title_response.url)
++                    if not page.title or len(page.title)>200 or not page.span_for(page.title):continue
++                    if re.search(r'add.to.cart|legg.{0,10}handlekurv',page.raw,re.I):continue
++                    value={**value,'title':page.title,'title_source':'page_title'}
++                    title_span=page.span_for(page.title)[:300]
++                value={**value,'identity_level':proof.value['identity_level'],'identity_claim_id':proof.id}
++                add(section,response_source(response),org,'activity',field,value,locator,span=span,effective=value['date'],
++                    source_class='company_owned',method='signalpost.activity.index.v1')
++                if title_response is not None:
++                    extra=Section();add(extra,response_source(title_response),org,'activity',field,value,'/title',span=title_span,
++                        source_class='company_owned',method='signalpost.activity.index-title.v1')
++                    section.claims[-1].evidence_ids+=extra.claims[0].evidence_ids;section.evidence+=extra.evidence
++                known.add(field);count+=1
++    except SourceFailure:
++        pass  # Supplementary discovery never hides existing verified articles or registry activity.
++    finally:
++        extra_request_ceiling.reset(ceiling_token)
++        http.activity_extra.discard(org)
++        envelope.run.refresh.setdefault('activity',{})['checked_urls']=sorted(checked)
++    if section.claims:section.state='available'
++    return section
+--- a/tests/test_index_news.py
++++ b/tests/test_index_news.py
+@@ -0,0 +1,89 @@
++import asyncio
++import hashlib
++from datetime import datetime,timezone
++from types import SimpleNamespace
++import pytest
++from signalpost.web.index_news import entries,supplement
++from signalpost.web.html import Page
++from signalpost.sources.extract import Section
++from signalpost.budget import SourceFailure
++
++NOW=datetime(2026,11,12,tzinfo=timezone.utc)
++
++def xml(url='https://example.no/news/contract',date='2026-11-01',title='New workshop'):
++    return f'<rss><channel><item><title>{title}</title><link>{url}</link><pubDate>{date}</pubDate></item></channel></rss>'.encode()
++
++@pytest.mark.parametrize('url,date,expected',[
++    ('https://example.no/news/contract','2026-11-01',1),
++    ('https://foreign.no/news/contract','2026-11-01',0),
++    ('https://example.no/news/contract','',0),
++    ('https://example.no/news/contract','2024-11-11',0),
++    ('https://example.no/news/contract','2024-11-12',1),
++    ('https://example.no/shop/product','2026-11-01',0)])
++def test_feed_item_eligibility(url,date,expected):
++    assert len(entries(xml(url,date),'https://example.no/feed/',NOW)[0])==expected
++
++
++def test_sitemap_requires_explicit_date():
++    assert not entries(b'<urlset><url><loc>https://example.no/news/workshop</loc></url></urlset>','https://example.no/sitemap.xml',NOW)[0]
++
++
++def test_supplement_keeps_budget_domain_limit_and_source_span():
++    body=xml(date=datetime.now(timezone.utc).date().isoformat())
++    response=SimpleNamespace(url='https://example.no/feed/',body=body,status=200,
++        sha=hashlib.sha256(body).hexdigest(),retrieved_at='2026-11-12T00:00:00Z')
++    calls=[]
++    async def get(url,*args,**kwargs):
++        calls.append(url)
++        if len(calls)>1:raise SourceFailure('website_budget_exhausted')
++        return response
++    proof=SimpleNamespace(field='official_website',availability='available',carried_forward=False,id='proof',
++        value={'identity_level':'VERIFIED','final_url':'https://example.no'})
++    envelope=SimpleNamespace(claims=[proof],run=SimpleNamespace(refresh={}))
++    http=SimpleNamespace(get=get,robots={},counts={},activity_extra=set())
++    page=Page(b'<link rel="alternate" type="application/rss+xml" href="/feed/">','https://example.no')
++    section=asyncio.run(supplement(Section(state='not_available'),'123',envelope,http,[(SimpleNamespace(url=page.url),page)]))
++    assert len(calls)<=2 and calls[0]=='https://example.no/feed/'
++    assert len(section.claims)==1 and section.state=='available'
++    assert section.claims[0].value['date_source']=='pubDate'
++    assert section.evidence[0].claim_span in body.decode()
++    assert not http.activity_extra
++
++
++def test_nonverified_site_never_fetches():
++    proof=SimpleNamespace(field='official_website',availability='available',carried_forward=False,
++        value={'identity_level':'LOW'})
++    envelope=SimpleNamespace(claims=[proof])
++    section=Section(state='not_available')
++    assert asyncio.run(supplement(section,'123',envelope,None,[])) is section
++
++
++def test_actual_http_ceiling_counts_robots_and_stops_third_request(tmp_path):
++    import httpx
++    from signalpost.web.fetcher import WebsiteHttp, extra_request_ceiling
++    from signalpost.budget import Budget
++    from signalpost.sources.blobstore import BlobStore
++    from tests.test_registry import config
++    from tests.test_websites import OUR
++    calls=[]
++    def respond(request):
++        calls.append(str(request.url))
++        return httpx.Response(200,text='User-agent: *\nAllow: /' if request.url.path=='/robots.txt' else 'ok')
++    async def dns(*args):return ['93.184.216.34']
++    cfg=config(tmp_path,[OUR]).model_copy(update={'website_politeness_seconds':0})
++    async def run():
++        async with httpx.AsyncClient(transport=httpx.MockTransport(respond)) as client:
++            http=WebsiteHttp(client,cfg,Budget(cfg),BlobStore(cfg.state_dir),dns)
++            token=extra_request_ceiling.set((OUR,2))
++            try:
++                await http.get('https://example.no/feed/',OUR,'example.no')
++                with pytest.raises(SourceFailure):await http.get('https://example.no/sitemap.xml',OUR,'example.no')
++            finally:extra_request_ceiling.reset(token)
++            assert http.counts[OUR]==2
++    asyncio.run(run())
++    assert len(calls)==2 and calls[0].endswith('/robots.txt')
++
++
++def test_existing_news_never_adds_supplementary_requests():
++    section=Section(claims=[SimpleNamespace(field='dated_item.existing',availability='available')])
++    assert asyncio.run(supplement(section,'123',None,None,[])) is section
