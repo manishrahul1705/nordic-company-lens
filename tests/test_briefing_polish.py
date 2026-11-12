@@ -52,3 +52,15 @@ def test_sparse_two_or_three_cited_sentences_and_refresh_stability(tmp_path):
     row.run.refresh.update(mode='refresh',previous_completed_at='2026-11-11T00:00:00Z')
     assert first==generate(row)
     assert validate(first,row)==first
+
+
+def test_registry_only_size_workplace_and_major_event_stay_three_sentences(tmp_path,permit):
+    row,_=envelope(tmp_path)
+    add(row,'identity.employees',12)
+    add(row,'subunits.unit.982257867',{'organisation_number':'982257867','name':'Example AS','address':{'kommune':'OSLO'}},'subunits')
+    add(row,'registry_change.polish',{'date':'2026-11-01','changed_field':'/navn'},'activity')
+    brief=generate(row)
+    assert 2<=len(brief.sentences)<=3
+    text=' '.join(s.text for s in brief.sentences)
+    assert '12 registered employees' in text and 'registered workplace' in text and 'registered name change' in text
+    assert validate(brief,row)==brief

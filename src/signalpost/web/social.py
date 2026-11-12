@@ -15,6 +15,8 @@ def profile_url(url):
         return None
     if p.scheme not in {"http", "https"} or root not in SOCIAL:
         return None
+    if re.search(r'\s',unquote(p.path)):
+        return None
     bits = [x for x in p.path.split("/") if x]
     if not bits:
         return None

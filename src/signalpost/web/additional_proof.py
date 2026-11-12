@@ -18,6 +18,13 @@ def additional_proof(page, org, context):
     # independent ownership evidence for these additional rules.
     if not text.strip() or (len(text.strip()) < 200 and re.match(r'\s*her kommer\b', text, re.I)):
         return None
+    # A registered contact can belong to a director, adviser or another business.
+    # It is corroboration only when this exact legal publisher is also identified.
+    from .names import normalized
+    legal = normalized(context.get('name'))
+    identity = normalized(' '.join([page.title,*page.identity_headings,*page.footer_parts]))
+    if not legal or not re.search(r'(?<!\w)'+re.escape(legal)+r'(?!\w)',identity):
+        return None
     counts = shared_identifiers.bundled('shared_identifiers.json.gz')
     email = str(context.get('email') or '').strip().casefold()
     email_domain = email.rsplit('@', 1)[-1] if '@' in email else ''

@@ -1,10 +1,15 @@
 ﻿"""Final-precision fresh-clone README pair and unchanged strict verifier."""
-import hashlib,json,os,shutil,subprocess,time
+import argparse,hashlib,json,os,shutil,subprocess,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 CLONE=ROOT/'bench/cache/final-precision-clone'
 OUT=ROOT/'bench/reports/final-precision'
 def main():
+    global OUT, CLONE
+    parser=argparse.ArgumentParser();parser.add_argument("--final",action="store_true");args=parser.parse_args()
+    if args.final:
+        CLONE=ROOT/"bench/cache/final-precision-final-clone"
+        OUT=ROOT/"bench/reports/final-precision/final-code"
     OUT.mkdir(parents=True,exist_ok=True)
     env=dict(os.environ)
     for key in list(env):

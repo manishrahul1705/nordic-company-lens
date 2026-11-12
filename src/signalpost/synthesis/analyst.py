@@ -177,15 +177,24 @@ def generate(envelope):
         text='; '.join(gaps);add('f',text[:1].upper()+text[1:]+'.',used)
     # Collapse absent-source checklists only for genuinely sparse registry profiles.
     external=any(c.field.startswith(('identity.gleif.','procurement_award.','dated_item.','hiring.job.','hiring.site_job.')) or c.family=='website' for c in claims)
-    if not external and not financial and not number_claim(fields.get('identity.employees')) and len(units)<=1:
+    if not external:
         first=[s for s in result.sentences if s.sentence_type=='a']
-        substantive=[s for s in result.sentences if s.sentence_type in {'c','d'}]
-        if len(substantive)>1:substantive=[s for s in substantive if s.sentence_type=='d']
-        gaps=[s for s in result.sentences if s.sentence_type in {'e','f'}]
-        if gaps:
-            combined=AnalystSentence(sentence_type='f',text='; '.join(s.text.rstrip('.') for s in gaps)+'.',claim_ids=list(dict.fromkeys(cid for s in gaps for cid in s.claim_ids)))
-            result.sentences=first+substantive+[combined]
-        else:result.sentences=(first+substantive)[:3]
+        size=[s for s in result.sentences if s.sentence_type in {'b','c'}]
+        events=[s for s in result.sentences if s.sentence_type=='d']
+        retained=first[:]
+        if size:
+            pieces=[s.text.rstrip('.') for s in size]
+            text=pieces[0]+'; '+('; '.join(p[:1].lower()+p[1:] for p in pieces[1:])) if len(pieces)>1 else pieces[0]
+            workplace=next((s for s in size if s.record_type=='workplaces'),None)
+            retained.append(AnalystSentence(sentence_type='b',text=text+'.',
+                claim_ids=list(dict.fromkeys(cid for s in size for cid in s.claim_ids)),
+                value_kind='derived' if any(s.value_kind=='derived' for s in size) else 'reported',
+                count=workplace.count if workplace else None,record_type='workplaces' if workplace else None))
+        retained+=events[:1]
+        if len(retained)<2:
+            gaps=[s for s in result.sentences if s.sentence_type in {'e','f'}]
+            if gaps:retained.append(AnalystSentence(sentence_type='f',text='; '.join(s.text.rstrip('.') for s in gaps)+'.',claim_ids=list(dict.fromkeys(cid for s in gaps for cid in s.claim_ids))))
+        result.sentences=retained
     return result
 
 def validate(brief,envelope):

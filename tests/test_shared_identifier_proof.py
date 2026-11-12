@@ -17,9 +17,9 @@ def counts(monkeypatch):
 def proof(html,context=None,url='https://candidate.no'):
     return score(Page(('<html><head></head><body>'+html+'</body></html>').encode(),url),ORG,context or CONTEXT,'cc_index',[])
 
-def test_email_alone(counts):
-    assert proof('<a href="mailto:hello@example.no">Email</a>').proof_type=='registry_email_on_site'
-    assert proof('Contact hello@example.no.').proof_type=='registry_email_on_site'
+def test_email_alone_is_not_ownership(counts):
+    assert proof('<a href="mailto:hello@example.no">Email</a>').level!='VERIFIED'
+    assert proof('Contact hello@example.no.').level!='VERIFIED'
     counts['email_domains']['example.no']=5
     assert proof('hello@example.no').level!='VERIFIED'
 
@@ -30,13 +30,13 @@ def test_freemail(counts):
 def test_exact_email_not_substring():
     assert proof('nothello@example.no').level!='VERIFIED'
 
-def test_phone_alone(counts):
-    assert proof('<a href="tel:+4712345678">Call</a>').proof_type=='registry_phone_on_site'
+def test_phone_alone_is_not_ownership(counts):
+    assert proof('<a href="tel:+4712345678">Call</a>').level!='VERIFIED'
     counts['phones']['12345678']=5
     assert proof('12 34 56 78').level!='VERIFIED'
 
-def test_mobile():
-    assert proof('12 34 56 78',{**CONTEXT,'phone':'','mobile':'12345678'}).proof_type=='registry_phone_on_site'
+def test_mobile_alone_is_not_ownership():
+    assert proof('12 34 56 78',{**CONTEXT,'phone':'','mobile':'12345678'}).level!='VERIFIED'
 
 def test_masthead():
     p=Page(b'<html><head><title>Example Unique AS</title></head><body>Welcome</body></html>','https://candidate.no')
@@ -106,7 +106,7 @@ def test_parked_veto():
 
 
 def test_phone_evidence_localizes():
-    p=Page(b'<footer>Phone: 12 34 56 78</footer>','https://candidate.no')
+    p=Page(b'<h1>Example Unique AS</h1><footer>Phone: 12 34 56 78</footer>','https://candidate.no')
     result=score(p,ORG,CONTEXT,'cc_index',[])
     assert p.span_for(result.token)
 

@@ -48,8 +48,8 @@ def test_polished_employee_footprint_and_norwegian_quote(tmp_path,monkeypatch):
     original=gate.permitted
     monkeypatch.setattr(gate,'permitted',lambda c,e: c.id==c.field or original(c,e))
     brief=generate(row)
-    assert any(s.text=='It has 38 registered employees.' and s.claim_ids==['identity.employees'] for s in brief.sentences)
-    assert any(s.text=='It has one registered workplace, in Oslo.' for s in brief.sentences)
+    assert any(s.text=='It has 38 registered employees; it has one registered workplace, in Oslo.'
+               and s.claim_ids==['identity.employees','subunits.unit.test'] for s in brief.sentences)
     assert 'its registered purpose (in Norwegian) is \u00abUtvikle programvare\u00bb' in brief.sentences[0].text
     assert brief==generate(row)
 
