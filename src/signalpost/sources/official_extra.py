@@ -13,6 +13,7 @@ from .extract import Section, add, response_source
 from .http import Response
 
 GLEIF='https://api.gleif.org/api/v1/'
+GLEIF_AUTHORITIES=frozenset({'RA000472','RA000473'})
 TED='https://api.ted.europa.eu/v3/notices/search'
 METHOD='signalpost.official_extra.v1'
 NS={'cac':'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',
@@ -34,7 +35,7 @@ def gleif_lookup_numbers(numbers):
 def gleif_extract(item,response,locator,org):
     section=Section()
     a=item.get('attributes',{});entity=a.get('entity',{})
-    if gleif_orgnr(entity.get('registeredAs'))!=org or entity.get('registeredAt',{}).get('id')!='RA000472':return section
+    if gleif_orgnr(entity.get('registeredAs'))!=org or entity.get('registeredAt',{}).get('id') not in GLEIF_AUTHORITIES:return section
     fields={'lei':a.get('lei'),'entity_status':entity.get('status'),'legal_form':entity.get('legalForm'),
             'registration_date':a.get('registration',{}).get('initialRegistrationDate'),
             'renewal_date':a.get('registration',{}).get('nextRenewalDate')}
@@ -195,7 +196,7 @@ async def collect(envelopes,client,budget,blobs):
     for start in range(0,len(orgs),100):
         nums=orgs[start:start+100]
         try:
-            url=GLEIF+'lei-records?'+urlencode({'filter[entity.registeredAs]':gleif_lookup_numbers(nums),'filter[entity.registeredAt]':'RA000472','page[size]':200})
+            url=GLEIF+'lei-records?'+urlencode({'filter[entity.registeredAs]':gleif_lookup_numbers(nums),'filter[entity.registeredAt]':','.join(sorted(GLEIF_AUTHORITIES)),'page[size]':200})
             response=await fetch.get(url);data=json.loads(response.body)
             if data['meta']['pagination']['lastPage']!=1:raise SourceFailure('extra_pagination')
             for index,item in enumerate(data['data']):

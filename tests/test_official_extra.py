@@ -215,7 +215,7 @@ def test_failed_ted_fetch_retains_previous_award_and_evidence():
 def test_gleif_registration_number_spacing_preserves_exact_identity(number):
     item=record(org=number)
     assert len(gleif_extract(item,response({'data':[item]}),'/data/0',ORG).claims)==5
-    assert not gleif_extract(record(org=number,ra='RA000473'),response({'data':[item]}),'/data/0',ORG).claims
+    assert not gleif_extract(record(org=number,ra='RA000170'),response({'data':[item]}),'/data/0',ORG).claims
 
 
 @pytest.mark.parametrize('number',['NO923609016','923-609-016','923609017','923609016 extra',None])
@@ -240,9 +240,9 @@ def test_gleif_spaced_lookup_is_routed_to_the_exact_input_company(tmp_path):
             event={'url':url,'organisation_number':org};events.append(event);return event
     def dispatch(request):
         if request.method=='POST':return httpx.Response(200,json={'notices':[],'totalNoticeCount':0})
-        assert request.url.params['filter[entity.registeredAt]']=='RA000472'
+        assert request.url.params['filter[entity.registeredAt]']=='RA000472,RA000473'
         assert request.url.params['filter[entity.registeredAs]']==ORG+',923 609 016'
-        return httpx.Response(200,json={'data':[record('923 609 016'),record('984 851 006'),record('923 609 016','RA000473')],'meta':{'pagination':{'lastPage':1}}})
+        return httpx.Response(200,json={'data':[record('923 609 016'),record('984 851 006'),record('923 609 016','RA000170')],'meta':{'pagination':{'lastPage':1}}})
     async def go():
         async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch)) as client:
             return await collect({ORG:envelope()},client,Budget(),BlobStore(tmp_path))
@@ -278,3 +278,17 @@ def test_gleif_same_direct_and_ultimate_parent_has_one_shared_evidence_record(tm
     assert len(parents)==2 and all(c.value['lei']=='PARENT' for c in parents)
     assert len(section.evidence)==len({e.id for e in section.evidence})
     assert all(set(c.evidence_ids)<={e.id for e in section.evidence} for c in section.claims)
+
+
+@pytest.mark.parametrize('authority',['RA000472','RA000473'])
+def test_both_bronnoysund_authorities_require_exact_number(authority):
+    item=record('923 609 016',authority)
+    assert len(gleif_extract(item,response({'data':[item]}),'/data/0',ORG).claims)==5
+    assert not gleif_extract(item,response({'data':[item]}),'/data/0','984851006').claims
+
+
+def test_new_child_authority_does_not_change_parent_national_id_acceptance():
+    parent=record('911305631','RA000473');parent['attributes'].update(lei='PARENT');parent['attributes']['entity']['legalName']={'name':'Parent AS'}
+    edge={'data':{'attributes':{'relationship':{'startNode':{'id':'LEICHILD'},'endNode':{'id':'PARENT'},'type':'IS_DIRECTLY_CONSOLIDATED_BY','status':'ACTIVE'}}}}
+    section=parent_extract('LEICHILD','direct-parent',edge,parent,response(edge),response({'data':[parent]}),ORG)
+    assert section.claims and 'organisation_number' not in section.claims[0].value
