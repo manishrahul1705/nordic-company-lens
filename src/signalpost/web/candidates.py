@@ -80,11 +80,24 @@ def context_from_bulk(row):
             "postcode": column(row, "forretningsadresse.postnummer")[0], "city": column(row, "forretningsadresse.poststed")[0]}
 
 
+def registry_website_url(value):
+    """Read unambiguous www separators from a registry website cell only.
+
+    Keep the registry claim verbatim. This repairs nomination syntax, never
+    supplies a TLD, removes an owner veto, or establishes website ownership.
+    """
+    value = str(value or '').strip()
+    if value.lower().startswith('/www.'):
+        value = value[1:]
+    value = re.sub(r'^www[:/](?=[a-z0-9])', 'www.', value, flags=re.I)
+    return normalize_url(value)
+
+
 def generate(context):
     output = []
     seen = set()
     def add(value, origin, subunit_orgnr=None):
-        url = normalize_url(value)
+        url = registry_website_url(value) if origin in {"registry_website", "subunit_registry_website"} else normalize_url(value)
         root = domain(url) if url else ""
         if root and root not in seen and root not in SOCIAL | DIRECTORIES | FREE_MAIL and not is_directory_record(url):
             output.append(Candidate(url, root, origin,subunit_orgnr))
