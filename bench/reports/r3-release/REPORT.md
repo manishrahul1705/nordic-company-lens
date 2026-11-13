@@ -147,3 +147,8 @@ The earlier single failure was `test_real_os_process_kill_and_checkpoint_recover
 Final full suite: **1,381 passed, 1 failed in 648.07 s**. The remaining failure is `test_s67_compliance.py::test_shipped_index_valid_through_november_30_without_redating`, which hard-codes `built_at.startswith('2026-11-04')`; the real authorized rebuild is `2026-11-13T00:26:42.872674Z`. The schema/age load for 30 November succeeds. No redating, skipping, weakened assertion or expectation change was used. This old-date assertion remains an open test-maintenance issue; the release is not described as all tests green. `pytest-final.txt` and `test-diagnosis.json` retain the exact evidence.
 
 No runtime proof, scoring, identity, output-format or test changes remain from this release task. The only production artifacts changed are the rebuilt bundled CC and NAV data; the NAV builder budget repair and measurement scripts are development-only. No search engines, directory/Norid sources, paid APIs or LLMs were used. Robots, pooled budget and per-company cap were preserved. No real credentials or raw crawl/bulk/universe downloads were committed. Protected branches are unchanged. No merge or push. Stop here for review.
+
+
+## Stage A follow-up: stale-date test resolved
+
+The authorized test-only fix replaces the old date pin with real UTC/nonfuture timestamp validation while preserving the 30 November schema/age check. Full suite: **1,382 passed, zero failed**. The historical release results above remain unchanged. See [Stage A validation](../stage-a/REPORT.md).
