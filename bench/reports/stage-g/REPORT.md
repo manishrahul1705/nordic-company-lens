@@ -10,9 +10,9 @@ Ten deterministic previously202notice URLs, one anonymous XML GET each, then the
 
 Both use the frozen inputSHA7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782, fresh state, README command, no bulk override, stripped credentials, no search/LLM/paidAPI. Runtime source/tests/lockfiles match007b34f; per-source hashes verified before each run, no code change between. Exact commands/commits/time in run1/2-execution.json; runtime-identity.json records the report-only HEAD difference.
 
-**Run2 is final**, selected in advance, not the better website count. See NOISE.md and noise-band.json for all metrics in both runs with observed min/max and absolute span.
+**Run1 is final after Stage H diagnosis**, superseding the advance run2 selection because confirmed local Defender quarantine affected run2 before publication. Both original runs remain disclosed. See NOISE.md and noise-band.json for all metrics in both runs with observed min/max and absolute span.
 
-| Metric | Run1 | Run2 (final) |
+| Metric | Run1 (final) | Run2 |
 |---|---:|---:|
 | websites | 113 | 112 |
 | social_companies | 47 | 47 |
@@ -50,8 +50,13 @@ Every new website versus retained Stage E reviewed in both runs: ENSURE IT AS/93
 
 ## Signal versus noise limitation
 
-The only inter-run website difference is ISTAD. The homepage HTTP200/hash is identical, but its blob is missing in run2; unchanged role-holder scope guard consequently withholds the link. No recorded homepage network error explains it. Both have the same /om-oss404. This is an **observed missing-evidence storage limitation**, not proven transient transport noise. No article differences. Report it instead of claiming all variance is network noise. Exact diagnostics in istad-diagnostics.json; full band and difference records in NOISE.md/website-article-differences.json. No storage/proof fix is made under this no-rule-change task.
+### Known limitations: local measurement environment
+
+Stage H established that Windows Defender detected the fetched ISTAD homepage as `Program:Script/Wacapew.A!ml` (threat ID `251869`) and successfully quarantined the correctly written run 2 blob on **2026-11-13 at 20:31:06 IST** (detection at 20:30:02). This is local antivirus remediation on the measuring machine, not an application storage/retention defect; no production blob-pruning or deletion path was found. This was the second observed occurrence involving the same page in the measurement history. Defender later also detected the run 1 copy during diagnostic reads. The records establish quarantine, not whether the detection is a true or false positive.
+
+The final reported measurement is now **[Stage G run 1](run1-execution.json)**: **113 websites**, 47 social companies, 2 jobs companies, 1,000 activity companies, 69 articles and 165,481 facts; 9,281 HTTP requests, maximum 40/company, zero deadlines, 2,136.969 seconds. Its published ISTAD result was unaffected at publication; this does not claim its evidence files are immune to later antivirus actions. Run 2 remains fully disclosed with 112 websites and its original timing/counts. This supersedes the earlier advance selection of run 2 because Stage H identified local environmental interference, rather than silently choosing the higher count. No effect on a clean environment is asserted. See [Defender event evidence](defender-evidence.json), especially event 1117: Action Quarantine, successful status, error 0x00000000.
+
 
 ## Merge decision
 
-The revised gates pass independently of absolute website/article counts. Merge exact transport commit007b34f normally into the existing main clone on top ofe57bd74; preserve history, no cherry-pick. Then merge measurement/docs commits. README/SUBMISSION explicitly cite final run2 and both-run band, honestTED202 distribution and missing-evidence issue. No push. No changes to acceptance/scoring/expiry/ownership, tests or lockfiles from007b34f.
+The revised gates pass independently of absolute website/article counts. Merge exact transport commit007b34f normally into the existing main clone on top ofe57bd74; preserve history, no cherry-pick. Then merge measurement/docs commits. README/SUBMISSION now explicitly cite final run1 after Stage H, both-run band, honest TED202 distribution and confirmed local antivirus remediation. No push. No changes to acceptance/scoring/expiry/ownership, tests or lockfiles from007b34f.
