@@ -154,6 +154,23 @@
     return Number.isNaN(date.getTime()) ? String(value) : date.toLocaleString('en-GB', {day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'UTC'}) + ' UTC';
   }
 
+  const proofExplanations = {
+    orgnr_on_page: 'Accepted because the registered organisation number appears on the page.',
+    raw_owner_identifier: 'Accepted because the registered organisation number appears in the recorded owner identifier.',
+    jsonld_vatid: 'Accepted because the registered organisation number appears in structured company identification.',
+    contact_section_orgnr: 'Accepted because the registered organisation number appears in the company contact section.',
+    registered_subunit_orgnr: 'Accepted because a registered subunit organisation number appears on the page.',
+    legal_name_and_registry_contact: 'Accepted because the registered legal name and a registered contact appear on the page.',
+    legal_name_without_suffix_and_two_contacts: 'Accepted because the registered name without its legal suffix and two registered contacts appear on a name-derived domain.',
+    domain_legal_name_and_registry_location: 'Accepted because the domain matches the registered name and the page shows a registered location.',
+    registry_declared_name_tier_a: 'Accepted because the registry-declared website shows the registered name.',
+    registry_declared_hard_contact_tier_b: 'Accepted because the registry-declared website has corroborating registered contact or role-holder evidence.',
+    nominated_two_independent_signals: 'Accepted because the nominated website has two independent recorded registry signals.',
+    registry_email_on_site: 'Accepted because the registered legal name and registered email appear on the page.',
+    registry_phone_on_site: 'Accepted because the registered legal name and registered phone appear on the page.',
+    unique_no_corroborated: 'Accepted because the unique registry name appears in the site identity with registry corroboration.'
+  };
+
   function showEvidence(panel) {
     if(panel.dataset.loaded) return;
     const fact = facts.get(panel.dataset.source);
@@ -211,15 +228,38 @@
       } else {
         quote.textContent = e.claim_span;
       }
-      // Keep the captured excerpt intact, but do not lead with registry JSON.
+      // Present the captured source first; retain every metadata field and
+      // supplementary evidence record in collapsed, reachable details.
+      const technical = element('details', null, 'technical-details');
+      technical.append(element('summary', 'Technical details'), dl);
+      if(fact.value && typeof fact.value === 'object') {
+        const recorded = element('dl', null, 'values');
+        Object.entries(fact.value).forEach(([key,value]) => {
+          recorded.append(element('dt', key.replace(/_/g, ' ')), element('dd', format(value)));
+        });
+        technical.append(recorded);
+      }
+      const first = panel.querySelector('.evidence-record') === null;
+      record.replaceChildren();
+      if(first && fact.identity_level === 'VERIFIED' && proofExplanations[fact.value?.proof_type])
+        record.append(element('p', proofExplanations[fact.value.proof_type], 'proof-explanation'));
       const rawStructured = /[{}]|"[\w_]+"\s*:/.test(e.claim_span);
-      if(rawStructured && match) {
-        const readable = element('blockquote', match, 'excerpt');
-        const original = element('details', null, 'evidence-original');
-        original.append(element('summary', 'Original source excerpt (verbatim)'), quote);
-        record.append(dl, readable, original);
-      } else record.append(dl, quote);
-      panel.append(record);
+      if(fact.identity_level !== 'VERIFIED' && rawStructured && match) {
+        record.append(element('blockquote', match, 'excerpt'));
+        const original=element('details',null,'evidence-original');
+        original.append(element('summary','Original source excerpt (verbatim)'),quote);
+        technical.append(original);
+      } else record.append(quote);
+      const provenance = element('div', null, 'evidence-provenance');
+      provenance.append(sourceLink(e.source_url), element('p', 'Retrieved ' + evidenceDate(e.retrieved_at)));
+      const copyURL = element('button', 'Copy source URL'); copyURL.type='button';copyURL.dataset.copy=e.source_url;provenance.append(copyURL);
+      record.append(provenance, technical);
+      if(first) panel.append(record);
+      else {
+        let additional = panel.querySelector('.additional-evidence');
+        if(!additional) { additional=element('details',null,'additional-evidence');additional.append(element('summary','Additional supporting sources'));panel.append(additional); }
+        additional.append(record);
+      }
     }
     panel.dataset.loaded = 'true';
   }
@@ -1614,8 +1654,8 @@
     const f=facts.get(id);if(!f&&!context)return false;
     drawer.replaceChildren();const button=element('button','Close','drawer-close');button.type='button';button.setAttribute('aria-label','Close evidence');button.addEventListener('click',close);drawer.append(button,element('p','The evidence behind the fact','eyebrow'));
     if(context){const copy=context.cloneNode(true);copy.removeAttribute('id');copy.hidden=false;drawer.append(copy);}
-    else {drawer.append(element('h2',f.field.replace(/^(identity|accounts)\./,'').replace(/_/g,' ')),element('p',format(f.value),'drawer-fact-value'));const panel=element('div');panel.dataset.source=id;showEvidence(panel);drawer.append(panel);}
-    drawer.showModal();return true;
+    else {drawer.append(element('h2',f.field.replace(/^(identity|accounts)\./,'').replace(/_/g,' ')));if(f.identity_level !== 'VERIFIED')drawer.append(element('p',format(f.value),'drawer-fact-value'));const panel=element('div');panel.dataset.source=id;showEvidence(panel);drawer.append(panel);}
+    if(!drawer.open)drawer.showModal();drawer.scrollTop=0;return true;
   }
   document.addEventListener('click',event=>{
     const receipt=event.target.closest('[data-receipt]');
@@ -1625,6 +1665,31 @@
     const id=receipt?.dataset.receipt||cite?.hash?.slice(6)||sourceButton?.dataset.toggle?.slice(7);
     if(id||metadata){opener=receipt||cite||sourceButton||metadata;if(openDrawer(id,metadata?document.getElementById(metadata.dataset.toggle):null)){event.preventDefault();event.stopImmediatePropagation();}}
   },true);
+  // Group adjacent citation controls without deleting or changing citations.
+  document.querySelectorAll('p').forEach(paragraph => {
+    const citations=[...paragraph.querySelectorAll('a.citation[href^="#fact-"],button.citation[data-toggle^="context-"]')];
+    const visited=new Set();
+    citations.forEach(first => {
+      if(visited.has(first))return;
+      const run=[first];let node=first.nextSibling;
+      while(node) {
+        if(node.nodeType===Node.TEXT_NODE && !node.textContent.trim()){node=node.nextSibling;continue;}
+        if(node.nodeType===Node.ELEMENT_NODE && citations.includes(node)){run.push(node);node=node.nextSibling;continue;}
+        break;
+      }
+      run.forEach(c=>visited.add(c));if(run.length<2)return;
+      const group=element('span',null,'citation-group');const button=element('button','Sources ('+run.length+')','citation-group-button');button.type='button';
+      first.before(group);group.append(button);
+      const list=element('div',null,'citation-options');list.hidden=true;group.append(list);
+      run.forEach((citation,index)=>{citation.setAttribute('aria-label','Source '+(index+1)+' of '+run.length);list.append(citation);});
+      button.addEventListener('click',()=>{
+        opener=button;run[0].click();opener=button;
+        const choices=element('nav',null,'citation-choices');choices.setAttribute('aria-label','All citations for this sentence');
+        run.forEach((citation,index)=>{const choice=element('button','Source '+(index+1));choice.type='button';choice.addEventListener('click',()=>{citation.click();drawer.prepend(choices);});choices.append(choice);});
+        drawer.prepend(choices);
+      });
+    });
+  });
   document.querySelectorAll('[data-search]').forEach(button=>button.addEventListener('click',()=>{const input=document.getElementById('search');if(input){input.value=button.dataset.search;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus();}}));
   let compareIds=[];try{compareIds=JSON.parse(localStorage.getItem('signalpost_compare')||'[]').filter(id=>byId.has(id)).slice(0,4);}catch{}
   function compareBadge(){const node=document.getElementById('compare-count');if(node)node.textContent=compareIds.length?'('+compareIds.length+')':'';const a=document.getElementById('nav-compare');if(a&&compareIds.length)a.href=(['profile','evidence'].includes(document.body.dataset.page)?'../':'')+'compare.html?companies='+compareIds.join(',');}
