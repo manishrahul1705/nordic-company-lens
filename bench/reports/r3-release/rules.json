@@ -1,0 +1,17 @@
+{
+  "branch": "more-websites",
+  "runtime_commit": "fbe048529bc9816147ed107baf0c55a3ae985506",
+  "main_expected": "abc33afc6f72258883da41478345b04784f30cb1",
+  "fix_large_company_site_expected": "405eafccbd3d59df97121c337e6e90c03ea0f841",
+  "no_push": true,
+  "no_merge": true,
+  "crawl_worker_stopped": true,
+  "new_crawl_fetches": 0,
+  "benchmark_pooled_cap": 18000,
+  "per_company_max": 40,
+  "search_adapter_absent": true,
+  "llm_calls": 0,
+  "paid_cost_usd": 0,
+  "benchmark_credentials": "stripped from child environment; values never retained",
+  "proof_and_tests_restored": true
+}

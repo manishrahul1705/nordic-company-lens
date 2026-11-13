@@ -1,0 +1,447 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+..................................................FF...........F........ [ 20%]
+........................................................................ [ 25%]
+......F................................................................. [ 31%]
+........................................................................ [ 36%]
+........................................................................ [ 41%]
+........................................................................ [ 46%]
+........................................................................ [ 51%]
+.........FFFFFF.....F..........F....F.....FFFFF.F....................... [ 57%]
+........................................................................ [ 62%]
+...............................F........................................ [ 67%]
+........................................................................ [ 72%]
+........................................................................ [ 77%]
+........................................................................ [ 83%]
+....................................................F................... [ 88%]
+........................................................................ [ 93%]
+.................................F...................................... [ 98%]
+..................                                                       [100%]
+================================== FAILURES ===================================
+_ test_exact_domain_and_visible_registry_location[<footer>Office in Bergen</footer>-ctx0] _
+
+body = '<footer>Office in Bergen</footer>', ctx = {'municipality': 'BERGEN'}
+
+    @pytest.mark.parametrize('body,ctx', [
+        ('<footer>Office in Bergen</footer>', {'municipality':'BERGEN'}),
+        ('<footer>0461</footer>', {'postcode':'0461'}),
+    ])
+    def test_exact_domain_and_visible_registry_location(body,ctx):
+        proof,context=evaluate(body,**ctx)
+>       assert proof.proof_type=='domain_legal_name_and_registry_location'
+E       AssertionError: assert 'signals' == 'domain_legal...stry_location'
+E         
+E         - domain_legal_name_and_registry_location
+E         + signals
+
+tests\test_domain_legal_location.py:19: AssertionError
+_ test_exact_domain_and_visible_registry_location[<footer>0461</footer>-ctx1] _
+
+body = '<footer>0461</footer>', ctx = {'postcode': '0461'}
+
+    @pytest.mark.parametrize('body,ctx', [
+        ('<footer>Office in Bergen</footer>', {'municipality':'BERGEN'}),
+        ('<footer>0461</footer>', {'postcode':'0461'}),
+    ])
+    def test_exact_domain_and_visible_registry_location(body,ctx):
+        proof,context=evaluate(body,**ctx)
+>       assert proof.proof_type=='domain_legal_name_and_registry_location'
+E       AssertionError: assert 'signals' == 'domain_legal...stry_location'
+E         
+E         - domain_legal_name_and_registry_location
+E         + signals
+
+tests\test_domain_legal_location.py:19: AssertionError
+_______ test_location_proof_publishes_local_span_and_registry_evidence ________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1555/test_location_proof_publishes_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000136AF6AA990>
+
+    def test_location_proof_publishes_local_span_and_registry_evidence(tmp_path,monkeypatch):
+        import tests.test_websites as websites
+        original=websites.entity
+        monkeypatch.setattr(websites,'entity',lambda org:{**original(org),'navn':'Example AS','forretningsadresse':{'kommune':'BERGEN','postnummer':'5000'}})
+        body=html('Office in Bergen',title='Welcome').replace('<header>Example AS</header>','')
+        _,row,_,_=execute_web(tmp_path,monkeypatch,body=body,website_domain_location_proof=True)
+>       proof=next(c for c in row['claims'] if c['field']=='official_website')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       StopIteration
+
+tests\test_domain_legal_location.py:51: StopIteration
+__ test_live_collection_withholds_brand_only_group_without_attaching_content __
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1555/test_live_collection_withholds0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000136AF98AF30>
+
+    def test_live_collection_withholds_brand_only_group_without_attaching_content(tmp_path,monkeypatch):
+        import httpx
+        from tests.test_websites import execute_web
+        body='<html><title>Example</title><main>Example products</main><footer>Copyright Example</footer></html>'
+        def response(request):
+            if request.url.path=='/robots.txt':return httpx.Response(200,text='User-agent: *\nAllow: /')
+            return httpx.Response(200,text=body) if request.url.path=='/' else httpx.Response(404)
+        _,row,_,_=execute_web(tmp_path,monkeypatch,response=response,website='https://example.com/')
+        assert row['run']['sections']['website']=='ambiguous'
+        assert not any(c['field']=='official_website' or c['field'].startswith(('social_profile.','website_description.')) for c in row['claims'])
+>       assert any(e['code']=='group_site' and e['message']=='group website' for e in row['errors'])
+E       assert False
+E        +  where False = any(<generator object test_live_collection_withholds_brand_only_group_without_attaching_content.<locals>.<genexpr> at 0x00000136B4505150>)
+
+tests\test_final_group_website.py:51: AssertionError
+__________ test_tier_a_declared_exact_name_needs_no_contact[Example] __________
+
+name = 'Example'
+
+    @pytest.mark.parametrize('name',['Example AS','Example'])
+    def test_tier_a_declared_exact_name_needs_no_contact(name):
+        proof=score(page(name),ORG,CONTEXT,'registry_website',[],nominated_contacts=True)
+>       assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_name_tier_a'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step10.py:31: AssertionError
+_ test_tier_b_hard_corroboration_without_name[<a href="tel:12345678">Call</a>] _
+
+text = '<a href="tel:12345678">Call</a>'
+
+    @pytest.mark.parametrize('text',['<a href="tel:12345678">Call</a>','office@example.no','Example gate 1','0123 OSLO','Jane Person'])
+    def test_tier_b_hard_corroboration_without_name(text):
+        proof=score(page(text),ORG,CONTEXT,'registry_website',['Jane Person'],nominated_contacts=True)
+>       assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_hard_contact_tier_b'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step10.py:37: AssertionError
+_______ test_tier_b_hard_corroboration_without_name[office@example.no] ________
+
+text = 'office@example.no'
+
+    @pytest.mark.parametrize('text',['<a href="tel:12345678">Call</a>','office@example.no','Example gate 1','0123 OSLO','Jane Person'])
+    def test_tier_b_hard_corroboration_without_name(text):
+        proof=score(page(text),ORG,CONTEXT,'registry_website',['Jane Person'],nominated_contacts=True)
+>       assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_hard_contact_tier_b'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step10.py:37: AssertionError
+_________ test_tier_b_hard_corroboration_without_name[Example gate 1] _________
+
+text = 'Example gate 1'
+
+    @pytest.mark.parametrize('text',['<a href="tel:12345678">Call</a>','office@example.no','Example gate 1','0123 OSLO','Jane Person'])
+    def test_tier_b_hard_corroboration_without_name(text):
+        proof=score(page(text),ORG,CONTEXT,'registry_website',['Jane Person'],nominated_contacts=True)
+>       assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_hard_contact_tier_b'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step10.py:37: AssertionError
+___________ test_tier_b_hard_corroboration_without_name[0123 OSLO] ____________
+
+text = '0123 OSLO'
+
+    @pytest.mark.parametrize('text',['<a href="tel:12345678">Call</a>','office@example.no','Example gate 1','0123 OSLO','Jane Person'])
+    def test_tier_b_hard_corroboration_without_name(text):
+        proof=score(page(text),ORG,CONTEXT,'registry_website',['Jane Person'],nominated_contacts=True)
+>       assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_hard_contact_tier_b'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step10.py:37: AssertionError
+__________ test_tier_b_hard_corroboration_without_name[Jane Person] ___________
+
+text = 'Jane Person'
+
+    @pytest.mark.parametrize('text',['<a href="tel:12345678">Call</a>','office@example.no','Example gate 1','0123 OSLO','Jane Person'])
+    def test_tier_b_hard_corroboration_without_name(text):
+        proof=score(page(text),ORG,CONTEXT,'registry_website',['Jane Person'],nominated_contacts=True)
+>       assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_hard_contact_tier_b'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step10.py:37: AssertionError
+__________ test_email_nomination_requires_two_independent_categories __________
+
+    def test_email_nomination_requires_two_independent_categories():
+        assert score(page('Example'),ORG,CONTEXT,'registry_email',[],nominated_contacts=True).level!='VERIFIED'
+        accepted=score(page('Example <a href="tel:12345678">Call</a>'),ORG,CONTEXT,'registry_email',[],nominated_contacts=True)
+>       assert accepted.level=='VERIFIED' and accepted.proof_type=='nominated_two_independent_signals'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step10.py:48: AssertionError
+________ test_unique_name_alone_is_rejected_after_wrong_company_audit _________
+
+    def test_unique_name_alone_is_rejected_after_wrong_company_audit():
+        context={**CONTEXT,'unique_registry_core':True}
+        assert score(page('Example'),ORG,context,'legal_name_slug',[]).level!='VERIFIED'
+        assert score(page('Example',url='https://example.com'),ORG,context,'legal_name_slug',[]).level!='VERIFIED'
+>       assert score(page('Example 12345678 office@example.no'),ORG,context,'registry_email',[],nominated_contacts=True).level=='VERIFIED'
+E       AssertionError: assert 'MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM
+
+tests\test_recall_step10.py:92: AssertionError
+_______ test_tier_b_emits_only_the_link_including_refresh_content_guard _______
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1555/test_tier_b_emits_only_the_lin0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000136AFC72B70>
+
+    def test_tier_b_emits_only_the_link_including_refresh_content_guard(tmp_path, monkeypatch):
+        from tests.test_websites import execute_web
+        from signalpost.models.envelope import Envelope
+        body=b'<html><title>Welcome</title><main>Call 12 34 56 78</main><footer><a href="https://instagram.com/example">Instagram</a><p>Our excellent company services.</p></footer></html>'
+        _,row,_,_=execute_web(tmp_path,monkeypatch,body=body.decode())
+>       proof=next(c for c in row['claims'] if c['field']=='official_website')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       StopIteration
+
+tests\test_recall_step10.py:138: StopIteration
+_ test_email_declaration_requires_name_in_approved_identity[<h1>Example</h1>-Welcome] _
+
+body = '<h1>Example</h1>', title = 'Welcome'
+
+    @pytest.mark.parametrize('body,title',[
+        ('<h1>Example</h1>','Welcome'),('<footer>Example</footer>','Welcome'),
+        ('<img src="logo.svg" alt="Example">','Welcome'),('<meta property="og:site_name" content="Example">','Welcome'),('', 'Example'),
+    ])
+    def test_email_declaration_requires_name_in_approved_identity(body,title):
+        p=page(body,title=title);candidate=Candidate(p.url,'example.no','registry_email')
+        result=candidate_proof(p,ORG,CONTEXT,candidate,[])
+>       assert result.level=='VERIFIED' and result.proof_type=='registry_declared_name_tier_a'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step11.py:25: AssertionError
+_ test_email_declaration_requires_name_in_approved_identity[<footer>Example</footer>-Welcome] _
+
+body = '<footer>Example</footer>', title = 'Welcome'
+
+    @pytest.mark.parametrize('body,title',[
+        ('<h1>Example</h1>','Welcome'),('<footer>Example</footer>','Welcome'),
+        ('<img src="logo.svg" alt="Example">','Welcome'),('<meta property="og:site_name" content="Example">','Welcome'),('', 'Example'),
+    ])
+    def test_email_declaration_requires_name_in_approved_identity(body,title):
+        p=page(body,title=title);candidate=Candidate(p.url,'example.no','registry_email')
+        result=candidate_proof(p,ORG,CONTEXT,candidate,[])
+>       assert result.level=='VERIFIED' and result.proof_type=='registry_declared_name_tier_a'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step11.py:25: AssertionError
+_ test_email_declaration_requires_name_in_approved_identity[<img src="logo.svg" alt="Example">-Welcome] _
+
+body = '<img src="logo.svg" alt="Example">', title = 'Welcome'
+
+    @pytest.mark.parametrize('body,title',[
+        ('<h1>Example</h1>','Welcome'),('<footer>Example</footer>','Welcome'),
+        ('<img src="logo.svg" alt="Example">','Welcome'),('<meta property="og:site_name" content="Example">','Welcome'),('', 'Example'),
+    ])
+    def test_email_declaration_requires_name_in_approved_identity(body,title):
+        p=page(body,title=title);candidate=Candidate(p.url,'example.no','registry_email')
+        result=candidate_proof(p,ORG,CONTEXT,candidate,[])
+>       assert result.level=='VERIFIED' and result.proof_type=='registry_declared_name_tier_a'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step11.py:25: AssertionError
+_ test_email_declaration_requires_name_in_approved_identity[<meta property="og:site_name" content="Example">-Welcome] _
+
+body = '<meta property="og:site_name" content="Example">', title = 'Welcome'
+
+    @pytest.mark.parametrize('body,title',[
+        ('<h1>Example</h1>','Welcome'),('<footer>Example</footer>','Welcome'),
+        ('<img src="logo.svg" alt="Example">','Welcome'),('<meta property="og:site_name" content="Example">','Welcome'),('', 'Example'),
+    ])
+    def test_email_declaration_requires_name_in_approved_identity(body,title):
+        p=page(body,title=title);candidate=Candidate(p.url,'example.no','registry_email')
+        result=candidate_proof(p,ORG,CONTEXT,candidate,[])
+>       assert result.level=='VERIFIED' and result.proof_type=='registry_declared_name_tier_a'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step11.py:25: AssertionError
+_____ test_email_declaration_requires_name_in_approved_identity[-Example] _____
+
+body = '', title = 'Example'
+
+    @pytest.mark.parametrize('body,title',[
+        ('<h1>Example</h1>','Welcome'),('<footer>Example</footer>','Welcome'),
+        ('<img src="logo.svg" alt="Example">','Welcome'),('<meta property="og:site_name" content="Example">','Welcome'),('', 'Example'),
+    ])
+    def test_email_declaration_requires_name_in_approved_identity(body,title):
+        p=page(body,title=title);candidate=Candidate(p.url,'example.no','registry_email')
+        result=candidate_proof(p,ORG,CONTEXT,candidate,[])
+>       assert result.level=='VERIFIED' and result.proof_type=='registry_declared_name_tier_a'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_recall_step11.py:25: AssertionError
+_________________ test_email_link_only_and_provider_mismatch __________________
+
+    def test_email_link_only_and_provider_mismatch():
+        p=page('Call 12345678')
+        assert candidate_proof(p,ORG,CONTEXT,Candidate(p.url,'example.no','registry_email'),[]).level!='VERIFIED'
+        p=page('<h1>Example</h1>',title='Example regnskapskontor')
+        assert candidate_proof(p,ORG,{**CONTEXT,'nace':'47.100'},Candidate(p.url,'example.no','registry_email'),[]).reason=='provider_industry_mismatch'
+>       assert candidate_proof(p,ORG,{**CONTEXT,'nace':'69.201'},Candidate(p.url,'example.no','registry_email'),[]).level=='VERIFIED'
+E       AssertionError: assert 'MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM
+
+tests\test_recall_step11.py:39: AssertionError
+___ test_refresh_checked_low_candidate_does_not_mask_verified_site_timeout ____
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1555/test_refresh_checked_low_candi0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000136B21A7770>
+
+    def test_refresh_checked_low_candidate_does_not_mask_verified_site_timeout(tmp_path, monkeypatch):
+        """[state_classification & claim_carry_forward]
+        When a non-matching candidate returns HTTP 200 (LOW proof) and the true verified candidate
+        times out, retain the prior verified state and record the failed attempt as stale.
+        """
+        async def public_dns(host, port=443):
+            return ["93.184.216.34"]
+        monkeypatch.setattr(policy, "resolve_public", public_dns)
+    
+        baseline_cfg = config(tmp_path / "baseline", [OUR], websites=True).model_copy(
+            update={"website_politeness_seconds": 0}
+        )
+        def baseline_dispatch(request):
+            if request.url.host == "data.brreg.no":
+                return handler()(request)
+            if request.url.path == "/robots.txt":
+                return httpx.Response(200, text="User-agent: *\nAllow: /")
+            if request.url.host == "example.no":
+                return httpx.Response(200, text=html(extra='<a href="mailto:office@example.no">Email</a>'))
+            return httpx.Response(404, text="not found")
+    
+        with respx.mock(assert_all_called=False) as router:
+            router.route().mock(side_effect=baseline_dispatch)
+            asyncio.run(run(baseline_cfg))
+    
+        # In refresh: Candidate 1 (unrelated) returns 200 with LOW proof (no company signals).
+        # Candidate 2 (verified example.no) times out.
+        from signalpost.web import collector
+        from signalpost.web.candidates import Candidate
+        monkeypatch.setattr(collector, "generate", lambda ctx: [
+            Candidate("https://unrelated.no/", "unrelated.no", "brand"),
+            Candidate("https://example.no/", "example.no", "legal_name_slug"),
+        ])
+        refresh_cfg = config(tmp_path / "refresh", [OUR], websites=True, previous=baseline_cfg.output).model_copy(
+            update={"website_politeness_seconds": 0, "website_request_cap": 20, "website_total_request_cap": 50}
+        )
+        def refresh_dispatch(request):
+            if request.url.host == "data.brreg.no":
+                data = entity(OUR)
+                data["hjemmeside"] = None  # Registry has no declared website
+                if "/enhetsregisteret/api/enheter/" + OUR in request.url.path:
+                    return httpx.Response(200, json=data)
+                return handler()(request)
+            if request.url.path == "/robots.txt":
+                return httpx.Response(200, text="User-agent: *\nAllow: /")
+            if request.url.host in ("example.no", "www.example.no"):
+                raise httpx.ReadTimeout("timeout", request=request)
+            if request.url.host in ("unrelated.no", "www.unrelated.no"):
+                # Returns 200 with generic text, scoring LOW proof
+                return httpx.Response(200, text="<html><body>Unrelated generic company</body></html>")
+            return httpx.Response(404, text="not found")
+    
+        with respx.mock(assert_all_called=False) as router:
+            router.route().mock(side_effect=refresh_dispatch)
+            report = asyncio.run(run(refresh_cfg))
+    
+        rows = [json.loads(line) for line in refresh_cfg.output.read_text(encoding="utf8").splitlines()]
+        row = rows[0]
+    
+>       assert row["run"]["sections"]["website"] == "available"
+E       AssertionError: assert 'ambiguous' == 'available'
+E         
+E         - available
+E         + ambiguous
+
+tests\test_refresh_integrity_repair.py:425: AssertionError
+_ test_suffix_absent_remains_ambiguous_even_with_two_contacts_and_derived_domain _
+
+    def test_suffix_absent_remains_ambiguous_even_with_two_contacts_and_derived_domain():
+        body='<h1>Example</h1><footer>12 34 56 78 office@example.no</footer>'
+        proof=evaluate(body)
+        assert proof.level!='VERIFIED' and proof.reason=='full_legal_name_required_for_contact_proof'
+        assert evaluate(body,url='https://unrelated.no/').level=='MEDIUM'
+        one='<h1>Example</h1><footer>12 34 56 78</footer>'
+        assert evaluate(one).level=='MEDIUM'
+        assert evaluate('<h1>Example</h1>').level=='MEDIUM'
+        ctx={'name':'Example AS','phone':'12345678','email':'office@example.no'}
+        claim={'field':'official_website','value':{'final_url':'https://example.no','proof_type':proof.proof_type,'identity_level':'VERIFIED'}}
+>       assert audit_website_claim(OUR,claim,{},body,context=ctx)[0]=='CORRECT'
+E       AssertionError: assert 'INCORRECT' == 'CORRECT'
+E         
+E         - CORRECT
+E         + INCORRECT
+E         ? ++
+
+tests\test_suffix_absent_ownership.py:24: AssertionError
+_____________ test_registry_declared_is_not_available_to_guesses ______________
+
+    def test_registry_declared_is_not_available_to_guesses():
+        body=html('Distinctive street 12',title='Distinctive Services')
+        context={'name':'Distinctive Enterprise AS','street':['Distinctive street 12']}
+        proof=score(Page(body.encode(),'https://example.no/'),OUR,context,'registry_website',[])
+>       assert proof.level=='VERIFIED' and proof.proof_type=='registry_declared_hard_contact_tier_b'
+E       AssertionError: assert ('MEDIUM' == 'VERIFIED'
+E         
+E         - VERIFIED
+E         + MEDIUM)
+
+tests\test_website_reliability.py:48: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_domain_legal_location.py::test_exact_domain_and_visible_registry_location[<footer>Office in Bergen</footer>-ctx0]
+FAILED tests/test_domain_legal_location.py::test_exact_domain_and_visible_registry_location[<footer>0461</footer>-ctx1]
+FAILED tests/test_domain_legal_location.py::test_location_proof_publishes_local_span_and_registry_evidence
+FAILED tests/test_final_group_website.py::test_live_collection_withholds_brand_only_group_without_attaching_content
+FAILED tests/test_recall_step10.py::test_tier_a_declared_exact_name_needs_no_contact[Example]
+FAILED tests/test_recall_step10.py::test_tier_b_hard_corroboration_without_name[<a href="tel:12345678">Call</a>]
+FAILED tests/test_recall_step10.py::test_tier_b_hard_corroboration_without_name[office@example.no]
+FAILED tests/test_recall_step10.py::test_tier_b_hard_corroboration_without_name[Example gate 1]
+FAILED tests/test_recall_step10.py::test_tier_b_hard_corroboration_without_name[0123 OSLO]
+FAILED tests/test_recall_step10.py::test_tier_b_hard_corroboration_without_name[Jane Person]
+FAILED tests/test_recall_step10.py::test_email_nomination_requires_two_independent_categories
+FAILED tests/test_recall_step10.py::test_unique_name_alone_is_rejected_after_wrong_company_audit
+FAILED tests/test_recall_step10.py::test_tier_b_emits_only_the_link_including_refresh_content_guard
+FAILED tests/test_recall_step11.py::test_email_declaration_requires_name_in_approved_identity[<h1>Example</h1>-Welcome]
+FAILED tests/test_recall_step11.py::test_email_declaration_requires_name_in_approved_identity[<footer>Example</footer>-Welcome]
+FAILED tests/test_recall_step11.py::test_email_declaration_requires_name_in_approved_identity[<img src="logo.svg" alt="Example">-Welcome]
+FAILED tests/test_recall_step11.py::test_email_declaration_requires_name_in_approved_identity[<meta property="og:site_name" content="Example">-Welcome]
+FAILED tests/test_recall_step11.py::test_email_declaration_requires_name_in_approved_identity[-Example]
+FAILED tests/test_recall_step11.py::test_email_link_only_and_provider_mismatch
+FAILED tests/test_refresh_integrity_repair.py::test_refresh_checked_low_candidate_does_not_mask_verified_site_timeout
+FAILED tests/test_suffix_absent_ownership.py::test_suffix_absent_remains_ambiguous_even_with_two_contacts_and_derived_domain
+FAILED tests/test_website_reliability.py::test_registry_declared_is_not_available_to_guesses
+22 failed, 1364 passed in 499.20s (0:08:19)

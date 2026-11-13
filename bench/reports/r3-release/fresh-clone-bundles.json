@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "file": "data/cc_orgnr_index.json.gz",
+      "bytes": 1771479,
+      "sha256": "44fa7de01004ea7a31bc9031d91708fde202bb23dd2f78cca8e58e862b180299",
+      "fresh_clone_identical": true
+    },
+    {
+      "file": "data/shared_identifiers.json.gz",
+      "bytes": 8676502,
+      "sha256": "56a292749123af3e67c9e79052d6a45fc140030876043da47e1eaea80bdd5ae7",
+      "fresh_clone_identical": true
+    },
+    {
+      "file": "src/signalpost/data/nav_index.json.gz",
+      "bytes": 429720,
+      "sha256": "f062559454f26e7ad1d2bc2140499c1aeb939ce9f1506ea1048c4c8078bed2a3",
+      "fresh_clone_identical": true
+    }
+  ],
+  "search_adapter_absent": true,
+  "runtime_commit": "fbe048529bc9816147ed107baf0c55a3ae985506"
+}

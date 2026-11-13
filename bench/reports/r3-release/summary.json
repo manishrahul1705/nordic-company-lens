@@ -1,0 +1,206 @@
+{
+  "baseline": {
+    "websites": 114,
+    "social_companies": 48,
+    "jobs": 3,
+    "activity": 1000,
+    "facts": 165614,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9150,
+    "http_mean": 9.15,
+    "http_attributed_mean": 8.999,
+    "http_max": 40,
+    "wall_seconds": 1878.2503582999962,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "51a04b39e30a0ae73be945cd1cdc3d6767140b4d",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 761,
+        "ambiguous": 116,
+        "available": 114,
+        "blocked": 4,
+        "failed": 5
+      },
+      "hiring": {
+        "not_available": 993,
+        "available": 3,
+        "failed": 4
+      },
+      "activity": {
+        "available": 1000
+      }
+    },
+    "GLEIF_companies": 32,
+    "TED_companies": 0,
+    "news_companies": 7,
+    "articles": 67
+  },
+  "release": {
+    "websites": 113,
+    "social_companies": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "facts": 165424,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9281,
+    "http_mean": 9.281,
+    "http_attributed_mean": 9.154,
+    "http_max": 40,
+    "wall_seconds": 1650.169991600007,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "fbe048529bc9816147ed107baf0c55a3ae985506",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 993,
+        "failed": 4,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 762,
+        "ambiguous": 115,
+        "available": 113,
+        "failed": 6,
+        "blocked": 4
+      },
+      "hiring": {
+        "not_available": 995,
+        "failed": 3,
+        "available": 2
+      },
+      "activity": {
+        "available": 1000
+      }
+    },
+    "GLEIF_companies": 32,
+    "TED_companies": 5,
+    "news_companies": 7,
+    "articles": 69,
+    "websites_by_proof_type": {
+      "orgnr_on_page": 38,
+      "jsonld_vatid": 5,
+      "registry_declared_name_tier_a": 25,
+      "legal_name_without_suffix_and_two_contacts": 9,
+      "legal_name_and_registry_contact": 24,
+      "unique_no_corroborated": 7,
+      "registry_declared_hard_contact_tier_b": 3,
+      "registry_phone_on_site": 2
+    },
+    "seconds_per_100": 165.0169991600007
+  },
+  "new_websites": 3,
+  "new_social_profiles": 0,
+  "lost_websites": 3,
+  "lost_social_profiles": 2,
+  "review": {
+    "new_website_urls": 3,
+    "new_company_websites": 2,
+    "website_aliases": 1,
+    "new_social_profiles": 0,
+    "reviewed_gains": 3,
+    "correct": 3,
+    "wrong": 0,
+    "doubtful": 0,
+    "precision_rule_changes": 0,
+    "counts_after_review": {
+      "websites": 113,
+      "social_companies": 47
+    }
+  },
+  "test_status": {
+    "passed": 1381,
+    "failed": 1,
+    "seconds": 648.07,
+    "failure": "hard-coded expected NAV build date 2026-11-04; actual authorized rebuild 2026-11-13",
+    "test_expectation_changed": false
+  },
+  "refresh_final": {
+    "commit": "fbe048529bc9816147ed107baf0c55a3ae985506",
+    "input_sha256": "723c0f45a059d8ee27aebfa442663907aaf462a9f8cb6cbf559a075d62625add",
+    "input_lines": 103,
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "signalpost",
+      "run",
+      "--organisations",
+      "orgnrs.txt",
+      "--output",
+      "out/envelopes.jsonl",
+      "--profiles-output",
+      "out/profiles.jsonl",
+      "--report",
+      "out/report.json",
+      "--state-dir",
+      "out/state",
+      "--site-dir",
+      "out/site"
+    ],
+    "credentials": "stripped; values never recorded",
+    "runs": [
+      {
+        "run": 1,
+        "exit_code": 0,
+        "wall_seconds": 199.2562814999983,
+        "requests": 722,
+        "changes": 0,
+        "observation_changes": 0,
+        "emitted_envelopes": 103,
+        "deadline_hits": 0,
+        "warnings": []
+      },
+      {
+        "run": 2,
+        "exit_code": 0,
+        "wall_seconds": 204.51383769999666,
+        "requests": 714,
+        "changes": 0,
+        "observation_changes": 0,
+        "emitted_envelopes": 103,
+        "deadline_hits": 0,
+        "warnings": []
+      }
+    ],
+    "strict_verifier_exit_code": 0
+  },
+  "refresh_first_attempt": {
+    "company_changes": 0,
+    "observation_changes": 100,
+    "strict_verifier_exit_code": 1,
+    "reason": "Registry-activity timeout in run1 recovered in run2; genuine new supported announcements, preserved unchanged."
+  }
+}

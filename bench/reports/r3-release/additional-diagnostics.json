@@ -1,0 +1,75 @@
+{
+  "baseline_jobs": {
+    "991247610": [
+      [
+        "Du vet den barnehagen du h\u00e5per finnes? Kanskje du nettopp fant den. ",
+        "bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+        "2026-11-13T00:00:00+01:00"
+      ]
+    ],
+    "960213912": [
+      [
+        "Er det deg vi leter etter i Rosenlund? S\u00f8k da vell!",
+        "a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+        "2026-11-30T00:00:00+01:00"
+      ]
+    ],
+    "930202894": [
+      [
+        "Pedagogisk leder 40% vikariat",
+        "c0349976-bbfc-41f4-a980-b482f06e5f2d",
+        "2026-11-26T00:00:00+01:00"
+      ]
+    ]
+  },
+  "release_jobs": {
+    "960213912": [
+      [
+        "Er det deg vi leter etter i Rosenlund? S\u00f8k da vell!",
+        "a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+        "2026-11-30T00:00:00+01:00"
+      ]
+    ],
+    "930202894": [
+      [
+        "Pedagogisk leder 40% vikariat",
+        "c0349976-bbfc-41f4-a980-b482f06e5f2d",
+        "2026-11-26T00:00:00+01:00"
+      ]
+    ]
+  },
+  "hiring_failed": [
+    {
+      "orgnr": "923998012",
+      "errors": [
+        {
+          "section": "hiring",
+          "code": "company_careers_website_budget_exhausted",
+          "message": "Company careers coverage incomplete"
+        }
+      ]
+    },
+    {
+      "orgnr": "922828172",
+      "errors": [
+        {
+          "section": "hiring",
+          "code": "company_careers_website_budget_exhausted",
+          "message": "Company careers coverage incomplete"
+        }
+      ]
+    },
+    {
+      "orgnr": "987002808",
+      "errors": [
+        {
+          "section": "hiring",
+          "code": "company_careers_website_budget_exhausted",
+          "message": "Company careers coverage incomplete"
+        }
+      ]
+    }
+  ],
+  "release_contact_facts": 172,
+  "cc_deterministic_reencoding": true
+}

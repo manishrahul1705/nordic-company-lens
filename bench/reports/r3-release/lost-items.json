@@ -1,0 +1,317 @@
+[
+  {
+    "kind": "website_alias",
+    "orgnr": "936629466",
+    "company": "CLOSVA AS",
+    "prior": {
+      "value": {
+        "final_url": "https://closva.com",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "jsonld_vatid",
+        "proof_page_url": "https://closva.com/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "eac0aa4f1405f09155c00c3707f3633c13452917e10c2e60a218ba1ff376a0b2",
+          "source_url": "https://closva.com/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T05:58:31.087656Z",
+          "content_sha256": "486947f3d09b2300f1968c47f08e4c9d675802e231e09829ffe2bdc6e4941f0c",
+          "claim_span": "ed.</p><p>Owned by Closva AS · Org. no. 936 629 466</p></div></div></footer></div><div class=\"fixed right-6 bottom-6 z-50 hidden lg:block pointer-even",
+          "locator": "identity-proof:936629466",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "replacement": {
+      "value": {
+        "final_url": "https://www.closva.com",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "jsonld_vatid",
+        "proof_page_url": "https://www.closva.com/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "0f16e9508ed419151af39dafa2fc954c80be0bad314c5a109fbf693f501a7852",
+          "source_url": "https://www.closva.com/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-13T06:04:05.902602Z",
+          "content_sha256": "486947f3d09b2300f1968c47f08e4c9d675802e231e09829ffe2bdc6e4941f0c",
+          "claim_span": "ed.</p><p>Owned by Closva AS · Org. no. 936 629 466</p></div></div></footer></div><div class=\"fixed right-6 bottom-6 z-50 hidden lg:block pointer-even",
+          "locator": "identity-proof:936629466",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "current_state": "available",
+    "reason": "Same registered domain; host/scheme alias replaced, company website still published."
+  },
+  {
+    "kind": "website",
+    "orgnr": "934620011",
+    "company": "ENSURE IT AS",
+    "prior": {
+      "value": {
+        "final_url": "https://ensure-it.eu",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://ensure-it.eu/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "aa82eddc6bb06e04694667c1b2992838595cb5411904efc3eb0b56ea602e86b1",
+          "source_url": "https://ensure-it.eu/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T05:59:16.220264Z",
+          "content_sha256": "498f269a7ccee4c0c2c18dfce894e0ff77a729c7c185df2dc8a72d7de248e742",
+          "claim_span": "-stl-custom9\" data-dnid=\"10391\">ORG.NR. 934 620 011 MVA</p>\n</div></div></div></div></div></div></div></div></div><div id=\"a1935e371eaf0859ae86375c0fa",
+          "locator": "identity-proof:934620011",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "current_state": "failed",
+    "diagnostics": {},
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_source_unavailable",
+        "message": "A candidate source could not be checked"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_timeout\", \"candidate_not_reachable\": false}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"ensureit.com\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"legal_name_slug\", \"reason\": \"insufficient_owner_proof\", \"title\": \"\", \"proof_page_url\": \"https://www.ensureit.com/\"}, {\"domain\": \"ensure-it.com\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"legal_name_slug\", \"reason\": \"insufficient_owner_proof\", \"title\": \"\", \"proof_page_url\": \"https://ensure-it.com/\"}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"https://ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"https://www.ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.ensure-it.eu/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"http://www.ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://ensure-it.eu/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"http://ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensure-it.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.ensure-it.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.ensure-it.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://ensure-it.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensureit.com/\", \"reason\": \"website_timeout\"}, {\"domain\": \"ensureit.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.ensureit.com/\", \"final_url\": \"https://www.ensureit.com/\", \"status\": 200}, {\"domain\": \"ensure-it.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensure-it.com/\", \"final_url\": \"https://ensure-it.com/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "kind": "website",
+    "orgnr": "979973969",
+    "company": "JAR HELSE AS",
+    "prior": {
+      "value": {
+        "final_url": "https://www.jarhelse.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.jarhelse.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "30e419808bfa57dfebe3a2964da566a37e17ee77e570e2c6025131f7c677b519",
+          "source_url": "https://www.jarhelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T06:01:11.181589Z",
+          "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+          "claim_span": "div><a href=\"#\" class=\"text-size-small\">99 09 20 10<br/></a><a href=\"#\" class=\"text-size-small\">kontakt@jarhelse.no<br/></a></div></div><div class=\"w-layout-grid footer11_social-list\"><a href=\"https://www.facebook.com/jarhelse\" class=\"footer11_social-link w-inline-block\"><div class=\"icon-embed-xsmal",
+          "locator": "identity-proof:979973969",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "current_state": "ambiguous",
+    "diagnostics": {},
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"jarhelse.no\", \"level\": \"MEDIUM\", \"points\": 2, \"signals\": [\"legal_name_without_suffix\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"name_without_suffix_insufficient_contacts_or_domain\", \"title\": \"Jar Helse\", \"proof_page_url\": \"https://www.jarhelse.no/\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jarhelse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jarhelse.no/\", \"final_url\": \"https://www.jarhelse.no/\", \"status\": 200}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"url\": \"https://jarhelse.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://jar-helse.com/\", \"reason\": \"no_such_domain\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "kind": "social",
+    "orgnr": "979973969",
+    "company": "JAR HELSE AS",
+    "prior": {
+      "value": {
+        "url": "https://www.facebook.com/jarhelse",
+        "platform": "facebook.com"
+      },
+      "field": "social_profile.c0f1d5fa2628f9772b9c",
+      "evidence": [
+        {
+          "id": "596be7a467a59bf782707aedb529690e9adb612bd2abe05edfce26a9cdc1ba12",
+          "source_url": "https://www.jarhelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T06:01:11.181589Z",
+          "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+          "claim_span": "<a href=\"https://www.facebook.com/jarhelse\" class=\"footer11_social-link w-inline-block\">",
+          "locator": "company-link:https://www.facebook.com/jarhelse",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "current_state": "ambiguous",
+    "diagnostics": {},
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"jarhelse.no\", \"level\": \"MEDIUM\", \"points\": 2, \"signals\": [\"legal_name_without_suffix\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"name_without_suffix_insufficient_contacts_or_domain\", \"title\": \"Jar Helse\", \"proof_page_url\": \"https://www.jarhelse.no/\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jarhelse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jarhelse.no/\", \"final_url\": \"https://www.jarhelse.no/\", \"status\": 200}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"url\": \"https://jarhelse.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://jar-helse.com/\", \"reason\": \"no_such_domain\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "kind": "social",
+    "orgnr": "979973969",
+    "company": "JAR HELSE AS",
+    "prior": {
+      "value": {
+        "url": "https://www.instagram.com/jarhelse",
+        "platform": "instagram.com"
+      },
+      "field": "social_profile.710179cd0e06ef175dc1",
+      "evidence": [
+        {
+          "id": "2a0b384abe4c41c9a70f91438f016b8b85bdc2206e8b6a5848c5f765e5f4b16f",
+          "source_url": "https://www.jarhelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T06:01:11.181589Z",
+          "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+          "claim_span": "<a href=\"https://www.instagram.com/jarhelse\" class=\"footer11_social-link w-inline-block\">",
+          "locator": "company-link:https://www.instagram.com/jarhelse",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "current_state": "ambiguous",
+    "diagnostics": {},
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"jarhelse.no\", \"level\": \"MEDIUM\", \"points\": 2, \"signals\": [\"legal_name_without_suffix\", \"postcode_city\"], \"origin\": \"legal_name_slug\", \"reason\": \"name_without_suffix_insufficient_contacts_or_domain\", \"title\": \"Jar Helse\", \"proof_page_url\": \"https://www.jarhelse.no/\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"jarhelse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jarhelse.no/\", \"final_url\": \"https://www.jarhelse.no/\", \"status\": 200}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://jar-helse.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"url\": \"https://jarhelse.com/\", \"reason\": \"transient_dns_retry\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jarhelse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://jarhelse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.jar-helse.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"jar-helse.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://jar-helse.com/\", \"reason\": \"no_such_domain\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "kind": "website",
+    "orgnr": "999516386",
+    "company": "RISIKOKONSULENTEN AS",
+    "prior": {
+      "value": {
+        "final_url": "https://risikokonsulenten.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://risikokonsulenten.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "6ecb8ccb4c8938bba4ba8b01c4936f723d66a42a4dd77cd37f74cef988e388d5",
+          "source_url": "https://risikokonsulenten.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T06:01:31.429869Z",
+          "content_sha256": "5d8253414565cf0b55365f18ff867beffb9ed0e85242f46e79fde26ef7252a98",
+          "claim_span": "isikokonsulenten.no</a></p>\n<p>Telefon: +47 90873490</p>\n</div>\n\t\t</aside>\n\t</div><!-- .sidebar-main -->\n</div><!-- #secondary -->\n\n\n\t</div> <!-- ast-container -->\n\t</div><!-- #content -->\n\n\t\t<footer\n\t\tclass=\"site-footer\" id=\"colophon\" itemtype=\"https://schema.org/WPFooter\" itemscope=\"itemscope\" ite",
+          "locator": "identity-proof:999516386",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "current_state": "ambiguous",
+    "diagnostics": {},
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"inex.no\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"registry_email\", \"reason\": \"insufficient_owner_proof\", \"title\": \"www.inex.no\", \"proof_page_url\": \"https://inex.no/\"}, {\"domain\": \"risikokonsulenten.no\", \"level\": \"MEDIUM\", \"points\": 0, \"signals\": [\"legal_name_without_suffix\"], \"origin\": \"legal_name_slug\", \"reason\": \"name_without_suffix_insufficient_contacts_or_domain\", \"title\": \"– For sikkerhets skyld –\", \"proof_page_url\": \"https://risikokonsulenten.no/\"}, {\"domain\": \"risikokonsulenten.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"inex.no\", \"origin\": \"registry_email\", \"url\": \"https://inex.no/\", \"final_url\": \"https://inex.no/\", \"status\": 200}, {\"domain\": \"risikokonsulenten.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://risikokonsulenten.no/\", \"final_url\": \"https://risikokonsulenten.no/\", \"status\": 200}, {\"domain\": \"risikokonsulenten.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://risikokonsulenten.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"risikokonsulenten.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.risikokonsulenten.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"risikokonsulenten.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.risikokonsulenten.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"risikokonsulenten.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://risikokonsulenten.com/\", \"reason\": \"no_such_domain\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  }
+]
