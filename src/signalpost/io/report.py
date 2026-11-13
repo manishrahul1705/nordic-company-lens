@@ -118,6 +118,9 @@ def compute_rejection_reasons(envelopes):
 
 
 def build(envelopes, inputs, budget, config, warnings, runtime):
+    unrecognised_flags = getattr(config, 'unrecognised_flags', [])
+    if unrecognised_flags:
+        warnings.append('Unrecognised arguments ignored: ' + json.dumps(unrecognised_flags, ensure_ascii=False))
     unique = {e.organisation_number: e for e in envelopes}
     company_events=[e for e in budget.events if e['organisation_number'] in unique]
     by_org = Counter(e["organisation_number"] for e in company_events)
@@ -151,3 +154,29 @@ def build(envelopes, inputs, budget, config, warnings, runtime):
             "schema_validated": True, "membership_validated": True,
             "funnel_metrics": funnel,
             "rejection_reasons": rejection_reasons}
+
+
+def effective_configuration(config, budget, report):
+    """Describe actual runtime settings without affecting collected claims."""
+    nav = report.get('hiring_prefetch', {})
+    return {
+        'websites': config.websites,
+        'hiring': config.hiring,
+        'public_activity': config.public_activity,
+        'registry_changes': config.registry_changes,
+        'official_extra_sources': config.official_extra_sources,
+        'website_suffix_contact_proof': config.website_suffix_contact_proof,
+        'search': {'queries': report.get('search', {}).get('queries', 0),
+                   'estimated_usd': report.get('search', {}).get('estimated_usd', 0)},
+        'synthesis': {'requested_mode': config.synthesis, 'effective_mode': 'template',
+                      'llm_calls': report.get('llm', {}).get('calls', 0)},
+        'request_caps': {'pooled': budget.cap, 'pooled_per_company': 18,
+                         'per_company': 40, 'website': config.website_request_cap,
+                         'website_total': config.website_total_request_cap},
+        'nav': {'index_built_at': nav.get('index_built_at'),
+                'mode': nav.get('source_mode', 'disabled' if not config.hiring else 'not_reported')},
+        'unrecognised_flags': list(config.unrecognised_flags),
+        'outputs': {key: str(value) if value is not None else None for key, value in
+                    [('envelopes', config.output), ('profiles', config.profiles_output),
+                     ('report', config.report), ('site', config.site_dir)]},
+    }

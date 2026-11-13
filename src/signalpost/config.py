@@ -17,6 +17,7 @@ class Config(BaseModel):
     emit_duplicates: bool = True
     expected_count: int | None = None
     run_id: str = ""
+    unrecognised_flags: list[str] = Field(default_factory=list)
     max_requests: int | None = Field(default=None, ge=0)
     time_budget_seconds: float = Field(default=2400, gt=0)
     deadline_fraction: float = Field(default=0.85, gt=0, le=1)

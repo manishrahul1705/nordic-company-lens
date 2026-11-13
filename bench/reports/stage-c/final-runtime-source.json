@@ -1,0 +1,9 @@
+{
+  "sha256": {
+    "src/signalpost/cli.py": "dddb6609fd39d2529a74d8c994dab169f1d1a56c34f936c3b2add0cd89328899",
+    "src/signalpost/config.py": "ffe314bafd4747b28ed7ac02f71bfa4c3226e9f3047de2070d36a895f292d127",
+    "src/signalpost/io/report.py": "8e802decc2a144d6a65c8da3006022bd5d6cda6fc4122301b4eebc0186064006",
+    "src/signalpost/runner.py": "071c9d1bd2da2fa42d5e60765181e9e1e247b758a1a5d50dde4f41b99d35b85e"
+  },
+  "difference_since_live_benchmark": "Report build uses getattr(config, unrecognised_flags, []) for compatibility with existing DummyConfig tests; real CLI Config always defines that field. No collection or published output changes."
+}
