@@ -202,6 +202,7 @@
       pair('Extraction method / version', e.extraction_method);
       pair('Locator', e.locator);
       if(fact.identity_level) pair('Website identity level', fact.identity_level);
+      if(fact.value && typeof fact.value === 'object' && fact.value.proof_type) pair('Ownership proof', fact.value.proof_type);
       const quote = element('blockquote', null, 'excerpt');
       const match = [...fact.values].sort((a,b) => b.length - a.length).find(v => v && e.claim_span.includes(v));
       if(match) {

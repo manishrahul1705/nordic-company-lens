@@ -1,0 +1,778 @@
+{
+  "phase": "before",
+  "site": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-g-run1\\site",
+  "companies": {
+    "922828172": "TENSIO AS",
+    "917998787": "DRAGEHAUGEN VERDI AS",
+    "926077422": "NRP ANAXO NORDIC M2"
+  },
+  "results": [
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "landing-before-search",
+      "tasks": {
+        "autofocus": false
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "📊 Dashboard",
+          "width": 87,
+          "scroll": 93
+        }
+      ],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "index",
+      "tasks": {
+        "searchName": true,
+        "searchOrgnr": true,
+        "themeReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "📊 Dashboard",
+          "width": 87,
+          "scroll": 93
+        }
+      ],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "922828172",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "TENSIO AS",
+        "type": "large"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "922828172-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nTENSIO AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/922828172\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:58 UTC\nEffective / reporting date\nUnknown\nSHA-256\n8955416c92312f23…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nTENSIO AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "917998787",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "DRAGEHAUGEN VERDI AS",
+        "type": "medium"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "917998787-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nDRAGEHAUGEN VERDI AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/917998787\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:57 UTC\nEffective / reporting date\nUnknown\nSHA-256\ncebe3f9cc3f34cf0…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nDRAGEHAUGEN VERDI AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "926077422",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "NRP ANAXO NORDIC M2",
+        "type": "sparse"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "926077422-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nNRP ANAXO NORDIC M2\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/926077422\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:59 UTC\nEffective / reporting date\nUnknown\nSHA-256\n5f1e664982c5a1c6…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nNRP ANAXO NORDIC M2\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "light",
+      "page": "compare",
+      "tasks": {
+        "twoCompanies": true,
+        "comparisonReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "landing-before-search",
+      "tasks": {
+        "autofocus": false
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "📊 Dashboard",
+          "width": 87,
+          "scroll": 93
+        }
+      ],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "index",
+      "tasks": {
+        "searchName": true,
+        "searchOrgnr": true,
+        "themeReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "📊 Dashboard",
+          "width": 87,
+          "scroll": 93
+        }
+      ],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "922828172",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "TENSIO AS",
+        "type": "large"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "922828172-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nTENSIO AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/922828172\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:58 UTC\nEffective / reporting date\nUnknown\nSHA-256\n8955416c92312f23…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nTENSIO AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "917998787",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "DRAGEHAUGEN VERDI AS",
+        "type": "medium"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "917998787-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nDRAGEHAUGEN VERDI AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/917998787\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:57 UTC\nEffective / reporting date\nUnknown\nSHA-256\ncebe3f9cc3f34cf0…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nDRAGEHAUGEN VERDI AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "926077422",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "NRP ANAXO NORDIC M2",
+        "type": "sparse"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "926077422-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nNRP ANAXO NORDIC M2\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/926077422\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:59 UTC\nEffective / reporting date\nUnknown\nSHA-256\n5f1e664982c5a1c6…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nNRP ANAXO NORDIC M2\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 360,
+      "height": 812,
+      "theme": "dark",
+      "page": "compare",
+      "tasks": {
+        "twoCompanies": true,
+        "comparisonReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "landing-before-search",
+      "tasks": {
+        "autofocus": false
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "index",
+      "tasks": {
+        "searchName": true,
+        "searchOrgnr": true,
+        "themeReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "922828172",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "TENSIO AS",
+        "type": "large"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "922828172-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nTENSIO AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/922828172\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:58 UTC\nEffective / reporting date\nUnknown\nSHA-256\n8955416c92312f23…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nTENSIO AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "917998787",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "DRAGEHAUGEN VERDI AS",
+        "type": "medium"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "917998787-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nDRAGEHAUGEN VERDI AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/917998787\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:57 UTC\nEffective / reporting date\nUnknown\nSHA-256\ncebe3f9cc3f34cf0…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nDRAGEHAUGEN VERDI AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "926077422",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "NRP ANAXO NORDIC M2",
+        "type": "sparse"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "926077422-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nNRP ANAXO NORDIC M2\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/926077422\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:59 UTC\nEffective / reporting date\nUnknown\nSHA-256\n5f1e664982c5a1c6…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nNRP ANAXO NORDIC M2\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "light",
+      "page": "compare",
+      "tasks": {
+        "twoCompanies": true,
+        "comparisonReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "landing-before-search",
+      "tasks": {
+        "autofocus": false
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "index",
+      "tasks": {
+        "searchName": true,
+        "searchOrgnr": true,
+        "themeReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "922828172",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "TENSIO AS",
+        "type": "large"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "922828172-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nTENSIO AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/922828172\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:58 UTC\nEffective / reporting date\nUnknown\nSHA-256\n8955416c92312f23…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nTENSIO AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "917998787",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "DRAGEHAUGEN VERDI AS",
+        "type": "medium"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "917998787-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nDRAGEHAUGEN VERDI AS\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/917998787\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:57 UTC\nEffective / reporting date\nUnknown\nSHA-256\ncebe3f9cc3f34cf0…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nDRAGEHAUGEN VERDI AS\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "926077422",
+      "tasks": {
+        "briefingPresent": true,
+        "company": "NRP ANAXO NORDIC M2",
+        "type": "sparse"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "926077422-evidence",
+      "tasks": {
+        "dialogNonempty": true,
+        "sourceURL": true,
+        "date": true,
+        "quote": true,
+        "text": "Close\n\nTHE EVIDENCE BEHIND THE FACT\n\nlegal name\n\nNRP ANAXO NORDIC M2\n\nSource / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/926077422\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n13 Nov 2026, 13:59 UTC\nEffective / reporting date\nUnknown\nSHA-256\n5f1e664982c5a1c6…Copy full hash\nExtraction method / version\nsignalpost.registry.v1\nLocator\n/navn\nNRP ANAXO NORDIC M2\nOriginal source excerpt (verbatim)"
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "theme": "dark",
+      "page": "compare",
+      "tasks": {
+        "twoCompanies": true,
+        "comparisonReload": true
+      },
+      "overlaps": [],
+      "overflow": false,
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "smallTargets": [],
+      "clipped": [],
+      "narrow": [],
+      "rawJSON": false,
+      "isoDates": []
+    }
+  ],
+  "brokenLinks": [],
+  "externalRequests": [],
+  "pageErrors": [],
+  "htmlFiles": 3715,
+  "largestHTMLBytes": 239582,
+  "oversizeHTML": [],
+  "crawlCompanyPages": 30
+}

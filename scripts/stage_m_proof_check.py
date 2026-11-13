@@ -1,0 +1,7 @@
+import json,os
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+root=Path(__file__).resolve().parents[1];site=root/'bench/cache/stage-m-after';out=root/'bench/reports/stage-m'
+rows=(json.loads(l) for l in (root/'bench/runs/stage-g-run1/envelopes.jsonl').open(encoding='utf8'));row=next(r for r in rows if r['organisation_number']=='922828172');claim=next(c for c in row['claims'] if c['field']=='official_website');anchor='fact-'+claim['id'][:16]
+with sync_playwright() as p:
+ browser=p.chromium.launch(headless=True,executable_path=str(Path(os.environ['LOCALAPPDATA'])/'ms-playwright/chromium-1248/chrome-win64/chrome.exe'));page=browser.new_page(viewport={'width':360,'height':812});page.goto((site/'c/922828172.html').as_uri());page.locator('#'+anchor+' button[data-toggle^="source-"],#'+anchor+' [data-receipt]').first.click();page.wait_for_timeout(80);drawer=page.locator('#evidence-drawer');text=drawer.inner_text();result={'ownershipProofLabel':'Ownership proof' in text,'exactProofType':claim['value']['proof_type'] in text,'exactQuotePresent':drawer.locator('blockquote').count()>0,'sourceURLPresent':drawer.locator('a[href^="http"]').count()>0,'text':text[:2300]};assert all(result[k] for k in ['ownershipProofLabel','exactProofType','exactQuotePresent','sourceURLPresent']);page.screenshot(path=str(out/'after/360-website-proof.png'));(out/'proof-one-click.json').write_text(json.dumps(result,indent=2)+'\n');browser.close();print('PASS website proof drawer')

@@ -192,6 +192,7 @@ def evidence_panel(claim, records, shared=False):
     identity = v.get('identity_level') if isinstance(v, dict) else None
     if identity:
         parts.append('<p>Website identity level: ' + esc(identity) + '</p>')
+        if v.get('proof_type'): parts.append('<p><strong>Ownership proof:</strong> <code>'+esc(v['proof_type'])+'</code></p>')
     return ''.join(parts)
 
 
@@ -333,6 +334,37 @@ def deferred_registry_ids(row):
     awards=[c for c in row['claims'] if c['field'].startswith('procurement_award.')]
     awards.sort(key=lambda c:(str(c['value'].get('date','')),c['field']),reverse=True)
     return {c['id'] for c in items[10:]+awards[2:]}
+
+
+
+def recorded_state_reasons(row, family):
+    """Expose only diagnostic codes actually recorded for this section."""
+    labels = {'insufficient_owner_proof':'No ownership proof was established',
+              'parked':'The page was identified as parked or for sale',
+              'different_legal_entity':'The page identifies a different publisher',
+              'foreign_orgnr':'A different organisation number was recorded',
+              'redirect_without_company_identity':'The redirect did not establish this company identity',
+              'website_source_unavailable':'A nominated source could not be checked',
+              'website_timeout':'The website request timed out',
+              'website_connect_error':'The website connection failed',
+              'website_tls_error':'TLS verification failed',
+              'no_such_domain':'A nominated domain did not exist',
+              'robots':'Robots policy refused access',
+              'website_budget_exhausted':'Website requests reached the configured allowance'}
+    found = []
+    for error in row.get('errors', []):
+        if error.get('section') != family: continue
+        code = error.get('code', '')
+        if code == 'website_candidates':
+            try: records = json.loads(error.get('message', ''))
+            except (ValueError, TypeError): records = []
+            for item in records if isinstance(records, list) else []:
+                reason = item.get('reason') if isinstance(item, dict) else None
+                if reason in labels and reason not in found: found.append(reason)
+        elif code in labels and code not in found: found.append(code)
+    if not found: return ''
+    return '<details class="state-reasons"><summary>Why this result? Recorded checks</summary><ul>' + ''.join(
+        '<li>'+esc(labels[code])+' <code>'+esc(code)+'</code></li>' for code in found[:6]) + '</ul></details>'
 
 
 def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
@@ -513,6 +545,7 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
                 body += f'<div class="financial-trend-banner"><p><strong>Reporting period:</strong> Fiscal year {years[0]} filed in Regnskapsregisteret ({esc(curr_str)}). Single-year reported values.</p></div>'
         if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'
         if not items or state != 'available': body += '<p>' + esc(UNKNOWN.get(state, 'No facts published in this section.')) + '</p>'
+        if state != 'available': body += recorded_state_reasons(row, family)
         if key == 'financials' and items:
             chart=[c for c in items if c['availability']=='available' and isinstance(c['value'],(int,float)) and not isinstance(c['value'],bool) and c['field'].endswith(('.revenue','.net_result')) and not c['field'].startswith('accounts.consolidated.')]
             if chart:
@@ -911,7 +944,7 @@ def index_page(records, title, skipped=()):
     websites=sum(r['flags']['website'] for r in records)
     activity=sum(r['flags']['activity'] for r in records)
     body = '<section class="home-hero"><div class="hero-copy"><p class="eyebrow">Norwegian company research</p><h1>Every fact, traced to its source.</h1><p>Search '+str(n)+' Norwegian companies, compare them side by side, and check the original source behind every number.</p><p id="cohort-summary">'+esc(summary)+'</p>'
-    body += '<div class="hero-search"><label class="visually-hidden" for="search">Search by name, organisation number, municipality or industry</label><input id="search" type="search" autocomplete="off" placeholder="Search by name, org. number, town or industry" aria-controls="search-autocomplete"><div id="search-autocomplete" class="autocomplete-dropdown" hidden></div></div><div class="try-chips"><span>Try:</span>'
+    body += '<div class="hero-search"><label class="search-label" for="search">Find a company <span>Press / to search</span></label><input id="search" type="search" autofocus autocomplete="off" placeholder="Company name or organisation number" aria-controls="search-autocomplete"><div id="search-autocomplete" class="autocomplete-dropdown" hidden></div></div><div class="try-chips"><span>Try:</span>'
     for r in sorted(records,key=lambda r:r['claim_count'],reverse=True)[:3]:body += '<button type="button" data-search="'+esc(r['name'])+'">'+esc(r['name'])+'</button>'
     body += '</div></div><div class="hero-stats">'
     for number,label in [(n,'companies'),(verified,'verified claims'),(websites,'verified websites'),(activity,'companies with activity')]:body += '<div class="hero-stat"><strong>'+format(number,',')+'</strong><span>'+label+'</span></div>'
