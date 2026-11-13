@@ -1,0 +1,383 @@
+{
+  "index_built_at": "2026-11-13T00:26:42.872674Z",
+  "ads": 9296,
+  "employers": 5899,
+  "universe": 411160,
+  "direct_overlap": 0,
+  "direct_expected_per1000": 0.0,
+  "mapped_parent_overlap": 2116,
+  "mapped_expected_per1000": 5.146415020916431,
+  "subunit_employers": 5896,
+  "frozen1000_direct_companies": 0,
+  "frozen1000_parent_companies": 2,
+  "hiring_attempted_companies": 1000,
+  "run_hiring_prefetch": {
+    "pages": 3,
+    "items": 1974,
+    "bytes": 997975,
+    "details": 3,
+    "requests": 7,
+    "runtime_ms": 115484,
+    "source_mode": "declared_index",
+    "index_version": "nav-20261113T002642.872674Z-v1",
+    "index_built_at": "2026-11-13T00:26:42.872674Z",
+    "index_age_days": 0.5632701013078704,
+    "index_compressed_bytes": 429720,
+    "index_ads": 9296,
+    "seeded_from_disk": 0,
+    "fresh_fetched_ads": 9296,
+    "time_cap_seconds": 900,
+    "feed_complete": true,
+    "detail_request_cap": 13,
+    "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+    "offline_index_candidates": 0,
+    "feed_runtime_ms": 3171,
+    "first_detail_seconds": 10.687000000005355,
+    "first_detail_page_number": 3,
+    "details_started_before_feed_complete": false,
+    "detail_requests": 3,
+    "detail_requests_by_company": {
+      "991247610": 1,
+      "960213912": 1,
+      "930202894": 1
+    },
+    "last_detail_seconds": 74.76500000001397,
+    "forward_header_orgnr_counts": {
+      "parent_orgnr": 0,
+      "subunit_orgnr": 0,
+      "no_orgnr": 920,
+      "other_orgnr": 0
+    },
+    "runtime_seconds": 115.48400000002584,
+    "feed_seconds": 3.171,
+    "average_seconds_per_page": 1.057,
+    "complete": true,
+    "blocked": false,
+    "reason": "complete",
+    "header_processing_complete": true,
+    "candidate_headers": 3,
+    "distinct_candidate_ads": 3,
+    "indexed_ads": 4,
+    "detail_concurrency": 4,
+    "incomplete_companies": [],
+    "name_unusable_companies": 0,
+    "fallback_name_unusable_companies": 34,
+    "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+    "companies_with_unchecked_candidates": 0,
+    "cap_hits": 0,
+    "lookback_days": 185,
+    "matches_published": 2,
+    "companies_with_ads": 2
+  },
+  "matched_companies": [
+    {
+      "orgnr": "960213912",
+      "name": "ROSENLUND BARNEHAGE SA",
+      "ads": [
+        {
+          "employer_orgnr": "972285501",
+          "etag": null,
+          "expires": "2026-11-30T00:00:00+01:00",
+          "last_modified": "2026-11-09T11:46:45.339324+01:00",
+          "published": "2026-11-09T10:11:31+01:00",
+          "status": "ACTIVE",
+          "uuid": "a3e96411-9639-48cd-a27b-2e5e4406a3e8"
+        }
+      ],
+      "hiring_claims": [
+        {
+          "field": "hiring.job.a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+          "value": {
+            "uuid": "a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+            "employer_orgnr": "972285501",
+            "status": "ACTIVE",
+            "title": "Er det deg vi leter etter i Rosenlund? S\u00f8k da vell!",
+            "location": [
+              {
+                "municipality": "NORDRE FOLLO",
+                "city": "SKI"
+              }
+            ],
+            "published": "2026-11-09T10:11:31+01:00",
+            "expires": "2026-11-30T00:00:00+01:00",
+            "occupation_categories": [
+              {
+                "level1": "Utdanning",
+                "level2": "Barnehage- og skolefritidsassistenter"
+              }
+            ],
+            "url": "https://arbeidsplassen.nav.no/stillinger/stilling/a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+            "availability": {
+              "location": "available",
+              "occupation_categories": "available"
+            },
+            "matched_via": "subunit 972285501"
+          },
+          "availability": "available",
+          "confidence": 1.0,
+          "evidence_ids": [
+            "22a400b4d120d9ceb0c253b63beb50c5d05f0a16179474485200a1d27331c8d5"
+          ],
+          "id": "929ee9b1f28c4d3a6d8b0fa6946e2c22b359bdff7a492ee5468eb48e3dec6f25",
+          "family": "hiring",
+          "reporting_period": null,
+          "carried_forward": false,
+          "stale_since": null,
+          "first_observed_at": "2026-11-13T13:59:01.514128Z",
+          "last_observed_at": "2026-11-13T13:59:01.514128Z",
+          "reasons": {}
+        }
+      ],
+      "hiring_errors": [],
+      "modules": {
+        "state": "complete",
+        "retry_count": 0,
+        "final_timestamp": "2026-11-13T14:03:49.081589Z"
+      },
+      "detail_requests": 1
+    },
+    {
+      "orgnr": "930202894",
+      "name": "NORLANDIA ENGA BARNEHAGE AS",
+      "ads": [
+        {
+          "employer_orgnr": "997453964",
+          "etag": null,
+          "expires": "2026-11-26T00:00:00+01:00",
+          "last_modified": "2026-10-26T11:54:54.005583+01:00",
+          "published": "2026-10-26T10:53:41.231396+01:00",
+          "status": "ACTIVE",
+          "uuid": "c0349976-bbfc-41f4-a980-b482f06e5f2d"
+        }
+      ],
+      "hiring_claims": [
+        {
+          "field": "hiring.job.c0349976-bbfc-41f4-a980-b482f06e5f2d",
+          "value": {
+            "uuid": "c0349976-bbfc-41f4-a980-b482f06e5f2d",
+            "employer_orgnr": "997453964",
+            "status": "ACTIVE",
+            "title": "Pedagogisk leder 40% vikariat",
+            "location": [
+              {
+                "municipality": "OSLO",
+                "city": "OSLO"
+              }
+            ],
+            "published": "2026-10-26T10:53:41.231396+01:00",
+            "expires": "2026-11-26T00:00:00+01:00",
+            "occupation_categories": [
+              {
+                "level1": "Utdanning",
+                "level2": "Barnehagel\u00e6rer"
+              }
+            ],
+            "url": "https://arbeidsplassen.nav.no/stillinger/stilling/c0349976-bbfc-41f4-a980-b482f06e5f2d",
+            "availability": {
+              "location": "available",
+              "occupation_categories": "available"
+            },
+            "matched_via": "subunit 997453964"
+          },
+          "availability": "available",
+          "confidence": 1.0,
+          "evidence_ids": [
+            "9734f41f5a622199f6e8a5af389674ddb13789aa054f48078c7e6a188f66f2d3"
+          ],
+          "id": "3b2f2621909de0211b6faa2fee10c50c8f73fb5c7a05c58cb08788aa27010c8f",
+          "family": "hiring",
+          "reporting_period": null,
+          "carried_forward": false,
+          "stale_since": null,
+          "first_observed_at": "2026-11-13T13:59:04.176966Z",
+          "last_observed_at": "2026-11-13T13:59:04.176966Z",
+          "reasons": {}
+        }
+      ],
+      "hiring_errors": [],
+      "modules": {
+        "state": "complete",
+        "retry_count": 0,
+        "final_timestamp": "2026-11-13T14:03:40.258566Z"
+      },
+      "detail_requests": 1
+    }
+  ],
+  "run_live_subunit_scope_companies": 2,
+  "run_live_subunit_scope_ads": 2,
+  "live_scope_matches": [
+    {
+      "orgnr": "960213912",
+      "name": "ROSENLUND BARNEHAGE SA",
+      "ads": [
+        {
+          "employer_orgnr": "972285501",
+          "etag": null,
+          "expires": "2026-11-30T00:00:00+01:00",
+          "last_modified": "2026-11-09T11:46:45.339324+01:00",
+          "published": "2026-11-09T10:11:31+01:00",
+          "status": "ACTIVE",
+          "uuid": "a3e96411-9639-48cd-a27b-2e5e4406a3e8"
+        }
+      ],
+      "hiring_claims": [
+        {
+          "field": "hiring.job.a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+          "value": {
+            "uuid": "a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+            "employer_orgnr": "972285501",
+            "status": "ACTIVE",
+            "title": "Er det deg vi leter etter i Rosenlund? S\u00f8k da vell!",
+            "location": [
+              {
+                "municipality": "NORDRE FOLLO",
+                "city": "SKI"
+              }
+            ],
+            "published": "2026-11-09T10:11:31+01:00",
+            "expires": "2026-11-30T00:00:00+01:00",
+            "occupation_categories": [
+              {
+                "level1": "Utdanning",
+                "level2": "Barnehage- og skolefritidsassistenter"
+              }
+            ],
+            "url": "https://arbeidsplassen.nav.no/stillinger/stilling/a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+            "availability": {
+              "location": "available",
+              "occupation_categories": "available"
+            },
+            "matched_via": "subunit 972285501"
+          },
+          "availability": "available",
+          "confidence": 1.0,
+          "evidence_ids": [
+            "22a400b4d120d9ceb0c253b63beb50c5d05f0a16179474485200a1d27331c8d5"
+          ],
+          "id": "929ee9b1f28c4d3a6d8b0fa6946e2c22b359bdff7a492ee5468eb48e3dec6f25",
+          "family": "hiring",
+          "reporting_period": null,
+          "carried_forward": false,
+          "stale_since": null,
+          "first_observed_at": "2026-11-13T13:59:01.514128Z",
+          "last_observed_at": "2026-11-13T13:59:01.514128Z",
+          "reasons": {}
+        }
+      ],
+      "errors": []
+    },
+    {
+      "orgnr": "930202894",
+      "name": "NORLANDIA ENGA BARNEHAGE AS",
+      "ads": [
+        {
+          "employer_orgnr": "997453964",
+          "etag": null,
+          "expires": "2026-11-26T00:00:00+01:00",
+          "last_modified": "2026-10-26T11:54:54.005583+01:00",
+          "published": "2026-10-26T10:53:41.231396+01:00",
+          "status": "ACTIVE",
+          "uuid": "c0349976-bbfc-41f4-a980-b482f06e5f2d"
+        }
+      ],
+      "hiring_claims": [
+        {
+          "field": "hiring.job.c0349976-bbfc-41f4-a980-b482f06e5f2d",
+          "value": {
+            "uuid": "c0349976-bbfc-41f4-a980-b482f06e5f2d",
+            "employer_orgnr": "997453964",
+            "status": "ACTIVE",
+            "title": "Pedagogisk leder 40% vikariat",
+            "location": [
+              {
+                "municipality": "OSLO",
+                "city": "OSLO"
+              }
+            ],
+            "published": "2026-10-26T10:53:41.231396+01:00",
+            "expires": "2026-11-26T00:00:00+01:00",
+            "occupation_categories": [
+              {
+                "level1": "Utdanning",
+                "level2": "Barnehagel\u00e6rer"
+              }
+            ],
+            "url": "https://arbeidsplassen.nav.no/stillinger/stilling/c0349976-bbfc-41f4-a980-b482f06e5f2d",
+            "availability": {
+              "location": "available",
+              "occupation_categories": "available"
+            },
+            "matched_via": "subunit 997453964"
+          },
+          "availability": "available",
+          "confidence": 1.0,
+          "evidence_ids": [
+            "9734f41f5a622199f6e8a5af389674ddb13789aa054f48078c7e6a188f66f2d3"
+          ],
+          "id": "3b2f2621909de0211b6faa2fee10c50c8f73fb5c7a05c58cb08788aa27010c8f",
+          "family": "hiring",
+          "reporting_period": null,
+          "carried_forward": false,
+          "stale_since": null,
+          "first_observed_at": "2026-11-13T13:59:04.176966Z",
+          "last_observed_at": "2026-11-13T13:59:04.176966Z",
+          "reasons": {}
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "live_detail_bodies": [
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+      "sha256": "2ab1f3e0484f1146e97af167210b0a8e36d91e46faf2a67c95de984573a911c5",
+      "status": "ACTIVE",
+      "ad": {
+        "uuid": "bdb50d18-4cdb-485f-a8cf-f861927dd9ca",
+        "title": "Du vet den barnehagen du h\u00e5per finnes? Kanskje du nettopp fant den. ",
+        "published": "2026-10-23T08:15:17+02:00",
+        "expires": "2026-11-13T00:00:00+01:00",
+        "employer": {
+          "name": "Rolidbakken Fus Barnehage As",
+          "orgnr": "931166492",
+          "description": "<p>Vi i Rolidbakken FUS Barnehage mener at gode barnehager skapes av mennesker som trives sammen. Hos oss m\u00f8ter du engasjerte kollegaer som l\u00f8fter hverandre, ler sammen og alltid har barnas beste i fokus.</p>\n<p>Vi er opptatt av \u00e5 skape en hverdag preget av trygghet, lekeglede og nysgjerrighet. Her f\u00e5r du mulighet til \u00e5 bruke kompetansen din, p\u00e5virke praksisen v\u00e5r og v\u00e6re en viktig del av et faglig fellesskap som \u00f8nsker \u00e5 utvikle seg sammen.</p>\n<p>Vi vet at ingen er perfekte, men vi tror p\u00e5 \u00e5 spille hverandre gode. Derfor jobber vi for en kultur preget av \u00e5penhet, samarbeid og tillit. Hos oss skal du bli sett, h\u00f8rt og verdsatt for den du er.</p>\n<p>Hver dag hos oss handler om \u00e5 gi barn en trygg start p\u00e5 livet, skape magiske \u00f8yeblikk i leken og v\u00e6re den voksne som gj\u00f8r en forskjell.</p>\n<p><strong>\u00d8nsker du en arbeidsplass med varme, engasjement og faglig stolthet? Da kan Rolidbakken v\u00e6re stedet for deg.</strong></p>\n<p><em>&#34;Vi bygger ikke bare en barnehage. Vi bygger barndom.&#34;</em> \u2764\ufe0f</p>\n",
+          "homepage": "https://fus.no/rolidbakken"
+        }
+      }
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+      "sha256": "56cb30f3280c387bd7c82e097b973236601ac902734fc81992eb89a76fe59b9d",
+      "status": "ACTIVE",
+      "ad": {
+        "uuid": "a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+        "title": "Er det deg vi leter etter i Rosenlund? S\u00f8k da vell!",
+        "published": "2026-11-09T10:11:31+01:00",
+        "expires": "2026-11-30T00:00:00+01:00",
+        "employer": {
+          "name": "Rosenlund Barnehage",
+          "orgnr": "972285501",
+          "description": "<h2>Hvem er vi?</h2>\n<p>Rosenlund barnehage er en foreldreeid barnehage p\u00e5 Finstad i Ski, med rundt 70 barn i alderen 0--6 \u00e5r.</p>\n<p>Vi er en EQ-sertifisert barnehage som er opptatt av relasjoner, trygghet og emosjonell kompetanse. Hos oss skal barn bli m\u00f8tt med varme, respekt og anerkjennelse. Vi \u00f8nsker \u00e5 v\u00e6re voksne som ser, lytter, deltar og gj\u00f8r en forskjell.</p>\n<p>Vi tror at gode dager skapes sammen -- med lek, humor, omsorg, engasjement og voksne som er til stede.</p>\n",
+          "homepage": ""
+        }
+      }
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/c0349976-bbfc-41f4-a980-b482f06e5f2d",
+      "sha256": "04f6bcb4dda6f88e0e688fcaa7e8133e4cec0abaf3942e3b249d15520b9a1d4c",
+      "status": "ACTIVE",
+      "ad": {
+        "uuid": "c0349976-bbfc-41f4-a980-b482f06e5f2d",
+        "title": "Pedagogisk leder 40% vikariat",
+        "published": "2026-10-26T10:53:41.231396+01:00",
+        "expires": "2026-11-26T00:00:00+01:00",
+        "employer": {
+          "name": "Norlandia Enga Barnehage",
+          "orgnr": "997453964",
+          "description": "<p>Norlandia Enga barnehage er en 2-avdelings barnehage med til sammen 32 barn. Vi holder til i et verneverdig gammelt trehus p\u00e5 V\u00e5lerenga, rett ved V\u00e5lerengaparken og det er enkelt \u00e5 ta seg til oss med kollektivtrafikk. V\u00e5r beliggenhet gir oss n\u00e6rhet til parker og det kulturelle tilbud som hovedstaden har \u00e5 by p\u00e5.</p><p><br /></p><p>Barnas beste er det viktigste hos oss, og hos oss skal barna m\u00f8te trygghet og ansatte som lytter og ser barnet. I Enga barnehage har vi et stabilt personale med godt samhold og mye humor \u00e5 glede i hverdagen. Det er 4 pedagoger i barnehagens lederteam som samarbeider godt for utvikling og planlegging av det pedagogiske arbeidet i barnehagen. </p><p><br /></p><p>Vi drar nytte av at vi er et lite milj\u00f8 som gir godt samarbeid mellom avdelingene og der barn, ansatte og foresatte blir godt kjent med hverandre.\u00a0</p>",
+          "homepage": ""
+        }
+      }
+    }
+  ]
+}

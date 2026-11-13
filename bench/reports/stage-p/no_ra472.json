@@ -1,0 +1,148 @@
+{
+  "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAt%5D=RA000472&filter%5Bentity.legalAddress.country%5D=NO&page%5Bsize%5D=1",
+  "status": 200,
+  "body": {
+    "meta": {
+      "goldenCopy": {
+        "publishDate": "2026-11-13T08:00:00Z"
+      },
+      "pagination": {
+        "currentPage": 1,
+        "perPage": 1,
+        "from": 1,
+        "to": 1,
+        "total": 63773,
+        "lastPage": 63773
+      }
+    },
+    "links": {
+      "first": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAt%5D=RA000472&filter%5Bentity.legalAddress.country%5D=NO&page%5Bnumber%5D=1&page%5Bsize%5D=1",
+      "next": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAt%5D=RA000472&filter%5Bentity.legalAddress.country%5D=NO&page%5Bnumber%5D=2&page%5Bsize%5D=1",
+      "last": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAt%5D=RA000472&filter%5Bentity.legalAddress.country%5D=NO&page%5Bnumber%5D=63773&page%5Bsize%5D=1"
+    },
+    "data": [
+      {
+        "type": "lei-records",
+        "id": "6367009EC5Z7734S7G31",
+        "attributes": {
+          "lei": "6367009EC5Z7734S7G31",
+          "entity": {
+            "legalName": {
+              "name": "BACKE INDUSTRI AS",
+              "language": "no"
+            },
+            "otherNames": [],
+            "transliteratedOtherNames": [],
+            "legalAddress": {
+              "language": "no",
+              "addressLines": [
+                "Lysaker torg 8"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "Lysaker",
+              "region": "NO-30",
+              "country": "NO",
+              "postalCode": "1366"
+            },
+            "headquartersAddress": {
+              "language": "no",
+              "addressLines": [
+                "Lysaker torg 8"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "Lysaker",
+              "region": "NO-30",
+              "country": "NO",
+              "postalCode": "1366"
+            },
+            "registeredAt": {
+              "id": "RA000472",
+              "other": null
+            },
+            "registeredAs": "834 636 212",
+            "jurisdiction": "NO",
+            "category": "GENERAL",
+            "legalForm": {
+              "id": "YI42",
+              "other": null
+            },
+            "associatedEntity": {
+              "lei": null,
+              "name": null
+            },
+            "status": "ACTIVE",
+            "expiration": {
+              "date": null,
+              "reason": null
+            },
+            "successorEntity": {
+              "lei": null,
+              "name": null
+            },
+            "successorEntities": [],
+            "creationDate": "2024-11-26T00:00:00Z",
+            "subCategory": null,
+            "otherAddresses": [],
+            "eventGroups": []
+          },
+          "registration": {
+            "initialRegistrationDate": "2026-11-13T06:27:00Z",
+            "lastUpdateDate": "2026-11-13T06:27:00Z",
+            "status": "ISSUED",
+            "nextRenewalDate": "2027-11-13T06:27:00Z",
+            "managingLou": "549300O897ZC5H7CY412",
+            "corroborationLevel": "FULLY_CORROBORATED",
+            "validatedAt": {
+              "id": "RA000472",
+              "other": null
+            },
+            "validatedAs": "834 636 212",
+            "otherValidationAuthorities": []
+          },
+          "bic": null,
+          "mic": null,
+          "ocid": null,
+          "qcc": null,
+          "gem": null,
+          "spglobal": null,
+          "conformityFlag": null
+        },
+        "relationships": {
+          "managing-lou": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/6367009EC5Z7734S7G31/managing-lou"
+            }
+          },
+          "lei-issuer": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/6367009EC5Z7734S7G31/lei-issuer"
+            }
+          },
+          "field-modifications": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/6367009EC5Z7734S7G31/field-modifications"
+            }
+          },
+          "direct-parent": {
+            "links": {
+              "relationship-record": "https://api.gleif.org/api/v1/lei-records/6367009EC5Z7734S7G31/direct-parent-relationship",
+              "lei-record": "https://api.gleif.org/api/v1/lei-records/6367009EC5Z7734S7G31/direct-parent"
+            }
+          },
+          "ultimate-parent": {
+            "links": {
+              "reporting-exception": "https://api.gleif.org/api/v1/lei-records/6367009EC5Z7734S7G31/ultimate-parent-reporting-exception"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.gleif.org/api/v1/lei-records/6367009EC5Z7734S7G31"
+        }
+      }
+    ]
+  }
+}
