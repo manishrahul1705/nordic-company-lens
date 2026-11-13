@@ -170,7 +170,7 @@ def effective_configuration(config, budget, report):
                    'estimated_usd': report.get('search', {}).get('estimated_usd', 0)},
         'synthesis': {'requested_mode': config.synthesis, 'effective_mode': 'template',
                       'llm_calls': report.get('llm', {}).get('calls', 0)},
-        'request_caps': {'pooled': budget.cap, 'pooled_per_company': 18,
+        'request_caps': {'pooled': budget.cap, 'pooled_per_company': 19,
                          'per_company': 40, 'website': config.website_request_cap,
                          'website_total': config.website_total_request_cap},
         'nav': {'index_built_at': nav.get('index_built_at'),

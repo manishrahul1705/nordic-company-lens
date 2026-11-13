@@ -1,0 +1,130 @@
+{
+  "baseline": {
+    "websites": 113,
+    "social_companies": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "facts": 165424,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9281,
+    "http_mean": 9.281,
+    "http_attributed_mean": 9.154,
+    "http_max": 40,
+    "wall_seconds": 1650.169991600007,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "fbe048529bc9816147ed107baf0c55a3ae985506",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 993,
+        "failed": 4,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 762,
+        "ambiguous": 115,
+        "available": 113,
+        "failed": 6,
+        "blocked": 4
+      },
+      "hiring": {
+        "not_available": 995,
+        "failed": 3,
+        "available": 2
+      },
+      "activity": {
+        "available": 1000
+      }
+    }
+  },
+  "candidate": {
+    "websites": 113,
+    "social_companies": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "facts": 165471,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9130,
+    "http_mean": 9.13,
+    "http_attributed_mean": 9.003,
+    "http_max": 40,
+    "wall_seconds": 930.5407043000014,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "b1d7868dfed5f1af59d9a35a5268d8a9569492e4",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 761,
+        "ambiguous": 116,
+        "available": 113,
+        "failed": 6,
+        "blocked": 4
+      },
+      "hiring": {
+        "not_available": 998,
+        "available": 2
+      },
+      "activity": {
+        "available": 1000
+      }
+    }
+  },
+  "websites_by_proof_type": {
+    "orgnr_on_page": 38,
+    "jsonld_vatid": 5,
+    "registry_declared_name_tier_a": 25,
+    "legal_name_without_suffix_and_two_contacts": 9,
+    "legal_name_and_registry_contact": 24,
+    "unique_no_corroborated": 7,
+    "registry_declared_hard_contact_tier_b": 3,
+    "registry_phone_on_site": 2
+  },
+  "jobs_funnel": {
+    "kept": 0,
+    "all_jobs_kept": 2,
+    "candidates": 38,
+    "fetched": 38,
+    "accepted": 0,
+    "active_posts": 0,
+    "pages_checked": 38
+  },
+  "careers_errors": {},
+  "new_websites": 1,
+  "new_jobs": 0,
+  "lost_websites": 0,
+  "pooled_limit": 19000,
+  "per_100_seconds": 93.05407043000014,
+  "all_attributed_counts_within_40": true
+}

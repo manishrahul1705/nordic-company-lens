@@ -407,6 +407,8 @@ async def _run(config, client=None):
             async with website_semaphore:
                 if config.websites:
                     await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), nav_index))
+                if config.hiring and website_http.accepted_pages.get(org):
+                    website_http.reserve_careers(org)
                 if config.public_activity:
                     from .web.activity import fetch as fetch_activity
                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
@@ -429,19 +431,11 @@ async def _run(config, client=None):
                 if has_nav_hp or has_nav_ad:
                     async with website_semaphore:
                         await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), nav_index))
+                        if config.hiring and website_http.accepted_pages.get(org):
+                            website_http.reserve_careers(org)
                         if config.public_activity and website_http.accepted_pages.get(org) and envelope.run.sections.get("activity") != "available":
                             from .web.activity import fetch as fetch_activity
                             await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
-            if config.hiring and config.websites and website_http.accepted_pages.get(org):
-                from .web.jobs import fetch as company_jobs
-                from .sources.extract import Section
-                async with website_semaphore:
-                    jobs = await company_jobs(envelope, website_http)
-                current = [c for c in envelope.claims if c.family=='hiring' and c.availability=='available']
-                if jobs.claims or jobs.errors:
-                    state = 'available' if current or jobs.claims else 'failed'
-                    update(envelope,'hiring',Section(state=state,claims=current+jobs.claims,evidence=jobs.evidence,
-                           errors=[e for e in envelope.errors if e.section=='hiring']+jobs.errors))
         except asyncio.CancelledError:
             raise
         except SourceFailure as exc:
@@ -509,7 +503,7 @@ async def _run(config, client=None):
                 warnings.append(f"{stuck} company tasks did not stop within {CANCEL_GRACE_SECONDS}s of cancellation; unfinished sections are reported as deadline")
             if config.websites and not stuck:
                 from .web.second_pass import run as second_pass
-                dns_metrics['website_second_pass']=await second_pass(envelopes,website_http,bulk,prior,nav_index,isolate,update)
+                dns_metrics['website_second_pass']=await second_pass(envelopes,website_http,bulk,prior,nav_index,isolate,update,defer_jobs=True)
             if config.registry_changes:
                 from .sources import registry_changes
                 eligible = {org: envelopes[org] for org in sorted(valid_orgs)
@@ -538,6 +532,27 @@ async def _run(config, client=None):
                         if any(c.family=='activity' for c in section.claims):row.run.sections['activity']='available'
                 except Exception:
                     dns_metrics['official_extra']={'state':'not_available_fetch_failed'}
+            if config.hiring and config.websites and not stuck:
+                from .web.jobs import fetch as company_jobs
+                from .sources.extract import Section
+                from .web.policy import DNS_ORG
+                async def careers(org, row):
+                    async with website_semaphore:
+                        DNS_ORG.set(org)
+                        website_http.reserve_careers(org)
+                        website_http.careers_active.add(org)
+                        try:
+                            jobs = await company_jobs(row, website_http)
+                            current = [c for c in row.claims if c.family == 'hiring' and c.availability == 'available']
+                            if jobs.claims or jobs.errors:
+                                update(row, 'hiring', Section(state='available' if current or jobs.claims else 'failed',
+                                    claims=current + jobs.claims, evidence=jobs.evidence,
+                                    errors=[e for e in row.errors if e.section == 'hiring'] + jobs.errors))
+                        finally:
+                            website_http.careers_active.discard(org)
+                careers_tasks = [asyncio.create_task(careers(org, row)) for org, row in envelopes.items()
+                                 if website_http.accepted_pages.get(org)]
+                await finish_before_deadline(careers_tasks, budget, CANCEL_GRACE_SECONDS)
             return pending
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
@@ -617,7 +632,7 @@ async def _run(config, client=None):
     report['limits']['time_budget_seconds']=budget.total_seconds
     report['limits']['hard_max_requests']=budget.hard_request_cap
     report['limits']['hard_time_budget_seconds']=budget.hard_time_cap_seconds
-    report['request_budget_basis']='Pooled 18 per unique normalized input globally, up to 40 per company; explicit lower limits honored'
+    report['request_budget_basis']='Pooled 19 per unique normalized input globally, up to 40 per company; explicit lower limits honored'
     report['measured_request_projection']={'baseline':'1000-company retained-features run',
         'baseline_mean_http':5.975,'projected_http':round(5.975*len(inputs.unique)),
         'note':'Projection from a measured sample; source pagination/retries and feed changes can differ.'}

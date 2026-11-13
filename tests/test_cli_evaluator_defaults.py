@@ -53,7 +53,7 @@ def test_evaluator_always_writes_all_artifacts(tmp_path,monkeypatch,capsys,mode)
     for name in ('websites','hiring','public_activity','registry_changes','official_extra_sources','website_suffix_contact_proof'):
         assert effective[name] is True
     assert effective['synthesis']['effective_mode']=='template' and effective['synthesis']['llm_calls']==0
-    assert effective['request_caps']['pooled']==360 and effective['request_caps']['per_company']==40
+    assert effective['request_caps']['pooled']==380 and effective['request_caps']['per_company']==40
     assert effective['search']['queries']==effective['search']['estimated_usd']==0
     assert report['unrecognised_flags']==effective['unrecognised_flags']==(unknown if mode=='invented' else [])
     err=capsys.readouterr().err

@@ -1,0 +1,92 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+........................................................................ [ 20%]
+........................................................................ [ 25%]
+........................................................................ [ 31%]
+........................................................................ [ 36%]
+........................................................................ [ 41%]
+........................................................................ [ 46%]
+........................................................................ [ 51%]
+............................................F........................... [ 56%]
+........................................................................ [ 62%]
+........................................................................ [ 67%]
+........................................................................ [ 72%]
+...........................................................F............ [ 77%]
+........................................................................ [ 82%]
+........................................................................ [ 87%]
+..................................................F..................... [ 93%]
+........................................................................ [ 98%]
+.......................                                                  [100%]
+================================== FAILURES ===================================
+_____ test_pooled_budget_allows_forty_but_keeps_global_nineteen_per_input _____
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1582/test_pooled_budget_allows_fort0')
+
+    def test_pooled_budget_allows_forty_but_keeps_global_nineteen_per_input(tmp_path):
+        orgs=numbers(3);budget=Budget(config(tmp_path,orgs))
+        for _ in range(40):budget.reserve('https://example.no','example.no',orgs[0])
+        with pytest.raises(SourceFailure,match='company_budget_exhausted'):budget.reserve('https://example.no','example.no',orgs[0])
+        for _ in range(17):budget.reserve('https://example.no','example.no',orgs[1])
+        with pytest.raises(SourceFailure,match='budget_exhausted'):budget.reserve('https://example.no','example.no',orgs[2])
+>       assert budget.hard_request_cap==54
+E       assert 57 == 54
+E        +  where 57 = <signalpost.budget.Budget object at 0x000001B0A4A50770>.hard_request_cap
+
+tests\test_recall_step10.py:130: AssertionError
+_____ test_every_site_timeout_preserves_100_outputs_and_hard_caps[False] ______
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1582/test_every_site_timeout_preser0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001B0A4F5D460>
+advance_clock = False
+
+    @pytest.mark.parametrize('advance_clock', [False, True])
+    def test_every_site_timeout_preserves_100_outputs_and_hard_caps(tmp_path, monkeypatch, advance_clock):
+        from signalpost.runner import run
+        from signalpost.web import policy
+        from signalpost.web.fetcher import WebsiteHttp
+        async def public(*args): return ['93.184.216.34']
+        async def no_delay(self): pass
+        monkeypatch.setattr(policy, 'resolve_public', public)
+        monkeypatch.setattr(WebsiteHttp, 'retry_pause', no_delay)
+        cfg = config(tmp_path, numbers(100), websites=True, time_budget_seconds=999999).model_copy(
+            update={'website_politeness_seconds': 0})
+        import time
+        from types import SimpleNamespace
+        from signalpost import budget as budget_module
+        began = time.monotonic()
+        clock = [began]
+        if advance_clock:
+            monkeypatch.setattr(budget_module, 'time', SimpleNamespace(monotonic=lambda: clock[0]))
+        def respond(request):
+            if request.url.host == 'data.brreg.no': return handler()(request)
+            if advance_clock:
+                clock[0] += 12
+            raise httpx.ReadTimeout('synthetic all-sites timeout', request=request)
+        async def invoke():
+            async with httpx.AsyncClient(transport=httpx.MockTransport(respond)) as client:
+                return await run(cfg, client=client)
+        report = asyncio.run(invoke())
+        rows = [json.loads(line) for line in cfg.output.read_text().splitlines()]
+        assert len(rows) == 100
+>       assert report['requests'] <= 1800
+E       assert 1900 <= 1800
+
+tests\test_s67_compliance.py:109: AssertionError
+_____________ test_global_hard_caps_cannot_be_raised_by_overrides _____________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1582/test_global_hard_caps_cannot_b0')
+
+    def test_global_hard_caps_cannot_be_raised_by_overrides(tmp_path):
+        cfg=config(tmp_path,numbers(3),max_requests=999999,time_budget_seconds=999999)
+        budget=Budget(cfg)
+>       assert budget.cap==57
+E       assert 57 == 54
+E        +  where 57 = <signalpost.budget.Budget object at 0x000001B0A4F5F7A0>.cap
+
+tests\test_transient_website_retry.py:122: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_recall_step10.py::test_pooled_budget_allows_forty_but_keeps_global_nineteen_per_input
+FAILED tests/test_s67_compliance.py::test_every_site_timeout_preserves_100_outputs_and_hard_caps[False]
+FAILED tests/test_transient_website_retry.py::test_global_hard_caps_cannot_be_raised_by_overrides
+3 failed, 1388 passed in 424.25s (0:07:04)
