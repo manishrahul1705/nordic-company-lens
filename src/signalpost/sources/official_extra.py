@@ -131,21 +131,41 @@ class Fetcher:
     def __init__(self,client,budget,blobs,count):
         self.client,self.budget,self.blobs=client,budget,blobs
         self.calls=0;self.cap=max(8,min(300,count//2));self.cache={};self.next_start={}
+        self.ted_calls=0;self.ted_statuses={};self.ted_failures=[]
     async def get(self,url,payload=None):
+        is_ted = urlsplit(url).hostname in {'api.ted.europa.eu','ted.europa.eu'}
+        for attempt in range(3 if is_ted else 1):
+            try:
+                return await self._get(url,payload)
+            except SourceFailure as exc:
+                if not is_ted or exc.code != 'extra_http_202' or attempt == 2:
+                    if is_ted:self.ted_failures.append({'url':url,'code':exc.code})
+                    raise
+                delay = (3,8)[attempt]
+                import time
+                if time.monotonic() + delay >= self.budget.deadline:
+                    raise SourceFailure('deadline')
+                await asyncio.sleep(delay)
+
+    async def _get(self,url,payload=None):
         if url in self.cache and payload is None:return self.cache[url]
         host=urlsplit(url).hostname
-        if host not in {'api.gleif.org','api.ted.europa.eu','ted.europa.eu'} or not url.startswith('https://'):raise SourceFailure('extra_url_refused')
+        if host not in {'api.gleif.org','api.ted.europa.eu','ted.europa.eu'} or urlsplit(url).scheme!='https' or urlsplit(url).port not in {None,443} or urlsplit(url).username or urlsplit(url).password:raise SourceFailure('extra_url_refused')
+        is_ted = host in {'api.ted.europa.eu','ted.europa.eu'}
+        if is_ted and self.ted_calls>=250:raise SourceFailure('ted_request_cap')
         if self.calls>=self.cap:raise SourceFailure('extra_request_cap')
         import time
         delay=max(0,self.next_start.get(host,0)-time.monotonic())
         if delay:await asyncio.sleep(min(delay,max(.001,self.budget.deadline-time.monotonic())))
         self.next_start[host]=time.monotonic()+1
         self.calls+=1;event=self.budget.reserve(url,host,'__official_extra__')
+        if is_ted:self.ted_calls+=1
         began=time.monotonic()
         try:
             async with asyncio.timeout(min(15,max(.001,self.budget.deadline-time.monotonic()))):
-                r=await self.client.request('POST' if payload else 'GET',url,json=payload,headers={'Accept':'application/xml,text/xml' if host=='ted.europa.eu' else 'application/json'},follow_redirects=False,timeout=15)
+                r=await self.client.request('POST' if payload else 'GET',url,json=payload,headers={'Accept':'application/xml,text/xml' if is_ted and payload is None else 'application/json'},follow_redirects=False,timeout=15)
                 event['status']=r.status_code
+                if is_ted:self.ted_statuses[str(r.status_code)]=self.ted_statuses.get(str(r.status_code),0)+1
                 if len(r.content)>4*1024*1024 or r.status_code!=200:raise SourceFailure('extra_http_'+str(r.status_code))
                 sha=await offload(self.blobs.put,r.content);event['content_sha256']=sha
                 result=Response(r.content,r.status_code,url,utc_now(),sha)
@@ -203,7 +223,7 @@ async def collect(envelopes,client,budget,blobs):
         # Retain the child's exact registry/LEI binding alongside relationship proof.
         child_claim=next(c for c in result[org].claims if c.field=='identity.gleif.lei')
         for c in section.claims:c.evidence_ids.extend(child_claim.evidence_ids)
-    notices={}
+    notices={};notice_links={}
     since=date.today()
     try:since=since.replace(year=since.year-3)
     except ValueError:since=since.replace(year=since.year-3,day=28)
@@ -212,20 +232,24 @@ async def collect(envelopes,client,budget,blobs):
         query='(winner-identifier = '+values+' OR buyer-identifier = '+values+') AND notice-type = (can-standard OR can-social) AND publication-date >= '+since.strftime('%Y%m%d')
         try:
             for page in range(1,11):
-                response=await fetch.get(TED,{'query':query,'fields':['publication-number','notice-type','winner-identifier','buyer-identifier'],'limit':100,'page':page,'scope':'ALL'})
+                response=await fetch.get(TED,{'query':query,'fields':['publication-number','notice-type','winner-identifier','buyer-identifier','links'],'limit':100,'page':page,'scope':'ALL'})
                 data=json.loads(response.body)
                 if data.get('timedOut'):raise SourceFailure('extra_query_timeout')
                 for item in data['notices']:
                     if item.get('notice-type') not in {'can-standard','can-social'}:continue
                     scope=set(nums)&set(item.get('winner-identifier',[])+item.get('buyer-identifier',[]))
-                    if scope:notices.setdefault(item['publication-number'],set()).update(scope)
+                    if scope:
+                        notice=item['publication-number']
+                        notices.setdefault(notice,set()).update(scope)
+                        link=((item.get('links') or {}).get('xml') or {}).get('MUL')
+                        if isinstance(link,str) and link:notice_links.setdefault(notice,link)
                 if page*100>=data['totalNoticeCount']:break
             else:raise SourceFailure('extra_pagination')
         except Exception:
             for org in nums:states[org]['TED']='not_available_fetch_failed'
     for notice,scope in sorted(notices.items()):
         try:
-            response=await fetch.get(f'https://ted.europa.eu/en/notice/{notice}/xml')
+            response=await fetch.get(notice_links.get(notice) or f'https://ted.europa.eu/en/notice/{notice}/xml')
             for org in scope:
                 section=await offload(award_extract,response,notice,org,date.fromisoformat(response.retrieved_at[:10]))
                 result[org].claims+=section.claims;result[org].evidence+=section.evidence
@@ -238,7 +262,7 @@ async def collect(envelopes,client,budget,blobs):
         awards=sorted((c for c in section.claims if c.family=='activity'),key=lambda c:(c.value['date'],c.field),reverse=True)[:10]
         section.claims=[c for c in section.claims if c.family!='activity']+awards
         for source in states[org]:envelopes[org].run.refresh.setdefault('official_extra',{})[source]=states[org][source]
-    return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices)}
+    return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures}
 
 
 def retain_failed(row,previous):
