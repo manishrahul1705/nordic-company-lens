@@ -656,6 +656,9 @@ async def _run(config, client=None):
         timing_markers['nav_runtime_seconds'] = nav_index.metrics.get('runtime_seconds')
     if timing_markers:
         report['timing_markers'] = timing_markers
+    from .io.report import effective_configuration
+    report['effective_configuration'] = effective_configuration(config, budget, report)
+    report['unrecognised_flags'] = list(config.unrecognised_flags)
     report["output_bytes"] = size
     report["output_bytes_per_company"] = size / len(result) if result else 0
     report["output_limit_exceeded"] = size > config.max_output_mb * 1024 * 1024

@@ -1,0 +1,123 @@
+diff --git a/src/signalpost/cli.py b/src/signalpost/cli.py
+index 5afeb4f..8874eca 100644
+--- a/src/signalpost/cli.py
++++ b/src/signalpost/cli.py
+@@ -12,22 +12,23 @@ def main(argv=None):
+         argv = sys.argv[1:]
+     if argv and argv[0] not in ("site", "run", "-h", "--help") and argv[0].startswith("-"):
+         argv = ["run"] + list(argv)
+-    parser = argparse.ArgumentParser(prog="signalpost")
++    parser = argparse.ArgumentParser(prog="signalpost", allow_abbrev=False)
+     sub = parser.add_subparsers(dest="command", required=True)
+-    site = sub.add_parser('site', help='Build offline searchable company profiles')
++    site = sub.add_parser('site', allow_abbrev=False, help='Build offline searchable company profiles')
+     site.add_argument('--input', type=Path, required=True)
+     site.add_argument('--out', type=Path, required=True)
+     site.add_argument('--title', default='Signalpost')
+-    command = sub.add_parser("run", help="Write a terminal result for every supplied company")
+-    for flag in ("organisations", "output", "report"):
++    command = sub.add_parser("run", allow_abbrev=False, help="Write a terminal result for every supplied company")
++    for flag in ("organisations", "output"):
+         command.add_argument("--" + flag, type=Path, required=True)
++    command.add_argument("--report", type=Path, default=Path("out/report.json"))
+     for flag in ("bulk", "previous"):
+         command.add_argument("--" + flag, type=Path)
+     command.add_argument("--state-dir", type=Path, default=Path("state"))
+     command.add_argument('--verify-bulk', action='store_true',
+                          help='Require an API identity check even on bulk hits; never fall back to CSV on verification failure')
+-    command.add_argument('--site-dir', type=Path)
+-    command.add_argument('--profiles-output', type=Path, help='Write kit-compatible raw profiles from the same verified claims')
++    command.add_argument('--site-dir', type=Path, default=Path('out/site'))
++    command.add_argument('--profiles-output', type=Path, default=Path('out/profiles.jsonl'), help='Write kit-compatible raw profiles from the same verified claims')
+     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
+     command.add_argument("--emit-duplicates", action="store_true", default=True)
+     command.add_argument('--deduplicate', dest='emit_duplicates', action='store_false')
+@@ -67,14 +68,17 @@ def main(argv=None):
+                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
+                                ("official-batch-size", int, 1100), ("max-output-mb", float, 512)):
+         command.add_argument("--" + flag, type=kind, default=default)
+-    args = vars(parser.parse_args(argv))
++    known, unrecognised = parser.parse_known_args(argv)
++    args = vars(known)
++    if unrecognised:
++        print('signalpost: warning: unrecognised arguments ignored: ' + json.dumps(unrecognised, ensure_ascii=False), file=sys.stderr)
+     action = args.pop("command")
+     try:
+         if action == 'site':
+             from .site import generate_site
+             print(json.dumps(generate_site(args['input'], args['out'], args['title'])))
+             return 0
+-        config = Config(**args)
++        config = Config(**args, unrecognised_flags=unrecognised)
+         snapshot = config.state_dir / "latest-envelopes.jsonl"
+         resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
+         resolved.append(snapshot.resolve())
+diff --git a/src/signalpost/config.py b/src/signalpost/config.py
+index aef8897..112ca79 100644
+--- a/src/signalpost/config.py
++++ b/src/signalpost/config.py
+@@ -17,6 +17,7 @@ class Config(BaseModel):
+     emit_duplicates: bool = True
+     expected_count: int | None = None
+     run_id: str = ""
++    unrecognised_flags: list[str] = Field(default_factory=list)
+     max_requests: int | None = Field(default=None, ge=0)
+     time_budget_seconds: float = Field(default=2400, gt=0)
+     deadline_fraction: float = Field(default=0.85, gt=0, le=1)
+diff --git a/src/signalpost/io/report.py b/src/signalpost/io/report.py
+index 756da7b..50c021e 100644
+--- a/src/signalpost/io/report.py
++++ b/src/signalpost/io/report.py
+@@ -118,6 +118,8 @@ def compute_rejection_reasons(envelopes):
+ 
+ 
+ def build(envelopes, inputs, budget, config, warnings, runtime):
++    if config.unrecognised_flags:
++        warnings.append('Unrecognised arguments ignored: ' + json.dumps(config.unrecognised_flags, ensure_ascii=False))
+     unique = {e.organisation_number: e for e in envelopes}
+     company_events=[e for e in budget.events if e['organisation_number'] in unique]
+     by_org = Counter(e["organisation_number"] for e in company_events)
+@@ -151,3 +153,29 @@ def build(envelopes, inputs, budget, config, warnings, runtime):
+             "schema_validated": True, "membership_validated": True,
+             "funnel_metrics": funnel,
+             "rejection_reasons": rejection_reasons}
++
++
++def effective_configuration(config, budget, report):
++    """Describe actual runtime settings without affecting collected claims."""
++    nav = report.get('hiring_prefetch', {})
++    return {
++        'websites': config.websites,
++        'hiring': config.hiring,
++        'public_activity': config.public_activity,
++        'registry_changes': config.registry_changes,
++        'official_extra_sources': config.official_extra_sources,
++        'website_suffix_contact_proof': config.website_suffix_contact_proof,
++        'search': {'queries': report.get('search', {}).get('queries', 0),
++                   'estimated_usd': report.get('search', {}).get('estimated_usd', 0)},
++        'synthesis': {'requested_mode': config.synthesis, 'effective_mode': 'template',
++                      'llm_calls': report.get('llm', {}).get('calls', 0)},
++        'request_caps': {'pooled': budget.cap, 'pooled_per_company': 18,
++                         'per_company': 40, 'website': config.website_request_cap,
++                         'website_total': config.website_total_request_cap},
++        'nav': {'index_built_at': nav.get('index_built_at'),
++                'mode': nav.get('source_mode', 'disabled' if not config.hiring else 'not_reported')},
++        'unrecognised_flags': list(config.unrecognised_flags),
++        'outputs': {key: str(value) if value is not None else None for key, value in
++                    [('envelopes', config.output), ('profiles', config.profiles_output),
++                     ('report', config.report), ('site', config.site_dir)]},
++    }
+diff --git a/src/signalpost/runner.py b/src/signalpost/runner.py
+index d43932c..0b66e2e 100644
+--- a/src/signalpost/runner.py
++++ b/src/signalpost/runner.py
+@@ -656,6 +656,9 @@ async def _run(config, client=None):
+         timing_markers['nav_runtime_seconds'] = nav_index.metrics.get('runtime_seconds')
+     if timing_markers:
+         report['timing_markers'] = timing_markers
++    from .io.report import effective_configuration
++    report['effective_configuration'] = effective_configuration(config, budget, report)
++    report['unrecognised_flags'] = list(config.unrecognised_flags)
+     report["output_bytes"] = size
+     report["output_bytes_per_company"] = size / len(result) if result else 0
+     report["output_limit_exceeded"] = size > config.max_output_mb * 1024 * 1024

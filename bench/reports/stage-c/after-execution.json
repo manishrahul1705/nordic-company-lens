@@ -1,0 +1,31 @@
+{
+  "commit": "11f0d388dc8e5225f862914fb6c9cf5235f7c113",
+  "input_sha256": "54f5c4254b5d61a969ed6ec5969fab905e45d947f920a8f8cdcb71e575b159f7",
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "signalpost",
+    "run",
+    "--organisations",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\inputs\\100\\batch.jsonl",
+    "--output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\report.json",
+    "--state-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\state",
+    "--site-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\site"
+  ],
+  "started_utc": "2026-11-13T07:31:59.189877+00:00",
+  "free_bytes_before": 36712022016,
+  "credentials": "Key/token/secret variables and optional provider selectors removed; values not recorded",
+  "fresh_state": true,
+  "mode": "README command; no bulk; default budgets",
+  "exit_code": 0,
+  "wall_seconds": 235.33282500000496,
+  "finished_utc": "2026-11-13T07:35:54.522761+00:00"
+}

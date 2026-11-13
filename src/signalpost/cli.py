@@ -12,22 +12,23 @@ def main(argv=None):
         argv = sys.argv[1:]
     if argv and argv[0] not in ("site", "run", "-h", "--help") and argv[0].startswith("-"):
         argv = ["run"] + list(argv)
-    parser = argparse.ArgumentParser(prog="signalpost")
+    parser = argparse.ArgumentParser(prog="signalpost", allow_abbrev=False)
     sub = parser.add_subparsers(dest="command", required=True)
-    site = sub.add_parser('site', help='Build offline searchable company profiles')
+    site = sub.add_parser('site', allow_abbrev=False, help='Build offline searchable company profiles')
     site.add_argument('--input', type=Path, required=True)
     site.add_argument('--out', type=Path, required=True)
     site.add_argument('--title', default='Signalpost')
-    command = sub.add_parser("run", help="Write a terminal result for every supplied company")
-    for flag in ("organisations", "output", "report"):
+    command = sub.add_parser("run", allow_abbrev=False, help="Write a terminal result for every supplied company")
+    for flag in ("organisations", "output"):
         command.add_argument("--" + flag, type=Path, required=True)
+    command.add_argument("--report", type=Path, default=Path("out/report.json"))
     for flag in ("bulk", "previous"):
         command.add_argument("--" + flag, type=Path)
     command.add_argument("--state-dir", type=Path, default=Path("state"))
     command.add_argument('--verify-bulk', action='store_true',
                          help='Require an API identity check even on bulk hits; never fall back to CSV on verification failure')
-    command.add_argument('--site-dir', type=Path)
-    command.add_argument('--profiles-output', type=Path, help='Write kit-compatible raw profiles from the same verified claims')
+    command.add_argument('--site-dir', type=Path, default=Path('out/site'))
+    command.add_argument('--profiles-output', type=Path, default=Path('out/profiles.jsonl'), help='Write kit-compatible raw profiles from the same verified claims')
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
     command.add_argument("--emit-duplicates", action="store_true", default=True)
     command.add_argument('--deduplicate', dest='emit_duplicates', action='store_false')
@@ -67,14 +68,17 @@ def main(argv=None):
                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
                                ("official-batch-size", int, 1100), ("max-output-mb", float, 512)):
         command.add_argument("--" + flag, type=kind, default=default)
-    args = vars(parser.parse_args(argv))
+    known, unrecognised = parser.parse_known_args(argv)
+    args = vars(known)
+    if unrecognised:
+        print('signalpost: warning: unrecognised arguments ignored: ' + json.dumps(unrecognised, ensure_ascii=False), file=sys.stderr)
     action = args.pop("command")
     try:
         if action == 'site':
             from .site import generate_site
             print(json.dumps(generate_site(args['input'], args['out'], args['title'])))
             return 0
-        config = Config(**args)
+        config = Config(**args, unrecognised_flags=unrecognised)
         snapshot = config.state_dir / "latest-envelopes.jsonl"
         resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
         resolved.append(snapshot.resolve())

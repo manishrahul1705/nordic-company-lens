@@ -1,0 +1,53 @@
+........................................................................ [  5%]
+........................................F............................... [ 10%]
+........................................................................ [ 15%]
+........................................................................ [ 20%]
+........................................................................ [ 25%]
+........................................................................ [ 31%]
+........................................................................ [ 36%]
+........................................................................ [ 41%]
+........................................................................ [ 46%]
+........................................................................ [ 51%]
+........................................................................ [ 57%]
+........................................................................ [ 62%]
+........................................................................ [ 67%]
+........................................................................ [ 72%]
+........................................................................ [ 77%]
+........................................................................ [ 83%]
+........................................................................ [ 88%]
+........................................................................ [ 93%]
+........................................................................ [ 98%]
+...................                                                      [100%]
+================================== FAILURES ===================================
+___________ test_report_build_includes_funnel_and_rejection_metrics ___________
+
+    def test_report_build_includes_funnel_and_rejection_metrics():
+        """Verifies that report build() contains funnel_metrics and rejection_reasons."""
+        e1 = make_dummy_envelope("923609016", "available")
+        e2 = make_dummy_envelope("988258229", "failed", "foreign_orgnr")
+        envelopes = [e1, e2]
+        inputs = DummyInputs()
+        budget = DummyBudget()
+        config = DummyConfig()
+    
+>       report = build(envelopes, inputs, budget, config, [], 1.5)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_candidate_rejections_and_funnel_metrics.py:207: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+envelopes = [Envelope(organisation_number='923609016', run=Run(run_id='test-run-123', started_at='2026-10-21T00:00:00Z', completed...00Z', modules={}, profile=CompactProfile(organisation_number='988258229', values={}, evidence_ids=[], synthesis=None))]
+inputs = <tests.test_candidate_rejections_and_funnel_metrics.DummyInputs object at 0x000002BBEC039100>
+budget = <tests.test_candidate_rejections_and_funnel_metrics.DummyBudget object at 0x000002BBEC03A4B0>
+config = <tests.test_candidate_rejections_and_funnel_metrics.DummyConfig object at 0x000002BBEC0397C0>
+warnings = [], runtime = 1.5
+
+    def build(envelopes, inputs, budget, config, warnings, runtime):
+>       if config.unrecognised_flags:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'DummyConfig' object has no attribute 'unrecognised_flags'
+
+src\signalpost\io\report.py:121: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_candidate_rejections_and_funnel_metrics.py::test_report_build_includes_funnel_and_rejection_metrics
+1 failed, 1386 passed in 425.26s (0:07:05)

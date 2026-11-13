@@ -1,0 +1,35 @@
+{
+  "websites": true,
+  "hiring": true,
+  "public_activity": true,
+  "registry_changes": true,
+  "official_extra_sources": true,
+  "website_suffix_contact_proof": true,
+  "search": {
+    "queries": 0,
+    "estimated_usd": 0.0
+  },
+  "synthesis": {
+    "requested_mode": "template",
+    "effective_mode": "template",
+    "llm_calls": 0
+  },
+  "request_caps": {
+    "pooled": 1800,
+    "pooled_per_company": 18,
+    "per_company": 40,
+    "website": 40,
+    "website_total": 40
+  },
+  "nav": {
+    "index_built_at": "2026-11-13T00:26:42.872674Z",
+    "mode": "declared_index"
+  },
+  "unrecognised_flags": [],
+  "outputs": {
+    "envelopes": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\envelopes.jsonl",
+    "profiles": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\profiles.jsonl",
+    "report": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\report.json",
+    "site": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-c-after\\site"
+  }
+}

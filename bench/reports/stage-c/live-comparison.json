@@ -1,0 +1,60 @@
+{
+  "before": {
+    "companies": 100,
+    "published_claims": 16741,
+    "families": {
+      "identity": 3090,
+      "subunits": 742,
+      "roles": 1713,
+      "accounts": 9767,
+      "activity": 1354,
+      "website": 75
+    },
+    "published_companies_by_family": {
+      "identity": 100,
+      "people": 100,
+      "locations": 85,
+      "financials": 100,
+      "website": 13,
+      "social": 5,
+      "jobs": 0,
+      "activity": 100,
+      "news": 0
+    },
+    "published_ids_sha256": "1d44afb3caaee795dd5a6bcbc7699b1755a4d7d8185cf1c475a4d9cd3a5f1c67",
+    "requests": 992,
+    "deadline_hits": 0,
+    "exit_code": 0,
+    "wall_seconds": 250.39046640000015
+  },
+  "after": {
+    "companies": 100,
+    "published_claims": 16741,
+    "families": {
+      "identity": 3090,
+      "subunits": 742,
+      "roles": 1713,
+      "accounts": 9767,
+      "activity": 1354,
+      "website": 75
+    },
+    "published_companies_by_family": {
+      "identity": 100,
+      "people": 100,
+      "locations": 85,
+      "financials": 100,
+      "website": 13,
+      "social": 5,
+      "jobs": 0,
+      "activity": 100,
+      "news": 0
+    },
+    "published_ids_sha256": "1d44afb3caaee795dd5a6bcbc7699b1755a4d7d8185cf1c475a4d9cd3a5f1c67",
+    "requests": 993,
+    "deadline_hits": 0,
+    "exit_code": 0,
+    "wall_seconds": 235.33282500000496
+  },
+  "identical_published_counts_and_ids": true,
+  "different_fields": 0
+}

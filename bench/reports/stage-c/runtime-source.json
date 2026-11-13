@@ -1,0 +1,11 @@
+{
+  "base_commit": "11f0d388dc8e5225f862914fb6c9cf5235f7c113",
+  "live_after_tested_uncommitted_patch": true,
+  "files": {
+    "src/signalpost/cli.py": "dddb6609fd39d2529a74d8c994dab169f1d1a56c34f936c3b2add0cd89328899",
+    "src/signalpost/config.py": "ffe314bafd4747b28ed7ac02f71bfa4c3226e9f3047de2070d36a895f292d127",
+    "src/signalpost/io/report.py": "1a4806e057a97c86e282607242ecf20a6d61954f110558d716433fe58ef65b72",
+    "src/signalpost/runner.py": "071c9d1bd2da2fa42d5e60765181e9e1e247b758a1a5d50dde4f41b99d35b85e"
+  },
+  "main_parent_required": "5e16dc4539667904750cc8aaad628e3aa1fd7107"
+}
