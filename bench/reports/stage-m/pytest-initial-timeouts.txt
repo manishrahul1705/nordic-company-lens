@@ -1,0 +1,157 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+........................................................................ [ 20%]
+........................................................................ [ 25%]
+........................................................................ [ 30%]
+.......................F................................................ [ 35%]
+........................................................................ [ 41%]
+..................................F..................................... [ 46%]
+........................................................................ [ 51%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+........................................................................ [ 77%]
+........................................................................ [ 82%]
+........................................................................ [ 87%]
+........................................................................ [ 92%]
+........................................................................ [ 97%]
+..................................                                       [100%]
+================================== FAILURES ===================================
+________ test_large_boolean_attribute_does_not_stall_link_localization ________
+
+    def test_large_boolean_attribute_does_not_stall_link_localization():
+        import subprocess
+        import sys
+        script = """
+    from signalpost.web.html import Page
+    from signalpost.web.social import discover
+    url = 'https://www.instagram.com/example'
+    body = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'
+    assert url in discover(Page(body.encode(), 'https://example.no/'))[url]
+    """
+>       subprocess.run([sys.executable, '-c', script], timeout=5, check=True, capture_output=True)
+
+tests\test_link_evidence_spans.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: 1 args: ['C:\\Users\\Manish\\Downloads\\nordic-company-l...>
+input = None, endtime = 157366.625, orig_timeout = 5
+
+    def _communicate(self, input, endtime, orig_timeout):
+        # Start reader threads feeding into a list hanging off of this
+        # object, unless they've already been started.
+        if self.stdout and not hasattr(self, "_stdout_buff"):
+            self._stdout_buff = []
+            self.stdout_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stdout, self._stdout_buff))
+            self.stdout_thread.daemon = True
+            self.stdout_thread.start()
+        if self.stderr and not hasattr(self, "_stderr_buff"):
+            self._stderr_buff = []
+            self.stderr_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stderr, self._stderr_buff))
+            self.stderr_thread.daemon = True
+            self.stderr_thread.start()
+    
+        if self.stdin:
+            self._stdin_write(input)
+    
+        # Wait for the reader threads, or time out.  If we time out, the
+        # threads remain reading and the fds left open in case the user
+        # calls communicate again.
+        if self.stdout is not None:
+            self.stdout_thread.join(self._remaining_time(endtime))
+            if self.stdout_thread.is_alive():
+>               raise TimeoutExpired(self.args, orig_timeout)
+E               subprocess.TimeoutExpired: Command '['C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\.venv\\Scripts\\python.exe', '-c', "\nfrom signalpost.web.html import Page\nfrom signalpost.web.social import discover\nurl = 'https://www.instagram.com/example'\nbody = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'\nassert url in discover(Page(body.encode(), 'https://example.no/'))[url]\n"]' timed out after 5 seconds
+
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1630: TimeoutExpired
+______________ test_real_os_process_kill_and_checkpoint_recovery ______________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1655/test_real_os_process_kill_and_0')
+
+    def test_real_os_process_kill_and_checkpoint_recovery(tmp_path):
+        # 1. Paths
+        full_dir = tmp_path / "full_run"
+        full_dir.mkdir()
+        full_env = full_dir / "envelopes.jsonl"
+        full_rep = full_dir / "report.json"
+        full_state = full_dir / "state"
+    
+        input_file = Path("tests/fixtures/ci20.jsonl").resolve()
+        bulk_file = Path("tests/fixtures/ci20.csv").resolve()
+    
+        # Run uninterrupted baseline run
+        cmd_full = [
+            sys.executable,
+            "-m", "signalpost.cli", "run",
+            "--organisations", str(input_file),
+            "--bulk", str(bulk_file),
+            "--output", str(full_env),
+            "--report", str(full_rep),
+            "--state-dir", str(full_state),
+            "--time-budget-seconds", "30",
+            "--workers", "2"
+        ]
+>       res_full = subprocess.run(cmd_full, capture_output=True, text=True, timeout=45)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_nav_process_kill_recovery.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: 1 args: ['C:\\Users\\Manish\\Downloads\\nordic-company-l...>
+input = None, endtime = 157479.718, orig_timeout = 45
+
+    def _communicate(self, input, endtime, orig_timeout):
+        # Start reader threads feeding into a list hanging off of this
+        # object, unless they've already been started.
+        if self.stdout and not hasattr(self, "_stdout_buff"):
+            self._stdout_buff = []
+            self.stdout_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stdout, self._stdout_buff))
+            self.stdout_thread.daemon = True
+            self.stdout_thread.start()
+        if self.stderr and not hasattr(self, "_stderr_buff"):
+            self._stderr_buff = []
+            self.stderr_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stderr, self._stderr_buff))
+            self.stderr_thread.daemon = True
+            self.stderr_thread.start()
+    
+        if self.stdin:
+            self._stdin_write(input)
+    
+        # Wait for the reader threads, or time out.  If we time out, the
+        # threads remain reading and the fds left open in case the user
+        # calls communicate again.
+        if self.stdout is not None:
+            self.stdout_thread.join(self._remaining_time(endtime))
+            if self.stdout_thread.is_alive():
+>               raise TimeoutExpired(self.args, orig_timeout)
+E               subprocess.TimeoutExpired: Command '['C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\.venv\\Scripts\\python.exe', '-m', 'signalpost.cli', 'run', '--organisations', 'C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\tests\\fixtures\\ci20.jsonl', '--bulk', 'C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\tests\\fixtures\\ci20.csv', '--output', 'C:\\Users\\Manish\\AppData\\Local\\Temp\\pytest-of-Manish\\pytest-1655\\test_real_os_process_kill_and_0\\full_run\\envelopes.jsonl', '--report', 'C:\\Users\\Manish\\AppData\\Local\\Temp\\pytest-of-Manish\\pytest-1655\\test_real_os_process_kill_and_0\\full_run\\report.json', '--state-dir', 'C:\\Users\\Manish\\AppData\\Local\\Temp\\pytest-of-Manish\\pytest-1655\\test_real_os_process_kill_and_0\\full_run\\state', '--time-budget-seconds', '30', '--workers', '2']' timed out after 45 seconds
+
+..\..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1630: TimeoutExpired
+=========================== short test summary info ===========================
+FAILED tests/test_link_evidence_spans.py::test_large_boolean_attribute_does_not_stall_link_localization
+FAILED tests/test_nav_process_kill_recovery.py::test_real_os_process_kill_and_checkpoint_recovery
+2 failed, 1400 passed in 452.57s (0:07:32)

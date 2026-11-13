@@ -1,0 +1,16 @@
+{
+  "production_changed": [
+    "src/signalpost/site.py",
+    "src/signalpost/site_assets/site.css",
+    "src/signalpost/site_assets/site.js"
+  ],
+  "proof_scoring_sources_budget_runner_config_lock_diff": "empty",
+  "compact_profile_ast_unchanged": true,
+  "PAGE_GATE": 250000,
+  "generated_max_html_bytes": 239582,
+  "same_input_byte_identical_output_files": 4726,
+  "input_sha256_unchanged": {
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-g-run1\\envelopes.jsonl": "9dfd143f31eeee6149d2b242789a87045502b452d4e033d2f2488c6a3de3d705",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-g-run1\\profiles.jsonl": "986cac1eb5f016c352c2cb3c83da5d4bd5fc6e7b1815a2ac8c724548c323a749"
+  }
+}

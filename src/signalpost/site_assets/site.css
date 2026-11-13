@@ -1843,3 +1843,11 @@ label.check input[type="checkbox"] { flex:0 0 44px; }
 
 .evidence-drawer > .eyebrow { padding-right:82px; min-height:44px; }
 .evidence-drawer .values dd, .evidence-drawer a { overflow-wrap:anywhere; min-width:0; }
+
+/* Stage M: editorial hierarchy and first-screen tasks, same existing palette. */
+.search-label{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;color:var(--hero-text,#fff);font-weight:600;margin-bottom:8px}.search-label span{font-size:13px;font-weight:400}
+.state-reasons{border-left:3px solid #C9A86A;padding:4px 12px;margin:12px 0;background:var(--card)}.state-reasons code{overflow-wrap:anywhere;font-size:12px}
+:focus-visible{outline:3px solid #b77d1c;outline-offset:3px}
+@media(max-width:600px){.home-hero{padding:22px 20px;gap:18px}.home-hero h1{font-size:36px;line-height:1.08;margin:8px 0 14px}.hero-copy>p{margin:10px 0}.hero-search{margin-top:16px}.hero-search input{font-size:16px;padding:12px;min-width:0;width:100%;box-sizing:border-box}.try-chips{display:none}.hero-stats{gap:10px}.hero-stat{padding:12px}.hero-stat strong{font-size:28px}.hero-stat span{font-size:13px}.company-hero{padding:18px!important}.company-hero .avatar{width:48px;height:48px;font-size:28px;float:right;margin:0 0 8px 12px}.company-hero h1{font-size:28px;line-height:1.15}.company-hero .eyebrow{margin:0 0 8px}.metadata-pills{margin-top:14px}.company-header-actions{margin-top:12px}.profile-grid{margin-top:18px}.summary{margin-top:0;padding:18px}.summary h2{font-size:25px}}
+
+@media(max-width:600px){.view-switcher{display:flex;flex-wrap:wrap;gap:6px}.view-switcher .tab-btn{flex:1 1 100px;white-space:normal;height:auto;line-height:1.35;padding:10px 8px}}
