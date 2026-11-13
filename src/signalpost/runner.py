@@ -407,8 +407,6 @@ async def _run(config, client=None):
             async with website_semaphore:
                 if config.websites:
                     await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), nav_index))
-                if config.hiring and website_http.accepted_pages.get(org):
-                    website_http.reserve_careers(org)
                 if config.public_activity:
                     from .web.activity import fetch as fetch_activity
                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
@@ -431,8 +429,6 @@ async def _run(config, client=None):
                 if has_nav_hp or has_nav_ad:
                     async with website_semaphore:
                         await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), nav_index))
-                        if config.hiring and website_http.accepted_pages.get(org):
-                            website_http.reserve_careers(org)
                         if config.public_activity and website_http.accepted_pages.get(org) and envelope.run.sections.get("activity") != "available":
                             from .web.activity import fetch as fetch_activity
                             await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
@@ -539,17 +535,12 @@ async def _run(config, client=None):
                 async def careers(org, row):
                     async with website_semaphore:
                         DNS_ORG.set(org)
-                        website_http.reserve_careers(org)
-                        website_http.careers_active.add(org)
-                        try:
-                            jobs = await company_jobs(row, website_http)
-                            current = [c for c in row.claims if c.family == 'hiring' and c.availability == 'available']
-                            if jobs.claims or jobs.errors:
-                                update(row, 'hiring', Section(state='available' if current or jobs.claims else 'failed',
-                                    claims=current + jobs.claims, evidence=jobs.evidence,
-                                    errors=[e for e in row.errors if e.section == 'hiring'] + jobs.errors))
-                        finally:
-                            website_http.careers_active.discard(org)
+                        jobs = await company_jobs(row, website_http)
+                        current = [c for c in row.claims if c.family == 'hiring' and c.availability == 'available']
+                        if jobs.claims or jobs.errors:
+                            update(row, 'hiring', Section(state='available' if current or jobs.claims else 'failed',
+                                claims=current + jobs.claims, evidence=jobs.evidence,
+                                errors=[e for e in row.errors if e.section == 'hiring'] + jobs.errors))
                 careers_tasks = [asyncio.create_task(careers(org, row)) for org, row in envelopes.items()
                                  if website_http.accepted_pages.get(org)]
                 await finish_before_deadline(careers_tasks, budget, CANCEL_GRACE_SECONDS)

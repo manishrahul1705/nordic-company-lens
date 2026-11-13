@@ -72,8 +72,6 @@ class WebsiteHttp:
         self.dns_counts = {}
         self.dns_lookups = 0
         self.activity_extra = set()
-        self.careers_reserves = {}
-        self.careers_active = set()
         self.accepted_pages = {}
         self.dns_metrics = dns_metrics
 
@@ -158,8 +156,6 @@ class WebsiteHttp:
                 # within the pooled global limit and hard 40/company ceiling.
                 company_cap = min(40,self.config.website_request_cap + int(org in self.activity_extra),
                                   max(0,self.config.website_total_request_cap-registry_requests))
-                if org not in self.careers_active:
-                    company_cap = max(0, company_cap - self.careers_reserves.get(org, 0))
                 if self.counts.get(org, 0) >= company_cap:
                     raise SourceFailure("website_budget_exhausted")
                 event = self.budget.reserve(url, parts.hostname, org)
@@ -257,20 +253,6 @@ class WebsiteHttp:
         # can follow only already permitted domains; content is not extracted
         # until the final authority's policy has also been checked.
         return await self.raw(url, org, domains, xml, obey_robots=True, allow_redirects=allow_redirects)
-
-    def reserve_careers(self, org):
-        """Earmark unused local slots after proof; never lift a hard ceiling.
-
-        Global requests are claimed only by the final careers pass, after all
-        primary website work has finished. Optional activity cannot consume
-        these local slots in the meantime.
-        """
-        if org not in self.careers_reserves:
-            remaining = min(40 - self.budget.by_company[org],
-                            self.config.website_request_cap - self.counts.get(org, 0),
-                            self.config.website_total_request_cap - self.budget.by_company[org])
-            self.careers_reserves[org] = max(0, min(6, remaining))
-        return self.careers_reserves[org]
 
     def discovery_cap(self, org):
         """Original per-company ceiling (6, within a total of 9 with registry calls).
