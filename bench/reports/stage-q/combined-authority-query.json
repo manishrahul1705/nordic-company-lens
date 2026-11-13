@@ -1,0 +1,440 @@
+{
+  "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=935327423%2C935+327+423%2C995541432%2C995+541+432%2C926970348%2C926+970+348&filter%5Bentity.registeredAt%5D=RA000472%2CRA000473&page%5Bsize%5D=200",
+  "status": 200,
+  "body": {
+    "meta": {
+      "goldenCopy": {
+        "publishDate": "2026-11-13T16:00:00Z"
+      },
+      "pagination": {
+        "currentPage": 1,
+        "perPage": 200,
+        "from": 1,
+        "to": 3,
+        "total": 3,
+        "lastPage": 1
+      }
+    },
+    "links": {
+      "first": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=935327423%2C935+327+423%2C995541432%2C995+541+432%2C926970348%2C926+970+348&filter%5Bentity.registeredAt%5D=RA000472%2CRA000473&page%5Bnumber%5D=1&page%5Bsize%5D=200",
+      "last": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=935327423%2C935+327+423%2C995541432%2C995+541+432%2C926970348%2C926+970+348&filter%5Bentity.registeredAt%5D=RA000472%2CRA000473&page%5Bnumber%5D=1&page%5Bsize%5D=200"
+    },
+    "data": [
+      {
+        "type": "lei-records",
+        "id": "648800DQI4N427CA5U74",
+        "attributes": {
+          "lei": "648800DQI4N427CA5U74",
+          "entity": {
+            "legalName": {
+              "name": "EDSVIK INVEST AS",
+              "language": "no"
+            },
+            "otherNames": [],
+            "transliteratedOtherNames": [],
+            "legalAddress": {
+              "language": "no",
+              "addressLines": [
+                "Reverud\u00e5sen 31"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "SLEPENDEN",
+              "region": null,
+              "country": "NO",
+              "postalCode": "1341"
+            },
+            "headquartersAddress": {
+              "language": "no",
+              "addressLines": [
+                "Reverud\u00e5sen 31"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "SLEPENDEN",
+              "region": null,
+              "country": "NO",
+              "postalCode": "1341"
+            },
+            "registeredAt": {
+              "id": "RA000473",
+              "other": null
+            },
+            "registeredAs": "935 327 423",
+            "jurisdiction": "NO",
+            "category": "GENERAL",
+            "legalForm": {
+              "id": "YI42",
+              "other": null
+            },
+            "associatedEntity": {
+              "lei": null,
+              "name": null
+            },
+            "status": "ACTIVE",
+            "expiration": {
+              "date": null,
+              "reason": null
+            },
+            "successorEntity": {
+              "lei": null,
+              "name": null
+            },
+            "successorEntities": [],
+            "creationDate": "2025-03-19T00:00:00Z",
+            "subCategory": null,
+            "otherAddresses": [
+              {
+                "fieldType": "TransliteratedOtherAddress",
+                "language": "no",
+                "type": "AUTO_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                "addressLines": [
+                  "Reverudasen 31"
+                ],
+                "city": "SLEPENDEN",
+                "country": "NO",
+                "postalCode": "1341"
+              },
+              {
+                "fieldType": "TransliteratedOtherAddress",
+                "language": "no",
+                "type": "AUTO_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                "addressLines": [
+                  "Reverudasen 31"
+                ],
+                "city": "SLEPENDEN",
+                "country": "NO",
+                "postalCode": "1341"
+              }
+            ],
+            "eventGroups": []
+          },
+          "registration": {
+            "initialRegistrationDate": "2026-07-31T10:54:21Z",
+            "lastUpdateDate": "2026-07-31T10:54:21Z",
+            "status": "ISSUED",
+            "nextRenewalDate": "2027-07-31T10:54:21Z",
+            "managingLou": "485100001PLJJ09NZT59",
+            "corroborationLevel": "FULLY_CORROBORATED",
+            "validatedAt": {
+              "id": "RA000473",
+              "other": null
+            },
+            "validatedAs": "935 327 423",
+            "otherValidationAuthorities": []
+          },
+          "bic": null,
+          "mic": null,
+          "ocid": null,
+          "qcc": "QNOEQP9EJ0",
+          "gem": null,
+          "spglobal": [
+            "1942344730"
+          ],
+          "conformityFlag": "CONFORMING"
+        },
+        "relationships": {
+          "managing-lou": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/648800DQI4N427CA5U74/managing-lou"
+            }
+          },
+          "lei-issuer": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/648800DQI4N427CA5U74/lei-issuer"
+            }
+          },
+          "field-modifications": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/648800DQI4N427CA5U74/field-modifications"
+            }
+          },
+          "direct-parent": {
+            "links": {
+              "reporting-exception": "https://api.gleif.org/api/v1/lei-records/648800DQI4N427CA5U74/direct-parent-reporting-exception"
+            }
+          },
+          "ultimate-parent": {
+            "links": {
+              "reporting-exception": "https://api.gleif.org/api/v1/lei-records/648800DQI4N427CA5U74/ultimate-parent-reporting-exception"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.gleif.org/api/v1/lei-records/648800DQI4N427CA5U74"
+        }
+      },
+      {
+        "type": "lei-records",
+        "id": "648800SCG49S6IXSYQ40",
+        "attributes": {
+          "lei": "648800SCG49S6IXSYQ40",
+          "entity": {
+            "legalName": {
+              "name": "ROTOR REAL 1 AS",
+              "language": "nb"
+            },
+            "otherNames": [],
+            "transliteratedOtherNames": [],
+            "legalAddress": {
+              "language": "nb",
+              "addressLines": [
+                "L\u00f8kkeveien 109"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "STAVANGER",
+              "region": null,
+              "country": "NO",
+              "postalCode": "4007"
+            },
+            "headquartersAddress": {
+              "language": "nb",
+              "addressLines": [
+                "L\u00f8kkeveien 109"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "STAVANGER",
+              "region": null,
+              "country": "NO",
+              "postalCode": "4007"
+            },
+            "registeredAt": {
+              "id": "RA000473",
+              "other": null
+            },
+            "registeredAs": "926 970 348",
+            "jurisdiction": "NO",
+            "category": "GENERAL",
+            "legalForm": {
+              "id": "YI42",
+              "other": null
+            },
+            "associatedEntity": {
+              "lei": null,
+              "name": null
+            },
+            "status": "ACTIVE",
+            "expiration": {
+              "date": null,
+              "reason": null
+            },
+            "successorEntity": {
+              "lei": null,
+              "name": null
+            },
+            "successorEntities": [],
+            "creationDate": "2021-03-29T00:00:00Z",
+            "subCategory": null,
+            "otherAddresses": [
+              {
+                "fieldType": "TransliteratedOtherAddress",
+                "language": "nb",
+                "type": "AUTO_ASCII_TRANSLITERATED_LEGAL_ADDRESS",
+                "addressLines": [
+                  "Lokkeveien 109"
+                ],
+                "city": "STAVANGER",
+                "country": "NO",
+                "postalCode": "4007"
+              },
+              {
+                "fieldType": "TransliteratedOtherAddress",
+                "language": "nb",
+                "type": "AUTO_ASCII_TRANSLITERATED_HEADQUARTERS_ADDRESS",
+                "addressLines": [
+                  "Lokkeveien 109"
+                ],
+                "city": "STAVANGER",
+                "country": "NO",
+                "postalCode": "4007"
+              }
+            ],
+            "eventGroups": []
+          },
+          "registration": {
+            "initialRegistrationDate": "2026-11-09T09:28:40Z",
+            "lastUpdateDate": "2026-11-09T09:28:40Z",
+            "status": "ISSUED",
+            "nextRenewalDate": "2027-11-09T09:28:40Z",
+            "managingLou": "485100001PLJJ09NZT59",
+            "corroborationLevel": "FULLY_CORROBORATED",
+            "validatedAt": {
+              "id": "RA000473",
+              "other": null
+            },
+            "validatedAs": "926 970 348",
+            "otherValidationAuthorities": []
+          },
+          "bic": null,
+          "mic": null,
+          "ocid": null,
+          "qcc": null,
+          "gem": null,
+          "spglobal": null,
+          "conformityFlag": "CONFORMING"
+        },
+        "relationships": {
+          "managing-lou": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/648800SCG49S6IXSYQ40/managing-lou"
+            }
+          },
+          "lei-issuer": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/648800SCG49S6IXSYQ40/lei-issuer"
+            }
+          },
+          "field-modifications": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/648800SCG49S6IXSYQ40/field-modifications"
+            }
+          },
+          "direct-parent": {
+            "links": {
+              "reporting-exception": "https://api.gleif.org/api/v1/lei-records/648800SCG49S6IXSYQ40/direct-parent-reporting-exception"
+            }
+          },
+          "ultimate-parent": {
+            "links": {
+              "reporting-exception": "https://api.gleif.org/api/v1/lei-records/648800SCG49S6IXSYQ40/ultimate-parent-reporting-exception"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.gleif.org/api/v1/lei-records/648800SCG49S6IXSYQ40"
+        }
+      },
+      {
+        "type": "lei-records",
+        "id": "529900F0Z0I9SECX4P10",
+        "attributes": {
+          "lei": "529900F0Z0I9SECX4P10",
+          "entity": {
+            "legalName": {
+              "name": "WACKER CHEMICALS NORWAY AS",
+              "language": "no"
+            },
+            "otherNames": [],
+            "transliteratedOtherNames": [],
+            "legalAddress": {
+              "language": "no",
+              "addressLines": [
+                "Hollaveien 482"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "Kyrks\u00e6ter\u00f8ra",
+              "region": "NO-50",
+              "country": "NO",
+              "postalCode": "7200"
+            },
+            "headquartersAddress": {
+              "language": "no",
+              "addressLines": [
+                "Hollaveien 482"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "Kyrks\u00e6ter\u00f8ra",
+              "region": "NO-50",
+              "country": "NO",
+              "postalCode": "7200"
+            },
+            "registeredAt": {
+              "id": "RA000473",
+              "other": null
+            },
+            "registeredAs": "995541432",
+            "jurisdiction": "NO",
+            "category": "GENERAL",
+            "legalForm": {
+              "id": "YI42",
+              "other": null
+            },
+            "associatedEntity": {
+              "lei": null,
+              "name": null
+            },
+            "status": "ACTIVE",
+            "expiration": {
+              "date": null,
+              "reason": null
+            },
+            "successorEntity": {
+              "lei": null,
+              "name": null
+            },
+            "successorEntities": [],
+            "creationDate": "2010-05-18T22:00:00Z",
+            "subCategory": null,
+            "otherAddresses": [],
+            "eventGroups": []
+          },
+          "registration": {
+            "initialRegistrationDate": "2013-11-23T10:30:03Z",
+            "lastUpdateDate": "2026-10-19T14:47:29Z",
+            "status": "ISSUED",
+            "nextRenewalDate": "2027-11-23T10:30:03Z",
+            "managingLou": "5299000J2N45DDNE4Y28",
+            "corroborationLevel": "FULLY_CORROBORATED",
+            "validatedAt": {
+              "id": "RA000473",
+              "other": null
+            },
+            "validatedAs": "995 541 432",
+            "otherValidationAuthorities": []
+          },
+          "bic": null,
+          "mic": null,
+          "ocid": "no/995541432",
+          "qcc": "QNOY7U7C51",
+          "gem": null,
+          "spglobal": [
+            "144928330"
+          ],
+          "conformityFlag": "CONFORMING"
+        },
+        "relationships": {
+          "managing-lou": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10/managing-lou"
+            }
+          },
+          "lei-issuer": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10/lei-issuer"
+            }
+          },
+          "field-modifications": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10/field-modifications"
+            }
+          },
+          "direct-parent": {
+            "links": {
+              "relationship-record": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10/direct-parent-relationship",
+              "lei-record": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10/direct-parent"
+            }
+          },
+          "ultimate-parent": {
+            "links": {
+              "relationship-record": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10/ultimate-parent-relationship",
+              "lei-record": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10/ultimate-parent"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.gleif.org/api/v1/lei-records/529900F0Z0I9SECX4P10"
+        }
+      }
+    ]
+  }
+}

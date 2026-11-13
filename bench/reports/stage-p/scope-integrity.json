@@ -1,0 +1,16 @@
+{
+  "production_changed": [
+    "src/signalpost/sources/official_extra.py"
+  ],
+  "existing_test_functions_unchanged": 14,
+  "added_test_functions": [
+    "test_gleif_lookup_includes_both_exact_number_formats",
+    "test_gleif_registration_number_spacing_preserves_exact_identity",
+    "test_gleif_same_direct_and_ultimate_parent_has_one_shared_evidence_record",
+    "test_gleif_spaced_lookup_is_routed_to_the_exact_input_company",
+    "test_gleif_spacing_does_not_strip_other_identifier_material"
+  ],
+  "website_NAV_scoring_budget_acceptance_authority_changes": false,
+  "matching_change": "only complete 9-digit or three-group whitespace formatting; RA000472 still required",
+  "source_sha256": "89032222fd4187ec13a0966b8ec7684ffa327a05b3600fa1ad8a5df1bb3661c1"
+}

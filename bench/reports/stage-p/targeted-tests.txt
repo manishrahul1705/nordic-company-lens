@@ -1,0 +1,2 @@
+uv run --frozen pytest -q tests/test_official_extra.py tests/test_evaluator_cli_and_site.py
+33 passed in 98.95s

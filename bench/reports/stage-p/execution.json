@@ -1,0 +1,27 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "signalpost",
+    "run",
+    "--organisations",
+    "bench/inputs/1000-r3/batch.jsonl",
+    "--output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\report.json",
+    "--state-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\state",
+    "--site-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\site"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 1678.390000000014,
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "conditions": "Fresh state; README settings; no bulk override; credential variables stripped; contained GLEIF whitespace matching and identical parent-evidence deduplication",
+  "tested_code_commit": "588f356b3e9d56aa0d641383c4b5f45058370f3c",
+  "official_extra_source_sha256": "89032222fd4187ec13a0966b8ec7684ffa327a05b3600fa1ad8a5df1bb3661c1"
+}

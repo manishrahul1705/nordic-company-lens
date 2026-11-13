@@ -1,0 +1,13 @@
+{
+  "runtime_changed": [
+    "src/signalpost/sources/official_extra.py"
+  ],
+  "unchanged_functions_AST": {
+    "parent_extract": true,
+    "award_extract": true,
+    "gleif_orgnr": true,
+    "gleif_lookup_numbers": true
+  },
+  "source_sha256": "3e9629484b99e901c1a1df32d13ab0e097cf9cb586b9ed47b6c73ecabdf35964",
+  "test_fixture_changes": "Two existing negative RA000473 examples now use foreign RA000170; query assertion includes the explicitly authorised second authority; positive two-authority and unchanged-parent tests added. No wrong-company expected outcome changed."
+}

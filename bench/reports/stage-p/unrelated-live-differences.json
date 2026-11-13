@@ -1,0 +1,65 @@
+{
+  "lost": [
+    {
+      "orgnr": "934620011",
+      "baseline": {
+        "value": {
+          "final_url": "https://ensure-it.eu",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://ensure-it.eu/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "registry_website",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "name": "ENSURE IT AS"
+      },
+      "current_website_claims": [
+        {
+          "field": "website.section",
+          "value": null,
+          "availability": "failed",
+          "confidence": 0.0,
+          "evidence_ids": [],
+          "id": "3c4133d04bdee31a41e19c215ceb132a53a3f944fe8377da13f211d9b1c73d55",
+          "family": "website",
+          "reporting_period": null,
+          "carried_forward": false,
+          "stale_since": null,
+          "first_observed_at": "2026-11-13T19:28:48.456475Z",
+          "last_observed_at": "2026-11-13T19:28:48.456475Z",
+          "reasons": {}
+        }
+      ],
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        },
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_timeout\", \"candidate_not_reachable\": false}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"ensureit.com\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"legal_name_slug\", \"reason\": \"insufficient_owner_proof\", \"title\": \"\", \"proof_page_url\": \"https://ensureit.com/\"}, {\"domain\": \"ensure-it.com\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"legal_name_slug\", \"reason\": \"insufficient_owner_proof\", \"title\": \"\", \"proof_page_url\": \"https://ensure-it.com/\"}, {\"url\": \"https://ensure-it.eu/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"https://ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"url\": \"https://www.ensure-it.eu/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"https://www.ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.ensure-it.eu/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"http://www.ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://ensure-it.eu/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.eu\", \"origin\": \"registry_website\", \"url\": \"http://ensure-it.eu/\", \"reason\": \"website_timeout\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://ensureit.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensure-it.no/\", \"reason\": \"no_such_domain\"}, {\"url\": \"https://www.ensure-it.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.ensure-it.no/\", \"reason\": \"website_timeout\"}, {\"url\": \"http://www.ensure-it.no/robots.txt\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.ensure-it.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"ensure-it.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://ensure-it.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"ensureit.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensureit.com/\", \"final_url\": \"https://ensureit.com/\", \"status\": 200}, {\"domain\": \"ensure-it.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://ensure-it.com/\", \"final_url\": \"https://ensure-it.com/\", \"status\": 200}]"
+        }
+      ],
+      "current_section": "failed"
+    }
+  ],
+  "gained": [],
+  "family_claim_diffs": {
+    "identity": 556,
+    "hiring": 0,
+    "activity": 8,
+    "subunits": 0,
+    "website": -3,
+    "GLEIF_claims": 556,
+    "roles": 0,
+    "accounts": 0
+  }
+}

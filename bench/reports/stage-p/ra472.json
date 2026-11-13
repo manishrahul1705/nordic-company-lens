@@ -1,0 +1,28 @@
+{
+  "url": "https://api.gleif.org/api/v1/registration-authorities/RA000472",
+  "status": 200,
+  "body": {
+    "data": {
+      "type": "registration-authorities",
+      "id": "RA000472",
+      "attributes": {
+        "code": "RA000472",
+        "internationalName": "The Register of Business Enterprises",
+        "localName": "Foretaksregisteret",
+        "internationalOrganizationName": "The Br\u00f8nn\u00f8ysund Register Centre",
+        "localOrganizationName": null,
+        "website": "https://www.brreg.no/",
+        "jurisdictions": [
+          {
+            "country": "Norway",
+            "countryCode": "NO",
+            "jurisdiction": "Norway"
+          }
+        ]
+      },
+      "links": {
+        "self": "https://api.gleif.org/api/v1/registration-authorities/RA000472"
+      }
+    }
+  }
+}

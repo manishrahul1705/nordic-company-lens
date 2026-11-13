@@ -1,0 +1,109 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+........................................................................ [ 20%]
+.......FF............................................................... [ 25%]
+........................................................................ [ 30%]
+........................................................................ [ 35%]
+........................................................................ [ 40%]
+........................................................................ [ 45%]
+........................................................................ [ 50%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 81%]
+........................................................................ [ 86%]
+........................................................................ [ 91%]
+........................................................................ [ 96%]
+............................................                             [100%]
+================================== FAILURES ===================================
+__________ test_evaluator_cli_direct_invocation_and_site_generation ___________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1682/test_evaluator_cli_direct_invo0')
+
+    def test_evaluator_cli_direct_invocation_and_site_generation(tmp_path):
+        """
+        Proves that:
+        1. Signalpost CLI can be directly invoked with options (e.g. without explicit 'run' subcommand).
+        2. Emits valid envelopes, report, and generates complete offline site.
+        3. Output passes strict independent verification (schema, hashes, verbatim spans, synthesis).
+        4. Profile HTML files stay within the 250 KB budget gate.
+        """
+        ci20_input = Path("tests/fixtures/ci20.jsonl")
+        ci20_bulk = Path("tests/fixtures/ci20.csv")
+        out_envelopes = tmp_path / "envelopes.jsonl"
+        out_report = tmp_path / "report.json"
+        out_site = tmp_path / "site"
+        state_dir = tmp_path / "state"
+    
+        # Invocation with direct flags (no 'run' prefix)
+        argv = [
+            "--organisations", str(ci20_input),
+            "--bulk", str(ci20_bulk),
+            "--output", str(out_envelopes),
+            "--report", str(out_report),
+            "--site-dir", str(out_site),
+            "--state-dir", str(state_dir),
+            "--expected-count", "20",
+            "--time-budget-seconds", "30",
+            "--workers", "4",
+            "--no-websites", "--no-hiring", "--no-public-activity",
+        ]
+    
+        exit_code = main(argv)
+>       assert exit_code == 0, f"CLI direct invocation failed with code {exit_code}"
+E       AssertionError: CLI direct invocation failed with code 1
+E       assert 1 == 0
+
+tests\test_evaluator_cli_and_site.py:38: AssertionError
+---------------------------- Captured stderr call -----------------------------
+signalpost could not produce output: ValidationError: 1 validation error for Envelope
+  Value error, Duplicate evidence IDs [type=value_error, input_value={'organisation_number': '...'evidence_ids': []}]}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/value_error
+_______________ test_evaluator_shapes_union_contract_reference ________________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-1682/test_evaluator_shapes_union_co0')
+
+    def test_evaluator_shapes_union_contract_reference(tmp_path):
+        """
+        Proves that all three supported envelope shapes (union, contract, reference)
+        can be emitted and verified cleanly through the CLI.
+        """
+        ci20_input = Path("tests/fixtures/ci20.jsonl")
+        ci20_bulk = Path("tests/fixtures/ci20.csv")
+    
+        for shape in ("contract", "reference"):
+            shape_dir = tmp_path / shape
+            shape_dir.mkdir()
+            out_envelopes = shape_dir / f"envelopes_{shape}.jsonl"
+            out_report = shape_dir / f"report_{shape}.json"
+            state_dir = shape_dir / "state"
+    
+            argv = [
+                "run",
+                "--organisations", str(ci20_input),
+                "--bulk", str(ci20_bulk),
+                "--output", str(out_envelopes),
+                "--report", str(out_report),
+                "--state-dir", str(state_dir),
+                "--envelope-shape", shape,
+                "--expected-count", "20",
+                "--time-budget-seconds", "30",
+                "--workers", "4",
+                "--no-websites", "--no-hiring", "--no-public-activity",
+            ]
+            exit_code = main(argv)
+>           assert exit_code == 0
+E           assert 1 == 0
+
+tests\test_evaluator_cli_and_site.py:106: AssertionError
+---------------------------- Captured stderr call -----------------------------
+signalpost could not produce output: ValidationError: 1 validation error for Envelope
+  Value error, Duplicate evidence IDs [type=value_error, input_value={'organisation_number': '...'evidence_ids': []}]}}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/value_error
+=========================== short test summary info ===========================
+FAILED tests/test_evaluator_cli_and_site.py::test_evaluator_cli_direct_invocation_and_site_generation
+FAILED tests/test_evaluator_cli_and_site.py::test_evaluator_shapes_union_contract_reference
+2 failed, 1410 passed in 430.94s (0:07:10)

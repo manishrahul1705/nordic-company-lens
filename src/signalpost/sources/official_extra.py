@@ -13,6 +13,7 @@ from .extract import Section, add, response_source
 from .http import Response
 
 GLEIF='https://api.gleif.org/api/v1/'
+GLEIF_AUTHORITIES=frozenset({'RA000472','RA000473'})
 TED='https://api.ted.europa.eu/v3/notices/search'
 METHOD='signalpost.official_extra.v1'
 NS={'cac':'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',
@@ -20,10 +21,21 @@ NS={'cac':'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponent
     'efac':'http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1'}
 
 
+def gleif_orgnr(value):
+    """Normalize only the official number's optional three-digit spacing."""
+    if not isinstance(value,str) or not re.fullmatch(r'[0-9]{9}|[0-9]{3}\s+[0-9]{3}\s+[0-9]{3}',value):
+        return None
+    return re.sub(r'\s+','',value)
+
+
+def gleif_lookup_numbers(numbers):
+    return ','.join(value for number in numbers for value in (number,' '.join((number[:3],number[3:6],number[6:]))))
+
+
 def gleif_extract(item,response,locator,org):
     section=Section()
     a=item.get('attributes',{});entity=a.get('entity',{})
-    if entity.get('registeredAs')!=org or entity.get('registeredAt',{}).get('id')!='RA000472':return section
+    if gleif_orgnr(entity.get('registeredAs'))!=org or entity.get('registeredAt',{}).get('id') not in GLEIF_AUTHORITIES:return section
     fields={'lei':a.get('lei'),'entity_status':entity.get('status'),'legal_form':entity.get('legalForm'),
             'registration_date':a.get('registration',{}).get('initialRegistrationDate'),
             'renewal_date':a.get('registration',{}).get('nextRenewalDate')}
@@ -184,11 +196,11 @@ async def collect(envelopes,client,budget,blobs):
     for start in range(0,len(orgs),100):
         nums=orgs[start:start+100]
         try:
-            url=GLEIF+'lei-records?'+urlencode({'filter[entity.registeredAs]':','.join(nums),'filter[entity.registeredAt]':'RA000472','page[size]':200})
+            url=GLEIF+'lei-records?'+urlencode({'filter[entity.registeredAs]':gleif_lookup_numbers(nums),'filter[entity.registeredAt]':','.join(sorted(GLEIF_AUTHORITIES)),'page[size]':200})
             response=await fetch.get(url);data=json.loads(response.body)
             if data['meta']['pagination']['lastPage']!=1:raise SourceFailure('extra_pagination')
             for index,item in enumerate(data['data']):
-                org=item['attributes']['entity']['registeredAs']
+                org=gleif_orgnr(item['attributes']['entity']['registeredAs'])
                 if org not in nums:continue
                 section=gleif_extract(item,response,'/data/'+str(index),org)
                 if section.claims:
@@ -261,6 +273,14 @@ async def collect(envelopes,client,budget,blobs):
             section.claims=[c for c in section.claims if c.family!='activity']
         awards=sorted((c for c in section.claims if c.family=='activity'),key=lambda c:(c.value['date'],c.field),reverse=True)[:10]
         section.claims=[c for c in section.claims if c.family!='activity']+awards
+        # Direct and ultimate relationships may cite the same parent record.
+        # Keep both claims and links, but emit each identical evidence record once.
+        unique={}
+        for evidence in section.evidence:
+            if evidence.id in unique and unique[evidence.id]!=evidence:
+                raise SourceFailure('extra_evidence_collision')
+            unique.setdefault(evidence.id,evidence)
+        section.evidence=list(unique.values())
         for source in states[org]:envelopes[org].run.refresh.setdefault('official_extra',{})[source]=states[org][source]
     return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures}
 
