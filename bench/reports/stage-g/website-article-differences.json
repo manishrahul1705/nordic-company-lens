@@ -1,0 +1,70 @@
+[
+  {
+    "orgnr": "911691248",
+    "company": "ISTAD ART SOLUTION NORWAY NUF",
+    "website_run1": "https://www.pederistad.no",
+    "website_run2": null,
+    "removed_articles": [],
+    "added_articles": [],
+    "diagnostics": [
+      {
+        "run": 1,
+        "recorded_errors": [
+          {
+            "section": "website",
+            "code": "website_candidates",
+            "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+          },
+          {
+            "section": "activity",
+            "code": "website_link_only",
+            "message": "website_link_only"
+          }
+        ],
+        "failed_http_events": [
+          {
+            "url": "https://www.pederistad.no/om-oss",
+            "host": "www.pederistad.no",
+            "organisation_number": "911691248",
+            "attempt_started": 182.31299999999464,
+            "status": 404,
+            "error": null,
+            "section": "website",
+            "content_sha256": "ce3bb37fd10e9e8ec930ed7f387336b3b73222defc5389cfeae5d27adc39712b",
+            "runtime_ms": 875
+          }
+        ],
+        "note": "Use these recorded diagnostics; do not assume every change is transient."
+      },
+      {
+        "run": 2,
+        "recorded_errors": [
+          {
+            "section": "website",
+            "code": "website_candidates",
+            "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+          },
+          {
+            "section": "activity",
+            "code": "website_link_only",
+            "message": "website_link_only"
+          }
+        ],
+        "failed_http_events": [
+          {
+            "url": "https://www.pederistad.no/om-oss",
+            "host": "www.pederistad.no",
+            "organisation_number": "911691248",
+            "attempt_started": 180.79699999999139,
+            "status": 404,
+            "error": null,
+            "section": "website",
+            "content_sha256": "ce3bb37fd10e9e8ec930ed7f387336b3b73222defc5389cfeae5d27adc39712b",
+            "runtime_ms": 1906
+          }
+        ],
+        "note": "Use these recorded diagnostics; do not assume every change is transient."
+      }
+    ]
+  }
+]

@@ -1,0 +1,319 @@
+[
+  {
+    "run": 1,
+    "website_refresh": {
+      "checked_urls": [
+        "https://www.pederistad.no/",
+        "https://www.pederistad.no/kontakt.html"
+      ],
+      "publication_tier": "B",
+      "content_allowed": false
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_link_only",
+        "message": "website_link_only"
+      }
+    ],
+    "http_events": [
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/911691248",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 29.828000000008615,
+        "status": 200,
+        "error": null,
+        "content_sha256": "8e2dc734e50e802f91be9cc8c8c1fdd5aa4d3ee2d2fa6ef7327b3782d58c13ff",
+        "runtime_ms": 407
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=911691248&size=1000&page=0",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 32.14100000000326,
+        "status": 200,
+        "error": null,
+        "content_sha256": "a8c521fb7ade5e5a984509d247d57a530c526e0afba7fae41a877101359e97dc",
+        "runtime_ms": 344
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/911691248/roller",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 147.875,
+        "status": 200,
+        "error": null,
+        "content_sha256": "bf5f9bf07de1c4b2a8ebd79db92099bebd2120b8ccbd69de7437e1ae49a11220",
+        "runtime_ms": 1813
+      },
+      {
+        "url": "https://data.brreg.no/regnskapsregisteret/regnskap/911691248",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 155.0470000000205,
+        "status": 200,
+        "error": null,
+        "content_sha256": "6822bf09eb80440e93d1194a0f115e934799e77b0bc1b13b750c36ddc5985483",
+        "runtime_ms": 813
+      },
+      {
+        "url": "https://pederistad.no/robots.txt",
+        "host": "pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 167.96900000001187,
+        "status": 301,
+        "error": null,
+        "section": "website",
+        "content_sha256": "16803a8b422dcbb35edcd13b767783104946021187c4a9cb659ac8193e98d337",
+        "runtime_ms": 2109
+      },
+      {
+        "url": "https://www.pederistad.no/robots.txt",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 171.11000000001513,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "070067c7cb07a32961967f88281ad4c7039498ac48153b1e1abdde777c15e20c",
+        "runtime_ms": 1062
+      },
+      {
+        "url": "https://pederistad.no/",
+        "host": "pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 173.56299999999464,
+        "status": 301,
+        "error": null,
+        "section": "website",
+        "content_sha256": "0a2d220cd09c26106e3e598bf3a740b318cda11e8ef43849e1b970985b1faea1",
+        "runtime_ms": 640
+      },
+      {
+        "url": "https://www.pederistad.no/",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 175.21900000001187,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "ec498f544d8371cdb72955c023a0cf08af140906ddcccdee612776f80400fc64",
+        "runtime_ms": 641
+      },
+      {
+        "url": "https://www.pederistad.no/kontakt.html",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 177.15700000000652,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "8a2637a97bf51ddf76ad76bca69ce445f419d14c32ad45ebf5b250b6b8534cd9",
+        "runtime_ms": 1000
+      },
+      {
+        "url": "https://www.pederistad.no/kontakt",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 179.18799999999464,
+        "status": 302,
+        "error": null,
+        "section": "website",
+        "content_sha256": "ef8a8ff86660c6ccd13edf8d799727e707dd763909a4d9922f3d95e7f6a722c4",
+        "runtime_ms": 594
+      },
+      {
+        "url": "https://www.pederistad.no/kontakt.html",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 180.84400000001187,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "44e89ad1554ac24627dcfc153be798bc8bf2871e5b74b68d1413fd458e179780",
+        "runtime_ms": 359
+      },
+      {
+        "url": "https://www.pederistad.no/om-oss",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 182.31299999999464,
+        "status": 404,
+        "error": null,
+        "section": "website",
+        "content_sha256": "ce3bb37fd10e9e8ec930ed7f387336b3b73222defc5389cfeae5d27adc39712b",
+        "runtime_ms": 875
+      }
+    ]
+  },
+  {
+    "run": 2,
+    "website_refresh": {
+      "checked_urls": [
+        "https://www.pederistad.no/",
+        "https://www.pederistad.no/kontakt.html"
+      ],
+      "publication_tier": "B",
+      "content_allowed": false,
+      "entity_scope": {
+        "group_site": false,
+        "other_registry_owners": [],
+        "historical_shared_domain_nominations": [],
+        "shared_domain_index_available": true,
+        "withheld_fields": [
+          "official_website"
+        ],
+        "website_status": "ambiguous",
+        "website_reason": "group/shared site"
+      }
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_link_only",
+        "message": "website_link_only"
+      }
+    ],
+    "http_events": [
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/911691248",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 28.07799999997951,
+        "status": 200,
+        "error": null,
+        "content_sha256": "8e2dc734e50e802f91be9cc8c8c1fdd5aa4d3ee2d2fa6ef7327b3782d58c13ff",
+        "runtime_ms": 375
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=911691248&size=1000&page=0",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 30.530999999988126,
+        "status": 200,
+        "error": null,
+        "content_sha256": "a8c521fb7ade5e5a984509d247d57a530c526e0afba7fae41a877101359e97dc",
+        "runtime_ms": 359
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/911691248/roller",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 144.9529999999795,
+        "status": 200,
+        "error": null,
+        "content_sha256": "bf5f9bf07de1c4b2a8ebd79db92099bebd2120b8ccbd69de7437e1ae49a11220",
+        "runtime_ms": 1328
+      },
+      {
+        "url": "https://data.brreg.no/regnskapsregisteret/regnskap/911691248",
+        "host": "data.brreg.no",
+        "organisation_number": "911691248",
+        "attempt_started": 153.48399999999674,
+        "status": 200,
+        "error": null,
+        "content_sha256": "6822bf09eb80440e93d1194a0f115e934799e77b0bc1b13b750c36ddc5985483",
+        "runtime_ms": 719
+      },
+      {
+        "url": "https://pederistad.no/robots.txt",
+        "host": "pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 166.13999999998487,
+        "status": 301,
+        "error": null,
+        "section": "website",
+        "content_sha256": "16803a8b422dcbb35edcd13b767783104946021187c4a9cb659ac8193e98d337",
+        "runtime_ms": 2641
+      },
+      {
+        "url": "https://www.pederistad.no/robots.txt",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 169.84299999999348,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "070067c7cb07a32961967f88281ad4c7039498ac48153b1e1abdde777c15e20c",
+        "runtime_ms": 1188
+      },
+      {
+        "url": "https://pederistad.no/",
+        "host": "pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 172.29699999999139,
+        "status": 301,
+        "error": null,
+        "section": "website",
+        "content_sha256": "0a2d220cd09c26106e3e598bf3a740b318cda11e8ef43849e1b970985b1faea1",
+        "runtime_ms": 609
+      },
+      {
+        "url": "https://www.pederistad.no/",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 173.93700000000536,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "ec498f544d8371cdb72955c023a0cf08af140906ddcccdee612776f80400fc64",
+        "runtime_ms": 531
+      },
+      {
+        "url": "https://www.pederistad.no/kontakt.html",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 175.5,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "147baf6586af01b913d93ad09139c6e2cb9f6353ee88cd75d7af925d0f293e02",
+        "runtime_ms": 468
+      },
+      {
+        "url": "https://www.pederistad.no/kontakt",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 177.13999999998487,
+        "status": 302,
+        "error": null,
+        "section": "website",
+        "content_sha256": "ef8a8ff86660c6ccd13edf8d799727e707dd763909a4d9922f3d95e7f6a722c4",
+        "runtime_ms": 688
+      },
+      {
+        "url": "https://www.pederistad.no/kontakt.html",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 179.0,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "e16908800c0281ed23d919605ab03e9e921cce9b295525d17a4a4b962d5a0da9",
+        "runtime_ms": 765
+      },
+      {
+        "url": "https://www.pederistad.no/om-oss",
+        "host": "www.pederistad.no",
+        "organisation_number": "911691248",
+        "attempt_started": 180.79699999999139,
+        "status": 404,
+        "error": null,
+        "section": "website",
+        "content_sha256": "ce3bb37fd10e9e8ec930ed7f387336b3b73222defc5389cfeae5d27adc39712b",
+        "runtime_ms": 1906
+      }
+    ]
+  }
+]
