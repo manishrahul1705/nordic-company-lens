@@ -37,7 +37,7 @@ async def build(args):
         # Rebuilding a completed checkpoint resumes at its last page, as NAV
         # documents for polling the tail, then follows newly appended pages.
         put('next_url',get('cursor'));put('feed_done','false');db.commit()
-    cfg=Config(organisations=Path('unused'),output=Path('unused'),report=Path('unused'),
+    cfg=Config(organisations=args.organisations,output=Path('unused'),report=Path('unused'),
         state_dir=args.state_dir,max_requests=args.max_requests,time_budget_seconds=args.time_budget_seconds,
         deadline_fraction=1,nav_concurrency=args.concurrency,nav_max_details=args.max_requests)
     budget=Budget(cfg);index=Index();index.metrics['detail_request_cap']=args.max_requests
@@ -150,6 +150,7 @@ async def build(args):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--organisations',type=Path,default=Path('bench/inputs/1000-r3/batch.jsonl'),help='Input used only to size the development builder budget')
     p.add_argument('--state-dir',type=Path,default=Path('state/nav-index-build'))
     p.add_argument('--output',type=Path,default=DEFAULT_PATH)
     p.add_argument('--report',type=Path,default=Path('out/nav-index-build-report.json'))
