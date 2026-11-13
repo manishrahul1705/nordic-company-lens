@@ -19,20 +19,7 @@ def test_apex_www_are_one_nomination():
     assert items[0].origin == 'registry_website'
 
 
-def test_careers_reserve_only_uses_remaining_slots(tmp_path):
-    cfg = config(tmp_path, [ORG, '982257867', '993578843'])
-    budget = Budget(cfg)
-    http = WebsiteHttp(None, cfg, budget, BlobStore(tmp_path / 'blobs'))
-    assert http.careers_reserves == {}
-    http.counts[ORG] = 32
-    budget.by_company[ORG] = 37
-    assert http.reserve_careers(ORG) == 3
-    assert http.reserve_careers(ORG) == 3
-    assert budget.cap == 57
-    assert len(budget.events) == 0  # Earmarking never spends global requests.
-
-
-def test_activity_cannot_spend_reserved_careers_slots_and_hard_cap_holds(tmp_path):
+def test_activity_keeps_original_allowance_and_careers_cap_failure_is_honest(tmp_path):
     async def run():
         cfg = config(tmp_path, [ORG, '982257867', '993578843']).model_copy(update={'website_politeness_seconds': 0})
         budget = Budget(cfg)
@@ -44,13 +31,9 @@ def test_activity_cannot_spend_reserved_careers_slots_and_hard_cap_holds(tmp_pat
                 event = budget.reserve('https://example.no/', 'example.no', ORG)
                 event['section'] = 'website'
             http.counts[ORG] = 34
-            assert http.reserve_careers(ORG) == 6
-            with pytest.raises(SourceFailure, match='website_budget_exhausted'):
-                await http.raw('https://example.no/news', ORG, {'example.no'})
-            http.careers_active.add(ORG)
             # Actual robots and redirects use this same raw request accounting.
             for _ in range(6):
-                await http.raw('https://example.no/jobs/1', ORG, {'example.no'})
+                await http.raw('https://example.no/news', ORG, {'example.no'})
             assert budget.by_company[ORG] == 40
             assert len(budget.events) == 40
             with pytest.raises(SourceFailure):

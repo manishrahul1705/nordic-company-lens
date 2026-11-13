@@ -61,7 +61,6 @@ async def run(envelopes,http,bulk,prior,nav_index,isolate,update,*,defer_jobs=Fa
                         recovered=row.run.sections.get('website')=='available'
                         if recovered:
                             meta['recovered']=True;totals['recovered']+=1
-                            if defer_jobs and config.hiring:http.reserve_careers(org)
                             if config.public_activity:
                                 await isolate(row,'activity',lambda:activity(org,row,http,http.accepted_pages.get(org,[])))
                             if config.hiring and not defer_jobs:
