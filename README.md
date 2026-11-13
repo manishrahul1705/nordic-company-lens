@@ -12,7 +12,7 @@ uv sync --frozen
 
 ## Official run
 
-For final measured coverage, sources, budgets and limitations, see [SUBMISSION.md](SUBMISSION.md). The Step 22 new random cohort (100 valid organisation numbers plus three invalid lines) passed the fixed-runtime same-command refresh check: 103 outputs per run, zero company changes, zero observation changes and strict verifier exit 0. [Precision review and exact results](bench/reports/s6-step22/SCOREBOARD.md).
+For final measured coverage, sources, budgets and limitations, see [SUBMISSION.md](SUBMISSION.md).
 
 The command writes a static offline site to `out/site`. Open `out/site/index.html` directly: search the directory by company name or organisation number, open a company, or compare two or three companies. The comparison URL preserves the selection; share that link together with the generated site folder. Source buttons show captured excerpts, URLs, retrieval dates and reporting periods. No CDN or web server is required. At narrow widths comparison cards stack vertically.
 
@@ -85,10 +85,6 @@ No personal NAV credential is required. When `NAV_API_TOKEN` is unset, the runne
 
 The command has **$0 provider cost**. Compute, storage and network costs are excluded. `--synthesis` accepts `template` (default) or `auto`, which both use templates; `llm` is rejected.
 
-## Final measured coverage
-
-One frozen 1,000-company run of runtime `39a73142` produced **108 verified websites, 44 social companies, 3 jobs companies and 1,000 activity companies**, plus GLEIF facts for 32 companies and TED awards for 6. Registry coverage: identity 1,000, people 997, subunit workplaces 774 and financials 999. Total supported facts: **166,207**. HTTP: **8,589**, mean 8.589/input, maximum 40/company; wall time **1,017.315 seconds**, zero deadlines, 1,000 envelopes/profiles. These are coverage measurements, not an evaluator score or a completeness guarantee. [Final release results and verifier](bench/reports/final-release/RESULTS.md).
-
 ## Limitations and checks
 
 Strict identity rules and bounded discovery can miss genuine websites, jobs and activity. Bulk data and the bundled NAV index can age; stale or unusable indexes trigger feed fallback. API failures, robots restrictions, timeouts and budget caps leave explicit incomplete states. Website research has no browser renderer. Scanned PDFs are not used; annual-report PDF discovery was removed after a failed recall trial. Small companies often have no discoverable, provably owned website. Unknown trading names can escape NAV discovery, and name matching alone never proves employer identity. Financial comparisons abstain when entity, period, currency or units are incompatible. Source-reported text is not an independent assessment, and cited templates do not provide general semantic fact verification.
@@ -127,3 +123,15 @@ The release adds locally bundled Common Crawl candidates and registry shared-ide
 `data/cc_orgnr_index.json.gz` was built 13 November 2026 from partial archived records in CC-MAIN-2026-43,2026-39 and2026-34. It contains 20,832 candidates for 19,735 parent companies. Access/use is subject to [Common Crawl Terms of Use](https://commoncrawl.org/terms-of-use) and third-party rights; see [the bundled terms/method notice](data/CC_INDEX_NOTICE.md). Official Bronnoysund subunit data (NLOD 2.0) maps branch numbers to parents. **Candidate coverage is not verified-site coverage**: every candidate is fetched and re-verified live under the ownership proof and vetoes.
 
 `src/signalpost/data/nav_index.json.gz` was built 2026-11-13T00:26:42.872674Z from the official public NAV feed using public access (9,296 ads / 5,899 employers). No private credential is required or bundled. The runtime retrieves NAV's published public token in memory, validates the index and live-checks nominated ads; missing, invalid or stale indexes retain the honest full-feed fallback. Source terms and limitations are in [SOURCES.md](docs/SOURCES.md).
+
+## Previous revisions
+
+Historical revision 2 results below are retained for comparison, not presented as current coverage.
+
+### Revision 2 measured coverage
+
+One frozen 1,000-company run of runtime `39a73142` produced **108 verified websites, 44 social companies, 3 jobs companies and 1,000 activity companies**, plus GLEIF facts for 32 companies and TED awards for 6. Registry coverage: identity 1,000, people 997, subunit workplaces 774 and financials 999. Total supported facts: **166,207**. HTTP: **8,589**, mean 8.589/input, maximum 40/company; wall time **1,017.315 seconds**, zero deadlines, 1,000 envelopes/profiles. These are coverage measurements, not an evaluator score or a completeness guarantee. [Final release results and verifier](bench/reports/final-release/RESULTS.md).
+
+### Revision 2 precision check
+
+The Step 22 new random cohort (100 valid organisation numbers plus three invalid lines) passed the fixed-runtime same-command refresh check: 103 outputs per run, zero company changes, zero observation changes and strict verifier exit 0. [Precision review and exact results](bench/reports/s6-step22/SCOREBOARD.md).
