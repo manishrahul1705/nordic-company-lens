@@ -1,0 +1,41 @@
+        links:
+          properties:
+            xml:
+              type: object
+              additionalProperties:
+                type: string
+            pdf:
+              type: object
+              additionalProperties:
+                type: string
+            pdfs:
+              type: object
+              additionalProperties:
+                type: string
+            html:
+              type: object
+              additionalProperties:
+                type: string
+            htmlDirect:
+              type: object
+              additionalProperties:
+                type: string
+        BT-5101(b)-Part:
+          type: array
+          items:
+            type: string
+        organisation-tel-docprovider-lot:
+          type: array
+          items:
+            type: string
+        organisation-fax-revieworg-part:
+          type: array
+          items:
+            type: string
+        organisation-tel-mediator-part:
+          type: array
+          items:
+            type: string
+        BT-728-Part:
+          type: object
+          description: A i18n field mapping to any of the 24 

@@ -1,0 +1,10 @@
+{
+  "openapi_url": "https://api.ted.europa.eu/api-v3.yaml",
+  "swagger_ui": "https://api.ted.europa.eu/swagger-ui/index.html#/Search/search",
+  "schema_has_links_xml_language_map": true,
+  "live_response_has_links_xml_MUL": true,
+  "observed_notice": "1-2026",
+  "observed_link": "https://ted.europa.eu/en/notice/1-2026/xml",
+  "finding": "Returned link equals previously constructed URL in the observed response; link selection alone is not evidence that HTTP 202 will disappear.",
+  "award_extract_ast_unchanged": true
+}

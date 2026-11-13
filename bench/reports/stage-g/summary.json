@@ -1,0 +1,147 @@
+{
+  "run1": {
+    "websites": 113,
+    "social_companies": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "facts": 165481,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9281,
+    "http_mean": 9.281,
+    "http_attributed_mean": 9.001,
+    "http_max": 40,
+    "wall_seconds": 2136.968971800001,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "802154cc2eb3b88ee04021969934e057f33033cf",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 766,
+        "ambiguous": 113,
+        "available": 113,
+        "blocked": 3,
+        "failed": 5
+      },
+      "hiring": {
+        "not_available": 994,
+        "failed": 4,
+        "available": 2
+      },
+      "activity": {
+        "available": 1000
+      }
+    },
+    "news_companies": 7,
+    "article_claims": 69,
+    "GLEIF_companies": 32,
+    "TED_companies": 0,
+    "TED_awards": 0,
+    "websites_by_proof_type": {
+      "orgnr_on_page": 38,
+      "jsonld_vatid": 5,
+      "registry_declared_name_tier_a": 25,
+      "legal_name_without_suffix_and_two_contacts": 9,
+      "legal_name_and_registry_contact": 24,
+      "unique_no_corroborated": 7,
+      "registry_declared_hard_contact_tier_b": 3,
+      "registry_phone_on_site": 2
+    },
+    "TED_requests": 238,
+    "TED_status_distribution": {
+      "200": 10,
+      "202": 228
+    },
+    "seconds_per_100": 213.6968971800001
+  },
+  "run2": {
+    "websites": 112,
+    "social_companies": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "facts": 165481,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9273,
+    "http_mean": 9.273,
+    "http_attributed_mean": 8.992,
+    "http_max": 40,
+    "wall_seconds": 1988.786416499992,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "802154cc2eb3b88ee04021969934e057f33033cf",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 766,
+        "ambiguous": 114,
+        "available": 112,
+        "blocked": 3,
+        "failed": 5
+      },
+      "hiring": {
+        "not_available": 995,
+        "failed": 3,
+        "available": 2
+      },
+      "activity": {
+        "available": 1000
+      }
+    },
+    "news_companies": 7,
+    "article_claims": 69,
+    "GLEIF_companies": 32,
+    "TED_companies": 0,
+    "TED_awards": 0,
+    "websites_by_proof_type": {
+      "orgnr_on_page": 38,
+      "jsonld_vatid": 5,
+      "registry_declared_name_tier_a": 25,
+      "legal_name_without_suffix_and_two_contacts": 9,
+      "legal_name_and_registry_contact": 24,
+      "unique_no_corroborated": 7,
+      "registry_phone_on_site": 2,
+      "registry_declared_hard_contact_tier_b": 2
+    },
+    "TED_requests": 238,
+    "TED_status_distribution": {
+      "200": 10,
+      "202": 228
+    },
+    "seconds_per_100": 198.8786416499992
+  },
+  "reported_final_run": 2
+}

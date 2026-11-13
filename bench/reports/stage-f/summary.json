@@ -1,0 +1,126 @@
+{
+  "baseline": {
+    "websites": 113,
+    "social_companies": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "facts": 165484,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9173,
+    "http_mean": 9.173,
+    "http_attributed_mean": 9.047,
+    "http_max": 40,
+    "wall_seconds": 2286.950907599996,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "c654406bb5cea9b4ca2f369bd308e62c26dcc10e",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 761,
+        "ambiguous": 116,
+        "available": 113,
+        "failed": 6,
+        "blocked": 4
+      },
+      "hiring": {
+        "not_available": 992,
+        "failed": 6,
+        "available": 2
+      },
+      "activity": {
+        "available": 1000
+      }
+    },
+    "GLEIF_companies": 32,
+    "TED_companies": 0,
+    "news_companies": 7,
+    "articles": 69
+  },
+  "release": {
+    "websites": 111,
+    "social_companies": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "facts": 165422,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9278,
+    "http_mean": 9.278,
+    "http_attributed_mean": 9.005,
+    "http_max": 40,
+    "wall_seconds": 2396.0234201999847,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "007b34fb691eb02caf121e9da6dc19c3c5bc603a",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 766,
+        "ambiguous": 115,
+        "available": 111,
+        "blocked": 3,
+        "failed": 5
+      },
+      "hiring": {
+        "not_available": 996,
+        "failed": 2,
+        "available": 2
+      },
+      "activity": {
+        "available": 1000
+      }
+    },
+    "GLEIF_companies": 32,
+    "TED_companies": 1,
+    "news_companies": 4,
+    "articles": 21,
+    "websites_by_proof_type": {
+      "orgnr_on_page": 38,
+      "jsonld_vatid": 5,
+      "registry_declared_name_tier_a": 24,
+      "legal_name_without_suffix_and_two_contacts": 9,
+      "legal_name_and_registry_contact": 24,
+      "unique_no_corroborated": 6,
+      "registry_declared_hard_contact_tier_b": 3,
+      "registry_phone_on_site": 2
+    }
+  },
+  "new_websites": 1,
+  "new_social_profiles": 0,
+  "lost_websites": 3,
+  "lost_social_profiles": 0
+}

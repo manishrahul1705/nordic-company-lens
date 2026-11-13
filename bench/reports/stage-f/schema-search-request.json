@@ -1,0 +1,11 @@
+{
+  "query": "notice-type = (can-standard OR can-social) AND publication-date >= 20260101",
+  "fields": [
+    "publication-number",
+    "notice-type",
+    "links"
+  ],
+  "limit": 1,
+  "page": 1,
+  "scope": "ALL"
+}

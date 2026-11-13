@@ -1,0 +1,326 @@
+{
+  "TED_companies": 0,
+  "awards": 0,
+  "TED_requests": 238,
+  "TED_status_distribution": {
+    "200": 10,
+    "202": 228
+  },
+  "official_extra": {
+    "requests": 252,
+    "gleif_companies": 32,
+    "parent_LEIs_batched": 2,
+    "tender_notices_nominated": 76,
+    "ted_requests": 238,
+    "ted_http_statuses": {
+      "200": 10,
+      "202": 228
+    },
+    "ted_failures": [
+      {
+        "url": "https://ted.europa.eu/en/notice/10384-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/112715-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/115235-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/116542-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/120822-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/138083-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/140390-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/150922-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/165606-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/173043-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/174478-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/187066-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/197558-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/198485-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/210972-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/228306-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/246735-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/247985-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/250458-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/261860-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/263789-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/271943-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/287502-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/288858-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/295084-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/313125-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/320357-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/327030-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/330396-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/335345-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/338506-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/341549-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/341842-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/354425-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/370861-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/387041-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/389874-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/390266-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/39027-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/397297-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/397515-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/418429-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/42374-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/42963-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/434277-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/461448-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/475312-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/486198-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/495785-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/510525-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/517910-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/528398-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/549796-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/574364-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/583218-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/627000-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/637605-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/640353-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/643444-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/690844-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/69164-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/69404-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/697888-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/698069-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/741466-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/741472-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/741743-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/744428-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/745118-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/757744-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/766764-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/778400-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/780228-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/817875-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/834670-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/839756-2025/xml",
+        "code": "extra_http_202"
+      }
+    ]
+  }
+}
