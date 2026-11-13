@@ -1,0 +1,37 @@
+{
+  "status": "running",
+  "updated_utc": "2026-11-13T00:04:24.066419+00:00",
+  "hard_stop_ist": "2026-11-13T10:00:00+05:30",
+  "crawls_covered": [
+    {
+      "crawl": "CC-MAIN-2026-43",
+      "status": "complete"
+    },
+    {
+      "crawl": "CC-MAIN-2026-39",
+      "status": "complete"
+    },
+    {
+      "crawl": "CC-MAIN-2026-34",
+      "status": "running"
+    }
+  ],
+  "records_selected": 178735,
+  "records_processed": 178735,
+  "records_fetched": 178725,
+  "orgnr_pages": 32300,
+  "distinct_orgnrs": 19633,
+  "distinct_domains": 20796,
+  "universe_size": 411160,
+  "universe_matches": 12798,
+  "expected_per_1000": 31.126568732366962,
+  "successful_range_MB": 5220.721463,
+  "elapsed_seconds": 148403.11648368835,
+  "excluded_domains": 79,
+  "parse_or_fetch_errors": 240,
+  "max_concurrent_warc_requests": 4,
+  "live_checks": false,
+  "terms": "Common Crawl Terms of Use and third-party rights apply; bounded30/60s backoff; no credentials or paid APIs.",
+  "scope": "Cumulative existing plus overnight results, exact cached subunit-parent mapping; pairs are candidates, not verified websites. Unknown parent contacts are not inferred. No WARC bytes stored.",
+  "MB_scope": "Successful stored-result range payload bytes, excludes failed/aborted requests and Parquet reads."
+}
