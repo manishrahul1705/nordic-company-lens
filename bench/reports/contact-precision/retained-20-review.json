@@ -1,0 +1,642 @@
+[
+  {
+    "orgnr": "928657523",
+    "company": "VIVIFY GRUPPEN AS",
+    "field": "contact.email.580064ff072946926c58",
+    "value": "post@vivify.no",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "087dc616b1cfc3a5c0e5a47451b729b54695aa5c34f203c90350b9f5b2f85d8a",
+        "source_url": "https://www.vivify.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:56:40.701203Z",
+        "content_sha256": "2450e640948a6ebfe66fbbcd2e24db33a1f2a29bab2682de8e4c69922b8653b0",
+        "claim_span": "<a target=\"\" href=\"mailto:post@vivify.no?cc=ole.morten%40vivify.no\">",
+        "locator": "contact:post@vivify.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "993372277",
+    "company": "REAL ØKONOMI AS",
+    "field": "contact.email.645fec23caebe7f71658",
+    "value": "post@realokonomi.no",
+    "registered_email": null,
+    "registered_phone": "56 35 19 75",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "c489e625c59cc34c9d5e2e6f8f2fa6298a3ef9f435a54dd95ab831ea5fabc6a5",
+        "source_url": "https://realokonomi.no/om-oss/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:50.459068Z",
+        "content_sha256": "f6eb39a4b2ccb6ed4d8bc6a2e3ab5a25125e1d4aec96d28a0ed41a59b2439b35",
+        "claim_span": "<a class=\"e-lottie__container__link\" href=\"mailto:post@realokonomi.no\">",
+        "locator": "contact:post@realokonomi.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "927152630",
+    "company": "HYGGE TANNHELSE AS",
+    "field": "contact.phone.fa4d73950f2a7cd0a5d6",
+    "value": "+4751556067",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "378a1e0a88bd95aa3e095b62a53c660d02cf23d140ab602252ee78d6f6903496",
+        "source_url": "https://www.hyggetannhelse.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:01:06.921718Z",
+        "content_sha256": "68b331eb92af53bb8011b68ec46211a24cfefd0f6887ab46dbc27abc533fce9d",
+        "claim_span": "<a href=\"tel:51556067\">",
+        "locator": "contact:+4751556067",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "980622444",
+    "company": "LØRENSKOG BANDASJE AS",
+    "field": "contact.email.25842152e222e33abc6d",
+    "value": "firmapost@loban.no",
+    "registered_email": null,
+    "registered_phone": "67 91 96 72",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "82922dc196b63fdd3c3944712eef7ac6d8724ece095c9a11d847f18ac708386c",
+        "source_url": "https://loban.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:34.322836Z",
+        "content_sha256": "0b38bd6ea4fc405b3286f13ee89f7f25d6a99a841fe7e1f52317b09e255f5fdb",
+        "claim_span": "<a href=\"mailto:firmapost@loban.no\">",
+        "locator": "contact:firmapost@loban.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "934289099",
+    "company": "NORTH GREY AS",
+    "field": "contact.email.88ab7b4d62a5faf62bc2",
+    "value": "kontakt@northgrey.no",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "19ca563a16a1fa8b9a34ff78d35eb98e8edab44abc3cd78787f3d8dc1f37a2a1",
+        "source_url": "https://www.northgrey.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:59:33.388127Z",
+        "content_sha256": "0b769c657566b03b085497cff4b373d191a9a2e6132813718e18f3308782e605",
+        "claim_span": "<a data-auto-recognition=\"true\" href=\"mailto:kontakt@northgrey.no\" class=\"wixui-rich-text__text\">",
+        "locator": "contact:kontakt@northgrey.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "921596154",
+    "company": "BIKE2WORK AS",
+    "field": "contact.phone.2d54ac226a188820f609",
+    "value": "+4747680672",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "b5c1c1112582233053545985117f66fae312443508c130719aed27e5dda80559",
+        "source_url": "https://bike2work.no/privacy-policy",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:24.047545Z",
+        "content_sha256": "ffd05ce6ef7224d117d90f2219fa167e3097060755e180f74906f431f7d7534d",
+        "claim_span": "takte selgeren, for eksempel pr telefon 476 80 672<br />eller e-post (ordre@bike2work.no) dersom han eller hun har spørsmål om selgerens bruk av perso",
+        "locator": "contact:+4747680672",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "932925982",
+    "company": "UDELT AS",
+    "field": "contact.phone.75f4e8d1be2e9ee9c94c",
+    "value": "+4741242752",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "d1352bfc2dc76d1256c42c350450047e305168a46b0cc0f080f8313325abf9c6",
+        "source_url": "https://udelt.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:56:39.182430Z",
+        "content_sha256": "fb96d74e405521043ce50ca0e3a861421e702a16b5bb2954d3d4cf752d16d41e",
+        "claim_span": "<a href=\"tel:+4741242752\">",
+        "locator": "contact:+4741242752",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "987564911",
+    "company": "NÆRINGSØKONOMI AS",
+    "field": "contact.email.1a7516fe389a8750dda6",
+    "value": "post@naringsokonomi.no",
+    "registered_email": "post@naringsokonomi.no",
+    "registered_phone": "22 19 02 30",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "f34f3e749784967f22c7805d48ebec26bfa74343b88393616aff8b4ee3419cb1",
+        "source_url": "https://naringsokonomi.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:56:40.379856Z",
+        "content_sha256": "435ed58bb8a7d0e81370732b3212b93545a8048748bf29bbdf12603e785156d3",
+        "claim_span": "<a href=\"mailto:post@naringsokonomi.no\" data-track-event=\"click\" data-track-action=\"email_link\">",
+        "locator": "contact:post@naringsokonomi.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "971558415",
+    "company": "DANSEINFORMASJONEN STI",
+    "field": "contact.email.439e9f110433ecadd44d",
+    "value": "post@danseinfo.no",
+    "registered_email": "post@danseinfo.no",
+    "registered_phone": "23 70 94 40",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "dfb797825f5957d7d61a077b22461bff4e53fc4433b28c210322e277124584f8",
+        "source_url": "https://danseinfo.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:59:48.348727Z",
+        "content_sha256": "33c3966a25d3b23524b29847d54bbc99d3f439c23316724af189e50049d343e2",
+        "claim_span": "<a class=\"footer-email\" href=\"mailto:post@danseinfo.no\">",
+        "locator": "contact:post@danseinfo.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "924828099",
+    "company": "ECOFRIC AS",
+    "field": "contact.email.02d7b9f4876146e7930a",
+    "value": "hello@ecofric.com",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "960097af73690f7da408413938678f325003c08113323fa37960dce14d3a4ad7",
+        "source_url": "https://www.ecofric.com/avtalevilkar/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:32.405699Z",
+        "content_sha256": "6bcd83ed662c6c62723f8cffd70e1d609bf0dc76a225eea8b01f4e12c6e9278b",
+        "claim_span": "<a href=\"mailto:hello@ecofric.com\">",
+        "locator": "contact:hello@ecofric.com",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "990412375",
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "field": "contact.phone.42b22a478b6e7a89e2ba",
+    "value": "+4790101021",
+    "registered_email": "post@bnv.no",
+    "registered_phone": null,
+    "registered_mobile": "901 01 021",
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "54b7cc1f862dcfcd8e054680ccc73d5ed4ff8d041ce1ed8dbdb213b6de689205",
+        "source_url": "https://bnv.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:51.530809Z",
+        "content_sha256": "2fb1e080f45a3c9dc38b026a72fbd66c805c50e2c0d10970c69b66151eaea1f0",
+        "claim_span": "<a href=\"tel:+4790101021\">",
+        "locator": "contact:+4790101021",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "996979660",
+    "company": "VALDRESMEIERIET AS",
+    "field": "contact.phone.4a41928036dbdf5fe649",
+    "value": "+4794009677",
+    "registered_email": "jorn@wangensten.no",
+    "registered_phone": "61 36 23 00",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "290b547930b60ff274e763456df65f13ae858b6c65f3c0c92771734d514e9090",
+        "source_url": "https://www.valdresmeieriet.no/kontakt/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:59:00.327435Z",
+        "content_sha256": "2f7ffe071584866e4655ed62f43d8b65767fa513f14a3d2ded8688e226d1a9f3",
+        "claim_span": "    <div class=\"contact-detail-content\">940 09 677</div>\r\n                            </div>\r\n                                                    <div",
+        "locator": "contact:+4794009677",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "932448459",
+    "company": "ROMERIKE VVS AS",
+    "field": "contact.email.f3158d5700d7d112e9c2",
+    "value": "hei@romerikevvs.no",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "b187e798db239cdf4f70f962333c9ecc82468781627864d09b2a9110dfc3859b",
+        "source_url": "https://romerikevvs.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:06.073015Z",
+        "content_sha256": "76a8bf35b395b2617fe102830422e3ae32ad99a40704c7791b4df205486d7788",
+        "claim_span": "<a class=\"elementor-button elementor-button-link elementor-size-sm elementor-animation-float\" href=\"mailto:hei@romerikevvs.no\">",
+        "locator": "contact:hei@romerikevvs.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "993014591",
+    "company": "STØREN DYREKLINIKK AS",
+    "field": "contact.phone.318169d0ffbd2f6a2607",
+    "value": "+4790075645",
+    "registered_email": null,
+    "registered_phone": "72 43 19 55",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "2c9e177f60a376ad7c873af8a2b399af0c19c71a3730d0ff162f8d81c045ce26",
+        "source_url": "https://www.storendyreklinikk.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:59.126102Z",
+        "content_sha256": "bcf4cf40449c33681aac2deee6b9edbad36cf63895e1b808049e2ab6f1ca7771",
+        "claim_span": "<a href=\"tel:90075645\" target=\"_self\" title=\"\" alt=\"\" data-stop-propagation=\"true\">",
+        "locator": "contact:+4790075645",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "987002808",
+    "company": "BRIDGE TECHNOLOGIES CO AS",
+    "field": "contact.phone.c187f62204d6b9462356",
+    "value": "+4722385100",
+    "registered_email": "info@bridgetech.tv",
+    "registered_phone": null,
+    "registered_mobile": "99404489",
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "5c44b78e14f34fb2c6392d6c8907d3a642bec6b0b36297dd7f92143a24a58a63",
+        "source_url": "https://bridgetech.tv/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:06.539063Z",
+        "content_sha256": "6f8ab0387889b5cd9e56adc3c0ff0834cce8f9e274ad2ddbb43c16c88f065e46",
+        "claim_span": "=\"phone\"><a href=\"tel:\" title=\"Call us\">+47 22 38 51 00</a></dd>\n\t\t<dt class=\"vat\">VAT</dt>\n\t<dd class=\"vat\">NO987002808MVA</dd>\n</dl>\t\t\t\t\t\t</div>\n\t\t\t",
+        "locator": "contact:+4722385100",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "831447842",
+    "company": "ALLIANSE PSYKOLOGKLINIKK AS",
+    "field": "contact.email.36580d615df14ca01013",
+    "value": "kontakt@alliansepsykologklinikk.no",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "be321b00736d8031da99c4f08ecafcba477bd4f07a8b6f923bf166518f945867",
+        "source_url": "https://alliansepsykologklinikk.no/kontakinformasjon.html",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:55.099502Z",
+        "content_sha256": "aac66f102fd3d06bbe150c2f308bf205a0c95a74593e7c54ed4d9508db2393a1",
+        "claim_span": "<a href='mailto:kontakt@alliansepsykologklinikk.no'>",
+        "locator": "contact:kontakt@alliansepsykologklinikk.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "995445611",
+    "company": "GS ELEKTRO GJØVIK AS",
+    "field": "contact.email.52fe8b001d0f8d07aad8",
+    "value": "gselektro@gsel.no",
+    "registered_email": "gselektro@gsel.no",
+    "registered_phone": "61 10 86 50",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "88d17f4697ddff89d2c11a0d5a3652a9eaffeecea857f1fd0d1f7b691e5fdf7e",
+        "source_url": "https://gsel.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:00:45.279159Z",
+        "content_sha256": "fd4aa30b7b246e494e22e5607e3ac411d8da9233fcd489173e0849dbadef7729",
+        "claim_span": "<a class=\"button secondary\" href=\"mailto:gselektro@gsel.no\">",
+        "locator": "contact:gselektro@gsel.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "938092516",
+    "company": "OSLO CHAMBER OF COMMERCE",
+    "field": "contact.email.f073d1804d752b773cd3",
+    "value": "mail@chamber.no",
+    "registered_email": "mail@chamber.no",
+    "registered_phone": "22 12 94 00",
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "9991823717c539eefe6e8f278f66d3060c7f947011d221d4f1f1f39af4db7996",
+        "source_url": "https://chamber.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:58:28.352805Z",
+        "content_sha256": "7f73de6e1d4303e0259b03bc13628e86d58dc1a5115b0234d60126f3bdf44e07",
+        "claim_span": "<a href=\"mailto:mail@chamber.no\" target=\"_self\" tabindex=\"-1\" aria-hidden=\"true\">",
+        "locator": "contact:mail@chamber.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "920358411",
+    "company": "LARSZACHARIASSEN AS",
+    "field": "contact.phone.3c9da0790ffee12acf72",
+    "value": "+4793469383",
+    "registered_email": null,
+    "registered_phone": null,
+    "registered_mobile": null,
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "ba4353a104dfc507ce44b96aba397a3d1dfd061102f06c34c70b94f83b04ddc9",
+        "source_url": "https://larszachariassen.no/kontakt/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:59:33.881914Z",
+        "content_sha256": "0d31f9de417dff0fb05dc76ff0637e80cab65e73cdf4268f492195380233d782",
+        "claim_span": "<a class=\"x-anchor x-anchor-button has-graphic e2781-e18 m259-w m259-x m259-3\" tabindex=\"0\" href=\"tel:93469383\" data-x-effect=\"{&quot;durationBase&quot;:&quot;300ms&quot;}\">",
+        "locator": "contact:+4793469383",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": false
+  },
+  {
+    "orgnr": "995520982",
+    "company": "HETLY FRITID AS",
+    "field": "contact.email.c5532e53aa65c8c14a62",
+    "value": "siv@kanobutikken.no",
+    "registered_email": "siv@kanobutikken.no",
+    "registered_phone": null,
+    "registered_mobile": "915 39 124",
+    "kept": true,
+    "reason": "passes publication policy",
+    "evidence": [
+      {
+        "id": "e01c32aecf7ac7f3a45519e6068b1c12d0f123d14f7cc8da2b9ad1e84d8f8f95",
+        "source_url": "https://kanobutikken.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:01:00.792177Z",
+        "content_sha256": "11b9e935437150ffac3e13223efb6b89d8267f76ccb7473df9f1dbfa54a89ac0",
+        "claim_span": "<a class=\"link1\" href=\"mailto:siv@kanobutikken.no\" data-wsb-id=\"src/components/sections/ContactSection.jsx:114:14\">",
+        "locator": "contact:siv@kanobutikken.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "accepted": true
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact registered email/number or approved role/company local; otherwise phone in corporate contact/footer area, outside staff lists. Cited source checked."
+    },
+    "registered_personal_exception": true
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "pair": "refresh",
+  "observation_patterns": {
+    "('activity', 'failed', 'available')": 100
+  },
+  "claim_ids_differ_companies": 100,
+  "first_activity_error": "timeout",
+  "second_activity_source": "registry_activity completed with supported registry announcements",
+  "classification": "Genuine network/source timeout and recovery, not provisional website bookkeeping. No observations suppressed.",
+  "action": "Retain first pair; retry complete pair with another fresh clone/state; no production changes."
+}

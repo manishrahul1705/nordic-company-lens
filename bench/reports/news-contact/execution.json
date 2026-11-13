@@ -1,0 +1,31 @@
+{
+  "commit": "77bd52fb39016aaf30d0632d2d6733a96b8f7986",
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "signalpost",
+    "run",
+    "--organisations",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\inputs\\1000-r3\\batch.jsonl",
+    "--output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\news-contact-live\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\news-contact-live\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\news-contact-live\\report.json",
+    "--state-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\news-contact-live\\state",
+    "--site-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\news-contact-live\\site"
+  ],
+  "started_utc": "2026-11-12T08:55:07.159777+00:00",
+  "free_bytes_before": 48465887232,
+  "credentials": "Key/token/secret variables and optional provider selectors removed; values not recorded",
+  "fresh_state": true,
+  "mode": "README command; no bulk; default budgets",
+  "exit_code": 0,
+  "wall_seconds": 1597.6135130999974,
+  "finished_utc": "2026-11-12T09:21:44.775170+00:00"
+}

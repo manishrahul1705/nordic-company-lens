@@ -1,0 +1,218 @@
+[
+  {
+    "baseline": {
+      "orgnr": "936094112",
+      "company": "NUVE AS",
+      "website": {
+        "value": {
+          "final_url": "https://nuve.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "jsonld_vatid",
+          "proof_page_url": "https://nuve.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "8e34d40d1dd592aa381a2e75a0968ac918aa1d86b556408c6a78d28e199394ef",
+            "source_url": "https://nuve.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T18:57:40.905362Z",
+            "content_sha256": "1dd8d48b9606857f073f9b0a3bcc67619fbddac8b14a4dcf561f8ec39941ac9a",
+            "claim_span": "<p class=\"footer__org\">Nuve AS &middot; Org.nr 936 094 112</p>\n      </div>\n      <div class=\"footer__social\">\n        <a href=\"https://no.linkedin.co",
+            "locator": "identity-proof:936094112",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"nuve.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Nuve | Search that converts\", \"proof_page_url\": \"https://nuve.no/\"}, {\"domain\": \"nuve.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://nuve.no/\", \"final_url\": \"https://nuve.no/\", \"status\": 200}]"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://nuve.no/"
+        ],
+        "observed_social_profiles": []
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "nuve.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [
+              "https://nuve.no/kontakt-oss",
+              "https://nuve.no/privacy-policy"
+            ],
+            "proof_type": "jsonld_vatid",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Ivar Aasen-gata 18"
+          ],
+          "kommune": "ØRSTA",
+          "kommunenummer": "1520",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "6153",
+          "poststed": "ØRSTA"
+        },
+        "identity.registered_activity": [
+          "Rådgivning og bistand innen digital markedsføring og teknologi, samt",
+          "tjenester knyttet til utvikling av digitale løsninger og strategier."
+        ],
+        "identity.registered_in_vat": true,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 30000.0,
+          "antallAksjer": 1000,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2025-09-04"
+        }
+      }
+    },
+    "candidate": {
+      "orgnr": "936094112",
+      "company": "NUVE AS",
+      "website": {
+        "value": {
+          "final_url": "https://www.nuve.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "jsonld_vatid",
+          "proof_page_url": "https://www.nuve.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "3bc5c1025cd1a8c908fc54d702490b73ee5ad935b5e431a2ff8b83b230a6c3e8",
+            "source_url": "https://www.nuve.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T19:16:23.098761Z",
+            "content_sha256": "1dd8d48b9606857f073f9b0a3bcc67619fbddac8b14a4dcf561f8ec39941ac9a",
+            "claim_span": "<p class=\"footer__org\">Nuve AS &middot; Org.nr 936 094 112</p>\n      </div>\n      <div class=\"footer__social\">\n        <a href=\"https://no.linkedin.co",
+            "locator": "identity-proof:936094112",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"nuve.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"legal_name_slug\", \"reason\": \"\", \"title\": \"Nuve | Search that converts\", \"proof_page_url\": \"https://www.nuve.no/\"}, {\"domain\": \"nuve.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://nuve.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"nuve.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.nuve.no/\", \"final_url\": \"https://www.nuve.no/\", \"status\": 200}]"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://www.nuve.no/"
+        ],
+        "observed_social_profiles": []
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "nuve.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [
+              "https://www.nuve.no/kontakt-oss",
+              "https://www.nuve.no/privacy-policy"
+            ],
+            "proof_type": "jsonld_vatid",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Ivar Aasen-gata 18"
+          ],
+          "kommune": "ØRSTA",
+          "kommunenummer": "1520",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "6153",
+          "poststed": "ØRSTA"
+        },
+        "identity.registered_activity": [
+          "Rådgivning og bistand innen digital markedsføring og teknologi, samt",
+          "tjenester knyttet til utvikling av digitale løsninger og strategier."
+        ],
+        "identity.registered_in_vat": true,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 30000.0,
+          "antallAksjer": 1000,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2025-09-04"
+        }
+      }
+    }
+  }
+]

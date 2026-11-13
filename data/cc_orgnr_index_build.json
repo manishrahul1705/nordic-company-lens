@@ -1,0 +1,375 @@
+{
+  "build_utc": "2026-11-13T00:19:33.469439+00:00",
+  "source_snapshot_bytes": 64646308,
+  "source_snapshot_sha256": "ff805e51508acca894c8ba079ea003d21da86132d1cc8f9ccab15895951cc3a6",
+  "ignored_incomplete_trailing_bytes": 0,
+  "records": 180059,
+  "records_fetched": 180049,
+  "pages_with_labelled_orgnr": 32608,
+  "unique_labelled_orgnrs": 20529,
+  "crawls": [
+    "CC-MAIN-2026-34",
+    "CC-MAIN-2026-39",
+    "CC-MAIN-2026-43"
+  ],
+  "parent_companies": 19735,
+  "entries": 20832,
+  "distinct_domains": 20575,
+  "gzip_bytes": 1771479,
+  "index_sha256": "44fa7de01004ea7a31bc9031d91708fde202bb23dd2f78cca8e58e862b180299",
+  "excluded_domains": 79,
+  "rejected_missing_label_snippets": 0,
+  "universe_size": 411160,
+  "universe_matches": 12873,
+  "expected_per_1000": 31.308979472711354,
+  "spot_check_seed": 20261111,
+  "spot_checks": [
+    {
+      "parent_orgnr": "976049365",
+      "domain": "flowtec.no",
+      "crawl": "CC-MAIN-2026-39",
+      "timestamp": "2026-09-17T03:54:50+00:00",
+      "url": "https://www.flowtec.no/",
+      "observed_orgnr": "976049365",
+      "snippet": "Norway Tel: (+47) 51 81 12 00 Org. nr.: 976 049 365 ISO9001:2015 Designed and developed by Vecora",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "929058119",
+      "domain": "jmstiftelsen.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-10T23:40:15+00:00",
+      "url": "https://jmstiftelsen.no/sommercamp/",
+      "observed_orgnr": "929058119",
+      "snippet": "iftelsen Stiftet 5. mars 2022 Org.nr. 929 058 119 Gavekonto 1506.78.65577 Vipps 766980 Kontakt kontakt@jmstiftelsen.no ©",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "935261678",
+      "domain": "aprendeas.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-17T08:54:11+00:00",
+      "url": "https://www.aprendeas.no/personvern",
+      "observed_orgnr": "935261678",
+      "snippet": "vem er ansvarlig? Aprende AS (org.nr 935 261 678 ), Nardoskrenten 17A , 7032 Trondheim , er behandlingsansvarlig for per",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "920153577",
+      "domain": "elmeragroup.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-08T22:51:25+00:00",
+      "url": "https://elmeragroup.no/about-elmera-group/",
+      "observed_orgnr": "920153577",
+      "snippet": "tesvei 38, 5147 Fyllingsdalen Org.nr 920 153 577 Reports and Presentations Quarterly reports Annual reports Careers in E",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "979294859",
+      "domain": "bystene.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-12T19:06:37+00:00",
+      "url": "https://bystene.no/kontakt/",
+      "observed_orgnr": "979294859",
+      "snippet": " 71 11 Mail: post@stene-as.no Org.nr: 979 294 859 MVA Produkter Madrasser på mål Tepper på mål Puter på mål Om oss Om By",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "932752468",
+      "domain": "eccco.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-08T19:35:34+00:00",
+      "url": "https://www.eccco.no/kontakt-oss",
+      "observed_orgnr": "932752468",
+      "snippet": "Takk, vi tar kontakt med deg! Org.nr: 932 752 468 ​ Avd Tønsberg: Adamsrødveien 52b, 3153 Tolvsrød Avd Geilo: Skurdalsve",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "993905607",
+      "domain": "osloskinlab.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-15T08:00:28+00:00",
+      "url": "https://www.osloskinlab.no/personvernerklaring/",
+      "observed_orgnr": "993905607",
+      "snippet": "siale medier NutraQ Norway AS Orgnr.: 993 905 607",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "916244924",
+      "domain": "omegahelse.no",
+      "crawl": "CC-MAIN-2026-39",
+      "timestamp": "2026-09-06T14:45:55+00:00",
+      "url": "https://omegahelse.no/spesialistfelt/sjomanns-medisin/",
+      "observed_orgnr": "916244924",
+      "snippet": "sonvernerklæring Cookiepolicy Org.nr 916 244 924 ⓒ 2024–2026 | Omega Helse Design & utvikling: Meny",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "922038899",
+      "domain": "zoocomics.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-14T20:12:09+00:00",
+      "url": "https://zoocomics.no/2015/10/13/velkommen-til-bloggen-min/",
+      "observed_orgnr": "922038899",
+      "snippet": "r 2012-2026 © Zoo Comics AS - organisasjonsnummer: 922 038 899 Søk etter: Demos Shop Demos Classic Shop Simple Slider Fu",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "912870219",
+      "domain": "thebroker.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-09T05:21:37+00:00",
+      "url": "https://www.thebroker.no/?utm_source=chatgpt.com",
+      "observed_orgnr": "912870219",
+      "snippet": ". Broker Restaurantdrift AS | Org.nr 912870219 | Send oss en mail",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "881972042",
+      "domain": "mtbreiband.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-17T00:42:09+00:00",
+      "url": "https://www.mtbreiband.no/",
+      "observed_orgnr": "881972042",
+      "snippet": "AS Lienveien 39 3678 Notodden Orgnr : 881 972 042 Snarveier Privat Bedrift Boligselskap Prosjekter Om oss Grossisttilgan",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "981171543",
+      "domain": "begravelsetilfastpris.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-10T14:07:13+00:00",
+      "url": "https://www.begravelsetilfastpris.no/kontakt",
+      "observed_orgnr": "981171543",
+      "snippet": "oss All rights reserved 2026, org.nr. 981171543 post@gravferdsvakten.no +4748433676",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "981549325",
+      "domain": "dyrskucamp.no",
+      "crawl": "CC-MAIN-2026-39",
+      "timestamp": "2026-09-12T17:48:28+00:00",
+      "url": "http://dyrskucamp.no/",
+      "observed_orgnr": "981549325",
+      "snippet": "es av Uppebøen Gjestegård med organisasjonsnummer NO 981549325. Betalingsløsning er levert av Worldline Norge © 2026 Upp",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "927532700",
+      "domain": "nordlandhjertesenter.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-10T17:04:10+00:00",
+      "url": "https://www.nordlandhjertesenter.no/",
+      "observed_orgnr": "927532700",
+      "snippet": " Stormyrveien 20, 8008 BODØ  Orgnr 927 532 700 Utviklet av Hjemmesidehuset | Personvern",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "918750355",
+      "domain": "malco.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-18T04:14:16+00:00",
+      "url": "https://malco.no/om-oss/",
+      "observed_orgnr": "918750355",
+      "snippet": " Alle rettigheter forbeholdt. Organisasjonsnummer: 918 750 355 Personvern Vilkår Cookies",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "930630233",
+      "domain": "norwegianketo.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-06T00:19:31+00:00",
+      "url": "https://www.norwegianketo.no/?mailpoet_page=subscriptions",
+      "observed_orgnr": "930630233",
+      "snippet": "irett 2022 - Norwegian Keto | Org.nr 930 630 233 Instagram Facebook Mail MailPoet-side This website uses cookies. By con",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "936951848",
+      "domain": "dreamwork.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-10T23:40:42+00:00",
+      "url": "https://dreamwork.no/fagomrader/datasenter/",
+      "observed_orgnr": "936951848",
+      "snippet": "nd post til post@dreamwork.no Org.nr: 936 951 848 Hovedkontor: Karvesvingen 7, 6 etg. 0579 Oslo Børehaugen 1A, 4006 Stav",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "916761988",
+      "domain": "timerecorder.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-15T08:15:52+00:00",
+      "url": "https://timerecorder.no/amano/kontakt/",
+      "observed_orgnr": "916761988",
+      "snippet": "sadresse Time Recorder Co. AS Org.nr. 916761988 Martin Linges vei 25 1364 Fornebu Allerede kunde? Supportsaker meldes i ",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "997391853",
+      "domain": "mosvikbarnehage.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-05T14:08:14+00:00",
+      "url": "http://www.mosvikbarnehage.no/",
+      "observed_orgnr": "974037149",
+      "snippet": " © 2025 Mosvik Barnehage AS · Org.nr. 974 037 149 · Køppenveien 4, 7690 Mosvik",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "929353552",
+      "domain": "finnskogenaktiv.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-08T14:08:04+00:00",
+      "url": "https://finnskogenaktiv.no/",
+      "observed_orgnr": "929353552",
+      "snippet": "nveien 1280, 2218 Lunderseter Orgnr: 929353552 Neve | Drevet av WordPress",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "990938547",
+      "domain": "sagamobil.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-09T04:19:44+00:00",
+      "url": "https://www.sagamobil.no/om-saga-mobil-privat/",
+      "observed_orgnr": "990938547",
+      "snippet": "yright 2016 – Saga Mobil AS | Org. nr.: 990 938 547 MVA | All Rights Reserved | Bygget av Studio Design | Gå til toppen",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "923191593",
+      "domain": "tromsholding.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-13T22:01:00+00:00",
+      "url": "https://tromsholding.no/2026-05-tromsvekstavtalene-0",
+      "observed_orgnr": "923191593",
+      "snippet": "g@tromsfylke.no +47 776 04848 Org. nr. 923191593 Lenker Footer menu Søk støtte Veiledninger Tildelinger Pressemeldinger ",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "913074548",
+      "domain": "byndle.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-18T00:57:27+00:00",
+      "url": "https://byndle.no/kontakt",
+      "observed_orgnr": "913074548",
+      "snippet": "pplysninger Foretak Byndle AS Org.nr. 913 074 548 Besøksadresse Beddingen 16, 7042 Trondheim E-post post@byndle.no Send ",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "999529860",
+      "domain": "russeoutfit.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-05T21:19:50+00:00",
+      "url": "https://russeoutfit.no/blogg/russelogo-pa-klaer-komplett-guide",
+      "observed_orgnr": "999529860",
+      "snippet": " · Partnere Webkompaniet AS · Org.nr. 999 529 860 MVA · Akershusstranda 15, Skur 35, 0150 Oslo · kontakt@russeoutfit.no ",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "923591826",
+      "domain": "naturfarge.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-16T21:03:24+00:00",
+      "url": "https://naturfarge.no/",
+      "observed_orgnr": "923591826",
+      "snippet": "Juridisk ansvarlig: Sekel AS, Foretaksregisteret NO 923 591 826 MVA Åpningstid Mandag 8-12 Fredag 12-16 Vi er på verkste",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "913475461",
+      "domain": "kverndalenterrasse.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-15T10:07:42+00:00",
+      "url": "https://kverndalenterrasse.no/",
+      "observed_orgnr": "913475461",
+      "snippet": "ndalenterrasse.no Informasjon Organisasjonsnummer: 913475461 Vedtekter 1. Navn 1-1 Navn, formål og opprettelse Sameiets ",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "893022392",
+      "domain": "atomelektro.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-10T14:07:19+00:00",
+      "url": "https://www.atomelektro.no/",
+      "observed_orgnr": "893022392",
+      "snippet": "no Gladengveien 3B, 0661 Oslo Org.nr: 893 022 392 Jeg godtar at opplysningene brukes til kontakt * hCaptcha Dette nettst",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "980711242",
+      "domain": "rettgarn.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-17T00:10:50+00:00",
+      "url": "https://rettgarn.no/personvern/",
+      "observed_orgnr": "980711242",
+      "snippet": "asin AS Storgata 11 2670 OTTA Orgnr: 980 711 242 E-post: post@rettgarn.no Telefon: +4761 23 02 40 Åpningstider: Man 10-1",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "999655084",
+      "domain": "advokatnesseth.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-15T11:20:06+00:00",
+      "url": "https://advokatnesseth.no/kontakt/",
+      "observed_orgnr": "999655084",
+      "snippet": "1395 Hvalstad Neru Consulting Org.nr.: 999 655 084 MVA Monitoring og coaching Mental trening for advokater Rådgivning Hv",
+      "snippet_pass": true,
+      "mapping_pass": true
+    },
+    {
+      "parent_orgnr": "932891557",
+      "domain": "portoggitter.no",
+      "crawl": "CC-MAIN-2026-43",
+      "timestamp": "2026-10-05T20:41:17+00:00",
+      "url": "https://portoggitter.no/about/",
+      "observed_orgnr": "932891557",
+      "snippet": "e. Port og Gitter Montasje AS Org.nr. 932 891 557 Ring for en uforpliktende prat: 32 17 82 10 Eller send oss en melding ",
+      "snippet_pass": true,
+      "mapping_pass": true
+    }
+  ],
+  "crawl_page_timestamp_ranges": {
+    "CC-MAIN-2026-43": {
+      "earliest": "2026-10-05 16:27:01+05:30",
+      "latest": "2026-10-18 10:20:14+05:30",
+      "records": 153732
+    },
+    "CC-MAIN-2026-39": {
+      "earliest": "2026-09-04 18:48:02+05:30",
+      "latest": "2026-09-17 10:33:41+05:30",
+      "records": 25003
+    },
+    "CC-MAIN-2026-34": {
+      "earliest": "2026-08-07 15:56:30+05:30",
+      "latest": "2026-08-20 06:00:45+05:30",
+      "records": 1324
+    }
+  }
+}

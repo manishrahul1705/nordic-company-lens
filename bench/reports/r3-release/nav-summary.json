@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "index_version": "nav-20261113T002642.872674Z-v1",
+  "built_at": "2026-11-13T00:26:42.872674Z",
+  "cursor": "https://pam-stilling-feed.nav.no/api/v1/feed/77c990a8-ee46-486a-8bd5-30e4c59f4e12",
+  "source_urls": [
+    "https://pam-stilling-feed.nav.no/api/v1/feed",
+    "https://pam-stilling-feed.nav.no/api/v1/feedentry/{uuid}"
+  ],
+  "ads_count": 9296,
+  "employer_count": 5899,
+  "failed_details": 0,
+  "seeded_from_disk": 0,
+  "fresh_fetched_ads": 9296,
+  "compressed_bytes": 429720,
+  "runtime_seconds": 1467.0620000000054,
+  "requests_this_attempt": 10099,
+  "checkpoint": "bench\\cache\\r3-release-nav-build\\nav-index-checkpoint.sqlite3",
+  "token_source": "public endpoint; environment credentials stripped; no disk seed",
+  "schema_validation": "PASS"
+}

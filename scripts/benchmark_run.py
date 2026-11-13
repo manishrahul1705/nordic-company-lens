@@ -50,12 +50,13 @@ def main():
     cmd=[sys.executable,'-m','signalpost.cli','run','--organisations',str(args.input),
         '--output',str(out/'envelopes.jsonl'),'--profiles-output',str(out/'profiles.jsonl'),
         '--report',str(out/'report.json'),'--site-dir',str(out/'site'),'--state-dir',str(out/'state'),
-        '--websites','--hiring','--public-activity','--max-cost-usd','0','--search-max-queries','0',
+        '--websites','--hiring','--public-activity','--max-cost-usd','0',
         '--max-requests',str(args.max_requests),
         '--time-budget-seconds',str(args.time_budget),'--expected-count',str(args.count)]
     if args.bulk:cmd+=['--bulk',str(args.bulk)]
     env=os.environ.copy()
-    for name in ['BRAVE_SEARCH_API_KEY','SIGNALPOST_SEARCH_PROVIDER']:env.pop(name,None)
+    for name in list(env):
+        if any(part in name.upper() for part in ('API_KEY','APIKEY','TOKEN','SECRET','CREDENTIAL')):env.pop(name,None)
     env['PYTHONUTF8']='1'
     metadata={'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
         'input_sha256':sha,'bulk_sha256':hashlib.sha256(args.bulk.read_bytes()).hexdigest() if args.bulk else None,

@@ -50,47 +50,9 @@ This document describes input handling, source policies, evidence standards and 
 | F-2 | **Request Accounting**: Reserve requests before dispatch; retries count toward caps. Default cap: $20 \times \text{unique companies}$. | Resource Contract | [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_resource_limits.py`. | **PASS** |
 | F-3 | **Zero-Cost Template Mode**: Template synthesis costs $0 in third-party API fees. No live LLM keys enabled by default. | Cost Rule (`docs/SOURCES.md`) | [`src/signalpost/synthesis/template.py`](../src/signalpost/synthesis/template.py); report emits `third_party_cost_usd: 0.0`. | **PASS** |
 
-### Category G: Search & External Discovery Isolation
-| ID | Requirement | Exact Source / Contract | Implementation Evidence | Status |
-|---|---|---|---|:---:|
-| G-1 | **No Key, No Calls**: When `BRAVE_SEARCH_API_KEY` is absent, search is unconfigured, making 0 requests and incurring $0 cost. | Source policy (`docs/SOURCES.md`) | [`src/signalpost/web/search.py`](../src/signalpost/web/search.py) line 190; verified in `tests/test_search.py:test_no_key_no_calls`. | **PASS** |
+### Category G: External discovery
 
----
-
-## 3. Search Discovery Audit: The Four Search-Nominated Companies
-
-In the 1,000-company evaluated cohort (`out/w5-opt1000-rev4-envelopes.jsonl`), exactly 4 companies have verified websites with `candidate_origin == 'search_brave'`:
-
-| Org Number | Company Legal Name | Verified Final URL | Proof Type | Candidate Source | Destination Proof Source | Classification |
-|---|---|---|:---:|:---:|:---:|:---:|
-| **853097012** | NYDALS AS | `https://nydals.no` | `orgnr_on_page` | `MockBraveProvider` (`brave_search_mock`) | Live HTTP GET `https://nydals.no/` (200 OK) | **Mock-Assisted Nomination; Live Verified Proof** |
-| **979703384** | STIG OG STEIN AS | `https://www.stigogstein.no` | `orgnr_on_page` | `MockBraveProvider` (`brave_search_mock`) | Live HTTP GET `https://stigogstein.no/` (200 OK) | **Mock-Assisted Nomination; Live Verified Proof** |
-| **987634308** | CONDIS AS | `https://www.condis.no` | `orgnr_on_page` | `MockBraveProvider` (`brave_search_mock`) | Live HTTP GET `https://condis.no/` (200 OK) | **Mock-Assisted Nomination; Live Verified Proof** |
-| **994109464** | DIGERNESET NÆRINGSOMRÅDE AS | `https://www.digerneset.no` | `orgnr_on_page` | `MockBraveProvider` (`brave_search_mock`) | Live HTTP GET `https://digerneset.no/` (200 OK) | **Mock-Assisted Nomination; Live Verified Proof** |
-
-### Detailed Findings & Isolation Verification:
-1. **Source of Nomination**:
-   - None of the 4 domains came from a live call to `api.search.brave.com`. No `BRAVE_SEARCH_API_KEY` was supplied during development.
-   - All 4 domains were nominated by the local deterministic mock generator (`MockBraveProvider` / `brave_search_mock`) based on brand tokens and legal name slugs.
-2. **Authenticity of Evidence**:
-   - The destination evidence bodies for all 4 companies are **100% genuine live website responses** stored in `state/blobs/<sha256>`.
-   - Each was cryptographically validated: the crawler retrieved the live HTML over the internet, verified that the exact 9-digit Norwegian organisation number was present in the page text (`proof_type: 'orgnr_on_page'`), and extracted verified contact/social claims.
-3. **Production Isolation Audit**:
-   - Default Evaluator Command: `uv run signalpost run --organisations batch.jsonl ...`
-   - In `src/signalpost/web/search.py`, `Search.__init__` checks:
-     ```python
-     name = (os.environ.get('SIGNALPOST_SEARCH_PROVIDER') or 'brave').lower()
-     key = os.environ.get('BRAVE_SEARCH_API_KEY')
-     if provider is None and name == 'brave' and key:
-         self.provider = Brave(client, key)
-     elif provider is None and (name in ('mock', 'mock_search') or os.environ.get('SIGNALPOST_SEARCH_MOCK') == '1'):
-         self.provider = MockBraveProvider()
-     ```
-   - In production (where `BRAVE_SEARCH_API_KEY` is unset and `SIGNALPOST_SEARCH_MOCK` is unset), `self.provider` is `None`.
-   - `search.nominate()` returns `[]` immediately. Zero search queries occur, zero candidates are nominated from mock fixtures, and $0 cost is billed.
-   - **Isolation Status**: **PASS** (Zero leakage in default production runs).
-
----
+There is no search-engine integration. Local candidate indexes never replace live ownership proof.
 
 ## 4. Assessment & Implementation Plan: "Update Status" Panel
 
@@ -149,7 +111,7 @@ flowchart TD
 5. **Operational Metrics**:
    - Elapsed wall-clock time (`time.monotonic() - start`).
    - Request counts (`requests_made / max_requests`).
-   - Third-party API cost (`$0.00` for template runs; real measured Brave search cost when active).
+   - Third-party API cost (`$0.00` for template runs; no paid search-engine calls).
 6. **Activity Log**:
    - Circular buffer of the last 6 timestamped pipeline events with direct company anchors.
 7. **Static Snapshot Fallback (Zero Hallucination)**:
@@ -180,15 +142,12 @@ flowchart TD
 | **1** | **NONE** | **Contract Schema Adherence** | Fully validated across `contract`, `reference`, and `union` shapes with 278/278 automated unit tests. |
 | **2** | **NONE** | **Evidence & Cryptographic Proof** | All available facts are backed by SHA-256 hashes of locally stored raw bodies and verbatim spans $\le 300$ chars. |
 | **3** | **NONE** | **Input Multiplicity & Determinism** | 100% order preservation, duplicate retention, mod-11 validation, and reproducible reruns verified. |
-| **4** | **MODERATE** | **Live Search API Dependency** | External web discovery via Brave requires `BRAVE_SEARCH_API_KEY`. Without a key, search remains safely unconfigured ($0 cost, 0 queries). The 4 search candidates in the benchmark run were mock-nominated and must remain classified as benchmark artifacts. |
 | **5** | **INFORMATIONAL** | **Cold NAV Fallback Timing** | Cold full-feed download takes ~141s on 1,000 companies. With declared index baseline (`nav_index.json.gz`), NAV runs in 57.77s. Documented and within the 900s timeout ceiling. |
 
 ---
 
 ## 6. Recommended Scope for Stage 3: Permitted External Coverage Improvements
 
-1. **Brave API Key Live Smoke Test**:
-   - Provide a live test harness verifying that when `BRAVE_SEARCH_API_KEY` is set, `Brave.search()` makes legitimate calls to `api.search.brave.com`, correctly parses responses, and stays within rate and cost limits.
 2. **Subunit Website Discovery Expansion**:
    - Expand candidate nomination using subunit domain patterns already permitted by the registry underenheter API without requiring external search engines.
 3. **Sitemap Depth Calibration**:

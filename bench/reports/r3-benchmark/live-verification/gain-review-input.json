@@ -1,0 +1,875 @@
+{
+  "websites": [
+    {
+      "orgnr": "915279082",
+      "company": "TØMRER S. FAGERBEKK AS",
+      "website": {
+        "final_url": "https://www.sfagerbekk.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.sfagerbekk.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "ed2e52641398745b400a5366ff5eb97af7b8820814a4434013028725c6b998c7",
+          "source_url": "https://www.sfagerbekk.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:42:19.844794Z",
+          "content_sha256": "fb9df4ad3376904416ec9edb7fdbdd5ae8d925f27863eb3f4bfaa087005b0876",
+          "claim_span": "eien 180 • 7288 Soknedal<br>Org. nr. NO 915 279 082 MVA</p></div>\n\n\n  \n<style id=\"container-styles\">#block-yui_3_17_2_1_1582983667517_12337 {\n    \n   ",
+          "locator": "identity-proof:915279082",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Exact organisation number NO 915 279 082 MVA and matching Soknedal address on the saved company page.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    },
+    {
+      "orgnr": "995654539",
+      "company": "TAKST MÅLENG AS",
+      "website": {
+        "final_url": "https://www.takstmaaleng.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://www.takstmaaleng.no/",
+        "signals": [
+          "exact_legal_name",
+          "street"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "46c41a8a4d51048222b2c997e8b880b0327a914b1532c33f0b180681ae8c6888",
+          "source_url": "https://www.takstmaaleng.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:44:23.377642Z",
+          "content_sha256": "4d41ce2532f2bde95f79605cce736911c6405fa0ab03fcfe2659e5bc7c9944ad",
+          "claim_span": "e>Din profesjonelle takstmann i Våler | Takst Måleng AS</title><meta name=\"keywords\" content=\"Takst Måleng AS\"><meta name=\"description\" content=\"Takst Måleng AS er et veletablert takseringsfirma med hovedbase i Våler. Vi har bred erfaring innen bygg og eiendom, og er sertifisert gjennom Norsk Takst.",
+          "locator": "identity-proof:995654539",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Takst Maleng AS, Folkestadhogda 12, 1592 Valer and registered phone/contact support exact entity.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    },
+    {
+      "orgnr": "979973969",
+      "company": "JAR HELSE AS",
+      "website": {
+        "final_url": "https://www.jarhelse.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.jarhelse.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "30e419808bfa57dfebe3a2964da566a37e17ee77e570e2c6025131f7c677b519",
+          "source_url": "https://www.jarhelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:44:34.185255Z",
+          "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+          "claim_span": "div><a href=\"#\" class=\"text-size-small\">99 09 20 10<br/></a><a href=\"#\" class=\"text-size-small\">kontakt@jarhelse.no<br/></a></div></div><div class=\"w-layout-grid footer11_social-list\"><a href=\"https://www.facebook.com/jarhelse\" class=\"footer11_social-link w-inline-block\"><div class=\"icon-embed-xsmal",
+          "locator": "identity-proof:979973969",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Registered mobile 99092010 is the site contact, alongside Jar Helse and matching Jar postcode/address.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    },
+    {
+      "orgnr": "993347728",
+      "company": "TO-BE-MORE AS",
+      "website": {
+        "final_url": "https://www.tobemore.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.tobemore.no/bestilling/kontakt-2/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "06c7e3335eb58e6e3de25fb31ce9166061f29e50a34ca800e26678a13a4ec385",
+          "source_url": "https://www.tobemore.no/bestilling/kontakt-2/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:37.622268Z",
+          "content_sha256": "056392938c04de1a03cbe4dde6b85b055e5c45cf4773cc4fe817849d85e646ee",
+          "claim_span": "size\">Daglig leder<br>Mob. <a href=\"tel:90836811\">908 36 811</a><br>E-post: <a style=\"color:#0A66C2\" href=\"mailto:morten@tobemore.no\">morten@tobemore.no</a>  </p>\n\n\n\n<div style=\"height:25px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<div class=\"wp-block-columns is-layout-flex wp-container",
+          "locator": "identity-proof:993347728",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Exact legal name plus registered mobile 90836811 for Morten Reffhaug in the contact page; LED/event activity agrees.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    },
+    {
+      "orgnr": "999516386",
+      "company": "RISIKOKONSULENTEN AS",
+      "website": {
+        "final_url": "https://risikokonsulenten.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://risikokonsulenten.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "e6b51136b6e77af0cc8d69f06db638e1d3e33699444f37198b83dd5e46c71679",
+          "source_url": "https://risikokonsulenten.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:40.960940Z",
+          "content_sha256": "9b2541c4a969711131cc675875c2ff5e01f285b2bc455e188271395b7b8d0b76",
+          "claim_span": "isikokonsulenten.no</a></p>\n<p>Telefon: +47 90873490</p>\n</div>\n\t\t</aside>\n\t</div><!-- .sidebar-main -->\n</div><!-- #secondary -->\n\n\n\t</div> <!-- ast-container -->\n\t</div><!-- #content -->\n\n\t\t<footer\n\t\tclass=\"site-footer\" id=\"colophon\" itemtype=\"https://schema.org/WPFooter\" itemscope=\"itemscope\" ite",
+          "locator": "identity-proof:999516386",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Registered mobile 90873490, legal name Risikokonsulenten AS and named Fred Thomassen corroborate the same business.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    },
+    {
+      "orgnr": "980622444",
+      "company": "LØRENSKOG BANDASJE AS",
+      "website": {
+        "final_url": "https://loban.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://loban.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "f63c968d36e682f5a27de0b7c67086e417fc667d3e04b864eb31cbf64e408f22",
+          "source_url": "https://loban.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:33.638615Z",
+          "content_sha256": "7f93e580a439bb87eb1069cbf177eeafe86929f49b25ec5d291849f503a2c3ab",
+          "claim_span": "g-title elementor-size-default\">Org.nr: 980 622 444</h5>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col-33 e",
+          "locator": "identity-proof:980622444",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Exact 980 622 444 and matching Skarersletta 18, Lorenskog retail business.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    },
+    {
+      "orgnr": "921320868",
+      "company": "KITCHEN & LIVING GROUP AS",
+      "website": {
+        "final_url": "https://www.kjokkenfronter.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.kjokkenfronter.no/om-oss/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "d5ab1f3ef700602eb990647c029347061762c238dde2e3f86cf7426a42c88d08",
+          "source_url": "https://www.kjokkenfronter.no/om-oss/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:46:29.164018Z",
+          "content_sha256": "6145156aae3b2a5f32fa45661a34817ba8f775d23229d60a233fcdb327e9e07e",
+          "claim_span": ">post@kjokkenfronter.no</a><br>Org.nr.: 921 320 868</td><td><strong>Showroom Gjøvik<br></strong>Mjøskjøkken AS<br>Amsrudvegen 4<br>2827 Hunndalen<br><",
+          "locator": "identity-proof:921320868",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "About page explicitly says owned by Kitchen & Living Group AS with exact 921 320 868, matching Hunndalen address.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    },
+    {
+      "orgnr": "998008123",
+      "company": "NERE AS",
+      "website": {
+        "final_url": "https://www.nere.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.nere.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "evidence": [
+        {
+          "id": "3a5c680a3de42f94402e3597d307766983137364ba50cfaeb66ebe76ec394bd6",
+          "source_url": "https://www.nere.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:46:10.152562Z",
+          "content_sha256": "a222234bb263e3b906ca6d4114e559a0f4ecc703d1538690dbc7bd408e3d799a",
+          "claim_span": "n style=\"font-size: 20px;\">918 60 715 / 971 28 141</span></div><br>\r\n            </article>\r\n    </section>\r\n\r\n                                    </div>\r\n                            </div>\r\n                        </div>\r\n                </div>\r\n            </div>\r\n            <!-- LayoutRow F&#xF8",
+          "locator": "identity-proof:998008123",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Registered mobile 97128141 is the site contact; NERE AS and storage/boat services agree with registry business.",
+        "method": "Manual inspection of saved live page text, ownership excerpt and official registry context; no new social-platform requests."
+      },
+      "same_reviewed_url": true
+    }
+  ],
+  "social": [
+    {
+      "orgnr": "915279082",
+      "company": "TØMRER S. FAGERBEKK AS",
+      "value": {
+        "url": "https://www.facebook.com/s.fagerbekk",
+        "platform": "facebook.com"
+      },
+      "evidence": [
+        {
+          "id": "d489809c38b1739c7494723c95d89ee38c2c49bcc4c011dfb1bc943b7d61ae45",
+          "source_url": "https://www.sfagerbekk.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:42:19.844794Z",
+          "content_sha256": "fb9df4ad3376904416ec9edb7fdbdd5ae8d925f27863eb3f4bfaa087005b0876",
+          "claim_span": "<a class=\"icon icon--fill  header-icon header-icon-border-shape-none header-icon-border-style-outline\"  href=\"https://www.facebook.com/s.fagerbekk/\" target=\"_blank\" aria-label=\"Facebook\">",
+          "locator": "company-link:https://www.facebook.com/s.fagerbekk",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://www.sfagerbekk.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.sfagerbekk.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "984633718",
+      "company": "BUØY BAKERI & KONDITORI AS",
+      "value": {
+        "url": "https://www.facebook.com/buoybakeri",
+        "platform": "facebook.com"
+      },
+      "evidence": [
+        {
+          "id": "231af08056a37b065695cfa8796e3e2250d4704b75acc2cbf0de6364d65cb06e",
+          "source_url": "https://www.buoybakeri.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:35.230015Z",
+          "content_sha256": "1ba397b7983121f3d85f680805524634706494e6571b6b4c0ca16bcdd6af027f",
+          "claim_span": "<div class=\"fb-page wpex-overflow-hidden wpex-align-top\" data-href=\"https://www.facebook.com/buoybakeri/\" data-small-header=\"\" data-adapt-container-width=\"true\" data-hide-cover=\"\" data-show-facepile=\"\" data-width=\"500\" data-lazy=\"\">",
+          "locator": "company-link:https://www.facebook.com/buoybakeri",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://www.buoybakeri.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "legal_name_and_registry_contact",
+        "proof_page_url": "https://www.buoybakeri.no/",
+        "signals": [
+          "exact_legal_name",
+          "street",
+          "postcode_city",
+          "phone",
+          "email"
+        ],
+        "points": 10,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "979973969",
+      "company": "JAR HELSE AS",
+      "value": {
+        "url": "https://www.facebook.com/jarhelse",
+        "platform": "facebook.com"
+      },
+      "evidence": [
+        {
+          "id": "596be7a467a59bf782707aedb529690e9adb612bd2abe05edfce26a9cdc1ba12",
+          "source_url": "https://www.jarhelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:44:34.185255Z",
+          "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+          "claim_span": "<a href=\"https://www.facebook.com/jarhelse\" class=\"footer11_social-link w-inline-block\">",
+          "locator": "company-link:https://www.facebook.com/jarhelse",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://www.jarhelse.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.jarhelse.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "979973969",
+      "company": "JAR HELSE AS",
+      "value": {
+        "url": "https://www.instagram.com/jarhelse",
+        "platform": "instagram.com"
+      },
+      "evidence": [
+        {
+          "id": "2a0b384abe4c41c9a70f91438f016b8b85bdc2206e8b6a5848c5f765e5f4b16f",
+          "source_url": "https://www.jarhelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:44:34.185255Z",
+          "content_sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+          "claim_span": "<a href=\"https://www.instagram.com/jarhelse\" class=\"footer11_social-link w-inline-block\">",
+          "locator": "company-link:https://www.instagram.com/jarhelse",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://www.jarhelse.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.jarhelse.no/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "993347728",
+      "company": "TO-BE-MORE AS",
+      "value": {
+        "url": "https://www.facebook.com/to-be-more-AS-85222791929",
+        "platform": "facebook.com"
+      },
+      "evidence": [
+        {
+          "id": "7c04487ec34da2f97f1691e98efb48573abb3d5d3458ad9912c4e36aa603764f",
+          "source_url": "https://www.tobemore.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:29.103380Z",
+          "content_sha256": "e6c2428fa2cdfa26f7562680755d12f6a0b81282e219dd99edfdabe08dc635d6",
+          "claim_span": "<a class=\"cnss-facebook\" target=\"_blank\" href=\"https://www.facebook.com/to-be-more-AS-85222791929/\" title=\"Facebook\" style=\"width:48px;height:48px;padding:8px 0;margin:5px;color: #ffffff;border-radius: 50%;\">",
+          "locator": "company-link:https://www.facebook.com/to-be-more-AS-85222791929",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://www.tobemore.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.tobemore.no/bestilling/kontakt-2/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "993347728",
+      "company": "TO-BE-MORE AS",
+      "value": {
+        "url": "https://www.linkedin.com/company/to-be-more-as",
+        "platform": "linkedin.com"
+      },
+      "evidence": [
+        {
+          "id": "2be0f64bb076749ae8215c330d07b5e105c017a70cb33e0dc338e0106c4efed9",
+          "source_url": "https://www.tobemore.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:29.103380Z",
+          "content_sha256": "e6c2428fa2cdfa26f7562680755d12f6a0b81282e219dd99edfdabe08dc635d6",
+          "claim_span": "<a class=\"cnss-linkedin\" target=\"_blank\" href=\"https://www.linkedin.com/company/to-be-more-as/\" title=\"linkedin\" style=\"width:48px;height:48px;padding:8px 0;margin:5px;color: #ffffff;border-radius: 50%;\">",
+          "locator": "company-link:https://www.linkedin.com/company/to-be-more-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://www.tobemore.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.tobemore.no/bestilling/kontakt-2/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "993347728",
+      "company": "TO-BE-MORE AS",
+      "value": {
+        "url": "https://www.instagram.com/tobemore_as",
+        "platform": "instagram.com"
+      },
+      "evidence": [
+        {
+          "id": "ccf0d0b885a07256ba1184fa00122dd461b7c9ef372fccc90b083adfc3dd71ad",
+          "source_url": "https://www.tobemore.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:29.103380Z",
+          "content_sha256": "e6c2428fa2cdfa26f7562680755d12f6a0b81282e219dd99edfdabe08dc635d6",
+          "claim_span": "<a class=\"cnss-instagram\" target=\"_blank\" href=\"https://www.instagram.com/tobemore_as/\" title=\"instagram\" style=\"width:48px;height:48px;padding:8px 0;margin:5px;color: #ffffff;border-radius: 50%;\">",
+          "locator": "company-link:https://www.instagram.com/tobemore_as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://www.tobemore.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "registry_phone_on_site",
+        "proof_page_url": "https://www.tobemore.no/bestilling/kontakt-2/",
+        "signals": [
+          "registry_phone"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "980622444",
+      "company": "LØRENSKOG BANDASJE AS",
+      "value": {
+        "url": "https://www.facebook.com/lorenskogbandasje",
+        "platform": "facebook.com"
+      },
+      "evidence": [
+        {
+          "id": "1cbaff5fd5714c26cdf34e8dea01de3ce63eec97d3de65bfce094de14873d53a",
+          "source_url": "https://loban.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:33.638615Z",
+          "content_sha256": "7f93e580a439bb87eb1069cbf177eeafe86929f49b25ec5d291849f503a2c3ab",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-caa6ece\" href=\"https://www.facebook.com/lorenskogbandasje\" target=\"_blank\">",
+          "locator": "company-link:https://www.facebook.com/lorenskogbandasje",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://loban.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://loban.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "980622444",
+      "company": "LØRENSKOG BANDASJE AS",
+      "value": {
+        "url": "https://www.instagram.com/lorenskogbandasje",
+        "platform": "instagram.com"
+      },
+      "evidence": [
+        {
+          "id": "ff6ee43fd2d8fdb3f870b66fbcae56d731789ed7b84ad2ba26a3ba575515d672",
+          "source_url": "https://loban.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T04:45:33.638615Z",
+          "content_sha256": "7f93e580a439bb87eb1069cbf177eeafe86929f49b25ec5d291849f503a2c3ab",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-2f2ad82\" href=\"https://www.instagram.com/lorenskogbandasje/\" target=\"_blank\">",
+          "locator": "company-link:https://www.instagram.com/lorenskogbandasje",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "previous_review": {
+        "verdict": "correct",
+        "reason": "Profile is explicitly linked from the verified business page and the handle/brand aligns with the named business. Strict runtime name matching may conservatively withhold a genuine alias.",
+        "method": "Manual source-page link and company/brand context review, not fetching the social platform."
+      },
+      "website": {
+        "final_url": "https://loban.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://loban.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    }
+  ],
+  "highlighted": [
+    {
+      "orgnr": "994382217",
+      "company": "FORMOSA AS",
+      "website": {
+        "final_url": "https://www.formosa.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.formosa.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "923998012",
+      "company": "ASKØY24 AS",
+      "website": {
+        "final_url": "https://www.askoy24.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.askoy24.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "922828172",
+      "company": "TENSIO AS",
+      "website": {
+        "final_url": "https://www.tensio.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.tensio.no/no/kunde/kontakt-oss",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "wikidata_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "934289099",
+      "company": "NORTH GREY AS",
+      "website": {
+        "final_url": "https://www.northgrey.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://www.northgrey.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "922187991",
+      "company": "ULSTEIN MINILAGER AS",
+      "website": {
+        "final_url": "http://www.ulsteinminilager.no",
+        "transport_scheme": "http",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "http://www.ulsteinminilager.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "924688696",
+      "company": "STILLASFORDEG AS",
+      "website": {
+        "final_url": "https://stillasfordeg.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "unique_no_corroborated",
+        "proof_page_url": "https://stillasfordeg.no/",
+        "signals": [
+          "registry_unique_name",
+          "name_in_identity",
+          "registry_corroboration"
+        ],
+        "points": 4,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    },
+    {
+      "orgnr": "917329435",
+      "company": "ANKERMANN AS",
+      "website": {
+        "final_url": "https://www.ankermann.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.ankermann.no/contact-1",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      }
+    }
+  ]
+}

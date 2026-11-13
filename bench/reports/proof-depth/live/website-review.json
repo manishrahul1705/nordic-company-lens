@@ -1,0 +1,238 @@
+[
+  {
+    "orgnr": "983486703",
+    "company": "RØRLEGGERMESTER TORSTEIN SOLLI AS",
+    "website": {
+      "value": {
+        "final_url": "https://torsteinsolli.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://torsteinsolli.no/personvern",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "6aea5b0ce4bdaee7ff107d606a51141cb4a14062eeada823be0ada3534755b4b",
+          "source_url": "https://torsteinsolli.no/personvern",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T06:01:26.257134Z",
+          "content_sha256": "2de2983e9ed7d940c3c6b0c2d4316b2818b72fc171be91a86a373ad639452a58",
+          "claim_span": "Torstein Solli AS<br>Foretaksregisteret 983 486 703 MVA</p><p class=\"footertext\" style=\"text-align: center;\">Utviklet av <a href=\"https://hjemmesidehu",
+          "locator": "identity-proof:983486703",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"torsteinsolli.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"cc_index\", \"reason\": \"\", \"title\": \"Personvern | Rørleggermester Torstein Solli AS\", \"proof_page_url\": \"https://torsteinsolli.no/personvern\"}, {\"domain\": \"torsteinsolli.no\", \"origin\": \"cc_index\", \"url\": \"https://torsteinsolli.no/\", \"final_url\": \"https://torsteinsolli.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://torsteinsolli.no/",
+        "https://torsteinsolli.no/personvern"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "torsteinsolli.no",
+          "origin": "cc_index",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "discovered_proof_targets": [
+            "https://www.torsteinsolli.no/personvern"
+          ],
+          "additional_proof_targets": [],
+          "proof_pages_fetched": 1,
+          "proof_page_attempts_including_homepage": 2,
+          "proof_type": "orgnr_on_page",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Humleveien 3"
+        ],
+        "kommune": "OSLO",
+        "kommunenummer": "0301",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "0870",
+        "poststed": "OSLO"
+      },
+      "identity.registered_activity": [
+        "Drive rørleggervirksomhet, samt å investere i andre selskaper som",
+        "driver med samme og alt hva dermed står i forbindelse."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 111111.0,
+        "antallAksjer": 111111,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2020-12-24"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company legal name and Foretaksregisteret 983 486 703 MVA in company privacy footer. Privacy URL was already nominated in the preceding run but timed out; current proof succeeded on page 2. Not attributable to new depth.",
+      "gain_attribution": "live_timeout_recovery",
+      "method": "Manual inspection of saved live ownership page and exact registry identity; no extra network requests."
+    }
+  },
+  {
+    "orgnr": "990412375",
+    "company": "BERGEN VAKTMESTERTJENESTER AS",
+    "website": {
+      "value": {
+        "final_url": "https://bnv.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://bnv.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "4674ef402bb50fc1430cfab8888e421fa04d07f616c8bbdb94ee87a712c7af47",
+          "source_url": "https://bnv.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T06:01:43.744325Z",
+          "content_sha256": "d4398964cb149cf0d8ffc5b781c68e14db38b479d421825b3a47783ffd9c5598",
+          "claim_span": "tertjenester AS<br />\n</strong>Org.nr.: 990 412 375<br />\nEidsvågveien 150, 5105 Eidsvåg<br />\nTelefon: <a href=\"tel:+4790101021\">90 10 10 21</a><br /",
+          "locator": "identity-proof:990412375",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "social": [],
+    "jobs": [],
+    "sections": {
+      "identity": "available",
+      "roles": "available",
+      "subunits": "available",
+      "accounts": "available",
+      "website": "available",
+      "hiring": "not_available",
+      "activity": "available"
+    },
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"bnv.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"registry_email\", \"reason\": \"\", \"title\": \"Vaktmestertjenester i Bergen | Bergen Vaktmestertjenester\", \"proof_page_url\": \"https://bnv.no/\"}, {\"domain\": \"bnv.no\", \"origin\": \"registry_email\", \"url\": \"https://bnv.no/\", \"final_url\": \"https://bnv.no/\", \"status\": 200}]"
+      }
+    ],
+    "website_diagnostics": {
+      "checked_urls": [
+        "https://bnv.no/",
+        "https://bnv.no/kontakt/",
+        "https://bnv.no/om-oss/",
+        "https://bnv.no/personvernerklaering/"
+      ],
+      "observed_social_profiles": []
+    },
+    "candidate_diagnostics": {
+      "candidates": [
+        {
+          "domain": "bnv.no",
+          "origin": "registry_email",
+          "subunit_orgnr": null,
+          "fetched": true,
+          "accepted": true,
+          "additional_proof_targets": [],
+          "proof_pages_fetched": 3,
+          "proof_page_attempts_including_homepage": 4,
+          "proof_type": "orgnr_on_page",
+          "rule": null,
+          "reason": ""
+        }
+      ]
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Eidsvågveien 150"
+        ],
+        "kommune": "BERGEN",
+        "kommunenummer": "4601",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "5105",
+        "poststed": "EIDSVÅG I ÅSANE"
+      },
+      "identity.registered_activity": [
+        "Investeringsvirksomhet i aksjer, fast eiendom, samt å foreta",
+        "investeringer og forvalte eierinteresser i andre firmaer og",
+        "forretningsforetak. Selskapet skal også kunne tilby allsidige",
+        "vaktmestertjenestertjenester, herunder snøbrøyting og hagestell til",
+        "institusjoner, borettslag og privatpersoner."
+      ],
+      "identity.registered_email": "post@bnv.no",
+      "identity.registered_mobile": "901 01 021",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 500500.0,
+        "antallAksjer": 500,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2020-12-17"
+      }
+    },
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company legal name, 990 412 375, Eidsvagveien 150 and registered post@bnv.no/mobile support this exact entity. Previously rejected generated HTML ID is addressed by prior commit 51a04b3, not new depth.",
+      "gain_attribution": "prior_layout_identifier_fix",
+      "method": "Manual inspection of saved live ownership page and exact registry identity; no extra network requests."
+    }
+  }
+]

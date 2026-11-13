@@ -1,0 +1,893 @@
+[
+  {
+    "orgnr": "986739874",
+    "company": "AAS BETONG AS",
+    "claim": {
+      "field": "dated_item.db14e9057eefdd521bfc",
+      "value": {
+        "title": "Nye flotte blomsterkasser i vårt sortiment",
+        "title_source": "page_title",
+        "url": "https://www.aasbetong.no/aktuelt/nye-blomsterkasser-i-vart-sortiment",
+        "date": "2026-10-14",
+        "date_source": "lastmod",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "d82e46f327a501c2c7bb8c343966d64a87ad11237355fb75ff0d15bb82ba7215"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "ff8b73b2935a7d4b5aff1c5b41fdb6083d1aab526c5e106ee3a56519caa0cfa1",
+        "a825b94520d650536663777789a72ef3e626a8924ae6bc78d5ca222f926ba5df"
+      ],
+      "id": "4eb6a3c0be67d71e519c9b58d430f01857d591702c3253bfa86df69fb7580539",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:57:23.498819Z",
+      "last_observed_at": "2026-11-12T08:57:23.498819Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Åsvegen 378"
+        ],
+        "kommune": "HUSTADVIKA",
+        "kommunenummer": "1579",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "6443",
+        "poststed": "TORNES I ROMSDAL"
+      },
+      "identity.registered_activity": [
+        "Produksjon og salg av betongelementer."
+      ],
+      "identity.registered_phone": "71 26 60 40",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 200000.0,
+        "antallAksjer": 200,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2004-04-03"
+      }
+    },
+    "evidence": [
+      {
+        "id": "ff8b73b2935a7d4b5aff1c5b41fdb6083d1aab526c5e106ee3a56519caa0cfa1",
+        "source_url": "https://www.aasbetong.no/sitemap.xml",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:23.498819Z",
+        "content_sha256": "79af2881ff1439a514b44efda520cf705a4b1ed84e8d9bbf4ef8932c80aa4503",
+        "claim_span": "https://www.aasbetong.no/aktuelt/nye-blomsterkasser-i-vart-sortiment</loc>\r\n        <lastmod>2026-10-14T09:08:19.064Z",
+        "locator": "/url/14",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-10-14",
+        "reporting_period": null,
+        "saved_context": "026-10-26T09:26:07.734Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.aasbetong.no/aktuelt/aas-prima-terrassehelle</loc>\r\n        <lastmod>2025-01-28T06:47:03.659Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.aasbetong.no/aktuelt/grunnarbeid-er-avgjorende-for-et-godt-resultat</loc>\r\n        <lastmod>2025-01-28T06:46:01.138Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.aasbetong.no/aktuelt/nye-blomsterkasser-i-vart-sortiment</loc>\r\n        <lastmod>2026-10-14T09:08:19.064Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.aasbetong.no/aktuelt/nytt-veikryss-ved-ase-alesund-sykehus</loc>\r\n        <lastmod>2025-01-28T06:46:12.152Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.aasbetong.no/aktuelt/produkter-levert-i-smasekk</loc>\r\n        <lastmod>2025-01-28T06:46:22.705Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.aasbetong.no/aktuelt/redi-blomsterurne</loc>\r\n        <lastmod>2025-01-28T06:47:14.106Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.aasbetong.no/aktuelt/redi-stottemur-natural</loc>\r\n        <lastmod>20"
+      },
+      {
+        "id": "a825b94520d650536663777789a72ef3e626a8924ae6bc78d5ca222f926ba5df",
+        "source_url": "https://www.aasbetong.no/aktuelt/nye-blomsterkasser-i-vart-sortiment",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:24.974925Z",
+        "content_sha256": "1885806fcf1adf8a0a41e93881b474a60f3b0fd3472d91ada33b7b0f65bb884f",
+        "claim_span": "onnect\" crossorigin=\"anonymous\"/><title>Nye flotte blomsterkasser i vårt sortiment</title><meta content=\"Vi har nå utvidet vårt-sortiment med nye varianter av Blomsterkasser.\" name=\"description\"/><meta content=\"Nye flotte blomsterkasser i vårt sortiment\" property=\"og:title\"/><meta content=\"Vi har nå",
+        "locator": "/title",
+        "extraction_method": "signalpost.activity.index-title.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "saved_context": "Last Published: Mon Oct 26 2026 09:27:46 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain=\"www.aasbetong.no\" data-wf-page=\"61688f4f798b2b5b4bb17635\" data-wf-site=\"61672938582971a4d11ace8c\" lang=\"no\" data-wf-collection=\"61688f4f798b2bf5a6b17633\" data-wf-item-slug=\"nye-blomsterkasser-i-vart-sortiment\"><head><meta charset=\"utf-8\"/><link href=\"https://cdn.prod.website-files.com\" rel=\"preconnect\" crossorigin=\"anonymous\"/><title>Nye flotte blomsterkasser i vårt sortiment</title><meta content=\"Vi har nå utvidet vårt-sortiment med nye varianter av Blomsterkasser.\" name=\"description\"/><meta content=\"Nye flotte blomsterkasser i vårt sortiment\" property=\"og:title\"/><meta content=\"Vi har nå utvidet vårt-sortiment med nye varianter av Blomsterkasser.\" property=\"og:description\"/><meta content=\"https://cdn.prod.website-files.com/61688f4f0eec126c280f6f3e/67864b20e854e6d3fea9badc_LAYOUT%20TIL%20FRAMSIDE%20-%20BANNER%20WEB%20SIDE%20AAS%20BETONG%20(Medium).jpg\" property=\"og:image\"/><meta content=\"Nye flotte blomsterkasser i vårt sortiment\" name=\"twitter:title\"/><meta content=\"Vi har nå utvidet vårt-sortiment med nye varianter av Blomsterkasser.\" name=\"twitter:description\"/><meta content=\"https://cdn.prod.website-files.com/61688f4f0eec126c280f6f3e/67864b20e854e6d3fea9badc_LAYOUT%20TIL%2"
+      }
+    ]
+  },
+  {
+    "orgnr": "928657523",
+    "company": "VIVIFY GRUPPEN AS",
+    "claim": {
+      "field": "dated_item.5659b96e60a9ec9b34b0",
+      "value": {
+        "title": "Bygginnredning Finnmark slår seg sammen med Vivify Gruppen — Vivify",
+        "title_source": "page_title",
+        "url": "https://www.vivify.no/nyheter/vivify-bygginnredning-finnmark",
+        "date": "2026-10-21",
+        "date_source": "lastmod",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "59e33a0a74dd7c6ae7ed3e094bb217bb653211303567f6b3efe44bccfebe256d"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "05a6ebeab3a757088e17d1113acf7865004ce88921870275db10cb0ae61d0c20",
+        "18dae52126b7b8d6897142600dd7492520130ea284ed8d3a502682b9d49d2ea3"
+      ],
+      "id": "5159d3a06e0f1f40647ff3394abdd3e1cabe112d3554db3b5d96d0dc221d6fc4",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:57:11.806459Z",
+      "last_observed_at": "2026-11-12T08:57:11.806459Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Lille Grensen 7"
+        ],
+        "kommune": "OSLO",
+        "kommunenummer": "0301",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "0159",
+        "poststed": "OSLO"
+      },
+      "identity.registered_website": "www.vivify.no",
+      "identity.registered_activity": [
+        "Å drive investeringsvirksomhet, direkte eller indirekte i fond, eller",
+        "direkte eller indirekte i fond-i-fond strukturer knyttet til private",
+        "equity, og annen virksomhet som naturlig har sammenheng med dette."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 209000.0,
+        "antallAksjer": 19000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2026-11-11"
+      }
+    },
+    "evidence": [
+      {
+        "id": "05a6ebeab3a757088e17d1113acf7865004ce88921870275db10cb0ae61d0c20",
+        "source_url": "https://www.vivify.no/sitemap.xml",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:11.806459Z",
+        "content_sha256": "9b825d008369f8a02c01b54b61c65fe6c3d4e744b149784209c2d38b2ea6f529",
+        "claim_span": "https://www.vivify.no/nyheter/vivify-bygginnredning-finnmark</loc>\r\n    <changefreq>monthly</changefreq>\r\n    <priority>0.5</priority>\r\n    <lastmod>2026-10-21",
+        "locator": "/url/1",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-10-21",
+        "reporting_period": null,
+        "saved_context": "\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:image=\"http://www.google.com/schemas/sitemap-image/1.1\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\" xmlns:video=\"http://www.google.com/schemas/sitemap-video/1.1\">\r\n  <url>\r\n    <loc>https://www.vivify.no/nyheter</loc>\r\n    <changefreq>daily</changefreq>\r\n    <priority>0.75</priority>\r\n    <lastmod>2026-10-20</lastmod>\r\n  </url>\r\n  <url>\r\n    <loc>https://www.vivify.no/nyheter/vivify-bygginnredning-finnmark</loc>\r\n    <changefreq>monthly</changefreq>\r\n    <priority>0.5</priority>\r\n    <lastmod>2026-10-21</lastmod>\r\n    <image:image>\r\n      <image:loc>https://images.squarespace-cdn.com/content/v1/6a1571d91be69221f8bcbf83/30e09157-3fb4-436b-a5e8-acb626dbc8d5/Trygve+Aasland_Vivify_CEO.jpg</image:loc>\r\n      <image:title>Nyheter - Bygginnredning Finnmark slår seg sammen med Vivify Gruppen</image:title>\r\n      <image:caption>Trygve Aasland, CEO i Vivify Gruppen ser på partnerskapet med Bygginnredning Finnmark som en viktig milepæl og sikrer konsernet fotfeste i en ny landsdel.</image:caption>\r\n    </image:image>\r\n  </url>\r\n  <url>\r\n    <loc>https://www.vivify.no/nyheter/vivify-kjoper-roommejts-i-s"
+      },
+      {
+        "id": "18dae52126b7b8d6897142600dd7492520130ea284ed8d3a502682b9d49d2ea3",
+        "source_url": "https://www.vivify.no/nyheter/vivify-bygginnredning-finnmark",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:13.621582Z",
+        "content_sha256": "2b0de865b4b134193929ec54f4fa4f2ef8c220205c12b204bd50a427547fcb57",
+        "claim_span": "\"1280\"/>\n<meta itemprop=\"name\" content=\"Bygginnredning Finnmark slår seg sammen med Vivify Gruppen — Vivify\"/>\n<meta itemprop=\"url\" content=\"https://www.vivify.no/nyheter/vivify-bygginnredning-finnmark\"/>\n<meta itemprop=\"description\" content=\"Vivify Gruppen og Bygginnredning Finnmark AS har inngått ",
+        "locator": "/title",
+        "extraction_method": "signalpost.activity.index-title.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "saved_context": "rskap. Det vil gi Vivify en sterk posisjon og styrker evnen til å betjene kunder og prosjekter i det nordnorske markedet.\"/>\n<meta property=\"og:image\" content=\"http://static1.squarespace.com/static/6a1571d91be69221f8bcbf83/t/6ad7bde19e11676f76a1271c/1792523745809/Trygve+Aasland_Vivify_CEO.jpeg?format=1500w\"/>\n<meta property=\"og:image:width\" content=\"960\"/>\n<meta property=\"og:image:height\" content=\"1280\"/>\n<meta itemprop=\"name\" content=\"Bygginnredning Finnmark slår seg sammen med Vivify Gruppen — Vivify\"/>\n<meta itemprop=\"url\" content=\"https://www.vivify.no/nyheter/vivify-bygginnredning-finnmark\"/>\n<meta itemprop=\"description\" content=\"Vivify Gruppen og Bygginnredning Finnmark AS har inngått avtale om partnerskap. Det vil gi Vivify en sterk posisjon og styrker evnen til å betjene kunder og prosjekter i det nordnorske markedet.\"/>\n<meta itemprop=\"thumbnailUrl\" content=\"http://static1.squarespace.com/static/6a1571d91be69221f8bcbf83/t/6ad7bde19e11676f76a1271c/1792523745809/Trygve+Aasland_Vivify_CEO.jpeg?format=1500w\"/>\n<link rel=\"image_src\" href=\"http://static1.squarespace.com/static/6a1571d91be69221f8bcbf83/t/6ad7bde19e11676f76a1271c/1792523745809/Trygve+Aasland_Vivify_CEO.jpeg?format=1500w\" />\n<meta itemprop=\"image\" content=\"http://static1.squarespace.com/static/6a1571d91be69221f8b"
+      }
+    ]
+  },
+  {
+    "orgnr": "987564911",
+    "company": "NÆRINGSØKONOMI AS",
+    "claim": {
+      "field": "dated_item.7a4cf122dd8cb43c92c9",
+      "value": {
+        "title": "Linker og nyheter | Næringsøkonomi AS",
+        "title_source": "page_title",
+        "url": "https://naringsokonomi.no/linker-og-nyheter",
+        "date": "2026-11-05",
+        "date_source": "lastmod",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "5253a98b241805994de51e18fc79200f7da544070fa51e15773b48433c8501e9"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "bd3c6a5b3616a0e104be33b560c1b81664b2e86d0e5b8cf6d963f8fbb9102bda",
+        "0e0118c216215ab685c176216e6fcc4bbc1332689b73c2b9e5d90ea1616f7733"
+      ],
+      "id": "815ec7c78f0581bce39ac1d9e21ebb871bebe269c1104e43080d67ef05da2e28",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:57:05.255033Z",
+      "last_observed_at": "2026-11-12T08:57:05.255033Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Tvetenveien 154"
+        ],
+        "kommune": "OSLO",
+        "kommunenummer": "0301",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "0671",
+        "poststed": "OSLO"
+      },
+      "identity.registered_activity": [
+        "Regnskapskontor og annen økonomisk bistand for klienter."
+      ],
+      "identity.registered_email": "post@naringsokonomi.no",
+      "identity.registered_phone": "22 19 02 30",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 100000.0,
+        "antallAksjer": 100,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2004-12-04"
+      }
+    },
+    "evidence": [
+      {
+        "id": "bd3c6a5b3616a0e104be33b560c1b81664b2e86d0e5b8cf6d963f8fbb9102bda",
+        "source_url": "https://naringsokonomi.no/sitemap.xml",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:05.255033Z",
+        "content_sha256": "118c1c6baeadd375a6f3a6e821e78bab76d929ebf694a8e862469ab0ad6e02f4",
+        "claim_span": "https://naringsokonomi.no/linker-og-nyheter</loc><priority>1.0</priority><lastmod>2026-11-05T12:24:33+00:00",
+        "locator": "/url/5",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-11-05",
+        "reporting_period": null,
+        "saved_context": "05T12:22:39+00:00</lastmod><changefreq>monthly</changefreq></url>\n\t<url><loc>https://naringsokonomi.no/hvorfor-velge-oss</loc><priority>1.0</priority><lastmod>2026-11-11T12:57:58+00:00</lastmod><changefreq>monthly</changefreq></url>\n\t<url><loc>https://naringsokonomi.no/priser</loc><priority>1.0</priority><lastmod>2026-11-05T12:24:23+00:00</lastmod><changefreq>monthly</changefreq></url>\n\t<url><loc>https://naringsokonomi.no/linker-og-nyheter</loc><priority>1.0</priority><lastmod>2026-11-05T12:24:33+00:00</lastmod><changefreq>monthly</changefreq></url>\n\t<url><loc>https://naringsokonomi.no/kontakt</loc><priority>1.0</priority><lastmod>2026-11-05T11:52:12+00:00</lastmod><changefreq>monthly</changefreq></url>\n\t<url><loc>https://naringsokonomi.no/personvern</loc><priority>1.0</priority><lastmod>2019-11-21T13:57:11+00:00</lastmod><changefreq>monthly</changefreq></url></urlset>"
+      },
+      {
+        "id": "0e0118c216215ab685c176216e6fcc4bbc1332689b73c2b9e5d90ea1616f7733",
+        "source_url": "https://naringsokonomi.no/linker-og-nyheter",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:06.980330Z",
+        "content_sha256": "2c26ca1428e42d756656e5a8755a08d7caf83d37ad636e5b27d0a06463d2df5c",
+        "claim_span": " type=\"text/javascript\"></script><title>Linker og nyheter | Næringsøkonomi AS</title><meta name=\"keywords\" content=\"Næringsøkonomi AS\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:title\" content=\"Linker og nyheter | Næringsøkonomi AS\"><meta property=\"og:url\" content=\"https://narings",
+        "locator": "/title",
+        "extraction_method": "signalpost.activity.index-title.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "saved_context": "okiebot=\"true\"> <head> <meta charset=\"UTF-8\"/> <script>window.addEventListener(\"CookiebotOnDialogInit\",function(){if (Cookiebot.getDomainUrlParam(\"autoAcceptCookies\") === \"true\")Cookiebot.setOutOfRegion();});</script><script async fetchpriority=\"high\" id=\"Cookiebot\" src=\"https://consent.cookiebot.com/uc.js\" data-cbid=\"5b94dcec-3020-4d5f-bcdf-26d534274faf\" data-blockingmode=\"auto\" data-culture=\"nb\" type=\"text/javascript\"></script><title>Linker og nyheter | Næringsøkonomi AS</title><meta name=\"keywords\" content=\"Næringsøkonomi AS\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:title\" content=\"Linker og nyheter | Næringsøkonomi AS\"><meta property=\"og:url\" content=\"https://naringsokonomi.no/linker-og-nyheter\"><meta property=\"og:image\" content=\"https://naringsokonomi.no\"><link rel='canonical' href='https://naringsokonomi.no/linker-og-nyheter'/><!-- Cookiebot: Google consent mode v2 defaults --> <script type='text/javascript' data-cookieconsent='ignore'> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('consent', 'default', { 'ad_storage': 'denied', 'analytics_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'functionality_storage': 'denied', 'personalization_storage': 'denied', 'security_storage': '"
+      }
+    ]
+  },
+  {
+    "orgnr": "924912758",
+    "company": "BORG BIERSTUBE AS",
+    "claim": {
+      "field": "dated_item.b11cd491338c0d1759f6",
+      "value": {
+        "title": "Borg Bierstube |  Artikler",
+        "title_source": "page_title",
+        "url": "https://www.borgbierstube.no/borg-bierstube-artikler",
+        "date": "2026-07-16",
+        "date_source": "lastmod",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "18fb83d1bf5e40e756dc64c7cfa22b4151c74f2b546762d1d63fb394c64cbaea"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "47b9fa8b981e8782f67c19ed41cb4f0dacec388e0b4f6a34269ef315915c39a9",
+        "4991fa23f535a39670efde3e037e82142126bcd019be9bb6060a0a0cd7018458"
+      ],
+      "id": "02767d39e9da7232f7ac57643c6b7ea2b582a65d08fdffe2b6f584e4f0d66013",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:57:32.733777Z",
+      "last_observed_at": "2026-11-12T08:57:32.733777Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Torget 6"
+        ],
+        "kommune": "SARPSBORG",
+        "kommunenummer": "3105",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1707",
+        "poststed": "SARPSBORG"
+      },
+      "identity.registered_activity": [
+        "Drift av restaurant, pub, kafe og nattklubb. Investere i og utleie av",
+        "eiendom og import av varer."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 300000.0,
+        "antallAksjer": 300,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2020-04-14"
+      }
+    },
+    "evidence": [
+      {
+        "id": "47b9fa8b981e8782f67c19ed41cb4f0dacec388e0b4f6a34269ef315915c39a9",
+        "source_url": "https://www.borgbierstube.no/sitemap.xml",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:32.733777Z",
+        "content_sha256": "8e3ea24f7d65887947601937975508ac59218fc689ac1ea11b831d9fcf138809",
+        "claim_span": "https://www.borgbierstube.no/borg-bierstube-artikler</loc>\r\n        <lastmod>2026-07-16T16:51:47.639Z",
+        "locator": "/url/6",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-07-16",
+        "reporting_period": null,
+        "saved_context": "</loc>\r\n        <lastmod>2024-12-10T19:24:28.876Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.borgbierstube.no/borg-bierstube-kontakt-oss</loc>\r\n        <lastmod>2024-12-10T19:24:35.019Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.borgbierstube.no/borg-bierstube-bestill-na</loc>\r\n        <lastmod>2026-04-20T13:40:29.559Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.borgbierstube.no/borg-bierstube-artikler</loc>\r\n        <lastmod>2026-07-16T16:51:47.639Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.borgbierstube.no/borg-bierstube-meny-mat</loc>\r\n        <lastmod>2026-10-14T21:03:54.847Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.borgbierstube.no/borg-bierstube-bestill-event</loc>\r\n        <lastmod>2025-01-25T11:45:21.452Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.borgbierstube.no/borg-bierstube-meny-mat---english</loc>\r\n        <lastmod>2026-04-17T08:41:26.499Z</lastmod>\r\n    </url>\r\n    <url>\r\n        <loc>https://www.borgbierstube.no/borg-bierstube-meny-mat---deutsch</loc>\r\n        <lastmod>202"
+      },
+      {
+        "id": "4991fa23f535a39670efde3e037e82142126bcd019be9bb6060a0a0cd7018458",
+        "source_url": "https://www.borgbierstube.no/borg-bierstube-artikler",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:57:34.780304Z",
+        "content_sha256": "5c9df1337d38468ed483460e6354da2b744b395a148e71961fd1e92f956f6088",
+        "claim_span": "onnect\" crossorigin=\"anonymous\"/><title>Borg Bierstube |  Artikler</title><meta content=\"Borg Bierstube |  Artikler\" property=\"og:title\"/><meta content=\"Borg Bierstube |  Artikler\" name=\"twitter:title\"/><meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/><meta content=\"Webflow\" name",
+        "locator": "/title",
+        "extraction_method": "signalpost.activity.index-title.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "saved_context": "<!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Wed Oct 14 2026 21:05:32 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain=\"www.borgbierstube.no\" data-wf-page=\"65bcad41eb1e1c63d69d47a5\" data-wf-site=\"659ddd640704ce377537882e\" lang=\"en\"><head><meta charset=\"utf-8\"/><link href=\"https://cdn.prod.website-files.com\" rel=\"preconnect\" crossorigin=\"anonymous\"/><title>Borg Bierstube |  Artikler</title><meta content=\"Borg Bierstube |  Artikler\" property=\"og:title\"/><meta content=\"Borg Bierstube |  Artikler\" name=\"twitter:title\"/><meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/><meta content=\"Webflow\" name=\"generator\"/><link href=\"https://cdn.prod.website-files.com/659ddd640704ce377537882e/css/borg-bierstube.webflow.shared.19ba4aa47.css\" rel=\"stylesheet\" type=\"text/css\" integrity=\"sha384-GbpKpH6jLSfoy9aYDu0iZ+SqnJu0xBSwuQLAUSmTrI8zmOe8Ifn+nMe7tXdHPDLr\" crossorigin=\"anonymous\"/><link href=\"https://fonts.googleapis.com\" rel=\"preconnect\"/><link href=\"https://fonts.gstatic.com\" rel=\"preconnect\" crossorigin=\"anonymous\"/><script src=\"https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js\" type=\"text/javascript\"></script><script type=\"text/javascript\">WebFont.load({  google: {    families: [\""
+      }
+    ]
+  },
+  {
+    "orgnr": "994382217",
+    "company": "FORMOSA AS",
+    "claim": {
+      "field": "dated_item.00fa7552e39750bf1465",
+      "value": {
+        "title": "Vigor 510ax på lager :)",
+        "title_source": "feed title",
+        "url": "https://www.formosa.no/nyheter/draytek/vigor-510ax-pa-lager.html",
+        "date": "2026-02-04",
+        "date_source": "pubDate",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "ee52e1eb02dbe383e40d68fafa47574f55f2bd051535993374f7a17790b9b3ed"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "e7c0a1c544485e3c6d08f50aaf668107e04284bc42ab7978cc869895fda1ceee"
+      ],
+      "id": "f049ce81ac3eb7e31e80b58c70a9a7b5a36996b55e1d2ad644c1b7ad3e6331f2",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:58:40.144542Z",
+      "last_observed_at": "2026-11-12T08:58:40.144542Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Voll terrasse 58"
+        ],
+        "kommune": "BÆRUM",
+        "kommunenummer": "3201",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1358",
+        "poststed": "JAR"
+      },
+      "identity.registered_activity": [
+        "Import og handel med dataprodukter, utvikling og drift av IT løsninger",
+        "samt kursvirksomhet."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 100000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2012-11-29"
+      }
+    },
+    "evidence": [
+      {
+        "id": "e7c0a1c544485e3c6d08f50aaf668107e04284bc42ab7978cc869895fda1ceee",
+        "source_url": "https://www.formosa.no/feed",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:58:40.144542Z",
+        "content_sha256": "f78cf3e3407f779b10d93025623f44bc221ed2a67dcc5fb7458f9fdf402be9b3",
+        "claim_span": "Vigor 510ax på lager :)</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/vigor-510ax-pa-lager.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Wed, 04 Feb 2026 08:06:47 +0000",
+        "locator": "/item/0",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-02-04",
+        "reporting_period": null,
+        "saved_context": "feed\" rel=\"self\" type=\"application/rss+xml\" />\n\t<link>https://www.formosa.no</link>\n\t<description>Din DrayTek spesialist i Norge</description>\n\t<lastBuildDate>Wed, 04 Feb 2026 08:12:31 +0000</lastBuildDate>\n\t<language>nb-NO</language>\n\t<sy:updatePeriod>\n\thourly\t</sy:updatePeriod>\n\t<sy:updateFrequency>\n\t1\t</sy:updateFrequency>\n\t<generator>https://wordpress.org/?v=7.1.4</generator>\n\t<item>\n\t\t<title>Vigor 510ax på lager :)</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/vigor-510ax-pa-lager.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Wed, 04 Feb 2026 08:06:47 +0000</pubDate>\n\t\t\t\t<category><![CDATA[DrayTek]]></category>\n\t\t<category><![CDATA[Nyheter]]></category>\n\t\t<guid isPermaLink=\"false\">https://www.formosa.no/?p=2357</guid>\n\n\t\t\t\t\t<description><![CDATA[Vigor 510ax er en rask 5G router med Wifi6 aksesspunkt. Ruteren støtter både kablet og mobilt internett og har alle de andre gode egenskapene vi kjenner fra DrayTek fra før. Bestill enten som Proff eller Privat]]></description>\n\t\t\t\t\t\t\t\t\t\t<content:encoded><![CDATA[\n<p class=\"wp-block-paragraph\"><a href=\"https://www.draytek.com/products/vigor-c510\">Vigor 510ax</a> er en rask 5G router med Wifi6 aksesspunkt"
+      }
+    ]
+  },
+  {
+    "orgnr": "994382217",
+    "company": "FORMOSA AS",
+    "claim": {
+      "field": "dated_item.b40cab069a87b1bba289",
+      "value": {
+        "title": "AP906 utgår :(",
+        "title_source": "feed title",
+        "url": "https://www.formosa.no/nyheter/draytek/ap906-utgar.html",
+        "date": "2026-02-04",
+        "date_source": "pubDate",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "ee52e1eb02dbe383e40d68fafa47574f55f2bd051535993374f7a17790b9b3ed"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "1387d619176d65f24e747b355d5070cb04fa607eb43cb8cf0521dfc83d9b24d1"
+      ],
+      "id": "0186dabc2e8969370dcb4b273f6190cb417bedbfeafba7668c4a6ae2bd173ca6",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:58:40.144542Z",
+      "last_observed_at": "2026-11-12T08:58:40.144542Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Voll terrasse 58"
+        ],
+        "kommune": "BÆRUM",
+        "kommunenummer": "3201",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1358",
+        "poststed": "JAR"
+      },
+      "identity.registered_activity": [
+        "Import og handel med dataprodukter, utvikling og drift av IT løsninger",
+        "samt kursvirksomhet."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 100000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2012-11-29"
+      }
+    },
+    "evidence": [
+      {
+        "id": "1387d619176d65f24e747b355d5070cb04fa607eb43cb8cf0521dfc83d9b24d1",
+        "source_url": "https://www.formosa.no/feed",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:58:40.144542Z",
+        "content_sha256": "f78cf3e3407f779b10d93025623f44bc221ed2a67dcc5fb7458f9fdf402be9b3",
+        "claim_span": "AP906 utgår :(</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/ap906-utgar.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Wed, 04 Feb 2026 07:43:30 +0000",
+        "locator": "/item/2",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-02-04",
+        "reporting_period": null,
+        "saved_context": "]]></category>\n\t\t<guid isPermaLink=\"false\">https://www.formosa.no/?p=2354</guid>\n\n\t\t\t\t\t<description><![CDATA[AP 905 tar over for 906. Vi har den på lager for umiddelbar levering.]]></description>\n\t\t\t\t\t\t\t\t\t\t<content:encoded><![CDATA[\n<p class=\"wp-block-paragraph\">AP 905 tar over for 906. Vi har den på lager for umiddelbar levering.</p>\n]]></content:encoded>\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\t</item>\n\t\t<item>\n\t\t<title>AP906 utgår :(</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/ap906-utgar.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Wed, 04 Feb 2026 07:43:30 +0000</pubDate>\n\t\t\t\t<category><![CDATA[DrayTek]]></category>\n\t\t<category><![CDATA[Nyheter]]></category>\n\t\t<guid isPermaLink=\"false\">https://www.formosa.no/?p=2350</guid>\n\n\t\t\t\t\t<description><![CDATA[DrayTek har desverre valgt å fase ut AP 906. Vi har fortsatt noen få på lager om noen trenger akuratt denne modellen.]]></description>\n\t\t\t\t\t\t\t\t\t\t<content:encoded><![CDATA[\n<p class=\"wp-block-paragraph\">DrayTek har desverre valgt å fase ut AP 906.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Vi har fortsatt noen få på lager om noen trenger akuratt denne modellen.</p>\n]]></content:encoded>\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\t</item>\n\t"
+      }
+    ]
+  },
+  {
+    "orgnr": "994382217",
+    "company": "FORMOSA AS",
+    "claim": {
+      "field": "dated_item.8f94a7a3b9e145e7ef79",
+      "value": {
+        "title": "AP905 på lager :)",
+        "title_source": "feed title",
+        "url": "https://www.formosa.no/nyheter/draytek/ap905-pa-lager.html",
+        "date": "2026-02-04",
+        "date_source": "pubDate",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "ee52e1eb02dbe383e40d68fafa47574f55f2bd051535993374f7a17790b9b3ed"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "a6656c386c7e0ab64da525b340d93610448777e3cc532a2e73e4baa677cfe9fa"
+      ],
+      "id": "7ea1ecb4a47d862ec1a5eb7a2955b49dd8931c2c5c06e2523f0a4b7bfed2d8ae",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:58:40.144542Z",
+      "last_observed_at": "2026-11-12T08:58:40.144542Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Voll terrasse 58"
+        ],
+        "kommune": "BÆRUM",
+        "kommunenummer": "3201",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1358",
+        "poststed": "JAR"
+      },
+      "identity.registered_activity": [
+        "Import og handel med dataprodukter, utvikling og drift av IT løsninger",
+        "samt kursvirksomhet."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 100000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2012-11-29"
+      }
+    },
+    "evidence": [
+      {
+        "id": "a6656c386c7e0ab64da525b340d93610448777e3cc532a2e73e4baa677cfe9fa",
+        "source_url": "https://www.formosa.no/feed",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:58:40.144542Z",
+        "content_sha256": "f78cf3e3407f779b10d93025623f44bc221ed2a67dcc5fb7458f9fdf402be9b3",
+        "claim_span": "AP905 på lager :)</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/ap905-pa-lager.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Wed, 04 Feb 2026 07:48:09 +0000",
+        "locator": "/item/1",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-02-04",
+        "reporting_period": null,
+        "saved_context": "e de andre gode egenskapene vi kjenner fra DrayTek fra før.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Bestill enten som <a href=\"https://shop.formosa.no/index.php?route=product/product&amp;keyword=510&amp;category_id=0&amp;product_id=167\">Proff</a> eller <a href=\"https://draytekshop.no/\">Privat</a></p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n]]></content:encoded>\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\t</item>\n\t\t<item>\n\t\t<title>AP905 på lager :)</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/ap905-pa-lager.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Wed, 04 Feb 2026 07:48:09 +0000</pubDate>\n\t\t\t\t<category><![CDATA[DrayTek]]></category>\n\t\t<category><![CDATA[Nyheter]]></category>\n\t\t<guid isPermaLink=\"false\">https://www.formosa.no/?p=2354</guid>\n\n\t\t\t\t\t<description><![CDATA[AP 905 tar over for 906. Vi har den på lager for umiddelbar levering.]]></description>\n\t\t\t\t\t\t\t\t\t\t<content:encoded><![CDATA[\n<p class=\"wp-block-paragraph\">AP 905 tar over for 906. Vi har den på lager for umiddelbar levering.</p>\n]]></content:encoded>\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\t</item>\n\t\t<item>\n\t\t<title>AP906 utgår :(</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/ap906-utgar.html</link>\n\t\t\n\t\t<dc:creator><![CD"
+      }
+    ]
+  },
+  {
+    "orgnr": "994382217",
+    "company": "FORMOSA AS",
+    "claim": {
+      "field": "dated_item.4b2977b62bcd050ef962",
+      "value": {
+        "title": "Nettbutikk Privat",
+        "title_source": "feed title",
+        "url": "https://www.formosa.no/nyheter/draytek/nettbutikk-privat.html",
+        "date": "2026-02-03",
+        "date_source": "pubDate",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "ee52e1eb02dbe383e40d68fafa47574f55f2bd051535993374f7a17790b9b3ed"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "858a2e272fb4177e63f5b95199becbe84c1565027297bcfe4e840d3ba16655ff"
+      ],
+      "id": "e818c8512dd7c4bf1c253ab41569728874c6fa35b00cbc0a02ad183c4e4bf793",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:58:40.144542Z",
+      "last_observed_at": "2026-11-12T08:58:40.144542Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Voll terrasse 58"
+        ],
+        "kommune": "BÆRUM",
+        "kommunenummer": "3201",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1358",
+        "poststed": "JAR"
+      },
+      "identity.registered_activity": [
+        "Import og handel med dataprodukter, utvikling og drift av IT løsninger",
+        "samt kursvirksomhet."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 100000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2012-11-29"
+      }
+    },
+    "evidence": [
+      {
+        "id": "858a2e272fb4177e63f5b95199becbe84c1565027297bcfe4e840d3ba16655ff",
+        "source_url": "https://www.formosa.no/feed",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:58:40.144542Z",
+        "content_sha256": "f78cf3e3407f779b10d93025623f44bc221ed2a67dcc5fb7458f9fdf402be9b3",
+        "claim_span": "Nettbutikk Privat</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/nettbutikk-privat.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Tue, 03 Feb 2026 10:11:26 +0000",
+        "locator": "/item/3",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-02-03",
+        "reporting_period": null,
+        "saved_context": "gt å fase ut AP 906. Vi har fortsatt noen få på lager om noen trenger akuratt denne modellen.]]></description>\n\t\t\t\t\t\t\t\t\t\t<content:encoded><![CDATA[\n<p class=\"wp-block-paragraph\">DrayTek har desverre valgt å fase ut AP 906.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Vi har fortsatt noen få på lager om noen trenger akuratt denne modellen.</p>\n]]></content:encoded>\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\t</item>\n\t\t<item>\n\t\t<title>Nettbutikk Privat</title>\n\t\t<link>https://www.formosa.no/nyheter/draytek/nettbutikk-privat.html</link>\n\t\t\n\t\t<dc:creator><![CDATA[Lars Berg]]></dc:creator>\n\t\t<pubDate>Tue, 03 Feb 2026 10:11:26 +0000</pubDate>\n\t\t\t\t<category><![CDATA[DrayTek]]></category>\n\t\t<category><![CDATA[Nyheter]]></category>\n\t\t<guid isPermaLink=\"false\">https://www.formosa.no/?p=2346</guid>\n\n\t\t\t\t\t<description><![CDATA[Vi åpner nettbutikk for privatpersoner på https://www.draytekshop.no/. Bestill og betal med Vipps eller kort og få varene innen noen få dager. Følg med på åpningstilbud i Februar og Mars 2026]]></description>\n\t\t\t\t\t\t\t\t\t\t<content:encoded><![CDATA[\n<p class=\"wp-block-paragraph\">Vi åpner nettbutikk for privatpersoner på <a href=\"https://www.draytekshop.no/\">https://www.draytekshop.no/</a>. Bestill og betal m"
+      }
+    ]
+  },
+  {
+    "orgnr": "918000143",
+    "company": "REN TEKNIKK AS",
+    "claim": {
+      "field": "dated_item.550b75042a012b5ce4f3",
+      "value": {
+        "title": "Retenke Landbruket (Osterøy)",
+        "title_source": "page_title",
+        "url": "https://www.ren-teknikk.no/kundecaser/blog-post-title-four-6j27h-slbtr-3bwdp-xcw8n-yfe4w",
+        "date": "2026-05-26",
+        "date_source": "lastmod",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "d3ac59d10d099e835e70ea9294c3a6b9bb441e08c53d5951c2eec8935114141d"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "6fd08878ddedfd4b9c51c4f151a4d136333b757588caf0eb9fdc7b8d0e5cf9d9",
+        "7a4bc6a6c4eeea143919e2d1942dc11b55eaa208aff5c4a4b0c4a0f8a031f09e"
+      ],
+      "id": "306cf4a59222e9de3026e321f5d5e5c55989c56795e97cb43036ce331464c841",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:59:55.740304Z",
+      "last_observed_at": "2026-11-12T08:59:55.740304Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Åstveitveien 61"
+        ],
+        "kommune": "BERGEN",
+        "kommunenummer": "4601",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "5106",
+        "poststed": "ØVRE ERVIK"
+      },
+      "identity.registered_activity": [
+        "Konsulentvirksomhet innen renovasjon som leies ut til entreprenører."
+      ],
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 30000.0,
+        "antallAksjer": 30000,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2016-11-10"
+      }
+    },
+    "evidence": [
+      {
+        "id": "6fd08878ddedfd4b9c51c4f151a4d136333b757588caf0eb9fdc7b8d0e5cf9d9",
+        "source_url": "https://www.ren-teknikk.no/sitemap.xml",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:59:55.740304Z",
+        "content_sha256": "6586e076871d2d64ff42677b4d463d0c31e8deaddfac8c697c7e1359fc243a99",
+        "claim_span": "https://www.ren-teknikk.no/kundecaser/blog-post-title-four-6j27h-slbtr-3bwdp-xcw8n-yfe4w</loc>\r\n    <changefreq>monthly</changefreq>\r\n    <priority>0.5</priority>\r\n    <lastmod>2026-05-26",
+        "locator": "/url/1",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-05-26",
+        "reporting_period": null,
+        "saved_context": "www.sitemaps.org/schemas/sitemap/0.9\" xmlns:image=\"http://www.google.com/schemas/sitemap-image/1.1\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\" xmlns:video=\"http://www.google.com/schemas/sitemap-video/1.1\">\r\n  <url>\r\n    <loc>https://www.ren-teknikk.no/kundecaser</loc>\r\n    <changefreq>daily</changefreq>\r\n    <priority>0.75</priority>\r\n    <lastmod>2026-05-26</lastmod>\r\n  </url>\r\n  <url>\r\n    <loc>https://www.ren-teknikk.no/kundecaser/blog-post-title-four-6j27h-slbtr-3bwdp-xcw8n-yfe4w</loc>\r\n    <changefreq>monthly</changefreq>\r\n    <priority>0.5</priority>\r\n    <lastmod>2026-05-26</lastmod>\r\n    <image:image>\r\n      <image:loc>https://images.squarespace-cdn.com/content/v1/6966358858d6923fce72346c/a8b021f8-9916-43c7-8e41-65d9f2572b9f/Bondecaf%C3%A9+workshop.jpeg</image:loc>\r\n      <image:title>Kundecaser - Retenke Landbruket (Osterøy) - Make it stand out</image:title>\r\n      <image:caption>Whatever it is, the way you tell your story online can make all the difference.</image:caption>\r\n    </image:image>\r\n  </url>\r\n  <url>\r\n    <loc>https://www.ren-teknikk.no/kundecaser/blog-post-title-four-6j27h-slbtr-3bwdp-xcw8n</loc>\r\n    <changefreq>monthly</changefreq>\r\n    <priorit"
+      },
+      {
+        "id": "7a4bc6a6c4eeea143919e2d1942dc11b55eaa208aff5c4a4b0c4a0f8a031f09e",
+        "source_url": "https://www.ren-teknikk.no/kundecaser/blog-post-title-four-6j27h-slbtr-3bwdp-xcw8n-yfe4w",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T08:59:57.943882Z",
+        "content_sha256": "451cd3657be7a40af97de899350801b8f41763b21f7f197b0bf195f34dfe72e3",
+        "claim_span": "ref=\"\">\n<meta charset=\"utf-8\" />\n<title>Retenke Landbruket (Osterøy)</title>\n<meta http-equiv=\"Accept-CH\" content=\"Sec-CH-UA-Platform-Version, Sec-CH-UA-Model\" /><link rel=\"icon\" type=\"image/x-icon\" href=\"https://images.squarespace-cdn.com/content/v1/6966358858d6923fce72346c/1768306083141-AOCEK1K6UL",
+        "locator": "/title",
+        "extraction_method": "signalpost.activity.index-title.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "saved_context": "<!doctype html>\n<html xmlns:og=\"http://opengraphprotocol.org/schema/\" xmlns:fb=\"http://www.facebook.com/2008/fbml\" lang=\"no-NO\"  >\n  <head>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- This is Squarespace. --><!-- renteknikk -->\n<base href=\"\">\n<meta charset=\"utf-8\" />\n<title>Retenke Landbruket (Osterøy)</title>\n<meta http-equiv=\"Accept-CH\" content=\"Sec-CH-UA-Platform-Version, Sec-CH-UA-Model\" /><link rel=\"icon\" type=\"image/x-icon\" href=\"https://images.squarespace-cdn.com/content/v1/6966358858d6923fce72346c/1768306083141-AOCEK1K6ULYLZTUEJT83/favicon.ico?format=100w\"/>\n<link rel=\"canonical\" href=\"https://www.ren-teknikk.no/kundecaser/blog-post-title-four-6j27h-slbtr-3bwdp-xcw8n-yfe4w\"/>\n<meta property=\"og:site_name\" content=\"Ren Teknikk\"/>\n<meta property=\"og:title\" content=\"Retenke Landbruket (Osterøy)\"/>\n<meta property=\"og:latitude\" content=\"40.7207559\"/>\n<meta property=\"og:longitude\" content=\"-74.00076130000002\"/>\n<meta property=\"og:locality\" content=\"\"/>\n<meta property=\"og:url\" content=\"https://www.ren-teknikk.no/kundecaser/blog-post-title-four-6j27h-slbtr-3bwdp-xcw8n-yfe4w\"/>\n<meta property=\"og:type\" content=\"article"
+      }
+    ]
+  },
+  {
+    "orgnr": "980622444",
+    "company": "LØRENSKOG BANDASJE AS",
+    "claim": {
+      "field": "dated_item.c7a8ecb4f98038c2c345",
+      "value": {
+        "title": "Rose Sløyfe-måned hos oss",
+        "title_source": "feed title",
+        "url": "https://loban.no/blogg/rose-sloyfe-maned-hos-oss/",
+        "date": "2026-10-12",
+        "date_source": "pubDate",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "82bc249e944282628b858cfe35e8416471369257b81dc5835d1dd6a6f34030f0"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "6d9cacb8830779954cdc404c2f715529b00f84cd43bfb90ae0034949cd8153d5"
+      ],
+      "id": "9191d563e3a590e4d4be85ff180ab3626fdb291bff44a2f0c733e6858239c1f6",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T09:01:31.459995Z",
+      "last_observed_at": "2026-11-12T09:01:31.459995Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Skårersletta 18"
+        ],
+        "kommune": "LØRENSKOG",
+        "kommunenummer": "3222",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1473",
+        "poststed": "LØRENSKOG"
+      },
+      "identity.registered_activity": [
+        "Detaljhandel med bandasjevarer, hud- og kroppspleie."
+      ],
+      "identity.registered_phone": "67 91 96 72",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 110000.0,
+        "antallAksjer": 110,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2006-09-13"
+      }
+    },
+    "evidence": [
+      {
+        "id": "6d9cacb8830779954cdc404c2f715529b00f84cd43bfb90ae0034949cd8153d5",
+        "source_url": "https://loban.no/feed/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:01:31.459995Z",
+        "content_sha256": "cb152ff90fad5633667d62ccf16ba53176f4a31388cb06b1ef1769dd1a1599bf",
+        "claim_span": "Rose Sløyfe-måned hos oss</title>\n\t\t<link>https://loban.no/blogg/rose-sloyfe-maned-hos-oss/</link>\n\t\t\n\t\t<dc:creator><![CDATA[evolve]]></dc:creator>\n\t\t<pubDate>Mon, 12 Oct 2026 13:56:46 +0000",
+        "locator": "/item/1",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-10-12",
+        "reporting_period": null,
+        "saved_context": "tspesialist fra Medi Norway er til stede hele dagen og svarer gjerne på spørsmål, gir råd og hjelper deg med å finne riktig løsning.</p>\n<p><!-- sett inn Medi-bildet her via \"Legg til media\" --></p>\n<p><strong>20 % rabatt på alle Medi-produkter denne dagen</strong></p>\n<p>Kom gjerne innom for en hyggelig prat og faglig veiledning.</p>\n]]></content:encoded>\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\t</item>\n\t\t<item>\n\t\t<title>Rose Sløyfe-måned hos oss</title>\n\t\t<link>https://loban.no/blogg/rose-sloyfe-maned-hos-oss/</link>\n\t\t\n\t\t<dc:creator><![CDATA[evolve]]></dc:creator>\n\t\t<pubDate>Mon, 12 Oct 2026 13:56:46 +0000</pubDate>\n\t\t\t\t<category><![CDATA[Blogg]]></category>\n\t\t<category><![CDATA[Fremhevet]]></category>\n\t\t<guid isPermaLink=\"false\">https://loban.no/?p=3482</guid>\n\n\t\t\t\t\t<description><![CDATA[Gjennom oktober setter vi fokus på brysthelse, komfort og livskvalitet. Vi inviterer derfor til Aktivitetsdager for brystopererte, med personlig veiledning, profesjonell tilpasning og de nyeste løsningene innen brystproteser, undertøy og badetøy. På disse dagene tilbyr vi: Personlig rådgivning og tilpasning 20 % rabatt på ordinære varer 30-50 % rabatt på utvalgte varer &#160; I tillegg [&#8230;]]]></descriptio"
+      }
+    ]
+  },
+  {
+    "orgnr": "980622444",
+    "company": "LØRENSKOG BANDASJE AS",
+    "claim": {
+      "field": "dated_item.19e5d29c66373d31860d",
+      "value": {
+        "title": "Aktivitetsdag med Medi Norway",
+        "title_source": "feed title",
+        "url": "https://loban.no/blogg/aktivitetsdag-med-medi-norway/",
+        "date": "2026-10-12",
+        "date_source": "pubDate",
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "82bc249e944282628b858cfe35e8416471369257b81dc5835d1dd6a6f34030f0"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "51262d3e278808188a2cea674576ff664ac764bc2b15ca8693b1442bfb8e962c"
+      ],
+      "id": "3c18cb07b622c1e1a3f6d1aa1d665c3cfe01f307111320e8a15280155b7017ba",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T09:01:31.459995Z",
+      "last_observed_at": "2026-11-12T09:01:31.459995Z",
+      "reasons": {}
+    },
+    "registry_contacts": {
+      "identity.registered_address": {
+        "adresse": [
+          "Skårersletta 18"
+        ],
+        "kommune": "LØRENSKOG",
+        "kommunenummer": "3222",
+        "land": "Norge",
+        "landkode": "NO",
+        "postnummer": "1473",
+        "poststed": "LØRENSKOG"
+      },
+      "identity.registered_activity": [
+        "Detaljhandel med bandasjevarer, hud- og kroppspleie."
+      ],
+      "identity.registered_phone": "67 91 96 72",
+      "identity.registered_in_vat": true,
+      "identity.registered_in_business_register": true,
+      "identity.registered_in_voluntary_register": false,
+      "identity.registered_in_foundations_register": false,
+      "identity.registered_in_party_register": false,
+      "identity.registered_capital": {
+        "belop": 110000.0,
+        "antallAksjer": 110,
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2006-09-13"
+      }
+    },
+    "evidence": [
+      {
+        "id": "51262d3e278808188a2cea674576ff664ac764bc2b15ca8693b1442bfb8e962c",
+        "source_url": "https://loban.no/feed/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-12T09:01:31.459995Z",
+        "content_sha256": "cb152ff90fad5633667d62ccf16ba53176f4a31388cb06b1ef1769dd1a1599bf",
+        "claim_span": "Aktivitetsdag med Medi Norway</title>\n\t\t<link>https://loban.no/blogg/aktivitetsdag-med-medi-norway/</link>\n\t\t\n\t\t<dc:creator><![CDATA[evolve]]></dc:creator>\n\t\t<pubDate>Mon, 12 Oct 2026 14:02:30 +0000",
+        "locator": "/item/0",
+        "extraction_method": "signalpost.activity.index.v1",
+        "source_identifier": null,
+        "effective_at": "2026-10-12",
+        "reporting_period": null,
+        "saved_context": "uage>nb-NO</language>\n\t<sy:updatePeriod>\n\thourly\t</sy:updatePeriod>\n\t<sy:updateFrequency>\n\t1\t</sy:updateFrequency>\n\t<generator>https://wordpress.org/?v=7.1.4</generator>\n\n<image>\n\t<url>https://loban.no/wp-content/uploads/2020/11/cropped-Loban-favicon-32x32.png</url>\n\t<title>Lørenskog Bandasje</title>\n\t<link>https://loban.no</link>\n\t<width>32</width>\n\t<height>32</height>\n</image> \n\t<item>\n\t\t<title>Aktivitetsdag med Medi Norway</title>\n\t\t<link>https://loban.no/blogg/aktivitetsdag-med-medi-norway/</link>\n\t\t\n\t\t<dc:creator><![CDATA[evolve]]></dc:creator>\n\t\t<pubDate>Mon, 12 Oct 2026 14:02:30 +0000</pubDate>\n\t\t\t\t<category><![CDATA[Blogg]]></category>\n\t\t<category><![CDATA[Fremhevet]]></category>\n\t\t<guid isPermaLink=\"false\">https://loban.no/?p=3496</guid>\n\n\t\t\t\t\t<description><![CDATA[Vi inviterer til aktivitetsdag sammen med spesialist fra Medi Norway. Denne dagen setter vi fokus på løsninger som kan bidra til økt komfort, støtte og bevegelsesfrihet i hverdagen. Du kan få veiledning om: ✅ Kompresjonsstrømper ✅ Såler og fotkomfort ✅ Ortoser og støttebandasjer ✅ Forebygging og lindring ved hevelser, smerter og belastningsplager Vår produktspesialist fra [&#8230;]]]></description>\n\t\t\t\t\t\t\t\t\t\t<"
+      }
+    ]
+  }
+]

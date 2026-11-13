@@ -1,0 +1,5399 @@
+{
+  "seed": 20261112,
+  "universe_source": "https://builderr.ai/signalpost-company-universe-2025.jsonl.gz",
+  "cached_universe_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384",
+  "universe_rows": 411160,
+  "eligible": 408738,
+  "excluded_identifier_count": 23612,
+  "exclusion_method": "All bench/inputs and earlier non-raw review artifacts, plus cached orgnrs.txt cohorts; official-run artifacts included. Source datasets and CC/OSM candidate indexes excluded from cohort definition.",
+  "exclusion_artifacts": [
+    {
+      "path": "bench\\inputs\\100\\batch.jsonl",
+      "sha256": "54f5c4254b5d61a969ed6ec5969fab905e45d947f920a8f8cdcb71e575b159f7",
+      "bytes": 3800
+    },
+    {
+      "path": "bench\\inputs\\100\\registry.csv",
+      "sha256": "2721de541081cc0ce500276b9579ad29b60d1d07462cc5e20e2b881b767a1e15",
+      "bytes": 67253
+    },
+    {
+      "path": "bench\\inputs\\1000-r3\\batch.jsonl",
+      "sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+      "bytes": 38000
+    },
+    {
+      "path": "bench\\inputs\\1000-r3\\MANIFEST.txt",
+      "sha256": "1e74c8fc606f87ed1a72977296471df92d805dabe4c38d396e40d549e9697cf0",
+      "bytes": 79
+    },
+    {
+      "path": "bench\\inputs\\1000-r3\\source.json",
+      "sha256": "81a124531850ac2baf4ef51c9bcce567cca45f68e6f181f2712b910f0fa61f4a",
+      "bytes": 432
+    },
+    {
+      "path": "bench\\inputs\\20\\batch.jsonl",
+      "sha256": "063413dffd75909022d7e730aac60fcfc178230972620a3cbb5eea20085acf11",
+      "bytes": 760
+    },
+    {
+      "path": "bench\\inputs\\20\\registry.csv",
+      "sha256": "c5bc0057237c91bdc5c4a8e64684f6c0cdc4955e4ab4450a72ae2dd8173b766a",
+      "bytes": 15477
+    },
+    {
+      "path": "bench\\inputs\\MANIFEST.txt",
+      "sha256": "15ddd7fc7512001c13740714a3866d547321b4458258c91a618042182091ad51",
+      "bytes": 685
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\cdx-events.json",
+      "sha256": "391ca5d4376a0157bd446febd6ff01c2d55afbcff47b08abc320d512049e8dee",
+      "bytes": 1690
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\cdx-summary.json",
+      "sha256": "5e0d2f82a0a4e7c8880e17a16b4e8fe7ac207afe0bc4500d1d85d049c33ab2d0",
+      "bytes": 2062
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\columnar-discovery.json",
+      "sha256": "7e63d06e73ba924df9bd050269fb19cc6d44f09fff49ea476932013b7f5101c3",
+      "bytes": 1779
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\columnar-files.json",
+      "sha256": "5362db057674822099072a06a39e6bede94ed08e7bd1c20e1a0fbe8c8930e62f",
+      "bytes": 40920
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\columnar-query.json",
+      "sha256": "6c5c1948ac960856e78debc330e9f0454c525221020f367ad674b5113220b8cf",
+      "bytes": 37227
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\columnar-run.json",
+      "sha256": "704cfe4b4149b20956da039ef669556258c53886e2c645e8778d7a9e903484ee",
+      "bytes": 970
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\columnar-validation.json",
+      "sha256": "13d46ad7f7498e17690d505c939f84eb47d3ad780d2b4c7dc9338ccbad2d08ed",
+      "bytes": 769
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\crawl.json",
+      "sha256": "dc8a80ae9322738cf144f1fc8a7dfa62ca981235e43fb8e20b7c76fece7de188",
+      "bytes": 266
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\events.json",
+      "sha256": "82a654d2b9c2396ab50a2cf0af13465f8a73630b9b63fa8765d768a7c1ef4044",
+      "bytes": 246
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\index-probe.json",
+      "sha256": "c080563f02184cd3db4ed73ecb4500a79d9c68896944b66158a4472856f122d8",
+      "bytes": 532
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\live-requests.json",
+      "sha256": "2be734b2e6e0f56ace8d9b716a0b92ce4724419951a6aff166b50d4637845ac0",
+      "bytes": 10792
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\live-review.json",
+      "sha256": "3cda481808ffad60fd93a2b3398223d17d95ccaf2a347e5b32d391f557433faa",
+      "bytes": 56310
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\network.json",
+      "sha256": "23a6add0be9a301c57c534137d902914f08985e0b918ee8f8723b07a169a09b2",
+      "bytes": 60
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\overnight-summary.json",
+      "sha256": "aa58e12b482dd962986d481e666d504c97539c9b76ac09020e254281b1883611",
+      "bytes": 1162
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\README.md",
+      "sha256": "78e6a9ac23a95e1b8bc2906dfb69d334fa08bed0243de956177c9206116945ed",
+      "bytes": 10851
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\summary.json",
+      "sha256": "3801a1736aed5f5f05716333db8faece0cd0e923b1e7719641e0bfcc73adc691",
+      "bytes": 44483
+    },
+    {
+      "path": "bench\\reports\\cc-proto\\validation.json",
+      "sha256": "aa121b59abf1e5274f278f77a2df60072c9e264511a3bf1e168908263863d6c9",
+      "bytes": 331
+    },
+    {
+      "path": "bench\\reports\\final-release\\benchmark-execution.json",
+      "sha256": "b3ca8de9604624b5d9dd2d1a272431de8893ff3a10549b1f983e20254573daac",
+      "bytes": 2026
+    },
+    {
+      "path": "bench\\reports\\final-release\\benchmark-scoreboard.json",
+      "sha256": "a137776a136dd2ce0c0e646bcc7f75f23d2a5beeb303b62ce3f62f6fe8325cf2",
+      "bytes": 5806
+    },
+    {
+      "path": "bench\\reports\\final-release\\benchmark-summary.txt",
+      "sha256": "0b1d944922fa6ae62f0e53732f2919b824c0bf809445f9ecb8119e361a9a7f8d",
+      "bytes": 1187
+    },
+    {
+      "path": "bench\\reports\\final-release\\benchmark-wrapper.txt",
+      "sha256": "553f1b54b055efb4db988301ace6606abc6e1ce41c16f94b8a5631aa346292de",
+      "bytes": 7441
+    },
+    {
+      "path": "bench\\reports\\final-release\\ci-command-1.txt",
+      "sha256": "1d45fdc382a2a80d76e288463d7fc6c52169680fa450692d17e2913d766f7554",
+      "bytes": 1018
+    },
+    {
+      "path": "bench\\reports\\final-release\\ci-command-2.txt",
+      "sha256": "2974098b8a7d57b282e5c83eb7c0300ba771585f2dca35c4964cf54e4caec212",
+      "bytes": 1492
+    },
+    {
+      "path": "bench\\reports\\final-release\\ci-command-3.txt",
+      "sha256": "98c0b1df86fad0bb67f494472648b43879a379fa26aab471c843c25e8e8dc78f",
+      "bytes": 164
+    },
+    {
+      "path": "bench\\reports\\final-release\\ci-command-4.txt",
+      "sha256": "9c4caa5b0c2fc6488da65622305b30edcd3b7ada4f1ffa5918ae2fda2fe3028f",
+      "bytes": 212
+    },
+    {
+      "path": "bench\\reports\\final-release\\ci-execution.json",
+      "sha256": "e0f7049875082153173965d3842203ef7e4bfeb281a28bb0e5e42a200eeaf0bb",
+      "bytes": 1117
+    },
+    {
+      "path": "bench\\reports\\final-release\\ci20-report.json",
+      "sha256": "e3606711c7608d4693c91a8d1ca87cbe14deb9d59409016826376a37da97a436",
+      "bytes": 1574567
+    },
+    {
+      "path": "bench\\reports\\final-release\\credential-check.json",
+      "sha256": "3ea911c6eec8275ae0b3836dfe61a360668aa2e3eab76a8615fd275df974a6bc",
+      "bytes": 60
+    },
+    {
+      "path": "bench\\reports\\final-release\\failed-sections.json",
+      "sha256": "f6cf2f309ce80e872d1ad6352d464f818f717d31e61af79a3ee4bcb56cc6718b",
+      "bytes": 6856
+    },
+    {
+      "path": "bench\\reports\\final-release\\metrics.json",
+      "sha256": "0599fb500ca5c5be008a519c7fe58c835ae7e691a48f3c1113f3bbe43c1d0730",
+      "bytes": 1557
+    },
+    {
+      "path": "bench\\reports\\final-release\\optional-source-statuses.json",
+      "sha256": "c9bee05e5d64ce45d30368dbe67bf67f751ef08dfae1087af42db77376b7d258",
+      "bytes": 504
+    },
+    {
+      "path": "bench\\reports\\final-release\\output-hashes.json",
+      "sha256": "03f7bd7ca9fbc8ae11be19c8cb8f55eb31e52148185810276545371d44621a8f",
+      "bytes": 322
+    },
+    {
+      "path": "bench\\reports\\final-release\\pre-run-disk.json",
+      "sha256": "5df06297d043389fcd6ad5f85f5168702f8bc840ce7b50ca74599e5c9982f749",
+      "bytes": 125
+    },
+    {
+      "path": "bench\\reports\\final-release\\RESULTS.md",
+      "sha256": "1638479f0e7ab1e52a12f89ccb675f53637d0fcfdf36aafbc9086158cca08e20",
+      "bytes": 7506
+    },
+    {
+      "path": "bench\\reports\\final-release\\runtime-integrity.json",
+      "sha256": "1dc2ce25e15e5a53a57e840b5a65f29ccee14b3e201e638a10c85bd2081990f9",
+      "bytes": 359
+    },
+    {
+      "path": "bench\\reports\\final-release\\verification-execution.json",
+      "sha256": "3e6168bf2b5b23eb722d707815cac8613e3682b45be46adc60a00dbf46a3eeaa",
+      "bytes": 492
+    },
+    {
+      "path": "bench\\reports\\final-release\\verification.txt",
+      "sha256": "861d521790b5813b46cb5d404f11649ef851afcbc307e106f308d4a0656b028a",
+      "bytes": 191
+    },
+    {
+      "path": "bench\\reports\\final-release\\website-losses.json",
+      "sha256": "64e0b9836b7d9984693a4cd16be35b44a00e9f1c8887d5325b16ba8a51d9e0d0",
+      "bytes": 12926
+    },
+    {
+      "path": "bench\\reports\\handoff-next.md",
+      "sha256": "46cbf004db7cc4474617cd28a98e8d3c71d02cd07d43b643c234755d67c5c7bf",
+      "bytes": 1651
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\briefing-integrity.json",
+      "sha256": "88f9c2d0aa6448d5975e429f0e02cbe6404614ad38448c5dc97c13f5b8647e15",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\browser-results.json",
+      "sha256": "552fd82731f111b7865883ce450d1acffba05fda49dbbc8f4cdf6ad3f7eb1048",
+      "bytes": 226
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\completion.json",
+      "sha256": "e8239c7da6541613fb4b4b915c00dc03fa42ddd6c475001888ed4f7648c6ebd5",
+      "bytes": 248
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\credential-check.json",
+      "sha256": "3ea911c6eec8275ae0b3836dfe61a360668aa2e3eab76a8615fd275df974a6bc",
+      "bytes": 60
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\final-focused-tests.txt",
+      "sha256": "553bebc09ff3488b3e0593c2a79c885d23cfb58d2df194897d90218818ce7c27",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\final-full-tests.txt",
+      "sha256": "fb8bea6dc862d9ab38ce3f30d262479841e073b4c08b139c9b86062881b0cdc3",
+      "bytes": 583
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\final-runtime-source.json",
+      "sha256": "7063abcf3645232eae902f8c4b99a2e820357047e2d4dd344dbf9dae2b657489",
+      "bytes": 444
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\final-source-integrity.json",
+      "sha256": "f65a6ed55351dceca9c0085819a8c69d4d5b7bcd112bc0017aa45f37db770ed0",
+      "bytes": 135
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\focused-tests.txt",
+      "sha256": "3366c3ced0932b62dfc7875da9f64791ffc9f1b384ed7e31ed332a6fd00c67ac",
+      "bytes": 104
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\full-tests.txt",
+      "sha256": "068dba52f8e6847e29537103b08693ab188e592df3f9a8c06e5d90189a6d25f2",
+      "bytes": 8832
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\official-run\\execution.json",
+      "sha256": "6a7ae71cb9e533b2626b8a80cff72b6d999af4365e273859cf222dbeaa258804",
+      "bytes": 1026
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\official-run\\RESULTS.md",
+      "sha256": "71f785fa0b801b77d36e002d7247b521fef573299d67ff14928e4bffeacbffc8",
+      "bytes": 1121
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\official-run\\site-results.json",
+      "sha256": "ab2230c0b9b7fb409c398d8a44e9f927c948859c83a084e4ef10c0ff6e5cabbd",
+      "bytes": 841
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\official-run\\verification.txt",
+      "sha256": "b5490d4e2bbd4f17df8f456fea544eb4602de60cd013ac8176777f63a4be42f3",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\offline-build.json",
+      "sha256": "dd3e61a3b2424673bde33c5cb06252033131f1c1ba2021da663a45a004cea3e4",
+      "bytes": 403
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\payload-integrity.json",
+      "sha256": "c8d4f896e73847eef3adee35376280391f6d746c22c3cc739c51d00122cb26cc",
+      "bytes": 191
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\RESULTS.md",
+      "sha256": "11fc5e170b140dcab06b1010180d44d1afc805ec13abe18dfa1844220b133606",
+      "bytes": 6500
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\runtime-source.json",
+      "sha256": "ffdeba029feadc5118c4c40c3c96946f9ea8d874c28e09db1e7fad1df9503c30",
+      "bytes": 401
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\scope-check.json",
+      "sha256": "f71fd393bef9ac2ccfb18bceda84d08c65c7aa0021736a853e2658f27dad2aec",
+      "bytes": 263
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\source-output-integrity.json",
+      "sha256": "1a4bb1c8379127a9ebf122853b388135c1bd51337ba67b81da79995228e58695",
+      "bytes": 84
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\validated-full-tests.txt",
+      "sha256": "e8a1ce4293d01f93f4d1457fd2e4864f9f38719479fd18676e7a77a6b822b5ef",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\offline-jbox-restyle\\validation-history.json",
+      "sha256": "015ec96aa948a3b6b73f5d58e34644d843478d4a6cb968e94267cd70f99422e0",
+      "bytes": 512
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\browser-results.json",
+      "sha256": "656ad256d516bade144384aeb638d698fc96e305175f4d9840fed7c3b31adf33",
+      "bytes": 451
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\final-source-integrity.json",
+      "sha256": "c668a3a61ad201b1bcb56569f7847c93565dc1b3d0edb54d4e45d0f417436434",
+      "bytes": 422
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\focused-tests.txt",
+      "sha256": "7315c15a32d5c50552fffd5766351f002f0f05cd9d965b915b3b324a8fddce40",
+      "bytes": 102
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\font-provenance.json",
+      "sha256": "8aa1ca5b6d825cfcaa1806b52fca5ad72f65ae021619096930830d5e854e60c0",
+      "bytes": 914
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\full-tests.txt",
+      "sha256": "1911d75cfdbca3c4543f353f6e74f08abdc487e6ce91ec3fe129019488a5aa9a",
+      "bytes": 1492
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\official-run\\execution.json",
+      "sha256": "ffc3cfe3c571d6c086281e5ce32625a783f5998e70afb15470d76c70feb7edfc",
+      "bytes": 1027
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\official-run\\site-results.json",
+      "sha256": "9e44105e988a7e15fd9df1d8993a73b1f0ee7dfda0786b4e1d158dd08d809009",
+      "bytes": 839
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\official-run\\verification.txt",
+      "sha256": "b5490d4e2bbd4f17df8f456fea544eb4602de60cd013ac8176777f63a4be42f3",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\offline-build.json",
+      "sha256": "f6b6a05e6f6cac8ee89d6a5e46bd1ba1179097d5992ca01b9d76e259f2d2f7a3",
+      "bytes": 320
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\RESULTS.md",
+      "sha256": "b7040c93ad4f0bca39046934e9652fd85f696ca1ea288c46dfe85de0e4140061",
+      "bytes": 3533
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\runtime-source.json",
+      "sha256": "4832bda15984ee5d0c8e959249b1f9c228eab891925578ec0341f7d55d7f9e0a",
+      "bytes": 976
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\scope-check.json",
+      "sha256": "e4f15e8dcb2e5696afc6a8ae3c23905a4715358010d17c0353479ce1662affe9",
+      "bytes": 344
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\source-output-integrity.json",
+      "sha256": "1a4bb1c8379127a9ebf122853b388135c1bd51337ba67b81da79995228e58695",
+      "bytes": 84
+    },
+    {
+      "path": "bench\\reports\\offline-polish\\timestamp-scan.json",
+      "sha256": "72cb2cdf1ac3e34b6f9ffb36e95e02bb8977826c59049143a94f79da604b0303",
+      "bytes": 94
+    },
+    {
+      "path": "bench\\reports\\osm-check\\download.json",
+      "sha256": "bc7e549b9e2cb4b48db8b650117c1e9bfd0100e729eb1fc9ad850ade310a8366",
+      "bytes": 1342
+    },
+    {
+      "path": "bench\\reports\\osm-check\\live-requests.json",
+      "sha256": "155dfb20bebcfa6aa0234bc237148264efad93eb5897e4f2a50f39913beed64f",
+      "bytes": 8021
+    },
+    {
+      "path": "bench\\reports\\osm-check\\live-review.json",
+      "sha256": "59a7dee6a2724532c39743c70ee2d139b94006f1ee161e65b753da21d09a64a8",
+      "bytes": 60077
+    },
+    {
+      "path": "bench\\reports\\osm-check\\objects.jsonl",
+      "sha256": "6b653688646b709d8bb0781f01fa7bce0470a3eb8f3de39b3962913c9f64b91b",
+      "bytes": 3374803
+    },
+    {
+      "path": "bench\\reports\\osm-check\\pbf-manifest.json",
+      "sha256": "056fd03466166457972df553b4f3d4ca66a529b96c68b7a361287326be1b7b91",
+      "bytes": 1447
+    },
+    {
+      "path": "bench\\reports\\osm-check\\README.md",
+      "sha256": "3c785d723ec3f59c5f3ec6f281a683dc033429d9ea4f837db5259f954512d77f",
+      "bytes": 6112
+    },
+    {
+      "path": "bench\\reports\\osm-check\\summary.json",
+      "sha256": "a8220593c10e1501f6c7c9bfd57bfb16c5d08cd97d90305e998bec85a8f5d1ef",
+      "bytes": 5371
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\audit.json",
+      "sha256": "2f89ce8a8c697a7b6ad49df82f52906e5c672769c77c8749611c38d94d6b1fd9",
+      "bytes": 70895
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\depth-diagnostics.json",
+      "sha256": "af81a6e84a68e62acbb696046d08130e10c99ceef54585ada050e327d8ff2b42",
+      "bytes": 16663
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\live\\changed-websites.json",
+      "sha256": "d1880447e410db3ab6a16665a53eb00fb60ad8f00bc7089aeb2e8381c7814261",
+      "bytes": 21522
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\live\\lost-websites.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\live\\social-review.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\live\\summary.json",
+      "sha256": "ef181f59a6eafa753b0cf607328933e7bf76768e869b1a38fe9e4bf48fe0fde3",
+      "bytes": 2549
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\live\\website-review.json",
+      "sha256": "24f300c5976c0d5cabc667f42f439b3732074cc8ebcefe0c40a66d4f3deca82c",
+      "bytes": 9274
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\membership.json",
+      "sha256": "7424ecf38784b6208aca008cb67cf914fe60bed61d854b35e0410807808c8211",
+      "bytes": 146
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\network.json",
+      "sha256": "13569ba2fbd64336e0ef9931db60dfdc06f9e4059d0d48e83d13bb3686d70b71",
+      "bytes": 306
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\pytest.txt",
+      "sha256": "0da85c7eb11d91e69f70e18903ce907a82aa5e37fc50fbb1d4b344f356a99d40",
+      "bytes": 1492
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\REPORT.md",
+      "sha256": "ef61972a2f617b11cf66ee5d322cfbe20ae2dcb10b941ae24131f1cb86a9b60f",
+      "bytes": 4891
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\runtime-source.json",
+      "sha256": "9519ee956095fc37bb5e621eecf15de43c178d95c16b206df4f7686e5cebab40",
+      "bytes": 372
+    },
+    {
+      "path": "bench\\reports\\proof-depth\\tests.json",
+      "sha256": "842a6b3c545ebf88e617c6c9ff67c5754e32c9612c5e5e1453246dd6a1a728a8",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\proof-sample.json",
+      "sha256": "b9301f2cd9349503e2e0587dbe13900e6851a218c5ac4b59857a5ea92320ef63",
+      "bytes": 238053
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\baseline.json",
+      "sha256": "9aade2533c0d803fe0cbe12b14f907ecb1ec12b9f55a62d07816d4e8ff33df9c",
+      "bytes": 1021
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\changed-websites.json",
+      "sha256": "5393ad316d58cfe3fd9d084866883c3da67d0c42491abadf82508d09a14ad658",
+      "bytes": 8240
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\final-review-summary.json",
+      "sha256": "aa9a398a23adbc73bca327a374432494737deaf87aaeab4269c8bf38bd3181e0",
+      "bytes": 8010
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\final-small-items\\blob-audit.json",
+      "sha256": "bbad073c56a17095ab4007c423b47a6283970fca8f98446e75f51af2b49ef1a5",
+      "bytes": 309
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\final-small-items\\checks.json",
+      "sha256": "75591f3169d574fc2d8be125b68ba1bb3a41cda26e10d07c9eef475c609d1a68",
+      "bytes": 2181
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\final-small-items\\defender-events.json",
+      "sha256": "2836d15e35517f77b952930a89ec48eb3d99a4ef2662eefe66ec03fca97c35c7",
+      "bytes": 760
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\final-small-items\\pytest.txt",
+      "sha256": "4fde45e32d3c9d3d961af2bc28e6ccac3fd31c2dda6347819417047f04f381c2",
+      "bytes": 1492
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\final-small-items\\REPORT.md",
+      "sha256": "e4c02d7d680e91624050b900f535d331b0fa3a51f2ffeac8f40aaf78540a1a90",
+      "bytes": 4396
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\final-small-items\\tests.json",
+      "sha256": "35256780c4f20089848b6380e9db0dbe119e2268f0e6fdf27d95f9a5622f7642",
+      "bytes": 165
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\changed-websites.json",
+      "sha256": "dc8e7913c9dff500df0faa9dd3e48cc0cf689c507287e8879419fedbf2292034",
+      "bytes": 21667
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\clone-integrity.json",
+      "sha256": "66faadff37bc3d0207b6766385295e11f6b9f6c4cc32328192077eebf68e0183",
+      "bytes": 365
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\gain-review-input.json",
+      "sha256": "38361767174f46cc5eecfb654e8b2de280b6273abc40311da4d2e36469f86a10",
+      "bytes": 37339
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\loss-replay-after-layout-fix.json",
+      "sha256": "202040eed30a2cffea1957ce5bc4a94f35f62747a1933aa82905ea5f824b1413",
+      "bytes": 2117
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\loss-replay-corrected.json",
+      "sha256": "0c861156ebba58f072cb7084db12e4d0314c48a7ebef7a686d02363f2cfe36fe",
+      "bytes": 2153
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\loss-replay-main.json",
+      "sha256": "0c861156ebba58f072cb7084db12e4d0314c48a7ebef7a686d02363f2cfe36fe",
+      "bytes": 2153
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\lost-websites.json",
+      "sha256": "110a7bfab4b33cb75839779d2cc72b42a2ccdc464dbf5384d16487133ecdff02",
+      "bytes": 24246
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\release-diagnosis.json",
+      "sha256": "222f74af309282d47b3a051fafc83a69064f62ae0f246f2c2122aeb635408c3e",
+      "bytes": 4956
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\release-execution.json",
+      "sha256": "3f4b2ed0a1b1b1cfcdbcdab648332da35b733098004520f1baa437b799eff9e5",
+      "bytes": 1172
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\release-run1-verification.txt",
+      "sha256": "9b9e7ebe5b733f5cecfdaa92e823ba78d12d20c211c9df2cb010d12fd2358ddf",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\release-run2-evidence-verification.txt",
+      "sha256": "44a25b2d1d0ec892164668f8cae9be286eb2b72dc3f1ba72da40fb188bb1b335",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\release-run2-verification.txt",
+      "sha256": "a474fa62749ad1e96a8140a041704abcb82354e7548a8c6d1cb86ef53260f772",
+      "bytes": 933
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\review-result.json",
+      "sha256": "3e10787520fad803fbb4bee381c05116bc38d2dc174c8770e53e3203c921a817",
+      "bytes": 5133
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\social-review.json",
+      "sha256": "30b480b37794fbae9c4801e7334a87df85b19a88d6a8e6da13230bc8b4caacd8",
+      "bytes": 34232
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\summary.json",
+      "sha256": "c7fe0b707f4bc2f9e3c877796571f054ae42b61b1e230a5aad92ecb5ac39e5c7",
+      "bytes": 2628
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\tests.json",
+      "sha256": "d836bdfd100aa6925d9f5c8c13c6c075e73ad0217a5c4ae4b36c75452d73a1c3",
+      "bytes": 173
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\live-verification\\website-review.json",
+      "sha256": "e5b892cd1623d352cfe9ab66ac8817b0796368ac7592401ced697a7e5950b6f3",
+      "bytes": 49059
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\lost-websites.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\offline-projection.json",
+      "sha256": "e9b4f1a4e1d3b5853979e4604bafbfeed50d7c2d590c582dd6406d7f732ab9e7",
+      "bytes": 100420
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\REVIEW.md",
+      "sha256": "9877d7b89364fa9b4ce0b17909c0f3433df907e724e96c376fa062528eacec95",
+      "bytes": 38951
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\SCOREBOARD.md",
+      "sha256": "dcfce934b5da38964556e208cf2e831d9b47b977926017ee52b5d4b6d940cea4",
+      "bytes": 18070
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\social-review.json",
+      "sha256": "d088658c1f0d44a4064ab649f2dc3b88a8879710a31bb7206eee621af808f485",
+      "bytes": 238031
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\summary.json",
+      "sha256": "fe755435b5fcd20ae8b3533365c4aaa0ab8e70d4e3f8bcc8f52360e130c393a1",
+      "bytes": 2786
+    },
+    {
+      "path": "bench\\reports\\r3-benchmark\\website-review.json",
+      "sha256": "dc9e667166329eb8662352c84b83a351dd2b3f6465e7a98fefbde9e910c89ac6",
+      "bytes": 129236
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\after\\audit.json",
+      "sha256": "34ba28e4d857e08c59da6d14ddfaf787502fc26f252a3ea1417e12120cef1282",
+      "bytes": 21853
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\before\\audit.json",
+      "sha256": "1aa808f345d2040d24cbc72c55ffb3e26a1974d147dab0cbd6c1521638b59852",
+      "bytes": 1061662
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\full-tests-initial.txt",
+      "sha256": "205827108a4c24b1b4f9669a243cd12d940d5ed5e83f1e23a20c37eaa5e78183",
+      "bytes": 6449
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\full-tests.txt",
+      "sha256": "ea56a35c4e67b0d615ac9a4d9966227a77390bc4edf5015c624bf7575601cc10",
+      "bytes": 1492
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\internal-links.json",
+      "sha256": "1504bcb6a03bfa650ea023d6a454367ab515824b7e343bffefba124d4b7611de",
+      "bytes": 233
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\REPORT.md",
+      "sha256": "ed143be38921e2c1042721859b15e3052ade4886d3c06d6e004d4f4f1804a032",
+      "bytes": 3609
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\site-tests.txt",
+      "sha256": "7303e8b0b9455d15c207cb3a52d616475e60b2940dbf85f867322b1dd63d3d33",
+      "bytes": 113
+    },
+    {
+      "path": "bench\\reports\\r3-ux\\validation.json",
+      "sha256": "1f85decb333c0b46c5ac8c9ff95cf42c6ac588d826acfc9ceb87a7aec3bcdf60",
+      "bytes": 875
+    },
+    {
+      "path": "bench\\reports\\release\\ci20-1.txt",
+      "sha256": "a1455d373ae7496c010c2b21eb893d6b4d3c1fdfd3b80d80d0b4b3539b62b56c",
+      "bytes": 164
+    },
+    {
+      "path": "bench\\reports\\release\\ci20-2.txt",
+      "sha256": "5a77eded8d4ea0ba708dbd2ee070701c203a7f2e9976d00f3969dabf8b018e2c",
+      "bytes": 1281
+    },
+    {
+      "path": "bench\\reports\\release\\ci20-execution.json",
+      "sha256": "3a40474d511dfaecd3004ec0a3fc91abf53ed8f459af3a0f9a8dc22ea508490e",
+      "bytes": 960
+    },
+    {
+      "path": "bench\\reports\\release\\credential-check.json",
+      "sha256": "c3cd6250e8e2860d69ce77eb170ecfeddbf8c76fb84d6dd6bfd3e86b885906fe",
+      "bytes": 91
+    },
+    {
+      "path": "bench\\reports\\release\\execution.json",
+      "sha256": "85031a9ef06f4b69b74b6ae670d6442b9d85468f3cbc51992b52b3db0470214e",
+      "bytes": 1027
+    },
+    {
+      "path": "bench\\reports\\release\\full-tests-network.txt",
+      "sha256": "71bd3a70a0013740d508e5660a0a64bae9327291bad13ab693589e6a6b5dfeba",
+      "bytes": 1330
+    },
+    {
+      "path": "bench\\reports\\release\\full-tests.txt",
+      "sha256": "1fe1777f7f37a1900408a88fe6d8ec2c71cf0b341cc8ac8c0f51380efb8ff3c2",
+      "bytes": 15399
+    },
+    {
+      "path": "bench\\reports\\release\\orgnrs.txt",
+      "sha256": "723c0f45a059d8ee27aebfa442663907aaf462a9f8cb6cbf559a075d62625add",
+      "bytes": 1130
+    },
+    {
+      "path": "bench\\reports\\release\\pairwise-difference.json",
+      "sha256": "410c887b4c00f426cc751ecb2db8933c7b6f4755d2eb582e3363d683675dfa47",
+      "bytes": 2767
+    },
+    {
+      "path": "bench\\reports\\release\\RESULTS.md",
+      "sha256": "9ce2ffc592ce6d1fde31a09afc730f13a526b0e48682412b92f61d702bef7884",
+      "bytes": 7494
+    },
+    {
+      "path": "bench\\reports\\release\\run1-failed-stale.json",
+      "sha256": "d947c2e3bc1bf1cf841525e9dc48c332eba6a2ce0caa9fd4def7c96578b86c21",
+      "bytes": 3292
+    },
+    {
+      "path": "bench\\reports\\release\\run1-metrics.json",
+      "sha256": "65dfe9e8b304d89bb32640bf01f5f3fd2efd3bf2c76b85f7d0b950ace88e4aac",
+      "bytes": 1580
+    },
+    {
+      "path": "bench\\reports\\release\\run1-verification.json",
+      "sha256": "5c3dff02a2d6c7cd46b2d1d05a56de03061fb226a1011deb9075a2c58192343c",
+      "bytes": 208
+    },
+    {
+      "path": "bench\\reports\\release\\run2-failed-stale.json",
+      "sha256": "83b5325512b200cfbb7d38f35026ba4df3b40da019deb2591ca3395cb4be9f67",
+      "bytes": 3039
+    },
+    {
+      "path": "bench\\reports\\release\\run2-metrics.json",
+      "sha256": "9702e31a1eafb66ed674efe25cb6cf84e19227eaf74c5255a133c149eeb68aa2",
+      "bytes": 1579
+    },
+    {
+      "path": "bench\\reports\\release\\run2-verification.json",
+      "sha256": "5c3dff02a2d6c7cd46b2d1d05a56de03061fb226a1011deb9075a2c58192343c",
+      "bytes": 208
+    },
+    {
+      "path": "bench\\reports\\release\\selection.json",
+      "sha256": "de265eaf25ba68fbef0f8e1e0539f4bfb2b7339d1c930c5d8ae26f26dc7220a8",
+      "bytes": 11487
+    },
+    {
+      "path": "bench\\reports\\release\\summary.json",
+      "sha256": "d57064a0b69c233f22a41cb29f5e8b5410e5c4b979adab714b30a86bead90d60",
+      "bytes": 3788
+    },
+    {
+      "path": "bench\\reports\\release\\verification.txt",
+      "sha256": "c4f3dd80834eb95b6c61df2d5cda9ea98776517ad3c63d93f77bc081617dca20",
+      "bytes": 888
+    },
+    {
+      "path": "bench\\reports\\rules-audit\\README.md",
+      "sha256": "adbc848621cae6214c5dba7928f115d0cd0193352c5f85898b853bbee6e1463f",
+      "bytes": 2198
+    },
+    {
+      "path": "bench\\reports\\rules-audit\\runtime-grep.txt",
+      "sha256": "23ac887b2474ccc28c4f78dc286a292fe352a5b588aaa6253d582120cdbf4c27",
+      "bytes": 9623
+    },
+    {
+      "path": "bench\\reports\\rules-audit\\summary.json",
+      "sha256": "9a724e199686e22e690806914978ca5cac8557fee6aeec0748bfe1b8b725900f",
+      "bytes": 4099
+    },
+    {
+      "path": "bench\\reports\\S4_REPORT.md",
+      "sha256": "358b6343cc6a41681d926d641a74969071b7c50f0d9e421e3101b1f3331d6c26",
+      "bytes": 5512
+    },
+    {
+      "path": "bench\\reports\\S5_REPORT.md",
+      "sha256": "515b156476406e9d9503696f81aa8ec5fa8f38f6c144fe5d6f3d5581ce80cf0c",
+      "bytes": 80845
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\baseline\\execution.json",
+      "sha256": "300ae8bcbe1dda39e7ed5dea7365d3cbd87c72e525202329280d733867a6f61c",
+      "bytes": 1761
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\baseline\\scoreboard.json",
+      "sha256": "abdec01f68ed732ab6f8f52a3c980cd45a3e0f20616a4ccab78352a68d69d242",
+      "bytes": 5776
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\baseline\\summary.txt",
+      "sha256": "5f02928a09ef57871ec48f063e0a72eafed34dae88330ba3edd0376fa1d9e5ee",
+      "bytes": 1165
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\SCOREBOARD.md",
+      "sha256": "1340b4791b4b31daf7285afcbbf6fff267e295ff881556c7f13261426acf47ee",
+      "bytes": 3134
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step1\\execution.json",
+      "sha256": "9b519878043d0f070cea7c36cc93a65f70b455e518d7d25a76038c83d9230756",
+      "bytes": 1759
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step1\\review.json",
+      "sha256": "19aed190546043a703725fd75c333c920477182ece33b0d7027441f7f7d9ad80",
+      "bytes": 58077
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step1\\scoreboard.json",
+      "sha256": "2015666cfe9db3534eb2ce0a3419e6c6d52d128a60113822a696b86e68a03d7a",
+      "bytes": 5775
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step1\\summary.txt",
+      "sha256": "1f9fa9bb49225d8d84eed87ba9149d8f1beb300ec8d60723dec188c1456d8667",
+      "bytes": 1164
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step2\\execution.json",
+      "sha256": "d63542fd524f21afab47477bf4204ffa28c23a82046fe9a292c62376cbc58325",
+      "bytes": 1760
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step2\\review.json",
+      "sha256": "7751b0e2df742829c22fdf43013714802645d812016822f905cec6946dd26fdf",
+      "bytes": 199833
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step2\\scoreboard.json",
+      "sha256": "01e87eabe9a08c5f572c780368b8054846c001b2d4e19277bd60b9a9108bc71f",
+      "bytes": 5774
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step2\\summary.txt",
+      "sha256": "53ce15407a6188b8201809f4b6efbec87b5b62013d33fedf618c9a1cecda133d",
+      "bytes": 1164
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3a\\archival-sample-review.json",
+      "sha256": "634210f8bb96871b7b22bd2c6c0836a3b4df3faffe41832d6a3c913ad48da35a",
+      "bytes": 8277
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3a\\execution.json",
+      "sha256": "616c7a58fefb246fb4f2750287803124d908f97dd7dfc5077dce2af5a7e9f1b6",
+      "bytes": 1759
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3a\\review.json",
+      "sha256": "c8f5076f4bb13906c90a00f4ea37579067158fce12d12d6ae15c53afa4191a2f",
+      "bytes": 37041
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3a\\scoreboard.json",
+      "sha256": "2c839a490ee08864256d00ff855350e12ba2dd1c9d92820b8452828ded2f2d19",
+      "bytes": 5777
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3a\\summary.txt",
+      "sha256": "264185d183675acfa771885229793ed5f05c8d1d634733337055debdfc949596",
+      "bytes": 1166
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3b\\execution.json",
+      "sha256": "350486b9219ad4d98513706eb366f9fb95caa77a84c7e93e12b0563b709aa89a",
+      "bytes": 1759
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3b\\review.json",
+      "sha256": "f2c4cbe09aaf7ea7d226e6ee980ce7d28b47600b7dff6e8ac6299e057b946edc",
+      "bytes": 27944
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3b\\scoreboard.json",
+      "sha256": "5f6a6986cef6b20335c867b2d2fd4d64c2d76aeffd2c778ce71495bb24fd91a6",
+      "bytes": 5777
+    },
+    {
+      "path": "bench\\reports\\s6-continued\\step3b\\summary.txt",
+      "sha256": "238c44fce2bda3948b67f7cf0e946b9f6448605d88ea630397849463d0d0f534",
+      "bytes": 1166
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\1-100\\s6-review.json",
+      "sha256": "0eeac90525e0c0b4ce143d08e5e44828133a7fe2163f0528c6fb657a3b0f5bcb",
+      "bytes": 13661
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\1-100\\scoreboard.json",
+      "sha256": "2c478a7fa25042844455f22e53348aa1d66244be650e261d488ab7fcaf73242e",
+      "bytes": 5775
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\1-1000\\s6-review.json",
+      "sha256": "192500f9926422b938447e56b0d639fbc99f865fa6d64970c3736271c0806cd1",
+      "bytes": 194473
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\1-1000\\scoreboard.json",
+      "sha256": "a121e3a97051faaf762c25aeecba7cd6e7516e42a80207321a3934b2d5760272",
+      "bytes": 5810
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\2-100\\s6-review.json",
+      "sha256": "40fac0eaf1e594c27766695f87758a6f6b1f37be32b4bb3cf7ed7d062a198ad3",
+      "bytes": 9922
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\2-100\\scoreboard.json",
+      "sha256": "483d6d19c1a02adce8f08d5944c9c861ff603c867c994c2c0b152ec78ef084b0",
+      "bytes": 5775
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\2-1000\\s6-review.json",
+      "sha256": "e6371e86704f31386de978b49f04e554cffb1529984672d4cda2cdfbc00bae8a",
+      "bytes": 92875
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\2-1000\\scoreboard.json",
+      "sha256": "d44bc3074f9eccf500101111799a3a818f084a8d8d555fac418972ac71808c82",
+      "bytes": 5810
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\2-stale1000\\s6-review.json",
+      "sha256": "769c59c8c06d6cf66f64e9a5420319d696ef273d31c24c9458ba4d35b5fca370",
+      "bytes": 91353
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\2-stale1000\\scoreboard.json",
+      "sha256": "6aaae9c5c15f2060dddfc0932beeeb7ebc4273da3c6537bd8a47b5459d0ceaf2",
+      "bytes": 5812
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\3a-100\\s6-review.json",
+      "sha256": "0780033227b52747f9aa51499400df9c8dad4374c1e9e0c9de50d6db0433eaca",
+      "bytes": 9954
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\3a-100\\scoreboard.json",
+      "sha256": "4639dea77200469c8749b3abb0c5778f5cb32cf5ef81416ff316f459e9a124e9",
+      "bytes": 5775
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\3a-1000\\s6-review.json",
+      "sha256": "62863df72eacdf6776586972c60841e2b13f2d94478862053f075a24a18f8e54",
+      "bytes": 178908
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\3a-1000\\scoreboard.json",
+      "sha256": "db39fab19c100b982bc671acc6fb6c3f73f5e3f0f782dab5c8795cb6502ed69e",
+      "bytes": 5814
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\gates.json",
+      "sha256": "8cefea832a3e12e3eda463b8faacf2f8fe60f2f48361ea25549a72b82909ab65",
+      "bytes": 54379
+    },
+    {
+      "path": "bench\\reports\\s6-evidence\\nav-build-validation.json",
+      "sha256": "e8edd6c4a46db513b7d1410b932d1becfb986137c5b1b7b93d4de7bb0950bc96",
+      "bytes": 707
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\amendment-tests.txt",
+      "sha256": "377c4140c3518f0397f7398e13da5ba12fcbe650b38900dfe68b4d6c5628f061",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\baseline\\funnel-domains.json",
+      "sha256": "56d6351056e20195c49bbc2d2b9ee11a00f9aab230c94ceb43e0dfd6ed940604",
+      "bytes": 2944593
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\baseline\\funnel.json",
+      "sha256": "8f5c4168bf2b3f9488d66162142dd2d93bb2f5abd05386a31fe733cc61f9da9d",
+      "bytes": 26235
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\baseline\\social-audit.json",
+      "sha256": "200d864e4601377f380351825fb69c8a41b8b58e1d73eb7c57de0a6274454d35",
+      "bytes": 44250
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\BASELINE_SOCIAL_AUDIT.md",
+      "sha256": "acdf51df7c704fc1a1b051b2d82336e63bec9308344cc3f4a08a3a5b0c13e7c6",
+      "bytes": 10903
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\benchmark\\execution.json",
+      "sha256": "ffe4f69bcb92d7f949f0b5f799b769f332133660636913c05c49a39af4d9992f",
+      "bytes": 2026
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\benchmark\\kept-metrics.json",
+      "sha256": "cb27dd5afc754311216338e86101b107bd7e71338b89750934a815b622995822",
+      "bytes": 1306
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\benchmark\\policy-projection.json",
+      "sha256": "ef3569126f2843ae3033ccc40a71c97ffb2fa0b415edbc8ff84e579328bbcd3f",
+      "bytes": 14302
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\benchmark\\requests-by-company.json",
+      "sha256": "b887b34e6f9d7df3565667b9ddfe8ab941e9a666b9e18fe2f61063ab1eba6df6",
+      "bytes": 19336
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\benchmark\\scoreboard.json",
+      "sha256": "04b25436168a95835f34af0b3cb4336b85934479caec594d4a7e3154407709d3",
+      "bytes": 5810
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\benchmark\\summary.txt",
+      "sha256": "7c434be62ad13419f041fef3f6ee12b49024de0aeade972d5233f02b34889af2",
+      "bytes": 1187
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\credential-check.json",
+      "sha256": "dd8507f01dea2b366de21a5389436e24cc79e12fc4c99619335712c986cb4e7e",
+      "bytes": 210
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\excerpt-tests.txt",
+      "sha256": "8ef6c8af5ff214d2d8834714886baf47e28db73a5b7d360ac796aa59fa1b0398",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\final-focused.txt",
+      "sha256": "b97c51a1069290a2dda0157b86a246de5313c4259159c4f4e2ab082cb2421694",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\final-group-tests.txt",
+      "sha256": "1960d7b4fa1f5eff56813caa821430c87095f2e6b96552ffe375fc713c8438e2",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\final-group-tier-a-review.json",
+      "sha256": "6a210a6916057b3bb32331eb38e713dbcbaf53929cbcb1f60f7589ffa53d71ab",
+      "bytes": 45735
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\FINAL_GROUP_PRECISION.md",
+      "sha256": "e472a2e09d55dc739966246d9638649e2b1a2928b376b2d8f5e60e11f23bb41f",
+      "bytes": 5232
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\first-failure.txt",
+      "sha256": "092d3f15ff4eab9e81f764237085006d95bb2c17fc4fbc698475907155b5feb0",
+      "bytes": 2014
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\fix-tests.txt",
+      "sha256": "1f84da218f943a7b61a3fb6b6df5a36b0467dc9f0568c4078d64fa8a5c0a0931",
+      "bytes": 3252
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\fix-tests2.txt",
+      "sha256": "21206192ce8b2b31e219aa7ffed30df77d233dc3ad0235b5b2c15449e6f97549",
+      "bytes": 9754
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\focused-final.txt",
+      "sha256": "c6a5758136d4582c70e541ac085c2ee7c90b45bb750bfbb2a7feb985d4b0a688",
+      "bytes": 183
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\focused-tests.txt",
+      "sha256": "986c11b335eb89b4340234a2a9109d71909e680905c1460cf6382c50fff36829",
+      "bytes": 1402
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\full-tests-final.txt",
+      "sha256": "b5ce716d69ec6b344409969ae69bfaa726bf31c8430a803f7ef902c75970fcfd",
+      "bytes": 1167
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\full-tests-kept.txt",
+      "sha256": "ddec268219940ed87ca43090d8b9e481f9517d6305e374f4011b8419417a4f79",
+      "bytes": 1168
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\full-tests-polish.txt",
+      "sha256": "04125983da66aa9f4f463feb4961d1ffe4bbec5b59f19957de1f92ff2c85c687",
+      "bytes": 7479
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\full-tests-submission.txt",
+      "sha256": "e318ad64b53e263ffac528dbf020b76a24bd13e9dd8e53d457101ffed1839511",
+      "bytes": 1168
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\full-tests.txt",
+      "sha256": "90281dc7fbbe0bec33e55fe27d6f5753f8ae31063d2adbcfcf15148265d41f15",
+      "bytes": 79600
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\FUNNEL.md",
+      "sha256": "a95cd966cc0dd8db9e36a30f3247d4abde1ed85d04f1992d49a1b0dc933af2ee",
+      "bytes": 8704
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\gate-tests-final.txt",
+      "sha256": "4932e92d66ef9fb5c5bdc71b70409942695543226b96c8e06fcc4801f47084a5",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\gate-tests-kept.txt",
+      "sha256": "fa8ff4742eaf19461ee6086421083160ea3877a8c3ce2a523bfa7519a395de9e",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\gate-tests.txt",
+      "sha256": "47f5c4f563b9ac8195fac9a29c06556a85a61f39e196afbc672dc61fe2806ff8",
+      "bytes": 183
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\kept-verification.txt",
+      "sha256": "6eef7fe904242e67a84d8eaf672d846ab68cc90a29d9b85fa104f341e5c32009",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\live-smoke-retry.txt",
+      "sha256": "04db744f9e1f1acf764b68ff54b9bd9c9ec064a3750eca49d1021070d9e786cb",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\LOCATION_REVIEW.md",
+      "sha256": "270814d5ea670cbf135502f18ea951818f5aeae8052d1e8f69b058604885ca9a",
+      "bytes": 32233
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\new-items.json",
+      "sha256": "3c3e487d0bd30c58af0407d6598b8c52fee87816588ddde44c0d61aebaa2d1e9",
+      "bytes": 14400138
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\new-locations.json",
+      "sha256": "bde12fa7f5c422662cbdf2a44bf239d46a63fd015bfd7273b28378a0d6a851bf",
+      "bytes": 436610
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\official-run\\execution.json",
+      "sha256": "09471971166a9fe9f619e55d73dcc5caa31aea2ae460dd7e304ffbf0e619bd3b",
+      "bytes": 1016
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\official-run\\plain-english-examples.json",
+      "sha256": "2779d59ad2583942b7687dcb79964e0e2dbc47ce681ce8efb68ff1f492ab6c8f",
+      "bytes": 1785
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\official-run\\RESULTS.md",
+      "sha256": "90297c632df4b81a0194dcbf003ad38e5384f5c3c355895205d5acd311241acf",
+      "bytes": 2965
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\official-run\\run1-metrics.json",
+      "sha256": "621e84f838ffe27abb433546675266479f3b16c57da7ef3ff6297ebda03b9495",
+      "bytes": 650
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\official-run\\run2-metrics.json",
+      "sha256": "3fa25e0f94f957e8c935ac62c5278845c404ea40d2c9d5a333ac6c468a139845",
+      "bytes": 650
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\official-run\\verification.txt",
+      "sha256": "b480627fc93fb4ec3f609644396fa5cad5484cdcbe56d4aed5907db190fd6238",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\REVIEW.md",
+      "sha256": "18f23d11754355176d529fd3c0892026304821ffeec10b15e81d89a1c93b1471",
+      "bytes": 25387
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\SCOREBOARD.md",
+      "sha256": "98fe5bec5c342dc5a9a2c8a5610749aa2c026e11d48d00a192f13e31fd428738",
+      "bytes": 9857
+    },
+    {
+      "path": "bench\\reports\\s6-step10\\TESTS.md",
+      "sha256": "91f1fe14aa19e41e22b792f9293ae132f995d82b4bd229d717ae015b6a8ea467",
+      "bytes": 3118
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\baseline.json",
+      "sha256": "4ad00f86012c518972414d6c6c1ed71444e669d63766da81dead7abdce517ceb",
+      "bytes": 183
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\counts.json",
+      "sha256": "515173c7027975c03c25268b2f518bfd6288f5395c00f3c9224f23405c97a167",
+      "bytes": 665
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\credential-check.json",
+      "sha256": "5e1f21c392cbc0eda0e9cf0c1b74431278434c0290f1300fcd88c8e68d1164d9",
+      "bytes": 170
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\final-full-tests.txt",
+      "sha256": "9332884064d4f0d582bf040027441870faa8a9d2059d8893ae6fa2e031317d40",
+      "bytes": 1249
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\first-tests.txt",
+      "sha256": "0d8de4e1c843ae691eb6cf899f23601471e9887bf1b4cef98f2c05d02160175f",
+      "bytes": 2448
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\focused-final.txt",
+      "sha256": "83c075fb5ddcccf10dc8e987704db7b14de9f495913fb909d443a8b6e91a689b",
+      "bytes": 265
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\footer-tests.txt",
+      "sha256": "865b54ad828059957f0c3fc5cf0351c4536c634cd91373c409511089cdfbab25",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\full-tests.txt",
+      "sha256": "385a4b3c3add914965cc1ac9192dd5f7b5f32317db413e6cd6a82245a7ba42b8",
+      "bytes": 1249
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\funnel-final.json",
+      "sha256": "0e7acd6fa3d23b4c96272f0b236a7cd2b0d11d4d2bab1713ec6edb921a44db9b",
+      "bytes": 676
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\funnel.json",
+      "sha256": "e69a657909d4c201a4b5ab0fb512e934dd9df267c8edea5e8d581cc199066291",
+      "bytes": 501
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\jobs-diagnostics.json",
+      "sha256": "5f4d60f54bd8b56057c2e8070131b38d90d988c3f33cb8c6fb7e6fd095730db9",
+      "bytes": 14237
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\JOBS.md",
+      "sha256": "9f4ae5b53a2ed098f57632c25f01fdc6d0a3dd332e2ace5ba6e7822722e4e26c",
+      "bytes": 930
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\kept\\funnel.json",
+      "sha256": "f7b3edfeb8d0d1f27cccc1fb094fd27393e84d0ab19f4eff99e753ce7d2817f9",
+      "bytes": 501
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\kept\\new-items.json",
+      "sha256": "0f94ae619801231eb8bdb676663f9a862be23e9c2723035bbf54e61552d10c08",
+      "bytes": 42975
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\kept-verification.txt",
+      "sha256": "d52d9a0d0ac67083a75acd39664a6e6e01b83512a2533c19c666582e32e39ce3",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\lock-tests.txt",
+      "sha256": "0d6254a80c2d67ba14e53b31f28fb27e754d9cc31ec5510ea3d5707cd75be5c0",
+      "bytes": 182
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\metrics.json",
+      "sha256": "48d39161d70bcd143a9069d2d6b52ee8d2ae47cc4b0b9fc1679e6ef1b9332d41",
+      "bytes": 5625
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\new-items.json",
+      "sha256": "82294a6bac9980417582840faa79816c0f8a9f69da09a0c2b09ca57c2406b081",
+      "bytes": 51396
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\official-run\\execution.json",
+      "sha256": "4961907fbee54529269800ccbddfcf2eae9fafd9c7b305f37275456f4c55bd04",
+      "bytes": 1027
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\official-run\\RESULTS.md",
+      "sha256": "4636f02dd4011cad662051dfab7628cfed6e0fae1c1bb02863c8a3214afbddf2",
+      "bytes": 1852
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\official-run\\run1-metrics.json",
+      "sha256": "14d84f3bbf2d274bcf27544fe51abf3f0901d06689635c2ce24001acc4720533",
+      "bytes": 3134
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\official-run\\run2-metrics.json",
+      "sha256": "10bf79f8e9b41b2c39e7142724d8b9e1ce4c565f5f7a53de9af8f709a6de7fac",
+      "bytes": 3134
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\official-run\\verification.txt",
+      "sha256": "cd7e1f376364371bce9acbe1cb6266e9d8061c80dbadadcd76e9fabc30f03377",
+      "bytes": 478
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\review-items.json",
+      "sha256": "82294a6bac9980417582840faa79816c0f8a9f69da09a0c2b09ca57c2406b081",
+      "bytes": 51396
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\REVIEW.md",
+      "sha256": "d63ceaee6347a1be50ebae867edb9b98404edd6e7b28c109fbaf62d41640b498",
+      "bytes": 8416
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\reviewed-tests.txt",
+      "sha256": "a49fe56803ab6578ed7d32eb9d93ca9b015c5d8e2c5b853dd65a344e621b8753",
+      "bytes": 182
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\SCOREBOARD.md",
+      "sha256": "1dcb44de4f2d47500f18c7ba6a3d432d62d7fbf734aff36f5bb7f781b00fb5c3",
+      "bytes": 7028
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\trial-verification.txt",
+      "sha256": "767f5d8141863baac377131999f93e1f96898dfd582405c8d37208ffa9fc0357",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\unique-29-review.json",
+      "sha256": "8063408995d90b62c9efbba18da758769ee19f1cbb76f16bd15f83b2922abbc1",
+      "bytes": 41437
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\UNIQUE_29.md",
+      "sha256": "e381e58d5f89966bedf33e55250abdb1e92d226cc2bbf83b57e40a5db6a1c0bf",
+      "bytes": 3330
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\unit-tests-final.txt",
+      "sha256": "ceecbc9828a6381c520c44eaea398fc446f7b1df295f7f6b6bacbb5b3c091ff1",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\s6-step11\\unit-tests.txt",
+      "sha256": "cd1e64b8182371e5293a17aed67d757cd2881d2026930bdca54805c4ad71b8e9",
+      "bytes": 1414
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-additions-verification.json",
+      "sha256": "b24f9086a4bd35178bc62d733532ed2144bfc791e6786ac6b95ada78d5227592",
+      "bytes": 201
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-ci-log-example.json",
+      "sha256": "a8d3ecc9b39f2eaf1989188485b3e4338dab0ba3adceb410400a384cf5240c6c",
+      "bytes": 503
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-counts.json",
+      "sha256": "803b38dd5d400940fe2eb25cabbe42082e7c9c7c517fe59a276d004334d4c3e5",
+      "bytes": 1239
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-credential-check.json",
+      "sha256": "5374822cf422431edd8853cabf77be2f5798f2281038d77e3e765b6320383a95",
+      "bytes": 76
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-focused-tests.txt",
+      "sha256": "ab4d84afed8e678b5235602e3a0c1f03a18c78b44c493241e28f295fc98d09c2",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-full-tests.txt",
+      "sha256": "d4f431b57667ffa63fac501065d0dfdac6ba95c9d147307b4513ca54cf4d077c",
+      "bytes": 1330
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-missing-step11-blobs.json",
+      "sha256": "a4778c3ec48368635d054d571281a4476a7787348170e6c7eb7b43b3716dd552",
+      "bytes": 253
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-new-items.json",
+      "sha256": "d27e0199fa36c4b453decf360cbb57941987e59b2c05443487468b39c0229dd8",
+      "bytes": 10845
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-pdf-removed.json",
+      "sha256": "2c038e3fe91d41bffe28e685e5d6492e78ed535667d183712e1d7a48bf7ee6ed",
+      "bytes": 248
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\cleanup-saved-step11-recheck.json",
+      "sha256": "36b3ee5cc6e9ace11361edb1c98529e7c1006850bff59c37f95de5375e04f12c",
+      "bytes": 32804
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\CLEANUP_REVIEW.md",
+      "sha256": "1411d768368f9c12192c9a015aaf7e78eb5e1943a62cb89cfa504efda4a08964",
+      "bytes": 3000
+    },
+    {
+      "path": "bench\\reports\\s6-step12\\SCOREBOARD.md",
+      "sha256": "e6fcf39e5b5a822609d52070d6f2b2c96886b2d7d8c1c6e93b8ad208ce4142a2",
+      "bytes": 5927
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\baseline.json",
+      "sha256": "8fee25ad142d3b465e6ebf24a5bc84f1bc8cca5748ab7603edf9423c2186c84c",
+      "bytes": 1498
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\brand-fetched-cases.json",
+      "sha256": "4597f175f761cd8dc940c844d68ab633d8101ea19782d32705a3e7b9814ce366",
+      "bytes": 3966
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\canonical-tests.txt",
+      "sha256": "0a6406ce1dd84a41c56bd1f31a5d10f168da2edb240a3f20ce8ca2666ac48ebc",
+      "bytes": 182
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\counts.json",
+      "sha256": "80ee2b4e71965ec7966fbc4bef643b57326a2d5b15b8ef6f36e82fab1eabab02",
+      "bytes": 957
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\credential-check.json",
+      "sha256": "40a4663de1600cd7a28e36dad6daa97e09c07464e6b9350a870d405cb96f0a26",
+      "bytes": 91
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\depth-audit.json",
+      "sha256": "0fd5e2ea178001245af6129febdb415d532ed10491f3cfd63b33855ca5c6cedb",
+      "bytes": 904
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\excluded-attempt.json",
+      "sha256": "71ba7722c592222ba6694e1a8a8302bce172093067a0db142e57294fa688cd9f",
+      "bytes": 341
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\final-full-tests.txt",
+      "sha256": "51041dc66b36f8629c3905b79f7132fbffa7fe16a0c65c5d40096bc39c04b9af",
+      "bytes": 1330
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\focused-tests.txt",
+      "sha256": "ee7ee7105e94cf36a355091178d1adf3c809a8057994e971a52a304b8f0c6fbf",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\full-tests.txt",
+      "sha256": "2426390aecd6668564db0e3949d0d539dcad3b50075c16535df17dfed5bd8544",
+      "bytes": 23962
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\funnel.json",
+      "sha256": "80a95eba52b2b2ba8acffd7cf02bc1839da44cc88fd036f60a2c553830c98260",
+      "bytes": 10895
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\LOCATIONS_REVIEW.md",
+      "sha256": "12042d7b9678b7d4d82de7db6747b2d90abdac51af0e36f15fc39e99d2d9a0ff",
+      "bytes": 27995
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\locked-tests.txt",
+      "sha256": "b47b944be14501770b4d30e0f3d5fd0d41cd038c64c4acb7fc95dcf33ef8c8f3",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\losses.json",
+      "sha256": "2fd29938aedc1ad9bb2347ba297ca4965b1a063a21d582e103660eab9023d901",
+      "bytes": 5706
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\LOSSES.md",
+      "sha256": "0da5e80ae9a50eeae66f78f44a9b23b1bcbb5c9b34c9d56d020bb71acb61e1a9",
+      "bytes": 2710
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\metrics.json",
+      "sha256": "e128d3eadc74dbef3b4250dce2faa8d5d7e45b204b1591cf7e3cca46ea29af26",
+      "bytes": 5586
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\new-items.json",
+      "sha256": "790cef2e7ea0a1b21d01eea21da50fe33acec1fb0a7a5be3056e95200ead7e73",
+      "bytes": 99628
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\new-locations.json",
+      "sha256": "df6a30b8ae88c6019d69cfb68ed6f71af91a1d7ae03632a898fa272c6cf9026e",
+      "bytes": 407894
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\official-run\\additional-items.json",
+      "sha256": "1a92dcafdadec3fb013985c658bb4e83447bbad1b485522012fbd4c7e9796282",
+      "bytes": 18529
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\official-run\\execution.json",
+      "sha256": "6f235b3f5b142199e3df384e928cf32f7254b03f27d641c303a670d59fcab591",
+      "bytes": 1015
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\official-run\\RESULTS.md",
+      "sha256": "59f83d3d9cab6c9a310c4ecea7237ed8101aa9a18398613905d5ec84a59d84db",
+      "bytes": 2057
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\official-run\\REVIEW.md",
+      "sha256": "4d5957762690facfc901763b7113e170cd6b2813715b85899d17dba0abc0651e",
+      "bytes": 2333
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\official-run\\run1-metrics.json",
+      "sha256": "7f7ad995edfeb268af194d0fc4ace938e08bebe3e2917b0196085ef7c8ca2776",
+      "bytes": 4709
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\official-run\\run2-metrics.json",
+      "sha256": "35c23b01a772238a6ccafad7f88236f7b6e06773264e5a7cf2b019745c26636e",
+      "bytes": 4698
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\official-run\\verification.txt",
+      "sha256": "014c944ca27749843b4329aebf00637a35b4ac6615a9cc6b407fd377a80243f1",
+      "bytes": 478
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\postal-preview.json",
+      "sha256": "f36655aec1025c27ed29122c9653fcb784a10f5c1e41daeeb05cd6f022cb03ee",
+      "bytes": 158000
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\pre-benchmark-check.json",
+      "sha256": "d5b6a4424516558044bc990b2dbf32035063fd341155733a32ece30c81b0fdc1",
+      "bytes": 351
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\pre-completed-benchmark-check.json",
+      "sha256": "9a9e38393fe163c33ff22fb29e621db74c96c541f129d65d6c761c2f515c0929",
+      "bytes": 113
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\review-summary.json",
+      "sha256": "8f3bc24bc10f538debdf9c4f4ef97c1226d0fe8a1b8c8e83c79c74680b753bfe",
+      "bytes": 180
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\REVIEW.md",
+      "sha256": "fd7f2fe89bc41bb7f374ada54fc0f35c5dd3631cad23a4b16abd19815cde44a7",
+      "bytes": 20075
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\SCOREBOARD.md",
+      "sha256": "0d92169b21b011a15ba0433740aa67bc08dcef84d04f5772850af1576b26d9dd",
+      "bytes": 8182
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\social-losses.json",
+      "sha256": "44dbbac1da5bb25098b903046ad2a33fe85bd7659dbdf8ae89dee55b126e93f2",
+      "bytes": 7903
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\validated-full-tests.txt",
+      "sha256": "1efbf7f9e7b1ea19013e5244025a1a4cb82890d368a1180a7c1f25d772823c69",
+      "bytes": 1330
+    },
+    {
+      "path": "bench\\reports\\s6-step13\\verification.txt",
+      "sha256": "986efbbfa1d26a277389f323ed0fe5e2a387ff91094f13d08ebb341f2bcb1940",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\benchmark-execution.json",
+      "sha256": "bf919d17b27d41ee016ce0fe3e34824c955e1019acad90dd9e85eb492f6c6c8f",
+      "bytes": 2024
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\benchmark-scoreboard.json",
+      "sha256": "4e25a661c6796e12fb9abb22452fb589d5739758fe3c581f473425e98735e9b7",
+      "bytes": 5801
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\credential-check.json",
+      "sha256": "f4fb76785071c97ce4086a70319163f710d6f8825401a4c08a6faf9314d741b8",
+      "bytes": 91
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\focused-tests.txt",
+      "sha256": "ad4709ef4a820bfd31ee7eaf8caf04a830213c35b33db5b8d280693009e70e35",
+      "bytes": 182
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\full-tests.txt",
+      "sha256": "1750a14325636f7573744f010a84725a0c84fd98ef9c676ce6c2b046a39812fe",
+      "bytes": 1330
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\metrics.json",
+      "sha256": "4bbca690d856886f4bc5b3bf5082489b4e7cdb3cc33913094330083fd611bf74",
+      "bytes": 1118
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\news-variation.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\official-run\\execution.json",
+      "sha256": "b7fde4da4ded212c07bc14ad3f29d52e75a4efe30f2ae70e885b686e57af59e0",
+      "bytes": 1027
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\official-run\\RESULTS.md",
+      "sha256": "8eed538be400a533cce1e3786ffe6a28f5fe9417e682d20059540b98f71844c7",
+      "bytes": 1306
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\official-run\\run1-metrics.json",
+      "sha256": "d0b162f0f484bd4e0bf84d70978b41f7d0396a8de1a532df85f3ddc3f5b83dde",
+      "bytes": 915
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\official-run\\run2-metrics.json",
+      "sha256": "dc60c21c84957ee5a6dcc53cf25e22e9cc9a174cbbedad03efb1e8dfa8b4abfb",
+      "bytes": 915
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\official-run\\verification.txt",
+      "sha256": "8f25aeb5b93510781d734f19bdceac8e6e58b25d19cfcd0063ca39845062cbf7",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\pre-benchmark-disk.json",
+      "sha256": "eae546b98da0fc5881261f400edf3c3306f906b376f641711d8aafeb0de3b136",
+      "bytes": 114
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\review-preview.txt",
+      "sha256": "d1cb0c6e1310a99e5d4fc8a0c6d89c30cbb3e08fdb56bdba30cb5452eece1a5c",
+      "bytes": 31814
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\REVIEW.md",
+      "sha256": "35b99abb58cc3c6439b7f617ab25eb0b1033f60be9761e701f75c23549de1f71",
+      "bytes": 5485
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\review30.json",
+      "sha256": "970c00ee57ccd75c4931d22a1274d6bc107a09d25701054c6e543cd2d2ec0d93",
+      "bytes": 144415
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\SCOREBOARD.md",
+      "sha256": "05b78150b6808f1cede93dbcded7ca57c7bdeae80b4e215a6dcc0a340392e2bc",
+      "bytes": 5418
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\source-check.json",
+      "sha256": "58fd00ba72711c6e3168a84b7ba5f2b7ca73b48df8a3bc14b42c6fc1d872bdef",
+      "bytes": 16537
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\SOURCE.md",
+      "sha256": "087db38582045b69de925b147fc09945b528c16b2c7636b2af0ce635a3463f7f",
+      "bytes": 4165
+    },
+    {
+      "path": "bench\\reports\\s6-step14\\verification.txt",
+      "sha256": "e7f19c057370fa1ca03fe988f074fa5d939bc05444ea07c11e8ac01f6b74c016",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\benchmark-execution.json",
+      "sha256": "1a52b4edc2cce3afa781d8c75e56e72ded129df3af462f1f4f86cc6f4ba871e0",
+      "bytes": 2026
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\benchmark-scoreboard.json",
+      "sha256": "c944cc888398f0c2fec45ef8bba2588eeb3c7ffa5d8bcd058140e31fd1768bf8",
+      "bytes": 5805
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-focused-tests.txt",
+      "sha256": "8fc9ccdfbff721fa6d5893000445aa97950e9ad2c441588fe867fcf111f90c18",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-followup\\candidate-source.json",
+      "sha256": "95a222bc6c4f701798b034c7ce2db91cf2ad7593d7266605387d9016335f4d03",
+      "bytes": 444
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-followup\\execution.json",
+      "sha256": "46df840d40e617a72d9ae03d82bf59c1fb89f917aee25e975fa40e6e41a3d8a4",
+      "bytes": 1026
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-followup\\observation-changes.json",
+      "sha256": "11beb5ebc6460ba40a77dcad79d6753cd0be79b474f9d103d456c4c9a1079fe8",
+      "bytes": 17538
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-followup\\RESULTS.md",
+      "sha256": "d2da704bf88dfb31e9d03a9578ad952c7726673dc0a9f59254fa484753b8b58f",
+      "bytes": 2948
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-followup\\run1-metrics.json",
+      "sha256": "7deadd2e5e0e8c9b2a458ec53f03d486220be0054a0a53f466263eb6313ce998",
+      "bytes": 323
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-followup\\run2-metrics.json",
+      "sha256": "2019fb62e21aeaad07a392b97017ffdeb3c6db287054e6f2a7922f1b8edb0571",
+      "bytes": 324
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-followup\\verification.txt",
+      "sha256": "a248a10d188f3068147ae206481782dbf30c9a63336199357e3aaf0cd964e937",
+      "bytes": 909
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\blocked-full-tests.txt",
+      "sha256": "9db66a83aeaf5430502e59509ea81d5ed817e3f1d732b269329992fbcdd043ff",
+      "bytes": 1411
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\build-history-full-tests.txt",
+      "sha256": "f9de398f97a5b87956b255b2bd6456333e9af0da4e1c92068e49dd64afd704aa",
+      "bytes": 9123
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\credential-check.json",
+      "sha256": "596c49b80c19fc9a7368e95ef75ff920eba079df54174f86671e8ac07495f437",
+      "bytes": 48
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\FAILURES.md",
+      "sha256": "ab4adf0d36826b17f7ad44d1fbae2a49ec4e7a8c92a3fba773748345039ffcd0",
+      "bytes": 2369
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\focused-tests.txt",
+      "sha256": "fd3d4735362bf96e30955c0c92a220235b4ac1d40b07b5bac8e326433f1380f5",
+      "bytes": 183
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\full-tests.txt",
+      "sha256": "3c55f38d84d9f877f03e95b1823aaf54b22d662fbdf00f2dd15554e3bf0b5705",
+      "bytes": 12354
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\funnel-company-ledger.json",
+      "sha256": "9666c9d4004a32c3fb2e68b71f711ba9cdcdf72aae8ea5dcb35550822853bf5f",
+      "bytes": 748452
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\funnel-final-guard-correction.json",
+      "sha256": "e89c3f2072b6fb512c45b9b4ce8ccfc4a928f20fb55f655d8cd44c81b06e7e87",
+      "bytes": 449
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\funnel.json",
+      "sha256": "d237231e1ec8a989fd17ffa2c0787930688bf1e710ce62cf661369d9bf70f0db",
+      "bytes": 811
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\FUNNEL.md",
+      "sha256": "e91c6f566e5600c7c5e416c33bc3a6e613c54adaa24d9a7eb1c8b8b47907e350",
+      "bytes": 1506
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\locked-tests.txt",
+      "sha256": "e042c6b8daee2e09648ab52120dd0a5e501cfe8a5b4f9c7d69dfd84108fdc905",
+      "bytes": 101
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\losses.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\metrics.json",
+      "sha256": "876919acb5f9431d305de0929bdce7dd6e55622773d45fb8cbefb1b43c16587f",
+      "bytes": 1378
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\new-items.json",
+      "sha256": "c79d4ca232b35280410d65eabf0aeab83476cbc0dd38a3cba2b90ebb365f65cc",
+      "bytes": 47175
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\new-website-failures.json",
+      "sha256": "88a87afd1c06fefe813b06dbd9a9ef2f2a03c07d0b4feb804c0fa57e951a0168",
+      "bytes": 99852
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\official-run\\execution.json",
+      "sha256": "d4d1d378a407db34a51ac9a83b4b995a63d0186323b51c241f942171fb398bf8",
+      "bytes": 1027
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\official-run\\observation-changes.json",
+      "sha256": "b309c0b2bf7297ba18c7f18538221dcd071ebd7078d9d84a290c20f16f9dd78f",
+      "bytes": 453
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\official-run\\RESULTS.md",
+      "sha256": "39f995172f7eec2c0b70a0a0b740004e3b376e516d036acac1f06e4b4b344979",
+      "bytes": 1960
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\official-run\\run1-metrics.json",
+      "sha256": "dad58974184d0b333b5fce2271df82889346f705661bca30aedef8f2f301799f",
+      "bytes": 542
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\official-run\\run2-metrics.json",
+      "sha256": "1863e7b6350746e2bdc403eb1d76eb43be1a1fb5807cf718fb857e7d666cab0b",
+      "bytes": 542
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\official-run\\verification.txt",
+      "sha256": "7886bed920ff023201b898bed32a38e0de9e83a80fb81b4bae5410d8d146d948",
+      "bytes": 903
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\pre-benchmark-disk.json",
+      "sha256": "fa5af7aa2ac103b9f197c633c8656861da2f4d4d45bcefff221d02a5b74113a5",
+      "bytes": 114
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\preserved-full-tests.txt",
+      "sha256": "b2c25d639f263a3a875ec2350bb594a534fb9bfd087fa31d4d977e3c039fa6d7",
+      "bytes": 1330
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\proof-order-tests.txt",
+      "sha256": "b9afc6f950e06f12d94c4072213f43ec23de2f8c67c22cc67dfda03c89acb070",
+      "bytes": 183
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\regression-tests.txt",
+      "sha256": "10c14646c79dfe77acc1b74d19a42cc242bba9a391440261431bf5d7e2d2a564",
+      "bytes": 183
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\review-summary.json",
+      "sha256": "60c7167d1983862764693805a9253930d5584144b30188e1c40eeeffddbc4dcf",
+      "bytes": 163
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\REVIEW.md",
+      "sha256": "fe047e1a1fce116cc8b2dfb272d89f3205d656008ad060048bb590872f0d0880",
+      "bytes": 3543
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\SCOREBOARD.md",
+      "sha256": "9d9637359d3df9fc0ddf9ab69487adf03c6703846b484b765fb4daa3d2d8067d",
+      "bytes": 12183
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\speculative-focused-tests.txt",
+      "sha256": "da438a2976ff6f22992f6aeec7202729c918dbfa9b5f2d287518abe9af643aea",
+      "bytes": 184
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\speculative-full-tests.txt",
+      "sha256": "b2a4db7458176211c841d7a7e18bb48ebaa8a0ba8d8ca8ecf657a75a3fe04fb7",
+      "bytes": 1411
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\speculative-old-expectations.txt",
+      "sha256": "6e095f6f8d1340975e502b099d6b6a05d290c008471b67a1ad049d5969341a6a",
+      "bytes": 6594
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\speculative-state-projection.json",
+      "sha256": "83c49bcf7bdc0b96b99bd913b671ea77b399cc1c7d0b283a1b2665245358b601",
+      "bytes": 7748
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\two-failures-rerun.txt",
+      "sha256": "f2c050601f966fbe631a49536167909490e212efc01bb409b02adee0446fd373",
+      "bytes": 2463
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\verification.txt",
+      "sha256": "209ffbbfcccb10b72373179b68064156b3ee772b624b01d3865deee4bfad8f92",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\veto-breakdown.json",
+      "sha256": "17702563b1392cda6f092e0df0b416489fbd8309dfaa12bcc72e27e3281ad985",
+      "bytes": 379494
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\veto-review-sample.json",
+      "sha256": "f115a721d40601d8cfa9a1b261090d1ffce03e5ad7f3892e592b5a18a7b8d0f7",
+      "bytes": 65891
+    },
+    {
+      "path": "bench\\reports\\s6-step15\\VETO_REVIEW.md",
+      "sha256": "3b171d1a0850c1cb368e4e67de3203ecb585295224900c98a72dd74a7e2e48f9",
+      "bytes": 7063
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\alias-focused-tests.txt",
+      "sha256": "c2b6a4f4bc263017d5940a13bcd4b1c0790815213bae954170d0068388939f05",
+      "bytes": 102
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\alias-saved-pair-replay.json",
+      "sha256": "388552d55eb6ece11e94125a2de22e554e0a466a4483f808807155f872161d4d",
+      "bytes": 222
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\audit.json",
+      "sha256": "0a96c1ef6c09efe0f7a15370631e5e964dcc5e3e4509ded2141280ed2f7fbb55",
+      "bytes": 834846
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\AUDIT.md",
+      "sha256": "ad5b9d39e24a84128051fdd27dcb4f5b8ce39d477f9c1209f81e942421b85135",
+      "bytes": 7251
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\benchmark-execution.json",
+      "sha256": "613fc4ec3b0628b29e84e4ec574cc2bf4a0f9c19bc30c819c217438247075353",
+      "bytes": 2025
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\benchmark-scoreboard.json",
+      "sha256": "bb1150eb70838c2e7433206987b96ef62b6a00ac8e514fbcf21f0f48d2c6d4a0",
+      "bytes": 5802
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\credential-check.json",
+      "sha256": "881576e18ff38726869b18e0f9c706ec6f867bb4fd5f6a2dc626c35b1a522242",
+      "bytes": 217
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\final-full-tests.txt",
+      "sha256": "15128771ab4f5d3f206bb819affd18904ae642d5929082a1d8715e3e80a8964a",
+      "bytes": 1411
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\focused-tests.txt",
+      "sha256": "8ffa526e63fd3512266339bb2ea98eeab0fe76ed275932dc9cf51628cce07165",
+      "bytes": 102
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\full-tests.txt",
+      "sha256": "0989b77a1d9e013f75c5a640dfa45cc64f4e25c2190077b5eb50dbb597d9d827",
+      "bytes": 1411
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\input-check.json",
+      "sha256": "3f01bf1aa96d1bb0e017024b2e52eb8c7b00da17c6981cb8e845cc1d1be1fca3",
+      "bytes": 224
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\metrics.json",
+      "sha256": "67f62f2b175f0d98113f111a6bc49ade8cbf5a9ec991dbf2811e75eb1c5942f8",
+      "bytes": 1149
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\execution.json",
+      "sha256": "c662c6e98762a931bccc3d32cfb12607a4115f74f686428d5355d6767137d4b5",
+      "bytes": 1026
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\initial-alias-failure\\cause.json",
+      "sha256": "59e7bfef5bded5442362373260aee2cf18589c512dab4d19547cfccd44009acb",
+      "bytes": 3340
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\initial-alias-failure\\execution.json",
+      "sha256": "c5136470ab056c8691b15809c02c76167b3740fa91de21deed503068366c920b",
+      "bytes": 1014
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\initial-alias-failure\\RESULTS.md",
+      "sha256": "ea3bb751533688e65f73124dab3b266d322c522b2b716e36408812a03f01b551",
+      "bytes": 1354
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\initial-alias-failure\\verification.txt",
+      "sha256": "7893dd2b61804ab96b0636ac8334cabe181c701ebd3b291f5d0206c5503f48ee",
+      "bytes": 885
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\RESULTS.md",
+      "sha256": "6aa9c6c4760a81f87f93f0511b4b26c1237c6e0d9bc6fb039852cfa5c77954fd",
+      "bytes": 2262
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\run1-metrics.json",
+      "sha256": "2f31c447fe263a4be75fb2b77a86e2fd9a197229426e3fcba068ddf86bf5cdee",
+      "bytes": 759
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\run2-metrics.json",
+      "sha256": "0db3fa4210cf0735dc107f1690f98c02e6560fb7ac3a0a468e014f95f140a774",
+      "bytes": 758
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\official-run\\verification.txt",
+      "sha256": "e4fb25882459285f90adb3d46b14738db449ccbf3298f6369c16af5bead5d67e",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\pre-benchmark-disk.json",
+      "sha256": "0e8e32c875a8df04925ec9c0dc4b7c15fed70437078487a55a99e4d039222f2c",
+      "bytes": 143
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\pre-birth-year-and-rollover-fixes.txt",
+      "sha256": "cd9b83cc369b79d04ca821a62e0fa348062fc8eb03aae0c0540bac4f5bc9294f",
+      "bytes": 10125
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\pre-separate-consolidated-test-update.txt",
+      "sha256": "6553e6cb8d6a388c7195b1bd05a2d331e43bb73cf0690d673780e63b0a79c451",
+      "bytes": 567
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\profile-check.json",
+      "sha256": "cc7a1f68d32bfacddc1ebfc851005aca9d983f9ecea7cb6322b39472a4a5b903",
+      "bytes": 164
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\review-sample.json",
+      "sha256": "6da20e4b303184d18c6597202d1f43897bcc386f53d98bcc8f64bf458f59e9e6",
+      "bytes": 90050
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\REVIEW.md",
+      "sha256": "1f810670e457cc47bd3f61216bfea87a9851956ade9a30465583d547b91edf33",
+      "bytes": 8515
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\saved-projection.json",
+      "sha256": "ea5dac373287cc1f58cc813fc7a2c1ad1d0aa679759cc666ba66ebe45900ff18",
+      "bytes": 700
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\SCOREBOARD.md",
+      "sha256": "007987af5d3187f180127c2b567fe851bd1a34b4eeb8f8068b2c54b7fe73f46a",
+      "bytes": 8418
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\supplemental-review.json",
+      "sha256": "77e626be099e809ae6e7fe9fe2895fc9f1f55d771dfe2c97d138cb2e8a0b1227",
+      "bytes": 9346
+    },
+    {
+      "path": "bench\\reports\\s6-step16\\verification.txt",
+      "sha256": "232c6564a7f89f46a3526186d92bcaa71f506d428830f7426de06c57b5bb81cf",
+      "bytes": 190
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\AUDIT.md",
+      "sha256": "dd5c9be8bdb2109e5b55db2a29e452fb778b5b950d378efa9af2722e20374a6c",
+      "bytes": 7399
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\before-examples.json",
+      "sha256": "734cc7200df555f03f2e98b4362787708e21877dcedf991845ec394eb6f11db7",
+      "bytes": 57151
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\benchmark-execution.json",
+      "sha256": "5b4c3e871f1b089b71a2e13f679328ec23dd468eb2b725c2159c1b016b6808c5",
+      "bytes": 2025
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\benchmark-log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\benchmark-scoreboard.json",
+      "sha256": "4c739dbfd408585180e995fc1fcf15ec7bcabe37f6db677553675cca70fff756",
+      "bytes": 5802
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\budget-metrics.json",
+      "sha256": "f282e1629e3d1c27eb426fd6fffe91de5b87f27ab0e183a2eb247ac28c846e96",
+      "bytes": 896
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\committed-full-tests.txt",
+      "sha256": "c0b8b152eee8043ad32a9d86e96f177daeb0c0c20a40b3d346314d61c4c8bebc",
+      "bytes": 1429
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\credential-check.json",
+      "sha256": "d96491603a23ce1424a7125bdcf01471381f5c003441c3d1f69c17a265dddee7",
+      "bytes": 167
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\eur-tests.txt",
+      "sha256": "cb503342d45be5172d976ba377d950aa00987128b1be4446218914f96259dde7",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\EXAMPLES.md",
+      "sha256": "f6f9af3df9ac5fd5d63fac0e2cc6e0d0c389064dc07b27704df272e0498070f3",
+      "bytes": 9328
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\final-focused-tests.txt",
+      "sha256": "407bc2f1010173827ec71323b8680a190e56027f9f57a6b0571e0898dd5d1968",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\final-full-tests.txt",
+      "sha256": "2f88c06cb8d72316644ba2996d3c1f4c37212edccf0210123265918037749676",
+      "bytes": 1429
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\first-tests.txt",
+      "sha256": "dba77dc2a32cc73ad547eecca03fbb7af274aac7bbd0f52298e5da933e36c8c6",
+      "bytes": 6814
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\focused-tests.txt",
+      "sha256": "e7bfce9fac6c7254501d41b9f38190f85576cf5f0b77d94b30d155290d085af2",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\full-tests.txt",
+      "sha256": "50d1de3cd8b19443f36b71182fa21036c239cbbab261f3f5b7ce4a4fca425a82",
+      "bytes": 3697
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\official-run\\execution.json",
+      "sha256": "e539930101724aca80c1209031365f6ba1cb1b37ad611486072fff086266e7d1",
+      "bytes": 1026
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\official-run\\output-check.json",
+      "sha256": "98b81eab780680f5432c135c13acf56f94b62be78b677decee64bf7b24732a96",
+      "bytes": 472
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\official-run\\RESULTS.md",
+      "sha256": "bb8db396bfcdd404856f261b5bfbd68af75d26689a56ff5791f259a3d858e41c",
+      "bytes": 1726
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\official-run\\verification.txt",
+      "sha256": "6e03c4327c2b292f5f4458ce0e02da40a2e93c1c011672e5ed13a4d32e24df94",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\offline-check.json",
+      "sha256": "9afea01120b9d2683ac5707b1c7caa6d10a6345e256e579bfae3bba894842cdb",
+      "bytes": 15394
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\pre-benchmark-disk.json",
+      "sha256": "5ea292804cb3210a7a178abd6882ccdc1e489152586006f167f96a99f63dd621",
+      "bytes": 134
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\review-sample.json",
+      "sha256": "7de3e1739752e66a4be843576b62c880c446687b9dd6b77afe5b684a4dbb2305",
+      "bytes": 3882866
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\REVIEW.md",
+      "sha256": "0a2872624df8619220ac551ce35544ba36ec13b072553f3195f763850f567393",
+      "bytes": 3213
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\SCOREBOARD.md",
+      "sha256": "bdcd5899a7a4fde077321535acd81910dd670a906e5512e102bebc7fe60fb44f",
+      "bytes": 6956
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\summary-metrics.json",
+      "sha256": "200fead0135d7dfc9282422e26928652f1c1420d4f4abde873f7fef082583eb1",
+      "bytes": 669
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\supplemental-review.json",
+      "sha256": "bc2dbdddc516da6cadc4a1e0f950da8d99991883a0383d045f257845518b33ce",
+      "bytes": 119144
+    },
+    {
+      "path": "bench\\reports\\s6-step17\\verification.txt",
+      "sha256": "48d0a05db28404050eac91ef6e214abec66207ff7552b79d81e7e41ce4b7b71b",
+      "bytes": 191
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\audit.json",
+      "sha256": "e1f71ffa7c15cbd225f1c31765e99f0d59a4bbedf7b9a778e41058518694c1fe",
+      "bytes": 61630
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\AUDIT.md",
+      "sha256": "d2fc145bca67029c35f36cf6530c0244342a7d8fe28387c3911b978f9972b42f",
+      "bytes": 1710
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\benchmark-execution.json",
+      "sha256": "71383f4989ae1ee635ed5458f5ebf980b6229e18188af0e75fb6dbff84c3736a",
+      "bytes": 2025
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\benchmark-scoreboard.json",
+      "sha256": "490e544d267f6c4c4fe7e4a1ca8782466116a897908e015605c6568ee24e838f",
+      "bytes": 5851
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\briefing-review.json",
+      "sha256": "952902740b06fcfe3c86ffa7462008104b9f7660eb6b1db87c20a45771e43659",
+      "bytes": 255525
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\committed-full-tests.txt",
+      "sha256": "99d2fb5d5f53aae741f1c5bbc1bd55cf2f5f4da506a76ec55bfdc0ba0ddc0a2a",
+      "bytes": 1429
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\credential-check.json",
+      "sha256": "b556daccbc7b51ef70e079e0e8790ebd5bf67f88accfea845b8edbbd3737db22",
+      "bytes": 137
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\event-review.json",
+      "sha256": "efb134482e9dd7d722f0f957fda0081a5a5fda4f40747985ee4d76bcaebb9f89",
+      "bytes": 171379
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\EXAMPLES.md",
+      "sha256": "69cd746bc9f302328c8cc0032f35132533e2bebe9b9558a4309b326d5bef7b8d",
+      "bytes": 7917
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\final-focused.txt",
+      "sha256": "b2351d9a17bd20683192567522840d15dcfce418b9bd2c450ffb0f5db7846cc4",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\final-full-tests.txt",
+      "sha256": "9d154483927afb7bede02f392df24a2fdcd21bae47754cff376fd82a3ea54ea3",
+      "bytes": 1429
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\focused-final.txt",
+      "sha256": "e794ef399072f5c2c8467cb4fafac94c57003dd1d6465fac1ad8443297dfef7d",
+      "bytes": 185
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\focused-tests.txt",
+      "sha256": "7cbbce9b0e601a6af2425340928b1fa10cf82eccd273f8d15761e2638962c16b",
+      "bytes": 5748
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\full-tests.txt",
+      "sha256": "f88187fe09ecacfac191af91da5ae49704d8cddc24b4303cd0101148caf2c038",
+      "bytes": 1429
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\metrics.json",
+      "sha256": "2c10bea168c09fb8b91414eb2ace2786e648a6189bd37b9baf13338c7488c0f4",
+      "bytes": 1657
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\official-run\\execution.json",
+      "sha256": "4e3ac4c6c878917010c79624c7d0b5c89a21c941166a4d1c5df5b45d006fe192",
+      "bytes": 1026
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\official-run\\output-check.json",
+      "sha256": "8da3a574a848f26baeaf2661a558f662682ee35c726f207400f13aa7a8054062",
+      "bytes": 920
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\official-run\\RESULTS.md",
+      "sha256": "57b0bc50f621e8e7e45bbb254072c28c33b8a2fb46662b54fe667648b0fad9ef",
+      "bytes": 1612
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\official-run\\verification.txt",
+      "sha256": "cacad80cb8df890a0786f2480b93bdcee05f20f7a8760d0289d4168aae6b9b16",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\pre-benchmark-disk.json",
+      "sha256": "2385830803ad6c37648a54ae7c75d04bb52ecf70d3b231112bcb567f5e93deae",
+      "bytes": 104
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\REVIEW.md",
+      "sha256": "d2b6bba4b1dd999c483ea28cee3f1f426a52ac7cc79f5a27d586685b2c29c226",
+      "bytes": 4043
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\SCOREBOARD.md",
+      "sha256": "e79608726e031c1bce9a26b42ef3229dd6767e0b8cbbf9ceb20c52fe142dd6f5",
+      "bytes": 9027
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\site-final-tests.txt",
+      "sha256": "a3d87245f7df9f1607262d7e37f86827140395cbcdcd59038c2f8e663084b489",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\site-focused.txt",
+      "sha256": "66ba92380fb21d78cc0ba9a1d727dc8bc4b0a37c907a015b852ad26d3832bf3b",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\site-rebuild.json",
+      "sha256": "5d39f68d7b37d70ef5ce3c7294df6c874c046713a786027fe2c6fd70baf00e15",
+      "bytes": 212
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\site-size-diagnosis.json",
+      "sha256": "45e8c29961939914546e2456a8b408bf1096b3740c86c058419ee951d80dff41",
+      "bytes": 44
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\verification.txt",
+      "sha256": "b4f66da166a3ae693cf0e362efb21b24e6cbec6cb8bfbdee410f90fcb29ad0cc",
+      "bytes": 191
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\website-loss-http.json",
+      "sha256": "dd3961ba39472b541a9898135a368a5b5c54de26ebc82dc89f21674f09226415",
+      "bytes": 502
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\website-loss.json",
+      "sha256": "36ea18b8d33a264d31c6ea03e597ca27555a16857f75e17d0c8dcd3e495f1bc0",
+      "bytes": 4547
+    },
+    {
+      "path": "bench\\reports\\s6-step18\\wording-tests.txt",
+      "sha256": "6bcac6a940302386410182b67c048dc96e65879ec7f2da029b566da516a6c743",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step19\\audit.json",
+      "sha256": "741ae84d304acda22ffa2ecc2311f335878ec9872c430d75c75e5309d231e1ba",
+      "bytes": 84244
+    },
+    {
+      "path": "bench\\reports\\s6-step19\\AUDIT.md",
+      "sha256": "e0a5dfe052717bff3fe88b713f6770d7217eed31503959c987507e89c98a1d26",
+      "bytes": 5819
+    },
+    {
+      "path": "bench\\reports\\s6-step19\\external-careers-links.json",
+      "sha256": "5cc47840c083019df710a8a3c62146b610244a14c3d5a42bf765ff432cb8b88f",
+      "bytes": 3796
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\accept-tests.txt",
+      "sha256": "1ee363fed83c53650d93eba67815019f7d3d7086d798a25b8f4af57ad8fc2657",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\accepted-full-tests.txt",
+      "sha256": "b1966841c17747c2f6c6b4403e7d0dc4f443a9bd4332e4397c4feab86d894d93",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\amount-projection.json",
+      "sha256": "1fa647012763ed1b68b381051e5b3d36fdc6d36232ef1de1b16e8021a3838f25",
+      "bytes": 18180
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\amount-tests.txt",
+      "sha256": "f195f192d75c66d0bc1cc00a9462c346c89c12b09c88531c9d66c9dd01f0f1bc",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\batch-tests.txt",
+      "sha256": "046d07caff3bb048659f414493c4a46e2a575b949b813d0d68f342469fb7f346",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\benchmark-execution.json",
+      "sha256": "8f034914a03bcafbbeff538ff8505b4e5f7e73084c156d388275c7067fcbbfdb",
+      "bytes": 621
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\benchmark-scoreboard.json",
+      "sha256": "60052029c52001d6cc5aa4f7faebc86800751fb5f1d2cf167128c66134f7f153",
+      "bytes": 5804
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\credential-check.json",
+      "sha256": "3ea911c6eec8275ae0b3836dfe61a360668aa2e3eab76a8615fd275df974a6bc",
+      "bytes": 60
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\declared-absence.json",
+      "sha256": "addf65f34eb2f3177e233b5bc6241e1795d277c28aea8f7f04208c0947b16862",
+      "bytes": 1416
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\excluded-attempt.json",
+      "sha256": "be74933dede41f615967168e8df789fa974a10e07c49c15c1a7d262caf11bc3f",
+      "bytes": 346
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\export-tests.txt",
+      "sha256": "5e2b3a0eebb21ffad8ac91b1abf1235bffcd02a7df352ed15cf921b39e69c9bb",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\extra-final-tests.txt",
+      "sha256": "d46b250b3ed209ba4bcb3a595637173a8239a475ece0de26ccafa5569454a44d",
+      "bytes": 102
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\extra-tests.txt",
+      "sha256": "baed6df8697125271d159de3bf2a3baa8b4c80411060fe6efbda46a6668f810c",
+      "bytes": 4753
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\final-focused-tests.txt",
+      "sha256": "1dff57df0d7767994758e7c765537036dfc077c4573b4c37e2af5b355241c548",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\final-full-tests.txt",
+      "sha256": "b4b1cc43e836a1f332bee0876c3a9572cbcebb99aa80216f6ff5b720a4bb6ede",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\final-refresh-tests.txt",
+      "sha256": "3a7e827f71c4a1b238262e33c46c4a37664736ad7d6b54a6c9e60dca93969cb2",
+      "bytes": 104
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\final-runtime-tests.txt",
+      "sha256": "12a7108fe8da8d4f0b018c21c2995e6e1f7cc170816e57742a22898f728d17e5",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\first-tests.txt",
+      "sha256": "724c9575ec710b6b935969c522bfaaeb36d2502a65c4b0ce37b6aaf188154c18",
+      "bytes": 186
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\focused-tests.txt",
+      "sha256": "0dc4d0f15114df37671c20ca51f53c2509e4a25c840b516674b76985dd491752",
+      "bytes": 104
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\full-tests.txt",
+      "sha256": "dc2ece4bedcad073e000ce5c6070b001ab65458458d96a6876f06aae92c35ee4",
+      "bytes": 4550
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\GLEIF-review.json",
+      "sha256": "4ffee9c7fab8717e0ad3e24fb416dd0eeb431c266de420409d81339be4e36053",
+      "bytes": 66147
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\initial-metrics.json",
+      "sha256": "08fb845f14ab74798db8ec484c2d5483ed5df641143970a9ac4dfdd8f7e5369b",
+      "bytes": 44438
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\integrity.json",
+      "sha256": "8e1827023dddebbbb0aef626edbc285b468a50070d780a6aa9a5b51385fd4d64",
+      "bytes": 139
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\label-tests.txt",
+      "sha256": "b04f3d49c963ab1684008bb84ba2a8f63f55dd8a1939ea3a4679098c2de167a7",
+      "bytes": 104
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\metrics.json",
+      "sha256": "4220376638bbfd24b74ed5d2ccf0653612fd46887cf4368a3dc5b506f0864bc8",
+      "bytes": 94272
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\official-run\\execution.json",
+      "sha256": "1a23271c845fa249e9f3f712bb1ee254c75062e401b17d85616936333483162a",
+      "bytes": 1026
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\official-run\\request-statuses.json",
+      "sha256": "aa468f320558c4d519bf1fe9314727c472ef95fb9bfb93f84fc55cdf4f50c03c",
+      "bytes": 4175
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\official-run\\RESULTS.md",
+      "sha256": "145aa087253e892688cf199523f2f52568a4affb71a8644cc7202c2a77d03086",
+      "bytes": 1656
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\official-run\\verification.txt",
+      "sha256": "cacad80cb8df890a0786f2480b93bdcee05f20f7a8760d0289d4168aae6b9b16",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\optional-error-tests.txt",
+      "sha256": "07acf78b3dd8838616e615dc58ce7c993b993b7d78b89e4417199d2d8e7f6339",
+      "bytes": 104
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\paced-tests.txt",
+      "sha256": "64537616f9935cff078c8d947cf46b31e64b47e5e494954e2f37b5693383ad8d",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\parents-review.json",
+      "sha256": "9d0fa098cbd168c600ed09eb2ab8d7fdd12b621685bcbc4a12fc4cd3c9706363",
+      "bytes": 189946
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\pinned-full-tests.txt",
+      "sha256": "57d7891c4a84cf9ea7820187100540351031cea75a2d6bf64284807b87094ab6",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\pre-benchmark-disk.json",
+      "sha256": "7076c3d411cdd89d72637b70805719538f0a2b15d2575bac6c1016b37bbe2946",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\precision-tests.txt",
+      "sha256": "e6e7ab683de5d1b1c1f09f090d50e85b1ced252e7d993d60ff7190d63f4c89d4",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\preserved-base-hashes.json",
+      "sha256": "0bb8198a2e31c1d9e9a27e767dce05d76565fb8b8fda8e46414e1c2cc72b6399",
+      "bytes": 447
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\refresh-tests.txt",
+      "sha256": "14fc77867f59b187be4d47f748d2a1e7038e675a56c131ac630a0c221db24cd1",
+      "bytes": 104
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\restored-full-tests.txt",
+      "sha256": "3682bdd38f4fd4a4a728254e2c7e203a52e690b49c04b179073e564301182d2e",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\restored-refresh-tests.txt",
+      "sha256": "cbff183508d16c0350fec06ef76522ae0f12b248ceb4d1caca284af4a33316cb",
+      "bytes": 3155
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\resume-focused-tests.txt",
+      "sha256": "74dc5bf0bdfeea3293a93dabc54b48663c9e459fcdcc8216a97fc84a72babfa4",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\resume-full-tests.txt",
+      "sha256": "084fcd2aff70da3aa6ea9bdde1f89fe15657b57cbc3a8d3dec821fd41c072c6b",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\REVIEW.md",
+      "sha256": "8bd4e3a38ea6c4addb14498bdbec0b6120f039e6521042c12337ad7b1b68c76f",
+      "bytes": 7985
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\SCOREBOARD.md",
+      "sha256": "8ae2fedfc15fe51c1d6515ef30ee74baa3bf82d0f21f42eb951622c832c5d498",
+      "bytes": 7057
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\shutdown-affected-pair\\execution.json",
+      "sha256": "42c819c92343892210bb7ba6a6e20807af25d7ab009d4aa54ea69f5b077a7697",
+      "bytes": 1028
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\shutdown-affected-pair\\verification.txt",
+      "sha256": "9ad2fbfb69e6332349be4682f9d94ed6ee8441279cf09ee612ed1624aa2fd1d7",
+      "bytes": 913
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-sample.json",
+      "sha256": "a25712184000f7fb818c6d84226daaf11bf992c6e8096f20333dfcde133880ac",
+      "bytes": 513
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\doffin_api.txt",
+      "sha256": "3494d22a0b9ae1678a72df5841b7a6ec60e75499b91341f9763a556d6b8cb1f9",
+      "bytes": 54
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\doffin_api_docs.txt",
+      "sha256": "3494d22a0b9ae1678a72df5841b7a6ec60e75499b91341f9763a556d6b8cb1f9",
+      "bytes": 54
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\doffin_no_key.txt",
+      "sha256": "3494d22a0b9ae1678a72df5841b7a6ec60e75499b91341f9763a556d6b8cb1f9",
+      "bytes": 54
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\doffin_robots.txt",
+      "sha256": "e5ab0d231eeb01b4a982d1c79a6729cac9797ad15a69247e4f28ba6afc149b4c",
+      "bytes": 70
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-1.json",
+      "sha256": "17b972ff08b98502acc09757495edbd80ce45c308aef56d6d8b0c2188385d4c4",
+      "bytes": 13466
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-10.json",
+      "sha256": "93da5e7c19db4d95f3c1eb2e0e75e486aec4eaf0adcf6489a06be58ad6fa45c7",
+      "bytes": 5632
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-2.json",
+      "sha256": "60e76829cc8ba8da52b186d2fd0cb28b47f6a8a5366ad9383294cae4b281b0bf",
+      "bytes": 13131
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-3.json",
+      "sha256": "3e429b9c77b7ae65e2dd820b730b9fa07d9f517d5238c65c93595fdbe71a9980",
+      "bytes": 8214
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-4.json",
+      "sha256": "53d5dd7073cb6f1815b0f4d0fdf8bc07ab0e2dad26e0a83b400f351960039f12",
+      "bytes": 17980
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-5.json",
+      "sha256": "edbfe4d63093a71e52f96b3a184135d1b63ffb8fafe2e9ca31785be299b8db6c",
+      "bytes": 7652
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-6.json",
+      "sha256": "6ec202e88b5e885b3203b7eaa0354bf732c81cdb637e3e8eb3d06feb2b03ca84",
+      "bytes": 5226
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-7.json",
+      "sha256": "3aefbd71731c0dea02172cd805971aef2e037efeb523a00e3d39ec234619eba4",
+      "bytes": 15196
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-8.json",
+      "sha256": "296fcf16f4259f377b9c9f14e006206a14f7b1f0b73697b24b25bffecf79421e",
+      "bytes": 5326
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-cohort-9.json",
+      "sha256": "f0452e38ecea47b852d27a7aa460b79f6d4830e19ca340032bafdcc73a21c060",
+      "bytes": 17277
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-coverage.json",
+      "sha256": "cc5b4b5953d18639ae819fa45ceddd5d85c217ceda4d687b90e862a4ac0efc46",
+      "bytes": 148685
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif-parent-batch.json",
+      "sha256": "ed688ba473160979e7be7068313f57c87373044c40a413eea2f1e76804afc14e",
+      "bytes": 7123
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_authority.txt",
+      "sha256": "23c37964d622e301326941b8ebaea90f8816a2596e14a01a84f8a8fd873d824c",
+      "bytes": 497
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_bar_batch.json",
+      "sha256": "5833aa71c31d379cece7a1cd7be978c2c0aebba1b2041f3da2bb56e8f14ac9a9",
+      "bytes": 549
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_batch_test.json",
+      "sha256": "46aa7c6fa42bf0d7468e695a363d1d930419fdc4661c57066beae47adcc642c7",
+      "bytes": 99
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_include.json",
+      "sha256": "a8ba24aa4944a87e6163998564b735bf7a8077f45d2a31f7810cffde67c5635f",
+      "bytes": 3919
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_positive_batch.json",
+      "sha256": "40963d63f9148294836c5a79c007905bc0b69da630c7127fb799e7dad467b286",
+      "bytes": 2979
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_positive_single.json",
+      "sha256": "cfc79f20f5df269471417e5c0bc4e3d08a1ecf0f59d304353ca6b7aef9b8bbbf",
+      "bytes": 2955
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_ra.json",
+      "sha256": "3d4b8532d52427b88ceda914b1aaa99adfd4950693899cec912a87aef5c8691a",
+      "bytes": 3413
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_robots.txt",
+      "sha256": "9133ceedd6bece0761cc791489df7a3fdbfaaa32d6316d98b92e6f8ff76e397a",
+      "bytes": 26
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_ten.json",
+      "sha256": "04ebd37b5b384839b1f32a65ae32d44d92a1140a6f1303515de41168c5b2fa4c",
+      "bytes": 659
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\gleif_test.txt",
+      "sha256": "569996588242fc092c1a0bfbe6d08dad27c1539f0db6d8bfca9fe67cefbc1ec5",
+      "bytes": 2870
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\parent-923354220-direct-parent-lei-record.json",
+      "sha256": "cc6c0f0be7982a9fb2d60ce073c0489acdcf127efdbbed5677c46f39b4d0fe68",
+      "bytes": 2900
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\parent-923354220-direct-parent-relationship-record.json",
+      "sha256": "50067151b6ab3f3241e528d81112be49284950d93474ebfe57742df1103eb3a4",
+      "bytes": 1226
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\parent-923354220-ultimate-parent-lei-record.json",
+      "sha256": "cc6c0f0be7982a9fb2d60ce073c0489acdcf127efdbbed5677c46f39b4d0fe68",
+      "bytes": 2900
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\parent-923354220-ultimate-parent-relationship-record.json",
+      "sha256": "62c34b891450094fca854a8f81b16288c8aa89426efeba13bb3d944109f15dd3",
+      "bytes": 1230
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\parent-999536999-ultimate-parent-lei-record.json",
+      "sha256": "1d67082f1dc78253657d2c411282f01a0e2981002952f1a2f49f9e595c2441d8",
+      "bytes": 3889
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\parent-999536999-ultimate-parent-relationship-record.json",
+      "sha256": "ccec5ccb63d3628e1ee87f75fc49e14875cddeb2f99947de278f995fd5cdc57f",
+      "bytes": 1230
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-award-filter.json",
+      "sha256": "9e50bc7daaadd2a302a18709b6c7b8702a22570bc7e7dbf9b993c24e4dc7f9f6",
+      "bytes": 63799
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-1.json",
+      "sha256": "fa603151763ff33eb2d4b100b340ea1dcd57ae63a59a55143737b14e21e4a244",
+      "bytes": 125651
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-10.json",
+      "sha256": "114ea2da2d03de3729e1eff9c0cd890295e3ca867944e9e592c652f8ac7d78df",
+      "bytes": 304912
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-2.json",
+      "sha256": "def6de873097853b098d403b10c043838027b04bb5b399eea91332011790265b",
+      "bytes": 16987
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-3.json",
+      "sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+      "bytes": 78
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-4.json",
+      "sha256": "4651d917fb3bf6a9ea6f6268955c8996f93b05f66b2746b9263bae19f0c0d9d7",
+      "bytes": 53430
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-5.json",
+      "sha256": "9fbd7c14b744af41abd474e8b4af8bda814fcc4d7586b45c2ad7f5036e2c3dd4",
+      "bytes": 441186
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-6.json",
+      "sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+      "bytes": 78
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-7.json",
+      "sha256": "ee44430a709ddd64a3409653b19b1955ab40cf36a48cbb81fa81a3ef97e08fc3",
+      "bytes": 22431
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-8.json",
+      "sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+      "bytes": 78
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-cohort-9.json",
+      "sha256": "b5962f9123e27f7e8944ead45cc4e6b2264943086828792176bca58ae350af34",
+      "bytes": 24174
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted-coverage.json",
+      "sha256": "ba46e6786a8a16fa37c85b0bd9f6408b4ceb237bd0b700ee2504a3aeec50af82",
+      "bytes": 1327947
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted_initializer.txt",
+      "sha256": "c4e53f113803415c54cf76add4cbab18f87b5d68f4d4c7c03bc0ffb151253bff",
+      "bytes": 696
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted_openapi.txt",
+      "sha256": "87e484b00abdcbf886694824fd5872818b48c6c1382cf612a5d1e7d038c1000d",
+      "bytes": 131
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted_robots.txt",
+      "sha256": "7c742a380c4f0548aab04fb2460dc3ecbf0d810c6dc43dedc5be898f36ab0922",
+      "bytes": 130
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted_site_robots.txt",
+      "sha256": "bc3abfa380b6a43b44b24193680192f0e7c3fa324f899134d75927fa0538f988",
+      "bytes": 1366
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted_swagger.txt",
+      "sha256": "872a029ae531eb011228b56a2e8795b174a0a8ce402d58bf393ead2a79833cb2",
+      "bytes": 986
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted_swagger_config.json",
+      "sha256": "dd553a3e9df215a0b1dadbdc97e351a8576c0a6afc3cb2b03de5dfdea294fded",
+      "bytes": 240
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\source-verification\\ted_ten.json",
+      "sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+      "bytes": 78
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\SOURCE_VERIFICATION.md",
+      "sha256": "d956ce27414d8c029ac0dc0c5fb45f003176699c2b1270a58adb685131b54b9b",
+      "bytes": 5000
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\tender-before-amount-review.json",
+      "sha256": "6d6103ca187be336c157e04fbf89d87facf2a40681355b5668a443f196a2d5aa",
+      "bytes": 608398
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\tender-independent-checks.json",
+      "sha256": "af3ad0c4e661f3410a709204e75ac2d1ae8013683a5d34f67f44f16ecc18d66a",
+      "bytes": 5909
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\tender-review.json",
+      "sha256": "9a7d9700ab9419eda035e81edce478c80ed5e0fcbd4f8911cb1c21569b083af7",
+      "bytes": 632635
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\verification.txt",
+      "sha256": "3852c1daea714267c443d240d8df477a63352967fa02c3d9c66e1b3fa18ad80e",
+      "bytes": 191
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\website-social-delta.json",
+      "sha256": "f20a434ac0a9942155bcbdc891a7ee07db5eb619eddb6c01c25b9c0e27cbb8ae",
+      "bytes": 2103
+    },
+    {
+      "path": "bench\\reports\\s6-step20\\xml-full-tests.txt",
+      "sha256": "5aab410c8e2164ed88c9e9fc0e4a560349b7021527e2f976c15f1aab90268591",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step21\\landing.txt",
+      "sha256": "8de574d4a93bae573d59d66ae2fb816e4a2b80c6519826538c2d358b39870fcb",
+      "bytes": 50032
+    },
+    {
+      "path": "bench\\reports\\s6-step21\\robots.txt",
+      "sha256": "313f60685cbcf1115488e8c6a4071875547deb0d031d66fdaac03012753d26a2",
+      "bytes": 666
+    },
+    {
+      "path": "bench\\reports\\s6-step21\\SCOREBOARD.md",
+      "sha256": "5bc086451d6acefef992c3bfee1b02a06e5b9d4c5bd2b5147556c86a22f3c32e",
+      "bytes": 2142
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\affected-website-preview.json",
+      "sha256": "727f71930a788fcdcc93b7af9d19e3786ce7f887ee97ae9080728c3775ce481b",
+      "bytes": 437
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\coverage.json",
+      "sha256": "32845bb6a0dc62c8d4c41fa59fe0484febffd35384c30747a4ce9aca6a073f62",
+      "bytes": 1969
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\credential-check.json",
+      "sha256": "3ea911c6eec8275ae0b3836dfe61a360668aa2e3eab76a8615fd275df974a6bc",
+      "bytes": 60
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\final-source-integrity.json",
+      "sha256": "fb0cc2a9bdd77e239de17cf35fc667bbc8ceb79c2522a6902b2bd3e93911dc71",
+      "bytes": 282
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\fixed-full-tests.txt",
+      "sha256": "565612f71c611f21680984bf3110993d24d1d27002caa1d1c0cf4974d8061abf",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\fixed-live-delta-review.json",
+      "sha256": "d512ccb60d09993d0599c30527f3e6c7bbdac10909218cb04f1df939945cbb74",
+      "bytes": 16562
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\fixed-official-run\\coverage.json",
+      "sha256": "b1fc0d8af08b1a73618f89de68eca67f9cf9f9de06402191c6e47805137bef21",
+      "bytes": 1827
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\fixed-official-run\\execution.json",
+      "sha256": "629a361a0c6768cf4c12fb75f3b1bed602b7b4e038a839dafdf61da16b9cb9df",
+      "bytes": 1025
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\fixed-official-run\\RESULTS.md",
+      "sha256": "aacde294cefe6a526d486e73588eefed1e3b518a739ffe63cd912852a4fdc86b",
+      "bytes": 1629
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\fixed-official-run\\verification.txt",
+      "sha256": "76e86c4344f69f36f8ddc446718a4f6d53c280d8798c35240aa50f27b75f7680",
+      "bytes": 273
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\fixed-runtime-source.json",
+      "sha256": "223ae9478bb3ef03ff5731dde084a89ae5bbacdd0b2a4fa2c91f25d295a09542",
+      "bytes": 804
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\focused-tests-final.txt",
+      "sha256": "ce8d8d793d8d5d66a43609b5d7bec9ce981e955f2d27969b4822476d5f55cf59",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\focused-tests.txt",
+      "sha256": "2369ac327656d59fa6ac01a75db622e5eda0de97b4c1bb2a0cbf61bf8906fa79",
+      "bytes": 2297
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\frozen-financial-identity.json",
+      "sha256": "aed2cafdd8a11954c6b29fe43d9cb825b4fc2961ccdc43ed1b8d3181d9f91f86",
+      "bytes": 380
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\frozen-guard-final.json",
+      "sha256": "ec9a85f2146d28161a625a1f239fa55b239da218005f1d44e54d69e88bd1b6ac",
+      "bytes": 262
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\frozen-guard-review.json",
+      "sha256": "f40e3cb66c773b7b5f8c5fa3ab11000b55b38296cd404c78d6730d43d9b80135",
+      "bytes": 14244
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\frozen-offline-replay.json",
+      "sha256": "7a8d837acbcf0214898e24e004bb7834c94e40fbe9ddb1e542d3332f73efae8d",
+      "bytes": 200029
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\frozen-verification.txt",
+      "sha256": "76ad763dcba16a327c6b747a4bb42009e28406e30b4ae3d52106e7fc59b6d1aa",
+      "bytes": 191
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\full-tests.txt",
+      "sha256": "c8f585c5f657016ac162ac4d0e0b25410b9e2eeaa7ceea1c35369b99e4dadaff",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\guard-final-tests.txt",
+      "sha256": "106b1fa840bcd95ce2b39071b078d1a157da0ece70e832b65556207b77b11ef0",
+      "bytes": 103
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\observation-changes.json",
+      "sha256": "20aaa105d31965d470c07769389a76d25462a132cb332fb22b8b311755c4fbe2",
+      "bytes": 52784
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\official-run\\execution.json",
+      "sha256": "9cb8e4330ab3eccc119e870780279b502947c8392693ac520e4dd09a19337069",
+      "bytes": 1012
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\official-run\\verification.txt",
+      "sha256": "3d1a4dac1cb34d213b0b6a92c5be784317e4ce3c2e85499434d6d0cac4d84c9c",
+      "bytes": 897
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\offline-pair-identity.json",
+      "sha256": "0c35635fcabd15645df72be4e405a402375e6fd78126478305b6cccba9cb54f6",
+      "bytes": 209
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\offline-replay.json",
+      "sha256": "74e2647fec86324c55f41cfdbe42e2b6fa8eba8e2f73eda3b29d8029894b4ff6",
+      "bytes": 19867
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\offline-verification.txt",
+      "sha256": "08ca4632f61f591345fa50226769290ad98ff29d23fc196d39a4b8315c281452",
+      "bytes": 185
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\orgnrs.txt",
+      "sha256": "f309997f2e60ef4e22f97d09bfd6cafe10c93be9e4ddb780b27323ccdd49b36e",
+      "bytes": 1130
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\original-output-hashes.json",
+      "sha256": "a1833cfef356e7edf2138bf2b2721dde2291e75fa02caea16749c83492d3870a",
+      "bytes": 565
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\pinned-final-full-tests.txt",
+      "sha256": "b04a30ad7c2362b87fb286285cf5346caea2c5e9ddad21d360ebef617b2c9203",
+      "bytes": 1511
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\review-ledger.json",
+      "sha256": "2e024d9ef602a3851a3760c6d80b0fb8e4adb250a77ec8b5de09664d71d44f5c",
+      "bytes": 1020086
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\REVIEW.md",
+      "sha256": "32bfb9a8a91fa2c37790dfe4e6a8c7c741dc61c69b160244064684fbac7571a8",
+      "bytes": 38189
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\SCOREBOARD.md",
+      "sha256": "8687a34690c465cbee9cb210bb66cfb17543ae49a1aaba8b98c6869df76a3462",
+      "bytes": 10236
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-10.json",
+      "sha256": "cc89237b6281df0099a417ea3e40ec4472cf714af5ffad996040975d73163b95",
+      "bytes": 164412
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-28.json",
+      "sha256": "059eea72ee7081f15fc82c2cff01ee13defa9268eab14c158ffb3c99579de581",
+      "bytes": 179503
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-35.json",
+      "sha256": "61a028a9a572ef7d792f6fa2dc22e3c98d12d9bfb41ce7a318e5fc9bef2e1940",
+      "bytes": 160258
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-41.json",
+      "sha256": "1f6d70f099c05bca6b502f93ec63e0205e10d219cf4f35dc62b18d177bf1c048",
+      "bytes": 168214
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-43.json",
+      "sha256": "d3ff9a6bc14f1880d3b6df32a0fefe855b72bd36ccb15123777a8479f04bbfad",
+      "bytes": 163198
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-45.json",
+      "sha256": "b66f3f4b5b6c69c83335c3cf163638ea555a3734184e1374f07ec13a27a18708",
+      "bytes": 158098
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-83.json",
+      "sha256": "af3fbf3632ccb4116f1f92f165e08e4c2dd9c3b2833a7c0776d1965de251296a",
+      "bytes": 153130
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection-source\\page-9.json",
+      "sha256": "8c9cb95b5fd7902a91830bda61a3f6269fb2f7ccb3cec08ab3e08677fc4f9dd5",
+      "bytes": 156173
+    },
+    {
+      "path": "bench\\reports\\s6-step22\\selection.json",
+      "sha256": "36f2612f19b838196f4dcb04de289a1971920a4cbdad8089c84037c66b94169d",
+      "bytes": 11497
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\loss1000\\baseline\\website-loss.json",
+      "sha256": "f7d6b045bdb0700ab64777df64fe591b96e46a5f30c776c5c0f64085e7c907c1",
+      "bytes": 3397287
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\loss1000\\baseline\\website-loss.md",
+      "sha256": "f818ce7a1b0e6d4afba368068deff1170c143259ee676f202f606ad1d512d2f8",
+      "bytes": 10161
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\loss1000\\final-off\\website-loss.json",
+      "sha256": "d4cbe9a3a2b4e31d839eb1650ddedc225f759e8838fb7434deb6a9e823dc63f9",
+      "bytes": 12393662
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\loss1000\\final-off\\website-loss.md",
+      "sha256": "49237193ee777bf8d807119eb6f929b75eb37d3fd21e3fa4bba05d7991e8c4fa",
+      "bytes": 9142
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\loss1000\\final-on\\website-loss.json",
+      "sha256": "9c4d0db3e2d0b99bdac526afb8386e494526ced7acc270dc0207dc42e7fd8478",
+      "bytes": 12063998
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\loss1000\\final-on\\website-loss.md",
+      "sha256": "664732307b446e1535cf0c8ac0c02fa83347d80852a273e3fffab5160e0a3731",
+      "bytes": 9120
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\baseline\\execution.json",
+      "sha256": "ce28463f2a0f089bea9aaa04dc4262487e4466f9201a703cc58e1e8104603263",
+      "bytes": 1951
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\baseline\\scoreboard.json",
+      "sha256": "0053439408588f467518348c969f2ddbeaaecf64c7268eac6f76d2a159ac3a7e",
+      "bytes": 5814
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\baseline\\summary.txt",
+      "sha256": "6853442e8c70a7670687638716c7262e9f5316c164b34b7708466d8a7dbd9524",
+      "bytes": 1189
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-off\\execution.json",
+      "sha256": "15c4e8eb6f5110ab09f86d8b368ca562bad5ba42e51f03946e3d098bbb02653c",
+      "bytes": 1847
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-off\\new-items-review.json",
+      "sha256": "481ddd8c95f5e1f0da2eb0e31494edb1eaaafb0f08c3232d75526b9b5bd1c9c3",
+      "bytes": 3498076
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-off\\scoreboard.json",
+      "sha256": "c6fb829a2d611d7b979e334160debdea4d986b517d537e7a5843779628512ffe",
+      "bytes": 5817
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-off\\summary.txt",
+      "sha256": "820de1e8a95f37518f435ef9c34383b5674929cf910f68ebbe3ef3370bd09247",
+      "bytes": 1190
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-on\\execution.json",
+      "sha256": "6a5c02e2d357591054bae805fd2e98cca1262bc76b1b52034070c716d55c9489",
+      "bytes": 1924
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-on\\new-items-review.json",
+      "sha256": "4286a37795e23e78792c9ea328cda4a6d25093cbf86f593c7e8c1b245757b685",
+      "bytes": 10735912
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-on\\scoreboard.json",
+      "sha256": "f93b411da9b72ac3d39250c0eb768a918fce595e50e8fe093ed4584945d9be9c",
+      "bytes": 5821
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\scale1000\\final-on\\summary.txt",
+      "sha256": "c7015cb9ea38be5572949b96eb66390f59a2ebe12b6956b02f9369a710e138f6",
+      "bytes": 1193
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\SCOREBOARD.md",
+      "sha256": "1b4e058541e693acbd907af0e8c61f91822180f8216db41b7a093a3787f23def",
+      "bytes": 3071
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step0\\execution.json",
+      "sha256": "86f775b9d1056ba4ab2bf8be3af57302cb4ddabe4dd813c90381c81b298594ff",
+      "bytes": 1844
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step0\\review.json",
+      "sha256": "1034b88b41f72a6a5fb8316fbdc53827514776cf1529108c33b4b141e4ac841c",
+      "bytes": 325588
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step0\\scoreboard.json",
+      "sha256": "6d54713ce13884287ac51312b8b98c321d4c888e72d314f3c89f0ef83776c7a1",
+      "bytes": 5775
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step0\\summary.txt",
+      "sha256": "54a0a6bdeda6140660b35437820812a0b10f20001dacd8bffcc25bb03bb21ec2",
+      "bytes": 1164
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step1\\execution.json",
+      "sha256": "167b3b0726221c9ad4b39fcdd3d3433212684591fcaf83841f18ba469575cc1b",
+      "bytes": 1843
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step1\\review.json",
+      "sha256": "ccc343c4d33eb8e4e5971278001fbeaaeb692fa47e2f9d16efc5006d10368912",
+      "bytes": 475773
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step1\\scoreboard.json",
+      "sha256": "f6679f3550c41d810f562995f280e582665e8dd736756d79cc2586eeac98c900",
+      "bytes": 5777
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step1\\summary.txt",
+      "sha256": "48dbeb8fd8586485f8bdeda9d70c3403943d7e7691067f546936c47891e51501",
+      "bytes": 1165
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step2\\execution.json",
+      "sha256": "d841d40a9abea48dff604b84c5ad56a046b1d30993b2ef2ba118c68fc3436522",
+      "bytes": 1845
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step2\\review.json",
+      "sha256": "27b91b7ef09918798477ccf0c954c41809b67bcd8827f27aea965057c48358d2",
+      "bytes": 858049
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step2\\scoreboard.json",
+      "sha256": "b05581244446492d767f50e6e93ea66604a9e668aa65dd152887912f070d1691",
+      "bytes": 5778
+    },
+    {
+      "path": "bench\\reports\\s6-step4\\step2\\summary.txt",
+      "sha256": "b5ca9143057000a6ae2efdffdc4951344f327bf2710ce2ff4b7229f3a0da70e5",
+      "bytes": 1165
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\ambiguous.json",
+      "sha256": "4244e596394d746de1bd64645d996bc2770987a8dd28d0a7df397c2de105e088",
+      "bytes": 67173
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\AMBIGUOUS.md",
+      "sha256": "3d753aed0052b36a9ddc86fdb46beb175c0d06420378d158f4e0f06bf07fc95c",
+      "bytes": 3085
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\budget.json",
+      "sha256": "b4094bef92b6c56473c3207f006f67326893564c5ae5c734453509913a47eba4",
+      "bytes": 1276
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\BUDGET.md",
+      "sha256": "c9db2236664c36daf5a35550adb6d94a8c051b2f7996beb75dbfb776d3529983",
+      "bytes": 1098
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\loss1000\\suffix-only\\website-loss.json",
+      "sha256": "a44c62af345574c63fd594a2b84270b00d5a6c4fe8a623dc5dedb5849da2b234",
+      "bytes": 12513919
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\loss1000\\suffix-only\\website-loss.md",
+      "sha256": "f87f875a3b19598496ef330b3edefe625209743762fbdf84879277c46cee2ebb",
+      "bytes": 9118
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\ownership-review.json",
+      "sha256": "4d5f7e31aa3548fc3566fde0cb6f40dd1649e0160a63dc558b1d947975705b69",
+      "bytes": 79181
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\OWNERSHIP_REVIEW.md",
+      "sha256": "8b951b90bbd493c65b6f5141445e3adf620d5b9e96cbff6783aebd04aa126016",
+      "bytes": 25562
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\SCOREBOARD.md",
+      "sha256": "e460586d8bb080412fa0a2e699b15312c1fd3375be73addeaf61c19e3042258a",
+      "bytes": 5144
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-100\\execution.json",
+      "sha256": "155116b16a85c4390e7b2c84144fcc185222b2c8910290fbc7aa91f25c28be40",
+      "bytes": 1882
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-100\\review.json",
+      "sha256": "59149cb453428b5f8a881a36a40bc55927cd9ca7523771a5db658e2f964a7a7d",
+      "bytes": 342
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-100\\scoreboard.json",
+      "sha256": "29345eef9d53c58b2578fa74ec680d84e51fd3011bc77b87464a49ccac979441",
+      "bytes": 5780
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-100\\summary.txt",
+      "sha256": "4b40c43f5c484a07c06d30ff02a835f56a44bcbbf7a36dc6b3161ddba2afaecd",
+      "bytes": 1167
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-1000\\execution.json",
+      "sha256": "53b69213cb65427949ca3c0d1e898abe4026e573921bf4e1fa4f09b5cc5457ba",
+      "bytes": 1884
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-1000\\news-loss.json",
+      "sha256": "f3351b87c53ba00ff74c314f3fda45d4332e25107274f1a1026cb5ecfa8cba4c",
+      "bytes": 9506
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-1000\\review.json",
+      "sha256": "ea0c4623ce249794e5911b39dd3b6b39e755f267ad54f3bd401fba152ce92875",
+      "bytes": 51221
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-1000\\scoreboard.json",
+      "sha256": "0c4b03e0ff4194cf6e63978d487bf03bc8afa112d92798aa62bf68f641dc4982",
+      "bytes": 5816
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\suffix-only-1000\\summary.txt",
+      "sha256": "5f287f9a928b292ac125fc93b06706789cb4f11dda7ceafed3a4a28e9b3552ab",
+      "bytes": 1191
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\tests.json",
+      "sha256": "f21685ad0daaf8ec3fcc68ee7aa628802e9865aebd1bb4687d345c39a7e6265b",
+      "bytes": 806
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\tls\\sample30.json",
+      "sha256": "7a9d9da0ba29ee1dab3f48340702a45b9e677423eb8dcd22933ba318c2485d9b",
+      "bytes": 98324
+    },
+    {
+      "path": "bench\\reports\\s6-step5\\TLS.md",
+      "sha256": "433898373123dde5ad2d5b2596ae5ff9234e825fa2ef02b5f1347bad9fa9aca1",
+      "bytes": 11065
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-a\\execution.json",
+      "sha256": "a53be6bf3a5a5168296cba57ff8c7099c124be3c5213fdcfab423309c48ca86c",
+      "bytes": 1847
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-a\\request-stats.json",
+      "sha256": "aaae0e62ce79f8c614853947292f91670f8b6a6c02c99a1b9e72dc923fe8fda8",
+      "bytes": 42813
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-a\\scoreboard.json",
+      "sha256": "6c9510d01f98cedd9ff8948b6866fb4687539f7b1c21a43486aa0fb6162d6f2a",
+      "bytes": 5814
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-a\\summary.txt",
+      "sha256": "4cb8c1acb371b8da94c084c164c2147413079d4c042d80ce941ef13ba6fd5d1d",
+      "bytes": 1189
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-b\\execution.json",
+      "sha256": "c3658a8cf39d9c0c7d9af5ee5776c041dc3c449361e2bfd2cc469cadad109100",
+      "bytes": 1847
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-b\\request-stats.json",
+      "sha256": "89ae5a906f54ba3883d58b4406d545d91e64e5dc1651dd3f349c69463918a317",
+      "bytes": 42843
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-b\\scoreboard.json",
+      "sha256": "e61d2b96e08393b6dd3830a2ea3ad7582ee4145bf6ca4a622a39475bcd5d4e30",
+      "bytes": 5814
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\baseline-b\\summary.txt",
+      "sha256": "7aea348cb55db4340f8047e93cdec7f5c96b1a5680784af0792f18ca2a757d8b",
+      "bytes": 1189
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\comparison.json",
+      "sha256": "12ec3969a60b9a57f399ac2085e29efdb707f6e99cb7f4af3312be5430c563b4",
+      "bytes": 469766
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\execution.json",
+      "sha256": "68f00b0f18c656332ff1ee3fced6891c364c3fed4603838e278a980fc9503262",
+      "bytes": 2108
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\request-stats.json",
+      "sha256": "cc5ec6ce5384716b6cbcc6234d61d857fa431a9899475847f369d3e4963de9af",
+      "bytes": 42951
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\review-items.json",
+      "sha256": "bf4cbc99e5679160a106c0bd1e4f3d5b8db5ec1c9792a453156a0a6f6abfe821",
+      "bytes": 1987807
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\review-summary.json",
+      "sha256": "ccf5242b65b5b1ac3dca184b49307e0c2ff4e4012948e4d6301ccb103fe69dda",
+      "bytes": 632
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\REVIEW.md",
+      "sha256": "fb249510bb113b383d2b702800aeeab74f3b5ee5642839d7beae29660aa9a3a4",
+      "bytes": 156982
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\scoreboard.json",
+      "sha256": "fb8933a7e455fae07e9ac91113cee6ec1c8a3dd956fdb146a85aed42b0c948bc",
+      "bytes": 5816
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined\\summary.txt",
+      "sha256": "85a844b8cf5e42ed6e79df662681199e6ed117e485843b50f8c31fc21e6cd294",
+      "bytes": 1190
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined-vs-steps1-3\\comparison.json",
+      "sha256": "ded986c71a8fa4eece656eb780e7c0625085d3cda8c00625ce4759bbb8706805",
+      "bytes": 324466
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined-vs-steps1-3\\review-items.json",
+      "sha256": "4de2feb39f5873730f7e0dc80071fc0e54785b0ec84056e115dfe60a2c35541d",
+      "bytes": 1391837
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined-vs-steps1-3\\review-summary.json",
+      "sha256": "30b7b63dd5e42679d717f2bae96f79d7a8137f4e6bbe51ed2c2e4ca6968dc99d",
+      "bytes": 627
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined-vs-steps1-3\\REVIEW.md",
+      "sha256": "f940fbfeacb083d98a8dc18f3f35527d4c49d7a314533a99870f4138eb8286ba",
+      "bytes": 94751
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\combined-vs-steps1-3\\social-losses.json",
+      "sha256": "f19d5a96ee4f71b1ce139b0bcfb5fd6da22765d0fb52181acf7f02bb97866f4e",
+      "bytes": 57406
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\credential-check.json",
+      "sha256": "3239e3197328e4194604d1f33c2a32c7662486fd9d6a49e495450cd296a56405",
+      "bytes": 264
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\final-validation.json",
+      "sha256": "155dfb8c75d9e6a840e9749d79f6000d1cae71faa5c674d954edf67fcfc22d4d",
+      "bytes": 732
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\noise\\comparison.json",
+      "sha256": "172d13c7b548fe77f0d0c4b0f46eb5cfd43403fa316d8b4a70b28b686543ca09",
+      "bytes": 336771
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\NOISE.md",
+      "sha256": "ad0cdb74a661be1c12518a783aee715d747e85dd4270750ca8f2cf73434f1e40",
+      "bytes": 4294
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\SCOREBOARD.md",
+      "sha256": "d3e10215e1d8cab9e2a780be9f6736ffe75a6228a91da83778a88f10804b7ba8",
+      "bytes": 8505
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\additional-items-reviewed.json",
+      "sha256": "8e09fcaf1557991e560fefe6bcd216642d97895eec82a055b615f3d9bab0008a",
+      "bytes": 322224
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\comparison.json",
+      "sha256": "d74cf2b573f5237ac84197647486d3e3440bf67506a557e8b2d31dda142d19db",
+      "bytes": 340304
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\execution.json",
+      "sha256": "8cc63955e0a464d3b5acf400c1e21a8437a6080d821cf2369dcf4a69d70452c1",
+      "bytes": 2212
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\request-stats.json",
+      "sha256": "cfcf933e6e8c6928db28114b54759c9a0a4c60716907cd8ea1ec5054a45935c5",
+      "bytes": 42912
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\review-items.json",
+      "sha256": "c5e666351ef2529bfb5e8e1d1c1320c14d445b44dcb5544794011860310ede59",
+      "bytes": 1577174
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\review-summary.json",
+      "sha256": "57b22100fd32292293cd10f8a448bc7d619f096fbaff5ca14ee4b786550a96ca",
+      "bytes": 652
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\REVIEW.md",
+      "sha256": "7eaf73c21506c271841541d8a417f62aa288ad83a4df7e4cb9e2db246d841772",
+      "bytes": 141424
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\scoreboard.json",
+      "sha256": "85ea25c8ae100cfd42d2e6db7403f5a8b32790d99d1e760cb7d5553d478558e1",
+      "bytes": 5814
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only\\summary.txt",
+      "sha256": "2f1bb440ea6574b9af8e2893bdc9f3e32cd0e83ed92ff220d3807e7a83fd177f",
+      "bytes": 1189
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\step4-only-vs-steps1-3\\comparison.json",
+      "sha256": "91dc6564547502e76e2befcf66bbbce276ff0fa38a6cc72231940e8c336114b6",
+      "bytes": 328421
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\comparison.json",
+      "sha256": "038fd2a6c03c416d7832779070e73947812a26752fa33f42a85bce55ee2f94d3",
+      "bytes": 316061
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\execution.json",
+      "sha256": "4ab93ebc64e15699cd9848ef9358860520ccbf4e879d40c30dace0820c7dadcf",
+      "bytes": 2111
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\request-stats.json",
+      "sha256": "c93b2f771ef678d32b1a8088f3b2eb115d90f32eb0d2ee54c8cca2d68297f2cf",
+      "bytes": 43012
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\review-items.json",
+      "sha256": "50c9613f9c74d527243b0a340d86da192b9805873bd3f80a60eefdbb6d75b2a0",
+      "bytes": 1155990
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\review-summary.json",
+      "sha256": "5741e736cd7e9e6cf7528aaccc9ea6a77e18cefe854bc16e26782524d5f3c557",
+      "bytes": 530
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\REVIEW.md",
+      "sha256": "7d2edc3f9fae6d80c5b45eadf7c33f677f9e19c4d98d224ab3e6546bfc847a44",
+      "bytes": 74518
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\scoreboard.json",
+      "sha256": "08a82ac7be270dd4b93b8367ed2ed277cdfe521e0d30cde42f734ac322087c2f",
+      "bytes": 5819
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\steps1-3\\summary.txt",
+      "sha256": "675c59a5f87d07a43169bdaa50c0904faa59020d1cde21e2d1484083cc903cbe",
+      "bytes": 1192
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\tests-kept.txt",
+      "sha256": "a7662aec835e1eb8400596864daa0de863af35710bd71a7ad0d895f9726a86d1",
+      "bytes": 2174
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\tests.json",
+      "sha256": "7fbdeb0079aaaa8bc67827593fc7183fe3720b661aefe779185ec69910b47780",
+      "bytes": 1345
+    },
+    {
+      "path": "bench\\reports\\s6-step6\\WRONG_COMPANY.json",
+      "sha256": "2cdc72309d5513b43f53a59a8b53bc96bd82ffe302d87bf03fd4dbbd6f187d21",
+      "bytes": 2476
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\baseline-jobs.json",
+      "sha256": "a93d2b5255fbae9aecd4a13afd99e41f2961d9bce7d76e097bf6d3a76acb39c1",
+      "bytes": 6526
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\baseline-scope-review.json",
+      "sha256": "a66260d3b09c1c8287a2132bc7d0d8b53957a664847ae535b8d140196744d6a6",
+      "bytes": 24668
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\baseline-websites.json",
+      "sha256": "14ae989bb6a81ce6ce0e6f2cefce5ec34d03c756c27ff0348f52217dece0c40c",
+      "bytes": 1382925
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\clone.stderr.txt",
+      "sha256": "0d6c80630c0ffd80a3474ace984c4be1855fc03d1755437da6e96cc1881a1cdd",
+      "bytes": 78
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\clone.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\execution.json",
+      "sha256": "ada05afb28e2d14b099de8d40ec81800d1b187f32e66e8d6ab96a75af2479cf4",
+      "bytes": 7011
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run1-changes.json",
+      "sha256": "2a3113b7799c1703632ec84392ae4cdba0c4ec2595038e78e405aaeac5f6d47a",
+      "bytes": 10705
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run1-report.json",
+      "sha256": "7482db7b0451e77764257d5c8c1581f94e8d67a1d7dd1122d2604628fe0bc407",
+      "bytes": 6399129
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run1.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run1.stdout.txt",
+      "sha256": "37c32ecfec05db35ddddffb47200f4a088c37f67885f95c9a5d4d082e60346a0",
+      "bytes": 165
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run2-changes.json",
+      "sha256": "05c2e8c9c249933b92e4bd70c8ddb4ec67057b746803eae0a35787bcef71f5fc",
+      "bytes": 14616
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run2-report.json",
+      "sha256": "3750d518a35846fbd4c5177229de98a6a43a78aa313ffa03ed222bdc8723ab72",
+      "bytes": 6404597
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run2.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\run2.stdout.txt",
+      "sha256": "c7ef09dfbf334f6e2b2203277c8063445e33f59eae97de7159051d89d8d53f84",
+      "bytes": 166
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\sync.stderr.txt",
+      "sha256": "fd2ae7293e1eccc0b169ece15aa49467a608823fa9346a7c042e46f8779a725a",
+      "bytes": 928
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\clean-run\\sync.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\comparison\\comparison.json",
+      "sha256": "2cbc097155069c62545fd3dc23136cff3fe56ab6e4cf99158fb13a7e34ee9c74",
+      "bytes": 89984
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\comparison\\review-items.json",
+      "sha256": "66a5836bb1a6870a10b3abdec9cba9e7ecc0ce894af22962989b7e9978b622f1",
+      "bytes": 134388
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\comparison\\REVIEW.md",
+      "sha256": "5d704c765ba330857b9661110228659c4a86a6a33ee72bd9a238bb28c7db6f10",
+      "bytes": 1643
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\LOST_ITEMS.md",
+      "sha256": "b53fa0a1e364fade21e1ac86752e9199a34c86cbccdc9604128899a99380a2f7",
+      "bytes": 3449
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\official-run\\RESULTS.md",
+      "sha256": "04dc97c2355313d3eff7a9c951299bba64ba517792ba8911f592dd0665084859",
+      "bytes": 2755
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\OWNERSHIP_REVIEW.md",
+      "sha256": "ebe33a1fae0011e7cd5bba4751e5fc9c9cef50c463ac09e0dfbaee24de1bc1e2",
+      "bytes": 10458
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\0146c9311fe605699288346ada79746c6c1ef471ba326a275b2da2fe4da91a33.json",
+      "sha256": "0146c9311fe605699288346ada79746c6c1ef471ba326a275b2da2fe4da91a33",
+      "bytes": 1535
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\0cd0da2e9a7c9ebcbbbe4ab3e1baf6ca6c04227fc640be8da37d25a5eacc9be7.json",
+      "sha256": "0cd0da2e9a7c9ebcbbbe4ab3e1baf6ca6c04227fc640be8da37d25a5eacc9be7",
+      "bytes": 1918
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\12082355a020962135d2a83e04df7fd9b182eaba5ee67e8466c5abdef21ac337.json",
+      "sha256": "12082355a020962135d2a83e04df7fd9b182eaba5ee67e8466c5abdef21ac337",
+      "bytes": 1829
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\1a02a94e62bfdb157a13642cd5e8f58fc6620330be04aa899bff57fc45b21434.json",
+      "sha256": "1a02a94e62bfdb157a13642cd5e8f58fc6620330be04aa899bff57fc45b21434",
+      "bytes": 2711
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\1bc77f66930d700a2249a1175187341b73a3764cf998fa293db118995b97e291.json",
+      "sha256": "1bc77f66930d700a2249a1175187341b73a3764cf998fa293db118995b97e291",
+      "bytes": 2054
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\20bfc26e4409a48b6dff55ffd293f2aa80f2a0b417d8a3174ed16130f8bcf15a.json",
+      "sha256": "20bfc26e4409a48b6dff55ffd293f2aa80f2a0b417d8a3174ed16130f8bcf15a",
+      "bytes": 1651
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\222e0be0553be3c346bffb8b23b87f951fdba7562be3171f191f05ca39e556d4.json",
+      "sha256": "222e0be0553be3c346bffb8b23b87f951fdba7562be3171f191f05ca39e556d4",
+      "bytes": 1932
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\3e8f5acb648c8364f08274f50fb70d7d658401690ac937855ebbb09b82eb4b94.json",
+      "sha256": "3e8f5acb648c8364f08274f50fb70d7d658401690ac937855ebbb09b82eb4b94",
+      "bytes": 1693
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\3f7e02eddd8054b532269bb84e9c2275732042702cd94c764bcecdf892765b68.json",
+      "sha256": "3f7e02eddd8054b532269bb84e9c2275732042702cd94c764bcecdf892765b68",
+      "bytes": 1727
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\56df78f17c4b13451655bf00c84b7df8fe4612bb5ff4edad1976f14dbfd70a71.json",
+      "sha256": "56df78f17c4b13451655bf00c84b7df8fe4612bb5ff4edad1976f14dbfd70a71",
+      "bytes": 1812
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\6008c4c7816f9a5d7edda807c5125ea9e1d800a4714bc47483ee2ae9bd486558.json",
+      "sha256": "6008c4c7816f9a5d7edda807c5125ea9e1d800a4714bc47483ee2ae9bd486558",
+      "bytes": 1829
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\8370020ca78e8c6ad42632c69b5895de9558786949591a1f767ed928459753b9.json",
+      "sha256": "8370020ca78e8c6ad42632c69b5895de9558786949591a1f767ed928459753b9",
+      "bytes": 1628
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\968f2babec8ed1cda62abfa64912e39a84fe8e9924fe956788aa6598b415b662.json",
+      "sha256": "968f2babec8ed1cda62abfa64912e39a84fe8e9924fe956788aa6598b415b662",
+      "bytes": 1955
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\aba9a3009c4fa4d1c21c08c9820992b08a5d95ce6f3ded1bb4e1b4a0c93881dc.json",
+      "sha256": "aba9a3009c4fa4d1c21c08c9820992b08a5d95ce6f3ded1bb4e1b4a0c93881dc",
+      "bytes": 1655
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\b40f3398febbfbf36c6e2be09e5f68106268bd2bab0732f750afdb5ed29b5558.json",
+      "sha256": "b40f3398febbfbf36c6e2be09e5f68106268bd2bab0732f750afdb5ed29b5558",
+      "bytes": 1832
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\daabf5049ec0a2d81ba0c4227f1f0ca8624fb1ed08dcb0ac3b0b418dcd7c327c.json",
+      "sha256": "daabf5049ec0a2d81ba0c4227f1f0ca8624fb1ed08dcb0ac3b0b418dcd7c327c",
+      "bytes": 1627
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\registry-review\\review.json",
+      "sha256": "1b065a5bdbafa28207b151d5715f0836d51e0f0b253c7ccb42a3203fd6e1e91b",
+      "bytes": 7715
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\SCOREBOARD.md",
+      "sha256": "e19eeee56998711c2ee7c347144d565e67051a5998a9b669688df16cfd3c5101",
+      "bytes": 4379
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\simulated-budgets.json",
+      "sha256": "d8f3e5bbb6bc03a1adba192d41cfed5a5813fcf93dba7f3d3ac426e549f0ba9b",
+      "bytes": 1482
+    },
+    {
+      "path": "bench\\reports\\s6-step7\\trial-counts.json",
+      "sha256": "9f379c995244daebe696aa43d9d413294fa790fc1ecd02fc32d2f31340c46a79",
+      "bytes": 2804
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\DIFFERENTIAL_REVIEW.md",
+      "sha256": "b699e46b3a2cb7a6ba6c4d2bd66d007df43edb7264f6726114aaa8460c71f23c",
+      "bytes": 4830
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\GROUP_WEBSITE_REVIEW.md",
+      "sha256": "9dad621a1182712a43e97cb29d50bbef472e4f0b0dc5865e699d81d3e0ff9313",
+      "bytes": 2167
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\NAV_AUDIT.json",
+      "sha256": "81ac36e2916907e511b00130e9a86bba2fde6bd5444f5e9ff7c8d7bc6563fe10",
+      "bytes": 19839
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\NAV_AUDIT.md",
+      "sha256": "4ef42ab7d687a0ee88629cfacde07c8d1ca8bd7b8ac133b1ef2797611ea436fd",
+      "bytes": 3190
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\official-run\\RESULTS.md",
+      "sha256": "d3382ff5f32aabf54762b5f9f3e3e215f3a59e0aba0821c7baa4c1e69b7bd377",
+      "bytes": 2195
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\official_orgnrs.txt",
+      "sha256": "e42b962027dd5839e6c9b0ba396481421fa7ec07ef9ccf6d82cb898e01848a8b",
+      "bytes": 1128
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\SCOREBOARD.md",
+      "sha256": "61f0676fa6de959c0d68666a69e02fcd360f87618a513cc37a25b51024a61a75",
+      "bytes": 5921
+    },
+    {
+      "path": "bench\\reports\\s6-step8\\WIKIDATA_SOCIAL_REVIEW.md",
+      "sha256": "e49ee2bc03080764ec9031325382a26c051f4bf6516a1bde5116411dbe9a3c6d",
+      "bytes": 1811
+    },
+    {
+      "path": "bench\\reports\\s6-step8b\\RESULTS.md",
+      "sha256": "95dff5f3818be23f64c87cee0ae6d14ddb91ba6a15c90961a571f78a62e61ea8",
+      "bytes": 5547
+    },
+    {
+      "path": "bench\\reports\\s6-step8b\\STALE_SECTIONS.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "bench\\reports\\s6-step8b\\validation.json",
+      "sha256": "f4c358f82c9fd9e10115b87e2dc300771ac75ed268bd7009607c0e5695444656",
+      "bytes": 1799
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\browser-check.json",
+      "sha256": "d408de26b298e141cd2bc6b5bb004b4ab0b52821ff9ac41b301d0f8b1a9db911",
+      "bytes": 1327
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\credential-check.json",
+      "sha256": "b515ac36fffe698f705ae4fb5eb4fb87de0c28918b755bc5c218931a1f4322ac",
+      "bytes": 98
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\EXAMPLE_SUMMARIES.json",
+      "sha256": "2d064cea0a14f937a0586ebee76e132a3ae204d282f79a330f096daa22a60115",
+      "bytes": 26620
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\EXAMPLE_SUMMARIES.md",
+      "sha256": "9ea7c439693b042d0751f9281b812a67c186d10da9a753de8539ee5c71519c47",
+      "bytes": 3662
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\RESULTS.md",
+      "sha256": "1efb15e095d4552bf7fbe3d5d307719abecbf591b29eaaf08149945ce12b18e6",
+      "bytes": 7943
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\SOURCE_RECOVERY_DIAGNOSTIC.json",
+      "sha256": "601090198dda2df0ae89fda9244746f04160e97dfa99cd6d182b7c880171b67f",
+      "bytes": 1004
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\TIMEZONE_DIAGNOSTIC.json",
+      "sha256": "a234b8fc1a5d35e230f4126b65c32ba728401bcd10b0fadd799046d8140cbd8a",
+      "bytes": 19200
+    },
+    {
+      "path": "bench\\reports\\s6-step9\\validation.json",
+      "sha256": "7fb9348ff914ea4782ca652754fca58a3af96750de88c2c49a6aedf9b2a25dac",
+      "bytes": 2521
+    },
+    {
+      "path": "bench\\reports\\S6_REPORT.md",
+      "sha256": "474955d56139152e33038906c1322b9cf29f8e5dc5871b017d205aa66c457710",
+      "bytes": 15353
+    },
+    {
+      "path": "bench\\reports\\suffix-screen.json",
+      "sha256": "a47077b0751b3509f2a905955c47a148f90261ff0501fc1760a57474233dc0f3",
+      "bytes": 30916
+    }
+  ],
+  "input_sha256": "1819f0d0d68dc6bc3d390511c7d0444ab4d05825f07284369f88e53107b69d8d",
+  "companies": [
+    {
+      "organisation_number": "921005512",
+      "name": "SUN BEAUTY SOLSTUDIO AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LARVIK",
+      "municipality_number": "3909",
+      "industry_code": "96.230",
+      "industry_label": "Aktiviteter i dagspa, badstue og dampbad",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "935431689",
+      "name": "RAST MASKIN AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "NESBYEN",
+      "municipality_number": "3322",
+      "industry_code": "43.120",
+      "industry_label": "Grunnarbeid",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "920693342",
+      "name": "ULLENSAKER TANNLEGESENTER AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ULLENSAKER",
+      "municipality_number": "3209",
+      "industry_code": "86.230",
+      "industry_label": "Tannlegetjenester",
+      "website": "www.ullensakertannlegesenter.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "930046760",
+      "name": "LOG MOLDE AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "AUKRA",
+      "municipality_number": "1547",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "995392755",
+      "name": "VIGILO AS",
+      "legal_form": "AS",
+      "employees": 22,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "KARMØY",
+      "municipality_number": "1149",
+      "industry_code": "62.200",
+      "industry_label": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "923301704",
+      "name": "GLÅMDAL TAK OG HÅNDVERKERTJENESTER AS",
+      "legal_form": "AS",
+      "employees": 7,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "KONGSVINGER",
+      "municipality_number": "3401",
+      "industry_code": "43.320",
+      "industry_label": "Snekkerarbeid",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "980235882",
+      "name": "OXFOR EIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ASKER",
+      "municipality_number": "3203",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "www.oxer.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "914851114",
+      "name": "SELJÅSEN GÅRD AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ARENDAL",
+      "municipality_number": "4203",
+      "industry_code": "47.780",
+      "industry_label": "Annen detaljhandel med andre nye varer",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "998078210",
+      "name": "AVANTI GRUPPEN AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "MOSS",
+      "municipality_number": "3103",
+      "industry_code": "70.200",
+      "industry_label": "Bedriftsrådgivning og annen administrativ rådgivning",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "922921237",
+      "name": "SAMEIET SOKNES 1",
+      "legal_form": "ESEK",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TRONDHEIM",
+      "municipality_number": "5001",
+      "industry_code": "97.001",
+      "industry_label": "Aktiviteter i borettslag og boligsameier",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "932513307",
+      "name": "SØSTRENE ØYO AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HOL",
+      "municipality_number": "3330",
+      "industry_code": "10.890",
+      "industry_label": "Produksjon av næringsmidler ikke nevnt annet sted",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "928690393",
+      "name": "BABY TEK AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LILLESTRØM",
+      "municipality_number": "3205",
+      "industry_code": "47.260",
+      "industry_label": "Detaljhandel med tobakksvarer",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "918881824",
+      "name": "WAGYU INVEST AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LØTEN",
+      "municipality_number": "3412",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "934170784",
+      "name": "MMA INVESTERING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HARAM",
+      "municipality_number": "1580",
+      "industry_code": "64.323",
+      "industry_label": "Andre egeninvesteringsselskaper",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "941549047",
+      "name": "KIVLE EIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "KRAGERØ",
+      "municipality_number": "4014",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "920817998",
+      "name": "LARSEN BYGG & TØMRERFIRMA AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ASKER",
+      "municipality_number": "3203",
+      "industry_code": "41.000",
+      "industry_label": "Oppføring av bygninger",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "922156980",
+      "name": "VASS-SKILLE AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "VINDAFJORD",
+      "municipality_number": "1160",
+      "industry_code": "95.310",
+      "industry_label": "Reparasjon og vedlikehold av motorvogner",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "934995538",
+      "name": "RUKAM HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "NAMSOS",
+      "municipality_number": "5007",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "932296314",
+      "name": "CJ VETERINÆRTJENESTER AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "GJØVIK",
+      "municipality_number": "3407",
+      "industry_code": "75.000",
+      "industry_label": "Veterinærtjenester",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "932591987",
+      "name": "FRA DYPET SJØMAT AS",
+      "legal_form": "AS",
+      "employees": 14,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ASKER",
+      "municipality_number": "3203",
+      "industry_code": "56.110",
+      "industry_label": "Drift av restauranter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "827373672",
+      "name": "FLYPLASSVEIEN 1 AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BRØNNØY",
+      "municipality_number": "1813",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "935988365",
+      "name": "JARIN AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ØYGARDEN",
+      "municipality_number": "4626",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "926417932",
+      "name": "WELL HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TØNSBERG",
+      "municipality_number": "3905",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "913047818",
+      "name": "AUDRIUS BYGGSERVICE AS",
+      "legal_form": "AS",
+      "employees": 9,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LARVIK",
+      "municipality_number": "3909",
+      "industry_code": "41.000",
+      "industry_label": "Oppføring av bygninger",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "936369510",
+      "name": "JUXERO AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "990180008",
+      "name": "PROPAN SENTERET AS",
+      "legal_form": "AS",
+      "employees": 7,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TRONDHEIM",
+      "municipality_number": "5001",
+      "industry_code": "46.810",
+      "industry_label": "Engroshandel med drivstoff, brensel og beslektede produkter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "923303251",
+      "name": "OPPSTRYN EIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BERGEN",
+      "municipality_number": "4601",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "989176315",
+      "name": "STIG OLSEN SQUASH AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "DRAMMEN",
+      "municipality_number": "3301",
+      "industry_code": "85.510",
+      "industry_label": "Undervisning innenfor idrett og rekreasjon",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "915073557",
+      "name": "TNB MOLDE AS",
+      "legal_form": "AS",
+      "employees": 5,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "MOLDE",
+      "municipality_number": "1506",
+      "industry_code": "47.400",
+      "industry_label": "Detaljhandel med informasjons- og kommunikasjonsteknologiutstyr",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "928080463",
+      "name": "RÅDHUSPLASSEN BORETTSLAG",
+      "legal_form": "BRL",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "KRISTIANSUND",
+      "municipality_number": "1505",
+      "industry_code": "97.001",
+      "industry_label": "Aktiviteter i borettslag og boligsameier",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "994751832",
+      "name": "RANA IDRETTSKLINIKK AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "RANA",
+      "municipality_number": "1833",
+      "industry_code": "79.902",
+      "industry_label": "Guide- og reiseledervirksomhet",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "938710953",
+      "name": "FAVN FORSIKRING",
+      "legal_form": "GFS",
+      "employees": 7,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TROMSØ",
+      "municipality_number": "5501",
+      "industry_code": "65.120",
+      "industry_label": "Skadeforsikring",
+      "website": "www.favnforsikring.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "822564682",
+      "name": "MWT PARTNER AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BÆRUM",
+      "municipality_number": "3201",
+      "industry_code": "41.000",
+      "industry_label": "Oppføring av bygninger",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "914340632",
+      "name": "AKB AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "983653251",
+      "name": "BRÆNDERIET BOLIGSAMEIE",
+      "legal_form": "ESEK",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HAMAR",
+      "municipality_number": "3403",
+      "industry_code": "97.001",
+      "industry_label": "Aktiviteter i borettslag og boligsameier",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "927421445",
+      "name": "R2 EIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ASKER",
+      "municipality_number": "3203",
+      "industry_code": "68.120",
+      "industry_label": "Utvikling og salg av byggeprosjekter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "919732008",
+      "name": "PREG BARNEHAGER FRØYLAND AS",
+      "legal_form": "AS",
+      "employees": 39,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TIME",
+      "municipality_number": "1121",
+      "industry_code": "85.100",
+      "industry_label": "Førskoleundervisning og drift av barnehager",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "931426648",
+      "name": "PERAZZONE & VAUDAGNA AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "NARVIK",
+      "municipality_number": "1806",
+      "industry_code": "56.110",
+      "industry_label": "Drift av restauranter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "929635574",
+      "name": "SNAGS AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BODØ",
+      "municipality_number": "1804",
+      "industry_code": "47.270",
+      "industry_label": "Detaljhandel med nærings- og nytelsesmidler ellers",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "925985198",
+      "name": "SCHRØDAHL HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "SANDNES",
+      "municipality_number": "1108",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "871002592",
+      "name": "MAP MÅLING ANALYSE PRESENTASJON AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BÆRUM",
+      "municipality_number": "3201",
+      "industry_code": "74.990",
+      "industry_label": "All annen faglig, vitenskapelig og teknisk virksomhet ikke nevnt annet sted",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "882932222",
+      "name": "SUNNMØRE VENTILASJON AS",
+      "legal_form": "AS",
+      "employees": 6,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HERØY",
+      "municipality_number": "1515",
+      "industry_code": "43.223",
+      "industry_label": "Ventilasjonsarbeid",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "931407139",
+      "name": "MARSILIUS HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "997083199",
+      "name": "ÅLESUND BIL INVEST AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TRONDHEIM",
+      "municipality_number": "5001",
+      "industry_code": "95.310",
+      "industry_label": "Reparasjon og vedlikehold av motorvogner",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "984847262",
+      "name": "FARET 6 AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LARVIK",
+      "municipality_number": "3909",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "988884960",
+      "name": "ATLANTIS HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "GJØVIK",
+      "municipality_number": "3407",
+      "industry_code": "85.403",
+      "industry_label": "Undervisning ved andre høgskoler",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "925160202",
+      "name": "GUNNAR KLO HOLDING AS",
+      "legal_form": "AS",
+      "employees": 8,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ØKSNES",
+      "municipality_number": "1868",
+      "industry_code": "03.211",
+      "industry_label": "Produksjon av fisk, bløtdyr, krepsdyr og pigghuder i sjø og brakkvann",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "918609067",
+      "name": "BDH AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "KRISTIANSAND",
+      "municipality_number": "4204",
+      "industry_code": "68.110",
+      "industry_label": "Kjøp og salg av egen fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "932286467",
+      "name": "RJT INVEST AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "VESTBY",
+      "municipality_number": "3216",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "897051982",
+      "name": "NTE AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "STAD",
+      "municipality_number": "4649",
+      "industry_code": "85.531",
+      "industry_label": "Undervisning ved godkjente trafikkskoler",
+      "website": "www.nordfjordtrafikk.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "920541461",
+      "name": "SANDGRIND HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TRONDHEIM",
+      "municipality_number": "5001",
+      "industry_code": "68.120",
+      "industry_label": "Utvikling og salg av byggeprosjekter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "988946389",
+      "name": "MASAJ AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TRONDHEIM",
+      "municipality_number": "5001",
+      "industry_code": "64.323",
+      "industry_label": "Andre egeninvesteringsselskaper",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "988875260",
+      "name": "CEDA INVEST AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "64.323",
+      "industry_label": "Andre egeninvesteringsselskaper",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "955205278",
+      "name": "NORDÅS SELEGREND BORETTSLAG",
+      "legal_form": "BRL",
+      "employees": 10,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BERGEN",
+      "municipality_number": "4601",
+      "industry_code": "97.001",
+      "industry_label": "Aktiviteter i borettslag og boligsameier",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "912016757",
+      "name": "IGM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "85.597",
+      "industry_label": "Annen undervisning ellers",
+      "website": "www.igm.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "927874458",
+      "name": "SAMEIET FROSTAVEIEN 2",
+      "legal_form": "ESEK",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TRONDHEIM",
+      "municipality_number": "5001",
+      "industry_code": "97.001",
+      "industry_label": "Aktiviteter i borettslag og boligsameier",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "979738595",
+      "name": "GAASSAND ANLEGGSERVICE AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BJØRNAFJORDEN",
+      "municipality_number": "4624",
+      "industry_code": "33.120",
+      "industry_label": "Reparasjon og vedlikehold av maskiner",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "931481126",
+      "name": "M.M.7 BYGG AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "GJERDRUM",
+      "municipality_number": "3230",
+      "industry_code": "41.000",
+      "industry_label": "Oppføring av bygninger",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "924351195",
+      "name": "MEGAHARTZ AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BÆRUM",
+      "municipality_number": "3201",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "922087067",
+      "name": "HEIAN 2 AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BODØ",
+      "municipality_number": "1804",
+      "industry_code": "68.120",
+      "industry_label": "Utvikling og salg av byggeprosjekter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "925306304",
+      "name": "CHARLTON TECHNICAL SUPPORT AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HOLMESTRAND",
+      "municipality_number": "3903",
+      "industry_code": "43.210",
+      "industry_label": "Elektrisk installasjonsarbeid",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "921542615",
+      "name": "FIAT LUX AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "993031526",
+      "name": "FOSSESKANSEN BARNEHAGE AS",
+      "legal_form": "AS",
+      "employees": 9,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TRONDHEIM",
+      "municipality_number": "5001",
+      "industry_code": "85.100",
+      "industry_label": "Førskoleundervisning og drift av barnehager",
+      "website": "www.fosseskansen.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "988282766",
+      "name": "HOPLAND AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "STAD",
+      "municipality_number": "4649",
+      "industry_code": "69.201",
+      "industry_label": "Revisjon",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "915769772",
+      "name": "GREEN HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "TØNSBERG",
+      "municipality_number": "3905",
+      "industry_code": "64.323",
+      "industry_label": "Andre egeninvesteringsselskaper",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "985803692",
+      "name": "KRISTIANSUND BILPLEIE AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "KRISTIANSUND",
+      "municipality_number": "1505",
+      "industry_code": "95.310",
+      "industry_label": "Reparasjon og vedlikehold av motorvogner",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "814344312",
+      "name": "VOKSENKOLLEN UTVIKLING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "68.120",
+      "industry_label": "Utvikling og salg av byggeprosjekter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "915476457",
+      "name": "RODE KONSULT AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "70.200",
+      "industry_label": "Bedriftsrådgivning og annen administrativ rådgivning",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "952542699",
+      "name": "AS HOLTEGÅRDEN",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BÆRUM",
+      "municipality_number": "3201",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "936848710",
+      "name": "E WOLD EIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "VÅGÅ",
+      "municipality_number": "3435",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "922833583",
+      "name": "AFARM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "ASKER",
+      "municipality_number": "3203",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "980363872",
+      "name": "VERKSGT 14 A AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "STAVANGER",
+      "municipality_number": "1103",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "934085280",
+      "name": "AXSA ADVOKATFIRMA AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "69.100",
+      "industry_label": "Juridisk tjenesteyting",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "933499375",
+      "name": "KVN ENTREPRENØR AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OVERHALLA",
+      "municipality_number": "5047",
+      "industry_code": "71.200",
+      "industry_label": "Teknisk prøving og analyse",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "934197976",
+      "name": "STEG LØPETRENING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BERGEN",
+      "municipality_number": "4601",
+      "industry_code": "85.510",
+      "industry_label": "Undervisning innenfor idrett og rekreasjon",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "988436542",
+      "name": "HAVNEGATA 25 AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HARSTAD",
+      "municipality_number": "5503",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "835014282",
+      "name": "MOTORPOWER AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "INDRE ØSTFOLD",
+      "municipality_number": "3118",
+      "industry_code": "95.310",
+      "industry_label": "Reparasjon og vedlikehold av motorvogner",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "932224445",
+      "name": "ALU DESIGN & SERVICES AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "KRISTIANSAND",
+      "municipality_number": "4204",
+      "industry_code": "74.110",
+      "industry_label": "Industri-, produkt- og motedesignvirksomhet",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "990769087",
+      "name": "LÆRDALSØYRI EIGEDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LÆRDAL",
+      "municipality_number": "4642",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "991086188",
+      "name": "SUKO EIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "STRAND",
+      "municipality_number": "1130",
+      "industry_code": "68.120",
+      "industry_label": "Utvikling og salg av byggeprosjekter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "916752016",
+      "name": "STRØM-NORMANN HELSE AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "SANDEFJORD",
+      "municipality_number": "3907",
+      "industry_code": "86.950",
+      "industry_label": "Fysioterapi- og ergoterapitjenester",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "925261971",
+      "name": "BACKSLASH AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "00.000",
+      "industry_label": "Uoppgitt",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "988192996",
+      "name": "N.K.S. HELSEHUS AKERSHUS AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LØRENSKOG",
+      "municipality_number": "3222",
+      "industry_code": "87.101",
+      "industry_label": "Tjenester i spesialinstitusjon innenfor helse- og omsorg",
+      "website": "www.nks-helsehus.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "914330289",
+      "name": "HILDING INVEST & ADVISE AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BERGEN",
+      "municipality_number": "4601",
+      "industry_code": "70.200",
+      "industry_label": "Bedriftsrådgivning og annen administrativ rådgivning",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "955972651",
+      "name": "TANGEN TRELAST AS",
+      "legal_form": "AS",
+      "employees": 35,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "NESODDEN",
+      "municipality_number": "3212",
+      "industry_code": "47.520",
+      "industry_label": "Detaljhandel med jernvarer, byggevarer, fargevarer og glass",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "894103892",
+      "name": "IN-BOUNDS AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HAMAR",
+      "municipality_number": "3403",
+      "industry_code": "22.260",
+      "industry_label": "Produksjon av plastprodukter ellers",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "931816756",
+      "name": "TVT SUSHI AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "56.110",
+      "industry_label": "Drift av restauranter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "915790585",
+      "name": "SARPSBORG SENTRUMSBOLIG AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "MOSS",
+      "municipality_number": "3103",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "933958868",
+      "name": "GUZZLE AS",
+      "legal_form": "AS",
+      "employees": 25,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "MELHUS",
+      "municipality_number": "5028",
+      "industry_code": "56.110",
+      "industry_label": "Drift av restauranter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "915810489",
+      "name": "KB.GTI AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "RINGSAKER",
+      "municipality_number": "3411",
+      "industry_code": "68.120",
+      "industry_label": "Utvikling og salg av byggeprosjekter",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "922372446",
+      "name": "KARSTEN FOSSUM TRANSPORT AS",
+      "legal_form": "AS",
+      "employees": 9,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "FREDRIKSTAD",
+      "municipality_number": "3107",
+      "industry_code": "43.120",
+      "industry_label": "Grunnarbeid",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "989266365",
+      "name": "NIC HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "OSLO",
+      "municipality_number": "0301",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "989032402",
+      "name": "KVS-LYNGDAL AS",
+      "legal_form": "AS",
+      "employees": 64,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LYNGDAL",
+      "municipality_number": "4225",
+      "industry_code": "85.320",
+      "industry_label": "Videregående opplæring innenfor yrkesfaglige utdanningsprogram",
+      "website": "kvslyngdal.no",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "934268598",
+      "name": "LAKSEVÅG RØR & SANITÆR AS",
+      "legal_form": "AS",
+      "employees": 10,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "BERGEN",
+      "municipality_number": "4601",
+      "industry_code": "43.221",
+      "industry_label": "Rørleggerarbeid",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "994194437",
+      "name": "JS EIENDOM INVEST AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "HALDEN",
+      "municipality_number": "3101",
+      "industry_code": "77.110",
+      "industry_label": "Utleie og leasing av biler og andre lette motorvogner",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "918708545",
+      "name": "MONGSTAD HANDELSEIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "RINGERIKE",
+      "municipality_number": "3305",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "936438768",
+      "name": "KLANGWERK AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "SKIEN",
+      "municipality_number": "4003",
+      "industry_code": "96.990",
+      "industry_label": "Andre personlige tjenester ikke nevnt annet sted",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "916763018",
+      "name": "YTTEREN IDRETTSPARK EIENDOM AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "RANA",
+      "municipality_number": "1833",
+      "industry_code": "68.200",
+      "industry_label": "Utleie av egen eller leid fast eiendom",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "992377429",
+      "name": "KRISTIANSEN OPTIK AS",
+      "legal_form": "AS",
+      "employees": 8,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "SANDEFJORD",
+      "municipality_number": "3907",
+      "industry_code": "47.740",
+      "industry_label": "Detaljhandel med medisinske og ortopediske artikler",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    },
+    {
+      "organisation_number": "913699041",
+      "name": "AMPO HOLDING AS",
+      "legal_form": "AS",
+      "employees": null,
+      "bankrupt": false,
+      "liquidating": false,
+      "municipality": "LØRENSKOG",
+      "municipality_number": "3222",
+      "industry_code": "85.699",
+      "industry_label": "Andre tjenester tilknyttet undervisning ikke nevnt annet sted",
+      "website": "",
+      "latest_submitted_accounts": "2025"
+    }
+  ],
+  "invalid_lines": [
+    "NOT-AN-ORGNR",
+    "123456789",
+    "   "
+  ]
+}

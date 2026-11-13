@@ -22,7 +22,7 @@ from scripts.accuracy_audit import audit_website_claim
 ])
 def test_directory_registry_details_do_not_prove_site_ownership(url,org,name,body):
     context={'name':name,'street':['Kirkegaten 36B'],'website':url}
-    proof=score(Page(body.encode(),url),org,context,'search_brave',[])
+    proof=score(Page(body.encode(),url),org,context,'cc_index',[])
     assert proof.level=='REJECT'
     assert proof.reason=='directory_or_marketplace'
     assert all(candidate.domain not in {'utdanning.no','vat-validation.com'}

@@ -33,18 +33,14 @@ def verify_inputs(directory, manifest):
     return hashes
 
 
-def benchmark_environment(search=False, environment=None):
+def benchmark_environment(environment=None):
     env = dict(os.environ if environment is None else environment)
-    if search and ((env.get('SIGNALPOST_SEARCH_PROVIDER') or '').strip().lower() != 'brave'
-                   or not env.get('BRAVE_SEARCH_API_KEY')):
-        raise ValueError('Search benchmark requires SIGNALPOST_SEARCH_PROVIDER=brave and BRAVE_SEARCH_API_KEY set in the terminal')
     for key in list(env):
         if (any(marker in key.upper() for marker in ('API_KEY', 'APIKEY', 'TOKEN', 'SECRET', 'CREDENTIAL'))
-                or key.startswith(('SIGNALPOST_SEARCH', 'SIGNALPOST_LLM'))):
-            if search and key in {'BRAVE_SEARCH_API_KEY','SIGNALPOST_SEARCH_PROVIDER'}:
-                continue
+                or key.startswith('SIGNALPOST_LLM')):
             env.pop(key)
     return env
+
 
 
 def main():
@@ -54,12 +50,11 @@ def main():
     parser.add_argument('--website-domain-location-proof',action='store_true')
     parser.add_argument('--website-transient-retry',action=argparse.BooleanOptionalAction,default=True)
     parser.add_argument('--website-request-cap',type=int,default=40)
-    parser.add_argument('--search', action='store_true', help='Explicit paid Brave comparison; requires terminal environment variables')
     parser.add_argument('--nav-index-path',type=Path,help='Explicit fixture override for stale/malformed index benchmarks')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     try:
-        env = benchmark_environment(args.search)
+        env = benchmark_environment()
     except ValueError as exc:
         parser.error(str(exc))
     if args.size == 1000:
@@ -100,21 +95,16 @@ def main():
     if args.website_domain_location_proof: command.append('--website-domain-location-proof')
     command.append('--website-transient-retry' if args.website_transient_retry else '--no-website-transient-retry')
     command.extend(['--website-request-cap',str(args.website_request_cap)])
-    if args.search:
-        # User-authorized comparison: at most one $0.005 query per company.
-        command.extend(['--search-max-queries',str(args.size),'--max-cost-usd',str(args.size*.005)])
     if args.nav_index_path:
         command.extend(['--nav-index-path',str(args.nav_index_path.resolve())])
     execution = {'commit': commit, 'working_tree_dirty': dirty, 'size': args.size,
                  'started_at': datetime.now(timezone.utc).isoformat(), 'command': command,
                  'input_sha256': hashes,
-                 'search_enabled': args.search,
                  'website_suffix_contact_proof':args.website_suffix_contact_proof,
                  'website_domain_location_proof':args.website_domain_location_proof,
                  'website_transient_retry':args.website_transient_retry,
                  'website_request_cap':args.website_request_cap,
-                 'credentials': ('Only Brave provider/key retained in child environment; values never recorded' if args.search
-                                 else 'API key variables, NAV_API_TOKEN and search/model selectors removed')}
+                 'credentials': 'API key, token, secret and model-selector variables removed'}
     execution_path = destination / 'execution.json'
     if args.nav_index_path:
         execution['nav_index_override_sha256']=hashlib.sha256(args.nav_index_path.read_bytes()).hexdigest()

@@ -26,7 +26,7 @@ uv run --frozen signalpost run --organisations orgnrs.txt --output out/envelopes
 
 This is the supported clean-checkout command: it needs no credentials and no `--bulk` file. The runner uses live official BRREG APIs for registry identity, roles, subunits and accounts. The input count is read automatically. Blank lines are retained as invalid input records, so each line produces one envelope and one profile.
 
-Website research, NAV hiring checks, public activity and template synthesis are on by default. Paid search defaults to zero queries, and provider cost defaults to $0. Use `--no-websites`, `--no-hiring` or `--no-public-activity` to opt out of those sources. `--expected-count` is optional and is normally unnecessary.
+Website research, NAV hiring checks, public activity and template synthesis are on by default. There is no search-engine integration; provider cost is $0. Use `--no-websites`, `--no-hiring` or `--no-public-activity` to opt out of those sources. `--expected-count` is optional and is normally unnecessary.
 
 Requests use a pooled global ceiling of 1,800 per 100 distinct normalized input records, with at most 40 attributed to any one company. The default run time limit is 2,400 seconds, also bounded by a hard 24 seconds per distinct normalized input (40 minutes per 100). Lower configured limits remain effective. Registry-declared websites require the legal name or hard registry corroboration; sites corroborated only by a contact or role-holder publish a website link without site content. Registered subunit identifiers can establish ownership. Shared domains, conflicting owners, parked pages and directories are withheld. Exact-name-only and contact-only two-signal publication were rejected in the Step 10 audit; guessed domains retain the stronger existing ownership proof.
 
@@ -76,12 +76,12 @@ Wikidata's CC0 structured data is queried by exact Norwegian organisation number
 | TED | Exact winner/buyer public procurement awards | [EU Publications Office reuse terms](https://ted.europa.eu/en/legal-notice); anonymous API and public notice XML | $0 |
 | Doffin | **Not used** | Supported keyless API/access and reuse terms were not verified | - |
 | Kunngjøringer HTML service | **Not used** | w2.brreg.no robots.txt disallows /kunngjoring/; no NLOD grant for this service assumed | - |
-| Paid search | Disabled; maximum queries defaults to `0` | No provider is called | $0 |
+| Search engines | No integration | No provider is called | $0 |
 | Language models | None; summaries use deterministic templates | No model provider is called | $0 |
 
 No personal NAV credential is required. When `NAV_API_TOKEN` is unset, the runner retrieves NAV's published public token from `https://pam-stilling-feed.nav.no/api/publicToken` and keeps it in memory for that run; it is never logged or written to output or state.
 
-The command has **$0 provider cost**. Compute, storage and network costs are excluded. `--synthesis` accepts `template` (default) or `auto`, which both use templates; `llm` is rejected. Optional Brave search requires both `SIGNALPOST_SEARCH_PROVIDER=brave` and `BRAVE_SEARCH_API_KEY`, plus a positive `--max-cost-usd` budget. If explicitly enabled, it estimates $0.005 per query and only nominates ownership-proof candidates. Keys are never written to run outputs.
+The command has **$0 provider cost**. Compute, storage and network costs are excluded. `--synthesis` accepts `template` (default) or `auto`, which both use templates; `llm` is rejected.
 
 ## Final measured coverage
 

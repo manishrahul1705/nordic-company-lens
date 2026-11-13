@@ -1,0 +1,42 @@
+{
+  "viewports": [
+    [
+      375,
+      812
+    ],
+    [
+      1366,
+      900
+    ]
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "site_tests": {
+    "passed": 32,
+    "seconds": 199.58
+  },
+  "full_suite": {
+    "passed": 1282,
+    "seconds": 472.69
+  },
+  "initial_full_suite": {
+    "passed": 1280,
+    "failed": 2,
+    "reason": "Timing checks under concurrent task load; full suite passed unchanged when isolated"
+  },
+  "production_files_changed": [
+    "src/signalpost/site_assets/site.css",
+    "src/signalpost/site_assets/site.js"
+  ],
+  "data_claim_changes": false,
+  "screenshots": {
+    "before": 44,
+    "after": 44
+  },
+  "asset_sha256": {
+    "site.css": "78757854ef3f193f1d486329b223e9d6382e04ed859620ad233deaa35ef9cfc1",
+    "site.js": "d13fa547e277268cbb16eb80f16edd43d79673e928d2cc16fb95c6bd0aa421db"
+  }
+}

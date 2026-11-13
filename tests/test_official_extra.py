@@ -80,7 +80,7 @@ def test_briefing_cites_gleif_and_newest_proven_procurement(tmp_path):
     brief=generate(row)
     assert 'registered in GLEIF with LEI LEICHILD' in brief.sentences[0].text
     event=next(s for s in brief.sentences if s.sentence_type=='d')
-    assert 'public procurement award dated 1 Oct 2026' in event.text
+    assert event.text == 'It won a public contract from Buyer (1 Oct 2026, TED).'
     assert event.claim_ids==[award.claims[0].id]
     assert validate(brief,row)==generate(row)
 

@@ -1,0 +1,2805 @@
+[
+  {
+    "run": 2,
+    "orgnr": "931426648",
+    "company": "PERAZZONE & VAUDAGNA AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.history.2023.net_result",
+      "value": -78925.0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "4fe2eeeebdf3566383b6f3c9a0a4988277a9d75405522e2bd9f41a1abfc4f530"
+      ],
+      "id": "162bb0f322118532cf922ffda86bc80202dc6b2565411bbfc34b4fdcf65bdc26",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2023",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "currency": "NOK",
+        "unit": "NOK",
+        "account_type": "SELSKAP",
+        "source_unit": null,
+        "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:12.373008Z",
+      "last_observed_at": "2026-11-12T08:02:07.247816Z",
+      "reasons": {
+        "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+      }
+    },
+    "sources": [
+      {
+        "id": "4fe2eeeebdf3566383b6f3c9a0a4988277a9d75405522e2bd9f41a1abfc4f530",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/931426648",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:07.247816Z",
+        "content_sha256": "30b718638112677ec865d188bf2f6d216a548ee4fd9fe839227a0c7a433924d7",
+        "claim_span": "sultatFoerSkattekostnad\":-78925.00,\"aarsresultat\":-78925.00,\"totalresultat\":-78925.00,\"finansresultat\":{\"nettoFinans\":-8992.00,\"finansinntekt\":{\"sumFinansinntekter\":2343.00},\"finanskostnad\":{\"sumFinanskostnad\":11334.00}},\"driftsresultat\":{\"driftsresultat\":-69934.00,\"driftsinntekter\":{\"salgsinntekter",
+        "locator": "/0/resultatregnskapResultat/aarsresultat",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2023-12-31",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "located_source_value": -78925.0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "955972651",
+    "company": "TANGEN TRELAST AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.statement.2024.liquidation_accounts",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "f2d33ecb56b3fe20c9e53049d5bc2469bc7d4e6773097df58f3736a14ae9c2d2"
+      ],
+      "id": "7137f0928755238075bd3f8810f8553ee05c8f71afd133c3e98f64689f2dbce7",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2024",
+        "period_start": "2024-01-01",
+        "period_end": "2024-12-31",
+        "currency": "NOK",
+        "unit": null,
+        "account_type": "SELSKAP"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:13.768480Z",
+      "last_observed_at": "2026-11-12T08:02:08.727536Z",
+      "reasons": {
+        "label": "Company liquidation accounts"
+      }
+    },
+    "sources": [
+      {
+        "id": "f2d33ecb56b3fe20c9e53049d5bc2469bc7d4e6773097df58f3736a14ae9c2d2",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/955972651",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:08.727536Z",
+        "content_sha256": "3e100fd6cb10af4312c5f8ac923ba3f229da07aa46c149a8e05604c4a38399dd",
+        "claim_span": "\"2024-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":20331575.00,",
+        "locator": "/1/avviklingsregnskap",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2024-12-31",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "919732008",
+    "company": "PREG BARNEHAGER FRØYLAND AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.statement.2025.currency",
+      "value": "NOK",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "691f91edef09533eee3502995443a66762c10093d27782d54a65bfbb65bc76ee"
+      ],
+      "id": "ed886175c9a69acfc61336de5bd6514f8a575e550b28775e5632189d61eb2541",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2025",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "currency": "NOK",
+        "unit": null,
+        "account_type": "SELSKAP"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:12.498133Z",
+      "last_observed_at": "2026-11-12T08:02:07.377859Z",
+      "reasons": {
+        "label": "Company currency"
+      }
+    },
+    "sources": [
+      {
+        "id": "691f91edef09533eee3502995443a66762c10093d27782d54a65bfbb65bc76ee",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/919732008",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:07.377859Z",
+        "content_sha256": "6808367c982a693d01b615b1dd9d284637f662e87c23c7d2c47b7bbdb9f68329",
+        "claim_span": "to\":\"2025-01-01\",\"tilDato\":\"2025-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEge",
+        "locator": "/2/valuta",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "located_source_value": "NOK"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "915769772",
+    "company": "GREEN HOLDING AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.total_assets",
+      "value": 806038.0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d6bfe0d48a156a67682c3ebbf810247c76e14abd1ba40f0bff5501c0c2161b0e"
+      ],
+      "id": "f532594593612d1341c42d88f75523d77f3081fe9fe575ac48e523d781f661ac",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2025",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "currency": "NOK",
+        "unit": "NOK",
+        "account_type": "SELSKAP",
+        "source_unit": null,
+        "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:13.180245Z",
+      "last_observed_at": "2026-11-12T08:02:08.070680Z",
+      "reasons": {
+        "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+      }
+    },
+    "sources": [
+      {
+        "id": "d6bfe0d48a156a67682c3ebbf810247c76e14abd1ba40f0bff5501c0c2161b0e",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/915769772",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:08.070680Z",
+        "content_sha256": "9c324c84005281a23b9190caa91c5fb9180b530c5cbe262ca1e0f663924b9366",
+        "claim_span": "mBankinnskuddOgKontanter\":52038.00,\"sumEiendeler\":806038.00,\"omloepsmidler\":{\"sumOmloepsmidler\":52038.00},\"anleggsmidler\":{\"sumAnleggsmidler\":754000.00}},\"resultatregnskapResultat\":{\"ordinaertResultatFoerSkattekostnad\":256615.00,\"aarsresultat\":256615.00,\"totalresultat\":256615.00,\"finansresultat\":{\"n",
+        "locator": "/2/eiendeler/sumEiendeler",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "located_source_value": 806038.0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "997083199",
+    "company": "ÅLESUND BIL INVEST AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.statement.2025.currency",
+      "value": "NOK",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "02c18182a5f4f4351e0ad7a2588210933ceca6c6cbcd7e96899fda59e2292eab"
+      ],
+      "id": "67d62dabcdc439195c1692472938cd8e9fe073124c199d8788eab195035b7788",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2025",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "currency": "NOK",
+        "unit": null,
+        "account_type": "SELSKAP"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:12.597427Z",
+      "last_observed_at": "2026-11-12T08:02:07.387861Z",
+      "reasons": {
+        "label": "Company currency"
+      }
+    },
+    "sources": [
+      {
+        "id": "02c18182a5f4f4351e0ad7a2588210933ceca6c6cbcd7e96899fda59e2292eab",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/997083199",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:07.387861Z",
+        "content_sha256": "0da4100c3dee96ebf1f03a1fc7e838ba0a0c2dc595fb6418c46d427e49f9a318",
+        "claim_span": "to\":\"2025-01-01\",\"tilDato\":\"2025-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEge",
+        "locator": "/2/valuta",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        },
+        "located_source_value": "NOK"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "827373672",
+    "company": "FLYPLASSVEIEN 1 AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.history.2024.financial_income",
+      "value": 246258.0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "9c6936dd0f531fc8cb92526639f66d38f364b914af964df83263eb9efcedc75a"
+      ],
+      "id": "5ee0eb609a2a37ff2dff89c03de238958399a21beef335cde7a1f9dd4f5c7c8a",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2024",
+        "period_start": "2024-01-01",
+        "period_end": "2024-12-31",
+        "currency": "NOK",
+        "unit": "NOK",
+        "account_type": "SELSKAP",
+        "source_unit": null,
+        "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:10.621770Z",
+      "last_observed_at": "2026-11-12T08:02:05.568598Z",
+      "reasons": {
+        "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+      }
+    },
+    "sources": [
+      {
+        "id": "9c6936dd0f531fc8cb92526639f66d38f364b914af964df83263eb9efcedc75a",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/827373672",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:05.568598Z",
+        "content_sha256": "93e831a5b132bb4e22296668cd0ca619157d601fce9113f1163d41f872fd8cdb",
+        "claim_span": "-1984341.00,\"finansinntekt\":{\"sumFinansinntekter\":246258.00},\"finanskostnad\":{\"annenRentekostnad\":2230598.00,\"sumFinanskostnad\":2230598.00}},\"driftsresultat\":{\"driftsresultat\":-1644300.00,\"driftsinntekter\":{\"sumDriftsinntekter\":7113714.00},\"driftskostnad\":{\"loennskostnad\":386226.00,\"sumDriftskostnad",
+        "locator": "/1/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2024-12-31",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "located_source_value": 246258.0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "931407139",
+    "company": "MARSILIUS HOLDING AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.history.2023.non_current_assets",
+      "value": 0.0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "5360034b526f0ed8d1b17c299debd8df9b19622c21eeb4951a50d1c630c63a4d"
+      ],
+      "id": "2ea491529f49ab9c32beee000f235e8be7fcaeeb210c0ab560e48abaa45fb4c8",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2023",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "currency": "NOK",
+        "unit": "NOK",
+        "account_type": "SELSKAP",
+        "source_unit": null,
+        "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:12.465047Z",
+      "last_observed_at": "2026-11-12T08:02:07.354322Z",
+      "reasons": {
+        "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+      }
+    },
+    "sources": [
+      {
+        "id": "5360034b526f0ed8d1b17c299debd8df9b19622c21eeb4951a50d1c630c63a4d",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/931407139",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:07.354322Z",
+        "content_sha256": "435e4e11b562db9a9c3eb5f8e26413e3ea647b6812b3425ae19b69a7a87e6392",
+        "claim_span": "er\":30000.00},\"anleggsmidler\":{\"sumAnleggsmidler\":0.00}},\"resultatregnskapResultat\":{\"ordinaertResultatFoerSkattekostnad\":0.00,\"aarsresultat\":0.00,\"finansresultat\":{\"finansinntekt\":{},\"finanskostnad\":{}},\"driftsresultat\":{\"driftsinntekter\":{},\"driftskostnad\":{}}}},{\"id\":5751725,\"journalnr\":\"20254741",
+        "locator": "/0/eiendeler/anleggsmidler/sumAnleggsmidler",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2023-12-31",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "located_source_value": 0.0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "934085280",
+    "company": "AXSA ADVOKATFIRMA AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.history.2024.long_term_liabilities",
+      "value": 0.0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "1b0936ca5e3170df78a7a9f28a4a72957b43ca553c48d927f9addd176d8c0dc0"
+      ],
+      "id": "21b03c2480142e809bf34d52414142708fa33b3c08fbd007c42d3289bef54d70",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2024",
+        "period_start": "2024-08-24",
+        "period_end": "2024-12-31",
+        "currency": "NOK",
+        "unit": "NOK",
+        "account_type": "SELSKAP",
+        "source_unit": null,
+        "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:13.567045Z",
+      "last_observed_at": "2026-11-12T08:02:08.329998Z",
+      "reasons": {
+        "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+      }
+    },
+    "sources": [
+      {
+        "id": "1b0936ca5e3170df78a7a9f28a4a72957b43ca553c48d927f9addd176d8c0dc0",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/934085280",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:08.329998Z",
+        "content_sha256": "d1ab8d38df3d45acb450941450a4d385dd2ee2e3ef271c09ed5376df3bc458d0",
+        "claim_span": "70744.00},\"langsiktigGjeld\":{\"sumLangsiktigGjeld\":0.00}}},\"eiendeler\":{\"sumFordringer\":341937.00,\"sumInvesteringer\":0.00,\"sumBankinnskuddOgKontanter\":259173.00,\"sumEiendeler\":601110.00,\"omloepsmidler\":{\"sumOmloepsmidler\":601110.00},\"anleggsmidler\":{\"sumAnleggsmidler\":0.00}},\"resultatregnskapResultat",
+        "locator": "/0/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2024-12-31",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-08-24",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "located_source_value": 0.0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "922087067",
+    "company": "HEIAN 2 AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.history.2023.receivables",
+      "value": 87820.0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "ea9a84c55fe34c8e0a226015619fd8f5e06c10d9d123b4134b05026611af4d94"
+      ],
+      "id": "f19af1dcd0216f1034ef7c27d2cfb1495cf61fc48df0c63718977789abe9560f",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2023",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "currency": "NOK",
+        "unit": "NOK",
+        "account_type": "SELSKAP",
+        "source_unit": null,
+        "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:13.138531Z",
+      "last_observed_at": "2026-11-12T08:02:08.039647Z",
+      "reasons": {
+        "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+      }
+    },
+    "sources": [
+      {
+        "id": "ea9a84c55fe34c8e0a226015619fd8f5e06c10d9d123b4134b05026611af4d94",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/922087067",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:08.039647Z",
+        "content_sha256": "0af163902b9f861948b46f7ca9e37436b8fb12eed3e5aa0e36bc41f8a9df6925",
+        "claim_span": "gGjeld\":300794.00}}},\"eiendeler\":{\"sumFordringer\":87820.00,\"sumBankinnskuddOgKontanter\":1353.00,\"sumEiendeler\":1324927.00,\"omloepsmidler\":{\"sumOmloepsmidler\":89173.00},\"anleggsmidler\":{\"sumAnleggsmidler\":1235754.00}},\"resultatregnskapResultat\":{\"ordinaertResultatFoerSkattekostnad\":-87820.00,\"ordinae",
+        "locator": "/0/eiendeler/sumFordringer",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2023-12-31",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "located_source_value": 87820.0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "822564682",
+    "company": "MWT PARTNER AS",
+    "category": "accounts",
+    "claim": {
+      "field": "accounts.other_interest_expense",
+      "value": 21506.0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "69baaf58aa1ed98a23b0f0065ebd7c1eee916c7b82318d1e1d1d6208c8314964"
+      ],
+      "id": "557567920ba2fa6cefa593f6d3ef291f66eed509fb11e0c5cccde9e440914e4b",
+      "family": "accounts",
+      "reporting_period": {
+        "fiscal_year": "2025",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "currency": "NOK",
+        "unit": "NOK",
+        "account_type": "SELSKAP",
+        "source_unit": null,
+        "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:12.264816Z",
+      "last_observed_at": "2026-11-12T08:02:07.144082Z",
+      "reasons": {
+        "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+      }
+    },
+    "sources": [
+      {
+        "id": "69baaf58aa1ed98a23b0f0065ebd7c1eee916c7b82318d1e1d1d6208c8314964",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/822564682",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:07.144082Z",
+        "content_sha256": "63046b7bd5b57bc9f60440888d1befd3981d6d307f2b25de4591e2f7491eabf6",
+        "claim_span": "er\":-391.00},\"finanskostnad\":{\"annenRentekostnad\":21506.00,\"sumFinanskostnad\":21506.00}},\"driftsresultat\":{\"driftsresultat\":432606.00,\"driftsinntekter\":{\"salgsinntekter\":3529017.00,\"sumDriftsinntekter\":3529017.00},\"driftskostnad\":{\"loennskostnad\":2008647.00,\"sumDriftskostnad\":3096411.00}}}}]",
+        "locator": "/2/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2025-12-31",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": "NOK",
+          "account_type": "SELSKAP",
+          "source_unit": null,
+          "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+        },
+        "located_source_value": 21506.0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Value, fiscal year, account scope and currency agree with located official statement; normalized unit basis is explicitly disclosed.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "988282766",
+    "company": "HOPLAND AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.registered_in_foundations_register",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "291c3fcb72128eb40d1a2c4fa8e6d4b764a0c95176f78f86945485b5296683ed"
+      ],
+      "id": "5443e764e36ee6e9687d994de8ff4840a1dcf65ddb16df18e64b1cd2c8fc1e6c",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:06.734623Z",
+      "last_observed_at": "2026-11-12T08:02:01.641626Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "291c3fcb72128eb40d1a2c4fa8e6d4b764a0c95176f78f86945485b5296683ed",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/988282766",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:01.641626Z",
+        "content_sha256": "5df9120445cc7f53631c7603bf674258497891419465f385efa05b344953c40e",
+        "claim_span": "gisteret\":false,\"registrertIStiftelsesregisteret\":false,\"respons_klasse\":\"Enhet\",\"sisteInnsendteAarsregnskap\":\"2025\",\"stiftelsesdato\":\"2005-05-20\",\"underAvvikling\":false,\"underTvangsavviklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2015-12-08\",\"vedtektsfestetFormaal\":[\"Kjøp og salg av tjenester ",
+        "locator": "/registrertIStiftelsesregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "933499375",
+    "company": "KVN ENTREPRENØR AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.vat_registration_date",
+      "value": "2024-05-20",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "66246755973d0e6c6d2677f4cf9600dd96722c01440a771be037dff9bf6ed21f"
+      ],
+      "id": "c6708e806e31008f5901b45d0adf3cb152def0e8cad94d19b7d57cd71660526d",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:08.242801Z",
+      "last_observed_at": "2026-11-12T08:02:03.173769Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "66246755973d0e6c6d2677f4cf9600dd96722c01440a771be037dff9bf6ed21f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/933499375",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:03.173769Z",
+        "content_sha256": "4c961b4969c6f4a6c905c069ebdfd3a778fe1dbc8fbe5615e2f97319beab73d3",
+        "claim_span": "-27\",\"registreringsdatoMerverdiavgiftsregisteret\":\"2024-05-20\",\"registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret\":\"2024-05-29\",\"registrertIForetaksregisteret\":true,\"registrertIFrivillighetsregisteret\":false,\"registrertIMvaregisteret\":true,\"registrertIPartiregisteret\":false,\"registrertIStif",
+        "locator": "/registreringsdatoMerverdiavgiftsregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2024-05-20",
+        "reporting_period": null,
+        "located_source_value": "2024-05-20"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "989176315",
+    "company": "STIG OLSEN SQUASH AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.employee_count_nav_registration_date",
+      "value": "2017-04-10",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "c04a444730991d1c8619a9de4c7ba3cf80dbbc2fbe532e4e0c8900b9241bd0b1"
+      ],
+      "id": "8fb996be264bfb6afe58cde979e19bac1b844d66e62195cbedd143217e5d34be",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:05.861952Z",
+      "last_observed_at": "2026-11-12T08:02:00.854013Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "c04a444730991d1c8619a9de4c7ba3cf80dbbc2fbe532e4e0c8900b9241bd0b1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/989176315",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:00.854013Z",
+        "content_sha256": "51284c90152f31ac7024229922d005c3be1cee8e519528242141930c1832fadb",
+        "claim_span": "\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2017-04-10\",\"registreringsdatoEnhetsregisteret\":\"2006-01-12\",\"registreringsdatoForetaksregisteret\":\"2006-01-12\",\"registreringsdatoMerverdiavgiftsregisteret\":\"2016-09-01\",\"registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret\":\"2016-12-10\",\"regi",
+        "locator": "/registreringsdatoAntallAnsatteNAVAaregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2017-04-10",
+        "reporting_period": null,
+        "located_source_value": "2017-04-10"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "994751832",
+    "company": "RANA IDRETTSKLINIKK AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.articles_date",
+      "value": "2022-12-10",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "a367b234fafa38cdf23d935494ac2d920ae2c11339b3500bc5703db59ec1047b"
+      ],
+      "id": "d9b4de818fa920db3600ce28f9e7865ac304ba63fc70127d7889ad9fb916f390",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:06.005742Z",
+      "last_observed_at": "2026-11-12T08:02:00.970485Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "a367b234fafa38cdf23d935494ac2d920ae2c11339b3500bc5703db59ec1047b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/994751832",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:00.970485Z",
+        "content_sha256": "91ccfa08362e3e525d430d4114a04651be6e720d85cf80b7f6a95e9c94f61648",
+        "claim_span": "iklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2022-12-10\",\"vedtektsfestetFormaal\":[\"Tilby tjenester til allmenheten og idrettsutøvere. Hovedvirksomheten\",\"vil være forebyggende-, undersøkelse-, og behandlingstiltak for\",\"bevegelsesapparatet. Det skal foregå kunnskapsbasert idrettsmedisinsk\",\"ar",
+        "locator": "/vedtektsdato",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2022-12-10",
+        "reporting_period": null,
+        "located_source_value": "2022-12-10"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "814344312",
+    "company": "VOKSENKOLLEN UTVIKLING AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.bankrupt",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "73e90f89d92c8f5b3f12c6662f6c551e2789d9f5d17370f1f25ff3ab2cabe03d"
+      ],
+      "id": "3ab50469c495d977a182a981d7139da182554214dd04988fe21c125388596ab6",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:08.141454Z",
+      "last_observed_at": "2026-11-12T08:02:02.977121Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "73e90f89d92c8f5b3f12c6662f6c551e2789d9f5d17370f1f25ff3ab2cabe03d",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/814344312",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:02.977121Z",
+        "content_sha256": "74fc4a15d466037050b43da1c566a98789c1cc54e41e61172f77cfea249934ba",
+        "claim_span": "\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Utvikling og salg av byggeprosjekter\",\"kode\":\"68.120\"},\"navn\":\"VOKSENKOLLEN UTVIKLING AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjon",
+        "locator": "/konkurs",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "931481126",
+    "company": "M.M.7 BYGG AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.forced_dissolution",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "70d171f8fca96a6570d04cd9d81dca7909da15970681ab17209488da0585429b"
+      ],
+      "id": "25a456b9823462e409b12de602ead2cafadaa403d81b631e7f394afe03012de0",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:06.669668Z",
+      "last_observed_at": "2026-11-12T08:02:01.462384Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "70d171f8fca96a6570d04cd9d81dca7909da15970681ab17209488da0585429b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/931481126",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:01.462384Z",
+        "content_sha256": "4f4a7493df6ec1012c1c3e40140641f02813a4ad304cab6e1643adb4e18677a0",
+        "claim_span": "false,\"underTvangsavviklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2025-04-02\",\"vedtektsfestetFormaal\":[\"Salg av byggmester- og entreprenørtjenester- og varer, og alt som står\",\"i forbindelse med dette, samt deltakelse i andre selskaper.\"]}",
+        "locator": "/underTvangsavviklingEllerTvangsopplosning",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "924351195",
+    "company": "MEGAHARTZ AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.registered_in_foundations_register",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "b70445d764685c946f32416353f2bceb5d21ad1e389592cda519563b04908d8f"
+      ],
+      "id": "49dca7536f600140f7f6cab081a3ae838bbe2f8ebddc1fe32cfdf1f806522cfc",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:06.665657Z",
+      "last_observed_at": "2026-11-12T08:02:01.477988Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "b70445d764685c946f32416353f2bceb5d21ad1e389592cda519563b04908d8f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/924351195",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:01.477988Z",
+        "content_sha256": "f9c92a98d15fde316d2675c3c28274d1b6b61c16520312f89351e124dc1d01c7",
+        "claim_span": "gisteret\":false,\"registrertIStiftelsesregisteret\":false,\"respons_klasse\":\"Enhet\",\"sisteInnsendteAarsregnskap\":\"2025\",\"stiftelsesdato\":\"2019-12-13\",\"underAvvikling\":false,\"underTvangsavviklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2019-12-13\",\"vedtektsfestetFormaal\":[\"Investere i selskaper og e",
+        "locator": "/registrertIStiftelsesregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "930046760",
+    "company": "LOG MOLDE AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.registered_activity",
+      "value": [
+        "Holdingselskap."
+      ],
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "20fba107b4c0c81198072b49ed48391c4061fc8679c2de5463ba7a7d0ad53ab2"
+      ],
+      "id": "9175efbe89946d388c1ada962aed91ef42203ad99c91b89609cf8a53e4bcb1f6",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:05.413046Z",
+      "last_observed_at": "2026-11-12T08:02:00.439153Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "20fba107b4c0c81198072b49ed48391c4061fc8679c2de5463ba7a7d0ad53ab2",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/930046760",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:00.439153Z",
+        "content_sha256": "60f3d2d7ec9c1b419dcb7cedee1b194723905cdfa0cb9105944d895d0cd11b6b",
+        "claim_span": "tsregisteret/api/enheter/930046760\"}},\"aktivitet\":[\"Holdingselskap.\"],\"epostadresse\":\"ruben@prorailing.no\",\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Torhaugvegen 31\"],\"kommune\":\"AUKRA\",\"kommunenummer\":\"1547\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"6409\",\"poststed\":\"MOLDE\"},\"fravalgRe",
+        "locator": "/aktivitet",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": [
+          "Holdingselskap."
+        ]
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "936848710",
+    "company": "E WOLD EIENDOM AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.part_of_group",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "66ce182f1de0fedeef4b2c5584a10d528557f1fae913e705769be57e1893a486"
+      ],
+      "id": "8d9c0e61884bdad98bb56955a9c853307721527adde3a4a9f1ba76892bde2f97",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:08.169072Z",
+      "last_observed_at": "2026-11-12T08:02:03.098973Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "66ce182f1de0fedeef4b2c5584a10d528557f1fae913e705769be57e1893a486",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/936848710",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:03.098973Z",
+        "content_sha256": "44049296df67e706a77c957820bb8bff6ca6f8a2ed170fb35b05f8ef6a4d3feb",
+        "claim_span": "virksomheter med økonomisk formål.\"],\"erIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"c/o Snøhetta Regnskap Otta Vågå AS\",\"Vollvegen 2B\"],\"kommune\":\"VÅGÅ\",\"kommunenummer\":\"3435\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2680\",\"poststed\":\"VÅGÅ\"},\"fravalgRevisjonDato\":\"2014-05-06\",\"harRegistrer",
+        "locator": "/erIKonsern",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "871002592",
+    "company": "MAP MÅLING ANALYSE PRESENTASJON AS",
+    "category": "identity",
+    "claim": {
+      "field": "identity.statutory_purpose",
+      "value": [
+        "Måling, analyse og presentasjon av data innen",
+        "laboratorie og navigasjon, samt hva hermed står i",
+        "forbindelse, herunder deltakelse i andre selskaper",
+        "og foretagender med lignende virksomhet."
+      ],
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "86f184d0477f198226069ad80b4f33e7be238aa53eaa68ec4f351ccde44fa4cc"
+      ],
+      "id": "5ddbf753d6d678a267cbf30e9ba5416c94e0a4fe8d9f27d42bc7d677bafd959e",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:06.205769Z",
+      "last_observed_at": "2026-11-12T08:02:01.170560Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "86f184d0477f198226069ad80b4f33e7be238aa53eaa68ec4f351ccde44fa4cc",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/871002592",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:01.170560Z",
+        "content_sha256": "f44c97cbc27f98461ff067e896cc26dfd14b58f1f63a51295a7cd9155903ebd0",
+        "claim_span": "edtektsdato\":\"2003-10-20\",\"vedtektsfestetFormaal\":[\"Måling, analyse og presentasjon av data innen\",\"laboratorie og navigasjon, samt hva hermed står i\",\"forbindelse, herunder deltakelse i andre selskaper\",\"og foretagender med lignende virksomhet.\"]}",
+        "locator": "/vedtektsfestetFormaal",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": [
+          "Måling, analyse og presentasjon av data innen",
+          "laboratorie og navigasjon, samt hva hermed står i",
+          "forbindelse, herunder deltakelse i andre selskaper",
+          "og foretagender med lignende virksomhet."
+        ]
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed value equals the exact current BRREG field for the input orgnr.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "920817998",
+    "company": "LARSEN BYGG & TØMRERFIRMA AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.9db0492e923bd7d02f75c659",
+      "value": {
+        "company_orgnr": "920817998",
+        "event_id": 18638115,
+        "date": "2024-01-01T06:49:12.018000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=18638115&size=1&includeChanges=true",
+        "title": "Registry update recorded",
+        "event_type": "Endring"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "427ff3ec93c7d422a977f9dddf5f297eef0689b2e2e4ae16c59dfffc224eb9e4"
+      ],
+      "id": "f0cfde75abe32e8b8fff157af748b67b13f9fa4c55b53343820452a24a63d0dc",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "427ff3ec93c7d422a977f9dddf5f297eef0689b2e2e4ae16c59dfffc224eb9e4",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "gsid\":18636109,\"organisasjonsnummer\":\"941549047\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/920817998\"}},\"dato\":\"2024-01-01T06:49:12.018Z\",\"endringstype\":\"Endring\",\"oppdateringsid\":18638115,\"organisasjonsnummer\":\"920817998\"},{\"_links\":{\"enhet\":{\"href\":\"https://da",
+        "locator": "/_embedded/oppdaterteEnheter/46",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "enhet": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/enheter/920817998"
+            }
+          },
+          "dato": "2024-01-01T06:49:12.018Z",
+          "endringstype": "Endring",
+          "oppdateringsid": 18638115,
+          "organisasjonsnummer": "920817998"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "931816756",
+    "company": "TVT SUSHI AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.4276fe1177fba99371d6d41b",
+      "value": {
+        "company_orgnr": "931816756",
+        "event_id": 22045186,
+        "date": "2025-09-13T15:18:27.951000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=22045186&size=1&includeChanges=true",
+        "title": "Employee information registration date updated (NAV Aa register)",
+        "changed_field": "/registreringsdatoAntallAnsatteNAVAaregisteret",
+        "operation": "replace",
+        "new_value": "2025-09-10"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "16488aa1cda8984faa114fecca8a33efc791617ef380e728f18681a2fce50437"
+      ],
+      "id": "de134a2001842d6babe328afbfd36cb7b4a292532d082feaa97016f868cf5f8b",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "16488aa1cda8984faa114fecca8a33efc791617ef380e728f18681a2fce50437",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "allAnsatteEnhetsregisteret\",\"value\":\"2025-09-13\"},{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteNAVAaregisteret\",\"value\":\"2025-09-10\"}],\"endringstype\":\"Endring\",\"oppdateringsid\":22045186,\"organisasjonsnummer\":\"931816756\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/ap",
+        "locator": "/_embedded/oppdaterteEnheter/530/endringer/1",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "op": "replace",
+          "path": "/registreringsdatoAntallAnsatteNAVAaregisteret",
+          "value": "2025-09-10"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "919732008",
+    "company": "PREG BARNEHAGER FRØYLAND AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.206e7e7ef0dc3b9ca9d09b20",
+      "value": {
+        "company_orgnr": "919732008",
+        "event_id": 21562502,
+        "date": "2025-06-11T22:06:16.639000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=21562502&size=1&includeChanges=true",
+        "title": "Registry update recorded",
+        "event_type": "Endring"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d59ffd2636f5a2411a1c0c02b72a70c70164561b62c49673c92dc88b16f2e2a7"
+      ],
+      "id": "9c92d31b3f4df6f2e300f1955920051c21b9fe65758b32081f1bc51feae43b4f",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "d59ffd2636f5a2411a1c0c02b72a70c70164561b62c49673c92dc88b16f2e2a7",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "gsid\":21552098,\"organisasjonsnummer\":\"938710953\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/919732008\"}},\"dato\":\"2025-06-11T22:06:16.639Z\",\"endringstype\":\"Endring\",\"oppdateringsid\":21562502,\"organisasjonsnummer\":\"919732008\"},{\"_links\":{\"enhet\":{\"href\":\"https://da",
+        "locator": "/_embedded/oppdaterteEnheter/436",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "enhet": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/enheter/919732008"
+            }
+          },
+          "dato": "2025-06-11T22:06:16.639Z",
+          "endringstype": "Endring",
+          "oppdateringsid": 21562502,
+          "organisasjonsnummer": "919732008"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "932591987",
+    "company": "FRA DYPET SJØMAT AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.b0247103bd59a49ed303e7c3",
+      "value": {
+        "company_orgnr": "932591987",
+        "event_id": 23486980,
+        "date": "2025-12-11T23:08:30.961000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=23486980&size=1&includeChanges=true",
+        "title": "Employee information registration date updated (NAV Aa register)",
+        "changed_field": "/registreringsdatoAntallAnsatteNAVAaregisteret",
+        "operation": "add",
+        "new_value": "2025-12-10"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "2a4e1f594d21aed6a21202418fb388296be704fa9cd7c853ef35b2eca51d7025"
+      ],
+      "id": "f44ad53248be4c2ac6b17f6aafd7a9b15ef0a8ba84c85896791bf922f5569e57",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "2a4e1f594d21aed6a21202418fb388296be704fa9cd7c853ef35b2eca51d7025",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "allAnsatteEnhetsregisteret\",\"value\":\"2025-12-11\"},{\"op\":\"add\",\"path\":\"/registreringsdatoAntallAnsatteNAVAaregisteret\",\"value\":\"2025-12-10\"},{\"op\":\"replace\",\"path\":\"/harRegistrertAntallAnsatte\",\"value\":true}],\"endringstype\":\"Endring\",\"oppdateringsid\":23486980,\"organisasjonsnummer\":\"932591987\"},{\"_lin",
+        "locator": "/_embedded/oppdaterteEnheter/668/endringer/1",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "op": "add",
+          "path": "/registreringsdatoAntallAnsatteNAVAaregisteret",
+          "value": "2025-12-10"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "955205278",
+    "company": "NORDÅS SELEGREND BORETTSLAG",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.2d690b36527aa2f386b4afcd",
+      "value": {
+        "company_orgnr": "955205278",
+        "event_id": 24148997,
+        "date": "2026-04-14T22:06:09.028000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24148997&size=1&includeChanges=true",
+        "title": "Employee information registration date updated (Enhetsregisteret)",
+        "changed_field": "/registreringsdatoAntallAnsatteEnhetsregisteret",
+        "operation": "replace",
+        "new_value": "2026-04-14"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "ab19102d0e0092591b330ae0a529747ad98d253cd6653d09c4943eca2f03a99f"
+      ],
+      "id": "3e9c3c8e952f766f5826e4ae5a6c5aa1cecdefee04649be35832ab775b2bf85e",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "ab19102d0e0092591b330ae0a529747ad98d253cd6653d09c4943eca2f03a99f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "}},\"dato\":\"2026-04-14T22:06:09.028Z\",\"endringer\":[{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteEnhetsregisteret\",\"value\":\"2026-04-14\"},{\"op\":\"replace\",\"path\":\"/antallAnsatte\",\"value\":13},{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteNAVAaregisteret\",\"value\":\"2026-04-10\"}],\"endring",
+        "locator": "/_embedded/oppdaterteEnheter/730/endringer/0",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "op": "replace",
+          "path": "/registreringsdatoAntallAnsatteEnhetsregisteret",
+          "value": "2026-04-14"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "933958868",
+    "company": "GUZZLE AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.97ef5cdb019237baf635619a",
+      "value": {
+        "company_orgnr": "933958868",
+        "event_id": 25213118,
+        "date": "2026-09-14T22:05:37.353000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25213118&size=1&includeChanges=true",
+        "title": "Employee information registration date updated (Enhetsregisteret)",
+        "changed_field": "/registreringsdatoAntallAnsatteEnhetsregisteret",
+        "operation": "replace",
+        "new_value": "2026-09-14"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "23b2b001e1b4f72afc26eb3d7a78dc4fe73670261fb4431dbb83473a24b5c199"
+      ],
+      "id": "ffc0cac034d24b85dacf1283e563bbf6edace4585f26c30b08f7fa2fcd59b9bb",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "23b2b001e1b4f72afc26eb3d7a78dc4fe73670261fb4431dbb83473a24b5c199",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "}},\"dato\":\"2026-09-14T22:05:37.353Z\",\"endringer\":[{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteEnhetsregisteret\",\"value\":\"2026-09-14\"},{\"op\":\"replace\",\"path\":\"/antallAnsatte\",\"value\":22},{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteNAVAaregisteret\",\"value\":\"2026-09-10\"}],\"endring",
+        "locator": "/_embedded/oppdaterteEnheter/862/endringer/0",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "op": "replace",
+          "path": "/registreringsdatoAntallAnsatteEnhetsregisteret",
+          "value": "2026-09-14"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "995392755",
+    "company": "VIGILO AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.f471017c4b485c231143df88",
+      "value": {
+        "company_orgnr": "995392755",
+        "event_id": 25229276,
+        "date": "2026-09-14T22:09:48.389000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=25229276&size=1&includeChanges=true",
+        "title": "Employee information registration date updated (NAV Aa register)",
+        "changed_field": "/registreringsdatoAntallAnsatteNAVAaregisteret",
+        "operation": "replace",
+        "new_value": "2026-09-10"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "4319c2e8c5fb2cba67ad9fd9ed6f23981d59efff61d959624f25663e1364a4c3"
+      ],
+      "id": "d3ed871d4edde4d43116a3a0d72818911a4dd35c773599071ae6c0d19ef860d1",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "4319c2e8c5fb2cba67ad9fd9ed6f23981d59efff61d959624f25663e1364a4c3",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "op\":\"replace\",\"path\":\"/antallAnsatte\",\"value\":19},{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteNAVAaregisteret\",\"value\":\"2026-09-10\"}],\"endringstype\":\"Endring\",\"oppdateringsid\":25229276,\"organisasjonsnummer\":\"995392755\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/ap",
+        "locator": "/_embedded/oppdaterteEnheter/866/endringer/2",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "op": "replace",
+          "path": "/registreringsdatoAntallAnsatteNAVAaregisteret",
+          "value": "2026-09-10"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "932591987",
+    "company": "FRA DYPET SJØMAT AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.ea61a475636d8f8735e1e38c",
+      "value": {
+        "company_orgnr": "932591987",
+        "event_id": 24408782,
+        "date": "2026-05-12T22:01:53.974000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24408782&size=1&includeChanges=true",
+        "title": "Employee information registration date updated (Enhetsregisteret)",
+        "changed_field": "/registreringsdatoAntallAnsatteEnhetsregisteret",
+        "operation": "replace",
+        "new_value": "2026-05-12"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3ee0de4a1f9176b25884f7385dacd7cf93c7d2e22992ccd1761761abdaa7900c"
+      ],
+      "id": "22464286e788977cf732c494b409556b09d0fe5248f502a3b017eec9f6589a56",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "3ee0de4a1f9176b25884f7385dacd7cf93c7d2e22992ccd1761761abdaa7900c",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "}},\"dato\":\"2026-05-12T22:01:53.974Z\",\"endringer\":[{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteEnhetsregisteret\",\"value\":\"2026-05-12\"},{\"op\":\"replace\",\"path\":\"/antallAnsatte\",\"value\":9},{\"op\":\"replace\",\"path\":\"/registreringsdatoAntallAnsatteNAVAaregisteret\",\"value\":\"2026-05-10\"}],\"endrings",
+        "locator": "/_embedded/oppdaterteEnheter/754/endringer/0",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "op": "replace",
+          "path": "/registreringsdatoAntallAnsatteEnhetsregisteret",
+          "value": "2026-05-12"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "994194437",
+    "company": "JS EIENDOM INVEST AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.395952484b9715756e6c5203",
+      "value": {
+        "company_orgnr": "994194437",
+        "event_id": 21444867,
+        "date": "2025-05-28T18:02:31.002000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=21444867&size=1&includeChanges=true",
+        "title": "Registry update recorded",
+        "event_type": "Endring"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "b1ac2af0965b33998df1bee098dcede8352d1bc6899121c8526f68651e434dd3"
+      ],
+      "id": "4b829d02a802e020e3b60411b399a171cc92271cdb914f134d37bd9d4ad772b5",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "b1ac2af0965b33998df1bee098dcede8352d1bc6899121c8526f68651e434dd3",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "gsid\":21439197,\"organisasjonsnummer\":\"931407139\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/994194437\"}},\"dato\":\"2025-05-28T18:02:31.002Z\",\"endringstype\":\"Endring\",\"oppdateringsid\":21444867,\"organisasjonsnummer\":\"994194437\"},{\"_links\":{\"enhet\":{\"href\":\"https://da",
+        "locator": "/_embedded/oppdaterteEnheter/418",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "enhet": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/enheter/994194437"
+            }
+          },
+          "dato": "2025-05-28T18:02:31.002Z",
+          "endringstype": "Endring",
+          "oppdateringsid": 21444867,
+          "organisasjonsnummer": "994194437"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "920541461",
+    "company": "SANDGRIND HOLDING AS",
+    "category": "registry_announcements",
+    "claim": {
+      "field": "registry_change.3fe6a7cb22ded0a0a994aa7c",
+      "value": {
+        "company_orgnr": "920541461",
+        "event_id": 24811596,
+        "date": "2026-07-09T18:03:08.508000Z",
+        "kind": "Registry announcement",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=24811596&size=1&includeChanges=true",
+        "title": "Latest submitted annual accounts year updated",
+        "changed_field": "/sisteInnsendteAarsregnskap",
+        "operation": "replace",
+        "new_value": "2025"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "2f478fefdbea081a83f9363d344530f7efda9ed36cee04b95af4936d26a62967"
+      ],
+      "id": "d74cdd4bd58b1372bc82c4e3be66c0688b92a28e803c29db7971e8de78198fcf",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:01:20.032649Z",
+      "last_observed_at": "2026-11-12T08:03:14.427397Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "2f478fefdbea081a83f9363d344530f7efda9ed36cee04b95af4936d26a62967",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814344312%2C822564682%2C827373672%2C835014282%2C871002592%2C882932222%2C894103892%2C897051982%2C912016757%2C913047818%2C913699041%2C914330289%2C914340632%2C914851114%2C915073557%2C915476457%2C915769772%2C915790585%2C915810489%2C916752016%2C916763018%2C918609067%2C918708545%2C918881824%2C919732008%2C920541461%2C920693342%2C920817998%2C921005512%2C921542615%2C922087067%2C922156980%2C922372446%2C922833583%2C922921237%2C923301704%2C923303251%2C924351195%2C925160202%2C925261971%2C925306304%2C925985198%2C926417932%2C927421445%2C927874458%2C928080463%2C928690393%2C929635574%2C930046760%2C931407139%2C931426648%2C931481126%2C931816756%2C932224445%2C932286467%2C932296314%2C932513307%2C932591987%2C933499375%2C933958868%2C934085280%2C934170784%2C934197976%2C934268598%2C934995538%2C935431689%2C935988365%2C936369510%2C936438768%2C936848710%2C938710953%2C941549047%2C952542699%2C955205278%2C955972651%2C979738595%2C980235882%2C980363872%2C983653251%2C984847262%2C985803692%2C988192996%2C988282766%2C988436542%2C988875260%2C988884960%2C988946389%2C989032402%2C989176315%2C989266365%2C990180008%2C990769087%2C991086188%2C992377429%2C993031526%2C994194437%2C994751832%2C995392755%2C997083199%2C998078210&dato=2023-11-12T08%3A01%3A58.687Z&updatedBefore=2026-11-12T08%3A01%3A58.687Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:03:14.427397Z",
+        "content_sha256": "610abb81205d8fead22a3ba5f428a4561c2627b6386320115dc84094999565d4",
+        "claim_span": "}},\"dato\":\"2026-07-09T18:03:08.508Z\",\"endringer\":[{\"op\":\"replace\",\"path\":\"/sisteInnsendteAarsregnskap\",\"value\":\"2025\"}],\"endringstype\":\"Endring\",\"oppdateringsid\":24811596,\"organisasjonsnummer\":\"920541461\"},{\"_links\":{\"enhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/925160202\"}},\"d",
+        "locator": "/_embedded/oppdaterteEnheter/806/endringer/0",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "op": "replace",
+          "path": "/sisteInnsendteAarsregnskap",
+          "value": "2025"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Exact company/event ID, published time and (where present) changed path/operation/value agree with the official event. Publication time is not presented as effective date.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "934268598",
+    "company": "LAKSEVÅG RØR & SANITÆR AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.c540f01b78ea70ffd8453927.0.birth_year",
+      "value": 1952,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "04a9e300db947bb28f13ffc35a251107712a92d7c84d3bba5863c54ada6e2200"
+      ],
+      "id": "1d311b60af7b3176eb6a678787421eb0ed2354f4eabd4209e82f3d00a2a9e92a",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:14.100182Z",
+      "last_observed_at": "2026-11-12T08:02:08.866927Z",
+      "reasons": {
+        "label": "Birth year"
+      }
+    },
+    "sources": [
+      {
+        "id": "04a9e300db947bb28f13ffc35a251107712a92d7c84d3bba5863c54ada6e2200",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/934268598/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:08.866927Z",
+        "content_sha256": "34aa4e8c751c6581e2b2e29a7c44039d512152c04003e54f00405ff995571a22",
+        "claim_span": "ert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1952-10-02\",\"navn\":{\"etternavn\":\"Moen\",\"fornavn\":\"Rolf\"}},\"rekkefolge\":2,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem\",\"kode\":\"MEDL\"}},{\"avregistrert\":false,\"person",
+        "locator": "/rollegrupper/1/roller/2/person/fodselsdato",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": "1952-10-02"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "990180008",
+    "company": "PROPAN SENTERET AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.74659875162cfc45b1288414.0.entity_deleted",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d4657117078dde95b24de6e2f79f5505e0715168b8bae6aa3e4336e4be335d48"
+      ],
+      "id": "cd1591a81aad63e1ce4ee35a4aa299217f6c1f51493dbdd4f6cf392e424047d6",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:09.328576Z",
+      "last_observed_at": "2026-11-12T08:02:05.776480Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "d4657117078dde95b24de6e2f79f5505e0715168b8bae6aa3e4336e4be335d48",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/990180008/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:05.776480Z",
+        "content_sha256": "8f3bb6a1ecac3ad99774751c282dfe45c44f1e4ace917d03d552dfd25cb05fa9",
+        "claim_span": "tsregisteret/api/enheter/919563753\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent regnskapsforetak\",\"navn\":[\"ICONOMY AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsn",
+        "locator": "/rollegrupper/3/roller/0/enhet/erSlettet",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "925160202",
+    "company": "GUNNAR KLO HOLDING AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.082dd7ae26f6ac3a8c11fd15.0.order",
+      "value": 0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "5204e21cecf096e386be63df3d1634c636a1149c94867d6b214392fa99dceade"
+      ],
+      "id": "1ec39746fec50fb3de84009c3d07eb7845d426c46f9b0d2ee96f27add260fc55",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:11.224606Z",
+      "last_observed_at": "2026-11-12T08:02:06.099996Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "5204e21cecf096e386be63df3d1634c636a1149c94867d6b214392fa99dceade",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/925160202/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:06.099996Z",
+        "content_sha256": "bd4836b484db799e61d23ab7f48457b8969db748e415aac68567ccef80a33603",
+        "claim_span": "},\"organisasjonsnummer\":\"931282506\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI\"}},\"beskrivelse\":\"Revisor\",\"kode\":\"REVI\"}}],\"sistEndret\":\"2020-06-05\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/r",
+        "locator": "/rollegrupper/2/roller/0/rekkefolge",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": 0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "984847262",
+    "company": "FARET 6 AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.f72f7ee0091cbbf16011fa26.0.birth_year",
+      "value": 1986,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "e68b6e3f74fa4ebd7cb96c5df699f08e0769c4205381038b56e32e6cc69295a8"
+      ],
+      "id": "08908601955ff9d8f831b99ffc7ed54de2f13a276180272c8270a13b9f4298b1",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:11.119993Z",
+      "last_observed_at": "2026-11-12T08:02:06.077993Z",
+      "reasons": {
+        "label": "Birth year"
+      }
+    },
+    "sources": [
+      {
+        "id": "e68b6e3f74fa4ebd7cb96c5df699f08e0769c4205381038b56e32e6cc69295a8",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/984847262/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:06.077993Z",
+        "content_sha256": "243e6be2a68a2964fd24ec8ab8c24fcdd49375cdac21d324898367ec3382a826",
+        "claim_span": "ert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1986-09-26\",\"navn\":{\"etternavn\":\"Borgen-Dons\",\"fornavn\":\"Béatrice\",\"mellomnavn\":\"Aall\"}},\"rekkefolge\":2,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem\",\"kode\":\"MEDL\"}",
+        "locator": "/rollegrupper/1/roller/2/person/fodselsdato",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": "1986-09-26"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "983653251",
+    "company": "BRÆNDERIET BOLIGSAMEIE",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.6fd9b52cf3f8088c389279b8.0.entity_form",
+      "value": {
+        "beskrivelse": "Aksjeselskap",
+        "kode": "AS"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "f30f900fd82edc7f781c5e1d4fead45e0890d20feff55a35d7a477435078d1eb"
+      ],
+      "id": "4c0ce972cb03ca4c70a8052c64cb4338c3a2a7c35490c2529e39a6f74e7b292e",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:11.037368Z",
+      "last_observed_at": "2026-11-12T08:02:05.892793Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "f30f900fd82edc7f781c5e1d4fead45e0890d20feff55a35d7a477435078d1eb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/983653251/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:05.892793Z",
+        "content_sha256": "1aa89222f90500fece9e8296d9b7e366128b3c9cccb4398e5c3f539b9fce8ad2",
+        "claim_span": "tak\",\"navn\":[\"TELL NORGE AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"834836912\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhets",
+        "locator": "/rollegrupper/2/roller/0/enhet/organisasjonsform",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"
+            }
+          },
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "980235882",
+    "company": "OXFOR EIENDOM AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.384b091f487ae8bfe22671a8.0.person_deceased",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "4b9efa38f02b35a91c88dad202885ac4c813362f5def9e5c37f064534794f367"
+      ],
+      "id": "29f66160f06bceb610b00f716764018d329e64419fe6141fec3e8f46f870d91c",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:08.831744Z",
+      "last_observed_at": "2026-11-12T08:02:03.893083Z",
+      "reasons": {
+        "label": "Registered as deceased"
+      }
+    },
+    "sources": [
+      {
+        "id": "4b9efa38f02b35a91c88dad202885ac4c813362f5def9e5c37f064534794f367",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/980235882/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:03.893083Z",
+        "content_sha256": "55e5b007e221aea5e86573144b581e9de6d6eab03f1e0224e6c3526821108d17",
+        "claim_span": "\"MEDL\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1973-06-28\",\"navn\":{\"etternavn\":\"Hofsø\",\"fornavn\":\"Christina\",\"mellomnavn\":\"Hojem\"}},\"rekkefolge\":3,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}},\"beskrivelse\":\"Styremedlem",
+        "locator": "/rollegrupper/1/roller/3/person/erDoed",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "914851114",
+    "company": "SELJÅSEN GÅRD AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.6a5127926d2f66154f373706.0.person_deceased",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "b1715a2fd01af48971b2cf96e69de7864c3cf78e986c2d5d69b4fb84a9a37875"
+      ],
+      "id": "559fdebe25f9f406968a61e0516018930e8694e4c0823e212c00e3b5df444035",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:08.918361Z",
+      "last_observed_at": "2026-11-12T08:02:03.741402Z",
+      "reasons": {
+        "label": "Registered as deceased"
+      }
+    },
+    "sources": [
+      {
+        "id": "b1715a2fd01af48971b2cf96e69de7864c3cf78e986c2d5d69b4fb84a9a37875",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/914851114/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:03.741402Z",
+        "content_sha256": "d4f05bf5b9cd7ed2e318ecf825e7b24414e32061ee908809fe9b2f551f0f30e9",
+        "claim_span": "roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1963-10-31\",\"navn\":{\"etternavn\":\"Gunbjørnsen\",\"fornavn\":\"Nina\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE\"}},\"beskrivelse\":\"Styrets leder\",\"kode\":\"LEDE\"}},",
+        "locator": "/rollegrupper/0/roller/0/person/erDoed",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "925160202",
+    "company": "GUNNAR KLO HOLDING AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.role.082dd7ae26f6ac3a8c11fd15.0",
+      "value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI"
+            }
+          },
+          "beskrivelse": "Revisor",
+          "kode": "REVI"
+        },
+        "name": [
+          "REVICOM AS"
+        ],
+        "entity_organisation_number": "931282506",
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REVI"
+            }
+          },
+          "beskrivelse": "Revisor",
+          "kode": "REVI"
+        },
+        "last_changed": "2020-06-05",
+        "from_date": null
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "c4a173da2aff71019cae1a26b2897732078734b1a4c2827f738fe14902ae4516"
+      ],
+      "id": "94bde9bc6e72a7165d9cd832b02e2db37948efe33b29e9c92627adeaef98d4d0",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:11.224606Z",
+      "last_observed_at": "2026-11-12T08:02:06.099996Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "c4a173da2aff71019cae1a26b2897732078734b1a4c2827f738fe14902ae4516",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/925160202/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:06.099996Z",
+        "content_sha256": "bd4836b484db799e61d23ab7f48457b8969db748e415aac68567ccef80a33603",
+        "claim_span": "{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/931282506\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent revisjonsforetak\",\"navn\":[\"REVICOM AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/",
+        "locator": "/rollegrupper/2/roller/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2020-06-05",
+        "reporting_period": null,
+        "located_source_value": {
+          "avregistrert": false,
+          "enhet": {
+            "_links": {
+              "self": {
+                "href": "https://data.brreg.no/enhetsregisteret/api/enheter/931282506"
+              }
+            },
+            "erSlettet": false,
+            "godkjenningsstatus": "Godkjent revisjonsforetak",
+            "navn": [
+              "REVICOM AS"
+            ],
+            "organisasjonsform": {
+              "_links": {
+                "self": {
+                  "href": "https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"
+                }
+              },
+              "beskrivelse": "Aksjeselskap",
+              "kode": "AS"
+            },
+            "organisasjonsnummer": "931282506"
+          },
+          "rekkefolge": 0,
+          "type": {
+            "_links": {
+              "self": {
+                "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI"
+              }
+            },
+            "beskrivelse": "Revisor",
+            "kode": "REVI"
+          }
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "955972651",
+    "company": "TANGEN TRELAST AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.762f261aac1299ff3a0474e9.0.order",
+      "value": 0,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "1303a4a79e8bc18ff17818d650f93fa69ef2d2eccd682a61a50d34cae1ead923"
+      ],
+      "id": "37be0081b72e7449e9aaac9229e3522839e036895416f9bb06ac3512c6e52048",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:12.064033Z",
+      "last_observed_at": "2026-11-12T08:02:06.967446Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "1303a4a79e8bc18ff17818d650f93fa69ef2d2eccd682a61a50d34cae1ead923",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/955972651/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:06.967446Z",
+        "content_sha256": "9a52d906858b5817604ceb5b54bfd76551831ac1de9b23503e696f706b533646",
+        "claim_span": "},\"organisasjonsnummer\":\"931776207\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI\"}},\"beskrivelse\":\"Revisor\",\"kode\":\"REVI\"}}],\"sistEndret\":\"2024-09-25\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/r",
+        "locator": "/rollegrupper/2/roller/0/rekkefolge",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": 0
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "916763018",
+    "company": "YTTEREN IDRETTSPARK EIENDOM AS",
+    "category": "roles",
+    "claim": {
+      "field": "roles.detail.8c3c4f5c9e6737804f093b35.0.entity_form",
+      "value": {
+        "beskrivelse": "Aksjeselskap",
+        "kode": "AS"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "a64edb0a5f46c0f66d32bbf8439a675036458a5a8bb2e6e1b601745d6568dc58"
+      ],
+      "id": "b80beceba281fcc8ab0b18439ce658779fb32bda163e7460c22d2472a1e0aef7",
+      "family": "roles",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:14.098177Z",
+      "last_observed_at": "2026-11-12T08:02:08.982445Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "a64edb0a5f46c0f66d32bbf8439a675036458a5a8bb2e6e1b601745d6568dc58",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/916763018/roller",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:08.982445Z",
+        "content_sha256": "302fda49b61922754feed1c7810c006e44f8cc0cd8f310676a6aa31d72c2c4a1",
+        "claim_span": "retak\",\"navn\":[\"RESULTAT AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"898316572\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhets",
+        "locator": "/rollegrupper/3/roller/0/enhet/organisasjonsform",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"
+            }
+          },
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Role/detail matches the exact role record for this company; birth year is the year of the source date; entity form strips links only.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "918708545",
+    "company": "MONGSTAD HANDELSEIENDOM AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.918769757.organisation_form",
+      "value": {
+        "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
+        "kode": "BEDR"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "998a2a2b893e70999a4fc2776eefc599f922b7d74cd6fb95e6c61e814792e186"
+      ],
+      "id": "114ddd0b3340d20fa802b886760db86dd15957c1466174736d1ad5ee6a1108de",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:09.964769Z",
+      "last_observed_at": "2026-11-12T08:02:04.934456Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "998a2a2b893e70999a4fc2776eefc599f922b7d74cd6fb95e6c61e814792e186",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918708545&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:04.934456Z",
+        "content_sha256": "1e7079c62a60c236348fd8b534fd408445eae70f37fe1537f48b13fdf8f96266",
+        "claim_span": ",\"oppstartsdato\":\"2017-02-13\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"918769757\",\"overordnetEnhet\":\"918708545\",\"",
+        "locator": "/_embedded/underenheter/0/organisasjonsform",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"
+            }
+          },
+          "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
+          "kode": "BEDR"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "913699041",
+    "company": "AMPO HOLDING AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.913701259.registration_date",
+      "value": "2014-05-31",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "eae35efdb0e1a6d83958f21fec057564cf33092014753e45089ec4e7018d51c6"
+      ],
+      "id": "13d3850ecacf4ba83ef2cba45acf852167c54de3698457e9065b2ba99807db70",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:10.078450Z",
+      "last_observed_at": "2026-11-12T08:02:04.959823Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "eae35efdb0e1a6d83958f21fec057564cf33092014753e45089ec4e7018d51c6",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913699041&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:04.959823Z",
+        "content_sha256": "ccb276d4288de1382953e0ec0a7e3981d293c98a28aada143c3a289d5c9ddbda",
+        "claim_span": "\":\"913699041\",\"registreringsdatoEnhetsregisteret\":\"2014-05-31\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913699041&size=1000&page=0\"}},\"page\":{\"number\":0,\"size\":1000,\"totalElemen",
+        "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2014-05-31",
+        "reporting_period": null,
+        "located_source_value": "2014-05-31"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "871002592",
+    "company": "MAP MÅLING ANALYSE PRESENTASJON AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.875220012.organisation_form",
+      "value": {
+        "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
+        "kode": "BEDR"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "0eec7b7790529f628db9f341a0a44f0551a520dfde4048548b03446824dcdf5a"
+      ],
+      "id": "35e33aa8e0e403492b442c05168dee2e7e6838769b951044cc8b09ed68e7f665",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:07.559578Z",
+      "last_observed_at": "2026-11-12T08:02:02.478017Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "0eec7b7790529f628db9f341a0a44f0551a520dfde4048548b03446824dcdf5a",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=871002592&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:02.478017Z",
+        "content_sha256": "921df3b9216e177ed4f020581651ee3b41d2ffd0bf370aeca7fdf7dcfe578a86",
+        "claim_span": "LING ANALYSE PRESENTASJON AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"875220012\",\"overordnetEnhet\":\"871002592\",\"",
+        "locator": "/_embedded/underenheter/0/organisasjonsform",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"
+            }
+          },
+          "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
+          "kode": "BEDR"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "923303251",
+    "company": "OPPSTRYN EIENDOM AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.unit.923445153",
+      "value": {
+        "organisation_number": "923445153",
+        "name": "OPPSTRYN EIENDOM AS",
+        "address": {
+          "adresse": [
+            "Granbakken 5"
+          ],
+          "kommune": "BERGEN",
+          "kommunenummer": "4601",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "5055",
+          "poststed": "BERGEN"
+        },
+        "nace": {
+          "beskrivelse": "Utleie av egen eller leid fast eiendom",
+          "kode": "68.200"
+        },
+        "employees": null
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "edd8ff9ce30686770e12611506134332832ca995382004091a17abdb0e43f8ff"
+      ],
+      "id": "4b95bfa477a54b197a7bf697555e303d5959b56c9713b97ed0c87fbc6ae6f154",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:07.358197Z",
+      "last_observed_at": "2026-11-12T08:02:02.102031Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "edd8ff9ce30686770e12611506134332832ca995382004091a17abdb0e43f8ff",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=923303251&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:02.102031Z",
+        "content_sha256": "0855dd14f40ac0f185837ae9e9b513efaafa15e8de3073016092f5ad921f7628",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/923445153\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/923303251\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Granbakken 5\"],\"kommune\":\"BERGEN\",\"kommunenummer\":\"4601\",\"land\":\"Norge\",\"landko",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/underenheter/923445153"
+            },
+            "overordnetEnhet": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/enheter/923303251"
+            }
+          },
+          "beliggenhetsadresse": {
+            "adresse": [
+              "Granbakken 5"
+            ],
+            "kommune": "BERGEN",
+            "kommunenummer": "4601",
+            "land": "Norge",
+            "landkode": "NO",
+            "postnummer": "5055",
+            "poststed": "BERGEN"
+          },
+          "harRegistrertAntallAnsatte": false,
+          "historiskeNavn": [
+            {
+              "fraDato": "2019-09-23 21:13:46",
+              "navn": "HST EIENDOM AS",
+              "tilDato": "2022-08-19 16:32:10"
+            }
+          ],
+          "naeringskode1": {
+            "beskrivelse": "Utleie av egen eller leid fast eiendom",
+            "kode": "68.200"
+          },
+          "navn": "OPPSTRYN EIENDOM AS",
+          "oppstartsdato": "2019-08-12",
+          "organisasjonsform": {
+            "_links": {
+              "self": {
+                "href": "https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"
+              }
+            },
+            "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
+            "kode": "BEDR"
+          },
+          "organisasjonsnummer": "923445153",
+          "overordnetEnhet": "923303251",
+          "registreringsdatoEnhetsregisteret": "2019-09-23",
+          "registrertIMvaregisteret": false,
+          "respons_klasse": "Underenhet"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "952542699",
+    "company": "AS HOLTEGÅRDEN",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.972827142.registered_in_vat",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "f52cda7c52264ff566d26194493aa8aaa5d33b587c0989694d53bd578946af5d"
+      ],
+      "id": "d813d35d4ff758c8ea041a3b34979b95d48e7ff3ffa7d8e22e0cde77321b013f",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:09.416314Z",
+      "last_observed_at": "2026-11-12T08:02:04.334960Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "f52cda7c52264ff566d26194493aa8aaa5d33b587c0989694d53bd578946af5d",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=952542699&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:04.334960Z",
+        "content_sha256": "76114ae7db7a6a23033c7fd512a20cff4635e2d5b748cccc45715f70bb037c8f",
+        "claim_span": "gisteret\":\"1995-02-23\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\",\"telefon\":\"67 53 64 53\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=952542699&size=1000&page=0\"}},\"page\":{\"number\":0,\"size\":1000,\"totalElements\":1,\"totalPage",
+        "locator": "/_embedded/underenheter/0/registrertIMvaregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "932513307",
+    "company": "SØSTRENE ØYO AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.932530813.registered_email",
+      "value": "vik.ingeranne@gmail.com",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3d0cb30dd663f9a5fe3cf2f6b67028440ec0e2c602be1a4ff92b3cb0ff56de0f"
+      ],
+      "id": "e265ed79254e04b7346a4168c3296a6b711e7fe4d38a1928698e2e5c38634aec",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:06.942840Z",
+      "last_observed_at": "2026-11-12T08:02:01.879841Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "3d0cb30dd663f9a5fe3cf2f6b67028440ec0e2c602be1a4ff92b3cb0ff56de0f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=932513307&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:01.879841Z",
+        "content_sha256": "13a6b1bc43784c4b8fbaa354b3f4328bd8d04a394b2be575cdd439205823f79d",
+        "claim_span": "nummer\":\"3580\",\"poststed\":\"GEILO\"},\"epostadresse\":\"vik.ingeranne@gmail.com\",\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"mobil\":\"992 44 918\",\"naeringskode1\":{\"beskrivelse\":\"Produksjon av næringsmidler ikke nevnt annet sted\",\"kode\":\"10.890\"},\"navn\":\"SØSTRENE ØYO AS\",\"oppstartsdato\":\"2023-1",
+        "locator": "/_embedded/underenheter/0/epostadresse",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": "vik.ingeranne@gmail.com"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "994751832",
+    "company": "RANA IDRETTSKLINIKK AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.895243612.historical_name.42c818f278d51e12a9aa6625",
+      "value": {
+        "navn": "SPESIALSPORT AS",
+        "fraDato": "2010-03-02 20:37:39",
+        "tilDato": "2023-01-02 10:55:20"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "ff776a55ffdbbc662aa9a7e18866a07149f6c2ae7ff58d8ee7b0173bcc5b20b4"
+      ],
+      "id": "c78a34bf3d537ad9398f6563eb71256bc9bdb604c29cb7773e3e5542bd003c26",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:07.363743Z",
+      "last_observed_at": "2026-11-12T08:02:02.276764Z",
+      "reasons": {
+        "label": "Former registered name"
+      }
+    },
+    "sources": [
+      {
+        "id": "ff776a55ffdbbc662aa9a7e18866a07149f6c2ae7ff58d8ee7b0173bcc5b20b4",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=994751832&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:02.276764Z",
+        "content_sha256": "7bb3a0c39145c4edec834b05c4c907799216eeef90034f53967ba2c91fa12474",
+        "claim_span": "rRegistrertAntallAnsatte\":false,\"historiskeNavn\":[{\"fraDato\":\"2010-03-02 20:37:39\",\"navn\":\"SPESIALSPORT AS\",\"tilDato\":\"2023-01-02 10:55:20\"}],\"mobil\":\"909 51 108\",\"naeringskode1\":{\"beskrivelse\":\"Guide- og reiseledervirksomhet\",\"kode\":\"79.902\"},\"navn\":\"RANA IDRETTSKLINIKK AS\",\"oppstartsdato\":\"2009-10",
+        "locator": "/_embedded/underenheter/0/historiskeNavn/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": {
+          "fraDato": "2010-03-02 20:37:39",
+          "navn": "SPESIALSPORT AS",
+          "tilDato": "2023-01-02 10:55:20"
+        }
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "913699041",
+    "company": "AMPO HOLDING AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.913701259.employees_reported",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "dd4f985fa82165fb1d14526459492cc555e39abea82a994451b557703ead3f62"
+      ],
+      "id": "2014168c4c6c559dc4c57417755acd44c6231cb9a070fd196d73288d5b16277f",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:10.078450Z",
+      "last_observed_at": "2026-11-12T08:02:04.959823Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "dd4f985fa82165fb1d14526459492cc555e39abea82a994451b557703ead3f62",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913699041&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:04.959823Z",
+        "content_sha256": "ccb276d4288de1382953e0ec0a7e3981d293c98a28aada143c3a289d5c9ddbda",
+        "claim_span": "tsted\":\"FJELLHAMAR\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Andre tjenester tilknyttet undervisning ikke nevnt annet sted\",\"kode\":\"85.699\"},\"navn\":\"AMPO HOLDING AS\",\"oppstartsdato\":\"2014-05-10\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://dat",
+        "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "931816756",
+    "company": "TVT SUSHI AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.931883917.employee_registration_date",
+      "value": "2026-11-11",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "2fdeb1cdca05d385ae7bd59b9be8458b77254222d3b448f126e5032395a604e3"
+      ],
+      "id": "43cc8906834b6cbb0d9845e5749e9338497774eea41d9e8778abd5cc40933664",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:09.774150Z",
+      "last_observed_at": "2026-11-12T08:02:04.745835Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "2fdeb1cdca05d385ae7bd59b9be8458b77254222d3b448f126e5032395a604e3",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=931816756&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:04.745835Z",
+        "content_sha256": "80411e6b0343ca91840db4c9fb6aa9b948d186560f75bc7eca6a65196dd221cf",
+        "claim_span": ",\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2026-11-11\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2026-11-10\",\"registreringsdatoEnhetsregisteret\":\"2023-08-15\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregiste",
+        "locator": "/_embedded/underenheter/0/registreringsdatoAntallAnsatteEnhetsregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": "2026-11-11",
+        "reporting_period": null,
+        "located_source_value": "2026-11-11"
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  },
+  {
+    "run": 2,
+    "orgnr": "934170784",
+    "company": "MMA INVESTERING AS",
+    "category": "subunits",
+    "claim": {
+      "field": "subunits.detail.934324005.registered_in_vat",
+      "value": false,
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d3ea28177c668b6ec8f6311174dcdb88bf07c10db8c14767cf2764bd38091aea"
+      ],
+      "id": "5b5bfdc7a81cd30a3527c0f5e78cbe50ec6edf33c12f8db7c56ea06df14e3c6d",
+      "family": "subunits",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-12T08:00:07.016918Z",
+      "last_observed_at": "2026-11-12T08:02:01.968821Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "d3ea28177c668b6ec8f6311174dcdb88bf07c10db8c14767cf2764bd38091aea",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934170784&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-12T08:02:01.968821Z",
+        "content_sha256": "d3577fff3c70c3a388db0eb1a07f001061769b8ef1524d135f1953c096065d11",
+        "claim_span": "gisteret\":\"2024-10-22\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934170784&size=1000&page=0\"}},\"page\":{\"number\":0,\"size\":1000,\"totalElements\":1,\"totalPages\":1}}",
+        "locator": "/_embedded/underenheter/0/registrertIMvaregisteret",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null,
+        "located_source_value": false
+      }
+    ],
+    "review": {
+      "verdict": "correct",
+      "reason": "Typed detail agrees with the located official subunit record linked to the input parent.",
+      "final_verdict": "correct",
+      "final_check": "Same exact company/field/value manually reviewed against the final-run located source and verbatim excerpt. Final source hashes were rechecked during extraction."
+    }
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "audited_commit": "f44966886fa3847f66161147d39a2c84d4d116fa",
+  "results": {
+    "1": "PASS",
+    "2": "PASS",
+    "3": "PASS",
+    "4": "PASS",
+    "5": "PASS",
+    "6": "PASS"
+  },
+  "indexes": {
+    "cc_orgnr_index.json.gz": {
+      "bytes": 954922,
+      "sha256": "c4970f6be93087034a5d7543ccb2e17a44b105b9e2dec5d8c18f24d01a6dc00f",
+      "tracked": true,
+      "fresh_clone_frozen_load": "PASS"
+    },
+    "shared_identifiers.json.gz": {
+      "bytes": 8676502,
+      "sha256": "56a292749123af3e67c9e79052d6a45fc140030876043da47e1eaea80bdd5ae7",
+      "tracked": true,
+      "fresh_clone_frozen_load": "PASS"
+    }
+  },
+  "grep": {
+    "literal_lines": 72,
+    "hit_lines_per_pattern": {
+      "1881": 4,
+      "proff": 7,
+      "purehelp": 4,
+      "gulesider": 4,
+      "norid": 0,
+      "google": 4,
+      "bing": 29,
+      "duckduckgo": 1,
+      "serpapi": 0,
+      "openai": 0,
+      "anthropic": 0,
+      "api_key": 1,
+      "token=": 32
+    },
+    "interpretation": "Exclusion lists; unreachable mock result strings; local font provenance; plumbing substring matches; NAV public-token/internal context variables; ownership evidence tokens. BRAVE_SEARCH_API_KEY is read only by the pre-existing optional Brave provider, disabled by default; this audit clears credentials and observed zero search queries. No listed directory/search/model provider was contacted. See runtime-grep.txt for every exact hit."
+  },
+  "local_reads": {
+    "module": "src/signalpost/web/shared_identifiers.py:bundled",
+    "network": false,
+    "cc_candidate_path": "generate -> collector.fetch -> shared-owner rejection -> HTTP robots/public-IP/TLS/redirect checks -> candidate_proof -> declared_score/score -> checked-page vetoes -> publish_result -> entity_scope.enforce",
+    "all_existing_veto_paths_retained": true
+  },
+  "budgets": {
+    "per_company_http_ceiling": 40,
+    "pooled_requests_per_distinct_input": 18,
+    "run_pool": 360,
+    "config_and_budget_unchanged_from_runtime_commit": true
+  },
+  "run": {
+    "clone_commit": "f44966886fa3847f66161147d39a2c84d4d116fa",
+    "wall_seconds": 114.4875431,
+    "exit_code": 0,
+    "input_lines": 20,
+    "envelopes": 20,
+    "profiles": 20,
+    "exact_ordered_membership": "PASS",
+    "requests": 162,
+    "requests_per_input_including_shared": 8.1,
+    "attributed_requests_per_company": 6.95,
+    "shared_requests": 23,
+    "max_company_requests": 21,
+    "requests_by_company": {
+      "912823970": 4,
+      "916729774": 4,
+      "917998787": 4,
+      "918049215": 4,
+      "919948493": 4,
+      "982410851": 20,
+      "981508734": 4,
+      "916049153": 4,
+      "882749762": 6,
+      "936276075": 10,
+      "923472134": 4,
+      "936312055": 4,
+      "995541432": 17,
+      "989252968": 21,
+      "991247610": 7,
+      "935450233": 6,
+      "914723612": 4,
+      "918975934": 4,
+      "933170705": 4,
+      "997768728": 4
+    },
+    "runtime_ms_from_report": 87734,
+    "wall_scope": "External stopwatch around the complete uv run command, including startup and site generation; report runtime is narrower.",
+    "request_hosts": [
+      "api.gleif.org",
+      "api.ted.europa.eu",
+      "cristty.com",
+      "data.brreg.no",
+      "fluvio.com",
+      "marialouise.com",
+      "marialouise.no",
+      "marun.com",
+      "marun.no",
+      "mbergum.com",
+      "notech.no",
+      "pam-stilling-feed.nav.no",
+      "query.wikidata.org",
+      "tryggebarnehager.no",
+      "wacker.com",
+      "www.marialouise.no",
+      "www.marun.no",
+      "www.mbergum.com",
+      "www.wacker.com"
+    ],
+    "forbidden_hosts_contacted": [],
+    "warnings": [],
+    "deadline_hits": 0,
+    "search_queries": 0,
+    "source_outputs": "Ignored fresh clone under bench/reports/cc-proto/raw/rules-audit-clone/out"
+  },
+  "command": "uv run --frozen signalpost run --organisations bench/inputs/20/batch.jsonl --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --state-dir out/state --site-dir out/site"
+}

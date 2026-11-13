@@ -1,0 +1,13 @@
+{
+  "task_started_utc": "2026-11-11T05:14:31Z",
+  "user_extended_hard_stop_utc": "2026-11-11T07:00:00Z",
+  "warc_admission_stop_utc": "2026-11-11T06:35:00Z",
+  "live_review_deadline_utc": "2026-11-11T06:53:00Z",
+  "max_concurrent_warc_requests": 2,
+  "raw_warc_storage": "none; byte ranges decoded in memory",
+  "selected_record_cap": 20000,
+  "max_records_per_registered_domain": 2,
+  "selection_order": "Fixed seed20261111 shuffle of one nonempty Parquet file sample; earlier129 files returned zero rows",
+  "parser_history": "First386 completed records include210 retained parse errors caused by archive-normalized HTTP payloads; parser fixed before later records. Prior errors remain errors, not claimed no-orgnr pages; fetched-range counts include valid ranges independently of parsing.",
+  "download_MB_scope": "Successful WARC range payload bytes; excludes failed/aborted attempts, HTTP overhead and uninstrumented Parquet projected-read traffic."
+}

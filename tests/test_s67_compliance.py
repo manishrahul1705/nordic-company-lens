@@ -1,6 +1,6 @@
 import asyncio
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from uuid import UUID
 
 import httpx
@@ -57,8 +57,10 @@ def test_shipped_index_valid_through_november_30_without_redating(tmp_path):
     cfg = config(tmp_path, ['923609016'])
     data, age = load(DEFAULT_PATH, cfg.nav_index_max_age_days,
                      now=datetime(2026, 11, 30, 23, 59, 59, tzinfo=timezone.utc))
-    assert data['built_at'].startswith('2026-11-04')
-    assert age < cfg.nav_index_max_age_days
+    built_at = datetime.fromisoformat(data['built_at'].replace('Z', '+00:00'))
+    assert built_at.tzinfo is not None and built_at.utcoffset() == timedelta(0)
+    assert built_at <= datetime.now(timezone.utc)
+    assert 0 <= age < cfg.nav_index_max_age_days
 
 
 @pytest.mark.parametrize('kwargs,published', [({}, True), ({'status': 'INACTIVE'}, False),

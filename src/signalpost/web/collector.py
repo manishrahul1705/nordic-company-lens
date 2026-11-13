@@ -3,7 +3,7 @@ import html
 import json
 import asyncio
 import re
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlsplit, urlunsplit, unquote
 from ..budget import SourceFailure
 from ..models.envelope import Error
 from ..models.evidence import digest
@@ -127,7 +127,7 @@ def registry_context(envelope, bulk, blobs):
     data = json.loads(body)
     address = data.get("forretningsadresse") or {}
     context = {"name": data.get("navn"), "website": data.get("hjemmeside"), "email": data.get("epostadresse"),
-               "phone": data.get("telefon"), "municipality": address.get("kommune"), "street": address.get("adresse"),
+               "phone": data.get("telefon"), "mobile": data.get("mobil"), "municipality": address.get("kommune"), "street": address.get("adresse"),
                "postcode": address.get("postnummer"), "city": address.get("poststed")}
     return context, Source(reference.source_url, body, reference.content_sha256, reference.retrieved_at), "/hjemmeside"
 
@@ -166,6 +166,26 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
     return targets[:limit]
 
 
+MAX_PROOF_PAGES = 5  # Includes the candidate landing page, excludes robots/XML.
+
+
+def extra_proof_targets(pages, base_url, seen=()):
+    """Only links published on this site nominate the two deeper proof pages."""
+    patterns = (r'(?:salgs|kjops|kjop)[\s/_-]*(?:betingelser|vilkar)|vilkar|betingelser|terms',
+                r'personvern|privacy', r'kontakt|contact|impressum',
+                r'om[- /]oss|(?:^|[/\s])om(?:[/\s?#]|$)|about')
+    ranked = []
+    for page in pages:
+        for link in page.links:
+            url = normalize_url(link.href)
+            if not url or url in seen or urlsplit(url).hostname != urlsplit(base_url).hostname:
+                continue
+            text = unquote(urlsplit(url).path + ' ' + link.text).casefold().replace('?','o').replace('?','a').replace('?','ae')
+            rank = next((i for i, pattern in enumerate(patterns) if re.search(pattern,text)),None)
+            if rank is not None:ranked.append((rank,url))
+    return list(dict.fromkeys(url for _,url in sorted(ranked,key=lambda item:item[0])))[:2]
+
+
 def previous_nomination(previous, context, units):
     if not previous:
         return None, None
@@ -190,6 +210,7 @@ def previous_nomination(previous, context, units):
 
 async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_candidates=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
+    context['orgnr'] = org
     context['nace']=next((str(c.value.get('kode','')) for c in envelope.claims if c.field=='identity.nace1' and isinstance(c.value,dict)),'')
     round2=envelope.run.refresh.setdefault('recall_round2',{'candidates':[]})
     units={c.value['organisation_number']:{'name': c.value.get('name'), 'address':c.value.get('address')} for c in envelope.claims
@@ -228,8 +249,6 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
     context['annual_report_domains'] = await offload(annual_domains, envelope, http.blobs)
     from .wikidata import websites
     context['wikidata_homepages'] = websites(getattr(http, 'wikidata_index', {'records':{}}), org)
-    from .search import active_for_search
-    context['active_for_search'] = active_for_search(envelope)
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")) and matches_profile(social,company_names(context)):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
@@ -266,11 +285,6 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                 brand_support[candidate.domain]=support
                 envelope.run.refresh.setdefault('brand_candidates',[]).append({'domain':candidate.domain,**support})
                 yield candidate
-        search=getattr(http,'search',None)
-        if not successes and search and retry_candidates is None:
-            existing={c.domain for c in candidates}
-            for candidate in await search.nominate(org,context,http):
-                if candidate.domain not in existing:yield candidate
     async for candidate in nominations():
         pages = []
         best = None
@@ -325,12 +339,16 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     proof=Proof('VERIFIED','unique_no_corroborated',['registry_unique_name','name_in_identity','registry_corroboration'],4,token=legal_name(context.get('name')))
                     proof.rule='C'
             pages.append((response, page))
+            proof_page_attempts = 1
+            proof_urls = {response.url}
             best = (proof, response, page)
             if proof.level == "BLOCKED":
                 raise SourceFailure("block_page")
             if (candidate is refresh_candidate and refresh_proof and refresh_proof != response.url
                     and domain(refresh_proof) == candidate.domain and proof.level != 'REJECT'):
                 try:
+                    proof_page_attempts += 1
+                    proof_urls.add(refresh_proof)
                     checked_response = await http.get(refresh_proof, org, candidate.domain, proved)
                     if checked_response.status == 200:
                         checked_page = await offload(Page, checked_response.body, checked_response.url)
@@ -343,30 +361,35 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
             # Owner conflicts on any checked page cannot be rescued by another
-            # page on that domain. Up to three same-domain proof pages are checked.
+            # page on that domain. Keep the existing checks before deeper linked pages.
             vetoes = {'foreign_orgnr','different_legal_entity','hosting_default','parked','shared_registry_domain','placeholder','frameset_placeholder','provider_industry_mismatch'}
             if proof.reason not in vetoes:
-                seen = {response.url}
-                limit = 5  # Preserve the previous selection before adding pages.
+                seen = set(proof_urls)
+                initially_verified = best[0].level == 'VERIFIED'
+                limit = 5  # Preserve the existing selection and order.
                 targets=proof_page_targets(page,response.url,limit=limit)
                 if proof.level!='VERIFIED' and getattr(http.config,'website_proof_discovery',True):
                     from .round2 import proof_targets
                     original=set(targets)
                     targets=await proof_targets(page,response.url,http,org,targets)
                     entry['discovered_proof_targets']=[u for u in targets if u not in original]
-                # Never let a new path displace an old linked/sitemap/fixed
-                # target. The existing stop-after-proof and pooled caps apply.
-                previous_targets=list(targets)
-                additions=[u for u in proof_page_targets(page,response.url,limit=32)
-                           if u not in previous_targets][:2]
-                targets=previous_targets+additions
-                entry['additional_proof_targets']=additions
-                for position,target in enumerate(targets):
-                    if position>=FOLLOWUP_PAGES and best[0].level=='VERIFIED':
+                existing_targets = targets[:FOLLOWUP_PAGES]
+                entry['additional_proof_targets'] = []
+                def bounded_targets():
+                    yield from existing_targets
+                    if best[0].level not in {'VERIFIED','REJECT','BLOCKED'}:
+                        additions = extra_proof_targets([p for _,p in pages],response.url,seen)
+                        entry['additional_proof_targets'] = additions
+                        yield from additions
+                        if not additions:
+                            yield from targets[FOLLOWUP_PAGES:]  # Existing fixed fallback, within the same total cap.
+                for target in bounded_targets():
+                    if proof_page_attempts >= MAX_PROOF_PAGES:
                         break
                     if target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
+                    proof_page_attempts += 1
                     try:
                         extra = await http.get(target, org, candidate.domain, proved)
                     except SourceFailure as exc:
@@ -397,6 +420,9 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     ranks = {'REJECT': -1, 'BLOCKED': -1, 'LOW': 0, 'MEDIUM': 1, 'REGISTRY_DECLARED': 2, 'HIGH': 3, 'VERIFIED': 4}
                     if ranks[extra_proof.level] > ranks[best[0].level]:
                         best = (extra_proof, extra, extra_page)
+                    if not initially_verified and best[0].level == 'VERIFIED':
+                        break
+            entry['proof_page_attempts_including_homepage'] = proof_page_attempts
             proof, response, page = best
             entry.update(proof_type=proof.proof_type,rule=getattr(proof,'rule',None),reason=proof.reason)
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason, 'title':page.title, 'proof_page_url':response.url})
@@ -544,22 +570,26 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
                 publish(section, source_response, org, "social_profile." + digest(url)[:20], {"url": url, "platform": domain(url)}, "company-link:" + url, source_span)
                 section.claims[-1].reasons['relationship'] = 'Company-owned profile linked from verified website'
                 social_seen.add(url)
+        from .contact_policy import Regions, email_allowed, phone_allowed
+        contact_regions = Regions(source_page, context)
         contacts = []
         for link in source_page.links:
             if link.href.startswith("tel:") and (number := phone(link.href[4:])):
                 contacts.append(("phone", number, link.span))
             if link.href.startswith("mailto:"):
                 address = link.href[7:].split("?", 1)[0].strip()
-                if address.rsplit("@", 1)[-1].lower() == target_domain:
+                if email_allowed(address, context, target_domain, contact_regions):
                     contacts.append(("email", address, link.span))
         for match in re.finditer(r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", source_page.visible):
             address = match.group()
-            if address.rsplit("@", 1)[-1].lower() == target_domain:
+            if email_allowed(address, context, target_domain, contact_regions):
                 contacts.append(("email", address, source_page.span_for(address)[:150]))
         for match in re.finditer(r"(?:telefon|tlf|phone)\s*:?\s*((?:\+47|0047)?[ .()0-9-]{8,20})", source_page.visible, re.I):
             if number := phone(match.group(1)):
                 contacts.append(("phone", number, source_page.span_for(match.group(1))[:150]))
         for kind, contact, source_span in contacts:
+            if kind == 'phone' and not phone_allowed(contact, source_page, context, source_span, contact_regions):
+                continue
             if (kind, contact.casefold()) not in contact_seen:
                 if is_group:
                     pos = source_page.raw.find(contact)
@@ -604,7 +634,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=getattr(proof,'subject_orgnr',None) or org
-    contact_proofs={'legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
+    contact_proofs={'registry_email_on_site','registry_phone_on_site','legal_name_masthead','unique_legal_name_domain','legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',
                     'domain_legal_name_and_registry_location','nominated_two_independent_signals',
                     'registry_declared_name_tier_a','registry_declared_hard_contact_tier_b','unique_no_corroborated'}
     span = page.proof_span(matched) if proof.level == "VERIFIED" and proof.proof_type not in contact_proofs else (page.name_span(proof.token) or page.span_for(proof.token))

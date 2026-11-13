@@ -1,0 +1,88 @@
+[
+  {
+    "field": "roles.role.ba7a8afda61337ed30ea217a.0",
+    "value": {
+      "role_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"
+          }
+        },
+        "beskrivelse": "Daglig leder",
+        "kode": "DAGL"
+      },
+      "name": "Peder Istad",
+      "entity_organisation_number": null,
+      "inactive": false,
+      "group_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL"
+          }
+        },
+        "beskrivelse": "Daglig leder",
+        "kode": "DAGL"
+      },
+      "last_changed": "2014-11-26",
+      "from_date": null
+    }
+  },
+  {
+    "field": "roles.role.2b3ad622e175bc71dfea2bab.0",
+    "value": {
+      "role_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"
+          }
+        },
+        "beskrivelse": "Styrets leder",
+        "kode": "LEDE"
+      },
+      "name": "Peder Istad",
+      "entity_organisation_number": null,
+      "inactive": false,
+      "group_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+          }
+        },
+        "beskrivelse": "Styre",
+        "kode": "STYR"
+      },
+      "last_changed": "2014-11-26",
+      "from_date": null
+    }
+  },
+  {
+    "field": "roles.role.2834a473d5167d0fff79ab8a.0",
+    "value": {
+      "role_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/HFOR"
+          }
+        },
+        "beskrivelse": "Oppl om foretaket i hjemlandet",
+        "kode": "HFOR"
+      },
+      "name": [
+        "ISTAD ART SOLUTION AB"
+      ],
+      "entity_organisation_number": "911691264",
+      "inactive": false,
+      "group_type": {
+        "_links": {
+          "self": {
+            "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/HFOR"
+          }
+        },
+        "beskrivelse": "Hovedforetak",
+        "kode": "HFOR"
+      },
+      "last_changed": "2013-03-19",
+      "from_date": null
+    }
+  }
+]

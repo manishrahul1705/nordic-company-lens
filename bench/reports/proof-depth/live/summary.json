@@ -1,0 +1,116 @@
+{
+  "baseline": {
+    "websites": 112,
+    "social_companies": 48,
+    "jobs": 3,
+    "activity": 1000,
+    "facts": 165602,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9735,
+    "http_mean": 9.735,
+    "http_attributed_mean": 9.583,
+    "http_max": 40,
+    "wall_seconds": 2052.5063875999986,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "81086a96b8ef34b8abe56afc666f72093d0452ef",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 763,
+        "ambiguous": 117,
+        "available": 112,
+        "blocked": 4,
+        "failed": 4
+      },
+      "hiring": {
+        "not_available": 992,
+        "available": 3,
+        "failed": 5
+      },
+      "activity": {
+        "available": 1000
+      }
+    }
+  },
+  "candidate": {
+    "websites": 114,
+    "social_companies": 48,
+    "jobs": 3,
+    "activity": 1000,
+    "facts": 165614,
+    "envelopes": 1000,
+    "profiles": 1000,
+    "http_total": 9150,
+    "http_mean": 9.15,
+    "http_attributed_mean": 8.999,
+    "http_max": 40,
+    "wall_seconds": 1878.2503582999962,
+    "deadline_hits": 0,
+    "warnings": [],
+    "site_warnings": [],
+    "exit_code": 0,
+    "commit": "51a04b39e30a0ae73be945cd1cdc3d6767140b4d",
+    "states": {
+      "identity": {
+        "available": 1000
+      },
+      "roles": {
+        "available": 997,
+        "not_available": 3
+      },
+      "subunits": {
+        "available": 774,
+        "not_available": 226
+      },
+      "accounts": {
+        "available": 999,
+        "failed": 1
+      },
+      "website": {
+        "not_available": 761,
+        "ambiguous": 116,
+        "available": 114,
+        "blocked": 4,
+        "failed": 5
+      },
+      "hiring": {
+        "not_available": 993,
+        "available": 3,
+        "failed": 4
+      },
+      "activity": {
+        "available": 1000
+      }
+    }
+  },
+  "new_websites": 2,
+  "new_social_companies": 0,
+  "new_social_profiles": 0,
+  "lost_websites": 0,
+  "changed_websites": 2,
+  "new_websites_by_proof": {
+    "orgnr_on_page": 2
+  },
+  "new_websites_by_source": {
+    "cc_index": 1,
+    "registry_email": 1
+  }
+}

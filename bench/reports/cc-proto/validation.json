@@ -1,0 +1,5 @@
+{
+  "checks": "syntax; labelled numbers; checksum rejection; visible-only parsing; gzip WARC/HTTP extraction; chunked HTTP decoding; three-ID detection; JSON consistency; protected files/branch refs unchanged",
+  "result": "passed",
+  "network_pipeline": "not validated on real WARC records because CDX records unavailable"
+}

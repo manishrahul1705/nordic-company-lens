@@ -20,6 +20,45 @@ def orgnrs(text):
     return result
 
 
+def owner_identifier_markup(raw):
+    """Mask layout attributes and CSS before scanning raw owner identifiers.
+
+    Preserve offsets, visible text, metadata and structured script contents.
+    Attribute matching is confined to parsed start tags, never JSON strings.
+    """
+    from html.parser import HTMLParser
+    offsets = [0]
+    for line in raw.split('\n')[:-1]:
+        offsets.append(offsets[-1] + len(line) + 1)
+    masked = list(raw)
+    class LayoutMask(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=False)
+            self.css = False
+        def _raw_offset(self):
+            line, col = self.getpos()
+            return offsets[line - 1] + col
+        def handle_starttag(self, tag, attrs):
+            start = self._raw_offset()
+            pattern = r"""([^\s/>="']+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>"']+))"""
+            for match in re.finditer(pattern, self.get_starttag_text()):
+                key = match[1].casefold()
+                if key in {'id', 'class', 'style'} or key.startswith('data-'):
+                    for pos in range(start + match.start(), start + match.end()):
+                        if masked[pos].isdigit(): masked[pos] = ' '
+            if tag == 'style': self.css = True
+        def handle_endtag(self, tag):
+            if tag == 'style': self.css = False
+        def handle_data(self, data):
+            if self.css:
+                start = self._raw_offset()
+                for pos in range(start, start + len(data)):
+                    if masked[pos] not in '\r\n': masked[pos] = ' '
+    parser = LayoutMask()
+    parser.feed(raw)
+    return ''.join(masked)
+
+
 def hidden_owner_ids(page, context):
     """Read explicit site-owner identifiers, never customer IDs or analytics numbers."""
     from html import unescape
@@ -63,7 +102,7 @@ def hidden_owner_ids(page, context):
     # explicitly labelled identifier. A number in arbitrary raw HTML is not proof.
     expected = legal_name(context.get('name'))
     for match in re.finditer(r'<footer\b[^>]*>(.*?)</footer\s*>', page.raw, re.I | re.S):
-        text = unescape(re.sub(r'<[^>]+>', ' ', match[1]))
+        text = unescape(re.sub(r'<[^>]+>', ' ', owner_identifier_markup(match[1])))
         if (expected and re.search(r'(?<!\w)'+re.escape(expected)+r'(?!\w)', legal_name(text))
                 and not re.search(r'\b(?:customer|client|partner|kunde|referanse)',text,re.I)
                 and re.search(r'org(?:anisasjons)?\.?\s*(?:nr|nummer)|vat|tax\s*id', text, re.I)):
@@ -159,16 +198,17 @@ class EntityCard:
         self.text = text
         self.tag = tag
         self.attrs = attrs
-        self.orgnrs = orgnrs(text) | orgnrs(raw)
+        self.identifier_raw = owner_identifier_markup(raw)
+        self.orgnrs = orgnrs(re.sub(r'<[^>]+>', ' ', self.identifier_raw)) | orgnrs(self.identifier_raw)
 
     def matches_org(self, org: str, context: dict | None = None, subunits: set[str] | None = None) -> bool:
         org_pat = re.compile(r'\b' + org[:3] + r'[\s.]?' + org[3:6] + r'[\s.]?' + org[6:9] + r'\b')
-        if org in self.orgnrs or org_pat.search(self.raw):
+        if org in self.orgnrs or org_pat.search(self.identifier_raw):
             return True
         if subunits:
             for sub in subunits:
                 sub_pat = re.compile(r'\b' + sub[:3] + r'[\s.]?' + sub[3:6] + r'[\s.]?' + sub[6:9] + r'\b')
-                if sub in self.orgnrs or sub_pat.search(self.raw):
+                if sub in self.orgnrs or sub_pat.search(self.identifier_raw):
                     return True
         if context and context.get("name"):
             subj_tokens = [t.lower() for t in re.findall(r'[a-zA-ZæøåÆØÅ]{3,}', context["name"]) if t.lower() not in {"as", "asa", "holding", "group", "norge", "nordic", "the"}]
@@ -257,7 +297,7 @@ def is_dedicated_entity_card(raw_html: str, org: str, name: str = "") -> bool:
         if c.matches_org(org, context={"name": name}):
             return True
     pat = re.compile(r"\b" + org[0:3] + r"[\s.]?" + org[3:6] + r"[\s.]?" + org[6:9] + r"\b")
-    for m in pat.finditer(raw_html):
+    for m in pat.finditer(owner_identifier_markup(raw_html)):
         start = max(0, m.start() - 350)
         end = min(len(raw_html), m.end() + 250)
         window = raw_html[start:end]
@@ -464,6 +504,10 @@ def score(page, org, context, origin, leaders, *, suffix_contact=False, domain_l
             if valid_location and re.search(r'(?<!\w)' + re.escape(location) + r'(?!\w)', location_text):
                 return Proof('VERIFIED', 'domain_legal_name_and_registry_location',
                              ['exact_legal_domain', 'registry_' + key], 4, token=str(context[key]))
+    from .additional_proof import additional_proof
+    recovered = additional_proof(page, org, context)
+    if recovered:
+        return recovered
     if suffix_contact and exact_base:
         return Proof('MEDIUM','signals',['legal_name_without_suffix',*contacts],2*len(contacts),reason='name_without_suffix_insufficient_contacts_or_domain',token=base_name)
     return Proof('MEDIUM' if exact_name else 'LOW', 'signals', signals, 2 * len(signals), reason='name_only' if exact_name else 'insufficient_owner_proof', token=str(context.get('name') or ''))

@@ -1,0 +1,62 @@
+[
+  {
+    "orgnr": "979973969",
+    "company": "JAR HELSE AS",
+    "old_proof": {
+      "final_url": "https://www.jarhelse.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "registry_phone_on_site",
+      "proof_page_url": "https://www.jarhelse.no/",
+      "signals": [
+        "registry_phone"
+      ],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "current_rule_replay": [
+      {
+        "source_url": "https://www.jarhelse.no/",
+        "sha256": "90750b0cc51b63e0d4f24c71a968000e567a9ec9b847ec2e321f21fc9f5e070e",
+        "level": "MEDIUM",
+        "reason": "name_without_suffix_insufficient_contacts_or_domain",
+        "proof_type": "signals"
+      }
+    ],
+    "cause": "Earlier exact legal-publisher corroboration for contact-only proof; supplementary news does not participate in website verification."
+  },
+  {
+    "orgnr": "999516386",
+    "company": "RISIKOKONSULENTEN AS",
+    "old_proof": {
+      "final_url": "https://risikokonsulenten.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "registry_phone_on_site",
+      "proof_page_url": "https://risikokonsulenten.no/",
+      "signals": [
+        "registry_phone"
+      ],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    },
+    "current_rule_replay": [
+      {
+        "source_url": "https://risikokonsulenten.no/",
+        "sha256": "5d8253414565cf0b55365f18ff867beffb9ed0e85242f46e79fde26ef7252a98",
+        "level": "MEDIUM",
+        "reason": "name_without_suffix_insufficient_contacts_or_domain",
+        "proof_type": "signals"
+      }
+    ],
+    "cause": "Earlier exact legal-publisher corroboration for contact-only proof; supplementary news does not participate in website verification."
+  }
+]

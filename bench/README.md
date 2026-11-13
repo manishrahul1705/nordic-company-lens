@@ -4,11 +4,10 @@ Run `powershell -File scripts/bench.ps1 -Size 100` on Windows or
 `bash scripts/bench.sh --size 100` on Linux/macOS. Use size 20 for the first
 20 companies. Both wrappers install with `uv sync --frozen`, use the evaluator
 flags, retain all production budget defaults, remove API key/NAV credential and
-search/model selector variables from the child environment, and create fresh
+model selector variables from the child environment, and create fresh
 state under `bench/runs/<UTC timestamp>-<short commit>/`. Nothing is reused from
 an earlier run's state. Runtime files and caches are ignored by git.
 
-Optional paid comparison: after setting `SIGNALPOST_SEARCH_PROVIDER=brave` and `BRAVE_SEARCH_API_KEY` in the terminal, use `powershell -File scripts/bench.ps1 -Size 100 -Search` or `bash scripts/bench.sh --size 100 --search`. The default invocation still strips all search credentials. The opt-in invocation retains only these two search variables for the agent child, without recording their values. It sets a cohort query cap and a maximum provider cost of size × $0.005 ($0.50 for 100); only eligible companies without verified websites can query. Run the default invocation separately for the paired baseline. Search comparison results and KEEP/ROLLBACK require source review; credentials alone do not establish ownership.
 
 The committed 100-company JSONL/CSV are byte-identical to the comparison inputs;
 20 is its first 20 records and corresponding CSV subset. `inputs/MANIFEST.txt`

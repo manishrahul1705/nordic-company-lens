@@ -1,0 +1,465 @@
+[
+  {
+    "baseline": {
+      "orgnr": "911691248",
+      "company": "ISTAD ART SOLUTION NORWAY NUF",
+      "website": {
+        "value": {
+          "final_url": "https://www.pederistad.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "registry_declared_hard_contact_tier_b",
+          "proof_page_url": "https://www.pederistad.no/",
+          "signals": [
+            "registry_declared_domain",
+            "registered_role_holder"
+          ],
+          "points": 4,
+          "candidate_origin": "registry_website",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "B",
+          "content_allowed": false
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "fa3e439afaca6df518cea1bbc8304e23074cf83988cc0943591f438dcd587c13",
+            "source_url": "https://www.pederistad.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T18:56:02.447406Z",
+            "content_sha256": "93b2c371aebfc56266c460ed68cdf49c2c7b9c87c8261f762b5e3d9f9679a588",
+            "claim_span": "http://ogp.me/ns/fb#\">\n\t<head>\n\t\t<title>peder istad - Nyheter</title><meta property=\"og:site_name\" content=\"peder istad\" />\n<meta property=\"og:title\" content=\"Nyheter\" />\n<meta property=\"og:description\" content=\"Kunst\" />\n<meta property=\"og:image\" content=\"http://www.pederistad.no/uploads/9/1/2/1/91",
+            "locator": "identity-proof:911691248",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_link_only",
+          "message": "website_link_only"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://www.pederistad.no/",
+          "https://www.pederistad.no/kontakt.html"
+        ],
+        "publication_tier": "B",
+        "content_allowed": false
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "pederistad.no",
+            "origin": "registry_website",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [
+              "https://www.pederistad.no/impressum",
+              "https://www.pederistad.no/kontakt-oss"
+            ],
+            "proof_pages_fetched": 2,
+            "proof_type": "registry_declared_hard_contact_tier_b",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Synnøves veg 1"
+          ],
+          "kommune": "MOLDE",
+          "kommunenummer": "1506",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "6429",
+          "poststed": "MOLDE"
+        },
+        "identity.registered_website": "www.pederistad.no",
+        "identity.registered_activity": [
+          "Kunst. Skulptur installasjoner, skulptur, maleri, landart, foto,",
+          "scenografi, foredrag, workshop, undervisningsvirksomhet,",
+          "publikasjoner."
+        ],
+        "identity.registered_mobile": "92445067",
+        "identity.registered_in_vat": false,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false
+      }
+    },
+    "candidate": {
+      "orgnr": "911691248",
+      "company": "ISTAD ART SOLUTION NORWAY NUF",
+      "website": null,
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"pederistad.no\", \"level\": \"VERIFIED\", \"points\": 4, \"signals\": [\"registry_declared_domain\", \"registered_role_holder\"], \"origin\": \"registry_website\", \"reason\": \"\", \"title\": \"peder istad - Nyheter\", \"proof_page_url\": \"https://www.pederistad.no/\"}, {\"domain\": \"pederistad.no\", \"origin\": \"registry_website\", \"url\": \"https://pederistad.no/\", \"final_url\": \"https://www.pederistad.no/\", \"status\": 200}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_link_only",
+          "message": "website_link_only"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://www.pederistad.no/",
+          "https://www.pederistad.no/kontakt.html"
+        ],
+        "publication_tier": "B",
+        "content_allowed": false,
+        "entity_scope": {
+          "group_site": false,
+          "other_registry_owners": [],
+          "historical_shared_domain_nominations": [],
+          "shared_domain_index_available": true,
+          "withheld_fields": [
+            "official_website"
+          ],
+          "website_status": "ambiguous",
+          "website_reason": "group/shared site"
+        }
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "pederistad.no",
+            "origin": "registry_website",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [
+              "https://www.pederistad.no/impressum",
+              "https://www.pederistad.no/kontakt-oss"
+            ],
+            "proof_pages_fetched": 2,
+            "proof_type": "registry_declared_hard_contact_tier_b",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Synnøves veg 1"
+          ],
+          "kommune": "MOLDE",
+          "kommunenummer": "1506",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "6429",
+          "poststed": "MOLDE"
+        },
+        "identity.registered_website": "www.pederistad.no",
+        "identity.registered_activity": [
+          "Kunst. Skulptur installasjoner, skulptur, maleri, landart, foto,",
+          "scenografi, foredrag, workshop, undervisningsvirksomhet,",
+          "publikasjoner."
+        ],
+        "identity.registered_mobile": "92445067",
+        "identity.registered_in_vat": false,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "orgnr": "990412375",
+      "company": "BERGEN VAKTMESTERTJENESTER AS",
+      "website": {
+        "value": {
+          "final_url": "https://bnv.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://bnv.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "registry_email",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "field": "official_website",
+        "evidence": [
+          {
+            "id": "a6fc017a1f64227c6959c471abbf526ccbafc9123c10583903b7a5e7f3f00f4b",
+            "source_url": "https://bnv.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-11T18:59:11.324594Z",
+            "content_sha256": "fb28b97859ad3a78b42baef3c30a58c53e7fa877fb53dd082f31ed7467bed771",
+            "claim_span": "tertjenester AS<br />\n</strong>Org.nr.: 990 412 375<br />\nEidsvågveien 150, 5105 Eidsvåg<br />\nTelefon: <a href=\"tel:+4790101021\">90 10 10 21</a><br /",
+            "locator": "identity-proof:990412375",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"bnv.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"registry_email\", \"reason\": \"\", \"title\": \"Vaktmestertjenester i Bergen | Bergen Vaktmestertjenester\", \"proof_page_url\": \"https://bnv.no/\"}, {\"domain\": \"bnv.no\", \"origin\": \"registry_email\", \"url\": \"https://bnv.no/\", \"final_url\": \"https://bnv.no/\", \"status\": 200}]"
+        }
+      ],
+      "website_diagnostics": {
+        "checked_urls": [
+          "https://bnv.no/",
+          "https://bnv.no/kontakt/",
+          "https://bnv.no/om-oss/",
+          "https://bnv.no/personvernerklaering/"
+        ],
+        "observed_social_profiles": []
+      },
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "bnv.no",
+            "origin": "registry_email",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "additional_proof_targets": [
+              "https://bnv.no/about",
+              "https://bnv.no/personvern"
+            ],
+            "proof_pages_fetched": 3,
+            "proof_type": "orgnr_on_page",
+            "rule": null,
+            "reason": ""
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Eidsvågveien 150"
+          ],
+          "kommune": "BERGEN",
+          "kommunenummer": "4601",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "5105",
+          "poststed": "EIDSVÅG I ÅSANE"
+        },
+        "identity.registered_activity": [
+          "Investeringsvirksomhet i aksjer, fast eiendom, samt å foreta",
+          "investeringer og forvalte eierinteresser i andre firmaer og",
+          "forretningsforetak. Selskapet skal også kunne tilby allsidige",
+          "vaktmestertjenestertjenester, herunder snøbrøyting og hagestell til",
+          "institusjoner, borettslag og privatpersoner."
+        ],
+        "identity.registered_email": "post@bnv.no",
+        "identity.registered_mobile": "901 01 021",
+        "identity.registered_in_vat": true,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 500500.0,
+          "antallAksjer": 500,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2020-12-17"
+        }
+      }
+    },
+    "candidate": {
+      "orgnr": "990412375",
+      "company": "BERGEN VAKTMESTERTJENESTER AS",
+      "website": null,
+      "social": [],
+      "jobs": [],
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      },
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"bnv.no\", \"level\": \"REJECT\", \"points\": 0, \"signals\": [], \"origin\": \"registry_email\", \"reason\": \"foreign_orgnr\", \"title\": \"Personvernerklæring - Bergen Vaktmestertjenester\", \"proof_page_url\": \"https://bnv.no/personvernerklaering/\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"level\": \"LOW\", \"reason\": \"no_such_domain\", \"candidate_not_reachable\": true}, {\"domain\": \"bnv.no\", \"origin\": \"registry_email\", \"url\": \"https://bnv.no/\", \"final_url\": \"https://bnv.no/\", \"status\": 200}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergenvaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergen-vaktmestertjenester.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergenvaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergenvaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"bergen-vaktmestertjenester.com\", \"origin\": \"legal_name_slug\", \"url\": \"http://bergen-vaktmestertjenester.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.no\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenesteribergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.no\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenester-i-bergen.no/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenesteribergen.com\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenesteribergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"https://vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"https://www.vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"http://www.vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}, {\"domain\": \"vaktmestertjenester-i-bergen.com\", \"origin\": \"brand_name\", \"url\": \"http://vaktmestertjenester-i-bergen.com/\", \"reason\": \"no_such_domain\"}]"
+        },
+        {
+          "section": "activity",
+          "code": "no_verified_website",
+          "message": "no_verified_website"
+        }
+      ],
+      "website_diagnostics": {},
+      "candidate_diagnostics": {
+        "candidates": [
+          {
+            "domain": "bnv.no",
+            "origin": "registry_email",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": false,
+            "additional_proof_targets": [
+              "https://bnv.no/about",
+              "https://bnv.no/personvern"
+            ],
+            "proof_pages_fetched": 3,
+            "proof_type": "",
+            "rule": null,
+            "reason": "foreign_orgnr"
+          },
+          {
+            "domain": "bergenvaktmestertjenester.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "bergen-vaktmestertjenester.no",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "bergenvaktmestertjenester.com",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "bergen-vaktmestertjenester.com",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "vaktmestertjenesteribergen.no",
+            "origin": "brand_name",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "vaktmestertjenester-i-bergen.no",
+            "origin": "brand_name",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "vaktmestertjenesteribergen.com",
+            "origin": "brand_name",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "vaktmestertjenester-i-bergen.com",
+            "origin": "brand_name",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          }
+        ]
+      },
+      "registry_contacts": {
+        "identity.registered_address": {
+          "adresse": [
+            "Eidsvågveien 150"
+          ],
+          "kommune": "BERGEN",
+          "kommunenummer": "4601",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "5105",
+          "poststed": "EIDSVÅG I ÅSANE"
+        },
+        "identity.registered_activity": [
+          "Investeringsvirksomhet i aksjer, fast eiendom, samt å foreta",
+          "investeringer og forvalte eierinteresser i andre firmaer og",
+          "forretningsforetak. Selskapet skal også kunne tilby allsidige",
+          "vaktmestertjenestertjenester, herunder snøbrøyting og hagestell til",
+          "institusjoner, borettslag og privatpersoner."
+        ],
+        "identity.registered_email": "post@bnv.no",
+        "identity.registered_mobile": "901 01 021",
+        "identity.registered_in_vat": true,
+        "identity.registered_in_business_register": true,
+        "identity.registered_in_voluntary_register": false,
+        "identity.registered_in_foundations_register": false,
+        "identity.registered_in_party_register": false,
+        "identity.registered_capital": {
+          "belop": 500500.0,
+          "antallAksjer": 500,
+          "type": "Aksjekapital",
+          "valuta": "NOK",
+          "innfortDato": "2020-12-17"
+        }
+      }
+    }
+  }
+]

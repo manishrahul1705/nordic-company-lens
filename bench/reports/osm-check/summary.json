@@ -1,0 +1,129 @@
+{
+  "status": "complete",
+  "source": "Geofabrik Norway PBF",
+  "pbf": {
+    "url": "https://download.geofabrik.de/europe/norway-latest.osm.pbf",
+    "resolved_url": "https://download.geofabrik.de/europe/norway-261108.osm.pbf",
+    "http_last_modified": "Mon, 09 Nov 2026 00:58:22 GMT",
+    "download_note": "Initial transfer ended early; existing prefix retained and only missing bytes requested via disjoint ranges; no full duplicate download.",
+    "download_ranges": {
+      "url": "https://download.geofabrik.de/europe/norway-261108.osm.pbf",
+      "etag": "\"522b5538-65fcd7562010c\"",
+      "total": 1378571576,
+      "prefix_bytes": 982421017,
+      "ranges": [
+        [
+          982421017,
+          1180496295
+        ],
+        [
+          1180496296,
+          1378571575
+        ]
+      ],
+      "started_utc": "2026-11-11T04:36:42Z"
+    },
+    "bytes": 1378571576,
+    "sha256": "3c801f90aa88b248c755f873ad13b443fc5580e6885c865bfe83f06320bb3edf",
+    "header": {
+      "osmosis_replication_timestamp": "2026-11-08T21:21:00Z",
+      "osmosis_replication_sequence_number": "4965",
+      "generator": "osmium/1.16.0",
+      "timestamp": "2026-11-08T21:21:00Z"
+    },
+    "attribution": "© OpenStreetMap contributors",
+    "licence": "ODbL 1.0",
+    "download_and_hash_seconds": 1.906,
+    "extracted_objects": 11172,
+    "extracted_by_type": {
+      "node": 8396,
+      "way": 2572,
+      "relation": 204
+    },
+    "matching_callbacks_by_type": {
+      "node": 8396,
+      "way": 2572,
+      "relation": 204
+    },
+    "total_seconds": 64.297
+  },
+  "licences": {
+    "osm": {
+      "licence": "ODbL 1.0",
+      "attribution": "© OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    "brreg_subunit_bulk": {
+      "licence": "NLOD 2.0",
+      "attribution": "Brønnøysundregistrene",
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter/lastned/csv"
+    },
+    "builderr_universe": {
+      "licence": "Not stated in downloaded JSONL; challenge input, no redistribution of raw file",
+      "url": "https://builderr.ai/signalpost-company-universe-2025.jsonl.gz"
+    }
+  },
+  "future_in_agent_use": "Any future in-agent use needs a bundled ODbL-licensed index; integration and licensing design remain to be decided. No production integration performed.",
+  "objects_with_orgnr_tag": 11172,
+  "objects_with_valid_orgnr": 11163,
+  "invalid_orgnr_objects_excluded": 9,
+  "objects_with_valid_orgnr_and_website": 5103,
+  "objects_with_subunit_orgnr": 9630,
+  "website_objects_with_subunit_orgnr": 4851,
+  "subunit_share_of_valid_objects": 0.8626713249126579,
+  "distinct_subunit_numbers": 9621,
+  "distinct_parent_companies_with_website": 2330,
+  "universe": {
+    "distinct_companies": 411160,
+    "companies_with_osm_website": 1641,
+    "expected_per_1000": 3.9911469987352857,
+    "method": "1000 * matched distinct parents / 411160 universe companies; nomination coverage, not verified or incremental agent coverage"
+  },
+  "batch100_match_count": 0,
+  "batch100_matches": [],
+  "categories": {
+    "amenity": 5011,
+    "shop": 62,
+    "office": 14,
+    "craft": 3,
+    "leisure": 2,
+    "none": 5,
+    "tourism": 5,
+    "healthcare": 1
+  },
+  "live_review": {
+    "seed": 20261111,
+    "sample_size": 20,
+    "passed": 4,
+    "user_agent": "SignalpostAgent/1.0 (+https://github.com/manishrahul1705/nordic-company-lens)",
+    "max_proof_pages": 2,
+    "per_host_min_spacing_seconds": 1.01,
+    "proof": "Unchanged candidate_proof with current Config defaults, OSM origin (no declaration trust), parent identity plus official mapped subunit identity/contact. Any checked owner conflict vetoes pass.",
+    "contact_limit": "Only permitted source files used: parent legal name from universe, registered subunit contacts from cached official bulk. Parent contact data absent from these sources is not inferred; this can undercount name+parent-contact proof.",
+    "scope": "One first OSM candidate per randomly sampled parent, homepage plus up to two same-site proof pages, robots and public-address checks, TLS verified, redirects same registrable domain only. HTTP pages explicitly recorded; proof pass is not full collector/publication acceptance. Errors count as non-passes.",
+    "outcomes": {
+      "transport_or_policy_unavailable": 9,
+      "no_accepted_proof_or_owner_conflict": 7,
+      "proof_pass": 4
+    }
+  },
+  "wall_seconds": 103.64100000000326,
+  "objects_with_orgnr_and_website_before_checksum": 5110,
+  "subunit_share_of_website_objects": 0.9506172839506173,
+  "mapping_limit": "Numbers absent from cached current subunit bulk remain unmapped and treated as putative parents; no main-entity status is inferred.",
+  "validation": {
+    "json_objects": 11172,
+    "valid_candidates": 5103,
+    "reviewed_parents": 20,
+    "proof_passes": 4,
+    "max_requested_pages_per_site": 3,
+    "request_count_including_robots_and_redirects": 58,
+    "minimum_observed_host_request_spacing_seconds": 1.0,
+    "body_sha256_checks": "all passed",
+    "production_code_tests_and_lockfile": "unchanged",
+    "protected_refs": {
+      "main": "abc33afc6f72258883da41478345b04784f30cb1",
+      "fix-large-company-site": "405eafccbd3d59df97121c337e6e90c03ea0f841"
+    }
+  }
+}

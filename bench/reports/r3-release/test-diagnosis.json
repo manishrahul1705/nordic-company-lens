@@ -1,0 +1,19 @@
+{
+  "failed_test": "tests/test_nav_process_kill_recovery.py::test_real_os_process_kill_and_checkpoint_recovery",
+  "failure": "subprocess.TimeoutExpired on the uninterrupted baseline child after 45 seconds; the test had not yet reached its kill/resume checks",
+  "child_command": "python -m signalpost.cli run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --time-budget-seconds 30 --workers 2 (isolated output/state)",
+  "concurrent_activity": "public NAV rebuild processing thousands of details; Windows process/network/disk load present",
+  "isolated_rerun": "unchanged test: 1 passed in 98.50 seconds (three process phases total)",
+  "diagnosis": "Wall-time timeout under concurrent live load, not a SQLite integrity or checkpoint assertion failure. Exact host-delay breakdown was not captured, so load is a likely contributor rather than a proven root cause.",
+  "test_expectation_changed": false,
+  "correction": "All attempted suffix/contact-proof restrictions and changed tests restored to committed originals before Stage 4; original proof logic preserved. Only existing contact-only email/phone proof requires the full legal name.",
+  "restored_full_suite": {
+    "passed": 1381,
+    "failed": 1,
+    "seconds": 648.07,
+    "remaining_failure": "tests/test_s67_compliance.py::test_shipped_index_valid_through_november_30_without_redating",
+    "actual": "NAV load succeeds through Nov30, then an assertion expects built_at 2026-11-04 while the authorized rebuilt source timestamp is 2026-11-13T00:26:42.872674Z",
+    "expectation_changed": false,
+    "process_kill_test": "PASS unchanged in this full suite"
+  }
+}

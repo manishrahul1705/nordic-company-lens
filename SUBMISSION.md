@@ -31,7 +31,7 @@ Run the **same command again with the same state directory** to refresh automati
 | Wikidata | Supplementary exact-orgnr website/social nominations | CC0, item provenance retained | $0 |
 | Company websites | Ownership proof, descriptions, social links, dated news, linked active jobs | robots.txt and site access rules; no blanket open licence inferred | $0 |
 | SSB KLASS | Bundled industry descriptions | CC BY 4.0 | $0 |
-| LLM / paid search | Disabled; deterministic cited templates | No provider called | $0 |
+| LLM / search engines | No integration; deterministic cited templates | No provider called | $0 |
 | GLEIF | LEI/status/form/dates and explicit direct/ultimate parents | CC0 1.0; anonymous exact orgnr + RA000472 API, batched parent LEIs | $0 |
 | TED | Exact winner/buyer public procurement awards | EU Publications Office legal notice/Commission reuse policy; anonymous published-notice API and public XML | $0 |
 | Doffin | **Not used** | Keyless supported API/access and reuse terms not verified | - |
@@ -86,3 +86,15 @@ The final release executes the exact local workflow commands on the final runtim
 Official extra sources need no personal key. All requests, including explicit-parent relationship proofs and batched parent LEIs, count in the existing pool. Doffin is excluded pending verified keyless API/terms; no application key or website scraping is used. See [source terms and matching policy](docs/SOURCES.md).
 
 Final exact local CI: **1,244 tests passed; live-20 scoped verifier passed**, with zero failed/stale sections and zero unverified values. Independent frozen-1000 verification also passed with zero unverified values. No runtime changes in release prep.
+
+## Bundled website candidates and registry-backed proof
+
+Common Crawl's bundled `data/cc_orgnr_index.json.gz` is a partial CC-MAIN-2026-43 candidate index (crawl 5–18 October 2026). Runtime reads it locally by organisation number; it does not query Common Crawl. Domains are candidates only, ranked after registry nominations and before name guesses. Every candidate is fetched live and must pass the existing ownership proof and all applicable directory, parked-page, foreign-owner, group/shared-site, robots, DNS, TLS and request-budget checks. See [Common Crawl Terms of Use](https://commoncrawl.org/terms-of-use) and the third-party rights notice in `data/CC_INDEX_NOTICE.md`; no blanket licence for crawled site content is claimed.
+
+The bundled `data/shared_identifiers.json.gz` counts registered phone/mobile numbers, email domains and distinctive legal-name keys from the official Bronnoysundregistrene entity bulk CSV. Attribution: Bronnoysundregistrene, [NLOD 2.0](https://data.norge.no/nlod/en/2.0). It is read locally, without a runtime registry bulk download. Build hashes and counts are in `data/shared_identifiers_build.json`; the complete gzip is 8,676,502 bytes, above the 3 MB target. Missing keys do not establish uniqueness.
+
+Additional website proof can use the exact registered email visible in text or mailto links only when its non-free-mail domain is registered to exactly one entity; or a registered phone/mobile visible on the page when fewer than five entities register it. Both require a positive count in the snapshot and a nonempty non-placeholder page. The exact legal name, including its legal form, must also identify the publisher in the title, heading or footer; a staff/adviser contact alone is not ownership proof. Name-only masthead and unique-name-domain publication were removed after the R3 precision review exposed namesake and placeholder risks. Existing stronger proofs keep their labels. None of these rules overrides an existing rejection or owner conflict.
+
+On a company-verified site, bounded social profile discovery includes header/footer/navigation links, eligible Organization/LocalBusiness sameAs links and actual Facebook page-plugin hrefs, with company/verified-brand name matching still required. Share/intent links, posts, media, events, groups, platform homepages, LinkedIn non-company paths, profile.php, agency/builder/directory handles and hidden plugins are excluded. Shared/path-scoped attribution and cross-company shared-handle suppression remain in place; social platforms are not fetched.
+
+Operational ceilings are unchanged: at most 40 attributed HTTP requests per company, and a pooled ceiling of 18 requests per distinct normalized input (360 for 20 companies). Lower configured limits still apply. These additions contain no search-engine, directory, Norid or model-provider requests. There is no search-engine integration.

@@ -1,0 +1,13 @@
+{
+  "worker_stopped": true,
+  "restart": false,
+  "records": 180059,
+  "records_fetched": 180049,
+  "by_crawl": {
+    "CC-MAIN-2026-43": 153732,
+    "CC-MAIN-2026-39": 25003,
+    "CC-MAIN-2026-34": 1324
+  },
+  "heartbeat_12798": "Distinct parent companies matching cached Builderr universe after banned-domain exclusions and subunit mapping; summary() logs records_fetched then universe_matches.",
+  "latest_log_note": "Worker had resumed and written records through 2026-11-13T00:17:47Z before explicit stop; not assumed frozen at the older heartbeat."
+}

@@ -1,0 +1,46 @@
+{
+  "status": "index_unavailable",
+  "crawl": {
+    "id": "CC-MAIN-2026-43",
+    "name": "October 2026 Index",
+    "timegate": "https://index.commoncrawl.org/CC-MAIN-2026-43/",
+    "cdx-api": "https://index.commoncrawl.org/CC-MAIN-2026-43-index",
+    "from": "2026-10-05T10:56:23",
+    "to": "2026-10-18T05:34:47"
+  },
+  "terms": "Common Crawl access is subject to its Terms of Use and third-party content rights; do not overload the service; this prototype uses at most two concurrent requests and bounded backoff for 429/503. https://commoncrawl.org/terms-of-use",
+  "future_in_agent_use": "Any in-agent use would need a bundled index; licensing and third-party content rights are a grey area to decide.",
+  "error": "RemoteProtocolError: Server disconnected without sending a response.",
+  "records_selected": 0,
+  "records_fetched": 0,
+  "warc_range_MB_downloaded": 0,
+  "pages_with_orgnr": null,
+  "pairs": null,
+  "distinct_orgnrs": null,
+  "distinct_domains": null,
+  "distinct_parent_companies": null,
+  "universe": {
+    "size": 411160,
+    "matches": null,
+    "expected_per_1000": null
+  },
+  "extrapolation": {
+    "estimate": null,
+    "method": "No eligible CDX records retrieved. Count response measures index blocks, not eligible pages or domains; no coverage extrapolation is possible."
+  },
+  "osm_overlap": null,
+  "bench100_matches": null,
+  "bench100_match_count": null,
+  "live_review": {
+    "sample_size": 0,
+    "passed": null,
+    "reason": "No CC candidate pairs available; live check not performed."
+  },
+  "wall_seconds": 112.57800000000134,
+  "wall_seconds_scope": "Last bounded one-block index attempt including backoff; excludes earlier discovery/five-block probe.",
+  "limitations": [
+    "No CDX records or WARC ranges were retrieved; zero fetched records is not zero coverage.",
+    "Prototype extraction, joins and live-check pipeline not validated against real WARC data in this run.",
+    "No raw WARC bytes stored; empty candidates file denotes unavailable measurement."
+  ]
+}

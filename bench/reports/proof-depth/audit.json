@@ -1,0 +1,2038 @@
+{
+  "source_run": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\r3-corrected-live",
+  "scope": "Companies without an available website; fetched non-accepted candidates with explicit missing-proof reason and no recorded veto/policy/transport/budget failure for that domain. Requires a retained successful HTML page. Links are nominations, not proof.",
+  "eligible_candidate_sites": 67,
+  "eligible_companies": 63,
+  "sites_with_matching_links": 20,
+  "companies_with_matching_links": 20,
+  "sites_with_unfetched_matching_links": 8,
+  "companies_with_unfetched_matching_links": 8,
+  "missing_retained_bodies": 0,
+  "diagnostic_reasons_before_filter": {
+    "insufficient_owner_proof": 75,
+    "": 66,
+    "different_legal_entity": 43,
+    "hosting_default": 72,
+    "name_without_suffix_insufficient_contacts_or_domain": 67,
+    "foreign_orgnr": 21,
+    "placeholder": 22,
+    "frameset_placeholder": 7,
+    "partner_directory_mention": 1
+  },
+  "candidates": [
+    {
+      "orgnr": "995541432",
+      "company": "WACKER CHEMICALS NORWAY AS",
+      "domain": "wacker.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.wacker.com/cms/en-in/home/home.html",
+          "sha256": "0be77909e716e395dbcba0a11b326718e5a73c10e63e8b9f52a8da1f3ca033cc"
+        },
+        {
+          "url": "https://www.wacker.com/cms/en-in/global-contents/contact-overview.html",
+          "sha256": "bc7a06ead8e8856332f18f04b3f3cbd3379316143225276cbe62b1ba242fedeb"
+        },
+        {
+          "url": "https://www.wacker.com/cms/en-in/about-wacker/wacker-global/overview/wacker-global.html",
+          "sha256": "326fd16c3afa47b8040d05de7061b788c2b3469ceec4955f449084206bb99712"
+        },
+        {
+          "url": "https://www.wacker.com/cms/en-in/about-wacker/overview.html",
+          "sha256": "b20d07b32c7d2f3f40626435b621c40f66962448404e33ab5cc2956379f96007"
+        },
+        {
+          "url": "https://www.wacker.com/cms/en-in/about-wacker/profile-and-organization/overview.html",
+          "sha256": "41c06918470a7932f60c1f81e52aa62c73f8ae7907b6362a0686dae92b9839fe"
+        },
+        {
+          "url": "https://www.wacker.com/cms/en-in/about-wacker/corporate-strategy-and-policy-guidelines/overview.html",
+          "sha256": "c5d3b35db971d87fe1f95fecbf5ecfedf55dd352b97d2f338ea71a95f97d4f92"
+        },
+        {
+          "url": "https://www.wacker.com/h/en-in/distributor-and-sales",
+          "sha256": "e0763a385528ad177f1c7bb504b70f2680a1c1ea597e906f38afcd74a4f0acba"
+        },
+        {
+          "url": "https://www.wacker.com/cms/en-in/investor-relations/contact/detail.html",
+          "sha256": "a44b57826de53622e34b74a95f7fbbe88ef803a2460eba89f71460f3d2ef523f"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.wacker.com/cms/en-in/global-contents/privacy.html",
+          "text": "Privacy",
+          "already_fetched": false
+        }
+      ]
+    },
+    {
+      "orgnr": "989252968",
+      "company": "MARIA LOUISE AS",
+      "domain": "marialouise.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://marialouise.com/home.html",
+          "sha256": "dbbdec3220b54223d8ebd6eb3ed52bf08e560ba6b6caea6890cc461dd081b894"
+        },
+        {
+          "url": "https://marialouise.com/contact.html",
+          "sha256": "56999d87450eac4908883642b414a626547a384204af9812551a8e0dcc9e4f24"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "934404688",
+      "company": "SEROTONIC AS",
+      "domain": "serotonic.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://serotonic.no/",
+          "sha256": "702a244083265231c5b9bb77a2579c587e3ffeb97fe4b26354e2f8d314443d6f"
+        },
+        {
+          "url": "https://serotonic.no/om-oss",
+          "sha256": "0845f4878758f54cc8a91d35c009084c61d6cdf48e1be2d58cd1698b9579071e"
+        },
+        {
+          "url": "https://serotonic.no/kontakt",
+          "sha256": "251258c51e064df8e33cc1f429ac938dd780b560dac5a3b7d60092c0a51c4777"
+        },
+        {
+          "url": "https://serotonic.no/personvern",
+          "sha256": "10efd75c9b3295ac5c9977c1ea7f7ffb9bf51ff2e1df2767f23523f0ad9a35f0"
+        },
+        {
+          "url": "https://serotonic.no/about",
+          "sha256": "9307d3a198a53c8cc77d8e06587492bcf7aa30b21e70ef735175262e7f4c84ed"
+        },
+        {
+          "url": "https://serotonic.no/impressum",
+          "sha256": "54a6ac18593edf1b16adffd3e0634d9f326b025a285810458f46eebdbef8a66b"
+        },
+        {
+          "url": "https://serotonic.no/kontakt-oss",
+          "sha256": "50aa18a8a38fea85b521b1ebaf09b62d12a1e33623d5795b3d04a1ac2ebd9294"
+        },
+        {
+          "url": "https://serotonic.no/privacy-policy",
+          "sha256": "7659c6cd8cf0414daa5c51a3f152f0f2f4fec8c63ced3f73afef2a8f9d1b1abb"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "934244443",
+      "company": "KLET AS",
+      "domain": "klet.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.klet.com/",
+          "sha256": "e58f239ae88d4b275f3d093ab72cc43148f724dce3dbf5e4ca599537ea17cc86"
+        },
+        {
+          "url": "https://www.klet.com/kontakt/",
+          "sha256": "9c356a374cc9630ffc1bccd71616148cd50a843be195d197fc7959a73612a399"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.klet.com/kontakt/",
+          "text": "Kontakt",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "936073840",
+      "company": "NAUTØY AS",
+      "domain": "nautoy.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://nautoy.com/",
+          "sha256": "7b13032784edd8a8a45c6716cbc2ec70549e32bcad7b008ab3d477ad770555c3"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "926128507",
+      "company": "GLOA AS",
+      "domain": "betongbygg.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://betongbygg.no/",
+          "sha256": "57caa8eaf409c43bf82c9ac3e5b0378c0eba9a1cc1a5909ab384194724689bd6"
+        },
+        {
+          "url": "https://betongbygg.no/kontakt/",
+          "sha256": "296009a5c0a97322c56e464973a2a00d56377433eb6c8ae7d518945706087add"
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/betongbygg-eiendom/",
+          "sha256": "45e65a51af362c2bf0bc159b360f51cff2d2723d0d33cf8b1191e460e0670e4c"
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/betongbygg-naering/",
+          "sha256": "1e7b0433b9e25503829bff7f57d858ff14ca3ae477f711a40daa253ced0762d7"
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/betongbygg-bolig/",
+          "sha256": "7adb6d8a433ec1861d6e0125e51eb0dea088cf009c59384fe1e1dd855a56a7d3"
+        },
+        {
+          "url": "https://betongbygg.no/boliger-for-salg/skarmyrakvartalet-moss/",
+          "sha256": "cd24c00ac6e39f9f4f151ad6656ef5aaa42fc43d05f26990d74c848bf27f3c4f"
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/",
+          "sha256": "dee123e8888c4e82f0f63670ccc61b4930cd02d98e2149ad95da984eb1fd9dfe"
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/kundeoppfoelging/",
+          "sha256": "eb621eebb7c9aadd256ef80b1c87444408f00345890503c147ebfbf0c7fcc324"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://betongbygg.no/om-oss/",
+          "text": "Om oss",
+          "already_fetched": true
+        },
+        {
+          "url": "https://betongbygg.no/kontakt/",
+          "text": "Kontakt oss ›",
+          "already_fetched": true
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/kundeoppfoelging/",
+          "text": "Toppen av siden",
+          "already_fetched": true
+        },
+        {
+          "url": "https://betongbygg.no/boliger-for-salg/skarmyrakvartalet-moss/",
+          "text": "\r\n                        \r\n                            \r\n                            \r\n                                \r\n                                    Sk",
+          "already_fetched": true
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/betongbygg-eiendom/",
+          "text": "Betongbygg Eiendom AS › ",
+          "already_fetched": true
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/betongbygg-naering/",
+          "text": "Betongbygg Næring AS › ",
+          "already_fetched": true
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/betongbygg-bolig/",
+          "text": "Betongbygg Bolig AS › ",
+          "already_fetched": true
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/historie/",
+          "text": "Historie",
+          "already_fetched": false
+        },
+        {
+          "url": "https://betongbygg.no/om-oss/slik-arbeider-vi/",
+          "text": "Slik arbeider vi",
+          "already_fetched": false
+        }
+      ]
+    },
+    {
+      "orgnr": "950220317",
+      "company": "INFLOW MEDIA NORWAY AS",
+      "domain": "simply.tv",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.simply.tv/",
+          "sha256": "f4602cf12cba448e3e034a4974835049a4bb3cbc3266c8c1394daf8437bc8436"
+        },
+        {
+          "url": "https://www.simply.tv/contact",
+          "sha256": "fe40abf263912a402039626baa0a2a1014901e6f6b3cfa04e52e3ff6c5f492d8"
+        },
+        {
+          "url": "https://www.simply.tv/about-us",
+          "sha256": "f587e172b10ca1510f1d6e6fa127a26d97b8397dcb51126abf9a34185e4642fc"
+        },
+        {
+          "url": "https://www.simply.tv/legal/privacy-policy",
+          "sha256": "e2c58826aa2d8cf391bf68fccad818e8f81cdd09ece87934d44b6f9c1515a751"
+        },
+        {
+          "url": "https://www.simply.tv/legal/terms-of-use",
+          "sha256": "0f715b2e9cac786e0e0469037bd9169f69619375f97ccccb9d24bdde7cd32265"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.simply.tv/legal/terms-of-use",
+          "text": "Terms",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.simply.tv/legal/privacy-policy",
+          "text": "Privacy",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "997002695",
+      "company": "BREMO INVEST AS",
+      "domain": "retail24.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://retail24.no/",
+          "sha256": "fb37a98396251cfdad4c03d9ef035dff69dabcfdd1e2ff5002dfb2f5f6c4d91e"
+        },
+        {
+          "url": "https://retail24.no/om-oss/",
+          "sha256": "e224977f3a48e6f7ae8029299bc116e49e371ab69ed62438e9b66580f5cf9987"
+        },
+        {
+          "url": "https://retail24.no/kontakt-oss/",
+          "sha256": "2ffba83e98d6bceee91eccc8991772b4d5d8f1b361eeca82e18d9d2e329bca1c"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://retail24.no/om-oss/",
+          "text": "Om oss",
+          "already_fetched": true
+        },
+        {
+          "url": "https://retail24.no/kontakt-oss/",
+          "text": "Accept All",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "921961022",
+      "company": "GREEN BUSINESS AS",
+      "domain": "greenbusiness.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://greenbusiness.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://greenbusiness.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://greenbusiness.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://greenbusiness.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://greenbusiness.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://greenbusiness.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://greenbusiness.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://greenbusiness.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "921961022",
+      "company": "GREEN BUSINESS AS",
+      "domain": "green-business.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://green-business.com/Account/Login",
+          "sha256": "6d12b22ababa4268d5990190c0ce00501af91503f5955bb4d670c6c97aca6bdb"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "913147383",
+      "company": "NYMÅNE AS",
+      "domain": "nymane.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://nymane.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://nymane.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://nymane.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://nymane.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://nymane.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://nymane.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://nymane.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://nymane.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "992475765",
+      "company": "SES CONSULT AS",
+      "domain": "ses-consult.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.ses-consult.com/",
+          "sha256": "7aa20bc6d6a528fd68cf3b00fc8d034e2cda06f598f331e553f1c09312aee769"
+        },
+        {
+          "url": "https://www.ses-consult.com/contact/",
+          "sha256": "dbc10aa60f457065ca0dffb261dcb58092572ab4f851fe53b948b3217ba6ac1a"
+        },
+        {
+          "url": "https://www.ses-consult.com/contact/formations-réglementaires/",
+          "sha256": "9ff6383dc807b6714ce20c4d65d3cc578d20089d8c850a5a70789dff40000ed4"
+        },
+        {
+          "url": "https://www.ses-consult.com/contact/formations-r%C3%A9glementaires/",
+          "sha256": "04ea9df761ad965761377d7a68464579074595d0bec94616b7503a85832cff30"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "935073359",
+      "company": "NEUPHAI AS",
+      "domain": "neuphai.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.neuphai.com/",
+          "sha256": "61f36b127b608d1b89e12ebb9e66e4c4e020eb2373d4be5177035d7997f5b4c2"
+        },
+        {
+          "url": "https://www.neuphai.com/contact",
+          "sha256": "94ec61bf2fdd74370e8aa10ebcb8511b1755d87f5f550f7997dc2883da6c8c34"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "925787884",
+      "company": "PALLIDUS AS",
+      "domain": "pallidus.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://pallidus.no/",
+          "sha256": "04584341160b342e704323590974ed229106c6734070785861a0e487c170fe2d"
+        },
+        {
+          "url": "https://pallidus.no/personvernerklaering/",
+          "sha256": "593b41ca9c4ae94d3ec68574c4f1c02896cac153e6fb89355ba94217196672b8"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://pallidus.no/om-forfatterene/",
+          "text": "Om forfatterene",
+          "already_fetched": false
+        }
+      ]
+    },
+    {
+      "orgnr": "925787884",
+      "company": "PALLIDUS AS",
+      "domain": "pallidus.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://pallidus.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://pallidus.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://pallidus.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://pallidus.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://pallidus.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://pallidus.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://pallidus.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://pallidus.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "984611927",
+      "company": "VECO INTERNATIONAL AS",
+      "domain": "veco-international.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://veco-international.com/",
+          "sha256": "67c91033d3dea855deaaf46f752d8a0c27de20e70d20eb987e13df846c7887e8"
+        },
+        {
+          "url": "https://veco-international.com/contact",
+          "sha256": "b4293033b4e1ee92f625f8cab3f2b68e29396a53c94a9160a15bd328cd05f3ca"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "919086815",
+      "company": "AGNES BRYGGHUS AS",
+      "domain": "agnesbrygghus.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.agnesbrygghus.no/",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        },
+        {
+          "url": "https://www.agnesbrygghus.no/kontakt",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        },
+        {
+          "url": "https://www.agnesbrygghus.no/om-oss",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        },
+        {
+          "url": "https://www.agnesbrygghus.no/about",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        },
+        {
+          "url": "https://www.agnesbrygghus.no/personvern",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        },
+        {
+          "url": "https://www.agnesbrygghus.no/impressum",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        },
+        {
+          "url": "https://www.agnesbrygghus.no/kontakt-oss",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        },
+        {
+          "url": "https://www.agnesbrygghus.no/privacy-policy",
+          "sha256": "c71aa99710a9d88f9ede0ba43fbcb13c32962da0449b51bb89eb76f1d6280861"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "979870795",
+      "company": "RYSTEG AS",
+      "domain": "rysteg.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://rysteg.no/",
+          "sha256": "eab319401d4add1cd2eb16c4796cdb5fa8517335599e70b27151ea5ac9ff878d"
+        },
+        {
+          "url": "https://rysteg.no/om-oss/",
+          "sha256": "748793d731378db947b04a1b854bef92904997d8d5505f8bb374260380b0b9e0"
+        },
+        {
+          "url": "https://rysteg.no/om-oss/vare-ansatte/",
+          "sha256": "2d02aab8e51282723e3e240d61948b8f7b5d43c65708aed35dd4dcdb42cc90e6"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://rysteg.no/om-oss/",
+          "text": "Om oss",
+          "already_fetched": true
+        },
+        {
+          "url": "https://rysteg.no/om-oss/vare-ansatte/",
+          "text": "Våre ansatte",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "928764125",
+      "company": "CLIPS AS",
+      "domain": "domeneporten.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://domeneporten.no/clips",
+          "sha256": "332a98af648048ea3d4948ea9ca01a2630b0395687e27c02c3e0427716d88cde"
+        },
+        {
+          "url": "https://domeneporten.no/",
+          "sha256": "867f6cd669c3d209aea4b96da521eac1e8fbd2be4d487e64ff7924b2fdb9dcf4"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "996744744",
+      "company": "NORCON NORWAY AS",
+      "domain": "norcon.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://norcon.com/jacobs/",
+          "sha256": "16c788fce5edcd2d791464d26ccbfaada8909f4e58f424d2893c982a2d735d1a"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "935674948",
+      "company": "COCO INVEST AS",
+      "domain": "coco-invest.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://coco-invest.com/",
+          "sha256": "04046839326619b1334008adb08050784a981691a90724dbeadd7a3cd7e4c703"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "976645677",
+      "company": "VARD AS",
+      "domain": "vard.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.vard.no/",
+          "sha256": "8cb1fdd6223a9addffd6373daad3eeb8515e74bb7635f68bc3d91ac6bcf18afe"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "998077028",
+      "company": "INNOVATION SUPPORT AS",
+      "domain": "innovationsupport.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://innovationsupport.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://innovationsupport.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://innovationsupport.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://innovationsupport.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://innovationsupport.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://innovationsupport.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://innovationsupport.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://innovationsupport.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "935829437",
+      "company": "NORDEN SECURITY AS",
+      "domain": "nordensecurity.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://nordensecurity.no/",
+          "sha256": "3d927841fa09b22ac7b0d91ba2c9b216792af115b47fc55b6b8391b39cc5ad88"
+        },
+        {
+          "url": "https://nordensecurity.no/kontakt",
+          "sha256": "c5ad2327e4f1f44eccda2159165364dfdc3c3669815b940c945aa2611d7f7319"
+        },
+        {
+          "url": "https://nordensecurity.no/om-oss",
+          "sha256": "4eec78c91fe2fda95bc8b82aa9d0976d50075f0c84f024f139071fe8a36d63f3"
+        },
+        {
+          "url": "https://nordensecurity.no/about",
+          "sha256": "99a236ded378d8968f0b908cf34d0d293889f07b855c86fcd62bdd8ee79e48c0"
+        },
+        {
+          "url": "https://nordensecurity.no/personvern",
+          "sha256": "61b9173871902537ff0baf9536cc559ac3fd5f646afd947029a779e2998194d5"
+        },
+        {
+          "url": "https://nordensecurity.no/impressum",
+          "sha256": "924f5273c38d8e53a631c04ed7f02bcff41ecb139b26726566b41575f4846d3a"
+        },
+        {
+          "url": "https://nordensecurity.no/kontakt-oss",
+          "sha256": "0171e5de308d6e00dfda5d975d8339baab0b96ef479846275667b8ef7e423eb7"
+        },
+        {
+          "url": "https://nordensecurity.no/privacy-policy",
+          "sha256": "bb1b312f637622a5f90bea6ec1951bbae82e0272739ef0f23b6e2065c437e320"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "965530819",
+      "company": "EVENTMAKER AS",
+      "domain": "eventmaker.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.eventmaker.com/fr/",
+          "sha256": "a40242e0e3991d231c6249b2a270a1f9caa70e9a2818d50c7803ae9c61bd7e01"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "929089464",
+      "company": "VITROTECH NUF",
+      "domain": "vitrotech.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://vitrotech.com/",
+          "sha256": "73f57461bcbd60cadc4bf0a3086f55a58533f6ba2b77c021bbd1eeb9d146bf73"
+        },
+        {
+          "url": "https://vitrotech.com/about",
+          "sha256": "52ac1c499fa9e98c2456d7c2b2692aa0d5fdf2748ef7f39730058352ddc1fc91"
+        },
+        {
+          "url": "https://vitrotech.com/contact",
+          "sha256": "0554edfeebf71b292f28fba782109265f7a36bfb6b7d201e7fc3f9a4c57bee4d"
+        },
+        {
+          "url": "https://vitrotech.com/kontakt",
+          "sha256": "ee27df0b2f0f8f3a2abf0d398858eba3ef4cc46b11e371cf411216b286a90374"
+        },
+        {
+          "url": "https://vitrotech.com/om-oss",
+          "sha256": "d4e15f86b6dff47311f88be00b555c7d014b72f6b1f4a108bc382c2a6a8bed2f"
+        },
+        {
+          "url": "https://vitrotech.com/personvern",
+          "sha256": "cce0d3e459b89d923d17a4562e6594c71a7ac370bd308bb3be2abada04ed988f"
+        },
+        {
+          "url": "https://vitrotech.com/impressum",
+          "sha256": "9a815cca90002c7bf11f4c1359fdccef10d00477fed6be2a8f722e1edd8edb71"
+        },
+        {
+          "url": "https://vitrotech.com/kontakt-oss",
+          "sha256": "c922865d7a5c8ecafee75b0a9d61e2939af1c7e446632cdb103975447463c0a1"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "992174676",
+      "company": "DEIGEN HOLDING AS",
+      "domain": "credor.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://credor.no/",
+          "sha256": "3f7eb77414a18ead757300703dcfb7cd971a7ae9f7d7ce03e22def0f5e953db3"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://credor.no/?page_id=17",
+          "text": "Om Credor",
+          "already_fetched": false
+        },
+        {
+          "url": "https://credor.no/?page_id=21",
+          "text": "Be om en gratis vurdering",
+          "already_fetched": false
+        }
+      ]
+    },
+    {
+      "orgnr": "930219665",
+      "company": "LIZZI AS",
+      "domain": "lizzi.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://lizzi.com/",
+          "sha256": "a3a69f0b01b071bb0c67b2f138e1711f402416802619ba7467920cc8f67c7440"
+        },
+        {
+          "url": "https://lizzi.com/privacy.php",
+          "sha256": "2533ae80677af8e3efe6c6e68d65e7fb78edc764e3ba108dbf0ff1c52b2ca3fb"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://lizzi.com/privacy.php",
+          "text": "Policy Privacy",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "918328564",
+      "company": "RPS INVEST AS",
+      "domain": "rps-invest.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://rps-invest.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://rps-invest.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://rps-invest.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://rps-invest.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://rps-invest.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://rps-invest.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://rps-invest.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://rps-invest.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "929817516",
+      "company": "LYNGHOLM AS",
+      "domain": "lyngholm.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://lyngholm.no/",
+          "sha256": "338276c1359eeebe7e604810301bdfbf39f39741e0e4339659363ec71f4dd568"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "934407253",
+      "company": "FLAVEURIA AS",
+      "domain": "flaveuria.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://flaveuria.no/",
+          "sha256": "c95478158085249819f100b9f179078a24e9bab79159c0173c36232c350c9eee"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "935499984",
+      "company": "TRANSPARTNER AS",
+      "domain": "transpartner.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://transpartner.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://transpartner.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://transpartner.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://transpartner.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://transpartner.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://transpartner.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://transpartner.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://transpartner.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "931708694",
+      "company": "CO2-TRANSPORT AS",
+      "domain": "co2transport.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://co2transport.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://co2transport.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://co2transport.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://co2transport.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://co2transport.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://co2transport.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://co2transport.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://co2transport.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "927211033",
+      "company": "HIGHCAMP AS",
+      "domain": "highcamp.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.highcamp.no/",
+          "sha256": "032f3f0ad85cd55b0ce4ad68d7d9ba9e849b9655d07cd87c535464ab83cd17c4"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "925547530",
+      "company": "HANCHE AS",
+      "domain": "hanche.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://hanche.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://hanche.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://hanche.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://hanche.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://hanche.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://hanche.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://hanche.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://hanche.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "929481070",
+      "company": "SNAPPY AS",
+      "domain": "snappy.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://snappy.no/",
+          "sha256": "4bf55fb632bc22642d989ae63ea288b2a62f5499180ae98e7f19a8038e3591aa"
+        },
+        {
+          "url": "https://snappy.no/Contact_Us",
+          "sha256": "46c659cd108630380722120cbb39ee66e421c0221e0297e3ced2ce2368367e02"
+        },
+        {
+          "url": "https://snappy.no/About",
+          "sha256": "45131bbe4162a2c044df9e0336cae5349ef61d7c0edf9223383faed6fe51c9ca"
+        },
+        {
+          "url": "https://snappy.no/kontakt",
+          "sha256": "447451cbac8695883a8f91d6b66df3c135074918b2d17cb76d9128c83fdebe42"
+        },
+        {
+          "url": "https://snappy.no/om-oss",
+          "sha256": "c6f49ea5dbbde7c6546889c71b6d8ae9a57b2f02143ec4bb27eebaf3e56cb8c3"
+        },
+        {
+          "url": "https://snappy.no/about",
+          "sha256": "4d70ef90c75a846f9e04120ac21842c8706f461380b6925f024e83273d0930f2"
+        },
+        {
+          "url": "https://snappy.no/personvern",
+          "sha256": "7c7366803c70460cebfd73db0e3f8ad0d35e300a57207a5e2a3bb0d86f3bd682"
+        },
+        {
+          "url": "https://snappy.no/impressum",
+          "sha256": "fd28d21a215b198f026c3ad14c399ece7d2ecad75c1c0d0600fd07cfabf2b11c"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://snappy.no/kontakt",
+          "text": "🗙",
+          "already_fetched": true
+        },
+        {
+          "url": "https://snappy.no/om-oss",
+          "text": "🗙",
+          "already_fetched": true
+        },
+        {
+          "url": "https://snappy.no/personvern",
+          "text": "🗙",
+          "already_fetched": true
+        },
+        {
+          "url": "https://snappy.no/impressum",
+          "text": "🗙",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "929481070",
+      "company": "SNAPPY AS",
+      "domain": "snappy.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.snappy.com/",
+          "sha256": "4a3b20b83e180f7e98ed2d51d63f25dc31d506ee2ee7395809e26ab905de058e"
+        },
+        {
+          "url": "https://www.snappy.com/about-us",
+          "sha256": "8c9a86e149e4e93611c0980de3d1a85abfa01e48facb5d3c49e822835e181cd3"
+        },
+        {
+          "url": "https://www.snappy.com/contact-us",
+          "sha256": "f96b710b254ddbba4ad88940ea1851f9d804ad79113cf7fda3bdce1460811043"
+        },
+        {
+          "url": "https://www.snappy.com/resources-webinars/everything-you-need-to-know-about-holiday-swag",
+          "sha256": "fd0dfba88545407ddd6167d8d69205570100e241c1615cb54c30463a5bc8587f"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "993395919",
+      "company": "CARLSON HEALTHY OILS AS",
+      "domain": "carlsonhealthyoils.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://carlsonhealthyoils.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://carlsonhealthyoils.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://carlsonhealthyoils.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://carlsonhealthyoils.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://carlsonhealthyoils.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://carlsonhealthyoils.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://carlsonhealthyoils.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://carlsonhealthyoils.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "996233391",
+      "company": "MUFFINS AS",
+      "domain": "muffins.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "http://www.muffins.com/",
+          "sha256": "6c7860826c4a42a6214b425f23897022cf01689bcccff3bdd4ff07e9a3b495a3"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "919650826",
+      "company": "TUTTIFRUTTI AS",
+      "domain": "tuttifrutti.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://tuttifrutti.com/",
+          "sha256": "e01f1d37f104075139ea6b10c6974f18470b225c099f0b6237a453f1a627053a"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "988236756",
+      "company": "BYGGTEMA AS",
+      "domain": "byggtema.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.byggtema.no/",
+          "sha256": "97dcff136a622405cc09b212764ea094804581365b8dc5cc2ef34fd4f9f1dbf4"
+        },
+        {
+          "url": "https://www.byggtema.no/index.php/personvern",
+          "sha256": "9cbb582a23dc8f090497942f67aa1c7e0348890784753c36b1b1e187f4df593d"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.byggtema.no/",
+          "text": "\r\n\t\t\t\tKontakt\n\t\t\t",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.byggtema.no/index.php/personvern",
+          "text": " ",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "935214599",
+      "company": "COOL RACING AS",
+      "domain": "coolracing.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://coolracing.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://coolracing.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://coolracing.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://coolracing.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://coolracing.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://coolracing.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://coolracing.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://coolracing.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "825986332",
+      "company": "GEIRTECH AS",
+      "domain": "geirtech.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://geirtech.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://geirtech.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://geirtech.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://geirtech.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://geirtech.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://geirtech.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://geirtech.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://geirtech.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "932858843",
+      "company": "TION AS",
+      "domain": "tion.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://tion.com/",
+          "sha256": "659a9104940d5ddcc7a2f8578a7f296fb9fb9e591756331ca3c256dc4e9df637"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "922285632",
+      "company": "MAKEITWORK AS",
+      "domain": "makeitwork.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://makeitwork.com/",
+          "sha256": "4498f84dd6449ae03995fcc6c95f825689026fe870069ebf29b9f7804ef71bd2"
+        },
+        {
+          "url": "https://makeitwork.com/contact/",
+          "sha256": "c279fc64f94cb8679b662a08f210a85cc44d8ed51dbae760bd2a4049c3aa5124"
+        },
+        {
+          "url": "https://makeitwork.com/contact-us/",
+          "sha256": "2efa357aeb6a2e206dcbf462fbe8c7dbede521345e9171e69184056c35641a23"
+        },
+        {
+          "url": "https://makeitwork.com/about-us/",
+          "sha256": "1f2fc84759ec251b4a11452ea41ba603d03c764d3bf430eb51fbd9f94f5a6a73"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://makeitwork.com/contact-us/",
+          "text": "Privacy Policy",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "996154343",
+      "company": "THERMOPYLAE AS",
+      "domain": "thermopylae.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://thermopylae.com/",
+          "sha256": "a9870ab3efaef5850c90cdd7fda6d193e43cbad88837ebc9b1133dbfafb45786"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "930595950",
+      "company": "HGB INVEST AS",
+      "domain": "hgb-invest.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.hgb-invest.com/",
+          "sha256": "eff059a234986869f2513ae68421ce8e25139c897ef018f171b1e12d017f5d1b"
+        },
+        {
+          "url": "https://hgb-invest.com/",
+          "sha256": "eff059a234986869f2513ae68421ce8e25139c897ef018f171b1e12d017f5d1b"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "916800916",
+      "company": "YOUSAFE AS",
+      "domain": "yousafe.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://yousafe.no/",
+          "sha256": "14807cab6274e3c55cb7839fafccdf779bb79356b9f8e86f066280cec8a30b51"
+        },
+        {
+          "url": "https://yousafe.no/contacts/",
+          "sha256": "5057e0117da2891aa51c70628f203cddafa7a330bdbbc2f7d3127fda958c6ab9"
+        },
+        {
+          "url": "https://yousafe.no/om-oss/",
+          "sha256": "11eead96abf9a6ed217c240095fcc498bc5e8b3cdc05c1edbebda1d262222b75"
+        },
+        {
+          "url": "https://yousafe.no/about-us/",
+          "sha256": "7c63cfa8c2401e53e60affdc975909b36031b361e6d01084b7b1d8b2d39683a5"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://yousafe.no/contacts/",
+          "text": "Kontakt oss",
+          "already_fetched": true
+        },
+        {
+          "url": "https://yousafe.no/om-oss/",
+          "text": "Om oss",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "927560429",
+      "company": "SVART ASFALT AS",
+      "domain": "svartasfalt.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.svartasfalt.no/",
+          "sha256": "bc1b3b77864af3453693d2cdb727c52b80fc8fe7feedd2aeeabaa4345766450b"
+        },
+        {
+          "url": "https://www.svartasfalt.no/personvern",
+          "sha256": "0682fd885245df7f79c4ec6b28e5f2898e3cd8639fcec20fd06a8400459b3b20"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.svartasfalt.no/",
+          "text": "Kontakt",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.svartasfalt.no/personvern",
+          "text": "  ",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "812753932",
+      "company": "TIME 2 TRADE AS",
+      "domain": "time2trade.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://time2trade.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://time2trade.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://time2trade.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://time2trade.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://time2trade.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://time2trade.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://time2trade.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://time2trade.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "914507812",
+      "company": "STRAUMSNES UTVIKLING AS",
+      "domain": "icedrift.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.icedrift.no/",
+          "sha256": "88551c2af1e8dcd943440d6a0358d557c5b0841ae5dbdeb12b8e3a85f7696ac5"
+        },
+        {
+          "url": "https://www.icedrift.no/om-oss/",
+          "sha256": "d41f3eeee6769c737c5f3b536932ae69ce49ab9fea3ef4ed816e414a021dd7f0"
+        },
+        {
+          "url": "https://www.icedrift.no/kontakt/",
+          "sha256": "fd871911221b433c74329e14c52a9862e9aa9c7f98d7cf9003c4b62d7b0e3918"
+        },
+        {
+          "url": "https://www.icedrift.no/personvernvilkar/",
+          "sha256": "e92adc4c06f7fbd8280309bf4a98b62270c370557f590af198ad54ce083423d3"
+        },
+        {
+          "url": "https://www.icedrift.no/kontakt",
+          "sha256": "fd871911221b433c74329e14c52a9862e9aa9c7f98d7cf9003c4b62d7b0e3918"
+        },
+        {
+          "url": "https://www.icedrift.no/om-oss",
+          "sha256": "d41f3eeee6769c737c5f3b536932ae69ce49ab9fea3ef4ed816e414a021dd7f0"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.icedrift.no/om-oss/",
+          "text": "Om oss",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.icedrift.no/kontakt/",
+          "text": "Kontakt",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.icedrift.no/personvernvilkar/",
+          "text": "Les personvernvilkår",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.icedrift.no/kontakt",
+          "text": "Gå til søk",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.icedrift.no/om-oss",
+          "text": "Gå til søk",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "928736032",
+      "company": "REBR AS",
+      "domain": "rebr.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://rebr.no/",
+          "sha256": "abf7fc83ffb4f108bf25ebed18fe8262cfc645614c3ca1565e18ae7e98675cae"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "919280204",
+      "company": "NESFJELLET PROSJEKTUTVIKLING AS",
+      "domain": "nesfjellet.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://nesfjellet.no/nb",
+          "sha256": "2a7e7744f708fd9a4466f0b75f086bb61da718874b3c1f64aa183c03f9bf8755"
+        },
+        {
+          "url": "https://nesfjellet.no/nb/kundeservice",
+          "sha256": "41986ffef4c721ef7719e34f139275f32eede1a0f9ab014d6e4bd7961019ffc2"
+        },
+        {
+          "url": "https://nesfjellet.no/nb/personvern",
+          "sha256": "ae67848a74b3e1e615f2e6ff1dae9ca862110de18b83437c3428b9b6860d4340"
+        },
+        {
+          "url": "https://nesfjellet.no/en/privacy",
+          "sha256": "b2bdc94307cd6084f9ebd30201cb4c285bc4d7abf1dfc65e16c9366bb3af5c9a"
+        },
+        {
+          "url": "https://nesfjellet.no/nl/privacy",
+          "sha256": "1227d77bb6cfad6b854a77bb6f5f06b76d4f3c6d72c3037e218b62c829a1382f"
+        },
+        {
+          "url": "https://nesfjellet.no/nb/privacy-policy",
+          "sha256": "0f1c4714118c73fd68688471338037fc76cabb4d7af9003746ed29e6cc92b0d7"
+        },
+        {
+          "url": "https://nesfjellet.no/nb/kundeservice",
+          "sha256": "2e4dcf6823d4564c28946ff37713386398b2babcebd42ceadc863ed97bd4e54f"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://nesfjellet.no/nb/nesfjellet-alpin",
+          "text": "Les mer om Nesfjellet Alpin",
+          "already_fetched": false
+        },
+        {
+          "url": "https://nesfjellet.no/nb/kundeservice",
+          "text": "Kontakt oss",
+          "already_fetched": true
+        },
+        {
+          "url": "https://nesfjellet.no/nb/personvern",
+          "text": "Personvernerklæring",
+          "already_fetched": true
+        },
+        {
+          "url": "https://nesfjellet.no/sites/cb_nesfjelletweb/files/2025-10/Salgsbetingelser%20Nesfjellet%20Booking%20AS%20%281%29.pdf",
+          "text": "Salgsbetingelser",
+          "already_fetched": false
+        },
+        {
+          "url": "https://nesfjellet.no/en/privacy",
+          "text": "Engelsk",
+          "already_fetched": true
+        },
+        {
+          "url": "https://nesfjellet.no/nl/privacy",
+          "text": "Dutch",
+          "already_fetched": true
+        },
+        {
+          "url": "https://nesfjellet.no/en/node/696",
+          "text": "Privacy Policy",
+          "already_fetched": false
+        },
+        {
+          "url": "https://nesfjellet.no/sites/cb_nesfjelletweb/files/2025-10/Terms%20%26%20conditions%20Nesfjellet%20.pdf",
+          "text": "Algemene voorwaarden",
+          "already_fetched": false
+        },
+        {
+          "url": "https://nesfjellet.no/nl/privacybeleid",
+          "text": "Dutch",
+          "already_fetched": false
+        },
+        {
+          "url": "https://nesfjellet.no/nb/privacy-policy",
+          "text": "Norwegian",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "926338730",
+      "company": "ESPACE AS",
+      "domain": "espace.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.espace.com/",
+          "sha256": "1e3c804916276491906af285132da050b18d4a11baa3e41635ef4e2aa79debb7"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "928354318",
+      "company": "OKC INVEST AS",
+      "domain": "okcinvest.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.okcinvest.com/",
+          "sha256": "1c97048aa2067aefc0df5552ae6c2afa101990fe375d2327f378262cb8c81865"
+        },
+        {
+          "url": "https://www.okcinvest.com/contact-us/",
+          "sha256": "9397af226f2f333b9653158080f9c9e4121c7ae010e96514133de85344013919"
+        },
+        {
+          "url": "https://www.okcinvest.com/privacy/",
+          "sha256": "0af93b46ab59c2463051784dd0ed284127ec94456ba85dd4f6a75887f2365884"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "934882237",
+      "company": "TQ INVEST AS",
+      "domain": "tqinvest.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://tqinvest.com/",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://tqinvest.com/kontakt",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://tqinvest.com/om-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://tqinvest.com/about",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://tqinvest.com/personvern",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://tqinvest.com/impressum",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://tqinvest.com/kontakt-oss",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        },
+        {
+          "url": "https://tqinvest.com/privacy-policy",
+          "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "933031071",
+      "company": "WRIXIT AS",
+      "domain": "wrixit.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://www.wrixit.com/",
+          "sha256": "f76851efc0d7261d10fd963c817532627f95edd0faac8051f6bcde28143b6271"
+        },
+        {
+          "url": "https://www.wrixit.com/contact",
+          "sha256": "2b0a51c1f8bdf71c91f1ebb70c6daaabbbe0b4dd0fa8562cfffc60bc546e43a8"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "989665537",
+      "company": "EKÅS EIENDOM AS",
+      "domain": "aktivbemanning.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.aktivbemanning.no/",
+          "sha256": "bed51e7a2507ecda9a78965730c27e5422debea143d454b32865680db1526943"
+        },
+        {
+          "url": "https://www.aktivbemanning.no/kontakt/",
+          "sha256": "e7584cb3690eb1cda8ccc2d4d77053cea6d61831f60b1dc5c08105b2bb30cdcb"
+        },
+        {
+          "url": "https://www.aktivbemanning.no/cookies/",
+          "sha256": "b51e16f966c7eb7f6b9ba9b15b77827fbc5c3aca71d989d1c20a4f5792107fb3"
+        },
+        {
+          "url": "https://www.aktivbemanning.no/om-aktiv-bemanning/",
+          "sha256": "538cfaf663db7d4438175751ddff91cf7cf65831108de2d39ef2729f192d169d"
+        },
+        {
+          "url": "https://www.aktivbemanning.no/kontakt/",
+          "sha256": "28fed20a8b61e2c9b0a8eb6cd9194b717147a238110ef8da589aa845a46fd510"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.aktivbemanning.no/om-aktiv-bemanning/",
+          "text": "Om Oss",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.aktivbemanning.no/kontakt/",
+          "text": "",
+          "already_fetched": true
+        },
+        {
+          "url": "https://www.aktivbemanning.no/for-jobbsoker/",
+          "text": "Les mer om hva vi gjør for våre jobbsøkere",
+          "already_fetched": false
+        },
+        {
+          "url": "https://www.aktivbemanning.no/cookies",
+          "text": "Bruk av cookies / personvern",
+          "already_fetched": false
+        },
+        {
+          "url": "https://www.aktivbemanning.no/kongsvinger/",
+          "text": "Klikk her for kontaktpersoner i Kongsvinger",
+          "already_fetched": false
+        }
+      ]
+    },
+    {
+      "orgnr": "927441217",
+      "company": "KERMIT TECH AS",
+      "domain": "kermittech.no",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://kermittech.no/",
+          "sha256": "2bd935028f247f75a9e4591db2309acd8424334236d96db90a17e23ef7fb4bc4"
+        },
+        {
+          "url": "https://kermittech.no/about",
+          "sha256": "a1da5ec29241de5ffb4054e9f0a586fdb6ea7736ef156e744af1c5596a2010d2"
+        },
+        {
+          "url": "https://kermittech.no/contact",
+          "sha256": "eeaaced53da991dc9180a300270d664311e0c14738cf1bee94cb46bc646850af"
+        },
+        {
+          "url": "https://kermittech.no/privacy-policy",
+          "sha256": "e22028d1a7f8a06abae3536e0169fe044935b7c7bd6ae04f266db9771b0f6265"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://kermittech.no/privacy-policy",
+          "text": "Terms of Service",
+          "already_fetched": true
+        },
+        {
+          "url": "https://kermittech.no/",
+          "text": "Terms of Service",
+          "already_fetched": true
+        },
+        {
+          "url": "https://kermittech.no/about",
+          "text": "Terms of Service",
+          "already_fetched": true
+        },
+        {
+          "url": "https://kermittech.no/contact",
+          "text": "Terms of Service",
+          "already_fetched": true
+        }
+      ]
+    },
+    {
+      "orgnr": "912172090",
+      "company": "MALER & BYGGTAPETSERER HOLST AS",
+      "domain": "oleholst.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://oleholst.no/",
+          "sha256": "9b27ab127a0a6ad90a35919cae30d155a77535d02a7c1c5d8b5be41d9846c8fe"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "934500644",
+      "company": "SANDØ AS",
+      "domain": "sando.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://www.sando.com/",
+          "sha256": "e136cce714f6cfa6c768872e848287db1110113b98ef9eaadfd23c8ca4cdbb1e"
+        },
+        {
+          "url": "https://www.sando.com/contacto",
+          "sha256": "35dbdb00a7075cc1e5659addf1cc954ebd785af0272139fe9c9abbfac1add4bd"
+        },
+        {
+          "url": "https://www.sando.com/contacto/comercial",
+          "sha256": "1f9e10b47fb633888437d866e63e7b62e448912cd5f0dc1487e09c7990aa2ab1"
+        },
+        {
+          "url": "https://www.sando.com/contacto/envia-tu-cv",
+          "sha256": "61cd9868483f7fd2afc47fff3a9ecaffac6d4c88674a7dde7ba9b4bb26e37100"
+        },
+        {
+          "url": "https://www.sando.com/contacto/nuestras-sedes",
+          "sha256": "549b221ebf88bf98e066f478f955877b96573c4c40f2a9e191e9bcfe5b1311fa"
+        },
+        {
+          "url": "https://www.sando.com/en/about-us/fundacion-sando",
+          "sha256": "64c1f8fb07fe45fb832e7feeb29974ad81aaccadd6dcaf28d32f77dc7d65555d"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://www.sando.com/en/privacy-policy",
+          "text": " Privacy policy ",
+          "already_fetched": false
+        },
+        {
+          "url": "https://www.sando.com/contenido/subidas/2024/08/legales-politica-de-proteccion-de-datos-sando-Eng.pdf",
+          "text": " Data privacy",
+          "already_fetched": false
+        },
+        {
+          "url": "https://www.sando.com/contenido/subidas/2024/07/eng_GRUPO_EMPRESARIAL_SANDO_SA_Politica_de_PRIVACIDAD_en_redes_sociales_060224_REV.pdf",
+          "text": " Social Media privacy policy",
+          "already_fetched": false
+        }
+      ]
+    },
+    {
+      "orgnr": "927440466",
+      "company": "LOCKTECH AS",
+      "domain": "locktech.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://locktech.com/",
+          "sha256": "b9fdc7059be060340ad1c0bf6971902888a8725ff72248a67abaed169da2195b"
+        },
+        {
+          "url": "https://locktech.com/pages/contact",
+          "sha256": "7e767c33fb582c0827c6874a699ea8dc9399a1d52a4bf9a5d660441808675429"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "822291082",
+      "company": "FAMSA ESTATE CO AS",
+      "domain": "famsaestateco.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://famsaestateco.no/",
+          "sha256": "f99de6b4be0ade49403fffe5de4af56573297db210ab682a80b021221f035a7f"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "822291082",
+      "company": "FAMSA ESTATE CO AS",
+      "domain": "famsaestateco.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://famsaestateco.com/",
+          "sha256": "7a58048e5e0d3d2e01a471607394fda38f597d37c9fa13d0511ddede3e35b14f"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "971161531",
+      "company": "CASTRA AS",
+      "domain": "castra.com",
+      "reason": "name_without_suffix_insufficient_contacts_or_domain",
+      "pages": [
+        {
+          "url": "https://castra.com/",
+          "sha256": "8e3b6fa2fd411ff8bd1c470a3698c7736b5e79155aa1667c324a4a1be72ad425"
+        },
+        {
+          "url": "https://castra.com/pages/contact-us",
+          "sha256": "ffb445b43918ff9cfee0a8a6afb12143f5860375adab1bfb0f7f2ded117ad2e3"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "921860609",
+      "company": "TL ELEKTRO AS",
+      "domain": "tlelektro.no",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://tlelektro.no/",
+          "sha256": "2d221dd6d280a9f3cf5ba54703f1e436ad73f930b820c3fc3a55d9bd92e52e0c"
+        }
+      ],
+      "matching_links": []
+    },
+    {
+      "orgnr": "920285716",
+      "company": "DARIZE CONSULTING AS",
+      "domain": "darize.com",
+      "reason": "insufficient_owner_proof",
+      "pages": [
+        {
+          "url": "https://darize.com/",
+          "sha256": "3b9d24dc46193d192d71b8076c2958cf3c339c49765d8e9cd751e8596bbb3683"
+        },
+        {
+          "url": "https://darize.com/who-we-are/contact-us/",
+          "sha256": "793bc30f2a7dc951c8dabda4eac3fdeb659f299858e2d5f696d563c7adeff029"
+        },
+        {
+          "url": "https://darize.com/da/kontakt-konsulenter/",
+          "sha256": "838403d8a2c62297a11470ab02fee5f574727719259020decacee2f32f6f0454"
+        },
+        {
+          "url": "https://darize.com/da/hvem-vi-er/kontakt-os/",
+          "sha256": "874883ff02642002bf44e661f822f8eada85899b662a25fe2dc4aa2a3f40b55d"
+        },
+        {
+          "url": "https://darize.com/da/vaern/kontakt-os/",
+          "sha256": "94e91372a6b399ef23f04b034e228160709979d44c139578f192b10cc71ea3d8"
+        }
+      ],
+      "matching_links": [
+        {
+          "url": "https://darize.com/da/hvem-vi-er/kontakt-os/",
+          "text": "Kontakt os",
+          "already_fetched": true
+        },
+        {
+          "url": "https://darize.com/de/ueber-darize/kontakt/",
+          "text": "DE  — Skift til Deutsch",
+          "already_fetched": false
+        },
+        {
+          "url": "https://darize.com/da/kontakt-konsulenter/",
+          "text": "DA  — Skift til Dansk",
+          "already_fetched": true
+        },
+        {
+          "url": "https://darize.com/da/vaern/kontakt-os/",
+          "text": "Kontakt os",
+          "already_fetched": true
+        }
+      ]
+    }
+  ]
+}

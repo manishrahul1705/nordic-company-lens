@@ -62,3 +62,17 @@ desktop.ini
 # Local reachability audits and cleanup working files
 scratch/
 .antigravity/
+
+# One-shot OSM measurement downloads and saved live bodies
+/bench/reports/osm-check/raw/
+!/bench/reports/osm-check/candidates.jsonl
+!/bench/reports/osm-check/objects.jsonl
+
+# Common Crawl measurement cache (never store WARC bytes)
+/bench/reports/cc-proto/raw/
+!/bench/reports/cc-proto/candidates.jsonl
+/bench/reports/cc-proto/columnar-files.json
+
+# Bundled candidate and registry-count indexes are release inputs.
+!/data/cc_orgnr_index.json.gz
+!/data/shared_identifiers.json.gz

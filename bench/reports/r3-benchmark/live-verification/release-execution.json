@@ -1,0 +1,50 @@
+{
+  "clone_commit": "81086a96b8ef34b8abe56afc666f72093d0452ef",
+  "input_sha256": "723c0f45a059d8ee27aebfa442663907aaf462a9f8cb6cbf559a075d62625add",
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "signalpost",
+    "run",
+    "--organisations",
+    "orgnrs.txt",
+    "--output",
+    "out/envelopes.jsonl",
+    "--profiles-output",
+    "out/profiles.jsonl",
+    "--report",
+    "out/report.json",
+    "--state-dir",
+    "out/state",
+    "--site-dir",
+    "out/site"
+  ],
+  "credentials": "Removed; values never recorded",
+  "runs": [
+    {
+      "number": 1,
+      "exit_code": 0,
+      "wall_seconds": 372.7661578999978,
+      "requests": 807,
+      "changes": 0,
+      "observation_changes": 0,
+      "deadline_hits": 0,
+      "warnings": [],
+      "emitted_envelopes": 103,
+      "strict_verifier_exit_code": 0
+    },
+    {
+      "number": 2,
+      "exit_code": 0,
+      "wall_seconds": 254.72229920000245,
+      "requests": 749,
+      "changes": 0,
+      "observation_changes": 5,
+      "deadline_hits": 0,
+      "warnings": [],
+      "emitted_envelopes": 103,
+      "strict_verifier_exit_code": 1
+    }
+  ]
+}

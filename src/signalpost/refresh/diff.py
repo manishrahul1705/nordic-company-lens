@@ -300,3 +300,28 @@ def apply(envelope, previous, blobs):
     for evid in old_evidence.values():
         new_evidence.setdefault(evid.id, evid)
     envelope.evidence = list(new_evidence.values())
+
+
+def reconcile_final_observations(envelope, previous):
+    """Discard provisional observations when publication leaves a section unchanged.
+
+    Run after all publication guards. This compares output only and must not
+    restore claims, rerun proof, or change the guards' decisions.
+    """
+    if previous is None:
+        return
+    old = previous if 'claims' in previous else previous.get('profile', previous)
+    old_sections = previous.get('run', {}).get('sections', old.get('sections', {}))
+
+    def published(claims, family):
+        return canonical({c['field']: {k: c.get(k) for k in
+                          ('id', 'field', 'value', 'availability', 'reporting_period')}
+                          for c in claims if c.get('family') == family})
+
+    current = [c.model_dump(mode='json') for c in envelope.claims]
+    unchanged = {family for family, state in envelope.run.sections.items()
+                 if state == old_sections.get(family)
+                 and published(current, family) == published(old.get('claims', []), family)}
+    envelope.run.refresh['observation_changes'] = [
+        item for item in envelope.run.refresh.get('observation_changes', [])
+        if item.get('section') not in unchanged]

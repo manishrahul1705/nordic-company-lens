@@ -1,0 +1,17 @@
+{
+  "run": "bench/runs/r3-release-live",
+  "status": "aborted as invalid host-interrupted benchmark",
+  "elapsed_jump_seconds": [
+    241.1,
+    12098.2,
+    15405.5
+  ],
+  "reason": "Several hours of host pause/resume; no normal wall-time inference possible. Partial artifacts retained; fresh rerun required.",
+  "production_changed": false,
+  "second_attempt": {
+    "run": "bench/runs/r3-release-awake",
+    "last_heartbeat": "2026-11-13T05:42:41.578166Z",
+    "last_elapsed_seconds": 2069.84,
+    "status": "process absent after turn interruption; data files complete, site/final exit unfinished; not claimed exit 0"
+  }
+}

@@ -1,0 +1,1653 @@
+[
+  {
+    "orgnr": "971479094",
+    "name": "TROLLSTUA BARNEHAGE SA",
+    "candidate": {
+      "orgnr": "973457225",
+      "name": "Trollstua barnehage",
+      "website": "https://trollstua-barnehage.no",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "way",
+      "id": 1469631938,
+      "tags": {
+        "ref:NO:orgnr": "973457225",
+        "name": "Trollstua barnehage",
+        "website": "https://trollstua-barnehage.no",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "973457225",
+      "parent_orgnr": "971479094",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/way/1469631938"
+    },
+    "context": {
+      "name": "TROLLSTUA BARNEHAGE SA",
+      "subunits": [
+        {
+          "orgnr": "973457225",
+          "name": "TROLLSTUA BARNEHAGE SA",
+          "email": "styrer@trollstua-barnehage.no",
+          "phone": "32 70 16 44",
+          "website": "trollstua-barnehage.no",
+          "address": {
+            "adresse": "Nyveien 12",
+            "postnummer": "3322",
+            "poststed": "FISKUM",
+            "kommune": "ØVRE EIKER"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "971479094",
+        "973457225"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://trollstua-barnehage.no/",
+        "error": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'trollstua-barnehage.no'. (_ssl.c:1010)"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "930688746",
+    "name": "VELLE OLALØKKA BARNEHAGE AS",
+    "candidate": {
+      "orgnr": "976668138",
+      "name": "Velle Olaløkka barnehage",
+      "website": "https://velle.no",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690111933,
+      "tags": {
+        "ref:NO:orgnr": "976668138",
+        "name": "Velle Olaløkka barnehage",
+        "website": "https://velle.no",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "976668138",
+      "parent_orgnr": "930688746",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690111933"
+    },
+    "context": {
+      "name": "VELLE OLALØKKA BARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "976668138",
+          "name": "VELLE OLALØKKA BARNEHAGE AS",
+          "email": "kristin.eriksen@velle.no",
+          "phone": "45445822",
+          "website": "www.velle.no",
+          "address": {
+            "adresse": "Søndre Villavei 3",
+            "postnummer": "3160",
+            "poststed": "STOKKE",
+            "kommune": "SANDEFJORD"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "930688746",
+        "976668138"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://velle.no/",
+        "error": "ValueError: TLS downgrade refused"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "932252163",
+    "name": "LØNNEBERGET BARNEHAGE AS",
+    "candidate": {
+      "orgnr": "989331558",
+      "name": "Lønneberget barnehage",
+      "website": "https://lonneberget-bhg.no",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 8385406488,
+      "tags": {
+        "ref:NO:orgnr": "989331558",
+        "name": "Lønneberget barnehage",
+        "website": "https://lonneberget-bhg.no",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "989331558",
+      "parent_orgnr": "932252163",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/8385406488"
+    },
+    "context": {
+      "name": "LØNNEBERGET BARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "989331558",
+          "name": "LØNNEBERGET BARNEHAGE AS",
+          "email": "dl@lonneberget-bhg.no",
+          "phone": "40671770",
+          "website": "lonneberget-bhg.no",
+          "address": {
+            "adresse": "Bjørgvingata 40",
+            "postnummer": "5531",
+            "poststed": "HAUGESUND",
+            "kommune": "HAUGESUND"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "932252163",
+        "989331558"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://lonneberget-bhg.no/",
+        "status": 200,
+        "url": "https://lonneberget-bhg.no/",
+        "body_sha256": "9bb95e41c90822c2336d0da6cc368daccc93d575b7f70d9fa46b3e8a2b808673",
+        "title": "Lønneberget Barnehage",
+        "proof": {
+          "level": "MEDIUM",
+          "proof_type": "signals",
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "name_without_suffix_insufficient_contacts_or_domain",
+          "token": "lønneberget barnehage",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "           <p>\r\n                        L&#248;nneberget Barnehage<br />\r\n                    Bj&#248;rgvinsgaten 40<br />\r\n                    5531 Haugesund\r\n                </p>\r\n                <p>\r\n                        <span>T:&nbsp;40671770<br /></span>\r\n                    <span id=\"footer"
+      },
+      {
+        "requested_url": "https://lonneberget-bhg.no/Informasjon/Kontakt",
+        "status": 200,
+        "url": "https://lonneberget-bhg.no/Informasjon/Kontakt",
+        "body_sha256": "ead401c80b37efa63c198b23c92e52564a4cb8babab7bf3256af37d603660ba1",
+        "title": "Kontakt",
+        "proof": {
+          "level": "REJECT",
+          "proof_type": "",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [
+            "984081049"
+          ],
+          "reason": "foreign_orgnr",
+          "token": "",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"nb\" dir=\"ltr\">\r\n<head>\r\n    <meta content=\"PBL Kidplan\" charset=\"utf-8\" />\r\n    <meta name=\"description\" />\r\n    <meta name=\"keywords\" />\r\n\r\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n\r\n    <script type=\"text/plain\" data-cookiec"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": true
+  },
+  {
+    "orgnr": "922043809",
+    "name": "SJØLIV FUS BARNEHAGE AS",
+    "candidate": {
+      "orgnr": "980182347",
+      "name": "Sjøliv FUS barnehage",
+      "website": "https://fus.no/sjoliv",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690124545,
+      "tags": {
+        "ref:NO:orgnr": "980182347",
+        "name": "Sjøliv FUS barnehage",
+        "website": "https://fus.no/sjoliv",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "980182347",
+      "parent_orgnr": "922043809",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690124545"
+    },
+    "context": {
+      "name": "SJØLIV FUS BARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "980182347",
+          "name": "SJØLIV FUS BARNEHAGE AS",
+          "email": "dl.sjoliv@bhg.no",
+          "phone": "55 08 21 92",
+          "website": "fus.no/sjoliv",
+          "address": {
+            "adresse": "Makkhamn 43",
+            "postnummer": "5384",
+            "poststed": "TORANGSVÅG",
+            "kommune": "AUSTEVOLL"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "922043809",
+        "980182347"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://fus.no/sjoliv",
+        "status": 200,
+        "url": "https://fus.no/sjoliv",
+        "body_sha256": "0c262465fccbd10dba23a49d419101ac1aca693876ef96e16453440097c49964",
+        "title": "Sjøliv FUS barnehage as",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "922043809",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "         \n                  Org. nummer 922043809 <br/><br/>\n\n                  Vi er registrert i ELMA-registeret. Dersom dere ikke har mulighet til "
+      },
+      {
+        "requested_url": "https://fus.no/sjoliv/kontakt",
+        "status": 200,
+        "url": "https://fus.no/sjoliv/kontakt",
+        "body_sha256": "5482f8ad7c8551a4720f5fd7736226d43f3a589e083bcbae72b34940468805df",
+        "title": "FUS barnehagene | Contact Us",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "922043809",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "         \n                  Org. nummer 922043809 <br/><br/>\n\n                  Vi er registrert i ELMA-registeret. Dersom dere ikke har mulighet til "
+      },
+      {
+        "requested_url": "https://fus.no/files/barnehager/files/Personvernerklæring.pdf",
+        "status": 200,
+        "url": "https://fus.no/files/barnehager/files/Personvernerklæring.pdf",
+        "body_sha256": "e4c9b7ce2eb17898facb587e492f5a3305b04cbcb8145f328079a563f1ac6b4d",
+        "title": "",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "SJØLIV FUS BARNEHAGE AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "%PDF-1.7\r\n%����\r\n1 0 obj\r\n<</Type/Catalog/Pages 2 0 R/Lang(nb-NO) /StructTreeRoot 49 0 R/MarkInfo<</Marked true>>/Metadata 531 0 R/ViewerPreferences 532 0 R>>\r\nendobj\r\n2 0 obj\r\n<</Type/Pages/Count 9/Kids[ 3 0 R 20 0 R 27 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R] >>\r\nendobj\r\n3 0 obj\r\n<</Type/Pag"
+      }
+    ],
+    "passes": true,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "971487941",
+    "name": "BLÅVEISKROKEN BARNEHAGE STI",
+    "candidate": {
+      "orgnr": "973471961",
+      "name": "Blåveiskroken barnehage Sti",
+      "website": "https://blaveiskroken.no",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690123179,
+      "tags": {
+        "ref:NO:orgnr": "973471961",
+        "name": "Blåveiskroken barnehage Sti",
+        "website": "https://blaveiskroken.no",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "973471961",
+      "parent_orgnr": "971487941",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690123179"
+    },
+    "context": {
+      "name": "BLÅVEISKROKEN BARNEHAGE STI",
+      "subunits": [
+        {
+          "orgnr": "973471961",
+          "name": "BLÅVEISKROKEN BARNEHAGE STI",
+          "email": "styrer@blaveiskroken.no",
+          "phone": "67544295",
+          "website": "www.blaveiskroken.no",
+          "address": {
+            "adresse": "Hvitveisstien 15",
+            "postnummer": "1346",
+            "poststed": "GJETTUM",
+            "kommune": "BÆRUM"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "971487941",
+        "973471961"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://blaveiskroken.no/",
+        "status": 200,
+        "url": "https://blaveiskroken.no/",
+        "body_sha256": "cf0e08153b79828c537bc16c87d8a4ffd98c1d018fb974d2c655307487469e49",
+        "title": "",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "BLÅVEISKROKEN BARNEHAGE STI",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <link rel=\"manifest\" href=\"s/manifest.json\" />\n\n    <link rel=\"preconnect\" href=\"https://fonts.googl"
+      },
+      {
+        "requested_url": "https://blaveiskroken.no/kontakt",
+        "status": 200,
+        "url": "https://blaveiskroken.no/kontakt",
+        "body_sha256": "cf0e08153b79828c537bc16c87d8a4ffd98c1d018fb974d2c655307487469e49",
+        "title": "",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "BLÅVEISKROKEN BARNEHAGE STI",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <link rel=\"manifest\" href=\"s/manifest.json\" />\n\n    <link rel=\"preconnect\" href=\"https://fonts.googl"
+      },
+      {
+        "requested_url": "https://blaveiskroken.no/om-oss",
+        "status": 200,
+        "url": "https://blaveiskroken.no/om-oss",
+        "body_sha256": "cf0e08153b79828c537bc16c87d8a4ffd98c1d018fb974d2c655307487469e49",
+        "title": "",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "BLÅVEISKROKEN BARNEHAGE STI",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <link rel=\"manifest\" href=\"s/manifest.json\" />\n\n    <link rel=\"preconnect\" href=\"https://fonts.googl"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "930873594",
+    "name": "LÆRINGSVERKSTEDET NOTVEIEN NATURBARNEHAGE AS",
+    "candidate": {
+      "orgnr": "986850155",
+      "name": "Læringsverkstedet Notveien naturbarnehage",
+      "website": "https://laringsverkstedet.no/barnehage/notveien-naturbarnehage",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690124780,
+      "tags": {
+        "ref:NO:orgnr": "986850155",
+        "name": "Læringsverkstedet Notveien naturbarnehage",
+        "website": "https://laringsverkstedet.no/barnehage/notveien-naturbarnehage",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "986850155",
+      "parent_orgnr": "930873594",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690124780"
+    },
+    "context": {
+      "name": "LÆRINGSVERKSTEDET NOTVEIEN NATURBARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "986850155",
+          "name": "LÆRINGSVERKSTEDET NOTVEIEN NATURBARNEHAGE",
+          "email": "notveien@laringsverkstedet.no",
+          "phone": "",
+          "website": "laringsverkstedet.no/barnehage/notveien-naturbarnehage",
+          "address": {
+            "adresse": "Notveien 2",
+            "postnummer": "8013",
+            "poststed": "BODØ",
+            "kommune": "BODØ"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "930873594",
+        "986850155"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://laringsverkstedet.no/barnehage/notveien-naturbarnehage",
+        "status": 200,
+        "url": "https://laringsverkstedet.no/barnehage/notveien-naturbarnehage",
+        "body_sha256": "36e31a6a40e9624d3916460de63c98f73882c53634ad051dcaa87814ba6e9e47",
+        "title": "Notveien Naturbarnehage | Læringsverkstedet",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "legal_name_and_registry_contact",
+          "signals": [
+            "exact_legal_name",
+            "street",
+            "postcode_city",
+            "email"
+          ],
+          "points": 8,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "LÆRINGSVERKSTEDET NOTVEIEN NATURBARNEHAGE",
+          "subject_orgnr": "986850155"
+        },
+        "proof_excerpt": " Naturbarnehage</h1>\n                <p>Læringsverkstedet Notveien Naturbarnehage ligger i Bodøsjøen/Alstad bydel i Bodø. Vi er en fireavdelings barnehage med utvidet turtilbud gjennom utegruppa Corvus.<br><br>Avdelingene har rundt 20 barn.  De tolv eldste barna fra hver avdeling er ute på utegruppa"
+      },
+      {
+        "requested_url": "https://laringsverkstedet.no/barnehage/notveien-naturbarnehage/kontakt",
+        "status": 200,
+        "url": "https://laringsverkstedet.no/barnehage/notveien-naturbarnehage/kontakt",
+        "body_sha256": "160f20279bb346c92497b319c6e1fe299991e47f59e733fbc5d8bc0411cf026f",
+        "title": "Læringsverkstedet | Kontakt Notveien naturbarnehage",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "LÆRINGSVERKSTEDET NOTVEIEN NATURBARNEHAGE AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"nb-NO\" class=\"no-js\">\n\n<head>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https://laringsverkstedet"
+      },
+      {
+        "requested_url": "https://laringsverkstedet.no/kontakt",
+        "status": 200,
+        "url": "https://laringsverkstedet.no/kontakt",
+        "body_sha256": "2c416c5dcc3d6d763276a4ab0e670e40d36c782485320d341f5a88041a4fa83f",
+        "title": "Læringsverkstedet | Kontakt",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "LÆRINGSVERKSTEDET NOTVEIEN NATURBARNEHAGE AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"nb-NO\" class=\"no-js\">\n\n<head>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https://laringsverkstedet"
+      }
+    ],
+    "passes": true,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "999629024",
+    "name": "HOPPENSPRETT MELBU AS",
+    "candidate": {
+      "orgnr": "974184362",
+      "name": "Hoppensprett Melbu",
+      "website": "https://hoppensprett.no/barnehager/vaare-barnehager/hadsel-kommune/hoppensprett-melbu-barnehage",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690123462,
+      "tags": {
+        "ref:NO:orgnr": "974184362",
+        "name": "Hoppensprett Melbu",
+        "website": "https://hoppensprett.no/barnehager/vaare-barnehager/hadsel-kommune/hoppensprett-melbu-barnehage",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "974184362",
+      "parent_orgnr": "999629024",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690123462"
+    },
+    "context": {
+      "name": "HOPPENSPRETT MELBU AS",
+      "subunits": [
+        {
+          "orgnr": "974184362",
+          "name": "HOPPENSPRETT MELBU AS",
+          "email": "melbu@hoppensprett.no",
+          "phone": "76121000",
+          "website": "www.hoppensprett.no/Barnehager/Vaare-barnehager/Hadsel-kommune/Hoppensprett-Melbu-Barnehage",
+          "address": {
+            "adresse": "Idrettsveien 17",
+            "postnummer": "8445",
+            "poststed": "MELBU",
+            "kommune": "HADSEL"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "974184362",
+        "999629024"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://hoppensprett.no/barnehager/vaare-barnehager/hadsel-kommune/hoppensprett-melbu-barnehage",
+        "error": "ValueError: TLS downgrade refused"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "988252573",
+    "name": "LÆRINGSVERKSTEDET BUKKESPRANGET BARNEHAGE AS",
+    "candidate": {
+      "orgnr": "988313785",
+      "name": "Læringsverkstedet Bukkespranget barnehage",
+      "website": "https://laringsverkstedet.no/barnehage/bukkespranget-naturbarnehage",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690124879,
+      "tags": {
+        "ref:NO:orgnr": "988313785",
+        "name": "Læringsverkstedet Bukkespranget barnehage",
+        "website": "https://laringsverkstedet.no/barnehage/bukkespranget-naturbarnehage",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "988313785",
+      "parent_orgnr": "988252573",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690124879"
+    },
+    "context": {
+      "name": "LÆRINGSVERKSTEDET BUKKESPRANGET BARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "988313785",
+          "name": "LÆRINGSVERKSTEDET BUKKESPRANGET BARNEHAGE",
+          "email": "bukkespranget@laringsverkstedet.no",
+          "phone": "92211750",
+          "website": "laringsverkstedet.no/barnehage/bukkespranget-naturbarnehage",
+          "address": {
+            "adresse": "Jervvegen 128",
+            "postnummer": "9017",
+            "poststed": "TROMSØ",
+            "kommune": "TROMSØ"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "988252573",
+        "988313785"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://laringsverkstedet.no/barnehage/bukkespranget-naturbarnehage",
+        "status": 200,
+        "url": "https://laringsverkstedet.no/barnehage/bukkespranget-barnehage",
+        "body_sha256": "a3aef62d7c91cf755b37befb87014a86f17d713d930cc972d468839718dabafb",
+        "title": "Bukkespranget Barnehage | Læringsverkstedet",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "LÆRINGSVERKSTEDET BUKKESPRANGET BARNEHAGE AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"nb-NO\" class=\"no-js\">\n\n<head>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https://laringsverkstedet"
+      },
+      {
+        "requested_url": "https://laringsverkstedet.no/barnehage/bukkespranget-barnehage/kontakt",
+        "status": 200,
+        "url": "https://laringsverkstedet.no/barnehage/bukkespranget-barnehage/kontakt",
+        "body_sha256": "f5663d950cbb3e164a68a1e8039a4947b6a248bb2e2f47d4e7c57f94ef3a6c29",
+        "title": "Læringsverkstedet | Kontakt Bukkespranget barnehage",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "LÆRINGSVERKSTEDET BUKKESPRANGET BARNEHAGE AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"nb-NO\" class=\"no-js\">\n\n<head>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https://laringsverkstedet"
+      },
+      {
+        "requested_url": "https://laringsverkstedet.no/kontakt",
+        "status": 200,
+        "url": "https://laringsverkstedet.no/kontakt",
+        "body_sha256": "2c416c5dcc3d6d763276a4ab0e670e40d36c782485320d341f5a88041a4fa83f",
+        "title": "Læringsverkstedet | Kontakt",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "LÆRINGSVERKSTEDET BUKKESPRANGET BARNEHAGE AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"nb-NO\" class=\"no-js\">\n\n<head>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link href=\"https://laringsverkstedet"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "984215606",
+    "name": "SOLVANGEN BARNEHAGE SA",
+    "candidate": {
+      "orgnr": "984240317",
+      "name": "Solvangen barnehage",
+      "website": "https://solvangen.vigilo.no",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690124665,
+      "tags": {
+        "ref:NO:orgnr": "984240317",
+        "name": "Solvangen barnehage",
+        "website": "https://solvangen.vigilo.no",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "984240317",
+      "parent_orgnr": "984215606",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690124665"
+    },
+    "context": {
+      "name": "SOLVANGEN BARNEHAGE SA",
+      "subunits": [
+        {
+          "orgnr": "984240317",
+          "name": "SOLVANGEN BARNEHAGE SA",
+          "email": "heather.ahlers@solvangen.com",
+          "phone": "72 56 70 10",
+          "website": "solvangen.vigilo.no",
+          "address": {
+            "adresse": "Solvangen 181",
+            "postnummer": "7027",
+            "poststed": "TRONDHEIM",
+            "kommune": "TRONDHEIM"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "984215606",
+        "984240317"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://solvangen.vigilo.no/",
+        "error": "gaierror: [Errno 11001] getaddrinfo failed"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "915697275",
+    "name": "VIKKILEN BARNEHAGE AS",
+    "candidate": {
+      "orgnr": "998624630",
+      "name": "Vikkilen barnehage",
+      "website": "https://firearstider.no/vikkilen",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 5547096773,
+      "tags": {
+        "ref:NO:orgnr": "998624630",
+        "name": "Vikkilen barnehage",
+        "website": "https://firearstider.no/vikkilen",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "998624630",
+      "parent_orgnr": "915697275",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/5547096773"
+    },
+    "context": {
+      "name": "VIKKILEN BARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "998624630",
+          "name": "VIKKILEN BARNEHAGE AS",
+          "email": "siren@firearstider.no",
+          "phone": "90927098",
+          "website": "www.firearstider.no/vikkilen",
+          "address": {
+            "adresse": "J. M. Uglands vei 30",
+            "postnummer": "4878",
+            "poststed": "GRIMSTAD",
+            "kommune": "GRIMSTAD"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "915697275",
+        "998624630"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://firearstider.no/vikkilen",
+        "status": 200,
+        "url": "https://www.firearstider.no/vikkilen",
+        "body_sha256": "b8af44dd2a39cde63f5edb0d35f4a108771f4c5d688b534da649c002ef281d9b",
+        "title": "Vikkilen Barnehage",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "915697275",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "der.no </a><br><strong>Org.nr. </strong>915 697 275</p></div>\n          \n        </div>\n\n\t\t<p class=\"credit\">Design: <a href=\"http://www.tressdesign.n"
+      },
+      {
+        "requested_url": "https://www.firearstider.no/vikkilen",
+        "status": 200,
+        "url": "https://www.firearstider.no/vikkilen",
+        "body_sha256": "6ccba062640ed62ce687198c7071c122a0b6e0b6a0d7759b9be045b34a95dfd8",
+        "title": "Vikkilen Barnehage",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "915697275",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "der.no </a><br><strong>Org.nr. </strong>915 697 275</p></div>\n          \n        </div>\n\n\t\t<p class=\"credit\">Design: <a href=\"http://www.tressdesign.n"
+      },
+      {
+        "requested_url": "https://www.firearstider.no/barnehage/kontakt/vikkilen",
+        "status": 200,
+        "url": "https://www.firearstider.no/barnehage/kontakt/vikkilen",
+        "body_sha256": "f819afbfa8558316157698965063776c0f0ed9fd7bff48b7a80b1ebbb9bd8f08",
+        "title": "Vikkilen Barnehage – Kontakt oss",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "915697275",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "Grimstad<br><br>\n              Org. nr. 915 697 275\n              \n              <br><br>\n              <strong>Åpningstider:</strong><br>\n           "
+      }
+    ],
+    "passes": true,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "927311216",
+    "name": "MELLOM-NES FUS BARNEHAGE AS",
+    "candidate": {
+      "orgnr": "993891231",
+      "name": "Mellom-Nes FUS barnehage",
+      "website": "https://mellomnes.bhg.no/",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690125259,
+      "tags": {
+        "ref:NO:orgnr": "993891231",
+        "name": "Mellom-Nes FUS barnehage",
+        "website": "https://mellomnes.bhg.no/",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "993891231",
+      "parent_orgnr": "927311216",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690125259"
+    },
+    "context": {
+      "name": "MELLOM-NES FUS BARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "993891231",
+          "name": "MELLOM-NES FUS BARNEHAGE AS",
+          "email": "dl.mellomnes@bhg.no",
+          "phone": "99200792",
+          "website": "mellomnes.bhg.no/",
+          "address": {
+            "adresse": "Nesbruveien 70",
+            "postnummer": "1394",
+            "poststed": "NESBRU",
+            "kommune": "ASKER"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "927311216",
+        "993891231"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://mellomnes.bhg.no/",
+        "error": "SourceFailure: URL lies outside this company's permitted candidate domains"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "994517619",
+    "name": "ØLVE MONTESSORISKULE SA",
+    "candidate": {
+      "orgnr": "994665995",
+      "name": "Ølve montessoriskule",
+      "website": "https://minskole.no/olve",
+      "category": {
+        "key": "amenity",
+        "value": "school"
+      },
+      "type": "way",
+      "id": 129805446,
+      "tags": {
+        "ref:NO:orgnr": "994665995",
+        "name": "Ølve montessoriskule",
+        "website": "https://minskole.no/olve",
+        "amenity": "school"
+      },
+      "tagged_orgnr": "994665995",
+      "parent_orgnr": "994517619",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/way/129805446"
+    },
+    "context": {
+      "name": "ØLVE MONTESSORISKULE SA",
+      "subunits": [
+        {
+          "orgnr": "994665995",
+          "name": "ØLVE MONTESSORISKULE SA",
+          "email": "post@olvemontessori.no",
+          "phone": "53 48 78 01",
+          "website": "olvemontessori.no",
+          "address": {
+            "adresse": "Ølvesvegen 461",
+            "postnummer": "5637",
+            "poststed": "ØLVE",
+            "kommune": "KVINNHERAD"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "994517619",
+        "994665995"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://minskole.no/olve",
+        "status": 410,
+        "url": "https://minskole.no/ErrorPages/410.aspx",
+        "error": "ValueError: HTTP 410"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "911660679",
+    "name": "REINE RORBUER DRIFT AS",
+    "candidate": {
+      "orgnr": "911660679",
+      "name": "Gammelbua Restaurant",
+      "website": "https://reinerorbuer.no/restaurant-og-selskap/",
+      "category": {
+        "key": "amenity",
+        "value": "restaurant"
+      },
+      "type": "node",
+      "id": 5009543163,
+      "tags": {
+        "ref:NO:orgnr": "911660679",
+        "name": "Gammelbua Restaurant",
+        "website": "https://reinerorbuer.no/restaurant-og-selskap/",
+        "amenity": "restaurant"
+      },
+      "tagged_orgnr": "911660679",
+      "parent_orgnr": "911660679",
+      "is_subunit": false,
+      "osm_url": "https://www.openstreetmap.org/node/5009543163"
+    },
+    "context": {
+      "name": "REINE RORBUER DRIFT AS",
+      "subunits": [],
+      "allowed_orgnrs": [
+        "911660679"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://reinerorbuer.no/restaurant-og-selskap/",
+        "status": 200,
+        "url": "https://reinerorbuer.no/restaurant-og-selskap/",
+        "body_sha256": "d708802d6c7d0fc1e379ef09242a3476b04e9c09330a40fb1050db6e86c01e5a",
+        "title": "Restaurant og selskap - Reine Rorbuer",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "REINE RORBUER DRIFT AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html lang=\"nb-NO\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"profile\" href=\"http://gmpg.org/xfn/11\">\n\n  <!-- Resource hints for better performance -->\n  <link rel=\"preconnect\" href=\"https://use.typekit.net\" c"
+      },
+      {
+        "requested_url": "https://reinerorbuer.no/kontakt-oss/",
+        "status": 200,
+        "url": "https://reinerorbuer.no/kontakt-oss/",
+        "body_sha256": "963faf44be2e7b6d53e2a053576529eb91d65e85bf6b6e3725af51b082d8a409",
+        "title": "Kontakt oss - Reine Rorbuer",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "REINE RORBUER DRIFT AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html lang=\"nb-NO\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link rel=\"profile\" href=\"http://gmpg.org/xfn/11\">\n\n  <!-- Resource hints for better performance -->\n  <link rel=\"preconnect\" href=\"https://use.typekit.net\" c"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "881209942",
+    "name": "JUSTØY SKOLE - MONTESSORISKOLEN I LILLESAND STI",
+    "candidate": {
+      "orgnr": "982944538",
+      "name": "Justøy skole - Montessoriskolen i Lillesand",
+      "website": "https://minskole.no/justoy",
+      "category": {
+        "key": "amenity",
+        "value": "school"
+      },
+      "type": "node",
+      "id": 5819974720,
+      "tags": {
+        "ref:NO:orgnr": "982944538",
+        "name": "Justøy skole - Montessoriskolen i Lillesand",
+        "website": "https://minskole.no/justoy",
+        "amenity": "school"
+      },
+      "tagged_orgnr": "982944538",
+      "parent_orgnr": "881209942",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/5819974720"
+    },
+    "context": {
+      "name": "JUSTØY SKOLE - MONTESSORISKOLEN I LILLESAND STI",
+      "subunits": [
+        {
+          "orgnr": "982944538",
+          "name": "JUSTØY SKOLE - MONTESSORISKOLEN I LILLESAND STI",
+          "email": "ingrid@jmskole.no",
+          "phone": "41506262",
+          "website": "www.minskole.no/justoy",
+          "address": {
+            "adresse": "Justøyveien 540",
+            "postnummer": "4780",
+            "poststed": "BREKKESTØ",
+            "kommune": "LILLESAND"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "881209942",
+        "982944538"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://minskole.no/justoy",
+        "status": 200,
+        "url": "https://minskole.no/justoy",
+        "body_sha256": "756e3d95c6dcaff759fc1e00aecd6c92f99f33a57ce68fb020c45ce2b495f6dc",
+        "title": "\r\n\tJustøy skole - Montessoriskolen i Lillesand - Nyheter\r\n",
+        "proof": {
+          "level": "REJECT",
+          "proof_type": "",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "different_legal_entity",
+          "token": "",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "\r\n\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /><link href=\"/Styles/Default.css?guid=20180610\" rel=\"stylesheet\" /><link href=\"/Styles/Widgets.css?guid=20140324\" rel=\"stylesheet\" /><link href=\"/Styles/Subpages.css?guid=20140704\" rel=\"styles"
+      },
+      {
+        "requested_url": "https://minskole.no/justoy/Underside/1823",
+        "status": 200,
+        "url": "https://minskole.no/justoy/Underside/1823",
+        "body_sha256": "f0698716081ce2989924c16c4dc54e99e7628a75639e0cbc2b83a4dcaae73fe6",
+        "title": "\r\n\tJustøy skole - Montessoriskolen i Lillesand - Kontakt oss\r\n",
+        "proof": {
+          "level": "REJECT",
+          "proof_type": "",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "different_legal_entity",
+          "token": "",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "\r\n\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /><link href=\"/Styles/Default.css?guid=20180610\" rel=\"stylesheet\" /><link href=\"/Styles/Widgets.css?guid=20140324\" rel=\"stylesheet\" /><link href=\"/Styles/Subpages.css?guid=20140704\" rel=\"styles"
+      },
+      {
+        "requested_url": "https://minskole.no/justoy/kontakt/bedrift/369",
+        "status": 200,
+        "url": "https://minskole.no/justoy/kontakt/bedrift/369",
+        "body_sha256": "538eb73bf5844273d2845de329576b46c909868a422e5a6d6a62c78c80bb0525",
+        "title": "\r\n\tJustøy skole - Montessoriskolen i Lillesand\r\n",
+        "proof": {
+          "level": "REJECT",
+          "proof_type": "",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "different_legal_entity",
+          "token": "",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "\r\n\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /><link href=\"/Styles/Default.css?guid=20180610\" rel=\"stylesheet\" /><link href=\"/Styles/Widgets.css?guid=20140324\" rel=\"stylesheet\" /><link href=\"/Styles/Subpages.css?guid=20140704\" rel=\"styles"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": true
+  },
+  {
+    "orgnr": "971499346",
+    "name": "RØYSEPLASSEN BARNEHAGE SA",
+    "candidate": {
+      "orgnr": "973497820",
+      "name": "Røyseplassen barnehage",
+      "website": "https://royseplassen.no/",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690123254,
+      "tags": {
+        "ref:NO:orgnr": "973497820",
+        "name": "Røyseplassen barnehage",
+        "website": "https://royseplassen.no/",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "973497820",
+      "parent_orgnr": "971499346",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690123254"
+    },
+    "context": {
+      "name": "RØYSEPLASSEN BARNEHAGE SA",
+      "subunits": [
+        {
+          "orgnr": "973497820",
+          "name": "RØYSEPLASSEN BARNEHAGE SA",
+          "email": "styrer@royseplassen.no",
+          "phone": "32 88 88 88",
+          "website": "www.royseplassen.no/",
+          "address": {
+            "adresse": "Røyseplassen 12B",
+            "postnummer": "3033",
+            "poststed": "DRAMMEN",
+            "kommune": "DRAMMEN"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "971499346",
+        "973497820"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://royseplassen.no/",
+        "error": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'royseplassen.no'. (_ssl.c:1010)"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "971500662",
+    "name": "SKØYEN TERRASSE BARNEHAGE STI",
+    "candidate": {
+      "orgnr": "973501879",
+      "name": "Skøyen terrasse barnehage Sti",
+      "website": "https://stb.barnehage.no/",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "way",
+      "id": 1244845046,
+      "tags": {
+        "ref:NO:orgnr": "973501879",
+        "name": "Skøyen terrasse barnehage Sti",
+        "website": "https://stb.barnehage.no/",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "973501879",
+      "parent_orgnr": "971500662",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/way/1244845046"
+    },
+    "context": {
+      "name": "SKØYEN TERRASSE BARNEHAGE STI",
+      "subunits": [
+        {
+          "orgnr": "973501879",
+          "name": "SKØYEN TERRASSE BARNEHAGE STI",
+          "email": "styrer@stbhg.no",
+          "phone": "22733411",
+          "website": "stb.barnehage.no/",
+          "address": {
+            "adresse": "Konventveien 76",
+            "postnummer": "0276",
+            "poststed": "OSLO",
+            "kommune": "OSLO"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "971500662",
+        "973501879"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://stb.barnehage.no/",
+        "error": "SourceFailure: URL lies outside this company's permitted candidate domains"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "930548537",
+    "name": "ESPIRA KUNNSKAPSBYEN AS",
+    "candidate": {
+      "orgnr": "977066026",
+      "name": "Espira Kunnskapsbyen barnehage",
+      "website": "https://espira.no/barnehage/espira-kunnskapsbyen/",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "way",
+      "id": 941121118,
+      "tags": {
+        "ref:NO:orgnr": "977066026",
+        "name": "Espira Kunnskapsbyen barnehage",
+        "website": "https://espira.no/barnehage/espira-kunnskapsbyen/",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "977066026",
+      "parent_orgnr": "930548537",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/way/941121118"
+    },
+    "context": {
+      "name": "ESPIRA KUNNSKAPSBYEN AS",
+      "subunits": [
+        {
+          "orgnr": "977066026",
+          "name": "ESPIRA KUNNSKAPSBYEN BARNEHAGE",
+          "email": "linn.baardseth@espira.no",
+          "phone": "64840350",
+          "website": "espira.no/barnehage/espira-kunnskapsbyen/",
+          "address": {
+            "adresse": "Elvengveien 14",
+            "postnummer": "2007",
+            "poststed": "KJELLER",
+            "kommune": "LILLESTRØM"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "930548537",
+        "977066026"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://espira.no/barnehage/espira-kunnskapsbyen/",
+        "status": 200,
+        "url": "https://espira.no/barnehager/lillestrom/kunnskapsbyen",
+        "body_sha256": "df7cd0c331935e46e23e953f26ab503c30dd4881b4dd1dc5769fa4a8026f702c",
+        "title": "Espira Kunnskapsbyen barnehage – trygg og inspirerende barnehage på Kjeller ",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "legal_name_and_registry_contact",
+          "signals": [
+            "exact_legal_name",
+            "street",
+            "postcode_city",
+            "phone"
+          ],
+          "points": 8,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "ESPIRA KUNNSKAPSBYEN BARNEHAGE",
+          "subject_orgnr": "977066026"
+        },
+        "proof_excerpt": "me=\"theme-color\" content=\"#000\"/><title>Espira Kunnskapsbyen barnehage – trygg og inspirerende barnehage på Kjeller </title><meta name=\"description\" content=\"Espira Kunnskapsbyen i Lillestrøm tilbyr stort uteområde, sunn mat, språk- og realfagssatsing, og egen skolespireavdeling. En trygg barnehage "
+      },
+      {
+        "requested_url": "https://espira.no/om-espira/kontakt-oss",
+        "status": 200,
+        "url": "https://espira.no/om-espira/kontakt-oss",
+        "body_sha256": "3e683b30fc806cf9632b66eeaf0a4f24a81a430998a46c8104e31b68b14202f7",
+        "title": "Kontakt Espira",
+        "proof": {
+          "level": "LOW",
+          "proof_type": "signals",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "insufficient_owner_proof",
+          "token": "ESPIRA KUNNSKAPSBYEN AS",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html><html lang=\"en\" class=\"__variable_166268 __variable_d8ebd1 __variable_38a545\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"preload\" href=\"/_next/static/media/2b419e8fb2fec4ad-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font"
+      },
+      {
+        "requested_url": "https://espira.no/personvernerklaering",
+        "status": 200,
+        "url": "https://espira.no/personvernerklaering",
+        "body_sha256": "34370a8ab8262ec29ecf3258e6bc3904b1ca1eb3b3fb194b4b4035de8d6eb66a",
+        "title": "Personvernerklæring",
+        "proof": {
+          "level": "REJECT",
+          "proof_type": "",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "different_legal_entity",
+          "token": "",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": " font-medium md:font-semibold text-sm md:text-lg\">Kunnskapsbarnehagen</div></div><div class=\"flex md:gap-12 sm:gap-10 gap-6\"><button class=\"flex flex-row-reverse items-center justify-center gap-2 text-[#111820] md:text-lg font-medium self-center text-btn bg-transparent text-left leading-8 font-semib"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": true
+  },
+  {
+    "orgnr": "921094647",
+    "name": "LIVENSVEEN GÅRDSBARNEHAGE AS",
+    "candidate": {
+      "orgnr": "988484539",
+      "name": "Livensveen gårdsbarnehage",
+      "website": "https://livensveen.no",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690124890,
+      "tags": {
+        "ref:NO:orgnr": "988484539",
+        "name": "Livensveen gårdsbarnehage",
+        "website": "https://livensveen.no",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "988484539",
+      "parent_orgnr": "921094647",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690124890"
+    },
+    "context": {
+      "name": "LIVENSVEEN GÅRDSBARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "988484539",
+          "name": "LIVENSVEEN GÅRDSBARNEHAGE AS",
+          "email": "ane.cecilie@livensveen.no",
+          "phone": "62594110",
+          "website": "www.livensveen.no",
+          "address": {
+            "adresse": "Mosjøvegen 52",
+            "postnummer": "2340",
+            "poststed": "LØTEN",
+            "kommune": "LØTEN"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "921094647",
+        "988484539"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://livensveen.no/",
+        "status": 200,
+        "url": "https://livensveen.no/index.html",
+        "body_sha256": "6a03ff6f0861750fdd4679784b30623f68e154a4f94df991978f3d60d7b70293",
+        "title": "Livensveen Gårdsbarnehage - Hjem",
+        "proof": {
+          "level": "REJECT",
+          "proof_type": "",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [
+            "116738872"
+          ],
+          "reason": "foreign_orgnr",
+          "token": "",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "<!DOCTYPE html>\n<html lang=\"no_NO\">\n\t<head><script src=\"/gdpr/gdprscript.js?buildTime=1791487143&hasRemindMe=true&stealth=false\"></script>\n\t\t<title>Livensveen G&aring;rdsbarnehage - Hjem</title><meta property=\"og:site_name\" content=\"Livensveen G&aring;rdsbarnehage\" />\n<meta property=\"og:title\" conte"
+      },
+      {
+        "requested_url": "https://livensveen.no/kontakt.html",
+        "status": 200,
+        "url": "https://livensveen.no/kontakt.html",
+        "body_sha256": "c21072b505198dcd233cbadb62851ce29124ed36e8bd96422517308a13225551",
+        "title": "Kontakt - Livensveen Gårdsbarnehage",
+        "proof": {
+          "level": "MEDIUM",
+          "proof_type": "signals",
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "name_without_suffix_insufficient_contacts_or_domain",
+          "token": "livensveen gårdsbarnehage",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "aragraph\">&#8203;<strong>Adresse:<br />&#8203;Livensveen g&aring;rdsbarnehage<br />Mosj&oslash;veien 52<br />2340 L&oslash;ten</strong></div>\n\n<div class=\"paragraph\">&#8203;<strong>Eier/styrer</strong>:<br />Ane Cecilie Myklevik&nbsp;<br />Mob: 41 42 91 76<br />E-post: <font size=\"3\">anececilie@live"
+      },
+      {
+        "requested_url": "https://livensveen.no/om-oss.html",
+        "status": 200,
+        "url": "https://livensveen.no/om-oss.html",
+        "body_sha256": "29ba920c89a4c0bf6a812ae1765bc2d0467db0e56b53a814186150d3e16250fe",
+        "title": "om oss - Livensveen Gårdsbarnehage",
+        "proof": {
+          "level": "MEDIUM",
+          "proof_type": "signals",
+          "signals": [
+            "legal_name_without_suffix"
+          ],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "name_without_suffix_insufficient_contacts_or_domain",
+          "token": "livensveen gårdsbarnehage",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "a8044\">Naturbarnehage og!</font><br />I Livensveen g&aring;rdsbarnehage st&aring;r friluftsliv, samt lek og l&aelig;ring i naturen like sterkt som tilh&oslash;righet til g&aring;rd. Vi har en unik beliggenhet i skogkanten og ansatte som vet &aring; bruke mulighetene dette gir.&nbsp;<br />Vi er oppta"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": true
+  },
+  {
+    "orgnr": "930868981",
+    "name": "LÆRINGSVERKSTEDET GRØNNLIA NATURBARNEHAGE AS",
+    "candidate": {
+      "orgnr": "993979686",
+      "name": "Læringsverkstedet Grønnlia naturbarnehage",
+      "website": "https://laringsverkstedet.no/barnehage/gr%c3%b8nnlia",
+      "category": {
+        "key": "amenity",
+        "value": "kindergarten"
+      },
+      "type": "node",
+      "id": 11690125265,
+      "tags": {
+        "ref:NO:orgnr": "993979686",
+        "name": "Læringsverkstedet Grønnlia naturbarnehage",
+        "website": "https://laringsverkstedet.no/barnehage/gr%c3%b8nnlia",
+        "amenity": "kindergarten"
+      },
+      "tagged_orgnr": "993979686",
+      "parent_orgnr": "930868981",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/11690125265"
+    },
+    "context": {
+      "name": "LÆRINGSVERKSTEDET GRØNNLIA NATURBARNEHAGE AS",
+      "subunits": [
+        {
+          "orgnr": "993979686",
+          "name": "LÆRINGSVERKSTEDET GRØNNLIA NATURBARNEHAGE",
+          "email": "gronnlia@laringsverkstedet.no",
+          "phone": "95795355",
+          "website": "laringsverkstedet.no/barnehage/gr%C3%B8nnlia",
+          "address": {
+            "adresse": "Buveien 61",
+            "postnummer": "8521",
+            "poststed": "ANKENES",
+            "kommune": "NARVIK"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "930868981",
+        "993979686"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://laringsverkstedet.no/barnehage/gr%c3%b8nnlia",
+        "status": 404,
+        "url": "https://laringsverkstedet.no/barnehage/gr%c3%b8nnlia",
+        "error": "ValueError: HTTP 404"
+      }
+    ],
+    "passes": false,
+    "owner_conflict": false
+  },
+  {
+    "orgnr": "937896859",
+    "name": "FANA SPAREBANK",
+    "candidate": {
+      "orgnr": "973162063",
+      "name": "Fana Sparebank Sentrum",
+      "website": "https://www.fanasparebank.no/",
+      "category": {
+        "key": "amenity",
+        "value": "bank"
+      },
+      "type": "node",
+      "id": 3997139339,
+      "tags": {
+        "ref:NO:orgnr": "973162063",
+        "name": "Fana Sparebank Sentrum",
+        "website": "https://www.fanasparebank.no/",
+        "amenity": "bank"
+      },
+      "tagged_orgnr": "973162063",
+      "parent_orgnr": "937896859",
+      "is_subunit": true,
+      "osm_url": "https://www.openstreetmap.org/node/3997139339"
+    },
+    "context": {
+      "name": "FANA SPAREBANK",
+      "subunits": [
+        {
+          "orgnr": "925519189",
+          "name": "FANA SPAREBANK AVD OS",
+          "email": "post@fanasparebank.no",
+          "phone": "",
+          "website": "",
+          "address": {
+            "adresse": "Brugata 10",
+            "postnummer": "5200",
+            "poststed": "OS",
+            "kommune": "BJØRNAFJORDEN"
+          }
+        },
+        {
+          "orgnr": "973162055",
+          "name": "FANA SPAREBANK HOVEDKONTOR",
+          "email": "",
+          "phone": "",
+          "website": "",
+          "address": {
+            "adresse": "Østre Nesttunvegen 1",
+            "postnummer": "5221",
+            "poststed": "NESTTUN",
+            "kommune": "BERGEN"
+          }
+        },
+        {
+          "orgnr": "973162063",
+          "name": "FANA SPAREBANK AVD SENTRUM",
+          "email": "",
+          "phone": "51 91 98 00",
+          "website": "",
+          "address": {
+            "adresse": "Kaigaten 8",
+            "postnummer": "5016",
+            "poststed": "BERGEN",
+            "kommune": "BERGEN"
+          }
+        }
+      ],
+      "allowed_orgnrs": [
+        "925519189",
+        "937896859",
+        "973162055",
+        "973162063"
+      ]
+    },
+    "pages": [
+      {
+        "requested_url": "https://www.fanasparebank.no/",
+        "status": 200,
+        "url": "https://www.fanasparebank.no/",
+        "body_sha256": "371a0d51cbff96e0437ec588cb1c8f6da6b4e94e847d9fc1b8e1f686a917ec85",
+        "title": "Din bank i Vest | Fana Sparebank",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "937896859",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "        <p class=\"footer__address-line\">937 896 859</p>\n                </div>\n            </div>\n\n            <div class=\"footer__bottom\">\n          "
+      },
+      {
+        "requested_url": "https://www.fanasparebank.no/privat/kontakt-oss/book-mote/",
+        "status": 200,
+        "url": "https://www.fanasparebank.no/privat/kontakt-oss/book-mote/",
+        "body_sha256": "887b83da83214c0d83564fa8c36fe44e56f467315ebad3d038ec526b72604eb4",
+        "title": "Book møte med rådgiver | Fana Sparebank",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "937896859",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "        <p class=\"footer__address-line\">937 896 859</p>\n                </div>\n            </div>\n\n            <div class=\"footer__bottom\">\n          "
+      },
+      {
+        "requested_url": "https://www.fanasparebank.no/privat/tips-og-rad/svindel-og-sikkerhet/",
+        "status": 200,
+        "url": "https://www.fanasparebank.no/privat/tips-og-rad/svindel-og-sikkerhet/",
+        "body_sha256": "16aeaea5ed14a0a6057a594430483b7ecfc12315ff40425a6e8cff1976e24281",
+        "title": "Svindlet? Ta grep kjapt | Fana Sparebank",
+        "proof": {
+          "level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "signals": [],
+          "points": 0,
+          "other_orgnrs": [],
+          "reason": "",
+          "token": "937896859",
+          "subject_orgnr": ""
+        },
+        "proof_excerpt": "        <p class=\"footer__address-line\">937 896 859</p>\n                </div>\n            </div>\n\n            <div class=\"footer__bottom\">\n          "
+      }
+    ],
+    "passes": true,
+    "owner_conflict": false
+  }
+]
