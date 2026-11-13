@@ -1,0 +1,52 @@
+[
+  {
+    "orgnr": "983486703",
+    "company": "RØRLEGGERMESTER TORSTEIN SOLLI AS",
+    "kind": "website",
+    "claim": {
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.torsteinsolli.no",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.torsteinsolli.no/personvern",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "cc_index",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "916044d81513d382284326a745194e94c0f593c436e8a5228679d2e9c62e11ae"
+      ],
+      "id": "b8814d9a7dc9ffc675cf95021b4ba6b7842df0d06acbb3f06ca28b5ae277e481",
+      "family": "website",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-13T11:11:57.068068Z",
+      "last_observed_at": "2026-11-13T11:11:57.068068Z",
+      "reasons": {}
+    },
+    "sources": [
+      {
+        "id": "916044d81513d382284326a745194e94c0f593c436e8a5228679d2e9c62e11ae",
+        "source_url": "https://www.torsteinsolli.no/personvern",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-13T11:11:57.068068Z",
+        "content_sha256": "2de2983e9ed7d940c3c6b0c2d4316b2818b72fc171be91a86a373ad639452a58",
+        "claim_span": "Torstein Solli AS<br>Foretaksregisteret 983 486 703 MVA</p><p class=\"footertext\" style=\"text-align: center;\">Utviklet av <a href=\"https://hjemmesidehu",
+        "locator": "identity-proof:983486703",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  }
+]

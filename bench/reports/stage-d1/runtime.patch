@@ -1,0 +1,26 @@
+diff --git a/src/signalpost/web/fetcher.py b/src/signalpost/web/fetcher.py
+index a5d0c1e..6707191 100644
+--- a/src/signalpost/web/fetcher.py
++++ b/src/signalpost/web/fetcher.py
+@@ -158,8 +158,6 @@ class WebsiteHttp:
+                 # within the pooled global limit and hard 40/company ceiling.
+                 company_cap = min(40,self.config.website_request_cap + int(org in self.activity_extra),
+                                   max(0,self.config.website_total_request_cap-registry_requests))
+-                if org not in self.careers_active:
+-                    company_cap = max(0, company_cap - self.careers_reserves.get(org, 0))
+                 if self.counts.get(org, 0) >= company_cap:
+                     raise SourceFailure("website_budget_exhausted")
+                 event = self.budget.reserve(url, parts.hostname, org)
+@@ -261,9 +259,10 @@ class WebsiteHttp:
+     def reserve_careers(self, org):
+         """Earmark unused local slots after proof; never lift a hard ceiling.
+ 
++        This is an additive target, not a reduction of primary/activity caps.
+         Global requests are claimed only by the final careers pass, after all
+-        primary website work has finished. Optional activity cannot consume
+-        these local slots in the meantime.
++        primary work. The original activity allowance and hard 40 ceiling win
++        if no local headroom remains; incomplete careers coverage stays honest.
+         """
+         if org not in self.careers_reserves:
+             remaining = min(40 - self.budget.by_company[org],
