@@ -1,0 +1,91 @@
+[
+  {
+    "orgnr": "993919675",
+    "legal_name": "FEIE- OG TILSYNSTJENESTER AS",
+    "claim": {
+      "field": "procurement_award.b1ea37d59a84c65b19ecdb35",
+      "value": {
+        "kind": "Public procurement award",
+        "title": "(25081) Sweeping services",
+        "buyer": [
+          "Asker og Bærum Brann og Redning IKS"
+        ],
+        "award_date": "2025-05-09",
+        "date": "2025-05-09",
+        "notice_id": "341549-2025",
+        "contract_id": "CON-0001",
+        "company_orgnr": "993919675",
+        "matched_role": "winner",
+        "url": "https://ted.europa.eu/en/notice/-/detail/341549-2025",
+        "value": 8529600.0,
+        "currency": "NOK"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "93021a18b4ad7596d4f93066bf43125dfc3d419699c3025cdb566bd5d71ffd2a",
+        "e4aee3eee85e0647273918282c4d108dab60c4163ecbc1031f194c928f1ce82f",
+        "95365d12d47473f34d798317edf9230228641eae0ea3ce7301468bd09da39bed",
+        "ab820a7c39f15301860404e899961f0236ab956fd6d8597bf317040be004af8a",
+        "32c92ddd91ba9f9f1e97564ce01a53f56fe5125b1cde712aa5055331fd5ed100",
+        "c5b0f9a708e83f021784fd2d37e20f39ec13a44da097c6e43fc44ead7cc47a9e",
+        "87b84e37617885fb8369666a730e5dd3c79d9b5583bd82146b2213af26454467",
+        "8af1cd37395839953f567c09cc27a0f9785014799e218ba797e3cfa2c713917a",
+        "de86c4fc1c7b39abe96efa73b452eb5f20c881a78626afdb5fa9c3991f2a586c",
+        "7b85bf81cace33de401bc6d10a8e24aa5c3f8f1c1310b9356d9ad1b5c06448b7"
+      ],
+      "id": "ec7e71247d61c2bf9240cd83a0f593083ba3633ec4843ca4b173166dd2fdcc32",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-13T13:21:06.346089Z",
+      "last_observed_at": "2026-11-13T13:21:06.346089Z",
+      "reasons": {
+        "label": "Public procurement award"
+      }
+    },
+    "source": {
+      "id": "93021a18b4ad7596d4f93066bf43125dfc3d419699c3025cdb566bd5d71ffd2a",
+      "source_url": "https://ted.europa.eu/en/notice/341549-2025/xml",
+      "source_class": "TED",
+      "retrieved_at": "2026-11-13T13:21:06.346089Z",
+      "content_sha256": "c76eb4b6052b2a5c7c7f5c650b43cbeb793333c5e713bff5b7d7800527590761",
+      "claim_span": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><ContractAwardNotice xmlns=\"urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2\" xmlns:cac=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\" xmlns:cbc=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBas",
+      "locator": "/ContractAwardNotice",
+      "extraction_method": "signalpost.official_extra.v1",
+      "source_identifier": null,
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "matching_company_xml": [
+      "<ns0:Company xmlns:ns0=\"http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1\" xmlns:ns1=\"http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1\" xmlns:ns2=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\" xmlns:ns3=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\">\n                <ns1:CompanySizeCode listName=\"economic-operator-size\">medium</ns1:CompanySizeCode>\n                <ns2:PartyIdentification>\n                  <ns3:ID schemeName=\"organization\">ORG-0004</ns3:ID>\n                </ns2:PartyIdentification>\n                \n                <ns2:PartyName>\n                  <ns3:Name languageID=\"ENG\">Feie og tilsynstjenester AS</ns3:Name>\n                </ns2:PartyName>\n                <ns2:PostalAddress>\n                  <ns3:StreetName>Gamle Ringeriksvei 47</ns3:StreetName>\n                  <ns3:Department>Feiing/Tilsyn</ns3:Department>\n                  <ns3:CityName>Bekkestua</ns3:CityName>\n                  <ns3:PostalZone>1357</ns3:PostalZone>\n                  <ns3:CountrySubentityCode listName=\"nuts\">NO084</ns3:CountrySubentityCode>\n                  <ns2:Country>\n                    <ns3:IdentificationCode listName=\"country\">NOR</ns3:IdentificationCode>\n                  </ns2:Country>\n                </ns2:PostalAddress>\n                <ns2:PartyLegalEntity>\n                  <ns3:CompanyID schemeID=\"002\">993919675</ns3:CompanyID>\n                </ns2:PartyLegalEntity>\n                <ns2:Contact>\n                  <ns3:Name>Geir Sørlie-Reininger</ns3:Name>\n                  <ns3:Telephone>+4740018551</ns3:Telephone>\n                  <ns3:ElectronicMail>post@tilsyn.no</ns3:ElectronicMail>\n                </ns2:Contact>\n              </ns0:Company>\n            "
+    ],
+    "contract_xml": "<ns0:SettledContract xmlns:ns0=\"http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1\" xmlns:ns1=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\" xmlns:ns2=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\">\n              <ns1:ID schemeName=\"contract\">CON-0001</ns1:ID>\n              <ns1:AwardDate>2025-05-09Z</ns1:AwardDate>\n              <ns1:IssueDate>2025-05-22Z</ns1:IssueDate>\n              \n              <ns1:Title languageID=\"ENG\">General part-Sweeping and inspection services AS</ns1:Title>\n              <ns2:SignatoryParty>\n                <ns2:PartyIdentification>\n                  <ns1:ID schemeName=\"organization\">ORG-0001</ns1:ID>\n                </ns2:PartyIdentification>\n              </ns2:SignatoryParty>\n              <ns0:ContractReference>\n                <ns1:ID>25081-1</ns1:ID>\n              </ns0:ContractReference>\n              <ns0:LotTender>\n                <ns1:ID schemeName=\"tender\">TEN-0002</ns1:ID>\n              </ns0:LotTender>\n            </ns0:SettledContract>\n            ",
+    "linked_tender_xml": [
+      "<ns0:LotTender xmlns:ns0=\"http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1\" xmlns:ns1=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\" xmlns:ns2=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\" xmlns:ns3=\"http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1\">\n              <ns1:ID schemeName=\"tender\">TEN-0002</ns1:ID>\n              <ns2:LegalMonetaryTotal>\n                <ns1:PayableAmount currencyID=\"NOK\">8529600</ns1:PayableAmount>\n              </ns2:LegalMonetaryTotal>\n              <ns0:SubcontractingTerm>\n                <ns3:TermCode listName=\"applicability\">no</ns3:TermCode>\n              </ns0:SubcontractingTerm>\n              <ns0:TenderingParty>\n                <ns1:ID schemeName=\"tendering-party\">TPA-0002</ns1:ID>\n              </ns0:TenderingParty>\n              <ns0:TenderLot>\n                <ns1:ID schemeName=\"Lot\">LOT-0000</ns1:ID>\n              </ns0:TenderLot>\n              <ns0:TenderReference>\n                <ns1:ID>Feiing Asker/Bærum</ns1:ID>\n              </ns0:TenderReference>\n            </ns0:LotTender>\n            "
+    ],
+    "tendering_party_xml": [
+      "<ns0:TenderingParty xmlns:ns0=\"http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1\" xmlns:ns1=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\">\n              <ns1:ID schemeName=\"tendering-party\">TPA-0001</ns1:ID>\n              <ns0:Tenderer>\n                <ns1:ID schemeName=\"organization\">ORG-0003</ns1:ID>\n              </ns0:Tenderer>\n            </ns0:TenderingParty>\n            ",
+      "<ns0:TenderingParty xmlns:ns0=\"http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1\" xmlns:ns1=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\">\n              <ns1:ID schemeName=\"tendering-party\">TPA-0002</ns1:ID>\n              <ns0:Tenderer>\n                <ns1:ID schemeName=\"organization\">ORG-0004</ns1:ID>\n              </ns0:Tenderer>\n            </ns0:TenderingParty>\n            ",
+      "<ns0:TenderingParty xmlns:ns0=\"http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1\" xmlns:ns1=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\">\n              <ns1:ID schemeName=\"tendering-party\">TPA-0003</ns1:ID>\n              <ns0:Tenderer>\n                <ns1:ID schemeName=\"organization\">ORG-0005</ns1:ID>\n              </ns0:Tenderer>\n            </ns0:TenderingParty>\n            ",
+      "<ns0:TenderingParty xmlns:ns0=\"http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1\" xmlns:ns1=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\">\n              <ns1:ID schemeName=\"tendering-party\">TPA-0004</ns1:ID>\n              <ns0:Tenderer>\n                <ns1:ID schemeName=\"organization\">ORG-0006</ns1:ID>\n              </ns0:Tenderer>\n            </ns0:TenderingParty>\n          "
+    ],
+    "buyer_xml": [
+      "<ns0:ContractingParty xmlns:ns0=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\" xmlns:ns1=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\">\n    <ns0:ContractingPartyType>\n      <ns1:PartyTypeCode listName=\"buyer-legal-type\">ra</ns1:PartyTypeCode>\n    </ns0:ContractingPartyType>\n    <ns0:ContractingActivity>\n      <ns1:ActivityTypeCode listName=\"authority-activity\">gen-pub</ns1:ActivityTypeCode>\n    </ns0:ContractingActivity>\n    <ns0:Party>\n      <ns0:PartyIdentification>\n        <ns1:ID schemeName=\"organization\">ORG-0001</ns1:ID>\n      </ns0:PartyIdentification>\n    </ns0:Party>\n  </ns0:ContractingParty>\n  "
+    ],
+    "exact_saved_spans": [
+      "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><ContractAwardNotice xmlns=\"urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2\" xmlns:cac=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\" xmlns:cbc=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBas",
+      "5/25</cbc:ID>\n    \n    <cbc:Name languageID=\"ENG\">(25081) Sweeping services</cbc:Name>\n    \n    <cbc:Description languageID=\"ENG\">The competition is for th",
+      "t\">CON-0001</cbc:ID>\n              <cbc:AwardDate>2025-05-09Z</cbc:AwardDate>\n              <cbc:IssueDate>2025-05-22Z</cbc:IssueDate>\n      ",
+      "ct>\n                <cbc:ID schemeName=\"contract\">CON-0001</cbc:ID>\n              </efac:SettledContract>\n              <efac:TenderLot>\n ",
+      "ame>\n                  <cbc:Name languageID=\"ENG\">Asker og Bærum Brann og Redning IKS</cbc:Name>\n                </cac:PartyName>\n                <cac:PostalAddress>",
+      ">\n                  <cbc:CompanyID schemeID=\"002\">993919675</cbc:CompanyID>\n                </cac:PartyLegalEntity>\n                <cac:Co",
+      "                <cbc:ID schemeName=\"organization\">ORG-0004</cbc:ID>\n              </efac:Tenderer>\n            </efac:TenderingParty>\n    ",
+      "                <cbc:ID schemeName=\"organization\">ORG-0001</cbc:ID>\n                </cac:PartyIdentification>\n              </cac:Signato",
+      "              <cbc:PayableAmount currencyID=\"NOK\">8529600</cbc:PayableAmount>\n              </cac:LegalMonetaryTotal>\n              <efac",
+      "eResult>\n            <cbc:TotalAmount currencyID=\"NOK\">40000000</cbc:TotalAmount>\n            <efac:LotResult>\n              <cbc:ID "
+    ],
+    "verdict": "pending manual review"
+  }
+]
