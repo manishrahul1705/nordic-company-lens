@@ -209,3 +209,72 @@ def test_failed_ted_fetch_retains_previous_award_and_evidence():
     awards=[c for c in current.claims if c.field.startswith('procurement_award.')]
     assert len(awards)==1 and awards[0].id==section.claims[0].id and awards[0].carried_forward
     assert set(awards[0].evidence_ids)<={e.id for e in current.evidence}
+
+
+@pytest.mark.parametrize('number',['923 609 016','923\u00a0609\u00a0016','923609016'])
+def test_gleif_registration_number_spacing_preserves_exact_identity(number):
+    item=record(org=number)
+    assert len(gleif_extract(item,response({'data':[item]}),'/data/0',ORG).claims)==5
+    assert not gleif_extract(record(org=number,ra='RA000473'),response({'data':[item]}),'/data/0',ORG).claims
+
+
+@pytest.mark.parametrize('number',['NO923609016','923-609-016','923609017','923609016 extra',None])
+def test_gleif_spacing_does_not_strip_other_identifier_material(number):
+    assert not gleif_extract(record(org=number),response({'data':[]}),'/data/0',ORG).claims
+
+
+def test_gleif_lookup_includes_both_exact_number_formats():
+    from signalpost.sources.official_extra import gleif_lookup_numbers
+    assert gleif_lookup_numbers([ORG,'984851006'])=='923609016,923 609 016,984851006,984 851 006'
+
+
+def test_gleif_spaced_lookup_is_routed_to_the_exact_input_company(tmp_path):
+    import httpx,time
+    from signalpost.sources.official_extra import collect
+    from signalpost.sources.blobstore import BlobStore
+    from tests.test_registry_changes import envelope
+    events=[]
+    class Budget:
+        deadline=time.monotonic()+30
+        def reserve(self,url,host,org):
+            event={'url':url,'organisation_number':org};events.append(event);return event
+    def dispatch(request):
+        if request.method=='POST':return httpx.Response(200,json={'notices':[],'totalNoticeCount':0})
+        assert request.url.params['filter[entity.registeredAt]']=='RA000472'
+        assert request.url.params['filter[entity.registeredAs]']==ORG+',923 609 016'
+        return httpx.Response(200,json={'data':[record('923 609 016'),record('984 851 006'),record('923 609 016','RA000473')],'meta':{'pagination':{'lastPage':1}}})
+    async def go():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch)) as client:
+            return await collect({ORG:envelope()},client,Budget(),BlobStore(tmp_path))
+    result,metrics=asyncio.run(go())
+    assert metrics['gleif_companies']==1
+    assert len(result[ORG].claims)==5
+    assert all(c.field.startswith('identity.gleif.') for c in result[ORG].claims)
+
+
+def test_gleif_same_direct_and_ultimate_parent_has_one_shared_evidence_record(tmp_path):
+    import httpx,time
+    from signalpost.sources.official_extra import collect
+    from signalpost.sources.blobstore import BlobStore
+    from tests.test_registry_changes import envelope
+    class Budget:
+        deadline=time.monotonic()+30
+        def reserve(self,url,host,org):return {'url':url,'organisation_number':org}
+    def dispatch(request):
+        if request.method=='POST':return httpx.Response(200,json={'notices':[],'totalNoticeCount':0})
+        if request.url.path.endswith('-parent-relationship'):
+            kind='IS_DIRECTLY_CONSOLIDATED_BY' if request.url.path.endswith('/direct-parent-relationship') else 'IS_ULTIMATELY_CONSOLIDATED_BY'
+            return httpx.Response(200,json={'data':{'attributes':{'relationship':{'startNode':{'id':'LEICHILD'},'endNode':{'id':'PARENT'},'status':'ACTIVE','type':kind}}}})
+        if 'filter[lei]' in request.url.params:
+            parent=record('911305631');parent['id']='PARENT';parent['attributes'].update(lei='PARENT');parent['attributes']['entity']['legalName']={'name':'Parent AS'}
+            return httpx.Response(200,json={'data':[parent],'meta':{'pagination':{'lastPage':1}}})
+        child=record('923 609 016');child['relationships']={kind:{'links':{'relationship-record':'https://api.gleif.org/api/v1/lei-records/LEICHILD/'+kind+'-relationship'}} for kind in ['direct-parent','ultimate-parent']}
+        return httpx.Response(200,json={'data':[child],'meta':{'pagination':{'lastPage':1}}})
+    async def go():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch)) as client:
+            return await collect({ORG:envelope()},client,Budget(),BlobStore(tmp_path))
+    result,_=asyncio.run(go());section=result[ORG]
+    parents=[c for c in section.claims if c.field in ['identity.gleif.direct_parent','identity.gleif.ultimate_parent']]
+    assert len(parents)==2 and all(c.value['lei']=='PARENT' for c in parents)
+    assert len(section.evidence)==len({e.id for e in section.evidence})
+    assert all(set(c.evidence_ids)<={e.id for e in section.evidence} for c in section.claims)
