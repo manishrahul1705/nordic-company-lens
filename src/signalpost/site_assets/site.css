@@ -1851,3 +1851,20 @@ label.check input[type="checkbox"] { flex:0 0 44px; }
 @media(max-width:600px){.home-hero{padding:22px 20px;gap:18px}.home-hero h1{font-size:36px;line-height:1.08;margin:8px 0 14px}.hero-copy>p{margin:10px 0}.hero-search{margin-top:16px}.hero-search input{font-size:16px;padding:12px;min-width:0;width:100%;box-sizing:border-box}.try-chips{display:none}.hero-stats{gap:10px}.hero-stat{padding:12px}.hero-stat strong{font-size:28px}.hero-stat span{font-size:13px}.company-hero{padding:18px!important}.company-hero .avatar{width:48px;height:48px;font-size:28px;float:right;margin:0 0 8px 12px}.company-hero h1{font-size:28px;line-height:1.15}.company-hero .eyebrow{margin:0 0 8px}.metadata-pills{margin-top:14px}.company-header-actions{margin-top:12px}.profile-grid{margin-top:18px}.summary{margin-top:0;padding:18px}.summary h2{font-size:25px}}
 
 @media(max-width:600px){.view-switcher{display:flex;flex-wrap:wrap;gap:6px}.view-switcher .tab-btn{flex:1 1 100px;white-space:normal;height:auto;line-height:1.35;padding:10px 8px}}
+
+/* Evidence first: exact quotes and provenance, with metadata on demand. */
+.evidence-drawer{box-sizing:border-box;width:min(520px,100vw);max-width:100vw;padding:20px;overflow-x:hidden}
+.evidence-drawer *{box-sizing:border-box;min-width:0;overflow-wrap:anywhere}
+.evidence-drawer .drawer-close{position:sticky;top:0;z-index:2;float:right;background:var(--card)}
+.evidence-drawer h2{font-size:24px;margin:12px 0}
+.evidence-drawer .evidence-record{padding:0;border:0;margin:12px 0;background:transparent}
+.evidence-drawer .proof-explanation{font-weight:600;margin:0 0 12px;line-height:1.45}
+.evidence-drawer blockquote{margin:0 0 12px;padding:12px;font-size:16px;line-height:1.45;white-space:pre-wrap}
+.evidence-provenance{font-size:13px}
+.evidence-provenance a{display:block;word-break:break-word}
+.evidence-provenance p{margin:6px 0}
+.technical-details,.additional-evidence{margin-top:12px;border-top:1px solid var(--border)}
+.citation-group{display:inline-block;vertical-align:middle;margin:0 3px}
+.citation-choices{display:flex;flex-wrap:wrap;gap:6px;padding:6px 0;background:var(--card);position:static}
+body>nav>a:not(.brand){display:inline-flex;align-items:center;justify-content:center;align-self:center;line-height:1.2;height:44px}
+@media(max-width:600px){.evidence-drawer{padding:14px}.evidence-drawer>.eyebrow{font-size:10px;margin:0;display:flex;align-items:center}.evidence-drawer h2{margin:8px 0;font-size:22px}.evidence-drawer blockquote{font-size:15px}.evidence-drawer .evidence-record{margin:8px 0}}

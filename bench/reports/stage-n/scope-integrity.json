@@ -1,0 +1,13 @@
+{
+  "production_changed": [
+    "src/signalpost/site.py",
+    "src/signalpost/site_assets/site.css",
+    "src/signalpost/site_assets/site.js"
+  ],
+  "unchanged_ast": {
+    "company_payload": true,
+    "compact_profile": true,
+    "PAGE_GATE": true
+  },
+  "proof_scoring_sources_budget_config_lock_diff": "empty"
+}

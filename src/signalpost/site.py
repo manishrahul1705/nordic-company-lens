@@ -944,7 +944,7 @@ def index_page(records, title, skipped=()):
     websites=sum(r['flags']['website'] for r in records)
     activity=sum(r['flags']['activity'] for r in records)
     body = '<section class="home-hero"><div class="hero-copy"><p class="eyebrow">Norwegian company research</p><h1>Every fact, traced to its source.</h1><p>Search '+str(n)+' Norwegian companies, compare them side by side, and check the original source behind every number.</p><p id="cohort-summary">'+esc(summary)+'</p>'
-    body += '<div class="hero-search"><label class="search-label" for="search">Find a company <span>Press / to search</span></label><input id="search" type="search" autofocus autocomplete="off" placeholder="Company name or organisation number" aria-controls="search-autocomplete"><div id="search-autocomplete" class="autocomplete-dropdown" hidden></div></div><div class="try-chips"><span>Try:</span>'
+    body += '<div class="hero-search"><label class="search-label" for="search">Find a company <span>Press / to search</span></label><input id="search" type="search" autofocus autocomplete="off" placeholder="Name or org. number" aria-controls="search-autocomplete"><div id="search-autocomplete" class="autocomplete-dropdown" hidden></div></div><div class="try-chips"><span>Try:</span>'
     for r in sorted(records,key=lambda r:r['claim_count'],reverse=True)[:3]:body += '<button type="button" data-search="'+esc(r['name'])+'">'+esc(r['name'])+'</button>'
     body += '</div></div><div class="hero-stats">'
     for number,label in [(n,'companies'),(verified,'verified claims'),(websites,'verified websites'),(activity,'companies with activity')]:body += '<div class="hero-stat"><strong>'+format(number,',')+'</strong><span>'+label+'</span></div>'

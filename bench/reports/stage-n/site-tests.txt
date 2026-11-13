@@ -1,0 +1,2 @@
+uv run --frozen pytest -q tests/test_site.py tests/test_site_presentation_states.py
+24 passed in 23.89s
