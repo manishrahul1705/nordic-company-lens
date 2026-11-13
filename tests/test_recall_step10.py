@@ -121,13 +121,13 @@ def test_only_single_active_exact_employer_postings_publish():
     assert active_job(page('<a href="/jobs/1">Careers</a>'),ORG,{ORG:'Example AS'},{ORG}) is None
 
 
-def test_pooled_budget_allows_forty_but_keeps_global_eighteen_per_input(tmp_path):
+def test_pooled_budget_allows_forty_but_keeps_global_nineteen_per_input(tmp_path):
     orgs=numbers(3);budget=Budget(config(tmp_path,orgs))
     for _ in range(40):budget.reserve('https://example.no','example.no',orgs[0])
     with pytest.raises(SourceFailure,match='company_budget_exhausted'):budget.reserve('https://example.no','example.no',orgs[0])
-    for _ in range(14):budget.reserve('https://example.no','example.no',orgs[1])
+    for _ in range(17):budget.reserve('https://example.no','example.no',orgs[1])
     with pytest.raises(SourceFailure,match='budget_exhausted'):budget.reserve('https://example.no','example.no',orgs[2])
-    assert budget.hard_request_cap==54
+    assert budget.hard_request_cap==57
 
 
 def test_tier_b_emits_only_the_link_including_refresh_content_guard(tmp_path, monkeypatch):

@@ -14,7 +14,7 @@ from .policy import domain, normalize_url
 from .candidates import legal_name
 from .proof import orgnrs
 
-ATS = {'webcruiter.no','webcruiter.com','teamtailor.com','jobylon.com','reachmee.com','recman.no','recman.page','easycruit.com','workday.com','myworkdayjobs.com','myworkdaysite.com','jobbnorge.no','varbi.com'}
+ATS = {'webcruiter.no','webcruiter.com','teamtailor.com','jobylon.com','reachmee.com','recman.no','recman.page','easycruit.com','workday.com','myworkdayjobs.com','myworkdaysite.com','jobbnorge.no','varbi.com','hr-manager.net'}
 CAREERS = re.compile(r'karrier|career|ledige|stillinger|vacanc|job(?:s|b|ber)?(?:/|$|[-_])|work-with-us|recruit|positions?', re.I)
 
 
@@ -118,7 +118,7 @@ async def fetch(envelope, http):
     for c in envelope.claims:
         if c.field.startswith('subunits.unit.') and c.availability=='available':
             number=c.value['organisation_number'];allowed.add(number);names[number]=c.value.get('name')
-    queue=deque();seen=set();requests=0;candidate_urls=set();fetched=0
+    queue=deque();seen=set();requests=0;candidate_urls=set();fetched=0;accepted=0
     def nominate(response,page, depth, scope=None, chain=()):
         if staffing(page):return
         for link in page.links:
@@ -158,6 +158,7 @@ async def fetch(envelope, http):
                 if len(declared_jobs)!=1 or not isinstance(declared_jobs[0].get('hiringOrganization'),dict) or not (declared_jobs[0]['hiringOrganization'].get('name') or declared_jobs[0]['hiringOrganization'].get('legalName')):continue
             linked=getattr(http.config,'website_linked_board_jobs',True) if hasattr(http,'config') else True
             value=active_job(page,org,names,allowed,linked_board=linked and (scope is not None or domain(response.url)==root))
+            if value:accepted+=1
             if value and (value['employer_orgnr'],value['title'].casefold()) not in nav_keys:
                 source=response_source(response)
                 add(result,source,org,'hiring','hiring.site_job.'+digest(page.url)[:20],value,'/JobPosting',span=page.span_for(value['title']),source_class='company_owned',method='signalpost.company_jobs.v1')
@@ -180,5 +181,5 @@ async def fetch(envelope, http):
             result.errors.append(Error(section='hiring',code='company_careers_'+exc.code,message='Company careers coverage incomplete'))
             break
     result.state='available' if result.claims else 'failed' if result.errors else 'not_available' if seen else 'not_applicable'
-    envelope.run.refresh['company_jobs']={'candidates':len(candidate_urls),'fetched':fetched,'pages_checked':requests,'urls_checked':sorted(seen),'active_posts':len(result.claims),'complete':not queue and not result.errors}
+    envelope.run.refresh['company_jobs']={'candidates':len(candidate_urls),'fetched':fetched,'pages_checked':requests,'urls_checked':sorted(seen),'accepted':accepted,'active_posts':len(result.claims),'complete':not queue and not result.errors}
     return result

@@ -106,10 +106,10 @@ def test_every_site_timeout_preserves_100_outputs_and_hard_caps(tmp_path, monkey
     report = asyncio.run(invoke())
     rows = [json.loads(line) for line in cfg.output.read_text().splitlines()]
     assert len(rows) == 100
-    assert report['requests'] <= 1800
+    assert report['requests'] <= 1900
     assert report['limits']['hard_time_budget_seconds'] == 2400
     assert max(r['operations']['requests'] for r in rows) <= 40
-    assert report['requests'] / len(rows) <= 18
+    assert report['requests'] / len(rows) <= 19
     if advance_clock:
         assert clock[0] - began <= 2400
         assert any(e['code'] == 'deadline' for r in rows for e in r['errors'])

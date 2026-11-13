@@ -1,0 +1,212 @@
+diff --git a/src/signalpost/budget.py b/src/signalpost/budget.py
+index e6b3e4b..6498219 100644
+--- a/src/signalpost/budget.py
++++ b/src/signalpost/budget.py
+@@ -37,7 +37,7 @@ class Budget:
+             self.input_orgs = set()
+         # Hard ceilings scale continuously with distinct normalized inputs.
+         # Lower user limits remain effective; overrides cannot lift the ceiling.
+-        self.hard_request_cap = 18 * companies
++        self.hard_request_cap = 19 * companies
+         self.hard_time_cap_seconds = 24 * companies
+         self.total_seconds = min(config.time_budget_seconds, self.hard_time_cap_seconds)
+         self.finalise_estimate, self.site_estimate = finalisation_estimates(companies, config.site_dir is not None)
+diff --git a/src/signalpost/io/report.py b/src/signalpost/io/report.py
+index 42d47ea..5a665be 100644
+--- a/src/signalpost/io/report.py
++++ b/src/signalpost/io/report.py
+@@ -170,7 +170,7 @@ def effective_configuration(config, budget, report):
+                    'estimated_usd': report.get('search', {}).get('estimated_usd', 0)},
+         'synthesis': {'requested_mode': config.synthesis, 'effective_mode': 'template',
+                       'llm_calls': report.get('llm', {}).get('calls', 0)},
+-        'request_caps': {'pooled': budget.cap, 'pooled_per_company': 18,
++        'request_caps': {'pooled': budget.cap, 'pooled_per_company': 19,
+                          'per_company': 40, 'website': config.website_request_cap,
+                          'website_total': config.website_total_request_cap},
+         'nav': {'index_built_at': nav.get('index_built_at'),
+diff --git a/src/signalpost/runner.py b/src/signalpost/runner.py
+index 0b66e2e..57de6b3 100644
+--- a/src/signalpost/runner.py
++++ b/src/signalpost/runner.py
+@@ -407,6 +407,8 @@ async def _run(config, client=None):
+             async with website_semaphore:
+                 if config.websites:
+                     await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), nav_index))
++                if config.hiring and website_http.accepted_pages.get(org):
++                    website_http.reserve_careers(org)
+                 if config.public_activity:
+                     from .web.activity import fetch as fetch_activity
+                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
+@@ -429,19 +431,11 @@ async def _run(config, client=None):
+                 if has_nav_hp or has_nav_ad:
+                     async with website_semaphore:
+                         await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), nav_index))
++                        if config.hiring and website_http.accepted_pages.get(org):
++                            website_http.reserve_careers(org)
+                         if config.public_activity and website_http.accepted_pages.get(org) and envelope.run.sections.get("activity") != "available":
+                             from .web.activity import fetch as fetch_activity
+                             await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
+-            if config.hiring and config.websites and website_http.accepted_pages.get(org):
+-                from .web.jobs import fetch as company_jobs
+-                from .sources.extract import Section
+-                async with website_semaphore:
+-                    jobs = await company_jobs(envelope, website_http)
+-                current = [c for c in envelope.claims if c.family=='hiring' and c.availability=='available']
+-                if jobs.claims or jobs.errors:
+-                    state = 'available' if current or jobs.claims else 'failed'
+-                    update(envelope,'hiring',Section(state=state,claims=current+jobs.claims,evidence=jobs.evidence,
+-                           errors=[e for e in envelope.errors if e.section=='hiring']+jobs.errors))
+         except asyncio.CancelledError:
+             raise
+         except SourceFailure as exc:
+@@ -509,7 +503,7 @@ async def _run(config, client=None):
+                 warnings.append(f"{stuck} company tasks did not stop within {CANCEL_GRACE_SECONDS}s of cancellation; unfinished sections are reported as deadline")
+             if config.websites and not stuck:
+                 from .web.second_pass import run as second_pass
+-                dns_metrics['website_second_pass']=await second_pass(envelopes,website_http,bulk,prior,nav_index,isolate,update)
++                dns_metrics['website_second_pass']=await second_pass(envelopes,website_http,bulk,prior,nav_index,isolate,update,defer_jobs=True)
+             if config.registry_changes:
+                 from .sources import registry_changes
+                 eligible = {org: envelopes[org] for org in sorted(valid_orgs)
+@@ -538,6 +532,27 @@ async def _run(config, client=None):
+                         if any(c.family=='activity' for c in section.claims):row.run.sections['activity']='available'
+                 except Exception:
+                     dns_metrics['official_extra']={'state':'not_available_fetch_failed'}
++            if config.hiring and config.websites and not stuck:
++                from .web.jobs import fetch as company_jobs
++                from .sources.extract import Section
++                from .web.policy import DNS_ORG
++                async def careers(org, row):
++                    async with website_semaphore:
++                        DNS_ORG.set(org)
++                        website_http.reserve_careers(org)
++                        website_http.careers_active.add(org)
++                        try:
++                            jobs = await company_jobs(row, website_http)
++                            current = [c for c in row.claims if c.family == 'hiring' and c.availability == 'available']
++                            if jobs.claims or jobs.errors:
++                                update(row, 'hiring', Section(state='available' if current or jobs.claims else 'failed',
++                                    claims=current + jobs.claims, evidence=jobs.evidence,
++                                    errors=[e for e in row.errors if e.section == 'hiring'] + jobs.errors))
++                        finally:
++                            website_http.careers_active.discard(org)
++                careers_tasks = [asyncio.create_task(careers(org, row)) for org, row in envelopes.items()
++                                 if website_http.accepted_pages.get(org)]
++                await finish_before_deadline(careers_tasks, budget, CANCEL_GRACE_SECONDS)
+             return pending
+         finally:
+             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
+@@ -617,7 +632,7 @@ async def _run(config, client=None):
+     report['limits']['time_budget_seconds']=budget.total_seconds
+     report['limits']['hard_max_requests']=budget.hard_request_cap
+     report['limits']['hard_time_budget_seconds']=budget.hard_time_cap_seconds
+-    report['request_budget_basis']='Pooled 18 per unique normalized input globally, up to 40 per company; explicit lower limits honored'
++    report['request_budget_basis']='Pooled 19 per unique normalized input globally, up to 40 per company; explicit lower limits honored'
+     report['measured_request_projection']={'baseline':'1000-company retained-features run',
+         'baseline_mean_http':5.975,'projected_http':round(5.975*len(inputs.unique)),
+         'note':'Projection from a measured sample; source pagination/retries and feed changes can differ.'}
+diff --git a/src/signalpost/web/fetcher.py b/src/signalpost/web/fetcher.py
+index 1cbfcd8..a5d0c1e 100644
+--- a/src/signalpost/web/fetcher.py
++++ b/src/signalpost/web/fetcher.py
+@@ -72,6 +72,8 @@ class WebsiteHttp:
+         self.dns_counts = {}
+         self.dns_lookups = 0
+         self.activity_extra = set()
++        self.careers_reserves = {}
++        self.careers_active = set()
+         self.accepted_pages = {}
+         self.dns_metrics = dns_metrics
+ 
+@@ -156,6 +158,8 @@ class WebsiteHttp:
+                 # within the pooled global limit and hard 40/company ceiling.
+                 company_cap = min(40,self.config.website_request_cap + int(org in self.activity_extra),
+                                   max(0,self.config.website_total_request_cap-registry_requests))
++                if org not in self.careers_active:
++                    company_cap = max(0, company_cap - self.careers_reserves.get(org, 0))
+                 if self.counts.get(org, 0) >= company_cap:
+                     raise SourceFailure("website_budget_exhausted")
+                 event = self.budget.reserve(url, parts.hostname, org)
+@@ -254,6 +258,20 @@ class WebsiteHttp:
+         # until the final authority's policy has also been checked.
+         return await self.raw(url, org, domains, xml, obey_robots=True, allow_redirects=allow_redirects)
+ 
++    def reserve_careers(self, org):
++        """Earmark unused local slots after proof; never lift a hard ceiling.
++
++        Global requests are claimed only by the final careers pass, after all
++        primary website work has finished. Optional activity cannot consume
++        these local slots in the meantime.
++        """
++        if org not in self.careers_reserves:
++            remaining = min(40 - self.budget.by_company[org],
++                            self.config.website_request_cap - self.counts.get(org, 0),
++                            self.config.website_total_request_cap - self.budget.by_company[org])
++            self.careers_reserves[org] = max(0, min(6, remaining))
++        return self.careers_reserves[org]
++
+     def discovery_cap(self, org):
+         """Original per-company ceiling (6, within a total of 9 with registry calls).
+ 
+diff --git a/src/signalpost/web/jobs.py b/src/signalpost/web/jobs.py
+index 1de709f..10c6ff4 100644
+--- a/src/signalpost/web/jobs.py
++++ b/src/signalpost/web/jobs.py
+@@ -14,7 +14,7 @@ from .policy import domain, normalize_url
+ from .candidates import legal_name
+ from .proof import orgnrs
+ 
+-ATS = {'webcruiter.no','webcruiter.com','teamtailor.com','jobylon.com','reachmee.com','recman.no','recman.page','easycruit.com','workday.com','myworkdayjobs.com','myworkdaysite.com','jobbnorge.no','varbi.com'}
++ATS = {'webcruiter.no','webcruiter.com','teamtailor.com','jobylon.com','reachmee.com','recman.no','recman.page','easycruit.com','workday.com','myworkdayjobs.com','myworkdaysite.com','jobbnorge.no','varbi.com','hr-manager.net'}
+ CAREERS = re.compile(r'karrier|career|ledige|stillinger|vacanc|job(?:s|b|ber)?(?:/|$|[-_])|work-with-us|recruit|positions?', re.I)
+ 
+ 
+@@ -118,7 +118,7 @@ async def fetch(envelope, http):
+     for c in envelope.claims:
+         if c.field.startswith('subunits.unit.') and c.availability=='available':
+             number=c.value['organisation_number'];allowed.add(number);names[number]=c.value.get('name')
+-    queue=deque();seen=set();requests=0;candidate_urls=set();fetched=0
++    queue=deque();seen=set();requests=0;candidate_urls=set();fetched=0;accepted=0
+     def nominate(response,page, depth, scope=None, chain=()):
+         if staffing(page):return
+         for link in page.links:
+@@ -158,6 +158,7 @@ async def fetch(envelope, http):
+                 if len(declared_jobs)!=1 or not isinstance(declared_jobs[0].get('hiringOrganization'),dict) or not (declared_jobs[0]['hiringOrganization'].get('name') or declared_jobs[0]['hiringOrganization'].get('legalName')):continue
+             linked=getattr(http.config,'website_linked_board_jobs',True) if hasattr(http,'config') else True
+             value=active_job(page,org,names,allowed,linked_board=linked and (scope is not None or domain(response.url)==root))
++            if value:accepted+=1
+             if value and (value['employer_orgnr'],value['title'].casefold()) not in nav_keys:
+                 source=response_source(response)
+                 add(result,source,org,'hiring','hiring.site_job.'+digest(page.url)[:20],value,'/JobPosting',span=page.span_for(value['title']),source_class='company_owned',method='signalpost.company_jobs.v1')
+@@ -180,5 +181,5 @@ async def fetch(envelope, http):
+             result.errors.append(Error(section='hiring',code='company_careers_'+exc.code,message='Company careers coverage incomplete'))
+             break
+     result.state='available' if result.claims else 'failed' if result.errors else 'not_available' if seen else 'not_applicable'
+-    envelope.run.refresh['company_jobs']={'candidates':len(candidate_urls),'fetched':fetched,'pages_checked':requests,'urls_checked':sorted(seen),'active_posts':len(result.claims),'complete':not queue and not result.errors}
++    envelope.run.refresh['company_jobs']={'candidates':len(candidate_urls),'fetched':fetched,'pages_checked':requests,'urls_checked':sorted(seen),'accepted':accepted,'active_posts':len(result.claims),'complete':not queue and not result.errors}
+     return result
+diff --git a/src/signalpost/web/second_pass.py b/src/signalpost/web/second_pass.py
+index b1023c6..4f6be49 100644
+--- a/src/signalpost/web/second_pass.py
++++ b/src/signalpost/web/second_pass.py
+@@ -25,7 +25,7 @@ def candidates(row):
+     return selected
+ 
+ 
+-async def run(envelopes,http,bulk,prior,nav_index,isolate,update):
++async def run(envelopes,http,bulk,prior,nav_index,isolate,update,*,defer_jobs=False):
+     from . import collector
+     from .activity import fetch as activity
+     from .jobs import fetch as jobs
+@@ -61,9 +61,10 @@ async def run(envelopes,http,bulk,prior,nav_index,isolate,update):
+                         recovered=row.run.sections.get('website')=='available'
+                         if recovered:
+                             meta['recovered']=True;totals['recovered']+=1
++                            if defer_jobs and config.hiring:http.reserve_careers(org)
+                             if config.public_activity:
+                                 await isolate(row,'activity',lambda:activity(org,row,http,http.accepted_pages.get(org,[])))
+-                            if config.hiring:
++                            if config.hiring and not defer_jobs:
+                                 extra=await jobs(row,http)
+                                 current=[c for c in row.claims if c.family=='hiring' and c.availability=='available']
+                                 if extra.claims:update(row,'hiring',Section(state='available',claims=current+extra.claims,evidence=extra.evidence,errors=extra.errors))

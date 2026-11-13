@@ -1,0 +1,15 @@
+[
+  {
+    "orgnr": "936629466",
+    "company": "CLOSVA AS",
+    "url": "https://closva.com",
+    "proof_type": "jsonld_vatid",
+    "proof_excerpt": "Owned by Closva AS · Org. no. 936 629 466",
+    "source_url": "https://closva.com/",
+    "retrieved_at": "2026-11-13T08:27:49.961364Z",
+    "content_sha256": "486947f3d09b2300f1968c47f08e4c9d675802e231e09829ffe2bdc6e4941f0c",
+    "posting_date": null,
+    "verdict": "correct",
+    "reason": "Exact target legal entity and organisation number in saved company footer; same registrable domain as the prior www host, no additional company accepted."
+  }
+]

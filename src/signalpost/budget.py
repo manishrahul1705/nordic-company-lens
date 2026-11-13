@@ -37,7 +37,7 @@ class Budget:
             self.input_orgs = set()
         # Hard ceilings scale continuously with distinct normalized inputs.
         # Lower user limits remain effective; overrides cannot lift the ceiling.
-        self.hard_request_cap = 18 * companies
+        self.hard_request_cap = 19 * companies
         self.hard_time_cap_seconds = 24 * companies
         self.total_seconds = min(config.time_budget_seconds, self.hard_time_cap_seconds)
         self.finalise_estimate, self.site_estimate = finalisation_estimates(companies, config.site_dir is not None)

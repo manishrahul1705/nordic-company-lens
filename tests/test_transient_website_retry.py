@@ -119,7 +119,7 @@ def test_system_dns_temporary_error_is_distinct_from_nxdomain(monkeypatch):
 def test_global_hard_caps_cannot_be_raised_by_overrides(tmp_path):
     cfg=config(tmp_path,numbers(3),max_requests=999999,time_budget_seconds=999999)
     budget=Budget(cfg)
-    assert budget.cap==54
+    assert budget.cap==57
     assert budget.total_seconds==72
     assert budget.deadline<=budget.start+72
 

@@ -1,0 +1,139 @@
+{
+  "baseline": {
+    "counts": {
+      "news_companies": 7,
+      "articles": 69,
+      "company_site_job_claims": 0
+    },
+    "funnel": {
+      "candidates": 38,
+      "fetched": 31,
+      "pages_checked": 36,
+      "active_posts": 0
+    },
+    "reported_failures": {
+      "923998012": {
+        "company": "ASKØY24 AS",
+        "metrics": {
+          "candidates": 2,
+          "fetched": 0,
+          "pages_checked": 1,
+          "urls_checked": [
+            "https://www.askoy24.no/nyheter/dropper-fysak-jobber-med-losning-pa-kleppesto-senter/246517"
+          ],
+          "active_posts": 0,
+          "complete": false
+        },
+        "errors": [
+          {
+            "section": "hiring",
+            "code": "company_careers_website_budget_exhausted",
+            "message": "Company careers coverage incomplete"
+          }
+        ]
+      },
+      "922828172": {
+        "company": "TENSIO AS",
+        "metrics": {
+          "candidates": 2,
+          "fetched": 0,
+          "pages_checked": 1,
+          "urls_checked": [
+            "https://www.tensio.no/no/kunde/nyheter/vinter-storm-og-stromforsyning-slik-forbereder-du-deg-og-slik-jobber-tensio"
+          ],
+          "active_posts": 0,
+          "complete": false
+        },
+        "errors": [
+          {
+            "section": "hiring",
+            "code": "company_careers_website_budget_exhausted",
+            "message": "Company careers coverage incomplete"
+          }
+        ]
+      },
+      "987002808": {
+        "company": "BRIDGE TECHNOLOGIES CO AS",
+        "metrics": {
+          "candidates": 1,
+          "fetched": 0,
+          "pages_checked": 1,
+          "urls_checked": [
+            "https://bridgetech.tv/careers/"
+          ],
+          "active_posts": 0,
+          "complete": false
+        },
+        "errors": [
+          {
+            "section": "hiring",
+            "code": "company_careers_website_budget_exhausted",
+            "message": "Company careers coverage incomplete"
+          }
+        ]
+      }
+    }
+  },
+  "candidate": {
+    "counts": {
+      "news_companies": 7,
+      "articles": 62,
+      "company_site_job_claims": 0
+    },
+    "funnel": {
+      "candidates": 38,
+      "fetched": 38,
+      "pages_checked": 38,
+      "active_posts": 0
+    },
+    "reported_failures": {
+      "923998012": {
+        "company": "ASKØY24 AS",
+        "metrics": {
+          "candidates": 2,
+          "fetched": 2,
+          "pages_checked": 2,
+          "urls_checked": [
+            "https://www.askoy24.no/nyheter/dropper-fysak-jobber-med-losning-pa-kleppesto-senter/246517",
+            "https://www.askoy24.no/sport/ga-opp-fotballen-for-a-satse-pa-loping/245509"
+          ],
+          "accepted": 0,
+          "active_posts": 0,
+          "complete": true
+        },
+        "errors": []
+      },
+      "922828172": {
+        "company": "TENSIO AS",
+        "metrics": {
+          "candidates": 2,
+          "fetched": 2,
+          "pages_checked": 2,
+          "urls_checked": [
+            "https://www.tensio.no/no/kunde/nyheter/vinter-storm-og-stromforsyning-slik-forbereder-du-deg-og-slik-jobber-tensio",
+            "https://www.tensio.no/no/kunde/om-tensio/jobbe-hos-oss"
+          ],
+          "accepted": 0,
+          "active_posts": 0,
+          "complete": true
+        },
+        "errors": []
+      },
+      "987002808": {
+        "company": "BRIDGE TECHNOLOGIES CO AS",
+        "metrics": {
+          "candidates": 1,
+          "fetched": 1,
+          "pages_checked": 1,
+          "urls_checked": [
+            "https://bridgetech.tv/careers/"
+          ],
+          "accepted": 0,
+          "active_posts": 0,
+          "complete": true
+        },
+        "errors": []
+      }
+    }
+  }
+}
