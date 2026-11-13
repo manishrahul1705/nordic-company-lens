@@ -1,0 +1,27 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "signalpost",
+    "run",
+    "--organisations",
+    "bench/inputs/1000-r3/batch.jsonl",
+    "--output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\report.json",
+    "--state-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\state",
+    "--site-dir",
+    "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\site"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 851.9839999999967,
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "conditions": "Fresh state; README settings; no bulk override; credential variables stripped; two official Bronnoysund child authorities; exact normalized number; parent acceptance unchanged",
+  "tested_code_commit": "4ae29bc4127de87b41fd717e6275fb8ff693400e",
+  "official_extra_source_sha256": "3e9629484b99e901c1a1df32d13ab0e097cf9cb586b9ed47b6c73ecabdf35964"
+}

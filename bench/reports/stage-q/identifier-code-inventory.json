@@ -1,0 +1,1759 @@
+[
+  {
+    "file": "src/signalpost/budget.py",
+    "matches": [
+      {
+        "line": 75,
+        "code": "            raise SourceFailure('company_budget_exhausted')\n        event = {\"url\": url, \"host\": host, \"organisation_number\": org, \"attempt_started\": time.monotonic() - self.start, \"status\": None, \"error\": None}\n        self.events.append(event)"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/io/envelope_writer.py",
+    "matches": [
+      {
+        "line": 38,
+        "code": "        e.claims = [Claim(field=f + \".section\", value=None, availability=\"failed\", confidence=0,\n                         evidence_ids=[], id=digest([e.organisation_number, f + \".section\", None, \"failed\", None]),\n                         family=f, first_observed_at=e.started_at, last_observed_at=e.completed_at)"
+      },
+      {
+        "line": 49,
+        "code": "            module.state = \"budget_exhausted\"\n        e.profile = CompactProfile(organisation_number=e.organisation_number, values={c.field: None for c in e.claims}, evidence_ids=[])\n        from ..synthesis.template import generate"
+      },
+      {
+        "line": 57,
+        "code": "        lines[key], sizes[key] = new_line, new_size\n        limited.append(e.organisation_number)\n    return lines, limited, total > ceiling"
+      },
+      {
+        "line": 87,
+        "code": "        os.fsync(handle.fileno())\n    expected = [e.organisation_number for e in envelopes]\n    actual = []"
+      },
+      {
+        "line": 93,
+        "code": "            validate(body, shape)\n            actual.append(body[\"organisation_number\"])\n    if actual != expected:"
+      },
+      {
+        "line": 113,
+        "code": "                    validate(row, shape)\n                    rows[row[\"organisation_number\"]] = row\n                except Exception as exc:"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/io/input_adapter.py",
+    "matches": [
+      {
+        "line": 6,
+        "code": "from pathlib import Path\nfrom ..identity.orgnr import normalize, valid\n"
+      },
+      {
+        "line": 31,
+        "code": "                raise json.JSONDecodeError(\"line records\", text, 0)\n            if isinstance(body, dict) and \"organisation_numbers\" in body:\n                values = body[\"organisation_numbers\"]"
+      },
+      {
+        "line": 32,
+        "code": "            if isinstance(body, dict) and \"organisation_numbers\" in body:\n                values = body[\"organisation_numbers\"]\n                if not isinstance(values, list):"
+      },
+      {
+        "line": 44,
+        "code": "                csv_rows = [r for r in csv.reader(io.StringIO(text)) if any(cell.strip() for cell in r)]\n                header_tokens = {\"organisasjonsnummer\", \"orgnr\", \"organisation_number\", \"organization_number\", \"org_nr\"}\n                if csv_rows and (csv_rows[0][0].strip().lower() in header_tokens or any(h.strip().lower() in header_tokens for h in csv_rows[0])):"
+      },
+      {
+        "line": 52,
+        "code": "                        row_dict = {header_cols[i]: r[i] for i in range(min(len(header_cols), len(r)))}\n                        row_dict[\"organisation_number\"] = org_val\n                        values.append(row_dict)"
+      },
+      {
+        "line": 70,
+        "code": "    for item in values:\n        org = normalize(item.get(\"organisation_number\") if isinstance(item, dict) else item)\n        rows.append(org)"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/io/provenance.py",
+    "matches": [
+      {
+        "line": 15,
+        "code": "    counts = Counter()\n    for envelope in {e.organisation_number: e for e in envelopes}.values():\n        evidence = {e.id: e for e in envelope.evidence}"
+      },
+      {
+        "line": 35,
+        "code": "            counts.update(source_types)\n            claims.append({'organisation_number': envelope.organisation_number,\n                           'claim_id': claim.id, 'field': claim.field,"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/io/report.py",
+    "matches": [
+      {
+        "line": 47,
+        "code": "        verified_orgs = {\n            getattr(e, 'organisation_number', None) or getattr(e, 'org', None)\n            for e in envelopes"
+      },
+      {
+        "line": 92,
+        "code": "                            norm_code = 'insufficient_ownership_proof'\n                            if 'foreign_orgnr' in raw_r or 'orgnr_mismatch' in raw_r:\n                                norm_code = 'wrong_organization_number'"
+      },
+      {
+        "line": 106,
+        "code": "                                norm_code = 'http_error'\n                            elif 'no_orgnr' in raw_r or 'empty_signals' in raw_r or 'LOW' in raw_r:\n                                norm_code = 'insufficient_ownership_proof'"
+      },
+      {
+        "line": 108,
+        "code": "                                norm_code = 'insufficient_ownership_proof'\n                            elif 'other_orgnrs' in raw_r or 'ambiguous' in raw_r:\n                                norm_code = 'ambiguous_multiple_orgnrs'"
+      },
+      {
+        "line": 109,
+        "code": "                            elif 'other_orgnrs' in raw_r or 'ambiguous' in raw_r:\n                                norm_code = 'ambiguous_multiple_orgnrs'\n                            reasons[norm_code] += 1"
+      },
+      {
+        "line": 124,
+        "code": "        warnings.append('Unrecognised arguments ignored: ' + json.dumps(unrecognised_flags, ensure_ascii=False))\n    unique = {e.organisation_number: e for e in envelopes}\n    company_events=[e for e in budget.events if e['organisation_number'] in unique]"
+      },
+      {
+        "line": 125,
+        "code": "    unique = {e.organisation_number: e for e in envelopes}\n    company_events=[e for e in budget.events if e['organisation_number'] in unique]\n    by_org = Counter(e[\"organisation_number\"] for e in company_events)"
+      },
+      {
+        "line": 126,
+        "code": "    company_events=[e for e in budget.events if e['organisation_number'] in unique]\n    by_org = Counter(e[\"organisation_number\"] for e in company_events)\n    completed = [e.get(\"attempt_started\", 0) + e.get(\"runtime_ms\", 0)/1000 for e in budget.events]"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/models/envelope.py",
+    "matches": [
+      {
+        "line": 39,
+        "code": "class Change(Model):\n    organisation_number: str\n    type: str"
+      },
+      {
+        "line": 61,
+        "code": "class Profile(Model):\n    organisation_number: str = \"\"\n    legal_identity: dict = Field(default_factory=dict)"
+      },
+      {
+        "line": 74,
+        "code": "class CompactProfile(Model):\n    organisation_number: str\n    values: dict"
+      },
+      {
+        "line": 81,
+        "code": "class Envelope(Model):\n    organisation_number: str\n    run: Run"
+      },
+      {
+        "line": 103,
+        "code": "            duplicates=sorted(k for k,n in Counter(c.field for c in self.claims).items() if n>1)\n            raise ValueError(\"Duplicate claim fields for \"+self.organisation_number+\": \"+', '.join(duplicates[:10]))\n        for claim in self.claims:"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/models/shapes.py",
+    "matches": [
+      {
+        "line": 6,
+        "code": "\nCONTRACT_KEYS = {\"organisation_number\", \"run\", \"claims\", \"evidence\", \"changes\", \"errors\", \"operations\"}\nREFERENCE_KEYS = {\"run_id\", \"organisation_number\", \"state\", \"started_at\", \"completed_at\", \"modules\", \"profile\"}"
+      },
+      {
+        "line": 7,
+        "code": "CONTRACT_KEYS = {\"organisation_number\", \"run\", \"claims\", \"evidence\", \"changes\", \"errors\", \"operations\"}\nREFERENCE_KEYS = {\"run_id\", \"organisation_number\", \"state\", \"started_at\", \"completed_at\", \"modules\", \"profile\"}\n"
+      },
+      {
+        "line": 11,
+        "code": "class Contract(Model):\n    organisation_number: str\n    run: Run"
+      },
+      {
+        "line": 22,
+        "code": "    run_id: str\n    organisation_number: str\n    state: TerminalState"
+      },
+      {
+        "line": 35,
+        "code": "    elif shape == \"reference\":\n        data[\"profile\"] = Profile(organisation_number=envelope.organisation_number,\n                                  legal_identity=envelope.run.legal_identity, claims=envelope.claims,"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/models/states.py",
+    "matches": [
+      {
+        "line": 12,
+        "code": "        return \"budget_exhausted\"\n    if codes & {\"invalid_orgnr\", \"not_started\", \"input_error\"}:\n        return \"submission_error\""
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/profiles.py",
+    "matches": [
+      {
+        "line": 10,
+        "code": "          'failed':'source_error', 'ambiguous':'source_error', 'blocked':'blocked'}\nIDENTITY = {'organisation_number':None, 'name':'legal_name', 'legal_form':'organisation_form',\n            'employees':'employees','bankrupt':'bankrupt','liquidating':'under_liquidation',"
+      },
+      {
+        "line": 24,
+        "code": "    if 'identity.legal_name' in fields:\n        registry['organisation_number'] = envelope.organisation_number\n    form=registry['legal_form']"
+      },
+      {
+        "line": 31,
+        "code": "        v=c.value;role=v.get('role_type') or {};group=v.get('group_type') or {}\n        roles.append({'name':v.get('name'),'organisation_number':v.get('entity_organisation_number'),\n                      'role_code':role.get('kode'),'role':role.get('beskrivelse'),"
+      },
+      {
+        "line": 39,
+        "code": "        v=c.value;raw=v.get('raw') or v\n        locations.append({'organisation_number':v.get('organisation_number'),'name':v.get('name'), 'type':'workplace',\n                          'address':raw.get('beliggenhetsadresse') or raw.get('postadresse') or v.get('address'),"
+      },
+      {
+        "line": 46,
+        "code": "    if business:\n        locations.append({'organisation_number':envelope.organisation_number,'name':'Registered business address',\n                          'type':'registered_business_address','address':business.value,'industry':None,'employees':None})"
+      },
+      {
+        "line": 61,
+        "code": "        postal_locations.append(c)\n        number=envelope.organisation_number if parent else c.field.split('.')[2]\n        locations.append({'organisation_number':number,'name':'Registered postal address' if parent else 'Subunit postal address',"
+      },
+      {
+        "line": 62,
+        "code": "        number=envelope.organisation_number if parent else c.field.split('.')[2]\n        locations.append({'organisation_number':number,'name':'Registered postal address' if parent else 'Subunit postal address',\n                          'type':'registered_postal_address' if parent else 'subunit_postal_address','address':c.value,'industry':None,'employees':None})"
+      },
+      {
+        "line": 77,
+        "code": "        from .sources.financial_comparability import compare_periods\n        comp=compare_periods(financials[0],financials[1],org=envelope.organisation_number,metric='revenue')\n        financials[0]['comparability_with_prior']={'comparable':comp.comparable,'reason_codes':comp.reason_codes,'growth_rate':comp.growth_rate,'nominal_change':comp.nominal_change}"
+      },
+      {
+        "line": 94,
+        "code": "    website=value('official_website')\n    values={'registry_live':registry if registry['organisation_number'] else None,\n            'financials':{'records':financials,'consolidated_records':consolidated} if financials or consolidated else None,"
+      },
+      {
+        "line": 122,
+        "code": "                          'content_sha256':primary.content_sha256 if primary else None,\n                          'source_row_key':envelope.organisation_number if primary else None,\n                          'effective_at':primary.effective_at if primary else None}"
+      },
+      {
+        "line": 129,
+        "code": "    provenance={eid:records[eid].model_dump(mode='json') for eid in sorted(ids)}\n    return {'organisation_number':envelope.organisation_number,'name':value('identity.legal_name'),\n            'municipality':value('identity.municipality'),'website':website.get('final_url') if isinstance(website,dict) else None,"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/refresh/diff.py",
+    "matches": [
+      {
+        "line": 36,
+        "code": "    refuted = envelope.run.refresh.get('website', {}).get('refuted_previous_website')\n    if gone or refuted or any(e.section == 'website' and e.code == 'foreign_orgnr_on_previous_domain' for e in envelope.errors):\n        reasons.pop('website', None)"
+      },
+      {
+        "line": 181,
+        "code": "                if family == 'website' and envelope.run.refresh.get('website', {}).get('refuted_previous_website'):\n                    continue  # Do not carry forward a discredited website that was refuted with foreign orgnr.\n                carried = claim.model_copy(update={\"carried_forward\": True,"
+      },
+      {
+        "line": 269,
+        "code": "        envelope.changes.append(Change(\n            organisation_number=envelope.organisation_number, type=\"closed_job\" if family=='hiring' and meaning(before) is not None and meaning(after) is None else \"added\" if meaning(before) is None else \"removed\" if meaning(after) is None else \"changed\",\n            field=field, old_value=before.value if before else None, new_value=after.value if after else None,"
+      },
+      {
+        "line": 289,
+        "code": "            newest = new_evidence.get(new_ids[0]) if new_ids else None\n            envelope.changes.append(Change(organisation_number=envelope.organisation_number, type=\"changed\", field=\"roles.roles\",\n                                           old_value=before_values or None, new_value=after_values or None,"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/runner.py",
+    "matches": [
+      {
+        "line": 12,
+        "code": "from .budget import Budget, SourceFailure\nfrom .identity.orgnr import valid\nfrom .io.input_adapter import read, Inputs"
+      },
+      {
+        "line": 40,
+        "code": "    errors = [Error(section=f, code=\"not_started\", message=\"Section has not started\") for f in families]\n    envelope = Envelope(organisation_number=org, run=Run(run_id=run_id, started_at=started, completed_at=started, sections=sections),\n                        claims=[], evidence=[], changes=[], errors=errors, operations=Operations(), run_id=run_id,"
+      },
+      {
+        "line": 60,
+        "code": "                                    evidence_ids=[], confidence=0, family=family,\n                                    id=digest([envelope.organisation_number, family + \".section\", None, section.state, None]),\n                                    first_observed_at=now, last_observed_at=now))"
+      },
+      {
+        "line": 111,
+        "code": "    envelope.run.terminal_status = \"failed\" if all(s == \"failed\" for s in envelope.run.sections.values()) else \"completed\"\n    events = [e for e in budget.events if e[\"organisation_number\"] == envelope.organisation_number]\n    envelope.operations.requests = len(events)"
+      },
+      {
+        "line": 117,
+        "code": "        module.retry_count = max(0, len(matching) - len({e[\"url\"] for e in matching}))\n    envelope.profile = CompactProfile(organisation_number=envelope.organisation_number,\n                                      values={c.field: c.value for c in envelope.claims},"
+      },
+      {
+        "line": 122,
+        "code": "def extract_company_scope(envelope, bulk_row=None, prior_row=None):\n    org = envelope.organisation_number\n    subunits = {org}"
+      },
+      {
+        "line": 130,
+        "code": "            elif c.family == 'subunits' and isinstance(c.value, dict):\n                unit = c.value.get('organisation_number')\n                if valid(str(unit)):"
+      },
+      {
+        "line": 199,
+        "code": "        for family in families:\n            update(envelopes[org], family, missing(family, \"invalid_orgnr\"))\n    expected_membership = len(inputs.rows) if config.emit_duplicates else len(inputs.unique)"
+      },
+      {
+        "line": 370,
+        "code": "            for family in families:\n                update(envelope, family, missing(family, \"invalid_orgnr\"))\n            progress.company_completed(org, success=False)"
+      },
+      {
+        "line": 428,
+        "code": "                )\n                has_nav_ad=any(c.family=='hiring' and c.availability=='available' and isinstance(c.value,dict) and c.value.get('employer_orgnr') for c in envelope.claims)\n                if has_nav_hp or has_nav_ad:"
+      },
+      {
+        "line": 586,
+        "code": "        if config.hiring and valid(org) and not any(c.family=='hiring' and c.availability=='available' for c in envelope.claims):\n            scope={org} | {c.value['organisation_number'] for c in envelope.claims\n                if c.family=='subunits' and c.availability=='available' and isinstance(c.value,dict) and c.value.get('organisation_number')}"
+      },
+      {
+        "line": 587,
+        "code": "            scope={org} | {c.value['organisation_number'] for c in envelope.claims\n                if c.family=='subunits' and c.availability=='available' and isinstance(c.value,dict) and c.value.get('organisation_number')}\n            if any(nav_index.ads.get(number) for number in scope):"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/site.py",
+    "matches": [
+      {
+        "line": 68,
+        "code": "        p = raw['profile']\n        return {'organisation_number': raw['organisation_number'], 'claims': p['claims'], 'evidence': p['evidence'],\n                'changes': p['changes'], 'run': {'sections': p['sections'], 'refresh': p['refresh'],"
+      },
+      {
+        "line": 345,
+        "code": "              'different_legal_entity':'The page identifies a different publisher',\n              'foreign_orgnr':'A different organisation number was recorded',\n              'redirect_without_company_identity':'The redirect did not establish this company identity',"
+      },
+      {
+        "line": 379,
+        "code": "    fields_map = {c['field']: c for c in claims if c['availability'] == 'available'}\n    org = row['organisation_number']\n    synthesis = row['run'].get('synthesis') or {}"
+      },
+      {
+        "line": 533,
+        "code": "                if curr_c and prior_c:\n                    res = compare_periods(curr_c, prior_c, org=row.get('organisation_number'), metric='revenue')\n                    if res.comparable:"
+      },
+      {
+        "line": 546,
+        "code": "                body += f'<div class=\"financial-trend-banner\"><p><strong>Reporting period:</strong> Fiscal year {years[0]} filed in Regnskapsregisteret ({esc(curr_str)}). Single-year reported values.</p></div>'\n        if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'\n        if not items or state != 'available': body += '<p>' + esc(UNKNOWN.get(state, 'No facts published in this section.')) + '</p>'"
+      },
+      {
+        "line": 825,
+        "code": "                   for c in row['claims'] if overflow and c['id'] in overflow and c['id'] not in deferred)\n    name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])\n    all_records = {e['id']: e for e in row['evidence']}"
+      },
+      {
+        "line": 827,
+        "code": "    all_records = {e['id']: e for e in row['evidence']}\n    payload = {'orgnr': row['organisation_number'], 'name': name,\n               'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,"
+      },
+      {
+        "line": 891,
+        "code": "\n    result = {'orgnr': row['organisation_number'], 'name': get('identity.legal_name') or row['organisation_number'],\n              'municipality': get('identity.municipality'), 'nace': iv.get('kode'), 'industry_en': english_title(iv) if iv else None,"
+      },
+      {
+        "line": 1058,
+        "code": "    for r in records:\n        body += '<article class=\"company no-js-company\"><a href=\"c/'+esc(r['orgnr'])+'.html\">'+esc(r['name'])+'</a> <small>'+esc(r['orgnr'])+'</small></article>'\n    body += '</div><div class=\"pagination\"><button id=\"previous\" type=\"button\">Previous</button><span id=\"page-label\"></span><button id=\"next\" type=\"button\">Next</button></div>'"
+      },
+      {
+        "line": 1071,
+        "code": "    body += '<label>Job title keyword<input type=\"search\" id=\"hiring-search-title\" placeholder=\"Search job title (e.g. Utvikler, Konsulent)...\" autocomplete=\"off\"></label>'\n    body += '<label>Company<input type=\"search\" id=\"hiring-search-company\" placeholder=\"Search company name or orgnr...\" autocomplete=\"off\"></label>'\n    body += '<label>Published within<select id=\"hiring-filter-date\"><option value=\"all\">All publication dates</option><option value=\"7\">Last 7 days</option><option value=\"30\">Last 30 days</option><option value=\"90\">Last 90 days</option></select></label>'"
+      },
+      {
+        "line": 1089,
+        "code": "    for i in range(4):\n        body += f'<label>Company {i + 1}<input type=\"search\" id=\"company-{i}\" list=\"company-options\" autocomplete=\"off\" placeholder=\"Enter company name or orgnr...\"></label>'\n    body += '<div class=\"compare-actions\"><button type=\"button\" id=\"clear-compare\" class=\"btn-clear-filters\">Clear all</button><button type=\"button\" id=\"share-compare\">Copy comparison link</button></div>'"
+      },
+      {
+        "line": 1095,
+        "code": "    if records:\n        selected=[r for r in records if r['orgnr'] in {'922828172','919653477'}] or list(records[:2])\n        body += '<noscript><section><h2>Company comparison</h2><p>JavaScript enhances company selection; all company facts and receipts remain readable below.</p><div class=\"comparison\">'"
+      },
+      {
+        "line": 1097,
+        "code": "        body += '<noscript><section><h2>Company comparison</h2><p>JavaScript enhances company selection; all company facts and receipts remain readable below.</p><div class=\"comparison\">'\n        for r in selected:body += '<article class=\"compare-card\"><h2><a href=\"c/'+esc(r['orgnr'])+'.html\">'+esc(r['name'])+'</a></h2><p>'+esc(r['orgnr'])+'</p><p>Revenue: '+esc(value_text(r['revenue']))+'</p><p>Annual result: '+esc(value_text(r['annual_result']))+'</p><p>Employees: '+esc(value_text(r['employees']))+'</p></article>'\n        body += '</div></section></noscript>'"
+      },
+      {
+        "line": 1104,
+        "code": "    \"\"\"Readable, bounded source receipts with every evidence record retained.\"\"\"\n    org=row['organisation_number'];records={e['id']:e for e in row['evidence']}\n    chunks=[];current=[];size=0;parts_by_claim={}"
+      },
+      {
+        "line": 1142,
+        "code": "    facts inline, every fact still reachable through its evidence pages.\"\"\"\n    claims=row['claims'];org=row['organisation_number']\n    by_field={c['field']:c['value'] for c in claims if c['availability']=='available'}"
+      },
+      {
+        "line": 1167,
+        "code": "    for row in input_rows:\n        org=row['organisation_number']\n        if org in unique and unique[org]!=row:raise ValueError('Conflicting duplicate company envelopes')"
+      },
+      {
+        "line": 1172,
+        "code": "    # Its terminal envelope stays in the JSON output; the site lists it in a batch notice.\n    skipped=[r['organisation_number'] for r in unique.values() if not re.fullmatch(r'\\d{9}', r['organisation_number'])]\n    rows=[r for r in unique.values() if re.fullmatch(r'\\d{9}', r['organisation_number'])]"
+      },
+      {
+        "line": 1173,
+        "code": "    skipped=[r['organisation_number'] for r in unique.values() if not re.fullmatch(r'\\d{9}', r['organisation_number'])]\n    rows=[r for r in unique.values() if re.fullmatch(r'\\d{9}', r['organisation_number'])]\n    records = [index_record(r) for r in rows]"
+      },
+      {
+        "line": 1181,
+        "code": "    for row in rows:\n        org=row['organisation_number']\n        receipts,routes=receipt_pages(row,title)"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/brreg_enhet.py",
+    "matches": [
+      {
+        "line": 22,
+        "code": "def extract(org, data, source):\n    if str(data.get(\"organisasjonsnummer\")) != org:\n        raise SourceFailure(\"wrong_company\", \"Registry identity differs from requested orgnr\")"
+      },
+      {
+        "line": 23,
+        "code": "    if str(data.get(\"organisasjonsnummer\")) != org:\n        raise SourceFailure(\"wrong_company\", \"Registry identity differs from requested orgnr\")\n    section = Section()"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/brreg_roller.py",
+    "matches": [
+      {
+        "line": 20,
+        "code": "    linked_entity = data.get(\"_links\", {}).get(\"enhet\", {}).get(\"href\") if isinstance(data, dict) else None\n    explicit_org = data.get(\"organisasjonsnummer\") if isinstance(data, dict) else None\n    if not isinstance(data, dict) or (str(explicit_org) != org and linked_entity != BASE + org):"
+      },
+      {
+        "line": 39,
+        "code": "            entry = {\"role_type\": item.get(\"type\"), \"name\": display or entity.get(\"navn\") or None,\n                     \"entity_organisation_number\": entity.get(\"organisasjonsnummer\"), \"inactive\": item.get(\"avregistrert\"),\n                     \"group_type\": group.get(\"type\"), \"last_changed\": group.get(\"sistEndret\"), \"from_date\": item.get(\"fraDato\")}"
+      },
+      {
+        "line": 41,
+        "code": "                     \"group_type\": group.get(\"type\"), \"last_changed\": group.get(\"sistEndret\"), \"from_date\": item.get(\"fraDato\")}\n            key = digest(canonical([entry[\"group_type\"], entry[\"role_type\"], entry[\"name\"], entry[\"entity_organisation_number\"]]))[:24]\n            slot = seen.get(key, 0)"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/brreg_underenheter.py",
+    "matches": [
+      {
+        "line": 22,
+        "code": "    while page < total:\n        url = \"https://data.brreg.no/enhetsregisteret/api/underenheter?\" + urlencode({\"overordnetEnhet\": org, \"size\": 1000, \"page\": page})\n        response = await http.get(url, org)"
+      },
+      {
+        "line": 37,
+        "code": "        for item in items:\n            if str(item.get('overordnetEnhet'))!=org:raise SourceFailure('wrong_company','Subunit parent differs from requested company')\n        normalized = [{\"organisation_number\": item.get(\"organisasjonsnummer\"), \"name\": item.get(\"navn\"),"
+      },
+      {
+        "line": 38,
+        "code": "            if str(item.get('overordnetEnhet'))!=org:raise SourceFailure('wrong_company','Subunit parent differs from requested company')\n        normalized = [{\"organisation_number\": item.get(\"organisasjonsnummer\"), \"name\": item.get(\"navn\"),\n                       \"address\": item.get(\"beliggenhetsadresse\") or item.get(\"postadresse\"),"
+      },
+      {
+        "line": 45,
+        "code": "        for index, item in enumerate(normalized):\n            key = item[\"organisation_number\"]\n            if not key:"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/bulk_registry.py",
+    "matches": [
+      {
+        "line": 12,
+        "code": "\nALIASES = {\"organisasjonsnummer\": \"Organisasjonsnummer\", \"navn\": \"Navn\", \"antallAnsatte\": \"Antall ansatte\",\n           \"konkurs\": \"Konkurs\", \"underAvvikling\": \"Under avvikling\", \"hjemmeside\": \"Hjemmeside\","
+      },
+      {
+        "line": 72,
+        "code": "            raise SourceFailure('malformed_bulk_columns', 'Bulk column names must be unique, including case variants')\n        if not {'organisasjonsnummer','navn'} <= required:\n            raise SourceFailure('malformed_bulk_columns','Bulk requires organisation-number and legal-name columns')"
+      },
+      {
+        "line": 76,
+        "code": "        captured.clear()\n        org_index = next(i for i, name in enumerate(fields) if name.casefold() == 'organisasjonsnummer')\n        website_index = next((i for i, name in enumerate(fields) if name.casefold() == 'hjemmeside'), None)"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/fact_depth.py",
+    "matches": [
+      {
+        "line": 84,
+        "code": "    for idx,row in indexed:\n        if not isinstance(row,dict) or str(get(row,('virksomhet','organisasjonsnummer')))!=org:continue\n        kind=row.get('regnskapstype')"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/financial_comparability.py",
+    "matches": [
+      {
+        "line": 16,
+        "code": "class FinancialObservation:\n    organisation_number: str\n    fiscal_year: str"
+      },
+      {
+        "line": 58,
+        "code": "        # 1. Legal Entity check\n        if str(current.organisation_number or \"\").strip() != str(prior.organisation_number or \"\").strip():\n            reasons.append(\"differing_legal_entity\")"
+      },
+      {
+        "line": 159,
+        "code": "                f\"Fiscal years {curr.fiscal_year} and {prior.fiscal_year} are comparable: \"\n                f\"matching legal entity ({curr.organisation_number}), scope ({curr.account_type}), \"\n                f\"currency ({curr.currency}), and standard annual boundaries.\""
+      },
+      {
+        "line": 192,
+        "code": "                return FinancialObservation(\n                    organisation_number=str(org or \"\"),\n                    fiscal_year=str(p.get(\"fiscal_year\") or \"\"),"
+      },
+      {
+        "line": 205,
+        "code": "                return FinancialObservation(\n                    organisation_number=str(org or \"\"),\n                    fiscal_year=str(p.get(\"tilDato\", \"\")[:4]),"
+      },
+      {
+        "line": 223,
+        "code": "        return FinancialObservation(\n            organisation_number=str(org or \"\"),\n            fiscal_year=str(p.get(\"fiscal_year\") or \"\"),"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/nav.py",
+    "matches": [
+      {
+        "line": 22,
+        "code": "from ..budget import SourceFailure\nfrom ..identity.orgnr import valid\nfrom ..models.evidence import utc_now"
+      },
+      {
+        "line": 29,
+        "code": "\n# Broad discovery only: exact detail employer.orgnr remains mandatory.\nGENERIC_NAMES={'as','asa','enk','ans','da','sa','ba','nuf','ltd','limited','inc','llc',"
+      },
+      {
+        "line": 98,
+        "code": "                remember(value.get('name') if isinstance(value,dict) else value)\n        prior=(previous or {}).get(envelope.organisation_number,{})\n        for claim in prior.get('claims',prior.get('profile',{}).get('claims',[])):"
+      },
+      {
+        "line": 103,
+        "code": "                remember(value.get('name') if isinstance(value,dict) else value)\n        names[envelope.organisation_number]=tokens\n    return names"
+      },
+      {
+        "line": 358,
+        "code": "    now_dt=now or datetime.now(timezone.utc)\n    complete=index.company_complete(envelope.organisation_number)\n    is_snapshot=index.metrics.get('source_mode')=='historical_snapshot'"
+      },
+      {
+        "line": 362,
+        "code": "    result=Section(state=state)\n    parents={envelope.organisation_number:None}\n    for claim in envelope.claims:"
+      },
+      {
+        "line": 365,
+        "code": "        if claim.family=='subunits' and claim.availability=='available' and isinstance(claim.value,dict):\n            org=claim.value.get('organisation_number')\n            if org: parents[org]='subunit '+org"
+      },
+      {
+        "line": 372,
+        "code": "            seen_uuids.add(ad.value['uuid'])\n            actual_emp = ad.value.get('employer_orgnr')\n            if actual_emp not in parents:"
+      },
+      {
+        "line": 375,
+        "code": "                continue  # Discovery/index aliases do not prove a current branch relationship.\n            match_via = ('subunit ' + actual_emp) if (actual_emp and actual_emp != envelope.organisation_number) else (via or 'organisation ' + org)\n            value={**ad.value,'matched_via':match_via}"
+      },
+      {
+        "line": 380,
+        "code": "            body=(blobs.directory/ad.sha).read_bytes()\n            add(result,Source(ad.url,body,ad.sha,ad.retrieved_at),envelope.organisation_number,'hiring','hiring.job.'+ad.value['uuid'],\n                value,'/ad_content',effective=ad.value['published'],source_class='official_nav',method='signalpost.nav.v1')"
+      },
+      {
+        "line": 389,
+        "code": "                temporary=Section()\n                add(temporary,page_source,envelope.organisation_number,'hiring','hiring.page',ad.value['uuid'],ad.page_locator,source_class='official_nav',method='signalpost.nav.v1')\n                result.evidence.extend(temporary.evidence); result.claims[-1].evidence_ids.extend(e.id for e in temporary.evidence)"
+      },
+      {
+        "line": 409,
+        "code": "        temporary=Section();body=(blobs.directory/sha).read_bytes()\n        add(temporary,Source(url,body,sha,retrieved),envelope.organisation_number,'hiring','hiring.closed.'+uuid,None,\n            locator,availability='not_available',span=Source(url,body,sha,retrieved).excerpt(value,locator),"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/nav_cached.py",
+    "matches": [
+      {
+        "line": 9,
+        "code": "from ..budget import SourceFailure\nfrom ..identity.orgnr import valid\nfrom .nav import BASE,Ad,NavHttp,allowed,header_name,name_matches,name_tokens,timestamp,time_cap,token_from"
+      },
+      {
+        "line": 20,
+        "code": "        for a in data['ads']:\n            self.ads_by_employer[a['employer_orgnr']].append(a['uuid'])\n        self.headers={};self.names={};self.scopes={};self.owners=defaultdict(set)"
+      },
+      {
+        "line": 51,
+        "code": "            for org in ids:self.owners[org].add(parent)\n        for uuid,ad in self.members.items():self.candidate(uuid,self.owners.get(ad['employer_orgnr'],set()),'declared_cache')\n        for parent,row in self.previous.items():"
+      },
+      {
+        "line": 96,
+        "code": "            employer=entry.get('employer') or item.get('employer') or {}\n            employer_org=str(employer.get('orgnr') or '') if isinstance(employer,dict) else ''\n            if employer_org in subunits:"
+      },
+      {
+        "line": 115,
+        "code": "        if member:\n            self.candidate(uuid,self.owners.get(member['employer_orgnr'],set()),'declared_cache')\n            return"
+      },
+      {
+        "line": 119,
+        "code": "        employer=entry.get('employer') or item.get('employer') or {}\n        employer_org=str(employer.get('orgnr') or '') if isinstance(employer,dict) else ''\n        if valid(employer_org):"
+      },
+      {
+        "line": 224,
+        "code": "                    raise SourceFailure('nav_public_page_unverified')\n                org=record['employer']['orgnr']\n                if org!=indexed['employer_orgnr'] or not any(org in state.scopes.get(parent,set()) for parent in affected):"
+      },
+      {
+        "line": 225,
+        "code": "                org=record['employer']['orgnr']\n                if org!=indexed['employer_orgnr'] or not any(org in state.scopes.get(parent,set()) for parent in affected):\n                    raise SourceFailure('nav_public_page_employer_mismatch')"
+      },
+      {
+        "line": 247,
+        "code": "                                         'city':item.get('city')})\n                value={'uuid':uuid,'employer_orgnr':org,'status':'ACTIVE','title':record['title'],\n                       'location':location or None,'published':record['published'],'expires':record['expires'],"
+      },
+      {
+        "line": 270,
+        "code": "        'time_cap_seconds':time_cap(config),'feed_complete':False,'detail_request_cap':0,\n        'coverage_scope':'declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details'})\n    async def detail(uuid,record):"
+      },
+      {
+        "line": 294,
+        "code": "            if published>now_dt:raise SourceFailure('nav_invalid_dates')\n            org=str((ad.get('employer') or {}).get('orgnr') or '').strip()\n            if not valid(org):return True"
+      },
+      {
+        "line": 299,
+        "code": "            homepage=str(employer.get('homepage') or employer.get('url') or ad.get('employerHomepage') or ad.get('homepage') or '').strip() or None\n            value={'uuid':uuid,'employer_orgnr':org,'status':entry.get('status','ACTIVE'),'title':ad['title'],\n                'location':[{'municipality':x.get('municipal'),'city':x.get('city')} for x in ad.get('workLocations',[])] or None,"
+      },
+      {
+        "line": 433,
+        "code": "                member=state.members.get(uuid)\n                affected=state.affected.get(uuid,set()) | (state.owners.get(member['employer_orgnr'],set()) if member else set())\n                if uuid in state.headers and state.headers[uuid][1]['_feed_entry']['status']=='ACTIVE':"
+      },
+      {
+        "line": 440,
+        "code": "        unusable={org for org,names in state.names.items() if not any(name_tokens(n) for n in names)} if state.new_unknown else set()\n        # The declared baseline is orgnr-keyed. Name usability is diagnostic for\n        # forward nomination, not an extra cache-mode qualification condition."
+      },
+      {
+        "line": 452,
+        "code": "        subunit_ids=set().union(*state.scopes.values())-parent_ids if state.scopes else set()\n        forward_counts={'parent_orgnr':0,'subunit_orgnr':0,'no_orgnr':0,'other_orgnr':0}\n        for _,item in state.headers.values():"
+      },
+      {
+        "line": 456,
+        "code": "            employer=entry.get('employer') or item.get('employer') or {}\n            number=str(employer.get('orgnr') or '') if isinstance(employer,dict) else ''\n            key='no_orgnr' if not valid(number) else 'parent_orgnr' if number in parent_ids else 'subunit_orgnr' if number in subunit_ids else 'other_orgnr'"
+      },
+      {
+        "line": 457,
+        "code": "            number=str(employer.get('orgnr') or '') if isinstance(employer,dict) else ''\n            key='no_orgnr' if not valid(number) else 'parent_orgnr' if number in parent_ids else 'subunit_orgnr' if number in subunit_ids else 'other_orgnr'\n            forward_counts[key]+=1"
+      },
+      {
+        "line": 459,
+        "code": "            forward_counts[key]+=1\n        index.metrics['forward_header_orgnr_counts']=forward_counts\n        feed_ms=index.metrics.get('feed_runtime_ms',round((time.monotonic()-feed_began)*1000) if feed_began else 0)"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/nav_index.py",
+    "matches": [
+      {
+        "line": 10,
+        "code": "from ..budget import SourceFailure\nfrom ..identity.orgnr import valid\nfrom .nav import BASE,allowed,timestamp"
+      },
+      {
+        "line": 16,
+        "code": "        'employer_count','failed_details','seeded_from_disk','fresh_fetched_ads','ads'}\nAD_FIELDS={'uuid','employer_orgnr','status','published','expires','last_modified','etag'}\n"
+      },
+      {
+        "line": 38,
+        "code": "        except (ValueError,TypeError,AttributeError):raise SourceFailure('index_uuid_invalid') from None\n        if uuid!=ad['uuid'] or uuid in seen or not valid(ad['employer_orgnr']) or ad['status']!='ACTIVE':\n            raise SourceFailure('index_ad_invalid')"
+      },
+      {
+        "line": 44,
+        "code": "        if ad['etag'] is not None and not isinstance(ad['etag'],str):raise SourceFailure('index_etag_invalid')\n    if len(seen)!=data['ads_count'] or len({a['employer_orgnr'] for a in data['ads']})!=data['employer_count']:\n        raise SourceFailure('index_counts_invalid')"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/nav_public_page.py",
+    "matches": [
+      {
+        "line": 9,
+        "code": "\nfrom ..identity.orgnr import valid\nfrom .nav import timestamp"
+      },
+      {
+        "line": 64,
+        "code": "    # from their required fields, without interpreting arbitrary page text.\n    for match in re.finditer(r'\"orgnr\"\\s*:\\s*\"\\d{9}\"', text):\n        pos = match.start()"
+      },
+      {
+        "line": 98,
+        "code": "                employer = record['employer']\n                orgnr = str(employer.get('orgnr') or '').strip()\n                published = record.get('published')"
+      },
+      {
+        "line": 101,
+        "code": "                expires = record.get('expires')\n                if not valid(orgnr) or timestamp(published) is None or timestamp(expires) is None:\n                    continue"
+      },
+      {
+        "line": 105,
+        "code": "                        'published': published, 'expires': expires,\n                        'employer': {'orgnr': orgnr, 'name': str(employer.get('name') or '')},\n                        'locationList': record.get('locationList') or [],"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/nav_stream.py",
+    "matches": [
+      {
+        "line": 19,
+        "code": "from ..budget import SourceFailure\nfrom ..identity.orgnr import valid\nfrom .nav import (BASE,NavHttp,Ad,allowed,time_cap,token_from,timestamp,header_name,"
+      },
+      {
+        "line": 190,
+        "code": "            if published>now:raise SourceFailure('nav_invalid_dates')\n            org=str((ad.get('employer') or {}).get('orgnr') or '').strip()\n            if not valid(org):return True"
+      },
+      {
+        "line": 194,
+        "code": "            homepage=str(employer.get('homepage') or employer.get('url') or ad.get('employerHomepage') or ad.get('homepage') or '').strip() or None\n            value={'uuid':uuid,'employer_orgnr':org,'status':entry['status'],'title':ad.get('title') or None,\n                   'location':[{'municipality':x.get('municipal'),'city':x.get('city')} for x in ad.get('workLocations',[])] or None,"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/official_extra.py",
+    "matches": [
+      {
+        "line": 24,
+        "code": "\ndef gleif_orgnr(value):\n    \"\"\"Normalize only the official number's optional three-digit spacing.\"\"\""
+      },
+      {
+        "line": 38,
+        "code": "    a=item.get('attributes',{});entity=a.get('entity',{})\n    if gleif_orgnr(entity.get('registeredAs'))!=org or entity.get('registeredAt',{}).get('id') not in GLEIF_AUTHORITIES:return section\n    fields={'lei':a.get('lei'),'entity_status':entity.get('status'),'legal_form':entity.get('legalForm'),"
+      },
+      {
+        "line": 59,
+        "code": "    value={'name':entity['legalName']['name'],'lei':lei,'relationship':expected}\n    if entity.get('registeredAt',{}).get('id')=='RA000472' and re.fullmatch(r'\\d{9}',entity.get('registeredAs','')):\n        value['organisation_number']=entity['registeredAs']"
+      },
+      {
+        "line": 60,
+        "code": "    if entity.get('registeredAt',{}).get('id')=='RA000472' and re.fullmatch(r'\\d{9}',entity.get('registeredAs','')):\n        value['organisation_number']=entity['registeredAs']\n    add(section,response_source(parent_response),org,'identity','identity.gleif.'+kind.replace('-','_'),value,"
+      },
+      {
+        "line": 82,
+        "code": "        ident=text(company,'cac:PartyIdentification/cbc:ID')\n        national=text(company,'cac:PartyLegalEntity/cbc:CompanyID') or ''\n        national=re.sub(r'^NO\\s*|\\s*MVA$','',national,flags=re.I).replace(' ','')"
+      },
+      {
+        "line": 85,
+        "code": "        country=text(company,'cac:PostalAddress/cac:Country/cbc:IdentificationCode')\n        organisations[ident]={'name':text(company,'cac:PartyName/cbc:Name'),'orgnr':national,'country':country}\n    buyers={text(p,'cac:Party/cac:PartyIdentification/cbc:ID') for p in root.findall('./cac:ContractingParty',NS)}"
+      },
+      {
+        "line": 88,
+        "code": "    buyer_names=[organisations[x]['name'] for x in sorted(buyers) if x in organisations and organisations[x]['name']]\n    buyer_match=any(organisations.get(x,{}).get('orgnr')==org and organisations.get(x,{}).get('country') in {'NOR','NO'} for x in buyers)\n    parties={text(p,'cbc:ID'):{text(t,'cbc:ID') for t in p.findall('efac:Tenderer',NS)}"
+      },
+      {
+        "line": 103,
+        "code": "        winners=set().union(*(parties.get(text(t,'efac:TenderingParty/cbc:ID'),set()) for t in linked)) if linked else set()\n        winner_match=any(organisations.get(x,{}).get('orgnr')==org and organisations.get(x,{}).get('country') in {'NOR','NO'} for x in winners)\n        if not (buyer_match or winner_match) or not title or not buyer_names:continue"
+      },
+      {
+        "line": 108,
+        "code": "        value={'kind':'Public procurement award','title':title,'buyer':buyer_names,'award_date':day.isoformat(),\n               'date':day.isoformat(),'notice_id':notice,'contract_id':contract_id,'company_orgnr':org,\n               'matched_role':'winner' if winner_match else 'buyer','url':f'https://ted.europa.eu/en/notice/-/detail/{notice}'}"
+      },
+      {
+        "line": 111,
+        "code": "        # Only a single linked tender amount is attributable, never a notice total.\n        owned=[t for t in linked if any(organisations.get(x,{}).get('orgnr')==org for x in parties.get(text(t,'efac:TenderingParty/cbc:ID'),set()))]\n        priced=owned if winner_match else linked"
+      },
+      {
+        "line": 199,
+        "code": "        try:\n            url=GLEIF+'lei-records?'+urlencode({'filter[entity.registeredAs]':gleif_lookup_numbers(nums),'filter[entity.registeredAt]':','.join(sorted(GLEIF_AUTHORITIES)),'page[size]':200})\n            response=await fetch.get(url);data=json.loads(response.body)"
+      },
+      {
+        "line": 203,
+        "code": "            for index,item in enumerate(data['data']):\n                org=gleif_orgnr(item['attributes']['entity']['registeredAs'])\n                if org not in nums:continue"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/registry_changes.py",
+    "matches": [
+      {
+        "line": 58,
+        "code": "            detail += ': field removed'\n    elif 'subunit_orgnr' in value:\n        detail += ': ' + value['subunit_orgnr']"
+      },
+      {
+        "line": 59,
+        "code": "    elif 'subunit_orgnr' in value:\n        detail += ': ' + value['subunit_orgnr']\n        if value.get('start_date'):"
+      },
+      {
+        "line": 67,
+        "code": "    value = claim.value\n    if not isinstance(value, dict) or value.get('company_orgnr') != envelope.organisation_number:\n        return False"
+      },
+      {
+        "line": 88,
+        "code": "            continue\n        unit = claim.value['organisation_number']\n        for eid in claim.evidence_ids:"
+      },
+      {
+        "line": 100,
+        "code": "            for item in bodies[sha]:\n                if item.get('organisasjonsnummer') == unit:\n                    if item.get('overordnetEnhet') != envelope.organisation_number:"
+      },
+      {
+        "line": 101,
+        "code": "                if item.get('organisasjonsnummer') == unit:\n                    if item.get('overordnetEnhet') != envelope.organisation_number:\n                        raise SourceFailure('registry_change_wrong_parent')"
+      },
+      {
+        "line": 117,
+        "code": "    published = timestamp(event['dato']).isoformat().replace('+00:00', 'Z')\n    common = {'company_orgnr': org, 'event_id': event_id, 'date': published,\n              'kind': 'Registry announcement',"
+      },
+      {
+        "line": 123,
+        "code": "    if endpoint == 'enheter':\n        if event.get('organisasjonsnummer') != org:\n            raise SourceFailure('registry_change_wrong_company')"
+      },
+      {
+        "line": 150,
+        "code": "    elif event.get('endringstype') in {'Ny', 'Sletting', 'Endring', 'Ukjent'}:\n        unit = event['organisasjonsnummer']\n        item, proof = scope[unit]"
+      },
+      {
+        "line": 152,
+        "code": "        item, proof = scope[unit]\n        if item.get('overordnetEnhet') != org:\n            raise SourceFailure('registry_change_wrong_parent')"
+      },
+      {
+        "line": 156,
+        "code": "        value = {**common, 'title': labels[event['endringstype']],\n                 'subunit_orgnr': unit, 'event_type': event['endringstype']}\n        if event['endringstype'] == 'Ny' and item.get('oppstartsdato'):"
+      },
+      {
+        "line": 178,
+        "code": "    while True:\n        params = {'organisasjonsnummer': ','.join(numbers), 'dato': since,\n                  'updatedBefore': until, 'includeChanges': 'true', 'size': PAGE_SIZE,"
+      },
+      {
+        "line": 199,
+        "code": "                raise SourceFailure('registry_change_pagination_repeated')\n            if event['organisasjonsnummer'] not in numbers:\n                raise SourceFailure('registry_change_wrong_company')"
+      },
+      {
+        "line": 245,
+        "code": "                async for event, response, locator in pages(http, endpoint, chunk, since, until):\n                    org = event['organisasjonsnummer'] if endpoint == 'enheter' else owners[event['organisasjonsnummer']]\n                    section = await offload(extract, event, response, locator, org, endpoint, scopes.get(org))"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/registry_fields.py",
+    "matches": [
+      {
+        "line": 29,
+        "code": "    'audit_opt_out_decision_date':('fravalgRevisjonBeslutningsDato','text'),\n    'part_of_group':('erIKonsern','bool'),'parent_organisation_number':('overordnetEnhet','text'),\n}"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/regnskap.py",
+    "matches": [
+      {
+        "line": 64,
+        "code": "    entity = record.get(\"virksomhet\", {})\n    reported_org = entity.get(\"organisasjonsnummer\") if isinstance(entity, dict) else None\n    if str(reported_org) != org:"
+      },
+      {
+        "line": 66,
+        "code": "    if str(reported_org) != org:\n        raise SourceFailure(\"wrong_company\", \"Accounts do not explicitly match the requested orgnr\")\n    seen_years = set()"
+      },
+      {
+        "line": 71,
+        "code": "        row_entity = row.get(\"virksomhet\", {})\n        row_org = row_entity.get(\"organisasjonsnummer\") if isinstance(row_entity, dict) else None\n        if not row_org or str(row_org) != org:"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/sources/subunits.py",
+    "matches": [
+      {
+        "line": 6,
+        "code": "from pathlib import Path\nfrom ..identity.orgnr import normalize, valid\n"
+      },
+      {
+        "line": 10,
+        "code": "class SubunitMap(dict):\n    \"\"\"In-memory map of employer_orgnr -> [legal_name, brand_name].\n    Also tracks employer_orgnr -> parent_orgnr and parent_orgnr -> set(subunit_orgnrs)."
+      },
+      {
+        "line": 11,
+        "code": "    \"\"\"In-memory map of employer_orgnr -> [legal_name, brand_name].\n    Also tracks employer_orgnr -> parent_orgnr and parent_orgnr -> set(subunit_orgnrs).\n    \"\"\""
+      },
+      {
+        "line": 18,
+        "code": "\n    def add_mapping(self, employer_orgnr: str, parent_orgnr: str, legal_name: str = None, brand_name: str = None):\n        emp = normalize(str(employer_orgnr or \"\"))"
+      },
+      {
+        "line": 19,
+        "code": "    def add_mapping(self, employer_orgnr: str, parent_orgnr: str, legal_name: str = None, brand_name: str = None):\n        emp = normalize(str(employer_orgnr or \"\"))\n        parent = normalize(str(parent_orgnr or \"\"))"
+      },
+      {
+        "line": 20,
+        "code": "        emp = normalize(str(employer_orgnr or \"\"))\n        parent = normalize(str(parent_orgnr or \"\"))\n        if not valid(emp) or not valid(parent):"
+      },
+      {
+        "line": 42,
+        "code": "                        if isinstance(sub, dict):\n                            sub_org = sub.get(\"organisation_number\") or sub.get(\"orgnr\")\n                            sub_name = sub.get(\"name\") or sub.get(\"navn\") or sub.get(\"legal_name\")"
+      },
+      {
+        "line": 49,
+        "code": "\n    # 2. From bulk registry (if CSV has overordnetEnhet)\n    if bulk:"
+      },
+      {
+        "line": 52,
+        "code": "        for org, (row, _) in bulk.items():\n            parent = row.get(\"overordnetEnhet\")\n            if parent:"
+      },
+      {
+        "line": 63,
+        "code": "                    val = c[\"value\"]\n                    sub_org = val.get(\"organisation_number\")\n                    sub_name = val.get(\"name\")"
+      },
+      {
+        "line": 79,
+        "code": "                    for row in r:\n                        comp = row.get(\"company\") or row.get(\"parent_orgnr\")\n                        emp = row.get(\"employer_orgnr\") or row.get(\"subunit_orgnr\")"
+      },
+      {
+        "line": 80,
+        "code": "                        comp = row.get(\"company\") or row.get(\"parent_orgnr\")\n                        emp = row.get(\"employer_orgnr\") or row.get(\"subunit_orgnr\")\n                        name = row.get(\"name\") or row.get(\"legal_name\")"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/synthesis/analyst.py",
+    "matches": [
+      {
+        "line": 51,
+        "code": "    def context(field,value,evidence_ids=()):\n        c=ChangeClaim(id=digest(['analyst-context',envelope.organisation_number,field,value]),field=field,value=value,evidence_ids=list(evidence_ids))\n        result.context_claims.append(c);return c.id"
+      },
+      {
+        "line": 63,
+        "code": "        add('f','Company identity could not be established from the checked sources.',[state_context('identity')]);return result\n    used=[name];org=context('snapshot.analyst.organisation_number',envelope.organisation_number,name.evidence_ids);used.append(org)\n    form=fields.get('identity.organisation_form');city=fields.get('identity.municipality')"
+      },
+      {
+        "line": 65,
+        "code": "    form=fields.get('identity.organisation_form');city=fields.get('identity.municipality')\n    text=str(name.value)+' (org. '+envelope.organisation_number+')'\n    if form and isinstance(form.value,dict):"
+      },
+      {
+        "line": 118,
+        "code": "                    p=c.reporting_period\n                    return FinancialObservation(envelope.organisation_number,str(p['fiscal_year']),p.get('period_start'),p.get('period_end'),p.get('currency'),p.get('unit'),p.get('account_type'),{'revenue':c.value})\n                comparable=ComparablePeriodGate().compare(obs(revenue),obs(prior),metric='revenue').comparable"
+      },
+      {
+        "line": 129,
+        "code": "        c=fields['identity.employees'];add('b','It has '+format(c.value,',')+' registered employees.',[c])\n    units={str(c.value.get('organisation_number')):c for c in claims if c.field.startswith('subunits.unit.') and isinstance(c.value,dict) and c.value.get('organisation_number')}\n    if units:"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/synthesis/company_brief.py",
+    "matches": [
+      {
+        "line": 25,
+        "code": "        return 'only a shared group website was found'\n    if any(word in code for word in ('ambiguous', 'attribution', 'owner', 'identity', 'foreign_orgnr')):\n        return \"a match couldn't be confirmed for this exact company\""
+      },
+      {
+        "line": 46,
+        "code": "    def context(field, value):\n        claim = ChangeClaim(id=digest(['snapshot-context', envelope.organisation_number, field, value]),\n                            field=field, value=value, evidence_ids=[])"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/synthesis/readability.py",
+    "matches": [
+      {
+        "line": 84,
+        "code": "    # Names alone cannot establish that two different registered people are one.\n    if ceo.value.get('birth_date') != chair.value.get('birth_date') or ceo.value.get('entity_organisation_number')!=chair.value.get('entity_organisation_number'):\n        return None"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/synthesis/service.py",
+    "matches": [
+      {
+        "line": 14,
+        "code": "        except Exception:\n            result=Synthesis(generator=Generator(input_sha256=digest([envelope.organisation_number,'template_error'])))\n            result.checks.fallback_used=True"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/synthesis/validate.py",
+    "matches": [
+      {
+        "line": 58,
+        "code": "            evidence={e.id:e for e in envelope.evidence}\n            return bool(isinstance(value,dict) and value.get('company_orgnr')==envelope.organisation_number and claim.evidence_ids and all(eid in evidence for eid in claim.evidence_ids) and any(evidence[eid].source_url.startswith('https://ted.europa.eu/en/notice/') and evidence[eid].extraction_method=='signalpost.official_extra.v1' for eid in claim.evidence_ids))\n        if claim.field.startswith('registry_change.'):"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/activity.py",
+    "matches": [
+      {
+        "line": 336,
+        "code": "    section = Section(state='not_available')\n    if proof.value.get('identity_level') != 'VERIFIED' or proof.value.get('other_orgnrs'):\n        return section"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/additional_proof.py",
+    "matches": [
+      {
+        "line": 9,
+        "code": "def additional_proof(page, org, context):\n    from .proof import Proof, orgnrs\n    # These new rules do not waive page-wide conflicts or foreign-entity checks."
+      },
+      {
+        "line": 11,
+        "code": "    # These new rules do not waive page-wide conflicts or foreign-entity checks.\n    if orgnrs(page.visible) - {org}:\n        return None"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/brands.py",
+    "matches": [
+      {
+        "line": 32,
+        "code": "    if not refs:return result\n    allowed={envelope.organisation_number,*[u['orgnr'] for u in context.get('subunits',[])]}\n    for e in envelope.evidence:"
+      },
+      {
+        "line": 38,
+        "code": "            employer=ad.get('employer') or {}\n            if str(employer.get('orgnr')) in allowed and employer.get('name'):result.append((employer['name'],'exact_nav_employer',[e.id]))\n        except (OSError,ValueError,AttributeError):pass"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/candidates.py",
+    "matches": [
+      {
+        "line": 18,
+        "code": "    origin: str\n    subunit_orgnr: str | None = None\n"
+      },
+      {
+        "line": 86,
+        "code": "    seen = set()\n    def add(value, origin, subunit_orgnr=None):\n        url = normalize_url(value)"
+      },
+      {
+        "line": 90,
+        "code": "        if root and root not in seen and root not in SOCIAL | DIRECTORIES | FREE_MAIL and not is_directory_record(url):\n            output.append(Candidate(url, root, origin,subunit_orgnr))\n            seen.add(root)"
+      },
+      {
+        "line": 98,
+        "code": "        if isinstance(nav_item, dict):\n            add(nav_item.get('url') or nav_item.get('homepage'), 'nav_employer_homepage', nav_item.get('subunit_orgnr'))\n        elif isinstance(nav_item, str):"
+      },
+      {
+        "line": 104,
+        "code": "        if isinstance(hp, dict):\n            add(hp.get('url') or hp.get('homepage'), 'nav_employer_homepage', hp.get('subunit_orgnr'))\n        elif isinstance(hp, str):"
+      },
+      {
+        "line": 108,
+        "code": "    for unit in context.get('subunits',[]):\n        add(unit.get('website'),'subunit_registry_website',unit['orgnr'])\n        email=str(unit.get('email') or '')"
+      },
+      {
+        "line": 110,
+        "code": "        email=str(unit.get('email') or '')\n        if '@' in email:add(email.rsplit('@',1)[1],'subunit_registry_email',unit['orgnr'])\n    for url in context.get('wikidata_homepages', []):"
+      },
+      {
+        "line": 116,
+        "code": "    from .shared_identifiers import bundled\n    for item in bundled('cc_orgnr_index.json.gz').get(str(context.get('orgnr') or ''), []):\n        add('https://' + item['domain'], 'cc_index')"
+      },
+      {
+        "line": 122,
+        "code": "        trading = re.split(r'\\b(?:avd|avdeling)\\b', str(unit.get('name') or ''), flags=re.I)[0].strip(' .-')\n        sources.append((bounded_variants(trading), 'subunit_name_slug', unit['orgnr']))\n    variants = [(values[i], origin, unit) for i in range(8) for values, origin, unit in sources if i < len(values)]"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/collector.py",
+    "matches": [
+      {
+        "line": 96,
+        "code": "\n    cleaned_brand = re.sub(r\"\\s*[-\u00e2\u20ac\u201c|:]?\\s*(?:org(?:anisasjons)?\\.?\\s*nr\\.?|organisasjonsnummer)\\s*[:.]?\\s*\\d{9}\\b.*$\", \"\", candidate_brand, flags=re.I).strip(\" .,-\")\n    cleaned_brand = re.sub(r\"\\s*[-\u00e2\u20ac\u201c|:]\\s*(?:nettbutikk|butikk|webshop|forside|hjem|velkommen|home|shop|store)\\b.*$\", \"\", cleaned_brand, flags=re.I).strip(\" .,-\")"
+      },
+      {
+        "line": 122,
+        "code": "        row, source = bulk\n        return context_from_bulk(row), source, \"row:\" + envelope.organisation_number + \"/column:hjemmeside\"\n    reference = next((e for e in envelope.evidence if e.locator == \"/navn\"), None)"
+      },
+      {
+        "line": 213,
+        "code": "    context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)\n    context['orgnr'] = org\n    context['nace']=next((str(c.value.get('kode','')) for c in envelope.claims if c.field=='identity.nace1' and isinstance(c.value,dict)),'')"
+      },
+      {
+        "line": 216,
+        "code": "    round2=envelope.run.refresh.setdefault('recall_round2',{'candidates':[]})\n    units={c.value['organisation_number']:{'name': c.value.get('name'), 'address':c.value.get('address')} for c in envelope.claims\n           if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}"
+      },
+      {
+        "line": 223,
+        "code": "            units[unit][{'registered_website':'website','registered_email':'email','registered_phone':'phone','registered_mobile':'mobile'}[field]]=c.value\n    context['subunits']=[{'orgnr':unit,**data} for unit,data in units.items()]\n    nav_homepages = list(context.get('nav_homepages') or [])"
+      },
+      {
+        "line": 231,
+        "code": "            hp = val_dict.get('employer_homepage')\n            if hp and val_dict.get('employer_orgnr') == org:\n                nav_homepages.append({'url': hp, 'subunit_orgnr': None})"
+      },
+      {
+        "line": 232,
+        "code": "            if hp and val_dict.get('employer_orgnr') == org:\n                nav_homepages.append({'url': hp, 'subunit_orgnr': None})\n        for unit_org in units:"
+      },
+      {
+        "line": 238,
+        "code": "                hp = val_dict.get('employer_homepage')\n                if hp and val_dict.get('employer_orgnr') == unit_org:\n                    nav_homepages.append({'url': hp, 'subunit_orgnr': unit_org})"
+      },
+      {
+        "line": 239,
+        "code": "                if hp and val_dict.get('employer_orgnr') == unit_org:\n                    nav_homepages.append({'url': hp, 'subunit_orgnr': unit_org})\n    for c in envelope.claims:"
+      },
+      {
+        "line": 243,
+        "code": "            hp = c.value.get('employer_homepage')\n            if hp and c.value.get('employer_orgnr') in {org, *units}:\n                emp_org = c.value.get('employer_orgnr')"
+      },
+      {
+        "line": 244,
+        "code": "            if hp and c.value.get('employer_orgnr') in {org, *units}:\n                emp_org = c.value.get('employer_orgnr')\n                sub = emp_org if (emp_org and emp_org != org and emp_org in units) else None"
+      },
+      {
+        "line": 246,
+        "code": "                sub = emp_org if (emp_org and emp_org != org and emp_org in units) else None\n                nav_homepages.append({'url': hp, 'subunit_orgnr': sub})\n    context['nav_homepages'] = nav_homepages"
+      },
+      {
+        "line": 291,
+        "code": "        best = None\n        entry={'domain':candidate.domain,'origin':candidate.origin,'subunit_orgnr':candidate.subunit_orgnr,'fetched':False,'accepted':False}\n        round2['candidates'].append(entry)"
+      },
+      {
+        "line": 365,
+        "code": "            # page on that domain. Keep the existing checks before deeper linked pages.\n            vetoes = {'foreign_orgnr','different_legal_entity','hosting_default','parked','shared_registry_domain','placeholder','frameset_placeholder','provider_industry_mismatch'}\n            if proof.reason not in vetoes:"
+      },
+      {
+        "line": 430,
+        "code": "            is_prev_domain = bool(refresh_candidate and (candidate is refresh_candidate or candidate.domain == refresh_candidate.domain or domain(response.url) == refresh_candidate.domain))\n            if is_prev_domain and (proof.reason == \"foreign_orgnr\" or (proof.level == \"REJECT\" and proof.reason == \"foreign_orgnr\")):\n                refuted_previous_website = True"
+      },
+      {
+        "line": 510,
+        "code": "            envelope.run.refresh.setdefault('website', {})['refuted_previous_website'] = True\n            section.errors.append(Error(section='website', code='foreign_orgnr_on_previous_domain',\n                                        message=f'Previous website {refresh_candidate.domain} refuted by foreign organization number'))"
+      },
+      {
+        "line": 536,
+        "code": "    web_val = web_claim.value if hasattr(web_claim, \"value\") and isinstance(web_claim.value, dict) else (web_claim if isinstance(web_claim, dict) else {})\n    other_orgnrs = web_val.get(\"other_orgnrs\") or []\n    is_group = bool(other_orgnrs) or web_val.get(\"relationship_note\") == \"group_site\""
+      },
+      {
+        "line": 537,
+        "code": "    other_orgnrs = web_val.get(\"other_orgnrs\") or []\n    is_group = bool(other_orgnrs) or web_val.get(\"relationship_note\") == \"group_site\"\n"
+      },
+      {
+        "line": 542,
+        "code": "        for c in envelope.claims:\n            if c.field.startswith(\"subunits.unit.\") and isinstance(c.value, dict) and c.value.get(\"orgnr\"):\n                subunits.add(c.value.get(\"orgnr\"))"
+      },
+      {
+        "line": 543,
+        "code": "            if c.field.startswith(\"subunits.unit.\") and isinstance(c.value, dict) and c.value.get(\"orgnr\"):\n                subunits.add(c.value.get(\"orgnr\"))\n    if context.get(\"subunits\"):"
+      },
+      {
+        "line": 545,
+        "code": "    if context.get(\"subunits\"):\n        subunits.update(unit['orgnr'] for unit in context[\"subunits\"] if unit.get('orgnr'))\n"
+      },
+      {
+        "line": 568,
+        "code": "                        c = find_containing_card(cards, pos)\n                        if c and c.is_sibling(org, other_orgnrs, subunits):\n                            continue"
+      },
+      {
+        "line": 599,
+        "code": "                        if c:\n                            if c.is_sibling(org, other_orgnrs, subunits) or not c.matches_org(org, context, subunits):\n                                continue"
+      },
+      {
+        "line": 613,
+        "code": "                   nominated_contacts=candidate.origin in NOMINATED)\n    context = {**context, 'allowed_orgnrs':{org, *[u['orgnr'] for u in context.get('subunits', [])]}}\n    from .round2 import declared_score"
+      },
+      {
+        "line": 617,
+        "code": "    proof=declared_score(page,org,context,candidate.origin,leaders,options,enabled)\n    if candidate.subunit_orgnr and (proof.level not in {'VERIFIED','BLOCKED'} or proof.proof_type=='registry_declared_hard_contact_tier_b'):\n        unit_context = next((u for u in context.get('subunits', []) if u['orgnr']==candidate.subunit_orgnr), {})"
+      },
+      {
+        "line": 618,
+        "code": "    if candidate.subunit_orgnr and (proof.level not in {'VERIFIED','BLOCKED'} or proof.proof_type=='registry_declared_hard_contact_tier_b'):\n        unit_context = next((u for u in context.get('subunits', []) if u['orgnr']==candidate.subunit_orgnr), {})\n        address = unit_context.get('address') or {}"
+      },
+      {
+        "line": 621,
+        "code": "        unit_context = {**context, **unit_context, 'street':address.get('adresse'), 'postcode':address.get('postnummer'), 'city':address.get('poststed'), 'municipality':address.get('kommune')}\n        unit=declared_score(page,candidate.subunit_orgnr,unit_context,candidate.origin,leaders,options,enabled)\n        if unit.level=='VERIFIED' and (proof.level!='VERIFIED' or unit.proof_type!='registry_declared_hard_contact_tier_b'):"
+      },
+      {
+        "line": 623,
+        "code": "        if unit.level=='VERIFIED' and (proof.level!='VERIFIED' or unit.proof_type!='registry_declared_hard_contact_tier_b'):\n            unit.subject_orgnr = candidate.subunit_orgnr\n            return unit"
+      },
+      {
+        "line": 636,
+        "code": "    root_url = urlunsplit((p.scheme, p.netloc, \"\", \"\", \"\"))\n    matched=getattr(proof,'subject_orgnr',None) or org\n    contact_proofs={'registry_email_on_site','registry_phone_on_site','legal_name_masthead','unique_legal_name_domain','legal_name_and_registry_contact','legal_name_without_suffix_and_two_contacts',"
+      },
+      {
+        "line": 643,
+        "code": "        return missing(\"website\", \"no_localized_proof\", state=\"ambiguous\")\n    from .proof import orgnrs\n    group_site = bool(proof.other_orgnrs) or any(len(orgnrs(p.visible)) >= 3 for _, p in pages)"
+      },
+      {
+        "line": 644,
+        "code": "    from .proof import orgnrs\n    group_site = bool(proof.other_orgnrs) or any(len(orgnrs(p.visible)) >= 3 for _, p in pages)\n    value = {\"final_url\": root_url, \"transport_scheme\": p.scheme,"
+      },
+      {
+        "line": 649,
+        "code": "             \"candidate_origin\": candidate.origin, \"relationship_note\": \"group_site\" if group_site else None,\n             \"other_orgnrs\": proof.other_orgnrs}\n    value['publication_tier'] = 'B' if proof.proof_type == 'registry_declared_hard_contact_tier_b' else 'A'"
+      },
+      {
+        "line": 652,
+        "code": "    value['content_allowed'] = value['publication_tier'] == 'A'\n    if matched != org and matched in {u['orgnr'] for u in context.get('subunits', [])}:\n        value['matched_via_subunit']=matched"
+      },
+      {
+        "line": 676,
+        "code": "        section.claims[-1].evidence_ids.extend(sorted(refs))\n    elif candidate.subunit_orgnr:\n        refs={ref for c in envelope.claims if c.field.startswith(('subunits.unit.'+candidate.subunit_orgnr,'subunits.detail.'+candidate.subunit_orgnr+'.')) for ref in c.evidence_ids}"
+      },
+      {
+        "line": 677,
+        "code": "    elif candidate.subunit_orgnr:\n        refs={ref for c in envelope.claims if c.field.startswith(('subunits.unit.'+candidate.subunit_orgnr,'subunits.detail.'+candidate.subunit_orgnr+'.')) for ref in c.evidence_ids}\n        section.evidence.extend(e for e in envelope.evidence if e.id in refs)"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/entity_scope.py",
+    "matches": [
+      {
+        "line": 8,
+        "code": "from .candidates import legal_name\nfrom .proof import orgnrs\nfrom .policy import domain"
+      },
+      {
+        "line": 17,
+        "code": "    \"\"\"\n    if check_ids and orgnrs(page.owner_text) - {org}:\n        return True"
+      },
+      {
+        "line": 46,
+        "code": "            if isinstance(v, dict) for v in (v.get('name'), v.get('alternateName')) if v)\n        if org in orgnrs(page.owner_text):\n            return True"
+      },
+      {
+        "line": 73,
+        "code": "    names=[normalize(s.get('name')) for s in subjects if s.get('name')]\n    allowed={org,*[s['orgnr'] for s in context.get('subunits',[]) if s.get('orgnr')]}\n    norwegian_owner=False"
+      },
+      {
+        "line": 83,
+        "code": "    for page in pages:\n        if allowed & orgnrs(page.owner_text+' '+json.dumps(page.jsonld)):\n            return False"
+      },
+      {
+        "line": 117,
+        "code": "                if host:\n                    owners.setdefault(host, set()).add(row.organisation_number)\n    cache = {}"
+      },
+      {
+        "line": 120,
+        "code": "    for row in envelopes:\n        org = row.organisation_number\n        name = next((c.value for c in row.claims if c.field == 'identity.legal_name'), '')"
+      },
+      {
+        "line": 167,
+        "code": "                proof_pages.append(cache[key])\n        group = group or any(len(orgnrs(p.visible + ' ' + json.dumps(p.jsonld))) >= 3 for p in proof_pages)\n        group = group or any(foreign_entity_page(p, org, name) for p in proof_pages)"
+      },
+      {
+        "line": 178,
+        "code": "                 'phone':next((c.value for c in row.claims if c.field=='identity.registered_phone' and c.availability=='available'),None)}\n        context['subunits']=[{'orgnr':c.value['organisation_number'],**c.value} for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)]\n        for claim in row.claims:"
+      },
+      {
+        "line": 184,
+        "code": "            for unit in context['subunits']:\n                if unit['orgnr']==number:unit[field.removeprefix('registered_')]=claim.value\n        global_site=value.get('proof_type')=='registry_declared_name_tier_a' and unproven_global_site(proof_pages,org,context,value.get('final_url',''))"
+      },
+      {
+        "line": 187,
+        "code": "        group = group or global_site\n        units = {c.value['organisation_number'] for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}\n        subject = value.get('matched_via_subunit') if value.get('matched_via_subunit') in units else org"
+      },
+      {
+        "line": 191,
+        "code": "        from .round2 import real_page\n        unit_names = [{'orgnr':c.value['organisation_number'],'name':c.value.get('name')} for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)]\n        owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity'"
+      },
+      {
+        "line": 193,
+        "code": "        owner_conflict = any(score(p,org,{'name':name,'subunits':unit_names},'legal_name_slug',[]).reason == 'different_legal_entity'\n                             or real_page(p,{'name':name,'subunits':unit_names,'allowed_orgnrs':{org,*units}}) == 'different_legal_entity'\n                             for p in proof_pages)"
+      },
+      {
+        "line": 224,
+        "code": "                        card = find_containing_card(extract_entity_cards(page.raw), pos) if pos >= 0 else None\n                        if card and org in card.orgnrs and not (card.orgnrs - {org}):\n                            scoped = True"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/fetcher.py",
+    "matches": [
+      {
+        "line": 154,
+        "code": "                    gate.next_start = time.monotonic() + self.config.website_politeness_seconds\n                registry_requests = sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)\n                # Preserve a reserved activity request for explicitly lower caps,"
+      },
+      {
+        "line": 262,
+        "code": "        \"\"\"\n        registry_requests = sum(e['organisation_number'] == org and e.get('section') != 'website' for e in self.budget.events)\n        return min(6, max(0, 9 - registry_requests))"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/jobs.py",
+    "matches": [
+      {
+        "line": 15,
+        "code": "from .candidates import legal_name\nfrom .proof import orgnrs\n"
+      },
+      {
+        "line": 59,
+        "code": "        for value in json_values(employer,key):\n            identifiers |= orgnrs(str(value))\n    if identifiers - allowed:return None"
+      },
+      {
+        "line": 77,
+        "code": "        if foreign_entity_page(page, matched, names.get(matched), check_ids=False):return None\n    return {'uuid':str(uuid5(NAMESPACE_URL,page.url)), 'source':'company_site', 'employer_orgnr':matched,\n            'status':'ACTIVE','title':title.strip(),'url':page.url,'published':job['datePosted'],'expires':job['validThrough'],"
+      },
+      {
+        "line": 80,
+        "code": "            'matched_via':'verified company website and tenant-scoped linked board' if not identifiers else 'verified website link and exact registered employer',\n            'employer_identity_proof':'linked_board' if not identifiers else 'orgnr_on_posting', 'location':job.get('jobLocation'),\n            'occupation_categories':None}"
+      },
+      {
+        "line": 110,
+        "code": "async def fetch(envelope, http):\n    org=envelope.organisation_number\n    proof=next((c for c in envelope.claims if c.field=='official_website' and c.availability=='available'),None)"
+      },
+      {
+        "line": 120,
+        "code": "        if c.field.startswith('subunits.unit.') and c.availability=='available':\n            number=c.value['organisation_number'];allowed.add(number);names[number]=c.value.get('name')\n    queue=deque();seen=set();requests=0;candidate_urls=set();fetched=0;accepted=0"
+      },
+      {
+        "line": 142,
+        "code": "    for response,page in http.accepted_pages.get(org,[]):nominate(response,page,0)\n    nav_keys={(c.value.get('employer_orgnr'),c.value.get('title','').strip().casefold()) for c in envelope.claims if c.family=='hiring' and c.availability=='available' and isinstance(c.value,dict)}\n    while queue and requests<6:"
+      },
+      {
+        "line": 162,
+        "code": "            if value:accepted+=1\n            if value and (value['employer_orgnr'],value['title'].casefold()) not in nav_keys:\n                source=response_source(response)"
+      },
+      {
+        "line": 177,
+        "code": "                    result.evidence.extend(support.evidence);result.claims[-1].evidence_ids.extend(e.id for e in support.evidence)\n                nav_keys.add((value['employer_orgnr'],value['title'].casefold()))\n            elif depth<2:"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/names.py",
+    "matches": [
+      {
+        "line": 31,
+        "code": "def proof_context(page,org,context):\n    from .proof import orgnrs\n    # Only a number in publisher/header/footer context permits a damaged-name"
+      },
+      {
+        "line": 33,
+        "code": "    # Only a number in publisher/header/footer context permits a damaged-name\n    # repair. A customer/article reference to our orgnr cannot trigger it.\n    if orgnrs(' '.join(page.brand_parts))!={org}:return context"
+      },
+      {
+        "line": 34,
+        "code": "    # repair. A customer/article reference to our orgnr cannot trigger it.\n    if orgnrs(' '.join(page.brand_parts))!={org}:return context\n    names=[page.title,' '.join(page.identity_headings)]"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/proof.py",
+    "matches": [
+      {
+        "line": 5,
+        "code": "from dataclasses import dataclass, field\nfrom ..identity.orgnr import valid\nfrom .candidates import legal_name"
+      },
+      {
+        "line": 13,
+        "code": "\ndef orgnrs(text):\n    result = set()"
+      },
+      {
+        "line": 66,
+        "code": "    found = set()\n    keys = {'orgnr', 'organisasjonsnummer', 'organizationnumber', 'organisationnumber', 'vatid', 'taxid'}\n    own_keys = {'organization', 'organisation', 'businessinfo', 'business', 'companyinfo', 'siteowner'}"
+      },
+      {
+        "line": 79,
+        "code": "                if key.casefold().replace('_', '') in keys and isinstance(value, (str, int)):\n                    numbers = orgnrs(str(value))\n                    if named:"
+      },
+      {
+        "line": 83,
+        "code": "                    else:\n                        found.update(numbers - set(context.get('allowed_orgnrs', ())))\n        for key, value in node.items():"
+      },
+      {
+        "line": 109,
+        "code": "                and re.search(r'org(?:anisasjons)?\\.?\\s*(?:nr|nummer)|vat|tax\\s*id', text, re.I)):\n            found.update(orgnrs(text))\n    return found"
+      },
+      {
+        "line": 148,
+        "code": "                and re.search(r'\\b(?:hovedkontor|kontaktinformasjon|registered office|company details|impressum)\\b',block,re.I)\n                and re.search(r'\\b(?:org\\.?\\s*nr|organisasjonsnummer|vat|tax\\s*id)',block,re.I)\n                and not re.search(r'\\b(?:kunde|kunder|customer|customers|partner|partners|client|clients|referanser)\\b',block,re.I)):"
+      },
+      {
+        "line": 186,
+        "code": "    for text in parsed.footers:\n        if orgnrs(text)!={org}:continue\n        owners=re.finditer(r'(?:\u00a9|copyright)\\s*(?:\\d{4}\\s*)?(.+?)(?=\\s*(?:organisasjonsnummer|org\\.?\\s*nr|vat|\u00a9|copyright)|$)',text,re.I)"
+      },
+      {
+        "line": 187,
+        "code": "        if orgnrs(text)!={org}:continue\n        owners=re.finditer(r'(?:\u00a9|copyright)\\s*(?:\\d{4}\\s*)?(.+?)(?=\\s*(?:organisasjonsnummer|org\\.?\\s*nr|vat|\u00a9|copyright)|$)',text,re.I)\n        if any(compact(owner.group(1).strip(' .,:;'))==expected for owner in owners):return True"
+      },
+      {
+        "line": 202,
+        "code": "        self.identifier_raw = owner_identifier_markup(raw)\n        self.orgnrs = orgnrs(re.sub(r'<[^>]+>', ' ', self.identifier_raw)) | orgnrs(self.identifier_raw)\n"
+      },
+      {
+        "line": 206,
+        "code": "        org_pat = re.compile(r'\\b' + org[:3] + r'[\\s.]?' + org[3:6] + r'[\\s.]?' + org[6:9] + r'\\b')\n        if org in self.orgnrs or org_pat.search(self.identifier_raw):\n            return True"
+      },
+      {
+        "line": 211,
+        "code": "                sub_pat = re.compile(r'\\b' + sub[:3] + r'[\\s.]?' + sub[3:6] + r'[\\s.]?' + sub[6:9] + r'\\b')\n                if sub in self.orgnrs or sub_pat.search(self.identifier_raw):\n                    return True"
+      },
+      {
+        "line": 216,
+        "code": "            if subj_tokens and all(t in self.text.lower() for t in subj_tokens) and not any(sib in self.text.lower() for sib in [\"group\", \"gruppe\", \"holding\"]):\n                if not any(o != org for o in self.orgnrs if not (subunits and o in subunits)):\n                    return True"
+      },
+      {
+        "line": 220,
+        "code": "\n    def is_sibling(self, org: str, other_orgnrs: set[str] | list[str] | None = None, subunits: set[str] | None = None) -> bool:\n        other_set = set(other_orgnrs or [])"
+      },
+      {
+        "line": 221,
+        "code": "    def is_sibling(self, org: str, other_orgnrs: set[str] | list[str] | None = None, subunits: set[str] | None = None) -> bool:\n        other_set = set(other_orgnrs or [])\n        if other_set and any(o in self.orgnrs for o in other_set if o != org):"
+      },
+      {
+        "line": 222,
+        "code": "        other_set = set(other_orgnrs or [])\n        if other_set and any(o in self.orgnrs for o in other_set if o != org):\n            return True"
+      },
+      {
+        "line": 224,
+        "code": "            return True\n        if any(o != org for o in self.orgnrs if not (subunits and o in subunits)):\n            return True"
+      },
+      {
+        "line": 305,
+        "code": "\n        has_id_label = bool(re.search(r\"(?:organisation\\s+number|organisasjonsnummer|org\\.?\\s*nr|faktura|invoice|mva|vat)\", window, re.I))\n        if not has_id_label:"
+      },
+      {
+        "line": 333,
+        "code": "    points: int = 0\n    other_orgnrs: list[str] = field(default_factory=list)\n    reason: str = \"\""
+      },
+      {
+        "line": 336,
+        "code": "    token: str = \"\"\n    subject_orgnr: str = ''\n"
+      },
+      {
+        "line": 356,
+        "code": "        normalized = ' '.join(re.findall(r'\\w+', label.casefold()))\n        if not any(same_name(name,normalized,orgnrs(' '.join(page.brand_parts))=={org}) for name in expected):\n            return Proof('REJECT', reason='different_legal_entity')"
+      },
+      {
+        "line": 380,
+        "code": "            return Proof('REJECT', reason='different_legal_entity')\n        allowed = set(context.get('allowed_orgnrs', {org}))\n        if foreign_entity_page(page, org, context.get('name'), check_ids=False):"
+      },
+      {
+        "line": 383,
+        "code": "            return Proof('REJECT', reason='different_legal_entity')\n    visible = orgnrs(page.owner_text)\n    meta = orgnrs(\" \".join(page.meta.values()))"
+      },
+      {
+        "line": 384,
+        "code": "    visible = orgnrs(page.owner_text)\n    meta = orgnrs(\" \".join(page.meta.values()))\n    json_ids = set()"
+      },
+      {
+        "line": 394,
+        "code": "                    normalized = re.sub(r\"^\\s*NO\\s*|\\s*MVA\\s*$\", \" \", value, flags=re.I).strip()\n                    json_ids |= orgnrs(normalized)\n                elif isinstance(value, dict):"
+      },
+      {
+        "line": 396,
+        "code": "                elif isinstance(value, dict):\n                    json_ids |= orgnrs(value.get(\"value\", \"\"))\n    hidden_ids = hidden_owner_ids(page, {**context, 'allowed_orgnrs': context.get('allowed_orgnrs', {org})})"
+      },
+      {
+        "line": 397,
+        "code": "                    json_ids |= orgnrs(value.get(\"value\", \"\"))\n    hidden_ids = hidden_owner_ids(page, {**context, 'allowed_orgnrs': context.get('allowed_orgnrs', {org})})\n    all_ids = visible | meta | json_ids | hidden_ids"
+      },
+      {
+        "line": 399,
+        "code": "    all_ids = visible | meta | json_ids | hidden_ids\n    allowed = set(context.get('allowed_orgnrs', {org}))\n    others = sorted(all_ids - allowed)"
+      },
+      {
+        "line": 401,
+        "code": "    others = sorted(all_ids - allowed)\n    owner_ids = orgnrs(' '.join(page.brand_parts)) | json_ids | hidden_ids\n    if owner_ids - allowed:"
+      },
+      {
+        "line": 403,
+        "code": "    if owner_ids - allowed:\n        return Proof('REJECT', other_orgnrs=sorted(owner_ids - allowed), reason='foreign_orgnr')\n    if org not in all_ids and not others and (subjects := all_ids & allowed):"
+      },
+      {
+        "line": 406,
+        "code": "        subject = sorted(subjects)[0]\n        return Proof('VERIFIED', 'registered_subunit_orgnr', token=subject, subject_orgnr=subject)\n    if not others and contact_section_number(page,org,context):"
+      },
+      {
+        "line": 408,
+        "code": "    if not others and contact_section_number(page,org,context):\n        return Proof('VERIFIED','contact_section_orgnr',token=org)\n    if org in all_ids:"
+      },
+      {
+        "line": 417,
+        "code": "        ) and not is_dedicated_entity_card(page.raw, org, context.get('name', '')) and not has_copyright_owner(page, org, context.get('name', '')):\n            return Proof(\"REJECT\", other_orgnrs=others, reason=\"partner_directory_mention\")\n        if len(others) >= 2 and org not in json_ids:"
+      },
+      {
+        "line": 425,
+        "code": "            if not is_valid_group:\n                return Proof(\"REJECT\", other_orgnrs=others, reason=\"unverified_multi_entity_site\")\n        return Proof(\"VERIFIED\", \"jsonld_vatid\" if org in json_ids else \"raw_owner_identifier\" if org in hidden_ids and org not in visible | meta else \"orgnr_on_page\", other_orgnrs=others, token=org)"
+      },
+      {
+        "line": 426,
+        "code": "                return Proof(\"REJECT\", other_orgnrs=others, reason=\"unverified_multi_entity_site\")\n        return Proof(\"VERIFIED\", \"jsonld_vatid\" if org in json_ids else \"raw_owner_identifier\" if org in hidden_ids and org not in visible | meta else \"orgnr_on_page\", other_orgnrs=others, token=org)\n    if others:"
+      },
+      {
+        "line": 428,
+        "code": "    if others:\n        return Proof(\"REJECT\", other_orgnrs=others, reason=\"foreign_orgnr\")\n    def normalized(value):"
+      },
+      {
+        "line": 436,
+        "code": "    if re.search(r'\\b(?:group|gruppen|gruppe|holding)\\b', branding) and not re.search(r'\\b(?:group|gruppen|gruppe|holding)\\b', full_name):\n        return Proof('REJECT', reason='parent_group_without_exact_orgnr')\n    signals = ['exact_legal_name'] if exact_name else []"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/recall.py",
+    "matches": [
+      {
+        "line": 49,
+        "code": "def redirect_names_company(page, org, context):\n    from .proof import orgnrs\n    from .candidates import legal_name"
+      },
+      {
+        "line": 51,
+        "code": "    from .candidates import legal_name\n    allowed = {org, *[u['orgnr'] for u in context.get('subunits', [])]}\n    if orgnrs(page.owner_text) & allowed:return True"
+      },
+      {
+        "line": 52,
+        "code": "    allowed = {org, *[u['orgnr'] for u in context.get('subunits', [])]}\n    if orgnrs(page.owner_text) & allowed:return True\n    text = ' '.join(re.findall(r'\\w+', (page.title + ' ' + page.owner_text).casefold()))"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/round2.py",
+    "matches": [
+      {
+        "line": 35,
+        "code": "    from .names import proof_context\n    # Preserve the existing own-orgnr spelling/spacing repair when this guard\n    # is invoked directly during final carried-forward publication checks."
+      },
+      {
+        "line": 37,
+        "code": "    # is invoked directly during final carried-forward publication checks.\n    from .proof import orgnrs\n    allowed=set(context.get('allowed_orgnrs',()))"
+      },
+      {
+        "line": 38,
+        "code": "    from .proof import orgnrs\n    allowed=set(context.get('allowed_orgnrs',()))\n    page_ids=orgnrs(' '.join(page.brand_parts))"
+      },
+      {
+        "line": 39,
+        "code": "    allowed=set(context.get('allowed_orgnrs',()))\n    page_ids=orgnrs(' '.join(page.brand_parts))\n    if len(page_ids)==1 and page_ids<=allowed:"
+      },
+      {
+        "line": 49,
+        "code": "    expected={normalized(n) for n in [context.get('name'),*[u.get('name') for u in context.get('subunits',[])]] if n}\n    from .proof import orgnrs\n    own_ids=set(context.get('allowed_orgnrs',()))"
+      },
+      {
+        "line": 50,
+        "code": "    from .proof import orgnrs\n    own_ids=set(context.get('allowed_orgnrs',()))\n    joined_footer=normalized(' '.join(page.footer_parts))"
+      },
+      {
+        "line": 52,
+        "code": "    joined_footer=normalized(' '.join(page.footer_parts))\n    split_own_footer=bool(own_ids and orgnrs(' '.join(page.brand_parts))<=own_ids and orgnrs(' '.join(page.brand_parts))\n        and any(re.search(r'(?<!\\w)'+re.escape(n)+r'(?!\\w)',joined_footer) for n in expected))"
+      },
+      {
+        "line": 146,
+        "code": "        if page.get('totalPages',2)>1 or page.get('totalElements')!=len(entries):return []\n        if {str(r.get('organisasjonsnummer')) for r in entries if legal_name(r.get('navn'))==core}!={org}:return []\n        support=Section();add(support,response_source(response),org,'website','registry_name_uniqueness',{'core':core,'orgnr':org},'/_embedded/enheter')"
+      },
+      {
+        "line": 147,
+        "code": "        if {str(r.get('organisasjonsnummer')) for r in entries if legal_name(r.get('navn'))==core}!={org}:return []\n        support=Section();add(support,response_source(response),org,'website','registry_name_uniqueness',{'core':core,'orgnr':org},'/_embedded/enheter')\n        cache[org]=support.evidence"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/second_pass.py",
+    "matches": [
+      {
+        "line": 23,
+        "code": "        if item['domain'] in domains and item['domain'] not in {c.domain for c in selected}:\n            selected.append(Candidate('https://'+item['domain'],item['domain'],item['origin'],item.get('subunit_orgnr')))\n        if len(selected)==3:break"
+      },
+      {
+        "line": 44,
+        "code": "                DNS_ORG.set(org);meta={'candidates':[c.domain for c in selected],'attempted':False,'recovered':False}\n                row.run.refresh['website_second_pass']=meta;totals['companies'].append({'organisation_number':org,'details':meta})\n                try:http.budget.check()"
+      },
+      {
+        "line": 75,
+        "code": "                    meta['fetched']=sum(bool(c.get('fetched')) for c in entries);totals['candidates_fetched']+=meta['fetched']\n                    meta['requests']=sum(e['organisation_number']==org for e in http.budget.events[start:]);meta['seconds']=round(time.monotonic()-clock,3)\n                    # Failed retries must not discard old verified optional facts"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/social.py",
+    "matches": [
+      {
+        "line": 236,
+        "code": "            or domain(page.url) != domain(proof.get('final_url', ''))\n            or path_scope(proof, context) or proof.get('other_orgnrs')):\n        return names"
+      },
+      {
+        "line": 267,
+        "code": "            url = profile_key(observed)\n            owners.setdefault(url, set()).add(envelope.organisation_number)\n        for claim in envelope.claims:"
+      },
+      {
+        "line": 271,
+        "code": "                url = profile_key(str(claim.value.get('url', '')))\n                owners.setdefault(url, set()).add(envelope.organisation_number)\n    for envelope in envelopes:"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/web/wikidata.py",
+    "matches": [
+      {
+        "line": 11,
+        "code": "from ..budget import SourceFailure\nfrom ..identity.orgnr import valid\nfrom ..models.evidence import digest, utc_now"
+      },
+      {
+        "line": 29,
+        "code": "            'SELECT ?org ?item ?property ?value WHERE { VALUES ?org { '+values+' } '\n            'VALUES ?property { '+properties+' } ?item wdt:P2333 ?org . ?item ?property ?value . }')\n"
+      },
+      {
+        "line": 126,
+        "code": "        section.claims[-1].reasons['relationship']=('linked from the verified company website' if site_linked else\n            'Wikidata exact P2333 organisation number and matching company handle')\n        existing.add(url);index['metrics']['social_published']+=1"
+      }
+    ]
+  },
+  {
+    "file": "scripts/cc_proto.py",
+    "matches": [
+      {
+        "line": 10,
+        "code": "from osm_measure import Live,UA,CONFIG,unit_context\nfrom signalpost.identity.orgnr import valid\nfrom signalpost.web.html import Page"
+      },
+      {
+        "line": 21,
+        "code": "PATH=re.compile(r'kontakt|kontakt-oss|om|om-oss|personvern|about|contact',re.I)\nLABEL=re.compile(r'(?i)(?:\\borg\\s*\\.?\\s*nr\\s*\\.?|\\borganisasjonsnummer|\\bforetaksregisteret)\\s*[:#.-]?\\s*(?:NO\\s*)?((?:[0-9][ .\\u00a0]*){8}[0-9])(?![0-9])|\\bNO\\s*((?:[0-9][ .\\u00a0]*){8}[0-9])\\s*MVA\\b')\nCOUNTERS=Counter();LOCK=threading.Lock();LAST=[0.0];EVENTS=[]"
+      },
+      {
+        "line": 123,
+        "code": " 'error':str(error),'records_selected':0,'records_fetched':0,'warc_range_MB_downloaded':0,\n 'pages_with_orgnr':None,'pairs':None,'distinct_orgnrs':None,'distinct_domains':None,\n 'distinct_parent_companies':None,'universe':{'size':411160,'matches':None,'expected_per_1000':None},"
+      },
+      {
+        "line": 192,
+        "code": "  for row in reader:\n   if row['organisasjonsnummer'] in wanted:\n    parent=row['overordnetEnhet'];assert valid(parent);parents[row['organisasjonsnummer']]=parent;units[row['organisasjonsnummer']]=unit_context(row)"
+      },
+      {
+        "line": 193,
+        "code": "   if row['organisasjonsnummer'] in wanted:\n    parent=row['overordnetEnhet'];assert valid(parent);parents[row['organisasjonsnummer']]=parent;units[row['organisasjonsnummer']]=unit_context(row)\n pairs=[]"
+      },
+      {
+        "line": 197,
+        "code": "  if row['domain'] in excluded:continue\n  for n,snippet in row['numbers'].items():pairs.append({'orgnr':n,'parent_orgnr':parents.get(n,n),'is_subunit':n in parents,'domain':row['domain'],'url':row['url'],'crawl_id':crawl['id'],'timestamp':row['timestamp'],'snippet':snippet[:120]})\n with (OUT/'candidates.jsonl').open('w',encoding='utf8') as f:"
+      },
+      {
+        "line": 201,
+        "code": " with textfile(OSM/'raw/universe.jsonl.gz') as f:universe={org(row):row for line in f if line.strip() for row in [json.loads(line)]}\n parent_set={p['parent_orgnr'] for p in pairs};matched=sorted(parent_set&universe.keys())\n osmpairs=[json.loads(x) for x in (OSM/'candidates.jsonl').read_text(encoding='utf8').splitlines()];osmparents={p['parent_orgnr'] for p in osmpairs}"
+      },
+      {
+        "line": 202,
+        "code": " parent_set={p['parent_orgnr'] for p in pairs};matched=sorted(parent_set&universe.keys())\n osmpairs=[json.loads(x) for x in (OSM/'candidates.jsonl').read_text(encoding='utf8').splitlines()];osmparents={p['parent_orgnr'] for p in osmpairs}\n batch={org(json.loads(x)) for x in (ROOT/'bench/inputs/100/batch.jsonl').read_text(encoding='utf8').splitlines() if x.strip()}"
+      },
+      {
+        "line": 205,
+        "code": " sample_blocks=min(indexmeta['count_response']['blocks'],len(indexmeta['pages_visited']));fraction=sample_blocks/indexmeta['count_response']['blocks']\n summary={'status':'live_review_running','crawl':crawl,'terms':TERMS,'future_in_agent_use':'Any in-agent use would need a bundled index; licensing/third-party content rights are a grey area to decide, not authorized by this measurement.','records_selected':len(records),'records_fetched':sum(bool(x.get('fetched')) for x in items),'warc_range_MB_downloaded':sum(x.get('compressed_bytes',0) for x in items)/1e6,'pages_with_orgnr_before_domain_exclusion':sum(bool(x['numbers']) for x in items),'pages_with_orgnr':sum(bool(x['numbers']) and x['domain'] not in excluded for x in items),'excluded_multi_org_domains':sorted(excluded),'pairs':len(pairs),'distinct_orgnrs':len({p['orgnr'] for p in pairs}),'distinct_domains':len({p['domain'] for p in pairs}),'distinct_orgnr_domain_pairs':len({(p['orgnr'],p['domain']) for p in pairs}),'distinct_parent_companies':len(parent_set),'subunit_numbers_mapped':len(parents),'universe':{'size':len(universe),'matches':len(matched),'expected_per_1000':1000*len(matched)/len(universe)},'osm_overlap':{'parent_companies':len(parent_set&osmparents),'new_universe_matches':len(set(matched)-osmparents)},'bench100_matches':sorted(parent_set&batch),'bench100_match_count':len(parent_set&batch),'extrapolation':{'sampled_index_block_fraction':fraction,'naive_full_crawl_universe_matches':min(len(universe),len(matched)/fraction) if fraction else None,'naive_expected_per_1000':min(1000,1000*len(matched)/fraction/len(universe)) if fraction else None,'method':'Scale observed matched parents by total .no CDX blocks / visited blocks (1 per page), cap at universe size. Illustrative only: CDX blocks include noneligible records; two-per-domain cap, final-page truncation and duplicate domains bias this. Not a statistical coverage estimate, no confidence interval; full .no eligible-domain denominator not measured.'},'errors':dict(Counter(x['error'].split(':')[0] for x in items if x.get('error'))),'mapping_limit':'Unmapped numbers are putative parents; no main-entity status inferred.'}\n if '--columnar' in sys.argv:"
+      },
+      {
+        "line": 214,
+        "code": " dump(OUT/'summary.json',summary);print('Summary',json.dumps(summary),flush=True)\n selected=random.Random(20261111).sample(matched,min(20,len(matched)));reviewpath=OUT/'live-review.json';reviews=json.loads(reviewpath.read_text(encoding='utf8')) if reviewpath.exists() else [];previous={x['orgnr'] for x in reviews};live=Live()\n def live_deadline(req):"
+      },
+      {
+        "line": 223,
+        "code": "  if n in previous:continue\n  c=next(p for p in pairs if p['parent_orgnr']==n);urlparts=urlsplit(c['url']);url=urlparts.scheme+'://'+urlparts.netloc+'/'\n  companyunits=[u for k,u in units.items() if parents[k]==n];context={'name':universe[n]['name'],'subunits':companyunits,'allowed_orgnrs':{n,*[u['orgnr'] for u in companyunits]}}"
+      },
+      {
+        "line": 224,
+        "code": "  c=next(p for p in pairs if p['parent_orgnr']==n);urlparts=urlsplit(c['url']);url=urlparts.scheme+'://'+urlparts.netloc+'/'\n  companyunits=[u for k,u in units.items() if parents[k]==n];context={'name':universe[n]['name'],'subunits':companyunits,'allowed_orgnrs':{n,*[u['orgnr'] for u in companyunits]}}\n  item={'orgnr':n,'name':context['name'],'candidate':c,'context':{**context,'allowed_orgnrs':sorted(context['allowed_orgnrs'])},'pages':[],'passes':False};proofs=[];targets=[url]"
+      },
+      {
+        "line": 225,
+        "code": "  companyunits=[u for k,u in units.items() if parents[k]==n];context={'name':universe[n]['name'],'subunits':companyunits,'allowed_orgnrs':{n,*[u['orgnr'] for u in companyunits]}}\n  item={'orgnr':n,'name':context['name'],'candidate':c,'context':{**context,'allowed_orgnrs':sorted(context['allowed_orgnrs'])},'pages':[],'passes':False};proofs=[];targets=[url]\n  for index in range(3):"
+      },
+      {
+        "line": 234,
+        "code": "    if status!=200:raise ValueError('HTTP '+str(status))\n    h=hashlib.sha256(body).hexdigest();(RAW/(h+'.html')).write_bytes(body);page=Page(body,final);proof=candidate_proof(page,n,context,Candidate(url,c['domain'],'common_crawl',c['orgnr'] if c['is_subunit'] else None),[],CONFIG);proofs.append(proof)\n    entry.update(body_sha256=h,title=page.title,proof=asdict(proof),proof_excerpt=page.proof_span(proof.subject_orgnr or n) or page.name_span(proof.token) or page.span_for(proof.token))"
+      },
+      {
+        "line": 235,
+        "code": "    h=hashlib.sha256(body).hexdigest();(RAW/(h+'.html')).write_bytes(body);page=Page(body,final);proof=candidate_proof(page,n,context,Candidate(url,c['domain'],'common_crawl',c['orgnr'] if c['is_subunit'] else None),[],CONFIG);proofs.append(proof)\n    entry.update(body_sha256=h,title=page.title,proof=asdict(proof),proof_excerpt=page.proof_span(proof.subject_orgnr or n) or page.name_span(proof.token) or page.span_for(proof.token))\n    if index==0:targets.extend(x for x in proof_page_targets(page,final,limit=2) if x not in targets)"
+      },
+      {
+        "line": 238,
+        "code": "   except Exception as e:entry['error']=f'{type(e).__name__}: {e}'\n  conflict=any(p.level=='REJECT' and (p.other_orgnrs or p.reason in {'foreign_orgnr','different_legal_entity'}) for p in proofs);item['owner_conflict']=conflict;item['passes']=any(p.level=='VERIFIED' for p in proofs) and not conflict\n  reviews.append(item);dump(reviewpath,reviews);dump(OUT/'live-requests.json',live.requests);print('Live review',len(reviews),n,item['passes'],flush=True)"
+      }
+    ]
+  },
+  {
+    "file": "scripts/build_cc_candidate_index.py",
+    "matches": [
+      {
+        "line": 17,
+        "code": "OUT = ROOT / 'data'\nLABEL = re.compile(r'(?i)(?:\\borg\\s*\\.?\\s*nr\\s*\\.?|\\borganisasjonsnummer|\\bforetaksregisteret)\\s*[:#.-]?\\s*(?:NO\\s*)?((?:[0-9][ .\\u00a0]*){8}[0-9])(?![0-9])|\\bNO\\s*((?:[0-9][ .\\u00a0]*){8}[0-9])\\s*MVA\\b')\n"
+      },
+      {
+        "line": 48,
+        "code": "        f.seek(0)\n        parents = {r['organisasjonsnummer']: r['overordnetEnhet'] for r in csv.DictReader(f, dialect=csv.Sniffer().sniff(sample, delimiters=';,\\t'))}\n    # Bound the snapshot so an independently running collector can continue appending."
+      },
+      {
+        "line": 88,
+        "code": "                continue\n            entry = {'domain': r['domain'], 'crawl': crawl, 'timestamp': instant(r['timestamp']).isoformat(), 'url': r['url'], 'observed_orgnr': number, 'snippet': snippet}\n            key = (parent, r['domain'])"
+      },
+      {
+        "line": 101,
+        "code": "    payload = (json.dumps(index, ensure_ascii=False, sort_keys=True, separators=(',', ':')) + '\\n').encode()\n    target = OUT / 'cc_orgnr_index.json.gz'\n    target.write_bytes(gzip.compress(payload, compresslevel=9, mtime=0))"
+      },
+      {
+        "line": 104,
+        "code": "    with textfile(OSM / 'universe.jsonl.gz') as f:\n        universe = {str(r.get('organisation_number') or r.get('organisasjonsnummer') or r.get('orgnr') or '') for line in f if line.strip() for r in [json.loads(line)]}\n    flat = [(p, e) for p, entries in index.items() for e in entries]"
+      },
+      {
+        "line": 107,
+        "code": "    sample = random.Random(20261111).sample(flat, min(30, len(flat)))\n    checks = [{'parent_orgnr': p, **e, 'snippet_pass': e['observed_orgnr'] in labelled(e['snippet']), 'mapping_pass': (parents.get(e['observed_orgnr']) or e['observed_orgnr']) == p} for p, e in sample]\n    assert all(c['snippet_pass'] and c['mapping_pass'] for c in checks)"
+      },
+      {
+        "line": 110,
+        "code": "    assert json.loads(gzip.decompress(target.read_bytes())) == index\n    summary = {'build_utc': datetime.now(timezone.utc).isoformat(), 'source_snapshot_bytes': snapshot, 'source_snapshot_sha256': digest.hexdigest(), 'ignored_incomplete_trailing_bytes': trailing, 'records': len(rows), 'records_fetched': sum(bool(r.get('fetched') or r.get('compressed_bytes')) for r in rows.values()), 'pages_with_labelled_orgnr': sum(any(valid(n) and n in labelled(snippet[:120]) for n,snippet in r.get('numbers',{}).items()) for r in rows.values()), 'unique_labelled_orgnrs': len({n for r in rows.values() for n,snippet in r.get('numbers',{}).items() if valid(n) and n in labelled(snippet[:120])}), 'crawls': sorted(crawls), 'parent_companies': len(index), 'entries': len(flat), 'distinct_domains': len({e['domain'] for _, e in flat}), 'gzip_bytes': target.stat().st_size, 'index_sha256': hashlib.sha256(target.read_bytes()).hexdigest(), 'excluded_domains': len(banned), 'rejected_missing_label_snippets': rejected_snippets, 'universe_size': len(universe), 'universe_matches': len(universe & index.keys()), 'expected_per_1000': 1000 * len(universe & index.keys()) / len(universe), 'spot_check_seed': 20261111, 'spot_checks': checks}\n    (OUT / 'cc_orgnr_index_build.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\\n', encoding='utf8')"
+      },
+      {
+        "line": 111,
+        "code": "    summary = {'build_utc': datetime.now(timezone.utc).isoformat(), 'source_snapshot_bytes': snapshot, 'source_snapshot_sha256': digest.hexdigest(), 'ignored_incomplete_trailing_bytes': trailing, 'records': len(rows), 'records_fetched': sum(bool(r.get('fetched') or r.get('compressed_bytes')) for r in rows.values()), 'pages_with_labelled_orgnr': sum(any(valid(n) and n in labelled(snippet[:120]) for n,snippet in r.get('numbers',{}).items()) for r in rows.values()), 'unique_labelled_orgnrs': len({n for r in rows.values() for n,snippet in r.get('numbers',{}).items() if valid(n) and n in labelled(snippet[:120])}), 'crawls': sorted(crawls), 'parent_companies': len(index), 'entries': len(flat), 'distinct_domains': len({e['domain'] for _, e in flat}), 'gzip_bytes': target.stat().st_size, 'index_sha256': hashlib.sha256(target.read_bytes()).hexdigest(), 'excluded_domains': len(banned), 'rejected_missing_label_snippets': rejected_snippets, 'universe_size': len(universe), 'universe_matches': len(universe & index.keys()), 'expected_per_1000': 1000 * len(universe & index.keys()) / len(universe), 'spot_check_seed': 20261111, 'spot_checks': checks}\n    (OUT / 'cc_orgnr_index_build.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\\n', encoding='utf8')\n    print(json.dumps({k: v for k, v in summary.items() if k != 'spot_checks'}, indent=2))"
+      }
+    ]
+  },
+  {
+    "file": "scripts/osm_check.py",
+    "matches": [
+      {
+        "line": 11,
+        "code": "sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))\nfrom signalpost.identity.orgnr import valid\nfrom signalpost.web.html import Page"
+      },
+      {
+        "line": 18,
+        "code": "UA='NordicCompanyLens-OSMMeasurement/1.0 (+https://github.com/manishrahul1705/nordic-company-lens)'\nQUERY='[out:json][timeout:900];area[\"ISO3166-1\"=\"NO\"][admin_level=2]->.a;(nwr[\"ref:NO:orgnr\"](area.a););out tags center;'\nBULK='https://data.brreg.no/enhetsregisteret/api/underenheter/lastned/csv'"
+      },
+      {
+        "line": 34,
+        "code": "    return io.TextIOWrapper(gzip.GzipFile(fileobj=f) if magic==b'\\x1f\\x8b' else f,encoding='utf-8-sig')\ndef org(row):return str(row.get('organisation_number') or row.get('organisasjonsnummer') or row.get('orgnr') or '')\ndef unavailable_summary(metadata):"
+      },
+      {
+        "line": 52,
+        "code": "             'brreg_licence':'NLOD 2.0; Bronnoysundregistrene',\n             'objects_with_orgnr_tag':None,'objects_with_valid_orgnr':None,\n             'objects_with_valid_orgnr_and_website':None,'objects_with_subunit_orgnr':None,"
+      },
+      {
+        "line": 53,
+        "code": "             'objects_with_orgnr_tag':None,'objects_with_valid_orgnr':None,\n             'objects_with_valid_orgnr_and_website':None,'objects_with_subunit_orgnr':None,\n             'website_objects_with_subunit_orgnr':None,'distinct_subunit_numbers':None,"
+      },
+      {
+        "line": 54,
+        "code": "             'objects_with_valid_orgnr_and_website':None,'objects_with_subunit_orgnr':None,\n             'website_objects_with_subunit_orgnr':None,'distinct_subunit_numbers':None,\n             'distinct_parent_companies_with_website':None,'batch100_match_count':None,"
+      },
+      {
+        "line": 100,
+        "code": "        for e in data['elements']:\n            tags=e.get('tags',{});number=str(tags.get('ref:NO:orgnr','')).strip()\n            if number:raw_count+=1"
+      },
+      {
+        "line": 104,
+        "code": "            website=next((str(tags[k]).split(';')[0].strip() for k in ['website','contact:website','url'] if tags.get(k)),None)\n            elements.append({'osm_type':e['type'],'osm_id':e['id'],'osm_url':f\"https://www.openstreetmap.org/{e['type']}/{e['id']}\",'tagged_orgnr':number,'website':website,'osm_name':tags.get('name')})\n        wanted={e['tagged_orgnr'] for e in elements}; parents={}"
+      },
+      {
+        "line": 105,
+        "code": "            elements.append({'osm_type':e['type'],'osm_id':e['id'],'osm_url':f\"https://www.openstreetmap.org/{e['type']}/{e['id']}\",'tagged_orgnr':number,'website':website,'osm_name':tags.get('name')})\n        wanted={e['tagged_orgnr'] for e in elements}; parents={}\n        csv.field_size_limit(10_000_000)"
+      },
+      {
+        "line": 112,
+        "code": "            for row in reader:\n                n=str(row.get('organisasjonsnummer','')).strip()\n                if n in wanted:"
+      },
+      {
+        "line": 114,
+        "code": "                if n in wanted:\n                    parent=str(row.get('overordnetEnhet') or row.get('overordnetenhet') or '').strip()\n                    if not valid(parent):raise ValueError('Missing valid parent in matching subunit row: '+repr(row))"
+      },
+      {
+        "line": 121,
+        "code": "            if e['website']:\n                e.update(parent_orgnr=parents.get(e['tagged_orgnr'],e['tagged_orgnr']),is_subunit=e['tagged_orgnr'] in parents)\n                candidates.append(e)"
+      },
+      {
+        "line": 125,
+        "code": "            for e in candidates:f.write(json.dumps(e,ensure_ascii=False)+'\\n')\n        parent_set={e['parent_orgnr'] for e in candidates}\n        batch={org(json.loads(line)) for line in (ROOT/'bench/inputs/100/batch.jsonl').read_text(encoding='utf8').splitlines() if line.strip()}"
+      },
+      {
+        "line": 127,
+        "code": "        batch={org(json.loads(line)) for line in (ROOT/'bench/inputs/100/batch.jsonl').read_text(encoding='utf8').splitlines() if line.strip()}\n        summary={'query':QUERY,'attribution':'\u00a9 OpenStreetMap contributors; ODbL 1.0 https://opendatacommons.org/licenses/odbl/1-0/','brreg_licence':'NLOD 2.0; Br\u00f8nn\u00f8ysundregistrene','objects_with_orgnr_tag':raw_count,'objects_with_valid_orgnr':len(elements),'invalid_orgnr_objects_excluded':invalid,'objects_with_valid_orgnr_and_website':len(candidates),'objects_with_subunit_orgnr':sum(e['tagged_orgnr'] in parents for e in elements),'website_objects_with_subunit_orgnr':sum(e['is_subunit'] for e in candidates),'distinct_subunit_numbers':len(parents),'distinct_parent_companies_with_website':len(parent_set),'batch100_matches':sorted(batch&parent_set),'batch100_match_count':len(batch&parent_set),'universe':None}\n        try:"
+      },
+      {
+        "line": 140,
+        "code": "            for n in selected:\n                item={'orgnr':n,'universe_record':universe[n]}; c=next(e for e in candidates if e['parent_orgnr']==n);item['candidate']=c\n                try:"
+      },
+      {
+        "line": 144,
+        "code": "                    address=reg.get('forretningsadresse') or reg.get('postadresse') or {}\n                    context={'name':reg.get('navn'),'phone':reg.get('telefon') or reg.get('mobil'),'email':reg.get('epostadresse'),'street':address.get('adresse'),'postcode':address.get('postnummer'),'city':address.get('poststed'),'municipality':address.get('kommune'),'allowed_orgnrs':{n},'subunits':[]}\n                    item['registry_context']={k:list(v) if isinstance(v,set) else v for k,v in context.items()}"
+      }
+    ]
+  },
+  {
+    "file": "scripts/build_nav_index.py",
+    "matches": [
+      {
+        "line": 10,
+        "code": "from signalpost.config import Config\nfrom signalpost.identity.orgnr import valid\nfrom signalpost.models.evidence import utc_now"
+      },
+      {
+        "line": 105,
+        "code": "                            if ad.get('uuid')!=uuid:raise SourceFailure('nav_wrong_ad')\n                            org=str((ad.get('employer') or {}).get('orgnr') or '').strip()\n                            # A successful response without an exact employer cannot nominate any company."
+      },
+      {
+        "line": 108,
+        "code": "                            if valid(org):\n                                value={'uuid':uuid,'employer_orgnr':org,'status':'ACTIVE',\n                                    'published':ad.get('published'),'expires':ad.get('expires'),"
+      },
+      {
+        "line": 134,
+        "code": "                'built_at':built,'cursor':get('cursor'),'source_urls':[BASE+'/api/v1/feed',BASE+'/api/v1/feedentry/{uuid}'],\n                'ads_count':len(ads),'employer_count':len({a['employer_orgnr'] for a in ads}),'failed_details':failures,\n                'seeded_from_disk':sum(origins.get(a['uuid'])=='disk' for a in ads),"
+      }
+    ]
+  },
+  {
+    "file": "src/signalpost/identity/orgnr.py",
+    "matches": [
+      {
+        "line": 1,
+        "code": "import re\n\n\ndef normalize(value: object) -> str:\n    if value is None or isinstance(value, (bool, dict, list)):\n        return \"\" if value is None else str(value)\n    return re.sub(r\"\\s\", \"\", str(value).lstrip(\"\\ufeff\"))\n\n\ndef checksum(number: str) -> bool:\n    \"\"\"Mathematical Modulo 11 weighted check digit verification.\"\"\"\n    if not re.fullmatch(r\"[0-9]{9}\", number):\n        return False\n    check = (11 - sum(int(d) * w for d, w in zip(number[:8], (3, 2, 7, 6, 5, 4, 3, 2))) % 11) % 11\n    return check != 10 and check == int(number[-1])\n\n\ndef valid(number: str) -> bool:\n    \"\"\"Standard organization number validation; preserves checksum contract for mock/evaluator inputs.\"\"\"\n    return checksum(number)\n"
+      }
+    ]
+  }
+]

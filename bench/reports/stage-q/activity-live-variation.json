@@ -1,0 +1,3596 @@
+{
+  "P": {
+    "counts": {
+      "news_companies": 7,
+      "news_claims": 69,
+      "TED_companies": 0,
+      "TED_claims": 0,
+      "activity_companies": 1000
+    },
+    "article_companies": {
+      "936629466": {
+        "name": "CLOSVA AS",
+        "count": 6,
+        "claims": [
+          {
+            "field": "dated_item.b0ac1ef3391251b00ffe",
+            "value": {
+              "title": "GPE-case: \u00e9n r\u00e5dgiver i stedet for et transaksjonsteam",
+              "title_source": "article_page",
+              "url": "https://closva.com/no/artikler/global-pivot-equity-case",
+              "date": "2026-10-31",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d549c15fa02c3c94a4bbef8cba532cf1c5d6d37925c4ceccad91c7488bca9625"
+            ],
+            "id": "b70e393a24b323c46864f6a9eaba9730ceaf4431b66098f26cf2ea00e8c083d5",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:25:57.257810Z",
+            "last_observed_at": "2026-11-13T19:25:57.257810Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.fb739c4b40157569f2ea",
+            "value": {
+              "title": "GPE-case: \u00e9n r\u00e5dgiver i stedet for et transaktionsteam",
+              "title_source": "article_page",
+              "url": "https://closva.com/dk/artikler/global-pivot-equity-case",
+              "date": "2026-10-31",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "474d0c1db215b694a9fee0cb6b9b2465aa3205b3410e8fa4a065c7f5c1f40dd6"
+            ],
+            "id": "a48d6c40e5a5ea15b4abee40b33b2b0d3fb10253afba0275fd0f048f645c238d",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:25:59.000080Z",
+            "last_observed_at": "2026-11-13T19:25:59.000080Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5caaebbca94f93a77909",
+            "value": {
+              "title": "Andreas blir kommersiell direkt\u00f8r og investor i Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/no/artikler/andreas-rasmussen-blir-med-i-closva",
+              "date": "2026-10-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b9813a7346116757340de1972668509ac6408e7daee707b89cf18c2dc570e9ff"
+            ],
+            "id": "b0b7e1a6f70271d0fac831f9f60e557fa4d6b8ecd5710575cc834660a2a6e26f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:26:00.318444Z",
+            "last_observed_at": "2026-11-13T19:26:00.318444Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5bd990fa461a5aac6772",
+            "value": {
+              "title": "Andreas bliver Chief Commercial Officer og investor i Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/dk/artikler/andreas-rasmussen-bliver-en-del-af-closva",
+              "date": "2026-10-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "beee07ebdeb22c3d620ceaf628445c3e4a74b567d0e819255aa45c669c4bce34"
+            ],
+            "id": "35724e93367fa5b69a3aabb63df544cf75a69abfb2e23fd8234082367ce5c098",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:26:01.747524Z",
+            "last_observed_at": "2026-11-13T19:26:01.747524Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6e2c1a1c8d023dd16bec",
+            "value": {
+              "title": "Global Pivot Equity kj\u00f8per 15 % av Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/no/artikler/global-pivot-equity-investerer-i-closva",
+              "date": "2026-09-27",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "61f1c8766803043c04a6c53544310f60bc083fdd0b9af5c7081f440bbed90fe5"
+            ],
+            "id": "6e67c4e59a1bf97ab136125852f49fabc3bd68b2b2db6f93dd396dbc52a94571",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:26:03.425959Z",
+            "last_observed_at": "2026-11-13T19:26:03.425959Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e3f6904c734b799a3dfe",
+            "value": {
+              "title": "Global Pivot Equity k\u00f8ber en ejerandel p\u00e5 15 % i Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/dk/artikler/global-pivot-equity-investerer-i-closva",
+              "date": "2026-09-27",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "f7c12bb2c2d673a6471e9bd7ca95c3e7264bd0b94c4845d157de34dfa7a59353"
+            ],
+            "id": "17796d5b49fa304c885f03480f519fe1c08ab65f54a0ba95d04dac97b5364274",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:26:04.773868Z",
+            "last_observed_at": "2026-11-13T19:26:04.773868Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "993919675": {
+        "name": "FEIE- OG TILSYNSTJENESTER AS",
+        "count": 11,
+        "claims": [
+          {
+            "field": "dated_item.3d67d5edd855ca5b4467",
+            "value": {
+              "title": "Riktig vedlikehold av ildsted og pipe for \u00e5 forebygge\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/riktig-vedlikehold-av-ildsted-og-pipe-for-a-forebygge-pipebrann",
+              "date": "2026-11-02",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "edf7701718450f23efb5b30d70f83a2e94da3c0f096beff1167243862adec9b2"
+            ],
+            "id": "80ed03d2457b910f61fe388006fdcefdf19485d6abcd265c97529de952d75887",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:07.950931Z",
+            "last_observed_at": "2026-11-13T19:27:07.950931Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.bc7523d8dec282548abd",
+            "value": {
+              "title": "Sotutslipp fra vedfyrt pizzaovn og feierens rolle i\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/sotutslipp-fra-vedfyrt-pizzaovn-og-feierens-rolle-i-brannforebygging",
+              "date": "2026-09-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "54d77cb82eb13c38889815818590ab8278993123c51e87be8b49fc51257bfb92"
+            ],
+            "id": "aeae5457d5ad93c5353784aa48ea872506301bf0b651787216b896fdee466e38",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:10.799872Z",
+            "last_observed_at": "2026-11-13T19:27:10.799872Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e7578a5a846fa8451f44",
+            "value": {
+              "title": "Skorsteinsblokkering p\u00e5 grunn av fuglereir \u2013 betydning for\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/skorsteinsblokkering-pa-grunn-av-fuglereir-betydning-for-brannforebygging-og-fei",
+              "date": "2026-08-19",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "f1f52b50880012bf2280c00b0b42eb5b89fa4fd570a1adea9a8f912dba35b45a"
+            ],
+            "id": "858c60be1151ac379ee29c8b72baca290e10f58386d1ee8a4fb5da19453e7ff1",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:12.200755Z",
+            "last_observed_at": "2026-11-13T19:27:12.200755Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.52a4d275acc6dc4a3733",
+            "value": {
+              "title": "R\u00f8ykutvikling i peis \u2013 hendelse i Tomm Murstadbakken, Oslo\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-peis-hendelse-i-tomm-murstadbakken-oslo",
+              "date": "2026-02-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9a78ca457138272ff584d6bc13a1e0a26c14ea2259d719304a242ae91750e99b"
+            ],
+            "id": "31c8339e1a7125fb92f53aad0ce67385a3d4735488e93b18afa0e0059290fa6d",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:13.685904Z",
+            "last_observed_at": "2026-11-13T19:27:13.685904Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6874f952187f72f148e4",
+            "value": {
+              "title": "R\u00f8ykutvikling i kjeller \u2013 forebygging og feierens rolle |\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-forebygging-og-feierens-rolle",
+              "date": "2026-02-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "293856b64f4512c270cca98df2f43b1a6a9608eed5118dbe7c2165c71a10110b"
+            ],
+            "id": "34a6629da4c6dad748310894e04489410e32c2e227f4752ea08f03b1d677483f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:15.171434Z",
+            "last_observed_at": "2026-11-13T19:27:15.171434Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.26c159f4aacbc64269cc",
+            "value": {
+              "title": "Pipebrann i Schwensens gate, St. Hanshaugen \u2013\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/pipebrann-i-schwensens-gate-st-hanshaugen-brannforebygging-og-feierens-rolle",
+              "date": "2026-02-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d554fe502c43381d67b2f60f70c98a7bc3f83c3fad935f37567a0886d5db9840"
+            ],
+            "id": "2818e9479195990552eac5719f67d20e91cdc6f7c9f2775cd77e4a5edb632fc5",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:16.566611Z",
+            "last_observed_at": "2026-11-13T19:27:16.566611Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.abe8e46d380a5c952524",
+            "value": {
+              "title": "R\u00f8ykutvikling i kjeller p\u00e5 Gr\u00fcnerl\u00f8kka \u2013 brannforebygging\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-pa-gr-nerlokka-brannforebygging-og-feierens-rolle",
+              "date": "2026-02-21",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d6737eea658f772a58dd86afde717f581e2ae55a302ffb072a049494ebae1398"
+            ],
+            "id": "7c8ff06cef2704b01fd85209643515fed02b2c946f46f379ecd4c9bda24ef001",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:18.095499Z",
+            "last_observed_at": "2026-11-13T19:27:18.095499Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.7b5613bec366fe1ef183",
+            "value": {
+              "title": "Pipebranner i Asker og B\u00e6rum \u2013 brannvesenets innsats og\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/pipebranner-i-asker-og-baerum-brannvesenets-innsats-og-feierens-rolle-i-brannfor",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "4af96242c894d81dcaa9281c44721c841bb065249be923134a68a103eaa6eabd"
+            ],
+            "id": "5f61b9aec97df4e4ed9dc773e5d59426f3f120dfa60fa9cbd3e7c4c867a8af96",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:19.523196Z",
+            "last_observed_at": "2026-11-13T19:27:19.523196Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.485c80058f6beee812e3",
+            "value": {
+              "title": "Pipebrann i Ekebergveien: Branninnsats og brannforebygging\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/pipebrann-i-ekebergveien-branninnsats-og-brannforebygging",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "2b33aef038b2f1a49a46cb07146b56196d6bc281c74b9e97b98a15a68ac46195"
+            ],
+            "id": "1b2f5b88ec28c27afcc2e3374424b61e60966fc3170707df5abc95d77c2dc685",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:20.911511Z",
+            "last_observed_at": "2026-11-13T19:27:20.911511Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.2912784ffd86e74bebc2",
+            "value": {
+              "title": "Hvordan h\u00e5ndtere pipebrann og viktigheten av\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/hvordan-handtere-pipebrann-og-viktigheten-av-brannforebygging-ved-skorsteinen",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "77caee0aa0857d9d1997845c053bf11d3c8b3e95416dc65f38733da1cc7c87ff"
+            ],
+            "id": "9f8aea3799a56df09e1ea4adcdfb581aff8f934270975a8b2bc684c7313fce12",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:22.305437Z",
+            "last_observed_at": "2026-11-13T19:27:22.305437Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.3aa8450c7a028171422c",
+            "value": {
+              "title": "Bilbrann p\u00e5 Prinsdal: Viktigheten av brannsikkerhet og\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/bilbrann-pa-prinsdal-viktigheten-av-brannsikkerhet-og-feierens-rolle-i-forebyggi",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "be6946792032e3e13a8729ac3acd70a77269521c7917f84d8cfaa96016458558"
+            ],
+            "id": "775f4841da8e0f1f07489ed714d6e0a48597cd210b9275a9e9bf167b3bc91529",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:23.689447Z",
+            "last_observed_at": "2026-11-13T19:27:23.689447Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "922828172": {
+        "name": "TENSIO AS",
+        "count": 28,
+        "claims": [
+          {
+            "field": "dated_item.b8885859ebb99a5a781f",
+            "value": {
+              "title": "Beskytt elektronikk din - v\u00e6r forberedt p\u00e5 lyn og torden",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/vaer-forberedt-pa-lyn-og-torden",
+              "date": "2024-06-06",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "7eba0532d9b88f72a8f0d87bfb4864e8802dac4fff05a554e30707253a869571"
+            ],
+            "id": "5d4e96b23df59b30628913ab4d959c6b7097bddb6864798e22d2c9e49887d7a9",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:07.382004Z",
+            "last_observed_at": "2026-11-13T19:27:07.382004Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.a79bc3a97ed1ec19543f",
+            "value": {
+              "title": "Fire av ti har fortsatt ikke valgt Norgespris",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/fire-av-ti-har-fortsatt-ikke-valgt-norgespris",
+              "date": "2026-11-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "04a2a63f12de77c12ff96eb9882eb4afc9a7d5da31f9f6d61f42431538341458"
+            ],
+            "id": "27fb7839c0afacd6320a5e9d8d9959b65b4b717423434c1f2d56cae7bf3a6902",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:08.467762Z",
+            "last_observed_at": "2026-11-13T19:27:08.467762Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.3aeed9c919a7ee8ce54e",
+            "value": {
+              "title": "Nye l\u00e6rlinger p\u00e5 plass i Tensio",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/nye-laerlinger-pa-plass-i-tensio",
+              "date": "2026-10-30",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "6fa4b69347dcf8655c798522819a3d36fec84fc18e28fd247d6784a9857c24e4"
+            ],
+            "id": "4cffdac183a1734095b532996208e02abcf91eef27ec3a475ec03cae1dd93a0c",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:09.587512Z",
+            "last_observed_at": "2026-11-13T19:27:09.587512Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5665bba45ffffa287531",
+            "value": {
+              "title": "Nettleia \u00f8ker fra 1. januar 2027",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/nettleia-oker-fra-1-januar",
+              "date": "2026-10-30",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "633f59f1b1af2d19ae16b5b06e92e49803c16196602aaa06d78a064863872d26"
+            ],
+            "id": "45f21df9ca264d654e0994f7c649866d2591529fb5f9945f3b8fb1648c88a270",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:10.692595Z",
+            "last_observed_at": "2026-11-13T19:27:10.692595Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.1b259ba4eafcdc3f19b5",
+            "value": {
+              "title": "Hva gj\u00f8r du hvis b\u00e5de str\u00f8m, mobil og internett forsvinner?",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/hva-gjor-du-hvis-bade-strom-mobil-og-internett-forsvinner",
+              "date": "2026-10-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "e3d4875e64cfab38cc76629760b4f6f9d2dd6092b94b3055fe32926612f472b0"
+            ],
+            "id": "f1a7dc167b69c7f79126c3788bfced8924db5fb433b4f9a90d6722fe26c0c7d3",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:11.805760Z",
+            "last_observed_at": "2026-11-13T19:27:11.805760Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.cd8442f635e9f5ff3a0a",
+            "value": {
+              "title": "\u00c5pen dag: 125-\u00e5rsjubileum str\u00f8m og trikk i Trondheim",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/apen-dag-125-arsjubileum-strom-og-trikk-i-trondheim",
+              "date": "2026-10-16",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "de477517462ac5edd30a06c32dca00d07f3165d794a9685afa69a608b0f0bbff"
+            ],
+            "id": "736913e2d6e85be089337eb510f19a294654c8a674f3fe472b1ae4e3ad22768e",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:12.958009Z",
+            "last_observed_at": "2026-11-13T19:27:12.958009Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.eb0a195527d20330072b",
+            "value": {
+              "title": "Elsikkerhetsdagen - Ta elsjekken hjemme",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-2026-ta-elsjekken-hjemme",
+              "date": "2026-10-14",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "6dc1ae3b307a98731268fb54dd7523a827ed68e1cd914fb4a729936e8613f5b5"
+            ],
+            "id": "38ffefef2bcd0f4a76d3d122170d9bfd4f3811839a1d19493fe1cddb7d5da735",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:14.057226Z",
+            "last_observed_at": "2026-11-13T19:27:14.057226Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.74f3faa72e613415b163",
+            "value": {
+              "title": "Mulig streik i str\u00f8msektoren - Tr\u00f8ndelag kan bli ber\u00f8rt",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/mulig-streik-i-stromsektoren-trondelag-kan-bli-berort",
+              "date": "2026-08-25",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9de6ee308a9117c8d2b104a9940b8323de41a2ef5a17b68bc8e706ed06515f58"
+            ],
+            "id": "a9cef30d0a8242718fe56948f34a67fcc4ad41b9f93e60ff89056e8020c29b1e",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:15.257704Z",
+            "last_observed_at": "2026-11-13T19:27:15.257704Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.1f6eec18122f8bd8bf0e",
+            "value": {
+              "title": "Str\u00f8mforsyningen 2035: Hva er det plass til av industri- og samfunnsutvikling?",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/stromforsyningen-2035-hva-er-det-plass-til-av-industri-og-samfunnsutvikling",
+              "date": "2026-08-11",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "11be6b35b5519df5c48baf794e3eac7f1a151551e81f00b1036930b34a0358f9"
+            ],
+            "id": "a4b9b20a1c20d2acce8baed67b05b0e50522efe67799a58454f8c49bf4e5b438",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:16.374836Z",
+            "last_observed_at": "2026-11-13T19:27:16.374836Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e8fe54c2bb8fb789cc30",
+            "value": {
+              "title": "Status Norgespris ved inngangen h\u00f8sten",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-hosten",
+              "date": "2026-08-11",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "8dd31827141285de09e2a5b4d000f88d950208755469f02995716182a7c87181"
+            ],
+            "id": "7e64fdb47bd616e3f8fb10ab8aa01d04158a69073ab514ceaa06f33ec5ec5a98",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:17.472591Z",
+            "last_observed_at": "2026-11-13T19:27:17.472591Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.003d7ffb296ec4862e36",
+            "value": {
+              "title": "Skal du flytte for \u00e5 studere? Husk \u00e5 ta over str\u00f8mabonnementet",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/skal-du-flytte-for-a-studere-husk-a-ta-over-stromabonnementet",
+              "date": "2026-08-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "065fff8f854d32a542212bd7ec1682557673250036dbc3013cc17efd2e43c226"
+            ],
+            "id": "1d846f054ef1aa7d134098a22dfa60140676f0a50e7c812f7983083c50cf8d0c",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:18.636865Z",
+            "last_observed_at": "2026-11-13T19:27:18.636865Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e63d2ad68974f83a33e3",
+            "value": {
+              "title": "Elsikkerhetsdagen - Ta elsjekken hjemme",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-ta-elsjekken-hjemme",
+              "date": "2025-10-14",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "7b36901926a229727099fbeb832b7c1fe292b90bd4f87ed36b0481e9d3729d1a"
+            ],
+            "id": "395fa3d646bcf468b55a96a002a252b79b23d28d140d11d741f382846fd18a88",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:19.756337Z",
+            "last_observed_at": "2026-11-13T19:27:19.756337Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.feb2b523a93029d7bcda",
+            "value": {
+              "title": "Tensio endrer nettleieprisene fra 1. juli",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/prisendringer-nettleie-fra-1-juli-2026",
+              "date": "2026-06-01",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "466cc0f0d7fbdb0315261b413dd58b92730f806893041a782da1642878595377"
+            ],
+            "id": "ac29497430ea9279181a90c127a458f99de227a74b088939b51704428810ddd8",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:20.874401Z",
+            "last_observed_at": "2026-11-13T19:27:20.874401Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.7d58cf093adca0e5fb43",
+            "value": {
+              "title": "Regjeringen gj\u00f8r viktige beredskapsgrep for Tr\u00f8ndelag",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/regjeringen-gjor-viktige-beredskapsgrep-for-trondelag",
+              "date": "2026-06-18",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "53c4f007496604e3e05a303f955f50521bb1b67f462e77d9dd987a6e81b071dc"
+            ],
+            "id": "1d3dc876eba801c391aefc233784dc5d9eb185da22b69cd3ab9a7b9d3e436813",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:21.990136Z",
+            "last_observed_at": "2026-11-13T19:27:21.990136Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5f993d7c46ea95d9667b",
+            "value": {
+              "title": "Forbered deg p\u00e5 lyn og torden",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/forbered-deg-pa-lyn-og-torden",
+              "date": "2026-06-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "fc35bcf1099a50822e977aafe25afb9d6ad9322e7ef739fb5dfc85296dc652c3"
+            ],
+            "id": "cd97dea326aa79ce916d11dccc58d8f4e3531b830a9d5fb4ee8bd527f3c8f0a6",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:23.101815Z",
+            "last_observed_at": "2026-11-13T19:27:23.101815Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.d0e57de35dcdd29af19a",
+            "value": {
+              "title": "Tensio gjennomf\u00f8rer droneflyging langs h\u00f8yspentlinjer i Tr\u00f8ndelag",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/tensio-gjennomforer-droneflyging-langs-hoyspentlinjer-i-trondelag",
+              "date": "2026-05-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "8bc8bde36e1802029dfd60c68d7eb04f2d2b9b128abe214c3995926152adb606"
+            ],
+            "id": "f2eae45eb011bde52427a0e05d52378e0a09e8b8ac5fbfc18ebaa8f0757bb7d4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:24.912639Z",
+            "last_observed_at": "2026-11-13T19:27:24.912639Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6868c462e75682cc1615",
+            "value": {
+              "title": "Status Norgespris ved inngangen til mai",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-mai",
+              "date": "2026-04-24",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "6a67632afa16cc9cac3e18ab3277ecb330611379c9e82a4a6164a3ea0501b58a"
+            ],
+            "id": "8adcec2ebad9f1660887f6a14702dd50072123425890cbbd362abb7d180e1855",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:26.062607Z",
+            "last_observed_at": "2026-11-13T19:27:26.062607Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.556eb343ba358bdea872",
+            "value": {
+              "title": "V\u00e5r i lufta \u2013 men hva ligger i bakken?",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/var-i-lufta-men-hva-ligger-i-bakken",
+              "date": "2026-04-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "953e8b8b2703964bb5e4e904db1de26378dcad0c4748e9fc9517a943b6f9d56b"
+            ],
+            "id": "63b6e2afc8c6031b7c32443514a5462dffecd65dc595bd4930ed18f789775104",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:27.181878Z",
+            "last_observed_at": "2026-11-13T19:27:27.181878Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5c933e4c11855916f19d",
+            "value": {
+              "title": "Mange str\u00f8mbrudd i Tr\u00f8ndelag  \u2013 kan vedvare over flere d\u00f8gn (mars 2025)",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/mange-strombrudd-i-trondelag-kan-vedvare-over-flere-dogn",
+              "date": "2025-03-06",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "06ffe90dba34a9442b88a3aa3d388ee2ea4a4e165c52c3f4b08789ea6db80985"
+            ],
+            "id": "ed0cab76eb62a98f2e89fe2c23423b96fabb8d2cf67f3bf88e485a87e79e10c7",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:28.462909Z",
+            "last_observed_at": "2026-11-13T19:27:28.462909Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e6ff4b0e4d51c26eef03",
+            "value": {
+              "title": "Ekstremv\u00e6ret Amy - oppdatering l\u00f8rdag kveld",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/ekstremvaeret-amy-oppdatering-lordag-kveld",
+              "date": "2025-10-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "220181fe7bb02909b0528008e3727c7e71c7475f0c0592da0b042bffbac25ebe"
+            ],
+            "id": "2f45c7220a724aff9eafef1260035a746f70ec2b36c91cb4599f3c1812c3d582",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:29.566864Z",
+            "last_observed_at": "2026-11-13T19:27:29.566864Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.53038f806d0bf4b8635a",
+            "value": {
+              "title": "\u00c5rs- og b\u00e6rekraftrapport 2025 - Tensio konsern",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/ars-og-baerekraftrapport-2025",
+              "date": "2026-03-26",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "47ae94e84936ad0f4a40d50b8a645e8b2effa31996c03003690756bb37b05e72"
+            ],
+            "id": "2d31d20b0830f2dc33a8a8036fba715f02cd97e23372d0642d38b97066a0251e",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:30.667165Z",
+            "last_observed_at": "2026-11-13T19:27:30.667165Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e1abac710a1356273f24",
+            "value": {
+              "title": "Trenger tiltak for raskere elektrifisering",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/trenger-tiltak-for-raskere-elektrifisering",
+              "date": "2024-04-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b25890dd1713754317ff7c94ee8b50f7595322d3f9687134fa13016c62c524b6"
+            ],
+            "id": "81a481f79cfa77929484d47fe780d002b550bda79f872aace496e72857b7c74a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:31.825089Z",
+            "last_observed_at": "2026-11-13T19:27:31.825089Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.30c111ff29e15679b88e",
+            "value": {
+              "title": "Status Norgespris i midten av mars",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-i-midten-av-mars",
+              "date": "2026-03-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "00e3794b1ea52331d8ac5b0eab17e77ee6f40e319c08b02129adcb58824cc6b8"
+            ],
+            "id": "08119c99ed43959295ade386d6395ff04b95e4e2dd3f892d72fbb647e8fa5bd6",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:32.971206Z",
+            "last_observed_at": "2026-11-13T19:27:32.971206Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.733b5ca9c34214d8c108",
+            "value": {
+              "title": "Langsiktig skogrydding for et mer robust Tr\u00f8ndelag",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/skogrydding-for-en-mer-motstandsdyktig-stromforsyning",
+              "date": "2026-03-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "4e29d2765e20b0a3ce7dc9b571ce8e47f65d8e135976176b8cc0a70836482a85"
+            ],
+            "id": "57707b8057bb8806a29f3411dd301717b746402be1a60e4fdaf863907e9dc3d4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:34.136435Z",
+            "last_observed_at": "2026-11-13T19:27:34.136435Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6030439877e998d44cfb",
+            "value": {
+              "title": "Spenningens helter - Tensio kommer p\u00e5 tv-skjermen neste \u00e5r",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/spenningens-helter",
+              "date": "2025-12-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b00d4813ac665c4cc8e1e019af8cfbf8ab823c33ffccb93ca8c0e264a800e74d"
+            ],
+            "id": "f26c5c351bfb5037b0df3186d85f1e6a2ab6e1d945ba5858a0488b46b1401f2f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:35.982405Z",
+            "last_observed_at": "2026-11-13T19:27:35.982405Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.90659a383fb3c151fa37",
+            "value": {
+              "title": "Ny tv-serie om str\u00f8mforsyningens helter",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/ny-tv-serie-om-stromforsyningens-helter",
+              "date": "2026-02-02",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9da652c92c397bd619ccc8e0263d37855309cdeae7a386602431bdd10eec87fc"
+            ],
+            "id": "9a8c5e3deef898b2e04f360d1b1e1d94f616d7ff7a9fd8a1ea5f074b34105366",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:37.158048Z",
+            "last_observed_at": "2026-11-13T19:27:37.158048Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.d8a305b839a5c69e95fc",
+            "value": {
+              "title": "Status Norgespris ved inngangen til februar",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-februar",
+              "date": "2026-01-28",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "55394dedaaa7bac4f17f10608e35632dfec90ae31fac02d0504679734254cb45"
+            ],
+            "id": "125517202323ea45b584580801d50036379c94d999fc99c25977560b7c02a87f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:38.267034Z",
+            "last_observed_at": "2026-11-13T19:27:38.267034Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.9fe632ef9cb422732e9c",
+            "value": {
+              "title": "Vinter, storm og str\u00f8mforsyning: Slik forbereder du deg \u2013 og slik jobber Tensio",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/vinter-storm-og-stromforsyning-slik-forbereder-du-deg-og-slik-jobber-tensio",
+              "date": "2026-01-27",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9054c8ef9f2c24c6d3c4e9c2a4f78b045f38fdcd19be3169cb607555c996478d"
+            ],
+            "id": "1e06c0a494937fde5e16dccb16b3702e6efa04a3ca6ff7c9440faa289a0266f7",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:39.372826Z",
+            "last_observed_at": "2026-11-13T19:27:39.372826Z",
+            "reasons": {}
+          }
+        ],
+        "errors": [
+          {
+            "section": "activity",
+            "code": "website_budget_exhausted",
+            "message": "Additional article checks incomplete; verified articles retained"
+          }
+        ]
+      },
+      "971558415": {
+        "name": "DANSEINFORMASJONEN STI",
+        "count": 9,
+        "claims": [
+          {
+            "field": "dated_item.66a57147d3698b41e48e",
+            "value": {
+              "title": "50 \u00e5r siden etableringen av Danseloftet \u2013\u00a0verksted for koreografi og dans",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/50-ar-siden-etableringen-av-danseloftet-verksted-for-koreografi-og-dans/",
+              "date": "2026-11-12",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "f4970fc788292385defc0a5be588cad4fcacd7cb2b8bbbe8dcae1044435a71fd"
+            ],
+            "id": "6a3f43a9bb9cae965af0e4be20f7bdaa4eff7864346244cb2ab7f17e1373cccc",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:53.280845Z",
+            "last_observed_at": "2026-11-13T19:27:53.280845Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.acb97cd3bfeaa4a7e634",
+            "value": {
+              "title": "Nytt i biblioteket",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/nytt-i-biblioteket/",
+              "date": "2026-11-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "df3c65f9f08e737703fb0a3956bff2faa016a7ba927ec910fb94b8a927b5dca2"
+            ],
+            "id": "5668bf16ba068057d2d98c9738234a1e1a80cc38f676aa6b2c01036dda6d2765",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:54.751708Z",
+            "last_observed_at": "2026-11-13T19:27:54.751708Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.978b03790b829c3adb87",
+            "value": {
+              "title": "Maria \u00abLotus\u00bb Karlsen tildeles Soul Sessions Honor Award 2026",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/maria-lotus-karlsen-tildeles-soul-sessions-honor-award-2026/",
+              "date": "2026-11-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b097ef75ad092462f6e6e200ffb2b9d47301649e9c8895eac0bdc0fea606ae00"
+            ],
+            "id": "a16117a9e9c2065fc71bb20f836774d2ab99bcff5a5370778ea23fd92577cffc",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:56.342028Z",
+            "last_observed_at": "2026-11-13T19:27:56.342028Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.4626087ede6087b65ed8",
+            "value": {
+              "title": "\u00c5rets mottakere av Rolf Gammleng-priser i dans 2026",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/arets-mottakere-av-rolf-gammleng-priser-i-dans-2026/",
+              "date": "2026-11-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "583cf0d362d273daeac598b6ea41bc5e9fd805b28b175cf46b262538ba16846d"
+            ],
+            "id": "3d5f5231280875e39c2f560a8958fb9ac71a731b9ddf52b93c0517c351c87082",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:57.873736Z",
+            "last_observed_at": "2026-11-13T19:27:57.873736Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.79c005ddfb8be28c6eec",
+            "value": {
+              "title": "Snelle Ingrid Hall ny dekan ved Fakultet for ut\u00f8vende kunstfag ved Universitetet i Stavanger",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/snelle-ingrid-hall-ny-kunstdekan-i-stavanger/",
+              "date": "2026-11-06",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "f146622b679842f12fcd94a2a2542d94db06312f1fbc237e4991179745451bb5"
+            ],
+            "id": "9df4299cf78ca3ca065ecc8af3f29d217a5ecf28c53a96fc192bd012a01a31db",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:00.307573Z",
+            "last_observed_at": "2026-11-13T19:28:00.307573Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.cc34ed4e91638b30728f",
+            "value": {
+              "title": "Kamelia Javadi er tilbake p\u00e5 Danseinformasjonen",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/kamelia-javadi-er-tilbake-pa-danseinformasjonen/",
+              "date": "2026-11-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "c2d14d05c46201353dfcdd9eb2d1de3dfa8f034ae722d2f1ef3935b0600363a1"
+            ],
+            "id": "d6e06de7c1286b2411d40c43ecbe88b157909f0cd1a800fce8c28db19c0839fa",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:01.816081Z",
+            "last_observed_at": "2026-11-13T19:28:01.816081Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.9500799958f88c8a2d62",
+            "value": {
+              "title": "Innspillsm\u00f8te med kultur- og utdanningsutvalget i Oslo kommune",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/innspillsmote-med-kultur-og-utdanningsutvalget-i-oslo-kommune/",
+              "date": "2026-11-03",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9609a588b14c1d323e1db8a86951edc1c62278cdaa9846a837dca42d571192c3"
+            ],
+            "id": "c21ace24c5ca88fa3c799cdcd1553e535ca4b4ed946d55a73f44b68a9bc8a18a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:04.263054Z",
+            "last_observed_at": "2026-11-13T19:28:04.263054Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.063226d07563e46fffaa",
+            "value": {
+              "title": "Boklansering: ARKIVERT! \u00c5 arkivere et kunstnerskap",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/arrangementer/boklansering-arkivert-a-arkivere-et-kunstnerskap-2/",
+              "date": "2026-06-25",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "7031020c7b1abe6c3726368845c86bd633ee83965c9f2a4d1b3866c09c900718"
+            ],
+            "id": "2f1a55e1f0dfbfaa42c2bb6dbb73826fc8731ef1721d7d6a57a8de10bedfc0d8",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:07.353815Z",
+            "last_observed_at": "2026-11-13T19:28:07.353815Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.f712d0b5be88d23626dc",
+            "value": {
+              "title": "BOKLANSERING: ARKIVERT! \u00c5 arkivere et kunstnerskap",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/arrangementer/boklansering-arkivert-a-arkivere-et-kunstnerskap/",
+              "date": "2026-06-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "5edd56b3d391872accc5a48930dc671df047a3bb84427b1cf50bcaed008c08aa"
+            ],
+            "id": "cea781eb11e583f6d7fee3c31639f8fae97d38e13daabece290a506c3e68c3ab",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:09.600797Z",
+            "last_observed_at": "2026-11-13T19:28:09.600797Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "821962242": {
+        "name": "LAKSESYSTEMER AS",
+        "count": 2,
+        "claims": [
+          {
+            "field": "dated_item.8b39f85fe33196cbd130",
+            "value": {
+              "title": "Fra fj\u00f8s til fisk \u2013 teknologien som binder oss sammen",
+              "title_source": "article_page",
+              "url": "https://laksesystemer.no/aktuelt/fra-fjos-til-fisk-teknologien-som-binder-oss-sammen/",
+              "date": "2026-06-12",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ee09bbae19bb3094c505fb136857e4405a193cb4de4c1204b566dce19dc56f01"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "01727dd5072003cd3dc18343639a71f0c260050a620c2aa1069f6dbd55449472"
+            ],
+            "id": "d90ef5e87873695c9dd071d04242787ca44c302a404dad7a39b8fd49d6585cb7",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:50.580178Z",
+            "last_observed_at": "2026-11-13T19:27:50.580178Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.214fd5128307e8c029c4",
+            "value": {
+              "title": "Delta f\u00f4ringsautomat",
+              "title_source": "article_page",
+              "url": "https://laksesystemer.no/aktuelt/foringsautomat/",
+              "date": "2024-05-31",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ee09bbae19bb3094c505fb136857e4405a193cb4de4c1204b566dce19dc56f01"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "ca3bc39207cbdbef1fa94f924d941a0222112d4d6c50abbb14713929bba24bf3"
+            ],
+            "id": "9defbcfcdad2a7831afa6422a3bd338c8ba2a9b12c2743c9ef0f2eb22d331e6a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:27:52.052923Z",
+            "last_observed_at": "2026-11-13T19:27:52.052923Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "987002808": {
+        "name": "BRIDGE TECHNOLOGIES CO AS",
+        "count": 8,
+        "claims": [
+          {
+            "field": "dated_item.11a8383b69bae4908578",
+            "value": {
+              "title": "Networks are complex. But learning about them doesn\u2019t have to be",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/networks-are-complex-but-learning-about-them-doesnt-have-to-be/",
+              "date": "2023-10-12",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "81b3540ac86fb87a145107b8a8efacbff22d81855d778e3d35f82197a14d4f95"
+            ],
+            "id": "4424c4b8cbeb86ef726ff0e7f2f09006d0e4b7d3d6c1d3228297f6ec85fbc068",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:04.390677Z",
+            "last_observed_at": "2026-11-13T19:28:04.390677Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5dfba8c0fd7f53268a43",
+            "value": {
+              "title": "How Bridge probes are integral to effective OTT delivery",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/how-bridge-probes-are-integral-to-effective-ott-delivery/",
+              "date": "2023-03-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "ae30d8b2458433312e19dc56ccdbe7627f8c302934aef642cff34209b0767101"
+            ],
+            "id": "6372ec9d809c6722b5f4583c4815bcda5a75e0c496b4590bcb105ad1a7112549",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:06.854271Z",
+            "last_observed_at": "2026-11-13T19:28:06.854271Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.3636d4a4c9e86c914104",
+            "value": {
+              "title": "There\u2019s nothing sus about our approach to sustainability",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/theres-nothing-sus-about-our-approach-to-sustainability/",
+              "date": "2023-08-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "df0c96cb656ab0bbfef379a4d1ad6d0d8e059e16a4e36b4d868949cc62d38f92"
+            ],
+            "id": "99474ab3abeddac9af26d721c1617462b0aa2dc39855172ebbbd48e7891526c4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:09.347007Z",
+            "last_observed_at": "2026-11-13T19:28:09.347007Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5579617da27443cc371e",
+            "value": {
+              "title": "Why and how we celebrate our business partners",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/why-and-how-we-celebrate-our-business-partners/",
+              "date": "2023-07-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "72c196587f89c6c1720d2f869d6955ab38c0a7a3cc7aaf9d19edc46ecb8a84c7"
+            ],
+            "id": "045f6f611dce116b998de3ed03ae73be5916211e447f84ad5490710050e5d9e3",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:11.788670Z",
+            "last_observed_at": "2026-11-13T19:28:11.788670Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.fd563cad239350d36c56",
+            "value": {
+              "title": "Bridge Technologies January Blog Post",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/bridge-technologies-january-blog-post-3/",
+              "date": "2023-01-24",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "ab1db5d98339b351ae332f34c5ca25ae54f1c5920b53a7852e874382501c7f2b"
+            ],
+            "id": "a2123b58731f467ba5a9dff0562b7d0cebf3c292b36771f30834c7b2b584da2a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:14.283118Z",
+            "last_observed_at": "2026-11-13T19:28:14.283118Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.674a272ad9ec5424d6f8",
+            "value": {
+              "title": "Bridge Technologies December Blog Post",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/bridge-technologies-december-blog-post-4/",
+              "date": "2022-12-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "e84fbfe69751a83d54e5b25ecae10fdb1b6d4c6b5843b2bde6b61433f8a5059d"
+            ],
+            "id": "d3468305858c6445bc869606f07f1bbc09125bbfae10927dbe92d12e1003142c",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:16.687232Z",
+            "last_observed_at": "2026-11-13T19:28:16.687232Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.036015160ba1d3da5368",
+            "value": {
+              "title": "SatMagazine: Year in Review 2022",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/satmagazine-year-in-review-2022/",
+              "date": "2022-12-15",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "781b6865971958c0332f737326337667e45c9013db3dc481e0cea461402f18fd"
+            ],
+            "id": "d84562febae6764cc5ccd0d1d21de5950bf9576f4eabb6355befa736c01b4cf2",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:26.424778Z",
+            "last_observed_at": "2026-11-13T19:28:26.424778Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.87d39d18e7bd4ea5c5b4",
+            "value": {
+              "title": "Blog: How to define a unique solution for broadcast creatives and engineers",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/blog-how-to-define-a-unique-solution-for-broadcast-creatives-and-engineers/",
+              "date": "2022-12-08",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d5f60b33e4e561f60402478918a9d771e1efd077090973cc649646d6b1d88f15"
+            ],
+            "id": "42986233c9f0a517b5dc98849e10da5c603403e3acd19f8e2c9d1716560d50c6",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:28.941344Z",
+            "last_observed_at": "2026-11-13T19:28:28.941344Z",
+            "reasons": {}
+          }
+        ],
+        "errors": [
+          {
+            "section": "activity",
+            "code": "website_budget_exhausted",
+            "message": "Additional article checks incomplete; verified articles retained"
+          }
+        ]
+      },
+      "990412375": {
+        "name": "BERGEN VAKTMESTERTJENESTER AS",
+        "count": 5,
+        "claims": [
+          {
+            "field": "dated_item.f40d08eca3b6df36bccf",
+            "value": {
+              "title": "Hvor ofte b\u00f8r takrenner renses? | R\u00e5d for huseiere i Bergen",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/hvor-ofte-bor-takrenner-renses/",
+              "date": "2026-10-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "e950fe0d922a7626c219df1d4ee05001c3b5bd8978dc8e6375eaf969ace43d7b"
+            ],
+            "id": "6c619adef3e1753ce2fe385a24a2068640d955808f84491f900d7678cdb48f3a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:45.073980Z",
+            "last_observed_at": "2026-11-13T19:28:45.073980Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.f8c663479d4e84c0a017",
+            "value": {
+              "title": "Hva koster drenering rundt hus? Dette p\u00e5virker prisen",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/hva-koster-drenering-rundt-hus/",
+              "date": "2026-10-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "85a11bc8749b560987614c6c82bf4c2fb500bdaad6f1051bb976d93b05f507c5"
+            ],
+            "id": "9992649d896c6587679fb0d9a6059269999991a52084ca14d1fdac5b248e0eac",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:46.505374Z",
+            "last_observed_at": "2026-11-13T19:28:46.505374Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.340323b78352ff35130c",
+            "value": {
+              "title": "Hva gj\u00f8r en vaktmester i et borettslag? | Guide for styret",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/hva-gjor-en-vaktmester-i-et-borettslag/",
+              "date": "2026-10-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d3bb74247b2e3333ab2cb9a36cfbbfc7dc1ba5842e82d6bb79b66e614f72a41e"
+            ],
+            "id": "eb4683b13cf38e4dca7b59c3eb63dcf969da505731ade8b98a8102a526f039fc",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:48.047206Z",
+            "last_observed_at": "2026-11-13T19:28:48.047206Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.fe34c7f4c00b51f8470b",
+            "value": {
+              "title": "Belegningsstein i Helleveien",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/helleveien-belegningsstein/",
+              "date": "2024-11-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "92b39620b1f9f196163e58469949caea17e8ecdc1b91b58bce07b07b7f9ee91e"
+            ],
+            "id": "3c7d0546df72a0530decc7df08b203fd287144274d29c9ff7874128c171a5ec4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:49.460371Z",
+            "last_observed_at": "2026-11-13T19:28:49.460371Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.a412ae50a63501df9701",
+            "value": {
+              "title": "\u00c5pen jobbs\u00f8knad",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/apne-jobbsoknad/",
+              "date": "2024-11-01",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "966ea8a72a4d36fc7606f9911c22838478951bb784b2648ca52ac3e5dd22d396"
+            ],
+            "id": "4b292b66c73d9e417cdb08234ec2d5737bbc6e10ac8be131396f7df3477690df",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T19:28:50.907962Z",
+            "last_observed_at": "2026-11-13T19:28:50.907962Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      }
+    }
+  },
+  "Q": {
+    "counts": {
+      "news_companies": 7,
+      "news_claims": 69,
+      "TED_companies": 6,
+      "TED_claims": 20,
+      "activity_companies": 1000
+    },
+    "article_companies": {
+      "936629466": {
+        "name": "CLOSVA AS",
+        "count": 6,
+        "claims": [
+          {
+            "field": "dated_item.b0ac1ef3391251b00ffe",
+            "value": {
+              "title": "GPE-case: \u00e9n r\u00e5dgiver i stedet for et transaksjonsteam",
+              "title_source": "article_page",
+              "url": "https://closva.com/no/artikler/global-pivot-equity-case",
+              "date": "2026-10-31",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d549c15fa02c3c94a4bbef8cba532cf1c5d6d37925c4ceccad91c7488bca9625"
+            ],
+            "id": "b70e393a24b323c46864f6a9eaba9730ceaf4431b66098f26cf2ea00e8c083d5",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:58:42.129418Z",
+            "last_observed_at": "2026-11-13T22:58:42.129418Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.fb739c4b40157569f2ea",
+            "value": {
+              "title": "GPE-case: \u00e9n r\u00e5dgiver i stedet for et transaktionsteam",
+              "title_source": "article_page",
+              "url": "https://closva.com/dk/artikler/global-pivot-equity-case",
+              "date": "2026-10-31",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "474d0c1db215b694a9fee0cb6b9b2465aa3205b3410e8fa4a065c7f5c1f40dd6"
+            ],
+            "id": "a48d6c40e5a5ea15b4abee40b33b2b0d3fb10253afba0275fd0f048f645c238d",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:58:43.254651Z",
+            "last_observed_at": "2026-11-13T22:58:43.254651Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5caaebbca94f93a77909",
+            "value": {
+              "title": "Andreas blir kommersiell direkt\u00f8r og investor i Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/no/artikler/andreas-rasmussen-blir-med-i-closva",
+              "date": "2026-10-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b9813a7346116757340de1972668509ac6408e7daee707b89cf18c2dc570e9ff"
+            ],
+            "id": "b0b7e1a6f70271d0fac831f9f60e557fa4d6b8ecd5710575cc834660a2a6e26f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:58:44.830284Z",
+            "last_observed_at": "2026-11-13T22:58:44.830284Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5bd990fa461a5aac6772",
+            "value": {
+              "title": "Andreas bliver Chief Commercial Officer og investor i Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/dk/artikler/andreas-rasmussen-bliver-en-del-af-closva",
+              "date": "2026-10-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "beee07ebdeb22c3d620ceaf628445c3e4a74b567d0e819255aa45c669c4bce34"
+            ],
+            "id": "35724e93367fa5b69a3aabb63df544cf75a69abfb2e23fd8234082367ce5c098",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:58:45.945580Z",
+            "last_observed_at": "2026-11-13T22:58:45.945580Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6e2c1a1c8d023dd16bec",
+            "value": {
+              "title": "Global Pivot Equity kj\u00f8per 15 % av Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/no/artikler/global-pivot-equity-investerer-i-closva",
+              "date": "2026-09-27",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "61f1c8766803043c04a6c53544310f60bc083fdd0b9af5c7081f440bbed90fe5"
+            ],
+            "id": "6e67c4e59a1bf97ab136125852f49fabc3bd68b2b2db6f93dd396dbc52a94571",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:58:47.237599Z",
+            "last_observed_at": "2026-11-13T22:58:47.237599Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e3f6904c734b799a3dfe",
+            "value": {
+              "title": "Global Pivot Equity k\u00f8ber en ejerandel p\u00e5 15 % i Closva",
+              "title_source": "article_page",
+              "url": "https://closva.com/dk/artikler/global-pivot-equity-investerer-i-closva",
+              "date": "2026-09-27",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6835e2829c78546729c1b9c134f5ca17b0460a8c6b534b4da493744014978c11"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "f7c12bb2c2d673a6471e9bd7ca95c3e7264bd0b94c4845d157de34dfa7a59353"
+            ],
+            "id": "17796d5b49fa304c885f03480f519fe1c08ab65f54a0ba95d04dac97b5364274",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:58:48.431523Z",
+            "last_observed_at": "2026-11-13T22:58:48.431523Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "993919675": {
+        "name": "FEIE- OG TILSYNSTJENESTER AS",
+        "count": 11,
+        "claims": [
+          {
+            "field": "dated_item.3d67d5edd855ca5b4467",
+            "value": {
+              "title": "Riktig vedlikehold av ildsted og pipe for \u00e5 forebygge\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/riktig-vedlikehold-av-ildsted-og-pipe-for-a-forebygge-pipebrann",
+              "date": "2026-11-02",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "894ff41ad8c915a17d4e1be11d5a3e24229165fa355aed77514d3cd42b5edbb0"
+            ],
+            "id": "80ed03d2457b910f61fe388006fdcefdf19485d6abcd265c97529de952d75887",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:51.328299Z",
+            "last_observed_at": "2026-11-13T22:59:51.328299Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.bc7523d8dec282548abd",
+            "value": {
+              "title": "Sotutslipp fra vedfyrt pizzaovn og feierens rolle i\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/sotutslipp-fra-vedfyrt-pizzaovn-og-feierens-rolle-i-brannforebygging",
+              "date": "2026-09-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "52dbc612d29abda657868a5d2b952c21253bbda755a0f802e519b07288f7a5f9"
+            ],
+            "id": "aeae5457d5ad93c5353784aa48ea872506301bf0b651787216b896fdee466e38",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:54.219474Z",
+            "last_observed_at": "2026-11-13T22:59:54.219474Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e7578a5a846fa8451f44",
+            "value": {
+              "title": "Skorsteinsblokkering p\u00e5 grunn av fuglereir \u2013 betydning for\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/skorsteinsblokkering-pa-grunn-av-fuglereir-betydning-for-brannforebygging-og-fei",
+              "date": "2026-08-19",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "514d6ecc50fc48149a78d815640c23f766d247baa61a8d964f03e6d4810c28d5"
+            ],
+            "id": "858c60be1151ac379ee29c8b72baca290e10f58386d1ee8a4fb5da19453e7ff1",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:55.640988Z",
+            "last_observed_at": "2026-11-13T22:59:55.640988Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.52a4d275acc6dc4a3733",
+            "value": {
+              "title": "R\u00f8ykutvikling i peis \u2013 hendelse i Tomm Murstadbakken, Oslo\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-peis-hendelse-i-tomm-murstadbakken-oslo",
+              "date": "2026-02-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "55685e89b49b83668e9d8f74ced06c305e12770b742ef603334e91936cb30448"
+            ],
+            "id": "31c8339e1a7125fb92f53aad0ce67385a3d4735488e93b18afa0e0059290fa6d",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:57.029275Z",
+            "last_observed_at": "2026-11-13T22:59:57.029275Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6874f952187f72f148e4",
+            "value": {
+              "title": "R\u00f8ykutvikling i kjeller \u2013 forebygging og feierens rolle |\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-forebygging-og-feierens-rolle",
+              "date": "2026-02-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d5d6ce509b985adfd248559940c288b5125f84d70ad8b9ab984268ae0499ded0"
+            ],
+            "id": "34a6629da4c6dad748310894e04489410e32c2e227f4752ea08f03b1d677483f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:58.495205Z",
+            "last_observed_at": "2026-11-13T22:59:58.495205Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.26c159f4aacbc64269cc",
+            "value": {
+              "title": "Pipebrann i Schwensens gate, St. Hanshaugen \u2013\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/pipebrann-i-schwensens-gate-st-hanshaugen-brannforebygging-og-feierens-rolle",
+              "date": "2026-02-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "1a35b81cc855be9076b67d2f651cfe6f6b2c7adc5b5036fd3a8f281d66c1d772"
+            ],
+            "id": "2818e9479195990552eac5719f67d20e91cdc6f7c9f2775cd77e4a5edb632fc5",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:59.917444Z",
+            "last_observed_at": "2026-11-13T22:59:59.917444Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.abe8e46d380a5c952524",
+            "value": {
+              "title": "R\u00f8ykutvikling i kjeller p\u00e5 Gr\u00fcnerl\u00f8kka \u2013 brannforebygging\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/roykutvikling-i-kjeller-pa-gr-nerlokka-brannforebygging-og-feierens-rolle",
+              "date": "2026-02-21",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "ded43bda708bfe87d8010ddcad510355e0294c312b9a9caa349c8e0263f1fcaf"
+            ],
+            "id": "7c8ff06cef2704b01fd85209643515fed02b2c946f46f379ecd4c9bda24ef001",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:01.331671Z",
+            "last_observed_at": "2026-11-13T23:00:01.331671Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.7b5613bec366fe1ef183",
+            "value": {
+              "title": "Pipebranner i Asker og B\u00e6rum \u2013 brannvesenets innsats og\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/pipebranner-i-asker-og-baerum-brannvesenets-innsats-og-feierens-rolle-i-brannfor",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "000622ad82cfab48a988c4b60e1a1aa9cb6a99a768ab2d639383d86d79f6d151"
+            ],
+            "id": "5f61b9aec97df4e4ed9dc773e5d59426f3f120dfa60fa9cbd3e7c4c867a8af96",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:02.754685Z",
+            "last_observed_at": "2026-11-13T23:00:02.754685Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.485c80058f6beee812e3",
+            "value": {
+              "title": "Pipebrann i Ekebergveien: Branninnsats og brannforebygging\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/pipebrann-i-ekebergveien-branninnsats-og-brannforebygging",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "82df19e30b82392b6547d8be0a19e7bd58375bcc9dc86dabbbbd278358c2f96c"
+            ],
+            "id": "1b2f5b88ec28c27afcc2e3374424b61e60966fc3170707df5abc95d77c2dc685",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:04.149767Z",
+            "last_observed_at": "2026-11-13T23:00:04.149767Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.2912784ffd86e74bebc2",
+            "value": {
+              "title": "Hvordan h\u00e5ndtere pipebrann og viktigheten av\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/hvordan-handtere-pipebrann-og-viktigheten-av-brannforebygging-ved-skorsteinen",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9a1fabefd3a458ee1c2d76091ae41a141d5be9324147e92fb38eac7c9757cb59"
+            ],
+            "id": "9f8aea3799a56df09e1ea4adcdfb581aff8f934270975a8b2bc684c7313fce12",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:05.550355Z",
+            "last_observed_at": "2026-11-13T23:00:05.550355Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.3aa8450c7a028171422c",
+            "value": {
+              "title": "Bilbrann p\u00e5 Prinsdal: Viktigheten av brannsikkerhet og\u2026",
+              "title_source": "article_page",
+              "url": "https://www.tilsyn.no/nyheter/bilbrann-pa-prinsdal-viktigheten-av-brannsikkerhet-og-feierens-rolle-i-forebyggi",
+              "date": "2026-02-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "1ccf68166efcd03c7d9f1779c87e7acd9b701e949e804f568cc776192940103e"
+            ],
+            "id": "775f4841da8e0f1f07489ed714d6e0a48597cd210b9275a9e9bf167b3bc91529",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:06.952586Z",
+            "last_observed_at": "2026-11-13T23:00:06.952586Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "922828172": {
+        "name": "TENSIO AS",
+        "count": 28,
+        "claims": [
+          {
+            "field": "dated_item.b8885859ebb99a5a781f",
+            "value": {
+              "title": "Beskytt elektronikk din - v\u00e6r forberedt p\u00e5 lyn og torden",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/vaer-forberedt-pa-lyn-og-torden",
+              "date": "2024-06-06",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "7eba0532d9b88f72a8f0d87bfb4864e8802dac4fff05a554e30707253a869571"
+            ],
+            "id": "5d4e96b23df59b30628913ab4d959c6b7097bddb6864798e22d2c9e49887d7a9",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:53.967863Z",
+            "last_observed_at": "2026-11-13T22:59:53.967863Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.a79bc3a97ed1ec19543f",
+            "value": {
+              "title": "Fire av ti har fortsatt ikke valgt Norgespris",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/fire-av-ti-har-fortsatt-ikke-valgt-norgespris",
+              "date": "2026-11-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "04a2a63f12de77c12ff96eb9882eb4afc9a7d5da31f9f6d61f42431538341458"
+            ],
+            "id": "27fb7839c0afacd6320a5e9d8d9959b65b4b717423434c1f2d56cae7bf3a6902",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:55.073166Z",
+            "last_observed_at": "2026-11-13T22:59:55.073166Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.3aeed9c919a7ee8ce54e",
+            "value": {
+              "title": "Nye l\u00e6rlinger p\u00e5 plass i Tensio",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/nye-laerlinger-pa-plass-i-tensio",
+              "date": "2026-10-30",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "6fa4b69347dcf8655c798522819a3d36fec84fc18e28fd247d6784a9857c24e4"
+            ],
+            "id": "4cffdac183a1734095b532996208e02abcf91eef27ec3a475ec03cae1dd93a0c",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:56.223733Z",
+            "last_observed_at": "2026-11-13T22:59:56.223733Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5665bba45ffffa287531",
+            "value": {
+              "title": "Nettleia \u00f8ker fra 1. januar 2027",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/nettleia-oker-fra-1-januar",
+              "date": "2026-10-30",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "633f59f1b1af2d19ae16b5b06e92e49803c16196602aaa06d78a064863872d26"
+            ],
+            "id": "45f21df9ca264d654e0994f7c649866d2591529fb5f9945f3b8fb1648c88a270",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:57.325629Z",
+            "last_observed_at": "2026-11-13T22:59:57.325629Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.1b259ba4eafcdc3f19b5",
+            "value": {
+              "title": "Hva gj\u00f8r du hvis b\u00e5de str\u00f8m, mobil og internett forsvinner?",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/hva-gjor-du-hvis-bade-strom-mobil-og-internett-forsvinner",
+              "date": "2026-10-23",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "e3d4875e64cfab38cc76629760b4f6f9d2dd6092b94b3055fe32926612f472b0"
+            ],
+            "id": "f1a7dc167b69c7f79126c3788bfced8924db5fb433b4f9a90d6722fe26c0c7d3",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:58.433774Z",
+            "last_observed_at": "2026-11-13T22:59:58.433774Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.cd8442f635e9f5ff3a0a",
+            "value": {
+              "title": "\u00c5pen dag: 125-\u00e5rsjubileum str\u00f8m og trikk i Trondheim",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/apen-dag-125-arsjubileum-strom-og-trikk-i-trondheim",
+              "date": "2026-10-16",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "de477517462ac5edd30a06c32dca00d07f3165d794a9685afa69a608b0f0bbff"
+            ],
+            "id": "736913e2d6e85be089337eb510f19a294654c8a674f3fe472b1ae4e3ad22768e",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T22:59:59.547376Z",
+            "last_observed_at": "2026-11-13T22:59:59.547376Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.eb0a195527d20330072b",
+            "value": {
+              "title": "Elsikkerhetsdagen - Ta elsjekken hjemme",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-2026-ta-elsjekken-hjemme",
+              "date": "2026-10-14",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "6dc1ae3b307a98731268fb54dd7523a827ed68e1cd914fb4a729936e8613f5b5"
+            ],
+            "id": "38ffefef2bcd0f4a76d3d122170d9bfd4f3811839a1d19493fe1cddb7d5da735",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:00.666483Z",
+            "last_observed_at": "2026-11-13T23:00:00.666483Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.74f3faa72e613415b163",
+            "value": {
+              "title": "Mulig streik i str\u00f8msektoren - Tr\u00f8ndelag kan bli ber\u00f8rt",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/mulig-streik-i-stromsektoren-trondelag-kan-bli-berort",
+              "date": "2026-08-25",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9de6ee308a9117c8d2b104a9940b8323de41a2ef5a17b68bc8e706ed06515f58"
+            ],
+            "id": "a9cef30d0a8242718fe56948f34a67fcc4ad41b9f93e60ff89056e8020c29b1e",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:01.785189Z",
+            "last_observed_at": "2026-11-13T23:00:01.785189Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.1f6eec18122f8bd8bf0e",
+            "value": {
+              "title": "Str\u00f8mforsyningen 2035: Hva er det plass til av industri- og samfunnsutvikling?",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/stromforsyningen-2035-hva-er-det-plass-til-av-industri-og-samfunnsutvikling",
+              "date": "2026-08-11",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "11be6b35b5519df5c48baf794e3eac7f1a151551e81f00b1036930b34a0358f9"
+            ],
+            "id": "a4b9b20a1c20d2acce8baed67b05b0e50522efe67799a58454f8c49bf4e5b438",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:02.909502Z",
+            "last_observed_at": "2026-11-13T23:00:02.909502Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e8fe54c2bb8fb789cc30",
+            "value": {
+              "title": "Status Norgespris ved inngangen h\u00f8sten",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-hosten",
+              "date": "2026-08-11",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "8dd31827141285de09e2a5b4d000f88d950208755469f02995716182a7c87181"
+            ],
+            "id": "7e64fdb47bd616e3f8fb10ab8aa01d04158a69073ab514ceaa06f33ec5ec5a98",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:04.036659Z",
+            "last_observed_at": "2026-11-13T23:00:04.036659Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.003d7ffb296ec4862e36",
+            "value": {
+              "title": "Skal du flytte for \u00e5 studere? Husk \u00e5 ta over str\u00f8mabonnementet",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/skal-du-flytte-for-a-studere-husk-a-ta-over-stromabonnementet",
+              "date": "2026-08-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "065fff8f854d32a542212bd7ec1682557673250036dbc3013cc17efd2e43c226"
+            ],
+            "id": "1d846f054ef1aa7d134098a22dfa60140676f0a50e7c812f7983083c50cf8d0c",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:05.155299Z",
+            "last_observed_at": "2026-11-13T23:00:05.155299Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e63d2ad68974f83a33e3",
+            "value": {
+              "title": "Elsikkerhetsdagen - Ta elsjekken hjemme",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/elsikkerhetsdagen-ta-elsjekken-hjemme",
+              "date": "2025-10-14",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "7b36901926a229727099fbeb832b7c1fe292b90bd4f87ed36b0481e9d3729d1a"
+            ],
+            "id": "395fa3d646bcf468b55a96a002a252b79b23d28d140d11d741f382846fd18a88",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:06.346210Z",
+            "last_observed_at": "2026-11-13T23:00:06.346210Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.feb2b523a93029d7bcda",
+            "value": {
+              "title": "Tensio endrer nettleieprisene fra 1. juli",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/prisendringer-nettleie-fra-1-juli-2026",
+              "date": "2026-06-01",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "466cc0f0d7fbdb0315261b413dd58b92730f806893041a782da1642878595377"
+            ],
+            "id": "ac29497430ea9279181a90c127a458f99de227a74b088939b51704428810ddd8",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:07.473201Z",
+            "last_observed_at": "2026-11-13T23:00:07.473201Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.7d58cf093adca0e5fb43",
+            "value": {
+              "title": "Regjeringen gj\u00f8r viktige beredskapsgrep for Tr\u00f8ndelag",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/regjeringen-gjor-viktige-beredskapsgrep-for-trondelag",
+              "date": "2026-06-18",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "53c4f007496604e3e05a303f955f50521bb1b67f462e77d9dd987a6e81b071dc"
+            ],
+            "id": "1d3dc876eba801c391aefc233784dc5d9eb185da22b69cd3ab9a7b9d3e436813",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:08.591727Z",
+            "last_observed_at": "2026-11-13T23:00:08.591727Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5f993d7c46ea95d9667b",
+            "value": {
+              "title": "Forbered deg p\u00e5 lyn og torden",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/forbered-deg-pa-lyn-og-torden",
+              "date": "2026-06-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "fc35bcf1099a50822e977aafe25afb9d6ad9322e7ef739fb5dfc85296dc652c3"
+            ],
+            "id": "cd97dea326aa79ce916d11dccc58d8f4e3531b830a9d5fb4ee8bd527f3c8f0a6",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:09.697921Z",
+            "last_observed_at": "2026-11-13T23:00:09.697921Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.d0e57de35dcdd29af19a",
+            "value": {
+              "title": "Tensio gjennomf\u00f8rer droneflyging langs h\u00f8yspentlinjer i Tr\u00f8ndelag",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/tensio-gjennomforer-droneflyging-langs-hoyspentlinjer-i-trondelag",
+              "date": "2026-05-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "8bc8bde36e1802029dfd60c68d7eb04f2d2b9b128abe214c3995926152adb606"
+            ],
+            "id": "f2eae45eb011bde52427a0e05d52378e0a09e8b8ac5fbfc18ebaa8f0757bb7d4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:11.121783Z",
+            "last_observed_at": "2026-11-13T23:00:11.121783Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6868c462e75682cc1615",
+            "value": {
+              "title": "Status Norgespris ved inngangen til mai",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-mai",
+              "date": "2026-04-24",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "6a67632afa16cc9cac3e18ab3277ecb330611379c9e82a4a6164a3ea0501b58a"
+            ],
+            "id": "8adcec2ebad9f1660887f6a14702dd50072123425890cbbd362abb7d180e1855",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:12.274648Z",
+            "last_observed_at": "2026-11-13T23:00:12.274648Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.556eb343ba358bdea872",
+            "value": {
+              "title": "V\u00e5r i lufta \u2013 men hva ligger i bakken?",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/var-i-lufta-men-hva-ligger-i-bakken",
+              "date": "2026-04-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "953e8b8b2703964bb5e4e904db1de26378dcad0c4748e9fc9517a943b6f9d56b"
+            ],
+            "id": "63b6e2afc8c6031b7c32443514a5462dffecd65dc595bd4930ed18f789775104",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:13.371659Z",
+            "last_observed_at": "2026-11-13T23:00:13.371659Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5c933e4c11855916f19d",
+            "value": {
+              "title": "Mange str\u00f8mbrudd i Tr\u00f8ndelag  \u2013 kan vedvare over flere d\u00f8gn (mars 2025)",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/mange-strombrudd-i-trondelag-kan-vedvare-over-flere-dogn",
+              "date": "2025-03-06",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "06ffe90dba34a9442b88a3aa3d388ee2ea4a4e165c52c3f4b08789ea6db80985"
+            ],
+            "id": "ed0cab76eb62a98f2e89fe2c23423b96fabb8d2cf67f3bf88e485a87e79e10c7",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:14.505079Z",
+            "last_observed_at": "2026-11-13T23:00:14.505079Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e6ff4b0e4d51c26eef03",
+            "value": {
+              "title": "Ekstremv\u00e6ret Amy - oppdatering l\u00f8rdag kveld",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/ekstremvaeret-amy-oppdatering-lordag-kveld",
+              "date": "2025-10-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "220181fe7bb02909b0528008e3727c7e71c7475f0c0592da0b042bffbac25ebe"
+            ],
+            "id": "2f45c7220a724aff9eafef1260035a746f70ec2b36c91cb4599f3c1812c3d582",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:15.618454Z",
+            "last_observed_at": "2026-11-13T23:00:15.618454Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.53038f806d0bf4b8635a",
+            "value": {
+              "title": "\u00c5rs- og b\u00e6rekraftrapport 2025 - Tensio konsern",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/ars-og-baerekraftrapport-2025",
+              "date": "2026-03-26",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "47ae94e84936ad0f4a40d50b8a645e8b2effa31996c03003690756bb37b05e72"
+            ],
+            "id": "2d31d20b0830f2dc33a8a8036fba715f02cd97e23372d0642d38b97066a0251e",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:16.715406Z",
+            "last_observed_at": "2026-11-13T23:00:16.715406Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.e1abac710a1356273f24",
+            "value": {
+              "title": "Trenger tiltak for raskere elektrifisering",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/trenger-tiltak-for-raskere-elektrifisering",
+              "date": "2024-04-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b25890dd1713754317ff7c94ee8b50f7595322d3f9687134fa13016c62c524b6"
+            ],
+            "id": "81a481f79cfa77929484d47fe780d002b550bda79f872aace496e72857b7c74a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:17.819337Z",
+            "last_observed_at": "2026-11-13T23:00:17.819337Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.30c111ff29e15679b88e",
+            "value": {
+              "title": "Status Norgespris i midten av mars",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-i-midten-av-mars",
+              "date": "2026-03-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "00e3794b1ea52331d8ac5b0eab17e77ee6f40e319c08b02129adcb58824cc6b8"
+            ],
+            "id": "08119c99ed43959295ade386d6395ff04b95e4e2dd3f892d72fbb647e8fa5bd6",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:20.132499Z",
+            "last_observed_at": "2026-11-13T23:00:20.132499Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.733b5ca9c34214d8c108",
+            "value": {
+              "title": "Langsiktig skogrydding for et mer robust Tr\u00f8ndelag",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/skogrydding-for-en-mer-motstandsdyktig-stromforsyning",
+              "date": "2026-03-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "4e29d2765e20b0a3ce7dc9b571ce8e47f65d8e135976176b8cc0a70836482a85"
+            ],
+            "id": "57707b8057bb8806a29f3411dd301717b746402be1a60e4fdaf863907e9dc3d4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:21.236317Z",
+            "last_observed_at": "2026-11-13T23:00:21.236317Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.6030439877e998d44cfb",
+            "value": {
+              "title": "Spenningens helter - Tensio kommer p\u00e5 tv-skjermen neste \u00e5r",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/spenningens-helter",
+              "date": "2025-12-05",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b00d4813ac665c4cc8e1e019af8cfbf8ab823c33ffccb93ca8c0e264a800e74d"
+            ],
+            "id": "f26c5c351bfb5037b0df3186d85f1e6a2ab6e1d945ba5858a0488b46b1401f2f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:22.384805Z",
+            "last_observed_at": "2026-11-13T23:00:22.384805Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.90659a383fb3c151fa37",
+            "value": {
+              "title": "Ny tv-serie om str\u00f8mforsyningens helter",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/ny-tv-serie-om-stromforsyningens-helter",
+              "date": "2026-02-02",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9da652c92c397bd619ccc8e0263d37855309cdeae7a386602431bdd10eec87fc"
+            ],
+            "id": "9a8c5e3deef898b2e04f360d1b1e1d94f616d7ff7a9fd8a1ea5f074b34105366",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:23.581072Z",
+            "last_observed_at": "2026-11-13T23:00:23.581072Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.d8a305b839a5c69e95fc",
+            "value": {
+              "title": "Status Norgespris ved inngangen til februar",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/status-norgespris-ved-inngangen-til-februar",
+              "date": "2026-01-28",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "55394dedaaa7bac4f17f10608e35632dfec90ae31fac02d0504679734254cb45"
+            ],
+            "id": "125517202323ea45b584580801d50036379c94d999fc99c25977560b7c02a87f",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:25.027173Z",
+            "last_observed_at": "2026-11-13T23:00:25.027173Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.9fe632ef9cb422732e9c",
+            "value": {
+              "title": "Vinter, storm og str\u00f8mforsyning: Slik forbereder du deg \u2013 og slik jobber Tensio",
+              "title_source": "article_page",
+              "url": "https://www.tensio.no/no/kunde/nyheter/vinter-storm-og-stromforsyning-slik-forbereder-du-deg-og-slik-jobber-tensio",
+              "date": "2026-01-27",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "4be175f868410eb1d0c717ff68f6f7e795454a7f8b36f29cae0e5102eb5c5b5d"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "9054c8ef9f2c24c6d3c4e9c2a4f78b045f38fdcd19be3169cb607555c996478d"
+            ],
+            "id": "1e06c0a494937fde5e16dccb16b3702e6efa04a3ca6ff7c9440faa289a0266f7",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:26.141717Z",
+            "last_observed_at": "2026-11-13T23:00:26.141717Z",
+            "reasons": {}
+          }
+        ],
+        "errors": [
+          {
+            "section": "activity",
+            "code": "website_budget_exhausted",
+            "message": "Additional article checks incomplete; verified articles retained"
+          }
+        ]
+      },
+      "971558415": {
+        "name": "DANSEINFORMASJONEN STI",
+        "count": 9,
+        "claims": [
+          {
+            "field": "dated_item.66a57147d3698b41e48e",
+            "value": {
+              "title": "50 \u00e5r siden etableringen av Danseloftet \u2013\u00a0verksted for koreografi og dans",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/50-ar-siden-etableringen-av-danseloftet-verksted-for-koreografi-og-dans/",
+              "date": "2026-11-12",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d698c1c1616c460105657d72eedbdf2e89ba9c523ce5b0e74ff60d9161db85bc"
+            ],
+            "id": "6a3f43a9bb9cae965af0e4be20f7bdaa4eff7864346244cb2ab7f17e1373cccc",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:42.399507Z",
+            "last_observed_at": "2026-11-13T23:00:42.399507Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.acb97cd3bfeaa4a7e634",
+            "value": {
+              "title": "Nytt i biblioteket",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/nytt-i-biblioteket/",
+              "date": "2026-11-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "91aa62712e673d19a6f3e90d10ad88225e79d138fbb165aa7f1d13d5b220e7ad"
+            ],
+            "id": "5668bf16ba068057d2d98c9738234a1e1a80cc38f676aa6b2c01036dda6d2765",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:44.885753Z",
+            "last_observed_at": "2026-11-13T23:00:44.885753Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.978b03790b829c3adb87",
+            "value": {
+              "title": "Maria \u00abLotus\u00bb Karlsen tildeles Soul Sessions Honor Award 2026",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/maria-lotus-karlsen-tildeles-soul-sessions-honor-award-2026/",
+              "date": "2026-11-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b730c7cc464e4524a16a29273180ec437d3f8b9732767ffb59fb160b28925ec7"
+            ],
+            "id": "a16117a9e9c2065fc71bb20f836774d2ab99bcff5a5370778ea23fd92577cffc",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:47.124510Z",
+            "last_observed_at": "2026-11-13T23:00:47.124510Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.4626087ede6087b65ed8",
+            "value": {
+              "title": "\u00c5rets mottakere av Rolf Gammleng-priser i dans 2026",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/arets-mottakere-av-rolf-gammleng-priser-i-dans-2026/",
+              "date": "2026-11-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "0fc75e4de741dc2d8e2427e03c4bc80a0acfd8c77b2d5ece602d97aae64e53bc"
+            ],
+            "id": "3d5f5231280875e39c2f560a8958fb9ac71a731b9ddf52b93c0517c351c87082",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:49.810802Z",
+            "last_observed_at": "2026-11-13T23:00:49.810802Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.79c005ddfb8be28c6eec",
+            "value": {
+              "title": "Snelle Ingrid Hall ny dekan ved Fakultet for ut\u00f8vende kunstfag ved Universitetet i Stavanger",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/snelle-ingrid-hall-ny-kunstdekan-i-stavanger/",
+              "date": "2026-11-06",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "5c8be148f5a475a4839921a15ccb419a3f67c9262f87ed05076317ce39777490"
+            ],
+            "id": "9df4299cf78ca3ca065ecc8af3f29d217a5ecf28c53a96fc192bd012a01a31db",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:51.399790Z",
+            "last_observed_at": "2026-11-13T23:00:51.399790Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.cc34ed4e91638b30728f",
+            "value": {
+              "title": "Kamelia Javadi er tilbake p\u00e5 Danseinformasjonen",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/kamelia-javadi-er-tilbake-pa-danseinformasjonen/",
+              "date": "2026-11-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "2c575314d1fea6684dd90a0e44f398f1bb3dfa9f5cda880dd8543d9ca4e7911b"
+            ],
+            "id": "d6e06de7c1286b2411d40c43ecbe88b157909f0cd1a800fce8c28db19c0839fa",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:54.001963Z",
+            "last_observed_at": "2026-11-13T23:00:54.001963Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.9500799958f88c8a2d62",
+            "value": {
+              "title": "Innspillsm\u00f8te med kultur- og utdanningsutvalget i Oslo kommune",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/nyheter/innspillsmote-med-kultur-og-utdanningsutvalget-i-oslo-kommune/",
+              "date": "2026-11-03",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "cb4f20f5aa63ed90acca202f0032a18bed4c17d8fb8d4948abb9d953ee30ab09"
+            ],
+            "id": "c21ace24c5ca88fa3c799cdcd1553e535ca4b4ed946d55a73f44b68a9bc8a18a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:55.574068Z",
+            "last_observed_at": "2026-11-13T23:00:55.574068Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.063226d07563e46fffaa",
+            "value": {
+              "title": "Boklansering: ARKIVERT! \u00c5 arkivere et kunstnerskap",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/arrangementer/boklansering-arkivert-a-arkivere-et-kunstnerskap-2/",
+              "date": "2026-06-25",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "77928b226ddf338794dee9b278818d8b6e2e0a1c56dbf69769384ce821f260fc"
+            ],
+            "id": "2f1a55e1f0dfbfaa42c2bb6dbb73826fc8731ef1721d7d6a57a8de10bedfc0d8",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:00.250819Z",
+            "last_observed_at": "2026-11-13T23:01:00.250819Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.f712d0b5be88d23626dc",
+            "value": {
+              "title": "BOKLANSERING: ARKIVERT! \u00c5 arkivere et kunstnerskap",
+              "title_source": "article_page",
+              "url": "https://danseinfo.no/arrangementer/boklansering-arkivert-a-arkivere-et-kunstnerskap/",
+              "date": "2026-06-09",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "6fd10da346e18c0d987a9c7af838e4e3eb9c450e1508de9f8382236f1e0fec82"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "faf83ffb01e5d6c7c164c1efee917c07518bcbed2915eaaf79e8a295c45d39bc"
+            ],
+            "id": "cea781eb11e583f6d7fee3c31639f8fae97d38e13daabece290a506c3e68c3ab",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:02.928670Z",
+            "last_observed_at": "2026-11-13T23:01:02.928670Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "821962242": {
+        "name": "LAKSESYSTEMER AS",
+        "count": 2,
+        "claims": [
+          {
+            "field": "dated_item.8b39f85fe33196cbd130",
+            "value": {
+              "title": "Fra fj\u00f8s til fisk \u2013 teknologien som binder oss sammen",
+              "title_source": "article_page",
+              "url": "https://laksesystemer.no/aktuelt/fra-fjos-til-fisk-teknologien-som-binder-oss-sammen/",
+              "date": "2026-06-12",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ee09bbae19bb3094c505fb136857e4405a193cb4de4c1204b566dce19dc56f01"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "01727dd5072003cd3dc18343639a71f0c260050a620c2aa1069f6dbd55449472"
+            ],
+            "id": "d90ef5e87873695c9dd071d04242787ca44c302a404dad7a39b8fd49d6585cb7",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:38.245697Z",
+            "last_observed_at": "2026-11-13T23:00:38.245697Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.214fd5128307e8c029c4",
+            "value": {
+              "title": "Delta f\u00f4ringsautomat",
+              "title_source": "article_page",
+              "url": "https://laksesystemer.no/aktuelt/foringsautomat/",
+              "date": "2024-05-31",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "ee09bbae19bb3094c505fb136857e4405a193cb4de4c1204b566dce19dc56f01"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "ca3bc39207cbdbef1fa94f924d941a0222112d4d6c50abbb14713929bba24bf3"
+            ],
+            "id": "9defbcfcdad2a7831afa6422a3bd338c8ba2a9b12c2743c9ef0f2eb22d331e6a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:39.629669Z",
+            "last_observed_at": "2026-11-13T23:00:39.629669Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      },
+      "987002808": {
+        "name": "BRIDGE TECHNOLOGIES CO AS",
+        "count": 8,
+        "claims": [
+          {
+            "field": "dated_item.11a8383b69bae4908578",
+            "value": {
+              "title": "Networks are complex. But learning about them doesn\u2019t have to be",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/networks-are-complex-but-learning-about-them-doesnt-have-to-be/",
+              "date": "2023-10-12",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "f75ece7bcf4dcb586ff2fb403c2760bb576544250f955089039d7a4f8f2d24c8"
+            ],
+            "id": "4424c4b8cbeb86ef726ff0e7f2f09006d0e4b7d3d6c1d3228297f6ec85fbc068",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:46.969863Z",
+            "last_observed_at": "2026-11-13T23:00:46.969863Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5dfba8c0fd7f53268a43",
+            "value": {
+              "title": "How Bridge probes are integral to effective OTT delivery",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/how-bridge-probes-are-integral-to-effective-ott-delivery/",
+              "date": "2023-03-10",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "d498fa37573a1b79c16d2e546d6c9553df4ca48fe13ffc19697a1892f4abbf1c"
+            ],
+            "id": "6372ec9d809c6722b5f4583c4815bcda5a75e0c496b4590bcb105ad1a7112549",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:49.431641Z",
+            "last_observed_at": "2026-11-13T23:00:49.431641Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.3636d4a4c9e86c914104",
+            "value": {
+              "title": "There\u2019s nothing sus about our approach to sustainability",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/theres-nothing-sus-about-our-approach-to-sustainability/",
+              "date": "2023-08-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "f91d9e1f9f566ea0517b52d928f569c9342f7ae803d5af0d959eb933954933d1"
+            ],
+            "id": "99474ab3abeddac9af26d721c1617462b0aa2dc39855172ebbbd48e7891526c4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:51.894342Z",
+            "last_observed_at": "2026-11-13T23:00:51.894342Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.5579617da27443cc371e",
+            "value": {
+              "title": "Why and how we celebrate our business partners",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/why-and-how-we-celebrate-our-business-partners/",
+              "date": "2023-07-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "048b29850eb1304cc238b08da9329b27f9328330b05cddb75164b677dbc536bf"
+            ],
+            "id": "045f6f611dce116b998de3ed03ae73be5916211e447f84ad5490710050e5d9e3",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:54.349014Z",
+            "last_observed_at": "2026-11-13T23:00:54.349014Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.fd563cad239350d36c56",
+            "value": {
+              "title": "Bridge Technologies January Blog Post",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/bridge-technologies-january-blog-post-3/",
+              "date": "2023-01-24",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "c786ef935912c48ea1dc56705fc8e343013b9832b5e3e2a9bce59cda41042702"
+            ],
+            "id": "a2123b58731f467ba5a9dff0562b7d0cebf3c292b36771f30834c7b2b584da2a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:00:56.816971Z",
+            "last_observed_at": "2026-11-13T23:00:56.816971Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.674a272ad9ec5424d6f8",
+            "value": {
+              "title": "Bridge Technologies December Blog Post",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/bridge-technologies-december-blog-post-4/",
+              "date": "2022-12-20",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "6feb4a9fb6ee66337885da371a56629ef9a091de8345dcc4387f27e699677c6c"
+            ],
+            "id": "d3468305858c6445bc869606f07f1bbc09125bbfae10927dbe92d12e1003142c",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:00.250819Z",
+            "last_observed_at": "2026-11-13T23:01:00.250819Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.036015160ba1d3da5368",
+            "value": {
+              "title": "SatMagazine: Year in Review 2022",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/satmagazine-year-in-review-2022/",
+              "date": "2022-12-15",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "7ac96d3d81bc92e7fccc9c1658e75d20e18171ab1f0c8c873f90a5c4e2464b56"
+            ],
+            "id": "d84562febae6764cc5ccd0d1d21de5950bf9576f4eabb6355befa736c01b4cf2",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:10.001463Z",
+            "last_observed_at": "2026-11-13T23:01:10.001463Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.87d39d18e7bd4ea5c5b4",
+            "value": {
+              "title": "Blog: How to define a unique solution for broadcast creatives and engineers",
+              "title_source": "article_page",
+              "url": "https://bridgetech.tv/blog-how-to-define-a-unique-solution-for-broadcast-creatives-and-engineers/",
+              "date": "2022-12-08",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "66fedca92d19cb308277216959fd239f5f4100143e2bd966b14c30e2f1984e15"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b3538b9965f640c8c6de06d6cd5956c0ab71e2daf91a8dc573226897e34aface"
+            ],
+            "id": "42986233c9f0a517b5dc98849e10da5c603403e3acd19f8e2c9d1716560d50c6",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:12.368678Z",
+            "last_observed_at": "2026-11-13T23:01:12.368678Z",
+            "reasons": {}
+          }
+        ],
+        "errors": [
+          {
+            "section": "activity",
+            "code": "website_budget_exhausted",
+            "message": "Additional article checks incomplete; verified articles retained"
+          }
+        ]
+      },
+      "990412375": {
+        "name": "BERGEN VAKTMESTERTJENESTER AS",
+        "count": 5,
+        "claims": [
+          {
+            "field": "dated_item.f40d08eca3b6df36bccf",
+            "value": {
+              "title": "Hvor ofte b\u00f8r takrenner renses? | R\u00e5d for huseiere i Bergen",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/hvor-ofte-bor-takrenner-renses/",
+              "date": "2026-10-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "dd0dfe29e288e4e603bfc3baf2999c7329feaaa39c22c27b63b37a1a050faf6d"
+            ],
+            "id": "6c619adef3e1753ce2fe385a24a2068640d955808f84491f900d7678cdb48f3a",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:27.964689Z",
+            "last_observed_at": "2026-11-13T23:01:27.964689Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.f8c663479d4e84c0a017",
+            "value": {
+              "title": "Hva koster drenering rundt hus? Dette p\u00e5virker prisen",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/hva-koster-drenering-rundt-hus/",
+              "date": "2026-10-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "b6a2ed4003b46a88925736e9c9e4ff1a481ee42b67f093d97f043ede6c7d0ad4"
+            ],
+            "id": "9992649d896c6587679fb0d9a6059269999991a52084ca14d1fdac5b248e0eac",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:29.726799Z",
+            "last_observed_at": "2026-11-13T23:01:29.726799Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.340323b78352ff35130c",
+            "value": {
+              "title": "Hva gj\u00f8r en vaktmester i et borettslag? | Guide for styret",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/hva-gjor-en-vaktmester-i-et-borettslag/",
+              "date": "2026-10-13",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "4f2444c9042ee3ae4760492fccebcf2acb3883010c9c39cd5844bf12e4f24bc7"
+            ],
+            "id": "eb4683b13cf38e4dca7b59c3eb63dcf969da505731ade8b98a8102a526f039fc",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:31.508432Z",
+            "last_observed_at": "2026-11-13T23:01:31.508432Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.fe34c7f4c00b51f8470b",
+            "value": {
+              "title": "Belegningsstein i Helleveien",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/helleveien-belegningsstein/",
+              "date": "2024-11-04",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "93b510abcfb3537ac9f78e2d1160075709fed892f4700cd04a514a83400d4dd5"
+            ],
+            "id": "3c7d0546df72a0530decc7df08b203fd287144274d29c9ff7874128c171a5ec4",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:33.189939Z",
+            "last_observed_at": "2026-11-13T23:01:33.189939Z",
+            "reasons": {}
+          },
+          {
+            "field": "dated_item.a412ae50a63501df9701",
+            "value": {
+              "title": "\u00c5pen jobbs\u00f8knad",
+              "title_source": "article_page",
+              "url": "https://bnv.no/nyheter/apne-jobbsoknad/",
+              "date": "2024-11-01",
+              "date_source": "datePublished",
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "d42c6e4dad3a531f304034ada3b19e58f0db521a6e3ace0be45e001e49349bcd"
+            },
+            "availability": "available",
+            "confidence": 1.0,
+            "evidence_ids": [
+              "373df11f60e68af5f868d61d3d0ce6aee5dc7de68f09c0140f464b7b9bb2ae1c"
+            ],
+            "id": "4b292b66c73d9e417cdb08234ec2d5737bbc6e10ac8be131396f7df3477690df",
+            "family": "activity",
+            "reporting_period": null,
+            "carried_forward": false,
+            "stale_since": null,
+            "first_observed_at": "2026-11-13T23:01:34.924997Z",
+            "last_observed_at": "2026-11-13T23:01:34.924997Z",
+            "reasons": {}
+          }
+        ],
+        "errors": []
+      }
+    }
+  }
+}

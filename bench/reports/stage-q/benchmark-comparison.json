@@ -1,0 +1,580 @@
+{
+  "release": {
+    "envelopes": 1000,
+    "websites": 112,
+    "social": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "news": 7,
+    "gleif": 139,
+    "TED": 0,
+    "articles": 69,
+    "all_gleif_claims": 719,
+    "direct_gleif_claims": 695,
+    "facts": 166042,
+    "requests": 9309,
+    "http_mean": 9.309,
+    "http_max": 40,
+    "wall_seconds": 1678.390000000014,
+    "seconds_per100": 167.8390000000014,
+    "deadlines": 0,
+    "warnings": [],
+    "hiring_prefetch": {
+      "pages": 4,
+      "items": 2160,
+      "bytes": 1091829,
+      "details": 3,
+      "requests": 8,
+      "runtime_ms": 69391,
+      "source_mode": "declared_index",
+      "index_version": "nav-20261113T002642.872674Z-v1",
+      "index_built_at": "2026-11-13T00:26:42.872674Z",
+      "index_age_days": 0.7901104290046297,
+      "index_compressed_bytes": 429720,
+      "index_ads": 9296,
+      "seeded_from_disk": 0,
+      "fresh_fetched_ads": 9296,
+      "time_cap_seconds": 900,
+      "feed_complete": true,
+      "detail_request_cap": 13,
+      "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+      "offline_index_candidates": 0,
+      "feed_runtime_ms": 3703,
+      "first_detail_seconds": 20.01600000000326,
+      "first_detail_page_number": 4,
+      "details_started_before_feed_complete": false,
+      "detail_requests": 3,
+      "detail_requests_by_company": {
+        "991247610": 1,
+        "960213912": 1,
+        "930202894": 1
+      },
+      "last_detail_seconds": 61.53200000000652,
+      "forward_header_orgnr_counts": {
+        "parent_orgnr": 0,
+        "subunit_orgnr": 0,
+        "no_orgnr": 1043,
+        "other_orgnr": 0
+      },
+      "runtime_seconds": 69.39100000000326,
+      "feed_seconds": 3.703,
+      "average_seconds_per_page": 0.92575,
+      "complete": true,
+      "blocked": false,
+      "reason": "complete",
+      "header_processing_complete": true,
+      "candidate_headers": 3,
+      "distinct_candidate_ads": 3,
+      "indexed_ads": 4,
+      "detail_concurrency": 4,
+      "incomplete_companies": [],
+      "name_unusable_companies": 0,
+      "fallback_name_unusable_companies": 34,
+      "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+      "companies_with_unchecked_candidates": 0,
+      "cap_hits": 0,
+      "lookback_days": 185,
+      "matches_published": 2,
+      "companies_with_ads": 2
+    },
+    "official_extra": {
+      "requests": 265,
+      "gleif_companies": 139,
+      "parent_LEIs_batched": 13,
+      "tender_notices_nominated": 76,
+      "ted_requests": 230,
+      "ted_http_statuses": {
+        "200": 15,
+        "202": 215
+      },
+      "ted_failures": [
+        {
+          "url": "https://ted.europa.eu/en/notice/10384-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/112715-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/115235-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/116542-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/120822-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/138083-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/140390-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/150922-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/165606-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/173043-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/174478-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/187066-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/197558-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/198485-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/210972-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/228306-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/246735-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/247985-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/250458-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/261860-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/263789-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/271943-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/287502-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/288858-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/295084-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/313125-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/320357-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/327030-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/330396-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/335345-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/338506-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/341549-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/341842-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/354425-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/370861-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/387041-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/389874-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/390266-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/39027-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/397297-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/397515-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/418429-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/42374-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/42963-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/434277-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/461448-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/475312-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/486198-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/495785-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/510525-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/517910-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/528398-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/549796-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/574364-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/583218-2024/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/627000-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/637605-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/640353-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/643444-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/690844-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/69164-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/69404-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/697888-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/698069-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/757744-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/766764-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/778400-2026/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/780228-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/817875-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/834670-2025/xml",
+          "code": "extra_http_202"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/839756-2025/xml",
+          "code": "extra_http_202"
+        }
+      ]
+    },
+    "site": {
+      "state": "available",
+      "companies": 1000,
+      "input_records": 1000,
+      "pages": 1002,
+      "skipped_invalid_identifiers": 0,
+      "total_bytes": 766731852,
+      "evidence_pages": 2734,
+      "largest_page_bytes": 239582,
+      "largest_profile_data_bytes": 779871,
+      "largest_profile_bytes": 239582,
+      "compact_profiles": 0
+    },
+    "effective_configuration": {
+      "websites": true,
+      "hiring": true,
+      "public_activity": true,
+      "registry_changes": true,
+      "official_extra_sources": true,
+      "website_suffix_contact_proof": true,
+      "search": {
+        "queries": 0,
+        "estimated_usd": 0.0
+      },
+      "synthesis": {
+        "requested_mode": "template",
+        "effective_mode": "template",
+        "llm_calls": 0
+      },
+      "request_caps": {
+        "pooled": 19000,
+        "pooled_per_company": 19,
+        "per_company": 40,
+        "website": 40,
+        "website_total": 40
+      },
+      "nav": {
+        "index_built_at": "2026-11-13T00:26:42.872674Z",
+        "mode": "declared_index"
+      },
+      "unrecognised_flags": [],
+      "outputs": {
+        "envelopes": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\envelopes.jsonl",
+        "profiles": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\profiles.jsonl",
+        "report": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\report.json",
+        "site": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-p-whitespace\\site"
+      }
+    }
+  },
+  "corrected": {
+    "envelopes": 1000,
+    "websites": 112,
+    "social": 47,
+    "jobs": 2,
+    "activity": 1000,
+    "news": 7,
+    "gleif": 142,
+    "TED": 6,
+    "articles": 69,
+    "all_gleif_claims": 736,
+    "direct_gleif_claims": 710,
+    "facts": 166047,
+    "requests": 9170,
+    "http_mean": 9.17,
+    "http_max": 40,
+    "wall_seconds": 851.9839999999967,
+    "seconds_per100": 85.19839999999968,
+    "deadlines": 0,
+    "warnings": [],
+    "hiring_prefetch": {
+      "pages": 4,
+      "items": 2229,
+      "bytes": 1119911,
+      "details": 3,
+      "requests": 8,
+      "runtime_ms": 53734,
+      "source_mode": "declared_index",
+      "index_version": "nav-20261113T002642.872674Z-v1",
+      "index_built_at": "2026-11-13T00:26:42.872674Z",
+      "index_age_days": 0.9380975156365741,
+      "index_compressed_bytes": 429720,
+      "index_ads": 9296,
+      "seeded_from_disk": 0,
+      "fresh_fetched_ads": 9296,
+      "time_cap_seconds": 900,
+      "feed_complete": true,
+      "detail_request_cap": 13,
+      "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+      "offline_index_candidates": 0,
+      "feed_runtime_ms": 3531,
+      "first_detail_seconds": 8.0,
+      "first_detail_page_number": 4,
+      "details_started_before_feed_complete": false,
+      "detail_requests": 3,
+      "detail_requests_by_company": {
+        "991247610": 1,
+        "960213912": 1,
+        "930202894": 1
+      },
+      "last_detail_seconds": 45.421000000002095,
+      "forward_header_orgnr_counts": {
+        "parent_orgnr": 0,
+        "subunit_orgnr": 0,
+        "no_orgnr": 1108,
+        "other_orgnr": 0
+      },
+      "runtime_seconds": 53.73399999999674,
+      "feed_seconds": 3.531,
+      "average_seconds_per_page": 0.88275,
+      "complete": true,
+      "blocked": false,
+      "reason": "complete",
+      "header_processing_complete": true,
+      "candidate_headers": 3,
+      "distinct_candidate_ads": 3,
+      "indexed_ads": 4,
+      "detail_concurrency": 4,
+      "incomplete_companies": [],
+      "name_unusable_companies": 0,
+      "fallback_name_unusable_companies": 34,
+      "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+      "companies_with_unchecked_candidates": 0,
+      "cap_hits": 0,
+      "lookback_days": 185,
+      "matches_published": 2,
+      "companies_with_ads": 2
+    },
+    "official_extra": {
+      "requests": 123,
+      "gleif_companies": 142,
+      "parent_LEIs_batched": 14,
+      "tender_notices_nominated": 76,
+      "ted_requests": 86,
+      "ted_http_statuses": {
+        "200": 86
+      },
+      "ted_failures": []
+    },
+    "site": {
+      "state": "available",
+      "companies": 1000,
+      "input_records": 1000,
+      "pages": 1002,
+      "skipped_invalid_identifiers": 0,
+      "total_bytes": 766905062,
+      "evidence_pages": 2736,
+      "largest_page_bytes": 239582,
+      "largest_profile_data_bytes": 779869,
+      "largest_profile_bytes": 239582,
+      "compact_profiles": 0
+    },
+    "effective_configuration": {
+      "websites": true,
+      "hiring": true,
+      "public_activity": true,
+      "registry_changes": true,
+      "official_extra_sources": true,
+      "website_suffix_contact_proof": true,
+      "search": {
+        "queries": 0,
+        "estimated_usd": 0.0
+      },
+      "synthesis": {
+        "requested_mode": "template",
+        "effective_mode": "template",
+        "llm_calls": 0
+      },
+      "request_caps": {
+        "pooled": 19000,
+        "pooled_per_company": 19,
+        "per_company": 40,
+        "website": 40,
+        "website_total": 40
+      },
+      "nav": {
+        "index_built_at": "2026-11-13T00:26:42.872674Z",
+        "mode": "declared_index"
+      },
+      "unrecognised_flags": [],
+      "outputs": {
+        "envelopes": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\envelopes.jsonl",
+        "profiles": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\profiles.jsonl",
+        "report": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\report.json",
+        "site": "C:\\Users\\Manish\\Downloads\\nordic-company-lens-more-websites\\bench\\runs\\stage-q-whitespace\\site"
+      }
+    }
+  },
+  "diff": {
+    "websites": 0,
+    "social": 0,
+    "jobs": 0,
+    "activity": 0,
+    "news": 0,
+    "articles": 0,
+    "gleif": 3,
+    "direct_gleif_claims": 15,
+    "TED": 6,
+    "facts": 5,
+    "requests": -139,
+    "wall_seconds": -826.4060000000172
+  },
+  "gleif_gained_companies": 3,
+  "gleif_lost_companies": []
+}
