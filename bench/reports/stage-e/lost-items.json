@@ -1,0 +1,73 @@
+[
+  {
+    "kind": "website_alias",
+    "orgnr": "936629466",
+    "company": "CLOSVA AS",
+    "prior": {
+      "value": {
+        "final_url": "https://www.closva.com",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "jsonld_vatid",
+        "proof_page_url": "https://www.closva.com/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "0f16e9508ed419151af39dafa2fc954c80be0bad314c5a109fbf693f501a7852",
+          "source_url": "https://www.closva.com/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-13T06:04:05.902602Z",
+          "content_sha256": "486947f3d09b2300f1968c47f08e4c9d675802e231e09829ffe2bdc6e4941f0c",
+          "claim_span": "ed.</p><p>Owned by Closva AS · Org. no. 936 629 466</p></div></div></footer></div><div class=\"fixed right-6 bottom-6 z-50 hidden lg:block pointer-even",
+          "locator": "identity-proof:936629466",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "replacement": {
+      "value": {
+        "final_url": "https://closva.com",
+        "transport_scheme": "https",
+        "identity_level": "VERIFIED",
+        "proof_type": "jsonld_vatid",
+        "proof_page_url": "https://closva.com/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publication_tier": "A",
+        "content_allowed": true
+      },
+      "field": "official_website",
+      "evidence": [
+        {
+          "id": "eac0aa4f1405f09155c00c3707f3633c13452917e10c2e60a218ba1ff376a0b2",
+          "source_url": "https://closva.com/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-13T11:52:37.676650Z",
+          "content_sha256": "486947f3d09b2300f1968c47f08e4c9d675802e231e09829ffe2bdc6e4941f0c",
+          "claim_span": "ed.</p><p>Owned by Closva AS · Org. no. 936 629 466</p></div></div></footer></div><div class=\"fixed right-6 bottom-6 z-50 hidden lg:block pointer-even",
+          "locator": "identity-proof:936629466",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    "current_state": "available",
+    "reason": "Same registered domain; host/scheme alias replaced, company website still published."
+  }
+]

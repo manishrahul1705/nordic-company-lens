@@ -1,0 +1,767 @@
+[
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 552.9690000000119,
+    "status": 200,
+    "error": null,
+    "content_sha256": "9d047a3ec725bdad733054fbf51cce8e8cccab36486ad42b2d19dbb3a1c68f2d",
+    "runtime_ms": 969
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 553.984999999986,
+    "status": 200,
+    "error": null,
+    "content_sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+    "runtime_ms": 344
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 555.0,
+    "status": 200,
+    "error": null,
+    "content_sha256": "eefd455437507cec123554bcc44fb1f8b517904cca4a8ce128776acac2f0bfba",
+    "runtime_ms": 688
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 556.0,
+    "status": 200,
+    "error": null,
+    "content_sha256": "3a0676da2fadf71604e7d6dcdccdf965e8929bd3ca6e889b1c8b6fefd4343767",
+    "runtime_ms": 407
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 556.984999999986,
+    "status": 200,
+    "error": null,
+    "content_sha256": "53f80301cb899e07cf729c3c17a28622fcf7204ced0d8b15fbc56378f22993d6",
+    "runtime_ms": 390
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 557.984999999986,
+    "status": 200,
+    "error": null,
+    "content_sha256": "dac4b174d6784cdc22f60c3762a23e87c1cf657b58e80a7a97652005e4f98c03",
+    "runtime_ms": 375
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 559.0,
+    "status": 200,
+    "error": null,
+    "content_sha256": "4392cb2130efe494f4bca8f6967874500e6242fa87227fa0bcb8504a0bfb6737",
+    "runtime_ms": 360
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 560.0160000000033,
+    "status": 200,
+    "error": null,
+    "content_sha256": "d9990e16f4e56d3f8c773d19a90df5a6f23cd167e6743d0c8c87bb2fec1cf268",
+    "runtime_ms": 625
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 561.0320000000065,
+    "status": null,
+    "error": "TimeoutError",
+    "runtime_ms": 258750
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "host": "api.ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 819.7820000000065,
+    "status": 200,
+    "error": null,
+    "content_sha256": "ac11bda283a14b1f849b757c02bd86cd07b35039818bfce95192b5f627ca1304",
+    "runtime_ms": 1125
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/10384-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 820.9070000000065,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 672
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/112715-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 821.9070000000065,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/115235-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 822.9219999999914,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/116542-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 823.9379999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 312
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/120822-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 824.9379999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 203
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/138083-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 825.9539999999979,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/140390-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 826.9690000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/150922-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 827.984999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/165606-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 828.984999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/173043-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 830.0,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 157
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/174478-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 831.0,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 157
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/187066-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 832.0160000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/197558-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 833.0160000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/198485-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 834.0160000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/210972-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 835.0320000000065,
+    "status": null,
+    "error": "TimeoutError",
+    "runtime_ms": 168703
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/228306-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1003.734999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 672
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/246735-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1004.75,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 188
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/247985-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1005.75,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/250458-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1006.734999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/261860-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1007.75,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 188
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/263789-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1008.75,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 157
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/271943-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1009.734999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 187
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/287502-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1010.734999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/288858-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1011.75,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 157
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/295084-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1012.7660000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/313125-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1013.7820000000065,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/320357-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1025.703999999998,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 531
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/327030-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1026.703999999998,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 203
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/330396-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1027.7190000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/335345-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1028.7190000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/338506-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1029.7190000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/341549-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1030.703999999998,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 187
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/341842-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1031.7190000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/354425-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1032.734999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/370861-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1033.734999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/387041-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1034.75,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 157
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/389874-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1035.75,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 157
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/390266-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1036.7660000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/39027-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1037.7820000000065,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/397297-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1038.7969999999914,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 157
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/397515-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1039.8129999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 156
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/418429-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1040.8129999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 172
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/42963-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1041.8129999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 219
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/434277-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1042.828999999998,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 218
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/461448-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1043.8440000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 688
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/475312-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1045.5,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 485
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/486198-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1046.578999999998,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 296
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/495785-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1047.609999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1469
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/510525-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1049.078999999998,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 203
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/517910-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1050.0940000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 188
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/528398-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1051.25,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 3204
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/549796-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1054.453999999998,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 828
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/574364-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1055.609999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 515
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/583218-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1056.609999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 2640
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/627000-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1059.2820000000065,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 547
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/637605-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1060.3440000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1750
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/640353-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1062.0940000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 485
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/690844-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1063.1410000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 344
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/69164-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1064.1719999999914,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 297
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/69404-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1065.1879999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 203
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/697888-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1066.859999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1344
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/698069-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1068.3129999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 281
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/741466-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1069.3440000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 2938
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/741472-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1072.2820000000065,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 3640
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/741743-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1075.9219999999914,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1688
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/744428-2024/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1079.5629999999946,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 2484
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/745118-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1082.0469999999914,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 2453
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/757744-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1084.5,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 2610
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/766764-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1087.109999999986,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1031
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/778400-2026/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1088.1410000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1000
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/780228-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1089.1410000000033,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1859
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/817875-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1091.0,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1094
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/834670-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1092.0940000000119,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 391
+  },
+  {
+    "url": "https://ted.europa.eu/en/notice/839756-2025/xml",
+    "host": "ted.europa.eu",
+    "organisation_number": "__official_extra__",
+    "attempt_started": 1093.2820000000065,
+    "status": 202,
+    "error": "SourceFailure",
+    "runtime_ms": 1187
+  }
+]
