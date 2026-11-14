@@ -1,0 +1,13 @@
+{
+  "runtime_changed": [
+    "src/signalpost/web/candidates.py"
+  ],
+  "unchanged_existing_functions": [
+    "legal_name",
+    "legal_name_slugs",
+    "bounded_variants",
+    "context_from_bulk"
+  ],
+  "generate_change": "Registry and subunit registry website cells alone pass through registry_website_url before the unchanged root-domain and veto checks. No proof, name, ownership, veto, identity, source, budget or scoring function changed.",
+  "source_sha256": "2270a22abcfa4c36e1d7462b26209088fac7fffadebcad90c0aa66e3eec2138c"
+}

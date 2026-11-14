@@ -1,0 +1,16 @@
+{
+  "free_bytes_at_checkpoint": 4129107968,
+  "minimum_retry_free_bytes": 10737418240,
+  "failed_run": "bench/runs/stage-s-whitespace",
+  "retry_run": "bench/runs/stage-s-retry1",
+  "code_commit": "47885131e12b45c5b61628da6559e4d785b46602",
+  "pending": [],
+  "resolved_by_user_cleanup": true,
+  "free_bytes_before_retry": 31231270912,
+  "retry_started": true,
+  "retry_completed": true,
+  "retry_exit_code": 0,
+  "review": "one changed URL correct; zero new company websites; zero wrong/doubtful",
+  "status": "resolved; ready for authorised merge",
+  "not_merged_at_disk_failure_checkpoint": false
+}

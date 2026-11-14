@@ -1,0 +1,66 @@
+{
+  "removed": [
+    {
+      "orgnr": "995748983",
+      "claim": {
+        "field": "contact.email.2151cff6fbbdd8abb575",
+        "value": "booking@maaemo.no",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "a9571ef906741ba20f0985abd75412b90959b34d50f3635cc34bf6de56882eab"
+        ],
+        "id": "427ce5cf1bc982cdd1b3584013674bad9aa0cd598c056888cad1dc8bc433362b",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-13T22:58:30.761717Z",
+        "last_observed_at": "2026-11-13T22:58:30.761717Z",
+        "reasons": {}
+      }
+    },
+    {
+      "orgnr": "922767459",
+      "claim": {
+        "field": "contact.email.7d2882c75210a6d7416e",
+        "value": "post@skoglundmaskin.no",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "2063e965dd6fd328e08d382aadc9987a23515a5d995820c360e2691451d6f904"
+        ],
+        "id": "5e9695781807a2750a0aedba1731f022753e8637037572445539fb4935e00fd7",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-13T22:58:32.543917Z",
+        "last_observed_at": "2026-11-13T22:58:32.543917Z",
+        "reasons": {}
+      }
+    }
+  ],
+  "added": [
+    {
+      "orgnr": "968386085",
+      "claim": {
+        "field": "contact.phone.fe27aa7df44c3058f450",
+        "value": "+4777604512",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "06f1a9bd006b62302eb09f4758d7c776f42600a194970db5139ac6feca097887"
+        ],
+        "id": "54a65b04d51aaa9a3a1682c31cf5648a67b167a922d67cefd2c331760f319086",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-14T00:19:07.163672Z",
+        "last_observed_at": "2026-11-14T00:19:07.163672Z",
+        "reasons": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+uv run --frozen pytest -q tests/test_registry_website_normalization.py tests/test_website_candidate_expansion.py
+30 passed in 8.93s
