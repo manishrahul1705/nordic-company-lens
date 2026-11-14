@@ -1868,3 +1868,13 @@ label.check input[type="checkbox"] { flex:0 0 44px; }
 .citation-choices{display:flex;flex-wrap:wrap;gap:6px;padding:6px 0;background:var(--card);position:static}
 body>nav>a:not(.brand){display:inline-flex;align-items:center;justify-content:center;align-self:center;line-height:1.2;height:44px}
 @media(max-width:600px){.evidence-drawer{padding:14px}.evidence-drawer>.eyebrow{font-size:10px;margin:0;display:flex;align-items:center}.evidence-drawer h2{margin:8px 0;font-size:22px}.evidence-drawer blockquote{font-size:15px}.evidence-drawer .evidence-record{margin:8px 0}}
+
+/* Revision 4: compare header never overlaps long names; one-line brand at phone width. */
+.compare-card-header{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;column-gap:12px}
+.compare-card-header .avatar{grid-column:1;grid-row:1}
+.compare-card-header .compare-remove-btn{grid-column:2;grid-row:1;float:none;margin:0}
+.compare-card-header h2{grid-column:1/-1;grid-row:2;overflow-wrap:anywhere;margin:0 0 6px}
+.compare-card-header p{grid-column:1/-1;grid-row:3}
+.brief-part p{margin:0 0 10px}.more-citations{display:inline}.more-citations>summary{display:inline-flex;min-height:44px;align-items:center;padding:0 8px;font-size:12px;color:var(--muted)}
+.evidence-retrieved{font-weight:600;margin:0 0 4px}.evidence-locator{font-size:13px;margin:0 0 6px}.evidence-source{margin:0}.more-evidence-button{margin-top:12px}
+@media(max-width:420px){body>nav .brand{max-width:none;white-space:nowrap;font-size:12.5px}body>nav>a[href*="view=dashboard"]{display:none}body>nav{gap:6px}}

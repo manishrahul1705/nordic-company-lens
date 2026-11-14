@@ -17,7 +17,7 @@ def main(argv=None):
     site = sub.add_parser('site', allow_abbrev=False, help='Build offline searchable company profiles')
     site.add_argument('--input', type=Path, required=True)
     site.add_argument('--out', type=Path, required=True)
-    site.add_argument('--title', default='Signalpost')
+    site.add_argument('--title', default='Nordic Company Lens')
     command = sub.add_parser("run", allow_abbrev=False, help="Write a terminal result for every supplied company")
     for flag in ("organisations", "output"):
         command.add_argument("--" + flag, type=Path, required=True)
