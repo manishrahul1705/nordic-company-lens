@@ -145,6 +145,9 @@ class Ad:
     page_locator: str
     page_retrieved_at: str
     discovery: dict | None = None
+    # Anonymous public-page citation (url, sha, retrieved_at, spans). The feed
+    # API stays the discovery/verification path; this is what claims cite.
+    citation: dict | None = None
 
 
 @dataclass
@@ -325,6 +328,38 @@ class NavHttp:
         finally:
             event['runtime_ms']=round((time.monotonic()-began)*1000)
 
+    async def get_public_citation_page(self, uuid):
+        """Fetch the public ad page anonymously so a published claim can cite it.
+
+        Citation only: it reserves the shared pooled budget, never the NAV
+        detail cap, and it does not change which ads are verified or published.
+        """
+        uuid=str(UUID(uuid))
+        url=PUBLIC_AD_BASE+uuid
+        event=self.budget.reserve(url,'arbeidsplassen.nav.no','__nav_prefetch__')
+        event['section']='hiring_public_citation'
+        self.index.metrics['requests']+=1
+        began=time.monotonic()
+        try:
+            remaining=max(.001,self.budget.deadline-time.monotonic())
+            async with asyncio.timeout(min(self.config.nav_request_timeout,remaining)):
+                response=await self.client.get(url,headers={'Accept':'text/html','User-Agent':self.config.website_user_agent},
+                    follow_redirects=False,timeout=min(self.config.nav_request_timeout,remaining))
+            event['status']=response.status_code
+            if response.status_code!=200:raise SourceFailure('nav_public_citation_http_'+str(response.status_code))
+            body=response.content
+            if len(body)>2_000_000:raise SourceFailure('nav_public_citation_body_cap')
+            event['decoded_body_bytes']=len(body)
+            return body,utc_now()
+        except SourceFailure as exc:
+            event['error']=exc.code
+            raise
+        except (TimeoutError,httpx.HTTPError) as exc:
+            event['error']=type(exc).__name__
+            raise SourceFailure('nav_public_citation_network_error') from None
+        finally:
+            event['runtime_ms']=round((time.monotonic()-began)*1000)
+
     def save(self):
         try:
             self.cache_path.parent.mkdir(parents=True,exist_ok=True)
@@ -332,7 +367,72 @@ class NavHttp:
         except OSError: pass
 
 
+PUBLIC_AD_BASE='https://arbeidsplassen.nav.no/stillinger/stilling/'
+
+
+def public_citation_spans(body,value):
+    """Return verbatim title/employer spans from a public ad page, or None.
+
+    The page must name the same ad title and the same employer orgnr as the
+    already-verified claim value; otherwise the claim keeps its API citation.
+    This selects a citation only; it never decides publication.
+    """
+    from html import unescape
+    from .nav_public_page import parse_public_ad_page
+    record=parse_public_ad_page(body,value['uuid'])
+    if record is None or record['employer']['orgnr']!=value.get('employer_orgnr'):return None
+    text=body.decode('utf-8',errors='replace')
+    def norm(t):return ' '.join(unescape(re.sub(r'<[^>]+>',' ',t)).split()).casefold()
+    title_span=None
+    for m in re.finditer(r'<h1\b[^>]*>(.*?)</h1>',text,re.S):
+        if norm(m.group(1))==norm(str(value.get('title') or '')):
+            whole=m.group(0)
+            title_span=whole if len(whole)<=300 else m.group(1)[:300]
+            break
+    m=re.search(r'orgnr\\*"\s*:\s*\\*"'+re.escape(value['employer_orgnr']),text)
+    if not title_span or not title_span.strip() or m is None:return None
+    start=text.rfind('employer',max(0,m.start()-40),m.start())
+    start=start if start>=0 else m.start()
+    end=text.find('}',m.end())
+    end=end+1 if 0<=end<=m.end()+160 else m.end()
+    employer_span=text[start:end][:300]
+    if '�' in title_span+employer_span:return None
+    return {'title':title_span,'employer':employer_span}
+
+
+async def attach_public_citations(client,config,budget,blobs,index):
+    """Give every verified ad an anonymously reachable citation (best effort)."""
+    http=NavHttp(client,config,budget,blobs,index)
+    ads={}
+    for items in index.ads.values():
+        for ad in items:
+            if ad.citation is None:ads.setdefault(ad.value['uuid'],[]).append(ad)
+    metrics=index.metrics.setdefault('public_citations',{'attempted':0,'cited':0,'failures':{}})
+    for uuid in sorted(ads):
+        metrics['attempted']+=1
+        try:
+            body,retrieved=await http.get_public_citation_page(uuid)
+            spans=await nav_offload(public_citation_spans,body,ads[uuid][0].value)
+            if spans is None:raise SourceFailure('nav_public_citation_unmatched')
+            sha=await nav_offload(blobs.put,body)
+            citation={'url':PUBLIC_AD_BASE+uuid,'sha':sha,'retrieved_at':retrieved,'spans':spans}
+            for ad in ads[uuid]:ad.citation=citation
+            metrics['cited']+=1
+        except asyncio.CancelledError:raise
+        except Exception as exc:
+            code=exc.code if isinstance(exc,SourceFailure) else type(exc).__name__
+            metrics['failures'][code]=metrics['failures'].get(code,0)+1
+    return index
+
+
 async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=None,now=None):
+    result=await _prefetch(client,config,budget,blobs,index,names_ready,previous,now)
+    if index.ads:
+        await attach_public_citations(client,config,budget,blobs,index)
+    return result
+
+
+async def _prefetch(client,config,budget,blobs,index,names_ready=None,previous=None,now=None):
     from .nav_index import load,DEFAULT_PATH
     path=config.nav_index_path or DEFAULT_PATH
     allow_snapshot=getattr(config,'nav_historical_snapshot',False)
@@ -376,6 +476,22 @@ def section(envelope,index,blobs,previous=None,now=None):
             value={**ad.value,'matched_via':match_via}
             if is_snapshot:
                 value['status'] = 'HISTORICAL_SNAPSHOT'
+            if ad.citation is not None:
+                # Cite the anonymously reachable public page. The verified feed
+                # entry is retained as discovery provenance, not as the citation.
+                c=ad.citation;page=Source(c['url'],(blobs.directory/c['sha']).read_bytes(),c['sha'],c['retrieved_at'])
+                add(result,page,envelope.organisation_number,'hiring','hiring.job.'+ad.value['uuid'],value,'html:h1',
+                    effective=ad.value['published'],span=c['spans']['title'],source_class='official_nav',method='signalpost.nav.public_page.v1')
+                discovery={'discovery_url':ad.url,'discovery_sha256':ad.sha,'discovery_retrieved_at':ad.retrieved_at}
+                if ad.discovery:discovery['discovery']=ad.discovery
+                result.evidence[-1].source_identifier=json.dumps(discovery,sort_keys=True,separators=(',',':'))
+                temporary=Section()
+                add(temporary,page,envelope.organisation_number,'hiring','hiring.employer',ad.value['employer_orgnr'],'html:employer.orgnr',
+                    span=c['spans']['employer'],source_class='official_nav',method='signalpost.nav.public_page.v1')
+                result.evidence.extend(temporary.evidence);result.claims[-1].evidence_ids.extend(e.id for e in temporary.evidence)
+                if is_snapshot:
+                    result.claims[-1].reasons['dating']='historical_snapshot_as_of_'+str(index.metrics.get('index_built_at',''))
+                continue
             body=(blobs.directory/ad.sha).read_bytes()
             add(result,Source(ad.url,body,ad.sha,ad.retrieved_at),envelope.organisation_number,'hiring','hiring.job.'+ad.value['uuid'],
                 value,'/ad_content',effective=ad.value['published'],source_class='official_nav',method='signalpost.nav.v1')

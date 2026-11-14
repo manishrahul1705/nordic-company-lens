@@ -32,6 +32,19 @@ def test_external_sources_strict_replay(tmp_path):
     assert not any(key.startswith('website_description.') for key in claims)
     jobs = [value for key,value in claims.items() if key.startswith('hiring.job.')]
     assert {job['employer_orgnr'] for job in jobs} == {'923609016','993578843'}
+    # Job claims cite the anonymously reachable public ad page, never the
+    # token-gated feed API; the feed entry is retained as discovery provenance.
+    evidence = {e['id']:e for e in first[0]['evidence']}
+    blobs_dir = tmp_path/'first'/'state'/'blobs'
+    for claim in first[0]['claims']:
+        if not claim['field'].startswith('hiring.job.') or claim['availability']!='available':continue
+        cited = [evidence[i] for i in claim['evidence_ids']]
+        assert {e['source_url'] for e in cited} == {'https://arbeidsplassen.nav.no/stillinger/stilling/'+claim['value']['uuid']}
+        for e in cited:
+            body = (blobs_dir/e['content_sha256']).read_bytes().decode('utf-8')
+            assert e['claim_span'] in body
+        assert any(claim['value']['employer_orgnr'] in e['claim_span'] for e in cited)
+        assert 'pam-stilling-feed.nav.no/api/v1/feedentry/' in json.loads(cited[0]['source_identifier'])['discovery_url']
     activity = [value for key,value in claims.items() if key.startswith('dated_item.')]
     assert activity == []  # Group-site activity cannot describe the subsidiary.
     assert 'official_website' not in published(first[1])
