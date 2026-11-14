@@ -1,0 +1,107 @@
+{
+  "universe_size": 411160,
+  "cohort_size": 1000,
+  "bulk_rows_matched": {
+    "universe": 409653,
+    "cohort": 997
+  },
+  "fill": {
+    "universe": {
+      "hjemmeside": {
+        "filled": 44864,
+        "denominator": 411160,
+        "rate": 0.1091156727308104,
+        "rate_among_present_bulk_rows": 0.10951707908888743
+      },
+      "epostadresse": {
+        "filled": 97479,
+        "denominator": 411160,
+        "rate": 0.2370828874404125,
+        "rate_among_present_bulk_rows": 0.2379550497616275
+      },
+      "telefon": {
+        "filled": 77914,
+        "denominator": 411160,
+        "rate": 0.18949800564257224,
+        "rate_among_present_bulk_rows": 0.19019511635457326
+      },
+      "mobil": {
+        "filled": 81415,
+        "denominator": 411160,
+        "rate": 0.19801293900184844,
+        "rate_among_present_bulk_rows": 0.1987413737968476
+      }
+    },
+    "cohort": {
+      "hjemmeside": {
+        "filled": 107,
+        "denominator": 1000,
+        "rate": 0.107,
+        "expected_if_representative": 109.11567273081039,
+        "percentage_point_difference": -0.21156727308103973,
+        "sampling_standard_deviations": -0.21484364409391477,
+        "rate_among_present_bulk_rows": 0.10732196589769308
+      },
+      "epostadresse": {
+        "filled": 257,
+        "denominator": 1000,
+        "rate": 0.257,
+        "expected_if_representative": 237.0828874404125,
+        "percentage_point_difference": 1.9917112559587502,
+        "sampling_standard_deviations": 1.4827428686345874,
+        "rate_among_present_bulk_rows": 0.2577733199598796
+      },
+      "telefon": {
+        "filled": 211,
+        "denominator": 1000,
+        "rate": 0.211,
+        "expected_if_representative": 189.49800564257225,
+        "percentage_point_difference": 2.150199435742775,
+        "sampling_standard_deviations": 1.7371112230582435,
+        "rate_among_present_bulk_rows": 0.21163490471414242
+      },
+      "mobil": {
+        "filled": 225,
+        "denominator": 1000,
+        "rate": 0.225,
+        "expected_if_representative": 198.01293900184842,
+        "percentage_point_difference": 2.6987060998151566,
+        "sampling_standard_deviations": 2.1441411574774247,
+        "rate_among_present_bulk_rows": 0.22567703109327983
+      }
+    }
+  },
+  "cached_universe_declared_homepages": 44864,
+  "all_declared_format_flags": {
+    "missing_scheme": 44858,
+    "uppercase": 662,
+    "social_or_directory": 59,
+    "email_or_credentials": 3
+  },
+  "unusable_count": 127,
+  "unusable_flags": {
+    "missing_scheme": 127,
+    "uppercase": 22,
+    "social_or_directory": 59,
+    "email_or_credentials": 3
+  },
+  "frozen_unusable_count": 0,
+  "live_declared_homepages": 108,
+  "declared_no_published_website": 66,
+  "declared_no_website_buckets": {
+    "malformed/unusable declared value": 0,
+    "DNS failure": 7,
+    "parked": 0,
+    "different publisher": 8,
+    "group site": 35,
+    "robots": 2,
+    "fetched-but-no-proof": 7,
+    "budget": 0,
+    "other": 7
+  },
+  "classification": "Final recorded entity-scope/group veto first; otherwise declared-source outcome. Fetched-no-proof requires retained HTTP200 non-robots page. Full diagnostics retained; no reason inferred from unrelated guessed-domain failures.",
+  "missing_bulk_rows": {
+    "universe": 1507,
+    "cohort": 3
+  }
+}

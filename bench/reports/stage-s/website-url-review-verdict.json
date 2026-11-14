@@ -1,0 +1,33 @@
+{
+  "orgnr": "922187991",
+  "legal_name": "ULSTEIN MINILAGER AS",
+  "previous_url": "http://www.ulsteinminilager.no",
+  "url": "http://ulsteinminilager.no",
+  "proof_type": "unique_no_corroborated",
+  "exact_captured_evidence_quote": "d>\n\t\t<meta charset=\"utf-8\" />\r\n\t\t<title>Ulstein Minilager</title>\r\n\t\t<meta name=\"author\" content=\"Arild Gautestad\" />\n\t\t<meta name=\"generator\" content=\"Incomedia WebSite X5 Pro 2026.3.6 - www.websitex5.com\" />\n\t\t<meta property=\"og:locale\" content=\"no_NO\" />\n\t\t<meta property=\"og:type\" content=\"websit",
+  "exact_visible_page_quotes": [
+    "Ulstein Minilager",
+    "Flott tilbud p\u00e5 minilager i Ulstein",
+    "Lett tilgjengelig i Saunesmarka n\u00e6r Ulsteinvik sentrum (adresse: Brendehaugen 7).",
+    "Ta kontakt p\u00e5 telefon 92 133 432 , epost: kontakt@ulsteinminilager.no"
+  ],
+  "source_url": "http://ulsteinminilager.no/",
+  "source_sha256": "c9decf478cd1f1fa2d7310c5d8951beab2d6bef37dab62b428bc1981171e191b",
+  "registry_uniqueness_query_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=ulstein+minilager&size=1000",
+  "registry_uniqueness_sha256": "3227c588344d43fbe7984e290ab72a604db904a53e51dae95316e16920c7a2c1",
+  "complete_query_pagination": {
+    "number": 0,
+    "size": 1000,
+    "totalElements": 247,
+    "totalPages": 1
+  },
+  "exact_legal_name_matches": [
+    {
+      "orgnr": "922187991",
+      "name": "ULSTEIN MINILAGER AS"
+    }
+  ],
+  "verdict": "correct",
+  "reason": "Same previously verified company/domain; www/apex URL variation only. Existing recorded unique_no_corroborated proof preserved. No registry website declared for this company; registry-cell parsing repair cannot cause this variation. HTTP is present in both Q and S; no transport/proof logic changed.",
+  "new_company": false
+}
