@@ -34,13 +34,18 @@ def verify_synthesis(row):
         from signalpost.synthesis.company_brief import validate as validate_brief
         validate_brief(synthesis.brief, synthesis, envelope)
     primary=sentences
-    if synthesis.generator.version in {'5','6','7'}:
+    if synthesis.generator.version in {'5','6','7','8'}:
         assert synthesis.analyst_brief is not None,'Missing analyst brief'
     if synthesis.analyst_brief is not None:
         from signalpost.synthesis.analyst import validate as validate_analyst
         validate_analyst(synthesis.analyst_brief,envelope)
         primary=synthesis.analyst_brief.sentences
-    assert synthesis.summary==' '.join(s.text for s in primary),'Summary differs from checked sentences'
+    expected=' '.join(s.text for s in primary)
+    if synthesis.brief is not None and synthesis.generator.version not in {'5','6','7'}:
+        # Version 8+: the summary is the validated three-part brief.
+        from signalpost.synthesis.template import brief_summary
+        expected=brief_summary(synthesis)
+    assert synthesis.summary==expected,'Summary differs from checked sentences'
     assert synthesis.checks.sentences==synthesis.checks.cited==len(sentences) and synthesis.checks.values_verified
     assert synthesis.change_claims==change_claims(envelope),'Change citations differ from source events'
     if 'run' in row and 'profile' in row:assert row['profile'].get('synthesis')==raw,'Synthesis mirror differs'

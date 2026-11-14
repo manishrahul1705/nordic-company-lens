@@ -93,16 +93,21 @@ def test_company_scope_loss_and_prior_year(tmp_path,currency):
     # Parsing arithmetic is isolated here; production still enforces the source gate.
     from unittest.mock import patch
     with patch.object(gate,'permitted',lambda c,e: True if c.id.startswith(('2024','2025')) else original(c,e)):
+        from signalpost.synthesis.analyst import revenue_change
+        def change():
+            found=revenue_change(row,[c for c in row.claims if c.availability=='available' and gate.permitted(c,row)])
+            return format(found[0],'f') if found else None
         text=' '.join(s.text for s in generate(row).sentences)
-        assert 'loss of '+currency+' 500,000' in text and 'rose 100.0%' in text
+        assert 'loss of '+currency+' 500,000' in text and '%' not in text  # the trend is stated under "what changed"
+        assert change()=='100.0'
         prior=next(c for c in row.claims if c.id=='2024revenue')
         prior.value=2000000
-        assert '0.0%' not in ' '.join(s.text for s in generate(row).sentences)
+        assert change() is None  # no 0.0% change is ever stated
         prior.value=4000000
-        assert 'fell 50.0%' in ' '.join(s.text for s in generate(row).sentences)
+        assert change()=='-50.0'
         assert ('NOK' not in text) if currency=='EUR' else ('EUR' not in text)
         row.claims=[c for c in row.claims if not c.id.startswith('2024')]
-        assert '%' not in ' '.join(s.text for s in generate(row).sentences)
+        assert change() is None
         for c in row.claims:
             if c.id.startswith('2025'): c.reporting_period['account_type']='KONSERN'
         assert '2.0 million' not in ' '.join(s.text for s in generate(row).sentences)

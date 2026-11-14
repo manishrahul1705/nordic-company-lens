@@ -149,7 +149,9 @@ def test_housing_cooperative_never_uses_parent_title(tmp_path,monkeypatch):
     result=generate(row)
     forbidden='Activities of households as employers of domestic personnel'
     assert forbidden.casefold() not in result.summary.casefold()
-    assert 'working in activities of housing cooperatives' in result.summary
+    # NACE is stated as the registered classification, never as what the company does.
+    assert 'its registered industry code is NACE 97.001 (Activities of housing cooperatives)' in result.summary
+    assert 'working in' not in result.summary
     assert any('Activities of housing cooperatives (NACE 97.001)' in s.text for s in result.sections.what_it_does)
     assert sentence_error(Sentence(text='NACE 97.001: '+forbidden+' (Aktiviteter i borettslag og boligsameier).',claim_ids=[claim.id]),row)
     saved=copy.deepcopy(TABLE)

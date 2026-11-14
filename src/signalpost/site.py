@@ -60,6 +60,18 @@ def anchor(claim):
     return 'fact-' + claim['id'][:16]
 
 
+CITATIONS_SHOWN = 3
+
+
+def capped_citations(cites):
+    """At most three citations inline; the rest stay one click away."""
+    if len(cites) <= CITATIONS_SHOWN:
+        return ' '.join(cites)
+    extra = cites[CITATIONS_SHOWN:]
+    return (' '.join(cites[:CITATIONS_SHOWN]) + ' <details class="more-citations"><summary>+' + str(len(extra))
+            + ' more source' + ('s' if len(extra) != 1 else '') + '</summary>' + ' '.join(extra) + '</details>')
+
+
 def normalize(raw):
     shape = 'union' if 'profile' in raw and 'claims' in raw else 'reference' if 'profile' in raw else 'contract'
     validate(raw, shape)
@@ -255,7 +267,7 @@ def sentence_html(sentence, claim_map, change_ids):
         if target is None:
             raise ValueError('Unresolved synthesis citation')
         cites.append(f'<a href="#{esc(target)}" aria-label="Source fact {n}">[{n}]</a>')
-    return '<p>' + esc(sentence['text']) + ' ' + ' '.join(cites) + '</p>'
+    return '<p>' + esc(sentence['text']) + ' ' + capped_citations(cites) + '</p>'
 
 
 def page(title, body, prefix='', kind='profile', company_data=None):
@@ -402,27 +414,32 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
     from .synthesis.brief import select
     overview = select(synthesis, claims)
     body += '<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'
-    analyst = synthesis.get('analyst_brief')
-    brief = ({'context_claims':analyst['context_claims'],'what':analyst['sentences'],'changes':[],'unknowns':[]} if analyst else synthesis.get('brief'))
+    # The page renders exactly the machine-readable three-part brief.
+    brief = synthesis.get('brief')
+    if brief is None and synthesis.get('analyst_brief'):
+        analyst = synthesis['analyst_brief']
+        brief = {'context_claims': analyst['context_claims'], 'what': analyst['sentences'], 'changes': [], 'unknowns': []}
     if brief:
         contexts = {c['id']: c for c in brief.get('context_claims', [])}
-        for key, heading in [('what', 'What the company is and does'), ('changes', 'What changed since the previous run'), ('unknowns', "What's still unknown")]:
-            if analyst and key!='what':continue
-            body += '<div class="brief-part"><h3>' + esc(heading) + '</h3>'
+        for key, heading in [('what', 'What the company is and does'), ('changes', 'What changed'), ('unknowns', "What's still unknown")]:
+            if not brief.get(key):
+                continue
+            body += '<div class="brief-part brief-' + key + '"><h3>' + esc(heading) + '</h3>'
             for s in brief[key]:
                 cites = []
                 for cid in s['claim_ids']:
                     if cid in contexts:
                         ident = 'context-' + cid[:16]
-                        cites.append(f'<button class="citation" data-toggle="{ident}" aria-controls="{ident}" aria-expanded="false">[source]</button>')
+                        cites.append(f'<button class="citation" data-toggle="{ident}" aria-controls="{ident}" aria-expanded="false">[{"why" if key == "unknowns" else "source"}]</button>')
                     else:
                         target = anchor(claim_map[cid]) if cid in claim_map else 'change-' + cid
                         cites.append(f'<a class="citation" href="#{esc(target)}">[source]</a>')
-                body += '<p>' + esc(s['text']) + ' ' + ' '.join(cites) + '</p>'
+                body += '<p>' + esc(s['text']) + ' ' + capped_citations(cites) + '</p>'
                 for cid in s['claim_ids']:
                     if cid in contexts:
                         context = contexts[cid]
-                        body += f'<div class="evidence" id="context-{cid[:16]}" hidden><p>Run metadata (not an external source)</p><p>Claim ID: <code>{cid}</code></p><pre>{esc(value_text(context["value"]))}</pre></div>'
+                        body += (f'<div class="evidence" id="context-{cid[:16]}" hidden><p>Recorded check from this run (run metadata, not an external source)</p>'
+                                 f'<pre>{esc(value_text(context["value"]))}</pre><p class="claim-id">Claim ID: <code>{cid}</code></p></div>')
             body += '</div>'
     else:
         body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
@@ -1142,9 +1159,14 @@ def compact_profile(row, title, source_routes=None):
     claims=row['claims'];org=row['organisation_number']
     by_field={c['field']:c['value'] for c in claims if c['availability']=='available'}
     name=by_field.get('identity.legal_name',org)
-    analyst=(row['run'].get('synthesis') or {}).get('analyst_brief') or {}
+    synthesis=row['run'].get('synthesis') or {}
+    brief=synthesis.get('brief') or {'what':(synthesis.get('analyst_brief') or {}).get('sentences',[])}
     body='<header class="company-hero"><div class="avatar" aria-hidden="true">'+esc(avatar_letter(name))+'</div><p class="eyebrow">Company profile</p><h1>'+esc(name)+'</h1><div class="metadata-pills"><span class="meta-pill">Org. '+esc(org)+'</span></div></header>'
-    body+='<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'+''.join('<p>'+esc(s['text'])+'</p>' for s in analyst.get('sentences',[]))+'</section>'
+    body+='<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'
+    for key,heading in [('what','What the company is and does'),('changes','What changed'),('unknowns',"What's still unknown")]:
+        if brief.get(key):
+            body+='<div class="brief-part brief-'+key+'"><h3>'+esc(heading)+'</h3>'+''.join('<p>'+esc(s['text'])+'</p>' for s in brief[key])+'</div>'
+    body+='</section>'
     body+='<section id="facts"><h2>Sourced facts</h2><p>This company has an exceptionally large public record, so its facts are listed with links to their evidence pages.</p><ul>'
     routes=source_routes or {}
     for c in claims:

@@ -42,6 +42,70 @@ def major_event(value):
     if path in {'/fusjon','/fisjon'}:return 'a merger registration' if path=='/fusjon' else 'a demerger registration'
     return None
 
+def registered_text(claim):
+    """A short verbatim registry text (purpose/activity), or None."""
+    if claim is None:return None
+    value=' '.join(str(x) for x in claim.value) if isinstance(claim.value,list) else str(claim.value)
+    value=' '.join(value.split()).strip()
+    # Quote one verbatim sentence; abbreviations such as "m.v." are not breaks.
+    value=re.split(r'(?<=[.!?])\s+(?=[A-Z\u00c6\u00d8\u00c5])',value)[0].strip().rstrip('.!?').strip()
+    if value and 1<=len(value.split())<30 and '\u00ab' not in value and '\u00bb' not in value:return value
+    return None
+
+
+def company_financials(claims):
+    """Company-only annual amounts in NOK/EUR with a declared or absent unit."""
+    return [c for c in claims if c.family=='accounts' and not c.field.startswith('accounts.consolidated.') and number_claim(c)
+            and (c.reporting_period or {}).get('account_type')=='SELSKAP' and (c.reporting_period or {}).get('currency') in {'NOK','EUR'}
+            and (c.reporting_period or {}).get('unit') in {None,(c.reporting_period or {}).get('currency')}]
+
+
+def revenue_change(envelope,claims):
+    """(percent, latest revenue claim, prior-year revenue claim, currency) or None.
+
+    Only consecutive, comparable company-only years; no conversion is applied.
+    """
+    financial=company_financials(claims)
+    years=sorted({str(c.reporting_period.get('fiscal_year')) for c in financial if c.reporting_period.get('fiscal_year')},reverse=True)
+    if not years:return None
+    year=years[0]
+    currency=next(c.reporting_period['currency'] for c in financial if str(c.reporting_period['fiscal_year'])==year)
+    def metric(label,y):return next((c for c in financial if str(c.reporting_period['fiscal_year'])==y and c.field.rsplit('.',1)[-1]==label and c.reporting_period['currency']==currency),None)
+    revenue=metric('revenue',year);prior=metric('revenue',str(int(year)-1)) if year.isdigit() else None
+    if not revenue or not prior or not prior.value>0:return None
+    from ..sources.financial_comparability import FinancialObservation,ComparablePeriodGate
+    def obs(c):
+        p=c.reporting_period
+        return FinancialObservation(envelope.organisation_number,str(p['fiscal_year']),p.get('period_start'),p.get('period_end'),p.get('currency'),p.get('unit'),p.get('account_type'),{'revenue':c.value})
+    if not ComparablePeriodGate().compare(obs(revenue),obs(prior),metric='revenue').comparable:return None
+    pct=((Decimal(str(revenue.value))-Decimal(str(prior.value)))/Decimal(str(prior.value))*100).quantize(Decimal('.1'),rounding=ROUND_HALF_UP)
+    return (pct,revenue,prior,currency) if pct else None
+
+
+DESCRIPTION_ORDER=('website_description.meta_description.','website_description.og_description.','website_description.about_paragraph.')
+
+
+def self_description(claims):
+    """The company's own short website description, quoted verbatim, or None.
+
+    Contact blocks, addresses and long marketing text are skipped rather than
+    paraphrased; only a clean first sentence may be quoted.
+    """
+    for prefix in DESCRIPTION_ORDER:
+        for c in claims:
+            if not c.field.startswith(prefix) or not isinstance(c.value,dict) or c.value.get('self_description') is not True:continue
+            raw=str(c.value.get('text') or '')
+            if '\n' in raw.strip() or '\r' in raw:continue
+            text=' '.join(raw.split())
+            first=re.match(r'(.{30,220}?[.!?])(?:\s|$)',text)
+            text=first.group(1) if first else text
+            text=text.rstrip('.!?').strip()
+            if not 30<=len(text)<=220 or '@' in text or re.search(r'\d{5,}|\d{2,3} \d{2} \d{2,3}',text) or 'http' in text.casefold():continue
+            if '«' in text or '»' in text:continue
+            return text,c
+    return None
+
+
 def generate(envelope):
     from .validate import permitted
     result=AnalystBrief()
@@ -72,16 +136,19 @@ def generate(envelope):
     for c,word in [(founded,'founded'),(registered,'registered')]:
         if c and re.fullmatch(r'\d{4}-\d{2}-\d{2}',str(c.value)):
             text+=', '+word+' in '+str(c.value)[:4];used.append(c);break
+    described=self_description(claims)
+    if described:
+        text+='; on its own website it describes itself as \u00ab'+described[0]+'\u00bb';used.append(described[1])
+    for field,label in (('identity.statutory_purpose','registered purpose'),('identity.registered_activity','registered activity')):
+        quoted=registered_text(fields.get(field))
+        if quoted:
+            text+='; its '+label+' (in Norwegian) is \u00ab'+quoted+'\u00bb';used.append(fields[field]);break
     industry=next((c for c in claims if c.field.startswith('identity.nace') and english_title(c.value)),None)
     if industry:
+        # A registry classification, never an assertion of what the company does.
         title=english_title(industry.value).replace('n.e.c.','not elsewhere classified')
-        text+=', working in '+title[:1].lower()+title[1:];used.append(industry)
-    purpose=fields.get('identity.statutory_purpose')
-    if purpose:
-        value=' '.join(str(x) for x in purpose.value) if isinstance(purpose.value,list) else str(purpose.value)
-        value=' '.join(value.split()).strip().rstrip('.!?')
-        if value and len(value.split())<25 and not re.search(r'[.!?]',value):
-            text+='; its registered purpose (in Norwegian) is \u00ab'+value+'\u00bb';used.append(purpose)
+        code=str(industry.value.get('kode','')) if isinstance(industry.value,dict) else ''
+        text+='; its registered industry code is '+('NACE '+code+' ' if code else '')+'('+title+')';used.append(industry)
     lei=fields.get('identity.gleif.lei')
     if lei:
         text+='; it is registered in GLEIF with LEI '+str(lei.value);used.append(lei)
@@ -90,9 +157,7 @@ def generate(envelope):
         text+='. It is owned by '+parent.value['name']+' (GLEIF)';used.append(parent)
     add('a',text+'.',used)
     # Company-only annual amounts: no currency or unknown-scale conversion.
-    financial=[c for c in claims if c.family=='accounts' and not c.field.startswith('accounts.consolidated.') and number_claim(c)
-               and (c.reporting_period or {}).get('account_type')=='SELSKAP' and (c.reporting_period or {}).get('currency') in {'NOK','EUR'}
-               and (c.reporting_period or {}).get('unit') in {None,(c.reporting_period or {}).get('currency')}]
+    financial=company_financials(claims)
     years=sorted({str(c.reporting_period.get('fiscal_year')) for c in financial if c.reporting_period.get('fiscal_year')},reverse=True)
     revenue=profit=None;size=[];used=[]
     if years:
@@ -109,21 +174,10 @@ def generate(envelope):
         if size:
             text='In FY'+year+' '+(' and '.join(size))
             if not revenue:text='In FY'+year+' it '+(('reported a loss of '+amount(abs(profit.value))) if profit.value<0 else ('reported an annual result of '+amount(profit.value)))
-            prior=metric('revenue',str(int(year)-1)) if revenue else None
-            comparable=False
-            if prior and prior.value>0:
-                from ..sources.financial_comparability import FinancialObservation,ComparablePeriodGate
-                def obs(c):
-                    p=c.reporting_period
-                    return FinancialObservation(envelope.organisation_number,str(p['fiscal_year']),p.get('period_start'),p.get('period_end'),p.get('currency'),p.get('unit'),p.get('account_type'),{'revenue':c.value})
-                comparable=ComparablePeriodGate().compare(obs(revenue),obs(prior),metric='revenue').comparable
-            if comparable:
-                pct=((Decimal(str(revenue.value))-Decimal(str(prior.value)))/Decimal(str(prior.value))*100).quantize(Decimal('.1'),rounding=ROUND_HALF_UP)
-                if pct:
-                    text+=', revenue '+('rose ' if pct>0 else 'fell ')+format(abs(pct),'f')+'% from '+str(prior.reporting_period['fiscal_year']);used.append(prior)
+            # The year-on-year revenue trend is stated under "what changed".
             chosen=revenue or profit
             if chosen.reporting_period.get('unit') is None:text+=' ('+currency+'-denominated reported figures; source scale not declared, no conversion applied)'
-            add('b',text+'.',used,derived=bool(comparable))
+            add('b',text+'.',used)
     if number_claim(fields.get('identity.employees')):
         c=fields['identity.employees'];add('b','It has '+format(c.value,',')+' registered employees.',[c])
     units={str(c.value.get('organisation_number')):c for c in claims if c.field.startswith('subunits.unit.') and isinstance(c.value,dict) and c.value.get('organisation_number')}
