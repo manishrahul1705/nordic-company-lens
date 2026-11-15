@@ -166,10 +166,11 @@ def generate(envelope):
         def amount(value):return money(value,currency)
         def metric(label,y):return next((c for c in financial if str(c.reporting_period['fiscal_year'])==y and c.field.rsplit('.',1)[-1]==label and c.reporting_period['currency']==currency),None)
         revenue=metric('revenue',year);profit=metric('net_result',year)
-        if revenue and profit and revenue.value==profit.value and profit.value>=0:
+        if revenue and profit and revenue.value==profit.value and profit.value>0:
             size.append('revenue and annual result were both '+amount(revenue.value));used.extend([revenue,profit])
         else:
-            if revenue:size.append('it reported revenue of '+amount(revenue.value));used.append(revenue)
+            # An explicit 0 in the filing is reported as such; an absent figure never reaches here.
+            if revenue:size.append(('it reported no operating revenue ('+amount(revenue.value)+')') if revenue.value==0 else ('it reported revenue of '+amount(revenue.value)));used.append(revenue)
             if profit:size.append(('reported a loss of '+amount(abs(profit.value))) if profit.value<0 else ('an annual result of '+amount(profit.value)));used.append(profit)
         if size:
             text='In FY'+year+' '+(' and '.join(size))

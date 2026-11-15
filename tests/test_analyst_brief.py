@@ -111,3 +111,20 @@ def test_company_scope_loss_and_prior_year(tmp_path,currency):
         for c in row.claims:
             if c.id.startswith('2025'): c.reporting_period['account_type']='KONSERN'
         assert '2.0 million' not in ' '.join(s.text for s in generate(row).sentences)
+
+
+@pytest.mark.parametrize('profit,expected', [(-21393, 'In FY2025 it reported no operating revenue (NOK 0) and reported a loss of NOK 21,393'),
+                                             (0, 'In FY2025 it reported no operating revenue (NOK 0) and an annual result of NOK 0')])
+def test_explicit_zero_revenue_is_worded_as_no_operating_revenue(tmp_path, profit, expected):
+    row, _ = envelope(tmp_path)
+    seed = next(c for c in row.claims if c.field == 'identity.legal_name')
+    for field, value in [('revenue', 0.0), ('net_result', profit)]:
+        row.claims.append(seed.model_copy(update={'id': '2025' + field, 'family': 'accounts', 'field': 'accounts.' + field, 'value': value,
+            'reporting_period': {'fiscal_year': '2025', 'period_start': '2025-01-01', 'period_end': '2025-12-31', 'currency': 'NOK',
+                                 'unit': 'NOK', 'account_type': 'SELSKAP'}}))
+    from signalpost.synthesis import validate as gate
+    from unittest.mock import patch
+    original = gate.permitted
+    with patch.object(gate, 'permitted', lambda c, e: True if c.id.startswith('2025') else original(c, e)):
+        text = ' '.join(s.text for s in generate(row).sentences)
+    assert expected in text and 'revenue of NOK 0' not in text and 'were both' not in text

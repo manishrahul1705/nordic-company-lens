@@ -8,8 +8,8 @@ The `--organisations` input in README.md accepts either of these formats:
   `{"organisation_number":"923609016"}`).
 
 It also accepts a JSON list or a JSON object with an `organisation_numbers`
-list. The command emits exactly one JSONL envelope and one raw profile per
-input record, preserving order and duplicates. In plain text and JSONL, blank
+list. The command emits exactly one JSONL envelope (and, with `--profiles-output`,
+one raw profile) per input record, preserving order and duplicates. In plain text and JSONL, blank
 or spaces-only lines are invalid records too. A final newline terminates the
 last record; an empty file contains zero records. Whitespace within and around
 organisation numbers is normalized before checksum validation.
@@ -20,7 +20,7 @@ answers with HTTP 404/410 has not_applicable sections and `not_in_registry` /
 `identity_unverified` errors. Neither case can inherit prior company facts.
 Transport failures remain failed or blocked, never evidence of registry absence.
 
-Output is JSONL in the files passed to `--output` and `--profiles-output`;
+Output is JSONL in the file passed to `--output` (and, only when explicitly passed, the optional `--profiles-output`);
 console progress is not the data stream. Exit zero means membership was emitted,
 not that all sources succeeded. See [schema](docs/DATA_SCHEMA.md) for shapes,
 states, evidence and provenance.

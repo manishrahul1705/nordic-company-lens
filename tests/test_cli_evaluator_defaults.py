@@ -36,18 +36,21 @@ def test_evaluator_always_writes_all_artifacts(tmp_path,monkeypatch,capsys,mode)
             return await runner_run(config.model_copy(update={'website_politeness_seconds':0}),client)
     monkeypatch.setattr('signalpost.cli.run',run)
     monkeypatch.chdir(tmp_path)
+    # 'readme' is the documented command; profiles are opt-in, exercised in 'invented'.
     args=['run','--organisations',str(INPUT),'--output','out/envelopes.jsonl']
     if mode!='minimal':
-        args+=['--profiles-output','out/profiles.jsonl','--report','out/report.json','--state-dir','out/state']
+        args+=['--report','out/report.json','--state-dir','out/state']
         if mode!='no_site':args+=['--site-dir','out/site']
     unknown=['--invented-flag','--invented-choice=example','--invented-count','3']
-    if mode=='invented':args+=unknown
+    if mode=='invented':args+=['--profiles-output','out/profiles.jsonl']+unknown
     assert main(args)==0
-    for name in ('envelopes.jsonl','profiles.jsonl','report.json','site/index.html','site/compare.html'):
+    for name in ('envelopes.jsonl','report.json','site/index.html','site/compare.html'):
         path=tmp_path/'out'/name
         assert path.is_file() and path.stat().st_size>0,name
     assert len((tmp_path/'out/envelopes.jsonl').read_text(encoding='utf8').splitlines())==20
-    assert len((tmp_path/'out/profiles.jsonl').read_text(encoding='utf8').splitlines())==20
+    profiles=tmp_path/'out/profiles.jsonl'
+    if mode=='invented':assert len(profiles.read_text(encoding='utf8').splitlines())==20
+    else:assert not profiles.exists() and not (tmp_path/'out/profiles.jsonl.tmp').exists()
     report=json.loads((tmp_path/'out/report.json').read_text(encoding='utf8'))
     effective=report['effective_configuration']
     for name in ('websites','hiring','public_activity','registry_changes','official_extra_sources','website_suffix_contact_proof'):
@@ -55,6 +58,7 @@ def test_evaluator_always_writes_all_artifacts(tmp_path,monkeypatch,capsys,mode)
     assert effective['synthesis']['effective_mode']=='template' and effective['synthesis']['llm_calls']==0
     assert effective['request_caps']['pooled']==380 and effective['request_caps']['per_company']==40
     assert effective['search']['queries']==effective['search']['estimated_usd']==0
+    assert (effective['outputs']['profiles'] is not None)==(mode=='invented')
     assert report['unrecognised_flags']==effective['unrecognised_flags']==(unknown if mode=='invented' else [])
     err=capsys.readouterr().err
     if mode=='invented':
