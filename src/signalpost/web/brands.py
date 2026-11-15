@@ -33,7 +33,13 @@ def actual_names(envelope,context,blobs):
     for e in envelope.evidence:
         if e.id not in refs:continue
         try:
-            doc=json.loads((blobs.directory/e.content_sha256).read_bytes());ad=doc.get('ad_content') or doc
+            sha=e.content_sha256
+            if e.extraction_method=='signalpost.nav.public_page.v1':
+                # The claim cites the public HTML page; the employer name is read
+                # from the same verified feed entry as before (discovery provenance).
+                sha=json.loads(e.source_identifier or '{}').get('discovery_sha256')
+                if not sha:continue
+            doc=json.loads((blobs.directory/sha).read_bytes());ad=doc.get('ad_content') or doc
             employer=ad.get('employer') or {}
             if str(employer.get('orgnr')) in allowed and employer.get('name'):result.append((employer['name'],'exact_nav_employer',[e.id]))
         except (OSError,ValueError,AttributeError):pass

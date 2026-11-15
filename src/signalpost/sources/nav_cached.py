@@ -251,6 +251,11 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                        'availability':{'location':'available' if location else 'not_available',
                                        'occupation_categories':'available' if record.get('occupationCategories') else 'not_available'}}
                 ad=Ad(value,sha,source_url,retrieved,None,None,None,None,provenance)
+                from .nav import public_citation_spans
+                spans=public_citation_spans(raw_page,value)
+                if spans is not None:
+                    # Cite the raw page itself so the span is verbatim in the cited body.
+                    ad.citation={'url':source_url,'sha':await nav_offload(blobs.put,raw_page),'retrieved_at':retrieved,'spans':spans}
                 for parent in affected:
                     index.ads.setdefault(parent,[]).append(ad)
                 index.ads.setdefault(org,[]).append(ad)

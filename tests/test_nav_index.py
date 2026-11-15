@@ -112,6 +112,14 @@ def test_public_page_fallback_verifies_indexed_active_ad_without_token(tmp_path,
         assert index.metrics['public_page_fallback_failures']['nav_public_page_employer_mismatch']==1
     assert any(host=='arbeidsplassen.nav.no' and auth is None for host,_,auth in calls)
     assert sum(path=='/api/publicToken' for _,path,_ in calls)==1
+    if published:
+        # The fallback cites the raw page it fetched; no second request is made.
+        assert sum(host=='arbeidsplassen.nav.no' for host,_,_ in calls)==1
+        cited={e.id:e for e in result.evidence}
+        for ref in claims[0].evidence_ids:
+            e=cited[ref]
+            assert e.source_url.startswith('https://arbeidsplassen.nav.no/stillinger/stilling/')
+            assert e.claim_span in (blobs.directory/e.content_sha256).read_bytes().decode('utf-8')
 
 
 def test_public_page_parser_returns_exact_employer_for_scope_check():
@@ -273,3 +281,64 @@ def test_refresh_closure_has_live_evidence_and_no_unverified_ad_carry(tmp_path):
         assert not any(e['type']=='closed_job' for e in row['changes'])
         assert report['observation_changes']>0
         assert not any(c['family']=='hiring' and c['availability']=='available' for c in row['claims'])
+
+
+def _public_page(title,orgnr):
+    record={'id':str(UUID),'title':title,'status':'ACTIVE','published':'2026-11-01T00:00:00+01:00',
+            'expires':'2026-12-01T00:00:00+01:00','employer':{'orgnr':orgnr,'name':'Rareone AS'},
+            'locationList':[],'occupationCategories':[]}
+    payload='1:'+json.dumps(record,separators=(',',':'))
+    return ('<html><main><h1 class="aksel-heading">'+title+'</h1></main><script>self.__next_f.push('
+            +json.dumps([1,payload])+');</script></html>')
+
+
+def test_public_citation_spans_are_verbatim_and_must_match_the_verified_ad():
+    from signalpost.sources.nav import public_citation_spans
+    page=_public_page('Rareone Analyst',ORG)
+    value={'uuid':str(UUID),'title':'Rareone Analyst','employer_orgnr':ORG}
+    spans=public_citation_spans(page.encode(),value)
+    assert spans['title'] in page and 'Rareone Analyst' in spans['title']
+    assert spans['employer'] in page and ORG in spans['employer']
+    # A page that disagrees with the verified ad is never cited.
+    assert public_citation_spans(page.encode(),{**value,'employer_orgnr':OTHER}) is None
+    assert public_citation_spans(page.encode(),{**value,'title':'Another role'}) is None
+    assert public_citation_spans(b'<html>maintenance</html>',value) is None
+
+
+def test_feed_verified_ads_cite_the_anonymous_public_page(tmp_path):
+    from signalpost.sources.nav import Ad,attach_public_citations
+    from signalpost.web.brands import actual_names
+    cfg=config(tmp_path,[ORG],hiring=True);blobs=BlobStore(cfg.state_dir);index=Index()
+    now=datetime.now(timezone.utc)
+    entry={'uuid':str(UUID),'status':'ACTIVE','ad_content':{'uuid':str(UUID),'title':'Rareone Analyst',
+           'employer':{'orgnr':ORG,'name':'Rareone Brand AS'}}}
+    api_body=json.dumps(entry).encode();api_sha=blobs.put(api_body)
+    value={'uuid':str(UUID),'employer_orgnr':ORG,'status':'ACTIVE','title':'Rareone Analyst','location':None,
+           'published':(now-timedelta(days=1)).isoformat(),'expires':(now+timedelta(days=9)).isoformat(),
+           'occupation_categories':None,'url':'https://arbeidsplassen.nav.no/stillinger/stilling/'+str(UUID),
+           'availability':{'location':'not_available','occupation_categories':'not_available'}}
+    api_url=BASE+'/api/v1/feedentry/'+str(UUID)
+    index.ads[ORG]=[Ad(value,api_sha,api_url,utc_now(),None,None,None,None,None)]
+    index.complete=True;index.coverage_ready=True;index.reason='complete'
+    index.metrics['source_mode']='declared_index'
+    calls=[]
+    def response(request):
+        calls.append((request.url.host,request.headers.get('authorization')))
+        return httpx.Response(200,text=_public_page('Rareone Analyst',ORG))
+    async def run():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:
+            await attach_public_citations(client,cfg,Budget(cfg),blobs,index)
+    asyncio.run(run())
+    assert calls==[('arbeidsplassen.nav.no',None)]
+    row=placeholder(ORG,'test',utc_now(),('identity','roles','subunits','accounts','hiring'))
+    row.run.sections['subunits']='not_available'
+    result=section(row,index,blobs)
+    job=[c for c in result.claims if c.field.startswith('hiring.job.')][0]
+    assert job.value=={**value,'matched_via':'organisation '+ORG}  # citation never changes the value
+    cited=[e for e in result.evidence if e.id in job.evidence_ids]
+    assert {e.source_url for e in cited}=={'https://arbeidsplassen.nav.no/stillinger/stilling/'+str(UUID)}
+    assert all(e.claim_span in (blobs.directory/e.content_sha256).read_bytes().decode('utf-8') for e in cited)
+    assert json.loads(cited[0].source_identifier)['discovery_url']==api_url
+    # Brand-name discovery still reads the employer name from the verified feed entry.
+    row.claims.extend(result.claims);row.evidence.extend(result.evidence)
+    assert [n[:2] for n in actual_names(row,{'name':'Other Legal AS','subunits':[]},blobs)]==[('Rareone Brand AS','exact_nav_employer')]

@@ -17,7 +17,7 @@ def main(argv=None):
     site = sub.add_parser('site', allow_abbrev=False, help='Build offline searchable company profiles')
     site.add_argument('--input', type=Path, required=True)
     site.add_argument('--out', type=Path, required=True)
-    site.add_argument('--title', default='Signalpost')
+    site.add_argument('--title', default='Nordic Company Lens')
     command = sub.add_parser("run", allow_abbrev=False, help="Write a terminal result for every supplied company")
     for flag in ("organisations", "output"):
         command.add_argument("--" + flag, type=Path, required=True)
@@ -28,7 +28,7 @@ def main(argv=None):
     command.add_argument('--verify-bulk', action='store_true',
                          help='Require an API identity check even on bulk hits; never fall back to CSV on verification failure')
     command.add_argument('--site-dir', type=Path, default=Path('out/site'))
-    command.add_argument('--profiles-output', type=Path, default=Path('out/profiles.jsonl'), help='Write kit-compatible raw profiles from the same verified claims')
+    command.add_argument('--profiles-output', type=Path, default=None, help='Optional: also write kit-compatible raw profiles from the same verified claims (off unless passed)')
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
     command.add_argument("--emit-duplicates", action="store_true", default=True)
     command.add_argument('--deduplicate', dest='emit_duplicates', action='store_false')

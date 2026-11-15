@@ -11,8 +11,8 @@ def test_three_parts_are_cited_and_metadata_is_explicit(tmp_path):
     assert brief and brief.what and brief.changes and brief.unknowns
     ids = {c.id for c in row.claims} | {c.id for c in result.change_claims} | {c.id for c in brief.context_claims}
     assert all(s.claim_ids and set(s.claim_ids) <= ids for part in (brief.what, brief.changes, brief.unknowns) for s in part)
-    assert len(brief.what) <= 2
-    assert any('Financials: not found' in s.text for s in brief.unknowns)
+    assert len(brief.what) <= 6
+    assert any('Financials: no annual accounts are on file' in s.text for s in brief.unknowns)
     validate(brief, result, row)
 
 
@@ -23,10 +23,10 @@ def test_dated_no_change_and_stale_note_are_recomputed(tmp_path):
                               'failed_attempt_at': '2026-11-06T12:00:00Z', 'failure_codes': ['dns_timeout']}})
     row.run.sections['website'] = 'available'
     result = generate(row)
-    assert result.brief.changes[0].text == 'No changes since 2026-11-05.'
-    assert any('stale' in s.text and "the source couldn't be reached during the run" in s.text and '2026-11-06' in s.text for s in result.brief.unknowns)
+    assert result.brief.changes[-1].text == 'No changes since the previous run on 5 Nov 2026.'
+    assert any('stale' in s.text and "the source couldn't be reached during the run" in s.text and '6 Nov 2026' in s.text for s in result.brief.unknowns)
     changed = result.brief.model_copy(deep=True)
-    changed.changes[0].text = 'No changes since 2026-11-01.'
+    changed.changes[-1].text = 'No changes since the previous run on 1 Nov 2026.'
     with pytest.raises(ValueError, match='Unsupported company brief'):
         validate(changed, result, row)
     changed = result.brief.model_copy(deep=True)
@@ -86,12 +86,12 @@ def test_unknown_reasons_are_plain_english_with_identical_citations(tmp_path, co
     row.run.sections['website']='failed'
     row.errors=[e for e in row.errors if e.section!='website']+[Error(section='website',code=code,message='Test')]
     result=generate(row)
-    sentence=next(s for s in result.brief.unknowns if s.text.startswith('Website and social:'))
+    sentence=next(s for s in result.brief.unknowns if s.text.startswith('Website and social media:'))
     assert words in sentence.text
     assert '(' + code + ')' not in sentence.text
-    info={'state':'failed','reasons':[code],'stale':None}
+    info={'state':'failed','reasons':[code],'stale':None,'candidates':{}}
     assert sentence.claim_ids==[digest(['snapshot-context',row.organisation_number,'snapshot.section.website',info])]
     validate(result.brief,result,row)
     forged=result.brief.model_copy(deep=True)
-    next(s for s in forged.unknowns if s.text.startswith('Website and social:')).text=f'Website and social: failed ({code}).'
+    next(s for s in forged.unknowns if s.text.startswith('Website and social media:')).text=f'Website and social media: failed ({code}).'
     with pytest.raises(ValueError):validate(forged,result,row)

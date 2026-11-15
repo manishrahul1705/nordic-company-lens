@@ -30,6 +30,13 @@ def execute(tmp,org=ORG,employer=ORG,status='ACTIVE',expired=False,partial=False
                 return httpx.Response(200,json={'_embedded':{'underenheter':[{'organisasjonsnummer':SUB,'overordnetEnhet':org,'navn':'Branch'}]},'page':{'totalPages':1}})
             return handler()(request)
         if request.url.path=='/api/publicToken':return httpx.Response(200,text='Current public token:\n'+TOKEN) if token_ok else httpx.Response(503,text='unavailable')
+        if request.url.host=='arbeidsplassen.nav.no':
+            # The citation page is fetched anonymously, like any reader would.
+            assert 'Authorization' not in request.headers
+            record={'id':UUID,'title':'Employer vacancy','status':status,'published':(now-timedelta(days=2)).isoformat(),
+                    'expires':(now+timedelta(days=-1 if expired else 30)).isoformat(),'employer':{'orgnr':employer,'name':'Example AS'}}
+            payload='1:'+json.dumps(record,separators=(',',':'))
+            return httpx.Response(200,text='<html><h1 class="aksel-heading">Employer vacancy</h1><script>self.__next_f.push('+json.dumps([1,payload])+');</script></html>')
         assert request.headers['Authorization']=='Bearer '+TOKEN
         if '/feedentry/' in request.url.path:
             return httpx.Response(200,json={'uuid':UUID,'status':status,'ad_content':{'uuid':UUID,'title':'Employer vacancy',
@@ -117,11 +124,14 @@ def test_exact_org_and_shared_requests(tmp_path,monkeypatch):
     claim=next(c for c in row['claims'] if c['family']=='hiring' and c['availability']=='available')
     assert claim['value']['employer_orgnr']==ORG and claim['value']['matched_via']=='organisation '+ORG
     assert row['run']['sections']['hiring']=='available' and report['hiring_prefetch']['complete']
-    assert report['shared_requests']==3 and report['requests_per_company']==4
+    # Token, feed page and ad detail, plus one anonymous public-page citation.
+    assert report['shared_requests']==4 and report['requests_per_company']==4
     assert sum('/api/publicToken' in url for url in calls)==1
     assert TOKEN not in json.dumps(report) and TOKEN not in cfg.output.read_text()
     assert not any(TOKEN.encode() in p.read_bytes() for p in (cfg.state_dir/'blobs').iterdir())
-    assert not any('arbeidsplassen.nav.no' in url for url in calls)
+    assert [url for url in calls if 'arbeidsplassen.nav.no' in url]==['https://arbeidsplassen.nav.no/stillinger/stilling/'+UUID]
+    cited={e['id']:e for e in row['evidence']}
+    assert {cited[i]['source_url'] for i in claim['evidence_ids']}=={'https://arbeidsplassen.nav.no/stillinger/stilling/'+UUID}
 
 
 def test_subunit_and_name_only_rejection(tmp_path):

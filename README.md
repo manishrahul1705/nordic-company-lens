@@ -21,10 +21,10 @@ Each company has a deterministic cited analyst briefing, with detailed supportin
 Put one Norwegian organisation number on each line in `orgnrs.txt`, then run this command from the repository root:
 
 ```sh
-uv run --frozen signalpost run --organisations orgnrs.txt --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --state-dir out/state --site-dir out/site
+uv run --frozen signalpost run --organisations orgnrs.txt --output out/envelopes.jsonl --report out/report.json --state-dir out/state --site-dir out/site
 ```
 
-Only `--organisations` and `--output` are required. Omitted `--report`, `--profiles-output` and `--site-dir` default to `out/report.json`, `out/profiles.jsonl` and `out/site`. Unknown arguments are ignored with a warning on stderr and recorded in the report; the report's `effective_configuration` records the actual feature settings, limits, NAV mode and source-cost counters.
+Only `--organisations` and `--output` are required. Omitted `--report` and `--site-dir` default to `out/report.json` and `out/site`. Raw profiles are opt-in: `out/profiles.jsonl` is written only when `--profiles-output` is passed explicitly. Unknown arguments are ignored with a warning on stderr and recorded in the report; the report's `effective_configuration` records the actual feature settings, limits, NAV mode and source-cost counters.
 
 This is the supported clean-checkout command: it needs no credentials and no `--bulk` file. The runner uses live official BRREG APIs for registry identity, roles, subunits and accounts. The input count is read automatically. Blank lines are retained as invalid input records, so each line produces one envelope and one profile.
 
@@ -47,7 +47,7 @@ Input accepts plain text with one orgnr per line, JSONL strings/numbers, JSONL o
 ## Outputs
 
 - `out/envelopes.jsonl`: validated company envelopes, with verified claims, evidence, section states and cited summaries. The default shape is `union`; `contract` and `reference` are also supported.
-- `out/profiles.jsonl`: separate evaluator-compatible raw profiles from the same verified facts.
+- `out/profiles.jsonl` (only with `--profiles-output`): optional separate raw profiles from the same verified facts. Not required by the output contract.
 - `out/report.json`: membership, source states, errors, requests, budgets, timing and cost.
 - `out/site/`: optional static searchable company profiles with evidence excerpts. Open `index.html` locally. Site generation may be skipped if remaining time is insufficient.
 - `out/state/` (for the command above): local evidence bodies, caches and progress. Keep the matching state when verifying evidence or carrying facts forward.
@@ -127,7 +127,7 @@ The current final measurement is [Stage S](bench/reports/stage-s/REPORT.md), sup
 
 Stage S repairs four registry homepage cells with unambiguous `www` separators so they can be parsed as candidates: the measured effect is **4 universe candidates and zero cohort nominations**; no proof rule, veto or name matching changed ([normalization-only measurement](bench/reports/stage-s/REPORT.md#the-four-authorised-syntax-repairs)).
 
-The release adds locally bundled Common Crawl candidates and registry shared-identifier counts, bounded deeper ownership pages, strict company-scope filtering, cited contact facts, dated individual-job checks and offline-site improvements. Unknown CLI arguments warn rather than abort; omitted report/profiles/site options receive defaults and effective settings are recorded. The pooled ceiling is 19 HTTP per distinct normalized input (1,900/100), with a hard 40/company maximum including robots, redirects and retries. Lower configured limits remain effective. All time limits are unchanged. Careers runs after primary proof/collection and uses remaining headroom; it has no earmark and does not reduce activity's original allowance. No search-engine integration, paid API or LLM is used. These changes do not claim complete website or careers coverage.
+The release adds locally bundled Common Crawl candidates and registry shared-identifier counts, bounded deeper ownership pages, strict company-scope filtering, cited contact facts, dated individual-job checks and offline-site improvements. Unknown CLI arguments warn rather than abort; omitted report/site options receive defaults (profiles are opt-in) and effective settings are recorded. The pooled ceiling is 19 HTTP per distinct normalized input (1,900/100), with a hard 40/company maximum including robots, redirects and retries. Lower configured limits remain effective. All time limits are unchanged. Careers runs after primary proof/collection and uses remaining headroom; it has no earmark and does not reduce activity's original allowance. No search-engine integration, paid API or LLM is used. These changes do not claim complete website or careers coverage.
 
 GLEIF records can store the registration number with whitespace, for example `"923 609 016"`; the previous literal comparison rejected that spelling. Matching now normalises whitespace only and accepts both official Bronnoysund child-record authorities: **RA000472 Foretaksregisteret** and **RA000473 Enhetsregisteret**. An exact complete nine-digit organisation-number match is still required, with no name matching. Parent acceptance rules are unchanged. The measured correction is **32 to 142 companies; 15 reviewed, 0 wrong, 0 doubtful** ([identifier audit and review](bench/reports/stage-q/REPORT.md)).
 

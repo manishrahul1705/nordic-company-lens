@@ -14,7 +14,7 @@ from .synthesis.nace import english_title
 
 THEME_BOOT = "document.documentElement.classList.add('js');try{document.documentElement.dataset.theme=localStorage.getItem('signalpost_theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme='light'}"
 THEME_HASH = base64.b64encode(hashlib.sha256(THEME_BOOT.encode()).digest()).decode()
-DATE_BOOT = "document.addEventListener('DOMContentLoaded',()=>{const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];const pattern=/(?<![\\d-])(\\d{4})-(\\d{2})-(\\d{2})(?:T\\d{2}:\\d{2}(?::\\d{2}(?:\\.\\d+)?)?(?:Z|[+-]\\d{2}:?\\d{2})?)?/g;function visit(root){if(root.nodeType===3){if(root.parentElement?.closest('script,style,textarea,#evidence-drawer'))return;const old=root.data,next=old.replace(pattern,(whole,y,m,d)=>+m>0&&+m<13?+d+' '+months[+m-1]+' '+y:whole);if(next!==old)root.data=next;return;}if(root.nodeType===1&&root.matches('script,style,textarea,#evidence-drawer'))return;for(const child of root.childNodes)visit(child);}visit(document.body);new MutationObserver(changes=>{for(const change of changes){if(change.type==='characterData')visit(change.target);else for(const node of change.addedNodes)visit(node);}}).observe(document.body,{childList:true,subtree:true,characterData:true});});"
+DATE_BOOT = "document.addEventListener('DOMContentLoaded',()=>{const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];const pattern=/(?<![\\d-])(\\d{4})-(\\d{2})-(\\d{2})(?:T\\d{2}:\\d{2}(?::\\d{2}(?:\\.\\d+)?)?(?:Z|[+-]\\d{2}:?\\d{2})?)?/g;function visit(root){if(root.nodeType===3){if(root.parentElement?.closest('script,style,textarea,#evidence-drawer,[data-verbatim]'))return;const old=root.data,next=old.replace(pattern,(whole,y,m,d)=>+m>0&&+m<13?+d+' '+months[+m-1]+' '+y:whole);if(next!==old)root.data=next;return;}if(root.nodeType===1&&root.matches('script,style,textarea,#evidence-drawer,[data-verbatim]'))return;for(const child of root.childNodes)visit(child);}visit(document.body);new MutationObserver(changes=>{for(const change of changes){if(change.type==='characterData')visit(change.target);else for(const node of change.addedNodes)visit(node);}}).observe(document.body,{childList:true,subtree:true,characterData:true});});"
 DATE_HASH = base64.b64encode(hashlib.sha256(DATE_BOOT.encode()).digest()).decode()
 CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-" + THEME_HASH + "' 'sha256-" + DATE_HASH + "'; base-uri 'none'; form-action 'none'"
 ASSETS = Path(__file__).with_name('site_assets')
@@ -49,6 +49,26 @@ def link(value, label=None):
     return f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer nofollow">{esc(label if label is not None else value)}</a>' if url else esc(label if label is not None else value)
 
 
+def source_link(value):
+    """A short, readable source link; the full URL stays the link target and tooltip.
+
+    Batched API requests (one response covering many organisations) are labelled
+    so the reader knows the company's own record is at the shown locator.
+    """
+    url = safe_url(value)
+    if not url:
+        return esc(value)
+    parts = urlsplit(url)
+    text = (parts.hostname or '') + parts.path
+    if parts.query:
+        text += '?…' if len(parts.query) > 40 else '?' + parts.query
+    if len(text) > 80:
+        text = text[:77] + '…'
+    shared = len(set(re.findall(r'(?<!\d)\d{9}(?!\d)', parts.query.replace('+', '').replace('%20', ''))))
+    note = f' <span class="muted">(shared request covering {shared} organisations)</span>' if shared > 1 else ''
+    return f'<a href="{esc(url)}" title="{esc(url)}" target="_blank" rel="noopener noreferrer nofollow">{esc(text)}</a>{note}'
+
+
 def chip(state):
     labels = {'available': 'Found', 'not_available': 'Not found', 'failed': "Couldn't check",
               'ambiguous': 'Withheld', 'blocked': 'Blocked', 'not_applicable': 'Not applicable'}
@@ -58,6 +78,18 @@ def chip(state):
 def anchor(claim):
     # IDs come from validated claims, but prefix/hash conversion also prevents attribute injection.
     return 'fact-' + claim['id'][:16]
+
+
+CITATIONS_SHOWN = 3
+
+
+def capped_citations(cites):
+    """At most three citations inline; the rest stay one click away."""
+    if len(cites) <= CITATIONS_SHOWN:
+        return ' '.join(cites)
+    extra = cites[CITATIONS_SHOWN:]
+    return (' '.join(cites[:CITATIONS_SHOWN]) + ' <details class="more-citations"><summary>+' + str(len(extra))
+            + ' more source' + ('s' if len(extra) != 1 else '') + '</summary>' + ' '.join(extra) + '</details>')
 
 
 def normalize(raw):
@@ -82,11 +114,49 @@ def registry_events(row):
     return recent(obj)
 
 
+ADDRESS_KEYS = {'adresse', 'postnummer', 'poststed', 'kommune', 'kommunenummer', 'land', 'landkode'}
+
+
+def display_value(value):
+    """Presentation-only shape for registry objects; source values are unchanged.
+
+    API link objects are dropped, code/description pairs read "Description
+    (CODE)", addresses read as one line, and GLEIF entity legal-form objects
+    show their ISO 20275 code.
+    """
+    if not isinstance(value, dict):
+        return value
+    shown = {k: v for k, v in value.items() if k != '_links'}
+    keys = set(shown)
+    if keys and keys <= {'kode', 'beskrivelse'} and shown.get('beskrivelse'):
+        return str(shown['beskrivelse']) + (' (' + str(shown['kode']) + ')' if shown.get('kode') else '')
+    if keys and keys <= ADDRESS_KEYS and ('adresse' in keys or 'postnummer' in keys):
+        lines = [str(x) for x in shown.get('adresse') or [] if str(x).strip()]
+        place = ' '.join(str(x) for x in (shown.get('postnummer'), shown.get('poststed')) if x)
+        country = shown.get('land') if shown.get('landkode') not in {None, 'NO'} else None
+        return ', '.join(lines + ([place] if place else []) + ([str(country)] if country else [])) or 'Unknown'
+    if keys and keys <= {'id', 'other'} and shown.get('id'):
+        return str(shown['id']) + ' (ISO 20275 entity legal form code)' + ('; ' + str(shown['other']) if shown.get('other') else '')
+    return shown
+
+
+def number_text(value):
+    """Floats from accounts read as grouped numbers; integers are left as is."""
+    if isinstance(value, float):
+        if value.is_integer():
+            return format(int(value), ',')
+        return format(value, ',')
+    return str(value)
+
+
 def value_text(value):
+    value = display_value(value)
     if value is None:
         return 'Unknown'
     if isinstance(value, bool):
         return 'Yes' if value else 'No'
+    if isinstance(value, float):
+        return number_text(value)
     if isinstance(value, dict):
         return '; '.join(k.replace('_',' ').capitalize()+': '+value_text(v) for k,v in value.items() if k!='birth_date')
     if isinstance(value, list):
@@ -113,16 +183,22 @@ def display_dates(text):
 
 def display_markup_dates(markup):
     # Change only presentation text, never attributes, source URLs or source data.
+    # Verbatim source excerpts (data-verbatim) are never reformatted.
     class Dates(HTMLParser):
-        def __init__(self):super().__init__(convert_charrefs=False);self.output=[];self.raw=0
+        def __init__(self):super().__init__(convert_charrefs=False);self.output=[];self.raw=0;self.verbatim=[]
         def handle_starttag(self,tag,attrs):
             self.output.append(self.get_starttag_text())
             if tag in {'script','style'}:self.raw+=1
+            if self.verbatim and tag==self.verbatim[-1][0]:self.verbatim[-1][1]+=1
+            elif any(name=='data-verbatim' for name,_ in attrs):self.verbatim.append([tag,1])
         def handle_endtag(self,tag):
             self.output.append('</'+tag+'>')
             if tag in {'script','style'}:self.raw-=1
+            if self.verbatim and tag==self.verbatim[-1][0]:
+                self.verbatim[-1][1]-=1
+                if not self.verbatim[-1][1]:self.verbatim.pop()
         def handle_startendtag(self,tag,attrs):self.output.append(self.get_starttag_text())
-        def handle_data(self,data):self.output.append(data if self.raw else display_dates(data))
+        def handle_data(self,data):self.output.append(data if self.raw or self.verbatim else display_dates(data))
         def handle_entityref(self,name):self.output.append('&'+name+';')
         def handle_charref(self,name):self.output.append('&#'+name+';')
         def handle_comment(self,data):self.output.append('<!--'+data+'-->')
@@ -136,6 +212,7 @@ def avatar_letter(name):
 
 
 def value_html(value):
+    value = display_value(value)
     if isinstance(value, dict):
         return '<dl class="values">' + ''.join(f'<dt>{esc(k.replace("_", " "))}</dt><dd>{value_html(v)}</dd>' for k, v in sorted(value.items()) if k != 'birth_date') + '</dl>'
     if isinstance(value, list):
@@ -175,17 +252,18 @@ def evidence_panel(claim, records, shared=False):
         if claim['field'] == 'official_website' and e['source_class'] == 'company_owned':
             scheme = urlsplit(e['source_url']).scheme.upper()
             scheme_note = f'<span class="transport-scheme">[{esc(scheme)}]</span> '
+        # Date and the company-specific locator first; the full URL is one click away.
         parts.append('<div class="evidence-record"><dl class="values">'
-                     f'<dt>Source / class</dt><dd>{esc(e["source_class"])}</dd>'
-                     f'<dt>Source link</dt><dd>{link(e["source_url"])}</dd>'
-                     f'<dt>Registry identifier</dt><dd>{esc(e.get("source_identifier") or "Not supplied")}</dd>'
                      f'<dt>Retrieved at (UTC)</dt><dd>{esc(e["retrieved_at"])}</dd>'
                      f'<dt>Effective / reporting date</dt><dd>{esc(value_text(e.get("effective_at") or e.get("reporting_period") or claim.get("reporting_period")))}</dd>'
+                     f'<dt>Record in source</dt><dd><code>{esc(e["locator"])}</code></dd>'
+                     f'<dt>Source link</dt><dd>{source_link(e["source_url"])}</dd>'
+                     f'<dt>Source / class</dt><dd>{esc(e["source_class"])}</dd>'
+                     f'<dt>Registry identifier</dt><dd>{esc(e.get("source_identifier") or "Not supplied")}</dd>'
                      f'<dt>SHA-256</dt><dd><code title="{esc(sha)}">{esc(sha[:16])}…</code> '
                      f'<button type="button" data-copy="{esc(sha)}">Copy full hash</button></dd>'
-                     f'<dt>Extraction method / version</dt><dd>{esc(e["extraction_method"])}</dd>'
-                     f'<dt>Locator</dt><dd>{esc(e["locator"])}</dd></dl>'
-                     f'<blockquote class="excerpt">{scheme_note}{excerpt_html(e["claim_span"], claim["value"])}</blockquote></div>')
+                     f'<dt>Extraction method / version</dt><dd>{esc(e["extraction_method"])}</dd></dl>'
+                     f'<blockquote class="excerpt" data-verbatim>{scheme_note}{excerpt_html(e["claim_span"], claim["value"])}</blockquote></div>')
     if claim['availability'] == 'available' and not parts:
         raise ValueError('Available fact has no evidence')
     v = claim.get('value')
@@ -255,7 +333,7 @@ def sentence_html(sentence, claim_map, change_ids):
         if target is None:
             raise ValueError('Unresolved synthesis citation')
         cites.append(f'<a href="#{esc(target)}" aria-label="Source fact {n}">[{n}]</a>')
-    return '<p>' + esc(sentence['text']) + ' ' + ' '.join(cites) + '</p>'
+    return '<p>' + esc(sentence['text']) + ' ' + capped_citations(cites) + '</p>'
 
 
 def page(title, body, prefix='', kind='profile', company_data=None):
@@ -402,27 +480,32 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
     from .synthesis.brief import select
     overview = select(synthesis, claims)
     body += '<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'
-    analyst = synthesis.get('analyst_brief')
-    brief = ({'context_claims':analyst['context_claims'],'what':analyst['sentences'],'changes':[],'unknowns':[]} if analyst else synthesis.get('brief'))
+    # The page renders exactly the machine-readable three-part brief.
+    brief = synthesis.get('brief')
+    if brief is None and synthesis.get('analyst_brief'):
+        analyst = synthesis['analyst_brief']
+        brief = {'context_claims': analyst['context_claims'], 'what': analyst['sentences'], 'changes': [], 'unknowns': []}
     if brief:
         contexts = {c['id']: c for c in brief.get('context_claims', [])}
-        for key, heading in [('what', 'What the company is and does'), ('changes', 'What changed since the previous run'), ('unknowns', "What's still unknown")]:
-            if analyst and key!='what':continue
-            body += '<div class="brief-part"><h3>' + esc(heading) + '</h3>'
+        for key, heading in [('what', 'What the company is and does'), ('changes', 'What changed'), ('unknowns', "What's still unknown")]:
+            if not brief.get(key):
+                continue
+            body += '<div class="brief-part brief-' + key + '"><h3>' + esc(heading) + '</h3>'
             for s in brief[key]:
                 cites = []
                 for cid in s['claim_ids']:
                     if cid in contexts:
                         ident = 'context-' + cid[:16]
-                        cites.append(f'<button class="citation" data-toggle="{ident}" aria-controls="{ident}" aria-expanded="false">[source]</button>')
+                        cites.append(f'<button class="citation" data-toggle="{ident}" aria-controls="{ident}" aria-expanded="false">[{"why" if key == "unknowns" else "source"}]</button>')
                     else:
                         target = anchor(claim_map[cid]) if cid in claim_map else 'change-' + cid
                         cites.append(f'<a class="citation" href="#{esc(target)}">[source]</a>')
-                body += '<p>' + esc(s['text']) + ' ' + ' '.join(cites) + '</p>'
+                body += '<p>' + esc(s['text']) + ' ' + capped_citations(cites) + '</p>'
                 for cid in s['claim_ids']:
                     if cid in contexts:
                         context = contexts[cid]
-                        body += f'<div class="evidence" id="context-{cid[:16]}" hidden><p>Run metadata (not an external source)</p><p>Claim ID: <code>{cid}</code></p><pre>{esc(value_text(context["value"]))}</pre></div>'
+                        body += (f'<div class="evidence" id="context-{cid[:16]}" hidden><p>Recorded check from this run (run metadata, not an external source)</p>'
+                                 f'<pre>{esc(value_text(context["value"]))}</pre><p class="claim-id">Claim ID: <code>{cid}</code></p></div>')
             body += '</div>'
     else:
         body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
@@ -726,7 +809,7 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
         body += f'<details id="change-{esc(c["id"])}"><summary>{esc(c["field"])}: {esc(value_text(c["value"]))}</summary>'
         for eid in c.get('evidence_ids', []):
             e = records[eid]
-            body += '<div class="evidence-record"><p>' + link(e['source_url']) + '</p><p>Retrieved: ' + esc(e['retrieved_at']) + '</p><p>Reporting period: ' + esc(value_text(e.get('reporting_period'))) + '</p><blockquote>' + esc(e['claim_span']) + '</blockquote></div>'
+            body += '<div class="evidence-record"><p>' + link(e['source_url']) + '</p><p>Retrieved: ' + esc(e['retrieved_at']) + '</p><p>Reporting period: ' + esc(value_text(e.get('reporting_period'))) + '</p><blockquote data-verbatim>' + esc(e['claim_span']) + '</blockquote></div>'
         body += '</details>'
 
     # Source availability & observation changes subsection
@@ -762,7 +845,7 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
     for c in claims[:EXPLORER_VISIBLE_ROWS]:
         lbl, avail, v_str, s_class, loc, sha, span = explorer_cells(c, records)
         sha_disp = f'<code title="{esc(sha)}">{esc(sha[:12])}…</code>' if sha else '—'
-        body += f'<tr><th scope="row">{esc(lbl)}</th><td>{chip(avail)}</td><td>{esc(v_str)}</td><td>{esc(s_class)}</td><td><code>{esc(loc)}</code></td><td>{sha_disp}</td><td><blockquote class="table-excerpt">{esc(span)}</blockquote></td></tr>'
+        body += f'<tr><th scope="row">{esc(lbl)}</th><td>{chip(avail)}</td><td>{esc(v_str)}</td><td>{esc(s_class)}</td><td><code>{esc(loc)}</code></td><td>{sha_disp}</td><td><blockquote class="table-excerpt" data-verbatim>{esc(span)}</blockquote></td></tr>'
     body += '</tbody></table></div>'
     hidden = len(claims) - EXPLORER_VISIBLE_ROWS
     if hidden > 0:
@@ -936,18 +1019,17 @@ def index_record(row):
 
 def index_page(records, title, skipped=()):
     n = len(records)
-    summary = f'{n} companies'
-    for key in ('website', 'jobs', 'activity'):
-        summary += f' · {sum(r["flags"][key] for r in records) / n * 100 if n else 0:.1f}% with {key}'
-    summary += ' · Run date: ' + max((r['last_checked'] for r in records), default='Unknown')
     verified=sum(r['claim_count'] for r in records)
-    websites=sum(r['flags']['website'] for r in records)
     activity=sum(r['flags']['activity'] for r in records)
+    accounts=sum(bool(r.get('areas',{}).get('financials')) for r in records)
+    # Lead with what was found; per-source coverage stays in the dashboard.
+    summary = (f'{n:,} companies · {verified:,} cited claims · registry activity for {activity:,} · accounts for {accounts:,}'
+               + ' · Run date: ' + max((r['last_checked'] for r in records), default='Unknown'))
     body = '<section class="home-hero"><div class="hero-copy"><p class="eyebrow">Norwegian company research</p><h1>Every fact, traced to its source.</h1><p>Search '+str(n)+' Norwegian companies, compare them side by side, and check the original source behind every number.</p><p id="cohort-summary">'+esc(summary)+'</p>'
     body += '<div class="hero-search"><label class="search-label" for="search">Find a company <span>Press / to search</span></label><input id="search" type="search" autofocus autocomplete="off" placeholder="Name or org. number" aria-controls="search-autocomplete"><div id="search-autocomplete" class="autocomplete-dropdown" hidden></div></div><div class="try-chips"><span>Try:</span>'
     for r in sorted(records,key=lambda r:r['claim_count'],reverse=True)[:3]:body += '<button type="button" data-search="'+esc(r['name'])+'">'+esc(r['name'])+'</button>'
     body += '</div></div><div class="hero-stats">'
-    for number,label in [(n,'companies'),(verified,'verified claims'),(websites,'verified websites'),(activity,'companies with activity')]:body += '<div class="hero-stat"><strong>'+format(number,',')+'</strong><span>'+label+'</span></div>'
+    for number,label in [(n,'companies'),(verified,'cited claims'),(activity,'with registry activity'),(accounts,'with annual accounts')]:body += '<div class="hero-stat"><strong>'+format(number,',')+'</strong><span>'+label+'</span></div>'
     body += '</div></section>'
 
     if skipped:
@@ -1105,13 +1187,19 @@ def receipt_pages(row, title):
     chunks=[];current=[];size=0;parts_by_claim={}
     for c in row['claims']:
         label=c.get('reasons',{}).get('label') or c['field'].replace('_',' ')
-        fragments=[];part=''
-        for eid in c.get('evidence_ids',[]):
+        fragments=[];part='';shown=0;opened=False
+        ids=c.get('evidence_ids',[])
+        for index,eid in enumerate(ids):
             single={**c,'evidence_ids':[eid]}
             fragment=evidence_panel(single,records)
-            if part and len((part+fragment).encode('utf-8'))>155000:fragments.append(part);part=''
-            part+=fragment
-        fragments.append(part)
+            if part and len((part+fragment).encode('utf-8'))>155000:
+                fragments.append(part+('</details>' if opened else ''));part='';shown=0;opened=False
+            if shown==3 and not opened:
+                # Every record stays on the page; beyond three they are collapsed.
+                rest=len(ids)-index
+                part+='<details class="more-evidence"><summary>'+str(rest)+' more supporting source'+('s' if rest!=1 else '')+'</summary>';opened=True
+            part+=fragment;shown+=1
+        fragments.append(part+('</details>' if opened else ''))
         for n,fragment in enumerate(fragments):
             suffix='' if n==0 else '-'+str(n+1)
             key=c['id']+suffix
@@ -1142,9 +1230,14 @@ def compact_profile(row, title, source_routes=None):
     claims=row['claims'];org=row['organisation_number']
     by_field={c['field']:c['value'] for c in claims if c['availability']=='available'}
     name=by_field.get('identity.legal_name',org)
-    analyst=(row['run'].get('synthesis') or {}).get('analyst_brief') or {}
+    synthesis=row['run'].get('synthesis') or {}
+    brief=synthesis.get('brief') or {'what':(synthesis.get('analyst_brief') or {}).get('sentences',[])}
     body='<header class="company-hero"><div class="avatar" aria-hidden="true">'+esc(avatar_letter(name))+'</div><p class="eyebrow">Company profile</p><h1>'+esc(name)+'</h1><div class="metadata-pills"><span class="meta-pill">Org. '+esc(org)+'</span></div></header>'
-    body+='<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'+''.join('<p>'+esc(s['text'])+'</p>' for s in analyst.get('sentences',[]))+'</section>'
+    body+='<section class="summary ledger-section" id="briefing"><h2>Company briefing</h2>'
+    for key,heading in [('what','What the company is and does'),('changes','What changed'),('unknowns',"What's still unknown")]:
+        if brief.get(key):
+            body+='<div class="brief-part brief-'+key+'"><h3>'+esc(heading)+'</h3>'+''.join('<p>'+esc(s['text'])+'</p>' for s in brief[key])+'</div>'
+    body+='</section>'
     body+='<section id="facts"><h2>Sourced facts</h2><p>This company has an exceptionally large public record, so its facts are listed with links to their evidence pages.</p><ul>'
     routes=source_routes or {}
     for c in claims:
@@ -1157,7 +1250,7 @@ def compact_profile(row, title, source_routes=None):
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
 
-def generate_site(input_path, out, title='Signalpost'):
+def generate_site(input_path, out, title='Nordic Company Lens'):
     input_path, out = Path(input_path), Path(out)
     if input_path.resolve().is_relative_to(out.resolve()):
         raise ValueError('Site directory must not contain its source envelopes')

@@ -5,15 +5,29 @@
   const fold = text => String(text ?? '').toLowerCase().replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const element = (tag, text, cls) => { const e = document.createElement(tag); if(text != null) e.textContent = text; if(cls) e.className = cls; return e; };
   const stateChip = state => element('span', ({available:'Found',not_available:'Not found',failed:"Couldn't check",ambiguous:'Withheld',blocked:'Blocked',not_applicable:'Not applicable'})[state] || String(state).replace(/_/g,' '), 'chip '+state);
-  const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : Array.isArray(value) ? value.map(format).join(', ') : typeof value === 'object' ? Object.entries(value).filter(([key])=>key!=='birth_date').map(([key,v])=>key.replace(/_/g,' ')+': '+format(v)).join('; ') : String(value);
+  const displayValue = value => {
+    if(!value || typeof value !== 'object' || Array.isArray(value)) return value;
+    const shown = Object.fromEntries(Object.entries(value).filter(([key]) => key !== '_links'));
+    const keys = Object.keys(shown);
+    if(keys.length && keys.every(k => ['kode','beskrivelse'].includes(k)) && shown.beskrivelse) return shown.beskrivelse + (shown.kode ? ' (' + shown.kode + ')' : '');
+    if(keys.length && keys.every(k => ['adresse','postnummer','poststed','kommune','kommunenummer','land','landkode'].includes(k)) && (shown.adresse || shown.postnummer)) {
+      const place = [shown.postnummer, shown.poststed].filter(Boolean).join(' ');
+      return [...(shown.adresse || []).filter(x => String(x).trim()), place, shown.landkode && shown.landkode !== 'NO' ? shown.land : null].filter(Boolean).join(', ');
+    }
+    if(keys.length && keys.every(k => ['id','other'].includes(k)) && shown.id) return shown.id + ' (ISO 20275 entity legal form code)' + (shown.other ? '; ' + shown.other : '');
+    return shown;
+  };
+  const format = raw => { const value = displayValue(raw); return value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : Array.isArray(value) ? value.map(format).join(', ') : typeof value === 'object' ? Object.entries(value).filter(([key])=>key!=='birth_date').map(([key,v])=>key.replace(/_/g,' ')+': '+format(v)).join('; ') : String(value); };
 
   const globalDialog = document.getElementById('global-search-dialog');
   const globalInput = document.getElementById('global-search-input');
+  // An organisation number may be typed with spaces, dots or dashes ("915 574 858").
+  const searchKey = text => { const t = fold(text).trim(); return /\d/.test(t) && /^[\d\s.\-]+$/.test(t) ? t.replace(/\D/g, '') : t; };
   const globalResults = document.getElementById('global-search-results');
   const companyPrefix = document.body.dataset.page === 'profile' ? '' : document.body.dataset.page==='evidence' ? '../c/' : 'c/';
   function globalSearch() {
     globalResults.replaceChildren();
-    const query = fold(globalInput.value).trim();
+    const query = searchKey(globalInput.value);
     const matches = records.filter(r => !query || fold(r.name + ' ' + r.orgnr).includes(query)).slice(0, 15);
     for(const r of matches) {
       const item = element('li');
@@ -171,6 +185,19 @@
     unique_no_corroborated: 'Accepted because the unique registry name appears in the site identity with registry corroboration.'
   };
 
+  const EVIDENCE_BATCH = 4;
+  function shortSourceLink(url) {
+    const node = sourceLink(url);
+    try {
+      const parsed = new URL(url);
+      let text = parsed.hostname + parsed.pathname + (parsed.search ? (parsed.search.length > 41 ? '?…' : parsed.search) : '');
+      if(text.length > 80) text = text.slice(0, 77) + '…';
+      const shared = new Set((parsed.search.replace(/\+|%20/g, '').match(/(?<!\d)\d{9}(?!\d)/g) || [])).size;
+      if(node.tagName === 'A') { node.textContent = text; node.title = url; }
+      if(shared > 1) { const wrap = element('p', null, 'evidence-source'); wrap.append(node, element('span', ' (shared request covering ' + shared + ' organisations)', 'muted')); return wrap; }
+    } catch {}
+    return node;
+  }
   function showEvidence(panel) {
     if(panel.dataset.loaded) return;
     const fact = facts.get(panel.dataset.source);
@@ -183,9 +210,10 @@
       panel.append(element('p', 'No external evidence: ' + (fact.reasons?.join(', ') || 'this section has no supported value') + '.'));
     }
     if(fact.stale_since) panel.append(element('p', 'Stale: failed refresh on ' + fact.stale_since + '.', 'stale'));
-    for(const id of fact.evidence_ids) {
+    const ids = fact.evidence_ids.filter(id => evidence.has(id));
+    const renderFrom = start => { for(const id of ids.slice(start, start + EVIDENCE_BATCH)) renderRecord(id); };
+    const renderRecord = id => {
       const e = evidence.get(id);
-      if(!e) continue;
       const record = element('div', null, 'evidence-record');
       const dl = element('dl', null, 'values');
       const pair = (label, value) => {
@@ -251,15 +279,27 @@
         technical.append(original);
       } else record.append(quote);
       const provenance = element('div', null, 'evidence-provenance');
-      provenance.append(sourceLink(e.source_url), element('p', 'Retrieved ' + evidenceDate(e.retrieved_at)));
+      provenance.append(element('p', 'Retrieved ' + evidenceDate(e.retrieved_at), 'evidence-retrieved'));
+      if(e.locator) { const where = element('p', 'Record in source: ', 'evidence-locator'); where.append(element('code', e.locator)); provenance.append(where); }
+      provenance.append(shortSourceLink(e.source_url));
       const copyURL = element('button', 'Copy source URL'); copyURL.type='button';copyURL.dataset.copy=e.source_url;provenance.append(copyURL);
       record.append(provenance, technical);
       if(first) panel.append(record);
       else {
         let additional = panel.querySelector('.additional-evidence');
-        if(!additional) { additional=element('details',null,'additional-evidence');additional.append(element('summary','Additional supporting sources'));panel.append(additional); }
+        if(!additional) { additional=element('details',null,'additional-evidence');additional.append(element('summary','Additional supporting sources ('+(ids.length-1)+')'));panel.append(additional); }
         additional.append(record);
       }
+    };
+    renderFrom(0);
+    let rendered = Math.min(ids.length, EVIDENCE_BATCH);
+    if(rendered < ids.length) {
+      const more = element('button', 'Show ' + (ids.length - rendered) + ' more supporting sources', 'more-evidence-button');
+      more.type = 'button';
+      more.addEventListener('click', () => { renderFrom(rendered); rendered = Math.min(ids.length, rendered + EVIDENCE_BATCH);
+        const additional = panel.querySelector('.additional-evidence'); if(additional) { additional.open = true; additional.append(more); }
+        if(rendered >= ids.length) more.remove(); else more.textContent = 'Show ' + (ids.length - rendered) + ' more supporting sources'; });
+      (panel.querySelector('.additional-evidence') || panel).append(more);
     }
     panel.dataset.loaded = 'true';
   }
@@ -663,7 +703,7 @@
 
     function draw() {
       const currentSeq = ++searchSequence;
-      const query = fold(searchInput?.value.trim());
+      const query = searchKey(searchInput?.value);
       const town = muniSelect?.value || '';
       const division = divSelect?.value || '';
       const size = sizeSelect?.value || '';
@@ -774,7 +814,7 @@
     let highlightedIndex = -1;
     function renderAutocomplete() {
       if(!autocompleteBox || !searchInput) return;
-      const q = fold(searchInput.value.trim());
+      const q = searchKey(searchInput.value);
       if(q.length < 2) {
         autocompleteBox.hidden = true;
         autocompleteBox.replaceChildren();
@@ -1255,7 +1295,8 @@
       for(const input of inputs) {
         if(!input) continue;
         const val = input.value.trim();
-        const r = byId.get(val) || records.find(r => fold(r.name) === fold(val) || r.orgnr === val);
+        const key = searchKey(val);
+        const r = byId.get(key) || records.find(r => fold(r.name) === fold(val) || r.orgnr === key);
         if(r && !selected.includes(r)) selected.push(r);
       }
 
@@ -1285,7 +1326,7 @@
         });
         header.append(h2, removeBtn);
         header.prepend(element('div',r.name.slice(0,1),'avatar'));
-        header.append(element('p',r.orgnr+' ? '+(r.municipality||'Municipality not reported'),'muted'));
+        header.append(element('p',r.orgnr+' · '+(r.municipality||'Municipality not reported'),'muted'));
         card.append(header);
         const summary=element('div',null,'compare-summary');
         for(const [key,label] of [['revenue','Revenue'],['annual_result','Annual result'],['employees','Registered employees']]) {

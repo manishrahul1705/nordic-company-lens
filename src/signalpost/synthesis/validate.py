@@ -208,6 +208,7 @@ def validate_synthesis(synthesis,envelope):
     synthesis.summary=' '.join(s.text for key in SECTIONS for s in getattr(synthesis.sections,key))
     if synthesis.analyst_brief is not None:
         from .analyst import validate
+        from .template import brief_summary
         validate(synthesis.analyst_brief,envelope)
-        synthesis.summary=' '.join(s.text for s in synthesis.analyst_brief.sentences)
+        synthesis.summary=brief_summary(synthesis)
     return synthesis

@@ -6,6 +6,20 @@ from .readability import money,headline,nace_sentence,dual_role,normalised_descr
 from .nace import unspecified
 
 
+def brief_summary(synthesis):
+    """Summary text: the three cited brief parts in order (what, changes, unknowns).
+
+    Snapshot-only change placeholders ("First observation", "No changes since")
+    stay in the brief but are not padded into the readable summary.
+    """
+    if synthesis.brief is not None:
+        brief = synthesis.brief
+        meta = {c.id for c in brief.context_claims}
+        changes = [s for s in brief.changes if any(cid not in meta for cid in s.claim_ids)]
+        return ' '.join(s.text for part in (brief.what, changes, brief.unknowns) for s in part)
+    return ' '.join(s.text for s in synthesis.analyst_brief.sentences)
+
+
 def text(value):
     if isinstance(value,str):return value
     if isinstance(value,(int,float)) and not isinstance(value,bool):return format(Decimal(str(value)),'f').rstrip('0').rstrip('.') if '.' in format(Decimal(str(value)),'f') else str(value)
@@ -172,6 +186,6 @@ def generate(envelope):
     result.brief = validate_brief(generate_brief(result, envelope), result, envelope)
     from .analyst import generate as analyst_generate, validate as analyst_validate
     result.analyst_brief = analyst_validate(analyst_generate(envelope), envelope)
-    result.summary = ' '.join(s.text for s in result.analyst_brief.sentences)
-    result.generator.version = '7'
+    result.summary = brief_summary(result)
+    result.generator.version = '8'
     return result
