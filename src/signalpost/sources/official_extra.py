@@ -44,7 +44,13 @@ def ted_nominated(numbers,identifiers):
 
 
 def ted_query_values(numbers):
-    return '("'+'" OR "'.join(value for number in numbers for value in (number,' '.join((number[:3],number[3:6],number[6:]))))+'")'
+    """TED's identifier search matches exact strings: send the plain number, ``ddd ddd ddd``
+    and the observed narrow-no-break-space form (U+202F after the first group, then an ASCII space). Nomination still
+    applies ``ted_orgnr`` to whatever comes back."""
+    def spellings(n):
+        a,b,c=n[:3],n[3:6],n[6:]
+        return (n,a+' '+b+' '+c,a+'\N{NARROW NO-BREAK SPACE}'+b+' '+c)
+    return '("'+'" OR "'.join(value for number in numbers for value in spellings(number))+'")'
 
 
 def gleif_lookup_numbers(numbers):

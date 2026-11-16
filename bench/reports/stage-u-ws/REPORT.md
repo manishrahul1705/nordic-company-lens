@@ -66,3 +66,22 @@ The facts behind each verdict are in `recovered-notice-facts.json` and `review-v
 | Social companies | 47 | 45 |
 
 The registry-change, dated-item, website and social differences don't come from this change. The diff touches only TED nomination and the TED XML identifier comparison. These families are separate live fetches, and the two runs are three days apart. A same-day control run on revision-4 was not made, so this attribution rests on the code path, not on a paired live measurement.
+
+## Same-day control (2026-11-16): gate stopped
+
+The query now also sends `ddd ddd ddd`. TED's identifier search matches exact strings: of the plain, `ddd ddd ddd`, all-U+202F and mixed spellings, only the mixed form `984 024 290` returned 94190-2025.
+
+Revision-4 (701afaa, clean worktree) ran first, then the branch (9f0f610 plus the uncommitted query change), with the same command, fresh state and consecutive sessions. Both exited 0 with 1,000 envelopes, 0 warnings and 0 deadline hits. Counts are in `control-counts.json`; the script is `control.sh`.
+
+| | Stage S | revision-4 | branch |
+|---|---:|---:|---:|
+| Registry changes | 12,083 | 12,057 | 12,057 |
+| Dated items | 69 | 68 | 68 |
+| Website companies | 112 | 114 | **113** |
+| Social companies | 47 | 45 | 45 |
+| TED nominated notices | 76 | 76 | 79 (94190-2025 now in the search results) |
+| TED awards | 20 | 0 | 0 |
+
+**Website companies differ between revision-4 and the branch on the same day, so by the agreed rule the gate stops here.** The one company is 980973549 SKOGLI HELSE OG REHABILITERINGSSENTER AS (https://skogli.no, `registry_declared_name_tier_a`). In the branch run, `https://skogli.no/kontakt/` failed with `RemoteProtocolError`, while revision-4 got HTTP 200. Its website section became `ambiguous`. No code on this branch touches website fetching or proof; that is the observed cause, not a verdict.
+
+TED notice XML returned HTTP 202 for almost every notice in both runs (121 and 125 responses), so both published 0 awards. Stage S's website count of 112 comes from its own counter; the 114/113 here come from `family_counts.py` (companies with an available `official_website` claim) and are comparable only with each other.
