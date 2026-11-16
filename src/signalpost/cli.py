@@ -52,6 +52,9 @@ def main(argv=None):
                          help='Check current NAV jobs (default on; disable with --no-hiring)')
     command.add_argument('--nav-index-path',type=Path)
     command.add_argument('--nav-index-max-age-days',type=float,default=30)
+    command.add_argument('--no-ted-snapshot',dest='ted_snapshot',action='store_false',help='Query TED live instead of the bundled award-notice snapshot')
+    command.add_argument('--ted-snapshot-path',type=Path)
+    command.add_argument('--ted-snapshot-max-age-days',type=float,default=30)
     command.add_argument('--nav-historical-snapshot', action='store_true', default=False,
                          help='Allow older indexed NAV advertisements with explicit historical snapshot dating')
     command.add_argument('--allow-system-sleep',dest='prevent_system_sleep',action='store_false',default=True)

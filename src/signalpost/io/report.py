@@ -175,6 +175,9 @@ def effective_configuration(config, budget, report):
                          'website_total': config.website_total_request_cap},
         'nav': {'index_built_at': nav.get('index_built_at'),
                 'mode': nav.get('source_mode', 'disabled' if not config.hiring else 'not_reported')},
+        'ted': {'mode': report.get('official_extra', {}).get('ted_mode', 'disabled' if not config.official_extra_sources else 'not_reported'),
+                'snapshot_built_at': report.get('official_extra', {}).get('ted_snapshot', {}).get('built_at'),
+                'fallback_reason': report.get('official_extra', {}).get('ted_snapshot', {}).get('fallback_reason')},
         'unrecognised_flags': list(config.unrecognised_flags),
         'outputs': {key: str(value) if value is not None else None for key, value in
                     [('envelopes', config.output), ('profiles', config.profiles_output),

@@ -189,7 +189,8 @@ def test_optional_ted_error_never_fails_registry_or_verified_website(tmp_path,mo
         if request.url.host=='ted.europa.eu':return httpx.Response(status,text='Optional source unavailable')
         if request.url.path=='/robots.txt':return httpx.Response(200,text='User-agent: *\nAllow: /')
         return httpx.Response(200,text=html())
-    report,row,_,_=execute_web(tmp_path,monkeypatch,response=dispatch,official_extra_sources=True)
+    # This exercises the live TED transport, so the bundled snapshot is switched off.
+    report,row,_,_=execute_web(tmp_path,monkeypatch,response=dispatch,official_extra_sources=True,ted_snapshot=False)
     assert row['run']['sections']['identity']=='available'
     assert row['run']['sections']['roles']=='available'
     assert row['run']['sections']['subunits'] in {'available','not_available'}

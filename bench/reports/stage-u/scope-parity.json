@@ -1,0 +1,30 @@
+{
+ "inputs": 1000,
+ "since": "2023-11-16",
+ "live_search_requests": 10,
+ "live_http_statuses": {
+  "200": 10
+ },
+ "rule": "whitespace-only normalised exact nine-digit nomination (ted_nominated); query sends plain and 3-3-3 spellings",
+ "live_nominated_notices": 78,
+ "snapshot_nominated_notices": 79,
+ "live_literal_rule_notices": 76,
+ "live_literal_rule_companies": 14,
+ "live_normalised_rule_companies": 14,
+ "live_not_in_snapshot": [],
+ "snapshot_not_in_live": [
+  "94190-2025"
+ ],
+ "scope_mismatch_orgnrs": [
+  "984024290"
+ ],
+ "snapshot_gain_from_normalisation": {
+  "notices": 3,
+  "companies": 2,
+  "publication_numbers": [
+   "170520-2025",
+   "404734-2025",
+   "94190-2025"
+  ]
+ }
+}

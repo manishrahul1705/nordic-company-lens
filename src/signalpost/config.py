@@ -59,6 +59,9 @@ class Config(BaseModel):
     nav_index_path: Path | None = None
     nav_index_max_age_days: float = Field(default=30,gt=0)
     nav_historical_snapshot: bool = False
+    ted_snapshot: bool = True
+    ted_snapshot_path: Path | None = None
+    ted_snapshot_max_age_days: float = Field(default=30,gt=0)
     nav_now: datetime | None = None
     prevent_system_sleep: bool = True
     synthesis: str = 'template'

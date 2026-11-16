@@ -518,7 +518,7 @@ async def _run(config, client=None):
                 from .sources.official_extra import collect
                 eligible={org:envelopes[org] for org in sorted(valid_orgs) if envelopes[org].run.sections.get('identity')=='available'}
                 try:
-                    extra,metrics=await collect(eligible,active_client,budget,blobs)
+                    extra,metrics=await collect(eligible,active_client,budget,blobs,config)
                     dns_metrics['official_extra']=metrics
                     for org,section in extra.items():
                         row=envelopes[org]
