@@ -12,7 +12,7 @@ No credentials, bulk file, expected count, LLM or search service are required. N
 
 ## Input and outputs
 
-The command accepts plain text (one orgnr per line), JSONL strings/numbers or objects with `organisation_number`, JSON arrays, and objects with an `organisation_numbers` array. Whitespace is normalized, checksums are checked, input order and duplicates are preserved. Blank/invalid lines each receive a failed envelope and profile. The expected count is inferred from the input. See [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md).
+The command accepts plain text (one orgnr per line), JSONL strings/numbers or objects with `organisation_number`, JSON arrays, and objects with an `organisation_numbers` array. Whitespace is normalized, checksums are checked, input order and duplicates are preserved. Blank/invalid lines each receive a failed envelope (and a failed profile when `--profiles-output` is passed). The expected count is inferred from the input. See [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md).
 
 - `out/envelopes.jsonl`: one schema-validated envelope per input, with claims, citations, evidence, section states and refresh changes.
 - `out/profiles.jsonl`: optional raw profiles, written only when `--profiles-output` is passed.
@@ -27,7 +27,7 @@ Run the **same command again with the same state directory** to refresh automati
 | Source | Use | Licence / access | Provider cost |
 |---|---|---|---:|
 | BRREG | Identity, registered roles, subunits and returned financial years | NLOD 2.0; attribute Brønnøysundregistrene | $0 |
-| NAV public feed | Active individual ads, exact employer/subunit matching; public token obtained at runtime | NAV public-feed reuse terms; no personal credential | $0 |
+| NAV public feed and public ad pages | Active individual ads, exact employer/subunit matching; public token obtained at runtime. Job claims cite the anonymous public ad page when it matches the verified ad | NAV public-feed reuse terms; no personal credential | $0 |
 | Wikidata | Supplementary exact-orgnr website/social nominations | CC0, item provenance retained | $0 |
 | Company websites | Ownership proof, descriptions, social links, dated news, linked active jobs | robots.txt and site access rules; no blanket open licence inferred | $0 |
 | SSB KLASS | Bundled industry descriptions | CC BY 4.0 | $0 |
@@ -63,19 +63,45 @@ The archived collection was produced by [`cc_overnight.py`](scripts/cc_overnight
 
 The pooled HTTP hard cap is 19 per distinct normalized input: 1,900 per 100, with at most 40 attributed to any company and shared calls included globally. The hard time cap is 24 seconds per distinct input (40 minutes per 100), with the default 2,400-second run limit and lower configured limits honored. These are tighter than 2,000 HTTP / 45 minutes per 100. Crawl finalization reserves preserve one output per input even when discovery is incomplete. Public DNS fallbacks are bounded and tolerate blocked UDP; end-of-run retries consume the original pool.
 
+### Revision 4 changes
+
+Revision 4 changes presentation and citation only. No proof type, veto, acceptance rule, request or time budget, or source changed, and claim IDs and values are unchanged. The only added network access is one anonymous fetch of each already-verified NAV ad's public page, counted in the existing pooled budget. Revision 4 has not been re-measured on the frozen 1,000-company cohort: the coverage figures under [Measured precision](#measured-precision) are the Stage S measurement of code `4788513`, which predates revision 4.
+
+- **Job claims cite the public ad page.** After NAV discovery and verification, each verified ad's public page `https://arbeidsplassen.nav.no/stillinger/stilling/<uuid>` is fetched anonymously and stored verbatim. The job claim then cites that page, with two verbatim spans: the ad title and the employer orgnr. Previously it cited the token-protected feed API entry. The feed entry remains discovery provenance only (`source_identifier`). This is best effort: if the page cannot be fetched, or does not name the same title and employer orgnr as the verified ad, the claim keeps its previous feed-API citation, and the outcome is counted under `public_citations` in the NAV metrics. Code: `attach_public_citations` and `public_citation_spans` in [nav.py](src/signalpost/sources/nav.py), plus [nav_public_page.py](src/signalpost/sources/nav_public_page.py). Tests: `test_public_citation_spans_are_verbatim_and_must_match_the_verified_ad` and `test_feed_verified_ads_cite_the_anonymous_public_page` in [test_nav_index.py](tests/test_nav_index.py), the request-sequence check in [test_nav.py](tests/test_nav.py), and [test_external_integration.py](tests/test_external_integration.py).
+- **The brief states what the company does, what changed and what remains unknown.**
+  - *Changes* come from dated published events (registry announcements by tier, company articles and TED awards) and from the revenue trend between comparable consecutive company-only years, rather than only from snapshot diffs. Events are shown newest first, one per category, at most three. Bare, unspecified and administrative registry records are never presented as changes. A first run therefore reads "First observation" only when there are no dated events.
+  - *Unknowns* are listed with their recorded reasons, such as no ownership proof, a parked or unreachable site, no NAV ads, or no accounts on file.
+  - *What it does*: a proven company website's self-description and the registered purpose lead. NACE is stated only as the registered industry code, never as the company's activity.
+  - The site renders the same three-part brief as the envelope, and [verify_output.py](scripts/verify_output.py) checks it.
+  - Code: [company_brief.py](src/signalpost/synthesis/company_brief.py), [analyst.py](src/signalpost/synthesis/analyst.py), [template.py](src/signalpost/synthesis/template.py), [site.py](src/signalpost/site.py). Tests: [test_brief_revision4.py](tests/test_brief_revision4.py) (tiered events, dated changes replacing "First observation", the three-event cap, purpose before NACE, the website reason for unknowns, matching summary and site, and revenue trend as a cited change), plus updates in [test_company_brief.py](tests/test_company_brief.py) and [test_analyst_brief.py](tests/test_analyst_brief.py).
+- **Explicit zero revenue.** A filed revenue of exactly 0 reads "reported no operating revenue (NOK 0)" instead of "reported revenue of NOK 0". Code: [analyst.py](src/signalpost/synthesis/analyst.py). Test: `test_explicit_zero_revenue_is_worded_as_no_operating_revenue` in [test_analyst_brief.py](tests/test_analyst_brief.py).
+- **Offline-site fixes.** All of the following are covered by [test_site_revision4.py](tests/test_site_revision4.py) except the two CSS-only changes noted:
+  - search accepts organisation numbers typed with spaces, dots or dashes;
+  - compare cards use a middle dot instead of the stray `?` separator, and the Remove button has its own grid cell (CSS only, not asserted by a test);
+  - the evidence drawer shows the retrieval date and the record locator before the source link;
+  - excerpts are marked `data-verbatim`, and dates inside them are never rewritten on the server or in the browser;
+  - registry objects render without raw JSON or `_links` objects, and account floats are digit-grouped;
+  - the tab title defaults to "Nordic Company Lens", and the home headline leads with what was found;
+  - the header brand stays on one line at phone width (CSS only, not asserted by a test).
+
+  Code: [site.py](src/signalpost/site.py), [site.js](src/signalpost/site_assets/site.js), [site.css](src/signalpost/site_assets/site.css).
+- **Raw profiles are opt-in.** `profiles.jsonl` is written only when `--profiles-output` is passed. `--report` and `--site-dir` keep their defaults (`out/report.json`, `out/site`). Nothing in the [output contract](OUTPUT_CONTRACT.md) requires profiles. Code: [cli.py](src/signalpost/cli.py). Test: `test_evaluator_always_writes_all_artifacts` in [test_cli_evaluator_defaults.py](tests/test_cli_evaluator_defaults.py) asserts that no profiles file exists unless the flag is passed.
+
+Revision 4 validation on this checkout: **1,452 tests passed, zero failed** (`uv run --frozen pytest -q`). This count comes from a local run and has no committed report.
+
 ### Revision 3 changes
 
 Stage S repairs four registry homepage cells with unambiguous `www` separators so they can be parsed as candidates: the measured effect is **4 universe candidates and zero cohort nominations**; no proof rule, veto or name matching changed ([normalization-only measurement](bench/reports/stage-s/REPORT.md#the-four-authorised-syntax-repairs)).
 
 The release adds locally bundled Common Crawl candidates and registry shared-identifier counts, bounded deeper ownership pages, strict company-scope filtering, cited contact facts, dated individual-job checks and offline-site improvements. Unknown CLI arguments warn rather than abort; omitted report/site options receive defaults (profiles are opt-in) and effective settings are recorded. The pooled ceiling is 19 HTTP per distinct normalized input (1,900/100), with a hard 40/company maximum including robots, redirects and retries. Lower configured limits remain effective. All time limits are unchanged. Careers runs after primary proof/collection and uses remaining headroom; it has no earmark and does not reduce activity's original allowance. No search-engine integration, paid API or LLM is used. These changes do not claim complete website or careers coverage.
 
-GLEIF records can store the registration number with whitespace, for example `"923 609 016"`; the previous literal comparison rejected that spelling. Matching now normalises whitespace only and accepts both official Bronnoysund child-record authorities: **RA000472 Foretaksregisteret** and **RA000473 Enhetsregisteret**. An exact complete nine-digit organisation-number match is still required, with no name matching. Parent acceptance rules are unchanged. The measured correction is **32 to 142 companies; 15 reviewed, 0 wrong, 0 doubtful** ([identifier audit and review](bench/reports/stage-q/REPORT.md)).
+GLEIF records can store the registration number with whitespace, for example `"923 609 016"`; the previous literal comparison rejected that spelling. Matching now normalises whitespace only and accepts both official Bronnoysund child-record authorities: **RA000472 Foretaksregisteret** and **RA000473 Enhetsregisteret**. An exact complete nine-digit organisation-number match is still required, with no name matching. Parent acceptance rules are unchanged. The measured correction is **32 to 142 companies** (32 to 139 from whitespace normalisation in [Stage P](bench/reports/stage-p/REPORT.md), then 139 to 142 from RA000473 in [Stage Q](bench/reports/stage-q/REPORT.md)); **15 reviewed, 0 wrong, 0 doubtful** ([identifier audit and review](bench/reports/stage-q/REPORT.md)).
 
 ## Measured precision
 
 The final measurement is the **[Stage S frozen-1,000 retry](bench/reports/stage-s/REPORT.md)**, code `4788513`: **112 websites**, **47 social companies**, **2 jobs companies**, **1,000 activity companies**, **7 news companies / 69 article claims**, **142 GLEIF companies / 736 GLEIF claims**, **6 TED companies / 20 awards**, and **166,046 supported facts**. It emitted 1,000 envelopes and 1,000 profiles with zero warnings and **zero deadline hits**.
 
-The run used **9,214 HTTP requests (9.214 per company, maximum 40 attributed to one company)** and **136.4 seconds per 100**; total wall time including site finalisation was **1,364.110 seconds**. These are measured live-run results, not causal performance claims or a completeness guarantee. See the committed [measurement comparison](bench/reports/stage-s/benchmark-comparison.json), [execution record](bench/reports/stage-s/execution.json) and [website proof-type composition](bench/reports/stage-s/composition.json). The earlier Stage G two-run band is superseded as the current measurement; its historical report remains available separately.
+The run used **9,214 HTTP requests (9.214 per company, maximum 40 attributed to one company)** and **136.4 seconds per 100**; total wall time including site finalisation was **1,364.110 seconds**. These are measured live-run results, not causal performance claims or a completeness guarantee. Stage S measured code `4788513`, before revision 4; that run passed `--profiles-output`, and revision 4 has not been re-measured on this cohort. See the committed [measurement comparison](bench/reports/stage-s/benchmark-comparison.json), [execution record](bench/reports/stage-s/execution.json) and [website proof-type composition](bench/reports/stage-s/composition.json). The earlier Stage G two-run band is superseded as the current measurement; its historical report remains available separately.
 
 Two independent live runs on the same frozen cohort, [Stage Q (code `4ae29bc`)](bench/reports/stage-q/REPORT.md) and [Stage S (code `4788513`)](bench/reports/stage-s/REPORT.md), produced identical company counts in every family and identical website proof-type composition, differing by one website-family fact.
 
@@ -100,11 +126,11 @@ The current final measurement is [Stage S](bench/reports/stage-s/REPORT.md), sup
 
 [Verify Signalpost](.github/workflows/ci.yml) runs locked installation, the full pytest suite and live-20. Its `--require-clean` verifier remains strict for identity, roles, accounts and subunits. Only optional website/social, hiring and activity failures/stale states are tolerated and summarized with reasons; schema, membership, evidence, citations and global operational checks remain strict. Local release execution is documented in the release report; no GitHub workflow was dispatched and nothing was pushed.
 
-Current revision 3 validation: **1,432 tests passed, zero failed**, and the Stage S retry recorded zero deadline hits ([Stage S test log](bench/reports/stage-s/pytest.txt)). The earlier Stage E fresh-clone refresh pair recorded zero company and observation changes with strict verifier PASS; that historical pair was not rerun in Stage S ([refresh verification](bench/reports/stage-e/refresh/strict-verifier.txt)).
+Revision 3 / Stage S validation (code `4788513`): **1,432 tests passed, zero failed**, and the Stage S retry recorded zero deadline hits ([Stage S test log](bench/reports/stage-s/pytest.txt)). Revision 4 validation on this checkout: **1,452 tests passed, zero failed** (local run, no committed report; see [Revision 4 changes](#revision-4-changes)). The earlier Stage E fresh-clone refresh pair recorded zero company and observation changes with strict verifier PASS; that historical pair was not rerun in Stage S ([refresh verification](bench/reports/stage-e/refresh/strict-verifier.txt)).
 
 ## Previous revisions
 
-The following records describe revision 2 or superseded operational notes. Their values and links are preserved for historical comparison; they are not the current revision 3 measurement.
+The following records describe revision 2 or superseded operational notes. Their values and links are preserved for historical comparison; they are not the current Stage S measurement.
 
 ### Revision 2 frozen 1,000-company measurement
 
