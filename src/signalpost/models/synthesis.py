@@ -25,6 +25,9 @@ class Sections(Model):
     scale: list[Sentence] = Field(default_factory=list)
     leadership: list[Sentence] = Field(default_factory=list)
     changes: list[Sentence] = Field(default_factory=list)
+    reach: list[Sentence] = Field(default_factory=list)
+    standing: list[Sentence] = Field(default_factory=list)
+    not_established: list[Sentence] = Field(default_factory=list)
     unknowns: list[Unknown] = Field(default_factory=list)
 
 
@@ -59,6 +62,35 @@ class Brief(Model):
     context_claims: list[ChangeClaim] = Field(default_factory=list)
 
 
+class CohortClaim(Model):
+    """Verbatim copy of a published claim from another envelope in the same run."""
+    organisation_number: str
+    id: str
+    field: str
+    value: object
+    evidence_ids: list[str]
+
+
+class Comparable(Model):
+    organisation_number: str
+    claim_id: str
+    value: float
+
+
+class Standing(Model):
+    division: str
+    fiscal_year: str
+    account_type: str | None = None
+    currency: str
+    comparables: list[Comparable] = Field(default_factory=list)
+
+
+class Cohort(Model):
+    """Cross-company context taken from the run's own published envelopes."""
+    standing: Standing | None = None
+    role_holdings: list[CohortClaim] = Field(default_factory=list)
+
+
 class AnalystSentence(Sentence):
     sentence_type: Literal['a','b','c','d','e','f']
 
@@ -78,3 +110,4 @@ class Synthesis(Model):
     change_claims: list[ChangeClaim] = Field(default_factory=list)
     brief: Brief | None = None
     analyst_brief: AnalystBrief | None = None
+    cohort: Cohort | None = None

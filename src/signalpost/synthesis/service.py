@@ -8,8 +8,8 @@ class Service:
     def __init__(self):
         self.metrics={'calls':0,'cache_hits':0,'input_tokens':0,'output_tokens':0,'estimated_usd':0,'fallbacks':0}
 
-    async def summarize(self,envelope):
-        try:base=await offload(generate,envelope)
+    async def summarize(self,envelope,cohort=None):
+        try:base=await offload(generate,envelope,cohort)
         except Exception:
             result=Synthesis(generator=Generator(input_sha256=digest([envelope.organisation_number,'template_error'])))
             result.checks.fallback_used=True

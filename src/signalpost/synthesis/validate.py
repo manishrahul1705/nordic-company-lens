@@ -8,6 +8,7 @@ from .readability import headline,nace_sentence,dual_role,normalised_description
 from .nace import unspecified
 
 SECTIONS=('what_it_does','scale','leadership','changes')
+ALL_SECTIONS=SECTIONS+('reach','standing','not_established')
 LEVELS={'VERIFIED','HIGH','REGISTRY_DECLARED'}
 FIXED_WORDS=set('Registered activity purpose NACE Website Self description Employees Reported revenue Annual result Fiscal year Municipality Workplaces Board members Verified active ads found Official website Social profile CEO Chair Auditor First observation no earlier run to compare Previous Current Change From To Bankruptcy Liquidation Deletion Registration date Previously supported As registered NOK FY English CEO'.casefold().split())
 DATE=re.compile(r'\b(?:\d{4}[-/]\d{2}[-/]\d{2}|\d{1,2}[/.]\d{1,2}[/.]\d{4})\b')
@@ -75,6 +76,14 @@ def permitted(claim,envelope):
 def sentence_error(sentence,envelope):
     available=catalog(envelope)
     if not sentence.claim_ids:return 'uncited_sentence'
+    # A named gap cites the published non-available claim the run recorded for it;
+    # its fixed wording is recomputed from recorded run state only.
+    recorded={c.id:c for c in envelope.claims}
+    if len(sentence.claim_ids)==1 and sentence.claim_ids[0] not in available and sentence.claim_ids[0] in recorded:
+        from .sections_extra import absence_text
+        if sentence.text!=absence_text(recorded[sentence.claim_ids[0]],envelope):return 'unverified_absence'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
     if any(key not in available for key in sentence.claim_ids):return 'missing_or_unavailable_claim'
     claims=[available[key] for key in sentence.claim_ids]
     evidence={e.id for e in envelope.evidence}
@@ -188,6 +197,18 @@ def sentence_error(sentence,envelope):
     return None
 
 
+def resolves(claim_id,envelope,cohort):
+    """A cited id names a published claim of this company or a cohort copy of another company's."""
+    return any(c.id==claim_id for c in envelope.claims) or bool(cohort and any(c.id==claim_id for c in cohort.role_holdings))
+
+
+def extra_error(sentences,expected,envelope,cohort):
+    """reach / standing / not_established: exact recomputation, every citation resolved."""
+    if [s.model_dump() for s in sentences]!=[s.model_dump() for s in expected]:return 'unverified_extra_section'
+    if any(not s.claim_ids or not all(resolves(cid,envelope,cohort) for cid in s.claim_ids) for s in sentences):return 'unresolved_citation'
+    return None
+
+
 def validate_synthesis(synthesis,envelope):
     rejected=[]
     for section in SECTIONS:
@@ -200,7 +221,15 @@ def validate_synthesis(synthesis,envelope):
         setattr(synthesis.sections,section,valid)
         if sentences and not valid:
             synthesis.sections.unknowns.append(Unknown(family=section,state='failed',reason='No sentence passed evidence validation.'))
-    total=sum(len(getattr(synthesis.sections,key)) for key in SECTIONS)
+    from .sections_extra import EXTRA_SECTIONS,generate as extra_sections
+    expected=extra_sections(envelope,synthesis.cohort)
+    for section in EXTRA_SECTIONS:
+        sentences=[s if isinstance(s,Sentence) else Sentence.model_validate(s) for s in getattr(synthesis.sections,section)]
+        reason=extra_error(sentences,expected[section],envelope,synthesis.cohort)
+        if reason:
+            rejected.append({'section':section,'reason':reason});sentences=[]
+        setattr(synthesis.sections,section,sentences)
+    total=sum(len(getattr(synthesis.sections,key)) for key in ALL_SECTIONS)
     synthesis.checks.sentences=synthesis.checks.cited=total
     synthesis.checks.values_verified=True
     synthesis.checks.dropped_sentences+=len(rejected)

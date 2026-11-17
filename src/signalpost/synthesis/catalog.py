@@ -28,7 +28,7 @@ def catalog(envelope):
     return result
 
 
-def input_hash(envelope):
+def input_hash(envelope,cohort=None):
     # Retrieval/run timestamps and observation metadata are deliberately excluded.
     claims=[{'id':c.id,'field':c.field,'value':c.value,'availability':c.availability,
              'reporting_period':c.reporting_period,'carried_forward':c.carried_forward} for c in envelope.claims]
@@ -38,4 +38,5 @@ def input_hash(envelope):
     return digest({'claims':sorted(claims,key=lambda c:c['id']),'changes':events,
         'recent_registry_events':[(day,label,c.id) for day,label,c in recent(envelope)],
         'sections':envelope.run.sections,'baseline':envelope.run.refresh.get('mode')=='baseline',
-        'errors':sorted({(e.section,e.code) for e in envelope.errors if e.section in envelope.run.sections and e.code!='website_candidates'})})
+        'errors':sorted({(e.section,e.code) for e in envelope.errors if e.section in envelope.run.sections and e.code!='website_candidates'}),
+        'cohort':cohort.model_dump(mode='json') if cohort is not None else None})

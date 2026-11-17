@@ -10,31 +10,48 @@ from signalpost.models.claim import Claim
 from signalpost.models.evidence import Evidence
 from signalpost.models.envelope import Change
 from signalpost.models.synthesis import Synthesis
-from signalpost.synthesis.validate import sentence_error,SECTIONS
+from signalpost.synthesis.validate import sentence_error,SECTIONS,ALL_SECTIONS,extra_error
 from signalpost.synthesis.catalog import change_claims
 from types import SimpleNamespace
 from signalpost.sources.text import decode_body
 
 
-def verify_synthesis(row):
+def envelope_view(row):
     data=row if 'claims' in row else row['profile']
-    raw=row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')
-    if raw is None:return 0,0
-    synthesis=Synthesis.model_validate(raw)
     from signalpost.models.envelope import Error
-    envelope=SimpleNamespace(organisation_number=row['organisation_number'], claims=[Claim.model_validate(c) for c in data['claims']],
+    return SimpleNamespace(organisation_number=row['organisation_number'], claims=[Claim.model_validate(c) for c in data['claims']],
         errors=[Error.model_validate(e) for e in data.get('errors', [])],
         evidence=[Evidence.model_validate(e) for e in data['evidence']],changes=[Change.model_validate(c) for c in data['changes']],
         run=SimpleNamespace(refresh=row['run']['refresh'] if 'run' in row else data['refresh'],
                             sections=row['run']['sections'] if 'run' in row else data['sections'],
                             completed_at=row['run']['completed_at'] if 'run' in row else row['completed_at']))
+
+
+def verify_synthesis(row,cohort_index=None):
+    raw=row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')
+    if raw is None:return 0,0
+    synthesis=Synthesis.model_validate(raw)
+    envelope=envelope_view(row)
     sentences=[s for key in SECTIONS for s in getattr(synthesis.sections,key)]
+    if synthesis.generator.version not in {'1','2','3','4','5','6','7','8'}:
+        # Version 9+: reach, standing and not_established are recomputed exactly, and the
+        # cohort records they rely on must equal a recomputation over every output row.
+        from signalpost.synthesis.sections_extra import EXTRA_SECTIONS,generate as extra_sections
+        from signalpost.synthesis.cohort import context
+        if cohort_index is not None:
+            assert synthesis.cohort==context(envelope,cohort_index),'Cohort records differ from the run'
+        expected=extra_sections(envelope,synthesis.cohort)
+        for key in EXTRA_SECTIONS:
+            assert extra_error(getattr(synthesis.sections,key),expected[key],envelope,synthesis.cohort) is None,'Unverified '+key+' section'
+        counted=[s for key in ALL_SECTIONS for s in getattr(synthesis.sections,key)]
+    else:
+        counted=sentences
     assert all(sentence_error(s,envelope) is None for s in sentences),'Unverified synthesis sentence'
     if synthesis.brief is not None:
         from signalpost.synthesis.company_brief import validate as validate_brief
         validate_brief(synthesis.brief, synthesis, envelope)
     primary=sentences
-    if synthesis.generator.version in {'5','6','7','8'}:
+    if synthesis.generator.version in {'5','6','7','8','9'}:
         assert synthesis.analyst_brief is not None,'Missing analyst brief'
     if synthesis.analyst_brief is not None:
         from signalpost.synthesis.analyst import validate as validate_analyst
@@ -46,7 +63,7 @@ def verify_synthesis(row):
         from signalpost.synthesis.template import brief_summary
         expected=brief_summary(synthesis)
     assert synthesis.summary==expected,'Summary differs from checked sentences'
-    assert synthesis.checks.sentences==synthesis.checks.cited==len(sentences) and synthesis.checks.values_verified
+    assert synthesis.checks.sentences==synthesis.checks.cited==len(counted) and synthesis.checks.values_verified
     assert synthesis.change_claims==change_claims(envelope),'Change citations differ from source events'
     if 'run' in row and 'profile' in row:assert row['profile'].get('synthesis')==raw,'Synthesis mirror differs'
     return 1,len(primary)
@@ -108,8 +125,10 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     def stored_body(sha):
         return decode_body((state_dir/'blobs'/sha).read_bytes())
     synthesis_companies=synthesis_sentences=0
+    from signalpost.synthesis.cohort import build_index
+    cohort_index=build_index([envelope_view(row) for row in rows])
     for row in rows:
-        companies,sentences=verify_synthesis(row)
+        companies,sentences=verify_synthesis(row,cohort_index)
         synthesis_companies+=companies;synthesis_sentences+=sentences
         data = row if "claims" in row else row["profile"]
         evidence = {e["id"]: e for e in data["evidence"]}
@@ -149,7 +168,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                 assert not selected & set(refresh.get('stale_sections',{})), 'Stale required smoke-test section'
     if second is not None:
         rerun = load(second)
-        for row in rerun:verify_synthesis(row)
+        rerun_index=build_index([envelope_view(row) for row in rerun])
+        for row in rerun:verify_synthesis(row,rerun_index)
         assert len(rerun) == len(rows)
         assert [r["organisation_number"] for r in rerun] == [r["organisation_number"] for r in rows]
         assert ids(rerun) == ids(rows), "Claim IDs differ"

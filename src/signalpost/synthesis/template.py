@@ -50,8 +50,12 @@ def projected(claim):
     return text(value)
 
 
-def generate(envelope):
-    result=Synthesis(generator=Generator(version='3',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
+def generate(envelope,cohort=None):
+    if cohort is None:
+        # Standalone generation is a one-company run: its cohort is the company itself.
+        from .cohort import build_index,context
+        cohort=context(envelope,build_index([envelope]))
+    result=Synthesis(generator=Generator(version='3',input_sha256=input_hash(envelope,cohort)),change_claims=change_claims(envelope),cohort=cohort)
     claims=sorted((c for c in envelope.claims if c.availability=='available' and permitted(c,envelope)),key=lambda c:c.field)
     by_field={c.field:c for c in claims}
     registry_changes = sorted((c for c in claims if c.field.startswith('registry_change.') and not c.carried_forward),
@@ -176,6 +180,10 @@ def generate(envelope):
     periods={c.reporting_period.get('fiscal_year') for c in claims if c.family=='accounts' and c.reporting_period}
     if len(periods)==1:
         result.sections.unknowns.append(Unknown(family='accounts',field='financial_direction',state='not_available',reason="Only the latest year's accounts are available."))
+    from .sections_extra import fallback,generate as extra_sections
+    for key in ('scale','leadership'):
+        if not getattr(result.sections,key):getattr(result.sections,key).extend(fallback(key,envelope))
+    for key,sentences in extra_sections(envelope,cohort).items():getattr(result.sections,key).extend(sentences)
     for key in ('what_it_does','scale','leadership'):
         if key=='scale' and any(c.id in opening_ids and c.field in {'identity.municipality','identity.employees','accounts.revenue'} for c in claims):continue
         if not getattr(result.sections,key):
@@ -187,5 +195,5 @@ def generate(envelope):
     from .analyst import generate as analyst_generate, validate as analyst_validate
     result.analyst_brief = analyst_validate(analyst_generate(envelope), envelope)
     result.summary = brief_summary(result)
-    result.generator.version = '8'
+    result.generator.version = '9'
     return result

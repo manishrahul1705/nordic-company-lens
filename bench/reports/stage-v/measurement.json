@@ -1,0 +1,64 @@
+{
+ "companies": 1000,
+ "filled": {
+  "what_it_does": 1000,
+  "scale": 1000,
+  "leadership": 1000,
+  "changes": 1000,
+  "reach": 1000,
+  "standing": 1000,
+  "not_established": 1000
+ },
+ "empty": {
+  "what_it_does": 0,
+  "scale": 0,
+  "leadership": 0,
+  "changes": 0,
+  "reach": 0,
+  "standing": 0,
+  "not_established": 0
+ },
+ "sentences": {
+  "what_it_does": 3646,
+  "scale": 1256,
+  "leadership": 2091,
+  "changes": 2230,
+  "reach": 1818,
+  "standing": 1000,
+  "not_established": 3652
+ },
+ "unresolved_citations": [],
+ "standing_kinds": {
+  "percentile": 583,
+  "not_compared": 263,
+  "too_thin": 154
+ },
+ "http": {
+  "stage_v": [
+   9353,
+   {
+    "data.brreg.no": 4028,
+    "ted.europa.eu": 228,
+    "www.hugedomains.com": 40,
+    "api.gleif.org": 37,
+    "bridgetech.tv": 36,
+    "www.conplan.no": 33,
+    "www.askoy24.no": 33,
+    "www.tensio.no": 33
+   }
+  ],
+  "revision4_control_2026-11-16": [
+   9504,
+   {
+    "data.brreg.no": 4028,
+    "ted.europa.eu": 121,
+    "www.hugedomains.com": 120,
+    "api.gleif.org": 37,
+    "skogli.no": 36,
+    "bridgetech.tv": 36,
+    "www.askoy24.no": 33,
+    "www.tensio.no": 33
+   }
+  ]
+ }
+}

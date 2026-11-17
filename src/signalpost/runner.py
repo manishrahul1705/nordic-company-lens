@@ -604,8 +604,11 @@ async def _run(config, client=None):
         await offload(reconcile_final_observations, envelope, prior.get(org))
     progress.stage_update("Cited Synthesis", "running")
     synthesis_service=SynthesisService()
+    # Cohort context (standing, roles held elsewhere) comes only from this run's final envelopes.
+    from .synthesis.cohort import build_index, context as cohort_context
+    cohort_index=await offload(build_index,list(envelopes.values()))
     for envelope in envelopes.values():
-        envelope.run.synthesis=await synthesis_service.summarize(envelope)
+        envelope.run.synthesis=await synthesis_service.summarize(envelope,cohort_context(envelope,cohort_index))
         envelope.profile.synthesis=envelope.run.synthesis
     progress.stage_update("Cited Synthesis", "completed")
     progress.log_event("Cited synthesis complete")
