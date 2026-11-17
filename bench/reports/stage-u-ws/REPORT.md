@@ -85,3 +85,26 @@ Revision-4 (701afaa, clean worktree) ran first, then the branch (9f0f610 plus th
 **Website companies differ between revision-4 and the branch on the same day, so by the agreed rule the gate stops here.** The one company is 980973549 SKOGLI HELSE OG REHABILITERINGSSENTER AS (https://skogli.no, `registry_declared_name_tier_a`). In the branch run, `https://skogli.no/kontakt/` failed with `RemoteProtocolError`, while revision-4 got HTTP 200. Its website section became `ambiguous`. No code on this branch touches website fetching or proof; that is the observed cause, not a verdict.
 
 TED notice XML returned HTTP 202 for almost every notice in both runs (121 and 125 responses), so both published 0 awards. Stage S's website count of 112 comes from its own counter; the 114/113 here come from `family_counts.py` (companies with an available `official_website` claim) and are comparable only with each other.
+
+## Branch rerun (b386540, clean tree)
+
+| | revision-4 | branch | branch rerun |
+|---|---:|---:|---:|
+| Registry changes | 12,057 | 12,057 | 12,057 |
+| Dated items | 68 | 68 | 68 |
+| Website companies | 114 | 113 | **114** |
+| Social companies | 45 | 45 | 45 |
+| Total HTTP requests | 9,504 | 9,493 | 9,526 |
+| TED search / notice XML requests | 10 / 121 | 10 / 125 | 10 / 135 |
+| Companies at the 40-request cap | 9 | 9 (same set) | 8 (a subset; 980973549 no longer at cap) |
+
+- `https://skogli.no/kontakt/` returned HTTP 200, and 980973549 is again verified at https://skogli.no (`registry_declared_name_tier_a`). The four counts now match revision-4, so the earlier one-company difference was the site's connection reset: drift.
+- TED: 79 notices nominated; 29 notice requests returned HTTP 200 and 116 returned 202.
+- The rerun's wall time was 80,562 s, but only 307 CPU seconds were used. Requests ended at about 2,032 s, as in the other runs. The host slept during output writing, so the offline site was skipped on the clock budget. Envelopes, profiles and report are complete.
+
+**HTTP budget.** Every TED request is reserved under `__official_extra__`. TED therefore draws on the pooled 19 × inputs ceiling (19,000 here), never on a company's 40-request cap, and it also has its own caps of 300 (GLEIF and TED) and 250 (TED).
+- The three-spelling query adds **no search requests**: still one POST per 100-company batch, 10 in every run.
+- The extra cost is one notice fetch per newly nominated notice (79 vs 76), plus retries on HTTP 202. Measured on the same day: +4 notice requests.
+- No company reached its cap in a branch run without also reaching it in revision-4.
+
+Full suite after the query change: **1,463 passed, 0 failed** (`pytest.txt`). Comparison data: `control-counts.json`, `budget-compare.json`.
