@@ -11,7 +11,8 @@ FORMS={'AS':'private limited company','ASA':'public limited company','ENK':'sole
 MONTHS=('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
 PLATFORMS={'facebook.com':'Facebook','linkedin.com':'LinkedIn','instagram.com':'Instagram','youtube.com':'YouTube',
            'tiktok.com':'TikTok','x.com':'X','twitter.com':'X','pinterest.com':'Pinterest','vimeo.com':'Vimeo',
-           'github.com':'GitHub','flickr.com':'Flickr'}
+           'github.com':'GitHub','flickr.com':'Flickr','threads.net':'Threads','threads.com':'Threads',
+           'snapchat.com':'Snapchat'}
 
 def short_date(value):
     try:

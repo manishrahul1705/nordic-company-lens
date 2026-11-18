@@ -28,6 +28,19 @@ def test_bounded_names_norwegian_variants_and_no_before_com():
     assert all('holding' not in u for u in bounded_variants('Nord Vest Holding AS'))
     assert len([c for c in generate({'name':'Long Trading Name AS'}) if c.origin=='legal_name_slug'])<=8
 
+
+def test_generate_skips_overlong_labels_and_retains_other_candidates():
+    # The joined spelling fits, while the hyphenated spelling is 64 bytes.
+    name = f"{'a' * 31} {'b' * 32} AS"
+    assert bounded_variants(name) == [f"{'a' * 31}{'b' * 32}.{suffix}" for suffix in ('no', 'com')]
+
+    candidates = generate({
+        'name': name + ' Services',
+        'website': 'https://exampleservices.no',
+        'subunits': [{'orgnr': OTHER, 'name': 'Branch Services AS'}],
+    })
+    assert {candidate.origin for candidate in candidates} == {'registry_website', 'subunit_name_slug'}
+
 @pytest.mark.parametrize('email,expected',[('office@exampleservices.no',True),('x@gmail.com',False),('x@outlook.com',False),('x@broadpark.no',False),('x@getmail.no',False),('x@online.no',False)])
 def test_email_nomination_excludes_providers_and_never_proves_itself(email,expected):
     nominated=[c for c in generate({**CONTEXT,'email':email}) if c.origin=='registry_email']
@@ -75,9 +88,10 @@ def test_header_footer_social_keeps_exact_handle_and_excludes_agency_share_home_
     assert set(links)=={'https://linkedin.com/company/exampleservices','https://instagram.com/exampleservices'}
     assert not profile_url('https://linkedin.com/')
 
-def test_group_suffixed_handle_without_declared_brand_is_not_relaxed():
+def test_group_suffix_is_dropped_by_social_token_matcher():
     p=page('<footer><a href="https://linkedin.com/company/exampleservices-group">Follow us</a></footer>')
-    assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url,'proof_page_url':p.url,'other_orgnrs':[]},CONTEXT)
+    assert set(attributed(p,{'identity_level':'VERIFIED','final_url':p.url,'proof_page_url':p.url,'other_orgnrs':[]},CONTEXT)) == {
+        'https://linkedin.com/company/exampleservices-group'}
 
 
 def test_proof_page_order_preserves_legacy_links_then_common_paths():

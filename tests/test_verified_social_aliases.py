@@ -11,9 +11,9 @@ CONTEXT = {'name': 'Example Trading AS'}
     ('<title>Northern Lights | Home</title>', 'northernlights'),
     ('<script type="application/ld+json">{"@type":"Organization","url":"https://northlight.no/","name":"Northern Lights","alternateName":"Aurora Shop"}</script>', 'aurorashop'),
 ])
-def test_verified_site_alias(metadata, handle):
+def test_verified_site_alias_does_not_replace_registered_company_name(metadata, handle):
     page = Page(('<head>'+metadata+'</head><footer><a href="https://instagram.com/'+handle+'">Instagram</a></footer>').encode(), PROOF['final_url'])
-    assert attributed(page, PROOF, CONTEXT)
+    assert not attributed(page, PROOF, CONTEXT)
     assert not attributed(page, {**PROOF, 'identity_level':'LOW'}, CONTEXT)
 
 @pytest.mark.parametrize('metadata,handle', [
