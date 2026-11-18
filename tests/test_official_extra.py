@@ -292,3 +292,62 @@ def test_new_child_authority_does_not_change_parent_national_id_acceptance():
     edge={'data':{'attributes':{'relationship':{'startNode':{'id':'LEICHILD'},'endNode':{'id':'PARENT'},'type':'IS_DIRECTLY_CONSOLIDATED_BY','status':'ACTIVE'}}}}
     section=parent_extract('LEICHILD','direct-parent',edge,parent,response(edge),response({'data':[parent]}),ORG)
     assert section.claims and 'organisation_number' not in section.claims[0].value
+
+
+def test_ted_identifier_normalisation_is_whitespace_only():
+    from signalpost.sources.official_extra import ted_orgnr,ted_query_values
+    for spelling in ('923609016','923 609 016','923\u202f609\u202f016','923\u00a0609 016',' 923609016 ','923  609\t016'):
+        assert ted_orgnr(spelling)=='923609016'
+    for bad in ('NO 923 609 016','NO923609016','923609016MVA','923 609 016 MVA','923-609-016','92360901','9236090160',None,923609016):
+        assert ted_orgnr(bad) is None
+    assert ted_query_values(['923609016'])=='("923609016" OR "923 609 016" OR "923\u202f609 016")'
+
+
+def live_ted(tmp_path,identifiers,body):
+    import httpx,time
+    from signalpost.sources.blobstore import BlobStore
+    from signalpost.sources.official_extra import collect
+    from tests.test_registry_changes import envelope
+    queries=[]
+    class Budget:
+        def __init__(self):self.deadline=time.monotonic()+60
+        def reserve(self,url,host,org):return {'url':url,'host':host}
+    def dispatch(request):
+        if request.url.host=='api.gleif.org':
+            return httpx.Response(200,json={'data':[],'meta':{'pagination':{'lastPage':1}}})
+        if request.url.host=='api.ted.europa.eu':
+            queries.append(json.loads(request.content)['query'])
+            return httpx.Response(200,json={'notices':[{'publication-number':'1-2026','notice-type':'can-standard',
+                'winner-identifier':list(identifiers)}],'totalNoticeCount':1})
+        return httpx.Response(200,text=body)
+    async def go():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch)) as client:
+            return await collect({ORG:envelope(ORG)},client,Budget(),BlobStore(tmp_path))
+    result,metrics=asyncio.run(go())
+    return [c for c in result[ORG].claims if c.field.startswith('procurement_award.')],metrics,queries
+
+
+@pytest.mark.parametrize('spelling',['923609016','923 609 016','923\u202f609 016'])
+def test_live_ted_nominates_whitespace_spellings_and_queries_both_forms(tmp_path,spelling):
+    awards,metrics,queries=live_ted(tmp_path,[spelling],xml(day=date.today().isoformat()))
+    assert metrics['tender_notices_nominated']==1 and len(awards)==1
+    assert '"923609016" OR "923 609 016" OR "923\u202f609 016"' in queries[0]
+
+
+@pytest.mark.parametrize('spelling',['NO923609016','923609016MVA','NO 923 609 016','92360901','923-609-016'])
+def test_live_ted_never_nominates_other_identifier_material(tmp_path,spelling):
+    awards,metrics,_=live_ted(tmp_path,[spelling],xml(day=date.today().isoformat()))
+    assert metrics['tender_notices_nominated']==0 and not awards
+
+
+def test_live_ted_spaced_nomination_still_needs_the_exact_xml_company(tmp_path):
+    awards,metrics,_=live_ted(tmp_path,['923 609 016'],xml(winner='999999999',day=date.today().isoformat()))
+    assert metrics['tender_notices_nominated']==1 and not awards
+
+
+def test_xml_company_id_whitespace_is_normalised_but_the_number_must_be_exact():
+    def parse(winner):
+        return award_extract(response(xml(winner=winner,day='2026-10-01'),'https://ted.europa.eu/en/notice/1-2026/xml'),'1-2026',ORG,date(2026,11,7)).claims
+    for spelling in ('923 609 016','923\u202f609\u202f016','923\u00a0609\u00a0016','NO 923 609 016 MVA','923609016'):
+        assert parse(spelling)
+    assert not parse('923 609 01') and not parse('923 609 0160') and not parse('923-609-016')
