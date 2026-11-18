@@ -1,0 +1,118 @@
+{
+ "rev4": {
+  "requests": 9504,
+  "request_log": 9504,
+  "pooled_cap": 19000,
+  "limits": {
+   "max_requests": 19000,
+   "max_cost_usd": 0.0,
+   "time_budget_seconds": 2400.0,
+   "deadline_fraction": 0.85,
+   "request_timeout": 10.0,
+   "host_concurrency": 10,
+   "hard_max_requests": 19000,
+   "hard_time_budget_seconds": 24000
+  },
+  "ted_requests": 131,
+  "ted_search": 10,
+  "ted_notice_xml": 121,
+  "ted_attributed_to": [
+   "__official_extra__"
+  ],
+  "official_extra_requests": 168,
+  "max_requests_per_company": 40,
+  "companies_at_40": [
+   "922828172",
+   "923998012",
+   "927211033",
+   "935486807",
+   "976289862",
+   "980973549",
+   "987002808",
+   "989127934",
+   "999536999"
+  ],
+  "deadline_hits": 0,
+  "budget_rejections": {},
+  "rejection_reasons": {
+   "budget_exhausted": 16
+  }
+ },
+ "branch": {
+  "requests": 9493,
+  "request_log": 9493,
+  "pooled_cap": 19000,
+  "limits": {
+   "max_requests": 19000,
+   "max_cost_usd": 0.0,
+   "time_budget_seconds": 2400.0,
+   "deadline_fraction": 0.85,
+   "request_timeout": 10.0,
+   "host_concurrency": 10,
+   "hard_max_requests": 19000,
+   "hard_time_budget_seconds": 24000
+  },
+  "ted_requests": 135,
+  "ted_search": 10,
+  "ted_notice_xml": 125,
+  "ted_attributed_to": [
+   "__official_extra__"
+  ],
+  "official_extra_requests": 172,
+  "max_requests_per_company": 40,
+  "companies_at_40": [
+   "922828172",
+   "923998012",
+   "927211033",
+   "935486807",
+   "976289862",
+   "980973549",
+   "987002808",
+   "989127934",
+   "999536999"
+  ],
+  "deadline_hits": 0,
+  "budget_rejections": {},
+  "rejection_reasons": {
+   "budget_exhausted": 16
+  }
+ },
+ "branch_rerun": {
+  "requests": 9526,
+  "request_log": 9526,
+  "pooled_cap": 19000,
+  "limits": {
+   "max_requests": 19000,
+   "max_cost_usd": 0.0,
+   "time_budget_seconds": 2400.0,
+   "deadline_fraction": 0.85,
+   "request_timeout": 10.0,
+   "host_concurrency": 10,
+   "hard_max_requests": 19000,
+   "hard_time_budget_seconds": 24000
+  },
+  "ted_requests": 145,
+  "ted_search": 10,
+  "ted_notice_xml": 135,
+  "ted_attributed_to": [
+   "__official_extra__"
+  ],
+  "official_extra_requests": 182,
+  "max_requests_per_company": 40,
+  "companies_at_40": [
+   "922828172",
+   "923998012",
+   "927211033",
+   "935486807",
+   "976289862",
+   "987002808",
+   "989127934",
+   "999536999"
+  ],
+  "deadline_hits": 0,
+  "budget_rejections": {},
+  "rejection_reasons": {
+   "budget_exhausted": 16
+  }
+ }
+}

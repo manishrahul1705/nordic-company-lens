@@ -28,6 +28,31 @@ def gleif_orgnr(value):
     return re.sub(r'\s+','',value)
 
 
+def ted_orgnr(value):
+    """Whitespace-only normalisation of a TED winner/buyer identifier.
+
+    The identifier must consist of digits and whitespace only and become an exact,
+    complete nine-digit number; prefixes, suffixes and other material never match.
+    """
+    if not isinstance(value,str) or not re.fullmatch(r'[0-9\s]+',value):return None
+    compact=re.sub(r'\s+','',value)
+    return compact if re.fullmatch(r'[0-9]{9}',compact) else None
+
+
+def ted_nominated(numbers,identifiers):
+    return set(numbers)&{n for n in map(ted_orgnr,identifiers) if n}
+
+
+def ted_query_values(numbers):
+    """TED's identifier search matches exact strings: send the plain number, ``ddd ddd ddd``
+    and the observed narrow-no-break-space form (U+202F after the first group, then an ASCII space). Nomination still
+    applies ``ted_orgnr`` to whatever comes back."""
+    def spellings(n):
+        a,b,c=n[:3],n[3:6],n[6:]
+        return (n,a+' '+b+' '+c,a+'\N{NARROW NO-BREAK SPACE}'+b+' '+c)
+    return '("'+'" OR "'.join(value for number in numbers for value in spellings(number))+'")'
+
+
 def gleif_lookup_numbers(numbers):
     return ','.join(value for number in numbers for value in (number,' '.join((number[:3],number[3:6],number[6:]))))
 
@@ -80,7 +105,8 @@ def award_extract(response,notice,org,now):
     for company in root.findall('.//efac:Organizations/efac:Organization/efac:Company',NS):
         ident=text(company,'cac:PartyIdentification/cbc:ID')
         national=text(company,'cac:PartyLegalEntity/cbc:CompanyID') or ''
-        national=re.sub(r'^NO\s*|\s*MVA$','',national,flags=re.I).replace(' ','')
+        # Whitespace-only normalisation (any Unicode whitespace); NO/MVA handling is unchanged.
+        national=re.sub(r'\s+','',re.sub(r'^NO\s*|\s*MVA$','',national,flags=re.I))
         country=text(company,'cac:PostalAddress/cac:Country/cbc:IdentificationCode')
         organisations[ident]={'name':text(company,'cac:PartyName/cbc:Name'),'orgnr':national,'country':country}
     buyers={text(p,'cac:Party/cac:PartyIdentification/cbc:ID') for p in root.findall('./cac:ContractingParty',NS)}
@@ -240,7 +266,7 @@ async def collect(envelopes,client,budget,blobs):
     try:since=since.replace(year=since.year-3)
     except ValueError:since=since.replace(year=since.year-3,day=28)
     for start in range(0,len(orgs),100):
-        nums=orgs[start:start+100];values='("'+'" OR "'.join(nums)+'")'
+        nums=orgs[start:start+100];values=ted_query_values(nums)
         query='(winner-identifier = '+values+' OR buyer-identifier = '+values+') AND notice-type = (can-standard OR can-social) AND publication-date >= '+since.strftime('%Y%m%d')
         try:
             for page in range(1,11):
@@ -249,7 +275,7 @@ async def collect(envelopes,client,budget,blobs):
                 if data.get('timedOut'):raise SourceFailure('extra_query_timeout')
                 for item in data['notices']:
                     if item.get('notice-type') not in {'can-standard','can-social'}:continue
-                    scope=set(nums)&set(item.get('winner-identifier',[])+item.get('buyer-identifier',[]))
+                    scope=ted_nominated(nums,(item.get('winner-identifier') or [])+(item.get('buyer-identifier') or []))
                     if scope:
                         notice=item['publication-number']
                         notices.setdefault(notice,set()).update(scope)

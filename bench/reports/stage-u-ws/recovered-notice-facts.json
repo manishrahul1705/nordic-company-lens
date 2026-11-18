@@ -1,0 +1,118 @@
+[
+ {
+  "notice": "170520-2025",
+  "xml_source": "live run 2026-11-16, HTTP 200",
+  "xml_sha256": "c16fd18ed339274a6c4320dbbbf8a8c327b7f919c715a03f9952e225a9b4d89d",
+  "orgnr": "984024290",
+  "registry_legal_name": "VEIDEKKE ENTREPRENØR AS",
+  "xml_party_name": "Veidekke Entreprenør AS",
+  "xml_company_id_line": "<cbc:CompanyID schemeID=\"002\">984 024 290</cbc:CompanyID>",
+  "company_id_non_digit_codepoints": [
+   "0x20",
+   "0x20"
+  ],
+  "ted_orgnr_of_xml_value": "984024290",
+  "xml_org_ident": "ORG-0005",
+  "role_in_xml": "tenderer",
+  "tendering_parties": [
+   "TPA-0003"
+  ],
+  "own_lot_tenders": [
+   "TEN-0003"
+  ],
+  "contracts": [
+   {
+    "id": "CON-0001",
+    "award_date": "2025-02-21Z",
+    "lot_tenders": [
+     "TEN-0001"
+    ]
+   }
+  ],
+  "contracts_won": [],
+  "published_claims": 0
+ },
+ {
+  "notice": "404734-2025",
+  "xml_source": "live run 2026-11-16, HTTP 200",
+  "xml_sha256": "e40b8830dcaceb695a36551cc8be390f21f8b54b1df4eaf6e1b9cd9d13282fc8",
+  "orgnr": "922828172",
+  "registry_legal_name": "TENSIO AS",
+  "xml_party_name": "Tensio as",
+  "xml_company_id_line": "<cbc:CompanyID>922 828 172</cbc:CompanyID>",
+  "company_id_non_digit_codepoints": [
+   "0x20",
+   "0x20"
+  ],
+  "ted_orgnr_of_xml_value": "922828172",
+  "xml_org_ident": "ORG-0009",
+  "role_in_xml": "buyer",
+  "tendering_parties": [],
+  "own_lot_tenders": [],
+  "contracts": [
+   {
+    "id": "CON-0001",
+    "award_date": null,
+    "lot_tenders": [
+     "TEN-0001"
+    ]
+   },
+   {
+    "id": "CON-0002",
+    "award_date": null,
+    "lot_tenders": [
+     "TEN-0002"
+    ]
+   }
+  ],
+  "contracts_won": [],
+  "published_claims": 0
+ },
+ {
+  "notice": "94190-2025",
+  "xml_source": "parked snapshot build cache; not returned by the live query",
+  "xml_sha256": "a7c060e0fd93e2d2cb41eece45068b39453391c8782648c9d18d28d4a5156e75",
+  "orgnr": "984024290",
+  "registry_legal_name": "VEIDEKKE ENTREPRENØR AS",
+  "xml_party_name": "Veidekke Entreprenør AS",
+  "xml_company_id_line": "<cbc:CompanyID schemeID=\"002\">984 024 290</cbc:CompanyID>",
+  "company_id_non_digit_codepoints": [
+   "0x202f",
+   "0x20"
+  ],
+  "ted_orgnr_of_xml_value": "984024290",
+  "xml_org_ident": "ORG-0009",
+  "role_in_xml": "tenderer",
+  "tendering_parties": [
+   "TPA-0007"
+  ],
+  "own_lot_tenders": [
+   "TEN-0007"
+  ],
+  "contracts": [
+   {
+    "id": "CON-0001",
+    "award_date": null,
+    "lot_tenders": [
+     "TEN-0003"
+    ]
+   },
+   {
+    "id": "CON-0002",
+    "award_date": null,
+    "lot_tenders": [
+     "TEN-0006"
+    ]
+   },
+   {
+    "id": "CON-0003",
+    "award_date": null,
+    "lot_tenders": [
+     "TEN-0008"
+    ]
+   }
+  ],
+  "contracts_won": [],
+  "published_claims": 0
+ }
+]
