@@ -145,9 +145,29 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     if (cleaned_brand and len(cleaned_brand) <= 100 and "\ufffd" not in cleaned_brand
             and norm_b not in generic_brands
             and not is_generic_tagline
-            and norm_b != legal_name(legal_name_val)):
+            and norm_b != legal_name(legal_name_val)
+            and shares_identity_token(cleaned_brand, legal_name_val, page.url)):
         return cleaned_brand
     return None
+
+
+BRAND_TOKEN_STOPWORDS = {"og", "and", "the", "for", "med", "til", "av", "som", "www", "no", "com", "net", "org"}
+
+
+def identity_tokens(value):
+    """Lowercased, æøå-transliterated word tokens without legal suffixes or filler words."""
+    text = str(value or "").casefold().replace("æ", "ae").replace("ø", "o").replace("å", "a")
+    text = legal_name(text)
+    tokens = set(re.findall(r"[a-z0-9]+", text))
+    return {t for t in tokens if len(t) >= 3 and t not in BRAND_TOKEN_STOPWORDS}
+
+
+def shares_identity_token(brand, legal_name_val, url):
+    """A brand must share a token with the legal name or the verified site's domain label.
+    A page tagline ("Digitale løsninger som gir resultater") shares neither."""
+    label = domain(url).split(".")[0] if url else ""
+    allowed = identity_tokens(legal_name_val) | identity_tokens(label.replace("-", " ")) | ({label} if len(label) >= 3 else set())
+    return bool(identity_tokens(brand) & allowed)
 
 
 def registry_context(envelope, bulk, blobs):
