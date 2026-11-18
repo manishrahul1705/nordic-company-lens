@@ -1,0 +1,109 @@
+{
+  "http_requests": 0,
+  "companies": 114,
+  "old_published": 33,
+  "new_published": 32,
+  "old_recompute_vs_published": {
+    "matches_run": 110,
+    "differs_from_run": 4,
+    "differs": [
+      {
+        "orgnr": "911691248",
+        "run": null,
+        "recomputed_old": "peder istad",
+        "page": "https://www.pederistad.no/"
+      },
+      {
+        "orgnr": "916126700",
+        "run": null,
+        "recomputed_old": "Altihhh",
+        "page": "https://www.altihhh.no/"
+      },
+      {
+        "orgnr": "986927646",
+        "run": null,
+        "recomputed_old": "Aquafarm",
+        "page": "https://aquafarm.no/"
+      },
+      {
+        "orgnr": "990033897",
+        "run": null,
+        "recomputed_old": "EQ Institute",
+        "page": "https://eqi.no/"
+      }
+    ]
+  },
+  "changed": 7,
+  "changes": [
+    {
+      "orgnr": "922767459",
+      "legal_name": "SKOGLUND MASKIN AS",
+      "page": "https://skoglundmaskin.no/",
+      "title": "Skoglund Maskin AS – Graving, Drenering, Transport, Entreprenør og Støttemur",
+      "og_site_name": null,
+      "old": "Skoglund Maskin AS – Graving, Drenering, Transport, Entreprenør og Støttemur",
+      "new": null,
+      "cause": "encoding literals"
+    },
+    {
+      "orgnr": "935180678",
+      "legal_name": "RENEFFEKT AS",
+      "page": "https://reneffekt.no/",
+      "title": "Profesjonelt rengjøringsfirma Reneffekt – rengjøringstjenester |",
+      "og_site_name": null,
+      "old": "Profesjonelt rengjøringsfirma Reneffekt – rengjøringstjenester |",
+      "new": "Profesjonelt rengjøringsfirma Reneffekt",
+      "cause": "encoding literals"
+    },
+    {
+      "orgnr": "922828172",
+      "legal_name": "TENSIO AS",
+      "page": "https://www.tensio.no/no/kunde/kontakt-oss",
+      "title": "Kontaktinformasjon for kunder av Tensio",
+      "og_site_name": null,
+      "old": "Kontaktinformasjon for kunder av Tensio",
+      "new": null,
+      "cause": "page words"
+    },
+    {
+      "orgnr": "992868775",
+      "legal_name": "ALFA LAGERHOTELL AS",
+      "page": "http://alfalagerhotell.no/",
+      "title": "Alfa Lagerhotell – Et hjem for alt",
+      "og_site_name": null,
+      "old": "Alfa Lagerhotell – Et hjem for alt",
+      "new": null,
+      "cause": "encoding literals"
+    },
+    {
+      "orgnr": "918486666",
+      "legal_name": "ANTISINK AS",
+      "page": "https://www.antisink.no/contact-us",
+      "title": "Contact Us | Antisink Systems",
+      "og_site_name": null,
+      "old": null,
+      "new": "Antisink Systems",
+      "cause": "page words"
+    },
+    {
+      "orgnr": "993484407",
+      "legal_name": "DRØBAK MONTESSORI UNGDOMSSKOLE AS",
+      "page": "https://drobakmontessori.no/",
+      "title": "Drøbak Montessori – Med barnet i fokus",
+      "og_site_name": null,
+      "old": null,
+      "new": "Drøbak Montessori",
+      "cause": "encoding literals"
+    },
+    {
+      "orgnr": "921320868",
+      "legal_name": "KITCHEN & LIVING GROUP AS",
+      "page": "https://www.kjokkenfronter.no/om-oss/",
+      "title": "Kjøkkenfronter.no – Kjokkenfronter.no",
+      "og_site_name": null,
+      "old": "Kjøkkenfronter.no – Kjokkenfronter.no",
+      "new": "Kjøkkenfronter.no",
+      "cause": "encoding literals"
+    }
+  ]
+}

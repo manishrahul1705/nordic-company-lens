@@ -73,6 +73,31 @@ def extract_rss_domains(xml_body, legal_nm, brand_nm):
     return discovered
 
 
+PAGE_WORDS = (
+    "kontaktinformasjon", "kontakt oss", "kontakt", "om oss", "velkommen til", "velkommen",
+    "hjemmeside", "hjem", "forside",
+    "contact information", "contact us", "contact", "about us", "welcome to", "welcome",
+    "homepage", "home page", "home",
+)
+_PAGE_WORD_PREFIX = re.compile(
+    r"^\s*(?:" + "|".join(re.escape(w).replace(r"\ ", r"\s+") for w in PAGE_WORDS) + r")(?![\wæøåÆØÅ])[\s\-–—|:,.]*",
+    re.I)
+
+
+def strip_page_words(value):
+    """Remove leading generic page words; None when nothing distinctive remains."""
+    text = str(value or "")
+    while (stripped := _PAGE_WORD_PREFIX.sub("", text, count=1)) != text:
+        text = stripped
+    text = text.strip(" .,-–—|:")
+    # "Kontaktinformasjon for kunder av Tensio" leaves a sentence fragment, not a name.
+    if text != str(value or "").strip() and re.match(
+            r"(?:for|av|til|med|i|på|og|om|hos|fra|of|to|with|at|in|on|and|from)\b", text, re.I):
+        return None
+    compact_text = re.sub(r"[^\wæøå]", "", text.casefold())
+    return text if len(compact_text) >= 3 else None
+
+
 def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     """
     Extracts verified public brand from page, withholding generic storefront taglines,
@@ -82,9 +107,11 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     if candidate_brand:
         candidate_brand = html.unescape(candidate_brand).strip()
     else:
-        parts = [html.unescape(p).strip() for p in re.split(r"\s+[|â€“-]\s+", page.title) if p.strip()]
+        parts = [html.unescape(p).strip() for p in re.split(r"\s+[|–-]\s+", page.title) if p.strip()]
+        while len(parts) > 1 and strip_page_words(parts[0]) is None:
+            parts = parts[1:]  # "Kontakt oss | Acme": the leading part names the page.
         if parts:
-            generic_store_words = {"nettbutikk", "fiskeutstyr", "bÃ¥tutstyr", "butikk", "webshop", "forside", "hjem", "velkommen", "home", "shop", "online"}
+            generic_store_words = {"nettbutikk", "fiskeutstyr", "båtutstyr", "butikk", "webshop", "forside", "hjem", "velkommen", "home", "shop", "online"}
             p0_lower = parts[0].lower()
             if any(w in p0_lower for w in generic_store_words) and len(parts) > 1:
                 candidate_brand = parts[-1]
@@ -93,9 +120,15 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
 
     if not candidate_brand:
         return None
+    # A page title often leads with the page's purpose ("Kontaktinformasjon Falsen
+    # Transport"). Those words describe the page, not the company: strip them, and
+    # withhold the brand if nothing distinctive remains.
+    candidate_brand = strip_page_words(candidate_brand)
+    if not candidate_brand:
+        return None
 
-    cleaned_brand = re.sub(r"\s*[-â€“|:]?\s*(?:org(?:anisasjons)?\.?\s*nr\.?|organisasjonsnummer)\s*[:.]?\s*\d{9}\b.*$", "", candidate_brand, flags=re.I).strip(" .,-")
-    cleaned_brand = re.sub(r"\s*[-â€“|:]\s*(?:nettbutikk|butikk|webshop|forside|hjem|velkommen|home|shop|store)\b.*$", "", cleaned_brand, flags=re.I).strip(" .,-")
+    cleaned_brand = re.sub(r"\s*[-–|:]?\s*(?:org(?:anisasjons)?\.?\s*nr\.?|organisasjonsnummer)\s*[:.]?\s*\d{9}\b.*$", "", candidate_brand, flags=re.I).strip(" .,-")
+    cleaned_brand = re.sub(r"\s*[-–|:]\s*(?:nettbutikk|butikk|webshop|forside|hjem|velkommen|home|shop|store)\b.*$", "", cleaned_brand, flags=re.I).strip(" .,-")
     norm_b = legal_name(cleaned_brand)
     generic_brands = {
         "home", "hjem", "welcome", "velkommen", "kontakt", "contact",
@@ -106,8 +139,8 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     is_generic_tagline = (
         re.search(r"\b(?:din|ditt)\s+\w+", cleaned_brand, re.I) is not None
         or re.search(r"\b(?:kontakt|contact)\b", cleaned_brand, re.I) is not None
-        or re.search(r"\b(?:vilk[aÃ¥]r|betingelser|privacy|personvern)\b", cleaned_brand, re.I) is not None
-        or (re.search(r"\bi\s+[A-ZÃ†Ã˜Ã…a-zÃ¦Ã¸Ã¥]{3,}\b", cleaned_brand) is not None and len(cleaned_brand.split()) > 3)
+        or re.search(r"\b(?:vilk[aå]r|betingelser|privacy|personvern)\b", cleaned_brand, re.I) is not None
+        or (re.search(r"\bi\s+[A-ZÆØÅa-zæøå]{3,}\b", cleaned_brand) is not None and len(cleaned_brand.split()) > 3)
     )
     if (cleaned_brand and len(cleaned_brand) <= 100 and "\ufffd" not in cleaned_brand
             and norm_b not in generic_brands
