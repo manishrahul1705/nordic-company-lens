@@ -109,3 +109,26 @@ Rendered pages (`site-pages/`, open `site-pages/c/<org>.html`):
 | not compared: accounts failed | 926077422 | NRP ANAXO NORDIC M2 |
 
 Full suite after the revision: **1460 passed, 0 failed** (`pytest.txt`).
+
+## Revision: test count and SSB division titles (2026-11-18)
+
+**Test count.** No test was lost or renamed.
+- `revision-4` now includes the Stage U merge 57e1a7b, which carries Stage U's 11 tests: 1,452 + 11 = 1,463.
+- This branch was cut from 701afaa, before that merge, and adds 8 Stage V tests: 1,452 + 8 = 1,460. One more test was added below, giving 1,461.
+- The gap of 3 is net: 11 Stage U tests not on this branch, against Stage V's own 8. The Stage U tests are intact in `revision-4`.
+- They join this branch when `revision-4` is merged into it. That merge was not made, as instructed.
+
+**Division titles.** Each comparison group is named by its two-digit SSB KLASS English title (`nace.division_title`), taken from the already bundled, dated SSB snapshots (`ssb-sn2025-en-2026-10-13.json`, `ssb-sn2007-en-2026-10-13.json`). No new download was made.
+- The title comes from the version whose subclass label matches the company's registered code, otherwise SN2025.
+- The group is labelled as the comparison group, never as the company's activity: "Among the 37 other companies in this run in the comparison group NACE division 47 (retail trade) with FY2025 accounts, its FY2025 operating revenue of NOK 1,818,468 is higher than 24% of them."
+
+**Gates rerun** (`bench/runs/stage-v3`, frozen 1,000):
+- Run: exit 0, 1,000 envelopes, 0 warnings, 0 deadline hits, 9,321 HTTP (4,028 registry, identical to the control).
+- **Strict verifier: PASS**, 0 unverified values.
+- 0 empty sections across all seven, 0 unresolved citations.
+- Standing: 581 percentiles, 140 too thin, 13 with no comparable company in the run, 266 not compared. All 734 sentences that name a group carry its division title.
+- Site: all 1,000 pages show every sentence byte-exact, in output order.
+- Repetition checks: unchanged (see `repetition-check.json`).
+- 0 national-comparison wordings.
+- **Full suite: 1,461 passed, 0 failed.**
+- The 10 sample pages in `site-pages/` were refreshed from this run.

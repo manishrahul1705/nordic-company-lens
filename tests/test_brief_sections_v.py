@@ -37,13 +37,13 @@ def test_percentile_and_thin_comparison(tmp_path):
     rows = cohort_of(tmp_path, 12)
     index = build_index(rows)
     top = generate(rows[-1], context(rows[-1], index)).sections.standing[0].text
-    assert top.startswith('Among the 12 other companies in this run in NACE division ') and ' accounts, its FY2025 operating revenue of NOK ' in top and top.endswith('is higher than 100% of them.')
+    assert top.startswith('Among the 12 other companies in this run in the comparison group NACE division ') and ' accounts, its FY2025 operating revenue of NOK ' in top and top.endswith('is higher than 100% of them.')
     few = cohort_of(tmp_path / 'few', 3)
     thin = generate(few[0], context(few[0], build_index(few))).sections.standing[0].text
-    assert thin.startswith('Only 3 other companies in this run are in NACE division ') and 'fewer than the 10 needed' in thin and 'not ranked' in thin
+    assert thin.startswith('Only 3 other companies in this run are in the comparison group NACE division ') and 'fewer than the 10 needed' in thin and 'not ranked' in thin
     alone = cohort_of(tmp_path / 'alone', 0)
     none = generate(alone[0], context(alone[0], build_index(alone))).sections.standing[0].text
-    assert none.startswith('No other company in this run is in NACE division ') and '0 other' not in none
+    assert none.startswith('No other company in this run is in the comparison group NACE division ') and '0 other' not in none
 
 
 def test_forged_standing_or_cohort_is_rejected(tmp_path):
@@ -104,3 +104,9 @@ def test_site_renders_all_seven_sections_with_the_output_text_and_order(tmp_path
         for sentence in synthesis['sections'][key]:
             position = page.index(sentence['text'], position)
     assert '[why]' in page and '[source]' in page
+
+
+def test_comparison_group_names_the_ssb_division_title():
+    from signalpost.synthesis.nace import division_title
+    assert division_title({'kode': '47.690', 'beskrivelse': 'Detaljhandel med kulturvarer ikke nevnt annet sted'}) == 'Retail trade'
+    assert division_title({'kode': '00.000', 'beskrivelse': 'Uoppgitt'}) is None

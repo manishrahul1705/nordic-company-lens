@@ -170,7 +170,11 @@ def standing(envelope, cohort):
     record = cohort.standing if cohort is not None else None
     others = [c.value for c in record.comparables] if record is not None else []
     n = len(others)
-    basis = 'in NACE division ' + group + ' with FY' + year + ' accounts'
+    # The division is named only as the comparison group, never as the company's activity.
+    from .nace import division_title
+    title = division_title(nace.value)
+    label = 'NACE division ' + group + (' (' + title[:1].lower() + title[1:] + ')' if title else '')
+    basis = 'in the comparison group ' + label + ' with FY' + year + ' accounts'
     if n == 0:
         return [Sentence(text='No other company in this run is ' + basis + ', so its FY' + year + ' operating revenue of '
                          + amount + ' is not compared.', claim_ids=[revenue.id, nace.id], value_kind='derived')]
