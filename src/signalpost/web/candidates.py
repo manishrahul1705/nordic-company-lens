@@ -66,7 +66,11 @@ def bounded_variants(name):
         for separator in ('','-'):
             label = separator.join(converted)
             if len(label) >= 4:
-                labels.append(label.encode('idna').decode('ascii'))
+                try:
+                    encoded = label.encode('idna').decode('ascii')
+                except UnicodeError:
+                    continue
+                labels.append(encoded)
     labels = list(dict.fromkeys(labels))
     return [label+'.'+suffix for suffix in ('no','com') for label in labels][:8]
 

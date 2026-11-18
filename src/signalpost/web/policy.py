@@ -90,7 +90,9 @@ class DNSFallbackBudget:
 DNS_FALLBACK_STATE = ContextVar('signalpost_dns_fallback_state', default=None)
 DNS_FALLBACK_RESOLVER_TIMEOUT_SECONDS = 2.0
 DNS_FALLBACK_COMPANY_CAP_SECONDS = 10.0
-SOCIAL = {"facebook.com", "instagram.com", "linkedin.com", "x.com", "twitter.com", "youtube.com", "tiktok.com"}
+REGISTRY_SOCIAL = {"facebook.com", "instagram.com", "linkedin.com", "x.com", "twitter.com",
+                   "youtube.com", "tiktok.com"}
+SOCIAL = REGISTRY_SOCIAL | {"lnkd.in", "threads.net", "threads.com", "vimeo.com", "snapchat.com"}
 DIRECTORIES = {"proff.no", "proff.com", "proff.dk", "proff.se", "gulesider.no", "1881.no", "purehelp.no", "finn.no", "fb.me", "fb.com", "youtu.be", "lnkd.in", "t.co", "threads.net"}
 # These services reproduce registry identity/contact data; a matching company
 # entry is not evidence that the company owns the service's website.

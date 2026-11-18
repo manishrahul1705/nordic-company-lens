@@ -4,7 +4,12 @@ import json
 import sys
 from pathlib import Path
 from .config import Config
-from .runner import run
+from .runner import IdentityOutage, run
+
+
+# Exit code when the run stops early because the identity registry is unreachable
+# (see runner.IDENTITY_OUTAGE_SAMPLE).
+IDENTITY_OUTAGE_EXIT = 3
 
 
 def main(argv=None):
@@ -90,6 +95,9 @@ def main(argv=None):
         report = asyncio.run(run(config))
         print(json.dumps({k: report[k] for k in ("emitted_envelopes", "invalid_inputs", "requests", "runtime_ms", "changes",'observation_changes', "deadline_hits", "warnings")}, ensure_ascii=False))
         return 0
+    except IdentityOutage as exc:
+        print(f"signalpost aborted: {exc}", file=sys.stderr)
+        return IDENTITY_OUTAGE_EXIT
     except Exception as exc:
         print(f"signalpost could not produce output: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 1

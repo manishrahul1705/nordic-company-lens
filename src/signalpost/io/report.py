@@ -117,6 +117,22 @@ def compute_rejection_reasons(envelopes):
     return dict(reasons)
 
 
+def run_outcome(envelopes):
+    """Run status from actual section outcomes, using the same success rule as progress.json:
+    a company succeeded unless every one of its sections failed."""
+    envelopes = list(envelopes)
+    families = sorted({f for e in envelopes for f in e.modules})
+    source_errors = {f: sum(e.modules[f].state == 'source_error' for e in envelopes if f in e.modules) for f in families}
+    succeeded = sum(not all(s == 'failed' for s in e.run.sections.values()) for e in envelopes)
+    failed = len(envelopes) - succeeded
+    fully = sum(all(m.state != 'source_error' for m in e.modules.values()) for e in envelopes)
+    return {'run_status': 'completed' if not failed else 'failed',
+            'success_rate': round(succeeded / len(envelopes), 4) if envelopes else 0.0,
+            'companies_succeeded': succeeded, 'companies_failed': failed,
+            'companies_without_source_errors': fully,
+            'source_errors_by_family': source_errors}
+
+
 def build(envelopes, inputs, budget, config, warnings, runtime):
     unrecognised_flags = getattr(config, 'unrecognised_flags', [])
     if unrecognised_flags:
@@ -131,7 +147,8 @@ def build(envelopes, inputs, budget, config, warnings, runtime):
     funnel = compute_funnel_metrics(envelopes, inputs, budget)
     rejection_reasons = compute_rejection_reasons(envelopes)
 
-    return {"run_id": config.run_id, "input_rows": len(inputs.rows), "unique_inputs": len(inputs.unique),
+    outcome = run_outcome(unique.values())
+    return {"run_id": config.run_id, **outcome, "input_rows": len(inputs.rows), "unique_inputs": len(inputs.unique),
             'emit_duplicates':config.emit_duplicates,
             "emitted_envelopes": len(envelopes), "duplicates": inputs.duplicates, "invalid_inputs": inputs.invalid,
             "counts_by_state": dict(Counter(e.state for e in envelopes)),

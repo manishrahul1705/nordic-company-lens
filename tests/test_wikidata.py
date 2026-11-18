@@ -101,7 +101,7 @@ def test_wikidata_social_requires_site_link_or_matching_exact_org_handle(tmp_pat
     assert any(c.value['url']=='https://www.facebook.com/unrelated-shared-parent' for c in row.claims if c.field.startswith('social_profile.'))
 
 
-def test_wikidata_social_accepts_verified_domain_and_declared_brand_aliases(tmp_path):
+def test_wikidata_social_does_not_accept_website_or_public_brand_aliases(tmp_path):
     cfg=config(tmp_path,[ORG],websites=True,wikidata=True);blobs=BlobStore(cfg.state_dir);blobs.put(BODY)
     index={'records':{ORG:[
         {'org':ORG,'item':'https://www.wikidata.org/wiki/Q123456','property':'P2013','value':'declaredbrand',
@@ -120,7 +120,7 @@ def test_wikidata_social_accepts_verified_domain_and_declared_brand_aliases(tmp_
     from signalpost.web.social import drop_shared
     drop_shared([row],blobs)
     urls={c.value['url'] for c in row.claims if c.field.startswith('social_profile.')}
-    assert urls=={'https://www.facebook.com/declaredbrand','https://www.instagram.com/verifieddomain'}
+    assert urls==set()
 
 
 @pytest.mark.parametrize('failure',['timeout','malformed'])

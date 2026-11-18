@@ -1,9 +1,14 @@
 import re
-from urllib.parse import urlsplit, urlunsplit, unquote, urljoin
+from urllib.parse import parse_qs, urlsplit, urlunsplit, unquote, urljoin
 import unicodedata
 from .candidates import legal_name
 from .policy import SOCIAL, domain
 from .html import json_values
+
+VIMEO_RESERVED = {'about', 'blog', 'channels', 'create', 'features', 'help', 'join', 'log_in',
+                  'manage', 'ondemand', 'ott', 'pricing', 'settings', 'showcase', 'staffpicks',
+                  'stock', 'terms', 'upgrade', 'upload'}
+REDIRECT_PARAMETERS = {'url', 'u', 'redirect', 'redirect_to', 'redirect_uri', 'destination', 'target', 'next'}
 
 
 def profile_url(url):
@@ -13,7 +18,14 @@ def profile_url(url):
     except (TypeError, ValueError):
         # Broken third-party sameAs values must not discard valid site proof.
         return None
-    if p.scheme not in {"http", "https"} or root not in SOCIAL:
+    if p.scheme not in {"http", "https"} or root not in SOCIAL or p.username is not None or p.password is not None:
+        return None
+    # LinkedIn short links are opaque redirects. The destination cannot be
+    # attributed from the fetched company page without following the link.
+    host = (p.hostname or "").lower()
+    if root == "lnkd.in" or host.startswith(("l.", "link.", "links.", "go.", "redirect.", "player.")):
+        return None
+    if any(key.casefold() in REDIRECT_PARAMETERS for key in parse_qs(p.query, keep_blank_values=True)):
         return None
     if re.search(r'\s',unquote(p.path)):
         return None
@@ -21,7 +33,10 @@ def profile_url(url):
     if not bits:
         return None
     lowered = [unquote(x).lower() for x in bits]
-    if any(x in {"share", "sharer", "sharer.php", "intent", "login", "explore", "hashtag", "search", "privacy", "watch", "p", "reel", "reels", "profile.php", "l.php", "dialog", "status", "statuses", "posts", "videos", "photos", "events", "groups", "plugins"} for x in lowered):
+    if any(not x or x in {'.', '..'} or re.search(r'[/\\?#\x00-\x1f\x7f]', x) for x in lowered):
+        return None
+    if any(x in {"share", "sharer", "sharer.php", "intent", "login", "explore", "hashtag", "search", "privacy", "watch", "p", "reel", "reels", "profile.php", "l.php", "dialog", "status", "statuses", "posts", "videos", "photos", "events", "groups", "plugins"}
+           for i, x in enumerate(lowered) if (root, i, x) != ("snapchat.com", 0, "p")):
         return None
     blocked = {'wix','squarespace','wordpress','shopify','webflow','jimdo','onecom','domeneshop','1881','gulesider','proff','purehelp'}
     if any(any(compact(unquote(bit)) == brand + suffix for brand in blocked for suffix in ('','com','no','norge','official')) or re.search(r'(?:agency|byraa|webdesign)', compact(unquote(bit))) or compact(unquote(bit)) in {'home','other','design','agency'} for bit in bits):
@@ -34,10 +49,14 @@ def profile_url(url):
     elif root == "facebook.com":
         allowed = len(bits) == 1 or (len(bits) == 3 and lowered[0] == "pages")
     elif root == "youtube.com":
-        allowed = (len(bits) == 1 and bits[0].startswith("@")) or (len(bits) == 2 and lowered[0] in {"channel", "c", "user"})
-    elif root == "tiktok.com":
-        allowed = len(bits) == 1 and bits[0].startswith("@")
-    return urlunsplit((p.scheme, (p.hostname or "").lower(), "/" + "/".join(bits), "", "")) if allowed else None
+        allowed = (len(bits) == 1 and lowered[0].startswith("@") and len(lowered[0]) > 1) or (len(bits) == 2 and lowered[0] in {"channel", "c", "user"})
+    elif root in {"tiktok.com", "threads.net", "threads.com"}:
+        allowed = len(bits) == 1 and lowered[0].startswith("@") and len(lowered[0]) > 1
+    elif root == "vimeo.com":
+        allowed = len(bits) == 1 and not lowered[0].isdigit() and lowered[0] not in VIMEO_RESERVED
+    elif root == "snapchat.com":
+        allowed = len(bits) == 2 and lowered[0] in {"add", "p"}
+    return urlunsplit((p.scheme, host, "/" + "/".join(bits), "", "")) if allowed else None
 
 
 ORGANIZATION_TYPES={'Organization','LocalBusiness','Corporation','ProfessionalService','Store',
@@ -63,7 +82,7 @@ def organization_social(page,context=None,scope=None):
     for body in page.jsonld:
         for node in organization_objects(body, own_only=True):
             name=node.get('legalName') or node.get('name')
-            if context and name and (not isinstance(name,str) or not name_matches(name,company_names(context))):continue
+            if context and name and (not isinstance(name,str) or not name_matches(name,social_company_names(context))):continue
             if scope:
                 own=node.get('url') or node.get('@id')
                 if not isinstance(own,str):continue
@@ -95,7 +114,6 @@ def discover(page,context=None,*,same_as=True):
 
 def facebook_plugins(page):
     from html.parser import HTMLParser
-    from urllib.parse import parse_qs
     class Plugins(HTMLParser):
         def __init__(self):
             super().__init__(convert_charrefs=True)
@@ -135,6 +153,11 @@ def company_names(context):
                        *(u.get('name') for u in context.get('subunits', []))] if n]
 
 
+def social_company_names(context):
+    """Registered legal entity names only; a website brand is not a legal name."""
+    return [n for n in [context.get('name'), *(u.get('name') for u in context.get('subunits', []))] if n]
+
+
 def context_for_envelope(envelope):
     """Name aliases justified by a verified company site and its metadata."""
     claims=envelope.claims
@@ -154,13 +177,35 @@ def context_for_envelope(envelope):
 
 
 def name_matches(value, names):
-    """Whole handle/name equality, allowing legal suffix and trailing profile ID."""
-    value = unquote(str(value or '')).lstrip('@')
-    value = re.sub(r'[-_. ]*\d{5,}$', '', value)
-    actual = compact(legal_name(value.replace('-', ' ').replace('_', ' ')))
+    """Match profile and company tokens, or a sufficiently long name prefix."""
+    from .candidates import GENERIC
+    qualifiers = {'as', 'asa', 'sa', 'ans', 'da', 'group', 'gruppen', 'global',
+                  'holding', 'norge', 'norway', 'no'}
+    def tokens(value):
+        # Transliterate Norwegian letters first: NFKD leaves æ/ø/å whole, and the
+        # ASCII token pattern would otherwise split "lørenskog" into "l", "renskog".
+        text = unquote(str(value or '')).lstrip('@').casefold().replace('æ', 'ae').replace('ø', 'o').replace('å', 'a')
+        normalized = ''.join(ch for ch in unicodedata.normalize("NFKD", text) if not unicodedata.combining(ch))
+        parts = re.findall(r'[a-z0-9]+', normalized)
+        while parts and parts[-1] in qualifiers:
+            parts.pop()
+        return parts
+
+    actual_tokens = tokens(value)
+    if not actual_tokens:
+        return False
+    actual = ''.join(actual_tokens)
+    # A one-token handle must be a distinctive word, not "fus" or "transport".
+    single_ok = len(actual_tokens) > 1 or (len(actual) >= 5 and actual not in GENERIC)
     for name in names:
-        expected = compact(legal_name(name))
-        if len(expected) >= 3 and actual in {expected, expected+'as', expected+'asa'}:
+        expected_tokens = tokens(name)
+        if not expected_tokens:
+            continue
+        expected = ''.join(expected_tokens)
+        if (len(expected) >= 3 and actual in {expected, expected + 'as', expected + 'asa'}
+                or single_ok and set(actual_tokens) <= set(expected_tokens)
+                or set(expected_tokens) <= set(actual_tokens)
+                or len(actual) >= 8 and expected.startswith(actual)):
             return True
     return False
 
@@ -195,6 +240,7 @@ def observed_profiles(page):
 def profile_key(url):
     root=domain(url)
     if root=='twitter.com':root='x.com'
+    if root=='threads.net':root='threads.com'
     path=unquote(urlsplit(url).path).rstrip('/').casefold()
     if root=='facebook.com' and (identifier:=re.search(r'(?:^|[-/])(\d{5,})$',path)):
         path='/'+identifier[1]
@@ -216,12 +262,11 @@ def path_scope(proof, context):
 
 
 def attributed(page, proof, context, *, same_as=True):
-    names = verified_site_names(page, proof, context)
-    context = {**context, 'registered_brands': names}
+    names = social_company_names(context)
     scope = path_scope(proof, context)
     found = discover(page,context,same_as=same_as) if not scope else {
         profile_url(x.href): x.span for x in page.links
-        if profile_url(x.href) and not x.template_context
+        if profile_url(x.href) and not x.template_context and not getattr(x, 'excluded_context', False)
         and (urlsplit(page.url).path.rstrip('/') == scope or urlsplit(page.url).path.startswith(scope+'/'))}
     if scope and same_as:
         for url,span in organization_social(page,context,scope).items():found.setdefault(url,span)
@@ -272,7 +317,7 @@ def drop_shared(envelopes, blobs=None):
     for envelope in envelopes:
         removed = []
         context=context_for_envelope(envelope)
-        names=company_names(context)
+        names=social_company_names(context)
         proof=next((c.value for c in envelope.claims if c.field=='official_website' and c.availability=='available'),{})
         evidence={e.id:e for e in envelope.evidence}
         shared_count=0

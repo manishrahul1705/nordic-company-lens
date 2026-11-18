@@ -9,11 +9,12 @@ from ..models.envelope import Error
 from ..models.evidence import digest
 import xml.etree.ElementTree as ET
 from ..sources.extract import Section, Source, add, missing, response_source
+from ..sources.text import decode_body
 from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC, NOMINATED, RECOVERY
 from .html import Page
-from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL, extract
+from .policy import domain, normalize_url, REGISTRY_SOCIAL, SOCIAL, DIRECTORIES, FREE_MAIL, extract
 from .proof import score, phone, extract_entity_cards, find_containing_card
-from .social import discover, profile_url, attributed, observed_profiles, matches_profile, company_names
+from .social import discover, profile_url, attributed, observed_profiles, matches_profile, social_company_names
 
 
 STRONG_CANDIDATE_ORIGINS = frozenset({'registry_website', 'subunit_registry_website', 'wikidata_website'})
@@ -133,7 +134,7 @@ def registry_context(envelope, bulk, blobs):
 
 
 def publish(section, response, org, field, value, locator, span):
-    if not span or span not in response.body.decode("utf8", errors="replace") or len(span) > 300:
+    if not span or span not in decode_body(response.body) or len(span) > 300:
         raise SourceFailure("invalid_span")
     add(section, response_source(response), org, "website", field, value, locator, span=span,
         source_class="company_owned", method="signalpost.website.v1")
@@ -250,7 +251,9 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
     from .wikidata import websites
     context['wikidata_homepages'] = websites(getattr(http, 'wikidata_index', {'records':{}}), org)
     section = Section(state="not_available")
-    if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")) and matches_profile(social,company_names(context)):
+    if (registry_source and (social := profile_url(normalize_url(context.get("website")) or ""))
+            and domain(social) in REGISTRY_SOCIAL
+            and matches_profile(social,social_company_names(context))):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
     candidates = generate(context)
@@ -324,7 +327,7 @@ async def fetch(org, envelope, bulk, http, previous=None, nav_index=None, retry_
                     for name in [page.meta.get('og:site_name'),*re.split(r'\s+[|–—]\s+',page.title)]:
                         if name and legal_name(name)!=legal_name(context.get('name')):
                             span=page.name_span(name) or page.span_for(name)
-                            if span and len(span)<=300 and span in response.body.decode('utf8',errors='replace'):
+                            if span and len(span)<=300 and span in decode_body(response.body):
                                 support=Section()
                                 add(support,response_source(response),org,'website','brand_nomination',name,'/brand-nomination',span=span,source_class='company_owned')
                                 section.evidence+=support.evidence
