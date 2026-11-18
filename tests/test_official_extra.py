@@ -1,7 +1,7 @@
 import asyncio
 import hashlib
 import json
-from datetime import date
+from datetime import date, datetime, timezone
 from types import SimpleNamespace
 
 import pytest
@@ -303,6 +303,14 @@ def test_ted_identifier_normalisation_is_whitespace_only():
     assert ted_query_values(['923609016'])=='("923609016" OR "923 609 016" OR "923\u202f609 016")'
 
 
+def utc_today():
+    # award_extract's reference date is the response's retrieved_at, which is UTC
+    # (utc_now). A fixture dated with local date.today() is "tomorrow" in UTC between
+    # local midnight and UTC midnight east of Greenwich, so the award is dropped as
+    # future-dated and these tests fail. Keep the fixture on the UTC date.
+    return datetime.now(timezone.utc).date().isoformat()
+
+
 def live_ted(tmp_path,identifiers,body):
     import httpx,time
     from signalpost.sources.blobstore import BlobStore
@@ -329,19 +337,20 @@ def live_ted(tmp_path,identifiers,body):
 
 @pytest.mark.parametrize('spelling',['923609016','923 609 016','923\u202f609 016'])
 def test_live_ted_nominates_whitespace_spellings_and_queries_both_forms(tmp_path,spelling):
-    awards,metrics,queries=live_ted(tmp_path,[spelling],xml(day=date.today().isoformat()))
+    awards,metrics,queries=live_ted(tmp_path,[spelling],xml(day=utc_today()))
+    assert all(a.value['date'] <= utc_today() for a in awards), 'fixture must use the UTC date (see utc_today)'
     assert metrics['tender_notices_nominated']==1 and len(awards)==1
     assert '"923609016" OR "923 609 016" OR "923\u202f609 016"' in queries[0]
 
 
 @pytest.mark.parametrize('spelling',['NO923609016','923609016MVA','NO 923 609 016','92360901','923-609-016'])
 def test_live_ted_never_nominates_other_identifier_material(tmp_path,spelling):
-    awards,metrics,_=live_ted(tmp_path,[spelling],xml(day=date.today().isoformat()))
+    awards,metrics,_=live_ted(tmp_path,[spelling],xml(day=utc_today()))
     assert metrics['tender_notices_nominated']==0 and not awards
 
 
 def test_live_ted_spaced_nomination_still_needs_the_exact_xml_company(tmp_path):
-    awards,metrics,_=live_ted(tmp_path,['923 609 016'],xml(winner='999999999',day=date.today().isoformat()))
+    awards,metrics,_=live_ted(tmp_path,['923 609 016'],xml(winner='999999999',day=utc_today()))
     assert metrics['tender_notices_nominated']==1 and not awards
 
 
