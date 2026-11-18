@@ -32,6 +32,28 @@ from .synthesis.service import Service as SynthesisService
 FAMILIES = ("identity", "roles", "subunits", "accounts")
 # Bound on waiting for cancelled work; terminal output is written regardless.
 CANCEL_GRACE_SECONDS = 5
+# Early abort on a total registry outage. If the first IDENTITY_OUTAGE_SAMPLE live
+# identity lookups (data.brreg.no, not bulk-snapshot rows) ALL fail with a network-level
+# error (IDENTITY_NETWORK_CODES), the registry is unreachable and every later section
+# would be skipped as identity_unverified. The run then stops with IdentityOutage
+# (CLI exit code 3) after the second pass below confirms it. Any non-network outcome
+# within the sample disables the check for the rest of the run, so scattered failures
+# never abort.
+IDENTITY_OUTAGE_SAMPLE = 25
+IDENTITY_NETWORK_CODES = frozenset({"network_error", "timeout"})
+# Each lookup's own retry (2 attempts, 0.1-0.3s backoff) cannot ride out a startup blip,
+# so a full sample of network failures is only a suspicion. New lookups pause, and after
+# IDENTITY_OUTAGE_RECHECK_DELAY_SECONDS up to IDENTITY_OUTAGE_RECHECK_COUNT of the failed
+# lookups are retried once. Any answer from the host resumes the run and repeats the
+# sampled lookups; the run aborts only if every recheck also fails at network level.
+IDENTITY_OUTAGE_RECHECK_DELAY_SECONDS = 15
+IDENTITY_OUTAGE_RECHECK_COUNT = 3
+
+
+class IdentityOutage(RuntimeError):
+    def __init__(self, host, sample):
+        self.host = host
+        super().__init__(f"identity source {host} unreachable: the first {sample} identity lookups all failed with network errors; run aborted")
 
 
 def placeholder(org, run_id, started, families=FAMILIES):
@@ -106,7 +128,11 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
         envelope.run.refresh = {"mode": "baseline", "previous_rejected": True}
     envelope.run.legal_identity = {c.field.removeprefix("identity."): c.value for c in envelope.claims if c.family == "identity"}
     failures = any(s == "failed" for s in envelope.run.sections.values())
-    envelope.state = "submission_error" if any(m.state == "submission_error" for m in envelope.modules.values()) else "complete"
+    module_states = [m.state for m in envelope.modules.values()]
+    # A company whose every section ended in source_error was not collected; never call it complete.
+    envelope.state = ("submission_error" if "submission_error" in module_states
+                      else "source_error" if module_states and all(s == "source_error" for s in module_states)
+                      else "complete")
     envelope.run.terminal_status = "failed" if all(s == "failed" for s in envelope.run.sections.values()) else "completed"
     events = [e for e in budget.events if e["organisation_number"] == envelope.organisation_number]
     envelope.operations.requests = len(events)
@@ -359,6 +385,57 @@ async def _run(config, client=None):
         await registry_ready.wait()
         return scopes_dict
     nav_names.scopes_ready=nav_scopes
+    live_identity = sum(1 for org in valid_orgs if not (org in bulk and not config.verify_bulk))
+    outage = {'failures': [], 'done': False, 'confirming': False, 'tripped': False, 'tasks': [],
+              'expected': min(IDENTITY_OUTAGE_SAMPLE, live_identity),
+              'verdict': asyncio.get_running_loop().create_future(), 'gate': asyncio.Event()}
+    outage['gate'].set()
+    def settle(verdict):
+        outage['done'] = True
+        if not outage['verdict'].done(): outage['verdict'].set_result(verdict)
+        outage['gate'].set()
+    async def confirm_outage(http):
+        # Second pass: one Http.get already retries only ~0.2-0.6s, so a short registry
+        # hiccup can fail every lookup in the sample. Wait, then retry a few once.
+        await asyncio.sleep(max(0, min(IDENTITY_OUTAGE_RECHECK_DELAY_SECONDS, budget.deadline - time.monotonic())))
+        if outage['done']:
+            return  # An in-flight lookup already proved the host is answering.
+        for org in outage['failures'][:IDENTITY_OUTAGE_RECHECK_COUNT]:
+            try:
+                await brreg_enhet.fetch(org, http)
+                return settle('recovered')
+            except SourceFailure as exc:
+                if exc.code not in IDENTITY_NETWORK_CODES:
+                    return settle('recovered')  # The host answered.
+            except Exception:
+                return settle('recovered')
+        outage['tripped'] = True
+        settle('outage')
+        current = asyncio.current_task()
+        for task in outage['tasks']:
+            if task is not current: task.cancel()
+    async def identity_outcome(org, envelope, http):
+        """Return 'retry' when this company's lookup should be repeated after a recovered
+        blip, 'abort' on a confirmed outage, else None (keep the result as is)."""
+        if outage['done']:
+            return None
+        network = envelope.run.sections['identity'] == 'failed' and any(
+            e.section == 'identity' and e.code in IDENTITY_NETWORK_CODES for e in envelope.errors)
+        if not network:
+            # Before the sample fills, a host answer means scattered failures: they stand.
+            # While the second pass is pending, it proves recovery: repeat the sampled lookups.
+            settle('recovered' if outage['confirming'] else 'disarmed')
+            return None
+        outage['failures'].append(org)
+        if len(outage['failures']) == outage['expected']:
+            if outage['expected'] < IDENTITY_OUTAGE_SAMPLE:
+                settle('disarmed')  # Run smaller than the sample: never abort.
+            else:
+                outage['confirming'] = True
+                outage['gate'].clear()  # Pause new lookups while the second pass runs.
+                asyncio.ensure_future(confirm_outage(http))
+        verdict = await asyncio.shield(outage['verdict'])
+        return {'recovered': 'retry', 'outage': 'abort'}.get(verdict)
     async def company(org, http, website_http, nav_task):
         from .web.policy import DNS_ORG
         DNS_ORG.set(org)
@@ -378,7 +455,16 @@ async def _run(config, client=None):
                         return await offload(bulk_registry.extract,org,*bulk[org])
                     return await brreg_enhet.fetch(org, http)
                 if envelope.run.sections["identity"] != "available":
+                    live = not (org in bulk and not config.verify_bulk)
+                    if live and not outage['done']:
+                        await outage['gate'].wait()
                     await isolate(envelope, "identity", identity)
+                    if live:
+                        outcome = await identity_outcome(org, envelope, http)
+                        if outcome == 'abort':
+                            return
+                        if outcome == 'retry':
+                            await isolate(envelope, "identity", identity)
                 if envelope.run.sections["identity"] != "available":
                     for family in families[1:]:
                         state = envelope.run.sections["identity"]
@@ -493,8 +579,17 @@ async def _run(config, client=None):
         from .web.wikidata import fetch_batch
         wikidata_index.update(await fetch_batch(valid_orgs, active_client, config, budget, blobs))
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
+        outage['tasks'] = tasks
+        # Only lookups company() will actually make count; urgent ones already ran.
+        outage['expected'] = min(IDENTITY_OUTAGE_SAMPLE, sum(
+            1 for org in valid_orgs if not (org in bulk and not config.verify_bulk)
+            and envelopes[org].run.sections.get('identity') != 'available'))
+        if not outage['expected']: settle('disarmed')
         try:
             pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
+            if outage['tripped']:
+                from urllib.parse import urlparse
+                raise IdentityOutage(urlparse(brreg_enhet.BASE).hostname, IDENTITY_OUTAGE_SAMPLE)
             if stuck:
                 warnings.append(f"{stuck} company tasks did not stop within {CANCEL_GRACE_SECONDS}s of cancellation; unfinished sections are reported as deadline")
             if config.websites and not stuck:
