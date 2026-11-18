@@ -1,0 +1,30 @@
+[
+  {
+    "family": "inter",
+    "file": "inter-latin.woff2",
+    "bytes": 28768,
+    "sha256": "800f98ca2297387c670d5f97896c91cb1adf54dd45919d9f1a48c215b2d7ee0a",
+    "upstream_source": "https://github.com/google/fonts/tree/main/ofl/inter",
+    "licence": "SIL OFL 1.1",
+    "coverage": "Latin U+0020-00FF including Norwegian; punctuation U+2000-206F; euro",
+    "axes": {
+      "opsz": 14,
+      "wght": 400
+    }
+  },
+  {
+    "family": "fraunces",
+    "file": "fraunces-latin.woff2",
+    "bytes": 18116,
+    "sha256": "f09a32c49543264c9e98816b50ad0b1abe09da1cae7bd7e3c4337e76968590b6",
+    "upstream_source": "https://github.com/google/fonts/tree/main/ofl/fraunces",
+    "licence": "SIL OFL 1.1",
+    "coverage": "Latin U+0020-00FF including Norwegian; punctuation U+2000-206F; euro",
+    "axes": {
+      "wght": 600,
+      "opsz": 48,
+      "SOFT": 0,
+      "WONK": 1
+    }
+  }
+]

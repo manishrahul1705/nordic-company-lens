@@ -2,7 +2,7 @@
 from tests.test_synthesis import envelope
 from signalpost.models.synthesis import Sentence
 from signalpost.synthesis.cohort import build_index, context
-from signalpost.synthesis.sections_extra import percentile, ordinal, generate as extra
+from signalpost.synthesis.sections_extra import percentile, generate as extra
 from signalpost.synthesis.template import generate
 from signalpost.synthesis.validate import ALL_SECTIONS, validate_synthesis, sentence_error
 
@@ -33,21 +33,24 @@ def test_all_seven_sections_are_filled_and_cited(tmp_path):
 
 
 def test_percentile_and_thin_comparison(tmp_path):
-    assert percentile(5, [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]) == 40 and ordinal(41) == '41st' and ordinal(12) == '12th'
+    assert percentile(5, [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]) == 40 and percentile(5, [5] * 10) == 0
     rows = cohort_of(tmp_path, 12)
     index = build_index(rows)
     top = generate(rows[-1], context(rows[-1], index)).sections.standing[0].text
-    assert 'at the 100th percentile of the 12 other companies' in top
+    assert top.startswith('Among the 12 other companies in this run in NACE division ') and ' accounts, its FY2025 operating revenue of NOK ' in top and top.endswith('is higher than 100% of them.')
     few = cohort_of(tmp_path / 'few', 3)
     thin = generate(few[0], context(few[0], build_index(few))).sections.standing[0].text
-    assert 'Comparison too thin: 3 other companies' in thin and 'percentile is given' in thin
+    assert thin.startswith('Only 3 other companies in this run are in NACE division ') and 'fewer than the 10 needed' in thin and 'not ranked' in thin
+    alone = cohort_of(tmp_path / 'alone', 0)
+    none = generate(alone[0], context(alone[0], build_index(alone))).sections.standing[0].text
+    assert none.startswith('No other company in this run is in NACE division ') and '0 other' not in none
 
 
 def test_forged_standing_or_cohort_is_rejected(tmp_path):
     rows = cohort_of(tmp_path, 12)
     index = build_index(rows)
     result = generate(rows[0], context(rows[0], index))
-    result.sections.standing[0].text = result.sections.standing[0].text.replace('at the 0th', 'at the 90th')
+    result.sections.standing[0].text = result.sections.standing[0].text.replace('higher than 0%', 'higher than 90%')
     checked = validate_synthesis(result, rows[0])
     assert not checked.sections.standing and any(r['section'] == 'standing' for r in checked.checks.rejections)
     result = generate(rows[0], context(rows[0], index))
@@ -73,3 +76,31 @@ def test_role_held_at_another_cohort_company_is_cited_from_that_company(tmp_path
     reach = generate(holder, cohort).sections.reach
     line = next(s for s in reach if s.text.startswith('Registered role at another company'))
     assert role.id in line.claim_ids and '(org. ' + other.organisation_number + ')' in line.text
+
+
+def test_reach_and_gaps_are_not_repeated(tmp_path):
+    row, _ = envelope(tmp_path)
+    sections = generate(row).sections
+    reach = [s.text for s in sections.reach]
+    gaps = [s.text for s in sections.not_established]
+    assert any(t.startswith('Workplaces: no separately registered') for t in reach)
+    assert not any(t.startswith('Workplaces:') for t in gaps)
+    assert not any('Business address: none registered' in s.text for key in ('reach', 'standing') for s in getattr(sections, key))
+
+
+def test_site_renders_all_seven_sections_with_the_output_text_and_order(tmp_path):
+    import html
+    from signalpost.site import brief_sections_html, BRIEF_SECTIONS, display_markup_dates
+    row, _ = envelope(tmp_path)
+    synthesis = generate(row).model_dump(mode='json')
+    claims = {c.id: c.model_dump(mode='json') for c in row.claims}
+    synthesis['sections']['changes'].append({'text': 'Registry publication time: 2026-07-22T18:04:03.789000Z.', 'claim_ids': []})
+    page = html.unescape(display_markup_dates(brief_sections_html(synthesis, claims, set())))
+    assert [key for key, _ in BRIEF_SECTIONS] == list(ALL_SECTIONS)
+    position = 0
+    for key, heading in BRIEF_SECTIONS:
+        assert synthesis['sections'][key]
+        position = page.index('<h3>' + heading + '</h3>', position)
+        for sentence in synthesis['sections'][key]:
+            position = page.index(sentence['text'], position)
+    assert '[why]' in page and '[source]' in page

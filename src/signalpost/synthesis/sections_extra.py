@@ -78,11 +78,6 @@ def absence(claim, envelope):
     return Sentence(text=text, claim_ids=[claim.id]) if text else None
 
 
-def ordinal(n):
-    suffix = 'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')
-    return str(n) + suffix
-
-
 def municipality(address):
     return str((address or {}).get('kommune') or '').strip() or None
 
@@ -99,6 +94,8 @@ def reach(envelope, cohort):
                             claim_ids=[address.id]))
     units = sorted((c for c in _claims(envelope) if c.field.startswith('subunits.unit.') and isinstance(c.value, dict)
                     and _address(c.value.get('address'))), key=lambda c: (str(c.value.get('name') or ''), str(c.value.get('organisation_number') or ''), c.id))
+    if len(units) == 1 and where and _address(units[0].value.get('address')) == where:
+        units = []  # the only workplace is the company itself, at its business address
     for unit in units[:MAX_WORKPLACES]:
         value = unit.value
         place = municipality(value.get('address'))
@@ -121,57 +118,70 @@ def reach(envelope, cohort):
         title = str(((role.value or {}).get('role_type') or {}).get('beskrivelse') or 'Registered role')
         out.append(Sentence(text='Registered role at another company in this run: ' + title + ' for ' + str(name.value)
                             + ' (org. ' + role.organisation_number + ').', claim_ids=[role.id, name.id]))
+    # No separately registered workplace is a recorded fact about where it operates.
+    # A missing business address is stated once, in not_established.
+    if envelope.run.sections.get('subunits') != 'available':
+        sentence = absence(section_claim(envelope, 'subunits'), envelope)
+        if sentence:
+            out.append(sentence)
     if not out:
-        fallback = absence(_field(envelope, 'identity.registered_address', available=False), envelope) or \
-            absence(section_claim(envelope, 'identity'), envelope)
-        if fallback:
-            out.append(fallback)
+        sentence = absence(section_claim(envelope, 'identity'), envelope)
+        if sentence:
+            out.append(sentence)
     return out
 
 
 # --- Standing ------------------------------------------------------------------
 
 def percentile(value, others):
+    """Share of the compared companies with strictly lower operating revenue, rounded down."""
     below = sum(1 for v in others if v < value)
-    equal = sum(1 for v in others if v == value)
-    rank = (Decimal(below) + Decimal(equal) / 2) * 100 / Decimal(len(others))
-    return int(rank.to_integral_value(rounding=ROUND_FLOOR))
+    return int((Decimal(below) * 100 / Decimal(len(others))).to_integral_value(rounding=ROUND_FLOOR))
+
+
+RUN_ONLY = 'other companies in this run'
 
 
 def standing(envelope, cohort):
+    """Every wording names the comparison basis: companies in this run only, NACE division, fiscal year."""
     nace = _field(envelope, 'identity.nace1')
     revenue = _field(envelope, 'accounts.revenue')
     revenue = revenue if revenue is not None and not revenue.carried_forward else None
     if revenue is None or revenue_key(revenue) is None:
         missing = _field(envelope, 'accounts.revenue', available=False)
         if missing is not None and envelope.run.sections.get('accounts') == 'available':
-            return [Sentence(text='Revenue standing: not compared, because the filed annual accounts state no operating revenue figure.',
+            return [Sentence(text='Not compared with ' + RUN_ONLY + ': the filed annual accounts state no operating revenue figure.',
                              claim_ids=[missing.id])]
         placeholder = section_claim(envelope, 'accounts')
         if placeholder is not None:
-            return [Sentence(text='Revenue standing: not compared, because no operating revenue is published. '
+            return [Sentence(text='Not compared with ' + RUN_ONLY + ': no operating revenue is published. '
                              + section_text(envelope, 'accounts'), claim_ids=[placeholder.id])]
         return [s for s in [absence(missing, envelope)] if s]
     year, _, currency = revenue_key(revenue)
-    amount = 'Operating revenue FY' + year + ': ' + currency + ' ' + money(revenue.value)
+    amount = currency + ' ' + money(revenue.value)
     group = division(nace)
     if nace is None:
         missing = _field(envelope, 'identity.nace1', available=False)
-        return [Sentence(text=amount + '. Not compared, because no industry code is registered.',
-                         claim_ids=[revenue.id] + ([missing.id] if missing else []))]
+        return [Sentence(text='Its FY' + year + ' operating revenue of ' + amount + ' is not compared with ' + RUN_ONLY
+                         + ', because no industry code is registered.', claim_ids=[revenue.id] + ([missing.id] if missing else []))]
     if group is None:
-        return [Sentence(text=amount + '. Not compared, because the registered industry code is unspecified.',
-                         claim_ids=[revenue.id, nace.id])]
+        return [Sentence(text='Its FY' + year + ' operating revenue of ' + amount + ' is not compared with ' + RUN_ONLY
+                         + ', because the registered industry code is unspecified.', claim_ids=[revenue.id, nace.id])]
     record = cohort.standing if cohort is not None else None
     others = [c.value for c in record.comparables] if record is not None else []
     n = len(others)
-    scope = ('other compan' + ('y' if n == 1 else 'ies') + ' in this run registered under NACE division ' + group
-             + ' with FY' + year + ' operating revenue')
+    basis = 'in NACE division ' + group + ' with FY' + year + ' accounts'
+    if n == 0:
+        return [Sentence(text='No other company in this run is ' + basis + ', so its FY' + year + ' operating revenue of '
+                         + amount + ' is not compared.', claim_ids=[revenue.id, nace.id], value_kind='derived')]
     if n < MIN_COMPARABLES:
-        return [Sentence(text=amount + '. Comparison too thin: ' + str(n) + ' ' + scope + ' (fewer than '
-                         + str(MIN_COMPARABLES) + '), so no percentile is given.', claim_ids=[revenue.id, nace.id], value_kind='derived')]
-    return [Sentence(text=amount + ', at the ' + ordinal(percentile(float(revenue.value), others)) + ' percentile of the '
-                     + str(n) + ' ' + scope + '.', claim_ids=[revenue.id, nace.id], value_kind='derived')]
+        return [Sentence(text='Only ' + str(n) + (' other company' if n == 1 else ' other companies') + ' in this run '
+                         + ('is ' if n == 1 else 'are ') + basis + ', fewer than the ' + str(MIN_COMPARABLES)
+                         + ' needed for a comparison, so its FY' + year + ' operating revenue of ' + amount + ' is not ranked.',
+                         claim_ids=[revenue.id, nace.id], value_kind='derived')]
+    return [Sentence(text='Among the ' + str(n) + ' other companies in this run ' + basis + ', its FY' + year
+                     + ' operating revenue of ' + amount + ' is higher than ' + str(percentile(float(revenue.value), others)) + '% of them.',
+                     claim_ids=[revenue.id, nace.id], value_kind='derived')]
 
 
 # --- Not established ---------------------------------------------------------------
@@ -212,11 +222,11 @@ def not_established(envelope):
         host = _host(declared.value)
         rejected = sorted({str(i.get('reason')) for i in _candidates(envelope)
                            if _host(i['domain']) == host and any(w in str(i.get('reason') or '').casefold() for w in ('group', 'shared'))})
-        if host and rejected:
+        if host and rejected and not any(host in s.text for s in out):
             out.append(Sentence(text='Declared homepage ' + declared.value + ': not used as company website; recorded as a shared or group site ('
                                 + ', '.join(rejected) + ').', claim_ids=[declared.id]))
     for family in sorted(envelope.run.sections):
-        if family == 'website' or envelope.run.sections[family] == 'available':
+        if family in ('website', 'subunits') or envelope.run.sections[family] == 'available':
             continue
         sentence = absence(section_claim(envelope, family), envelope)
         if sentence:

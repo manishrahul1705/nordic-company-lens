@@ -1878,3 +1878,19 @@ body>nav>a:not(.brand){display:inline-flex;align-items:center;justify-content:ce
 .brief-part p{margin:0 0 10px}.more-citations{display:inline}.more-citations>summary{display:inline-flex;min-height:44px;align-items:center;padding:0 8px;font-size:12px;color:var(--muted)}
 .evidence-retrieved{font-weight:600;margin:0 0 4px}.evidence-locator{font-size:13px;margin:0 0 6px}.evidence-source{margin:0}.more-evidence-button{margin-top:12px}
 @media(max-width:420px){body>nav .brand{max-width:none;white-space:nowrap;font-size:12.5px}body>nav>a[href*="view=dashboard"]{display:none}body>nav{gap:6px}}
+
+.home-hero .run-review-link { color: inherit; text-underline-offset: .2em; }
+.company-page-links { columns: 3 16rem; padding-inline-start: 1.25rem; }
+.company-page-links li { break-inside: avoid; margin-bottom: .45rem; overflow-wrap: anywhere; }
+.company-page-links small { color: var(--muted); white-space: nowrap; }
+.gap-list { padding-inline-start: 1.25rem; }
+.gap-list > li { margin-block: 1.25rem; overflow-wrap: anywhere; }
+.gap-claims { padding-inline-start: 1.25rem; }
+.review-links ul { padding-inline-start: 1.25rem; }
+@media (max-width: 600px) {
+  body > nav .brand { max-width: none; white-space: nowrap; }
+}
+@media (max-width: 360px) {
+  body > nav { padding-inline: 8px; gap: 4px; }
+  body > nav .brand svg { width: 18px; }
+}

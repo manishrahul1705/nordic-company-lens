@@ -14,7 +14,7 @@ for r in rows:
             if not s['claim_ids'] or set(s['claim_ids'])-ids:unresolved.append((r['organisation_number'],k,s['text'][:80]))
         if k=='standing':
             t=ss[0]['text'] if ss else ''
-            kinds['percentile' if 'percentile of' in t else 'too_thin' if 'too thin' in t else 'not_compared']+=1
+            kinds['percentile' if '% of them.' in t else 'too_thin' if 'needed for a comparison' in t else 'no_comparable_in_run' if t.startswith('No other company in this run') else 'not_compared']+=1
 def http(p):
     r=json.load(open(p));return r['requests'],dict(collections.Counter(e['host'] for e in r['request_log']).most_common(8))
 out={'companies':len(rows),'filled':{k:fill[k] for k in SECTIONS},'empty':{k:len(empty[k]) for k in SECTIONS},

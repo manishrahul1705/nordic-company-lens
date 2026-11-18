@@ -74,13 +74,57 @@ def source(tmp, rows, shape='union'):
     return p
 
 
+def test_gap_pages_use_recorded_brief_and_are_two_clicks_from_index(tmp_path):
+    from urllib.parse import urlsplit
+
+    from signalpost.models.envelope import Envelope
+    from signalpost.site import esc
+    from signalpost.synthesis.template import generate
+
+    _, rows = execute(config(tmp_path / 'run', ['923609016', '993578843']))
+    first, second = [Envelope.model_validate(row) for row in rows]
+    for row in (first, second):
+        row.run.synthesis = generate(row)
+    out = tmp_path / 'site'
+    metrics = generate_site(source(tmp_path, [first, second]), out)
+    pages = {path: path.read_text(encoding='utf8') for path in out.rglob('*.html')}
+    assert len(pages) == metrics['pages']
+    parsed = {path: Markup(markup) for path, markup in pages.items()}
+    route = {}
+    for path, markup in parsed.items():
+        targets = set()
+        for link in markup.links:
+            url = urlsplit(link)
+            if url.scheme or url.netloc:
+                continue
+            target = (path.parent / url.path).resolve() if url.path else path
+            assert target.is_file(), (path, link)
+            if target in parsed:
+                if url.fragment:
+                    assert url.fragment in parsed[target].ids, (path, link)
+                targets.add(target)
+        route[path] = targets
+    index = out / 'index.html'
+    assert set(pages) <= {index} | route[index] | {target for path in route[index] for target in route[path]}
+    summary = pages[out / 'gaps.html']
+    for row in (first, second):
+        page = pages[out / f'g/{row.organisation_number}.html']
+        assert f'href="../c/{row.organisation_number}.html"' in page
+        for sentence in row.run.synthesis.sections.not_established:
+            assert esc(sentence.text) in page and esc(sentence.text) in summary
+    common = {s.text for s in first.run.synthesis.sections.not_established} & {
+        s.text for s in second.run.synthesis.sections.not_established}
+    assert common
+    assert all(f'<td>{esc(reason)}</td><td>2</td>' in summary for reason in common)
+
+
 @pytest.mark.parametrize('shape', ['union', 'reference', 'contract'])
 def test_site_membership_evidence_citations_and_determinism(tmp_path, shape):
     row, _ = envelope(tmp_path / 'run')
     out = tmp_path / 'site'
     inp = source(tmp_path, [row], shape)
     metrics = generate_site(inp, out)
-    assert metrics['companies'] == 1 and metrics['pages'] == 3
+    assert metrics['companies'] == 1 and metrics['pages'] == metrics['evidence_pages'] + 5
     assert metrics['largest_profile_bytes'] < 250_000
     index = json.loads((out / 'data/index.json').read_text(encoding='utf8'))
     assert [r['orgnr'] for r in index] == [row.organisation_number]
@@ -253,7 +297,7 @@ def test_identical_duplicate_rows_share_a_profile(tmp_path):
     row, _ = envelope(tmp_path / 'run')
     result = generate_site(source(tmp_path, [row, row]), tmp_path / 'site')
     assert result['input_records'] == 2
-    assert result['companies'] == 1 and result['pages'] == 3
+    assert result['companies'] == 1 and result['pages'] == result['evidence_pages'] + 5
 
 
 def test_scalar_role_metadata_is_not_a_role_record(tmp_path):

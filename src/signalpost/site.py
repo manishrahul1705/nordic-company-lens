@@ -2,6 +2,7 @@
 import html
 import hashlib
 import base64
+from collections import Counter
 from html.parser import HTMLParser
 import json
 import re
@@ -90,6 +91,48 @@ def capped_citations(cites):
     extra = cites[CITATIONS_SHOWN:]
     return (' '.join(cites[:CITATIONS_SHOWN]) + ' <details class="more-citations"><summary>+' + str(len(extra))
             + ' more source' + ('s' if len(extra) != 1 else '') + '</summary>' + ' '.join(extra) + '</details>')
+
+
+BRIEF_SECTIONS = [('what_it_does', 'What it does'), ('scale', 'How big it is'), ('leadership', 'Who runs it'),
+                  ('changes', 'What changed'), ('reach', 'Where it operates'), ('standing', 'How it compares'),
+                  ('not_established', 'What we could not establish')]
+
+
+def brief_sections_html(synthesis, claim_map, change_ids, compact=False):
+    """All seven cited brief sections, with the output's text, citations and order."""
+    sections = synthesis.get('sections', {})
+    if not any(sections.get(key) for key, _ in BRIEF_SECTIONS):
+        return ''
+    cohort = {c['id']: c for c in ((synthesis.get('cohort') or {}).get('role_holdings') or [])}
+    # data-verbatim: the page shows exactly the output's sentence text (no display reformatting).
+    html = '<section class="ledger-section brief-sections" id="brief-sections" data-verbatim><h2>Company brief</h2>'
+    for key, heading in BRIEF_SECTIONS:
+        sentences = sections.get(key) or []
+        if not sentences:
+            continue
+        html += '<div class="brief-part brief-' + key + '"><h3>' + esc(heading) + '</h3>'
+        for n, s in enumerate(sentences):
+            cites, boxes = [], ''
+            for cid in s['claim_ids']:
+                claim = claim_map.get(cid)
+                if compact:
+                    continue
+                if claim is not None and claim.get('availability') == 'available':
+                    cites.append(f'<a class="citation" href="#{esc(anchor(claim))}">[source]</a>')
+                elif cid in change_ids:
+                    cites.append(f'<a class="citation" href="#change-{esc(cid)}">[source]</a>')
+                elif cid in cohort:
+                    other = cohort[cid]
+                    cites.append(f'<a class="citation" href="{esc(other["organisation_number"])}.html#{esc(anchor(other))}">[source: org. {esc(other["organisation_number"])}]</a>')
+                elif claim is not None:
+                    ident = 'gap-' + key + '-' + str(n) + '-' + cid[:12]
+                    cites.append(f'<button class="citation" data-toggle="{ident}" aria-controls="{ident}" aria-expanded="false">[why]</button>')
+                    boxes += (f'<div class="evidence" id="{ident}" hidden><p>Recorded state from this run: '
+                              f'<code>{esc(claim["field"])}</code> is {esc(claim["availability"].replace("_", " "))}.</p>'
+                              f'<p class="claim-id">Claim ID: <code>{esc(cid)}</code></p></div>')
+            html += '<p>' + esc(s['text']) + (' ' + capped_citations(cites) if cites else '') + '</p>' + boxes
+        html += '</div>'
+    return html + '</section>'
 
 
 def normalize(raw):
@@ -445,7 +488,7 @@ def recorded_state_reasons(row, family):
         '<li>'+esc(labels[code])+' <code>'+esc(code)+'</code></li>' for code in found[:6]) + '</ul></details>'
 
 
-def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
+def profile(row, title, source_routes=None, inline_limit=None, overflow=None, receipt_paths=()):
     """inline_limit bounds facts rendered inline per section; the rest are
     recorded in ``overflow`` (claim id -> section) and loaded from the company
     data file, so very large companies still get a page under the size gate."""
@@ -509,6 +552,7 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
             body += '</div>'
     else:
         body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
+    body += brief_sections_html(synthesis, claim_map, change_ids)
     remaining = [s for s in sentences if s not in overview]
     if remaining:
         body += '<details id="full-summary"><summary>Supporting detail: full cited summary</summary>'
@@ -853,6 +897,7 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None):
                  f'<button type="button" id="explorer-show-all" data-hidden="{hidden}">Show the remaining {hidden} claims</button>')
     body += '</section>'
 
+    body += review_links(org, receipt_paths)
     body += f'<p><a href="../index.html">Back to search</a> · <a href="../compare.html?companies={esc(org)}">Compare with…</a></p>'
     body += '</details></div><aside class="profile-sidebar"><h2>On this page</h2><nav aria-label="Company sections">'+''.join('<a href="#'+key+'">'+label+'</a>' for key,label in [('briefing','Company briefing')]+([('ownership','Ownership & identifiers (GLEIF)')] if gleif else [])+[(key,label) for key,label,_ in GROUPS]+[('gaps','Gaps')])+'</nav><h3>Data coverage</h3>'+''.join('<p>'+esc(f)+': '+chip(state)+'</p>' for f,state in row['run']['sections'].items())+'</aside></div>'
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
@@ -1017,6 +1062,14 @@ def index_record(row):
     return result
 
 
+def company_links(records, prefix):
+    return '<ul class="company-page-links">' + ''.join(
+        f'<li><a href="{prefix}{esc(record["orgnr"])}.html">{esc(record["name"])}</a> '
+        f'<small>{esc(record["orgnr"])}</small></li>'
+        for record in sorted(records, key=lambda item: (item['name'].casefold(), item['orgnr']))
+    ) + '</ul>'
+
+
 def index_page(records, title, skipped=()):
     n = len(records)
     verified=sum(r['claim_count'] for r in records)
@@ -1028,7 +1081,7 @@ def index_page(records, title, skipped=()):
     body = '<section class="home-hero"><div class="hero-copy"><p class="eyebrow">Norwegian company research</p><h1>Every fact, traced to its source.</h1><p>Search '+str(n)+' Norwegian companies, compare them side by side, and check the original source behind every number.</p><p id="cohort-summary">'+esc(summary)+'</p>'
     body += '<div class="hero-search"><label class="search-label" for="search">Find a company <span>Press / to search</span></label><input id="search" type="search" autofocus autocomplete="off" placeholder="Name or org. number" aria-controls="search-autocomplete"><div id="search-autocomplete" class="autocomplete-dropdown" hidden></div></div><div class="try-chips"><span>Try:</span>'
     for r in sorted(records,key=lambda r:r['claim_count'],reverse=True)[:3]:body += '<button type="button" data-search="'+esc(r['name'])+'">'+esc(r['name'])+'</button>'
-    body += '</div></div><div class="hero-stats">'
+    body += '</div><p><a class="run-review-link" href="gaps.html">What we could not establish in this run</a></p></div><div class="hero-stats">'
     for number,label in [(n,'companies'),(verified,'cited claims'),(activity,'with registry activity'),(accounts,'with annual accounts')]:body += '<div class="hero-stat"><strong>'+format(number,',')+'</strong><span>'+label+'</span></div>'
     body += '</div></section>'
 
@@ -1136,8 +1189,6 @@ def index_page(records, title, skipped=()):
     body += '</div>'
 
     body += '<div id="results" class="results">'
-    for r in records:
-        body += '<article class="company no-js-company"><a href="c/'+esc(r['orgnr'])+'.html">'+esc(r['name'])+'</a> <small>'+esc(r['orgnr'])+'</small></article>'
     body += '</div><div class="pagination"><button id="previous" type="button">Previous</button><span id="page-label"></span><button id="next" type="button">Next</button></div>'
     body += '</section>'
 
@@ -1160,6 +1211,7 @@ def index_page(records, title, skipped=()):
     body += '<p>Zero results indicates no active job ads match your criteria in the evaluated cohort. This does not indicate zero employment.</p>'
     body += '</div>'
     body += '</section>'
+    body += '<section id="company-pages"><h2>All company profiles</h2>' + company_links(records, 'c/') + '</section>'
     body += '<section id="sources" class="sources-note"><h2>Sources &amp; licences</h2><p>BRREG: NLOD 2.0. NAV: public feed terms. Wikidata and GLEIF: CC0. TED: EU Publications Office reuse terms. Company websites: access under robots.txt; no open licence assumed.</p><p>Data checked '+esc(max((r['last_checked'][:10] for r in records),default='Unknown'))+'. No language model or search engine was used.</p></section>'
     return page(title, body, kind='index')
 
@@ -1203,7 +1255,9 @@ def receipt_pages(row, title):
         for n,fragment in enumerate(fragments):
             suffix='' if n==0 else '-'+str(n+1)
             key=c['id']+suffix
-            entry='<article class="receipt" id="receipt-'+c['id'][:16]+suffix+'"><p class="eyebrow">The evidence behind the fact</p><h2>'+esc(label)+'</h2>'+value_html(c['value'])+fragment+'<p data-continuation="'+key+'"></p></article>'
+            recorded = (value_html(c['value']) if c['availability'] == 'available'
+                        else '<p>Recorded state: ' + chip(c['availability']) + '</p>')
+            entry='<article class="receipt" id="receipt-'+c['id'][:16]+suffix+'"><h2>'+esc(label)+'</h2>'+recorded+fragment+'<p data-continuation="'+key+'"></p></article>'
             length=len(entry.encode('utf-8'))
             if current and size+length>200000:chunks.append(current);current=[];size=0
             current.append((key,entry));size+=length
@@ -1221,10 +1275,62 @@ def receipt_pages(row, title):
     return files,{cid:targets[keys[0]] for cid,keys in parts_by_claim.items()}
 
 
+def review_links(org, receipt_paths):
+    links = ''.join(f'<li><a href="../{esc(path)}">Evidence receipts {number}</a></li>'
+                    for number, path in enumerate(receipt_paths, 1))
+    return (f'<section class="review-links"><h2>Review this company</h2><ul>'
+            f'<li><a href="../g/{esc(org)}.html">What we could not establish, and why</a></li>'
+            f'{links}</ul></section>')
+
+
+def company_gaps_page(row, name, title, routes):
+    org = esc(row['organisation_number'])
+    claims = {claim['id']: claim for claim in row['claims']}
+    synthesis = row['run'].get('synthesis') or {}
+    gaps = synthesis.get('sections', {}).get('not_established', [])
+    body = (f'<p><a href="../c/{org}.html">Back to company profile</a> · '
+            '<a href="../gaps.html">Run summary</a></p>'
+            f'<header><p class="eyebrow">{esc(name)} · Org. {org}</p>'
+            '<h1>What we could not establish, and why</h1></header>')
+    if not gaps:
+        body += '<p>No entries were recorded in this company’s “What we could not establish” section.</p>'
+    else:
+        body += '<ul class="gap-list">'
+        for gap in gaps:
+            body += '<li><p>' + esc(gap['text']) + '</p><ul class="gap-claims">'
+            for claim_id in gap['claim_ids']:
+                claim = claims.get(claim_id)
+                if claim is not None:
+                    label = '<code>' + esc(claim['field']) + '</code> ' + chip(claim['availability'])
+                    target = routes.get(claim_id)
+                    body += '<li>' + (f'<a href="{esc(target)}">{label}</a>' if target else label) + '</li>'
+            body += '</ul></li>'
+        body += '</ul>'
+    return page(name + ' · What we could not establish · ' + title, body, '../', kind='company-gaps')
+
+
+def run_gaps_page(records, reasons, title):
+    body = ('<p><a href="index.html">Back to index</a></p>'
+            '<header><h1>What we could not establish, and why</h1>'
+            f'<p>{sum(reasons.values()):,} recorded gaps across {len(records):,} company profiles. '
+            'Identical recorded explanations are counted together.</p></header>')
+    if reasons:
+        body += ('<section><h2>Reasons by frequency</h2><div class="table-responsive">'
+                 '<table><thead><tr><th scope="col">Recorded explanation</th>'
+                 '<th scope="col">Companies</th></tr></thead><tbody>')
+        for reason, count in sorted(reasons.items(), key=lambda item: (-item[1], item[0])):
+            body += f'<tr><td>{esc(reason)}</td><td>{count:,}</td></tr>'
+        body += '</tbody></table></div></section>'
+    else:
+        body += '<p>No company brief recorded a gap in this run.</p>'
+    body += '<section><h2>Company gap pages</h2>' + company_links(records, 'g/') + '</section>'
+    return page('Run gaps · ' + title, body, kind='run-gaps')
+
+
 PAGE_GATE=250_000
 
 
-def compact_profile(row, title, source_routes=None):
+def compact_profile(row, title, source_routes=None, receipt_paths=()):
     """Last-resort page for an exceptionally large company: briefing and key
     facts inline, every fact still reachable through its evidence pages."""
     claims=row['claims'];org=row['organisation_number']
@@ -1238,6 +1344,7 @@ def compact_profile(row, title, source_routes=None):
         if brief.get(key):
             body+='<div class="brief-part brief-'+key+'"><h3>'+esc(heading)+'</h3>'+''.join('<p>'+esc(s['text'])+'</p>' for s in brief[key])+'</div>'
     body+='</section>'
+    body+=brief_sections_html(synthesis,{c['id']:c for c in claims},set(),compact=True)
     body+='<section id="facts"><h2>Sourced facts</h2><p>This company has an exceptionally large public record, so its facts are listed with links to their evidence pages.</p><ul>'
     routes=source_routes or {}
     for c in claims:
@@ -1246,7 +1353,7 @@ def compact_profile(row, title, source_routes=None):
         target=routes.get(c['id'])
         body+='<li>'+line+(' <a href="'+esc(target)+'">source</a>' if target else '')+'</li>'
         if len(body.encode('utf8'))>PAGE_GATE-30_000:body+='<li>More facts are in the evidence pages.</li>';break
-    body+='</ul></section>'
+    body+='</ul></section>' + review_links(org, receipt_paths)
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
 
@@ -1270,23 +1377,28 @@ def generate_site(input_path, out, title='Nordic Company Lens'):
     files = {'index.html': index_page(records, title, skipped), 'compare.html': compare_page(title,records),
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
     oversized=[]
-    for row in rows:
+    reasons = Counter()
+    for row, record in zip(rows, records):
         org=row['organisation_number']
         receipts,routes=receipt_pages(row,title)
         files.update(receipts)
+        gaps = (row['run'].get('synthesis') or {}).get('sections', {}).get('not_established', [])
+        reasons.update({gap['text'] for gap in gaps})
+        files['g/' + org + '.html'] = company_gaps_page(row, record['name'], title, routes)
         overflow={}
-        html=profile(row, title,routes)
+        html=profile(row, title,routes,receipt_paths=receipts)
         # Very large companies: move the tail of each section into the lazily
         # loaded data file instead of failing the whole site.
         for limit in (40, 15, 5, 0):
             if len(html.encode('utf8')) < PAGE_GATE:break
-            overflow={};html=profile(row,title,routes,inline_limit=limit,overflow=overflow)
+            overflow={};html=profile(row,title,routes,inline_limit=limit,overflow=overflow,receipt_paths=receipts)
         if len(html.encode('utf8')) >= PAGE_GATE:
-            html=compact_profile(row,title,routes);oversized.append(org)
+            html=compact_profile(row,title,routes,receipt_paths=receipts);oversized.append(org)
         files['c/' + org + '.html'] = html
         data=json.dumps(company_payload(row,overflow),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
+    files['gaps.html'] = run_gaps_page(records, reasons, title)
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')
     for asset in (ASSETS/'fonts').iterdir():
         if asset.is_file():files['assets/fonts/'+asset.name]=asset.read_bytes()
@@ -1299,7 +1411,7 @@ def generate_site(input_path, out, title='Nordic Company Lens'):
         if isinstance(content,bytes):target.write_bytes(content)
         else:target.write_text(content, encoding='utf8', newline='\n')
     sizes = {filename: len(content if isinstance(content,bytes) else content.encode('utf8')) for filename, content in files.items()}
-    return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'skipped_invalid_identifiers': len(skipped), 'total_bytes': sum(sizes.values()),
+    return {'companies': len(rows), 'input_records':len(input_rows), 'pages': sum(path.endswith('.html') for path in files), 'skipped_invalid_identifiers': len(skipped), 'total_bytes': sum(sizes.values()),
             'evidence_pages':sum(path.startswith('e/') and path.endswith('.html') for path in files),
             'largest_page_bytes':max((size for path,size in sizes.items() if path.endswith('.html')),default=0),
             'largest_profile_data_bytes':max((size for path,size in sizes.items() if path.endswith('.data.js')),default=0),

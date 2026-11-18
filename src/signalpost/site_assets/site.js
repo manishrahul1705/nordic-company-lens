@@ -24,7 +24,8 @@
   // An organisation number may be typed with spaces, dots or dashes ("915 574 858").
   const searchKey = text => { const t = fold(text).trim(); return /\d/.test(t) && /^[\d\s.\-]+$/.test(t) ? t.replace(/\D/g, '') : t; };
   const globalResults = document.getElementById('global-search-results');
-  const companyPrefix = document.body.dataset.page === 'profile' ? '' : document.body.dataset.page==='evidence' ? '../c/' : 'c/';
+  const sitePrefix = document.querySelector('body > nav .brand').getAttribute('href').replace(/index\.html$/, '');
+  const companyPrefix = sitePrefix + 'c/';
   function globalSearch() {
     globalResults.replaceChildren();
     const query = searchKey(globalInput.value);
@@ -1292,12 +1293,18 @@
 
     function draw() {
       const selected = [];
+      const selectedInputs = new Map();
       for(const input of inputs) {
         if(!input) continue;
         const val = input.value.trim();
         const key = searchKey(val);
         const r = byId.get(key) || records.find(r => fold(r.name) === fold(val) || r.orgnr === key);
-        if(r && !selected.includes(r)) selected.push(r);
+        if(!r) continue;
+        if(!selectedInputs.has(r)) {
+          selected.push(r);
+          selectedInputs.set(r, []);
+        }
+        selectedInputs.get(r).push(input);
       }
 
       const root = document.getElementById('comparison');
@@ -1310,7 +1317,7 @@
       if(!root) return;
       root.replaceChildren();
 
-      selected.forEach((r, idx) => {
+      selected.forEach(r => {
         const card = element('article', null, 'compare-card');
         const header = element('div', null, 'compare-card-header');
         const h2 = element('h2');
@@ -1321,7 +1328,7 @@
         removeBtn.type = 'button';
         removeBtn.setAttribute('aria-label', 'Remove ' + r.name + ' from comparison');
         removeBtn.addEventListener('click', () => {
-          inputs[idx].value = '';
+          selectedInputs.get(r).forEach(input => { input.value = ''; });
           draw();
         });
         header.append(h2, removeBtn);
@@ -1583,9 +1590,9 @@
     if (document.hidden) return; // Pause while hidden
 
     try {
-      let resp = await fetch('progress.json', { cache: 'no-store' });
+      let resp = await fetch(sitePrefix + 'progress.json', { cache: 'no-store' });
       if (!resp.ok) {
-        resp = await fetch('state/progress.json', { cache: 'no-store' });
+        resp = await fetch(sitePrefix + 'state/progress.json', { cache: 'no-store' });
       }
       if (!resp.ok) {
         showUnavailableProgress();
@@ -1733,7 +1740,7 @@
   });
   document.querySelectorAll('[data-search]').forEach(button=>button.addEventListener('click',()=>{const input=document.getElementById('search');if(input){input.value=button.dataset.search;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus();}}));
   let compareIds=[];try{compareIds=JSON.parse(localStorage.getItem('signalpost_compare')||'[]').filter(id=>byId.has(id)).slice(0,4);}catch{}
-  function compareBadge(){const node=document.getElementById('compare-count');if(node)node.textContent=compareIds.length?'('+compareIds.length+')':'';const a=document.getElementById('nav-compare');if(a&&compareIds.length)a.href=(['profile','evidence'].includes(document.body.dataset.page)?'../':'')+'compare.html?companies='+compareIds.join(',');}
+  function compareBadge(){const node=document.getElementById('compare-count');if(node)node.textContent=compareIds.length?'('+compareIds.length+')':'';const a=document.getElementById('nav-compare');if(a)a.href=sitePrefix+'compare.html'+(compareIds.length?'?companies='+compareIds.join(','):'');}
   document.addEventListener('click',event=>{const button=event.target.closest('[data-compare-add]');if(!button)return;const id=button.dataset.compareAdd;if(!compareIds.includes(id)&&compareIds.length<4)compareIds.push(id);try{localStorage.setItem('signalpost_compare',JSON.stringify(compareIds));}catch{}button.textContent='Added to compare';compareBadge();});compareBadge();
   if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('reveal-ready');observer.unobserve(entry.target);}}),{threshold:.03});document.querySelectorAll('.profile-main>section').forEach(section=>observer.observe(section));}
 })();
