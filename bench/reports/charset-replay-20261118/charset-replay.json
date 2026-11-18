@@ -1,27 +1,25 @@
 {
   "http_requests_leaving_process": 0,
-  "mock_requests": 90,
+  "mock_requests": 91,
   "companies": {
     "986665358": {
       "before": {
-        "website_state": "source_error",
-        "published": [],
-        "withheld_invalid_span": 1
+        "website_state": "complete",
+        "published": [
+          "contact=\"post@falsentransport.no\"",
+          "official_website={\"final_url\": \"https://falsentransport.no\", \"transport_scheme\": \"https\", \"identity_level\":"
+        ],
+        "withheld_invalid_span": 0
       },
       "after": {
         "website_state": "complete",
         "published": [
           "contact=\"post@falsentransport.no\"",
-          "official_website={\"final_url\": \"https://falsentransport.no\", \"transport_scheme\": \"https\", \"identity_level\":",
-          "public_brand=\"Kontaktinformasjon Falsen Transport\""
+          "official_website={\"final_url\": \"https://falsentransport.no\", \"transport_scheme\": \"https\", \"identity_level\":"
         ],
         "withheld_invalid_span": 0
       },
-      "newly_published": [
-        "contact=\"post@falsentransport.no\"",
-        "official_website={\"final_url\": \"https://falsentransport.no\", \"transport_scheme\": \"https\", \"identity_level\":",
-        "public_brand=\"Kontaktinformasjon Falsen Transport\""
-      ],
+      "newly_published": [],
       "no_longer_published": []
     },
     "989338811": {
@@ -81,6 +79,6 @@
       "no_longer_published": []
     }
   },
-  "published_delta": 3,
-  "withheld_delta": -1
+  "published_delta": 0,
+  "withheld_delta": 0
 }
