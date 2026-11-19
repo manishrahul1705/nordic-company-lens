@@ -2,11 +2,21 @@
 
 ## Official command
 
-Requires Python 3.12+, uv and internet access. From a clean checkout, install locked dependencies with `uv sync --frozen`, put organisation numbers in `orgnrs.txt`, then run:
+Requires Python 3.12+ (tested on 3.12 and 3.13), uv and internet access. From a clean checkout, install locked dependencies with `uv sync --frozen`, put organisation numbers in `orgnrs.txt`, then run:
 
 ```sh
 uv run --frozen signalpost run --organisations orgnrs.txt --output out/envelopes.jsonl --report out/report.json --state-dir out/state --site-dir out/site
 ```
+
+**Without uv.** Plain pip works too (tested on Linux with Python 3.13). This installs the agent from `pyproject.toml`; it does not use the lock file, so dependency versions are resolved fresh within the declared ranges:
+
+```sh
+python -m venv .venv
+.venv/bin/pip install -e .
+.venv/bin/signalpost run --organisations orgnrs.txt --output out/envelopes.jsonl --report out/report.json --state-dir out/state --site-dir out/site
+```
+
+The test suite additionally needs the `dev` dependency group (pytest, respx): `.venv/bin/pip install pytest respx`, or `.venv/bin/pip install --group dev` with pip 25.1 or later. `uv sync --frozen` installs both the agent and the dev group from the lock file. On Windows, use `.venv\Scripts\` in place of `.venv/bin/`.
 
 No credentials, bulk file, expected count, LLM or search service are required. NAV's published public token is fetched in memory from `https://pam-stilling-feed.nav.no/api/publicToken`; no personal credential is required or persisted. Provider cost is **$0**; local compute, disk and network are excluded.
 

@@ -4,11 +4,21 @@ Nordic Company Lens researches Norwegian companies using official registries and
 
 ## Install
 
-Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/). From this repository:
+Requires Python 3.12+ (tested on 3.12 and 3.13) and [uv](https://docs.astral.sh/uv/). From this repository:
 
 ```sh
 uv sync --frozen
 ```
+
+**Without uv.** Plain pip works too (tested on Linux with Python 3.13). This installs the agent from `pyproject.toml`; it does not use the lock file, so dependency versions are resolved fresh within the declared ranges:
+
+```sh
+python -m venv .venv
+.venv/bin/pip install -e .
+.venv/bin/signalpost run --organisations orgnrs.txt --output out/envelopes.jsonl --report out/report.json --state-dir out/state --site-dir out/site
+```
+
+The test suite additionally needs the `dev` dependency group (pytest, respx): `.venv/bin/pip install pytest respx`, or `.venv/bin/pip install --group dev` with pip 25.1 or later. `uv sync --frozen` installs both the agent and the dev group from the lock file. On Windows, use `.venv\Scripts\` in place of `.venv/bin/`.
 
 ## Official run
 

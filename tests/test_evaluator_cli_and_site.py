@@ -125,7 +125,10 @@ def test_cli_rejects_removed_llm_mode(capsys):
     assert error.value.code == 2
     message = capsys.readouterr().err
     assert 'invalid choice' in message and "'llm'" in message
-    assert 'choose from auto, template' in message
+    # Python 3.12 prints "choose from auto, template"; 3.13 quotes the names. Match the names only.
+    import re
+    choices = re.search(r'choose from (.*?)\)', message)
+    assert choices and re.findall(r"[A-Za-z_]+", choices.group(1)) == ['auto', 'template']
 
 
 def test_cli_accepts_template_and_auto_modes(tmp_path, monkeypatch):
