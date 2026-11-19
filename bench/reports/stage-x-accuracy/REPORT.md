@@ -62,6 +62,14 @@ Wilson score lower bound, 200/200, z = 1.96: n / (n + z²) = 200 / 203.84 = **0.
   tagline, not a brand. The page-word rule does not cover leading descriptions; the same is true
   of RENEFFEKT AS. Brands are 26 of 184,134 population items, so this does not move the bound,
   but brand accuracy on its own is lower than the overall figure.
-- Two synthesis sentences ("First observation; no earlier run to compare.") are correct, but cite
-  an incidental accounts claim. One what-it-does sentence shows the NACE title in Norwegian.
-  Neither is wrong.
+- **"First observation" citation.** The template sentence "First observation; no earlier run to
+  compare." (in `sections.changes`) is true, but its citation points to the company's first
+  published claim, not to the run's first-run status. That status is not itself a published
+  claim, and the section validator and verifier accept only published, evidenced claims, so the
+  sentence cannot cite the context claim that `company_brief.py` uses for its own version of the
+  sentence without a change to the output model, validator and verifier. **1,000 sentences are
+  affected across the frozen 1,000** (one per company, every company being a first run in
+  `bench/runs/final-frozen-20261119`). Two of them fell in this sample and were scored correct,
+  since the text is true. The three-part brief's own "First observation" sentence cites the
+  refresh context claim correctly and is not affected.
+- One what-it-does sentence shows the NACE title in Norwegian. It is not wrong.
