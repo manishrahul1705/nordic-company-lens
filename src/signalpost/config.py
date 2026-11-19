@@ -26,7 +26,10 @@ class Config(BaseModel):
     workers: int = Field(default=64, ge=1)
     request_timeout: float = Field(default=10, gt=0)
     official_batch_size: int = Field(default=1100, ge=1)
-    max_output_mb: float = Field(default=512, gt=0)
+    # Our own safety ceiling, not an evaluator limit. 4 GiB exceeds 1,100 envelopes even at
+    # the largest single envelope measured (2.31 MB, headroom-1100-20261119), so an official
+    # 1,100-company run is never truncated to placeholders.
+    max_output_mb: float = Field(default=4096, gt=0)
     websites: bool = False
     wikidata: bool = True
     dns_precheck: bool = True
