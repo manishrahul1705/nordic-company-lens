@@ -36,18 +36,23 @@ def profile_url(url):
     if any(not x or x in {'.', '..'} or re.search(r'[/\\?#\x00-\x1f\x7f]', x) for x in lowered):
         return None
     if any(x in {"share", "sharer", "sharer.php", "intent", "login", "explore", "hashtag", "search", "privacy", "watch", "p", "reel", "reels", "profile.php", "l.php", "dialog", "status", "statuses", "posts", "videos", "photos", "events", "groups", "plugins"}
-           for i, x in enumerate(lowered) if (root, i, x) != ("snapchat.com", 0, "p")):
+           for i, x in enumerate(lowered) if (root, i, x) not in {("snapchat.com", 0, "p"),('facebook.com',0,'p'),('facebook.com',0,'profile.php')}):
+        return None
+    facebook_id = (parse_qs(p.query).get('id', [''])[0] if root == 'facebook.com' and lowered == ['profile.php'] else '')
+    if facebook_id and not re.fullmatch(r'\d{5,}', facebook_id):
         return None
     blocked = {'wix','squarespace','wordpress','shopify','webflow','jimdo','onecom','domeneshop','1881','gulesider','proff','purehelp'}
     if any(any(compact(unquote(bit)) == brand + suffix for brand in blocked for suffix in ('','com','no','norge','official')) or re.search(r'(?:agency|byraa|webdesign)', compact(unquote(bit))) or compact(unquote(bit)) in {'home','other','design','agency'} for bit in bits):
         return None
     allowed = False
     if root == "linkedin.com":
-        allowed = len(bits) == 2 and lowered[0] == "company"
+        allowed = len(bits) == 2 and lowered[0] in {"company", "showcase", "school"}
     elif root in {"instagram.com", "x.com", "twitter.com"}:
         allowed = len(bits) == 1 and lowered[0] not in {"home", "i", "settings", "tos"}
     elif root == "facebook.com":
-        allowed = len(bits) == 1 or (len(bits) == 3 and lowered[0] == "pages")
+        allowed = (len(bits) == 1 and lowered[0] not in {'tr','profile.php'}
+                   or bool(facebook_id) or len(bits) == 3 and lowered[0] == "pages"
+                   or len(bits) == 2 and lowered[0] == 'p' and re.fullmatch(r'.+-\d{5,}',bits[1]) is not None)
     elif root == "youtube.com":
         allowed = (len(bits) == 1 and lowered[0].startswith("@") and len(lowered[0]) > 1) or (len(bits) == 2 and lowered[0] in {"channel", "c", "user"})
     elif root in {"tiktok.com", "threads.net", "threads.com"}:
@@ -56,7 +61,10 @@ def profile_url(url):
         allowed = len(bits) == 1 and not lowered[0].isdigit() and lowered[0] not in VIMEO_RESERVED
     elif root == "snapchat.com":
         allowed = len(bits) == 2 and lowered[0] in {"add", "p"}
-    return urlunsplit((p.scheme, host, "/" + "/".join(bits), "", "")) if allowed else None
+    # Preserve Facebook's identity-bearing query; discard tracking parameters.
+    if root in {'x.com','twitter.com'}:
+        host = root
+    return urlunsplit((p.scheme, host, "/" + "/".join(bits), 'id='+facebook_id if facebook_id else '', "")) if allowed else None
 
 
 ORGANIZATION_TYPES={'Organization','LocalBusiness','Corporation','ProfessionalService','Store',
@@ -161,7 +169,13 @@ def social_company_names(context):
 def context_for_envelope(envelope):
     """Name aliases justified by a verified company site and its metadata."""
     claims=envelope.claims
+    from .social_universe import registered_relations
     context={'name':next((c.value for c in claims if c.field=='identity.legal_name' and c.availability=='available'),''),
+             'organisation_number':getattr(envelope,'organisation_number',None),
+             'registered_social_relations':registered_relations(envelope) if hasattr(envelope,'organisation_number') and hasattr(envelope,'evidence') else {},
+             'role_person_names':[c.value['name'] for c in claims if c.field.startswith('roles.role.')
+                 and c.availability=='available' and isinstance(c.value,dict) and c.value.get('name')
+                 and not c.value.get('entity_organisation_number')],
              'subunits':[c.value for c in claims if c.field.startswith('subunits.unit.') and c.availability=='available'],
              'registered_brands':[c.value for c in claims if c.field=='public_brand' and c.availability=='available' and isinstance(c.value,str)]}
     website=next((c for c in claims if c.field=='official_website' and c.availability=='available'),None)
@@ -234,6 +248,8 @@ def observed_profiles(page):
         for values in json_values(body,'sameAs'):
             for value in values if isinstance(values,list) else [values]:
                 if isinstance(value,str) and (url:=profile_url(value)):found.add(url)
+    from .social_links import links
+    found.update(links(page))
     return found
 
 
@@ -242,6 +258,8 @@ def profile_key(url):
     if root=='twitter.com':root='x.com'
     if root=='threads.net':root='threads.com'
     path=unquote(urlsplit(url).path).rstrip('/').casefold()
+    if root=='facebook.com' and path=='/profile.php':
+        return root+'/'+parse_qs(urlsplit(url).query).get('id',[''])[0]
     if root=='facebook.com' and (identifier:=re.search(r'(?:^|[-/])(\d{5,})$',path)):
         path='/'+identifier[1]
     return root+path
@@ -262,6 +280,10 @@ def path_scope(proof, context):
 
 
 def attributed(page, proof, context, *, same_as=True):
+    from .social_links import proven_links
+    proven=proven_links(page,proof,context)
+    if proven is not None:
+        return proven
     names = social_company_names(context)
     scope = path_scope(proof, context)
     found = discover(page,context,same_as=same_as) if not scope else {
@@ -305,7 +327,9 @@ def verified_site_names(page, proof, context):
 
 def drop_shared(envelopes, blobs=None):
     """A profile observed for multiple legal companies is never company-specific."""
+    from .social_links import veto
     owners = {}
+    cohort_names={e.organisation_number:context_for_envelope(e).get('name','') for e in envelopes}
     for envelope in envelopes:
         for observed in envelope.run.refresh.get('website', {}).get('observed_social_profiles', []):
             url = profile_key(observed)
@@ -317,6 +341,8 @@ def drop_shared(envelopes, blobs=None):
     for envelope in envelopes:
         removed = []
         context=context_for_envelope(envelope)
+        context['other_company_names']=[name for org,name in cohort_names.items()
+            if org!=envelope.organisation_number and org not in context.get('registered_social_relations',{})]
         names=social_company_names(context)
         proof=next((c.value for c in envelope.claims if c.field=='official_website' and c.availability=='available'),{})
         evidence={e.id:e for e in envelope.evidence}
@@ -353,6 +379,11 @@ def drop_shared(envelopes, blobs=None):
                         except (OSError,ValueError):pass
                     rejected=not allowed
                 shared=len(owners[url])>1
+                from .social_universe import assess
+                universe=assess(target,context)
+                if universe['matches'] or universe['state']=='withhold':
+                    envelope.run.refresh.setdefault('website',{}).setdefault('social_universe_checks',{})[target]=universe
+                if veto(target,context):rejected=True
                 if rejected or shared:
                     removed.append(claim.id)
                     shared_count+=int(shared)

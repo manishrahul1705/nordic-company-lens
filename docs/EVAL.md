@@ -1,17 +1,17 @@
 # Evaluation and smoke checks
 
-Install the locked dependencies and run the offline suite:
+Install the locked dependencies and run the suite (two modules use live services; see README):
 
 ```sh
 uv sync --frozen
 uv run pytest -q
 ```
 
-Tests cover input membership and multiplicity, identity checks, budgets and cancellation, envelope shapes, evidence provenance, refresh, website safety, NAV authentication and recovery, output verification, financial comparability and cited synthesis. Local fixtures and mocked transports keep the suite independent of live source availability.
+Tests cover input membership and multiplicity, identity checks, budgets and cancellation, envelope shapes, evidence provenance, refresh, website safety, NAV authentication and recovery, output verification, financial comparability and cited synthesis. Most tests use local fixtures and mocked transports. The two live-network modules are documented in README; the full suite is not wholly offline. Latest saved full-suite result: 1,656 passed (20 November 2026).
 
 ## Resource defaults
 
-The default time budget is 3,600 seconds, our own safeguard; the competition brief specifies no numeric limit. Crawl time is bounded by the deadline fraction and the reserved finalisation work; optional site generation is skipped if it cannot fit. The request budget derives from unique input identifiers unless explicitly overridden. Default output safety ceiling is 256 MiB. Consult `uv run signalpost run --help` for controls; inspect report states rather than treating a successful exit as source completeness.
+The default time budget is 3,600 seconds, our own safeguard; the competition brief specifies no numeric limit. Crawl time is bounded by the deadline fraction and the reserved finalisation work; optional site generation is skipped if it cannot fit. The hard pooled request ceiling is 19 per distinct normalized input, with 40 attributed requests per company, including retries and shared calls in the pool. Overrides can only lower these ceilings. Default output safety ceiling is 4,096 MiB (4 GiB). Consult `uv run signalpost run --help` for controls; inspect report states rather than treating a successful exit as source completeness.
 
 NAV uses a separate connection pool and an adaptive time cap of min(900 seconds, 40% of the run budget), unless overridden. Its declared index only nominates candidates: published ads require live exact-company or listed-subunit proof. Missing, stale or unusable indexes trigger feed fallback. Incomplete discovery never establishes absence.
 
@@ -24,7 +24,7 @@ uv run python scripts/verify_output.py --first out/smoke.jsonl --organisations t
 
 The public fixtures provide bulk identity rows; roles, subunits and accounts are requested live. Website, NAV and public-activity checks are explicitly disabled for this smoke command. The runner should emit an envelope for every input record even when sources fail. The separate `--require-clean` verifier is stricter: it checks section success, exceptions, deadlines, warnings, membership, evidence and output bounds. Network failures can therefore fail verification despite a successful runner exit.
 
-GitHub Actions defines Ubuntu `tests` and `live-20` jobs using frozen installation. See the [Actions page](https://github.com/manishrahul1705/nordic-company-lens/actions) for results after the repository is pushed. Local validation does not establish hosted CI success or official evaluator acceptance.
+GitHub Actions defines Ubuntu `tests` and `live-20` jobs, each with Python 3.12 and 3.13 matrix entries and frozen installation. See the [Actions page](https://github.com/manishrahul1705/nordic-company-lens/actions) for results after the repository is pushed. Local validation does not establish hosted CI success or official evaluator acceptance.
 
 ## Output verification and refresh
 

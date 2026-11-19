@@ -1,0 +1,808 @@
+[
+  {
+    "organisation_number": "922828172",
+    "company": "TENSIO AS",
+    "claim": {
+      "field": "identity.wikidata.official_name.f1987cd36d111c2a",
+      "value": {
+        "text": "Tensio AS",
+        "language": "nb"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "81223ac7ff1115d9611e33cf1b5830972ead4146740a0fee9e8aabc1ad73ac61"
+      ],
+      "id": "8b05372e4aafbf4148c0025cb7624445c25343d359ced09f3f5821d9bf6b02e5",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:56.854145Z",
+      "last_observed_at": "2026-11-19T17:42:56.854145Z",
+      "reasons": {
+        "wikidata_property": "P1448",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q111605409",
+        "wikidata_revision": "2564096376",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: official name"
+      }
+    },
+    "evidence": {
+      "id": "81223ac7ff1115d9611e33cf1b5830972ead4146740a0fee9e8aabc1ad73ac61",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22918610650%22+%22918640967%22+%22918746781%22+%22918765662%22+%22918784438%22+%22918843582%22+%22918859632%22+%22918863877%22+%22918952071%22+%22918975934%22+%22919025131%22+%22919026324%22+%22919038438%22+%22919086815%22+%22919092734%22+%22919212101%22+%22919217081%22+%22919254254%22+%22919276843%22+%22919280204%22+%22919529180%22+%22919650826%22+%22919653477%22+%22919681101%22+%22919690658%22+%22919763477%22+%22919807393%22+%22919862904%22+%22919893389%22+%22919926546%22+%22919931477%22+%22919940972%22+%22919948493%22+%22919966289%22+%22920043356%22+%22920057217%22+%22920060641%22+%22920133428%22+%22920285716%22+%22920358411%22+%22920417892%22+%22920514502%22+%22920542158%22+%22920597122%22+%22920641504%22+%22920667872%22+%22920918204%22+%22920956718%22+%22921044186%22+%22921044577%22+%22921108249%22+%22921146795%22+%22921186924%22+%22921206232%22+%22921320868%22+%22921338732%22+%22921348401%22+%22921366086%22+%22921368348%22+%22921391005%22+%22921443234%22+%22921450737%22+%22921484623%22+%22921509502%22+%22921596154%22+%22921634544%22+%22921646542%22+%22921669259%22+%22921678851%22+%22921707924%22+%22921715528%22+%22921810229%22+%22921860609%22+%22921961022%22+%22921994435%22+%22922069212%22+%22922154635%22+%22922187991%22+%22922285632%22+%22922302812%22+%22922581169%22+%22922645884%22+%22922646481%22+%22922654875%22+%22922661650%22+%22922687552%22+%22922723664%22+%22922753768%22+%22922767459%22+%22922828172%22+%22922829551%22+%22922857873%22+%22922971684%22+%22923068805%22+%22923160485%22+%22923172874%22+%22923192352%22+%22923201661%22+%22923219137%22+%22923354220%22+%22923472134%22+%22923479732%22+%22923558330%22+%22923566031%22+%22923591079%22+%22923716416%22+%22923763058%22+%22923845488%22+%22923883819%22+%22923998012%22+%22924061847%22+%22924412615%22+%22924458100%22+%22924478101%22+%22924499613%22+%22924517476%22+%22924553871%22+%22924688696%22+%22924775793%22+%22924784091%22+%22924825464%22+%22924828099%22+%22924840439%22+%22924910275%22+%22924912758%22+%22925149365%22+%22925201049%22+%22925226009%22+%22925255475%22+%22925273422%22+%22925310492%22+%22925321419%22+%22925321605%22+%22925347531%22+%22925360376%22+%22925370525%22+%22925400467%22+%22925413763%22+%22925421391%22+%22925434264%22+%22925546739%22+%22925547530%22+%22925656348%22+%22925677264%22+%22925738328%22+%22925787884%22+%22925809462%22+%22925853488%22+%22925854689%22+%22925856363%22+%22925924601%22+%22926007866%22+%22926045571%22+%22926065173%22+%22926077422%22+%22926096974%22+%22926128507%22+%22926307487%22+%22926338730%22+%22926351184%22+%22926351370%22+%22926446843%22+%22926490060%22+%22926529870%22+%22926543962%22+%22926624717%22+%22926648306%22+%22926698435%22+%22926876155%22+%22926877720%22+%22926970348%22+%22927044390%22+%22927088584%22+%22927092026%22+%22927113872%22+%22927129159%22+%22927146487%22+%22927152630%22+%22927162121%22+%22927182173%22+%22927211033%22+%22927239620%22+%22927327481%22+%22927379384%22+%22927409593%22+%22927440466%22+%22927440725%22+%22927441217%22+%22927445034%22+%22927529319%22+%22927560429%22+%22927616084%22+%22927661683%22+%22927671174%22+%22927718650%22+%22927826550%22+%22927901722%22+%22927906694%22+%22927938197%22+%22927944979%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:56.854145Z",
+      "content_sha256": "d52b6bd72e782ac9e2717a019eb1ba1c5a45c59a69f7489b841924ad37fc8b69",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q111605409-7ad4fadc-438b-351c-d33b-764661b5ee99\"\n      },\n      \"value\" : {\n        \"xml:lang\" : \"nb\",\n        \"type\" : \"literal\",\n        \"value\" : \"Tensio AS\"\n      },\n      \"org\" : {\n      ",
+      "locator": "/results/bindings/8",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q111605409, revision 2564096376; https://www.wikidata.org/w/index.php?title=Q111605409&oldid=2564096376; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q111605409-7ad4fadc-438b-351c-d33b-764661b5ee99"
+      },
+      "value": {
+        "xml:lang": "nb",
+        "type": "literal",
+        "value": "Tensio AS"
+      },
+      "org": {
+        "type": "literal",
+        "value": "922828172"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P1448"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111605409"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2564096376"
+      }
+    },
+    "property": "P1448",
+    "verdict": "correct",
+    "why_correct": "The raw row binds 922828172 to Q111605409 and states the Norwegian official name “Tensio AS”. This agrees with the registry name TENSIO AS after case/whitespace normalization; the primary registry name remains unchanged."
+  },
+  {
+    "organisation_number": "923354220",
+    "company": "EIDEFOSS VANNKRAFT AS",
+    "claim": {
+      "field": "identity.wikidata.employees.4ee693c24f949760",
+      "value": {
+        "amount": "18",
+        "unit": "http://www.wikidata.org/entity/Q199",
+        "point_in_time": {
+          "time": "2023-01-01T00:00:00Z",
+          "precision": 9,
+          "calendar": "http://www.wikidata.org/entity/Q1985727"
+        }
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "7deba798db480ee6e553479db072900498bc57b87d089067bd1c08391479925d"
+      ],
+      "id": "553fe17ce401f0d1e4e49545b6339ac1ab5d1ceb00574e8a92426ac65bae83ac",
+      "family": "identity",
+      "reporting_period": {
+        "time": "2023-01-01T00:00:00Z",
+        "precision": 9,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:56.854145Z",
+      "last_observed_at": "2026-11-19T17:42:56.854145Z",
+      "reasons": {
+        "wikidata_property": "P1128",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q104146333",
+        "wikidata_revision": "2551055776",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: employees"
+      }
+    },
+    "evidence": {
+      "id": "7deba798db480ee6e553479db072900498bc57b87d089067bd1c08391479925d",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22918610650%22+%22918640967%22+%22918746781%22+%22918765662%22+%22918784438%22+%22918843582%22+%22918859632%22+%22918863877%22+%22918952071%22+%22918975934%22+%22919025131%22+%22919026324%22+%22919038438%22+%22919086815%22+%22919092734%22+%22919212101%22+%22919217081%22+%22919254254%22+%22919276843%22+%22919280204%22+%22919529180%22+%22919650826%22+%22919653477%22+%22919681101%22+%22919690658%22+%22919763477%22+%22919807393%22+%22919862904%22+%22919893389%22+%22919926546%22+%22919931477%22+%22919940972%22+%22919948493%22+%22919966289%22+%22920043356%22+%22920057217%22+%22920060641%22+%22920133428%22+%22920285716%22+%22920358411%22+%22920417892%22+%22920514502%22+%22920542158%22+%22920597122%22+%22920641504%22+%22920667872%22+%22920918204%22+%22920956718%22+%22921044186%22+%22921044577%22+%22921108249%22+%22921146795%22+%22921186924%22+%22921206232%22+%22921320868%22+%22921338732%22+%22921348401%22+%22921366086%22+%22921368348%22+%22921391005%22+%22921443234%22+%22921450737%22+%22921484623%22+%22921509502%22+%22921596154%22+%22921634544%22+%22921646542%22+%22921669259%22+%22921678851%22+%22921707924%22+%22921715528%22+%22921810229%22+%22921860609%22+%22921961022%22+%22921994435%22+%22922069212%22+%22922154635%22+%22922187991%22+%22922285632%22+%22922302812%22+%22922581169%22+%22922645884%22+%22922646481%22+%22922654875%22+%22922661650%22+%22922687552%22+%22922723664%22+%22922753768%22+%22922767459%22+%22922828172%22+%22922829551%22+%22922857873%22+%22922971684%22+%22923068805%22+%22923160485%22+%22923172874%22+%22923192352%22+%22923201661%22+%22923219137%22+%22923354220%22+%22923472134%22+%22923479732%22+%22923558330%22+%22923566031%22+%22923591079%22+%22923716416%22+%22923763058%22+%22923845488%22+%22923883819%22+%22923998012%22+%22924061847%22+%22924412615%22+%22924458100%22+%22924478101%22+%22924499613%22+%22924517476%22+%22924553871%22+%22924688696%22+%22924775793%22+%22924784091%22+%22924825464%22+%22924828099%22+%22924840439%22+%22924910275%22+%22924912758%22+%22925149365%22+%22925201049%22+%22925226009%22+%22925255475%22+%22925273422%22+%22925310492%22+%22925321419%22+%22925321605%22+%22925347531%22+%22925360376%22+%22925370525%22+%22925400467%22+%22925413763%22+%22925421391%22+%22925434264%22+%22925546739%22+%22925547530%22+%22925656348%22+%22925677264%22+%22925738328%22+%22925787884%22+%22925809462%22+%22925853488%22+%22925854689%22+%22925856363%22+%22925924601%22+%22926007866%22+%22926045571%22+%22926065173%22+%22926077422%22+%22926096974%22+%22926128507%22+%22926307487%22+%22926338730%22+%22926351184%22+%22926351370%22+%22926446843%22+%22926490060%22+%22926529870%22+%22926543962%22+%22926624717%22+%22926648306%22+%22926698435%22+%22926876155%22+%22926877720%22+%22926970348%22+%22927044390%22+%22927088584%22+%22927092026%22+%22927113872%22+%22927129159%22+%22927146487%22+%22927152630%22+%22927162121%22+%22927182173%22+%22927211033%22+%22927239620%22+%22927327481%22+%22927379384%22+%22927409593%22+%22927440466%22+%22927440725%22+%22927441217%22+%22927445034%22+%22927529319%22+%22927560429%22+%22927616084%22+%22927661683%22+%22927671174%22+%22927718650%22+%22927826550%22+%22927901722%22+%22927906694%22+%22927938197%22+%22927944979%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:56.854145Z",
+      "content_sha256": "d52b6bd72e782ac9e2717a019eb1ba1c5a45c59a69f7489b841924ad37fc8b69",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q104146333-268b8644-4793-6632-881b-e9dcc04d606a\"\n      },\n      \"pointPrecision\" : {\n        \"datatype\" : \"http://www.w3.org/2001/XMLSchema#integer\",\n        \"type\" : \"literal\",\n        \"value",
+      "locator": "/results/bindings/0",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q104146333, revision 2551055776; https://www.wikidata.org/w/index.php?title=Q104146333&oldid=2551055776; CC0",
+      "effective_at": null,
+      "reporting_period": {
+        "time": "2023-01-01T00:00:00Z",
+        "precision": 9,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      }
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q104146333-268b8644-4793-6632-881b-e9dcc04d606a"
+      },
+      "pointPrecision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "9"
+      },
+      "pointCalendar": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "pointInTime": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type": "literal",
+        "value": "2023-01-01T00:00:00Z"
+      },
+      "value": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+        "type": "literal",
+        "value": "18"
+      },
+      "org": {
+        "type": "literal",
+        "value": "923354220"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P1128"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104146333"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2551055776"
+      },
+      "unit": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q199"
+      }
+    },
+    "property": "P1128",
+    "verdict": "correct",
+    "why_correct": "The statement reports 18 employees with unit Q199 (one) and P585 in 2023 at YEAR precision (9). It is a dated 2023 observation, not an assertion of 18 employees today or specifically on 1 January. The current registry count remains primary."
+  },
+  {
+    "organisation_number": "980910857",
+    "company": "THE ORCHARD AS",
+    "claim": {
+      "field": "identity.wikidata.inception.8c5ab64a70a71f01",
+      "value": {
+        "time": "1999-01-01T00:00:00Z",
+        "precision": 9,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "534f3969316cd5727ec6728bdda9a3bb02e0176ddbc299825bce2d8a533918a3"
+      ],
+      "id": "a233a7004599f36cee96e3213dadc37487449f29d2671c07a3db32fac4fb67bf",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:59.197729Z",
+      "last_observed_at": "2026-11-19T17:42:59.197729Z",
+      "reasons": {
+        "wikidata_property": "P571",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q23878247",
+        "wikidata_revision": "2532480783",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: inception"
+      }
+    },
+    "evidence": {
+      "id": "534f3969316cd5727ec6728bdda9a3bb02e0176ddbc299825bce2d8a533918a3",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22935422116%22+%22935432014%22+%22935450233%22+%22935486807%22+%22935499984%22+%22935502993%22+%22935556139%22+%22935624088%22+%22935624401%22+%22935641403%22+%22935666481%22+%22935674948%22+%22935691850%22+%22935738237%22+%22935794595%22+%22935794897%22+%22935809207%22+%22935829437%22+%22935831601%22+%22935853664%22+%22935856507%22+%22935861144%22+%22935868475%22+%22935884152%22+%22935941016%22+%22935955033%22+%22935999820%22+%22936008593%22+%22936010067%22+%22936010695%22+%22936043380%22+%22936049192%22+%22936052304%22+%22936056687%22+%22936073840%22+%22936094112%22+%22936106536%22+%22936107362%22+%22936256295%22+%22936276075%22+%22936312055%22+%22936392946%22+%22936428215%22+%22936441440%22+%22936544525%22+%22936553214%22+%22936563139%22+%22936597386%22+%22936621716%22+%22936629466%22+%22936673066%22+%22936681514%22+%22936703445%22+%22936768873%22+%22936801005%22+%22936855865%22+%22938092516%22+%22938986673%22+%22939725709%22+%22939882480%22+%22940572355%22+%22941235905%22+%22942393679%22+%22942633475%22+%22943189145%22+%22943384150%22+%22946381373%22+%22947439332%22+%22948415534%22+%22948774402%22+%22948850532%22+%22950137169%22+%22950220317%22+%22951734543%22+%22952049070%22+%22952690744%22+%22952785052%22+%22953459450%22+%22954081311%22+%22955010477%22+%22955098498%22+%22956329132%22+%22956409071%22+%22956605059%22+%22957883303%22+%22958366620%22+%22958415079%22+%22959189412%22+%22959876959%22+%22960213912%22+%22960694503%22+%22961574110%22+%22962148204%22+%22963008090%22+%22963116128%22+%22964267952%22+%22964898278%22+%22965530819%22+%22965835156%22+%22966443960%22+%22967933635%22+%22968386085%22+%22968468235%22+%22968545337%22+%22970979026%22+%22971161531%22+%22971173459%22+%22971349743%22+%22971400862%22+%22971456299%22+%22971492325%22+%22971521570%22+%22971558415%22+%22974527197%22+%22974533537%22+%22975569306%22+%22975822567%22+%22975962121%22+%22976183193%22+%22976271157%22+%22976289862%22+%22976526368%22+%22976623797%22+%22976645677%22+%22976746651%22+%22976758218%22+%22976843878%22+%22976871448%22+%22976886534%22+%22977107385%22+%22977126150%22+%22977149312%22+%22977250293%22+%22977456436%22+%22978714854%22+%22979354843%22+%22979709803%22+%22979775288%22+%22979870795%22+%22979907168%22+%22979973969%22+%22980166635%22+%22980362779%22+%22980411575%22+%22980622444%22+%22980910857%22+%22980973549%22+%22981052765%22+%22981058771%22+%22981063635%22+%22981089022%22+%22981130243%22+%22981391594%22+%22981490363%22+%22981508734%22+%22981613171%22+%22982189071%22+%22982388449%22+%22982410851%22+%22982801559%22+%22983025498%22+%22983103030%22+%22983244858%22+%22983298176%22+%22983430570%22+%22983478999%22+%22983485731%22+%22983486703%22+%22983520944%22+%22983643647%22+%22983651526%22+%22983690262%22+%22983742149%22+%22983803997%22+%22983901840%22+%22983923089%22+%22983947859%22+%22983985378%22+%22984024290%22+%22984081332%22+%22984133715%22+%22984290535%22+%22984414978%22+%22984470835%22+%22984590881%22+%22984597665%22+%22984611927%22+%22984633718%22+%22984717865%22+%22984821115%22+%22984852487%22+%22985090572%22+%22985204381%22+%22985464405%22+%22985470944%22+%22985803722%22+%22985830355%22+%22985868972%22+%22985891346%22+%22986007458%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:59.197729Z",
+      "content_sha256": "830bbda5f9b8a0c3421c991f7d96c97cb829a1041366da6d3d5fa860fa0ca8da",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q23878247-2a0ae1fb-4938-9abf-a59f-88761dd09e38\"\n      },\n      \"value\" : {\n        \"datatype\" : \"http://www.w3.org/2001/XMLSchema#dateTime\",\n        \"type\" : \"literal\",\n        \"value\" : \"1999",
+      "locator": "/results/bindings/34",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q23878247, revision 2532480783; https://www.wikidata.org/w/index.php?title=Q23878247&oldid=2532480783; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q23878247-2a0ae1fb-4938-9abf-a59f-88761dd09e38"
+      },
+      "value": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type": "literal",
+        "value": "1999-01-01T00:00:00Z"
+      },
+      "org": {
+        "type": "literal",
+        "value": "980910857"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23878247"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2532480783"
+      },
+      "precision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "9"
+      },
+      "calendar": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1985727"
+      }
+    },
+    "property": "P571",
+    "verdict": "correct",
+    "why_correct": "The row identifies this exact organisation number on Q23878247 and reports inception in 1999 with precision 9. Only the year is established; the padded 1 January timestamp is not promoted to a day-precise founding date. The registry founding date retains precedence."
+  },
+  {
+    "organisation_number": "938092516",
+    "company": "OSLO CHAMBER OF COMMERCE",
+    "claim": {
+      "field": "identity.wikidata.headquarters.2a7d586f53e0bf3a",
+      "value": {
+        "entity": "http://www.wikidata.org/entity/Q5245991",
+        "label": "Oslo kommune",
+        "label_language": "nb"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "c134a6236608dc5cc456ef5c7a1c581d5f78344f7d805e2488077bfa271eba1e"
+      ],
+      "id": "3da40a93a86aa2d85a593bb53b50bc421832196ae76b96d86ed8ccfc44f70ea7",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:59.197729Z",
+      "last_observed_at": "2026-11-19T17:42:59.197729Z",
+      "reasons": {
+        "wikidata_property": "P159",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q19384816",
+        "wikidata_revision": "2502423198",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: headquarters"
+      }
+    },
+    "evidence": {
+      "id": "c134a6236608dc5cc456ef5c7a1c581d5f78344f7d805e2488077bfa271eba1e",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22935422116%22+%22935432014%22+%22935450233%22+%22935486807%22+%22935499984%22+%22935502993%22+%22935556139%22+%22935624088%22+%22935624401%22+%22935641403%22+%22935666481%22+%22935674948%22+%22935691850%22+%22935738237%22+%22935794595%22+%22935794897%22+%22935809207%22+%22935829437%22+%22935831601%22+%22935853664%22+%22935856507%22+%22935861144%22+%22935868475%22+%22935884152%22+%22935941016%22+%22935955033%22+%22935999820%22+%22936008593%22+%22936010067%22+%22936010695%22+%22936043380%22+%22936049192%22+%22936052304%22+%22936056687%22+%22936073840%22+%22936094112%22+%22936106536%22+%22936107362%22+%22936256295%22+%22936276075%22+%22936312055%22+%22936392946%22+%22936428215%22+%22936441440%22+%22936544525%22+%22936553214%22+%22936563139%22+%22936597386%22+%22936621716%22+%22936629466%22+%22936673066%22+%22936681514%22+%22936703445%22+%22936768873%22+%22936801005%22+%22936855865%22+%22938092516%22+%22938986673%22+%22939725709%22+%22939882480%22+%22940572355%22+%22941235905%22+%22942393679%22+%22942633475%22+%22943189145%22+%22943384150%22+%22946381373%22+%22947439332%22+%22948415534%22+%22948774402%22+%22948850532%22+%22950137169%22+%22950220317%22+%22951734543%22+%22952049070%22+%22952690744%22+%22952785052%22+%22953459450%22+%22954081311%22+%22955010477%22+%22955098498%22+%22956329132%22+%22956409071%22+%22956605059%22+%22957883303%22+%22958366620%22+%22958415079%22+%22959189412%22+%22959876959%22+%22960213912%22+%22960694503%22+%22961574110%22+%22962148204%22+%22963008090%22+%22963116128%22+%22964267952%22+%22964898278%22+%22965530819%22+%22965835156%22+%22966443960%22+%22967933635%22+%22968386085%22+%22968468235%22+%22968545337%22+%22970979026%22+%22971161531%22+%22971173459%22+%22971349743%22+%22971400862%22+%22971456299%22+%22971492325%22+%22971521570%22+%22971558415%22+%22974527197%22+%22974533537%22+%22975569306%22+%22975822567%22+%22975962121%22+%22976183193%22+%22976271157%22+%22976289862%22+%22976526368%22+%22976623797%22+%22976645677%22+%22976746651%22+%22976758218%22+%22976843878%22+%22976871448%22+%22976886534%22+%22977107385%22+%22977126150%22+%22977149312%22+%22977250293%22+%22977456436%22+%22978714854%22+%22979354843%22+%22979709803%22+%22979775288%22+%22979870795%22+%22979907168%22+%22979973969%22+%22980166635%22+%22980362779%22+%22980411575%22+%22980622444%22+%22980910857%22+%22980973549%22+%22981052765%22+%22981058771%22+%22981063635%22+%22981089022%22+%22981130243%22+%22981391594%22+%22981490363%22+%22981508734%22+%22981613171%22+%22982189071%22+%22982388449%22+%22982410851%22+%22982801559%22+%22983025498%22+%22983103030%22+%22983244858%22+%22983298176%22+%22983430570%22+%22983478999%22+%22983485731%22+%22983486703%22+%22983520944%22+%22983643647%22+%22983651526%22+%22983690262%22+%22983742149%22+%22983803997%22+%22983901840%22+%22983923089%22+%22983947859%22+%22983985378%22+%22984024290%22+%22984081332%22+%22984133715%22+%22984290535%22+%22984414978%22+%22984470835%22+%22984590881%22+%22984597665%22+%22984611927%22+%22984633718%22+%22984717865%22+%22984821115%22+%22984852487%22+%22985090572%22+%22985204381%22+%22985464405%22+%22985470944%22+%22985803722%22+%22985830355%22+%22985868972%22+%22985891346%22+%22986007458%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:59.197729Z",
+      "content_sha256": "830bbda5f9b8a0c3421c991f7d96c97cb829a1041366da6d3d5fa860fa0ca8da",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q19384816-D4F5ED1D-4561-4A69-8B0F-24E060D66854\"\n      },\n      \"value\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q5245991\"\n      },\n      \"org\" : {\n        ",
+      "locator": "/results/bindings/51",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q19384816, revision 2502423198; https://www.wikidata.org/w/index.php?title=Q19384816&oldid=2502423198; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q19384816-D4F5ED1D-4561-4A69-8B0F-24E060D66854"
+      },
+      "value": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5245991"
+      },
+      "org": {
+        "type": "literal",
+        "value": "938092516"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2502423198"
+      },
+      "valueLabel": {
+        "xml:lang": "nb",
+        "type": "literal",
+        "value": "Oslo kommune"
+      }
+    },
+    "property": "P159",
+    "verdict": "correct",
+    "why_correct": "The own-item P159 statement explicitly names Q5245991, Oslo kommune. The municipality identifier and Norwegian label are retained. No street address is invented, and a registry contact address is not used to infer headquarters."
+  },
+  {
+    "organisation_number": "968386085",
+    "company": "LOFOTPOSTEN AS",
+    "claim": {
+      "field": "identity.wikidata.industry.4318115d998455b3",
+      "value": {
+        "entity": "http://www.wikidata.org/entity/Q29585660",
+        "label": "utgivelse av aviser",
+        "label_language": "nb"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "b4671728917404e401b85f8c66fdc0b41465ac160c6df74f933575bb1c6de13d"
+      ],
+      "id": "0a8ed181bf1f37f1ed65e6b8a9dea8975ce49deea94e859d5125c30da7f7b395",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:59.197729Z",
+      "last_observed_at": "2026-11-19T17:42:59.197729Z",
+      "reasons": {
+        "wikidata_property": "P452",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q1764736",
+        "wikidata_revision": "2569438172",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: industry"
+      }
+    },
+    "evidence": {
+      "id": "b4671728917404e401b85f8c66fdc0b41465ac160c6df74f933575bb1c6de13d",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22935422116%22+%22935432014%22+%22935450233%22+%22935486807%22+%22935499984%22+%22935502993%22+%22935556139%22+%22935624088%22+%22935624401%22+%22935641403%22+%22935666481%22+%22935674948%22+%22935691850%22+%22935738237%22+%22935794595%22+%22935794897%22+%22935809207%22+%22935829437%22+%22935831601%22+%22935853664%22+%22935856507%22+%22935861144%22+%22935868475%22+%22935884152%22+%22935941016%22+%22935955033%22+%22935999820%22+%22936008593%22+%22936010067%22+%22936010695%22+%22936043380%22+%22936049192%22+%22936052304%22+%22936056687%22+%22936073840%22+%22936094112%22+%22936106536%22+%22936107362%22+%22936256295%22+%22936276075%22+%22936312055%22+%22936392946%22+%22936428215%22+%22936441440%22+%22936544525%22+%22936553214%22+%22936563139%22+%22936597386%22+%22936621716%22+%22936629466%22+%22936673066%22+%22936681514%22+%22936703445%22+%22936768873%22+%22936801005%22+%22936855865%22+%22938092516%22+%22938986673%22+%22939725709%22+%22939882480%22+%22940572355%22+%22941235905%22+%22942393679%22+%22942633475%22+%22943189145%22+%22943384150%22+%22946381373%22+%22947439332%22+%22948415534%22+%22948774402%22+%22948850532%22+%22950137169%22+%22950220317%22+%22951734543%22+%22952049070%22+%22952690744%22+%22952785052%22+%22953459450%22+%22954081311%22+%22955010477%22+%22955098498%22+%22956329132%22+%22956409071%22+%22956605059%22+%22957883303%22+%22958366620%22+%22958415079%22+%22959189412%22+%22959876959%22+%22960213912%22+%22960694503%22+%22961574110%22+%22962148204%22+%22963008090%22+%22963116128%22+%22964267952%22+%22964898278%22+%22965530819%22+%22965835156%22+%22966443960%22+%22967933635%22+%22968386085%22+%22968468235%22+%22968545337%22+%22970979026%22+%22971161531%22+%22971173459%22+%22971349743%22+%22971400862%22+%22971456299%22+%22971492325%22+%22971521570%22+%22971558415%22+%22974527197%22+%22974533537%22+%22975569306%22+%22975822567%22+%22975962121%22+%22976183193%22+%22976271157%22+%22976289862%22+%22976526368%22+%22976623797%22+%22976645677%22+%22976746651%22+%22976758218%22+%22976843878%22+%22976871448%22+%22976886534%22+%22977107385%22+%22977126150%22+%22977149312%22+%22977250293%22+%22977456436%22+%22978714854%22+%22979354843%22+%22979709803%22+%22979775288%22+%22979870795%22+%22979907168%22+%22979973969%22+%22980166635%22+%22980362779%22+%22980411575%22+%22980622444%22+%22980910857%22+%22980973549%22+%22981052765%22+%22981058771%22+%22981063635%22+%22981089022%22+%22981130243%22+%22981391594%22+%22981490363%22+%22981508734%22+%22981613171%22+%22982189071%22+%22982388449%22+%22982410851%22+%22982801559%22+%22983025498%22+%22983103030%22+%22983244858%22+%22983298176%22+%22983430570%22+%22983478999%22+%22983485731%22+%22983486703%22+%22983520944%22+%22983643647%22+%22983651526%22+%22983690262%22+%22983742149%22+%22983803997%22+%22983901840%22+%22983923089%22+%22983947859%22+%22983985378%22+%22984024290%22+%22984081332%22+%22984133715%22+%22984290535%22+%22984414978%22+%22984470835%22+%22984590881%22+%22984597665%22+%22984611927%22+%22984633718%22+%22984717865%22+%22984821115%22+%22984852487%22+%22985090572%22+%22985204381%22+%22985464405%22+%22985470944%22+%22985803722%22+%22985830355%22+%22985868972%22+%22985891346%22+%22986007458%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:59.197729Z",
+      "content_sha256": "830bbda5f9b8a0c3421c991f7d96c97cb829a1041366da6d3d5fa860fa0ca8da",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q1764736-5772D83F-C8A5-4C23-8264-508125489AED\"\n      },\n      \"value\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q29585660\"\n      },\n      \"org\" : {\n        ",
+      "locator": "/results/bindings/38",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q1764736, revision 2569438172; https://www.wikidata.org/w/index.php?title=Q1764736&oldid=2569438172; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q1764736-5772D83F-C8A5-4C23-8264-508125489AED"
+      },
+      "value": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29585660"
+      },
+      "org": {
+        "type": "literal",
+        "value": "968386085"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2569438172"
+      },
+      "valueLabel": {
+        "xml:lang": "nb",
+        "type": "literal",
+        "value": "utgivelse av aviser"
+      }
+    },
+    "property": "P452",
+    "verdict": "correct",
+    "why_correct": "The own-item P452 statement names Q29585660, “utgivelse av aviser”. The industry class is taken directly from Wikidata, not guessed from the company name or silently converted to a NACE code."
+  },
+  {
+    "organisation_number": "971558415",
+    "company": "DANSEINFORMASJONEN STI",
+    "claim": {
+      "field": "social_profile.849b53a48559cc37adac",
+      "value": {
+        "url": "https://www.instagram.com/danseinformasjonen",
+        "platform": "instagram.com"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "56b75493fdcece99e63ccccf48e998db2b4c133604e0dc54764719e4fe15dad4",
+        "6a4b5f6d23452a2d635822d0cfff0220a1a0912fe752fc06cd233a39f103f6de"
+      ],
+      "id": "c12f2cb46fa67c110bf6c5dbae82565ba7c1b857f93466aaf7927fa4ef799f79",
+      "family": "website",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:50:13.537654Z",
+      "last_observed_at": "2026-11-19T17:50:13.537654Z",
+      "reasons": {
+        "relationship": "Company-owned profile linked from verified website",
+        "wikidata_property": "P2003",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q19372421",
+        "wikidata_revision": "2502410378"
+      }
+    },
+    "evidence": {
+      "id": "6a4b5f6d23452a2d635822d0cfff0220a1a0912fe752fc06cd233a39f103f6de",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22935422116%22+%22935432014%22+%22935450233%22+%22935486807%22+%22935499984%22+%22935502993%22+%22935556139%22+%22935624088%22+%22935624401%22+%22935641403%22+%22935666481%22+%22935674948%22+%22935691850%22+%22935738237%22+%22935794595%22+%22935794897%22+%22935809207%22+%22935829437%22+%22935831601%22+%22935853664%22+%22935856507%22+%22935861144%22+%22935868475%22+%22935884152%22+%22935941016%22+%22935955033%22+%22935999820%22+%22936008593%22+%22936010067%22+%22936010695%22+%22936043380%22+%22936049192%22+%22936052304%22+%22936056687%22+%22936073840%22+%22936094112%22+%22936106536%22+%22936107362%22+%22936256295%22+%22936276075%22+%22936312055%22+%22936392946%22+%22936428215%22+%22936441440%22+%22936544525%22+%22936553214%22+%22936563139%22+%22936597386%22+%22936621716%22+%22936629466%22+%22936673066%22+%22936681514%22+%22936703445%22+%22936768873%22+%22936801005%22+%22936855865%22+%22938092516%22+%22938986673%22+%22939725709%22+%22939882480%22+%22940572355%22+%22941235905%22+%22942393679%22+%22942633475%22+%22943189145%22+%22943384150%22+%22946381373%22+%22947439332%22+%22948415534%22+%22948774402%22+%22948850532%22+%22950137169%22+%22950220317%22+%22951734543%22+%22952049070%22+%22952690744%22+%22952785052%22+%22953459450%22+%22954081311%22+%22955010477%22+%22955098498%22+%22956329132%22+%22956409071%22+%22956605059%22+%22957883303%22+%22958366620%22+%22958415079%22+%22959189412%22+%22959876959%22+%22960213912%22+%22960694503%22+%22961574110%22+%22962148204%22+%22963008090%22+%22963116128%22+%22964267952%22+%22964898278%22+%22965530819%22+%22965835156%22+%22966443960%22+%22967933635%22+%22968386085%22+%22968468235%22+%22968545337%22+%22970979026%22+%22971161531%22+%22971173459%22+%22971349743%22+%22971400862%22+%22971456299%22+%22971492325%22+%22971521570%22+%22971558415%22+%22974527197%22+%22974533537%22+%22975569306%22+%22975822567%22+%22975962121%22+%22976183193%22+%22976271157%22+%22976289862%22+%22976526368%22+%22976623797%22+%22976645677%22+%22976746651%22+%22976758218%22+%22976843878%22+%22976871448%22+%22976886534%22+%22977107385%22+%22977126150%22+%22977149312%22+%22977250293%22+%22977456436%22+%22978714854%22+%22979354843%22+%22979709803%22+%22979775288%22+%22979870795%22+%22979907168%22+%22979973969%22+%22980166635%22+%22980362779%22+%22980411575%22+%22980622444%22+%22980910857%22+%22980973549%22+%22981052765%22+%22981058771%22+%22981063635%22+%22981089022%22+%22981130243%22+%22981391594%22+%22981490363%22+%22981508734%22+%22981613171%22+%22982189071%22+%22982388449%22+%22982410851%22+%22982801559%22+%22983025498%22+%22983103030%22+%22983244858%22+%22983298176%22+%22983430570%22+%22983478999%22+%22983485731%22+%22983486703%22+%22983520944%22+%22983643647%22+%22983651526%22+%22983690262%22+%22983742149%22+%22983803997%22+%22983901840%22+%22983923089%22+%22983947859%22+%22983985378%22+%22984024290%22+%22984081332%22+%22984133715%22+%22984290535%22+%22984414978%22+%22984470835%22+%22984590881%22+%22984597665%22+%22984611927%22+%22984633718%22+%22984717865%22+%22984821115%22+%22984852487%22+%22985090572%22+%22985204381%22+%22985464405%22+%22985470944%22+%22985803722%22+%22985830355%22+%22985868972%22+%22985891346%22+%22986007458%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:59.197729Z",
+      "content_sha256": "830bbda5f9b8a0c3421c991f7d96c97cb829a1041366da6d3d5fa860fa0ca8da",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q19372421-4ed5ca32-4e95-2d9d-6590-4211792784c6\"\n      },\n      \"value\" : {\n        \"type\" : \"literal\",\n        \"value\" : \"danseinformasjonen\"\n      },\n      \"org\" : {\n        \"type\" : \"literal",
+      "locator": "/results/bindings/28",
+      "extraction_method": "signalpost.wikidata.social.v1",
+      "source_identifier": "Wikidata Q19372421, revision 2502410378; https://www.wikidata.org/w/index.php?title=Q19372421&oldid=2502410378; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q19372421-4ed5ca32-4e95-2d9d-6590-4211792784c6"
+      },
+      "value": {
+        "type": "literal",
+        "value": "danseinformasjonen"
+      },
+      "org": {
+        "type": "literal",
+        "value": "971558415"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P2003"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2502410378"
+      }
+    },
+    "property": "P2003",
+    "verdict": "correct",
+    "why_correct": "The result binds the exact orgnr and Instagram identifier danseinformasjonen. The existing website-discovered profile passes the same handle/site-link rules and receives this revision-bound citation without a duplicate profile or changed fact ID. No Instagram request is made."
+  },
+  {
+    "organisation_number": "975569306",
+    "company": "GLASSVERKET IDRETTSFORENING",
+    "claim": {
+      "field": "identity.wikidata.official_website.95c7721d926f4b01",
+      "value": "https://glassverketif.no/",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3081497bbebf580d040f457a06e312d2db48224ddfc4f5573ed9131dfd8a0ec6"
+      ],
+      "id": "94e7be2f22c604d30a7887c6053ea29f434b358b59966daf0e6aca2f14f84c18",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:59.197729Z",
+      "last_observed_at": "2026-11-19T17:42:59.197729Z",
+      "reasons": {
+        "wikidata_property": "P856",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q11972178",
+        "wikidata_revision": "2560086105",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: official website"
+      }
+    },
+    "evidence": {
+      "id": "3081497bbebf580d040f457a06e312d2db48224ddfc4f5573ed9131dfd8a0ec6",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22935422116%22+%22935432014%22+%22935450233%22+%22935486807%22+%22935499984%22+%22935502993%22+%22935556139%22+%22935624088%22+%22935624401%22+%22935641403%22+%22935666481%22+%22935674948%22+%22935691850%22+%22935738237%22+%22935794595%22+%22935794897%22+%22935809207%22+%22935829437%22+%22935831601%22+%22935853664%22+%22935856507%22+%22935861144%22+%22935868475%22+%22935884152%22+%22935941016%22+%22935955033%22+%22935999820%22+%22936008593%22+%22936010067%22+%22936010695%22+%22936043380%22+%22936049192%22+%22936052304%22+%22936056687%22+%22936073840%22+%22936094112%22+%22936106536%22+%22936107362%22+%22936256295%22+%22936276075%22+%22936312055%22+%22936392946%22+%22936428215%22+%22936441440%22+%22936544525%22+%22936553214%22+%22936563139%22+%22936597386%22+%22936621716%22+%22936629466%22+%22936673066%22+%22936681514%22+%22936703445%22+%22936768873%22+%22936801005%22+%22936855865%22+%22938092516%22+%22938986673%22+%22939725709%22+%22939882480%22+%22940572355%22+%22941235905%22+%22942393679%22+%22942633475%22+%22943189145%22+%22943384150%22+%22946381373%22+%22947439332%22+%22948415534%22+%22948774402%22+%22948850532%22+%22950137169%22+%22950220317%22+%22951734543%22+%22952049070%22+%22952690744%22+%22952785052%22+%22953459450%22+%22954081311%22+%22955010477%22+%22955098498%22+%22956329132%22+%22956409071%22+%22956605059%22+%22957883303%22+%22958366620%22+%22958415079%22+%22959189412%22+%22959876959%22+%22960213912%22+%22960694503%22+%22961574110%22+%22962148204%22+%22963008090%22+%22963116128%22+%22964267952%22+%22964898278%22+%22965530819%22+%22965835156%22+%22966443960%22+%22967933635%22+%22968386085%22+%22968468235%22+%22968545337%22+%22970979026%22+%22971161531%22+%22971173459%22+%22971349743%22+%22971400862%22+%22971456299%22+%22971492325%22+%22971521570%22+%22971558415%22+%22974527197%22+%22974533537%22+%22975569306%22+%22975822567%22+%22975962121%22+%22976183193%22+%22976271157%22+%22976289862%22+%22976526368%22+%22976623797%22+%22976645677%22+%22976746651%22+%22976758218%22+%22976843878%22+%22976871448%22+%22976886534%22+%22977107385%22+%22977126150%22+%22977149312%22+%22977250293%22+%22977456436%22+%22978714854%22+%22979354843%22+%22979709803%22+%22979775288%22+%22979870795%22+%22979907168%22+%22979973969%22+%22980166635%22+%22980362779%22+%22980411575%22+%22980622444%22+%22980910857%22+%22980973549%22+%22981052765%22+%22981058771%22+%22981063635%22+%22981089022%22+%22981130243%22+%22981391594%22+%22981490363%22+%22981508734%22+%22981613171%22+%22982189071%22+%22982388449%22+%22982410851%22+%22982801559%22+%22983025498%22+%22983103030%22+%22983244858%22+%22983298176%22+%22983430570%22+%22983478999%22+%22983485731%22+%22983486703%22+%22983520944%22+%22983643647%22+%22983651526%22+%22983690262%22+%22983742149%22+%22983803997%22+%22983901840%22+%22983923089%22+%22983947859%22+%22983985378%22+%22984024290%22+%22984081332%22+%22984133715%22+%22984290535%22+%22984414978%22+%22984470835%22+%22984590881%22+%22984597665%22+%22984611927%22+%22984633718%22+%22984717865%22+%22984821115%22+%22984852487%22+%22985090572%22+%22985204381%22+%22985464405%22+%22985470944%22+%22985803722%22+%22985830355%22+%22985868972%22+%22985891346%22+%22986007458%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:59.197729Z",
+      "content_sha256": "830bbda5f9b8a0c3421c991f7d96c97cb829a1041366da6d3d5fa860fa0ca8da",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q11972178-A635F5D7-6B1D-454D-9AFC-3D00A4A77506\"\n      },\n      \"value\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"https://glassverketif.no/\"\n      },\n      \"org\" : {\n        \"type\" : \"lite",
+      "locator": "/results/bindings/16",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q11972178, revision 2560086105; https://www.wikidata.org/w/index.php?title=Q11972178&oldid=2560086105; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q11972178-A635F5D7-6B1D-454D-9AFC-3D00A4A77506"
+      },
+      "value": {
+        "type": "uri",
+        "value": "https://glassverketif.no/"
+      },
+      "org": {
+        "type": "literal",
+        "value": "975569306"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11972178"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2560086105"
+      }
+    },
+    "property": "P856",
+    "verdict": "correct",
+    "why_correct": "The exact-orgnr item explicitly reports https://glassverketif.no/. It is published as an attributed Wikidata website assertion; that fact alone does not establish website ownership or create a VERIFIED website claim."
+  },
+  {
+    "organisation_number": "935189365",
+    "company": "HESTENES KRAFTVERK AS",
+    "claim": {
+      "field": "identity.wikidata.inception.fa624465e1a915bf",
+      "value": {
+        "time": "2025-02-11T00:00:00Z",
+        "precision": 11,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "17db8371fb07c4e39f054029d61567ec6b787c9ce3cf48c79e4712e38859296d"
+      ],
+      "id": "01281a89c6135b7ebece03d46e380708927b78c92ddb275d47b32c49ad1cd168",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:57.268295Z",
+      "last_observed_at": "2026-11-19T17:42:57.268295Z",
+      "reasons": {
+        "wikidata_property": "P571",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q136446847",
+        "wikidata_revision": "2502432260",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: inception"
+      }
+    },
+    "evidence": {
+      "id": "17db8371fb07c4e39f054029d61567ec6b787c9ce3cf48c79e4712e38859296d",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22927949954%22+%22927977508%22+%22927992442%22+%22928035212%22+%22928066193%22+%22928152553%22+%22928168263%22+%22928202267%22+%22928316033%22+%22928329828%22+%22928350193%22+%22928354318%22+%22928354709%22+%22928421937%22+%22928430359%22+%22928463923%22+%22928487067%22+%22928502732%22+%22928522539%22+%22928556417%22+%22928647854%22+%22928651797%22+%22928657523%22+%22928736032%22+%22928753581%22+%22928764125%22+%22928823873%22+%22928854337%22+%22928938875%22+%22928985407%22+%22929002733%22+%22929021266%22+%22929036301%22+%22929074009%22+%22929089464%22+%22929098463%22+%22929114116%22+%22929205472%22+%22929207157%22+%22929237889%22+%22929269314%22+%22929283988%22+%22929354435%22+%22929399900%22+%22929456246%22+%22929481070%22+%22929548647%22+%22929611160%22+%22929756800%22+%22929817516%22+%22929911393%22+%22929942167%22+%22930006289%22+%22930012734%22+%22930014397%22+%22930015210%22+%22930039217%22+%22930045055%22+%22930164518%22+%22930166030%22+%22930168157%22+%22930202894%22+%22930205508%22+%22930219665%22+%22930219746%22+%22930239070%22+%22930316547%22+%22930380423%22+%22930476587%22+%22930536148%22+%22930595950%22+%22930607967%22+%22930681628%22+%22930740985%22+%22930774359%22+%22930804541%22+%22930832707%22+%22930882542%22+%22930883247%22+%22930884286%22+%22930888923%22+%22930893358%22+%22930917230%22+%22930996386%22+%22931011642%22+%22931025422%22+%22931067877%22+%22931069373%22+%22931094726%22+%22931137905%22+%22931321676%22+%22931326201%22+%22931338900%22+%22931371010%22+%22931417215%22+%22931556649%22+%22931613294%22+%22931635387%22+%22931708694%22+%22931745271%22+%22931762001%22+%22931824317%22+%22931863509%22+%22931890875%22+%22931975552%22+%22932060663%22+%22932087650%22+%22932133245%22+%22932146118%22+%22932264773%22+%22932299720%22+%22932336774%22+%22932345978%22+%22932350963%22+%22932386933%22+%22932448459%22+%22932495996%22+%22932535157%22+%22932540509%22+%22932611104%22+%22932742608%22+%22932747197%22+%22932750465%22+%22932763559%22+%22932799901%22+%22932858843%22+%22932885743%22+%22932925982%22+%22932986833%22+%22933001776%22+%22933024229%22+%22933031071%22+%22933058174%22+%22933147045%22+%22933162214%22+%22933170705%22+%22933195988%22+%22933241041%22+%22933241866%22+%22933252043%22+%22933270610%22+%22933320766%22+%22933372332%22+%22933374610%22+%22933378918%22+%22933380025%22+%22933399443%22+%22933458032%22+%22933547000%22+%22933585379%22+%22933593037%22+%22933662578%22+%22933762467%22+%22933769917%22+%22933784762%22+%22933814106%22+%22933818713%22+%22934012674%22+%22934080041%22+%22934178653%22+%22934244443%22+%22934250176%22+%22934270266%22+%22934289099%22+%22934301226%22+%22934370619%22+%22934404688%22+%22934407253%22+%22934500644%22+%22934515218%22+%22934582578%22+%22934605209%22+%22934609441%22+%22934617762%22+%22934620011%22+%22934750969%22+%22934861353%22+%22934871545%22+%22934882237%22+%22934907736%22+%22934929187%22+%22934938011%22+%22934940792%22+%22934982762%22+%22935073359%22+%22935082110%22+%22935159628%22+%22935180678%22+%22935180759%22+%22935181100%22+%22935189365%22+%22935213908%22+%22935214599%22+%22935229200%22+%22935268796%22+%22935311969%22+%22935315077%22+%22935321751%22+%22935327423%22+%22935381991%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:57.268295Z",
+      "content_sha256": "2193c798f45776251afc3ba07b0eb2a126201280033cc19bb08ed147f88b92db",
+      "claim_span": "{\n      \"precision\" : {\n        \"datatype\" : \"http://www.w3.org/2001/XMLSchema#integer\",\n        \"type\" : \"literal\",\n        \"value\" : \"11\"\n      },\n      \"calendar\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q1985727\"\n      },\n      \"statement\" : {\n        \"type\" ",
+      "locator": "/results/bindings/0",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q136446847, revision 2502432260; https://www.wikidata.org/w/index.php?title=Q136446847&oldid=2502432260; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "precision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "11"
+      },
+      "calendar": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q136446847-e983c2be-4f8f-6a1e-c93b-ce46a5681f19"
+      },
+      "value": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type": "literal",
+        "value": "2025-02-11T00:00:00Z"
+      },
+      "org": {
+        "type": "literal",
+        "value": "935189365"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136446847"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2502432260"
+      }
+    },
+    "property": "P571",
+    "verdict": "correct",
+    "why_correct": "The row binds HESTENES KRAFTVERK AS’s orgnr to Q136446847 and reports 11 February 2025 with day precision (11), Gregorian calendar. This is compatible with the registry founding date, so the separately attributed date is retained."
+  },
+  {
+    "organisation_number": "939882480",
+    "company": "FAMILIEN BRYNILDSENS LEGAT STI",
+    "claim": {
+      "field": "identity.wikidata.headquarters.1c5380b91704c315",
+      "value": {
+        "entity": "http://www.wikidata.org/entity/Q10428388",
+        "label": "Bergen kommune",
+        "label_language": "nb"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "405a0981c8d61e4e454a11c63f0acd027743c02e50180d3efded1d03ccf8170a"
+      ],
+      "id": "8df8f85ec127029979fd7eb3be29d0a2262d7a09b163887a68e7ba7e70ef4fc7",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:59.197729Z",
+      "last_observed_at": "2026-11-19T17:42:59.197729Z",
+      "reasons": {
+        "wikidata_property": "P159",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q127060909",
+        "wikidata_revision": "2502419670",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: headquarters"
+      }
+    },
+    "evidence": {
+      "id": "405a0981c8d61e4e454a11c63f0acd027743c02e50180d3efded1d03ccf8170a",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22935422116%22+%22935432014%22+%22935450233%22+%22935486807%22+%22935499984%22+%22935502993%22+%22935556139%22+%22935624088%22+%22935624401%22+%22935641403%22+%22935666481%22+%22935674948%22+%22935691850%22+%22935738237%22+%22935794595%22+%22935794897%22+%22935809207%22+%22935829437%22+%22935831601%22+%22935853664%22+%22935856507%22+%22935861144%22+%22935868475%22+%22935884152%22+%22935941016%22+%22935955033%22+%22935999820%22+%22936008593%22+%22936010067%22+%22936010695%22+%22936043380%22+%22936049192%22+%22936052304%22+%22936056687%22+%22936073840%22+%22936094112%22+%22936106536%22+%22936107362%22+%22936256295%22+%22936276075%22+%22936312055%22+%22936392946%22+%22936428215%22+%22936441440%22+%22936544525%22+%22936553214%22+%22936563139%22+%22936597386%22+%22936621716%22+%22936629466%22+%22936673066%22+%22936681514%22+%22936703445%22+%22936768873%22+%22936801005%22+%22936855865%22+%22938092516%22+%22938986673%22+%22939725709%22+%22939882480%22+%22940572355%22+%22941235905%22+%22942393679%22+%22942633475%22+%22943189145%22+%22943384150%22+%22946381373%22+%22947439332%22+%22948415534%22+%22948774402%22+%22948850532%22+%22950137169%22+%22950220317%22+%22951734543%22+%22952049070%22+%22952690744%22+%22952785052%22+%22953459450%22+%22954081311%22+%22955010477%22+%22955098498%22+%22956329132%22+%22956409071%22+%22956605059%22+%22957883303%22+%22958366620%22+%22958415079%22+%22959189412%22+%22959876959%22+%22960213912%22+%22960694503%22+%22961574110%22+%22962148204%22+%22963008090%22+%22963116128%22+%22964267952%22+%22964898278%22+%22965530819%22+%22965835156%22+%22966443960%22+%22967933635%22+%22968386085%22+%22968468235%22+%22968545337%22+%22970979026%22+%22971161531%22+%22971173459%22+%22971349743%22+%22971400862%22+%22971456299%22+%22971492325%22+%22971521570%22+%22971558415%22+%22974527197%22+%22974533537%22+%22975569306%22+%22975822567%22+%22975962121%22+%22976183193%22+%22976271157%22+%22976289862%22+%22976526368%22+%22976623797%22+%22976645677%22+%22976746651%22+%22976758218%22+%22976843878%22+%22976871448%22+%22976886534%22+%22977107385%22+%22977126150%22+%22977149312%22+%22977250293%22+%22977456436%22+%22978714854%22+%22979354843%22+%22979709803%22+%22979775288%22+%22979870795%22+%22979907168%22+%22979973969%22+%22980166635%22+%22980362779%22+%22980411575%22+%22980622444%22+%22980910857%22+%22980973549%22+%22981052765%22+%22981058771%22+%22981063635%22+%22981089022%22+%22981130243%22+%22981391594%22+%22981490363%22+%22981508734%22+%22981613171%22+%22982189071%22+%22982388449%22+%22982410851%22+%22982801559%22+%22983025498%22+%22983103030%22+%22983244858%22+%22983298176%22+%22983430570%22+%22983478999%22+%22983485731%22+%22983486703%22+%22983520944%22+%22983643647%22+%22983651526%22+%22983690262%22+%22983742149%22+%22983803997%22+%22983901840%22+%22983923089%22+%22983947859%22+%22983985378%22+%22984024290%22+%22984081332%22+%22984133715%22+%22984290535%22+%22984414978%22+%22984470835%22+%22984590881%22+%22984597665%22+%22984611927%22+%22984633718%22+%22984717865%22+%22984821115%22+%22984852487%22+%22985090572%22+%22985204381%22+%22985464405%22+%22985470944%22+%22985803722%22+%22985830355%22+%22985868972%22+%22985891346%22+%22986007458%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:59.197729Z",
+      "content_sha256": "830bbda5f9b8a0c3421c991f7d96c97cb829a1041366da6d3d5fa860fa0ca8da",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q127060909-0E3229BF-3A57-4C60-8E6B-9A3302AE87FF\"\n      },\n      \"value\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q10428388\"\n      },\n      \"org\" : {\n      ",
+      "locator": "/results/bindings/18",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q127060909, revision 2502419670; https://www.wikidata.org/w/index.php?title=Q127060909&oldid=2502419670; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q127060909-0E3229BF-3A57-4C60-8E6B-9A3302AE87FF"
+      },
+      "value": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10428388"
+      },
+      "org": {
+        "type": "literal",
+        "value": "939882480"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2502419670"
+      },
+      "valueLabel": {
+        "xml:lang": "nb",
+        "type": "literal",
+        "value": "Bergen kommune"
+      }
+    },
+    "property": "P159",
+    "verdict": "correct",
+    "why_correct": "The P159 row on the exact-orgnr item names Q10428388, Bergen kommune. This supports a headquarters location at municipality granularity; it does not support a more specific office address."
+  },
+  {
+    "organisation_number": "971492325",
+    "company": "FOLKENBORG MUSEUM STI",
+    "claim": {
+      "field": "identity.wikidata.headquarters.c246efe0cb5c27c9",
+      "value": {
+        "entity": "http://www.wikidata.org/entity/Q42293305",
+        "label": "Indre Østfold",
+        "label_language": "nb"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "aa7a37f951b18581846f0f0561e207da66adad857419cca16f6c444113926f98"
+      ],
+      "id": "4dbc6bc8d19b805a8b53d1f5569f60e82f481a03304dacaac448df1581490130",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T17:42:59.197729Z",
+      "last_observed_at": "2026-11-19T17:42:59.197729Z",
+      "reasons": {
+        "wikidata_property": "P159",
+        "wikidata_item": "https://www.wikidata.org/wiki/Q11969372",
+        "wikidata_revision": "2502405734",
+        "source": "Wikidata (CC0)",
+        "label": "Wikidata: headquarters"
+      }
+    },
+    "evidence": {
+      "id": "aa7a37f951b18581846f0f0561e207da66adad857419cca16f6c444113926f98",
+      "source_url": "https://query.wikidata.org/sparql?query=PREFIX+wdt%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E+PREFIX+wb%3A%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E+PREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E+PREFIX+pq%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E+PREFIX+pqv%3A%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%3E+PREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+%3Forg+%3Fitem+%3Frevision+%3Fproperty+%3Fstatement+%3Fvalue+%3FvalueLabel+%3Funit+%3FcurrencyCode+%3Fprecision+%3Fcalendar+%3FpointInTime+%3FpointPrecision+%3FpointCalendar+WHERE+%7B+VALUES+%3Forg+%7B+%22935422116%22+%22935432014%22+%22935450233%22+%22935486807%22+%22935499984%22+%22935502993%22+%22935556139%22+%22935624088%22+%22935624401%22+%22935641403%22+%22935666481%22+%22935674948%22+%22935691850%22+%22935738237%22+%22935794595%22+%22935794897%22+%22935809207%22+%22935829437%22+%22935831601%22+%22935853664%22+%22935856507%22+%22935861144%22+%22935868475%22+%22935884152%22+%22935941016%22+%22935955033%22+%22935999820%22+%22936008593%22+%22936010067%22+%22936010695%22+%22936043380%22+%22936049192%22+%22936052304%22+%22936056687%22+%22936073840%22+%22936094112%22+%22936106536%22+%22936107362%22+%22936256295%22+%22936276075%22+%22936312055%22+%22936392946%22+%22936428215%22+%22936441440%22+%22936544525%22+%22936553214%22+%22936563139%22+%22936597386%22+%22936621716%22+%22936629466%22+%22936673066%22+%22936681514%22+%22936703445%22+%22936768873%22+%22936801005%22+%22936855865%22+%22938092516%22+%22938986673%22+%22939725709%22+%22939882480%22+%22940572355%22+%22941235905%22+%22942393679%22+%22942633475%22+%22943189145%22+%22943384150%22+%22946381373%22+%22947439332%22+%22948415534%22+%22948774402%22+%22948850532%22+%22950137169%22+%22950220317%22+%22951734543%22+%22952049070%22+%22952690744%22+%22952785052%22+%22953459450%22+%22954081311%22+%22955010477%22+%22955098498%22+%22956329132%22+%22956409071%22+%22956605059%22+%22957883303%22+%22958366620%22+%22958415079%22+%22959189412%22+%22959876959%22+%22960213912%22+%22960694503%22+%22961574110%22+%22962148204%22+%22963008090%22+%22963116128%22+%22964267952%22+%22964898278%22+%22965530819%22+%22965835156%22+%22966443960%22+%22967933635%22+%22968386085%22+%22968468235%22+%22968545337%22+%22970979026%22+%22971161531%22+%22971173459%22+%22971349743%22+%22971400862%22+%22971456299%22+%22971492325%22+%22971521570%22+%22971558415%22+%22974527197%22+%22974533537%22+%22975569306%22+%22975822567%22+%22975962121%22+%22976183193%22+%22976271157%22+%22976289862%22+%22976526368%22+%22976623797%22+%22976645677%22+%22976746651%22+%22976758218%22+%22976843878%22+%22976871448%22+%22976886534%22+%22977107385%22+%22977126150%22+%22977149312%22+%22977250293%22+%22977456436%22+%22978714854%22+%22979354843%22+%22979709803%22+%22979775288%22+%22979870795%22+%22979907168%22+%22979973969%22+%22980166635%22+%22980362779%22+%22980411575%22+%22980622444%22+%22980910857%22+%22980973549%22+%22981052765%22+%22981058771%22+%22981063635%22+%22981089022%22+%22981130243%22+%22981391594%22+%22981490363%22+%22981508734%22+%22981613171%22+%22982189071%22+%22982388449%22+%22982410851%22+%22982801559%22+%22983025498%22+%22983103030%22+%22983244858%22+%22983298176%22+%22983430570%22+%22983478999%22+%22983485731%22+%22983486703%22+%22983520944%22+%22983643647%22+%22983651526%22+%22983690262%22+%22983742149%22+%22983803997%22+%22983901840%22+%22983923089%22+%22983947859%22+%22983985378%22+%22984024290%22+%22984081332%22+%22984133715%22+%22984290535%22+%22984414978%22+%22984470835%22+%22984590881%22+%22984597665%22+%22984611927%22+%22984633718%22+%22984717865%22+%22984821115%22+%22984852487%22+%22985090572%22+%22985204381%22+%22985464405%22+%22985470944%22+%22985803722%22+%22985830355%22+%22985868972%22+%22985891346%22+%22986007458%22+%7D+VALUES+%3Fproperty+%7B+wdt%3AP1448+wdt%3AP571+wdt%3AP159+wdt%3AP452+wdt%3AP1128+wdt%3AP2139+wdt%3AP856+wdt%3AP2013+wdt%3AP2003+wdt%3AP4264+wdt%3AP2002+wdt%3AP2397+%7D+%3Fitem+wdt%3AP2333+%3Forg+.+%3Fprop+wb%3AdirectClaim+%3Fproperty%3B+wb%3Aclaim+%3Flink%3B+wb%3AstatementProperty+%3Fmain+.+%3Fitem+%3Flink+%3Fstatement+.+%3Fstatement+a+wb%3ABestRank%3B+%3Fmain+%3Fvalue+.+OPTIONAL+%7B+%3Fitem+schema%3Aversion+%3Frevision+%7D+OPTIONAL+%7B+%3Fvalue+rdfs%3Alabel+%3FvalueLabel+FILTER%28LANG%28%3FvalueLabel%29+IN+%28%22nb%22%2C%22nn%22%2C%22no%22%2C%22en%22%29%29+%7D+OPTIONAL+%7B+%3Fprop+wb%3AstatementValue+%3Ffull+.+%3Fstatement+%3Ffull+%3Fnode+.+OPTIONAL+%7B+%3Fnode+wb%3AquantityUnit+%3Funit+OPTIONAL+%7B+%3Funit+wdt%3AP498+%3FcurrencyCode+%7D+%7D+OPTIONAL+%7B+%3Fnode+wb%3AtimePrecision+%3Fprecision%3B+wb%3AtimeCalendarModel+%3Fcalendar+%7D+%7D+OPTIONAL+%7B+%3Fstatement+pq%3AP585+%3FpointInTime+.+OPTIONAL+%7B+%3Fstatement+pqv%3AP585+%3FpointNode+.+%3FpointNode+wb%3AtimePrecision+%3FpointPrecision%3B+wb%3AtimeCalendarModel+%3FpointCalendar+%7D+%7D+%7D&format=json",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T17:42:59.197729Z",
+      "content_sha256": "830bbda5f9b8a0c3421c991f7d96c97cb829a1041366da6d3d5fa860fa0ca8da",
+      "claim_span": "{\n      \"statement\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/statement/Q11969372-A5E14C9E-3CC9-4948-8EE2-EA7E70B60974\"\n      },\n      \"value\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q42293305\"\n      },\n      \"org\" : {\n       ",
+      "locator": "/results/bindings/10",
+      "extraction_method": "signalpost.wikidata.fact.v1",
+      "source_identifier": "Wikidata Q11969372, revision 2502405734; https://www.wikidata.org/w/index.php?title=Q11969372&oldid=2502405734; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "statement": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/statement/Q11969372-A5E14C9E-3CC9-4948-8EE2-EA7E70B60974"
+      },
+      "value": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42293305"
+      },
+      "org": {
+        "type": "literal",
+        "value": "971492325"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11969372"
+      },
+      "revision": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "type": "literal",
+        "value": "2502405734"
+      },
+      "valueLabel": {
+        "xml:lang": "nb",
+        "type": "literal",
+        "value": "Indre Østfold"
+      }
+    },
+    "property": "P159",
+    "verdict": "correct",
+    "why_correct": "The own-item P159 statement explicitly names Q42293305, Indre Østfold. This is an attributed location statement, independent of the museum’s conflicting inception and website properties, which are withheld separately."
+  }
+]

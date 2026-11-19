@@ -1,0 +1,185 @@
+[
+  {
+    "organisation_number": "968386085",
+    "company": "LOFOTPOSTEN AS",
+    "claim": {
+      "field": "social_profile.18827a4b63ceebca6fbd",
+      "value": {
+        "url": "https://x.com/lofotposten",
+        "platform": "x.com",
+        "source": "Wikidata",
+        "licence": "CC0",
+        "item_url": "https://www.wikidata.org/wiki/Q1764736"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "8d271ba94d3908bfacfbfcad3929cd2788dca12365c6155e7318c25375e1f6f7"
+      ],
+      "id": "363fb8ccc018efab26638e8a096d9f6c9018f2832b224bcf578d5bcf216c06ad",
+      "family": "website",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T16:34:15.330263Z",
+      "last_observed_at": "2026-11-19T16:34:15.330263Z",
+      "reasons": {
+        "relationship": "Wikidata exact P2333 organisation number and matching company handle"
+      }
+    },
+    "evidence": {
+      "id": "8d271ba94d3908bfacfbfcad3929cd2788dca12365c6155e7318c25375e1f6f7",
+      "source_url": "https://www.wikidata.org/wiki/Q1764736",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T16:34:15.330263Z",
+      "content_sha256": "07b91f7403825de58e9ea06629e8dffcf8496a9429355d5a5fa880b23e34f7ab",
+      "claim_span": "{\n      \"org\" : {\n        \"type\" : \"literal\",\n        \"value\" : \"968386085\"\n      },\n      \"property\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/prop/direct/P2002\"\n      },\n      \"item\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q1764736",
+      "locator": "/results/bindings/1",
+      "extraction_method": "signalpost.wikidata.social.v1",
+      "source_identifier": "Wikidata SPARQL; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "org": {
+        "type": "literal",
+        "value": "968386085"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P2002"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1764736"
+      },
+      "value": {
+        "type": "literal",
+        "value": "lofotposten"
+      }
+    },
+    "property": "P2002"
+  },
+  {
+    "organisation_number": "968386085",
+    "company": "LOFOTPOSTEN AS",
+    "claim": {
+      "field": "social_profile.c0f4fd23d86e444b326b",
+      "value": {
+        "url": "https://www.instagram.com/lofotposten",
+        "platform": "instagram.com",
+        "source": "Wikidata",
+        "licence": "CC0",
+        "item_url": "https://www.wikidata.org/wiki/Q1764736"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "aab4f8cb79a9de5c33c10798a387efdedf1e66df6c8f090777a66490c9319381"
+      ],
+      "id": "f40136c75472ff3989c9c661829e28699cc7bfe3b3a6a9872a47eeb621e08714",
+      "family": "website",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T16:34:15.330263Z",
+      "last_observed_at": "2026-11-19T16:34:15.330263Z",
+      "reasons": {
+        "relationship": "linked from the verified company website"
+      }
+    },
+    "evidence": {
+      "id": "aab4f8cb79a9de5c33c10798a387efdedf1e66df6c8f090777a66490c9319381",
+      "source_url": "https://www.wikidata.org/wiki/Q1764736",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T16:34:15.330263Z",
+      "content_sha256": "07b91f7403825de58e9ea06629e8dffcf8496a9429355d5a5fa880b23e34f7ab",
+      "claim_span": "{\n      \"org\" : {\n        \"type\" : \"literal\",\n        \"value\" : \"968386085\"\n      },\n      \"property\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/prop/direct/P2003\"\n      },\n      \"item\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q1764736",
+      "locator": "/results/bindings/2",
+      "extraction_method": "signalpost.wikidata.social.v1",
+      "source_identifier": "Wikidata SPARQL; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "org": {
+        "type": "literal",
+        "value": "968386085"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P2003"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1764736"
+      },
+      "value": {
+        "type": "literal",
+        "value": "lofotposten"
+      }
+    },
+    "property": "P2003"
+  },
+  {
+    "organisation_number": "968386085",
+    "company": "LOFOTPOSTEN AS",
+    "claim": {
+      "field": "social_profile.2ab01462d39d2bd0a770",
+      "value": {
+        "url": "https://www.facebook.com/lofotposten",
+        "platform": "facebook.com",
+        "source": "Wikidata",
+        "licence": "CC0",
+        "item_url": "https://www.wikidata.org/wiki/Q1764736"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "4bd4b3dd390f1db9233f04cff3bd52916714d9265ed8caf073d0a7235b141776"
+      ],
+      "id": "6fcd0bc35020759599f3aec9beb6b41f1835a5977ac7bdfb791b53ad717db7b4",
+      "family": "website",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T16:34:15.330263Z",
+      "last_observed_at": "2026-11-19T16:34:15.330263Z",
+      "reasons": {
+        "relationship": "Wikidata exact P2333 organisation number and matching company handle"
+      }
+    },
+    "evidence": {
+      "id": "4bd4b3dd390f1db9233f04cff3bd52916714d9265ed8caf073d0a7235b141776",
+      "source_url": "https://www.wikidata.org/wiki/Q1764736",
+      "source_class": "wikidata",
+      "retrieved_at": "2026-11-19T16:34:15.330263Z",
+      "content_sha256": "07b91f7403825de58e9ea06629e8dffcf8496a9429355d5a5fa880b23e34f7ab",
+      "claim_span": "{\n      \"org\" : {\n        \"type\" : \"literal\",\n        \"value\" : \"968386085\"\n      },\n      \"property\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/prop/direct/P2013\"\n      },\n      \"item\" : {\n        \"type\" : \"uri\",\n        \"value\" : \"http://www.wikidata.org/entity/Q1764736",
+      "locator": "/results/bindings/3",
+      "extraction_method": "signalpost.wikidata.social.v1",
+      "source_identifier": "Wikidata SPARQL; CC0",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "binding": {
+      "org": {
+        "type": "literal",
+        "value": "968386085"
+      },
+      "property": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/prop/direct/P2013"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1764736"
+      },
+      "value": {
+        "type": "literal",
+        "value": "lofotposten"
+      }
+    },
+    "property": "P2013"
+  }
+]

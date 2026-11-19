@@ -65,7 +65,8 @@ def test_social_exclusions(url):
 
 def test_verified_template_profile():
     p=Page(b'<footer><a href="https://facebook.com/tradingbrand">Facebook</a></footer>','https://candidate.no')
-    assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+    assert attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+    assert not attributed(p,{'identity_level':'LOW','final_url':p.url},CONTEXT)
     own=Page(b'<footer><a href="https://facebook.com/exampleunique">Facebook</a></footer>',p.url)
     assert attributed(own,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
     assert not attributed(p,{'identity_level':'LOW','final_url':p.url},CONTEXT)
@@ -145,4 +146,7 @@ def test_shared_employee_email_cannot_identify_the_site_owner(counts):
 @pytest.mark.parametrize('handle',['johnsmith','creativeworks','otherbusiness'])
 def test_verified_site_footer_does_not_authorize_unrelated_accounts(handle):
     p=Page(('<footer><a href="https://facebook.com/'+handle+'">Follow</a></footer>').encode(),'https://candidate.no')
-    assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+    context={**CONTEXT,'role_person_names':['John Smith'],'other_company_names':['Other Business AS']}
+    if handle=='creativeworks':
+        p=Page(('<footer><div class="agency-credit"><a href="https://facebook.com/'+handle+'">Designer</a></div></footer>').encode(),'https://candidate.no')
+    assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},context)

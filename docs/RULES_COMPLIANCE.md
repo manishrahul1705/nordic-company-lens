@@ -46,8 +46,8 @@ This document describes input handling, source policies, evidence standards and 
 ### Category F: Resource Limits & Cost Accounting
 | ID | Requirement | Exact Source / Contract | Implementation Evidence | Status |
 |---|---|---|---|:---:|
-| F-1 | **Deterministic Budget Watchdog**: Respect `--time-budget-seconds` (default 2,400s) with 0.85 deadline fraction (2,040s cutoff). Cancel gracefully without corruption. | Resource Contract (`docs/EVAL.md`) | [`src/signalpost/watchdog.py`](../src/signalpost/watchdog.py); [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_release_budgets.py`. | **PASS** |
-| F-2 | **Request Accounting**: Reserve requests before dispatch; retries count toward caps. Default cap: $20 \times \text{unique companies}$. | Resource Contract | [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_resource_limits.py`. | **PASS** |
+| F-1 | **Deterministic Budget Watchdog**: Respect `--time-budget-seconds` (our own default 3,600s; no numeric brief limit), with crawl cutoff min(0.85 ? total budget, total minus finalisation/site reserve). Cancel gracefully without corruption. | Resource Contract (`docs/EVAL.md`) | [`src/signalpost/watchdog.py`](../src/signalpost/watchdog.py); [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_release_budgets.py`. | **PASS** |
+| F-2 | **Request Accounting**: Reserve requests before dispatch; retries count toward caps. Hard pooled cap: 19 requests per distinct normalized input, plus 40 attributed requests per company; lower configured caps apply. | Resource Contract | [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_resource_limits.py`. | **PASS** |
 | F-3 | **Zero-Cost Template Mode**: Template synthesis costs $0 in third-party API fees. No live LLM keys enabled by default. | Cost Rule (`docs/SOURCES.md`) | [`src/signalpost/synthesis/template.py`](../src/signalpost/synthesis/template.py); report emits `third_party_cost_usd: 0.0`. | **PASS** |
 
 ### Category G: External discovery
@@ -139,7 +139,7 @@ flowchart TD
 
 | Rank | Severity | Item | Assessment / Resolution |
 |:---:|---|---|---|
-| **1** | **NONE** | **Contract Schema Adherence** | Fully validated across `contract`, `reference`, and `union` shapes with 278/278 automated unit tests. |
+| **1** | **NONE** | **Contract Schema Adherence** | Fully validated across `contract`, `reference`, and `union` shapes at that historical checkpoint (278/278 tests); current full-suite validation is 1,656 passed. |
 | **2** | **NONE** | **Evidence & Cryptographic Proof** | All available facts are backed by SHA-256 hashes of locally stored raw bodies and verbatim spans $\le 300$ chars. |
 | **3** | **NONE** | **Input Multiplicity & Determinism** | 100% order preservation, duplicate retention, mod-11 validation, and reproducible reruns verified. |
 | **5** | **INFORMATIONAL** | **Cold NAV Fallback Timing** | Cold full-feed download takes ~141s on 1,000 companies. With declared index baseline (`nav_index.json.gz`), NAV runs in 57.77s. Documented and within the 900s timeout ceiling. |

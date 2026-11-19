@@ -33,14 +33,16 @@ changes include old and new values and their evidence; an identical snapshot
 yields no company changes or observation changes. Evidence blobs stay in the
 same state folder for provenance checks.
 
-The hard HTTP ceiling is 18 per distinct normalized input, including retries
-and shared NAV requests; duplicates share research. The hard time ceiling is
-24 seconds per distinct normalized input (40 minutes per 100), with crawl time
-reserved for final output. Lower configured limits apply. Exhaustion produces
+The hard HTTP ceiling is a pooled 19 requests per distinct normalized input,
+including retries and shared requests, with a separate cap of 40 attributed
+requests per company; duplicates share research. Shared calls consume the pool. The hard time ceiling is
+24 seconds per distinct normalized input (40 minutes per 100), bounded also by our own default 3,600-second safeguard (the brief gives no
+numeric limit), with crawl time reserved for final output and the enabled site. Lower configured limits apply. Exhaustion produces
 explicit incomplete results for all inputs.
 
 The bundled NAV index is discovery metadata, accepted for 30 days after its
-unchanged build timestamp (4 November 2026; valid through 30 November). Each
+unchanged build timestamp (2026-11-13T00:26:42.872674Z; maximum age
+30 days, reaching that age on 2026-12-13T00:26:42.872674Z). Each
 published current job still requires a live ACTIVE, unexpired, single-ad NAV
 detail with exact employer or registered-subunit orgnr. Stale index fallback
 uses the same global request/time budget; incomplete discovery never proves

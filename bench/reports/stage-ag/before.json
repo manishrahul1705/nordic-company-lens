@@ -1,0 +1,135 @@
+{
+  "run": "bench\\runs\\stage-af-final-20261119",
+  "companies": 1000,
+  "total_available_claims": 167110,
+  "http_requests": 11345,
+  "wikidata_http_requests": 5,
+  "wikidata_metrics": {
+    "status": "complete",
+    "requests": 5,
+    "errors": 0,
+    "matched_companies": 9,
+    "website_candidates": 9,
+    "social_published": 4
+  },
+  "properties": {
+    "P1448": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    },
+    "P571": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    },
+    "P159": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    },
+    "P452": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    },
+    "P1128": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    },
+    "P2139": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    },
+    "P856": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 9,
+      "source_values": 9
+    },
+    "P2002": {
+      "companies": 1,
+      "claims": 1,
+      "source_companies": 1,
+      "source_values": 1
+    },
+    "P2003": {
+      "companies": 1,
+      "claims": 1,
+      "source_companies": 2,
+      "source_values": 2
+    },
+    "P2013": {
+      "companies": 1,
+      "claims": 1,
+      "source_companies": 3,
+      "source_values": 3
+    },
+    "P4264": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    }
+  },
+  "overall_information_types": {
+    "official_name": {
+      "companies": 1000,
+      "claims": 1000
+    },
+    "inception": {
+      "companies": 988,
+      "claims": 988
+    },
+    "explicit_headquarters": {
+      "companies": 0,
+      "claims": 0
+    },
+    "industry_including_NACE": {
+      "companies": 996,
+      "claims": 1002
+    },
+    "employee_count": {
+      "companies": 122,
+      "claims": 122
+    },
+    "revenue_current_or_wikidata": {
+      "companies": 790,
+      "claims": 790
+    },
+    "ownership_verified_official_website": {
+      "companies": 114,
+      "claims": 114
+    },
+    "X": {
+      "companies": 2,
+      "claims": 2
+    },
+    "Instagram": {
+      "companies": 29,
+      "claims": 29
+    },
+    "Facebook": {
+      "companies": 34,
+      "claims": 35
+    },
+    "LinkedIn": {
+      "companies": 16,
+      "claims": 16
+    }
+  },
+  "disagreements": [],
+  "dated_comparisons": [],
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "warnings": []
+}

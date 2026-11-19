@@ -588,6 +588,9 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
     Enforces corporate entity card attribution and filters sibling/group accounts on multi-entity group sites.
     """
     context = context or {}
+    if envelope:
+        from .social import context_for_envelope
+        context={**context,**context_for_envelope(envelope)}
     web_val = web_claim.value if hasattr(web_claim, "value") and isinstance(web_claim.value, dict) else (web_claim if isinstance(web_claim, dict) else {})
     other_orgnrs = web_val.get("other_orgnrs") or []
     is_group = bool(other_orgnrs) or web_val.get("relationship_note") == "group_site"

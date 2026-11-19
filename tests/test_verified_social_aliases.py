@@ -6,14 +6,14 @@ PROOF = {'identity_level': 'VERIFIED', 'final_url': 'https://northlight.no/'}
 CONTEXT = {'name': 'Example Trading AS'}
 
 @pytest.mark.parametrize('metadata,handle', [
-    ('', 'northlight'),
-    ('<meta property="og:site_name" content="Northern Lights">', 'northernlights'),
-    ('<title>Northern Lights | Home</title>', 'northernlights'),
+    ('', 'northlightfixturebrand'),
+    ('<meta property="og:site_name" content="Northern Lights">', 'northernlightsfixturebrand'),
+    ('<title>Northern Lights | Home</title>', 'northernlightsfixturebrand'),
     ('<script type="application/ld+json">{"@type":"Organization","url":"https://northlight.no/","name":"Northern Lights","alternateName":"Aurora Shop"}</script>', 'aurorashop'),
 ])
-def test_verified_site_alias_does_not_replace_registered_company_name(metadata, handle):
+def test_proven_page_link_can_use_brand_handle(metadata, handle):
     page = Page(('<head>'+metadata+'</head><footer><a href="https://instagram.com/'+handle+'">Instagram</a></footer>').encode(), PROOF['final_url'])
-    assert not attributed(page, PROOF, CONTEXT)
+    assert attributed(page, PROOF, CONTEXT)
     assert not attributed(page, {**PROOF, 'identity_level':'LOW'}, CONTEXT)
 
 @pytest.mark.parametrize('metadata,handle', [
@@ -25,7 +25,8 @@ def test_verified_site_alias_does_not_replace_registered_company_name(metadata, 
 ])
 def test_unrelated_or_generic_alias_rejected(metadata, handle):
     page = Page(('<head>'+metadata+'</head><footer><a href="https://instagram.com/'+handle+'">Instagram</a></footer>').encode(), PROOF['final_url'])
-    assert not attributed(page, PROOF, CONTEXT)
+    proof={**PROOF,'relationship_note':'group_site'} if handle in {'parentgroup','parent'} else PROOF
+    assert not attributed(page, proof, CONTEXT)
 
 def test_shared_branch_cannot_use_parent_domain_alias():
     page = Page(b'<main><a href="https://instagram.com/northlight">Instagram</a></main>', 'https://northlight.no/example')

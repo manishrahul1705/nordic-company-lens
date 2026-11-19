@@ -1,0 +1,90 @@
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 13%]
+........................................................................ [ 17%]
+........................................................................ [ 22%]
+........................................................................ [ 26%]
+........................................................................ [ 30%]
+........................................................................ [ 35%]
+........................................................................ [ 39%]
+........................................................................ [ 44%]
+........................................................................ [ 48%]
+........................................................................ [ 52%]
+........................................................................ [ 57%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 70%]
+........................................................................ [ 75%]
+...............................F..................FFF................... [ 79%]
+........................................................................ [ 83%]
+........................................................................ [ 88%]
+........................................................................ [ 92%]
+...................................................F.................... [ 97%]
+................................................                         [100%]
+================================== FAILURES ===================================
+_______________________ test_verified_template_profile ________________________
+
+    def test_verified_template_profile():
+        p=Page(b'<footer><a href="https://facebook.com/tradingbrand">Facebook</a></footer>','https://candidate.no')
+>       assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+E       assert not {'https://facebook.com/tradingbrand': '<a href="https://facebook.com/tradingbrand">'}
+E        +  where {'https://facebook.com/tradingbrand': '<a href="https://facebook.com/tradingbrand">'} = attributed(<signalpost.web.html.Page object at 0x00000284D5A6A390>, {'identity_level': 'VERIFIED', 'final_url': 'https://candidate.no'}, {'name': 'Example Unique AS', 'email': 'hello@example.no', 'phone': '12345678', 'postcode': '0123'})
+
+tests\test_shared_identifier_proof.py:68: AssertionError
+_ test_verified_site_footer_does_not_authorize_unrelated_accounts[johnsmith] __
+
+handle = 'johnsmith'
+
+    @pytest.mark.parametrize('handle',['johnsmith','creativeworks','otherbusiness'])
+    def test_verified_site_footer_does_not_authorize_unrelated_accounts(handle):
+        p=Page(('<footer><a href="https://facebook.com/'+handle+'">Follow</a></footer>').encode(),'https://candidate.no')
+>       assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+E       assert not {'https://facebook.com/johnsmith': '<a href="https://facebook.com/johnsmith">'}
+E        +  where {'https://facebook.com/johnsmith': '<a href="https://facebook.com/johnsmith">'} = attributed(<signalpost.web.html.Page object at 0x00000284D5A758B0>, {'identity_level': 'VERIFIED', 'final_url': 'https://candidate.no'}, {'name': 'Example Unique AS', 'email': 'hello@example.no', 'phone': '12345678', 'postcode': '0123'})
+
+tests\test_shared_identifier_proof.py:148: AssertionError
+_ test_verified_site_footer_does_not_authorize_unrelated_accounts[creativeworks] _
+
+handle = 'creativeworks'
+
+    @pytest.mark.parametrize('handle',['johnsmith','creativeworks','otherbusiness'])
+    def test_verified_site_footer_does_not_authorize_unrelated_accounts(handle):
+        p=Page(('<footer><a href="https://facebook.com/'+handle+'">Follow</a></footer>').encode(),'https://candidate.no')
+>       assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+E       assert not {'https://facebook.com/creativeworks': '<a href="https://facebook.com/creativeworks">'}
+E        +  where {'https://facebook.com/creativeworks': '<a href="https://facebook.com/creativeworks">'} = attributed(<signalpost.web.html.Page object at 0x00000284D5056D80>, {'identity_level': 'VERIFIED', 'final_url': 'https://candidate.no'}, {'name': 'Example Unique AS', 'email': 'hello@example.no', 'phone': '12345678', 'postcode': '0123'})
+
+tests\test_shared_identifier_proof.py:148: AssertionError
+_ test_verified_site_footer_does_not_authorize_unrelated_accounts[otherbusiness] _
+
+handle = 'otherbusiness'
+
+    @pytest.mark.parametrize('handle',['johnsmith','creativeworks','otherbusiness'])
+    def test_verified_site_footer_does_not_authorize_unrelated_accounts(handle):
+        p=Page(('<footer><a href="https://facebook.com/'+handle+'">Follow</a></footer>').encode(),'https://candidate.no')
+>       assert not attributed(p,{'identity_level':'VERIFIED','final_url':p.url},CONTEXT)
+E       assert not {'https://facebook.com/otherbusiness': '<a href="https://facebook.com/otherbusiness">'}
+E        +  where {'https://facebook.com/otherbusiness': '<a href="https://facebook.com/otherbusiness">'} = attributed(<signalpost.web.html.Page object at 0x00000284D5A75AC0>, {'identity_level': 'VERIFIED', 'final_url': 'https://candidate.no'}, {'name': 'Example Unique AS', 'email': 'hello@example.no', 'phone': '12345678', 'postcode': '0123'})
+
+tests\test_shared_identifier_proof.py:148: AssertionError
+_______________________ test_social_and_registry_social _______________________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-r4/out/pytest-proven-socials-final/test_social_and_registry_socia0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000284D5188830>
+
+    def test_social_and_registry_social(tmp_path, monkeypatch):
+        extra = '<nav><a href="https://linkedin.com/company/example/?trk=x">LinkedIn</a><a href="https://facebook.com/sharer.php?u=x">Share</a></nav><article><a href="https://instagram.com/someother/">Other</a></article><script type="application/ld+json">{"@type":"Organization","sameAs":["https://youtube.com/@example"]}</script>'
+        _, row, requests, _ = execute_web(tmp_path / "site", monkeypatch, html(extra=extra))
+        social = [c for c in row["claims"] if c["field"].startswith("social_profile.")]
+>       assert len(social) == 2
+E       AssertionError: assert 3 == 2
+E        +  where 3 = len([{'field': 'social_profile.a7a446f26bae81811a8c', 'value': {'url': 'https://linkedin.com/company/example', 'platform':... 'https://instagram.com/someother', 'platform': 'instagram.com'}, 'availability': 'available', 'confidence': 1.0, ...}])
+
+tests\test_websites.py:188: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_shared_identifier_proof.py::test_verified_template_profile
+FAILED tests/test_shared_identifier_proof.py::test_verified_site_footer_does_not_authorize_unrelated_accounts[johnsmith]
+FAILED tests/test_shared_identifier_proof.py::test_verified_site_footer_does_not_authorize_unrelated_accounts[creativeworks]
+FAILED tests/test_shared_identifier_proof.py::test_verified_site_footer_does_not_authorize_unrelated_accounts[otherbusiness]
+FAILED tests/test_websites.py::test_social_and_registry_social - AssertionErr...
+5 failed, 1627 passed in 362.88s (0:06:02)

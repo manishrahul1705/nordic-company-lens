@@ -5,20 +5,28 @@ permissions:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
-          python-version: '3.12'
+          python-version: ${{ matrix.python-version }}
       - run: uv sync --frozen
       - run: uv run pytest -q
   live-20:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
-          python-version: '3.12'
+          python-version: ${{ matrix.python-version }}
       - run: uv sync --frozen
       - run: uv run signalpost run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --output out/ci20.jsonl --report out/ci20-report.json --expected-count 20 --time-budget-seconds 180
       # Registry identity/people/financials/locations must be clean. Optional

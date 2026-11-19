@@ -1026,7 +1026,24 @@ def audit_social_claim(
             prop=value('property').rsplit('/',1)[1]
             from urllib.parse import quote
             expected=prefixes[prop]+quote(value('value').lstrip('@'),safe='-_.')
-            if value('org')!=org or ev['source_url']!='https://www.wikidata.org/wiki/'+item or expected!=s_url:
+            item_url='https://www.wikidata.org/wiki/'+item
+            source_matches=ev['source_url']==item_url
+            if not source_matches:
+                from urllib.parse import urlsplit,parse_qs
+                parsed_source=urlsplit(ev['source_url']);params=parse_qs(parsed_source.query)
+                query=params.get('query',[''])[0]
+                revision=value('revision')
+                revision_url=f'https://www.wikidata.org/w/index.php?title={item}&oldid={revision}'
+                source_matches=(parsed_source.scheme=='https' and parsed_source.hostname=='query.wikidata.org'
+                    and parsed_source.path=='/sparql' and not parsed_source.username and not parsed_source.password
+                    and parsed_source.port in (None,443) and params.get('format')==['json']
+                    and 'wdt:P2333 ?org' in query and json.dumps(org) in query and '?revision' in query
+                    and re.fullmatch(r'[1-9]\d*',revision) is not None
+                    and revision_url in (ev.get('source_identifier') or '')
+                    and ((val.get('revision_url')==revision_url and val.get('item_url')==item_url)
+                         or (claim.get('reasons',{}).get('wikidata_revision')==revision
+                             and claim.get('reasons',{}).get('wikidata_item')==item_url)))
+            if value('org')!=org or not source_matches or expected!=s_url:
                 return 'INCORRECT','Wikidata organisation/item/profile mismatch',None
             normalize=lambda text: re.sub(r'[^a-z0-9]','',legal_name(text).casefold().replace('æ','ae').replace('ø','o').replace('å','a'))
             handle=re.sub(r'[-_. ]*\d{5,}$','',value('value'))

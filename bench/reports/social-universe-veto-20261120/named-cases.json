@@ -1,0 +1,269 @@
+{
+  "cases": [
+    {
+      "organisation_number": "971558415",
+      "company": "DANSEINFORMASJONEN STI",
+      "url": "https://facebook.com/scenehuset",
+      "self_name_matches": [],
+      "registered_relation_evidence": {
+        "973899813": {
+          "kind": "subunit",
+          "claim_id": "d3793cc9a0a2907a04dc131ed2c0dd32f7631d83b8b511e3f7d08cde257640fa",
+          "evidence_ids": [
+            "bace48d97a0f5711771d0c9fa32a1f0824ee45b07f881a8b112e0adce5accdf1"
+          ]
+        }
+      },
+      "state": "allow",
+      "reason": null,
+      "matches": [],
+      "normalised_handle_keys": [
+        "scenehuset"
+      ],
+      "universe_rows": 411160,
+      "universe_archive_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    },
+    {
+      "organisation_number": "971558415",
+      "company": "DANSEINFORMASJONEN STI",
+      "url": "https://instagram.com/scenehuset",
+      "self_name_matches": [],
+      "registered_relation_evidence": {
+        "973899813": {
+          "kind": "subunit",
+          "claim_id": "d3793cc9a0a2907a04dc131ed2c0dd32f7631d83b8b511e3f7d08cde257640fa",
+          "evidence_ids": [
+            "bace48d97a0f5711771d0c9fa32a1f0824ee45b07f881a8b112e0adce5accdf1"
+          ]
+        }
+      },
+      "state": "allow",
+      "reason": null,
+      "matches": [],
+      "normalised_handle_keys": [
+        "scenehuset"
+      ],
+      "universe_rows": 411160,
+      "universe_archive_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    },
+    {
+      "organisation_number": "980362779",
+      "company": "RENTHALL AS",
+      "url": "https://instagram.com/hallmakergroup",
+      "self_name_matches": [],
+      "registered_relation_evidence": {
+        "980423166": {
+          "kind": "subunit",
+          "claim_id": "af4cc683d7a7b777e9aa706be7f7c586bf478b91aa858f7161b12cd3f2f0d59b",
+          "evidence_ids": [
+            "8cce987c62e4cbcd5bfb38f8b5b300405521908d4c1a75511ef1bbccf0a7cfb9"
+          ]
+        },
+        "935243351": {
+          "kind": "parent",
+          "claim_id": "e4df6bd90aba127c0f4e47c99775eb435ee82c6899518f8a4d168ba9095e4a2c",
+          "evidence_ids": [
+            "3f76e8749597280ef5f7265d33d9a52e2d063457944965a9f1e734bfe5dcbf3a"
+          ]
+        },
+        "933432211": {
+          "kind": "subsidiary",
+          "claim_id": "4ddf6d831db5ca9ddfd6f14de8b618162b0191533744a9d57a3b44b7ac5841f4",
+          "evidence_ids": [
+            "40361101c36f0e4823f59b77ae64d222e8fbc39db8130851acb4aaff5eb3f1fe"
+          ]
+        },
+        "933431886": {
+          "kind": "subsidiary",
+          "claim_id": "2e1628fc1f3907f2d866b76d598af50458046559f7cb12f6f4bd4eb0d974eaf5",
+          "evidence_ids": [
+            "402f54af8243f0ddea01fd0ad7bec8207320169defd09dcdcabc07acd9d53602"
+          ]
+        },
+        "933431738": {
+          "kind": "subsidiary",
+          "claim_id": "c489791a7404548c0e520e71e55595cf5da6ccb3e313d8b74af056b9e6408061",
+          "evidence_ids": [
+            "a80d3954ca647eea77d8e82ace3b4c9e2f418a46444bd3dc46253b80dcc106c9"
+          ]
+        }
+      },
+      "state": "withhold",
+      "reason": "other_registered_company",
+      "matches": [
+        {
+          "organisation_number": "937920040",
+          "name": "HALLMAKER AS",
+          "permitted_registry_relationship": null
+        }
+      ],
+      "normalised_handle_keys": [
+        "hallmaker",
+        "hallmakergroup"
+      ],
+      "universe_rows": 411160,
+      "universe_archive_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    },
+    {
+      "organisation_number": "980362779",
+      "company": "RENTHALL AS",
+      "url": "https://x.com/RentHallGlobal",
+      "self_name_matches": [
+        {
+          "organisation_number": "980362779",
+          "name": "RENTHALL AS"
+        }
+      ],
+      "registered_relation_evidence": {
+        "980423166": {
+          "kind": "subunit",
+          "claim_id": "af4cc683d7a7b777e9aa706be7f7c586bf478b91aa858f7161b12cd3f2f0d59b",
+          "evidence_ids": [
+            "8cce987c62e4cbcd5bfb38f8b5b300405521908d4c1a75511ef1bbccf0a7cfb9"
+          ]
+        },
+        "935243351": {
+          "kind": "parent",
+          "claim_id": "e4df6bd90aba127c0f4e47c99775eb435ee82c6899518f8a4d168ba9095e4a2c",
+          "evidence_ids": [
+            "3f76e8749597280ef5f7265d33d9a52e2d063457944965a9f1e734bfe5dcbf3a"
+          ]
+        },
+        "933432211": {
+          "kind": "subsidiary",
+          "claim_id": "4ddf6d831db5ca9ddfd6f14de8b618162b0191533744a9d57a3b44b7ac5841f4",
+          "evidence_ids": [
+            "40361101c36f0e4823f59b77ae64d222e8fbc39db8130851acb4aaff5eb3f1fe"
+          ]
+        },
+        "933431886": {
+          "kind": "subsidiary",
+          "claim_id": "2e1628fc1f3907f2d866b76d598af50458046559f7cb12f6f4bd4eb0d974eaf5",
+          "evidence_ids": [
+            "402f54af8243f0ddea01fd0ad7bec8207320169defd09dcdcabc07acd9d53602"
+          ]
+        },
+        "933431738": {
+          "kind": "subsidiary",
+          "claim_id": "c489791a7404548c0e520e71e55595cf5da6ccb3e313d8b74af056b9e6408061",
+          "evidence_ids": [
+            "a80d3954ca647eea77d8e82ace3b4c9e2f418a46444bd3dc46253b80dcc106c9"
+          ]
+        }
+      },
+      "state": "allow",
+      "reason": null,
+      "matches": [],
+      "normalised_handle_keys": [
+        "renthall",
+        "renthallglobal"
+      ],
+      "universe_rows": 411160,
+      "universe_archive_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    },
+    {
+      "organisation_number": "996979660",
+      "company": "VALDRESMEIERIET AS",
+      "url": "https://facebook.com/valdresost",
+      "self_name_matches": [],
+      "registered_relation_evidence": {
+        "997004477": {
+          "kind": "subunit",
+          "claim_id": "1eb8b53b16df441809e2ca89200ed349f366ec41d18e01e955870a3e00846f32",
+          "evidence_ids": [
+            "34deeb7505d7276d1b68ba763e6f92c0f3e334e14e9c688855eb56223d477e34"
+          ]
+        }
+      },
+      "state": "withhold",
+      "reason": "other_registered_company",
+      "matches": [
+        {
+          "organisation_number": "914992605",
+          "name": "VALDRES OST AS",
+          "permitted_registry_relationship": null
+        }
+      ],
+      "normalised_handle_keys": [
+        "valdresost"
+      ],
+      "universe_rows": 411160,
+      "universe_archive_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    },
+    {
+      "organisation_number": "996979660",
+      "company": "VALDRESMEIERIET AS",
+      "url": "https://instagram.com/valdresost",
+      "self_name_matches": [],
+      "registered_relation_evidence": {
+        "997004477": {
+          "kind": "subunit",
+          "claim_id": "1eb8b53b16df441809e2ca89200ed349f366ec41d18e01e955870a3e00846f32",
+          "evidence_ids": [
+            "34deeb7505d7276d1b68ba763e6f92c0f3e334e14e9c688855eb56223d477e34"
+          ]
+        }
+      },
+      "state": "withhold",
+      "reason": "other_registered_company",
+      "matches": [
+        {
+          "organisation_number": "914992605",
+          "name": "VALDRES OST AS",
+          "permitted_registry_relationship": null
+        }
+      ],
+      "normalised_handle_keys": [
+        "valdresost"
+      ],
+      "universe_rows": 411160,
+      "universe_archive_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    }
+  ],
+  "renthall_hallmaker_own_registry_proof": {
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/980362779",
+    "content_sha256": "c71aede1db50d3fbf27a01aa12e77500d8bd0215117a83dc8394f61e17ed3503",
+    "nodes": [
+      {
+        "pointer": "/children/4/children/3",
+        "value": {
+          "dato": "2025-12-20",
+          "grunnlag": "100%",
+          "knytningsform": {
+            "beskrivelse": "Konsern datter",
+            "kode": "KDAT"
+          },
+          "navn": "RENTHALL AS",
+          "nivaa": 2,
+          "organisasjonsform": {
+            "beskrivelse": "Aksjeselskap",
+            "kode": "AS"
+          },
+          "organisasjonsnummer": "980362779",
+          "parentNavn": "ZURHAAR INDUSTRIES AS",
+          "parentOrganisasjonsnummer": "935243351"
+        }
+      },
+      {
+        "pointer": "/children/4/children/4",
+        "value": {
+          "dato": "2025-12-20",
+          "grunnlag": "100%",
+          "knytningsform": {
+            "beskrivelse": "Konsern datter",
+            "kode": "KDAT"
+          },
+          "navn": "HALLMAKER AS",
+          "nivaa": 2,
+          "organisasjonsform": {
+            "beskrivelse": "Aksjeselskap",
+            "kode": "AS"
+          },
+          "organisasjonsnummer": "937920040",
+          "parentNavn": "ZURHAAR INDUSTRIES AS",
+          "parentOrganisasjonsnummer": "935243351"
+        }
+      }
+    ]
+  }
+}

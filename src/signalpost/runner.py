@@ -693,11 +693,15 @@ async def _run(config, client=None):
         # Invalid numbers must never inherit previously published information.
         if config.websites and envelope.run.sections.get('identity') == 'available':
             from .web.wikidata import publish_social
+            from .web.wikidata_facts import publish as publish_wikidata_facts
+            await offload(publish_wikidata_facts, wikidata_index, org, envelope, blobs)
             await offload(publish_social, wikidata_index, org, envelope, blobs)
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     from .web.contact_policy import filter_carried_contacts
     for envelope in envelopes.values():
         await offload(filter_carried_contacts, envelope, blobs)
+        from .web.wikidata_facts import enforce_evidence as enforce_wikidata_evidence
+        await offload(enforce_wikidata_evidence, envelope, blobs)
     from .web.social import drop_shared
     await offload(drop_shared, list(envelopes.values()), blobs)
     from .web.entity_scope import enforce as enforce_entity_scope

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "scripts/verify_output.py",
+    "--first",
+    "bench\\runs\\stage-ag-20261119\\envelopes.jsonl",
+    "--organisations",
+    "bench/inputs/1000-r3/batch.jsonl",
+    "--count",
+    "1000",
+    "--state-dir",
+    "bench\\runs\\stage-ag-20261119\\state",
+    "--report",
+    "bench\\runs\\stage-ag-20261119\\report.json"
+  ],
+  "exit_code": 0,
+  "seconds": 90.823
+}

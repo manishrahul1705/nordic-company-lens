@@ -1,0 +1,1780 @@
+{
+  "head" : {
+    "vars" : [ "org", "item", "revision", "property", "statement", "value", "valueLabel", "unit", "currencyCode", "precision", "calendar", "pointInTime", "pointPrecision", "pointCalendar" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-10F98A1D-BAB1-47AC-B5ED-E2E32670F960"
+      },
+      "pointPrecision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "pointCalendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      },
+      "pointInTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2025-10-15T00:00:00Z"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "13"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P1128"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      },
+      "unit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q199"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11972178-E5904222-B795-453A-8D46-8FE61896C6E5"
+      },
+      "pointPrecision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "pointCalendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      },
+      "pointInTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2026-05-12T00:00:00Z"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "39"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "975569306"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P1128"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11972178"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2560086105"
+      },
+      "unit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q199"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-6C9D4E13-DF16-413C-94A4-A27222408BD1"
+      },
+      "pointPrecision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "pointCalendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      },
+      "pointInTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2026-02-12T00:00:00Z"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "7"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P1128"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      },
+      "unit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q199"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-9D92C792-8B9D-4866-A590-26C3F4CB88D7"
+      },
+      "pointPrecision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "pointCalendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      },
+      "pointInTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2025-10-15T00:00:00Z"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "8"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P1128"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      },
+      "unit" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q199"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q116013607-074c656d-45bd-5cf7-9c0c-5639672eeeed"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q383973"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "983103030"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116013607"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502430426"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "electricity generation"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q116013607-074c656d-45bd-5cf7-9c0c-5639672eeeed"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q383973"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "983103030"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116013607"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502430426"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "kraftproduksjon"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q116013607-40adc3e0-4b9d-e85d-0777-4744ed467a1f"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2001-03-14T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "983103030"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116013607"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502430426"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11969372-0BE45632-CF76-4AF0-8F14-40C66652F339"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2007-02-20T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971492325"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11969372"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502405734"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11969372-3303a0d3-4e2b-5f7b-479d-1c4d20d3c3ac"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "https://ostfoldmuseene.no/folkenborg"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971492325"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11969372"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502405734"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11969372-A5E14C9E-3CC9-4948-8EE2-EA7E70B60974"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q42293305"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971492325"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11969372"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502405734"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nn",
+        "type" : "literal",
+        "value" : "Indre Østfold kommune"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11969372-A5E14C9E-3CC9-4948-8EE2-EA7E70B60974"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q42293305"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971492325"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11969372"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502405734"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Indre Østfold"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11969372-A5E14C9E-3CC9-4948-8EE2-EA7E70B60974"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q42293305"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971492325"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11969372"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502405734"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Indre Østfold Municipality"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11972178-20B91B07-233E-4EBF-B38F-48776BD85225"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1919-02-11T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "975569306"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11972178"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2560086105"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11972178-580c9ab5-4c3e-e9f1-0829-d376552ac459"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q15138612"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "975569306"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11972178"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2560086105"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Drammen"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11972178-580c9ab5-4c3e-e9f1-0829-d376552ac459"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q15138612"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "975569306"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11972178"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2560086105"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Drammen"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11972178-580c9ab5-4c3e-e9f1-0829-d376552ac459"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q15138612"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "975569306"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11972178"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2560086105"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nn",
+        "type" : "literal",
+        "value" : "Drammen"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11972178-A635F5D7-6B1D-454D-9AFC-3D00A4A77506"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "https://glassverketif.no/"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "975569306"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11972178"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2560086105"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q127060909-0E3229BF-3A57-4C60-8E6B-9A3302AE87FF"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q10428388"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "939882480"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502419670"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bergen Municipality"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q127060909-0E3229BF-3A57-4C60-8E6B-9A3302AE87FF"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q10428388"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "939882480"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502419670"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Bergen kommune"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q127060909-0E3229BF-3A57-4C60-8E6B-9A3302AE87FF"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q10428388"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "939882480"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502419670"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nn",
+        "type" : "literal",
+        "value" : "Bergen kommune"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q127060909-A9060DEF-1F8B-4B1F-97B3-E939BF34D00F"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "https://www.brynildsenslegat.no"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "939882480"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502419670"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q127060909-F741A101-5B74-49E8-8BA7-F8C65351804C"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2005-12-12T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "939882480"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502419670"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-48255e7a-463f-e63f-8835-5f0b953fc6e2"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "https://lofotposten.no"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-528f216d-4e99-15bf-7428-5a8578a0423e"
+      },
+      "value" : {
+        "type" : "literal",
+        "value" : "lofotposten"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P2002"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-8262d5b1-4ac7-34cf-5ab6-6b4c20640b02"
+      },
+      "value" : {
+        "type" : "literal",
+        "value" : "lofotposten"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P2013"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-8B66867D-1C43-483E-B734-6757A1F2CF8B"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1896-01-01T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "9"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-d5cb53a1-4bbd-2dc2-8914-e768de15a877"
+      },
+      "value" : {
+        "type" : "literal",
+        "value" : "lofotposten"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P2003"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-4a9278d4-4889-1c5f-2e4f-b293d3563f42"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "https://danseinfo.no"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-4ed5ca32-4e95-2d9d-6590-4211792784c6"
+      },
+      "value" : {
+        "type" : "literal",
+        "value" : "danseinformasjonen"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P2003"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-a65ef3b4-4eb0-71bc-9c91-e24d01cd592c"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q585"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Oslo"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-a7414551-4644-a762-ba0c-3216999199f1"
+      },
+      "value" : {
+        "type" : "literal",
+        "value" : "danseinformasjonen"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P2013"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-f933cb4f-408a-bec6-fde9-5d61defca809"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1994-03-09T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-0729369a-4b10-4fd4-b08e-f4abfc662eb7"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1908-03-25T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-F476A2C0-DF5A-4D6F-B420-D2803E26AC35"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://chamber.no/"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q23878247-2a0ae1fb-4938-9abf-a59f-88761dd09e38"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1999-01-01T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "980910857"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q23878247"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2532480783"
+      },
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "9"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q23878247-465261da-4fc8-cf31-65ca-e63a91d0cc6b"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://phonofile.com/"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "980910857"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P856"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q23878247"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2532480783"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q23878247-d66c0219-46a0-8b57-7993-cb124dd4ea46"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q585"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "980910857"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q23878247"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2532480783"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Oslo"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-5772D83F-C8A5-4C23-8264-508125489AED"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29585660"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "publishing of newspapers"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-5772D83F-C8A5-4C23-8264-508125489AED"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29585660"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "utgivelse av aviser"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-CC46B173-A6AE-45AF-87D0-E9CEEEB1E9F4"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29586050"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Activities of business and employers membership organisations"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-CC46B173-A6AE-45AF-87D0-E9CEEEB1E9F4"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29586050"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Bransje- og arbeidsgiverorganisasjon"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q11969372-0658132A-7FAC-48F2-8FA8-DAD10A36E21F"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29586014"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971492325"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11969372"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502405734"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "museums activities"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-61FE378D-12AF-4F7F-8FCB-20A505772088"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29586079"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "activities of other membership organisations n.e.c."
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19372421-61FE378D-12AF-4F7F-8FCB-20A505772088"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29586079"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "971558415"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19372421"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502410378"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Aktiviteter i andre medlemsorganisasjoner ellers"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q23878247-B4B70E30-78A7-436A-A066-78E545846CBB"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q112122771"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "980910857"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q23878247"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2532480783"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "sound recording and music publishing activities"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-D139B142-21E4-49BA-8F23-C483A525E7E4"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q490246"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Vågan"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-D139B142-21E4-49BA-8F23-C483A525E7E4"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q490246"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Vågan Municipality"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q1764736-D139B142-21E4-49BA-8F23-C483A525E7E4"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q490246"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "968386085"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1764736"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2569438172"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nn",
+        "type" : "literal",
+        "value" : "Vågan kommune"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q127060909-3F8EB977-CB95-45A8-B045-98BC88B5C066"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29586079"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "939882480"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502419670"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "activities of other membership organisations n.e.c."
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q127060909-3F8EB977-CB95-45A8-B045-98BC88B5C066"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q29586079"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "939882480"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127060909"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502419670"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Aktiviteter i andre medlemsorganisasjoner ellers"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-D4F5ED1D-4561-4A69-8B0F-24E060D66854"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5245991"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Oslo Municipality"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-D4F5ED1D-4561-4A69-8B0F-24E060D66854"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5245991"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Oslo kommune"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q19384816-D4F5ED1D-4561-4A69-8B0F-24E060D66854"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5245991"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "938092516"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19384816"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502423198"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nn",
+        "type" : "literal",
+        "value" : "Oslo kommune"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q116013607-D8003F4C-7D15-49F2-8D5F-40B316ED1562"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5245991"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "983103030"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116013607"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502430426"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Oslo Municipality"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q116013607-D8003F4C-7D15-49F2-8D5F-40B316ED1562"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5245991"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "983103030"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116013607"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502430426"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Oslo kommune"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q116013607-D8003F4C-7D15-49F2-8D5F-40B316ED1562"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5245991"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "983103030"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116013607"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502430426"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nn",
+        "type" : "literal",
+        "value" : "Oslo kommune"
+      }
+    } ]
+  }
+}

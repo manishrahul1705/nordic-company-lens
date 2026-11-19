@@ -1,0 +1,199 @@
+{
+  "head" : {
+    "vars" : [ "org", "item", "revision", "property", "statement", "value", "valueLabel", "unit", "currencyCode", "precision", "calendar", "pointInTime", "pointPrecision", "pointCalendar" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "precision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "11"
+      },
+      "calendar" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1985727"
+      },
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q136446847-e983c2be-4f8f-6a1e-c93b-ce46a5681f19"
+      },
+      "value" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2025-02-11T00:00:00Z"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "935189365"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P571"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q136446847"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502432260"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q136446847-f10f1014-49dc-1689-da8e-fa249d5bb879"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q383973"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "935189365"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q136446847"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502432260"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "electricity generation"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q136446847-f10f1014-49dc-1689-da8e-fa249d5bb879"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q383973"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "935189365"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P452"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q136446847"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502432260"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "kraftproduksjon"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q136446847-E3A72464-0648-4E39-8467-F434CC67B62D"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q383492"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "935189365"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q136446847"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502432260"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nb",
+        "type" : "literal",
+        "value" : "Gloppen"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q136446847-E3A72464-0648-4E39-8467-F434CC67B62D"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q383492"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "935189365"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q136446847"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502432260"
+      },
+      "valueLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Gloppen Municipality"
+      }
+    }, {
+      "statement" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/statement/Q136446847-E3A72464-0648-4E39-8467-F434CC67B62D"
+      },
+      "value" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q383492"
+      },
+      "org" : {
+        "type" : "literal",
+        "value" : "935189365"
+      },
+      "property" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/prop/direct/P159"
+      },
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q136446847"
+      },
+      "revision" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2502432260"
+      },
+      "valueLabel" : {
+        "xml:lang" : "nn",
+        "type" : "literal",
+        "value" : "Gloppen kommune"
+      }
+    } ]
+  }
+}

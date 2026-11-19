@@ -44,7 +44,7 @@ def newly_supported_field(field):
     from ..sources.fact_depth import IDENTITY_EXTRA
     from ..sources.regnskap import PATHS
     legacy={'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}
-    return (field.startswith(('identity.group_structure.','roles.signatur.','roles.prokura.','roles.detail.','subunits.detail.','accounts.history.','accounts.statement.','accounts.additional.','accounts.consolidated.','identity.historical_name.')) or
+    return (field.startswith(('identity.wikidata.','accounts.wikidata.','identity.group_structure.','roles.signatur.','roles.prokura.','roles.detail.','subunits.detail.','accounts.history.','accounts.statement.','accounts.additional.','accounts.consolidated.','identity.historical_name.')) or
             field in {'identity.'+k for k in (*EXTRA,*GROUPS,*IDENTITY_EXTRA,'employee_count_disclosure','founding_date','vat_registration_date')} or
             field in {'accounts.'+k for k in PATHS.keys()-legacy})
 
@@ -119,13 +119,21 @@ def apply(envelope, previous, blobs):
     # The primary identity/roles fetch can succeed while an independent group
     # or mandate lookup fails. That failure does not withdraw its prior facts.
     extended = envelope.run.refresh.get('brreg_extended', {})
+    if envelope.run.refresh.get('wikidata',{}).get('state')=='not_available_fetch_failed':
+        extended={**extended,'wikidata_identity':{'state':'not_available_fetch_failed','reason':'wikidata_lookup_failed'},
+                  'wikidata_accounts':{'state':'not_available_fetch_failed','reason':'wikidata_lookup_failed'},
+                  'wikidata_social':{'state':'not_available_fetch_failed','reason':'wikidata_lookup_failed'}}
     for kind, prefix in (('group_structure', 'identity.group_structure.'),
+                         ('wikidata_identity','identity.wikidata.'),('wikidata_accounts','accounts.wikidata.'),
+                         ('wikidata_social','social_profile.'),
                          ('signatur', 'roles.signatur.'), ('prokura', 'roles.prokura.')):
         if extended.get(kind, {}).get('state') != 'not_available_fetch_failed':
             continue
         present = {c.field for c in envelope.claims}
         for field, claim in old_claims.items():
             if not field.startswith(prefix) or field in present or claim.availability != 'available':
+                continue
+            if kind=='wikidata_social' and not any(old_evidence[ref].source_class=='wikidata' for ref in claim.evidence_ids if ref in old_evidence):
                 continue
             envelope.claims.append(claim.model_copy(update={'carried_forward': True, 'stale_since': envelope.run.completed_at}))
             envelope.run.refresh['observation_changes'].append({'section': claim.family, 'field': field,

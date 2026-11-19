@@ -47,3 +47,7 @@ the production live fallback. Preparing this size requires network access.
 
 Input registry data is attributed to Bronnoysundregistrene under NLOD 2.0.
 NAV and company content retain their terms; see [source policy](../docs/SOURCES.md).
+
+## Report data and current ceilings
+
+See [review-data licensing](reports/DATA_LICENSING.md) before redistributing dumps. Historical logs retain their original counts and budgets. Current limits are 19 pooled HTTP requests per distinct normalized input and 40 attributed requests/company (retries included), a 3,600-second default local safeguard and a 4 GiB output safeguard. Latest saved full suite: 1,656 passed.

@@ -1,0 +1,406 @@
+{
+  "run": "bench\\runs\\stage-ag-20261119",
+  "companies": 1000,
+  "total_available_claims": 167137,
+  "http_requests": 11254,
+  "wikidata_http_requests": 5,
+  "wikidata_metrics": {
+    "status": "complete",
+    "requests": 5,
+    "errors": 0,
+    "matched_companies": 13,
+    "website_candidates": 9,
+    "social_published": 4,
+    "social_corroborated": 2
+  },
+  "properties": {
+    "P1448": {
+      "companies": 1,
+      "claims": 1,
+      "source_companies": 1,
+      "source_values": 1
+    },
+    "P571": {
+      "companies": 7,
+      "claims": 7,
+      "source_companies": 13,
+      "source_values": 13
+    },
+    "P159": {
+      "companies": 13,
+      "claims": 13,
+      "source_companies": 13,
+      "source_values": 13
+    },
+    "P452": {
+      "companies": 12,
+      "claims": 12,
+      "source_companies": 12,
+      "source_values": 12
+    },
+    "P1128": {
+      "companies": 6,
+      "claims": 6,
+      "source_companies": 6,
+      "source_values": 6
+    },
+    "P2139": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    },
+    "P856": {
+      "companies": 8,
+      "claims": 8,
+      "source_companies": 9,
+      "source_values": 9
+    },
+    "P2002": {
+      "companies": 1,
+      "claims": 1,
+      "source_companies": 1,
+      "source_values": 1
+    },
+    "P2003": {
+      "companies": 2,
+      "claims": 2,
+      "source_companies": 2,
+      "source_values": 2
+    },
+    "P2013": {
+      "companies": 2,
+      "claims": 2,
+      "source_companies": 3,
+      "source_values": 3
+    },
+    "P4264": {
+      "companies": 0,
+      "claims": 0,
+      "source_companies": 0,
+      "source_values": 0
+    }
+  },
+  "overall_information_types": {
+    "official_name": {
+      "companies": 1000,
+      "claims": 1001
+    },
+    "inception": {
+      "companies": 988,
+      "claims": 995
+    },
+    "explicit_headquarters": {
+      "companies": 13,
+      "claims": 13
+    },
+    "industry_including_NACE": {
+      "companies": 996,
+      "claims": 1014
+    },
+    "employee_count": {
+      "companies": 122,
+      "claims": 128
+    },
+    "revenue_current_or_wikidata": {
+      "companies": 790,
+      "claims": 790
+    },
+    "ownership_verified_official_website": {
+      "companies": 114,
+      "claims": 114
+    },
+    "X": {
+      "companies": 2,
+      "claims": 2
+    },
+    "Instagram": {
+      "companies": 29,
+      "claims": 29
+    },
+    "Facebook": {
+      "companies": 34,
+      "claims": 35
+    },
+    "LinkedIn": {
+      "companies": 16,
+      "claims": 16
+    }
+  },
+  "disagreements": [
+    {
+      "organisation_number": "968386085",
+      "company": "LOFOTPOSTEN AS",
+      "status": "disagreement",
+      "property": "P571",
+      "registry_claim_id": "72a5b9eb7282538becd86426838a1563305813f26fdaa43153235799dd80153d",
+      "registry_value": "1994-01-01",
+      "registry_evidence_ids": [
+        "40e8174e5c3890bd65c1ae78be0207ecd9da4bf0d20971bec37e5485fc907fa2"
+      ],
+      "wikidata_value": {
+        "time": "1896-01-01T00:00:00Z",
+        "precision": 9,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "wikidata_evidence_ids": [
+        "03458fb91a88029106a707d27cb78ab81c1a7d44e6b78df4508c21190eece715"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q1764736",
+      "revision": "2569438172"
+    },
+    {
+      "organisation_number": "983103030",
+      "company": "STOREDALEN KRAFTVERK AS",
+      "status": "disagreement",
+      "property": "P571",
+      "registry_claim_id": "b324e5646a5012cb06e52aca5968cd044a8105647ee53f643b5257595d9273d6",
+      "registry_value": "2001-02-10",
+      "registry_evidence_ids": [
+        "cd1f010b8f69a5e0b90bee187b1deba65637e9c2a088ddf8da470df319050baa"
+      ],
+      "wikidata_value": {
+        "time": "2001-03-14T00:00:00Z",
+        "precision": 11,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "wikidata_evidence_ids": [
+        "178347c03abb69880f4adc9ab925d6851cd92fa6370d4223074e98364b4fa5fb"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q116013607",
+      "revision": "2502430426"
+    },
+    {
+      "organisation_number": "939882480",
+      "company": "FAMILIEN BRYNILDSENS LEGAT STI",
+      "status": "disagreement",
+      "property": "P571",
+      "registry_claim_id": "5d87c1bb8806032956917e775b1e9237170a42e32f0f777c0a55977e3d145962",
+      "registry_value": "1981-11-04",
+      "registry_evidence_ids": [
+        "a425ee4e5012e3e5c60a46372e27a6026ae97c46f40c0588c0b9967d07450302"
+      ],
+      "wikidata_value": {
+        "time": "2005-12-12T00:00:00Z",
+        "precision": 11,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "wikidata_evidence_ids": [
+        "3cd029ac65fd7daa29bdfa19120acba38b662c03298f517649f3d6397edfae2d"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q127060909",
+      "revision": "2502419670"
+    },
+    {
+      "organisation_number": "988119342",
+      "company": "GRYTE KRAFT AS",
+      "status": "disagreement",
+      "property": "P571",
+      "registry_claim_id": "5e3a73d60717ba9666ab92601a13d472f9fddeb4f1ab86a592412501abee57ed",
+      "registry_value": "2005-03-29",
+      "registry_evidence_ids": [
+        "d3595d613fe957af830df1218460529686588118faba0680014fed41d43a19f0"
+      ],
+      "wikidata_value": {
+        "time": "2005-05-02T00:00:00Z",
+        "precision": 11,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "wikidata_evidence_ids": [
+        "ec6e56adb30e903d38faec97650f62368e3e8ea22dbe0a6cb4e85fe7af9fc0ea"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q115945961",
+      "revision": "2502430080"
+    },
+    {
+      "organisation_number": "993021180",
+      "company": "KVANGREELVA KRAFTVERK AS",
+      "status": "disagreement",
+      "property": "P571",
+      "registry_claim_id": "32e9c70b5be664f1533bbdb69883606e4b6e287a825ca73d2c6097a11efb2f1a",
+      "registry_value": "2008-08-22",
+      "registry_evidence_ids": [
+        "9ac13f53ba4e0a4dd76992544d03b0b0b283dcff4b9f01eefd64bf492de26097"
+      ],
+      "wikidata_value": {
+        "time": "2008-09-27T00:00:00Z",
+        "precision": 11,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "wikidata_evidence_ids": [
+        "dbc717cda4877c7ab9bc3fe8123783bd3d82794b98eaf8f2a09685dfca4fcd4c"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q115863770",
+      "revision": "2502428413"
+    },
+    {
+      "organisation_number": "971492325",
+      "company": "FOLKENBORG MUSEUM STI",
+      "status": "disagreement",
+      "property": "P571",
+      "registry_claim_id": "76c9ca3afee040d95466ac51134d77ee6938da890288df3d79386a178aff6b2e",
+      "registry_value": "1990-01-02",
+      "registry_evidence_ids": [
+        "9df6b711033238eb0db82ee6e0654ed4c06c0baefddde4c53004aa223abecef2"
+      ],
+      "wikidata_value": {
+        "time": "2007-02-20T00:00:00Z",
+        "precision": 11,
+        "calendar": "http://www.wikidata.org/entity/Q1985727"
+      },
+      "wikidata_evidence_ids": [
+        "e498d5557ab2515fdd6826dbd4349b54d9ba69f89a0efe1c4a049fcfd2de8335"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q11969372",
+      "revision": "2502405734"
+    },
+    {
+      "organisation_number": "971492325",
+      "company": "FOLKENBORG MUSEUM STI",
+      "status": "disagreement",
+      "property": "P856",
+      "registry_claim_id": "5b8b626dd2907b63e73ac6e6bbe4f7a3c6d76058f2137113bb447245a0730f71",
+      "registry_value": "folkenborgmuseum.no",
+      "registry_evidence_ids": [
+        "049afa09b6bbaf4390c1e840827eb249861e3d4d0106d91120508c62d1dd3898"
+      ],
+      "wikidata_value": "https://ostfoldmuseene.no/folkenborg",
+      "wikidata_evidence_ids": [
+        "d78318fae200d0204e36fcb9176d668f890b7abc7f11565f8fc1a5e4019eb384"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q11969372",
+      "revision": "2502405734"
+    }
+  ],
+  "dated_comparisons": [
+    {
+      "organisation_number": "968386085",
+      "company": "LOFOTPOSTEN AS",
+      "status": "different_values_different_or_unknown_dates",
+      "property": "P1128",
+      "registry_claim_id": "f09623e20a7d15e89039b1c80e42a36a524cc92c00ad650a91765905e491c341",
+      "registry_value": 11,
+      "registry_evidence_ids": [
+        "d04339c209aae06d23abc312b1a7033c988a48e17fe8fae29192c2811170bde8"
+      ],
+      "wikidata_value": {
+        "amount": "13",
+        "unit": "http://www.wikidata.org/entity/Q199",
+        "point_in_time": {
+          "time": "2025-10-15T00:00:00Z",
+          "precision": 11,
+          "calendar": "http://www.wikidata.org/entity/Q1985727"
+        }
+      },
+      "wikidata_evidence_ids": [
+        "bb89f13978c94d6acebfe63f787aa948f09800e708b862896e336df2a8b0d7af"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q1764736",
+      "revision": "2569438172"
+    },
+    {
+      "organisation_number": "938092516",
+      "company": "OSLO CHAMBER OF COMMERCE",
+      "status": "different_values_different_or_unknown_dates",
+      "property": "P1128",
+      "registry_claim_id": "27a3107a580bbc10cc23896aefa23489f520936014a076f32657998fd9fa7f73",
+      "registry_value": 11,
+      "registry_evidence_ids": [
+        "895d1a04d423a84a0de660d57a66ea95590690064658970ae09783f5680616d7"
+      ],
+      "wikidata_value": {
+        "amount": "8",
+        "unit": "http://www.wikidata.org/entity/Q199",
+        "point_in_time": {
+          "time": "2025-10-15T00:00:00Z",
+          "precision": 11,
+          "calendar": "http://www.wikidata.org/entity/Q1985727"
+        }
+      },
+      "wikidata_evidence_ids": [
+        "965b786f71c121092b169fe27c847c72a283aa79c2f00f2efa2cb21339a26d8f"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q19384816",
+      "revision": "2502423198"
+    },
+    {
+      "organisation_number": "922828172",
+      "company": "TENSIO AS",
+      "status": "different_values_different_or_unknown_dates",
+      "property": "P1128",
+      "registry_claim_id": "246e9b24cb2a0415d5f45d7f2dfd7a908dfbf8ef8cef72afb1f1e5f58ae6d6e3",
+      "registry_value": 81,
+      "registry_evidence_ids": [
+        "2ee11e6ef5236ddda0b14daf882a5fb746ca3126fd1c9987ceb5b16d089f5b37"
+      ],
+      "wikidata_value": {
+        "amount": "77",
+        "unit": "http://www.wikidata.org/entity/Q199",
+        "point_in_time": {
+          "time": "2026-04-14T00:00:00Z",
+          "precision": 11,
+          "calendar": "http://www.wikidata.org/entity/Q1985727"
+        }
+      },
+      "wikidata_evidence_ids": [
+        "85c6c103db9d408d574bd1df6c6a77d7e3fb00b1f5e9241a56675d6e2a986c91"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q111605409",
+      "revision": "2564096376"
+    },
+    {
+      "organisation_number": "923354220",
+      "company": "EIDEFOSS VANNKRAFT AS",
+      "status": "different_values_different_or_unknown_dates",
+      "property": "P1128",
+      "registry_claim_id": "0ec457d661a4898df77a1507549df9950e593757a77ef833b4b4ba006feb078b",
+      "registry_value": 27,
+      "registry_evidence_ids": [
+        "907bc94f2652d35f494e1ca6c9af4fbdb04c825abf827683c291c917d9fbc850"
+      ],
+      "wikidata_value": {
+        "amount": "18",
+        "unit": "http://www.wikidata.org/entity/Q199",
+        "point_in_time": {
+          "time": "2023-01-01T00:00:00Z",
+          "precision": 9,
+          "calendar": "http://www.wikidata.org/entity/Q1985727"
+        }
+      },
+      "wikidata_evidence_ids": [
+        "7deba798db480ee6e553479db072900498bc57b87d089067bd1c08391479925d"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q104146333",
+      "revision": "2551055776"
+    },
+    {
+      "organisation_number": "975569306",
+      "company": "GLASSVERKET IDRETTSFORENING",
+      "status": "different_values_different_or_unknown_dates",
+      "property": "P1128",
+      "registry_claim_id": "a4fd8e2bd7eb55a82293fc455e39256751bc29ce0ce3feed6d59c563fc3aa7f7",
+      "registry_value": 36,
+      "registry_evidence_ids": [
+        "e6cf243401825f759d985a6e0d0dd0044c68d6869abb48b03c06822faecb6d3a"
+      ],
+      "wikidata_value": {
+        "amount": "39",
+        "unit": "http://www.wikidata.org/entity/Q199",
+        "point_in_time": {
+          "time": "2026-05-12T00:00:00Z",
+          "precision": 11,
+          "calendar": "http://www.wikidata.org/entity/Q1985727"
+        }
+      },
+      "wikidata_evidence_ids": [
+        "1509462f3baeed91fd819f76f3502681189e8e371018559e66a5e6dcee03c989"
+      ],
+      "item": "https://www.wikidata.org/wiki/Q11972178",
+      "revision": "2560086105"
+    }
+  ],
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "warnings": []
+}

@@ -1,5 +1,7 @@
 # Improvement log
 
+Historical record: figures, limits and pending work below apply to their dated checkpoints. Current status is in [README.md](README.md): latest saved suite 1,656 passed; current ceilings 19 pooled requests per distinct normalized input and 40 attributed requests/company; default time safeguard 3,600 seconds.
+
 Available counts use canonical scoreboard states, ordered as identity / people /
 locations / financials / website / social / jobs / news/activity. A baseline's
 before value is not measured. `checked/wrong` must describe its audit scope;

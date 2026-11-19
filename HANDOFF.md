@@ -1,5 +1,7 @@
 # Handoff — S6 hard-stop wrap-up, 4 November 2026
 
+Historical record: figures, limits and pending work below apply to their dated checkpoints. Current status is in [README.md](README.md): latest saved suite 1,656 passed; current ceilings 19 pooled requests per distinct normalized input and 40 attributed requests/company; default time safeguard 3,600 seconds.
+
 This handoff is delivered in repository HEAD. Implementation checkpoint after the requested revert: `5a4301307f84a3d551bd818abbbd5a4c2d3fe93d`. It reverts trial `2b97438` and restores the kept Step 3a code. The following documentation-only wrap-up commit contains this file; obtain its exact HEAD with `git rev-parse HEAD` (also reported in chat). Nothing pushed.
 
 | S6 step | Status | Evidence / remaining limitation |

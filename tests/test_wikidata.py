@@ -13,12 +13,27 @@ from signalpost.sources.extract import Section,Source,add
 from signalpost.runner import placeholder
 from signalpost.models.evidence import utc_now
 from signalpost.web.candidates import generate
-from signalpost.web.wikidata import fetch_batch,websites,publish_social,parse
+from signalpost.web.wikidata import fetch_batch,websites,publish_social,parse,query,ENDPOINT
+from urllib.parse import urlencode
 from tests.test_registry import config,numbers
 
 
 BODY=Path('tests/fixtures/wikidata-response.json').read_bytes()
 ORG='923609016'
+
+
+def recorded_index(blobs,changes):
+    data=json.loads(BODY)
+    bindings=[]
+    for prop,value in changes:
+        original=next(b for b in data['results']['bindings'] if b['org']['value']==ORG and b['property']['value'].endswith('/'+prop))
+        original['value']['value']=value
+        bindings.append(original)
+    body=json.dumps({'results':{'bindings':bindings}}).encode()
+    sha=blobs.put(body)
+    rows=parse(body,{ORG})
+    for row in rows:row.update(sha=sha,retrieved_at=utc_now(),source_url=ENDPOINT+'?'+urlencode({'query':query([ORG]),'format':'json'}))
+    return {'records':{ORG:rows},'metrics':{'social_published':0}}
 
 
 def test_exact_org_query_nominates_but_does_not_verify(tmp_path):
@@ -87,10 +102,7 @@ def test_malformed_or_foreign_identity_cannot_inject_candidate():
 
 def test_wikidata_social_requires_site_link_or_matching_exact_org_handle(tmp_path):
     cfg=config(tmp_path,[ORG],websites=True,wikidata=True);blobs=BlobStore(cfg.state_dir)
-    index={'records':{ORG:[{'org':ORG,'item':'https://www.wikidata.org/wiki/Q123456','property':'P2013',
-             'value':'unrelated-shared-parent','sha':hashlib.sha256(BODY).hexdigest(),'retrieved_at':utc_now(),'locator':'/fixture'}]},
-           'metrics':{'social_published':0}}
-    blobs.put(BODY)
+    index=recorded_index(blobs,[('P2013','unrelated-shared-parent')])
     row=placeholder(ORG,'test',utc_now());section=Section()
     add(section,Source('https://data.brreg.no',b'Example AS','b'*64,utc_now()),ORG,'identity','identity.legal_name','Example AS','/')
     row.claims=section.claims
@@ -103,12 +115,7 @@ def test_wikidata_social_requires_site_link_or_matching_exact_org_handle(tmp_pat
 
 def test_wikidata_social_does_not_accept_website_or_public_brand_aliases(tmp_path):
     cfg=config(tmp_path,[ORG],websites=True,wikidata=True);blobs=BlobStore(cfg.state_dir);blobs.put(BODY)
-    index={'records':{ORG:[
-        {'org':ORG,'item':'https://www.wikidata.org/wiki/Q123456','property':'P2013','value':'declaredbrand',
-         'sha':hashlib.sha256(BODY).hexdigest(),'retrieved_at':utc_now(),'locator':'/brand'},
-        {'org':ORG,'item':'https://www.wikidata.org/wiki/Q123456','property':'P2003','value':'verifieddomain',
-         'sha':hashlib.sha256(BODY).hexdigest(),'retrieved_at':utc_now(),'locator':'/domain'}]},
-        'metrics':{'social_published':0}}
+    index=recorded_index(blobs,[('P2013','declaredbrand'),('P2003','verifieddomain')])
     row=placeholder(ORG,'test',utc_now());section=Section()
     source=Source('https://data.brreg.no',b'Unrelated Legal AS','c'*64,utc_now())
     add(section,source,ORG,'identity','identity.legal_name','Unrelated Legal AS','/')

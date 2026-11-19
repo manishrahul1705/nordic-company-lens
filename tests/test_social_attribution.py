@@ -18,12 +18,13 @@ PROOF={'final_url':'https://fus.no','proof_page_url':'https://fus.no/rolidbakken
     ('threads.net', '@example'), ('threads.com', '@example'), ('vimeo.com', 'example'),
     ('snapchat.com', 'add/example'), ('snapchat.com', 'p/example'),
 ])
-def test_company_profile_paths_require_a_matching_company(host, path):
+def test_proven_company_page_is_profile_attribution(host, path):
     url = f'https://{host}/{path}'
     page = Page(f'<footer><a href="{url}">Follow us</a></footer>'.encode(), 'https://different.no/')
     proof = {'final_url': page.url, 'identity_level': 'VERIFIED'}
     assert url in attributed(page, proof, {'name': 'Example AS'})
-    assert not attributed(page, proof, {'name': 'Different Company AS'})
+    assert url in attributed(page, proof, {'name': 'Different Company AS'})
+    assert not attributed(page, {**proof,'identity_level':'LOW'}, {'name': 'Different Company AS'})
 
 
 @pytest.mark.parametrize('url', [
@@ -82,11 +83,11 @@ def test_norwegian_letters_and_run_together_handles_match():
     assert matches_profile('https://www.facebook.com/HillerenProsjekteringAS', ['HILLEREN PROSJEKTERING AS'])
 
 
-def test_verified_site_brand_does_not_replace_registered_name_match():
+def test_proven_site_link_does_not_require_legal_name_handle_match():
     page=Page(b'<main><a href="https://facebook.com/soa.no">Facebook</a></main>','https://soa.no/')
     context={'name':'Sigmund Olsen Agentur AS','registered_brands':['soa']}
     proof={'identity_level':'VERIFIED','final_url':page.url,'proof_page_url':page.url,'other_orgnrs':[]}
-    assert not attributed(page,proof,context)
+    assert attributed(page,proof,context)
 
 
 def test_profile_shared_by_different_companies_is_removed():

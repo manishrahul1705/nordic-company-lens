@@ -22,6 +22,9 @@ packages = ["src/signalpost"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "data/shared_identifiers.json.gz" = "signalpost/data/shared_identifiers.json.gz"
+"data/social_company_names.json.gz" = "signalpost/data/social_company_names.json.gz"
+"data/social_company_names_build.json" = "signalpost/data/social_company_names_build.json"
+"data/SOCIAL_COMPANY_NAMES_NOTICE.md" = "signalpost/data/SOCIAL_COMPANY_NAMES_NOTICE.md"
 "data/cc_orgnr_index.json.gz" = "signalpost/data/cc_orgnr_index.json.gz"
 "data/SHARED_IDENTIFIERS_NOTICE.md" = "signalpost/data/SHARED_IDENTIFIERS_NOTICE.md"
 "data/CC_INDEX_NOTICE.md" = "signalpost/data/CC_INDEX_NOTICE.md"
