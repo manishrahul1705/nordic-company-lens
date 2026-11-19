@@ -1,5 +1,7 @@
 # Frozen 1,000 attribution audit
 
+> **History.** The run this audit read (`bench/runs/long-label-clean-20261118`) no longer exists, so it cannot be rerun. It is superseded by the rerunnable audit in [stage-x-accuracy/REPORT.md](stage-x-accuracy/REPORT.md) (`attribution_audit.py`).
+
 **Result: 0 of 1,000 envelopes contain a claim, evidence record, or cited saved company page attributable to a different organisation number.** No code was changed for this audit.
 
 ## Scope and checks

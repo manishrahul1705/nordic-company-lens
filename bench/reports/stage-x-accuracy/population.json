@@ -1,23 +1,22 @@
 {
  "seed": 20261119,
  "size": 200,
- "run": "bench\\runs\\final-frozen-20261118",
+ "extract": "extract/envelopes.jsonl.xz",
  "population": {
   "accounts": 97416,
-  "activity": 12105,
-  "brands": 26,
+  "activity": 12112,
+  "brands": 18,
   "gleif": 736,
   "hiring": 3,
   "identity": 30339,
   "roles": 17817,
-  "social": 84,
-  "subunits": 6913,
-  "synthesis": 18135,
-  "ted": 9,
+  "social": 87,
+  "subunits": 6907,
+  "synthesis": 18164,
   "website": 551
  },
  "allocation": {
-  "accounts": 100,
+  "accounts": 101,
   "activity": 13,
   "brands": 1,
   "gleif": 2,
@@ -27,7 +26,6 @@
   "social": 1,
   "subunits": 8,
   "synthesis": 20,
-  "ted": 1,
   "website": 2
  }
 }

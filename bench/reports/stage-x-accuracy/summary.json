@@ -1,0 +1,56 @@
+{
+ "sampled": 200,
+ "correct": 200,
+ "wrong": 0,
+ "doubtful": 0,
+ "mechanical": 153,
+ "hand": 47,
+ "wilson_95_lower_bound": 0.9812,
+ "by_family": {
+  "accounts": {
+   "basis:mechanical": 101,
+   "correct": 101
+  },
+  "activity": {
+   "basis:hand": 13,
+   "correct": 13
+  },
+  "brands": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "gleif": {
+   "basis:hand": 2,
+   "correct": 2
+  },
+  "hiring": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "identity": {
+   "basis:mechanical": 32,
+   "correct": 32
+  },
+  "roles": {
+   "basis:hand": 7,
+   "basis:mechanical": 12,
+   "correct": 19
+  },
+  "social": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "subunits": {
+   "basis:mechanical": 8,
+   "correct": 8
+  },
+  "synthesis": {
+   "basis:hand": 20,
+   "correct": 20
+  },
+  "website": {
+   "basis:hand": 2,
+   "correct": 2
+  }
+ }
+}
