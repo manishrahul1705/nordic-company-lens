@@ -1,0 +1,8 @@
+{
+  "affected_company_numbers": [
+    "918049215",
+    "916049153",
+    "934500644"
+  ],
+  "cause": "One metadata read omitted explicit UTF-8 and used the Windows locale. Source names and numeric tests were intact. Keyword controls are reissued; original observations retained separately."
+}

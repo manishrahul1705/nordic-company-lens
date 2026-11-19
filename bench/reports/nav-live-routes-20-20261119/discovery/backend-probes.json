@@ -1,0 +1,119 @@
+[
+  {
+    "name": "backend-number",
+    "url": "https://arbeidsplassen.nav.no/stillinger/api/search?q=976645677&size=10",
+    "status": 200,
+    "content_type": "application/json",
+    "total": {
+      "value": 0,
+      "relation": "eq"
+    },
+    "employers": []
+  },
+  {
+    "name": "backend-name",
+    "url": "https://arbeidsplassen.nav.no/stillinger/api/search?q=VARD+AS&size=10",
+    "status": 200,
+    "content_type": "application/json",
+    "total": {
+      "value": 8,
+      "relation": "eq"
+    },
+    "employers": [
+      {
+        "name": "VARD INTERIORS AS"
+      },
+      {
+        "name": "VARD INTERIORS AS"
+      },
+      {
+        "name": "VARD GROUP AS AVD HOVEDKONTORET ÅLESUND"
+      },
+      {
+        "name": "VARD GROUP AS AVD BRATTVÅG"
+      },
+      {
+        "name": "VARD GROUP AS AVD LANGSTEN"
+      },
+      {
+        "name": "NOR FACILITY AS VARD SØVIKNES"
+      },
+      {
+        "name": "NOR FACILITY AS AVD VARD BRATTVÅG"
+      },
+      {
+        "name": "VENA FRITIDSEIENDOM AS"
+      }
+    ]
+  },
+  {
+    "name": "backend-employer",
+    "url": "https://arbeidsplassen.nav.no/stillinger/api/search?employer=976645677&size=10",
+    "status": 200,
+    "content_type": "application/json",
+    "total": {
+      "value": 12822,
+      "relation": "eq"
+    },
+    "employers": [
+      {
+        "name": "JOKER BYSENTERET"
+      },
+      {
+        "name": "MOELV BIL & CARAVAN AS"
+      },
+      {
+        "name": "DOVRE SOLUTIONS AS AVD BERGEN"
+      },
+      {
+        "name": "STIFTELSEN MOSSERØDHJEMMET"
+      },
+      {
+        "name": "MEDVIND ASSISTANSE AS AVD VESTLAND"
+      },
+      {
+        "name": "DOVRE SOLUTIONS AS AVD LYSAKER"
+      },
+      {
+        "name": "JOBZONE NORGE AS AVD MANDAL"
+      },
+      {
+        "name": "DEN NORSKE KRIGSFORSIKRING FOR SKIB"
+      },
+      {
+        "name": "HJULBYTTE AS"
+      },
+      {
+        "name": "JOKER BYSENTERET"
+      }
+    ]
+  },
+  {
+    "name": "backend-field",
+    "url": "https://arbeidsplassen.nav.no/stillinger/api/search?q=employer.orgnr%3A976645677&size=10",
+    "status": 200,
+    "content_type": "application/json",
+    "total": {
+      "value": 0,
+      "relation": "eq"
+    },
+    "employers": []
+  },
+  {
+    "name": "backend-child",
+    "url": "https://arbeidsplassen.nav.no/stillinger/api/search?q=981955234&size=10",
+    "status": 200,
+    "content_type": "application/json",
+    "total": {
+      "value": 0,
+      "relation": "eq"
+    },
+    "employers": []
+  },
+  {
+    "name": "page-name",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=VARD+AS&v=6",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8"
+  }
+]

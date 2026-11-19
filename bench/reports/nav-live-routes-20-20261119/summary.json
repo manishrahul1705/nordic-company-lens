@@ -1,0 +1,77 @@
+{
+  "companies": 20,
+  "required_audit_companies": [
+    "976645677",
+    "991247610",
+    "922154635",
+    "934500644"
+  ],
+  "published_companies": [
+    "923354220",
+    "960213912",
+    "930202894"
+  ],
+  "status_counts": {
+    "feed-control": {
+      "200": 1
+    },
+    "feed-employer": {
+      "200": 20
+    },
+    "feed-orgnr": {
+      "200": 20
+    },
+    "feed-page-orgnr": {
+      "200": 20
+    },
+    "feedentry-known-ad": {
+      "200": 3
+    },
+    "retired-auth": {
+      "404": 20
+    },
+    "search-control": {
+      "200": 1
+    },
+    "search-employer": {
+      "200": 1,
+      "429": 1
+    },
+    "search-orgnr": {
+      "200": 1,
+      "429": 19
+    },
+    "search-q-name": {
+      "429": 1
+    },
+    "search-q-number": {
+      "200": 1,
+      "429": 1
+    },
+    "site-child-number": {
+      "200": 3
+    },
+    "site-q-name": {
+      "200": 20
+    },
+    "site-q-number": {
+      "200": 20
+    },
+    "site-q-stem": {
+      "200": 20
+    }
+  },
+  "feed_filters_ignored_identical_header_ids": true,
+  "keyword_legal_name_positive_companies": 5,
+  "keyword_suffix_free_positive_companies": 9,
+  "number_keyword_positive_companies": 0,
+  "verified_active_companies": 3,
+  "verified_active_ads": 3,
+  "candidate_uuids": 39,
+  "candidate_detail_statuses": {
+    "200": 29,
+    "404": 10
+  },
+  "encoding_corrections": 3,
+  "scope": "Positive-enriched 20-company test; no extrapolation to the 1000-company cohort. Failed/rate-limited responses are unavailable, not zero ads."
+}

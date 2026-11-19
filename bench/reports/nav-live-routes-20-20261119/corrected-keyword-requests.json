@@ -1,0 +1,574 @@
+[
+  {
+    "route": "site-q-name",
+    "organisation_number": "934500644",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=SAND%C3%98+AS&v=6",
+    "query": "SANDØ AS",
+    "status": 200,
+    "corrected_encoding": true,
+    "total": 4,
+    "returned_ads": 4,
+    "ads": [
+      {
+        "uuid": "1203c55c-d6d8-4188-8a28-73a57db332a7",
+        "employer": {
+          "name": "SANDS Advokatfirma AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-24T00:00:00+01:00",
+        "title": "Advokat \\| Advokatfullmektig \\| IPT \\| Oslo",
+        "source": "FINN"
+      },
+      {
+        "uuid": "ca89fb1f-45ff-44c3-a387-9521190600d6",
+        "employer": {
+          "name": "Sande Gård AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-20T07:05:41.648065+01:00",
+        "title": "Lager- og distribusjonsmedarbeider søkes",
+        "source": "FINN"
+      },
+      {
+        "uuid": "9df1a9b9-982e-48cd-a560-3efa012b6874",
+        "employer": {
+          "name": "Renex Servicepartner As Avd Sande"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-04T00:00:00+01:00",
+        "title": "Kokk 100% turnus",
+        "source": "Stillingsregistrering"
+      },
+      {
+        "uuid": "4984c994-a971-476a-b34b-5c7716c1202b",
+        "employer": {
+          "name": "Renex Servicepartner As Avd Sande"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-04T00:00:00+01:00",
+        "title": "Renholder 92% stilling , Bjørke, Volda kommune",
+        "source": "Stillingsregistrering"
+      }
+    ],
+    "organisation_fields": [],
+    "employer_orgnr_present": false
+  },
+  {
+    "route": "site-q-stem",
+    "organisation_number": "934500644",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=SAND%C3%98&v=6",
+    "query": "SANDØ",
+    "status": 200,
+    "corrected_encoding": true,
+    "total": 11,
+    "returned_ads": 11,
+    "ads": [
+      {
+        "uuid": "e1fea794-9233-4dfa-8899-d7112f376d09",
+        "employer": {
+          "name": "Sande Barbershop"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-30T00:00:00+01:00",
+        "title": "ERFAREN BARBER SØKES",
+        "source": "Stillingsregistrering"
+      },
+      {
+        "uuid": "1203c55c-d6d8-4188-8a28-73a57db332a7",
+        "employer": {
+          "name": "SANDS Advokatfirma AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-24T00:00:00+01:00",
+        "title": "Advokat \\| Advokatfullmektig \\| IPT \\| Oslo",
+        "source": "FINN"
+      },
+      {
+        "uuid": "ca89fb1f-45ff-44c3-a387-9521190600d6",
+        "employer": {
+          "name": "Sande Gård AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-20T07:05:41.648065+01:00",
+        "title": "Lager- og distribusjonsmedarbeider søkes",
+        "source": "FINN"
+      },
+      {
+        "uuid": "206c0dc5-83d8-45ba-9b98-4c5c290a464c",
+        "employer": {
+          "name": "Sande barnehage, Sola kommune"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-22T00:00:00+01:00",
+        "title": "Pedagogisk leder ",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "5776e6ee-d23c-45c7-b5d6-64fbcd25e339",
+        "employer": {
+          "name": "Sunnfjord kommune Sande omsorgssenter"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-27T00:00:00+01:00",
+        "title": "Sande omsorgssenter har ledig fast 100 % stilling som ",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "d7d9207b-3532-41a5-8400-c2dbfab62870",
+        "employer": {
+          "name": "Sunnfjord kommune Sande omsorgssenter"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-27T00:00:00+01:00",
+        "title": "Sande omsorgssenter har ledig 100 % stilling som ",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "9df1a9b9-982e-48cd-a560-3efa012b6874",
+        "employer": {
+          "name": "Renex Servicepartner As Avd Sande"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-04T00:00:00+01:00",
+        "title": "Kokk 100% turnus",
+        "source": "Stillingsregistrering"
+      },
+      {
+        "uuid": "4984c994-a971-476a-b34b-5c7716c1202b",
+        "employer": {
+          "name": "Renex Servicepartner As Avd Sande"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-04T00:00:00+01:00",
+        "title": "Renholder 92% stilling , Bjørke, Volda kommune",
+        "source": "Stillingsregistrering"
+      },
+      {
+        "uuid": "98b75d3a-458a-4821-a3d1-b16d4db2c4fa",
+        "employer": {
+          "name": "Sande videregående skole, Vestfold fylkeskommune"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-31T00:00:00+01:00",
+        "title": "Har du fagbrev som elektriker, og har lyst til å prøve deg i klasserommet, ta kontakt!",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "77bbd40e-0af3-47af-83d3-214c5e8ae358",
+        "employer": {
+          "name": "Sande aktivitet og avlastning, Sola kommune"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-29T00:00:00+01:00",
+        "title": "Vernepleier Miljøterapeut Helsefagarbeider",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "819a43c3-9c25-4321-9b9d-1cb7930d799c",
+        "employer": {
+          "name": "Holmestrand kommune Sande bo- og behandlingssenter"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-26T00:00:00+01:00",
+        "title": "Vil du være med og skape trygghet, omsorg og gode øyeblikk for mennesker som trenger det mest?",
+        "source": "IMPORTAPI"
+      }
+    ],
+    "organisation_fields": [],
+    "employer_orgnr_present": false
+  },
+  {
+    "route": "site-q-name",
+    "organisation_number": "918049215",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=MENSTAD+N%C3%86RINGSPARK+AS&v=6",
+    "query": "MENSTAD NÆRINGSPARK AS",
+    "status": 200,
+    "corrected_encoding": true,
+    "total": 0,
+    "returned_ads": 0,
+    "ads": [],
+    "organisation_fields": [],
+    "employer_orgnr_present": false
+  },
+  {
+    "route": "site-q-stem",
+    "organisation_number": "918049215",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=MENSTAD+N%C3%86RINGSPARK&v=6",
+    "query": "MENSTAD NÆRINGSPARK",
+    "status": 200,
+    "corrected_encoding": true,
+    "total": 0,
+    "returned_ads": 0,
+    "ads": [],
+    "organisation_fields": [],
+    "employer_orgnr_present": false
+  },
+  {
+    "route": "site-q-name",
+    "organisation_number": "916049153",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=SJ%C3%98L+INVEST+AS&v=6",
+    "query": "SJØL INVEST AS",
+    "status": 200,
+    "corrected_encoding": true,
+    "total": 49,
+    "returned_ads": 25,
+    "ads": [
+      {
+        "uuid": "e3f6f91f-9d82-413c-9e67-e5f8876374c0",
+        "employer": {
+          "name": "Kongsberg Digital"
+        },
+        "status": "ACTIVE",
+        "expires": "2027-03-15T00:00:00+01:00",
+        "title": "Growth VP - Sitecom",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "94e0ee15-3049-44c6-85c0-92c21b288591",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-06T00:00:00+01:00",
+        "title": "Bilmekaniker - Nordvik AS, Harstad.",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "02b5c24d-5172-456d-8445-8988d48c115d",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2027-03-18T00:00:00+01:00",
+        "title": "Bilmekaniker - Nordvik AS, Bodø",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "aebe4545-4cd0-44c6-938e-1b982868dec3",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2027-01-08T00:00:00+01:00",
+        "title": "Bilmekanikere - M Nordvik AS, Bodø",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "a9b557a4-f6f8-456a-9d68-7843f6b06108",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-30T00:00:00+01:00",
+        "title": "Bilmekaniker Toyota - Nordvik AS, Sortland",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "c15baa10-ddfb-4ba9-bd18-2f3fe1b84bc7",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2027-05-04T00:00:00+02:00",
+        "title": "Vi søker Teknisk leder - Nordvik AS, Bodø",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "4f7912b3-d719-4d8b-afba-c849421233ec",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-30T00:00:00+01:00",
+        "title": "Hjelpearbeider Bilskadereparatør - Nordvik AS Bilskade, Bodø.",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "2ba1df90-515d-45b0-b7a7-4e43ad85e101",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2027-11-17T00:00:00+01:00",
+        "title": "Salgssjef bruktbil - Nordvik AS, Mo i Rana",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "2c0108dc-adb4-43f5-a28c-b85fa464d0aa",
+        "employer": {
+          "name": "AVD Jonskjæret"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-27T00:00:00+01:00",
+        "title": "Ode AS søker Driftsleder til Jonskjæret",
+        "source": "FINN"
+      },
+      {
+        "uuid": "4e0bae90-ccfd-4972-aa85-95e94ecff88a",
+        "employer": {
+          "name": "Nordvik Gruppen"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-30T00:00:00+01:00",
+        "title": "Vi søker Operativ teknisk leder - Nordvik AS, Narvik",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "da30a0bb-1ba0-470e-8fe1-d3cf290ddc73",
+        "employer": {
+          "name": "Bjørn Eiendom AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-22T00:00:00+01:00",
+        "title": "Bjørn Eiendom AS søker daglig leder",
+        "source": "FINN"
+      },
+      {
+        "uuid": "3b8ebcc8-0a73-4cdb-9992-911c2c64892b",
+        "employer": {
+          "name": "KE Nett AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-29T00:00:00+01:00",
+        "title": "Leder drift og vedlikehold søkes til KE Nett AS",
+        "source": "FINN"
+      },
+      {
+        "uuid": "ada9d27a-49dc-4d17-ac2f-bb6b5bd17e65",
+        "employer": {
+          "name": "Klimaeksperten As"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-31T00:00:00+01:00",
+        "title": "Møtebooker søkes bli med på veksten hos Klimaeksperten AS",
+        "source": "Stillingsregistrering"
+      },
+      {
+        "uuid": "9f738f2e-0a40-4282-aaea-9836ad3c9e1a",
+        "employer": {
+          "name": "DAIKIN AIRCONDITIONING NORWAY AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-22T07:04:41.696606+01:00",
+        "title": "Join Daikin as Application Engineer -- Air Side",
+        "source": "FINN"
+      },
+      {
+        "uuid": "6eed9711-a282-4ad5-b18f-890619dd9f77",
+        "employer": {
+          "name": "DAIKIN AIRCONDITIONING NORWAY AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-22T07:04:41.843153844+01:00",
+        "title": "Join Daikin as Application Engineer -- BMS \\& Controls",
+        "source": "FINN"
+      },
+      {
+        "uuid": "00ee98f1-5d6f-426e-81ad-62fb839a4ffb",
+        "employer": {
+          "name": "TIETO NORWAY AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-29T00:00:00+01:00",
+        "title": "Join Tieto Banktech as Head of Product",
+        "source": "FINN"
+      },
+      {
+        "uuid": "54bc510c-2902-4c5b-9ab5-649537f05e2d",
+        "employer": {
+          "name": "Ode Processing"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-15T00:00:00+01:00",
+        "title": "Ode Processing AS søker Produksjonsleder Videreforedling",
+        "source": "FINN"
+      },
+      {
+        "uuid": "659a2a0c-bf93-459e-bb9f-73989e517a7f",
+        "employer": {
+          "name": "Kumera Marine AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-10T00:00:00+01:00",
+        "title": "Utvikle din tekniske kompetanse hos Kumera Marine AS",
+        "source": "FINN"
+      },
+      {
+        "uuid": "e4eae982-c271-4e54-b2d4-a8d2625ed3e2",
+        "employer": {
+          "name": "Helseplattformen AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-29T00:00:00+01:00",
+        "title": "Vil du forme fremtidens digitale arbeidsplass for Helseplattformen AS og Hemit HF? ",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "d2eafc73-746c-47e8-bb1b-996d75e1afc7",
+        "employer": {
+          "name": "TechnipFMC"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-25T00:00:00+01:00",
+        "title": "Join Team TechnipFMC as our new Workshop Technician in Bergen!",
+        "source": "FINN"
+      },
+      {
+        "uuid": "b1c9c469-247c-48d9-b375-673ff6565b60",
+        "employer": {
+          "name": "Apex Ai As"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-20T00:00:00+01:00",
+        "title": "Bli med på AI-revolusjonen! APEX Ai AS søker sulten selger (Fastlønn + Provisjon + Mulighet for eierandel)",
+        "source": "Stillingsregistrering"
+      },
+      {
+        "uuid": "0fe0ef6c-3826-460f-ac1e-3d2417f8286a",
+        "employer": {
+          "name": "Heiskontrollen AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-25T00:00:00+01:00",
+        "title": "Vil du lede medarbeidere og bidra til tryggere heiser i Norge?",
+        "source": "FINN"
+      },
+      {
+        "uuid": "d237574f-3807-47a8-aeb3-e5c04dd59f60",
+        "employer": {
+          "name": "Brødrene Melby AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-22T07:04:42.838766+01:00",
+        "title": "Er du vår nye elektriker?",
+        "source": "FINN"
+      },
+      {
+        "uuid": "69405fda-c96b-4cf0-8c23-1a63d505b77f",
+        "employer": {
+          "name": "Fred. Olsen & Co AS."
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-29T07:04:27.259664+01:00",
+        "title": "Chief Group Controller",
+        "source": "FINN"
+      },
+      {
+        "uuid": "f0d9336f-8a28-4f0c-a4e0-05fecd5c36a6",
+        "employer": {
+          "name": "AS SPAR KJØP"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-30T00:00:00+01:00",
+        "title": "Leder IT",
+        "source": "FINN"
+      }
+    ],
+    "organisation_fields": [],
+    "employer_orgnr_present": false
+  },
+  {
+    "route": "site-q-stem",
+    "organisation_number": "916049153",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=SJ%C3%98L+INVEST&v=6",
+    "query": "SJØL INVEST",
+    "status": 200,
+    "corrected_encoding": true,
+    "total": 9,
+    "returned_ads": 9,
+    "ads": [
+      {
+        "uuid": "da34574f-4cf8-4c4a-a6e7-3b337f047851",
+        "employer": {
+          "name": "KONGSBERG"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-06T00:00:00+01:00",
+        "title": "Vil du forme fremtidens globale forsikringsstrategi i KONGSBERG?",
+        "source": "FINN"
+      },
+      {
+        "uuid": "574f0020-1d4e-4b27-a34c-2e6a43b64d41",
+        "employer": {
+          "name": "Telecom Infrastructure Partners Norway Propertyco AS"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-22T07:04:42.395255393+01:00",
+        "title": "Vi søker Transaksjonsmedarbeidere for videre vekst i Norge.",
+        "source": "FINN"
+      },
+      {
+        "uuid": "e3f6f91f-9d82-413c-9e67-e5f8876374c0",
+        "employer": {
+          "name": "Kongsberg Digital"
+        },
+        "status": "ACTIVE",
+        "expires": "2027-03-15T00:00:00+01:00",
+        "title": "Growth VP - Sitecom",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "efa7291a-c087-4e83-b883-70b3d270d12a",
+        "employer": {
+          "name": "Helse Sør-Øst RHF"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-07T00:00:00+01:00",
+        "title": "Vil du jobbe med noen av Norges største investeringer innen sykehusbygg og teknologi?",
+        "source": "FINN"
+      },
+      {
+        "uuid": "0f5e0a39-d7d7-4c8a-a00c-3b8de97e944f",
+        "employer": {
+          "name": "Coop Øst SA"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-20T07:05:40.756113+01:00",
+        "title": "Business Controller med teft for analyse, investeringer og forretningsutvikling søkes til Coop Øst på Kolbotn",
+        "source": "FINN"
+      },
+      {
+        "uuid": "73c80958-bc35-4741-9f92-88bd67111f8b",
+        "employer": {
+          "name": "CUSHMAN & WAKEFIELD REALKAPITAL"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-27T00:00:00+01:00",
+        "title": "Cushman \\& Wakefield Realkapital søker analytiker - næringseiendom",
+        "source": "FINN"
+      },
+      {
+        "uuid": "8b8f4ec7-c280-480d-9e37-92ca1fc5aaa3",
+        "employer": {
+          "name": "Ansettr"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-12-07T00:00:00+01:00",
+        "title": "Bli med og bygg fremtidens regnskapsbyrå for holdingselskaper! Holdingservice søker regnskapsfører (Søk uten CV og søknadsbrev)",
+        "source": "Stillingsregistrering"
+      },
+      {
+        "uuid": "912f76f3-50f5-42dd-af67-9e1e3bcc98c1",
+        "employer": {
+          "name": "TINE SA"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-23T22:59:59+01:00",
+        "title": "TINE anlegg Storsteinnes søker Prosjektleder Nord",
+        "source": "IMPORTAPI"
+      },
+      {
+        "uuid": "754bfedd-9ccb-4c1e-ac4e-a004dd812149",
+        "employer": {
+          "name": "Highvern"
+        },
+        "status": "ACTIVE",
+        "expires": "2026-11-27T07:05:20.763837+01:00",
+        "title": "Vil du jobbe tett på ledende PE-fond? Highvern søker senior regnskapsfører",
+        "source": "FINN"
+      }
+    ],
+    "organisation_fields": [],
+    "employer_orgnr_present": false
+  }
+]

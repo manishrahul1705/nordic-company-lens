@@ -1,0 +1,1676 @@
+[
+  {
+    "organisation_number": "976645677",
+    "name": "VARD AS",
+    "audit_positive": true,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=976645677",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=976645677",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=976645677",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=976645677&size=10",
+        "status": 200,
+        "total": {
+          "value": 12824,
+          "relation": "eq"
+        },
+        "returned_ads": 25,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=VARD+AS&v=6",
+        "status": 200,
+        "total": 8,
+        "returned_ads": 8,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=VARD&v=6",
+        "status": 200,
+        "total": 9,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=976645677&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=976645677&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "991247610",
+    "name": "ROLIDBAKKEN FUS BARNEHAGE AS",
+    "audit_positive": true,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=991247610",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=991247610",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=991247610",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=991247610&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=ROLIDBAKKEN+FUS+BARNEHAGE+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=ROLIDBAKKEN+FUS+BARNEHAGE&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=991247610&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=991247610&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "922154635",
+    "name": "SKATTEKISTEN AS",
+    "audit_positive": true,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=922154635",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=922154635",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=922154635",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=922154635&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SKATTEKISTEN+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SKATTEKISTEN&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=922154635&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=922154635&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "934500644",
+    "name": "SANDØ AS",
+    "audit_positive": true,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=934500644",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=934500644",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=934500644",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=934500644&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SAND%C3%98+AS&v=6",
+        "status": 200,
+        "total": 4,
+        "returned_ads": 4,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SAND%C3%98&v=6",
+        "status": 200,
+        "total": 11,
+        "returned_ads": 11,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=934500644&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=934500644&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "923354220",
+    "name": "EIDEFOSS VANNKRAFT AS",
+    "audit_positive": false,
+    "previously_published": true,
+    "verified_ads": [
+      {
+        "uuid": "5cc7591a-a28b-4753-93dd-d1a11200c883",
+        "candidate_for": [
+          "923354220"
+        ],
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/5cc7591a-a28b-4753-93dd-d1a11200c883",
+        "status": 200,
+        "ad_status": "ACTIVE",
+        "employer_orgnr": "981955234",
+        "employer_name": "Eidefoss Vannkraft AS",
+        "expires": "2026-12-02T00:00:00+01:00",
+        "title": "Koordinator drift og vedlikehold",
+        "matches": [
+          "923354220"
+        ]
+      }
+    ],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=923354220",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=923354220",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=923354220",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=923354220&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=EIDEFOSS+VANNKRAFT+AS&v=6",
+        "status": 200,
+        "total": 2,
+        "returned_ads": 2,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=EIDEFOSS+VANNKRAFT&v=6",
+        "status": 200,
+        "total": 2,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=923354220&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=923354220&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "960213912",
+    "name": "ROSENLUND BARNEHAGE SA",
+    "audit_positive": false,
+    "previously_published": true,
+    "verified_ads": [
+      {
+        "uuid": "a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+        "candidate_for": [
+          "960213912"
+        ],
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+        "status": 200,
+        "ad_status": "ACTIVE",
+        "employer_orgnr": "972285501",
+        "employer_name": "Rosenlund Barnehage",
+        "expires": "2026-11-30T00:00:00+01:00",
+        "title": "Er det deg vi leter etter i Rosenlund? Søk da vell!",
+        "matches": [
+          "960213912"
+        ]
+      }
+    ],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=960213912",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=960213912",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=960213912",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=960213912&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=ROSENLUND+BARNEHAGE+SA&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=ROSENLUND+BARNEHAGE&v=6",
+        "status": 200,
+        "total": 1,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=960213912&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=960213912&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "930202894",
+    "name": "NORLANDIA ENGA BARNEHAGE AS",
+    "audit_positive": false,
+    "previously_published": true,
+    "verified_ads": [
+      {
+        "uuid": "c0349976-bbfc-41f4-a980-b482f06e5f2d",
+        "candidate_for": [
+          "930202894"
+        ],
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/c0349976-bbfc-41f4-a980-b482f06e5f2d",
+        "status": 200,
+        "ad_status": "ACTIVE",
+        "employer_orgnr": "997453964",
+        "employer_name": "Norlandia Enga Barnehage",
+        "expires": "2026-11-26T00:00:00+01:00",
+        "title": "Pedagogisk leder 40% vikariat",
+        "matches": [
+          "930202894"
+        ]
+      }
+    ],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=930202894",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=930202894",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=930202894",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=930202894&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=NORLANDIA+ENGA+BARNEHAGE+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=NORLANDIA+ENGA+BARNEHAGE&v=6",
+        "status": 200,
+        "total": 1,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=930202894&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=930202894&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "912823970",
+    "name": "MYNT OG EIENDOM BESSAKER AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=912823970",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=912823970",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=912823970",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=912823970&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MYNT+OG+EIENDOM+BESSAKER+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MYNT+OG+EIENDOM+BESSAKER&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=912823970&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=912823970&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "916729774",
+    "name": "FIKO EIENDOM AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=916729774",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=916729774",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=916729774",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=916729774&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=FIKO+EIENDOM+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=FIKO+EIENDOM&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=916729774&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=916729774&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "917998787",
+    "name": "DRAGEHAUGEN VERDI AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=917998787",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=917998787",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=917998787",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=917998787&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=DRAGEHAUGEN+VERDI+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=DRAGEHAUGEN+VERDI&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=917998787&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=917998787&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "918049215",
+    "name": "MENSTAD NÆRINGSPARK AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=918049215",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=918049215",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=918049215",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=918049215&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MENSTAD+N%C3%86RINGSPARK+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MENSTAD+N%C3%86RINGSPARK&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=918049215&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=918049215&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "919948493",
+    "name": "SQ URBAN LANDSKAP AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=919948493",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=919948493",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=919948493",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=919948493&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SQ+URBAN+LANDSKAP+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SQ+URBAN+LANDSKAP&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=919948493&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=919948493&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "982410851",
+    "name": "MARUN AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=982410851",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=982410851",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=982410851",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=982410851&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MARUN+AS&v=6",
+        "status": 200,
+        "total": 2,
+        "returned_ads": 2,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MARUN&v=6",
+        "status": 200,
+        "total": 2,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=982410851&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=982410851&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "981508734",
+    "name": "MYKLEBUST MARITIME AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=981508734",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=981508734",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=981508734",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=981508734&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MYKLEBUST+MARITIME+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=MYKLEBUST+MARITIME&v=6",
+        "status": 200,
+        "total": 2,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=981508734&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=981508734&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "916049153",
+    "name": "SJØL INVEST AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=916049153",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=916049153",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=916049153",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=916049153&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SJ%C3%98L+INVEST+AS&v=6",
+        "status": 200,
+        "total": 49,
+        "returned_ads": 25,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=SJ%C3%98L+INVEST&v=6",
+        "status": 200,
+        "total": 9,
+        "returned_ads": 9,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=916049153&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=916049153&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "882749762",
+    "name": "NOTEK HOLDING AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=882749762",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=882749762",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=882749762",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=882749762&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=NOTEK+HOLDING+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=NOTEK+HOLDING&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=882749762&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=882749762&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "936276075",
+    "name": "M BERGUM AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=936276075",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=936276075",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=936276075",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=936276075&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=M+BERGUM+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=M+BERGUM&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=936276075&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=936276075&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "923472134",
+    "name": "BOLIG 1 HALDEN AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=923472134",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=923472134",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=923472134",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=923472134&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=BOLIG+1+HALDEN+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=BOLIG+1+HALDEN&v=6",
+        "status": 200,
+        "total": 2,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=923472134&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=923472134&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "936312055",
+    "name": "ULTRAMAX 8 AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=936312055",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=936312055",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=936312055",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=936312055&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=ULTRAMAX+8+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=ULTRAMAX+8&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=936312055&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=936312055&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  },
+  {
+    "organisation_number": "995541432",
+    "name": "WACKER CHEMICALS NORWAY AS",
+    "audit_positive": false,
+    "previously_published": false,
+    "verified_ads": [],
+    "routes": {
+      "feed-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?orgnr=995541432",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-employer": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed?employer=995541432",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "feed-page-orgnr": {
+        "url": "https://pam-stilling-feed.nav.no/api/v1/feed/4e7cebfb-1920-485b-8f65-0105797afed5?orgnr=995541432",
+        "status": 200,
+        "total": null,
+        "returned_ads": 1000,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "search-orgnr": {
+        "url": "https://arbeidsplassen.nav.no/stillinger/api/search?orgnr=995541432&size=10",
+        "status": 429,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": "60",
+        "employer_orgnr_present": null
+      },
+      "site-q-name": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=WACKER+CHEMICALS+NORWAY+AS&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "site-q-stem": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=WACKER+CHEMICALS+NORWAY&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": false
+      },
+      "site-q-number": {
+        "url": "https://arbeidsplassen.nav.no/stillinger?q=995541432&v=6",
+        "status": 200,
+        "total": 0,
+        "returned_ads": 0,
+        "organisation_fields": [],
+        "retry_after": null,
+        "employer_orgnr_present": null
+      },
+      "retired-auth": {
+        "url": "https://arbeidsplassen.nav.no/public-feed/api/v1/ads?orgnr=995541432&size=10",
+        "status": 404,
+        "total": null,
+        "returned_ads": null,
+        "organisation_fields": null,
+        "retry_after": null,
+        "employer_orgnr_present": null
+      }
+    }
+  }
+]
