@@ -1,0 +1,17 @@
+{
+ "purpose": "Headroom check at 1,100 companies, not a measurement",
+ "input": "bench/inputs/1100/batch.jsonl, seed 20261103 sample of 1,100; first 1,000 lines byte-identical to bench/inputs/1000-r3/batch.jsonl (sha256 7ba0c326...)",
+ "input_sha256": "95cbb270f0a4350387c598642f0d109d7224baf3ce4e1d79bc4160678e3c6619",
+ "code": "1a37e01 (runtime code identical to b0b70cc; docs-only commit)",
+ "exit": 0, "wall_seconds": 1832, "pipeline_runtime_seconds": 1386.3, "crawl_seconds": 1147.75, "site_seconds": 414.41,
+ "run_status": "completed", "success_rate": 1.0, "deadline_hits": 0, "envelopes": 1100,
+ "limits": {
+  "run_time_budget_seconds": {"limit": 2400, "deadline_at_0.85": 2040, "used_pipeline": 1386.3, "fraction_of_limit": 0.578},
+  "pooled_requests": {"limit": 20900, "used": 10328, "fraction": 0.494},
+  "per_company_requests": {"limit": 40, "max_used": 40, "budget_exhausted_rejections": 13, "note": "same as the 1,000 run (max 40, 10 rejections); per-input cap, not run-level"},
+  "max_output_mb": {"limit_bytes": 536870912, "envelopes_bytes": 431233009, "fraction": 0.803, "output_limited_companies": 0}
+ },
+ "peak_envelope_bytes": 2313878, "peak_envelope_orgnr": "991603344",
+ "disk_bytes": {"envelopes": 431233009, "profiles_opt_in": 373419892, "report": 80425378, "site": 866970226, "state": 696280487, "total": 2448329276},
+ "comparison_1000_run": {"wall_seconds": 1437, "pipeline_runtime_seconds": 1098.2, "requests": 9275, "envelopes_bytes": 391169216, "peak_envelope_bytes": 1159445, "disk_total_bytes": 2203916592}
+}

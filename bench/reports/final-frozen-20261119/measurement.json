@@ -1,0 +1,43 @@
+{
+ "envelopes": 1000,
+ "run_status": "completed",
+ "success_rate": 1.0,
+ "requests": 9275,
+ "deadline_hits": 0,
+ "handled_exceptions": 0,
+ "unhandled_exceptions": 0,
+ "source_errors_by_family": {
+  "accounts": 1,
+  "activity": 0,
+  "hiring": 3,
+  "identity": 0,
+  "roles": 0,
+  "subunits": 0,
+  "website": 123
+ },
+ "supported_facts": 166025,
+ "families": {
+  "brands": {
+   "companies": 20,
+   "claims": 20
+  },
+  "gleif": {
+   "companies": 142,
+   "claims": 736
+  },
+  "social": {
+   "companies": 47,
+   "claims": 83
+  },
+  "ted_awards": {
+   "companies": 6,
+   "claims": 20
+  },
+  "websites": {
+   "companies": 113,
+   "claims": 113
+  }
+ },
+ "site": "available",
+ "warnings": []
+}
