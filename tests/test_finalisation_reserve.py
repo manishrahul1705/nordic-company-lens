@@ -21,11 +21,11 @@ def crawl_seconds(budget):
 
 
 def test_reserve_covers_finalisation_and_site_for_a_comfortable_budget(tmp_path):
-    budget = budget_for(tmp_path, 1000, 600)
-    reserve = 600 - crawl_seconds(budget)
+    budget = budget_for(tmp_path, 1000, 900)
+    reserve = 900 - crawl_seconds(budget)
     assert budget.site_reserved
     assert reserve >= 1000 * (FINALISE_SECONDS_PER_COMPANY + SITE_SECONDS_PER_COMPANY) - 0.01
-    assert reserve >= 60 - 1e-6  # Never below 10 percent.
+    assert reserve >= 90 - 1e-6  # Never below 10 percent.
 
 
 def test_small_budget_drops_the_site_reserve_but_still_crawls(tmp_path):
@@ -41,7 +41,7 @@ def test_deadline_arithmetic_does_not_depend_on_the_clock_value(tmp_path, monkey
     import signalpost.budget as budget_module
     monkeypatch.setattr(budget_module.time, 'monotonic', lambda: clock)
     assert crawl_seconds(budget_for(tmp_path, 1000, 30)) == pytest.approx(12, abs=1e-9)
-    assert crawl_seconds(budget_for(tmp_path / 'b', 1000, 600)) == pytest.approx(510, abs=1e-9)
+    assert crawl_seconds(budget_for(tmp_path / 'b', 1000, 900)) == pytest.approx(270, abs=1e-9)  # 900 - (30 finalisation + 600 site)
 
 
 def test_no_site_means_no_site_reserve(tmp_path):

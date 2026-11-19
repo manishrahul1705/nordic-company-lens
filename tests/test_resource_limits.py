@@ -1,4 +1,5 @@
 import json
+import pytest
 from tests.test_registry import config, execute
 
 
@@ -53,3 +54,22 @@ def test_default_output_cap_cannot_truncate_an_official_1100_batch(tmp_path, mon
     assert main(['run', '--organisations', str(tmp_path / 'input.jsonl'),
                  '--output', str(tmp_path / 'output.jsonl'), '--report', str(tmp_path / 'report.json')]) == 0
     assert seen == [field_default]
+
+
+@pytest.mark.parametrize('extra,site_enabled', [([],True),(['--no-site'],False),
+    (['--site-dir','custom-site','--no-site'],False),(['--no-site','--site-dir','custom-site'],False)])
+def test_site_opt_out_and_budget_defaults(tmp_path,monkeypatch,extra,site_enabled):
+    from signalpost.cli import main
+    from signalpost.config import Config
+    from signalpost.budget import finalisation_estimates
+    async def run(config):
+        assert (config.site_dir is not None)==site_enabled
+        assert config.time_budget_seconds==Config.model_fields['time_budget_seconds'].default==3600
+        assert not config.unrecognised_flags
+        return dict(emitted_envelopes=0,invalid_inputs=[],requests=0,runtime_ms=0,changes=0,
+                    observation_changes=0,deadline_hits=0,warnings=[])
+    monkeypatch.setattr('signalpost.cli.run',run)
+    assert main(['run','--organisations',str(tmp_path/'input'),'--output',str(tmp_path/'output'),*extra])==0
+    assert finalisation_estimates(1000,True)[1]>=273.5
+    assert finalisation_estimates(1100,True)[1]>=414.41
+    assert finalisation_estimates(1000,False)[1]==0

@@ -470,6 +470,9 @@ async def _run(config, client=None):
                         state = envelope.run.sections["identity"]
                         inherited = next((e.code for e in envelope.errors if e.section == "identity" and e.code in {"budget_exhausted", "deadline"}), "identity_unverified")
                         update(envelope, family, missing(family, inherited, state=state))
+                    if config.signature_rights:
+                        from .sources.brreg_extended import enrich
+                        await enrich(org, envelope, http, config)
                     subunits_done.add(org)
                     if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
                         timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
@@ -487,6 +490,11 @@ async def _run(config, client=None):
             async with semaphore:
                 for family, source in (("roles", brreg_roller), ("accounts", regnskap)):
                     await isolate(envelope, family, lambda source=source: source.fetch(org, http))
+                # Reserve explicit registry mandates before optional website work
+                # can consume the company's unchanged 40-request allowance.
+                if config.group_structure or config.signature_rights:
+                    from .sources.brreg_extended import enrich
+                    await enrich(org, envelope, http, config)
                 registry_families_done.add(org)
                 if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
                     timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start

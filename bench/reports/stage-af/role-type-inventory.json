@@ -1,0 +1,50 @@
+{
+  "group_types": {
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR\"}}, \"beskrivelse\": \"Styre\", \"kode\": \"STYR\"}": 988,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN\"}}, \"beskrivelse\": \"Regnskapsfører\", \"kode\": \"REGN\"}": 667,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL\"}}, \"beskrivelse\": \"Daglig leder\", \"kode\": \"DAGL\"}": 649,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REVI\"}}, \"beskrivelse\": \"Revisor\", \"kode\": \"REVI\"}": 367,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/FFØR\"}}, \"beskrivelse\": \"Forretningsfører\", \"kode\": \"FFØR\"}": 66,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REPR\"}}, \"beskrivelse\": \"Norsk repr. for utenl. enhet\", \"kode\": \"REPR\"}": 1,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/KONT\"}}, \"beskrivelse\": \"Kontaktperson\", \"kode\": \"KONT\"}": 2,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/HFOR\"}}, \"beskrivelse\": \"Hovedforetak\", \"kode\": \"HFOR\"}": 6,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/INNH\"}}, \"beskrivelse\": \"Innehaver\", \"kode\": \"INNH\"}": 2,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/BEST\"}}, \"beskrivelse\": \"Bestyrende reder\", \"kode\": \"BEST\"}": 1,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DELT\"}}, \"beskrivelse\": \"Deltakere\", \"kode\": \"DELT\"}": 5,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/BOBE\"}}, \"beskrivelse\": \"Bostyrer\", \"kode\": \"BOBE\"}": 3
+  },
+  "role_types": {
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE\"}}, \"beskrivelse\": \"Styrets leder\", \"kode\": \"LEDE\"}": 987,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL\"}}, \"beskrivelse\": \"Styremedlem\", \"kode\": \"MEDL\"}": 1026,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN\"}}, \"beskrivelse\": \"Regnskapsfører\", \"kode\": \"REGN\"}": 703,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL\"}}, \"beskrivelse\": \"Daglig leder\", \"kode\": \"DAGL\"}": 651,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI\"}}, \"beskrivelse\": \"Revisor\", \"kode\": \"REVI\"}": 368,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/VARA\"}}, \"beskrivelse\": \"Varamedlem\", \"kode\": \"VARA\"}": 304,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/FFØR\"}}, \"beskrivelse\": \"Forretningsfører\", \"kode\": \"FFØR\"}": 66,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REPR\"}}, \"beskrivelse\": \"Norsk repr. for utenl. enhet\", \"kode\": \"REPR\"}": 1,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/KONT\"}}, \"beskrivelse\": \"Kontaktperson\", \"kode\": \"KONT\"}": 2,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/HFOR\"}}, \"beskrivelse\": \"Oppl om foretaket i hjemlandet\", \"kode\": \"HFOR\"}": 6,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/INNH\"}}, \"beskrivelse\": \"Innehaver\", \"kode\": \"INNH\"}": 2,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/BEST\"}}, \"beskrivelse\": \"Bestyrende reder\", \"kode\": \"BEST\"}": 1,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DTPR\"}}, \"beskrivelse\": \"Deltaker med delt ansvar\", \"kode\": \"DTPR\"}": 13,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/BOBE\"}}, \"beskrivelse\": \"Bostyrer\", \"kode\": \"BOBE\"}": 3,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DTSO\"}}, \"beskrivelse\": \"Deltaker med fullt ansvar\", \"kode\": \"DTSO\"}": 6,
+    "{\"_links\": {\"self\": {\"href\": \"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/NEST\"}}, \"beskrivelse\": \"Nestleder\", \"kode\": \"NEST\"}": 1
+  },
+  "group_keys": {
+    "roller": 2757,
+    "sistEndret": 2757,
+    "type": 2757
+  },
+  "role_keys": {
+    "avregistrert": 4140,
+    "person": 2999,
+    "rekkefolge": 4140,
+    "type": 4140,
+    "enhet": 1138,
+    "valgtAv": 181,
+    "ansvarsandel": 13,
+    "bostyrer": 3
+  },
+  "matching_groups": []
+}

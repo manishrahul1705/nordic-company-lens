@@ -12,8 +12,9 @@ class SourceFailure(Exception):
 # verification, finalisation, synthesis, profiles and report. Calibrated on
 # historical capacity runs.
 FINALISE_SECONDS_PER_COMPANY = 0.03
-# Static site generation, which is optional and skipped when it cannot fit.
-SITE_SECONDS_PER_COMPANY = 0.05
+# Optional site admission uses measured full builds, including Stage AF's
+# 520.56s/1,000 (0.521s/company). Reserve 0.60s/company with headroom.
+SITE_SECONDS_PER_COMPANY = 0.60
 MIN_RESERVE_FRACTION = 0.10
 # Keep at least this share of the budget for crawling before dropping the site reserve.
 MIN_WORK_FRACTION = 0.25

@@ -1,0 +1,21 @@
+{
+  "run": "bench/runs/stage-af-20261119",
+  "organisation_number": "922723664",
+  "company": "BNE SKI VESTVEIEN SØR AS",
+  "request": {
+    "url": "https://data.brreg.no/fullmakt/enheter/922723664/signatur",
+    "host": "data.brreg.no",
+    "organisation_number": "922723664",
+    "attempt_started": 330.25,
+    "status": null,
+    "error": null,
+    "runtime_ms": 10063
+  },
+  "errors": [
+    {"section": "website", "code": "company_exception", "message": "TimeoutError"},
+    {"section": "hiring", "code": "company_exception", "message": "TimeoutError"},
+    {"section": "activity", "code": "company_exception", "message": "TimeoutError"}
+  ],
+  "cause": "A native TimeoutError escaped the new optional BRREG lookup handler; one company, three later section errors.",
+  "fix": "Catch native TimeoutError inside the individual lookup, record not_available_fetch_failed with reason timeout, and continue sibling lookups and later company work. Retry policy and caps unchanged."
+}

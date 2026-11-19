@@ -1,0 +1,150 @@
+{
+  "companies": 1000,
+  "coverage": {
+    "prokura": {
+      "companies": 201,
+      "claims": 201
+    },
+    "signatur": {
+      "companies": 764,
+      "claims": 764
+    },
+    "group_structure": {
+      "companies": 75,
+      "claims": 119
+    }
+  },
+  "requests": 11303,
+  "pooled_cap": 19000,
+  "pooled_percent": 59.489,
+  "max_attributed_requests_per_company": 40,
+  "companies_at_cap": 10,
+  "new_endpoint_requests": {
+    "signatur": 1000,
+    "prokura": 1000,
+    "group_structure": 75
+  },
+  "new_endpoint_companies_attempted": {
+    "signatur": 1000,
+    "prokura": 1000,
+    "group_structure": 75
+  },
+  "new_endpoint_http_statuses": {
+    "signatur": {
+      "200": 996,
+      "404": 3,
+      "None": 1
+    },
+    "prokura": {
+      "200": 997,
+      "404": 3
+    },
+    "group_structure": {
+      "200": 75
+    }
+  },
+  "new_endpoint_request_seconds_sum_not_wall": {
+    "signatur": 582.493,
+    "prokura": 558.448,
+    "group_structure": 49.766
+  },
+  "new_endpoint_states": {
+    "signatur": [
+      {
+        "state": "available",
+        "reason": null,
+        "companies": 764
+      },
+      {
+        "state": "not_available",
+        "reason": "no_explicit_registered_basis",
+        "companies": 232
+      },
+      {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "companies": 3
+      },
+      {
+        "state": "not_available_fetch_failed",
+        "reason": "request_incomplete",
+        "companies": 1
+      }
+    ],
+    "prokura": [
+      {
+        "state": "available",
+        "reason": null,
+        "companies": 201
+      },
+      {
+        "state": "not_available",
+        "reason": "no_explicit_registered_basis",
+        "companies": 796
+      },
+      {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "companies": 3
+      }
+    ],
+    "group_structure": [
+      {
+        "state": "available",
+        "reason": null,
+        "companies": 75
+      }
+    ]
+  },
+  "wall_seconds": 1696.768,
+  "baseline_wall_seconds": 1744.427,
+  "delta_wall_seconds": -47.659,
+  "projected_1100": {
+    "wall_seconds": 1866.445,
+    "requests": 12433.3,
+    "pooled_cap": 20900,
+    "pooled_percent": 59.489
+  },
+  "finalisation": {
+    "crawl_seconds": 895.88,
+    "outputs_seconds": 258.58,
+    "estimate_seconds": 30.0,
+    "site_estimate_seconds": 400.0,
+    "site_reserved": true,
+    "site_seconds": 520.56
+  },
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 4773,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 791675167,
+    "evidence_pages": 2770,
+    "largest_page_bytes": 234293,
+    "largest_profile_data_bytes": 776909,
+    "largest_profile_bytes": 234293,
+    "compact_profiles": 0
+  },
+  "deadline_hits": 0,
+  "handled_exceptions": 3,
+  "unhandled_exceptions": 0,
+  "warnings": [],
+  "new_claim_source_hashes_verified": 1038,
+  "new_claim_source_pointer_audit_passed": true,
+  "source_unchanged_during_run": true,
+  "baseline_requests": 8953,
+  "baseline_pooled_percent": 47.121,
+  "baseline_finalisation": {
+    "crawl_seconds": 1170.42,
+    "outputs_seconds": 198.95,
+    "estimate_seconds": 30.0,
+    "site_estimate_seconds": 400.0,
+    "site_reserved": true,
+    "site_seconds": 362.25
+  },
+  "existing_coverage_companies": {
+    "websites": 116,
+    "hiring": 3
+  }
+}

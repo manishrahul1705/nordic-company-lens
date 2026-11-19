@@ -29,7 +29,7 @@ def test_evaluator_cli_direct_invocation_and_site_generation(tmp_path):
         "--site-dir", str(out_site),
         "--state-dir", str(state_dir),
         "--expected-count", "20",
-        "--time-budget-seconds", "30",
+        "--time-budget-seconds", "90",
         "--workers", "4",
         "--no-websites", "--no-hiring", "--no-public-activity",
     ]
@@ -98,7 +98,7 @@ def test_evaluator_shapes_union_contract_reference(tmp_path):
             "--state-dir", str(state_dir),
             "--envelope-shape", shape,
             "--expected-count", "20",
-            "--time-budget-seconds", "30",
+            "--time-budget-seconds", "90",
             "--workers", "4",
             "--no-websites", "--no-hiring", "--no-public-activity",
         ]

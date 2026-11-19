@@ -44,7 +44,7 @@ def newly_supported_field(field):
     from ..sources.fact_depth import IDENTITY_EXTRA
     from ..sources.regnskap import PATHS
     legacy={'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}
-    return (field.startswith(('roles.detail.','subunits.detail.','accounts.history.','accounts.statement.','accounts.additional.','accounts.consolidated.','identity.historical_name.')) or
+    return (field.startswith(('identity.group_structure.','roles.signatur.','roles.prokura.','roles.detail.','subunits.detail.','accounts.history.','accounts.statement.','accounts.additional.','accounts.consolidated.','identity.historical_name.')) or
             field in {'identity.'+k for k in (*EXTRA,*GROUPS,*IDENTITY_EXTRA,'employee_count_disclosure','founding_date','vat_registration_date')} or
             field in {'accounts.'+k for k in PATHS.keys()-legacy})
 
@@ -116,6 +116,21 @@ def apply(envelope, previous, blobs):
             item.claim_span = excerpt(base64.b64decode(item.snapshot_body_base64), locator=item.locator)
             item.snapshot_body_base64 = None
     new_evidence = {x.id: x for x in envelope.evidence}
+    # The primary identity/roles fetch can succeed while an independent group
+    # or mandate lookup fails. That failure does not withdraw its prior facts.
+    extended = envelope.run.refresh.get('brreg_extended', {})
+    for kind, prefix in (('group_structure', 'identity.group_structure.'),
+                         ('signatur', 'roles.signatur.'), ('prokura', 'roles.prokura.')):
+        if extended.get(kind, {}).get('state') != 'not_available_fetch_failed':
+            continue
+        present = {c.field for c in envelope.claims}
+        for field, claim in old_claims.items():
+            if not field.startswith(prefix) or field in present or claim.availability != 'available':
+                continue
+            envelope.claims.append(claim.model_copy(update={'carried_forward': True, 'stale_since': envelope.run.completed_at}))
+            envelope.run.refresh['observation_changes'].append({'section': claim.family, 'field': field,
+                'previous_state': 'available', 'current_state': 'fetch_failed',
+                'reason': extended[kind].get('reason') or 'registry_lookup_failed'})
     align_description_aliases(envelope,old_claims,old_evidence,new_evidence)
     envelope.run.refresh["previous_run_id"] = previous.get("run_id", previous.get("run", {}).get("run_id"))
     envelope.run.refresh["mode"] = "refresh"

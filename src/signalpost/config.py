@@ -19,7 +19,8 @@ class Config(BaseModel):
     run_id: str = ""
     unrecognised_flags: list[str] = Field(default_factory=list)
     max_requests: int | None = Field(default=None, ge=0)
-    time_budget_seconds: float = Field(default=2400, gt=0)
+    # Our own safeguard: the competition brief specifies no numeric time limit.
+    time_budget_seconds: float = Field(default=3600, gt=0)
     deadline_fraction: float = Field(default=0.85, gt=0, le=1)
     max_cost_usd: float = Field(default=0, ge=0)
     host_concurrency: int = Field(default=10, ge=1)
@@ -46,6 +47,8 @@ class Config(BaseModel):
     nav_rank_candidates: bool = True
     public_activity: bool = False
     official_extra_sources: bool = False
+    group_structure: bool = False
+    signature_rights: bool = False
     registry_changes: bool = True
     website_request_cap: int = Field(default=40, ge=0, le=40)
     website_total_request_cap: int = Field(default=40, ge=0, le=40)

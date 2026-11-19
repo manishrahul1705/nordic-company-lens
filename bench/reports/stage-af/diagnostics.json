@@ -1,0 +1,53 @@
+[
+  {
+    "organisation_number": "983985378",
+    "company": "PARTREDERIET SUNDØYFISK DA",
+    "errors": [],
+    "new_source_failures": {
+      "signatur": {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "url": "https://data.brreg.no/fullmakt/enheter/983985378/signatur"
+      },
+      "prokura": {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "url": "https://data.brreg.no/fullmakt/enheter/983985378/prokura"
+      }
+    }
+  },
+  {
+    "organisation_number": "911691248",
+    "company": "ISTAD ART SOLUTION NORWAY NUF",
+    "errors": [],
+    "new_source_failures": {
+      "signatur": {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "url": "https://data.brreg.no/fullmakt/enheter/911691248/signatur"
+      },
+      "prokura": {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "url": "https://data.brreg.no/fullmakt/enheter/911691248/prokura"
+      }
+    }
+  },
+  {
+    "organisation_number": "996613593",
+    "company": "SG CONSULT NUF",
+    "errors": [],
+    "new_source_failures": {
+      "signatur": {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "url": "https://data.brreg.no/fullmakt/enheter/996613593/signatur"
+      },
+      "prokura": {
+        "state": "not_available_fetch_failed",
+        "reason": "extended_http_404",
+        "url": "https://data.brreg.no/fullmakt/enheter/996613593/prokura"
+      }
+    }
+  }
+]

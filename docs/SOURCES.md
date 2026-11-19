@@ -7,11 +7,15 @@ The MIT licence covers this repository's code and documentation. Third-party dat
 Official HTTPS `data.brreg.no:443` endpoints:
 
 - `/enhetsregisteret/api/enheter/{orgnr}` and `/roller`.
+- `/enhetsregisteret/api/konsernstruktur/{orgnr}`, only when that company's entity record has `erIKonsern=true`.
+- Public `/fullmakt/enheter/{orgnr}/signatur` and `/prokura` for each company; no authenticated full-national-ID variant.
 - `/enhetsregisteret/api/underenheter?overordnetEnhet={orgnr}&size=1000&page=N`.
 - `/regnskapsregisteret/regnskap/{orgnr}`.
 - Bulk `/enhetsregisteret/api/enheter/lastned/csv`; responses can be gzip even with a CSV filename.
 
 Redirects, URL credentials, unapproved hosts and ports are refused. Registry requests share a bounded async client, host semaphore and global budgets. Accounts allow two retries; other registry requests allow one on eligible failures, respecting Retry-After and remaining deadline. Bodies are hashed and stored.
+
+Group claims use only explicit parent edges naming the requested company in its own group lookup. Other members of the returned tree are not published as its subsidiaries. A tree position, workplace registration or group-membership flag alone is insufficient. Signature/procuration claims preserve the complete registered `signaturProkuraRoller` basis and joint conditions; `muligeSigneringsRoller` and interpreted/statutory signing combinations are excluded. Personal birth dates and national identifiers are omitted from claim values. See [Fullmakt API documentation](https://data.brreg.no/fullmakt/docs/index.html).
 
 Enhetsregisteret data uses NLOD 2.0: attribute Bronnoysundregistrene. Primary references: [dataset licensing](https://www.brreg.no/en/use-of-data-from-the-bronnoysund-register-centre/datasets-and-api/), [registry API](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/en/index.html), [accounts schema](https://raw.githubusercontent.com/brreg/regnskapsregister-api/master/src/main/resources/specification/regnskapsregister.json). Restricted authenticated role data is not requested.
 
@@ -24,7 +28,7 @@ Candidates use parent registry website/email, exact-employer NAV homepages, list
 
 Every DNS answer and redirect must pass public-unicast and company-domain rules. Connection-time DNS pinning preserves TLS hostname checks and blocks rebinding to private, loopback, link-local, CGNAT, multicast or reserved addresses. HTTPS certificates remain verified; plaintext fallback is permitted only after TLS/connect failure.
 
-Robots are checked per scheme/authority, including redirected hosts. Robots 404/410 permits access; disallow/errors refuse it. At least one second between starts and at most two concurrent requests per registrable domain. Defaults: at most forty attributed HTTP requests/company and a pooled ceiling of eighteen requests per distinct normalized input; website requests also remain within the company cap, with eight-second DNS/response bounds and a two-MiB body cap. The user agent identifies this repository.
+Robots are checked per scheme/authority, including redirected hosts. Robots 404/410 permits access; disallow/errors refuse it. At least one second between starts and at most two concurrent requests per registrable domain. Defaults: at most forty attributed HTTP requests/company and a pooled ceiling of nineteen requests per distinct normalized input; website requests also remain within the company cap, with eight-second DNS/response bounds and a two-MiB body cap. The user agent identifies this repository.
 
 Website facts have company-owned provenance. Publication of short factual spans does not assert an open-data licence for website content. Social-profile URLs are extracted from accepted sites but social platforms are never requested. Ownership requires an exact organisation number (including explicit JSON-LD identifiers), or the full legal name including suffix plus a registered phone, email, street address or postcode and city. The homepage and up to three same-domain contact/about/privacy pages are checked. A conflicting site-owner number rejects the domain; name-only matches remain ambiguous; the trial masthead and unique-name-domain rules were removed after review. Registry declarations and nominations alone do not prove ownership.
 

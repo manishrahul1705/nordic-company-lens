@@ -325,7 +325,7 @@ def fact(claim, records, fallback=None):
         label = 'Registered business address'
     if claim['family'] in {'roles', 'subunits', 'hiring'} and isinstance(claim['value'], dict):
         v = claim['value']
-        label = v.get('title') or v.get('name') or {'roles': 'Registered role', 'subunits': 'Registered workplace', 'hiring': 'Job advertisement'}[claim['family']]
+        label = v.get('title') or v.get('name') or claim.get('reasons',{}).get('label') or {'roles': 'Registered role', 'subunits': 'Registered workplace', 'hiring': 'Job advertisement'}[claim['family']]
     if claim['field'].startswith('website_description.'):
         label = "Company's own description"
     if claim['field'].startswith('identity.gleif.'):

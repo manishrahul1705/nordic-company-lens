@@ -11,7 +11,7 @@ Tests cover input membership and multiplicity, identity checks, budgets and canc
 
 ## Resource defaults
 
-The default time budget is 2,400 seconds. Crawl time is bounded by the deadline fraction and the reserved finalisation work; optional site generation is skipped if it cannot fit. The request budget derives from unique input identifiers unless explicitly overridden. Default output safety ceiling is 256 MiB. Consult `uv run signalpost run --help` for controls; inspect report states rather than treating a successful exit as source completeness.
+The default time budget is 3,600 seconds, our own safeguard; the competition brief specifies no numeric limit. Crawl time is bounded by the deadline fraction and the reserved finalisation work; optional site generation is skipped if it cannot fit. The request budget derives from unique input identifiers unless explicitly overridden. Default output safety ceiling is 256 MiB. Consult `uv run signalpost run --help` for controls; inspect report states rather than treating a successful exit as source completeness.
 
 NAV uses a separate connection pool and an adaptive time cap of min(900 seconds, 40% of the run budget), unless overridden. Its declared index only nominates candidates: published ads require live exact-company or listed-subunit proof. Missing, stale or unusable indexes trigger feed fallback. Incomplete discovery never establishes absence.
 

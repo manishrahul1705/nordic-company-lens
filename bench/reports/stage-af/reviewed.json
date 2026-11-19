@@ -1,0 +1,1304 @@
+{
+  "group_structure": [
+    {
+      "organisation_number": "991247610",
+      "company": "ROLIDBAKKEN FUS BARNEHAGE AS",
+      "field": "identity.group_structure.parent",
+      "claim_id": "79fb98c056e9dbb4cd235f6c44cdd77605ce01c2949d1c79bd5c9da25a27c494",
+      "value": {
+        "parentOrganisasjonsnummer": "938641862",
+        "parentNavn": "SFR BARNEHAGER AS",
+        "grunnlag": "100%",
+        "dato": "2025-12-16",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "c903da2a391640f1c277c4c0acffc2d0ffb1aab862e7da5eafc10fdc9abf11e5",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/991247610",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:05.107424Z",
+        "content_sha256": "549eeddc8acef8d037d20f6a8be6b22b385462ce5612bad1e3f658a4b42de90a",
+        "claim_span": "{\"dato\":\"2025-12-16\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"ROLIDBAKKEN FUS BARNEHAGE AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"991247610\",\"parentNavn\":\"SFR BARNEHAGER AS\",\"parentOrganisasjons",
+        "locator": "/children/15/children/5",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "991247610",
+        "name": "ROLIDBAKKEN FUS BARNEHAGE AS"
+      },
+      "source_node": {
+        "dato": "2025-12-16",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "ROLIDBAKKEN FUS BARNEHAGE AS",
+        "nivaa": 2,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "991247610",
+        "parentNavn": "SFR BARNEHAGER AS",
+        "parentOrganisasjonsnummer": "938641862"
+      },
+      "verdict": "correct",
+      "why_correct": "The node identifies ROLIDBAKKEN itself as 991247610 and explicitly names SFR BARNEHAGER AS, 938641862, as its parent. The higher SFR HOLDING root and sibling nurseries are excluded.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "935327423",
+      "company": "EDSVIK INVEST AS",
+      "field": "identity.group_structure.parent",
+      "claim_id": "4099cfbfab1ca21b93a58eb0821a64853eb4403c75ec772a8234031b269e54f7",
+      "value": {
+        "parentOrganisasjonsnummer": "934152530",
+        "parentNavn": "ADVOKATFIRMAET SKOG AS",
+        "grunnlag": "100%",
+        "dato": "2025-06-20",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "236d838ed1a628c38a7fa06e8f42b478cc897562baf20f69ec19093c3a3107d2",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/935327423",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:11.544978Z",
+        "content_sha256": "638c737060abd1045b2c58971bbf4d11352ee6a05745ca614d1c2039d653b94b",
+        "claim_span": "{\"dato\":\"2025-06-20\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"EDSVIK INVEST AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"935327423\",\"parentNavn\":\"ADVOKATFIRMAET SKOG AS\",\"parentOrganisasjonsnummer\"",
+        "locator": "/children/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "935327423",
+        "name": "EDSVIK INVEST AS"
+      },
+      "source_node": {
+        "dato": "2025-06-20",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "EDSVIK INVEST AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "935327423",
+        "parentNavn": "ADVOKATFIRMAET SKOG AS",
+        "parentOrganisasjonsnummer": "934152530"
+      },
+      "verdict": "correct",
+      "why_correct": "The EDSVIK node names ADVOKATFIRMAET SKOG AS, 934152530, in parentNavn/parentOrganisasjonsnummer. The relationship is stated, rather than guessed from the company names.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "879309182",
+      "company": "KV 2 EIENDOM AS",
+      "field": "identity.group_structure.parent",
+      "claim_id": "a04592eaccd3edb572d3a417ed683f3ec1b899a84af742731f9f3860f1ec172e",
+      "value": {
+        "parentOrganisasjonsnummer": "919513195",
+        "parentNavn": "AKA AS",
+        "grunnlag": "100%",
+        "dato": "2025-11-24",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "b86e5204f707c2ceefc7c3c4f3d17ed83e9d8f95273992b194297d02bebed378",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/879309182",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:14.544452Z",
+        "content_sha256": "c20a7a4c424d10b21a6fa2c9b1b17c3dd934252a4fb713fc126bd954cb6e0e36",
+        "claim_span": "5\"},{\"dato\":\"2025-11-24\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"KV 2 EIENDOM AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"879309182\",\"parentNavn\":\"AKA AS\",\"parentOrganisasjonsnummer\":\"919513195\"}",
+        "locator": "/children/163",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "879309182",
+        "name": "KV 2 EIENDOM AS"
+      },
+      "source_node": {
+        "dato": "2025-11-24",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "KV 2 EIENDOM AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "879309182",
+        "parentNavn": "AKA AS",
+        "parentOrganisasjonsnummer": "919513195"
+      },
+      "verdict": "correct",
+      "why_correct": "The node at children/163 is explicitly KV 2 EIENDOM, 879309182, and names AKA AS, 919513195, as parent. Position 163 is a locator, not the basis for the relationship.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "928657523",
+      "company": "VIVIFY GRUPPEN AS",
+      "field": "identity.group_structure.parent",
+      "claim_id": "2d082e84ea4adc9665dcd5d4a0bde03c7c71243526fdca5b1308c392cb9e1d97",
+      "value": {
+        "parentOrganisasjonsnummer": "928652750",
+        "parentNavn": "VIVIFY HOLDING AS",
+        "grunnlag": "100%",
+        "dato": "2024-12-07",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "b2a05eb8960a133cbbc7cf7b95f2d8ccf664b463fa27a3a105606ed947b7e407",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/928657523",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:14.325914Z",
+        "content_sha256": "03b1b500b53899e54fed422ad31902099e8bddc5fdb7591e048277e3ef3b47b3",
+        "claim_span": "{\"children\":[{\"dato\":\"2026-11-10\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"OSLO BYGGINNREDNING AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"998296323\",\"parentNavn\":\"VIVIFY GRUPPEN AS\",\"parentOrgani",
+        "locator": "/children/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "928657523",
+        "name": "VIVIFY GRUPPEN AS"
+      },
+      "source_node": {
+        "dato": "2024-12-07",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "VIVIFY GRUPPEN AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "928657523",
+        "parentNavn": "VIVIFY HOLDING AS",
+        "parentOrganisasjonsnummer": "928652750"
+      },
+      "verdict": "correct",
+      "why_correct": "VIVIFY GRUPPEN, 928657523, explicitly reports VIVIFY HOLDING AS, 928652750, as parent. Similar names alone were not used as evidence.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "994919482",
+      "company": "BAKERIUTSALGET KROKSTADELVA AS",
+      "field": "identity.group_structure.parent",
+      "claim_id": "691ebd0bf4ff70f79379c5ed5311d68e81d90030d4e5dd8712241870f3716c80",
+      "value": {
+        "parentOrganisasjonsnummer": "998060486",
+        "parentNavn": "BAKERMESTER KLAUSEN GRUPPEN AS",
+        "grunnlag": "100%",
+        "dato": "2019-06-13",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "8b49a092880b545b477ff2722642e2cfbc0b8f0d8e9193a957e3d5533de3e50c",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/994919482",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:14.793916Z",
+        "content_sha256": "73fab149692c273fb3929cd229aeb13667e5bd2f3dc74d32b366f3a5000e25aa",
+        "claim_span": "{\"dato\":\"2019-06-13\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"BAKERIUTSALGET KROKSTADELVA AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"994919482\",\"parentNavn\":\"BAKERMESTER KLAUSEN GRUPPEN AS\",\"pare",
+        "locator": "/children/0/children/1",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "994919482",
+        "name": "BAKERIUTSALGET KROKSTADELVA AS"
+      },
+      "source_node": {
+        "dato": "2019-06-13",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "BAKERIUTSALGET KROKSTADELVA AS",
+        "nivaa": 2,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "994919482",
+        "parentNavn": "BAKERMESTER KLAUSEN GRUPPEN AS",
+        "parentOrganisasjonsnummer": "998060486"
+      },
+      "verdict": "correct",
+      "why_correct": "The requested bakery node explicitly names BAKERMESTER KLAUSEN GRUPPEN AS, 998060486, as parent. The nested tree root is not substituted for this direct parent.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "981508734",
+      "company": "MYKLEBUST MARITIME AS",
+      "field": "identity.group_structure.subsidiary.992145501",
+      "claim_id": "b85221ffc64ea4c7245f4ecf6eb148a969c8659da6ecf4a17a362923633673e3",
+      "value": {
+        "organisasjonsnummer": "992145501",
+        "navn": "KLEVEN MARITIME CONTRACTING AS",
+        "parentOrganisasjonsnummer": "981508734",
+        "parentNavn": "MYKLEBUST MARITIME AS",
+        "grunnlag": "100%",
+        "dato": "2025-12-30",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "e75853d015aa8d32a266f401ac8117587a82f38bb059f792073bc9ab54b6267f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/981508734",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.818208Z",
+        "content_sha256": "e8f9503030f6363a607f377e4c66ba89f1095718419daa301ca356eba82d30e1",
+        "claim_span": "{\"dato\":\"2025-12-30\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"KLEVEN MARITIME CONTRACTING AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"992145501\",\"parentNavn\":\"MYKLEBUST MARITIME AS\",\"parentOrganis",
+        "locator": "/children/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "981508734",
+        "name": "MYKLEBUST MARITIME AS"
+      },
+      "source_node": {
+        "dato": "2025-12-30",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "KLEVEN MARITIME CONTRACTING AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "992145501",
+        "parentNavn": "MYKLEBUST MARITIME AS",
+        "parentOrganisasjonsnummer": "981508734"
+      },
+      "verdict": "correct",
+      "why_correct": "KLEVEN MARITIME CONTRACTING AS, 992145501, explicitly has parentOrganisasjonsnummer=981508734 and parentNavn=MYKLEBUST MARITIME AS in MYKLEBUST's own lookup. This supports a registered direct subsidiary.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "882749762",
+      "company": "NOTEK HOLDING AS",
+      "field": "identity.group_structure.subsidiary.957503365",
+      "claim_id": "bd7097c21b5497b77c72f9123a7e6a14c3d959b9baf4887245d43f09f84417a7",
+      "value": {
+        "organisasjonsnummer": "957503365",
+        "navn": "NOTECH AS",
+        "parentOrganisasjonsnummer": "882749762",
+        "parentNavn": "NOTEK HOLDING AS",
+        "grunnlag": "100 %",
+        "dato": "2004-06-15",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "4c2bcbb92ecf3584414130e7ed67508067007946e6f82ed9128a4773f2b53b92",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/882749762",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.470108Z",
+        "content_sha256": "100b2dc53377fbcd0b23048672ea28071ebac8f8576f5590be4d0d3ccb84b943",
+        "claim_span": "{\"dato\":\"2004-06-15\",\"grunnlag\":\"100 %\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"NOTECH AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"957503365\",\"parentNavn\":\"NOTEK HOLDING AS\",\"parentOrganisasjonsnummer\":\"882749762\"",
+        "locator": "/children/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "882749762",
+        "name": "NOTEK HOLDING AS"
+      },
+      "source_node": {
+        "dato": "2004-06-15",
+        "grunnlag": "100 %",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "NOTECH AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "957503365",
+        "parentNavn": "NOTEK HOLDING AS",
+        "parentOrganisasjonsnummer": "882749762"
+      },
+      "verdict": "correct",
+      "why_correct": "NOTECH AS, 957503365, explicitly names NOTEK HOLDING AS, 882749762, as parent in NOTEK's lookup. The different spelling is retained exactly; no name-based identity inference is needed.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "922069212",
+      "company": "KARLSEN AS",
+      "field": "identity.group_structure.subsidiary.922388172",
+      "claim_id": "760a5ce38855d73980c8b8182833a5eb4f8a4b1a4e6b6222dc19fb8b97bd4270",
+      "value": {
+        "organisasjonsnummer": "922388172",
+        "navn": "KARLSEN BEGRAVELSESBYRÅ AS",
+        "parentOrganisasjonsnummer": "922069212",
+        "parentNavn": "KARLSEN AS",
+        "grunnlag": "100%",
+        "dato": "2025-10-08",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "bdb52ff6f2c849c823ed4302067c74713279abb84d195af1d3480b3bc5a42675",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/922069212",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:08.305132Z",
+        "content_sha256": "dbdea577daea3bc952f42989e7439f9ca07a5f4094bb713fd47324ad8dcfbe15",
+        "claim_span": "{\"dato\":\"2025-10-08\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"KARLSEN BEGRAVELSESBYRÅ AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"922388172\",\"parentNavn\":\"KARLSEN AS\",\"parentOrganisasjonsnummer\":\"",
+        "locator": "/children/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "922069212",
+        "name": "KARLSEN AS"
+      },
+      "source_node": {
+        "dato": "2025-10-08",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "KARLSEN BEGRAVELSESBYRÅ AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "922388172",
+        "parentNavn": "KARLSEN AS",
+        "parentOrganisasjonsnummer": "922069212"
+      },
+      "verdict": "correct",
+      "why_correct": "KARLSEN BEGRAVELSESBYRÅ AS, 922388172, explicitly names KARLSEN AS, 922069212, as parent in the requested company's lookup.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "921678851",
+      "company": "H1 CAPITAL AS",
+      "field": "identity.group_structure.subsidiary.930469009",
+      "claim_id": "01094ef9776d46894ab682f43fa11e23ae6abaa0ce51b2ec0a222be01e6543df",
+      "value": {
+        "organisasjonsnummer": "930469009",
+        "navn": "FS MANAGEMENT AS",
+        "parentOrganisasjonsnummer": "921678851",
+        "parentNavn": "H1 CAPITAL AS",
+        "grunnlag": "100%",
+        "dato": "2023-01-23",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "1b94691a74253a7aa117b1b6e3c0a22deb13ad76b0597abb235505428c8ed6f1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/921678851",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:14.504897Z",
+        "content_sha256": "73e472957da6bb6a8afe455c1b359a47e0d7edb255a458e3d4d805bd6589738d",
+        "claim_span": "{\"dato\":\"2023-01-23\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"FS MANAGEMENT AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"930469009\",\"parentNavn\":\"H1 CAPITAL AS\",\"parentOrganisasjonsnummer\":\"9216788",
+        "locator": "/children/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "921678851",
+        "name": "H1 CAPITAL AS"
+      },
+      "source_node": {
+        "dato": "2023-01-23",
+        "grunnlag": "100%",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "FS MANAGEMENT AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "930469009",
+        "parentNavn": "H1 CAPITAL AS",
+        "parentOrganisasjonsnummer": "921678851"
+      },
+      "verdict": "correct",
+      "why_correct": "FS MANAGEMENT AS, 930469009, explicitly has parentOrganisasjonsnummer=921678851 and parentNavn=H1 CAPITAL AS in H1's own registry lookup.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "935955033",
+      "company": "ELLINGSEN HOLDING AS",
+      "field": "identity.group_structure.subsidiary.950271728",
+      "claim_id": "a68ba6738114c731b1b8a8eece711a1bc764b8600a87aecd30a14f44c1009ab5",
+      "value": {
+        "organisasjonsnummer": "950271728",
+        "navn": "RANA ENTREPRENØR AS",
+        "parentOrganisasjonsnummer": "935955033",
+        "parentNavn": "ELLINGSEN HOLDING AS",
+        "grunnlag": "100 %",
+        "dato": "1997-03-18",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        }
+      },
+      "evidence": {
+        "id": "69ff4f0922a64f6ed698765f1cd4c1954b811eb2e3ed2827e13e6ed6af27d465",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/935955033",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:18.476025Z",
+        "content_sha256": "e006e4aa3117f346b7e56247bdb9345c88534b616a19b7c6a8f6037bcf430c67",
+        "claim_span": "{\"dato\":\"1997-03-18\",\"grunnlag\":\"100 %\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"RANA ENTREPRENØR AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"950271728\",\"parentNavn\":\"ELLINGSEN HOLDING AS\",\"parentOrganisasjonsnumme",
+        "locator": "/children/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "935955033",
+        "name": "ELLINGSEN HOLDING AS"
+      },
+      "source_node": {
+        "dato": "1997-03-18",
+        "grunnlag": "100 %",
+        "knytningsform": {
+          "beskrivelse": "Konsern datter",
+          "kode": "KDAT"
+        },
+        "navn": "RANA ENTREPRENØR AS",
+        "nivaa": 1,
+        "organisasjonsform": {
+          "beskrivelse": "Aksjeselskap",
+          "kode": "AS"
+        },
+        "organisasjonsnummer": "950271728",
+        "parentNavn": "ELLINGSEN HOLDING AS",
+        "parentOrganisasjonsnummer": "935955033"
+      },
+      "verdict": "correct",
+      "why_correct": "RANA ENTREPRENØR AS, 950271728, explicitly names ELLINGSEN HOLDING AS, 935955033, as parent in ELLINGSEN's lookup. The registered date and literal 100 % basis are preserved.",
+      "final_value_matches_inspected_value": true
+    }
+  ],
+  "signatur": [
+    {
+      "organisation_number": "912823970",
+      "company": "MYNT OG EIENDOM BESSAKER AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "14c356b55daf13dee9f47ddbcd202d69d4919bca35faced73acc22f60de87309",
+      "value": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Arne-Johan Nikolaisen",
+            "rolle": {
+              "kode": "SIFE",
+              "tekstforklaring": "Signatur i fellesskap"
+            }
+          },
+          {
+            "navn": "Volker Wolframm",
+            "rolle": {
+              "kode": "SIFE",
+              "tekstforklaring": "Signatur i fellesskap"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Styrets leder alene. Daglig leder og styrets leder i fellesskap."
+      },
+      "evidence": {
+        "id": "ab917a7d6b26fea7dea8e6f2b59862122c8bbda6786d25bde4ba6a9539557d23",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/912823970/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.818208Z",
+        "content_sha256": "dcd3c731b5a7f2f83305a40916897fe070fa278f16fc839944a2ab9c8c27a72b",
+        "claim_span": "{\"personRolleGrunnlag\":[{\"fodselsdato\":\"17.11.1977\",\"navn\":\"Arne-Johan Nikolaisen\",\"rolle\":{\"kode\":\"SIFE\",\"tekstforklaring\":\"Signatur i fellesskap\"}},{\"fodselsdato\":\"17.10.1961\",\"navn\":\"Volker Wolframm\",\"rolle\":{\"kode\":\"SIFE\",\"tekstforklaring\":\"Signatur i fellesskap\"}}],\"signaturProkuraFritekst\":\"St",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "912823970",
+        "name": "MYNT OG EIENDOM BESSAKER AS"
+      },
+      "source_node": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Arne-Johan Nikolaisen",
+            "rolle": {
+              "kode": "SIFE",
+              "tekstforklaring": "Signatur i fellesskap"
+            }
+          },
+          {
+            "navn": "Volker Wolframm",
+            "rolle": {
+              "kode": "SIFE",
+              "tekstforklaring": "Signatur i fellesskap"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Styrets leder alene. Daglig leder og styrets leder i fellesskap."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company registered basis lists Arne-Johan Nikolaisen and Volker Wolframm with SIFE, and preserves both sentences: chair alone; managing director and chair jointly. It does not flatten the two people into independent signers or resolve away the registered alternatives.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "918049215",
+      "company": "MENSTAD NÆRINGSPARK AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "c813718cf5698970f213b7cf54a4c92c20b9192ec5859233d6d4b9fda34ff5bd",
+      "value": {
+        "signaturProkuraFritekst": "To styremedlemmer i fellesskap."
+      },
+      "evidence": {
+        "id": "66c4c40ed1c5de910a2c77790b1192f0a0aa8d6a5a3bb0dd94795ebd321dcdc5",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/918049215/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.818208Z",
+        "content_sha256": "719f05d42764102700ac7bde43efb1490b2eefa933104232f789efda165edfbd",
+        "claim_span": "laring\":\"Styremedlem\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"To styremedlemmer i fellesskap.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"16.11.1986\",\"navn\":\"Lin",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "918049215",
+        "name": "MENSTAD NÆRINGSPARK AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "To styremedlemmer i fellesskap."
+      },
+      "verdict": "correct",
+      "why_correct": "The registered text requires two board members jointly. The claim retains the number two and joint condition, without inventing an individually authorized person.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "919948493",
+      "company": "SQ URBAN LANDSKAP AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "6684acb26de56805a7ec95c028eacce6f4dc2471862edafe82f4f827dcf56ab6",
+      "value": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Sergio Felisberto Quilambo",
+            "rolle": {
+              "kode": "SIGN",
+              "tekstforklaring": "Signatur"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "evidence": {
+        "id": "26e349ee708c4c6088cb62de80ae7f2f59004abfec5d835622963c7f29974608",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/919948493/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.096017Z",
+        "content_sha256": "4ec5b6c5665723dae8e26b96339c46c6d0ad2acbd04e464c37e4a34157da6285",
+        "claim_span": "ring\":\"Styrets leder\"}}]},\"signaturProkuraRoller\":{\"personRolleGrunnlag\":[{\"fodselsdato\":\"24.02.1972\",\"navn\":\"Sergio Felisberto Quilambo\",\"rolle\":{\"kode\":\"SIGN\",\"tekstforklaring\":\"Signatur\"}}],\"signaturProkuraFritekst\":\"Daglig leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signerings",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "919948493",
+        "name": "SQ URBAN LANDSKAP AS"
+      },
+      "source_node": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Sergio Felisberto Quilambo",
+            "rolle": {
+              "kode": "SIGN",
+              "tekstforklaring": "Signatur"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company registered basis names Sergio Felisberto Quilambo with SIGN and explicitly states Daglig leder alene. Both the named basis and the alone condition are retained.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "982410851",
+      "company": "MARUN AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "0f63dd71da4402a2b04af61d255064465d68b715632747716a77b2e1e48f6a0f",
+      "value": {
+        "signaturProkuraFritekst": "Daglig leder og styrets leder hver for seg."
+      },
+      "evidence": {
+        "id": "e476da57723fc46a9e6d26668103aa2c5bb1fa94f9e4914eb0d14d363198f9ca",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/982410851/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.056123Z",
+        "content_sha256": "1567e33435b3560d981f8329c90a46dfca08c7ee24f89c0c5aeb65303bae1bc1",
+        "claim_span": "laring\":\"Styremedlem\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Daglig leder og styrets leder hver for seg.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"26.11.1991\"",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "982410851",
+        "name": "MARUN AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Daglig leder og styrets leder hver for seg."
+      },
+      "verdict": "correct",
+      "why_correct": "The registered text permits the managing director and chair each separately. Hver for seg is preserved, rather than changed into a joint-signature requirement.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "981508734",
+      "company": "MYKLEBUST MARITIME AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "77cb271f3c8b5a63fee3020d9283570c7206b57e8d81d48d2ab36c4ab5609c5c",
+      "value": {
+        "signaturProkuraFritekst": "Styrets leder alene eller to styremedlemmer i fellesskap der minst en skal være aksjonærvalgt."
+      },
+      "evidence": {
+        "id": "b2feaae621cabf2909f1964eee3025e63d7d5f13ba47b17e5717862d9ca585a0",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/981508734/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.818208Z",
+        "content_sha256": "e58e59915a3c434e1d8058e69753f6ae53f666029ff2f7193dec704ef0d81904",
+        "claim_span": "laring\":\"Styremedlem\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Styrets leder alene eller to styremedlemmer i fellesskap der minst en skal være aksjonærvalgt.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"p",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "981508734",
+        "name": "MYKLEBUST MARITIME AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Styrets leder alene eller to styremedlemmer i fellesskap der minst en skal være aksjonærvalgt."
+      },
+      "verdict": "correct",
+      "why_correct": "The complete text retains chair alone OR two board members jointly, including the requirement that at least one is shareholder-elected. No condition is dropped.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "916049153",
+      "company": "SJØL INVEST AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "ed7c344e42f03a235ceeef9478bb24b9c8d2ffee63d9158662d52cd107e404d8",
+      "value": {
+        "signaturProkuraFritekst": "Styrets leder alene."
+      },
+      "evidence": {
+        "id": "dcc90725e61a3cf498bd1338c31aeaed431f5564a673a77df2feb7127405900e",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/916049153/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.479109Z",
+        "content_sha256": "bf3cccb91acadeba598e8e80e209612ddcb7c2a308f2b434f0bef3ccb8154fda",
+        "claim_span": "ring\":\"Styrets leder\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Styrets leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"23.07.1968\",\"navn\":\"Ståle Øvergård",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "916049153",
+        "name": "SJØL INVEST AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Styrets leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company basis explicitly states Styrets leder alene. The claim reports the registered role wording without inferring the holder from an ordinary role appointment.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "882749762",
+      "company": "NOTEK HOLDING AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "f02a2e4420db0bf0c8784d245edcfd9a9ba8bac54475c6c238287b76ec708370",
+      "value": {
+        "signaturProkuraFritekst": "Styrets leder alene."
+      },
+      "evidence": {
+        "id": "a047106b9773de8766c31184b732b016081d99f4a290e4ffedd9e312a334d20e",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/882749762/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.807406Z",
+        "content_sha256": "148f99f1c9bc4a7cf02b84187c897f6fc360769efa22fcb0d262f2cfd885447d",
+        "claim_span": "ring\":\"Styrets leder\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Styrets leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"29.01.1959\",\"navn\":\"Dag Andre Abra",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "882749762",
+        "name": "NOTEK HOLDING AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Styrets leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company basis explicitly states Styrets leder alene. It is a registered signing declaration, not an inference from NOTEK's board record.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "936276075",
+      "company": "M BERGUM AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "ed033dffe5b626d560b25f2ea9cb213859cebe5ea4c21a5ac5cdf8d13978b245",
+      "value": {
+        "signaturProkuraFritekst": "To styremedlemmer i fellesskap."
+      },
+      "evidence": {
+        "id": "f266bff7c9f0026e7344ca37bf3e4653a6c1a629b6e84ce157bfa512d9293367",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/936276075/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:03.807406Z",
+        "content_sha256": "915b957dda9bc06dbf9b4a6f16057a2e60183d55839fff28b1a3bbbad5534394",
+        "claim_span": "laring\":\"Styremedlem\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"To styremedlemmer i fellesskap.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"26.05.1971\",\"navn\":\"Han",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "936276075",
+        "name": "M BERGUM AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "To styremedlemmer i fellesskap."
+      },
+      "verdict": "correct",
+      "why_correct": "The registered text requires two board members jointly. Both the count and joint requirement are retained verbatim.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "936312055",
+      "company": "ULTRAMAX 8 AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "6228505308659caf9a71ae4a0a986aea7ab4a866aad3e06d35f9b67347a476db",
+      "value": {
+        "signaturProkuraFritekst": "Styrets medlemmer hver for seg."
+      },
+      "evidence": {
+        "id": "f66491f1a2f81c7b5c5a31faf2acd63670a6ea3c6c00afd7dd6ba9959c181158",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/936312055/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.108783Z",
+        "content_sha256": "4728787ff77d4c317476d4e920c3d96eacbf32d6a86a4f78da468308c6d238bf",
+        "claim_span": "ring\":\"Styrets leder\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Styrets medlemmer hver for seg.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"25.05.1986\",\"navn\":\"Jon",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "936312055",
+        "name": "ULTRAMAX 8 AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Styrets medlemmer hver for seg."
+      },
+      "verdict": "correct",
+      "why_correct": "The basis explicitly states that board members sign each separately. The claim preserves each separately rather than assuming the board must act jointly.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "995541432",
+      "company": "WACKER CHEMICALS NORWAY AS",
+      "field": "roles.signatur.registered_basis",
+      "claim_id": "c3a3d08b4714592c2d864d0c3b53723b1f1d43542ffad4ac3f2d23f54cbe611f",
+      "value": {
+        "signaturProkuraFritekst": "Ett styremedlem i fellesskap med styrets formann eller daglig leder."
+      },
+      "evidence": {
+        "id": "7c7d2c6b72f7ffbfdb0afc9c7055eac511e2e7b44fec7077b2a38e6e17da4286",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/995541432/signatur",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.610803Z",
+        "content_sha256": "e94af0e8d1b154a3666a367704ce70d1b46c3614c9587bcfed1bd14995fc6a55",
+        "claim_span": "laring\":\"Styremedlem\"}}]},\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Ett styremedlem i fellesskap med styrets formann eller daglig leder.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"STYR\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "995541432",
+        "name": "WACKER CHEMICALS NORWAY AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Ett styremedlem i fellesskap med styrets formann eller daglig leder."
+      },
+      "verdict": "correct",
+      "why_correct": "The registered wording requires one board member jointly with the chair OR managing director. Both the joint requirement and the alternative partner are preserved.",
+      "final_value_matches_inspected_value": true
+    }
+  ],
+  "prokura": [
+    {
+      "organisation_number": "912823970",
+      "company": "MYNT OG EIENDOM BESSAKER AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "c5461c4c0c88041698a0fbb5affc3252b572105e08249fc7b768d000d6535c47",
+      "value": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Arne-Johan Nikolaisen",
+            "rolle": {
+              "kode": "POHV",
+              "tekstforklaring": "Prokura hver for seg"
+            }
+          },
+          {
+            "navn": "Volker Wolframm",
+            "rolle": {
+              "kode": "POHV",
+              "tekstforklaring": "Prokura hver for seg"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Styrets leder og nestleder hver for seg."
+      },
+      "evidence": {
+        "id": "851c9616a8455ffec6faae41ea5e71a55735137f43cb505e1347dc2945519a7a",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/912823970/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.052102Z",
+        "content_sha256": "2fae016c6594f34aef8cd7dd53a3794157153df93032b5aaf8d9529f373fc4c0",
+        "claim_span": "{\"personRolleGrunnlag\":[{\"fodselsdato\":\"17.11.1977\",\"navn\":\"Arne-Johan Nikolaisen\",\"rolle\":{\"kode\":\"POHV\",\"tekstforklaring\":\"Prokura hver for seg\"}},{\"fodselsdato\":\"17.10.1961\",\"navn\":\"Volker Wolframm\",\"rolle\":{\"kode\":\"POHV\",\"tekstforklaring\":\"Prokura hver for seg\"}}],\"signaturProkuraFritekst\":\"Styr",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "912823970",
+        "name": "MYNT OG EIENDOM BESSAKER AS"
+      },
+      "source_node": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Arne-Johan Nikolaisen",
+            "rolle": {
+              "kode": "POHV",
+              "tekstforklaring": "Prokura hver for seg"
+            }
+          },
+          {
+            "navn": "Volker Wolframm",
+            "rolle": {
+              "kode": "POHV",
+              "tekstforklaring": "Prokura hver for seg"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Styrets leder og nestleder hver for seg."
+      },
+      "verdict": "correct",
+      "why_correct": "The registered basis names Arne-Johan Nikolaisen and Volker Wolframm with POHV, and states chair and deputy chair each separately. This is procuration from the prokura endpoint, distinct from the company's joint signature basis.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "919948493",
+      "company": "SQ URBAN LANDSKAP AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "b74a415a55495ef929ac5a4bdac851b8f6a05abfd7359ad72f625082de387747",
+      "value": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Sergio Felisberto Quilambo",
+            "rolle": {
+              "kode": "PROK",
+              "tekstforklaring": "Prokura"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "evidence": {
+        "id": "3455419f8bc1cf0c856977b5dd76fe949d0e604cc89bb335691ef1094063ca2d",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/919948493/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.084266Z",
+        "content_sha256": "b42b117f1ce51130679027f82422f118d3417165f06ae2ab95a28942afb89885",
+        "claim_span": "forklaring\":\"Prokura\"}}]},\"signaturProkuraRoller\":{\"personRolleGrunnlag\":[{\"fodselsdato\":\"24.02.1972\",\"navn\":\"Sergio Felisberto Quilambo\",\"rolle\":{\"kode\":\"PROK\",\"tekstforklaring\":\"Prokura\"}}],\"signaturProkuraFritekst\":\"Daglig leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsK",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "919948493",
+        "name": "SQ URBAN LANDSKAP AS"
+      },
+      "source_node": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Sergio Felisberto Quilambo",
+            "rolle": {
+              "kode": "PROK",
+              "tekstforklaring": "Prokura"
+            }
+          }
+        ],
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company procuration basis names Sergio Felisberto Quilambo with PROK and explicitly states Daglig leder alene. The claim retains both pieces of registered evidence.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "936312055",
+      "company": "ULTRAMAX 8 AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "b4f48135ced843780db9cb206373d72131982b4be34fa44b5aa78545acaac780",
+      "value": {
+        "signaturProkuraFritekst": "Styrets medlemmer hver for seg."
+      },
+      "evidence": {
+        "id": "f880b7094ec8918a8f6b086d61d6a5a8870ec5f439f503ba8f3b814c199b03ae",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/936312055/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.108783Z",
+        "content_sha256": "3eb4373b638ccc0fb0501f1b3168c456236fbb7e3ee4260dd34925fd2200bc57",
+        "claim_span": "ngsGrunnlag\":{\"kode\":\"SF\",\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Styrets medlemmer hver for seg.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"R0006\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"25.05.1986\",\"navn\":\"Jo",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "936312055",
+        "name": "ULTRAMAX 8 AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Styrets medlemmer hver for seg."
+      },
+      "verdict": "correct",
+      "why_correct": "The prokura record explicitly says Styrets medlemmer hver for seg. This role-based wording is retained without adding names from a separate board record.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "919653477",
+      "company": "VOKSER AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "0f76fa01ffa9478390940d310979a4a349f6a1e5109b5ccd736f122b34aca145",
+      "value": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Håvard Hauge",
+            "rolle": {
+              "kode": "PROK",
+              "tekstforklaring": "Prokura"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "id": "98162d49d190216a7a84bdd65005d3ad79844e62b6d7cfb6358aa092f0e4cd6d",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/919653477/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:04.862341Z",
+        "content_sha256": "ce52a9d999d4416e37d8639fa60965c0be180d1bcb1837eb3eff63795145c55a",
+        "claim_span": "forklaring\":\"Prokura\"}}]},\"signaturProkuraRoller\":{\"personRolleGrunnlag\":[{\"fodselsdato\":\"28.09.1978\",\"navn\":\"Håvard Hauge\",\"rolle\":{\"kode\":\"PROK\",\"tekstforklaring\":\"Prokura\"}}]},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"PROK\",\"kombinasjonsId\":\"1",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "919653477",
+        "name": "VOKSER AS"
+      },
+      "source_node": {
+        "personRolleGrunnlag": [
+          {
+            "navn": "Håvard Hauge",
+            "rolle": {
+              "kode": "PROK",
+              "tekstforklaring": "Prokura"
+            }
+          }
+        ]
+      },
+      "verdict": "correct",
+      "why_correct": "The registered person-role basis names Håvard Hauge with PROK. No alone or joint condition is invented where the registered basis supplies no additional free text.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "919038438",
+      "company": "BERGEN CONTAINER TRANSPORT AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "3da92da570a74f0993f2967d210b61e3647a09077eb5c75ef5486b003713ba88",
+      "value": {
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "evidence": {
+        "id": "6040bb1b806835ba21dab0adb77b221ce81e1c7688879ba1f591e7da360ef5fa",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/919038438/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:06.480958Z",
+        "content_sha256": "dd92da0bc1fc9087b1f24755b54ab8c0d7da5dd45c8d0b6ad6a1bed323a1cca2",
+        "claim_span": "ngsGrunnlag\":{\"kode\":\"SF\",\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Daglig leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"R0002\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"23.06.1972\",\"navn\":\"Silvia Zavenov",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "919038438",
+        "name": "BERGEN CONTAINER TRANSPORT AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The prokura basis explicitly states Daglig leder alene. The claim does not infer a named managing director from ordinary role appointments.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "921338732",
+      "company": "DOKTOR MUNKS PARK III BORETTSLAG",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "5118f9b7c50f710d0a429ba952301769e6713440a1e0e5fb3f323dd182c029aa",
+      "value": {
+        "signaturProkuraFritekst": "To styremedlemmer i fellesskap."
+      },
+      "evidence": {
+        "id": "7c39a7e94d726d222b0bf2179c610f16e61adce38a3ccf153a7e9d48f2839ef9",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/921338732/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:07.175113Z",
+        "content_sha256": "0b3cbe7498782f55205bce93e8483f958560262f19cb271cafb3277726e123bc",
+        "claim_span": "ngsGrunnlag\":{\"kode\":\"SF\",\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"To styremedlemmer i fellesskap.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"R0005\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"12.09.1957\",\"navn\":\"To",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "921338732",
+        "name": "DOKTOR MUNKS PARK III BORETTSLAG"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "To styremedlemmer i fellesskap."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company prokura record explicitly requires two board members jointly. The unusual-looking grant is supported by this record itself; it is not replaced by an assumed standard rule for a housing cooperative.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "915707238",
+      "company": "RØRESTRAND EIENDOM AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "286a997e20fc440a87993cde3f4d0585e726e867e2e3af12028275f61c717b40",
+      "value": {
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "evidence": {
+        "id": "d73325395c7ff7198005092d107373c2e4e2b263b43b248cec3de66033085dfa",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/915707238/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:07.713009Z",
+        "content_sha256": "86835b6c3a4cf284393b2c1f04d2c4cc48425418f7b94dfe4be0fba291031db2",
+        "claim_span": "ngsGrunnlag\":{\"kode\":\"SF\",\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Daglig leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"R0002\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"28.05.1958\",\"navn\":\"Arnt Holt\",\"ro",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "915707238",
+        "name": "RØRESTRAND EIENDOM AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company prokura basis explicitly states Daglig leder alene, and the published value preserves exactly that registered authority wording.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "924061847",
+      "company": "TSH AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "e7485d4582f60be547e169e559b42aa18f9ede36a7e25a3183055d8fda2530e5",
+      "value": {
+        "signaturProkuraFritekst": "Styrets leder alene."
+      },
+      "evidence": {
+        "id": "697a497e65c2c2403e54c831431117d04fc672f3b127a51e430156eaf2371d68",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/924061847/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:08.019770Z",
+        "content_sha256": "c2eb1a71886580d23b9215f990a7cd53cf991d4269a5d407be00617b0d737efa",
+        "claim_span": "ngsGrunnlag\":{\"kode\":\"SF\",\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Styrets leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"R0001\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"26.06.1978\",\"navn\":\"Tom Stian Har",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "924061847",
+        "name": "TSH AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Styrets leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The registered prokura basis explicitly states Styrets leder alene. The claim reports the registered role-level grant rather than naming a person by inference.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "922069212",
+      "company": "KARLSEN AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "00dd1b7d575209101d69ec8d3ad04826ac99917df1987641e2d169e1f873ec35",
+      "value": {
+        "signaturProkuraFritekst": "Styrets medlemmer hver for seg."
+      },
+      "evidence": {
+        "id": "c7fde6b99e5c91f949047bf7552d513220456489d90da1df5e7d2cd696ee3aa9",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/922069212/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:08.401319Z",
+        "content_sha256": "e5b46105d42c12331d9de8c8c335c3de3f3e831fa10f166660c9d85e05405f8e",
+        "claim_span": "ngsGrunnlag\":{\"kode\":\"SF\",\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Styrets medlemmer hver for seg.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"R0006\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"20.07.1976\",\"navn\":\"St",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "922069212",
+        "name": "KARLSEN AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Styrets medlemmer hver for seg."
+      },
+      "verdict": "correct",
+      "why_correct": "The own-company prokura basis states Styrets medlemmer hver for seg. The each-separately condition is preserved, and no individual board list is substituted.",
+      "final_value_matches_inspected_value": true
+    },
+    {
+      "organisation_number": "987454709",
+      "company": "NYE NEPTUNE PUB AS",
+      "field": "roles.prokura.registered_basis",
+      "claim_id": "11cec061103fe0cab94aa1597892a2e3be5a6ee36136c078515d757e4d394e9d",
+      "value": {
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "evidence": {
+        "id": "70dace5a06ad2808b17afbddbb68bcefa1780d8e1a963d0f03f8685b8de26378",
+        "source_url": "https://data.brreg.no/fullmakt/enheter/987454709/prokura",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T16:35:11.235090Z",
+        "content_sha256": "da1936712c2fab6eb04035d3624585bba76a2645a492559d28cef69a2150b437",
+        "claim_span": "ngsGrunnlag\":{\"kode\":\"SF\",\"signaturProkuraRoller\":{\"signaturProkuraFritekst\":\"Daglig leder alene.\"},\"tekstforklaring\":\"Signeringsgrunnlag finnes\"},\"signeringsKombinasjon\":{\"kombinasjon\":[{\"kode\":\"R0002\",\"kombinasjonsId\":\"1\",\"personRolleKombinasjon\":[{\"fodselsdato\":\"03.10.1980\",\"navn\":\"Raymond Larsen",
+        "locator": "/signeringsGrunnlag/signaturProkuraRoller",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      "source_identity": {
+        "organisation_number": "987454709",
+        "name": "NYE NEPTUNE PUB AS"
+      },
+      "source_node": {
+        "signaturProkuraFritekst": "Daglig leder alene."
+      },
+      "verdict": "correct",
+      "why_correct": "The prokura basis explicitly states Daglig leder alene. The claim retains that exact declaration from the requested company's record.",
+      "final_value_matches_inspected_value": true
+    }
+  ]
+}
