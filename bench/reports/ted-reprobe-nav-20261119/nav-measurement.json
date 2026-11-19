@@ -1,0 +1,23 @@
+{
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "companies_queried": 1000,
+  "status_counts": {
+    "404": 988,
+    "429": 12
+  },
+  "valid_ad_responses": 0,
+  "companies_returning_ads": null,
+  "coverage_counts_interpretable": false,
+  "started_at": "2026-11-19T14:15:08.308800+00:00",
+  "finished_at": "2026-11-19T14:25:23.044883+00:00",
+  "remaining_999_wall_seconds": 614.736,
+  "first_query_seconds": 1.924,
+  "concurrency": 4,
+  "minimum_start_interval_seconds": 0.25,
+  "retry_attempts": 0,
+  "endpoint_requests": 1000,
+  "note": "HTTP errors and unsupported payloads are unavailable measurements, never no-ad evidence. First request was preserved from the initial endpoint check.",
+  "observed_positive_ad_responses": 0,
+  "companies_with_active_ads": null,
+  "parent_subunit_behavior": "Not measurable: no successful ads payload"
+}

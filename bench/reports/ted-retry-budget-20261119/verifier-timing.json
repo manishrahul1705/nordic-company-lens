@@ -1,0 +1,18 @@
+{
+  "wall_seconds": 99.666,
+  "exit_code": 0,
+  "command": [
+    "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+    "scripts/verify_output.py",
+    "--first",
+    "bench\\runs\\ted-budget-network-20261119\\envelopes.jsonl",
+    "--organisations",
+    "bench/inputs/1000-r3/batch.jsonl",
+    "--count",
+    "1000",
+    "--state-dir",
+    "bench\\runs\\ted-budget-network-20261119\\state",
+    "--report",
+    "bench\\runs\\ted-budget-network-20261119\\report.json"
+  ]
+}

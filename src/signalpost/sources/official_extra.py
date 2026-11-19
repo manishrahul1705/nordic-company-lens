@@ -16,6 +16,10 @@ GLEIF='https://api.gleif.org/api/v1/'
 GLEIF_AUTHORITIES=frozenset({'RA000472','RA000473'})
 TED='https://api.ted.europa.eu/v3/notices/search'
 METHOD='signalpost.official_extra.v1'
+# Bound an unproductive 202 outage without discarding the first recovery opportunities.
+TED_NOTICE_CONCURRENCY = 3
+TED_202_BREAKER_THRESHOLD = 3
+TED_202_REPROBE_SKIPS = 25
 NS={'cac':'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',
     'cbc':'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
     'efac':'http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1'}
@@ -168,7 +172,7 @@ def award_extract(response,notice,org,now):
 class Fetcher:
     def __init__(self,client,budget,blobs,count):
         self.client,self.budget,self.blobs=client,budget,blobs
-        self.calls=0;self.cap=max(8,min(300,count//2));self.cache={};self.next_start={}
+        self.calls=0;self.cap=max(8,min(300,count//2));self.cache={};self.next_start={};self.host_locks={}
         self.ted_calls=0;self.ted_statuses={};self.ted_failures=[]
     async def get(self,url,payload=None):
         is_ted = urlsplit(url).hostname in {'api.ted.europa.eu','ted.europa.eu'}
@@ -190,14 +194,18 @@ class Fetcher:
         host=urlsplit(url).hostname
         if host not in {'api.gleif.org','api.ted.europa.eu','ted.europa.eu'} or urlsplit(url).scheme!='https' or urlsplit(url).port not in {None,443} or urlsplit(url).username or urlsplit(url).password:raise SourceFailure('extra_url_refused')
         is_ted = host in {'api.ted.europa.eu','ted.europa.eu'}
-        if is_ted and self.ted_calls>=250:raise SourceFailure('ted_request_cap')
-        if self.calls>=self.cap:raise SourceFailure('extra_request_cap')
         import time
-        delay=max(0,self.next_start.get(host,0)-time.monotonic())
-        if delay:await asyncio.sleep(min(delay,max(.001,self.budget.deadline-time.monotonic())))
-        self.next_start[host]=time.monotonic()+1
-        self.calls+=1;event=self.budget.reserve(url,host,'__official_extra__')
-        if is_ted:self.ted_calls+=1
+        # Serialize admission, not downloads/backoff: concurrent retries must retain
+        # the original one-second spacing and account for every actual attempt.
+        async with self.host_locks.setdefault(host, asyncio.Lock()):
+            delay=max(0,self.next_start.get(host,0)-time.monotonic())
+            if delay:await asyncio.sleep(min(delay,max(.001,self.budget.deadline-time.monotonic())))
+            if is_ted and self.ted_calls>=250:raise SourceFailure('ted_request_cap')
+            if self.calls>=self.cap:raise SourceFailure('extra_request_cap')
+            event=self.budget.reserve(url,host,'__official_extra__')
+            self.next_start[host]=time.monotonic()+1
+            self.calls+=1
+            if is_ted:self.ted_calls+=1
         began=time.monotonic()
         try:
             async with asyncio.timeout(min(15,max(.001,self.budget.deadline-time.monotonic()))):
@@ -285,18 +293,58 @@ async def collect(envelopes,client,budget,blobs):
             else:raise SourceFailure('extra_pagination')
         except Exception:
             for org in nums:states[org]['TED']='not_available_fetch_failed'
-    for notice,scope in sorted(notices.items()):
+    import time
+    xml_started=time.monotonic()
+    streak=0;breaker_open=False;skipped=[];skips_since_probe=0;reprobes=[]
+    ordered=sorted(notices.items())
+    async def download(notice):
         try:
-            response=await fetch.get(notice_links.get(notice) or f'https://ted.europa.eu/en/notice/{notice}/xml')
+            return await fetch.get(notice_links.get(notice) or f'https://ted.europa.eu/en/notice/{notice}/xml')
+        except Exception as exc:
+            return exc
+    # Batches bound in-flight work and apply the consecutive-failure policy in
+    # stable notice order, independent of response completion order.
+    position=0
+    while position<len(ordered):
+        is_probe=breaker_open and skips_since_probe>=TED_202_REPROBE_SKIPS
+        if breaker_open and not is_probe:
+            notice,scope=ordered[position];position+=1
+            skipped.append(notice);skips_since_probe+=1
+            fetch.ted_failures.append({'url':notice_links.get(notice) or f'https://ted.europa.eu/en/notice/{notice}/xml',
+                                      'code':'ted_202_circuit_open'})
             for org in scope:
-                section=await offload(award_extract,response,notice,org,date.fromisoformat(response.retrieved_at[:10]))
-                result[org].claims+=section.claims;result[org].evidence+=section.evidence
-                if section.claims and states[org]['TED']!='not_available_fetch_failed':states[org]['TED']='available'
-        except Exception:
-            for org in scope:states[org]['TED']='not_available_fetch_failed'
+                states[org]['TED']='not_available_fetch_failed'
+                states[org]['TED_reason']='ted_202_circuit_open'
+            continue
+        # A probe uses the unchanged three-attempt fetch policy and host pacing.
+        count=1 if is_probe else TED_NOTICE_CONCURRENCY
+        batch=ordered[position:position+count];position+=len(batch)
+        if is_probe:skips_since_probe=0
+        responses=await asyncio.gather(*(download(notice) for notice,scope in batch))
+        for (notice,scope),response in zip(batch,responses):
+            exhausted=isinstance(response,SourceFailure) and response.code=='extra_http_202'
+            streak=streak+1 if exhausted else 0
+            if is_probe:
+                success=not isinstance(response,Exception)
+                reprobes.append({'notice':notice,'success':success,
+                                 'reason':None if success else getattr(response,'code',type(response).__name__)})
+                if success:breaker_open=False;streak=0
+            elif streak>=TED_202_BREAKER_THRESHOLD:
+                breaker_open=True;skips_since_probe=0
+            if isinstance(response,Exception):
+                for org in scope:states[org]['TED']='not_available_fetch_failed'
+                continue
+            for org in scope:
+                try:
+                    section=await offload(award_extract,response,notice,org,date.fromisoformat(response.retrieved_at[:10]))
+                    result[org].claims+=section.claims;result[org].evidence+=section.evidence
+                    if section.claims and states[org]['TED']!='not_available_fetch_failed':states[org]['TED']='available'
+                except Exception:
+                    states[org]['TED']='not_available_fetch_failed'
+    xml_seconds=round(time.monotonic()-xml_started,3)
     for org,section in result.items():
-        if states[org]['TED']=='not_available_fetch_failed':
-            section.claims=[c for c in section.claims if c.family!='activity']
+        # Incomplete discovery must not erase separately verified notice awards.
+        # Keep the failed coverage state/reason even after a successful re-probe.
         awards=sorted((c for c in section.claims if c.family=='activity'),key=lambda c:(c.value['date'],c.field),reverse=True)[:10]
         section.claims=[c for c in section.claims if c.family!='activity']+awards
         # Direct and ultimate relationships may cite the same parent record.
@@ -308,7 +356,11 @@ async def collect(envelopes,client,budget,blobs):
             unique.setdefault(evidence.id,evidence)
         section.evidence=list(unique.values())
         for source in states[org]:envelopes[org].run.refresh.setdefault('official_extra',{})[source]=states[org][source]
-    return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures}
+    return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures,
+        'ted_xml_seconds':xml_seconds,'ted_notice_concurrency':TED_NOTICE_CONCURRENCY,
+        'ted_202_circuit_breaker':{'threshold':TED_202_BREAKER_THRESHOLD,'open':breaker_open,
+                                   'skipped_notices':skipped,'reason':'ted_202_circuit_open' if skipped else None,
+                                   'reprobe_every_skipped':TED_202_REPROBE_SKIPS,'reprobes':reprobes}}
 
 
 def retain_failed(row,previous):

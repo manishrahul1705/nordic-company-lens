@@ -1,0 +1,212 @@
+{
+  "run_status": "completed",
+  "emitted_envelopes": 1000,
+  "requests": 8953,
+  "deadline_hits": 1,
+  "warnings": [],
+  "finalisation": {
+    "crawl_seconds": 1170.42,
+    "outputs_seconds": 198.95,
+    "estimate_seconds": 30.0,
+    "site_estimate_seconds": 400.0,
+    "site_reserved": true,
+    "site_seconds": 362.25
+  },
+  "timing_markers": {
+    "subunits_complete_seconds": 91.95300000000861,
+    "registry_complete_seconds": 247.48399999999674,
+    "first_detail_seconds": 9.937999999994645,
+    "last_detail_seconds": 80.5630000000092,
+    "nav_runtime_seconds": 134.0159999999887
+  },
+  "official_extra": {
+    "requests": 56,
+    "gleif_companies": 142,
+    "parent_LEIs_batched": 14,
+    "tender_notices_nominated": 79,
+    "ted_requests": 19,
+    "ted_http_statuses": {
+      "200": 10,
+      "202": 9
+    },
+    "ted_xml_seconds": 13.86,
+    "ted_notice_concurrency": 3,
+    "ted_202_circuit_breaker": {
+      "threshold": 3,
+      "open": true,
+      "skipped_notices": [
+        "116542-2024",
+        "120822-2024",
+        "138083-2025",
+        "140390-2026",
+        "150922-2024",
+        "165606-2025",
+        "170520-2025",
+        "173043-2025",
+        "174478-2026",
+        "187066-2026",
+        "197558-2025",
+        "198485-2025",
+        "210972-2024",
+        "228306-2024",
+        "246735-2024",
+        "247985-2026",
+        "250458-2026",
+        "261860-2025",
+        "263789-2024",
+        "271943-2024",
+        "287502-2026",
+        "288858-2025",
+        "295084-2026",
+        "313125-2025",
+        "320357-2026",
+        "327030-2025",
+        "330396-2026",
+        "335345-2025",
+        "338506-2025",
+        "341549-2025",
+        "341842-2024",
+        "354425-2026",
+        "370861-2026",
+        "387041-2025",
+        "389874-2024",
+        "390266-2026",
+        "39027-2025",
+        "397297-2024",
+        "397515-2024",
+        "404734-2025",
+        "418429-2026",
+        "42374-2026",
+        "42963-2026",
+        "434277-2025",
+        "461448-2025",
+        "475312-2026",
+        "486198-2026",
+        "495785-2024",
+        "510525-2026",
+        "517910-2024",
+        "528398-2025",
+        "549796-2024",
+        "574364-2024",
+        "583218-2024",
+        "627000-2026",
+        "637605-2025",
+        "640353-2025",
+        "643444-2025",
+        "690844-2026",
+        "69164-2025",
+        "69404-2025",
+        "697888-2025",
+        "698069-2025",
+        "741466-2024",
+        "741472-2025",
+        "741743-2025",
+        "744428-2024",
+        "745118-2026",
+        "757744-2025",
+        "766764-2026",
+        "778400-2026",
+        "780228-2025",
+        "817875-2025",
+        "834670-2025",
+        "839756-2025",
+        "94190-2025"
+      ],
+      "reason": "ted_202_circuit_open"
+    }
+  },
+  "limits": {
+    "max_requests": 19000,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 3600.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "hard_max_requests": 19000,
+    "hard_time_budget_seconds": 24000
+  },
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 4754,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 785646476,
+    "evidence_pages": 2751,
+    "largest_page_bytes": 209959,
+    "largest_profile_data_bytes": 728683,
+    "largest_profile_bytes": 209959,
+    "compact_profiles": 0
+  },
+  "source_errors_by_family": {
+    "accounts": 1,
+    "activity": 0,
+    "hiring": 2,
+    "identity": 0,
+    "roles": 0,
+    "subunits": 0,
+    "website": 117
+  },
+  "wall_seconds": 1744.427,
+  "ted_awards_published": 0,
+  "ted_award_companies": 0,
+  "deadline_details": [
+    {
+      "organisation_number": "922828172",
+      "errors": [
+        {
+          "section": "activity",
+          "code": "deadline",
+          "message": "deadline"
+        }
+      ],
+      "recall_round2": {
+        "candidates": [
+          {
+            "domain": "tensio.no",
+            "origin": "wikidata_website",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "tensio.com",
+            "origin": "legal_name_slug",
+            "subunit_orgnr": null,
+            "fetched": false,
+            "accepted": false
+          },
+          {
+            "domain": "tensio.no",
+            "origin": "wikidata_website",
+            "subunit_orgnr": null,
+            "fetched": true,
+            "accepted": true,
+            "discovered_proof_targets": [
+              "https://www.tensio.no/no/kunde/nettleie/avtaler-og-vilkar",
+              "https://www.tensio.no/no/proff/for-leverandorer/kontakt-oss",
+              "https://www.tensio.no/no/kunde/kontakt-oss/sponsorstotte-oppdal-2024"
+            ],
+            "additional_proof_targets": [],
+            "unique_candidate": true,
+            "proof_pages_fetched": 1,
+            "proof_page_attempts_including_homepage": 2,
+            "proof_type": "unique_no_corroborated",
+            "rule": "C",
+            "reason": ""
+          }
+        ]
+      },
+      "sections": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    }
+  ],
+  "source_changed_during_run": []
+}

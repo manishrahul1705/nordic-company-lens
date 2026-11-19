@@ -1,0 +1,58 @@
+{
+  "runs": [
+    {
+      "path": "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\cache\\offline-polish-final-official\\bench\\reports\\final-release\\ci20-report.json",
+      "notices": 1,
+      "attempts": 1,
+      "recovered": []
+    },
+    {
+      "path": "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\reports\\final-release\\ci20-report.json",
+      "notices": 1,
+      "attempts": 1,
+      "recovered": []
+    },
+    {
+      "path": "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261107T094159020873Z-39a7314\\report.json",
+      "notices": 75,
+      "attempts": 75,
+      "recovered": []
+    },
+    {
+      "path": "C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\reports\\final-release\\ci20-report.json",
+      "notices": 1,
+      "attempts": 1,
+      "recovered": []
+    },
+    {
+      "path": "C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\runs\\frozen-repro-20261119\\report.json",
+      "notices": 79,
+      "attempts": 237,
+      "recovered": []
+    },
+    {
+      "path": "C:\\Users\\Manish\\AppData\\Local\\Temp\\claude\\1d9bfd370f8ed149\\17b04bf0-d19f-4738-abd8-80fc48792ff0\\scratchpad\\fresh-clone\\bench\\reports\\final-release\\ci20-report.json",
+      "notices": 1,
+      "attempts": 1,
+      "recovered": []
+    }
+  ],
+  "unreadable": [],
+  "distinct_request_logs": 3,
+  "duplicate_groups": [
+    [
+      "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\cache\\offline-polish-final-official\\bench\\reports\\final-release\\ci20-report.json",
+      "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\reports\\final-release\\ci20-report.json",
+      "C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\reports\\final-release\\ci20-report.json",
+      "C:\\Users\\Manish\\AppData\\Local\\Temp\\claude\\1d9bfd370f8ed149\\17b04bf0-d19f-4738-abd8-80fc48792ff0\\scratchpad\\fresh-clone\\bench\\reports\\final-release\\ci20-report.json"
+    ],
+    [
+      "C:\\Users\\Manish\\Downloads\\nordic-company-lens\\bench\\runs\\20261107T094159020873Z-39a7314\\report.json"
+    ],
+    [
+      "C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\runs\\frozen-repro-20261119\\report.json"
+    ]
+  ],
+  "scope": "Accessible saved JSON request logs under Downloads and Temp/claude. Summary-only runs cannot establish retry recovery; copies are not independent runs.",
+  "additional_json_files_scanned": 7347
+}

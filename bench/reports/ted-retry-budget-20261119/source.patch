@@ -1,0 +1,363 @@
+diff --git a/README.md b/README.md
+index 8213ebd..73dcbb1 100644
+--- a/README.md
++++ b/README.md
+@@ -34,13 +34,13 @@ Put one Norwegian organisation number on each line in `orgnrs.txt`, then run thi
+ uv run --frozen signalpost run --organisations orgnrs.txt --output out/envelopes.jsonl --report out/report.json --state-dir out/state --site-dir out/site
+ ```
+ 
+-Only `--organisations` and `--output` are required. Omitted `--report` and `--site-dir` default to `out/report.json` and `out/site`. Raw profiles are opt-in: `out/profiles.jsonl` is written only when `--profiles-output` is passed explicitly. Unknown arguments are ignored with a warning on stderr and recorded in the report; the report's `effective_configuration` records the actual feature settings, limits, NAV mode and source-cost counters.
++Only `--organisations` and `--output` are required. Omitted `--report` and `--site-dir` default to `out/report.json` and `out/site`. Site generation stays on by default; `--no-site` skips it, including when `--site-dir` is supplied. Raw profiles are opt-in: `out/profiles.jsonl` is written only when `--profiles-output` is passed explicitly. Unknown arguments are ignored with a warning on stderr and recorded in the report; the report's `effective_configuration` records the actual feature settings, limits, NAV mode and source-cost counters.
+ 
+ This is the supported clean-checkout command: it needs no credentials and no `--bulk` file. The runner uses live official BRREG APIs for registry identity, roles, subunits and accounts. The input count is read automatically. Blank lines are retained as invalid input records, so each line produces one envelope (and one raw profile when `--profiles-output` is passed).
+ 
+ Website research, NAV hiring checks, public activity and template synthesis are on by default. There is no search-engine integration; provider cost is $0. Use `--no-websites`, `--no-hiring` or `--no-public-activity` to opt out of those sources. `--expected-count` is optional and is normally unnecessary.
+ 
+-Requests use a pooled global ceiling of 1,900 per 100 distinct normalized input records, with at most 40 attributed to any one company. The default run time limit is 2,400 seconds, also bounded by a hard 24 seconds per distinct normalized input (40 minutes per 100). Lower configured limits remain effective. Careers checks run after primary collection using remaining budget, without earmarking or reducing the activity allowance. Incomplete careers coverage is reported honestly. The shared deadline and 40-request company ceiling still apply. Registry-declared websites require the legal name or hard registry corroboration; sites corroborated only by a contact or role-holder publish a website link without site content. Registered subunit identifiers can establish ownership. Shared domains, conflicting owners, parked pages and directories are withheld. Exact-name-only and contact-only two-signal publication were rejected in the Step 10 audit; guessed domains retain the stronger existing ownership proof.
++Requests use a pooled global ceiling of 1,900 per 100 distinct normalized input records, with at most 40 attributed to any one company. The default run time limit is 3,600 seconds (our own safeguard; the competition brief specifies no numeric limit), also bounded by a hard 24 seconds per distinct normalized input (40 minutes per 100). Lower configured limits remain effective. Careers checks run after primary collection using remaining budget, without earmarking or reducing the activity allowance. Incomplete careers coverage is reported honestly. The shared deadline and 40-request company ceiling still apply. Registry-declared websites require the legal name or hard registry corroboration; sites corroborated only by a contact or role-holder publish a website link without site content. Registered subunit identifiers can establish ownership. Shared domains, conflicting owners, parked pages and directories are withheld. Exact-name-only and contact-only two-signal publication were rejected in the Step 10 audit; guessed domains retain the stronger existing ownership proof.
+ 
+ Verified sites can supply individual active, dated job postings, including linked supported ATS pages. Careers landing pages are not jobs. Feeds and sitemaps discover articles, but each published article needs its own publication date. Registered business addresses are typed separately from workplaces and duplicate addresses are suppressed.
+ 
+diff --git a/SUBMISSION.md b/SUBMISSION.md
+index 9c64847..7ad1f2f 100644
+--- a/SUBMISSION.md
++++ b/SUBMISSION.md
+@@ -78,7 +78,7 @@ The archived collection was produced by [`cc_overnight.py`](scripts/cc_overnight
+ 
+ ## Budgets
+ 
+-The pooled HTTP hard cap is 19 per distinct normalized input: 1,900 per 100, with at most 40 attributed to any company and shared calls included globally. The hard time cap is 24 seconds per distinct input (40 minutes per 100), with the default 2,400-second run limit and lower configured limits honored. These are tighter than 2,000 HTTP / 45 minutes per 100. Crawl finalization reserves preserve one output per input even when discovery is incomplete. Public DNS fallbacks are bounded and tolerate blocked UDP; end-of-run retries consume the original pool. The envelope output cap (`--max-output-mb`) defaults to 4,096 MiB. It is a local safety ceiling, not an evaluator limit, and is large enough that a 1,100-company batch is never truncated.
++The pooled HTTP hard cap is 19 per distinct normalized input: 1,900 per 100, with at most 40 attributed to any company and shared calls included globally. The hard time cap is 24 seconds per distinct input (40 minutes per 100), with the default 3,600-second run limit (our own safeguard; the competition brief specifies no numeric limit) and lower configured limits honored. These are tighter than 2,000 HTTP / 45 minutes per 100. Crawl finalization reserves preserve one output per input even when discovery is incomplete. Public DNS fallbacks are bounded and tolerate blocked UDP; end-of-run retries consume the original pool. The envelope output cap (`--max-output-mb`) defaults to 4,096 MiB. It is a local safety ceiling, not an evaluator limit, and is large enough that a 1,100-company batch is never truncated.
+ 
+ ### Changes since revision 4
+ 
+diff --git a/docs/EVAL.md b/docs/EVAL.md
+index 083916a..239605e 100644
+--- a/docs/EVAL.md
++++ b/docs/EVAL.md
+@@ -11,7 +11,7 @@ Tests cover input membership and multiplicity, identity checks, budgets and canc
+ 
+ ## Resource defaults
+ 
+-The default time budget is 2,400 seconds. Crawl time is bounded by the deadline fraction and the reserved finalisation work; optional site generation is skipped if it cannot fit. The request budget derives from unique input identifiers unless explicitly overridden. Default output safety ceiling is 256 MiB. Consult `uv run signalpost run --help` for controls; inspect report states rather than treating a successful exit as source completeness.
++The default time budget is 3,600 seconds, our own safeguard; the competition brief specifies no numeric limit. Crawl time is bounded by the deadline fraction and the reserved finalisation work; optional site generation is skipped if it cannot fit. The request budget derives from unique input identifiers unless explicitly overridden. Default output safety ceiling is 256 MiB. Consult `uv run signalpost run --help` for controls; inspect report states rather than treating a successful exit as source completeness.
+ 
+ NAV uses a separate connection pool and an adaptive time cap of min(900 seconds, 40% of the run budget), unless overridden. Its declared index only nominates candidates: published ads require live exact-company or listed-subunit proof. Missing, stale or unusable indexes trigger feed fallback. Incomplete discovery never establishes absence.
+ 
+diff --git a/src/signalpost/budget.py b/src/signalpost/budget.py
+index 6498219..5097d95 100644
+--- a/src/signalpost/budget.py
++++ b/src/signalpost/budget.py
+@@ -12,8 +12,9 @@ class SourceFailure(Exception):
+ # verification, finalisation, synthesis, profiles and report. Calibrated on
+ # historical capacity runs.
+ FINALISE_SECONDS_PER_COMPANY = 0.03
+-# Static site generation, which is optional and skipped when it cannot fit.
+-SITE_SECONDS_PER_COMPANY = 0.05
++# Optional site admission uses measured full builds: 273.5s/1,000 and
++# 414.41s/1,100 (0.377s/company). Round up to 0.40s/company.
++SITE_SECONDS_PER_COMPANY = 0.40
+ MIN_RESERVE_FRACTION = 0.10
+ # Keep at least this share of the budget for crawling before dropping the site reserve.
+ MIN_WORK_FRACTION = 0.25
+diff --git a/src/signalpost/cli.py b/src/signalpost/cli.py
+index b6f2047..f9a9c10 100644
+--- a/src/signalpost/cli.py
++++ b/src/signalpost/cli.py
+@@ -33,6 +33,7 @@ def main(argv=None):
+     command.add_argument('--verify-bulk', action='store_true',
+                          help='Require an API identity check even on bulk hits; never fall back to CSV on verification failure')
+     command.add_argument('--site-dir', type=Path, default=Path('out/site'))
++    command.add_argument('--no-site', action='store_true', help='Skip offline site generation (on by default)')
+     command.add_argument('--profiles-output', type=Path, default=None, help='Optional: also write kit-compatible raw profiles from the same verified claims (off unless passed)')
+     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
+     command.add_argument("--emit-duplicates", action="store_true", default=True)
+@@ -68,7 +69,8 @@ def main(argv=None):
+     command.add_argument("--website-user-agent", default="SignalpostAgent/1.0 (+https://github.com/manishrahul1705/nordic-company-lens)")
+     command.add_argument("--expected-count", type=int)
+     command.add_argument("--run-id", default="")
+-    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 2400),
++    # Our own safeguard: the competition brief specifies no numeric time limit.
++    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 3600),
+                                ("deadline-fraction", float, .85), ("max-cost-usd", float, 0),
+                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
+                                ("official-batch-size", int, 1100), ("max-output-mb", float, 4096)):
+@@ -83,6 +85,8 @@ def main(argv=None):
+             from .site import generate_site
+             print(json.dumps(generate_site(args['input'], args['out'], args['title'])))
+             return 0
++        if args.pop('no_site'):
++            args['site_dir'] = None
+         config = Config(**args, unrecognised_flags=unrecognised)
+         snapshot = config.state_dir / "latest-envelopes.jsonl"
+         resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
+diff --git a/src/signalpost/config.py b/src/signalpost/config.py
+index d1a47e3..3c3260e 100644
+--- a/src/signalpost/config.py
++++ b/src/signalpost/config.py
+@@ -19,7 +19,8 @@ class Config(BaseModel):
+     run_id: str = ""
+     unrecognised_flags: list[str] = Field(default_factory=list)
+     max_requests: int | None = Field(default=None, ge=0)
+-    time_budget_seconds: float = Field(default=2400, gt=0)
++    # Our own safeguard: the competition brief specifies no numeric time limit.
++    time_budget_seconds: float = Field(default=3600, gt=0)
+     deadline_fraction: float = Field(default=0.85, gt=0, le=1)
+     max_cost_usd: float = Field(default=0, ge=0)
+     host_concurrency: int = Field(default=10, ge=1)
+diff --git a/src/signalpost/sources/official_extra.py b/src/signalpost/sources/official_extra.py
+index 1e106f1..5913533 100644
+--- a/src/signalpost/sources/official_extra.py
++++ b/src/signalpost/sources/official_extra.py
+@@ -16,6 +16,9 @@ GLEIF='https://api.gleif.org/api/v1/'
+ GLEIF_AUTHORITIES=frozenset({'RA000472','RA000473'})
+ TED='https://api.ted.europa.eu/v3/notices/search'
+ METHOD='signalpost.official_extra.v1'
++# Bound an unproductive 202 outage without discarding the first recovery opportunities.
++TED_NOTICE_CONCURRENCY = 3
++TED_202_BREAKER_THRESHOLD = 3
+ NS={'cac':'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',
+     'cbc':'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
+     'efac':'http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1'}
+@@ -168,7 +171,7 @@ def award_extract(response,notice,org,now):
+ class Fetcher:
+     def __init__(self,client,budget,blobs,count):
+         self.client,self.budget,self.blobs=client,budget,blobs
+-        self.calls=0;self.cap=max(8,min(300,count//2));self.cache={};self.next_start={}
++        self.calls=0;self.cap=max(8,min(300,count//2));self.cache={};self.next_start={};self.host_locks={}
+         self.ted_calls=0;self.ted_statuses={};self.ted_failures=[]
+     async def get(self,url,payload=None):
+         is_ted = urlsplit(url).hostname in {'api.ted.europa.eu','ted.europa.eu'}
+@@ -190,14 +193,18 @@ class Fetcher:
+         host=urlsplit(url).hostname
+         if host not in {'api.gleif.org','api.ted.europa.eu','ted.europa.eu'} or urlsplit(url).scheme!='https' or urlsplit(url).port not in {None,443} or urlsplit(url).username or urlsplit(url).password:raise SourceFailure('extra_url_refused')
+         is_ted = host in {'api.ted.europa.eu','ted.europa.eu'}
+-        if is_ted and self.ted_calls>=250:raise SourceFailure('ted_request_cap')
+-        if self.calls>=self.cap:raise SourceFailure('extra_request_cap')
+         import time
+-        delay=max(0,self.next_start.get(host,0)-time.monotonic())
+-        if delay:await asyncio.sleep(min(delay,max(.001,self.budget.deadline-time.monotonic())))
+-        self.next_start[host]=time.monotonic()+1
+-        self.calls+=1;event=self.budget.reserve(url,host,'__official_extra__')
+-        if is_ted:self.ted_calls+=1
++        # Serialize admission, not downloads/backoff: concurrent retries must retain
++        # the original one-second spacing and account for every actual attempt.
++        async with self.host_locks.setdefault(host, asyncio.Lock()):
++            delay=max(0,self.next_start.get(host,0)-time.monotonic())
++            if delay:await asyncio.sleep(min(delay,max(.001,self.budget.deadline-time.monotonic())))
++            if is_ted and self.ted_calls>=250:raise SourceFailure('ted_request_cap')
++            if self.calls>=self.cap:raise SourceFailure('extra_request_cap')
++            event=self.budget.reserve(url,host,'__official_extra__')
++            self.next_start[host]=time.monotonic()+1
++            self.calls+=1
++            if is_ted:self.ted_calls+=1
+         began=time.monotonic()
+         try:
+             async with asyncio.timeout(min(15,max(.001,self.budget.deadline-time.monotonic()))):
+@@ -285,15 +292,44 @@ async def collect(envelopes,client,budget,blobs):
+             else:raise SourceFailure('extra_pagination')
+         except Exception:
+             for org in nums:states[org]['TED']='not_available_fetch_failed'
+-    for notice,scope in sorted(notices.items()):
++    import time
++    xml_started=time.monotonic()
++    streak=0;breaker_open=False;skipped=[]
++    ordered=sorted(notices.items())
++    async def download(notice):
+         try:
+-            response=await fetch.get(notice_links.get(notice) or f'https://ted.europa.eu/en/notice/{notice}/xml')
++            return await fetch.get(notice_links.get(notice) or f'https://ted.europa.eu/en/notice/{notice}/xml')
++        except Exception as exc:
++            return exc
++    # Batches bound in-flight work and apply the consecutive-failure policy in
++    # stable notice order, independent of response completion order.
++    for start in range(0,len(ordered),TED_NOTICE_CONCURRENCY):
++        batch=ordered[start:start+TED_NOTICE_CONCURRENCY]
++        if breaker_open:
++            for notice,scope in batch:
++                skipped.append(notice)
++                fetch.ted_failures.append({'url':notice_links.get(notice) or f'https://ted.europa.eu/en/notice/{notice}/xml',
++                                          'code':'ted_202_circuit_open'})
++                for org in scope:
++                    states[org]['TED']='not_available_fetch_failed'
++                    states[org]['TED_reason']='ted_202_circuit_open'
++            continue
++        responses=await asyncio.gather(*(download(notice) for notice,scope in batch))
++        for (notice,scope),response in zip(batch,responses):
++            exhausted=isinstance(response,SourceFailure) and response.code=='extra_http_202'
++            streak=streak+1 if exhausted else 0
++            if streak>=TED_202_BREAKER_THRESHOLD:breaker_open=True
++            if isinstance(response,Exception):
++                for org in scope:states[org]['TED']='not_available_fetch_failed'
++                continue
+             for org in scope:
+-                section=await offload(award_extract,response,notice,org,date.fromisoformat(response.retrieved_at[:10]))
+-                result[org].claims+=section.claims;result[org].evidence+=section.evidence
+-                if section.claims and states[org]['TED']!='not_available_fetch_failed':states[org]['TED']='available'
+-        except Exception:
+-            for org in scope:states[org]['TED']='not_available_fetch_failed'
++                try:
++                    section=await offload(award_extract,response,notice,org,date.fromisoformat(response.retrieved_at[:10]))
++                    result[org].claims+=section.claims;result[org].evidence+=section.evidence
++                    if section.claims and states[org]['TED']!='not_available_fetch_failed':states[org]['TED']='available'
++                except Exception:
++                    states[org]['TED']='not_available_fetch_failed'
++    xml_seconds=round(time.monotonic()-xml_started,3)
+     for org,section in result.items():
+         if states[org]['TED']=='not_available_fetch_failed':
+             section.claims=[c for c in section.claims if c.family!='activity']
+@@ -308,7 +344,10 @@ async def collect(envelopes,client,budget,blobs):
+             unique.setdefault(evidence.id,evidence)
+         section.evidence=list(unique.values())
+         for source in states[org]:envelopes[org].run.refresh.setdefault('official_extra',{})[source]=states[org][source]
+-    return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures}
++    return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures,
++        'ted_xml_seconds':xml_seconds,'ted_notice_concurrency':TED_NOTICE_CONCURRENCY,
++        'ted_202_circuit_breaker':{'threshold':TED_202_BREAKER_THRESHOLD,'open':breaker_open,
++                                   'skipped_notices':skipped,'reason':'ted_202_circuit_open' if breaker_open else None}}
+ 
+ 
+ def retain_failed(row,previous):
+diff --git a/tests/test_evaluator_cli_and_site.py b/tests/test_evaluator_cli_and_site.py
+index 9f8fa75..ba924f9 100644
+--- a/tests/test_evaluator_cli_and_site.py
++++ b/tests/test_evaluator_cli_and_site.py
+@@ -29,7 +29,7 @@ def test_evaluator_cli_direct_invocation_and_site_generation(tmp_path):
+         "--site-dir", str(out_site),
+         "--state-dir", str(state_dir),
+         "--expected-count", "20",
+-        "--time-budget-seconds", "30",
++        "--time-budget-seconds", "90",
+         "--workers", "4",
+         "--no-websites", "--no-hiring", "--no-public-activity",
+     ]
+@@ -98,7 +98,7 @@ def test_evaluator_shapes_union_contract_reference(tmp_path):
+             "--state-dir", str(state_dir),
+             "--envelope-shape", shape,
+             "--expected-count", "20",
+-            "--time-budget-seconds", "30",
++            "--time-budget-seconds", "90",
+             "--workers", "4",
+             "--no-websites", "--no-hiring", "--no-public-activity",
+         ]
+diff --git a/tests/test_finalisation_reserve.py b/tests/test_finalisation_reserve.py
+index d06ab99..7c2540a 100644
+--- a/tests/test_finalisation_reserve.py
++++ b/tests/test_finalisation_reserve.py
+@@ -41,7 +41,7 @@ def test_deadline_arithmetic_does_not_depend_on_the_clock_value(tmp_path, monkey
+     import signalpost.budget as budget_module
+     monkeypatch.setattr(budget_module.time, 'monotonic', lambda: clock)
+     assert crawl_seconds(budget_for(tmp_path, 1000, 30)) == pytest.approx(12, abs=1e-9)
+-    assert crawl_seconds(budget_for(tmp_path / 'b', 1000, 600)) == pytest.approx(510, abs=1e-9)
++    assert crawl_seconds(budget_for(tmp_path / 'b', 1000, 600)) == pytest.approx(170, abs=1e-9)  # 600 - (30 finalisation + 400 site)
+ 
+ 
+ def test_no_site_means_no_site_reserve(tmp_path):
+diff --git a/tests/test_release_budgets.py b/tests/test_release_budgets.py
+index 8238f65..51f89cb 100644
+--- a/tests/test_release_budgets.py
++++ b/tests/test_release_budgets.py
+@@ -5,7 +5,7 @@ from tests.test_registry import config,execute
+ 
+ def test_derived_budget_uses_unique_inputs_and_override(tmp_path):
+     cfg=config(tmp_path/'auto',['923609016','923609016','bad'])
+-    assert Budget(cfg).cap==38 and cfg.time_budget_seconds==2400
++    assert Budget(cfg).cap==38 and cfg.time_budget_seconds==3600
+     assert time_cap(cfg)==900
+     report,rows=execute(cfg)
+     assert len(rows)==3 and report['limits']['max_requests']==38
+diff --git a/tests/test_resource_limits.py b/tests/test_resource_limits.py
+index bf2b91a..db5b8b7 100644
+--- a/tests/test_resource_limits.py
++++ b/tests/test_resource_limits.py
+@@ -1,4 +1,5 @@
+ import json
++import pytest
+ from tests.test_registry import config, execute
+ 
+ 
+@@ -53,3 +54,22 @@ def test_default_output_cap_cannot_truncate_an_official_1100_batch(tmp_path, mon
+     assert main(['run', '--organisations', str(tmp_path / 'input.jsonl'),
+                  '--output', str(tmp_path / 'output.jsonl'), '--report', str(tmp_path / 'report.json')]) == 0
+     assert seen == [field_default]
++
++
++@pytest.mark.parametrize('extra,site_enabled', [([],True),(['--no-site'],False),
++    (['--site-dir','custom-site','--no-site'],False),(['--no-site','--site-dir','custom-site'],False)])
++def test_site_opt_out_and_budget_defaults(tmp_path,monkeypatch,extra,site_enabled):
++    from signalpost.cli import main
++    from signalpost.config import Config
++    from signalpost.budget import finalisation_estimates
++    async def run(config):
++        assert (config.site_dir is not None)==site_enabled
++        assert config.time_budget_seconds==Config.model_fields['time_budget_seconds'].default==3600
++        assert not config.unrecognised_flags
++        return dict(emitted_envelopes=0,invalid_inputs=[],requests=0,runtime_ms=0,changes=0,
++                    observation_changes=0,deadline_hits=0,warnings=[])
++    monkeypatch.setattr('signalpost.cli.run',run)
++    assert main(['run','--organisations',str(tmp_path/'input'),'--output',str(tmp_path/'output'),*extra])==0
++    assert finalisation_estimates(1000,True)[1]>=273.5
++    assert finalisation_estimates(1100,True)[1]>=414.41
++    assert finalisation_estimates(1000,False)[1]==0
+diff --git a/tests/test_ted_download_transport.py b/tests/test_ted_download_transport.py
+index b75cc98..3ee5f8a 100644
+--- a/tests/test_ted_download_transport.py
++++ b/tests/test_ted_download_transport.py
+@@ -73,3 +73,57 @@ def test_collect_uses_returned_xml_link_or_old_fallback(tmp_path,monkeypatch,wit
+             assert sections[ORG].claims[0].value['matched_role']=='winner'
+             assert metrics['ted_requests']==2
+     asyncio.run(run())
++
++
++@pytest.mark.parametrize('recovery',[False,True])
++def test_202_outage_opens_breaker_and_records_skipped_notices(tmp_path,monkeypatch,recovery):
++    attempts={};original_sleep=asyncio.sleep
++    async def sleep(delay):await original_sleep(0)
++    monkeypatch.setattr('signalpost.sources.official_extra.asyncio.sleep',sleep)
++    def dispatch(request):
++        if request.url.host=='api.gleif.org':
++            return httpx.Response(200,json={'data':[],'meta':{'pagination':{'lastPage':1}}})
++        if request.method=='POST':
++            return httpx.Response(200,json={'notices':[
++                {'publication-number':f'{i}-2026','notice-type':'can-standard','winner-identifier':[ORG]}
++                for i in range(1,9)],'totalNoticeCount':8})
++        key=str(request.url);attempts[key]=attempts.get(key,0)+1
++        return httpx.Response(200,text=xml()) if recovery and request.url.path.endswith('/3-2026/xml') else httpx.Response(202)
++    async def run():
++        async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch)) as client:
++            rows={f'{i:09}':envelope() for i in range(39)}
++            rows[ORG]=envelope()
++            sections,metrics=await collect(rows,client,Budget(),BlobStore(tmp_path))
++            assert not sections[ORG].claims
++            assert rows[ORG].run.refresh['official_extra']['TED']=='not_available_fetch_failed'
++            assert rows[ORG].run.refresh['official_extra']['TED_reason']=='ted_202_circuit_open'
++            breaker=metrics['ted_202_circuit_breaker']
++            assert breaker['open'] and breaker['threshold']==3
++            assert len(breaker['skipped_notices'])==(2 if recovery else 5)
++            assert sum(f['code']=='ted_202_circuit_open' for f in metrics['ted_failures'])==(2 if recovery else 5)
++    asyncio.run(run())
++    assert len(attempts)==(6 if recovery else 3)
++    assert sorted(attempts.values())==([1,3,3,3,3,3] if recovery else [3,3,3])
++
++
++def test_concurrent_downloads_preserve_host_pacing_and_attempt_cap(tmp_path):
++    starts=[];active=0;peak=0
++    async def dispatch(request):
++        nonlocal active,peak
++        starts.append(time.monotonic());active+=1;peak=max(peak,active)
++        await asyncio.sleep(1.1)
++        active-=1
++        return httpx.Response(200,text=xml())
++    async def run():
++        async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch)) as client:
++            budget=Budget();fetch=Fetcher(client,budget,BlobStore(tmp_path),1000)
++            results=await asyncio.gather(*(fetch.get(f'https://ted.europa.eu/{i}.xml') for i in range(3)))
++            assert all(r.status==200 for r in results)
++            assert fetch.calls==len(budget.events)==3
++            fetch.ted_calls=249
++            results=await asyncio.gather(*(fetch.get(f'https://ted.europa.eu/limit-{i}.xml') for i in range(3)),return_exceptions=True)
++            assert sum(isinstance(r,SourceFailure) and r.code=='ted_request_cap' for r in results)==2
++            assert fetch.ted_calls==250
++    asyncio.run(run())
++    assert peak>=2
++    assert all(b-a>=.98 for a,b in zip(starts,starts[1:]))

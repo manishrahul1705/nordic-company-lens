@@ -1,0 +1,26 @@
+[
+  {
+    "name": "robots",
+    "url": "https://arbeidsplassen.nav.no/robots.txt",
+    "status": 200,
+    "content_type": "text/plain; charset=UTF-8",
+    "location": null,
+    "sha256": "d60860669272346512f13f44cfdb2a7771210b65a8630f84d988f956f739129d"
+  },
+  {
+    "name": "terms",
+    "url": "https://arbeidsplassen.nav.no/vilkar-api",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "sha256": "f01e8cae3904098eabd5540070b8910288380482861417eed317d631b5d430ff"
+  },
+  {
+    "name": "old-terms",
+    "url": "https://arbeidsplassen.nav.no/vilkar-api-gammel",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "location": null,
+    "sha256": "8675438789de86cee0a2c221f00d4252fa3565d82fb1113d8088cd3713cbecbb"
+  }
+]
