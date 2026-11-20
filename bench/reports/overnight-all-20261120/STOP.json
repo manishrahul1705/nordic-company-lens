@@ -17,5 +17,14 @@
     "README and SUBMISSION measured-number update"
   ],
   "workaround_attempted": false,
-  "pushed": false
+  "pushed": false,
+  "resolution": {
+    "status": "resolved_on_explicit_user_resume",
+    "fix_commit": "95b4f6f",
+    "fresh_clone_bench_runs_present": false,
+    "reproduce_exit_code": 0,
+    "attribution_audit_exit_code": 0,
+    "readme_submission_updated": true,
+    "evidence": "clone-check-resumed.json"
+  }
 }

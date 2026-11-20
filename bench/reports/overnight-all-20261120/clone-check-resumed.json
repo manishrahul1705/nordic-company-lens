@@ -1,0 +1,28 @@
+{
+  "clone_commit": "95b4f6f42d00b83a6e1be616de5f46b7f338af2e",
+  "bench_runs_present": false,
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "bench/reports/overnight-all-20261120/accuracy/reproduce.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.879,
+      "output": "{\"sampled\": 200, \"correct\": 200, \"wrong\": 0, \"doubtful\": 0, \"mechanical\": 147, \"hand\": 53, \"wilson_95_lower_bound\": 0.9812}\nOK: sample, population, mechanical checks and verdict tallies reproduced from committed data\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "bench/reports/overnight-all-20261120/accuracy/attribution_audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 5.437,
+      "output": "{\"envelopes\": 1000, \"published_claims\": 167200, \"cited_evidence_records\": 167838, \"dangling\": 0, \"registry_mismatch\": 0, \"page_url_reused_across_envelopes\": 0, \"page_hash_reused_across_envelopes\": 0, \"foreign_label\": 0}\nOK: attribution audit reproduced from committed data\n"
+    }
+  ]
+}

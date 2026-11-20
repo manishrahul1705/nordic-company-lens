@@ -1,6 +1,6 @@
 # Nordic Company Lens
 
-Current validation (20 November 2026): **1,656 tests passed**; [latest saved suite and strict-verifier results](bench/reports/social-universe-veto-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
+Current validation (20 November 2026): **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
 
 Nordic Company Lens researches Norwegian companies using official registries and bounded company-owned sources. It checks company identity, publishes evidence-linked facts and cited template summaries, and can generate searchable offline profiles. The Python import package and console command remain `signalpost`.
 
@@ -116,7 +116,51 @@ Step 15 bounds legal/subunit-name discovery to eight candidates, with Norwegian-
 
 ## Measured precision
 
-### Full-universe social-name veto (20 November 2026)
+### Latest combined live measurement (20 November 2026)
+
+The frozen 1,000-company cohort ran live on code `f2c7091`, with fresh state, default concurrency and **site ON**. `run_status=completed`: **1,309.681 seconds**, **11,477 HTTP requests**, **0 deadline hits**, **0 handled and 0 unhandled exceptions**, and no run warnings. It published **167,200 supported facts** (available non-null distinct company/field/value/period claims, excluding section placeholders). The pooled budget was 60.405% used; the maximum attributed requests for one company was 40.
+
+| Published information | Companies | Claims |
+|---|---:|---:|
+| Verified websites | 115 | 115 |
+| Social profiles | 63 | 129 |
+| Brands | 19 | 19 |
+| GLEIF | 142 | 736 |
+| TED awards | 6 | 20 |
+| Hiring ads | 3 | 3 |
+| Group structure | 75 | 119 |
+| Signatur | 765 | 765 |
+| Prokura | 201 | 201 |
+
+GLEIF's 142 companies have 736 claims across LEIs and related facts. The three published hiring ads all use registered subunit employer numbers. Collection took 814.530 seconds, output finalisation 140.020, site generation 341.330 and other command overhead 13.801. A linear 1,100-company projection under these conditions is 1,440.649 seconds; provider variability remains a limitation.
+
+**Group structure and signing rights.** Group lookup runs only when the company's own entity record flags group membership. Published parent and subsidiary claims require explicit relationships in that company's registry response; siblings and inferred tree relationships are excluded. Signatur and prokura use each company's own public mandate records and preserve registered role bases, free text and joint conditions, rather than interpreting possible/statutory signing rights. All use normal retained-body, hash, pointer and citation rules.
+
+**Wikidata.** The existing five SPARQL requests supply official name, inception, headquarters, industry, dated employee/revenue observations, official website assertions and social identifiers. Every published value requires the exact company's P2333 organisation number, the exact retained SPARQL row and item revision. Registry values win disagreements, which are recorded rather than overwritten. Employees/revenue require point-in-time qualifiers. Website assertions do not establish website ownership; social identifiers still require attribution and pass the social vetoes.
+
+| Wikidata property with published support | Companies | Claims |
+|---|---:|---:|
+| P1448: Official name | 1 | 1 |
+| P571: Inception | 7 | 7 |
+| P159: Headquarters | 13 | 13 |
+| P452: Industry | 12 | 12 |
+| P1128: Employees, dated | 6 | 6 |
+| P2139: Revenue, dated | 0 | 0 |
+| P856: Official website assertion | 8 | 8 |
+| P2002: X | 1 | 1 |
+| P2003: Instagram | 2 | 2 |
+| P2013: Facebook | 3 | 3 |
+| P4264: LinkedIn | 0 | 0 |
+
+These property counts include additional Wikidata support on existing claims; they are not all additional unique facts and are not the raw query-result counts.
+
+**Proven-site social attribution.** A profile linked on an already ownership-proven company page can be published without matching its handle to the legal name. Links include anchors, `og:see_also` and embedded Facebook page widgets on pages already fetched. Personal profiles (including LinkedIn `/in/`), own-role person handles, share/intent/home/tracking URLs, shared-profile and group-site vetoes still reject. A candidate matching another company's registered name in the pinned **411,160-company universe** is withheld unless the company's own registry claims explicitly establish that other company as a subunit, parent or subsidiary. A sibling relationship is insufficient. The universe is a frozen corpus, not a live registry completeness assertion.
+
+**Validation.** Unchanged strict integrity verifier **PASS**: 1,000 envelopes, 167,200 claims, 5,183 retained source blobs and zero unverified synthesis values. This is the established integrity check without the additional optional-source-health `--require-clean` gate. Full suite: **1,656 passed**, one pytest cache-write permission warning, no failed tests. New Stage X sample: **200/200 correct**, 147 mechanical checks and 53 contextual reviews; Wilson 95% lower bound 98.12%. Attribution audit: zero dangling evidence, registry mismatch, cross-company page/hash reuse or foreign labelled orgnr. Both scripts reproduced from a fresh local clone of `95b4f6f` with **no `bench/runs` present**. [Full measured results and logs](bench/reports/overnight-all-20261120/RESULTS.md), [review](bench/reports/overnight-all-20261120/accuracy/REVIEW.md), [fresh-clone results](bench/reports/overnight-all-20261120/clone-check-resumed.json).
+
+Earlier stage measurements below are historical and do not replace this combined live result.
+
+### Earlier full-universe social-name replay (20 November 2026)
 
 The social-name veto now checks the **complete pinned 411,160-company universe**, using a local 4.75 MB bundle included in the wheel. A foreign name match is withheld unless the subject's own available BRREG claims explicitly establish the matched number as its registered subunit, parent or subsidiary. Siblings, similar names and website branding do not qualify; missing/corrupt index data fails closed. No runtime HTTP is added.
 
@@ -189,7 +233,7 @@ The current final measurement is the [frozen run at `b0b70cc`](#measured-precisi
 
 ### Changes since revision 4
 
-These changes follow the revision 4 merge (`d5139bd`). All of them are included in the [final frozen run](#measured-precision) at code `b0b70cc`.
+These changes follow the revision 4 merge (`d5139bd`). Those revision changes were included in the historical frozen run at code `b0b70cc`; the latest combined live result is reported above.
 
 - **Seven-part company brief, rendered on the site.** The template brief now has seven sections: *What it does*, *How big it is*, *Who runs it*, *What changed*, *Where it operates*, *How it compares* and *What we could not establish*. The offline site renders all seven, with the same cited sentences as the envelope. Every *How it compares* (standing) sentence states its comparison basis in the sentence itself: other companies **in this run only**, the same NACE division, and the same fiscal year of accounts. The division is named by its SSB KLASS title, as the comparison group, never as the company's activity. When there are too few comparables, the sentence says so and does not rank. [verify_output.py](scripts/verify_output.py) recomputes the reach, standing and not-established sections exactly, including the cohort records they use. Code: [sections_extra.py](src/signalpost/synthesis/sections_extra.py), [template.py](src/signalpost/synthesis/template.py), [site.py](src/signalpost/site.py).
 - **Gaps view.** Each company has a page titled *What we could not establish, and why*, listing every not-established item with its recorded reason. The run also has a summary page (`gaps.html`), linked from the home page, that counts those reasons across the run. Code: `company_gaps_page` and `run_gaps_page` in [site.py](src/signalpost/site.py).
