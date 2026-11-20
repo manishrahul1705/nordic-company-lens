@@ -737,6 +737,9 @@ async def _run(config, client=None):
         from .sources.funding_snapshots import publish as publish_funding_snapshots
         if config.funding_snapshots:
             await offload(publish_funding_snapshots, envelope, blobs)
+        from .sources.registry_activity import publish as publish_registry_activity
+        if config.public_activity:
+            await offload(publish_registry_activity, envelope)
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     from .web.contact_policy import filter_carried_contacts
     for envelope in envelopes.values():

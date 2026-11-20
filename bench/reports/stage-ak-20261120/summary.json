@@ -1,0 +1,198 @@
+{
+  "sample_before": {
+    "raw_audit_flags": {
+      "companies": 100,
+      "claims": 558
+    },
+    "names": {
+      "companies": 34,
+      "claims": 96
+    }
+  },
+  "sample_after": {
+    "raw_audit_flags": {
+      "companies": 100,
+      "claims": 558
+    },
+    "audit_status": {
+      "companies": 100,
+      "claims": 279
+    },
+    "dated_registry": {
+      "companies": 100,
+      "claims": 797
+    },
+    "names": {
+      "companies": 34,
+      "claims": 96
+    }
+  },
+  "replay1000": {
+    "before": {
+      "raw_audit_flags": {
+        "companies": 999,
+        "claims": 5634
+      },
+      "previous_names": {
+        "companies": 302,
+        "claims": 701
+      }
+    },
+    "after": {
+      "raw_audit_flags": {
+        "companies": 999,
+        "claims": 5634
+      },
+      "audit_status": {
+        "companies": 999,
+        "claims": 2817
+      },
+      "registry_dates": {
+        "companies": 997,
+        "claims": 7714
+      },
+      "previous_names": {
+        "companies": 302,
+        "claims": 701
+      }
+    }
+  },
+  "retained_overlap": {
+    "abhinav": {
+      "records_in_retained_ledger": 141,
+      "matched": 135
+    },
+    "kilde": {
+      "records_in_retained_ledger": 279,
+      "matched": 127
+    }
+  },
+  "checks": [
+    {
+      "kind": "names",
+      "company": "SQ URBAN LANDSKAP AS",
+      "orgnr": "919948493",
+      "field": "subunits.detail.818984952.historical_name.3d34ebf482e1b7a8b4d7837c",
+      "value": {
+        "navn": "SQ URBAN LANDSKAP QUILAMBO",
+        "fraDato": "2017-05-11 20:09:14",
+        "tilDato": "2018-03-01 21:11:27"
+      },
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=919948493&size=1000&page=0",
+      "locator": "/_embedded/underenheter/0/historiskeNavn/0",
+      "span": "arRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2017-05-11 20:09:14\",\"navn\":\"SQ URBAN LANDSKAP QUILAMBO\",\"tilDato\":\"2018-03-01 21:11:27\"}],\"mobil\":\"92541552\",\"naeringskode1\":{\"beskrivelse\":\"Beplantning av hager og parkanlegg\",\"kode\":\"81.300\"},\"navn\":\"SQ URBAN LANDSKAP AS\",\"oppstartsdat"
+    },
+    {
+      "kind": "names",
+      "company": "MYKLEBUST MARITIME AS",
+      "orgnr": "981508734",
+      "field": "identity.historical_name.29e479ab9b69d7d8b23deca7",
+      "value": {
+        "navn": "KLEVEN FLORØ HOLDING AS",
+        "fraDato": "2000-02-01 08:24:15",
+        "tilDato": "2001-06-05 10:18:47"
+      },
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/981508734",
+      "locator": "/historiskeNavn/0",
+      "span": "rRegistrertAntallAnsatte\":false,\"historiskeNavn\":[{\"fraDato\":\"2000-02-01 08:24:15\",\"navn\":\"KLEVEN FLORØ HOLDING AS\",\"tilDato\":\"2001-06-05 10:18:47\"},{\"fraDato\":\"2001-06-05 10:18:47\",\"navn\":\"KLEVEN HOLDING AS\",\"tilDato\":\"2001-10-10 21:37:03\"},{\"fraDato\":\"2001-10-10 21:37:03\",\"navn\":\"KLEVEN MARITIME A"
+    },
+    {
+      "kind": "names",
+      "company": "M BERGUM AS",
+      "orgnr": "936276075",
+      "field": "identity.historical_name.629ccad167bc46472df6c157",
+      "value": {
+        "navn": "NFH 250957 AS",
+        "fraDato": "2025-09-30 11:11:38",
+        "tilDato": "2025-12-02 17:15:38"
+      },
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/936276075",
+      "locator": "/historiskeNavn/0",
+      "span": "rRegistrertAntallAnsatte\":false,\"historiskeNavn\":[{\"fraDato\":\"2025-09-30 11:11:38\",\"navn\":\"NFH 250957 AS\",\"tilDato\":\"2025-12-02 17:15:38\"}],\"institusjonellSektorkode\":{\"beskrivelse\":\"Private aksjeselskaper mv.\",\"kode\":\"2100\"},\"kapital\":{\"antallAksjer\":3000,\"belop\":30000.00,\"innfortDato\":\"2025-09-30\""
+    },
+    {
+      "kind": "audit_status",
+      "company": "MYNT OG EIENDOM BESSAKER AS",
+      "orgnr": "912823970",
+      "field": "accounts.statement.2025.audit_status",
+      "value": "audited",
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+      "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+      "span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":3872158.00,\"egenkapital\":{\"sumEgenkapital\":678124.00,\"opptjentEgenkapital\":{\"sumOpptj"
+    },
+    {
+      "kind": "audit_status",
+      "company": "FIKO EIENDOM AS",
+      "orgnr": "916729774",
+      "field": "accounts.statement.2025.audit_status",
+      "value": "audited",
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/916729774",
+      "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+      "span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":5361875.00,\"egenkapital\":{\"sumEgenkapital\":2384219.00,\"opptjentEgenkapital\":{\"sumOppt"
+    },
+    {
+      "kind": "audit_status",
+      "company": "DRAGEHAUGEN VERDI AS",
+      "orgnr": "917998787",
+      "field": "accounts.statement.2025.audit_status",
+      "value": "audited",
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/917998787",
+      "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+      "span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":21454758.00,\"egenkapital\":{\"sumEgenkapital\":17140509.00,\"opptjentEgenkapital\":{\"sumO"
+    },
+    {
+      "kind": "dated_registry",
+      "company": "MYNT OG EIENDOM BESSAKER AS",
+      "orgnr": "912823970",
+      "field": "registry_dated_activity.founding_date",
+      "value": "2013-11-21",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+      "locator": "/stiftelsesdato",
+      "span": "steInnsendteAarsregnskap\":\"2025\",\"stiftelsesdato\":\"2013-11-21\",\"underAvvikling\":false,\"underTvangsavviklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2013-11-21\",\"vedtektsfestetFormaal\":[\"Kjøp og salg av mynter, kjøp og salg av eiendom, samt utleie av\",\"eiendom og andre produkter/tjenester som nat"
+    },
+    {
+      "kind": "dated_registry",
+      "company": "FIKO EIENDOM AS",
+      "orgnr": "916729774",
+      "field": "registry_dated_activity.founding_date",
+      "value": "2016-02-09",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/916729774",
+      "locator": "/stiftelsesdato",
+      "span": "steInnsendteAarsregnskap\":\"2025\",\"stiftelsesdato\":\"2016-02-09\",\"underAvvikling\":false,\"underTvangsavviklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2016-02-09\",\"vedtektsfestetFormaal\":[\"Kjøp, salg og utleie av fast eiendom, medvirke i andre selskaper innen\",\"samme virksomhet, samt alt som hører "
+    },
+    {
+      "kind": "dated_registry",
+      "company": "DRAGEHAUGEN VERDI AS",
+      "orgnr": "917998787",
+      "field": "registry_dated_activity.founding_date",
+      "value": "2016-10-06",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/917998787",
+      "locator": "/stiftelsesdato",
+      "span": "steInnsendteAarsregnskap\":\"2025\",\"stiftelsesdato\":\"2016-10-06\",\"underAvvikling\":false,\"underTvangsavviklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2016-10-06\",\"vedtektsfestetFormaal\":[\"Investere i aksjer, verdipapirer, andre selskapsandeler og fast\",\"eiendom, samt det som naturlig står i forbin"
+    },
+    {
+      "kind": "dated_registry",
+      "company": "MENSTAD NÆRINGSPARK AS",
+      "orgnr": "918049215",
+      "field": "registry_dated_activity.founding_date",
+      "value": "2016-10-19",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/918049215",
+      "locator": "/stiftelsesdato",
+      "span": "steInnsendteAarsregnskap\":\"2025\",\"stiftelsesdato\":\"2016-10-19\",\"underAvvikling\":false,\"underTvangsavviklingEllerTvangsopplosning\":false,\"vedtektsdato\":\"2025-12-30\",\"vedtektsfestetFormaal\":[\"Kjøp, utvikling og salg av fast eiendom, ytelse av entreprisetjenester\",\"innenfor bygg og anlegg, samt hva som"
+    }
+  ],
+  "verification": {
+    "sample100": {
+      "lines": 100,
+      "claims": 17962,
+      "unverified_synthesis_values": 0
+    },
+    "offline1000": {
+      "lines": 1000,
+      "claims": 177731,
+      "unverified_synthesis_values": 0
+    },
+    "tests_passed": 1747,
+    "test_failures": 0
+  }
+}

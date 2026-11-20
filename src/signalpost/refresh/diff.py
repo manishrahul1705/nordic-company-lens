@@ -97,6 +97,14 @@ def align_description_aliases(envelope, old_claims, old_evidence, current_eviden
 
 
 def apply(envelope, previous, blobs):
+    # Registry-date activity has the same observation scope as its identity
+    # source. Rebuild it from current supported identity before comparing a
+    # changed website crawl scope with the previous observation.
+    prior_data = (previous if 'claims' in previous else previous.get('profile', {})) if previous else {}
+    if any(c.get('field', '').startswith('registry_dated_activity.')
+           for c in prior_data.get('claims', [])):
+        from ..sources.registry_activity import publish
+        publish(envelope)
     envelope.run.refresh = {**envelope.run.refresh,"mode": "baseline" if previous is None else "refresh", "previous_run_id": None,'observation_changes':[]}
     if previous is None:
         envelope.run.refresh['observed_claim_ids'] = sorted(c.id for c in envelope.claims if c.availability == 'available')

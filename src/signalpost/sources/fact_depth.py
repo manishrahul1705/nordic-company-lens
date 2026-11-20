@@ -98,6 +98,12 @@ def accounts(section,org,data,source):
             if value is None:continue
             add(section,source,org,'accounts',prefix+'.'+name,value,f'/{idx}/'+'/'.join(path),reporting=period,effective=end)
             label(section,scope+' '+name.replace('_',' '))
+        unaudited=get(row,('revisjon','ikkeRevidertAarsregnskap'))
+        if type(unaudited) is bool:
+            add(section,source,org,'accounts',prefix+'.audit_status',
+                'not_audited' if unaudited else 'audited',
+                f'/{idx}/revisjon/ikkeRevidertAarsregnskap',reporting=period,effective=end)
+            label(section,scope+' explicit audit status')
         reverse={path:name for name,path in PATHS.items()}
         for path,value in numeric_leaves(row):
             if not path or path[0] not in {'resultatregnskapResultat','egenkapitalGjeld','eiendeler'}:continue
