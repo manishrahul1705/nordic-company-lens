@@ -1,0 +1,2043 @@
+{
+  "run_status": "completed",
+  "success_rate": 1.0,
+  "companies_succeeded": 1000,
+  "companies_failed": 0,
+  "companies_without_source_errors": 868,
+  "source_errors_by_family": {
+    "accounts": 1,
+    "activity": 0,
+    "hiring": 4,
+    "identity": 0,
+    "roles": 0,
+    "subunits": 0,
+    "website": 127
+  },
+  "requests": 11653,
+  "max_requests_per_company": 40,
+  "runtime_ms": 1208875,
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "finalisation": {
+    "crawl_seconds": 1075.2,
+    "outputs_seconds": 137.73,
+    "estimate_seconds": 30.0,
+    "site_estimate_seconds": 600.0,
+    "site_reserved": true,
+    "site_seconds": 378.86
+  },
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 4885,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 828067821,
+    "evidence_pages": 2882,
+    "largest_page_bytes": 244465,
+    "largest_profile_data_bytes": 756906,
+    "largest_profile_bytes": 244465,
+    "compact_profiles": 0
+  },
+  "warnings": [],
+  "effective_configuration": {
+    "websites": true,
+    "hiring": true,
+    "public_activity": true,
+    "registry_changes": true,
+    "funding_snapshots": true,
+    "official_extra_sources": true,
+    "dibk": true,
+    "website_suffix_contact_proof": true,
+    "search": {
+      "queries": 0,
+      "estimated_usd": 0.0
+    },
+    "synthesis": {
+      "requested_mode": "template",
+      "effective_mode": "template",
+      "llm_calls": 0
+    },
+    "request_caps": {
+      "pooled": 19000,
+      "pooled_per_company": 19,
+      "per_company": 40,
+      "website": 40,
+      "website_total": 40
+    },
+    "nav": {
+      "index_built_at": "2026-11-13T00:26:42.872674Z",
+      "mode": "declared_index"
+    },
+    "unrecognised_flags": [],
+    "outputs": {
+      "envelopes": "bench\\runs\\final-20261120\\envelopes.jsonl",
+      "profiles": null,
+      "report": "bench\\runs\\final-20261120\\report.json",
+      "site": "bench\\runs\\final-20261120\\site"
+    }
+  },
+  "official_extra": {
+    "requests": 62,
+    "gleif_companies": 142,
+    "parent_LEIs_batched": 14,
+    "tender_notices_nominated": 79,
+    "ted_requests": 25,
+    "ted_http_statuses": {
+      "200": 10,
+      "202": 15
+    },
+    "ted_failures": [
+      {
+        "url": "https://ted.europa.eu/en/notice/10384-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/112715-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/115235-2026/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/116542-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/120822-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/138083-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/140390-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/150922-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/165606-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/170520-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/173043-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/174478-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/187066-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/197558-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/198485-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/210972-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/228306-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/246735-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/247985-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/250458-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/261860-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/263789-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/271943-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/287502-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/288858-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/295084-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/313125-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/320357-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/327030-2025/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/330396-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/335345-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/338506-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/341549-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/341842-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/354425-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/370861-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/387041-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/389874-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/390266-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/39027-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/397297-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/397515-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/404734-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/418429-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/42374-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/42963-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/434277-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/461448-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/475312-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/486198-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/495785-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/510525-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/517910-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/528398-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/549796-2024/xml",
+        "code": "extra_http_202"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/574364-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/583218-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/627000-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/637605-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/640353-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/643444-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/690844-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/69164-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/69404-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/697888-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/698069-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/741466-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/741472-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/741743-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/744428-2024/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/745118-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/757744-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/766764-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/778400-2026/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/780228-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/817875-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/834670-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/839756-2025/xml",
+        "code": "ted_202_circuit_open"
+      },
+      {
+        "url": "https://ted.europa.eu/en/notice/94190-2025/xml",
+        "code": "ted_202_circuit_open"
+      }
+    ],
+    "ted_xml_seconds": 38.765,
+    "ted_notice_concurrency": 3,
+    "ted_202_circuit_breaker": {
+      "threshold": 3,
+      "open": true,
+      "skipped_notices": [
+        "116542-2024",
+        "120822-2024",
+        "138083-2025",
+        "140390-2026",
+        "150922-2024",
+        "165606-2025",
+        "170520-2025",
+        "173043-2025",
+        "174478-2026",
+        "187066-2026",
+        "197558-2025",
+        "198485-2025",
+        "210972-2024",
+        "228306-2024",
+        "246735-2024",
+        "247985-2026",
+        "250458-2026",
+        "261860-2025",
+        "263789-2024",
+        "271943-2024",
+        "287502-2026",
+        "288858-2025",
+        "295084-2026",
+        "313125-2025",
+        "320357-2026",
+        "330396-2026",
+        "335345-2025",
+        "338506-2025",
+        "341549-2025",
+        "341842-2024",
+        "354425-2026",
+        "370861-2026",
+        "387041-2025",
+        "389874-2024",
+        "390266-2026",
+        "39027-2025",
+        "397297-2024",
+        "397515-2024",
+        "404734-2025",
+        "418429-2026",
+        "42374-2026",
+        "42963-2026",
+        "434277-2025",
+        "461448-2025",
+        "475312-2026",
+        "486198-2026",
+        "495785-2024",
+        "510525-2026",
+        "517910-2024",
+        "528398-2025",
+        "574364-2024",
+        "583218-2024",
+        "627000-2026",
+        "637605-2025",
+        "640353-2025",
+        "643444-2025",
+        "690844-2026",
+        "69164-2025",
+        "69404-2025",
+        "697888-2025",
+        "698069-2025",
+        "741466-2024",
+        "741472-2025",
+        "741743-2025",
+        "744428-2024",
+        "745118-2026",
+        "757744-2025",
+        "766764-2026",
+        "778400-2026",
+        "780228-2025",
+        "817875-2025",
+        "834670-2025",
+        "839756-2025",
+        "94190-2025"
+      ],
+      "reason": "ted_202_circuit_open",
+      "reprobe_every_skipped": 25,
+      "reprobes": [
+        {
+          "notice": "327030-2025",
+          "success": false,
+          "reason": "extra_http_202"
+        },
+        {
+          "notice": "549796-2024",
+          "success": false,
+          "reason": "extra_http_202"
+        }
+      ]
+    }
+  },
+  "wikidata": {
+    "status": "complete",
+    "requests": 5,
+    "errors": 0,
+    "matched_companies": 13,
+    "website_candidates": 9,
+    "social_published": 3,
+    "social_corroborated": 2
+  },
+  "website_second_pass": {
+    "eligible": 101,
+    "attempted": 99,
+    "candidates": 114,
+    "candidates_fetched": 4,
+    "recovered": 0,
+    "requests": 166,
+    "seconds": 197.313,
+    "companies": [
+      {
+        "organisation_number": "936276075",
+        "details": {
+          "candidates": [
+            "mbergum.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.235
+        }
+      },
+      {
+        "organisation_number": "920597122",
+        "details": {
+          "candidates": [
+            "arcticgrill.no",
+            "arcticgrill.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 41.281
+        }
+      },
+      {
+        "organisation_number": "914582660",
+        "details": {
+          "candidates": [
+            "seriva.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.234
+        }
+      },
+      {
+        "organisation_number": "927901722",
+        "details": {
+          "candidates": [
+            "kurius.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 6.156
+        }
+      },
+      {
+        "organisation_number": "915483976",
+        "details": {
+          "candidates": [
+            "ayinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.125
+        }
+      },
+      {
+        "organisation_number": "923219137",
+        "details": {
+          "candidates": [
+            "green4you.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.453
+        }
+      },
+      {
+        "organisation_number": "993327182",
+        "details": {
+          "candidates": [
+            "norwegianbusinesspavilions.no"
+          ],
+          "attempted": false,
+          "recovered": false,
+          "reason": "company_budget_exhausted"
+        }
+      },
+      {
+        "organisation_number": "929002733",
+        "details": {
+          "candidates": [
+            "hvalermarinepark.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.203
+        }
+      },
+      {
+        "organisation_number": "981391594",
+        "details": {
+          "candidates": [
+            "terob.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.172
+        }
+      },
+      {
+        "organisation_number": "913147383",
+        "details": {
+          "candidates": [
+            "nymane.no",
+            "nymane.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 5,
+          "seconds": 45.016
+        }
+      },
+      {
+        "organisation_number": "930884286",
+        "details": {
+          "candidates": [
+            "advokatkontakt.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 35.469
+        }
+      },
+      {
+        "organisation_number": "998077028",
+        "details": {
+          "candidates": [
+            "innovationsupport.com",
+            "innovation-support.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 45.016
+        }
+      },
+      {
+        "organisation_number": "942393679",
+        "details": {
+          "candidates": [
+            "harveland.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 44.203
+        }
+      },
+      {
+        "organisation_number": "989998285",
+        "details": {
+          "candidates": [
+            "spray.no",
+            "byggfirmaerikjordheim.no",
+            "byggfirma-erik-jordheim.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 1,
+          "seconds": 20.36
+        }
+      },
+      {
+        "organisation_number": "989171984",
+        "details": {
+          "candidates": [
+            "sag-holding.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 18.547
+        }
+      },
+      {
+        "organisation_number": "995243822",
+        "details": {
+          "candidates": [
+            "casis.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 42.359
+        }
+      },
+      {
+        "organisation_number": "971456299",
+        "details": {
+          "candidates": [
+            "fellesforbundet.org",
+            "stenjordcementarbforening.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 1,
+          "seconds": 19.25
+        }
+      },
+      {
+        "organisation_number": "989987291",
+        "details": {
+          "candidates": [
+            "boreiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.235
+        }
+      },
+      {
+        "organisation_number": "987038284",
+        "details": {
+          "candidates": [
+            "skinorway.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 19.031
+        }
+      },
+      {
+        "organisation_number": "935499984",
+        "details": {
+          "candidates": [
+            "transpartner.no",
+            "transpartner.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 45.031
+        }
+      },
+      {
+        "organisation_number": "916467443",
+        "details": {
+          "candidates": [
+            "zhangfrisoer.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.219
+        }
+      },
+      {
+        "organisation_number": "931708694",
+        "details": {
+          "candidates": [
+            "co2transport.com",
+            "co2-transport.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 9.187
+        }
+      },
+      {
+        "organisation_number": "911599287",
+        "details": {
+          "candidates": [
+            "spitsbergenlogistikk.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 19.547
+        }
+      },
+      {
+        "organisation_number": "935556139",
+        "details": {
+          "candidates": [
+            "treetops-holding.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 3.547
+        }
+      },
+      {
+        "organisation_number": "992123656",
+        "details": {
+          "candidates": [
+            "torleif-larsen.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 3.219
+        }
+      },
+      {
+        "organisation_number": "925547530",
+        "details": {
+          "candidates": [
+            "hanche.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 28.907
+        }
+      },
+      {
+        "organisation_number": "928463923",
+        "details": {
+          "candidates": [
+            "anssec.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 17.047
+        }
+      },
+      {
+        "organisation_number": "998024684",
+        "details": {
+          "candidates": [
+            "schwenkesoenn.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.125
+        }
+      },
+      {
+        "organisation_number": "993395919",
+        "details": {
+          "candidates": [
+            "lkg.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.157
+        }
+      },
+      {
+        "organisation_number": "985868972",
+        "details": {
+          "candidates": [
+            "fosseikeiendom.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.187
+        }
+      },
+      {
+        "organisation_number": "950137169",
+        "details": {
+          "candidates": [
+            "loken-borettslag.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 3.234
+        }
+      },
+      {
+        "organisation_number": "921715528",
+        "details": {
+          "candidates": [
+            "jhfeiendom.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.188
+        }
+      },
+      {
+        "organisation_number": "881637642",
+        "details": {
+          "candidates": [
+            "amedia-salg-og-marked.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.063
+        }
+      },
+      {
+        "organisation_number": "829695472",
+        "details": {
+          "candidates": [
+            "four-seasons-sushi.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.187
+        }
+      },
+      {
+        "organisation_number": "983947859",
+        "details": {
+          "candidates": [
+            "jarand-o-reffelbreks-legat.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.219
+        }
+      },
+      {
+        "organisation_number": "993451452",
+        "details": {
+          "candidates": [
+            "krag-jorgensen-boligpark.no",
+            "krag-joergensen-boligpark.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.141
+        }
+      },
+      {
+        "organisation_number": "928823873",
+        "details": {
+          "candidates": [
+            "park-eiendomsdrift.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.375
+        }
+      },
+      {
+        "organisation_number": "825986332",
+        "details": {
+          "candidates": [
+            "geirtech.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 5.047
+        }
+      },
+      {
+        "organisation_number": "966443960",
+        "details": {
+          "candidates": [
+            "landbruketshus.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.188
+        }
+      },
+      {
+        "organisation_number": "981130243",
+        "details": {
+          "candidates": [
+            "ffs.no",
+            "fastfoodservicenorge.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 39.157
+        }
+      },
+      {
+        "organisation_number": "928152553",
+        "details": {
+          "candidates": [
+            "rolvwesenlundsvei9borettslag.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 1.032
+        }
+      },
+      {
+        "organisation_number": "926529870",
+        "details": {
+          "candidates": [
+            "lundbyfysioogmanuellterapi.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.093
+        }
+      },
+      {
+        "organisation_number": "927977508",
+        "details": {
+          "candidates": [
+            "endresol.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 1.0
+        }
+      },
+      {
+        "organisation_number": "928938875",
+        "details": {
+          "candidates": [
+            "samna.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.453
+        }
+      },
+      {
+        "organisation_number": "994774050",
+        "details": {
+          "candidates": [
+            "darkprosjekt.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.093
+        }
+      },
+      {
+        "organisation_number": "989338811",
+        "details": {
+          "candidates": [
+            "illberginvest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.391
+        }
+      },
+      {
+        "organisation_number": "921707924",
+        "details": {
+          "candidates": [
+            "kvannli.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.188
+        }
+      },
+      {
+        "organisation_number": "923566031",
+        "details": {
+          "candidates": [
+            "trondheim-hotell.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.281
+        }
+      },
+      {
+        "organisation_number": "991843361",
+        "details": {
+          "candidates": [
+            "fpartner.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 17.296
+        }
+      },
+      {
+        "organisation_number": "933380025",
+        "details": {
+          "candidates": [
+            "prt-eiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.079
+        }
+      },
+      {
+        "organisation_number": "913737474",
+        "details": {
+          "candidates": [
+            "toen-holding.no",
+            "tonholding.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.297
+        }
+      },
+      {
+        "organisation_number": "935315077",
+        "details": {
+          "candidates": [
+            "reklamegruppen.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 1,
+          "seconds": 0.813
+        }
+      },
+      {
+        "organisation_number": "912972062",
+        "details": {
+          "candidates": [
+            "jaro-eiendomsutvikling.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.218
+        }
+      },
+      {
+        "organisation_number": "962148204",
+        "details": {
+          "candidates": [
+            "flaabilsentral.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.187
+        }
+      },
+      {
+        "organisation_number": "935624088",
+        "details": {
+          "candidates": [
+            "rk-komplett.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.188
+        }
+      },
+      {
+        "organisation_number": "916115288",
+        "details": {
+          "candidates": [
+            "la-vetta-boligstyling.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.438
+        }
+      },
+      {
+        "organisation_number": "912383555",
+        "details": {
+          "candidates": [
+            "transportsentralenharstad.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.203
+        }
+      },
+      {
+        "organisation_number": "995652935",
+        "details": {
+          "candidates": [
+            "bertmarknorge.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.219
+        }
+      },
+      {
+        "organisation_number": "918000143",
+        "details": {
+          "candidates": [
+            "renteknikk.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 16.766
+        }
+      },
+      {
+        "organisation_number": "933784762",
+        "details": {
+          "candidates": [
+            "et-ess.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 3,
+          "seconds": 3.422
+        }
+      },
+      {
+        "organisation_number": "920514502",
+        "details": {
+          "candidates": [
+            "soundtaenk.com",
+            "soundtenk.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.329
+        }
+      },
+      {
+        "organisation_number": "921044186",
+        "details": {
+          "candidates": [
+            "raptorinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.156
+        }
+      },
+      {
+        "organisation_number": "922753768",
+        "details": {
+          "candidates": [
+            "soerlieholding.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.062
+        }
+      },
+      {
+        "organisation_number": "920417892",
+        "details": {
+          "candidates": [
+            "holberg-skipsinvest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.328
+        }
+      },
+      {
+        "organisation_number": "983430570",
+        "details": {
+          "candidates": [
+            "bredde-invest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.093
+        }
+      },
+      {
+        "organisation_number": "932986833",
+        "details": {
+          "candidates": [
+            "bhak-holding.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 2.047
+        }
+      },
+      {
+        "organisation_number": "926543962",
+        "details": {
+          "candidates": [
+            "bygg-murmester-sara-tohn.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.094
+        }
+      },
+      {
+        "organisation_number": "935381991",
+        "details": {
+          "candidates": [
+            "kolnes-konsult.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.093
+        }
+      },
+      {
+        "organisation_number": "931824317",
+        "details": {
+          "candidates": [
+            "hotel-operation-vatnahalsen.no",
+            "hotel-operation-vatnahalsen.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.25
+        }
+      },
+      {
+        "organisation_number": "921186924",
+        "details": {
+          "candidates": [
+            "unime.no",
+            "unime.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 22.359
+        }
+      },
+      {
+        "organisation_number": "913772431",
+        "details": {
+          "candidates": [
+            "arepoinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.11
+        }
+      },
+      {
+        "organisation_number": "828565362",
+        "details": {
+          "candidates": [
+            "tilinspirasjoninterioertjenester.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.25
+        }
+      },
+      {
+        "organisation_number": "917283109",
+        "details": {
+          "candidates": [
+            "clbyggeiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.062
+        }
+      },
+      {
+        "organisation_number": "985803722",
+        "details": {
+          "candidates": [
+            "fossum-ingero.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.156
+        }
+      },
+      {
+        "organisation_number": "975962121",
+        "details": {
+          "candidates": [
+            "as-glassmesterforretning.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.187
+        }
+      },
+      {
+        "organisation_number": "988119342",
+        "details": {
+          "candidates": [
+            "grytekraft.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 1.063
+        }
+      },
+      {
+        "organisation_number": "923068805",
+        "details": {
+          "candidates": [
+            "veterinaerelinanissestad.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.141
+        }
+      },
+      {
+        "organisation_number": "812753932",
+        "details": {
+          "candidates": [
+            "time2trade.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 43.125
+        }
+      },
+      {
+        "organisation_number": "926338730",
+        "details": {
+          "candidates": [
+            "web.de"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 43.141
+        }
+      },
+      {
+        "organisation_number": "922154635",
+        "details": {
+          "candidates": [
+            "skattekisten.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.125
+        }
+      },
+      {
+        "organisation_number": "899100492",
+        "details": {
+          "candidates": [
+            "novahousing.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 8,
+          "seconds": 35.485
+        }
+      },
+      {
+        "organisation_number": "921443234",
+        "details": {
+          "candidates": [
+            "promotransport.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.172
+        }
+      },
+      {
+        "organisation_number": "912342409",
+        "details": {
+          "candidates": [
+            "faune.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 43.078
+        }
+      },
+      {
+        "organisation_number": "919931477",
+        "details": {
+          "candidates": [
+            "seatruck.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.078
+        }
+      },
+      {
+        "organisation_number": "934882237",
+        "details": {
+          "candidates": [
+            "tqinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 45.032
+        }
+      },
+      {
+        "organisation_number": "988836311",
+        "details": {
+          "candidates": [
+            "kaikanten.org"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.047
+        }
+      },
+      {
+        "organisation_number": "925546739",
+        "details": {
+          "candidates": [
+            "svoer.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.407
+        }
+      },
+      {
+        "organisation_number": "995612461",
+        "details": {
+          "candidates": [
+            "propel.no",
+            "propel.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 3,
+          "seconds": 45.0
+        }
+      },
+      {
+        "organisation_number": "985090572",
+        "details": {
+          "candidates": [
+            "musikkgarasjen.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.203
+        }
+      },
+      {
+        "organisation_number": "914718139",
+        "details": {
+          "candidates": [
+            "stianiversen.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 8,
+          "seconds": 35.781
+        }
+      },
+      {
+        "organisation_number": "822291082",
+        "details": {
+          "candidates": [
+            "famsa-estate-co.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.203
+        }
+      },
+      {
+        "organisation_number": "924517476",
+        "details": {
+          "candidates": [
+            "viddex.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 4.156
+        }
+      },
+      {
+        "organisation_number": "920133428",
+        "details": {
+          "candidates": [
+            "lillo-invest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.25
+        }
+      },
+      {
+        "organisation_number": "921108249",
+        "details": {
+          "candidates": [
+            "froya-mekaniske.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.141
+        }
+      },
+      {
+        "organisation_number": "925149365",
+        "details": {
+          "candidates": [
+            "e-flateland.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.375
+        }
+      },
+      {
+        "organisation_number": "926096974",
+        "details": {
+          "candidates": [
+            "moldvaerinvest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.172
+        }
+      },
+      {
+        "organisation_number": "924478101",
+        "details": {
+          "candidates": [
+            "midtileio.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.313
+        }
+      },
+      {
+        "organisation_number": "935856507",
+        "details": {
+          "candidates": [
+            "tjelland.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.125
+        }
+      },
+      {
+        "organisation_number": "989127934",
+        "details": {
+          "candidates": [
+            "taholding.no",
+            "taholding.com"
+          ],
+          "attempted": false,
+          "recovered": false,
+          "reason": "company_budget_exhausted"
+        }
+      },
+      {
+        "organisation_number": "998535611",
+        "details": {
+          "candidates": [
+            "skistad.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.063
+        }
+      },
+      {
+        "organisation_number": "935831601",
+        "details": {
+          "candidates": [
+            "kristiansandeiendom.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.328
+        }
+      }
+    ],
+    "unexpected_failures": 0
+  },
+  "bulk_preparation_seconds": 0.016,
+  "output_bytes": 405598109,
+  "execution": {
+    "exit_code": 0,
+    "defaults": {
+      "workers": 64,
+      "max_output_mb": 4096,
+      "time_budget_seconds": 3600,
+      "site": true
+    },
+    "completed_at": "2026-11-20T17:01:52.1162239Z",
+    "exclusive_preflight": true,
+    "head": "cede54701d5e50067764f472009b6c830254065a",
+    "wall_seconds": 1602.8767692,
+    "started_at": "2026-11-20T16:35:09.2219268Z"
+  },
+  "families": {
+    "identity": {
+      "companies": 1000,
+      "claims": 31241
+    },
+    "subunits": {
+      "companies": 773,
+      "claims": 6907
+    },
+    "roles": {
+      "companies": 997,
+      "claims": 18783
+    },
+    "accounts": {
+      "companies": 999,
+      "claims": 100233
+    },
+    "audit_status": {
+      "companies": 999,
+      "claims": 2817
+    },
+    "prokura": {
+      "companies": 201,
+      "claims": 201
+    },
+    "signatur": {
+      "companies": 765,
+      "claims": 765
+    },
+    "registry_changes": {
+      "companies": 1000,
+      "claims": 12055
+    },
+    "registry_date_activity": {
+      "companies": 997,
+      "claims": 7714
+    },
+    "historical_names_all_scopes": {
+      "companies": 302,
+      "claims": 701
+    },
+    "subunit_historical_names": {
+      "companies": 210,
+      "claims": 377
+    },
+    "GLEIF": {
+      "companies": 142,
+      "claims": 736
+    },
+    "state_aid": {
+      "companies": 98,
+      "claims": 679
+    },
+    "previous_names": {
+      "companies": 241,
+      "claims": 324
+    },
+    "group_structure": {
+      "companies": 75,
+      "claims": 119
+    },
+    "research": {
+      "companies": 9,
+      "claims": 17
+    },
+    "related_company_websites": {
+      "companies": 14,
+      "claims": 16
+    },
+    "SkatteFUNN": {
+      "companies": 36,
+      "claims": 89
+    },
+    "websites": {
+      "companies": 114,
+      "claims": 114
+    },
+    "social": {
+      "companies": 61,
+      "claims": 125
+    },
+    "brands": {
+      "companies": 19,
+      "claims": 19
+    },
+    "news": {
+      "companies": 32,
+      "claims": 115
+    },
+    "DiBK": {
+      "companies": 12,
+      "claims": 62
+    },
+    "cleaning_approval": {
+      "companies": 6,
+      "claims": 6
+    },
+    "Wikidata": {
+      "companies": 13,
+      "claims": 47
+    },
+    "workshop_approval": {
+      "companies": 1,
+      "claims": 2
+    },
+    "hiring": {
+      "companies": 3,
+      "claims": 3
+    },
+    "TED": {
+      "companies": 0,
+      "claims": 0
+    }
+  },
+  "projection_1100": {
+    "end_to_end_seconds": 1763.164,
+    "budget_seconds": 3600,
+    "HTTP": 12818.3,
+    "HTTP_cap": 20900,
+    "basis": "Linear 1.1x projection of this run; not a guarantee about network variance.",
+    "HTTP_rounded_up": 12819,
+    "wall_headroom_seconds": 1836.836
+  },
+  "strict_verifier": {
+    "lines": 1000,
+    "schema_valid": true,
+    "published_claims": 178669,
+    "source_blobs_verified": 5993,
+    "synthesis_companies": 1000,
+    "synthesis_sentences": 2552,
+    "synthesis_unverified_values": 0
+  },
+  "accuracy": {
+    "sampled": 200,
+    "correct": 200,
+    "wrong": 0,
+    "doubtful": 0,
+    "mechanical": 156,
+    "hand": 44,
+    "wilson_95_lower_bound": 0.9812
+  },
+  "attribution": {
+    "raw_shared_URL_flags": 4,
+    "independent_exact_subject_row_checks": 791,
+    "explicitly_scoped_registered_subunit_rows": 4,
+    "subject_mismatches": [],
+    "other_raw_contamination_flags": 0,
+    "cross_company_contamination": 0,
+    "basis": "Exact subject identifiers in retained SHA-256-checked official bulk rows; no changes to raw Stage X audit host list or checks."
+  },
+  "tests": {
+    "total": 1852,
+    "passed": 1850,
+    "failed": 2,
+    "seconds": 609.38,
+    "failures": [
+      "tests/test_evaluator_cli_and_site.py::test_evaluator_shapes_union_contract_reference",
+      "tests/test_footer_ownership.py::test_independent_footer_runs_dependent_production_extraction"
+    ],
+    "footer_isolation_pass_seconds": [
+      19.99,
+      17.59
+    ]
+  },
+  "source_families_dropped_to_zero": [
+    "TED"
+  ],
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "envelopes_sha256": "0ee440b2ad49d27bff101da6fa4e671150c7224e5b5c8b250f02e29086db4b76",
+  "report_sha256": "2b14f76e5cc1fe45b1611af34cccd892107d8829addfc65aaf4ad550d08217a6"
+}

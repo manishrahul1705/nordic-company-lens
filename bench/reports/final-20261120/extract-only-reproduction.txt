@@ -1,0 +1,8 @@
+{"manual_items": 44, "indexes": [42, 48, 62, 96, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 118, 151, 152, 153, 163, 164, 165, 166, 167, 168, 169, 171, 173, 174, 177, 178, 183, 184, 185, 188, 189, 190, 192, 197, 198, 199]}
+{"sampled": 200, "correct": 200, "mechanical": 156, "hand": 44}
+{"sampled": 200, "correct": 200, "wrong": 0, "doubtful": 0, "mechanical": 156, "hand": 44, "wilson_95_lower_bound": 0.9812}
+OK: sample, population, mechanical checks and verdict tallies reproduced from committed data
+{"envelopes": 1000, "published_claims": 178669, "cited_evidence_records": 168909, "dangling": 0, "registry_mismatch": 0, "page_url_reused_across_envelopes": 4, "page_hash_reused_across_envelopes": 0, "foreign_label": 0}
+OK: attribution audit reproduced from committed data
+{"raw_shared_URL_flags": 4, "independent_exact_subject_row_checks": 791, "explicitly_scoped_registered_subunit_rows": 4, "subject_mismatches": [], "other_raw_contamination_flags": 0, "cross_company_contamination": 0, "basis": "Exact subject identifiers in retained SHA-256-checked official bulk rows; no changes to raw Stage X audit host list or checks."}
+PASS: extract-only reproduction, with all bench/runs opens forbidden; regenerated hand-review context is identical.

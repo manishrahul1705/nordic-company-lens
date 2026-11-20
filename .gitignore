@@ -87,3 +87,7 @@ scratch/
 !/src/signalpost/data/cleaning_official.json.gz
 !/src/signalpost/data/workshop_official.json.gz
 !/src/signalpost/data/related_official.json.gz
+
+# Final Stage AP self-sufficient accuracy review.
+!bench/reports/final-20261120/accuracy/sample.jsonl
+!bench/reports/final-20261120/accuracy/verdicts.jsonl

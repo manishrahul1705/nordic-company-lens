@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-20T16:32:40.818949+00:00",
+  "head": "cede54701d5e50067764f472009b6c830254065a",
+  "disk_free_bytes": 12614041600,
+  "disk_free_GB": 12.614,
+  "required_free_bytes": 8000000000,
+  "fresh_output_path_absent": true,
+  "archived_reports": "bench/cache/pre-final-20261120",
+  "planned_command": ".venv/Scripts/python -m signalpost.cli run --organisations bench/inputs/1000-r3/batch.jsonl --output bench/runs/final-20261120/envelopes.jsonl --report bench/runs/final-20261120/report.json --state-dir bench/runs/final-20261120/state --site-dir bench/runs/final-20261120/site",
+  "default_workers": 64,
+  "default_budget_seconds": 3600,
+  "default_max_output_mb": 4096,
+  "initial_condition": "Other signal-nethra session running tests and verification; machine exclusivity confirmation pending",
+  "blocking_condition": null,
+  "resolved_by": "User confirmed signal-nethra paused/processes killed and exclusive machine reservation; process inventory immediately before launch found no other Python.",
+  "exclusive_preflight_at": "2026-11-20T16:35:09.2219268Z",
+  "run_preflight_free_GB": 12.599,
+  "signal_nethra_python_processes_at_launch": [],
+  "non_pytest_worktree_changes_at_launch": []
+}

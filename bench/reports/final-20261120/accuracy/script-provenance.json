@@ -1,0 +1,23 @@
+{
+  "base": "bench/reports/stage-x-accuracy",
+  "seed": 20261119,
+  "sample_size": 200,
+  "scope_change": "Published claims only, per Stage AP request; omit synthesis sentences from sampling population. Same allocation, fixed-seed draw, mechanical checks, verdict reproduction and Wilson formula.",
+  "original_sha256": {
+    "common.py": "b8875db85bfc315e46edff29c8eb0e22983b9ca0adacc2b75cd47f587c65f60d",
+    "extract.py": "fbc64c7fa4318e06e81de7d4a3d504f6ca940b6bd280c4114567d878df8e412c",
+    "reproduce.py": "50960c4fbda605fecc8f060c47446c12f398f7cca1c6b7c0e4ddd17a91c518f8",
+    "attribution_audit.py": "530338554c3f19530193036bba715449aae6b328b09bf6ba393bff3a1a965db8"
+  },
+  "copied_sha256": {
+    "common.py": "9b5ff64115e400f2eb33c97a136b0422ed9db016fcf68cd9bd64fcdbe4d662ee",
+    "extract.py": "fbc64c7fa4318e06e81de7d4a3d504f6ca940b6bd280c4114567d878df8e412c",
+    "reproduce.py": "50960c4fbda605fecc8f060c47446c12f398f7cca1c6b7c0e4ddd17a91c518f8",
+    "attribution_audit.py": "530338554c3f19530193036bba715449aae6b328b09bf6ba393bff3a1a965db8"
+  },
+  "review_helper_sha256": {
+    "adjudicate_bulk.py": "418b0407492a68f81c39bb0625cbb1e3144bbedb838f68d8ffa9cf0b5427a50f",
+    "adjudicate_sample.py": "3ec2a43f479a4ea8066bd2952cf49ee135d5b9fba74cfa4ccf81b51ad7c7e3c9",
+    "review_support.py": "2e0e243a3eafa9da1406f857870ac6621b8b4c55facc05f3cd515baa97c60bed"
+  }
+}

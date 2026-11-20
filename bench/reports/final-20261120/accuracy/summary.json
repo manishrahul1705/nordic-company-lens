@@ -1,0 +1,90 @@
+{
+ "sampled": 200,
+ "correct": 200,
+ "wrong": 0,
+ "doubtful": 0,
+ "mechanical": 156,
+ "hand": 44,
+ "wilson_95_lower_bound": 0.9812,
+ "by_family": {
+  "accounts": {
+   "basis:hand": 4,
+   "basis:mechanical": 98,
+   "correct": 102
+  },
+  "activity": {
+   "basis:hand": 13,
+   "correct": 13
+  },
+  "brands": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "gleif": {
+   "basis:mechanical": 2,
+   "correct": 2
+  },
+  "hiring": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "identity": {
+   "basis:mechanical": 32,
+   "correct": 32
+  },
+  "other:central_approval": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "other:cleaning_approval": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "other:news_item": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "other:registry_dated_activity": {
+   "basis:mechanical": 9,
+   "correct": 9
+  },
+  "other:related_company_website": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "other:research": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "other:skattefunn": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "other:state_aid": {
+   "basis:hand": 2,
+   "correct": 2
+  },
+  "other:workshop_approval": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "roles": {
+   "basis:hand": 10,
+   "basis:mechanical": 10,
+   "correct": 20
+  },
+  "social": {
+   "basis:hand": 1,
+   "correct": 1
+  },
+  "subunits": {
+   "basis:hand": 3,
+   "basis:mechanical": 5,
+   "correct": 8
+  },
+  "website": {
+   "basis:hand": 2,
+   "correct": 2
+  }
+ }
+}
