@@ -1,6 +1,6 @@
 # Nordic Company Lens
 
-Current validation (20 November 2026): **1,716 tests passed**; [bounded verified-site news measurement and validation](bench/reports/news-items-20261120/RESULTS.md). Previous funding validation: **1,686 tests passed**; [funding snapshot replay, verifier and full suite](bench/reports/funding-snapshots-20261120/RESULTS.md). Prior index rebuild: **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
+Current measurement: **Stage AP, 20 November 2026**, source commit `cede54701d5e50067764f472009b6c830254065a`. All figures below refer to that one fresh frozen 1,000-company run. **1,852 tests: 1,850 passed, two retained failures**. [Complete measurement and validation](bench/reports/final-20261120/RESULTS.md). Historical stage measurements remain in bench/reports and are not the current coverage.
 
 Nordic Company Lens researches Norwegian companies using official registries and bounded company-owned sources. It checks company identity, publishes evidence-linked facts and cited template summaries, and can generate searchable offline profiles. The Python import package and console command remain `signalpost`.
 
@@ -44,7 +44,7 @@ Website research, NAV hiring checks, public activity and template synthesis are 
 
 Requests use a pooled global ceiling of 1,900 per 100 distinct normalized input records, with at most 40 attributed to any one company. The default run time limit is 3,600 seconds (our own safeguard; the competition brief specifies no numeric limit), also bounded by a hard 24 seconds per distinct normalized input (40 minutes per 100). Lower configured limits remain effective. Careers checks run after primary collection using remaining budget, without earmarking or reducing the activity allowance. Incomplete careers coverage is reported honestly. The shared deadline and 40-request company ceiling still apply. Registry-declared websites require the legal name or hard registry corroboration; sites corroborated only by a contact or role-holder publish a website link without site content. Registered subunit identifiers can establish ownership. Shared domains, conflicting owners, parked pages and directories are withheld. Exact-name-only and contact-only two-signal publication were rejected in the Step 10 audit; guessed domains retain the stronger existing ownership proof.
 
-Verified sites can supply individual active, dated job postings, including linked supported ATS pages. Careers landing pages are not jobs. Feeds and sitemaps discover articles, but each published article needs its own publication date. Registered business addresses are typed separately from workplaces and duplicate addresses are suppressed.
+Verified sites can supply individual active, dated job postings, including linked supported ATS pages. Careers landing pages are not jobs. Dated items retain the explicit date meaning from the fetched article, feed or index. Registered business addresses are typed separately from workplaces and duplicate addresses are suppressed.
 
 Registry email domains and registered subunit website/email nominations can establish a declared site when the registered name appears in its title, main heading, site-name metadata, logo alt text or footer. Email/subunit declarations require the name; their contact-only trial was rejected after review. The existing direct registry-homepage Tier B rule remains link-only. Accounting/IT/hosting provider mismatches, placeholders, conflicting publishers and shared registry domains are rejected. Exact-name `.no` guesses additionally require registry-wide uniqueness and a registered contact, location or role-holder on the site. Site-linked ATS postings may use the verified company-to-board link chain instead of an employer orgnr; other employers, staffing-agency boards, expired ads and landing pages remain excluded.
 
@@ -72,11 +72,11 @@ Registry identity, roles, subunits and accounts come from official Brønnøysund
 
 Website research follows robots, public-IP, redirect, request and time limits. Published website facts require the documented company-identity proof. Social profile links can be recognised on accepted company pages; social platforms are not fetched. Public activity keeps company-published articles, supported registry updates and exact-party procurement awards separately labelled. Registry updates use the official Enhetsregisteret API, not the robots-disallowed Kunngjøringer HTML service. Bundled SSB KLASS industry titles retain CC BY 4.0 attribution to Statistics Norway.
 
-Feeds and sitemaps nominate news URLs. Website news is published only after fetching an article with a page title, article body and publication date; modification dates are not publication evidence. Registry activity is checked separately.
+Bounded news discovery selects one advertised feed, sitemap or news index from a verified homepage. It publishes at most five explicitly dated items without expanding child sitemaps or article links. Publication, update and last-modification dates retain their distinct meanings; registry activity is separate.
 
 Code and documentation use the [MIT licence](LICENSE). NAV, company websites and dependencies retain their own terms. See [source policy and dependency licences](docs/SOURCES.md) and [identity rules](docs/IDENTITY_RESOLUTION.md).
 
-Wikidata's CC0 structured data is queried by exact Norwegian organisation number for website nominations and name-matched social identifiers. Website nominations still need live ownership proof; Wikidata failures do not prevent registry or website research. Wikidata social claims identify their item URL and licence.
+Wikidata's CC0 structured data is queried by exact P2333 organisation number for revision-cited official name, inception, headquarters, industry, employees/revenue with point-in-time qualifiers, website and social identifiers. Registry values prevail where they disagree; disagreements are recorded. Wikidata social identifiers retain the handle attribution test. Website nominations still need live ownership proof; Wikidata failures do not prevent registry or website research. Wikidata social claims identify their item URL and licence.
 
 ## Sources, licences and cost
 
@@ -84,7 +84,7 @@ Wikidata's CC0 structured data is queried by exact Norwegian organisation number
 |---|---|---|---:|
 | Brønnøysundregistrene (BRREG) | Company identity, roles, subunits and accounts through the live official API | NLOD 2.0; attribute Brønnøysundregistrene | $0 |
 | NAV public job feed and public ad pages | Feed: candidate discovery and live verification of active job details. Public ad page: the anonymous citation for each matching job claim | Public feed; [NAV reuse terms](https://arbeidsplassen.nav.no/vilkar-api) | $0 |
-| Wikidata | Supplementary website/social nominations by exact orgnr | CC0; retain item attribution in claim provenance | $0 |
+| Wikidata | Revision-cited exact-orgnr structured facts and website/social nominations | CC0; retain item attribution in claim provenance | $0 |
 | Company websites | Ownership proof and company-published descriptions, social links and activity | Robots.txt and site access rules are followed; no open licence is inferred | $0 |
 | GLEIF | Exact-orgnr LEI facts and explicitly supported parents | [CC0 1.0](https://www.gleif.org/en/meta/lei-data-terms-of-use); anonymous API, exact child matches under RA000472 or RA000473 | $0 |
 | TED | Exact winner/buyer public procurement awards | [EU Publications Office reuse terms](https://ted.europa.eu/en/legal-notice); anonymous API and public notice XML | $0 |
@@ -97,221 +97,90 @@ No personal NAV credential is required. When `NAV_API_TOKEN` is unset, the runne
 
 The command has **$0 provider cost**. Compute, storage and network costs are excluded. `--synthesis` accepts `template` (default) or `auto`, which both use templates; `llm` is rejected.
 
-## Limitations and checks
+## Stage AP final combined measurement
 
-Among the frozen cohort's declared homepages that publish no website, the recorded outcomes are **35 group/shared site, 8 different publisher, 7 DNS failure, 7 fetched-but-no-proof, 2 robots and 7 other; zero malformed, parked or budget**. GLEIF headroom under the supported exact-ID queries is **zero** ([Stage S recall bounds](bench/reports/stage-s/REPORT.md)).
+Standard CLI defaults, fresh state, site ON, frozen `bench/inputs/1000-r3/batch.jsonl`, source `cede547`. **run_status completed; success_rate 1.0 (1,000/1,000)**. Crawl **1,075.200s**; end-to-end **1,602.8767692s** (1,602.877s rounded). Finalisation/outputs **137.730s**, site **378.860s**, other overhead **11.0867692s**. **11,653 / 19,000 HTTP**, maximum **40/company**, **0 deadline hits, 0 handled or unhandled exceptions**. Optional-source availability is distinct from terminal success: 868 companies have no source-error flags.
 
-TED availability varies: across five live runs of the frozen cohort it published 0 to 20 awards covering 0 to 6 companies, depending on how many requests returned HTTP 202 (0% to 93%). No complete procurement coverage is claimed ([measured range](#measured-precision)).
+Linear projection for 1,100: **1,763.164s / 3,600s** (1,836.836s headroom) and approximately **12,819 / 20,900 HTTP** (8,081 headroom). This is conditional on similar network/source conditions, including TED's breaker; it is not a tail-latency guarantee. The budget is our own safeguard; the brief specifies no numeric time limit. HTTP ceilings remain **19 pooled per distinct normalized input, 40 attributed per company**, including retries and shared requests globally. Lower configured limits apply.
 
-Strict identity rules and bounded discovery can miss genuine websites, jobs and activity. Bulk data and the bundled NAV index can age; stale or unusable indexes trigger feed fallback. API failures, robots restrictions, timeouts and budget caps leave explicit incomplete states. Website research has no browser renderer. Scanned PDFs are not used; annual-report PDF discovery was removed after a failed recall trial. Small companies often have no discoverable, provably owned website. Unknown trading names can escape NAV discovery, and name matching alone never proves employer identity. Financial comparisons abstain when entity, period, currency or units are incompatible. Source-reported text is not an independent assessment, and cited templates do not provide general semantic fact verification. On baseline runs, the template Changes section now repeats the registry-backed legal name rather than asserting first-run status from an unrelated claim.
+### Full family table
 
-Local coverage and timing measurements are recorded in [SUBMISSION.md](SUBMISSION.md); they are not an official evaluator score. Run `uv run pytest -q` for the offline suite. The [evaluation guide](docs/EVAL.md) documents smoke checks and output verification. See also [schema](docs/DATA_SCHEMA.md), [agent loop](docs/AGENT.md), [refresh](docs/REFRESH.md) and [limitations](docs/LIMITATIONS.md).
+All counts are published claims in this ONE run. Rows overlap; do not sum them. Accounts/identity/roles contain named subsets.
 
-Step 13 keeps brand-domain discovery bounded to four actual-use nominations per company, tried only after stronger candidates fail; a brand match never proves ownership. One end-of-run retry may revisit the top three transient-failure candidates within the original pooled caps. Financial output retains every distinct company fiscal year returned, roles include all registered role types, and profiles show distinct typed postal addresses alongside workplaces and business addresses. Dated article publication remains tied to dates on fetched article pages.
-
-Registry announcements use the official, unauthenticated NLOD 2.0 Enhetsregisteret updates API. Explicit returned changes retain their supported field details; records without supported details are labelled only as a recorded update or an explicitly unspecified registry event. Publication date (not inferred effective date), exact orgnr, source excerpts and retrieval evidence are retained. They are labelled "Registry announcement", separately from company-published news. The collector retains at most 50 announcement claims per company within 36 months, deduplicates event/field/value records, and uses a shared acquisition budget of at most two HTTP requests per input, inside the existing pooled cap. Bare or unspecified records never imply a specific business change, and never qualify as a major event in the analyst briefing. Registered subunit events require the retained exact-parent registry proof. Transient failed refreshes retain previous supported announcements as stale with original evidence.
-
-Step 15 bounds legal/subunit-name discovery to eight candidates, with Norwegian-letter spellings and joined/hyphenated .no forms before .com. Candidate DNS is checked before HTTP. Proof-page recovery preserves the previous linked/common-path selection before up to two extra same-host targets, inside the original budgets. Explicit CMS site-owner identifiers can be read from JSON/script/footer data; arbitrary tracking numbers, customer lists and another entity do not prove ownership. Existing publisher/group/parking vetoes and exact-handle social attribution remain unchanged.
-
-
-## Measured precision
-
-### Bounded verified-site news (20 November 2026)
-
-On the saved frozen cohort, the new one-resource discovery source publishes **113 news_item claims / 31 companies**. It reused verified homepages and robots policies, fetched **54 selected-resource HTTP requests** under the original pooled/company usage, and stayed at **40 maximum requests/company**. No existing claim changed. This incremental measurement is not a fresh full acquisition run. The unchanged strict verifier passes **1,000 envelopes / 167,975 claims**, zero unverified synthesis values; **1,716 tests pass**.
-
-Discovery stays on the verified domain, selects one advertised feed/sitemap/news page, never follows its article links or child sitemaps, requires explicit title/date/URL and publishes at most five latest items. Sitemap lastmod remains modification time, not publication time. No discovery or no dated item yields no placeholder. [Full findings and limitations](bench/reports/news-items-20261120/RESULTS.md); [every site's discovery outcome](bench/reports/news-items-20261120/DISCOVERY.md).
-
-### Bundled research projects and state aid (20 November 2026)
-
-**1,686 tests passed**; unchanged strict verifier passed 1,000 envelopes / 167,862 claims with zero unverified synthesis values. Official NLOD 2.0 snapshots add **17 research-project claims / 9 companies** and **679 state-aid claims / 98 companies**, with **zero runtime HTTP**. The saved-run replay publishes **167,862 supported facts**, adding 696 and removing none from the official-BRREG-index baseline. State-aid labels remain actual instruments: 651 tax benefits, 21 grants and 7 guarantees. Four recipient-subunit associations cite the parent's own registry records; legal recipient and specified subunit remain separate.
-
-Research amounts are **total project awards**, not the company's exclusive allocation or cash received. Application date and project years are retained; no award-decision date or currency is invented. The provider excludes its newer **Tibi** system, so coverage is a lower bound. The selected-row evidence is explicitly derived from the original official CSV and pinned by dataset/row/extract hashes. No-match snapshots never prove no support. Attribution: Forskningsrådet and Brønnøysundregistrene under [NLOD 2.0](https://data.norge.no/nlod/en/2.0). The two indexes total 32,967,611 bytes; raw full downloads are not bundled. [Measurements, source policy and ten reviews per source](bench/reports/funding-snapshots-20261120/RESULTS.md).
-
-### Official BRREG index rebuild (20 November 2026)
-
-The full suite passes **1,660 tests** and the replay strict verifier passes with zero unverified values. The current name/domain collision indexes are rebuilt directly from the official Enhetsregisteret full CSV under NLOD 2.0, credited to Brønnøysundregistrene. The name index now covers **1,181,598 main entities** (16,130,532 bytes); the shared-domain index covers **5,679 domains** (202,486 bytes). The manifests record the official URL, retrieval timestamp, dataset/index hashes, row counts and transformations. No raw dataset is bundled.
-
-A zero-HTTP saved-page replay of the combined run changes **34 claims**, all for TENSIO AS (922828172), under the unchanged shared-site guard. Replay totals: **167,166 supported facts, 114 websites, 62 social companies / 126 profiles**. Brands, GLEIF, TED, hiring and the new registry information counts are unchanged. The historical live measurement below remains the actual 1,309.681-second run with the earlier indexes; this rebuild is a replay, not a new live timing. [Official provenance, exact before/after and verification](bench/reports/brreg-indexes-20261120/RESULTS.md).
-
-### Latest combined live measurement (20 November 2026)
-
-The frozen 1,000-company cohort ran live on code `f2c7091`, with fresh state, default concurrency and **site ON**. `run_status=completed`: **1,309.681 seconds**, **11,477 HTTP requests**, **0 deadline hits**, **0 handled and 0 unhandled exceptions**, and no run warnings. It published **167,200 supported facts** (available non-null distinct company/field/value/period claims, excluding section placeholders). The pooled budget was 60.405% used; the maximum attributed requests for one company was 40.
-
-| Published information | Companies | Claims |
+| Family / information type | Companies | Claims |
 |---|---:|---:|
-| Verified websites | 115 | 115 |
-| Social profiles | 63 | 129 |
-| Brands | 19 | 19 |
-| GLEIF | 142 | 736 |
-| TED awards | 6 | 20 |
-| Hiring ads | 3 | 3 |
+| Identity | 1,000 | 31,241 |
+| Roles | 997 | 18,783 |
+| Accounts | 999 | 100,233 |
+| Audit status, per year/scope | 999 | 2,817 |
+| Registry-date activity | 997 | 7,714 |
+| Previous legal names of the subject company | 241 | 324 |
+| Subunits | 773 | 6,907 |
 | Group structure | 75 | 119 |
 | Signatur | 765 | 765 |
 | Prokura | 201 | 201 |
-
-GLEIF's 142 companies have 736 claims across LEIs and related facts. The three published hiring ads all use registered subunit employer numbers. Collection took 814.530 seconds, output finalisation 140.020, site generation 341.330 and other command overhead 13.801. A linear 1,100-company projection under these conditions is 1,440.649 seconds; provider variability remains a limitation.
-
-**Group structure and signing rights.** Group lookup runs only when the company's own entity record flags group membership. Published parent and subsidiary claims require explicit relationships in that company's registry response; siblings and inferred tree relationships are excluded. Signatur and prokura use each company's own public mandate records and preserve registered role bases, free text and joint conditions, rather than interpreting possible/statutory signing rights. All use normal retained-body, hash, pointer and citation rules.
-
-**Wikidata.** The existing five SPARQL requests supply official name, inception, headquarters, industry, dated employee/revenue observations, official website assertions and social identifiers. Every published value requires the exact company's P2333 organisation number, the exact retained SPARQL row and item revision. Registry values win disagreements, which are recorded rather than overwritten. Employees/revenue require point-in-time qualifiers. Website assertions do not establish website ownership; social identifiers still require attribution and pass the social vetoes.
-
-| Wikidata property with published support | Companies | Claims |
-|---|---:|---:|
-| P1448: Official name | 1 | 1 |
-| P571: Inception | 7 | 7 |
-| P159: Headquarters | 13 | 13 |
-| P452: Industry | 12 | 12 |
-| P1128: Employees, dated | 6 | 6 |
-| P2139: Revenue, dated | 0 | 0 |
-| P856: Official website assertion | 8 | 8 |
-| P2002: X | 1 | 1 |
-| P2003: Instagram | 2 | 2 |
-| P2013: Facebook | 3 | 3 |
-| P4264: LinkedIn | 0 | 0 |
-
-These property counts include additional Wikidata support on existing claims; they are not all additional unique facts and are not the raw query-result counts.
-
-**Proven-site social attribution.** A profile linked on an already ownership-proven company page can be published without matching its handle to the legal name. Links include anchors, `og:see_also` and embedded Facebook page widgets on pages already fetched. Personal profiles (including LinkedIn `/in/`), own-role person handles, share/intent/home/tracking URLs, shared-profile and group-site vetoes still reject. A candidate matching another company's registered name in the pinned **411,160-company universe** is withheld unless the company's own registry claims explicitly establish that other company as a subunit, parent or subsidiary. A sibling relationship is insufficient. The universe is a frozen corpus, not a live registry completeness assertion.
-
-**Validation.** Unchanged strict integrity verifier **PASS**: 1,000 envelopes, 167,200 claims, 5,183 retained source blobs and zero unverified synthesis values. This is the established integrity check without the additional optional-source-health `--require-clean` gate. Full suite: **1,656 passed**, one pytest cache-write permission warning, no failed tests. New Stage X sample: **200/200 correct**, 147 mechanical checks and 53 contextual reviews; Wilson 95% lower bound 98.12%. Attribution audit: zero dangling evidence, registry mismatch, cross-company page/hash reuse or foreign labelled orgnr. Both scripts reproduced from a fresh local clone of `95b4f6f` with **no `bench/runs` present**. [Full measured results and logs](bench/reports/overnight-all-20261120/RESULTS.md), [review](bench/reports/overnight-all-20261120/accuracy/REVIEW.md), [fresh-clone results](bench/reports/overnight-all-20261120/clone-check-resumed.json).
-
-Earlier stage measurements below are historical and do not replace this combined live result.
-
-### Earlier full-universe social-name replay (20 November 2026)
-
-The social-name veto now checks the **complete pinned 411,160-company universe**, using a local 4.75 MB bundle included in the wheel. A foreign name match is withheld unless the subject's own available BRREG claims explicitly establish the matched number as its registered subunit, parent or subsidiary. Siblings, similar names and website branding do not qualify; missing/corrupt index data fails closed. No runtime HTTP is added.
-
-Of the earlier **46 social additions, 43 remain**. The new veto withholds Facebook and Instagram `valdresost` for VALDRESMEIERIET (matches VALDRES OST AS, 914992605) and Instagram `hallmakergroup` for RENTHALL (matches HALLMAKER AS, 937920040). Renthall's own record lists Hallmaker as a sibling under ZURHAAR INDUSTRIES, not a permitted parent/subsidiary. `scenehuset` remains eligible for DANSEINFORMASJONEN because there is no matching name in the pinned universe; `RentHallGlobal` remains eligible because `renthall` matches the subject itself. Absence from this frozen corpus is not a live-register absence claim.
-
-Four older profiles also fail the same check. Final replay coverage is **62 companies / 126 social claims**, versus 65 / 133 before the universe veto. All 43 remaining additions have unchanged reviewed values and source bytes. **1,656 tests passed**; the unchanged strict verifier passed 1,000 envelopes / 167,176 claims with zero unverified synthesis values. [Named decisions, the four older withholdings, registry exception evidence and validation](bench/reports/social-universe-veto-20261120/RESULTS.md).
-
-### Earlier proven-site social replay (superseded by the universe veto above)
-
-A controlled replay of the same frozen 1,000 and **302 accepted saved pages** publishes **46 additional profiles** across 31 companies. Social coverage rises **49 to 65 companies**, and total profile claims **87 to 133**. Facebook: **34?54 companies / 35?57 claims**; Instagram **29?38 / 29?39**; LinkedIn **16?19 / 16?19**; X **2?7 / 2?7**; YouTube **3?8 / 3?8**; TikTok **2?3 / 2?3**. No existing profile was removed. Acquisition stays **11,254 HTTP requests** with **zero new requests**; this is saved-page extraction replay, not a new live runtime benchmark or site rebuild.
-
-A link from an ownership-proven company page can establish social attribution without a legal-name handle match. Facebook page URL forms, LinkedIn showcase/school, proven-page YouTube channels, metadata and Facebook page widgets are supported. Role-person names (including first/last and numeric-suffix variants), other cohort companies, personal LinkedIn paths, designer/agency handles, share/tracking/home URLs, shared profiles and group sites remain vetoes. The CONPLAN global Squarespace share-setting and TANGERIN WordPress contact-page article false exclusions are corrected; editorial articles on contact pages remain excluded.
-
-All **46 newly published profiles were hand-reviewed** against saved bytes and the vetoes. The unchanged strict verifier passed all **1,000 envelopes / 167,183 claims**, with zero unverified synthesis values. **1,633 tests passed**. [Full before/after results and retained vetoes](bench/reports/proven-site-socials-20261120/RESULTS.md); [every new profile and its evidence](bench/reports/proven-site-socials-20261120/REVIEW.md).
-
-### Stage AG: revision-bound Wikidata facts
-
-The existing five SPARQL requests per 1,000 now include official names, inception, headquarters, industry, dated employees/revenue, website assertions and social identifiers, with units, time precision and item revisions from the same responses. Exact P2333 identity and immutable result-row proof are required; registry fields stay primary, and the normal social handle/shared-profile rules are unchanged.
-
-The frozen 1,000 published **52 Wikidata-supported claims**: **47 new factual claims**, three existing Wikidata profiles upgraded to revision-bound proof, and two existing website profiles receiving additional Wikidata citations. Property coverage: P1448 **1**, P571 **7**, P159 **13**, P452 **12**, P1128 **6**, P856 **8**; X **1**, Instagram **2**, Facebook **2**. P2139 revenue and P4264 LinkedIn are absent from these matching Wikidata results. Explicit structured headquarters was previously zero; the other broad information types already had coverage from other sources.
-
-Total HTTP requests were **11,254 versus 11,345 before**; Wikidata stayed **5 versus 5**, with identical website nominations. The observed reduction reflects other live-source variation, not an AG optimization. No social profile URL was added or removed. Seven comparable registry disagreements were recorded and withheld; five differing historical employee observations remain explicitly dated. Primary registry fields were unchanged for all matched companies.
-
-The site-enabled run took **1,457.649 seconds**, with zero deadline hits/exceptions/warnings. The unchanged strict verifier passed **1,000 envelopes, 167,137 claims and 5,166 source blobs**, with zero unverified synthesis values. **1,592 tests passed**. [Before/after counts, cost, precedence and verification](bench/reports/stage-ag/RESULTS.md); [ten hand reviews with exact SPARQL snapshots and item revisions](bench/reports/stage-ag/REVIEW.md).
-
-### Stage AF: registered group structure and signing rights
-
-The fresh-state frozen 1,000-company Stage AF run completed in **1,337.059 seconds** with the offline site ON, versus 1,744.427 seconds previously. It used **11,345 requests / 59.711% of the 19,000 pool**, with at most **40 per company**, zero deadline hits, zero handled/unhandled exceptions and no warnings. Linear projection to 1,100: **1,470.765 seconds and approximately 12,480 requests / 59.711% of 20,900**. The slower initial AF measurement projects to 1,866.445 seconds; both are below the 3,000-second stop threshold. Live-source and machine timing varies; these are measured-conditions projections.
-
-Group structure is published for **75 companies / 119 claims**: 50 parent claims and 69 registered-subsidiary claims. Signatur covers **765 companies / 765 claims**; prokura covers **201 / 201**. Only the 75 entity-flagged group members were queried for group structure; signatur and prokura were each attempted for all 1,000. Each relationship comes from the requested company's own group lookup and explicitly names it as child or parent. Signing grants use only the explicitly registered basis, preserving joint conditions; possible signers and inferred/statutory combinations are excluded. No acceptance rule changed.
-
-The full suite passed **1,553 tests**. The unchanged strict integrity verifier passed on all 1,000 envelopes: 167,110 published claims, 5,180 source blobs and zero unverified synthesis values. [Measured costs, stage breakdown, request gate and validation](bench/reports/stage-af/RESULTS.md); [ten hand reviews of each new type](bench/reports/stage-af/REVIEW.md). The measured 520.56-second initial site build calibrated a conservative 0.60-second/company admission estimate; site generation remains ON by default. These additions share the existing host, retry policy and caps. CLI switches `--no-group-structure` and `--no-signature-rights` can disable them independently.
-
-The pre-AF frozen 1,000-company runtime measurement (`bench/runs/ted-budget-network-20261119`, worktree based on `2e70524`) completed in **1,744.427 seconds**, emitted all **1,000 envelopes** and built the offline site. It had **zero global deadline hits** (the global crawl deadline did not fire) and **one local section timeout recorded by `deadline_hits=1`**: TENSIO `922828172`, activity, during the 45-second website second pass. The activity section remained **available** from verified registry activity, so the local timeout did not cost the section. The counter still measures envelopes containing any `deadline` error; its semantics have not changed. See the [runtime results and timeout trace](bench/reports/ted-retry-budget-20261119/RESULTS.md).
-
-The earlier precision measurement is the **frozen 1,000-company run at code `b0b70cc`** (`bench/runs/final-frozen-20261119`), using the official command with default concurrency and fresh state. It emitted **1,000 envelopes**, with `run_status` **completed**, success rate 1.0, **0 deadline hits**, **0 handled and 0 unhandled exceptions**, and zero warnings. It used **9,275 HTTP requests** (at most 40 attributed to one company) and **1,437 seconds** of wall time, including site generation.
-
-| Family | Companies | Claims |
-|---|---:|---:|
-| Website | 113 | 113 |
-| Social | 47 | 83 |
-| Public brand | 20 | 20 |
+| Registry changes | 1,000 | 12,055 |
 | GLEIF | 142 | 736 |
-| TED awards | 6 | 20 |
-| **Supported facts** (available claims whose evidence all resolves) | | **166,025** |
+| TED awards — SOURCE UNAVAILABLE | 0 | 0 |
+| Wikidata structured identity/accounts and item claims | 13 | 47 |
+| Verified official websites | 114 | 114 |
+| Public brands | 19 | 19 |
+| Social profiles | 61 | 125 |
+| News / explicitly dated company items | 32 | 115 |
+| Hiring | 3 | 3 |
+| Research projects | 9 | 17 |
+| State aid | 98 | 679 |
+| SkatteFUNN | 36 | 89 |
+| DiBK central approvals | 12 | 62 |
+| Cleaning status snapshot | 6 | 6 |
+| Workshop approval snapshot | 1 | 2 |
+| Related-company registry-declared websites | 14 | 16 |
 
-The strict verifier passed (exit 0, without `--require-clean`): 1,000 lines, schema valid, 166,025 published claims, 4,144 source blobs verified, and 0 unverified synthesis values. That historical run reported **1,525 passed, 0 failed**. Records: [measurement](bench/reports/final-frozen-20261119/measurement.json), [process log](bench/reports/final-frozen-20261119/process.txt), [verifier](bench/reports/final-frozen-20261119/strict-verifier.txt), [test log](bench/reports/final-frozen-20261119/pytest.txt). These are measured live-run results, not causal performance claims or a completeness guarantee.
+Total supported published facts: **178,669**. Previous-name counts above are subject-company names; the broader company-plus-subunit view is 302 companies / 701 claims. Approval snapshots combined are seven companies / eight records, including one explicitly not-approved cleaning status. Related-company sites never supply borrowed social, brand or news content.
 
-**TED varies with source availability.** Across five live runs of this cohort, TED published **0 to 20 awards covering 0 to 6 companies**. HTTP 202 means "not ready", and a notice still not ready after the retries is recorded as a source failure. Award counts track how many TED requests returned 202:
+### Accuracy, attribution and tests
 
-| Run | Code | TED requests | HTTP 202 | Awards | Companies |
-|---|---|---:|---:|---:|---:|
-| [Stage P](bench/reports/stage-p/REPORT.md), 14 Nov | `588f356` | 230 | 215 (93%) | 0 | 0 |
-| `final-uvw-under-load`, 18 Nov | Stage V | 113 | 33 (29%) | 7 | 3 |
-| `long-label-clean-20261118`, 18 Nov | Stage V | 134 | 65 (49%) | 7 | 3 |
-| `final-frozen-20261118`, 18 Nov | `0ba340c` | 97 | 11 (11%) | 9 | 4 |
-| `final-frozen-20261119`, 18–19 Nov | `b0b70cc` | 89 | 0 (0%) | 20 | 6 |
+Strict verifier **PASS**: 1,000 schema-valid envelopes, 178,669 claims, 5,993 source blobs, 2,552 synthesis sentences and **zero unverified synthesis values**, exact input membership/order. The Stage X stratified **200-claim** sample (seed 20261119) has **200/200 correct**, zero wrong/doubtful, 156 mechanical and 44 hand-reviewed; **Wilson 95% lower bound 98.12%**. This measures precision of the sample, not recall or an evaluator score.
 
-Stage P predates the TED whitespace normalisation and the three-spelling query. Its zero reflects 202 responses, not missed matches. No complete procurement coverage is claimed.
+Attribution: **0 cross-company contamination**; four shared official bulk-URL flags were adjudicated using 791 exact-subject source rows (787 direct and four explicitly labelled, registry-proved recipient-subunit associations), without relaxing the raw audit.
 
-**Accuracy.** The [Stage X accuracy review](bench/reports/stage-x-accuracy/REPORT.md) drew a 200-claim stratified sample (seed 20261119) from a fresh frozen 1,000 run on code `4af8591` and checked it against the cited evidence bytes. All 200 were correct and attributed to the right organisation number (153 mechanical, 47 by hand). The Wilson 95% lower bound is 98.1%. The attribution audit over the same run found **0 of 1,000 envelopes** with a claim, evidence record or cited company page attributable to a different organisation number: 0 dangling evidence references, 0 registry-URL mismatches, 0 company pages or content hashes reused across envelopes and 0 foreign organisation-number labels. Both rerun from a committed extract with no `bench/runs` present: `uv run --frozen python bench/reports/stage-x-accuracy/reproduce.py` and `.../attribution_audit.py`.
+Self-sufficient accuracy and attribution checks reproduce without bench/runs: [commands and extract](bench/reports/final-20261120/accuracy/REPRODUCE.md). The full suite has **1,852 tests: 1,850 passed, two failed**:
 
-Earlier measurements remain available: [Stage S](bench/reports/stage-s/REPORT.md) (code `4788513`, 112 websites, 166,046 supported facts, 1,432 tests) and [Stage Q](bench/reports/stage-q/REPORT.md). The GLEIF identifier correction raised coverage from **32 to 142 companies**, and a review of the 15 newly matched companies found 15 correct, 0 wrong and 0 doubtful ([review](bench/reports/stage-q/review-live.json)). Careers coverage is not complete, and checks that cannot finish within the existing limits remain explicit failures.
+- `test_evaluator_shapes_union_contract_reference`: live-network evaluator reference check failed after BRREG oppdateringer ConnectTimeout left activity incomplete.
+- `test_independent_footer_runs_dependent_production_extraction`: footer timing flake (`official_website` absent after website deadline); passed twice in isolation. The full-suite failure remains recorded.
 
-### Known limitations: local measurement environment
+The suite is not all green. [Complete test output and diagnosis](bench/reports/final-20261120/RESULTS.md#every-test-failure).
 
-Stage H established that Windows Defender detected the fetched ISTAD homepage as `Program:Script/Wacapew.A!ml` (threat ID `251869`) and successfully quarantined the correctly written run 2 blob on **2026-11-13 at 20:31:06 IST** (detection at 20:30:02). This is local antivirus remediation on the measuring machine, not an application storage/retention defect; no production blob-pruning or deletion path was found. This was the second observed occurrence involving the same page in the measurement history. Defender later also detected the run 1 copy during diagnostic reads. The records establish quarantine, not whether the detection is a true or false positive.
+## Added sources and licences
 
-The current final measurement is the [frozen run at `b0b70cc`](#measured-precision), superseding Stage S and the earlier Stage G run selection. The ISTAD quarantine is retained as historical evidence of a local measurement-environment artifact; it does not establish an application storage defect or an effect on a clean environment. Later antivirus action can also affect retained evidence files. See [Defender event evidence](bench/reports/stage-g/defender-evidence.json), especially event 1117: Action Quarantine, successful status, error 0x00000000.
+| Source | Publication / access | Licence or terms |
+|---|---|---|
+| Forskningsrådet research projects | Bundled funded-phase snapshot; total project awards, not exclusive company funding | Forskningsrådet, [NLOD 2.0](https://data.norge.no/nlod/en/2.0); excludes newer Tibi system |
+| Støtteregisteret state aid | Bundled exact-recipient snapshot, actual instrument labels and explicit subunit scope | Brønnøysundregistrene, [NLOD 2.0](https://data.norge.no/nlod/en/2.0); no parseable robots file, officially published bulk download rather than crawl |
+| SkatteFUNN | Bundled approved applications, exact orgnr, deduplicated project numbers; R&D tax deduction scheme, never a cash grant | Forskningsrådet, [catalogued NLOD 2.0](https://data.norge.no/nb/datasets/f82d3d4a-b0f8-3220-83ef-15fbd854c54f/innsendte-soknader-til-skattefunn); current provider workbook substituted for stale catalogue distribution |
+| DiBK central approvals | NACE-gated live enterprise HTML pages; exact orgnr, status, area/class/function and dates | Direktoratet for byggkvalitet attributed; public register access, no HTML factual-reuse prohibition found. API documentation's CC BY 4.0 is not asserted for the HTML site. Robots allows enterprise pages; /api/ and /search never called |
+| Cleaning register | Bundled main-unit exact-orgnr statuses; only explicit approved statuses labelled approved | Arbeidstilsynet, [NLOD 2.0](https://data.norge.no/nlod/no/2.0); robots 403, official bulk download only |
+| Approved workshops | Bundled main-unit exact-orgnr approval numbers, type/location | Statens vegvesen, [NLOD](https://data.norge.no/nlod/no) (catalogue does not specify version); export-backend robots 404, frontend no disallow; official bulk only |
+| Verified-site news | One advertised same-domain resource, at most five dated items; normal robots/pacing/caps | Company-published material, no blanket open licence inferred; exact fetched evidence and date meaning retained |
 
-### Changes since revision 4
+Research, state aid, SkatteFUNN, cleaning, workshops and related-entity registry website snapshots use **zero runtime HTTP**, retain deterministic manifests/hashes/attribution and do not bundle raw downloads. Related-entity website data is official BRREG [NLOD 2.0](https://data.norge.no/nlod/en/2.0). Full derivation, licence basis, URLs, robots findings and restrictions: [docs/SOURCES.md](docs/SOURCES.md), [DATA_LICENSING.md](DATA_LICENSING.md).
 
-These changes follow the revision 4 merge (`d5139bd`). Those revision changes were included in the historical frozen run at code `b0b70cc`; the latest combined live result is reported above.
+## Proof and synthesis
 
-- **Seven-part company brief, rendered on the site.** The template brief now has seven sections: *What it does*, *How big it is*, *Who runs it*, *What changed*, *Where it operates*, *How it compares* and *What we could not establish*. The offline site renders all seven, with the same cited sentences as the envelope. Every *How it compares* (standing) sentence states its comparison basis in the sentence itself: other companies **in this run only**, the same NACE division, and the same fiscal year of accounts. The division is named by its SSB KLASS title, as the comparison group, never as the company's activity. When there are too few comparables, the sentence says so and does not rank. [verify_output.py](scripts/verify_output.py) recomputes the reach, standing and not-established sections exactly, including the cohort records they use. Code: [sections_extra.py](src/signalpost/synthesis/sections_extra.py), [template.py](src/signalpost/synthesis/template.py), [site.py](src/signalpost/site.py).
-- **Gaps view.** Each company has a page titled *What we could not establish, and why*, listing every not-established item with its recorded reason. The run also has a summary page (`gaps.html`), linked from the home page, that counts those reasons across the run. Code: `company_gaps_page` and `run_gaps_page` in [site.py](src/signalpost/site.py).
-- **TED identifier matching.** Winner and buyer identifiers in TED notice XML are compared after whitespace-only normalisation, so `923 609 016` matches `923609016`. A complete nine-digit match and a Norwegian country code are still required, with no prefix, substring or name matching. TED's identifier search matches exact strings, so the query sends three spellings of each number: the plain digits, `ddd ddd ddd`, and the observed form with a narrow no-break space (U+202F) after the first group. Code: `ted_query_values` in [official_extra.py](src/signalpost/sources/official_extra.py).
-- **DNS label and charset fixes.** A candidate domain label that cannot be IDNA-encoded, such as one over DNS's 63-byte label limit, is now skipped instead of raising an error for that company. Claim span checks now decode the stored body by its declared charset before searching. Previously a correct span on a non-UTF-8 page could fail the check. See the offline [charset replay](bench/reports/charset-replay-20261118/charset-replay.json). Code: [candidates.py](src/signalpost/web/candidates.py), `decode_body` in [text.py](src/signalpost/sources/text.py), [collector.py](src/signalpost/web/collector.py).
-- **Social matcher.** A profile is attributed only when its handle's tokens are contained in the company's **registered legal name**, never a trading name, brand or page title. Æ, ø and å are transliterated. A run-together handle may equal the name with or without `as`/`asa`. One-token handles are rejected if shorter than five characters or on the generic-word list. Profiles are recognised on nine platforms: Facebook, Instagram, LinkedIn, X/Twitter, YouTube, TikTok, Threads, Vimeo and Snapchat. Redirects, short links and URLs with credentials are rejected. See the offline [social replay](bench/reports/social-replay-20261118/). Code: [social.py](src/signalpost/web/social.py), [policy.py](src/signalpost/web/policy.py). Tests: [test_social_attribution.py](tests/test_social_attribution.py).
-- **Brand rule.** A public brand is published only if it shares at least one token with the legal name or the verified domain. Before comparing, brand, legal name and domain are lowercased, æ/ø/å are transliterated, and legal suffixes and filler words are removed. Leading page words ("Kontaktinformasjon", "Start" and similar) are stripped first, and a brand made only of page words is withheld. On the previous final run this withheld 7 of 26 brands. Six were taglines, descriptions or page words. The seventh, "NKS" for Nordstrand Kulturskole, is probably a genuine acronym and a known loss ([hand review](bench/reports/stage-x-accuracy/brand-token-check.json)). Code: `shares_identity_token` and `strip_page_words` in [collector.py](src/signalpost/web/collector.py). Tests: [test_brand_page_words.py](tests/test_brand_page_words.py).
-- **Honest run reporting and identity-outage abort.** `report.json` now opens with `run_status`, `success_rate`, counts of succeeded and failed companies, and source errors by family. A company whose modules all failed at the source is reported as `source_error`, not as complete. **Why the abort exists:** during a network outage, an earlier local run made only 2,007 of about 9,300 expected requests, yet still looked like an ordinary completed run. The abort stops a run in that situation instead of writing 1,000 empty envelopes. If the first 25 identity lookups (`IDENTITY_OUTAGE_SAMPLE`) all fail with network errors or timeouts, new lookups pause. The run then rechecks 3 times, 15 seconds apart, and exits with code 3, naming the unreachable host, only if every recheck also fails. A short startup blip therefore recovers instead of aborting. Code: [runner.py](src/signalpost/runner.py), [report.py](src/signalpost/io/report.py), [cli.py](src/signalpost/cli.py). Tests: [test_identity_outage.py](tests/test_identity_outage.py).
-- **Output cap raised from 512 MiB to 4,096 MiB.** `--max-output-mb` is our own safety ceiling. Neither the evaluation contract, the starter kit nor OUTPUT_CONTRACT.md sets an output size. At 512 MiB, the [1,100-company headroom run](bench/reports/headroom-1100-20261119/headroom.json) wrote 431 MB of envelopes, 80% of the cap, with a largest envelope of 2.31 MB. When the cap is exceeded, the writer reduces the largest envelopes to failure placeholders, which is worse than writing a larger file. 4,096 MiB holds 1,100 envelopes even if every one were as large as the largest measured, so an official-size batch cannot be truncated. Code: [config.py](src/signalpost/config.py), [cli.py](src/signalpost/cli.py), [envelope_writer.py](src/signalpost/io/envelope_writer.py). Test: `test_default_output_cap_cannot_truncate_an_official_1100_batch` in [test_resource_limits.py](tests/test_resource_limits.py).
+Registered group relationships, signatur and prokura require explicit company registry records. Accounts audit status uses both explicit boolean fields: opted-out, audited or not-audited; missing/contradictory values are withheld. Explicit registry dates add dated activity without replacing identity claims; historical names retain only source-stated dates.
 
-**Tests that make live network requests.** Two test modules contact live public services: [test_evaluator_cli_and_site.py](tests/test_evaluator_cli_and_site.py) (two evaluator test functions) and [test_nav_process_kill_recovery.py](tests/test_nav_process_kill_recovery.py) (one process-kill test). Thus the current source contains three live test functions across two modules. The evaluator tests disable websites, hiring and activity but still call registry/GLEIF/TED services; the process-kill test launches the full CLI without those switches. These tests can fail or slow down offline. The earlier DNS observation is historical, not a new network audit.
+Social links on a proven company website use that site's ownership evidence without requiring legal-name/handle equality. Personal forms (including LinkedIn /in/), own role-holder handles, other registered-company matches across the full bundled universe (except explicitly related entities), shared/group profiles, share/intent/tracking and platform homepages remain vetoed. Wikidata social claims retain their separate handle-attribution rule. Social platforms are not fetched.
 
-### Revision 4 changes
+Funding synthesis preserves actual instruments and recipient/subunit scope; research amounts are total project awards. Dated news is labelled published by the company, with lastmod distinguished from publication. No funding match produces no negative funding assertion. Every sentence cites published, evidence-backed claims under the unchanged validator/verifier.
 
-Historical Revision 4 changed presentation and citation only; the later stages documented above/below change sources and publication rules. For Revision 4 alone: No proof type, veto, acceptance rule, request or time budget, or source changed, and claim IDs and values are unchanged. The only added network access is one anonymous fetch of each already-verified NAV ad's public page, counted in the existing pooled budget. Revision 4 and the later changes are measured together in the [final frozen run](#measured-precision).
+## Known limitations
 
-- **Job claims cite the public ad page.** After NAV discovery and verification, each verified ad's public page `https://arbeidsplassen.nav.no/stillinger/stilling/<uuid>` is fetched anonymously and stored verbatim. The job claim then cites that page, with two verbatim spans: the ad title and the employer orgnr. Previously it cited the token-protected feed API entry. The feed entry remains discovery provenance only (`source_identifier`). This is best effort: if the page cannot be fetched, or does not name the same title and employer orgnr as the verified ad, the claim keeps its previous feed-API citation, and the outcome is counted under `public_citations` in the NAV metrics. Code: `attach_public_citations` and `public_citation_spans` in [nav.py](src/signalpost/sources/nav.py), plus [nav_public_page.py](src/signalpost/sources/nav_public_page.py). Tests: `test_public_citation_spans_are_verbatim_and_must_match_the_verified_ad` and `test_feed_verified_ads_cite_the_anonymous_public_page` in [test_nav_index.py](tests/test_nav_index.py), the request-sequence check in [test_nav.py](tests/test_nav.py), and [test_external_integration.py](tests/test_external_integration.py).
-- **The brief states what the company does, what changed and what remains unknown.**
-  - *Changes* come from dated published events (registry announcements by tier, company articles and TED awards) and from the revenue trend between comparable consecutive company-only years, rather than only from snapshot diffs. Events are shown newest first, one per category, at most three. Bare, unspecified and administrative registry records are never presented as changes. On a baseline run, the template uses a registered-name sentence supported by the registry claim instead of asserting that no earlier run exists.
-  - *Unknowns* are listed with their recorded reasons, such as no ownership proof, a parked or unreachable site, no NAV ads, or no accounts on file.
-  - *What it does*: a proven company website's self-description and the registered purpose lead. NACE is stated only as the registered industry code, never as the company's activity.
-  - The site renders the same three-part brief as the envelope, and [verify_output.py](scripts/verify_output.py) checks it.
-  - Code: [company_brief.py](src/signalpost/synthesis/company_brief.py), [analyst.py](src/signalpost/synthesis/analyst.py), [template.py](src/signalpost/synthesis/template.py), [site.py](src/signalpost/site.py). Tests: [test_brief_revision4.py](tests/test_brief_revision4.py) (tiered events, dated changes replacing "First observation", the three-event cap, purpose before NACE, the website reason for unknowns, matching summary and site, and revenue trend as a cited change), plus updates in [test_company_brief.py](tests/test_company_brief.py) and [test_analyst_brief.py](tests/test_analyst_brief.py).
-- **Explicit zero revenue.** A filed revenue of exactly 0 reads "reported no operating revenue (NOK 0)" instead of "reported revenue of NOK 0". Code: [analyst.py](src/signalpost/synthesis/analyst.py). Test: `test_explicit_zero_revenue_is_worded_as_no_operating_revenue` in [test_analyst_brief.py](tests/test_analyst_brief.py).
-- **Offline-site fixes.** All of the following are covered by [test_site_revision4.py](tests/test_site_revision4.py) except the two CSS-only changes noted:
-  - search accepts organisation numbers typed with spaces, dots or dashes;
-  - compare cards use a middle dot instead of the stray `?` separator, and the Remove button has its own grid cell (CSS only, not asserted by a test);
-  - the evidence drawer shows the retrieval date and the record locator before the source link;
-  - excerpts are marked `data-verbatim`, and dates inside them are never rewritten on the server or in the browser;
-  - registry objects render without raw JSON or `_links` objects, and account floats are digit-grouped;
-  - the tab title defaults to "Nordic Company Lens", and the home headline leads with what was found;
-  - the header brand stays on one line at phone width (CSS only, not asserted by a test).
+- TED depends on upstream XML readiness: HTTP 202 opens the breaker with periodic re-probes; **0 awards** in Stage AP versus **6 companies / 20 awards** in an earlier run, not evidence of no procurement.
+- Hiring is limited by NAV feed discovery/availability; all three published ads use proved registered-subunit employer numbers. [Route investigation](bench/reports/nav-live-routes-20-20261119/RESULTS.md).
+- Websites are verified-only (**114**); bounded discovery, static HTML, robots, transient failures and strict proof can miss genuine sites.
+- Related-company websites are **registry-declared, not ownership-verified**, and are not official_website claims.
+- SkatteFUNN licence basis is the catalogue's NLOD 2.0 dataset listing; its nov24 distribution returned 404 on 20 November 2026, so the provider's current publication of the same dataset is treated as covered. [Exact basis](docs/SOURCES.md#skattefunn-historical-approvals-bundled-zero-runtime-http).
+- Stage AI's baseline **"Registered name"** sentence cites the registry identity claim; it does not assert first observation or absence of prior facts. Repeat-run refresh handling is unchanged.
+- Research excludes Tibi; snapshots can age, absence is not proof of no funding/approval, company news is not independent verification, and optional source failure does not invalidate all terminal results.
 
-  Code: [site.py](src/signalpost/site.py), [site.js](src/signalpost/site_assets/site.js), [site.css](src/signalpost/site_assets/site.css).
-- **Raw profiles are opt-in.** `profiles.jsonl` is written only when `--profiles-output` is passed. `--report` and `--site-dir` keep their defaults (`out/report.json`, `out/site`). Nothing in the [output contract](OUTPUT_CONTRACT.md) requires profiles. Code: [cli.py](src/signalpost/cli.py). Test: `test_evaluator_always_writes_all_artifacts` in [test_cli_evaluator_defaults.py](tests/test_cli_evaluator_defaults.py) asserts that no profiles file exists unless the flag is passed.
-
-Historical Revision 4 validation: **1,452 tests passed, zero failed** (`uv run --frozen pytest -q`). This count comes from a local run and has no committed report.
-
-### Revision 3 changes
-
-Stage S repairs four registry homepage cells with unambiguous `www` separators so they can be parsed as candidates: the measured effect is **4 universe candidates and zero cohort nominations**; no proof rule, veto or name matching changed ([normalization-only measurement](bench/reports/stage-s/REPORT.md#the-four-authorised-syntax-repairs)).
-
-The release adds locally bundled Common Crawl candidates and registry shared-identifier counts, bounded deeper ownership pages, strict company-scope filtering, cited contact facts, dated individual-job checks and offline-site improvements. Unknown CLI arguments warn rather than abort; omitted report/site options receive defaults (profiles are opt-in) and effective settings are recorded. The pooled ceiling is 19 HTTP per distinct normalized input (1,900/100), with a hard 40/company maximum including robots, redirects and retries. Lower configured limits remain effective. All time limits are unchanged. Careers runs after primary proof/collection and uses remaining headroom; it has no earmark and does not reduce activity's original allowance. No search-engine integration, paid API or LLM is used. These changes do not claim complete website or careers coverage.
-
-GLEIF records can store the registration number with whitespace, for example `"923 609 016"`; the previous literal comparison rejected that spelling. Matching now normalises whitespace only and accepts both official Bronnoysund child-record authorities: **RA000472 Foretaksregisteret** and **RA000473 Enhetsregisteret**. An exact complete nine-digit organisation-number match is still required, with no name matching. Parent acceptance rules are unchanged. The measured correction is **32 to 142 companies** (32 to 139 from whitespace normalisation in [Stage P](bench/reports/stage-p/REPORT.md), then 139 to 142 from RA000473 in [Stage Q](bench/reports/stage-q/REPORT.md)); **15 reviewed, 0 wrong, 0 doubtful** ([identifier audit and review](bench/reports/stage-q/REPORT.md)).
-
-### Bundled-index provenance
-
-`data/cc_orgnr_index.json.gz` was built 13 November 2026 from partial archived records in CC-MAIN-2026-43,2026-39 and2026-34. It contains 20,832 candidates for 19,735 parent companies. Access/use is subject to [Common Crawl Terms of Use](https://commoncrawl.org/terms-of-use) and third-party rights; see [the bundled terms/method notice](data/CC_INDEX_NOTICE.md). Official Bronnoysund subunit data (NLOD 2.0) maps branch numbers to parents. **Candidate coverage is not verified-site coverage**: every candidate is fetched and re-verified live under the ownership proof and vetoes.
-
-`src/signalpost/data/nav_index.json.gz` was built 2026-11-13T00:26:42.872674Z from the official public NAV feed using public access (9,296 ads / 5,899 employers). No private credential is required or bundled. The runtime retrieves NAV's published public token in memory, validates the index and live-checks nominated ads; missing, invalid or stale indexes retain the honest full-feed fallback. Source terms and limitations are in [SOURCES.md](docs/SOURCES.md).
-
-## Previous revisions
-
-Historical revision 2 results below are retained for comparison, not presented as current coverage.
-
-### Revision 2 measured coverage
-
-One frozen 1,000-company run of runtime `39a73142` produced **108 verified websites, 44 social companies, 3 jobs companies and 1,000 activity companies**, plus GLEIF facts for 32 companies and TED awards for 6. Registry coverage: identity 1,000, people 997, subunit workplaces 774 and financials 999. Total supported facts: **166,207**. HTTP: **8,589**, mean 8.589/input, maximum 40/company; wall time **1,017.315 seconds**, zero deadlines, 1,000 envelopes/profiles. These are coverage measurements, not an evaluator score or a completeness guarantee. [Final release results and verifier](bench/reports/final-release/RESULTS.md).
-
-### Revision 2 precision check
-
-The Step 22 new random cohort (100 valid organisation numbers plus three invalid lines) passed the fixed-runtime same-command refresh check: 103 outputs per run, zero company changes, zero observation changes and strict verifier exit 0. [Precision review and exact results](bench/reports/s6-step22/SCOREBOARD.md).
+No LLM, paid API or search-engine scraping is used. Financial scope/currency/period mismatches are not reconciled by guessing. No JavaScript rendering or scanned-PDF extraction is provided. Local antivirus can quarantine retained fetched evidence; historical incidents are recorded in [Stage G](bench/reports/stage-g/defender-evidence.json).
