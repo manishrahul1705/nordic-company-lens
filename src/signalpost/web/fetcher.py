@@ -247,6 +247,12 @@ class WebsiteHttp:
             if not await offload(self.robots[origin].can_fetch,self.config.website_user_agent,url):
                 raise SourceFailure("robots")
 
+    async def get_news_resource(self, url, org, candidate_domain, xml=False):
+        # A single advertised resource: no transient retry or cross-domain
+        # redirect expansion. _raw retains normal robots, pacing and budgets.
+        return await self._raw(url, org, {candidate_domain}, xml=xml,
+                               obey_robots=True, allow_redirects=False)
+
     async def get(self, url, org, candidate_domain, proven=(), xml=False, allow_redirects=False):
         domains = {candidate_domain, *proven}
         # Robots are checked again on the effective redirect authority. raw()

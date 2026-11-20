@@ -1,6 +1,6 @@
 # Nordic Company Lens
 
-Current validation (20 November 2026): **1,686 tests passed**; [funding snapshot replay, verifier and full suite](bench/reports/funding-snapshots-20261120/RESULTS.md). Prior index rebuild: **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
+Current validation (20 November 2026): **1,716 tests passed**; [bounded verified-site news measurement and validation](bench/reports/news-items-20261120/RESULTS.md). Previous funding validation: **1,686 tests passed**; [funding snapshot replay, verifier and full suite](bench/reports/funding-snapshots-20261120/RESULTS.md). Prior index rebuild: **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
 
 Nordic Company Lens researches Norwegian companies using official registries and bounded company-owned sources. It checks company identity, publishes evidence-linked facts and cited template summaries, and can generate searchable offline profiles. The Python import package and console command remain `signalpost`.
 
@@ -115,6 +115,12 @@ Step 15 bounds legal/subunit-name discovery to eight candidates, with Norwegian-
 
 
 ## Measured precision
+
+### Bounded verified-site news (20 November 2026)
+
+On the saved frozen cohort, the new one-resource discovery source publishes **113 news_item claims / 31 companies**. It reused verified homepages and robots policies, fetched **54 selected-resource HTTP requests** under the original pooled/company usage, and stayed at **40 maximum requests/company**. No existing claim changed. This incremental measurement is not a fresh full acquisition run. The unchanged strict verifier passes **1,000 envelopes / 167,975 claims**, zero unverified synthesis values; **1,716 tests pass**.
+
+Discovery stays on the verified domain, selects one advertised feed/sitemap/news page, never follows its article links or child sitemaps, requires explicit title/date/URL and publishes at most five latest items. Sitemap lastmod remains modification time, not publication time. No discovery or no dated item yields no placeholder. [Full findings and limitations](bench/reports/news-items-20261120/RESULTS.md); [every site's discovery outcome](bench/reports/news-items-20261120/DISCOVERY.md).
 
 ### Bundled research projects and state aid (20 November 2026)
 

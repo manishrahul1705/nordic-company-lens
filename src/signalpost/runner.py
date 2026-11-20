@@ -647,6 +647,14 @@ async def _run(config, client=None):
                 careers_tasks = [asyncio.create_task(careers(org, row)) for org, row in envelopes.items()
                                  if website_http.accepted_pages.get(org)]
                 await finish_before_deadline(careers_tasks, budget, CANCEL_GRACE_SECONDS)
+            if config.websites and config.public_activity:
+                from .web.news_items import collect as collect_news_items
+                async def news(org,row):
+                    async with website_semaphore:
+                        await collect_news_items(row,website_http,website_http.accepted_pages.get(org,[]))
+                news_tasks=[asyncio.create_task(news(org,row)) for org,row in envelopes.items()
+                            if website_http.accepted_pages.get(org)]
+                await finish_before_deadline(news_tasks,budget,CANCEL_GRACE_SECONDS)
             return pending
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,

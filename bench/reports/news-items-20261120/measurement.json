@@ -1,0 +1,29 @@
+{
+  "baseline": "bench\\runs\\funding-snapshots-final-20261120",
+  "news_companies": 31,
+  "news_claims": 113,
+  "additional_http_requests": 54,
+  "states": {
+    "no_explicit_dated_items": 21,
+    "no_discoverable_resource": 49,
+    "published": 31,
+    "no_fetched_homepage": 2,
+    "withheld": 7
+  },
+  "reasons": {
+    "website_timeout": 3,
+    "website_budget_exhausted": 4
+  },
+  "max_total_company_requests": 40,
+  "pooled_requests": 11531,
+  "measurement_seconds": 142.144,
+  "scope": "Saved verified homepages and cached robots; live fetch at most one advertised resource; original per-company and pooled usage preserved; not a full live rerun",
+  "verified_sites_in_baseline": 114,
+  "eligible_verified_sites_checked": 110,
+  "additional_resource_http_requests": 54,
+  "additional_robots_http_requests": 0,
+  "http_statuses": {
+    "200": 51,
+    "None": 3
+  }
+}

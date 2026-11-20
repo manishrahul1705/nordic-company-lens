@@ -1,6 +1,6 @@
 # Submission notes
 
-Current validation (20 November 2026): **1,686 tests passed**; [funding snapshot replay, verifier and full suite](bench/reports/funding-snapshots-20261120/RESULTS.md). Prior index rebuild: **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
+Current validation (20 November 2026): **1,716 tests passed**; [bounded verified-site news measurement and validation](bench/reports/news-items-20261120/RESULTS.md). Previous funding validation: **1,686 tests passed**; [funding snapshot replay, verifier and full suite](bench/reports/funding-snapshots-20261120/RESULTS.md). Prior index rebuild: **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
 
 ## Official command
 
@@ -138,6 +138,12 @@ The release adds locally bundled Common Crawl candidates and registry shared-ide
 GLEIF records can store the registration number with whitespace, for example `"923 609 016"`; the previous literal comparison rejected that spelling. Matching now normalises whitespace only and accepts both official Bronnoysund child-record authorities: **RA000472 Foretaksregisteret** and **RA000473 Enhetsregisteret**. An exact complete nine-digit organisation-number match is still required, with no name matching. Parent acceptance rules are unchanged. The measured correction is **32 to 142 companies** (32 to 139 from whitespace normalisation in [Stage P](bench/reports/stage-p/REPORT.md), then 139 to 142 from RA000473 in [Stage Q](bench/reports/stage-q/REPORT.md)); **15 reviewed, 0 wrong, 0 doubtful** ([identifier audit and review](bench/reports/stage-q/REPORT.md)).
 
 ## Measured precision
+
+### Bounded verified-site news (20 November 2026)
+
+On the saved frozen cohort, the new one-resource discovery source publishes **113 news_item claims / 31 companies**. It reused verified homepages and robots policies, fetched **54 selected-resource HTTP requests** under the original pooled/company usage, and stayed at **40 maximum requests/company**. No existing claim changed. This incremental measurement is not a fresh full acquisition run. The unchanged strict verifier passes **1,000 envelopes / 167,975 claims**, zero unverified synthesis values; **1,716 tests pass**.
+
+Discovery stays on the verified domain, selects one advertised feed/sitemap/news page, never follows its article links or child sitemaps, requires explicit title/date/URL and publishes at most five latest items. Sitemap lastmod remains modification time, not publication time. No discovery or no dated item yields no placeholder. [Full findings and limitations](bench/reports/news-items-20261120/RESULTS.md); [every site's discovery outcome](bench/reports/news-items-20261120/DISCOVERY.md).
 
 ### Bundled research projects and state aid (20 November 2026)
 
