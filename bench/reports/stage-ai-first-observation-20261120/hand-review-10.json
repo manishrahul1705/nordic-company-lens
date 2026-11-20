@@ -1,0 +1,372 @@
+[
+  {
+    "organisation_number": "912823970",
+    "sentence": "Registered name: MYNT OG EIENDOM BESSAKER AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "MYNT OG EIENDOM BESSAKER AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d0f2ca4f92821d3e4645d4665aae406b5fe5d55c3583c65b5389abf7f7994896"
+      ],
+      "id": "34d5924e5c9f8a29a134203772a8d5b34f617fd8a505270a4e0bfb2aa1a5a369",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.887604Z",
+      "last_observed_at": "2026-11-19T23:59:21.887604Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "d0f2ca4f92821d3e4645d4665aae406b5fe5d55c3583c65b5389abf7f7994896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.887604Z",
+        "content_sha256": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "claim_span": "er ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"912823970\",\"paategninger\":[],\"registrer",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "916729774",
+    "sentence": "Registered name: FIKO EIENDOM AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "FIKO EIENDOM AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "b348e521b3c9b4bcf65bef5631d599af12155d22b63af8d648224cd4a198a9e4"
+      ],
+      "id": "7c2327d1039f8fdc07b7bbdf367e9196400902ecd81d1aa2b7af6f43ac8eb981",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.802964Z",
+      "last_observed_at": "2026-11-19T23:59:21.802964Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "b348e521b3c9b4bcf65bef5631d599af12155d22b63af8d648224cd4a198a9e4",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/916729774",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.802964Z",
+        "content_sha256": "5ac6f7bbf37287044e20e40896fd6bd67a715b576f5873c7583d3ab4be475dcb",
+        "claim_span": " eller leid fast eiendom\",\"kode\":\"68.200\"},\"navn\":\"FIKO EIENDOM AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"916729774\",\"paategninger\":[],\"registreringsdatoEnhe",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "917998787",
+    "sentence": "Registered name: DRAGEHAUGEN VERDI AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "DRAGEHAUGEN VERDI AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "7f66e5e225d837f0d46dd16e9a58086c8a87f03aba57f133137e4586e071a364"
+      ],
+      "id": "dc4b612b863c574922584b7b42359cccfe7b471b37809af306cbdf571bdfbb2b",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.796967Z",
+      "last_observed_at": "2026-11-19T23:59:21.796967Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "7f66e5e225d837f0d46dd16e9a58086c8a87f03aba57f133137e4586e071a364",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/917998787",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.796967Z",
+        "content_sha256": "cebe3f9cc3f34cf088a133302d76c70cfed9a398e70437e424694d82d5416936",
+        "claim_span": "geninvesteringsselskaper\",\"kode\":\"64.323\"},\"navn\":\"DRAGEHAUGEN VERDI AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"917998787\",\"paategninger\":[],\"postadresse\":{\"a",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "918049215",
+    "sentence": "Registered name: MENSTAD NÆRINGSPARK AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "MENSTAD NÆRINGSPARK AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "2a1a5cc51e2c42fbdb5a910bca21a4d16cf056d68db734d21670aab45ec511ee"
+      ],
+      "id": "bc2dd4cbe655a0d6f077bd20c4360bdc4855b9a0b72d8b6a00ad45831d4b369d",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.820652Z",
+      "last_observed_at": "2026-11-19T23:59:21.820652Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "2a1a5cc51e2c42fbdb5a910bca21a4d16cf056d68db734d21670aab45ec511ee",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/918049215",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.820652Z",
+        "content_sha256": "2ffc7c7c59a57cb644e90a44718ffddc9f4746075bf950daf5b2b6f7a447fced",
+        "claim_span": " salg av byggeprosjekter\",\"kode\":\"68.120\"},\"navn\":\"MENSTAD NÆRINGSPARK AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"918049215\",\"paategninger\":[],\"registreringsd",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "919948493",
+    "sentence": "Registered name: SQ URBAN LANDSKAP AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "SQ URBAN LANDSKAP AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "401c6d3624ad3a59110e616dfb048c56b6102cae6da480c4ce991500b71c7581"
+      ],
+      "id": "8c9fb7a099c71f0138d7eeaef29f8ddbd6159a4aaf377ee09f1e22ef26f35241",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.810652Z",
+      "last_observed_at": "2026-11-19T23:59:21.810652Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "401c6d3624ad3a59110e616dfb048c56b6102cae6da480c4ce991500b71c7581",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/919948493",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.810652Z",
+        "content_sha256": "d8f7b89b2ae4a3b21cac06a3969356acdf96413a9a55b77ff9f089a31b973a82",
+        "claim_span": "g av hager og parkanlegg\",\"kode\":\"81.300\"},\"navn\":\"SQ URBAN LANDSKAP AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"919948493\",\"paategninger\":[],\"registreringsdat",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "982410851",
+    "sentence": "Registered name: MARUN AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "MARUN AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "f323df1331d1947515b0e40aea7008f99222d593fc08a0bc786d5944221166bf"
+      ],
+      "id": "594afe99b07dd55f4b65bf164cc5873905d71e79bbf2d75b9c9513b773ebf251",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.870633Z",
+      "last_observed_at": "2026-11-19T23:59:21.870633Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "f323df1331d1947515b0e40aea7008f99222d593fc08a0bc786d5944221166bf",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/982410851",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.870633Z",
+        "content_sha256": "ab5831d2b2f66465a8995ddd709ca3f6f82a80b15d0042e2f8a091e6302f6a15",
+        "claim_span": " eller leid fast eiendom\",\"kode\":\"68.200\"},\"navn\":\"MARUN AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"982410851\",\"paategninger\":[],\"registreringsdatoAntallAnsat",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "981508734",
+    "sentence": "Registered name: MYKLEBUST MARITIME AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "MYKLEBUST MARITIME AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "baaca4db6ab01c34ba656a0682b239b811873551b70a1e69dbcd6a6116f4d2de"
+      ],
+      "id": "d5f4e6045f539950336ab638625271747148df874eb174b5374dec5f1cb298c2",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.870633Z",
+      "last_observed_at": "2026-11-19T23:59:21.870633Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "baaca4db6ab01c34ba656a0682b239b811873551b70a1e69dbcd6a6116f4d2de",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/981508734",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.870633Z",
+        "content_sha256": "320e1f6afda3593a916a41f2556b51261c369e556ffbb8a2f9cd03d82504e84e",
+        "claim_span": "ip og flytende materiell\",\"kode\":\"30.110\"},\"navn\":\"MYKLEBUST MARITIME AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"981508734\",\"paategninger\":[],\"registreringsda",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "916049153",
+    "sentence": "Registered name: SJØL INVEST AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "SJØL INVEST AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "f5a8318c39ffb84e11cbceffddc2db0af36333c81daf5b9bfaa0f16c393c03ac"
+      ],
+      "id": "6869534e5945da75fd3852bc790b33705121b7f77b9cffdeb8ff88865e43e16a",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.876486Z",
+      "last_observed_at": "2026-11-19T23:59:21.876486Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "f5a8318c39ffb84e11cbceffddc2db0af36333c81daf5b9bfaa0f16c393c03ac",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/916049153",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.876486Z",
+        "content_sha256": "bce8b4d3c4270dea3aa5d3d300c593d9e87ca0d25379b071d0d79938bebd22d8",
+        "claim_span": "geninvesteringsselskaper\",\"kode\":\"64.323\"},\"navn\":\"SJØL INVEST AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"916049153\",\"paategninger\":[],\"registreringsdatoEnhet",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "882749762",
+    "sentence": "Registered name: NOTEK HOLDING AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "NOTEK HOLDING AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "270c83005ce2116ad45413b595e6c4d88ee571eb1f4c17c93443dad516cf524c"
+      ],
+      "id": "fc06f61e8e71a581ddf9497ff659916f65697ae8e2248fea9b4855b0744bf46a",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.882151Z",
+      "last_observed_at": "2026-11-19T23:59:21.882151Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "270c83005ce2116ad45413b595e6c4d88ee571eb1f4c17c93443dad516cf524c",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/882749762",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.882151Z",
+        "content_sha256": "3b31039e958e42588baf28bd7709bb7dfd2be718bcee2c0760a0c9ae504b9a26",
+        "claim_span": " eller leid fast eiendom\",\"kode\":\"68.200\"},\"navn\":\"NOTEK HOLDING AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"882749762\",\"paategninger\":[],\"postadresse\":{\"adres",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  },
+  {
+    "organisation_number": "936276075",
+    "sentence": "Registered name: M BERGUM AS.",
+    "claim": {
+      "field": "identity.legal_name",
+      "value": "M BERGUM AS",
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3b761712445228a5c882830d571a2e91ef8beed9ec0e604efa2f67849448aa83"
+      ],
+      "id": "c750fcff83b323b86f344241c38d71c26da71e35c97bbc67abd77c18678c2973",
+      "family": "identity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-19T23:59:21.826427Z",
+      "last_observed_at": "2026-11-19T23:59:21.826427Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "3b761712445228a5c882830d571a2e91ef8beed9ec0e604efa2f67849448aa83",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/936276075",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-19T23:59:21.826427Z",
+        "content_sha256": "96a972ff0434e7edd682a1a9b74127bcdb78e7568eb655db1112645b9a9619fb",
+        "claim_span": "{\"beskrivelse\":\"Uoppgitt\",\"kode\":\"00.000\"},\"navn\":\"M BERGUM AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"936276075\",\"paategninger\":[],\"registreringsdatoEnhetsre",
+        "locator": "/navn",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "review": "The sentence reproduces the exact registered legal-name value; its cited available claim links to the official registry evidence for that value."
+  }
+]

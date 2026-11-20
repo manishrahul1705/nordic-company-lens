@@ -20,7 +20,9 @@ def test_template_citations_unknowns_and_all_shapes(tmp_path):
     summary=row.run.synthesis
     assert summary.checks.sentences==summary.checks.cited>0 and summary.checks.values_verified
     assert 'First observation' not in summary.summary
-    assert any('First observation' in s.text for s in summary.sections.changes)
+    name = next(c for c in row.claims if c.field == 'identity.legal_name')
+    assert any(s.text == 'Registered name: ' + str(name.value) + '.' and s.claim_ids == [name.id]
+               for s in summary.sections.changes)
     assert any(item.family=='accounts' for item in summary.sections.unknowns)
     for shape in ('union','contract','reference'):
         result=serialize(row,shape);validate(result,shape)

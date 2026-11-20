@@ -64,6 +64,31 @@ def test_changes_cite_dated_announcements_and_replace_first_observation(tmp_path
     assert validate(brief, synthesis, row) == brief
 
 
+def test_first_run_template_sentence_cites_the_registered_name(tmp_path):
+    from signalpost.synthesis.validate import sentence_error
+    row, _ = envelope(tmp_path)
+    assert row.run.refresh['mode'] == 'baseline'
+    name = next(c for c in row.claims if c.field == 'identity.legal_name' and c.availability == 'available')
+    expected = 'Registered name: ' + str(name.value) + '.'
+    result = template_generate(row)
+    sentence = next(s for s in result.sections.changes if s.text == expected)
+    assert sentence.claim_ids == [name.id]
+    assert sentence_error(sentence, row) is None
+    assert not any('First observation' in s.text for s in result.sections.changes)
+
+
+def test_repeat_run_company_brief_refresh_notice_is_unchanged(tmp_path):
+    row, _ = envelope(tmp_path)
+    row.run.refresh.update(mode='refresh', previous_completed_at='2026-11-05T12:00:00Z')
+    result = template_generate(row)
+    brief = result.brief
+    sentence = next(s for s in brief.changes if s.text.startswith('No changes since the previous run on '))
+    context_claim = next(c for c in brief.context_claims if c.id == sentence.claim_ids[0])
+    assert sentence.text == 'No changes since the previous run on 5 Nov 2026.'
+    assert context_claim.field == 'snapshot.refresh'
+    validate(brief, result, row)
+
+
 def test_events_are_capped_newest_first_one_per_category(permit, tmp_path):
     row, _ = envelope(tmp_path)
     for n, (path, day) in enumerate([('/navn', '2024-01-02'), ('/kapital/belop', '2025-03-04'), ('/postadresse', '2026-05-06'),

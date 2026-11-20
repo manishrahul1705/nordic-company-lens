@@ -159,8 +159,10 @@ def generate(envelope,cohort=None):
         claim=by_field.get(field)
         if claim and claim.value is True:add('scale',label,claim)
     if envelope.run.refresh.get('mode')=='baseline':
-        if claims:
-            result.sections.changes.append(Sentence(text='First observation; no earlier run to compare.',claim_ids=[claims[0].id]))
+        name_claim=next((c for c in claims if c.field=='identity.legal_name'),None)
+        if name_claim:
+            line,ids=headline([name_claim])
+            result.sections.changes.append(Sentence(text=line,claim_ids=ids))
         else:
             result.sections.unknowns.append(Unknown(family='refresh',state='not_available',reason='First observation; no earlier run to compare.'))
     elif not envelope.changes and claims:

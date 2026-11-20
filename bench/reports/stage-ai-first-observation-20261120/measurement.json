@@ -1,0 +1,47 @@
+﻿{
+    "baseline":  "bench\\runs\\funding-news-brief-final-20261120",
+    "output":  "bench\\runs\\stage-ai-first-observation-20261120",
+    "new_http_requests":  0,
+    "network_guard":  "socket.connect and getaddrinfo forbidden",
+    "companies":  1000,
+    "sentences_changed":  1000,
+    "sentences_removed":  0,
+    "synthesis_sentences_before":  15151,
+    "synthesis_sentences_after":  15151,
+    "sections_before":  {
+                            "what_it_does":  3649,
+                            "scale":  1288,
+                            "leadership":  2091,
+                            "changes":  2307,
+                            "reach":  1314,
+                            "standing":  1103,
+                            "not_established":  3399
+                        },
+    "sections_after":  {
+                           "what_it_does":  3649,
+                           "scale":  1288,
+                           "leadership":  2091,
+                           "changes":  2307,
+                           "reach":  1314,
+                           "standing":  1103,
+                           "not_established":  3399
+                       },
+    "strict_verifier":  "PASS: 1000 envelopes; 167975 claims; 5882 source blobs; 0 unverified values",
+    "test_count_before":  1732,
+    "test_count_after":  "full suite: 1732 passed, 2 failed (same two evaluator integration tests as base)",
+    "focused_tests":  "38 passed",
+    "full_suite_after":  "1732 passed, 2 failed",
+    "full_suite_failure":  "test_evaluator_cli_direct_invocation_and_site_generation and test_evaluator_shapes_union_contract_reference both failed strict verification with Incomplete smoke-test section after 227 live requests; both CLI reports showed zero deadline hits and no warnings.",
+    "comparison": {
+        "base_head": "b23558d611f3359957d97ffbe487b7b46201ef91",
+        "all_runs_failed_identically": true,
+        "assertion": "scripts/verify_output.py: Incomplete smoke-test section",
+        "requests_per_run": 227,
+        "deadline_hits_per_run": 0,
+        "warnings_per_run": 0,
+        "base_direct_runtime_ms": [7735, 7172],
+        "change_direct_runtime_ms": [7516, 7625],
+        "base_shapes_runtime_ms": [7609, 7406],
+        "change_shapes_runtime_ms": [7547, 7407]
+    }
+}
