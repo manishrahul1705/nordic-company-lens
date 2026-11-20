@@ -196,6 +196,7 @@ def effective_configuration(config, budget, report):
         'registry_changes': config.registry_changes,
         'funding_snapshots': config.funding_snapshots,
         'official_extra_sources': config.official_extra_sources,
+        'dibk': config.dibk,
         'website_suffix_contact_proof': config.website_suffix_contact_proof,
         'search': {'queries': report.get('search', {}).get('queries', 0),
                    'estimated_usd': report.get('search', {}).get('estimated_usd', 0)},

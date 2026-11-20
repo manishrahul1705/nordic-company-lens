@@ -1,0 +1,32 @@
+{
+  "checked_on": "2026-11-20",
+  "records": [
+    {
+      "url": "https://sgregister.dibk.no/robots.txt",
+      "status": 200,
+      "retrieved_at": "2026-11-20T13:12:24.151842+00:00",
+      "sha256": "b56ef3e250d54678fd5fa708b5f5889c7bfa9375edffba2b206face3bf899522",
+      "bytes": 482
+    },
+    {
+      "url": "https://sgregister.dibk.no/",
+      "status": 200,
+      "retrieved_at": "2026-11-20T13:17:13.028980+00:00",
+      "sha256": "c89eeceecd64a60f12173e023147762bbca362aa1296dd062e6d3a913c015ff8",
+      "bytes": 42144
+    },
+    {
+      "url": "https://sgregister.dibk.no/apidocs/openapi.yaml",
+      "status": 200,
+      "retrieved_at": "2026-11-20T13:20:44.888205+00:00",
+      "sha256": "e9acf6c789946258d7d660cd4de6059170ef9739aa7deb34f4877e7acdb93581",
+      "bytes": 25340
+    }
+  ],
+  "runtime_data_routes": [
+    "https://sgregister.dibk.no/enterprises/{orgnr}"
+  ],
+  "api_and_search_called": false,
+  "licence_assessment": "No factual enterprise-page reuse prohibition found; API documentation licences API data CC BY 4.0, without claiming a blanket HTML licence. Attribute DiBK and date observations; live recheck rather than permanent bulk snapshot.",
+  "robots_text": "# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file\n#\n# /enterprises/ must stay crawlable: pages of enterprises without a valid\n# approval carry an X-Robots-Tag: noindex header, which crawlers only see\n# if they are allowed to fetch the page.\nUser-agent: *\nDisallow: /search\nDisallow: /api/\nDisallow: /municipalities\nDisallow: /counties\nDisallow: /countries\nDisallow: /approval_area_function_types\nDisallow: /approval_area_field_types\n"
+}

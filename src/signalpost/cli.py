@@ -46,6 +46,8 @@ def main(argv=None):
     command.add_argument('--public-activity', action=argparse.BooleanOptionalAction, default=True,
                          help='Research bounded company-site public activity (default on; disable with --no-public-activity)')
     command.add_argument('--official-extra-sources', action=argparse.BooleanOptionalAction, default=True, help='Anonymous exact-ID GLEIF/TED sources')
+    command.add_argument('--dibk', action=argparse.BooleanOptionalAction, default=True,
+                         help='One DiBK enterprise page for construction/technical NACE codes; no API/search')
     command.add_argument('--group-structure', action=argparse.BooleanOptionalAction, default=True,
                          help='Fetch explicit BRREG group relationships only for registry-flagged group members')
     command.add_argument('--signature-rights', action=argparse.BooleanOptionalAction, default=True,

@@ -1,0 +1,214 @@
+{
+  "mode": "saved-cohort replay plus live DiBK-only fetches; not a fresh all-source crawl",
+  "selected": 10,
+  "companies_with_approvals": 2,
+  "approval_claims": 8,
+  "HTTP_added": 11,
+  "enterprise_HTTP": 10,
+  "robots_HTTP": 1,
+  "isolated_fetch_seconds": 10.48399999999674,
+  "requests": [
+    {
+      "url": "https://sgregister.dibk.no/robots.txt",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "__dibk_robots__",
+      "attempt_started": 0.031000000017229468,
+      "status": 200,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "b56ef3e250d54678fd5fa708b5f5889c7bfa9375edffba2b206face3bf899522",
+      "runtime_ms": 141
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/918975934",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "918975934",
+      "attempt_started": 1.187000000005355,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "7ef9a841078534b57c5846670bdba8518be51f1c4ad20da29325290fcfe90898",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/927239620",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "927239620",
+      "attempt_started": 2.187000000005355,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "a1717ca2042a8059e979512603e90d070e104b9ff3f18cdac32a06f404ffe582",
+      "runtime_ms": 235
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/926698435",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "926698435",
+      "attempt_started": 3.2030000000086147,
+      "status": 200,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "59598040b2491173bbb28a2abf69c656568168064e94762e7005be12e9e0ee8c",
+      "runtime_ms": 516
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/922767459",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "922767459",
+      "attempt_started": 4.203000000008615,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "856501f2152be9fbc3dca95a0fb4861f4b851345c63ff6c6f3ad85eeacd90426",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/829363712",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "829363712",
+      "attempt_started": 5.219000000011874,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "7c21ba4f59a1bc4681307f047a33be3f19b1e0434bff293d28353c345134bdf4",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/912492575",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "912492575",
+      "attempt_started": 6.219000000011874,
+      "status": 200,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "79def277c5257ce434441328fa188a9c63397818b9ab938d360ffc07b1370f75",
+      "runtime_ms": 250
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/920043356",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "920043356",
+      "attempt_started": 7.23399999999674,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "bf8ecc94876f439d196f6cd45dcfc85c12969860c20bfb3d8077c95f97596644",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/823147112",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "823147112",
+      "attempt_started": 8.25,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "5de9d1860fac0aed90aad60f9dc1fd4e0edf6ea0e66c9dba05355f261f8cdd4c",
+      "runtime_ms": 234
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/928657523",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "928657523",
+      "attempt_started": 9.26600000000326,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "d517de74f1d5f77d97f92c5b1814d6bd67244d60dfadfec08dacc4b817e0e235",
+      "runtime_ms": 218
+    },
+    {
+      "url": "https://sgregister.dibk.no/enterprises/984590881",
+      "host": "sgregister.dibk.no",
+      "organisation_number": "984590881",
+      "attempt_started": 10.26600000000326,
+      "status": 404,
+      "error": null,
+      "section": "dibk",
+      "content_sha256": "d5a825a63d1b82eb762d89aad74ffa22aa06f66986aa6bc88069040b30c3399d",
+      "runtime_ms": 234
+    }
+  ],
+  "diagnostics": {
+    "918975934": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    },
+    "927239620": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    },
+    "926698435": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 200,
+      "claims": 6,
+      "state": "available"
+    },
+    "922767459": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    },
+    "829363712": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    },
+    "912492575": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 200,
+      "claims": 2,
+      "state": "available"
+    },
+    "920043356": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    },
+    "823147112": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    },
+    "928657523": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    },
+    "984590881": {
+      "selected": true,
+      "requests": 1,
+      "http_status": 404,
+      "claims": 0,
+      "state": "not_found"
+    }
+  },
+  "strict_verifier": {
+    "lines": 100,
+    "schema_valid": true,
+    "published_claims": 17979,
+    "source_blobs_verified": 577,
+    "synthesis_companies": 100,
+    "synthesis_sentences": 266,
+    "synthesis_unverified_values": 0
+  }
+}

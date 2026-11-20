@@ -436,7 +436,7 @@ async def _run(config, client=None):
                 asyncio.ensure_future(confirm_outage(http))
         verdict = await asyncio.shield(outage['verdict'])
         return {'recovered': 'retry', 'outage': 'abort'}.get(verdict)
-    async def company(org, http, website_http, nav_task):
+    async def company(org, http, website_http, nav_task, dibk_collector=None):
         from .web.policy import DNS_ORG
         DNS_ORG.set(org)
         envelope = envelopes[org]
@@ -481,6 +481,8 @@ async def _run(config, client=None):
                         timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
                     await push_subunit_scope(org, envelope)
                     return
+                if dibk_collector is not None:
+                    dibk_collector.schedule(envelope)
                 await isolate(envelope, "subunits", lambda: brreg_underenheter.fetch(org, http, progress=lambda partial: update(envelope, "subunits", partial)))
                 subunits_done.add(org)
                 if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
@@ -608,7 +610,9 @@ async def _run(config, client=None):
             budget.shared_request_holds.clear()
         wikidata_index.update(shared['wikidata'])
         timing_markers['shared_sources_complete_seconds'] = time.monotonic() - budget.start
-        tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
+        from .sources.dibk import Collector as DibkCollector
+        dibk_collector = DibkCollector(active_client, config, budget, blobs) if config.dibk else None
+        tasks = [asyncio.create_task(company(org, http, website_http,nav_task,dibk_collector)) for org in inputs.unique if valid(org)]
         outage['tasks'] = tasks
         # Only lookups company() will actually make count; urgent ones already ran.
         outage['expected'] = min(IDENTITY_OUTAGE_SAMPLE, sum(
@@ -684,8 +688,15 @@ async def _run(config, client=None):
                 news_tasks=[asyncio.create_task(news(org,row)) for org,row in envelopes.items()
                             if website_http.accepted_pages.get(org)]
                 await finish_before_deadline(news_tasks,budget,CANCEL_GRACE_SECONDS)
+            if dibk_collector is not None:
+                before_dibk_wait = time.monotonic()
+                await dibk_collector.finish()
+                timing_markers['dibk_tail_wait_seconds'] = time.monotonic() - before_dibk_wait
+                timing_markers['dibk_selected_companies'] = len(dibk_collector.queried)
             return pending
         finally:
+            if dibk_collector is not None:
+                await dibk_collector.cancel()
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
                                 'dns_scope': 'prechecks, website preflight and pinned-transport connection resolutions'})
             if subunit_queue is not None:

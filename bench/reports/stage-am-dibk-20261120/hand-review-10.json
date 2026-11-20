@@ -1,0 +1,1212 @@
+[
+  {
+    "company": "HAUGESUND ELEKTRISKE FORRETNING AS",
+    "orgnr": "912492575",
+    "claim": {
+      "field": "central_approval.83c06fa9ff2f5609ac0952b1",
+      "value": {
+        "organisation_number": "912492575",
+        "area": "Installasjon av brannalarmanlegg",
+        "class": "1",
+        "function": "Utførende",
+        "valid_from": "22.09.2025",
+        "valid_to": "22.09.2028",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/912492575"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "9c4528e523f32c719123f9e4d4b6ebb23e686b0f8ee99ea644684f4a9fdfaf09",
+        "4896b81e65522295217a20d0fb90c7f1e661a42d6ac01980ff9e40011bbe0039",
+        "8013d8a38e7274ab2ed42c1cd172481344b7ccd312198b9fba2d40e7be51243f",
+        "7951caecdcdf1d6b249f4c2388c7bfb813f41822241027de0f61da972c2b0f71",
+        "c91d87382c66db701e3b4844088c2d8dc464bbd990191bd7b1c7c4fc7290224e",
+        "54a963c213b63768c5da6703fd4740c3a6a4e3ad2cff2ac69f755478012520b2"
+      ],
+      "id": "3fbfc9072fab0c4ac36bec4ff0dcf25dc331cb24509bab626fd92f268d2ce5ff",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:17:28.744376Z",
+      "last_observed_at": "2026-11-20T13:17:28.744376Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: Installasjon av brannalarmanlegg",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "9c4528e523f32c719123f9e4d4b6ebb23e686b0f8ee99ea644684f4a9fdfaf09",
+        "source_url": "https://sgregister.dibk.no/enterprises/912492575",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:28.744376Z",
+        "content_sha256": "779be72224e94c43c9a3cc2c8fee44dadcddf73322780f6520c3b39a5ab62c26",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">912492575</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4896b81e65522295217a20d0fb90c7f1e661a42d6ac01980ff9e40011bbe0039",
+        "source_url": "https://sgregister.dibk.no/enterprises/912492575",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:28.744376Z",
+        "content_sha256": "779be72224e94c43c9a3cc2c8fee44dadcddf73322780f6520c3b39a5ab62c26",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">22.09.2025&ndash;22.09.2028</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8013d8a38e7274ab2ed42c1cd172481344b7ccd312198b9fba2d40e7be51243f",
+        "source_url": "https://sgregister.dibk.no/enterprises/912492575",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:28.744376Z",
+        "content_sha256": "779be72224e94c43c9a3cc2c8fee44dadcddf73322780f6520c3b39a5ab62c26",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "7951caecdcdf1d6b249f4c2388c7bfb813f41822241027de0f61da972c2b0f71",
+        "source_url": "https://sgregister.dibk.no/enterprises/912492575",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:28.744376Z",
+        "content_sha256": "779be72224e94c43c9a3cc2c8fee44dadcddf73322780f6520c3b39a5ab62c26",
+        "claim_span": "<td class=\"py-2 text-xl\">Utførende</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "c91d87382c66db701e3b4844088c2d8dc464bbd990191bd7b1c7c4fc7290224e",
+        "source_url": "https://sgregister.dibk.no/enterprises/912492575",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:28.744376Z",
+        "content_sha256": "779be72224e94c43c9a3cc2c8fee44dadcddf73322780f6520c3b39a5ab62c26",
+        "claim_span": "<td class=\"py-2 text-xl\">Installasjon av brannalarmanlegg</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "54a963c213b63768c5da6703fd4740c3a6a4e3ad2cff2ac69f755478012520b2",
+        "source_url": "https://sgregister.dibk.no/enterprises/912492575",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:28.744376Z",
+        "content_sha256": "779be72224e94c43c9a3cc2c8fee44dadcddf73322780f6520c3b39a5ab62c26",
+        "claim_span": "<td class=\"py-2 text-xl\">1</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "UPPSTAD VVS AVDELING HOVDEN AS",
+    "orgnr": "926698435",
+    "claim": {
+      "field": "central_approval.35c63381367fa2f3fb23ab38",
+      "value": {
+        "organisation_number": "926698435",
+        "area": "Sanitærinstallasjoner",
+        "class": "1",
+        "function": "Prosjekterende",
+        "valid_from": "07.05.2026",
+        "valid_to": "07.05.2029",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/926698435"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "15654738a2383edf5d0513244fbbf467ef33bef752218f963b728a9ef3447664",
+        "b99c244fb48066e2f6014ebef4f3d1bb0b7c3cbfb3729ff8f277ab9e872ad72e",
+        "3731ad1979bc47c3ffdbe2d93c3368ced9267b2deeab9e1529667f858af13f51",
+        "d28f1153a0dc1125e307d9dfa68dad2b23ef9d38a80d908ab2fc7a0f67869c18",
+        "660d1cb2882e759b29b731854cfef6aa3ce440a7a4ec2dca827cfd80fbd0fdbb",
+        "2abf21acf93a44e455337ab045fae8064ea4a2a28040794376c60b72d47f9ccb"
+      ],
+      "id": "2e9d092417d8c1bcbf972925d5fc2109071c3bcf93b402469662efaf0e794869",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:17:25.809041Z",
+      "last_observed_at": "2026-11-20T13:17:25.809041Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: Sanitærinstallasjoner",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "15654738a2383edf5d0513244fbbf467ef33bef752218f963b728a9ef3447664",
+        "source_url": "https://sgregister.dibk.no/enterprises/926698435",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:25.809041Z",
+        "content_sha256": "f1ff853097e91bba7c94b146a60ae26fad54a7922054229629be98a502567f0f",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">926698435</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b99c244fb48066e2f6014ebef4f3d1bb0b7c3cbfb3729ff8f277ab9e872ad72e",
+        "source_url": "https://sgregister.dibk.no/enterprises/926698435",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:25.809041Z",
+        "content_sha256": "f1ff853097e91bba7c94b146a60ae26fad54a7922054229629be98a502567f0f",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">07.05.2026&ndash;07.05.2029</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3731ad1979bc47c3ffdbe2d93c3368ced9267b2deeab9e1529667f858af13f51",
+        "source_url": "https://sgregister.dibk.no/enterprises/926698435",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:25.809041Z",
+        "content_sha256": "f1ff853097e91bba7c94b146a60ae26fad54a7922054229629be98a502567f0f",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d28f1153a0dc1125e307d9dfa68dad2b23ef9d38a80d908ab2fc7a0f67869c18",
+        "source_url": "https://sgregister.dibk.no/enterprises/926698435",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:25.809041Z",
+        "content_sha256": "f1ff853097e91bba7c94b146a60ae26fad54a7922054229629be98a502567f0f",
+        "claim_span": "<td class=\"py-2 text-xl\">Prosjekterende</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "660d1cb2882e759b29b731854cfef6aa3ce440a7a4ec2dca827cfd80fbd0fdbb",
+        "source_url": "https://sgregister.dibk.no/enterprises/926698435",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:25.809041Z",
+        "content_sha256": "f1ff853097e91bba7c94b146a60ae26fad54a7922054229629be98a502567f0f",
+        "claim_span": "<td class=\"py-2 text-xl\">Sanitærinstallasjoner</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "2abf21acf93a44e455337ab045fae8064ea4a2a28040794376c60b72d47f9ccb",
+        "source_url": "https://sgregister.dibk.no/enterprises/926698435",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:25.809041Z",
+        "content_sha256": "f1ff853097e91bba7c94b146a60ae26fad54a7922054229629be98a502567f0f",
+        "claim_span": "<td class=\"py-2 text-xl\">1</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "FJELDE TEKNIKK AS",
+    "orgnr": "931069373",
+    "claim": {
+      "field": "central_approval.7236a3f0d647f67f7f22666c",
+      "value": {
+        "organisation_number": "931069373",
+        "area": "Varme- og kuldeinstallasjoner",
+        "class": "1",
+        "function": "Utførende",
+        "valid_from": "11.09.2025",
+        "valid_to": "11.09.2028",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/931069373"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "09c3d6294203316bb63c6d9964d4b99fa789c7464b09b0c35efa06d44d2e4851",
+        "8504c4d04cecfacd48b885134f6a1e1347c4b004f15ac9cbb098d14fdcadbea7",
+        "528cf01dc275fecef44846b2c3fec832ae1ff3a135364e05f015a0b50aa009a8",
+        "3efbe48d59fc135edddab4447d678777fcebd99078c51736ae7b16df677f0e48",
+        "1f159ee6f34c08469ecef328430799180aca45fff956166d4e66cd135ddceff3",
+        "3b6f5ce807eff6b0cb47b782e7ee199ff51be7c13fc2b97a4b05c484c309f8d8"
+      ],
+      "id": "795df8806d908708bf083e812ae27c1cbf375926e4e59ce6f4a506ff9929e28f",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:17:42.740267Z",
+      "last_observed_at": "2026-11-20T13:17:42.740267Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: Varme- og kuldeinstallasjoner",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "09c3d6294203316bb63c6d9964d4b99fa789c7464b09b0c35efa06d44d2e4851",
+        "source_url": "https://sgregister.dibk.no/enterprises/931069373",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:42.740267Z",
+        "content_sha256": "883740042549443e94677c7ec0d4d4e1985ff6a6270bdde3a7843ca2be68459c",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">931069373</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8504c4d04cecfacd48b885134f6a1e1347c4b004f15ac9cbb098d14fdcadbea7",
+        "source_url": "https://sgregister.dibk.no/enterprises/931069373",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:42.740267Z",
+        "content_sha256": "883740042549443e94677c7ec0d4d4e1985ff6a6270bdde3a7843ca2be68459c",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">11.09.2025&ndash;11.09.2028</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "528cf01dc275fecef44846b2c3fec832ae1ff3a135364e05f015a0b50aa009a8",
+        "source_url": "https://sgregister.dibk.no/enterprises/931069373",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:42.740267Z",
+        "content_sha256": "883740042549443e94677c7ec0d4d4e1985ff6a6270bdde3a7843ca2be68459c",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3efbe48d59fc135edddab4447d678777fcebd99078c51736ae7b16df677f0e48",
+        "source_url": "https://sgregister.dibk.no/enterprises/931069373",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:42.740267Z",
+        "content_sha256": "883740042549443e94677c7ec0d4d4e1985ff6a6270bdde3a7843ca2be68459c",
+        "claim_span": "<td class=\"py-2 text-xl\">Utførende</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "1f159ee6f34c08469ecef328430799180aca45fff956166d4e66cd135ddceff3",
+        "source_url": "https://sgregister.dibk.no/enterprises/931069373",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:42.740267Z",
+        "content_sha256": "883740042549443e94677c7ec0d4d4e1985ff6a6270bdde3a7843ca2be68459c",
+        "claim_span": "<td class=\"py-2 text-xl\">Varme- og kuldeinstallasjoner</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3b6f5ce807eff6b0cb47b782e7ee199ff51be7c13fc2b97a4b05c484c309f8d8",
+        "source_url": "https://sgregister.dibk.no/enterprises/931069373",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:42.740267Z",
+        "content_sha256": "883740042549443e94677c7ec0d4d4e1985ff6a6270bdde3a7843ca2be68459c",
+        "claim_span": "<td class=\"py-2 text-xl\">1</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "CONPLAN AS",
+    "orgnr": "987895276",
+    "claim": {
+      "field": "central_approval.9299110cae33918a94d801b8",
+      "value": {
+        "organisation_number": "987895276",
+        "area": "(for alle typer tiltak)",
+        "class": "3",
+        "function": "Ansvarlig søker",
+        "valid_from": "19.06.2026",
+        "valid_to": "19.06.2029",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/987895276"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "dbf484288384c582902309c7434c3cc008bc5bc2daf89cfbd4a4b010bb43ae7c",
+        "4f59b66556ed1f1d2729b8b9f03add52b0989a1a40159d3414ad74abc29f529e",
+        "c9566d466c840a6fa16e8eef96022ee05cd723ca0103b353fce50a11114b7e64",
+        "7c932342a97358d9e1b4f2ce30d94e39ab6f817d45461d6b5d9441e8a29d50f7",
+        "ec2c2c065792b40a607ae3b83cce9289d4e1b55a0946ee88f505130ccdeb1f68",
+        "7fd45ba0031e7cf54db7bea63ee66b108a4ed2f719cc361d97e1a7da92f0b8ad"
+      ],
+      "id": "f2357f1d6459796a6f335c1c68bfc2bb76d56ba7df4f32229180905ec01d4ba2",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:17:56.781074Z",
+      "last_observed_at": "2026-11-20T13:17:56.781074Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: (for alle typer tiltak)",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "dbf484288384c582902309c7434c3cc008bc5bc2daf89cfbd4a4b010bb43ae7c",
+        "source_url": "https://sgregister.dibk.no/enterprises/987895276",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:56.781074Z",
+        "content_sha256": "5ce4ab79460d4c2e18c1733ef76b779a345bf2e6556c239e1b4b459b373deac6",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">987895276</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4f59b66556ed1f1d2729b8b9f03add52b0989a1a40159d3414ad74abc29f529e",
+        "source_url": "https://sgregister.dibk.no/enterprises/987895276",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:56.781074Z",
+        "content_sha256": "5ce4ab79460d4c2e18c1733ef76b779a345bf2e6556c239e1b4b459b373deac6",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">19.06.2026&ndash;19.06.2029</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "c9566d466c840a6fa16e8eef96022ee05cd723ca0103b353fce50a11114b7e64",
+        "source_url": "https://sgregister.dibk.no/enterprises/987895276",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:56.781074Z",
+        "content_sha256": "5ce4ab79460d4c2e18c1733ef76b779a345bf2e6556c239e1b4b459b373deac6",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "7c932342a97358d9e1b4f2ce30d94e39ab6f817d45461d6b5d9441e8a29d50f7",
+        "source_url": "https://sgregister.dibk.no/enterprises/987895276",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:56.781074Z",
+        "content_sha256": "5ce4ab79460d4c2e18c1733ef76b779a345bf2e6556c239e1b4b459b373deac6",
+        "claim_span": "<td class=\"py-2 text-xl\">Ansvarlig søker</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "ec2c2c065792b40a607ae3b83cce9289d4e1b55a0946ee88f505130ccdeb1f68",
+        "source_url": "https://sgregister.dibk.no/enterprises/987895276",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:56.781074Z",
+        "content_sha256": "5ce4ab79460d4c2e18c1733ef76b779a345bf2e6556c239e1b4b459b373deac6",
+        "claim_span": "<td class=\"py-2 text-xl\">(for alle typer tiltak)</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "7fd45ba0031e7cf54db7bea63ee66b108a4ed2f719cc361d97e1a7da92f0b8ad",
+        "source_url": "https://sgregister.dibk.no/enterprises/987895276",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:17:56.781074Z",
+        "content_sha256": "5ce4ab79460d4c2e18c1733ef76b779a345bf2e6556c239e1b4b459b373deac6",
+        "claim_span": "<td class=\"py-2 text-xl\">3</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "TØMRER S. FAGERBEKK AS",
+    "orgnr": "915279082",
+    "claim": {
+      "field": "central_approval.cfaf04a4e8ce13eb2be61eef",
+      "value": {
+        "organisation_number": "915279082",
+        "area": "Tømrerarbeid og montering av trekonstruksjoner",
+        "class": "1",
+        "function": "Utførende",
+        "valid_from": "23.05.2025",
+        "valid_to": "23.05.2028",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/915279082"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "bb3cc305315d4e7f63e888f8791d7545463ad81ea13fb289e4793714f86c0c3d",
+        "81ddd75817bac9ea0fc42b2f9631f500f59b6a5849e69537eebc26fc6aab7cc5",
+        "56fec504000ecf5c07e908b0bff5159d412929029f1fed6f6e5231736fb6858e",
+        "b8438501544f460af60bb4394efe3f4d5e47b1106216cd6a266c0b17df7ff7dc",
+        "61947da4a5dc213eba033602382dedea3247b748ddf9beb445a366d9c302f974",
+        "aaa740242c3496278b2f915838bde975d94c28cb40847af98df852a06be94c2d"
+      ],
+      "id": "9b466527462532a375991aef786762ebdc38ed3589f431ac5bf98bb8887a09e6",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:18:12.073709Z",
+      "last_observed_at": "2026-11-20T13:18:12.073709Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: Tømrerarbeid og montering av trekonstruksjoner",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "bb3cc305315d4e7f63e888f8791d7545463ad81ea13fb289e4793714f86c0c3d",
+        "source_url": "https://sgregister.dibk.no/enterprises/915279082",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:12.073709Z",
+        "content_sha256": "c2aa1a16fd79ac4f074ec4238baf546ca56385898f6e5adb8d4b126debb09c2a",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">915279082</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "81ddd75817bac9ea0fc42b2f9631f500f59b6a5849e69537eebc26fc6aab7cc5",
+        "source_url": "https://sgregister.dibk.no/enterprises/915279082",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:12.073709Z",
+        "content_sha256": "c2aa1a16fd79ac4f074ec4238baf546ca56385898f6e5adb8d4b126debb09c2a",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">23.05.2025&ndash;23.05.2028</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "56fec504000ecf5c07e908b0bff5159d412929029f1fed6f6e5231736fb6858e",
+        "source_url": "https://sgregister.dibk.no/enterprises/915279082",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:12.073709Z",
+        "content_sha256": "c2aa1a16fd79ac4f074ec4238baf546ca56385898f6e5adb8d4b126debb09c2a",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b8438501544f460af60bb4394efe3f4d5e47b1106216cd6a266c0b17df7ff7dc",
+        "source_url": "https://sgregister.dibk.no/enterprises/915279082",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:12.073709Z",
+        "content_sha256": "c2aa1a16fd79ac4f074ec4238baf546ca56385898f6e5adb8d4b126debb09c2a",
+        "claim_span": "<td class=\"py-2 text-xl\">Utførende</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "61947da4a5dc213eba033602382dedea3247b748ddf9beb445a366d9c302f974",
+        "source_url": "https://sgregister.dibk.no/enterprises/915279082",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:12.073709Z",
+        "content_sha256": "c2aa1a16fd79ac4f074ec4238baf546ca56385898f6e5adb8d4b126debb09c2a",
+        "claim_span": "<td class=\"py-2 text-xl\">Tømrerarbeid og montering av trekonstruksjoner</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "aaa740242c3496278b2f915838bde975d94c28cb40847af98df852a06be94c2d",
+        "source_url": "https://sgregister.dibk.no/enterprises/915279082",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:12.073709Z",
+        "content_sha256": "c2aa1a16fd79ac4f074ec4238baf546ca56385898f6e5adb8d4b126debb09c2a",
+        "claim_span": "<td class=\"py-2 text-xl\">1</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "MURMESTER ANDREAS KAMMEN AS",
+    "orgnr": "928647854",
+    "claim": {
+      "field": "central_approval.c0975345d4dcf672dbe4ddf9",
+      "value": {
+        "organisation_number": "928647854",
+        "area": "(for alle typer tiltak)",
+        "class": "1",
+        "function": "Ansvarlig søker",
+        "valid_from": "07.11.2025",
+        "valid_to": "07.11.2028",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/928647854"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "117715a9833a75d41523fc38c29f0b83ebae3069c5a72d6297c9d5ac74d7ebf8",
+        "9dcd22c78e2cfb0a8ea1e975d9e814cb5ada4a7df531684b17709421cd08a833",
+        "7fdfc08735285f49a999c4c08dc8bf72c03a4d9a240fa0673fc84178b4b0021e",
+        "2f0e9c0af8a8f88bd66c2d0eb5fd5d7e237af45960eec47fad1481d294a7c3cb",
+        "3001e4e0d8dee756280bb5e56302008faace6638b79b4e78be90c598e164c950",
+        "2093908ff1bad82b86b0d4ff2af070131405395fc2fabf005981d924a16f8ecd"
+      ],
+      "id": "8262e36c7ea739b8d1b1325424ef3235f938a5effeae7a55bbd42b3af395375a",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:18:18.273596Z",
+      "last_observed_at": "2026-11-20T13:18:18.273596Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: (for alle typer tiltak)",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "117715a9833a75d41523fc38c29f0b83ebae3069c5a72d6297c9d5ac74d7ebf8",
+        "source_url": "https://sgregister.dibk.no/enterprises/928647854",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:18.273596Z",
+        "content_sha256": "ee5b231d6e32c081414dca34b6e164a7569a068cf5d7aaebe1a9bbc93cb717e8",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">928647854</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "9dcd22c78e2cfb0a8ea1e975d9e814cb5ada4a7df531684b17709421cd08a833",
+        "source_url": "https://sgregister.dibk.no/enterprises/928647854",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:18.273596Z",
+        "content_sha256": "ee5b231d6e32c081414dca34b6e164a7569a068cf5d7aaebe1a9bbc93cb717e8",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">07.11.2025&ndash;07.11.2028</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "7fdfc08735285f49a999c4c08dc8bf72c03a4d9a240fa0673fc84178b4b0021e",
+        "source_url": "https://sgregister.dibk.no/enterprises/928647854",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:18.273596Z",
+        "content_sha256": "ee5b231d6e32c081414dca34b6e164a7569a068cf5d7aaebe1a9bbc93cb717e8",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "2f0e9c0af8a8f88bd66c2d0eb5fd5d7e237af45960eec47fad1481d294a7c3cb",
+        "source_url": "https://sgregister.dibk.no/enterprises/928647854",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:18.273596Z",
+        "content_sha256": "ee5b231d6e32c081414dca34b6e164a7569a068cf5d7aaebe1a9bbc93cb717e8",
+        "claim_span": "<td class=\"py-2 text-xl\">Ansvarlig søker</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3001e4e0d8dee756280bb5e56302008faace6638b79b4e78be90c598e164c950",
+        "source_url": "https://sgregister.dibk.no/enterprises/928647854",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:18.273596Z",
+        "content_sha256": "ee5b231d6e32c081414dca34b6e164a7569a068cf5d7aaebe1a9bbc93cb717e8",
+        "claim_span": "<td class=\"py-2 text-xl\">(for alle typer tiltak)</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "2093908ff1bad82b86b0d4ff2af070131405395fc2fabf005981d924a16f8ecd",
+        "source_url": "https://sgregister.dibk.no/enterprises/928647854",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:18.273596Z",
+        "content_sha256": "ee5b231d6e32c081414dca34b6e164a7569a068cf5d7aaebe1a9bbc93cb717e8",
+        "claim_span": "<td class=\"py-2 text-xl\">1</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "OPPHEIM GRAVEMASKINSTASJON AS",
+    "orgnr": "974533537",
+    "claim": {
+      "field": "central_approval.6a7304ba527dd3bfa8eed745",
+      "value": {
+        "organisation_number": "974533537",
+        "area": "Veg- og grunnarbeider",
+        "class": "1",
+        "function": "Utførende",
+        "valid_from": "17.06.2025",
+        "valid_to": "17.06.2028",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/974533537"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "9a3dd64e757247a38815ed38b55af94b142a126e4ea93ab7c0ccea33684b367b",
+        "699fb68ce3d7c0adde4879d614896238f7f1f9f82d86739691394f45f73d5db4",
+        "d52636ff992c951c8a3c4da553e695bdc8bb9858c5d3568c18561eb2e18c83f9",
+        "c9b6247f127218d50c31024662351331fd1b146e25efb847f5a078d4dad060f2",
+        "d5e566a78f8220e1266a5ac45778d1fc71a8ed5b2439537a0e9ddc24906837a2",
+        "b013053056b64ac74237e36674a864c8b6d0ac83ee3c8f5993db7672e380bc1e"
+      ],
+      "id": "77cca47c575b4668545bffabc4b400c725db48648ea3d4dfe8146c881e178877",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:18:24.218753Z",
+      "last_observed_at": "2026-11-20T13:18:24.218753Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: Veg- og grunnarbeider",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "9a3dd64e757247a38815ed38b55af94b142a126e4ea93ab7c0ccea33684b367b",
+        "source_url": "https://sgregister.dibk.no/enterprises/974533537",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:24.218753Z",
+        "content_sha256": "68203b9e5a7684f6dc8532659aafb8d44e2ce1b1644855ed311c7f87fff89469",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">974533537</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "699fb68ce3d7c0adde4879d614896238f7f1f9f82d86739691394f45f73d5db4",
+        "source_url": "https://sgregister.dibk.no/enterprises/974533537",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:24.218753Z",
+        "content_sha256": "68203b9e5a7684f6dc8532659aafb8d44e2ce1b1644855ed311c7f87fff89469",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">17.06.2025&ndash;17.06.2028</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d52636ff992c951c8a3c4da553e695bdc8bb9858c5d3568c18561eb2e18c83f9",
+        "source_url": "https://sgregister.dibk.no/enterprises/974533537",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:24.218753Z",
+        "content_sha256": "68203b9e5a7684f6dc8532659aafb8d44e2ce1b1644855ed311c7f87fff89469",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "c9b6247f127218d50c31024662351331fd1b146e25efb847f5a078d4dad060f2",
+        "source_url": "https://sgregister.dibk.no/enterprises/974533537",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:24.218753Z",
+        "content_sha256": "68203b9e5a7684f6dc8532659aafb8d44e2ce1b1644855ed311c7f87fff89469",
+        "claim_span": "<td class=\"py-2 text-xl\">Utførende</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d5e566a78f8220e1266a5ac45778d1fc71a8ed5b2439537a0e9ddc24906837a2",
+        "source_url": "https://sgregister.dibk.no/enterprises/974533537",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:24.218753Z",
+        "content_sha256": "68203b9e5a7684f6dc8532659aafb8d44e2ce1b1644855ed311c7f87fff89469",
+        "claim_span": "<td class=\"py-2 text-xl\">Veg- og grunnarbeider</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b013053056b64ac74237e36674a864c8b6d0ac83ee3c8f5993db7672e380bc1e",
+        "source_url": "https://sgregister.dibk.no/enterprises/974533537",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:24.218753Z",
+        "content_sha256": "68203b9e5a7684f6dc8532659aafb8d44e2ce1b1644855ed311c7f87fff89469",
+        "claim_span": "<td class=\"py-2 text-xl\">1</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "CL BYGG & EIENDOM AS",
+    "orgnr": "917283109",
+    "claim": {
+      "field": "central_approval.cfaf04a4e8ce13eb2be61eef",
+      "value": {
+        "organisation_number": "917283109",
+        "area": "Tømrerarbeid og montering av trekonstruksjoner",
+        "class": "1",
+        "function": "Utførende",
+        "valid_from": "11.06.2024",
+        "valid_to": "11.06.2027",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/917283109"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3085c3e6f0a83699322181c10c7e454fa7c946aaaec89e02b830d1b062b0e334",
+        "343ec7a8ea5fdc340832cceb87bdd562c62e2ce7dde80657a16a2f0925c8ca85",
+        "b6f0c383fae2bcf83c7b44dbd512b23d62f382076a5fd8480cd9b9f064efb1b2",
+        "963e730096f557f6a97178d3b450f504688d06ee4315603d4fdfb64a9f013e90",
+        "4a84180d3dd5b2d32c3821b2992be1460e401226f54f990cd45e2ce8a3ad6f38",
+        "4aeabaa5611cac706ae1cb5d566a389ffaaee1c505d6e28c593a0fe449b83019"
+      ],
+      "id": "06bd43a24e1e2d4f8b96d6db4a717e5a2f7845a70ff9c00dfcbebaa22df692a1",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:18:39.422507Z",
+      "last_observed_at": "2026-11-20T13:18:39.422507Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: Tømrerarbeid og montering av trekonstruksjoner",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "3085c3e6f0a83699322181c10c7e454fa7c946aaaec89e02b830d1b062b0e334",
+        "source_url": "https://sgregister.dibk.no/enterprises/917283109",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:39.422507Z",
+        "content_sha256": "c4124eb70bcc04a0ea1d835e29c8a3c45901dfc4aae050f9b190d79f2d52cb91",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">917283109</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "343ec7a8ea5fdc340832cceb87bdd562c62e2ce7dde80657a16a2f0925c8ca85",
+        "source_url": "https://sgregister.dibk.no/enterprises/917283109",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:39.422507Z",
+        "content_sha256": "c4124eb70bcc04a0ea1d835e29c8a3c45901dfc4aae050f9b190d79f2d52cb91",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">11.06.2024&ndash;11.06.2027</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b6f0c383fae2bcf83c7b44dbd512b23d62f382076a5fd8480cd9b9f064efb1b2",
+        "source_url": "https://sgregister.dibk.no/enterprises/917283109",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:39.422507Z",
+        "content_sha256": "c4124eb70bcc04a0ea1d835e29c8a3c45901dfc4aae050f9b190d79f2d52cb91",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "963e730096f557f6a97178d3b450f504688d06ee4315603d4fdfb64a9f013e90",
+        "source_url": "https://sgregister.dibk.no/enterprises/917283109",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:39.422507Z",
+        "content_sha256": "c4124eb70bcc04a0ea1d835e29c8a3c45901dfc4aae050f9b190d79f2d52cb91",
+        "claim_span": "<td class=\"py-2 text-xl\">Utførende</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4a84180d3dd5b2d32c3821b2992be1460e401226f54f990cd45e2ce8a3ad6f38",
+        "source_url": "https://sgregister.dibk.no/enterprises/917283109",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:39.422507Z",
+        "content_sha256": "c4124eb70bcc04a0ea1d835e29c8a3c45901dfc4aae050f9b190d79f2d52cb91",
+        "claim_span": "<td class=\"py-2 text-xl\">Tømrerarbeid og montering av trekonstruksjoner</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4aeabaa5611cac706ae1cb5d566a389ffaaee1c505d6e28c593a0fe449b83019",
+        "source_url": "https://sgregister.dibk.no/enterprises/917283109",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:39.422507Z",
+        "content_sha256": "c4124eb70bcc04a0ea1d835e29c8a3c45901dfc4aae050f9b190d79f2d52cb91",
+        "claim_span": "<td class=\"py-2 text-xl\">1</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "ESPACE AS",
+    "orgnr": "926338730",
+    "claim": {
+      "field": "central_approval.79b607bf52e1bb9ac0539264",
+      "value": {
+        "organisation_number": "926338730",
+        "area": "(for alle typer tiltak)",
+        "class": "2",
+        "function": "Ansvarlig søker",
+        "valid_from": "09.01.2024",
+        "valid_to": "09.01.2027",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/926338730"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "92d9c541680883a3c03c0006c6a45dba2ade9dd5cf2fcc300f01344b60cf8d4c",
+        "d7775ca4d45fb4c736768c1997e9a49f4323c3a21ebbc4bfce485c5e54bf5ec1",
+        "f13ebc26893d0d102b02decbe2ae086c996ce93594a68719f43f5918219366e0",
+        "c7468fff5c01b4a926a858a071a86871db55cd97a301df805d75fdc6717e64e6",
+        "b49c8b213c5f0645b4679b0766b453dffcc8d6a3d3543b8ff675f84d23c24b49",
+        "3082ccc9f61592869e30bda2c7bf54399373dfca7789f065496b87fee8694bb3"
+      ],
+      "id": "3cb3df17394064bc70cd0a393257a53f20361af013bf861160006fb7af54418e",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:18:45.969678Z",
+      "last_observed_at": "2026-11-20T13:18:45.969678Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: (for alle typer tiltak)",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "92d9c541680883a3c03c0006c6a45dba2ade9dd5cf2fcc300f01344b60cf8d4c",
+        "source_url": "https://sgregister.dibk.no/enterprises/926338730",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:45.969678Z",
+        "content_sha256": "c5a0ac779fc15e0dc747024065e40d62bcc3a06ac7c50fa47819c5cf4d5bafe8",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">926338730</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d7775ca4d45fb4c736768c1997e9a49f4323c3a21ebbc4bfce485c5e54bf5ec1",
+        "source_url": "https://sgregister.dibk.no/enterprises/926338730",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:45.969678Z",
+        "content_sha256": "c5a0ac779fc15e0dc747024065e40d62bcc3a06ac7c50fa47819c5cf4d5bafe8",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">09.01.2024&ndash;09.01.2027</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "f13ebc26893d0d102b02decbe2ae086c996ce93594a68719f43f5918219366e0",
+        "source_url": "https://sgregister.dibk.no/enterprises/926338730",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:45.969678Z",
+        "content_sha256": "c5a0ac779fc15e0dc747024065e40d62bcc3a06ac7c50fa47819c5cf4d5bafe8",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "c7468fff5c01b4a926a858a071a86871db55cd97a301df805d75fdc6717e64e6",
+        "source_url": "https://sgregister.dibk.no/enterprises/926338730",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:45.969678Z",
+        "content_sha256": "c5a0ac779fc15e0dc747024065e40d62bcc3a06ac7c50fa47819c5cf4d5bafe8",
+        "claim_span": "<td class=\"py-2 text-xl\">Ansvarlig søker</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b49c8b213c5f0645b4679b0766b453dffcc8d6a3d3543b8ff675f84d23c24b49",
+        "source_url": "https://sgregister.dibk.no/enterprises/926338730",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:45.969678Z",
+        "content_sha256": "c5a0ac779fc15e0dc747024065e40d62bcc3a06ac7c50fa47819c5cf4d5bafe8",
+        "claim_span": "<td class=\"py-2 text-xl\">(for alle typer tiltak)</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3082ccc9f61592869e30bda2c7bf54399373dfca7789f065496b87fee8694bb3",
+        "source_url": "https://sgregister.dibk.no/enterprises/926338730",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:45.969678Z",
+        "content_sha256": "c5a0ac779fc15e0dc747024065e40d62bcc3a06ac7c50fa47819c5cf4d5bafe8",
+        "claim_span": "<td class=\"py-2 text-xl\">2</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  },
+  {
+    "company": "LEFDAL INSTALLASJON AS",
+    "orgnr": "968545337",
+    "claim": {
+      "field": "central_approval.e51d1fcb82b48ad1dc3c5807",
+      "value": {
+        "organisation_number": "968545337",
+        "area": "Brannalarmanlegg",
+        "class": "2",
+        "function": "Prosjekterende",
+        "valid_from": "20.05.2025",
+        "valid_to": "20.05.2028",
+        "status": "approved",
+        "date_format": "DD.MM.YYYY",
+        "source_url": "https://sgregister.dibk.no/enterprises/968545337"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "28ac04f2b6574e89c63300473ac355dd7fe2049cefcce4cb22801431c8180c67",
+        "b2d39056b69278ceac38b439fae91cb9af3efd4ca8ce09b69f0c7e9243ae761e",
+        "59623f32de46a626b57f77ac404ced4e67b656db992a46226f2bd3caa297bec9",
+        "4a5c9c8ce1161830139f16d38bc83afbdb19f93ef31861d7d665cec0e9a6f893",
+        "8308f2f85c2641b58333320744a6e76b4c3e9bc94a31e1b187a3d47a9357c21c",
+        "4e37916eba3f1bc4834cc567101471df2baacfbcde2bcfd94ade97bb32db2a67"
+      ],
+      "id": "04d1e23207e0036b9052d8d0177936a0deb9022f30376b45bba18e9d66baeb16",
+      "family": "certification",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T13:18:49.224728Z",
+      "last_observed_at": "2026-11-20T13:18:49.224728Z",
+      "reasons": {
+        "label": "DiBK sentral godkjenning: Brannalarmanlegg",
+        "attribution": "Direktoratet for byggkvalitet",
+        "observation": "Status as stated at retrieval; recheck before reliance"
+      }
+    },
+    "evidence": [
+      {
+        "id": "28ac04f2b6574e89c63300473ac355dd7fe2049cefcce4cb22801431c8180c67",
+        "source_url": "https://sgregister.dibk.no/enterprises/968545337",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:49.224728Z",
+        "content_sha256": "59e854ea6196ada7ea2c835fe8f0f2aee345d02548a193cf7726cdbce6248ef8",
+        "claim_span": "<b class=\"text-secondary text-xl\">Organisasjonsnummer</b><p class=\"text-xl\">968545337</p>",
+        "locator": "/table/0/row/1/support/0",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "b2d39056b69278ceac38b439fae91cb9af3efd4ca8ce09b69f0c7e9243ae761e",
+        "source_url": "https://sgregister.dibk.no/enterprises/968545337",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:49.224728Z",
+        "content_sha256": "59e854ea6196ada7ea2c835fe8f0f2aee345d02548a193cf7726cdbce6248ef8",
+        "claim_span": "Godkjenningsperiode:</b> <span class=\"text-xl\">20.05.2025&ndash;20.05.2028</span>",
+        "locator": "/table/0/row/1/support/1",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "59623f32de46a626b57f77ac404ced4e67b656db992a46226f2bd3caa297bec9",
+        "source_url": "https://sgregister.dibk.no/enterprises/968545337",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:49.224728Z",
+        "content_sha256": "59e854ea6196ada7ea2c835fe8f0f2aee345d02548a193cf7726cdbce6248ef8",
+        "claim_span": "<h3 class=\"text-3xl text-secondary mb-5\">Foretaket har sentral godkjenning</h3>",
+        "locator": "/table/0/row/1/support/2",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4a5c9c8ce1161830139f16d38bc83afbdb19f93ef31861d7d665cec0e9a6f893",
+        "source_url": "https://sgregister.dibk.no/enterprises/968545337",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:49.224728Z",
+        "content_sha256": "59e854ea6196ada7ea2c835fe8f0f2aee345d02548a193cf7726cdbce6248ef8",
+        "claim_span": "<td class=\"py-2 text-xl\">Prosjekterende</td>",
+        "locator": "/table/0/row/1/support/3",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "8308f2f85c2641b58333320744a6e76b4c3e9bc94a31e1b187a3d47a9357c21c",
+        "source_url": "https://sgregister.dibk.no/enterprises/968545337",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:49.224728Z",
+        "content_sha256": "59e854ea6196ada7ea2c835fe8f0f2aee345d02548a193cf7726cdbce6248ef8",
+        "claim_span": "<td class=\"py-2 text-xl\">Brannalarmanlegg</td>",
+        "locator": "/table/0/row/1/support/4",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4e37916eba3f1bc4834cc567101471df2baacfbcde2bcfd94ade97bb32db2a67",
+        "source_url": "https://sgregister.dibk.no/enterprises/968545337",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-11-20T13:18:49.224728Z",
+        "content_sha256": "59e854ea6196ada7ea2c835fe8f0f2aee345d02548a193cf7726cdbce6248ef8",
+        "claim_span": "<td class=\"py-2 text-xl\">2</td>",
+        "locator": "/table/0/row/1/support/5",
+        "extraction_method": "signalpost.dibk.enterprise-html.v1",
+        "source_identifier": "Direktoratet for byggkvalitet; live enterprise-page observation",
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "why_correct": "Exact labelled enterprise orgnr; positive current-status heading; explicit period covers retrieval day; function, area and class come from the same approval row, not its explanatory text. Six verbatim spans share the page hash."
+  }
+]

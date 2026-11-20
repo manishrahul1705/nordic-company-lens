@@ -1,0 +1,60 @@
+{
+  "mode": "fresh full-1000 all-source live run, default concurrency/budget, site ON",
+  "run_status": "completed",
+  "selected": 120,
+  "companies_queried": 120,
+  "companies_with_approvals": 14,
+  "approval_claims": 69,
+  "status_counts": {
+    "approved": 69
+  },
+  "HTTP_added": 121,
+  "enterprise_HTTP": 120,
+  "robots_HTTP": 1,
+  "HTTP_status_counts": {
+    "404": 106,
+    "200": 14
+  },
+  "total_run_HTTP": 11455,
+  "pooled_cap": 19000,
+  "max_HTTP_per_company": 40,
+  "source_first_request_seconds": 38.89000000001397,
+  "source_last_response_seconds": 173.5,
+  "source_tail_wait_seconds": 0.0,
+  "wall_time_limit_check": "The measured unhidden DiBK join wait must be <=60s; this is not a causal paired disabled/enabled whole-run benchmark.",
+  "crawl_runtime_seconds": 1045.578,
+  "end_to_end_wall_seconds": 1380.786807,
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "diagnostics": {
+    "not_found": 106,
+    "available": 14
+  },
+  "known_Kilde_overlap": {
+    "912492575": 2,
+    "926698435": 6
+  },
+  "strict_verifier": {
+    "lines": 1000,
+    "schema_valid": true,
+    "published_claims": 178628,
+    "source_blobs_verified": 5961,
+    "synthesis_companies": 1000,
+    "synthesis_sentences": 2539,
+    "synthesis_unverified_values": 0
+  },
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 4871,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 825979311,
+    "evidence_pages": 2868,
+    "largest_page_bytes": 243870,
+    "largest_profile_data_bytes": 755368,
+    "largest_profile_bytes": 243870,
+    "compact_profiles": 0
+  }
+}

@@ -48,6 +48,7 @@ class Config(BaseModel):
     nav_rank_candidates: bool = True
     public_activity: bool = False
     official_extra_sources: bool = False
+    dibk: bool = False
     group_structure: bool = False
     signature_rights: bool = False
     registry_changes: bool = True
