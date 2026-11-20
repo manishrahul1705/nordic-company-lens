@@ -1,0 +1,1571 @@
+[
+ {
+  "orgnr": "971349743",
+  "company": "STIFTINGA MUSEUMSSENTERET I HORDALAND",
+  "sentence": {
+   "text": "funding snapshot: research projects with Forskningsrådet: «Sirkulære Nordhordland» (total project award 485000.0); «Samspill i skolebesøket: Museumsspesifikke faktorer for læring og opplevelser i kulturhistoriske museer.» (total project award 2188000.0); amounts are total project awards, potentially shared with collaborators; state aid by instrument: grant: legal recipient this company (971349743).",
+   "claim_ids": [
+    "ded934b27c0c095fba325da17047174fd32a91bc265f35b6d91705da02b5bc82",
+    "5859218438e210d3d50e2dccca5849d312a08c669974f74ddddf5a571d543d20",
+    "91991b160a3e56d8d9f69c0605f83c2eb70188ffc69e030bfa4d5ba8d643437a"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "research.338396",
+    "value": {
+     "project_id": "338396",
+     "title": "Sirkulære Nordhordland",
+     "project_responsible_orgnr": "971349743",
+     "project_responsible_name": "STIFTINGA MUSEUMSSENTERET I HORDALAND",
+     "funder": "Forskningsrådet",
+     "total_project_award": {
+      "amount": "485000.0",
+      "currency": null,
+      "currency_note": "Currency is not explicit in this CSV; no conversion inferred."
+     },
+     "amount_scope": "Total award for the project, not the organisation exclusive share or cash received; collaborators may share it.",
+     "application_date": "2022-06-14",
+     "start_year": 2022,
+     "end_year": 2024,
+     "phase": "Avsluttet"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "602002b3484ab745e6884a5b4c8581817a2955b7b2e60d4b00a74af6e8848359"
+    ],
+    "id": "ded934b27c0c095fba325da17047174fd32a91bc265f35b6d91705da02b5bc82",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:01:57.524335Z",
+    "last_observed_at": "2026-11-20T02:01:57.524335Z",
+    "reasons": {
+     "label": "Research project (total project award)",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Forskningsrådet"
+    }
+   },
+   {
+    "field": "research.359286",
+    "value": {
+     "project_id": "359286",
+     "title": "Samspill i skolebesøket: Museumsspesifikke faktorer for læring og opplevelser i kulturhistoriske museer.",
+     "project_responsible_orgnr": "971349743",
+     "project_responsible_name": "STIFTINGA MUSEUMSSENTERET I HORDALAND",
+     "funder": "Forskningsrådet",
+     "total_project_award": {
+      "amount": "2188000.0",
+      "currency": null,
+      "currency_note": "Currency is not explicit in this CSV; no conversion inferred."
+     },
+     "amount_scope": "Total award for the project, not the organisation exclusive share or cash received; collaborators may share it.",
+     "application_date": "2025-03-12",
+     "start_year": 2025,
+     "end_year": 2029,
+     "phase": "Bevilgning"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "af97d5d3494888e20890d7b3b884c3f3d07ce3eabab8f800a2b4b35ce3741984"
+    ],
+    "id": "5859218438e210d3d50e2dccca5849d312a08c669974f74ddddf5a571d543d20",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:01:57.524335Z",
+    "last_observed_at": "2026-11-20T02:01:57.524335Z",
+    "reasons": {
+     "label": "Research project (total project award)",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Forskningsrådet"
+    }
+   },
+   {
+    "field": "state_aid.1000018903",
+    "value": {
+     "aid_id": "1000018903",
+     "instrument": "Tilskudd",
+     "instrument_type": "grant",
+     "recipient_orgnr": "971349743",
+     "recipient_name": "STIFTINGA MUSEUMSSENTERET I HORDALAND",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "983609155",
+      "name": "ENOVA SF"
+     },
+     "award_date": "2022-12-19",
+     "awarded_amount": {
+      "amount": "1355044.57",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000431",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7a63e10e97cccba251bb7b4d8e4fb300ce18a48bd35233992b1a1edb96003e63"
+    ],
+    "id": "91991b160a3e56d8d9f69c0605f83c2eb70188ffc69e030bfa4d5ba8d643437a",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Tilskudd",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "995541432",
+  "company": "WACKER CHEMICALS NORWAY AS",
+  "sentence": {
+   "text": "funding snapshot: state aid by instrument: grant: legal recipient this company (995541432); tax benefit: legal recipient this company (995541432), legal recipient this company (995541432); specified recipient subunit 873175702.",
+   "claim_ids": [
+    "22b7f37d184ac04009201ce3e95edde9b669442ada695c766297ae3ec1fbd37d",
+    "38c203013da2a05e9f3983cc31c7d60b345f67edadae66a77313d547696f992b",
+    "89e8319db7c03f2a21f9efc3fa48b5c14fca86242c41cf24bc033322708fa4b6",
+    "cc95ecf51e701c8582abcb810ca6fbcd274ebdfaff21d6c03a6669e893a79be9",
+    "68212783fc253df547224ddab52d9d25709a23833b1b299308af4b87c6962d90",
+    "4c74675209c869b61925d2d119250ef5bbb4c3526e2813fea07f3ab38434dac0",
+    "02269cabce5e3ac975829eb49a2db87e16fb2822c586ac65854d4c91d1d6c649",
+    "90df3692d4541d42d65cc615de171e216f8669899c6768daac5794fb049dc61d",
+    "f99e315b2dc9bb86cc3f23d8488ae0104c28b4a69a3e0c1d81124e4eb402c19a",
+    "98cee3d2582394d8161f99dd032dc94d688179593d4887c753edcd2de448db42",
+    "0e2326a21326e1b5f7401718f79a51deb765be3c2cdf4ca502e419023e238a92",
+    "4d522a0a3520feefbd4c1085ce8aaada979eedb32303a1badad8a3bd269855f2",
+    "d987469447003843631c7ce36a44a7da2623835d7bdabc75899cdf0f3cb9674f"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "state_aid.1000369509",
+    "value": {
+     "aid_id": "1000369509",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-10-05",
+     "awarded_amount": {
+      "amount": "1274480.54",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "1fb289d8742aa8c4fbf52ebe67478c2442a606f66579ddf9c384b838a6af78df"
+    ],
+    "id": "d987469447003843631c7ce36a44a7da2623835d7bdabc75899cdf0f3cb9674f",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000332140",
+    "value": {
+     "aid_id": "1000332140",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-09-07",
+     "awarded_amount": {
+      "amount": "1283462.05",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "6e1d8c97e93db6a638238fb6daf41ab049d418e5429c2d10cae1c8ac204f1a0c"
+    ],
+    "id": "4d522a0a3520feefbd4c1085ce8aaada979eedb32303a1badad8a3bd269855f2",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000287407",
+    "value": {
+     "aid_id": "1000287407",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-08-05",
+     "awarded_amount": {
+      "amount": "1387193.26",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "835b5220d40c3405ef66f9f6909ba1758f6dca9825dbeb21860d9dac608185dc"
+    ],
+    "id": "0e2326a21326e1b5f7401718f79a51deb765be3c2cdf4ca502e419023e238a92",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000246767",
+    "value": {
+     "aid_id": "1000246767",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-07-06",
+     "awarded_amount": {
+      "amount": "893078.66",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "a265a8a3fc298ea3b38c36ea06224b89bb697c69065acc559308c82eb0e18905"
+    ],
+    "id": "98cee3d2582394d8161f99dd032dc94d688179593d4887c753edcd2de448db42",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000209657",
+    "value": {
+     "aid_id": "1000209657",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-06-05",
+     "awarded_amount": {
+      "amount": "1684330.14",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "1fd8fa8a175e21502b1dda42f3e6c837db0a3f05117f7c85ca9ed7ed57253f92"
+    ],
+    "id": "f99e315b2dc9bb86cc3f23d8488ae0104c28b4a69a3e0c1d81124e4eb402c19a",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000171671",
+    "value": {
+     "aid_id": "1000171671",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-05-05",
+     "awarded_amount": {
+      "amount": "2231935.09",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "6d77785da767883331b8991864cec2f93853de89133c7730d9a407337972a589"
+    ],
+    "id": "90df3692d4541d42d65cc615de171e216f8669899c6768daac5794fb049dc61d",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000132876",
+    "value": {
+     "aid_id": "1000132876",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-04-07",
+     "awarded_amount": {
+      "amount": "1218080.46",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7855e70ad041b513a56d95fae44ad2c64fe51f8b391a3070a7a79eb8d5fd6f77"
+    ],
+    "id": "02269cabce5e3ac975829eb49a2db87e16fb2822c586ac65854d4c91d1d6c649",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000070127",
+    "value": {
+     "aid_id": "1000070127",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-03-05",
+     "awarded_amount": {
+      "amount": "1335381.59",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7ce4f8aeb92077c8d55895ec47af2d17abd44aa891e5aea53d375b84d277795b"
+    ],
+    "id": "4c74675209c869b61925d2d119250ef5bbb4c3526e2813fea07f3ab38434dac0",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000062006",
+    "value": {
+     "aid_id": "1000062006",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-02-05",
+     "awarded_amount": {
+      "amount": "1319933.76",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7eef8dcb21052dad553e958044122f48c06e27212f568025fbdad5287b71ace0"
+    ],
+    "id": "68212783fc253df547224ddab52d9d25709a23833b1b299308af4b87c6962d90",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000020339",
+    "value": {
+     "aid_id": "1000020339",
+     "instrument": "Tilskudd",
+     "instrument_type": "grant",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "983609155",
+      "name": "ENOVA SF"
+     },
+     "award_date": "2024-09-30",
+     "awarded_amount": {
+      "amount": "80625000.00",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000507",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "8654c01c871bb246d425bd97f520e0393fe2280720c81a267d7ddf42ed2274d7"
+    ],
+    "id": "38c203013da2a05e9f3983cc31c7d60b345f67edadae66a77313d547696f992b",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Tilskudd",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000005547",
+    "value": {
+     "aid_id": "1000005547",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": "873175702",
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2017-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "1000000.00",
+      "to": "1999999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b8e2309942d8fa135f9d49275fba7af84996757fa4279b2941e56c4444ef7aac"
+    ],
+    "id": "cc95ecf51e701c8582abcb810ca6fbcd274ebdfaff21d6c03a6669e893a79be9",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000004458",
+    "value": {
+     "aid_id": "1000004458",
+     "instrument": "Tilskudd",
+     "instrument_type": "grant",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "983609155",
+      "name": "ENOVA SF"
+     },
+     "award_date": "2018-06-04",
+     "awarded_amount": {
+      "amount": "5200000.00",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000059",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "6cc15bd04148eaaa4c581b47e108abdf65dbe177ad1616cc2261778c285116d4"
+    ],
+    "id": "22b7f37d184ac04009201ce3e95edde9b669442ada695c766297ae3ec1fbd37d",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Tilskudd",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000001267",
+    "value": {
+     "aid_id": "1000001267",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "995541432",
+     "recipient_name": "WACKER CHEMICALS NORWAY AS",
+     "specified_subunit_orgnr": "873175702",
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2016-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "1000000.00",
+      "to": "1999999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "03301e434cfa9e2a670ff06d0d0eb22690850076962a1a78c0ea5b90a1a28694"
+    ],
+    "id": "89e8319db7c03f2a21f9efc3fa48b5c14fca86242c41cf24bc033322708fa4b6",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "987454709",
+  "company": "NYE NEPTUNE PUB AS",
+  "sentence": {
+   "text": "funding snapshot: state aid by instrument: guarantee: legal recipient this company (987454709).",
+   "claim_ids": [
+    "df34fc233ef637d954c8e94ec613dd9009d6507be5f1da4ad7f74ee9c34ecea1",
+    "f08b0a967b754cdd76b41fac25926132ba6128da320a20a130ca57900376ce75"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "state_aid.1000301057",
+    "value": {
+     "aid_id": "1000301057",
+     "instrument": "Garanti",
+     "instrument_type": "guarantee",
+     "recipient_orgnr": "987454709",
+     "recipient_name": "NYE NEPTUNE PUB AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "926718304",
+      "name": "EKSPORTFINANSIERING NORGE"
+     },
+     "award_date": "2020-04-24",
+     "awarded_amount": {
+      "amount": "1925000.00",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000140",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "c4bb99a8f0fdd91867f63a62d415cb49db01b9f701c02a107e48f164f107e872"
+    ],
+    "id": "f08b0a967b754cdd76b41fac25926132ba6128da320a20a130ca57900376ce75",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Garanti",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000011943",
+    "value": {
+     "aid_id": "1000011943",
+     "instrument": "Garanti",
+     "instrument_type": "guarantee",
+     "recipient_orgnr": "987454709",
+     "recipient_name": "NYE NEPTUNE PUB AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974760908",
+      "name": ""
+     },
+     "award_date": "2020-04-26",
+     "awarded_amount": {
+      "amount": "1925000.00",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000140",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "380c1df257448185a41753057db39b0817336bca0c65a4415cbe87eadde87f24"
+    ],
+    "id": "df34fc233ef637d954c8e94ec613dd9009d6507be5f1da4ad7f74ee9c34ecea1",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Garanti",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "915884482",
+  "company": "FINNMARK RENSEFISK AS",
+  "sentence": {
+   "text": "funding snapshot: state aid by instrument: tax benefit: legal recipient this company (915884482); specified recipient subunit 915943012, registered recipient subunit 915943012, registered recipient subunit 915943012; specified recipient subunit 915884482.",
+   "claim_ids": [
+    "3ed0e6a1644960d6cf535122b856846079bc75b3887a14842c827e2f43a89fc0",
+    "455d6f8001bb51b12a12121291058b722a9e9d64913c19e25f0b1283102227da",
+    "55021f6cef3474b70defa5202a746dc9fc86ebe337cabc9b1bf703bea82b7dcf",
+    "7b4b16b78f0af75bde4457c5136a04ce9fd66d813881e4fd34f4ea578663cdd8",
+    "0ffb3e0b3de0b32fefd15af40560963264e2cee0b887cee619f8d3043c9f73dd",
+    "ff07e4e3efa637f153dc42c421fad9ad07643290087272260b057a3531c3d3c4",
+    "b81c747ab6a7efd511d8b29bce3d5b93ea055b259ba4188835ffc691c85e09b2",
+    "61ada6211bb91e55b314057e6c12289f596f3649823ebef04dd68b8a5c72d0c0",
+    "2d5cce71bcd69bd0417af5d7cf794d6541026ae487c385914432e4b6e2736d5b"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "state_aid.1000015098",
+    "value": {
+     "aid_id": "1000015098",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915884482",
+     "recipient_name": "FINNMARK RENSEFISK AS",
+     "specified_subunit_orgnr": "915943012",
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2020-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000067",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "268b5dea051e3f3e7251b71e7325750aef5508d1829540c74e77d90b308b8868"
+    ],
+    "id": "0ffb3e0b3de0b32fefd15af40560963264e2cee0b887cee619f8d3043c9f73dd",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000014661",
+    "value": {
+     "aid_id": "1000014661",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915884482",
+     "recipient_name": "FINNMARK RENSEFISK AS",
+     "specified_subunit_orgnr": "915943012",
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2020-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7b62df503255ac2775cc48f150859cdad6e1affec6c014ddb92ef0b37cdf9c39"
+    ],
+    "id": "7b4b16b78f0af75bde4457c5136a04ce9fd66d813881e4fd34f4ea578663cdd8",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000009935",
+    "value": {
+     "aid_id": "1000009935",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915884482",
+     "recipient_name": "FINNMARK RENSEFISK AS",
+     "specified_subunit_orgnr": "915943012",
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2020-05-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000069",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "0030f5a2c7eff46d4f48dee498923e1823edaa302c1b916c4840121e5516030f"
+    ],
+    "id": "55021f6cef3474b70defa5202a746dc9fc86ebe337cabc9b1bf703bea82b7dcf",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000009933",
+    "value": {
+     "aid_id": "1000009933",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915884482",
+     "recipient_name": "FINNMARK RENSEFISK AS",
+     "specified_subunit_orgnr": "915943012",
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2019-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b0bae4ad0e0bc14f9893fd5df84239b960f19a1ad2c978ebcb74c7f41fec7534"
+    ],
+    "id": "455d6f8001bb51b12a12121291058b722a9e9d64913c19e25f0b1283102227da",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000009931",
+    "value": {
+     "aid_id": "1000009931",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915884482",
+     "recipient_name": "FINNMARK RENSEFISK AS",
+     "specified_subunit_orgnr": "915943012",
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2019-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000067",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7e1a7f70ef1c484a5dd9d5dd0a73024e60502a8a64345a83f3bc96d8fd7ebdb2"
+    ],
+    "id": "3ed0e6a1644960d6cf535122b856846079bc75b3887a14842c827e2f43a89fc0",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000018190",
+    "value": {
+     "aid_id": "1000018190",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2022-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "14b02e6a3a634dd75647f9fcaf052ddff106178a3bf533cfb4cd04a8b6acf7ae",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "2d5cce71bcd69bd0417af5d7cf794d6541026ae487c385914432e4b6e2736d5b",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000018186",
+    "value": {
+     "aid_id": "1000018186",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2022-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000067",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "71237c48c39277c037bbc21ada775cb009caeb44b8622873065730588e513e2b",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "61ada6211bb91e55b314057e6c12289f596f3649823ebef04dd68b8a5c72d0c0",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000016694",
+    "value": {
+     "aid_id": "1000016694",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": "915884482",
+     "specified_subunit_name": "FINNMARK RENSEFISK AS",
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2021-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "ac36c6b4912ea8c2f4cbf403ae71137535c5d20466970a999abdcef6aff7463c",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "b81c747ab6a7efd511d8b29bce3d5b93ea055b259ba4188835ffc691c85e09b2",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000016580",
+    "value": {
+     "aid_id": "1000016580",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": "915884482",
+     "specified_subunit_name": "FINNMARK RENSEFISK AS",
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2021-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000067",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "8073dfbae3950a864edcaed302f80e74e3fc3a483391ebc9b0fb6a554d983811",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "ff07e4e3efa637f153dc42c421fad9ad07643290087272260b057a3531c3d3c4",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "982410851",
+  "company": "MARUN AS",
+  "sentence": {
+   "text": "funding snapshot: state aid by instrument: tax benefit: legal recipient this company (982410851).",
+   "claim_ids": [
+    "e9a03fd1a4c99aa4b3898d51ac0861295de4ecd5eff53a52c4ea9a552e71f96d",
+    "23892344c25cba30229b268e4c5ecb11c7f95ffb2e7d9aaaac0301e4d8727cf8"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "state_aid.1000260949",
+    "value": {
+     "aid_id": "1000260949",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "982410851",
+     "recipient_name": "MARUN AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-08-05",
+     "awarded_amount": {
+      "amount": "2310.00",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "406cb21da94f457e7eb51360d677b7334ce11e0eed31f072f3629fced67a727b"
+    ],
+    "id": "23892344c25cba30229b268e4c5ecb11c7f95ffb2e7d9aaaac0301e4d8727cf8",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   {
+    "field": "state_aid.1000239798",
+    "value": {
+     "aid_id": "1000239798",
+     "instrument": "Skatte- eller avgiftsfritak",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "982410851",
+     "recipient_name": "MARUN AS",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2026-07-06",
+     "awarded_amount": {
+      "amount": "8360.66",
+      "currency": "NOK"
+     },
+     "amount_interval": null,
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000029830",
+     "status": "Registrert"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "53274a738e6d3bb85164215940abc827151f09461efdb70d1dce8aa2178af211"
+    ],
+    "id": "e9a03fd1a4c99aa4b3898d51ac0861295de4ecd5eff53a52c4ea9a552e71f96d",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfritak",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "922767459",
+  "company": "SKOGLUND MASKIN AS",
+  "sentence": {
+   "text": "published by the company: «Hello world!» (publication date 2021-11-19).",
+   "claim_ids": [
+    "32d908b547de878bf716c1f2912810979ef858a65580f1d65bd826a63b2fa1de"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "news_item.387c66ea3a694ddd09b0",
+    "value": {
+     "title": "Hello world!",
+     "date": "2021-11-19",
+     "url": "https://skoglundmaskin.no/hello-world/",
+     "date_kind": "feed publication",
+     "source_url": "https://skoglundmaskin.no/feed/",
+     "identity_claim_id": "3eb80c52d8439bbdc5bd5e92d24b8b360849fdeae1b1e43c4233011e5ef84b99"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "faf055e60a0673803e816c01b010fb4b520dfed6a68ed216ad2c395c48743be8",
+     "0e65ba22cba7b8e05b17dcc61100a2b736ec7aaac44327dca2b67e3004a3e2d0"
+    ],
+    "id": "32d908b547de878bf716c1f2912810979ef858a65580f1d65bd826a63b2fa1de",
+    "family": "activity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T03:10:22.158462Z",
+    "last_observed_at": "2026-11-20T03:10:22.158462Z",
+    "reasons": {
+     "label": "Company news / dated item"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "999656099",
+  "company": "NETAD AS",
+  "sentence": {
+   "text": "published by the company: «Tracker marketing» (publication date 2023-08-21).",
+   "claim_ids": [
+    "ea475d0fd29479f654e5ecfee9dbae469d44b9c182750106452098ae1159b3ac"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "news_item.7fc86fdb416400c1ba5e",
+    "value": {
+     "title": "Tracker marketing",
+     "date": "2023-08-21",
+     "url": "https://netad24.com/2023/08/tracker-marketing/",
+     "date_kind": "feed publication",
+     "source_url": "https://netad24.com/feed/",
+     "identity_claim_id": "81c5dda93bc07eef6e70bc959981e3e28b1190631dca210785648c62f5d9376d"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "c673f4b9052b82ae014e776b8d4906862dfdaac2586af3f0846d014a7bed6f32",
+     "fd42fdc2c1c8b773d9f8568dde96adf3985ffdd56ae10ef05133c76987e607bb"
+    ],
+    "id": "ea475d0fd29479f654e5ecfee9dbae469d44b9c182750106452098ae1159b3ac",
+    "family": "activity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T03:10:21.352356Z",
+    "last_observed_at": "2026-11-20T03:10:21.352356Z",
+    "reasons": {
+     "label": "Company news / dated item"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "914248906",
+  "company": "INDIGOBOOM AS",
+  "sentence": {
+   "text": "published by the company: «Hvordan skriver man en hitlåt?» (publication date 2023-06-30).",
+   "claim_ids": [
+    "547c03f100cd52b91dbe5e0d7c165c1be24fbbfa97d0357cd53133d708bc1549"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "news_item.f1ce55dc010fa4b396da",
+    "value": {
+     "title": "Hvordan skriver man en hitlåt?",
+     "date": "2023-06-30",
+     "url": "https://www.indigoboom.no/single-post/hvordan-skriver-man-en-hitl%C3%A5t",
+     "date_kind": "feed publication",
+     "source_url": "https://www.indigoboom.no/blog-feed.xml",
+     "identity_claim_id": "a86cc2cb4b408468907fa744c928be0836fc951cef019616901f4c8a54b1bd5f"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "541d79388395bc6fba4062a31dbdf48a0eae78f4e4b46c07ef7fbca7db9b4583",
+     "7b38aeb02eed3959d086be018fdb3530983655384d7935af8372001d17fd4aec"
+    ],
+    "id": "547c03f100cd52b91dbe5e0d7c165c1be24fbbfa97d0357cd53133d708bc1549",
+    "family": "activity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T03:10:21.525793Z",
+    "last_observed_at": "2026-11-20T03:10:21.525793Z",
+    "reasons": {
+     "label": "Company news / dated item"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "823147112",
+  "company": "KN ELEKTRO AS",
+  "sentence": {
+   "text": "published by the company: «Hei, verden!» (publication date 2019-10-28).",
+   "claim_ids": [
+    "aec92a910a505901f965a5f280007ff3e41174384bb24f41292bafca63f44156"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "news_item.a2e6f47df9ccc35bf7db",
+    "value": {
+     "title": "Hei, verden!",
+     "date": "2019-10-28",
+     "url": "https://knelektro.no/2019/10/28/hei-verden/",
+     "date_kind": "feed publication",
+     "source_url": "https://knelektro.no/feed/",
+     "identity_claim_id": "80f2dd5c47acc9ebfed45e7bbce54c9f69f0dbc923bf0ccd909c294cae347fe6"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "69b56eb3f60ad3dfb55a77353b0c5b2b049b6c1e39aa7b846626a8816d6d8845",
+     "a17c71baef50dc4b04b2f6627b9a9d1b774e9995269caea25ba1076c2196fbfe"
+    ],
+    "id": "aec92a910a505901f965a5f280007ff3e41174384bb24f41292bafca63f44156",
+    "family": "activity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T03:10:25.280590Z",
+    "last_observed_at": "2026-11-20T03:10:25.280590Z",
+    "reasons": {
+     "label": "Company news / dated item"
+    }
+   }
+  ]
+ },
+ {
+  "orgnr": "928657523",
+  "company": "VIVIFY GRUPPEN AS",
+  "sentence": {
+   "text": "published by the company: «Sven Ove Bakke» (publication date 2026-10-21).",
+   "claim_ids": [
+    "7105d7b46bd133eaaacf45d12ce2e92bf8638c1cc65ce6b15f180b02cff6ec4b"
+   ],
+   "value_kind": "reported",
+   "count": null,
+   "record_type": null
+  },
+  "claims": [
+   {
+    "field": "news_item.72f21d8375837aae3b8e",
+    "value": {
+     "title": "Sven Ove Bakke",
+     "date": "2026-10-21",
+     "url": "https://www.vivify.no/nyheter",
+     "date_kind": "page explicit date",
+     "source_url": "https://www.vivify.no/nyheter/vivify-bygginnredning-finnmark",
+     "identity_claim_id": "59e33a0a74dd7c6ae7ed3e094bb217bb653211303567f6b3efe44bccfebe256d"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "d19addea2e2d91cadcb4c29058208fc0be2ee5c75ab9492215228376168e9ad8",
+     "afdb4e1b0c080323f3bd089a72b43ce5c38fc5eb51d94757d3dbc37baa3426b8"
+    ],
+    "id": "7105d7b46bd133eaaacf45d12ce2e92bf8638c1cc65ce6b15f180b02cff6ec4b",
+    "family": "activity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T03:10:22.793689Z",
+    "last_observed_at": "2026-11-20T03:10:22.793689Z",
+    "reasons": {
+     "label": "Company news / dated item"
+    }
+   }
+  ]
+ }
+]

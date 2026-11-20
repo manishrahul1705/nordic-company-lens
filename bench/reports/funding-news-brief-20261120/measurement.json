@@ -1,0 +1,38 @@
+﻿{
+    "baseline":  "bench\\runs\\news-items-20261120",
+    "output":  "bench\\runs\\funding-news-brief-final-20261120",
+    "new_http_requests":  0,
+    "network_guard":  "socket.connect and getaddrinfo forbidden",
+    "funding_briefs_gained":  103,
+    "funding_sentences":  103,
+    "news_briefs_gained":  31,
+    "news_sentences":  78,
+    "synthesis_sentences_before":  14970,
+    "synthesis_sentences_after":  15151,
+    "sections_before":  {
+                            "what_it_does":  3649,
+                            "scale":  1288,
+                            "leadership":  2091,
+                            "changes":  2229,
+                            "reach":  1314,
+                            "standing":  1000,
+                            "not_established":  3399
+                        },
+    "sections_after":  {
+                           "what_it_does":  3649,
+                           "scale":  1288,
+                           "leadership":  2091,
+                           "changes":  2307,
+                           "reach":  1314,
+                           "standing":  1103,
+                           "not_established":  3399
+                       },
+    "published_claims":  167975,
+    "news_claim_identity_links_added":  113,
+    "seconds":  26.74,
+    "validator_sha256":  "02484f64fa210e1c90d7f98cab443f9ef08621fdc48426f78d469a2ff9cb170e",
+    "test_count_before":  1716,
+    "test_count_after":  1732,
+    "full_suite_seconds":  396.72,
+    "full_suite_result":  "1732 passed; pytest cache nodeids permission warning only"
+}

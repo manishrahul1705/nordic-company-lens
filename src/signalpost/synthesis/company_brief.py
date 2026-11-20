@@ -311,6 +311,8 @@ def generate(synthesis, envelope):
             text=('Revenue rose ' if pct > 0 else 'Revenue fell ') + format(abs(pct), 'f') + '%, from ' + money(prior.value, currency)
             + ' in FY' + str(old_year) + ' to ' + money(revenue.value, currency) + ' in FY' + str(new_year) + '.',
             claim_ids=[revenue.id, prior.id], value_kind='derived'))
+    from .funding_news import news_sentences
+    brief.changes.extend(news_sentences(envelope))
     for event in dated_events(claims):
         brief.changes.append(Sentence(text=event['text'], claim_ids=sorted(event['ids'])))
     if not envelope.changes:
@@ -350,7 +352,7 @@ def generate(synthesis, envelope):
             wording = f'{label}: {reason}.'
         brief.unknowns.append(Sentence(text=wording[:1].upper() + wording[1:], claim_ids=[cid]))
     supported = {c.field for c in claims}
-    if not any(f.startswith('dated_item.') for f in supported) and envelope.run.sections.get('website') is not None:
+    if not any(f.startswith(('dated_item.','news_item.')) for f in supported) and envelope.run.sections.get('website') is not None:
         has_site = 'official_website' in supported
         cid = context('snapshot.news', {'verified_website': has_site, 'dated_articles': 0})
         brief.unknowns.append(Sentence(text='Company news: ' + ('no dated articles could be confirmed on its verified website.' if has_site

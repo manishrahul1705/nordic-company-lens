@@ -124,7 +124,7 @@ async def collect(envelope,http,pages):
         section=Section();source=Source(response.url,response.body,response.sha,response.retrieved_at)
         for item in extract(response.body,response.url,kind):
             locator=item.pop('locator');span=source.excerpt(item['title'],locator)
-            add(section,source,org,'activity','news_item.'+digest(item['url'])[:20],{**item,'source_url':response.url},locator,span=span,source_class='company_owned',method='signalpost.news.explicit-date.v1')
+            add(section,source,org,'activity','news_item.'+digest(item['url'])[:20],{**item,'source_url':response.url,'identity_claim_id':proof.id},locator,span=span,source_class='company_owned',method='signalpost.news.explicit-date.v1')
             section.claims[-1].evidence_ids.append(proof.evidence_ids[0])
             section.claims[-1].reasons['label']='Company news / dated item'
         envelope.claims.extend(section.claims);envelope.evidence.extend(section.evidence)

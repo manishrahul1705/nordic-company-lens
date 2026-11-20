@@ -142,7 +142,7 @@ def percentile(value, others):
 RUN_ONLY = 'other companies in this run'
 
 
-def standing(envelope, cohort):
+def _standing(envelope, cohort):
     """Every wording names the comparison basis: companies in this run only, NACE division, fiscal year."""
     nace = _field(envelope, 'identity.nace1')
     revenue = _field(envelope, 'accounts.revenue')
@@ -186,6 +186,12 @@ def standing(envelope, cohort):
     return [Sentence(text='Among the ' + str(n) + ' other companies in this run ' + basis + ', its FY' + year
                      + ' operating revenue of ' + amount + ' is higher than ' + str(percentile(float(revenue.value), others)) + '% of them.',
                      claim_ids=[revenue.id, nace.id], value_kind='derived')]
+
+
+def standing(envelope, cohort):
+    from .funding_news import funding_sentence
+    funding = funding_sentence(envelope)
+    return _standing(envelope, cohort) + ([funding] if funding else [])
 
 
 # --- Not established ---------------------------------------------------------------
