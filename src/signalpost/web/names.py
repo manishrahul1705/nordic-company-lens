@@ -38,6 +38,35 @@ def proof_context(page,org,context):
     for part in page.footer_parts:
         names+=re.findall(r'\b[A-ZÆØÅ][\wÆØÅæøå&.-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå&.-]*){0,5}\s+(?:AS|ASA|AB|Ltd|GmbH|Oy)\b',part)
     for name in names:
-        if same_name(context.get('name'),name,True,title_variant=True):
+        if same_name(context.get('name'),name,True,title_variant=True) or owner_descriptor_alias(page,org,context,name):
             return {**context,'name':name}
     return context
+
+
+def owner_descriptor_alias(page,org,context,name):
+    """One omitted trading descriptor is not a different identified publisher.
+
+    This comparison repair never proves a site by name: the caller requires
+    the sole publisher/header/footer orgnr to be the exact subject number.
+    All ownership scoring and final vetoes still run with the actual page.
+    """
+    expected=normalized(context.get('name')).split()
+    actual=normalized(name).split()
+    if len(expected)<4 or expected[-2:]!=['forretning','as']:
+        return False
+    title_parts={normalized(part) for part in re.split(r'[|\u2013\u2014]',page.title)}
+    if actual!=expected[:-2]+['as'] or normalized(name) not in title_parts:
+        return False
+    footer=normalized(' '.join(page.footer_parts))
+    if not re.search(r'(?<!\w)'+re.escape(' '.join(actual))+r'(?!\w)',footer):
+        return False
+    from .proof import orgnrs
+    if orgnrs(' '.join(page.brand_parts))!={org}:
+        return False
+    # A shortened name registered to someone else remains a different entity.
+    # Missing/corrupt universe data cannot authorize a comparison repair.
+    from .social_universe import index,name_keys
+    data=index()
+    if data is None:return False
+    matches={other for key in name_keys(name) for other in data['keys'].get(key,[])}
+    return not (matches-{org})

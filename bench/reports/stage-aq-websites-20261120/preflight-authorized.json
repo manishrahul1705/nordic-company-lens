@@ -1,0 +1,157 @@
+{
+  "transport": "production safe_transport; trust_env=False; TLS and robots unchanged",
+  "results": [
+    {
+      "orgnr": "919653477",
+      "url": "https://vokser.no",
+      "status": 200,
+      "final_url": "https://vokser.no/",
+      "sha256": "f56fd223756a1a8b4336d1158757c398166410d3864afb621f171078ee4de028",
+      "title": "Digitale løsninger som gir resultater | Vokser"
+    },
+    {
+      "orgnr": "986739874",
+      "url": "https://www.aasbetong.no",
+      "status": 200,
+      "final_url": "https://www.aasbetong.no/",
+      "sha256": "610f46940f54b205a83485fefae46c97212e6695ad5a012236ac23751d3012ec",
+      "title": "Et utemiljø å være stolt av"
+    },
+    {
+      "orgnr": "995748983",
+      "url": "https://maaemo.no",
+      "status": 200,
+      "final_url": "https://maaemo.no/",
+      "sha256": "c5a6f30894f2d8fdc20759c34ad5baf614805663d6b1599e938c42cbffa644d3",
+      "title": "Maaemo Restaurant"
+    },
+    {
+      "orgnr": "922767459",
+      "url": "https://skoglundmaskin.no",
+      "status": 200,
+      "final_url": "https://skoglundmaskin.no/",
+      "sha256": "1139bb17f2ea89b4c177acb6476d5216ec6aee48f38bd92c7ddb46e5b917415e",
+      "title": "Skoglund Maskin AS – Graving, Drenering, Transport, Entreprenør og Støttemur"
+    },
+    {
+      "orgnr": "929074009",
+      "url": "https://www.mulligangolf.no",
+      "status": 200,
+      "final_url": "https://www.mulligangolf.no/",
+      "sha256": "4e829afa242df5b6098a096046f93a0b714eb9a69a115e69b0963ea38a666f27",
+      "title": "Mulligan Indoor Golf | TrackMan-simulatorer i Fredrikstad og Sarpsborg"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://vokser.no/robots.txt",
+      "host": "vokser.no",
+      "organisation_number": "919653477",
+      "attempt_started": 0.0629999999946449,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "6c9d473bff746e57cae3791f26fbaaf319c20dfa7760e0f749f476b05007f4a0",
+      "runtime_ms": 1015
+    },
+    {
+      "url": "https://vokser.no/",
+      "host": "vokser.no",
+      "organisation_number": "919653477",
+      "attempt_started": 2.0780000000086147,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "f56fd223756a1a8b4336d1158757c398166410d3864afb621f171078ee4de028",
+      "runtime_ms": 125
+    },
+    {
+      "url": "https://www.aasbetong.no/robots.txt",
+      "host": "www.aasbetong.no",
+      "organisation_number": "986739874",
+      "attempt_started": 2.2190000000118744,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "0cbd501dc021b25f039832b44d1bb93512f4083fc3f606722904739bbf8e5519",
+      "runtime_ms": 578
+    },
+    {
+      "url": "https://www.aasbetong.no/",
+      "host": "www.aasbetong.no",
+      "organisation_number": "986739874",
+      "attempt_started": 3.812999999994645,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "610f46940f54b205a83485fefae46c97212e6695ad5a012236ac23751d3012ec",
+      "runtime_ms": 359
+    },
+    {
+      "url": "https://maaemo.no/robots.txt",
+      "host": "maaemo.no",
+      "organisation_number": "995748983",
+      "attempt_started": 4.203000000008615,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "d61f1669bfbd65e5956a65f3ed4a885d6cea99f77e41eff8487bab3fcb062bb4",
+      "runtime_ms": 547
+    },
+    {
+      "url": "https://maaemo.no/",
+      "host": "maaemo.no",
+      "organisation_number": "995748983",
+      "attempt_started": 5.76600000000326,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "c5a6f30894f2d8fdc20759c34ad5baf614805663d6b1599e938c42cbffa644d3",
+      "runtime_ms": 219
+    },
+    {
+      "url": "https://skoglundmaskin.no/robots.txt",
+      "host": "skoglundmaskin.no",
+      "organisation_number": "922767459",
+      "attempt_started": 6.0,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "3abafe883ba19669a94ff0f01e96d7ad3f9c1d11b3a6785059c13bcb6f3bc563",
+      "runtime_ms": 860
+    },
+    {
+      "url": "https://skoglundmaskin.no/",
+      "host": "skoglundmaskin.no",
+      "organisation_number": "922767459",
+      "attempt_started": 7.860000000015134,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "1139bb17f2ea89b4c177acb6476d5216ec6aee48f38bd92c7ddb46e5b917415e",
+      "runtime_ms": 359
+    },
+    {
+      "url": "https://www.mulligangolf.no/robots.txt",
+      "host": "www.mulligangolf.no",
+      "organisation_number": "929074009",
+      "attempt_started": 8.28200000000652,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "c994a16912a41c85a36526593685dc7d9de36f47281dd775d225d066163d17fb",
+      "runtime_ms": 1171
+    },
+    {
+      "url": "https://www.mulligangolf.no/",
+      "host": "www.mulligangolf.no",
+      "organisation_number": "929074009",
+      "attempt_started": 10.453000000008615,
+      "status": 200,
+      "error": null,
+      "section": "website",
+      "content_sha256": "4e829afa242df5b6098a096046f93a0b714eb9a69a115e69b0963ea38a666f27",
+      "runtime_ms": 188
+    }
+  ]
+}

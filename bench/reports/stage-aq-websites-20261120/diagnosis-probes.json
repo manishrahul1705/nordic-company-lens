@@ -1,0 +1,144 @@
+[
+  {
+    "orgnr": "912492575",
+    "url": "https://www.haugel.no/",
+    "final_url": "https://www.haugel.no/",
+    "status": 200,
+    "sha256": "b6404f70dc136b63f0541e716683400a383df5ed7879fa49ccb8bb3cb685e89a",
+    "title": "Haugesund Elektriske AS",
+    "requests": 2,
+    "request_log": [
+      {
+        "url": "https://www.haugel.no/robots.txt",
+        "host": "www.haugel.no",
+        "organisation_number": "912492575",
+        "attempt_started": 0.09299999999348074,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "b49c4766b493788d2757f7085ff7d8b040b59e154c2bf9f86318cb994f75cacd",
+        "runtime_ms": 469
+      },
+      {
+        "url": "https://www.haugel.no/",
+        "host": "www.haugel.no",
+        "organisation_number": "912492575",
+        "attempt_started": 1.562000000005355,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "b6404f70dc136b63f0541e716683400a383df5ed7879fa49ccb8bb3cb685e89a",
+        "runtime_ms": 1547
+      }
+    ],
+    "saved_website": null
+  },
+  {
+    "orgnr": "914248906",
+    "url": "https://indigoboom.com/",
+    "final_url": "https://www.indigoboom.com/",
+    "status": 200,
+    "sha256": "deb8600879512d6ad6248174b3511e36a130f28da2f1d507650b481730fa7e7f",
+    "title": "IndiGoBoom | Digital music distribution | Maridalsveien 89 Oslo",
+    "requests": 4,
+    "request_log": [
+      {
+        "url": "https://indigoboom.com/robots.txt",
+        "host": "indigoboom.com",
+        "organisation_number": "914248906",
+        "attempt_started": 3.2809999999881256,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "2e874558144b2b5e929b44830b024cb1c295bd2323441484391aa8d6b0771360",
+        "runtime_ms": 687
+      },
+      {
+        "url": "https://indigoboom.com/",
+        "host": "indigoboom.com",
+        "organisation_number": "914248906",
+        "attempt_started": 4.98399999999674,
+        "status": 301,
+        "error": null,
+        "section": "website",
+        "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "runtime_ms": 234
+      },
+      {
+        "url": "https://www.indigoboom.com/robots.txt",
+        "host": "www.indigoboom.com",
+        "organisation_number": "914248906",
+        "attempt_started": 6.23399999999674,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "2e874558144b2b5e929b44830b024cb1c295bd2323441484391aa8d6b0771360",
+        "runtime_ms": 109
+      },
+      {
+        "url": "https://www.indigoboom.com/",
+        "host": "www.indigoboom.com",
+        "organisation_number": "914248906",
+        "attempt_started": 7.342999999993481,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "deb8600879512d6ad6248174b3511e36a130f28da2f1d507650b481730fa7e7f",
+        "runtime_ms": 204
+      }
+    ],
+    "saved_website": {
+      "final_url": "https://www.indigoboom.no",
+      "transport_scheme": "https",
+      "identity_level": "VERIFIED",
+      "proof_type": "legal_name_without_suffix_and_two_contacts",
+      "proof_page_url": "https://www.indigoboom.no/",
+      "signals": [
+        "legal_name_without_suffix",
+        "name_derived_domain",
+        "street",
+        "postcode_city"
+      ],
+      "points": 4,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publication_tier": "A",
+      "content_allowed": true
+    }
+  },
+  {
+    "orgnr": "982410851",
+    "url": "http://www.marun.no/",
+    "final_url": "http://www.marun.no/",
+    "status": 200,
+    "sha256": "9278d16ed2fdcd5dc651615b0b8adc6b55fb667a9d106a9891b861d4561d9a24",
+    "title": "",
+    "requests": 2,
+    "request_log": [
+      {
+        "url": "http://www.marun.no/robots.txt",
+        "host": "www.marun.no",
+        "organisation_number": "982410851",
+        "attempt_started": 7.842999999993481,
+        "status": 404,
+        "error": null,
+        "section": "website",
+        "content_sha256": "9349d6691f815d4b9ba31c4cb1f39a38af1e166c2adcaeaea6938a1feeffc43a",
+        "runtime_ms": 407
+      },
+      {
+        "url": "http://www.marun.no/",
+        "host": "www.marun.no",
+        "organisation_number": "982410851",
+        "attempt_started": 9.264999999984866,
+        "status": 200,
+        "error": null,
+        "section": "website",
+        "content_sha256": "9278d16ed2fdcd5dc651615b0b8adc6b55fb667a9d106a9891b861d4561d9a24",
+        "runtime_ms": 203
+      }
+    ],
+    "saved_website": null
+  }
+]

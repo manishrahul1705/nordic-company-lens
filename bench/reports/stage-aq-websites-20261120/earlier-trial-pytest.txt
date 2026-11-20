@@ -1,0 +1,57 @@
+........................................................................ [  3%]
+........................................................................ [  7%]
+........................................................................ [ 11%]
+........................................................................ [ 15%]
+........................................................................ [ 19%]
+........................................................................ [ 23%]
+........................................................................ [ 27%]
+........................................................................ [ 31%]
+........................................................................ [ 35%]
+........................................................................ [ 39%]
+........................................................................ [ 43%]
+........................................................................ [ 47%]
+........................................................................ [ 51%]
+........................................................................ [ 55%]
+........................................................................ [ 59%]
+........................................................................ [ 63%]
+........................................................................ [ 67%]
+.F...................................................................... [ 71%]
+........................................................................ [ 75%]
+........................................................................ [ 78%]
+........................................................................ [ 82%]
+........................................................................ [ 86%]
+........................................................................ [ 90%]
+........................................................................ [ 94%]
+........................................................................ [ 98%]
+.......................                                                  [100%]
+================================== FAILURES ===================================
+_______________________ test_deadline_partial_progress ________________________
+
+tmp_path = WindowsPath('C:/Users/Manish/Downloads/nordic-r4/bench/tmp-stage-aq-full/test_deadline_partial_progress0')
+
+    def test_deadline_partial_progress(tmp_path):
+        async def slow(request):
+            if request.url.path.endswith("/roller"):
+                await asyncio.sleep(10)
+            return handler()(request)
+        began = time.monotonic()
+        report, rows = execute(config(tmp_path, numbers(20), time_budget_seconds=2, workers=2), slow)
+>       assert time.monotonic() - began < 3
+E       assert (219517.031 - 219513.968) < 3
+E        +  where 219517.031 = <built-in function monotonic>()
+E        +    where <built-in function monotonic> = time.monotonic
+
+tests\test_registry.py:134: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\_pytest\cacheprovider.py:469
+  C:\Users\Manish\Downloads\nordic-r4\.venv\Lib\site-packages\_pytest\cacheprovider.py:469: PytestCacheWarning: cache could not write path C:\Users\Manish\Downloads\nordic-r4\.pytest_cache\v\cache\nodeids: [Errno 13] Permission denied: 'C:\\Users\\Manish\\Downloads\\nordic-r4\\.pytest_cache\\v\\cache\\nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+.venv\Lib\site-packages\_pytest\cacheprovider.py:423
+  C:\Users\Manish\Downloads\nordic-r4\.venv\Lib\site-packages\_pytest\cacheprovider.py:423: PytestCacheWarning: could not create cache path C:\Users\Manish\Downloads\nordic-r4\.pytest_cache\v\cache\lastfailed: [WinError 5] Access is denied: 'C:\\Users\\Manish\\Downloads\\nordic-r4\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_registry.py::test_deadline_partial_progress - assert (21951...
+1 failed, 1822 passed, 2 warnings in 603.54s (0:10:03)

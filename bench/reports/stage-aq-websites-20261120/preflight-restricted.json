@@ -1,0 +1,55 @@
+{
+  "transport": "production safe_transport; trust_env=False; TLS and robots unchanged",
+  "results": [
+    {
+      "orgnr": "919653477",
+      "url": "https://vokser.no",
+      "error": [
+        {
+          "class": "SourceFailure",
+          "message": "website_connect_error",
+          "errno": null,
+          "winerror": null
+        },
+        {
+          "class": "ConnectError",
+          "message": "All connection attempts failed",
+          "errno": null,
+          "winerror": null
+        },
+        {
+          "class": "ConnectError",
+          "message": "All connection attempts failed",
+          "errno": null,
+          "winerror": null
+        },
+        {
+          "class": "OSError",
+          "message": "All connection attempts failed",
+          "errno": null,
+          "winerror": null
+        },
+        {
+          "class": "PermissionError",
+          "message": "[WinError 5] Access is denied",
+          "errno": 13,
+          "winerror": 5
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://vokser.no/robots.txt",
+      "host": "vokser.no",
+      "organisation_number": "919653477",
+      "attempt_started": 0.15599999998812564,
+      "status": null,
+      "error": "ConnectError",
+      "section": "website",
+      "failure_code": "website_connect_error",
+      "exception_message": "All connection attempts failed",
+      "runtime_ms": 78
+    }
+  ]
+}

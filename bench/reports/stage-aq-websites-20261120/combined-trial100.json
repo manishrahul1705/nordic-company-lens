@@ -1,0 +1,68 @@
+{
+  "source": "bench\\runs\\stage-am-live1000",
+  "mode": "saved run plus live affected-candidate fetches only; original requests retained against caps",
+  "companies": 100,
+  "affected_companies": 10,
+  "affected_candidates": 10,
+  "before": {
+    "websites": {
+      "companies": 13,
+      "claims": 13
+    },
+    "brands": {
+      "companies": 3,
+      "claims": 3
+    },
+    "social": {
+      "companies": 6,
+      "claims": 10
+    },
+    "news": {
+      "companies": 4,
+      "claims": 9
+    }
+  },
+  "after": {
+    "websites": {
+      "companies": 14,
+      "claims": 14
+    },
+    "brands": {
+      "companies": 3,
+      "claims": 3
+    },
+    "social": {
+      "companies": 6,
+      "claims": 10
+    },
+    "news": {
+      "companies": 4,
+      "claims": 9
+    }
+  },
+  "new_verified_sites": 1,
+  "extra_HTTP": 69,
+  "new_HTTP_by_error": {
+    "200": 39,
+    "301": 12,
+    "308": 3,
+    "TimeoutError": 4,
+    "404": 7,
+    "302": 4
+  },
+  "max_total_HTTP_per_company": 40,
+  "pooled_cap": 1900,
+  "total_requests_including_original": 1399,
+  "isolated_live_addition_seconds": 79.76,
+  "wall_time_note": "Measured standalone addition stage; not a paired complete-live-run wall-time delta.",
+  "strict_verifier": {
+    "lines": 100,
+    "schema_valid": true,
+    "published_claims": 18059,
+    "source_blobs_verified": 603,
+    "synthesis_companies": 100,
+    "synthesis_sentences": 270,
+    "synthesis_unverified_values": 0
+  },
+  "total_replay_seconds": 99.326
+}

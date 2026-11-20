@@ -1,0 +1,72 @@
+{
+  "source": "bench\\runs\\stage-am-live1000",
+  "mode": "saved run plus live affected-candidate fetches only; original requests retained against caps",
+  "companies": 1000,
+  "affected_companies": 58,
+  "affected_candidates": 62,
+  "before": {
+    "websites": {
+      "companies": 110,
+      "claims": 110
+    },
+    "brands": {
+      "companies": 19,
+      "claims": 19
+    },
+    "social": {
+      "companies": 60,
+      "claims": 123
+    },
+    "news": {
+      "companies": 30,
+      "claims": 109
+    }
+  },
+  "after": {
+    "websites": {
+      "companies": 110,
+      "claims": 110
+    },
+    "brands": {
+      "companies": 19,
+      "claims": 19
+    },
+    "social": {
+      "companies": 60,
+      "claims": 123
+    },
+    "news": {
+      "companies": 30,
+      "claims": 109
+    }
+  },
+  "new_verified_sites": 0,
+  "extra_HTTP": 444,
+  "new_HTTP_by_error": {
+    "301": 96,
+    "200": 202,
+    "TimeoutError": 28,
+    "308": 6,
+    "404": 38,
+    "302": 51,
+    "ConnectError": 15,
+    "ConnectTimeout": 5,
+    "307": 2,
+    "400": 1
+  },
+  "max_total_HTTP_per_company": 40,
+  "pooled_cap": 19000,
+  "total_requests_including_original": 11899,
+  "isolated_live_addition_seconds": 234.812,
+  "wall_time_note": "Measured standalone addition stage; not a paired complete-live-run wall-time delta.",
+  "strict_verifier": {
+    "lines": 1000,
+    "schema_valid": true,
+    "published_claims": 178628,
+    "source_blobs_verified": 5961,
+    "synthesis_companies": 1000,
+    "synthesis_sentences": 2539,
+    "synthesis_unverified_values": 0
+  },
+  "total_replay_seconds": 532.785
+}

@@ -1,0 +1,301 @@
+{
+  "new_sites_reviewed": [
+    {
+      "orgnr": "912492575",
+      "company": "HAUGESUND ELEKTRISKE FORRETNING AS",
+      "claim": {
+        "field": "official_website",
+        "value": {
+          "final_url": "https://www.haugel.no",
+          "transport_scheme": "https",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.haugel.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "registry_website",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "publication_tier": "A",
+          "content_allowed": true
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "b2e2d53f6622cbac170793193efb2d9ecf43bf511d9f8a958a0f2cb13ccd2dff"
+        ],
+        "id": "325017bbdedec373029d47ad6eb2de1ff98f725f1b2c8751d751c6f3dff16d0c",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T14:12:31.938301Z",
+        "last_observed_at": "2026-11-20T14:12:31.938301Z",
+        "reasons": {}
+      },
+      "evidence": [
+        {
+          "id": "b2e2d53f6622cbac170793193efb2d9ecf43bf511d9f8a958a0f2cb13ccd2dff",
+          "source_url": "https://www.haugel.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-20T14:12:31.938301Z",
+          "content_sha256": "11150b1f6ed91ca46d8904d1ccdd4859a7a2f334c062d3825c6832ad6ed7ff63",
+          "claim_span": "</a><span class=\"block\">Org nr: <!-- -->912 492 575</span></p><div class=\"mt-24 flex w-50 flex-col md:w-[298px]\" aria-hidden=\"true\"><figure class=\"blo",
+          "locator": "identity-proof:912492575",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "why_correct": "Exact sole publisher/footer organisation number 912 492 575, not an article/customer mention; registry-nominated domain; registered street/postcode and phone also match. Shortened title/footer name only omits FORRETNING with the same AS form. No other registered company matches that shortened name. Full proof and final cohort/group/entity guards retain this site.",
+      "registry_comparison": {
+        "legal_name": "HAUGESUND ELEKTRISKE FORRETNING AS",
+        "street": "Skjoldavegen 121",
+        "postcode": "5519",
+        "phone": "52717711"
+      },
+      "universe_short_name_matches": []
+    }
+  ],
+  "new_sites_available_to_review": 1,
+  "requested_ten_new_sites": "Only one recovered; all recovered sites reviewed. Nine additional controls are explicitly withheld, not invented recoveries.",
+  "withheld_controls": [
+    {
+      "orgnr": "982410851",
+      "company": "MARUN AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "Empty hosting page at .no; unrelated Cristty redirect at .com lacks exact company evidence; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://cristty.com/",
+          "sha256": "a46b12b92410abe8731ff2102c25ac16fe8132c2a825e6497b805d9b6b879b99",
+          "title": "Welcome to Cristty's Place",
+          "title_verbatim_span": "<html>\n<head>\n<title>Welcome to Cristty's Place</title>\n<script language=\"JavaScript\">\n<!--\nfunction MM_checkBrowser(NSvers,NSpass,NSnoPass,IEvers,IEpass,IEnoPass,OBpass,URL,altURL) { //v2.0\n  var newURL = '', version = parseFloat(navigator.appVersion);\n  if (navigator.appName.indexOf('Netscape') !=",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://marun.com/",
+          "origin": "legal_name_slug",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"cristty.com\", \"reason\": \"website_timeout\", \"page\": \"https://cristty.com/kontakt\"}, {\"domain\": \"cristty.com\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"redirect_target\", \"reason\": \"insufficient_owner_proof\", \"title\": \"Welcome to Cristty's Place\", \"proof_page_url\": \"https://cristty.com/\"}, {\"domain\": \"marun.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://marun.com/\", \"final_url\": \"https://cristty.com/\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "997352572",
+      "company": "SMEDATUNET SAMEIE",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "Redirected publisher is Randaberg Regnskap; different_legal_entity veto; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.randaberg-regnskap.no/",
+          "sha256": "e248d5809fec64839cc4d8b8c1b1f77fb5db16d7ade648b830278e601a30812b",
+          "title": "Autorisert regnskapsfører - Randaberg Regnskap",
+          "title_verbatim_span": "roduct/yoast-seo-wordpress/ -->\n\t<title>Autorisert regnskapsfører - Randaberg Regnskap</title>\n\t<meta name=\"description\" content=\"Randaberg regnskap AS er et autorisert regnskapsførerselskap som ble opprettet i 2005. Vi har lang erfaring med regnskapsførsel for små og mellomstore bedrifter.\" />\n\t<li",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://vistnes.no/",
+          "origin": "registry_email",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"randaberg-regnskap.no\", \"level\": \"REJECT\", \"points\": 0, \"signals\": [], \"origin\": \"redirect_target\", \"reason\": \"different_legal_entity\", \"title\": \"Autorisert regnskapsfører - Randaberg Regnskap\", \"proof_page_url\": \"https://www.randaberg-regnskap.no/\"}, {\"domain\": \"vistnes.no\", \"origin\": \"registry_email\", \"url\": \"https://vistnes.no/\", \"final_url\": \"https://www.randaberg-regnskap.no/\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "976746651",
+      "company": "SKRENTEN 21 AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "Wemail publisher is not this company; different_legal_entity veto; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.wemail.no/",
+          "sha256": "0f70bfba78c105253fa8b917babce418ce59d0bb4d2b16e5bc73dc9018f8a1c1",
+          "title": "Wemail",
+          "title_verbatim_span": "TO9ItbI4PkZS/timWDYQ==\"></script><title>Wemail</title><meta name=\"google-site-verification\" content=\"-hN4gzoXTnkFJU0wo8AJ3AoXlpqLehaBYLvaxCSFTek\"/><meta property=\"og:title\" content=\"Wemail\"/><meta property=\"og:url\" content=\"https://www.wemail.no\"/><meta property=\"og:site_name\" content=\"Wemail\"/><met",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://bntv.no/",
+          "origin": "registry_email",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"wemail.no\", \"level\": \"REJECT\", \"points\": 0, \"signals\": [], \"origin\": \"redirect_target\", \"reason\": \"different_legal_entity\", \"title\": \"Wemail\", \"proof_page_url\": \"https://www.wemail.no/\"}, {\"domain\": \"bntv.no\", \"origin\": \"registry_email\", \"url\": \"https://bntv.no/\", \"final_url\": \"https://www.wemail.no/\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "887820082",
+      "company": "ARENA HOLDING AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "HugeDomains marketplace target; no ownership proof; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.hugedomains.com/domain_profile.cfm",
+          "sha256": "a3367d00709d62738453a5f94a84cdfedf2cab30ec6bdfd01733308847f1e5fa",
+          "title": "HugeDomains.com",
+          "title_verbatim_span": "nc fetchpriority=\"low\" src=\"https://www.hugedomains.com/.webmcp/bridge.js\" data-packs=\"mcp-server-client\" data-mcp-url=\"/public/v1/mcp\"></script><link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css\" />\r\n    <link rel=\"stylesheet\" href=\"https:",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://arenaholding.com/",
+          "origin": "legal_name_slug",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"hugedomains.com\", \"origin\": \"legal_name_slug\", \"level\": \"REJECT\", \"reason\": \"redirect_without_company_identity\", \"title\": \"HugeDomains.com\"}, {\"domain\": \"arenaholding.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://arenaholding.com/\", \"final_url\": \"https://www.hugedomains.com/domain_profile.cfm\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "981391594",
+      "company": "TEROB AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "HugeDomains marketplace target; no ownership proof; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.hugedomains.com/domain_profile.cfm",
+          "sha256": "2a26334c84c048679ad2b3c25ff118a7ba7b1e3800f6baf629883d8cbf25440c",
+          "title": "HugeDomains.com",
+          "title_verbatim_span": "nc fetchpriority=\"low\" src=\"https://www.hugedomains.com/.webmcp/bridge.js\" data-packs=\"mcp-server-client\" data-mcp-url=\"/public/v1/mcp\"></script><link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css\" />\r\n    <link rel=\"stylesheet\" href=\"https:",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://www.terob.com/",
+          "origin": "legal_name_slug",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"hugedomains.com\", \"origin\": \"legal_name_slug\", \"level\": \"REJECT\", \"reason\": \"redirect_without_company_identity\", \"title\": \"HugeDomains.com\"}, {\"domain\": \"terob.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://terob.com/\", \"final_url\": \"https://www.hugedomains.com/domain_profile.cfm\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "930888923",
+      "company": "ZM DRIFT AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "Webhuset explicitly parked-domain placeholder; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.webhuset.no/parkering",
+          "sha256": "9781aa88d500ec664bb94b42108a8053f09e7f0272158703708ac0a6d09cb2fc",
+          "title": "Domene er parkert | Webhuset",
+          "title_verbatim_span": "e=\"next-size-adjust\" content=\"\"/><title>Domene er parkert | Webhuset</title><meta name=\"description\" content=\"Domenet du søkte er registrert og parkert. Søk etter et alternativt domene hos Webhuset — fra 7 kr.\"/><meta name=\"application-name\" content=\"Webhuset\"/><meta name=\"robots\" content=\"noindex, ",
+          "publisher_orgnrs": [
+            "981532848"
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "url": "http://www.zmdrift.no/",
+          "origin": "legal_name_slug",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"webhuset.no\", \"level\": \"REJECT\", \"points\": 0, \"signals\": [], \"origin\": \"redirect_target\", \"reason\": \"placeholder\", \"title\": \"Domene er parkert | Webhuset\", \"proof_page_url\": \"https://www.webhuset.no/parkering\"}, {\"domain\": \"zmdrift.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://zmdrift.no/\", \"reason\": \"website_tls_error\"}, {\"domain\": \"zmdrift.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.zmdrift.no/\", \"reason\": \"website_tls_error\"}, {\"url\": \"http://www.zmdrift.no/\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"zmdrift.no\", \"origin\": \"legal_name_slug\", \"url\": \"http://www.zmdrift.no/\", \"final_url\": \"https://www.webhuset.no/parkering\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "923219137",
+      "company": "GREEN 4 YOU AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "HugeDomains marketplace target; no ownership proof; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.hugedomains.com/domain_profile.cfm",
+          "sha256": "264edadb17e832191dc5bb2102f2e697598ea43b7eb57270a9837554ac79e8ab",
+          "title": "HugeDomains.com",
+          "title_verbatim_span": "nc fetchpriority=\"low\" src=\"https://www.hugedomains.com/.webmcp/bridge.js\" data-packs=\"mcp-server-client\" data-mcp-url=\"/public/v1/mcp\"></script><link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css\" />\r\n    <link rel=\"stylesheet\" href=\"https:",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://green4you.com/",
+          "origin": "legal_name_slug",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"hugedomains.com\", \"origin\": \"legal_name_slug\", \"level\": \"REJECT\", \"reason\": \"redirect_without_company_identity\", \"title\": \"HugeDomains.com\"}, {\"url\": \"https://green4you.com/\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_connect_error\", \"exception_class\": \"ConnectError\", \"message\": \"\", \"retry_timeout_seconds\": 12}, {\"domain\": \"green4you.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://green4you.com/\", \"reason\": \"website_connect_error\"}, {\"domain\": \"green4you.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://www.green4you.com/\", \"final_url\": \"https://www.hugedomains.com/domain_profile.cfm\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "915015743",
+      "company": "INVENSYS AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "Global Schneider Electric page has insufficient exact Norwegian company ownership proof; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.se.com/ww/en/",
+          "sha256": "9ad819806a6486064de5604f4f898fbea0a6a67cea2126dc9a5ce38d1992872d",
+          "title": "Schneider Electric Global | Your Energy Technology Partner",
+          "title_verbatim_span": "]--> <meta property=\"og:title\" content=\"Schneider Electric Global | Your Energy Technology Partner\"/> <meta property=\"og:description\" content=\"As a global specialist in energy management, automation and digitalization in more than 100 countries, we offer integrated energy technology solutions across",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://invensys.com/",
+          "origin": "legal_name_slug",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"se.com\", \"level\": \"LOW\", \"points\": 0, \"signals\": [], \"origin\": \"redirect_target\", \"reason\": \"insufficient_owner_proof\", \"title\": \"Schneider Electric Global | Your Energy Technology Partner\", \"proof_page_url\": \"https://www.se.com/ww/en/\"}, {\"domain\": \"invensys.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://invensys.com/\", \"final_url\": \"https://www.se.com/ww/en/\", \"status\": 200}]"
+          ]
+        }
+      ]
+    },
+    {
+      "orgnr": "833894862",
+      "company": "SUPPLYSYNC AS",
+      "result": "withheld control, not a newly verified site",
+      "why_correct": "Mixo platform terms are a different publisher; withhold.",
+      "checked_saved_page": [
+        {
+          "url": "https://www.mixo.io/site/supplysync-vbf6i",
+          "sha256": "e199217901483f296369a233ee6dde13f3c500ed99fe8214931274cff117a0ad",
+          "title": "This site is taking a breather — Mixo",
+          "title_verbatim_span": "ice-width, initial-scale=1.0\">\n  <title>This site is taking a breather — Mixo</title>\n  <meta name=\"robots\" content=\"noindex, nofollow\">\n  <meta name=\"description\"\n    content=\"This site has been unpublished by its owner. Build your own website in seconds with Mixo, the AI website builder.\">\n  <meta",
+          "publisher_orgnrs": []
+        }
+      ],
+      "attempts": [
+        {
+          "url": "https://supplysync.no/",
+          "origin": "legal_name_slug",
+          "saved_reason": "redirect_without_company_identity",
+          "section_state": "not_available",
+          "diagnostics": [
+            "[{\"domain\": \"mixo.io\", \"level\": \"REJECT\", \"points\": 0, \"signals\": [], \"origin\": \"redirect_target\", \"reason\": \"different_legal_entity\", \"title\": \"Terms of Service\", \"proof_page_url\": \"https://www.mixo.io/terms/\"}, {\"domain\": \"supplysync.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://supplysync.no/\", \"final_url\": \"https://www.mixo.io/site/supplysync-vbf6i\", \"status\": 200}, {\"url\": \"https://www.mixo.io/sitemap-0.xml\", \"reason\": \"transient_transport_retry\", \"failure_code\": \"website_timeout\", \"exception_class\": \"TimeoutError\", \"message\": \"\", \"retry_timeout_seconds\": 12}]"
+          ]
+        }
+      ]
+    }
+  ]
+}
