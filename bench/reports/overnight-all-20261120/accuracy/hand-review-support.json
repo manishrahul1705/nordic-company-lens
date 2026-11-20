@@ -1,0 +1,3387 @@
+[
+ {
+  "orgnr": "822707742",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "32389a27a5edc2a2a0cf1c7915febd3ab7fa5884dafbf1d2462207e6e9e8decd"
+    ],
+    "id": "47e5d77bd31941d1c076c31821fd6c29575e365ee6e93715aacb2fb0a1c8b504",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:31.005168Z",
+    "last_observed_at": "2026-11-19T23:59:31.005168Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "d91746d884460667f4a705acc97bd613bcb18e936efeb41e6ed17a54f785622e"
+    ],
+    "id": "1649bf6b456719a5c41966acc45718ac47b0e82b9304d77c4a560c8f42fc8ce8",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:31.005168Z",
+    "last_observed_at": "2026-11-19T23:59:31.005168Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registered_website",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "925b75d34779d91006aa3536f4b62255333091a39cca7fe26485b898a9d847d5"
+    ],
+    "id": "6b44b348d1141c6469ced24e414b18e7b2c820c4af51125258cb594d8e239b36",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:31.005168Z",
+    "last_observed_at": "2026-11-19T23:59:31.005168Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "f081c1415a7c9a84608689de27b63ecbe2cb6ca10e2987fecd0dade4a5afd600"
+    ],
+    "id": "cda7ee9c686034cebe5a1e4f016d70caa44f96808debbca987e70c9506ccd1d0",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:31.005168Z",
+    "last_observed_at": "2026-11-19T23:59:31.005168Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "a22bdb9e39dfb1c891928c14d35493eaaef2ba6651671913f010ad53e5cbd134"
+    ],
+    "id": "fd1e782130cdd9c59a6760a1818114ee4d2da8971f2e3db04230a0f2d878a095",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:31.005168Z",
+    "last_observed_at": "2026-11-19T23:59:31.005168Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "987365760916d0781cc5ead7e98747c361760a4331385b724e02989b90e7dae1"
+    ],
+    "id": "b0596cde48de65ea4348ad8350aa01f5388f2f3e12b73673193c49744979c4f2",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:31.005168Z",
+    "last_observed_at": "2026-11-19T23:59:31.005168Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "9dd3afb13a5d8edcc2fd03b1595d991331187203b933b66ace3674f0262f4509"
+    ],
+    "id": "ce598aa22746c8cd1e274a0e2d3d8dfab8592b9fb92e76dfe594c75b82905c9d",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:31.005168Z",
+    "last_observed_at": "2026-11-19T23:59:31.005168Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.units",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "c30b9c8e3fd49c84ebdba23443c9aa61ebb266852b4769ba7fa78851b675df87"
+    ],
+    "id": "d9dccdb2f0f006d044d6b1f8182ebf144a9badf87129d363825f084f19e6b07e",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:32.425161Z",
+    "last_observed_at": "2026-11-19T23:59:32.425161Z",
+    "reasons": {}
+   },
+   {
+    "field": "accounts.revenue",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "bdb46717848bedf851545651b23f2fb466de427bd03c96a009019b8f3e25e9ea"
+    ],
+    "id": "0908cb4bbb9862a87a8b87b70589fb9380e400f95b3a8b4e6695bbfd4059afd1",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2025",
+     "period_start": "2025-01-01",
+     "period_end": "2025-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:36.926072Z",
+    "last_observed_at": "2026-11-20T00:00:36.926072Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.history.2024.revenue",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "973bdbe17b90e8419631dd6d60dea289edd535175d703645fda07e55875ba416"
+    ],
+    "id": "b56a31ffd31916be5ea0dab7049c290bd00e6498fd88946e08141ac01cf80138",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2024",
+     "period_start": "2024-01-01",
+     "period_end": "2024-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:36.926072Z",
+    "last_observed_at": "2026-11-20T00:00:36.926072Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.history.2023.revenue",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "62393d3be13bbbbc2968598dac8bfebd25a1be79a8b16a066c3f29fea5fcb8fa"
+    ],
+    "id": "5ce4fa24e54a66745b3dbaac3ad37f2910663226b1b04a2b0d2a1d483bf72d3c",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2023",
+     "period_start": "2023-01-01",
+     "period_end": "2023-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:36.926072Z",
+    "last_observed_at": "2026-11-20T00:00:36.926072Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "website.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "01269bc800808d203c7e098a7e658fe7f30bf7a570f7e8da3ea0eb8da10636b0",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:02:12.850560Z",
+    "last_observed_at": "2026-11-20T00:02:12.850560Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "cd96a25c81c3554dddbfeb39fae6aeb2cb07af5bc9ebe2def7db82fdad2aa025",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:02:12.851533Z",
+    "last_observed_at": "2026-11-20T00:02:12.851533Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": null
+ },
+ {
+  "orgnr": "934982762",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "3b05ababd3f00ed2560711b6ef2e2463d045e6da4fc1f840cb65523f5033f429"
+    ],
+    "id": "1aec3d0f78bbe6db51ddbbde73ba9a1d37a2d6bb28c30e867c7f094344cecfc0",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:33.548728Z",
+    "last_observed_at": "2026-11-19T23:59:33.548728Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7b4ec5bd54ded6d0ae33ccd98888e5c5f71be1278a3421b015409bd2715d42b9"
+    ],
+    "id": "9786d99ab76bd5003de2f2094132a9cf9c4acafc48c11403f5cfd96b6b09b6fe",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:33.548728Z",
+    "last_observed_at": "2026-11-19T23:59:33.548728Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registered_website",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "cb80f7a61c8ae87bf71219b993559ccefc9eb37d2d2323a3f385b618d75a410f"
+    ],
+    "id": "b1f91d6dfccac642ca1f2a6f104f0721c306d508b4e51270ca0edcbb9487af48",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:33.548728Z",
+    "last_observed_at": "2026-11-19T23:59:33.548728Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "f3cf78d13fff818c6da76fe7a4dc83cfe3f5a3f45c5855affbfcf43b2f1c6017"
+    ],
+    "id": "8b496783840fa6ea9624d1bc15227b85d52183d54fcbbc9867b9a10218fc309b",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:33.548728Z",
+    "last_observed_at": "2026-11-19T23:59:33.548728Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "f49a842cf93806de2ca48d6abf9acfad2ea91b7e4529c5fcfc9f8b4da2e8f28c"
+    ],
+    "id": "cbee914fed787ad00191734136d15e83114fddf97853de2fab06f23a4cf19334",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:33.548728Z",
+    "last_observed_at": "2026-11-19T23:59:33.548728Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "1536379d1983156be76af33b05c9b24376ddbed4f0985c4476614e10df6644e4"
+    ],
+    "id": "04d46aea238d69d2ae6e143653fd659a70b1cc6451c79908505f9b35e3c0f3e0",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:33.548728Z",
+    "last_observed_at": "2026-11-19T23:59:33.548728Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "185f3ded07b4ef5cbbc6e7df8c2ec8b2974aebd2b587d9c4ebc6dd177c537663"
+    ],
+    "id": "9dba94d89c7e764ecef59882940907a11f8fc331dd12c05b0e94ff6531bca53c",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:33.548728Z",
+    "last_observed_at": "2026-11-19T23:59:33.548728Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.935120454",
+    "value": {
+     "organisation_number": "935120454",
+     "name": "ARKIDAL AS",
+     "address": {
+      "adresse": [
+       "Nesjane 3"
+      ],
+      "kommune": "BJERKREIM",
+      "kommunenummer": "1114",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "4389",
+      "poststed": "VIKESÅ"
+     },
+     "nace": {
+      "beskrivelse": "Byggeteknisk konsulentvirksomhet",
+      "kode": "71.121"
+     },
+     "employees": null
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "916a52ba056f58258e7e99e0b7e11e84a80bc51ace9012358ff8d2e5a7e08fd2"
+    ],
+    "id": "abe261e909fd1f1ee03612fb0860624e27936a98ace0c2570274d118196aa79b",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:35.163986Z",
+    "last_observed_at": "2026-11-19T23:59:35.163986Z",
+    "reasons": {}
+   },
+   {
+    "field": "official_website",
+    "value": {
+     "final_url": "https://www.arkidal.no",
+     "transport_scheme": "https",
+     "identity_level": "VERIFIED",
+     "proof_type": "legal_name_and_registry_contact",
+     "proof_page_url": "https://www.arkidal.no/",
+     "signals": [
+      "exact_legal_name",
+      "street",
+      "postcode_city"
+     ],
+     "points": 6,
+     "candidate_origin": "legal_name_slug",
+     "relationship_note": null,
+     "other_orgnrs": [],
+     "publication_tier": "A",
+     "content_allowed": true
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "91d6a0ef40af6a092e4db2486ce4956617b827b79787f7b62912093a63fa5082",
+     "e8c4af55eea0113d4e9e45045b38bfed1c1914d347c7f7fc24df1f9879987e3b",
+     "0a09f035cf73801504fa50e6c0f9aa91ca846cd967216bc79f6dfd458d88f80d",
+     "fdb751ed4b9d5f36fa45f2c0ee111d76c10a5f4776b97946a251b20a10578757",
+     "3efc5a321383ac5a601fc1acf6a6b0592980d40768251293b3a1fde629d9ba93",
+     "a2c3bbad57f9e8cb30a7bab073a4267d5c42e228444cfc4c7916b834da9fd828",
+     "6729efd658dfcf9d11b4053eff45e52c952195be307035431af093d0df3bd7be",
+     "3b05ababd3f00ed2560711b6ef2e2463d045e6da4fc1f840cb65523f5033f429",
+     "a1e39c92a142d6123b15d4a820a5bc1609751c5544485068925d678c50d74ebd",
+     "7b4ec5bd54ded6d0ae33ccd98888e5c5f71be1278a3421b015409bd2715d42b9",
+     "cb80f7a61c8ae87bf71219b993559ccefc9eb37d2d2323a3f385b618d75a410f",
+     "4ad515166dcc1df9bbe44a9247b7bf622a016d1e0b3d0e379c080575e7aec385",
+     "4842e4c984653ede7a005d4e4e150f5483a8cea8d22000710c997288cad4cafe",
+     "f3cf78d13fff818c6da76fe7a4dc83cfe3f5a3f45c5855affbfcf43b2f1c6017",
+     "19fcc23580766ab03e252c4180375385e46452a5f35f42fe7d35a8e44c97773b",
+     "326cbab06acd52ee39d9baed46145da941a9e5522589b4afade929a99aae1711",
+     "916a4db5530796789520155e2e432e08d165d59fc3ca5fd5e4ebcfb23a87cfe7",
+     "3462e7addeb4156cc6c9b1b0b76be0b906df5011b9e6f2ea9cfdce43e045b0f3",
+     "f49a842cf93806de2ca48d6abf9acfad2ea91b7e4529c5fcfc9f8b4da2e8f28c",
+     "1536379d1983156be76af33b05c9b24376ddbed4f0985c4476614e10df6644e4",
+     "4c91969f50f1203b4d3c72eaa166040e2a0d9add999866d9c69389dd1743eab8",
+     "c1db620968a16eba5d5b2fd5d70c3df0f42ecfb7edc4043606612f52dab1f899",
+     "3ce46aecc2b08a01f4c857c775c8738fd58cfa823bb6084700bcb42d634975a3",
+     "b2485e1aecc60e4b7bea23897858ba39ed1765217358c4afb016d3ea95a086fb",
+     "7714dc1a8edf7f18e015d1e4265e7eb83d8b217c5724e8085b74529707ad3ae7",
+     "6703a011d162889a3da3f0b549efd1db86869b85b6353793e59c4f1e1157ecbc",
+     "7d6121f1e395e02980e863b3e013fbf9fee0d84b54750cbea63b5c5696310481",
+     "3d4136152b1d2523fea603fa9d69d9c9c102307c490da6a475115f9a115499bd",
+     "80f5ab0f86b4314159f8fbe5dec0420a4450afef33c9877fab7fc3f65ce89ec3",
+     "137e2cba240969b8c68e98bf4e9d3af563309442dbabb3cf974ba7cde21301ff",
+     "e4ca4e700462c77810a45b1cefa008f493c08d58e3cf2b572ba52b8c71111357",
+     "5e6618fb15b5ea237a1e68b2b7c267e6046a11c29d26379a5efa5e1347a221c5",
+     "03c8c1428e01179068b96c09024044e67c0986040487950b99e4500de3034385",
+     "6f10f484e7fea399e593c11e0990f8c56cdbbd314e125fc9805a39767e793d4e",
+     "940267ca91017b74f6dbabf53ecb33f11a125a859f78a0756562182d3a723651",
+     "c143330a1b0cfaec5b856fe31efaffb2cd6173d933b6cde74aae09ba67da0d8e",
+     "9d7ad0ecb15c16229faf317639a2b00559eac1914e2e16f7f6795c43d3497ea2",
+     "185f3ded07b4ef5cbbc6e7df8c2ec8b2974aebd2b587d9c4ebc6dd177c537663",
+     "916a52ba056f58258e7e99e0b7e11e84a80bc51ace9012358ff8d2e5a7e08fd2",
+     "64ecd8e110cc4f76f7a82f82820969157f52b8931ceb1e32a7c6f5a78bfefb36",
+     "ee22071c5dbb416b436667883e13425066aacd8eee115223b54ee20f05c033b3",
+     "e11b0eb0bfea56c42652376af1bb107e7d0279db7ed12be2d82efa30d548c50c",
+     "e03bd9b20c073aa535b7be2d722a5638a1f5753c4b2323bc37b665d06d562d2b",
+     "0bfcc93da75f437f2861533f88d35c3da26244c697bd9d48ce09c2d403432776",
+     "d1364bebe2969e4fefaf7fcb7c306595babc393d27b8c2fa09340bab71a46094",
+     "0b0aff46b5e5e9650d49e8cd469ab60bc6b24b4851c09712fe41e704a19bbef1",
+     "0124f719fa955897b2f9d624086d89c55a4cb6e141552da474dbdc361074e674",
+     "06866b0e9c8a4200021fbf3a915e1cf6853c67f19b14bfdbc7c9656379e3cf6d",
+     "45ebc390dd7fc2df8c6b7b7ac6cb9016497f8d7f1fbfd3a5b24c418c60618578",
+     "4254f43700df2327067e12695432cf431195a8c3e61d9a211abbca16c38036a6",
+     "a0342ce0ad294759e00b5985b6106fd4ea5eaf1404c94424d23d0be60ac2ec2e",
+     "50abf03b1c1bdcb430281030b8c297b69355d619983174cdde04c479ab15a1de",
+     "5dd00d3a7152b4b1ee05c99f59633c9956c1387e86b7493bde37b0fabff2a75a",
+     "069884bad3e832500c78082df88f37188d921182e2a49569ca4b2e0778fe0852",
+     "6d042bbdbcf86c3ea6d8384f3814dd08ead1f5aa9b51979399f6fe5d8e5df8f5",
+     "49c63b31e7d95ae8d4f117eeb628498643e90a9374958733e1ae85a315fbebb2",
+     "c5b033ed009325cab1c9d17183ec132bf0013e85f105c3df0f0be692bfbb4df9",
+     "17cf9b7c16a367976b3ca5762584a9f126dd40ebd79f0dc5b07720ad98bf9e7c",
+     "b180d4da7b14586a8f3f4645c8fd966e21a9ced55c54180b99b20d9d0631969c",
+     "bd10972ffc0808dbb73e14ff31f843b49db86e4edc9d0a28792efb3fa2e64db1",
+     "566d2fd69112d3e433737643aed8b0ae6e09a9b9f8cdbe93950bbc115cc88ae3",
+     "cc4e07011275e4959231b951166fa44fa8fd38c659265371de761a5448969f5b",
+     "241ffbb969d3948c6eb5b900c03266377692dfe41517d9c5aead10177b57399e",
+     "b6e7f497e9c78c3e32fa367336ef5404a393a948dbe5a5ddd68f34ab56504efa",
+     "4de3beeecc61e9cd3059537c28b25234d9a19d31da718fa5733b375a7cef6030",
+     "5fbf7c1c72e8b7b7668a2c1481f3f57ebf154f615dc34bb5502b97a1c881e41b",
+     "764e2e0b6f1635e614396b0ebfb243b63301d237e1f75cb1ec695e73ffd0af8a",
+     "8630b09ab51a5acf1b545c706ff94d6a294341b89859447a65e73f25eb30911f",
+     "e2baf78cd805d1815982379de5a703590eeb409f4c93770e7793726051f51bb1",
+     "10aae071640fbb37fc85fe0e24c365e959be94ffc639afc8f0e65f6a4c354986",
+     "99157c69ca76b3add4b187a8e8d477a3a0723efe29f1ffc5693cab7cb2de750e",
+     "d4535765cecc8b850a757bb42c79f1dca19dd142fc66df2769d868ed0836c1a4",
+     "e532a39fdc7ab88fc1a6e8b100760102ad85fc0c4356ff5446e8838d578aeda2",
+     "5d59e74b5d50379da028cc6f78453b171e573f545c30836dcb79f7da69bfe16e",
+     "fe23cc06b15704496c55852ff44a938876b142f24ed996e0f637a5ce9bb2a756",
+     "7067ba851fb88deb52514b6751f5ecf175feebef54c50942633351a2d2aea619",
+     "a06d92a5a78953220e8e1a68eb3d159681c985cc4d97325817d48d80d7eb3b1d",
+     "90d27a80fea657032226063e4ca7cd0719d0fc026f5aa7302b926793792908e5",
+     "5500659341f05e03de7a52bae37077c6e73d2d033f25519560c235b99a3ec3e1",
+     "fa470eb558346dfa807c69940f796bfda268501939658ba6497bedc2aa910d75",
+     "3e742c0ce1239423ce7c0e5f2eceee72df6faa87c38f5e5929a183b1adc0fc87",
+     "1c2013d6904c4b19fd286c40525931994776fbdc54065bd3f1fd612ed0c1ed7c",
+     "58272a0ee210a009e5f6f9726b270abd2adcd2c6e116ba8e50f63c157d1bef0e",
+     "687f1c1aba166b0d424badd53847d38af1f61e375b72c95d67eb5a4a87b61790",
+     "57b6d199bdb3db84175df6228210abee84abde98daa367965a5ba2ad5c50430f",
+     "053e2ea058d95143b7a3dc012c8547419aae6a289a8dd932ee64f227025d991a",
+     "b5946922f9b659424b7eb1c007b142e7fb7fd671b24d61a333e471334d684f91",
+     "6b51210c84934631097ba9204d2882d237dc30929b1727b999d58e0b906009c6",
+     "6fd0c5bfd4765e23ed1d4fae31ab3e30965e535a953db326839d60680f564b49",
+     "c964ea214075d5ad5f11391d59284468f8b7e97b62ba11ba7d2a2b4d5b6c54b4",
+     "c9554e1ef6238de278dfffae2b914a746c5d40268dcdd99d08857d4d1cbaaa2a",
+     "c6f1531f7ab1cfacfb877ab58ad4d5b8d558d0eb709ff7906a8131750cb36e96",
+     "d9acefcc00814b4cb516d87da73dc59c2c22d96455b3e34f9fa9f7fac3a044ff"
+    ],
+    "id": "3a194720456a79ff8d98759e07b0c5c7298255b5189a5e8e0bfa9f4dd950a2f7",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:02:23.630084Z",
+    "last_observed_at": "2026-11-20T00:02:23.630084Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "7e3d011a6f5daa2597d4f43be5e06045dde686b88df8e64ed083417d15cecb94",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:02:38.455939Z",
+    "last_observed_at": "2026-11-20T00:02:38.455939Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": {
+   "checked_urls": [
+    "https://www.arkidal.no/",
+    "https://www.arkidal.no/kontakt",
+    "https://www.arkidal.no/personvern",
+    "https://www.arkidal.no/vilkar-og-betingelser"
+   ],
+   "observed_social_profiles": [
+    "https://www.facebook.com/arkidal",
+    "https://www.facebook.com/profile.php?id=100090066785106",
+    "https://www.youtube.com/@arkidal"
+   ]
+  }
+ },
+ {
+  "orgnr": "826969032",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "81152ad5ddab141ea703e04db800d56d93bd89c579ecf6c19721e264e8a49104"
+    ],
+    "id": "ee10ccbc702ead30e48a55ff5750fc8f582087d20590aa09c0defd8c762a03bc",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:34.604985Z",
+    "last_observed_at": "2026-11-19T23:59:34.604985Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "62228d7d96f4bc2f4a80dc19606d886e85df314538886cfa751743eb9c478b86"
+    ],
+    "id": "538b4d7cc7de6a6b72dd78d1d0480dcb1fb02df0e0bbfd4381fece6873ce4a56",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:34.604985Z",
+    "last_observed_at": "2026-11-19T23:59:34.604985Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registered_website",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "fa73668042fa30f97ab1fb87ca8ceeeeb7ba6dd954e42cdc2411f50824a3ea77"
+    ],
+    "id": "f66015e8abb909158f9206a441b99976550b0d55d3c7589e31d57e5a5a0097e3",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:34.604985Z",
+    "last_observed_at": "2026-11-19T23:59:34.604985Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "05880da03f8a9a5f4c0a377a817da3f3a55c40e7851dfcec165bb4df5a4e1603"
+    ],
+    "id": "a7ea872e433d19b1f3cd4f444c67a0dec0c3ac05f82ff6e36d3c18faaff4b2d1",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:34.604985Z",
+    "last_observed_at": "2026-11-19T23:59:34.604985Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "930adbd4ad99410d5ceb5226abecd716e50334c250f6361a99be2ad927a23d12"
+    ],
+    "id": "e8551c578ae8523ca9eef7a51e6c6fc36884c4b9bcfbcf61a8c315b70fd50295",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:34.604985Z",
+    "last_observed_at": "2026-11-19T23:59:34.604985Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "bc060223e5fabef019af0f452d588beea5cc22595b5ab0dd209ee4f27d23b485"
+    ],
+    "id": "2a50ffe6cd45cb5df0215669ee4712a378a45fd1aace8c98c95a8b381eb64acb",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:34.604985Z",
+    "last_observed_at": "2026-11-19T23:59:34.604985Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "36d4876d7abf4d6022a20f79ccf9c03d4d2851a8e2715a2559554c0804de1d8d"
+    ],
+    "id": "cbe90928606bf097be07cf51feffa2c17ef2e3e7b6f46aa4f6bf82081e16a97a",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:34.604985Z",
+    "last_observed_at": "2026-11-19T23:59:34.604985Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.units",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "bba034435932653662ca7853af37a5ed32a9cb8cdbd1486c427cc468e1c1e6a0"
+    ],
+    "id": "36b0a9565d5fec7a9d82aaffed9f95dc5dd207ad164914fc037af08d4e9ab3b9",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:36.058304Z",
+    "last_observed_at": "2026-11-19T23:59:36.058304Z",
+    "reasons": {}
+   },
+   {
+    "field": "accounts.revenue",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "0df6137eb695c5706e57a7c9b13e2e9cf728e9d2dc0fd141e53cfb46f1a353d6"
+    ],
+    "id": "9e27d5abfbd6bda77e1daa477c3b95ac03a82754bcdb8a320233bd34c01c4ba7",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2025",
+     "period_start": "2025-01-01",
+     "period_end": "2025-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:44.537361Z",
+    "last_observed_at": "2026-11-20T00:00:44.537361Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.operating_result",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "687cc040095ca79a722e3f9b89ce293df15fa6ca4f00e06410d6c795280d9fc1"
+    ],
+    "id": "7c4452a03352edf78a3c1d7aabf39e2d6b0bb692e0baa8a57bddc3baba46ed41",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2025",
+     "period_start": "2025-01-01",
+     "period_end": "2025-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:44.537361Z",
+    "last_observed_at": "2026-11-20T00:00:44.537361Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.history.2024.revenue",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "d76fa64778e585ec85f3b264b06c5f996eea55e5fc8f43971a0a3ad8dd6cbf00"
+    ],
+    "id": "fee1b099ca132f28d44fed6c857083c9648f6802ae7714e326db1d20852b00d1",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2024",
+     "period_start": "2024-01-01",
+     "period_end": "2024-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:44.537361Z",
+    "last_observed_at": "2026-11-20T00:00:44.537361Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.history.2024.operating_result",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "ce6f8306acb76661fa24b51e49cc6a06d6958af59291f7aa1bcc8ce864d7754b"
+    ],
+    "id": "764af19a8b67d686815f0ddbb2a90dde32ab25e3626f3636ddaf48e84e5a187a",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2024",
+     "period_start": "2024-01-01",
+     "period_end": "2024-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:44.537361Z",
+    "last_observed_at": "2026-11-20T00:00:44.537361Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.history.2023.revenue",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "eec7d19d4e3d0fe884b85519541c7090fe05b10f631b90733aa599a9ab79b386"
+    ],
+    "id": "d8bc372dcef8fddd5aab2447c4573ef7063a94ce87cfd8e4fbcfa6019a9af4f0",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2023",
+     "period_start": "2023-01-01",
+     "period_end": "2023-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:44.537361Z",
+    "last_observed_at": "2026-11-20T00:00:44.537361Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.history.2023.operating_result",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "e55af9ab0f829319300ba895fe61ce359921186da9e149839a5ea7742779fc0a"
+    ],
+    "id": "8265c976733083ca39e3a1f6ac74e9dbe9d413ba950b649d917ed7ccfe39f97b",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2023",
+     "period_start": "2023-01-01",
+     "period_end": "2023-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:44.537361Z",
+    "last_observed_at": "2026-11-20T00:00:44.537361Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "website.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "fd294af6cad2450e7f92ad219707e05d0b66fc475497175e055004d7a2091224",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:03:08.233603Z",
+    "last_observed_at": "2026-11-20T00:03:08.233603Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "9e5c3503bd94a2384b314eb67f2a4e3a7c089676302dac2a30c566a4fde351cd",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:03:08.233603Z",
+    "last_observed_at": "2026-11-20T00:03:08.233603Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": null
+ },
+ {
+  "orgnr": "993919675",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "0eadd7cf2c942f1a39573dfce13a33159685538cf4617d24c578dc1f28281708"
+    ],
+    "id": "5f0f62a428553718eeb812e21a918d948afaca14d7fa11f3a6ca70c71f65db2e",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:40.404216Z",
+    "last_observed_at": "2026-11-19T23:59:40.404216Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "11bb0e206855779431439aa1fd338747c26624b4b4352c824d52b2c66d1fe5c0"
+    ],
+    "id": "bd3f9c5a039789481460010ea43f12b99496dddb616893db3e3428f495e08591",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:40.404216Z",
+    "last_observed_at": "2026-11-19T23:59:40.404216Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "579ee1dd367eb2b5f827ff5766444abeb628c7003a9204820b1415bd4bfe7587"
+    ],
+    "id": "b66fd89184eab3d5da3be35794c131bf55f31ea019b7296a852b2c531ce70135",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:40.404216Z",
+    "last_observed_at": "2026-11-19T23:59:40.404216Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "3a967f7a03d2ab58701f8a6d54d1c97e854a7046882c35a62eb643549916ac42"
+    ],
+    "id": "ed0c44d6ffaf59904f6d746ec3986eb2f3e8dd09d55e466d055d2c0b8ef98757",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:40.404216Z",
+    "last_observed_at": "2026-11-19T23:59:40.404216Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "994c49c686bc524a574bff09c3fede8786acd5f134d1271655c441a8f1d7b8b8"
+    ],
+    "id": "f807d92ff474215e8d12703a9ab4d5cf8562ddf246b1727b362304239a1e090c",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:40.404216Z",
+    "last_observed_at": "2026-11-19T23:59:40.404216Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "fe997fcf2754a3184976c0c0f8e1bb6c20af11bb3d0555789559ecd111b0a8fb"
+    ],
+    "id": "28b9ca2839c4c9191582e6625a01cb486d186cb097803675681ef46bbdbaef0b",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:40.404216Z",
+    "last_observed_at": "2026-11-19T23:59:40.404216Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.993927244",
+    "value": {
+     "organisation_number": "993927244",
+     "name": "FEIE- OG TILSYNSTJENESTER AS",
+     "address": {
+      "adresse": [
+       "Gamle Ringeriksvei 42"
+      ],
+      "kommune": "BÆRUM",
+      "kommunenummer": "3201",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "1357",
+      "poststed": "BEKKESTUA"
+     },
+     "nace": {
+      "beskrivelse": "Utvendig rengjøring av bygninger og industriell rengjøring",
+      "kode": "81.220"
+     },
+     "employees": null
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "24ec10a5f603cdaf4224d0377b551e684252cbdec784c981754bbc21fb7c71d6"
+    ],
+    "id": "7cccde097f0775093bfc0925decc450b109ff1cb7d9ad7dea3cc32ffc85066cd",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:41.827058Z",
+    "last_observed_at": "2026-11-19T23:59:41.827058Z",
+    "reasons": {}
+   },
+   {
+    "field": "official_website",
+    "value": {
+     "final_url": "https://www.tilsyn.no",
+     "transport_scheme": "https",
+     "identity_level": "VERIFIED",
+     "proof_type": "jsonld_vatid",
+     "proof_page_url": "https://www.tilsyn.no/",
+     "signals": [],
+     "points": 0,
+     "candidate_origin": "registry_website",
+     "relationship_note": null,
+     "other_orgnrs": [],
+     "publication_tier": "A",
+     "content_allowed": true
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "2554b8502e71242bcdb93cce0583118db04000017ab7cefafe841f9dd8856bc1"
+    ],
+    "id": "ba4240a94499ed2edd1189e1a9d7e931aa422edf4a33360fd6cc46a89718d63d",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:04:12.119267Z",
+    "last_observed_at": "2026-11-20T00:04:12.119267Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "53b07b1b16f100f7ebe7e8b8db8ba1a84d7dbb998c413a3c013e15434b06463d",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:04:35.286175Z",
+    "last_observed_at": "2026-11-20T00:04:35.286175Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": {
+   "checked_urls": [
+    "https://www.tilsyn.no/",
+    "https://www.tilsyn.no/kontakt",
+    "https://www.tilsyn.no/personvern"
+   ],
+   "observed_social_profiles": []
+  }
+ },
+ {
+  "orgnr": "993312479",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "67df62ea0e923b6e9733317b100739a78c39fc48ac3ac95300f0f7f8f6ee0bfe"
+    ],
+    "id": "487562d0bf390cb57107103ed73a25e196f5dc4a3b288ab1c52b2171bc1ece79",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:51.978294Z",
+    "last_observed_at": "2026-11-19T23:59:51.978294Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "0bb0d41b3e6cb9d48d56feb1a05d42815b3a0230754a1d8f5867551f3e18b6ca"
+    ],
+    "id": "5785b241aa5a931cf9b499e22588a15aed7105c70e80c5a02a4898d3ea9ad284",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:51.978294Z",
+    "last_observed_at": "2026-11-19T23:59:51.978294Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "09e29b672e807e620edf94db9be091bd42e06ce738e8a1378a8fe9977627a0d6"
+    ],
+    "id": "bbbf3769b43fdc74f911e9936b2f2bc0d4a960b81fcce6cb97e4961ff9902b11",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:51.978294Z",
+    "last_observed_at": "2026-11-19T23:59:51.978294Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "a5e517f381bf0774e611e548c4242a7b45387e40d413b186bbb8d4a274802ac0"
+    ],
+    "id": "dd9d160a0afb43b8462197237136f16f3222d016a79e895bf82ca2fd48eb7e40",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:51.978294Z",
+    "last_observed_at": "2026-11-19T23:59:51.978294Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "3a69d4378b91ddf6aa7bd34552024096b7dd5da526a31f5862f91f0bbca95b34"
+    ],
+    "id": "6f5aecbe5a4a737b1032e29fa1173a6912ca2d1c6205eb32cb02d42604fecce6",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:51.978294Z",
+    "last_observed_at": "2026-11-19T23:59:51.978294Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "1901a19b3230fd5a3a81f55ccc17ef7b8e597598235e0f5e0a2e80d234a89c48"
+    ],
+    "id": "4cfbea0988b0da8756571d8bdb0922f86649b8b11f5c70d6f33051804c4f032d",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:51.978294Z",
+    "last_observed_at": "2026-11-19T23:59:51.978294Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.919014539",
+    "value": {
+     "organisation_number": "919014539",
+     "name": "NORDIC SMART HOUSE AS AVD BODØ",
+     "address": {
+      "adresse": [
+       "2. etg.",
+       "Sjøgata 33A"
+      ],
+      "kommune": "BODØ",
+      "kommunenummer": "1804",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "8006",
+      "poststed": "BODØ"
+     },
+     "nace": {
+      "beskrivelse": "Engroshandel med tømmer, trelast, byggevarer og sanitærutstyr",
+      "kode": "46.830"
+     },
+     "employees": null
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "4d6379165e1876578d09ff00506a9a42af493d51dae538b0f3ea7e7ec09d8ab5"
+    ],
+    "id": "4bc8d4e0fbcc5600588cc0cb6a949f107ef4acf67bafd17df1e61d6e53cdedc0",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:53.406881Z",
+    "last_observed_at": "2026-11-19T23:59:53.406881Z",
+    "reasons": {}
+   },
+   {
+    "field": "subunits.unit.921842422",
+    "value": {
+     "organisation_number": "921842422",
+     "name": "NORDIC SMART HOUSE AS AVD FREDRIKSTAD",
+     "address": {
+      "adresse": [
+       "Stabburveien 24"
+      ],
+      "kommune": "FREDRIKSTAD",
+      "kommunenummer": "3107",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "1617",
+      "poststed": "FREDRIKSTAD"
+     },
+     "nace": {
+      "beskrivelse": "Engroshandel med tømmer, trelast, byggevarer og sanitærutstyr",
+      "kode": "46.830"
+     },
+     "employees": null
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b04505eb4b8d31691e9b20098737a0415c7c191c0043bf3ada73bec5a41e2cb5"
+    ],
+    "id": "abf344b21f4d67f52d43d48d6941ed94689cf0cad26bc3307cd66f835cf076dd",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:53.406881Z",
+    "last_observed_at": "2026-11-19T23:59:53.406881Z",
+    "reasons": {}
+   },
+   {
+    "field": "official_website",
+    "value": {
+     "final_url": "https://www.nordicsmarthouse.no",
+     "transport_scheme": "https",
+     "identity_level": "VERIFIED",
+     "proof_type": "registry_declared_name_tier_a",
+     "proof_page_url": "https://www.nordicsmarthouse.no/",
+     "signals": [
+      "registry_declared_domain",
+      "legal_name"
+     ],
+     "points": 4,
+     "candidate_origin": "registry_website",
+     "relationship_note": null,
+     "other_orgnrs": [],
+     "publication_tier": "A",
+     "content_allowed": true
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "915008691c2d53c3cfdef2dbc1e6e324abf73e6346e8b9bfdc457a648246b91a",
+     "c55e97ae2065a3431d9a272ca9973833c7300b25ea8ec1c6af198d56079e85cc",
+     "5374d25126807e26ae68e3d6a9123b4403ee8af1f30015e3d1c2253abe59a632",
+     "2650aa53e007a160692c64a59e2854fa55820bcfe1f8a43050944cb43a03b6b5",
+     "2204d6fba1eff35f0ab816d2b3c533a40a2f56259ff5ecb1595f8fadec4339cb",
+     "a38f36e8807762a8f60d33cc61d15ea783ef5c63e10dc6168a7ab23c31f62dc5",
+     "f046ec65d737b1236c46e5ca4c6d27e48a54a3b846adedb2b58029fb9d1c3f1b",
+     "67df62ea0e923b6e9733317b100739a78c39fc48ac3ac95300f0f7f8f6ee0bfe",
+     "c977e4d1ff63757fe7fb251b821b98973bddadfa24049732da8e69a2c6eee557",
+     "0bb0d41b3e6cb9d48d56feb1a05d42815b3a0230754a1d8f5867551f3e18b6ca",
+     "40c7864efafde61126b18c28cdc86fdb692233bcf829ee750bb96daf4c454323",
+     "73352c237364b6636cddea2c21300e203b1ddb910110df0eae1b5869fe15e287",
+     "6d506f4ba727abf1ea1ffb65c0cb279223b5ba1cf01811f2e7b49fbd75e0359f",
+     "09e29b672e807e620edf94db9be091bd42e06ce738e8a1378a8fe9977627a0d6",
+     "1fbc885d65a1831de8ad1ddda5d9fb9930b66d69a856e1ca04d57cf747a19e04",
+     "7c87cda61926a840707d202ad8eb9e097d384a68056cc7f0f4ffd438e84a2bfe",
+     "35a97d94c3eaf18756f2f5fd0cd5d576f2d71b4561b62e46679ad3b06a911811",
+     "1712072c6d116175dbfcd6fc5d92917e1a1913320ca47472609509354e6790d3",
+     "a5e517f381bf0774e611e548c4242a7b45387e40d413b186bbb8d4a274802ac0",
+     "3a69d4378b91ddf6aa7bd34552024096b7dd5da526a31f5862f91f0bbca95b34",
+     "84942ce2fb37c4fef903729a01a0c69c7aa5cd0c05dc88ab27f4e9be14ddc1ce",
+     "ce3dd743fb585018d959c35edf7636febf85ba140a0d37e7d5760745decc9bdc",
+     "b4e3232e31be5acd32ce79d4f6bddb3eba41ba82105bd5a7f02a88c2cdde453b",
+     "936448d9877725ba0247b0c0100346e8aff133f85dce7804f6565d82e814838b",
+     "6407da722acb6221d339b2e536bd3528b8827abac3683fa3d3c817d021d285db",
+     "8f01ea910bab568f3c6f2e8afd1ebb2b550dfc17d6a9e82de4e1c2881f198187",
+     "8722592c9b25d7e95b30a1d9e139a8c9bbdb805319f9f662a0af2560c5e7ecbb",
+     "5fd12d05f09cfef5db2c3de6b53aa05e6f78136757e5426fd9ad38147a2e0dca",
+     "880f6c5982be7d67dbe10f4ba09335f195f68e8f9cda9d1d26f913880e73fbc0",
+     "b1cbec5375ccd762211caf51fd79780a19b457b14b92b26479f8f3bfbea9853a",
+     "f86bae76977dcee9b61e91bed37388e64de26b27346a51d7dcc4fbe152fc9817",
+     "3f151190c9e4c2373b3bfe433905ed836c7e623d546be56e859cc58caf24635d",
+     "4cdae7406a8b3105587a7424dc0195873467ce5cbd86adb4b0e22b5f1e1d7a0c",
+     "67e26ffd061b77925a770b1cf856e9d5b446d957d1aeb8618b7f2fd045bfd811",
+     "c73b9fce14a480ae3dc6cc7791bed9081a177811f66d3fbadeabdbd1e0d9623a",
+     "bfc5dfb97b2a4b4baa6a23fceb060d95c954c26b9142bf5e391089f75421fe7a",
+     "01d9b971dbdbc40f44a9b953925b6217c3f8e4864a96ba520f3027e5b2b57ce4",
+     "f04e841e0be347984970da22d9e1ad950554eb05f963049e20ae40139227744b",
+     "9e43c559560c30fc41ad7b2c1b4fe109302a05dfc9ad530d00887c942a476ee4",
+     "1901a19b3230fd5a3a81f55ccc17ef7b8e597598235e0f5e0a2e80d234a89c48",
+     "564f75e85b8105f3a094aad6aabce182193a9e97d38c548dd4580777bec5a3d1",
+     "4d6379165e1876578d09ff00506a9a42af493d51dae538b0f3ea7e7ec09d8ab5",
+     "518a967b78f12ed8755bda554dcde4ba77090bdeb33cdc503f6a6c33c4470454",
+     "d300aaee7fdcb7ace6ea911ccb848f6cf385be45e2f417d883fa919e658b40bd",
+     "05f7051248b1616287a8bba274f9c2bfc691565802ecd66469d1ba78de8ae292",
+     "0b1eb3e296f322dec6d8823408546b5bd2049ac30d93238d4ba89e111b4bc06a",
+     "65c748a1d3bcf583fb1067b0695cdb149805719361c2fb09600ad7844eef7c88",
+     "99ef2f16f99e9b071214afcf291af08253ce46f4b7227ef01cf2328c12c62b58",
+     "4fa63dc4c63838c5104e52db2de1991512e642ce5d09f79dea8af75deb670351",
+     "b04505eb4b8d31691e9b20098737a0415c7c191c0043bf3ada73bec5a41e2cb5",
+     "da2d652f95d3ef55f8f37b7cd5fa79358348fe816efa6f5ede651434a2c1ff27",
+     "1b7b2d0c18ce534628b9800a8db29e10832265bb582bd2400b580c671d700e7b",
+     "ba825ae0005575379bc119612349055ec196ba837d44dd51909169dcb9aa8b79",
+     "c8ed6001e32681e1195ab34ccace79d61864202b9d3f209c09fccdf086d91b67",
+     "55b7b56d67628c81e76b6f90978a722f0b6b8982c1820bc7456467a2e3f2475f",
+     "1c066fe91b2c58c3b0cbf9c3c05b0c650a9ea4cdc7186ceaa7c583ffa6252e57",
+     "0d32c0d5826e27bb66f61f64205f78d8754dd8b86957bcdcc10729c118bf266b",
+     "0a161c8ca7728a07d91fc39370a4408c5fecc76856f3482323475caccd4309c2",
+     "ca687b0e00896a52b59eeb56798ab6ca73c3c63e4262b9ce8b928d8f7f939196",
+     "4cdc405c652ce036f40577ea237bb281e3ea01ec9c6cfe981b3018f04069f51c",
+     "bd90117d3e146f7355a464b01422fa82d7cff12cd090c77dce22e9f82dbf4f9e",
+     "ee1dfc70f3d72a42de005251d2971af1df3d89345306db8fb777de0a18e88fb6",
+     "e8265e014eca59ffcc98f94d658c143ffa643ea0206a8432343fcbc0d7dd1efb",
+     "7cf0f33af2df15d7b8c67ead70400ef2d31c77e3494c9f3139efedb53d433e43",
+     "d733212b8815b8a289fd13dfa7d1e79ee341034dad4561bafce7007114e88115",
+     "a97d580e347d8ee243ce300788fbaff66e964da78a6c4aff7f045c17d57fcdeb",
+     "02132be39164be1007d6f24e55745ed0226053fd68c7d7e9e6e1a123c311967d",
+     "b0de2722c75cdd43c566477d5eeeb40f9557dc99a249913a8a8443a4e28b5e79",
+     "c65bdbdb121eb570360298a2f4cd7ac6747b806df5751fbbfd19b6e48b3a2d01",
+     "163d50ae82dffbf672074c9233484d43a4940c5500d1dd0aae8d012a2722a4de",
+     "1694828503ba1b5126e23bdc8c969b1be8ce808aec4c5ca32df2dccbcd58ffd7",
+     "bd35c82270858ff43aa3702b544282d3cafa4e58199a8b43085a0bec3290b6b7",
+     "2dfe9fdbbc5a7b16d18367a31fc46bd438f148cd65d987a533e75ebc6e0cfa2c",
+     "202a06259c4619bd4a62d68f4af2f96fc96798a95b8503addf0cdcf2421a2ae6",
+     "959cd305590151fd0a7fa5cf6300dc6bb57985451e10c6d8bf5428146abd2072",
+     "8722739721b011d6b32722d6ec7cc4ab67a0013ffa190631aac3ad7b892bf6f2",
+     "e183c36c62ce035bb2d246d6cfbd79d1c9125fe7226be2b925d9cac7cdef646d",
+     "acf09c58509cace5d7f4c385e5d049d87bb6bf9c549b25c2fdf25d34770dff73",
+     "8e28ef2a6e0b9f189471a42502dfd99dc70bce87dc418cd09d80cdad77f4cef2",
+     "d608b25674b8dd996997a858bcdb9f45176fa6d1355decdc36c82951bd4fbf4a",
+     "09b22b878c475903dbe1a49457555193a4a3b2586aac65f3ab0c66bf029906d5",
+     "36ea474c1f433edcb63a287108087bcb00ecf3d68c51c459067bda3a372afc8a",
+     "e911da15e366431ab60ff851494350cca37dad5045f18bdd585ab3cf9926db02",
+     "232bac02e0548459f0d98b1ab4cb0c2ddae7dd179f4c08fa8546f550754a7148",
+     "0ca8d22af979a1b74c45d4d3909968b2641ae0a3f07e16728ad145e280b01751",
+     "27e9bb1a5f5e3211b96fc3447e2dd508a218ee443741112630214c9e9f5ba667",
+     "2684e2c1e7f863691423ef20b51355e69dd5d9dc596428435aa7bc64c840ae50",
+     "bc595bcbd4cad22e5dc5b14110c674281ea2b7a6308292b204cbde72f91beeab",
+     "5f8a92f9c56d5c22ae401697a45fe9d414f8efb4dc603cef11d3a431686ed74d",
+     "05147f68f28daf36c66cd8c819747330be2365017c2e8a50bb0c5f1f0521521a",
+     "6969186918261d73fb7ff502f8ca46225a955b4ec4da65d3e58f5ea849583b59",
+     "19d926563698fc1e2960d2c72f44f145b36eb7bc4483625a74d4a810fc6ef396",
+     "29265aa37f7e706e527bae1d2ea58718feb81d35f292430a88854a81bd0a3207",
+     "595d61a5af3407287519962d06ff2c1f6d92911614401f60c92a04b1f3063986",
+     "8887a0b190dcc206f8e292da7f3c94e68feff1a4218c4640a4ee62222a4175a0",
+     "32d39a0abb20a2cfe658c729d5c029e912f55d7a0bd02f92f934da725017c2c5",
+     "89a018c0ad236ca6c80a8c11378f3030a1dea637b1d6c540f203093d25e78573",
+     "458b54c5db53cb177de78d23087fab462d47904dbb152f4784257892dd4a4df8",
+     "890dc9104d11c16a6de9d4d85cf04c896f536bc066c02f68a21740a14be9a60c",
+     "3af9879a0cee8607514b6cf4e2d0bc7a964cd470edd67188d85aa19616e46563",
+     "26e197837f33372df5c11392ba7e0b6f008a8723e9f363698bbf60d8cf149998",
+     "a267453694d1da83391407375c6bb088beb810404b804ab635567005971409d7",
+     "cde14e42810002042368234a540b112a0b4d016fbc9ab57dd9e5a5b056ab424b",
+     "eaf0387f824b563c41436b401ad6cec231984e3dbe6464e2c0fa2365857471bf",
+     "7a0407c789c5c7c36691d532bd57d5876f10987364eb72fee99d01d4d8a09711",
+     "bb3fc29daf2849dd4d85373a9e84ec6f4c904df863471a3cceab75d4cd2d7c8e",
+     "f85e86c6d3f99506927af8742b6fd4a3a9bffb375d62f141f4f64b9c9939ad00",
+     "3cce6064a6175006db697954d872d1ab0d6383da61185fee48e45c38fc2bc42b",
+     "0599a5b320290ed9dc5704996e714e42a0a6ef3b5797609ec8442583350bbafc",
+     "42252ef8600ba622ef74acc05f5d14974e889d0003da565ecfaa3702b6b7277e",
+     "7cb3ef28f45e396e01faeeb8ee75f559bfb570153cb86cc0a91aa97da74f40ac",
+     "5a6a7986a70350a985ce62645126030b7e80ba02b22d057a87fda247b75ce1dd",
+     "901c9b7a5c98e544491bd910f1d6d0cb95662a43a45c062164faf9041a5fecc7",
+     "d170de12c07d44995acb5f8ab5fc3882b9f6e80bc7cb1332eeaeb2667b926cbf",
+     "daa3d14d6c262647ae1390926420b87a8506f2c1b1e2af25b4d2a8ed384695f4",
+     "98ca40491fb51bb39901390ecd2b183d59e7f905ffb5b9315d8163ec4f86a9d7",
+     "91212c411d19a4ff183cffcfbd53fd233c0fff2e1840d7b918f58fcfc1f54dfa",
+     "d4846b8af3bea4e5f3e58128b61cf7acccdea2f416078d735ef8a4d797568afb",
+     "50b5731054d7f1f3148025e472010d1ddde54812e966adacb123fe0da8ae98bd",
+     "96cf11cd75389810e8036b37913dc579ed527830adece3b450202b6a79eba87d",
+     "d76ae77f37626eaebb5294ef0f610f89f42b56268f12251e9e00ddc481009a8e",
+     "74c9012199e497c0cf9c60eb142f9be75b95a8282ae00552da78686fddc4ab12",
+     "98f150e41d20de7e6f0c5e5d84adae9ebf9231bf5b2f70ec7bb9e6788efb0725",
+     "8bc6f8de1d1dc9d49ad209b40ae9366f60eb4fb4810ea700952be40e5afb3c37",
+     "20c887e844e491a59293b708c7c043c04ea11e45a7a977c817fc43faafcd234c",
+     "03b7bab204d162a2f01c9c20d92b8e70f4e569f9bc6b38cd7d6033c050c77254",
+     "3a2e7efe909115b0fc13737f11fd3f5e53963d3e2b672a06d1bbc8abe58f6b86",
+     "c0d69e7daa8beb728101003a4b7260158b1c8f2807a51b4fe1f01b9c60a82cf1",
+     "fc5f446142a46e02c5926977c37358e64d7a463d9aa0afec6fe944955b192945",
+     "7d21b3bf684354f03d3bfbdaef0e0508ca97d91891ff2a61ed4c1ff80ef8815c",
+     "a4de3f3745ae4e5479ba4186d5f9691300d1e4673f637f61347c868a468a49c4",
+     "efd94c1ef258d98dcd3d54a0c47d7e97da7d4efb23fd48a6d014bc4a51efb389",
+     "0ce881deed455294b95301220e8666b6cf3a203d03d1c7238acc1fd1ebfe6e99",
+     "28a6165958d8d60283977a5d09168a7db6798098b07e9dfcc1682ed661c17dd4",
+     "1dd1f7fc87ceba169d3334bc1e05395e2ce2dfae53fbf3d2c0ee0922a6e8642f",
+     "0cdfdc3b64852391053958eb2c6463f1cef4a2dfe0134cc5f4842a3f083100af",
+     "9690ef883aa403b769c4fbf1438e2ad2f3588db541d931fb1ee02d36c7488ddc",
+     "5412b702f3bc0d5059c663a904b85d6cfcbf5732b2e7dc0edf0af3f87e585893",
+     "8f8b393e417f390f786412c3f92da6f8581b29319e21515bd335ecd316f0ffde",
+     "fdab8865a15f72dc814826821dac1d87da9042fbbaab9930281ed0b280649bcd",
+     "cc0502e00f035134b8ab8cc04cb12cabce8bb8c9914d3784b602e809b460cb4e",
+     "15a21f813647ffbafbc1e54a77ebb67c50e399a757c9c52f59d39a8efd3109bb",
+     "d8e3142a04e7f24420bb4ebe5ab5cee9f49cee6962813fd72f2eeb76055ae300",
+     "1303074770c3b1f71cb03f298d76542a3c65699e8b61464fc5078b411413a574",
+     "09dd7eccd8ff80458a70e017876cffba8652b7224d344df82dfef475027081f6",
+     "5fd3ae1cb23a4e4eda66e44e31aad9cfae29f70a7311df70c4bbf9060c9071cd",
+     "cd14af7845cf127367932931736d73c25bc488355fc5faa3e10b3c45be146844",
+     "5e3f96e30f62e30672d957b3aae593924796b1cbc0a3e8f0078ba1e5cfb9c92a",
+     "e410e4c6ae8dac532128c976c9d25b8cd2cfa04fbf2cdba4ddabcb7889ea9e21",
+     "17052bf20067cfba3588e3137bb5a59edd5f9416606c8b1bd70336a7cd0b7a4a",
+     "eb7a69b60225e75d87d222b7ae8b17b29c026476774faffecc711fbee6095fa5",
+     "3fe004961b9bd0448b4d530d1b393f9c9367bc4f31b006196b50074c3ca60d6b",
+     "6a876e6bb4767b6bdea25da48f93b70ecbe7b39e6b75a766f3e2ac8c4df659e5",
+     "f1aba989c59ee7bd1e117188e5efe63cb2a1bbf8b965f7986d5d37c7e34f717f",
+     "e544e8870848230aea0d83b89b10f46f3c145b4abb644617c0c294d6c7aef3d2",
+     "7b7175df1108f7740587b12a0fcd9d5284d64a41bc7478ab8c43e628e21960eb",
+     "a432edbaad33e4cc79ba0f61ffcb9be78e09b01e6af0133329457268a5c981b5",
+     "ce165b3c779a21a83820780a48eaebde8d9c1b7ed1a653c36ce78d034dd0f421",
+     "720ce2e131da852b74763d376360d5a477dc1f27eab1902719aa5e73fcadef09",
+     "eb6802f487450429b74a4475116b8a6b5973b353bb6cadbe0a1cbbad53c611dc",
+     "ae1f8975197ebc74e755da1d282261c1a502a5a9b65046c9aaf5496464bb3148",
+     "17086cc61276828aee0a6d3f1c3528d92fc7a77129d1fbd28cf315003f1bb1fe",
+     "7d8413ac597288e140b4c63928ce865c146c9520481b7768563d90e4bf69754d",
+     "85ce49008e3afe50de1e499e06af13f003906ba23e34d8463229f1387debafc7",
+     "53552b0794806e685c6aadf57787f16fcca0951e1a45e74ae541be5aaa9a1da1",
+     "2f0f993c7f6dcc9e05ec4422676d67c297bb71400539a731f71e2aafabfb585c",
+     "1096f5058f64606f1f15c06418d6a49e2c341ce26906dc5d74900f7ab6cd4b6c",
+     "21855043267d9fa86dab712442e47fe9f2d0857f0fafd604f9b302f15d0d73bb",
+     "e003ec5de6f97911c4864293d12a0d0133911f7ffa0c3d42895e8cab62d372b9",
+     "2cf09c51c92461cde75161309f8aff05d6e52be76e374cb932820d827084f55a",
+     "06ef1cdf58ab60a36c0a74941f3833ee511566fe871b6d3620652d96e56dbcd3",
+     "6f06296338de9f051272d5f7befea2947978e6673505cbc336855916e0c66863",
+     "94d47f585624240f2ede67be26de95e22766e03b4a2f42a0853b47c2dfd4f0e3",
+     "3d00b6d8bd8153fb276a461647e25c69f1a445441cdd904e8a0866ba7288c3a5",
+     "963ca8a6b11fd73cb604106784d02696c02c9d192f81bb4cb5e11f6e608704f5",
+     "2f937aacaea1290c42a3b36396b8df7c7c19121bddd500a3b8ff81aeaee62f97",
+     "12fe91e56e4d785c6feea62447440d4a136a80c2b4df2ee6106694310f0db745",
+     "c9c5a56309132741fc64d4cf265f7982ccc0e8553e99262768c5a4862cf87703",
+     "491528c7891de8519a1aa06311b868588ed59c86e3a18913481aaec6091bec72",
+     "4c105eef3caa18b0a4e59cbef24d0d9be1cfa116d071bee899d81272fdb66b69",
+     "f8a14b4409dbde0187816e88bd47905b57819b83b3e0a9fa0510500199883f71",
+     "fcb5456a111364600a4d397190b61fde7bcdf51dc2c2750a61f9cf081d605897",
+     "7e22b735852a61c87a0a4a95b8a7855ee98cc7d037f2d132c67958f6abe6125d",
+     "267a9c74030dcf3454e8b2b66c8135d184a52b53d1da1a0e231e9d7ac5d93c7a",
+     "2c59068ec4dad8d99548515e42b79509310b4dc6657fdfbbaa3f10c118cf7b84",
+     "35c32a1f07e0ad8b2eb2a87492227900d3ab5fb0e7a328cad911964e0c96edb6",
+     "9e3f8134d0b7c7045baa540ed2bc60b48d27a4d8a2be64fa837be75e473d3f2b",
+     "b186945296ee7bcf7c32f1239ce2a88577cc6284a1d4d9549a35ba01e249df99",
+     "d61aa1eebdf328e419146f73c846265157ed0827cf1ff00304005247136d7ea7",
+     "aa7eb56033f44f62746d5136c1d574a7515114c00fe2198ab4c8081fe348462c",
+     "fa77385bd9d8e94f966491d514cb81732fe1a79bcc77507bd9b1ea043a44eeb1",
+     "4a702cb7cf332c163f22ef9c6369b7e63da55590b81b88d783cb048721990d33",
+     "9e335e43e5f2f09a92a16681db4f5d5556f475bf2e7f64fa0e99db27d7234f1e",
+     "c932daa488b42f103b3c7d37a6ea108e6ecf030a781c2578321c7cfa24baab57",
+     "09c48f2e0ed4f3703a2a153a6b0988541bda79e9a9809dc70f3e6347e68e25ac",
+     "d80f2e21235d2f213f032bc0bc135450386880cc4789b73ff97a50306c6da37f",
+     "49f5db0f23647dd40749b9225f77cd9007e4cbb9fe234e8de73e66c6a4ad50dc",
+     "38c2a911258c34887820883d6be9f12977fcd7be8c12077b90bdc284a5765488"
+    ],
+    "id": "76ebccc0c0e44de0c811046f78daec567d10ed678648ceae2bb73c94bd1c986c",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:05:35.389435Z",
+    "last_observed_at": "2026-11-20T00:05:35.389435Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "d49b1fe9564679be10218fa06f6e51d525671d6af8026b0dbca22dd564081e1d",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:06:12.286393Z",
+    "last_observed_at": "2026-11-20T00:06:12.286393Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": {
+   "checked_urls": [
+    "https://www.nordicsmarthouse.no/",
+    "https://www.nordicsmarthouse.no/contact.html",
+    "https://www.nordicsmarthouse.no/kontakt.html",
+    "https://www.nordicsmarthouse.no/kontakt1.html"
+   ],
+   "observed_social_profiles": [
+    "https://no.linkedin.com/company/nordic-smart-house",
+    "https://www.facebook.com/nordicsmarthouse",
+    "https://www.instagram.com/nordicsmarthouse.no"
+   ]
+  }
+ },
+ {
+  "orgnr": "984633718",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "23935aec9dbcb94ee742e1ab87167032cf486710580e684c71df353a015b9bea"
+    ],
+    "id": "f12bee5bd2a82a320305a108ff0a5a9dfe05dc0c7db466dd67b66cccab29e857",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:52.262438Z",
+    "last_observed_at": "2026-11-19T23:59:52.262438Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "19965c6af5358db2d51e371625396e0a771091bcd6275c5931fe251f3ba4f669"
+    ],
+    "id": "5b139c28068ff899277f4500250977caf8b94c53b70508be21b9e4f1f3434aab",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:52.262438Z",
+    "last_observed_at": "2026-11-19T23:59:52.262438Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "43650066c7395f7fa5e30f24a44d5e20c50ad9f0a07937f6987e3c9dea4329e4"
+    ],
+    "id": "cbd550aebf2f72135f02612f796abf450591dbb0d302703ebeeb89525d6b4ada",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:52.262438Z",
+    "last_observed_at": "2026-11-19T23:59:52.262438Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "4f111c01c6c024666cb86c4ce40702c39c58e21afdfe48e452c12cdf0592c342"
+    ],
+    "id": "c325428107470725be9fb00cde8d2ccc44454489e408809faf9496c750c88952",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:52.262438Z",
+    "last_observed_at": "2026-11-19T23:59:52.262438Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "ffc72c7e0462b7b87f8cc013ac074f81add8daff60518e6c2c9760ef77f7bf22"
+    ],
+    "id": "d428346b55f49b69f1beb847546e53ceb4c6a6abc5ca90bdef927125eb25fd69",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:52.262438Z",
+    "last_observed_at": "2026-11-19T23:59:52.262438Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.971797967",
+    "value": {
+     "organisation_number": "971797967",
+     "name": "BUØY BAKERI & KONDITORI AS",
+     "address": {
+      "adresse": [
+       "Fregattveien 11"
+      ],
+      "kommune": "STAVANGER",
+      "kommunenummer": "1103",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "4077",
+      "poststed": "HUNDVÅG"
+     },
+     "nace": {
+      "beskrivelse": "Produksjon av brød og ferske konditorvarer",
+      "kode": "10.710"
+     },
+     "employees": 24
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "05c2eff7d30d2c760e11ea9aea0846b693861fe563d8e0bf39f0a5781b7f19f4"
+    ],
+    "id": "d6de0c203a74c6e3d188b985588efc2d472702570e71d648791437cdb63fb32b",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:53.793966Z",
+    "last_observed_at": "2026-11-19T23:59:53.793966Z",
+    "reasons": {}
+   },
+   {
+    "field": "official_website",
+    "value": {
+     "final_url": "https://www.buoybakeri.no",
+     "transport_scheme": "https",
+     "identity_level": "VERIFIED",
+     "proof_type": "legal_name_and_registry_contact",
+     "proof_page_url": "https://www.buoybakeri.no/",
+     "signals": [
+      "exact_legal_name",
+      "street",
+      "postcode_city",
+      "phone",
+      "email"
+     ],
+     "points": 10,
+     "candidate_origin": "registry_website",
+     "relationship_note": null,
+     "other_orgnrs": [],
+     "publication_tier": "A",
+     "content_allowed": true
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "70f043c638f0a4c08e4a7fa7d0ee1d4a794bf27150f69d835c240eee0008f71c",
+     "4d1c5da82020a49079517ee68352e719daecb2e7974875458a449bbc9ce2ca1c",
+     "1c11db8e65288f720e509eb3fc65333e36b734a638a4c311d0da79051931dc02",
+     "011c1d448577dbe630d14061fbdf1bcf4a224d51f35eeb2c1a356f54a6374a10",
+     "aa2c269fa1dd001a236e795b4dbdd93585f2024b4cb7b0b5a66821e10f3e1715",
+     "aee72a6c4f3f990899b677d505f0128522cbaf070ae348f5a35cdaf57f8c81d2",
+     "b018e221d97785e23d31d13ef70879f1268750bf3ea7f2d2ab630f1ffd538475",
+     "23935aec9dbcb94ee742e1ab87167032cf486710580e684c71df353a015b9bea",
+     "e926b3ef6051860c0ffd32c3cc8594ac2a8c0ae7353f5870b4213a33036c754b",
+     "7e13cc54b3a8ca160a4cd4e96cc7e0eac4f86f3649a1dac987dba16eeb1bf7da",
+     "a62e518874232360b0b2d91692649b2cc86f9b86a7843a772deb085a67cc2327",
+     "695d18dc510c1d29ffd9c3ff9a5d02417930c3b0aba2a3dc36eec83f3090552a",
+     "98ee64d98446722ea8a42da35ee4d1d9961fdb21f4b2d5a2dec647a10a54763b",
+     "19965c6af5358db2d51e371625396e0a771091bcd6275c5931fe251f3ba4f669",
+     "c56f1fab91198ac24130363743031a2e6ee1364fb67c00b12784904b7009ad3f",
+     "ce119dcaf5f1dc3e63e4daf393a74420cebac08d2dc84b39f9d79f32da005f25",
+     "5bdd4372834102b0dcb477d8682c76e2b3cc68dae17714860054b0e28febeb3a",
+     "fca727426d9127d730e0454d59cad1505132eda64d4b029c72793678a828d4ce",
+     "43650066c7395f7fa5e30f24a44d5e20c50ad9f0a07937f6987e3c9dea4329e4",
+     "4f111c01c6c024666cb86c4ce40702c39c58e21afdfe48e452c12cdf0592c342",
+     "a8ad9e5688e2c39e595cba94e980ece562319f3c310cdc0c817411256ea7ff55",
+     "3d26dca8c0599498155ce9410ad6d5b32aa6c07f783d30a9cde9616c8fd91ef2",
+     "2c6f9503a0b3dbe829544b49533d080974217d65b3c28b128b6ef5676a2dc354",
+     "f7dfa767ac7ca6f5952d710634375d6f3e46f9dedd6423bcbb7ebdac191c9792",
+     "1347638c5e11c6e2e779d65b322f15520a41b8b9bf416b91b4b2878d1fd0d7e3",
+     "72901b4c3744fccead840990602345679586f47c0fa759d3c296c64750aae0e5",
+     "1d25b0a6f96e42d7eb4d646ca21b6b65cb8779ff078aea4db87949ebe844ff7a",
+     "7ef3598a4a11e32f448f96d18e9b303466ba6c046dd6e2b900503cfcefdf5905",
+     "8f3c607ebde4795b11211b957392305382d1e5d50b86b39b261335db88077629",
+     "3b1f4d31b7922e47dadaf21e74df00747596d42240654b0a8b0b032c27d31e57",
+     "2c0b133e6ca519eb37e9d4a7226fe2ac016c3e4d3c2b55ad69e3d3b53395b22c",
+     "d944614073554f5fdb5d5cdf7a2b4c2a1299a8ae0f3ea6ba933336743fa8f330",
+     "9870afea03510170154a385b9eac87283eb538315ea242493b76f8b6fbdc6bb5",
+     "b5d732860506daebf5b91826ec2dfd48fc533ed75b570a05b3994f4bf24e6110",
+     "b1a7e959d54efead1f26ee69958eadc96a13ad0bdfaf391f59aed4f8dd6e3147",
+     "b4ed8517247dc139bd9ff0d9e1c6a5823393211a6b6051a95a96ad8fc8a72819",
+     "ad899653671049bf49b4a4781eb8f6a9a795851604c501203be24741c7a470ca",
+     "162cb67ff1120a53b55dbb9d038f3824f6ec14650999245b7cb766b1dcc514ba",
+     "fadf276c5e5447f3222c1d4cee81cbf624cf862da9e0d945329d0254b11bdc6a",
+     "0d0c23548001b8962cd427fe984eb7c5a5086a8cacb2cfe76e9bde2dc6106cf6",
+     "ffc72c7e0462b7b87f8cc013ac074f81add8daff60518e6c2c9760ef77f7bf22",
+     "553259eb2d626eda7dcd2f18edf7e3cf4dca27ead911ebc7203ff940be8d7e95",
+     "05c2eff7d30d2c760e11ea9aea0846b693861fe563d8e0bf39f0a5781b7f19f4",
+     "c43fb212eedf2300dce309f9c37d26608dc8ef24fbe97003dcc516a34b71cd1e",
+     "791a7fc3d47ac961706d70d526c3e802392eac15a4133916fae456a3e240d8f1",
+     "ce5fb06d0197e90c414e558eb8a2263272f870051e2098c9b7e27bdc3e3d14f0",
+     "df8f61714863a287a1ddb07ff75366ddf8d8350f577b1a8e0b728f29687e41ec",
+     "24168f86bb2fdd5d3891b888156eff07f1947bf5338d7ec4bce49727ac5a966f",
+     "947eccaeaf2b4b102c304a83a51e8819c5678d12818e2e54c413999cd44906f9",
+     "25c5b311de0f7d56267d13c59b573434af130f8d672733b2b5e0e51555541288",
+     "81010800f8991dfdb863940d4fa796985476853855de2fdbbc0a8c824ea62a23",
+     "2e5985163de7427b58bdaa979065a47eff74b95bc888c044aa04d409de2b7c4f",
+     "997a4073581fdf898dfd0f50fc2553417e520e7d8ffc53bf70472db5d93ac969",
+     "0b08fdd846913803edd0a56224883cc35f8d3074d161d6f008c33712a2060ed8",
+     "7ff50511704ecae0a2996410b1e1b3dfcc9519f965c59a76701f45376e862ea2",
+     "59d9d7ef1ac275f8bc469942a0e9299ce84f4dd5322b3084a9d5f96fa2b61d1a",
+     "8a7309e7d17d5623168f3a94b9549a290844ccfbb6c640591937ab465005318d",
+     "600831e18e8296465302f5e3346db3f48830b2768c66821599d73bf460fe3aef",
+     "789826a5dfe1e8ac97b5605cce124fec0d8c1d4798492cf4a06a881eacbbfb4d",
+     "02ef8eaf75814f572d99c5fcb64eb00ed65ffd1ab0c541f897ca129a9a6a503f",
+     "a36812e4c2a216238e630545543421cc3466a0c1d7d1bf41fb888c023472280e",
+     "27316668f3c415ef890e60e6ad8d95d61a98c21a25611e4226377fd294da9a27",
+     "62fc803e420db856fe3344b9fca22506516b4a8318172426699d7e2ddbc1a511",
+     "9194f0f4b2e0c80af12e886c9e06a9872924e31b16d22ca2079ddc808d11c2a0",
+     "012b78bc73a8bb0eed16cde61f9c3cd00310e4da77dc5b3d92319d960abbea09",
+     "9423956b48ecd7a89bd74682835e529b4b29902fca68e60792cac23b953b9960",
+     "c9f79e1cac93dbcd0124b60b34f48dce5bed664c23cf2020f184e1dec7e5ea4b",
+     "8edfaf7d213c9c50e7bf1daa8b94610bbda5663b562490fad35105ffb2c1c1f6",
+     "f450edd532dc47b6fa747795d8d536ba86b87b74300137f2d51ac40b511a2c32",
+     "9689ce3c4407131bc6bca8b829007c8b3ae0d5c257475cc7a07de5051594ab8c",
+     "95564476deb90ddd6710435b2edc89b145f37082fd1185cc058f92cfe2401d6e",
+     "279accccd02fbe113f669b765b189aaafd23b6bbf56308bedf8feee190b6798f",
+     "7514ba221acf5b95a1ee68a769a57f580a953809c1804cc4f493295a29fc3085",
+     "34e38c5a3807f0becb35b4d717d3470bde383080049dc65da2982c1e9eb18bc5",
+     "429c306890be229caad89151c657355e371a1eab4dcabb0c52641237670c4c69",
+     "3354c590ac7cd008f258855edfcd2033167eaeb9e5b84e2a10a1c1f3ef56b2f3",
+     "dc636d152d450ca65ef713ec49c33f2e8b92f6f46b1634ad2a2c91663a99ddb7",
+     "f2834f228d2293cffe2e47c4fe85f90d70692f458dfb0cecdfea4772a5b40927",
+     "cd442a9f653c8222a13e4edb619385d57a103c451ccffa3abc0e6d96b11c39ee",
+     "d5ceca4cc21c768e1010becec23f945280458da22106706bdcc8b62c1117e1b8",
+     "13aac39030f5ef63274cd70944036285e3aed98d0300680f82c7b0b1fc25d651",
+     "9764df80e4eba5ec5a19b22a60f359465f1394e92d78c46a183ff9443b6f62f4",
+     "b89f751fc3d16e673cf8c3f9f9f41c920adfd1d1502df475be9dd9485c23042f",
+     "77d9ca12c87c047581c8c1449af448c06c2618d723241a5d5b6366fd96479edb",
+     "915d0667b6b13e888380721dd4bfdb96376ad33b2f7392303f6f7bf38fa504f6",
+     "c4b9a3f9744a367909fd59c36db4d2aed614bd0d75bd5fd35d60c0b9288cd8f8",
+     "ae7eec8d1b849b421486eaf39a30cffeb592cbbabe056580c0bbd700e14e463c",
+     "24e62d79fda11939653ea64662470974d6c2aa2712e3c63c245c6c36c5e22622",
+     "a211ff8aa7b7a6179cde4134153c343ddecccad4a2cfbd96f8839efc8304a143",
+     "3c91846a6676315fb69e2d69c27fa59bc43360e9feaa4d2b6f367ac7e0576cc0",
+     "0c25f7677926f527a9c322e2b305d91ab8506662a1cd71f06c0116edfa49e713",
+     "e88cda71dc68e3e957021b72c78541f75141c19e81a901f57053ae360ce31d01",
+     "cb6f9b8ca2dbfc3dce5a3de9787d8853f1a2e72c5409a7a9e03c8aab941a03a6",
+     "16665ce715beacac05aa4e776a237f1bd0bfcda3855b85f76fc75bdef49e6914",
+     "8ba980a7c9ea8650eed09b519d636f3900dc7512a53c8fc847e78f8976f439ad",
+     "e2dc3acc6b7bfd233150ba446b522b16a0cb96708fff1ce4719cf92c9e6babd4",
+     "1481ca37740d25865c65624172b446c1cbfc5ecbfdf5ec266546f73624096777",
+     "6f3068d3d3a19a54b5026ada1d827b5f8a4f19475c495d75447ebf947aac458c",
+     "25c208392c95eb9302877d07b25f997a41ee3a9aef80b14d99acbc837758db20",
+     "e9352541054e4163639c17585168a34f30c41eacfc5502ba01f6a482a34fc3b2",
+     "1b0d76aeea5ca82a7c14acb4869c6e9fc0b28c64e676a88400e6cd1e8b3cb4ec",
+     "0ab8b580e47c0812be133775741d3b53a5a61d2023fce90573b93245e8836296",
+     "785e00b0eecd96910261c8a95c38a175d992c9002e6485ac82d77383feaeef19",
+     "6cb9b47f0e85e05b13f137d1a7483db3a9d96ef4e2b44c09c6a7cea72ab702c0",
+     "fe17b42e92b5e9fec5ad5524e6f7fdbcefcd0b28cc2b610770d1c07f69486992",
+     "c7091790de7e69494db944e96fff8b2a12c0f88c3c473e276fab46aeca68564b",
+     "e4d10ab8f61c1eaa477ea3664086cf4e584a70fd3fff3a564eb34d2d00b5b6d5",
+     "d6d3b7dec85b1744c7e5d855728f7c3871dd64f3ad46bdf726f15260538f6377",
+     "43d8f276b17168747bbe8b28213facf6275fd4a388f84f3df93cfbc965c84e5c",
+     "cd0b96e68ff6fa9505771ee414fb7b09614badd05cdd697ab80f70ce20067837",
+     "bde487a2c26e47ac7a307dc945d3c4de72688582bc23a103e7cb8eb0dfbfddb8",
+     "918f5f00062ebd4d2fbbd75404d482f04f3c899d13a9dd3ec3a532e2285ef9ee",
+     "b7cab2790f244364b8c42ed35818e0cf73e50a0a9cc23c38856134bc7fdbb38b",
+     "618992e9b7a0fa71c70c33120c8f4bedf0746fd74346a9a2a55f27861bd6570a",
+     "ba0817e0b39420f5749d703b9d0e95c3a7f67fe065b9183f8fabb0fa9265aac4",
+     "14dfa2e69b61a85831900a19db7758df58d3a051f5bb214636f64e7554442afe",
+     "587c503694837acdae6806eb36f882d7c8d049616d04c5084e8b50c12f8d27a3",
+     "7f691823f76ca15eddcbf79e98759ed61b3a10750553ddecd6fcf460c52bf7df",
+     "aebfde6b9fb9e80e7aca64c1c4f31fb6091923226f02cd88182555a10ede59e6",
+     "47945d768896622e9b8788050ed6ebd42040bb8e2cda2972e8220fb4cfb70a95",
+     "29bbcbfb8fb79c9ca55958ed8ea0972dc8a1eb734ab59beef3824b9d6500fb0f",
+     "c816d78277b3baf4a88256134fb0395dc2adb9e5d37ea3fe6809e66d20d228ad",
+     "d5cb4defa6287baa1974a4bb209a3760c4f894a22c6e0431289b0e83704aeb72",
+     "d57e186d610ce5ea0f73fd096524b1d211bd59eccf258ec87f5dd8938f4e6a59",
+     "04f7eb5e87c634acadc58fc4b22ef3cf60bd7f86e975d5ea9a272667495d7756",
+     "d5bf42711cdebc02c3baa7fc4ec8b3d3b15455b8471dcd548c0b0d670df9e9a5",
+     "da441e99c4a10ca578e772d0bc16d8f22644250e2c1531001377f9fc1ab71f48",
+     "7a160c85f16902694667d827490d60dfbd6c76b6058273127e4f2cf2433765e4",
+     "b314d4b3e693615eff139132a05dab1b5b534b325561ef95082cc1130df87ce8",
+     "689a850e34b1b02aaa4beda0722ece56c3ff9b173bc2ff4aa9ea778fb3312a6b",
+     "1832094236858a40a279cbe134d9ce4e8cd003fb55094e16711e74589cbaf016",
+     "4f47277a98cce35a14009eb546ca0ffea2e434e0f7b357b23ee1f7bf5bebdf85",
+     "f31c51e2be83ef0256c783d9c256ea0f19f57b1f4cdf4f99e02e75b7506cecb2",
+     "740acf6f49801af8e94aa5c47966bca067e89898dd5d9042622482adafdcd6c6",
+     "cca2f613437a161d11929ac4421b13f6ddf8eeb1490d1d23c57ef59464adedd8",
+     "aaa21b9f3477c1a833de9467927b8176c7f3f85862584ba53cf740be1e3135a9",
+     "e26a29b0b6d439cc3d26c43faf4c5aabcd635cd1d60b31c837d1791666dad9e1",
+     "8a3ea29b2368df67b924dd9b6344cde94e0cd833cde5d4f7e0ea1ccab02c4032",
+     "03768640dbac6505adba7304d2f595237d9953d7e621ff5ebb46935b339cd878",
+     "7137d305912e5e5830336a83f1651fdb6197bf0e0a595eb84bf85fdd6b7020fd",
+     "c44c9c09617f90db189b2243db07810dfd8f6e31a297e37db2d8b6d0c96be9d1",
+     "116f126f178490463b999c2140434c995f61a8b6ed55fc1aa5d4d1a07856e5a8",
+     "73e48f28e861c41403cb9764b76fe969bcb3c3cae1228fe2438e1219fb347d21",
+     "89422c598cbd260995b431ed010a2c44d6218bbdf1bfe2a26c040653e8042a32",
+     "609c30f8a65e1b89497184ae3abb2a5cb24198c959be39db9459bf53480b342a",
+     "7b0a21b544c0b6a869b40cc1f525ff6546a9cd4078ae896445903434a9ddf46b",
+     "060b2af41aa6c82687d2ef9d348d1f947ef103352787de134fd3dfb00d787e48",
+     "90f199dae9af3dbe501bff28e1200efec0d7c721eb3af4f77451e4ee66b7f37e",
+     "41a0e54babe2c6c596ed838bc78838cfc324e69f2852919286466a24b704625a",
+     "5442d0ccc46e2b5098574c14ee41b75dd6d621eaf16b4076133073d333b255d3",
+     "5d067bb8b2f3bb31f7289d623a20aff71525eddbdeb71c03b9b877e9f9bb6efd",
+     "7e8640feeb8179ccf41e6530d6da0eb623d54a6653d5770a1b7b123ebaf825d0",
+     "9f32976f43fd35e795ddd492858b383397ebe7bd34b928d1bb49cd1ed0887ffe",
+     "8b98bb5ccf7db0a396f822645a86aef1754f42d1312a36d8a371b959224f301e",
+     "92756ab17ee769ac2859eee33a964e88371196de46e64ade393c915ee5d31bc1",
+     "8580a42ec58874a7ae3fa1bf8c47f875ef375a1f31b1707d4a1fb389519afe5b",
+     "b7b434131d1f84b0d7e82c4f7c5308915a9bf91d68d5e0db658c63c15b88cd0f",
+     "8b4442a9401ee9b995cb61180d9c531b49c797429b101f70ae4222875a8822e7",
+     "27d179de0e6e81e1c9e694eb499c8be904e9ca54adbc76b1f7932cccf357907d",
+     "49f35f49ef8f002d8cf3dca2b42c051a5715dcec34fec4f14c026b6f2a84611b",
+     "830b37d20f46b2a444f4ae652d5d67460ac1f90f2abf381338b579d43eb5dc9b",
+     "ae3b9a211741a1dd32ab817acc95d992970197ebff52b36ac50dc493b0ddc6ce",
+     "5a0e96d6e5c8c915280e713c58ba399d20b4237fe6163e82b4b77571ae66c00f",
+     "3a840ea332d69940b7b2ac19a11527f68181c17729ed01475aed6ad5a5d50725",
+     "66f4704342d47479191b729db7157b4cd99c9c231e2966da3889a68888e50576",
+     "187135ce95b65b32223be91688ef617bef06c8dea6f11c3530fcd8b595b939bc",
+     "0de630b7f61ac23083527c6b3bc0e9f1d6ec95f2735431460f9c8d98343e15c1",
+     "1d7b395ecad24036db3ed1db45b359ddf5ef71a5ce50fedc83319c0129896616",
+     "ac656bb04f56615c7f1b701956b7e634c179d48f9d7265eedc12682148df31e5",
+     "66e6135de9b1386f812cd4a79d292276a6e71ea2fc25289b93211ebb61cc27bb",
+     "84db8fb080d620d69f6d7d73546858ca01a61aa4be52b58844857e1473947f0d",
+     "30afbdb8b1a311a8bf5bfbdc346b1e5bc5677893c8c464766e65a219a4358571",
+     "c85370772530354fafe1304ae78ac1233b3228b619931c244b33ad2cba5f59f5",
+     "ed769f60e3ff76f96b8c274ea9e32b45e4565b89e697a7fc6a834e24be1dfbb5",
+     "a47d8ebe86f203a2f7f68be04ca061e441d089a7e3833d4ed2a13f6513286180",
+     "f81c589a3e34e949a41c2ba6b36e6af7c1c976020692b037d4882539ebb6889f",
+     "77aeb503c9df0a9a8b5a2f86d1609e0895dbf71544b6c63a8f7fea7c23b293c9",
+     "48f415a906ccb6dbad4ead29358b5c85fb9fdd533e37b40f8bfaff9e892e3279",
+     "50bc6727266cd796532a45d42742a63a48a4868ba8b9f2def54793bc9c47c7f6",
+     "d3eb270ace6767de071fe439b78f6a4244886917a93b13a7dce0699b4bd244d6",
+     "7d2a502cf01fe7dbe216bf5d12504e514c5272db73ef36ce7bd9342418bfa79a",
+     "c51b29e4469e65ef7ab77b6e4444678e1704b1190e816dbe1ddb18fd9124a7d7",
+     "e92aa5ca9e501f1bc4756f1cf3285b256e9c0c871d12181e13a22780212dc958",
+     "bee500f0bfcdf2ffaa197aa6c7e4bdfc6a632db454f829c9c33a08928a084213",
+     "7224393cdb171a23f7050d7d484c1c37ef9c7c25659111208cc52eaaa9dfc341",
+     "248e3e6e6cff9bacde7831dd822b9c49d35557288b73d4c07d39b9d40c21e2ea",
+     "44667258d0aa7ab30262d1b8aa46fa6ac2b9a624cced852363ce0fc25350b622",
+     "ff28e65cbd61920c3b2c8b17b0e22d451df132728ab3a12d65343bd3e596e1c3",
+     "3e7b3021366431429b5e0c0901c2c73a43d208ee26c854d78995743300664f0e",
+     "c06d4b7da22f08bfc44e1c12c9583513692e267e6a0cba2f6366164f5a33566f",
+     "615bca2b7cb8bb79a2349d6ef79227c6c70b696aad0230875a0b4f6c2407626a",
+     "7647dd769f81c96acddcd92aaa76db62da16228bd3bd9d8b1ca8000da4c5b74c",
+     "fcb805b297cd068465742218888edf6e40cdfe029a400ce27d86262577cfc372",
+     "45ffdaa0919162c0ef294b96d461135ff6a03c98144ee05498bd569cbc9a417f"
+    ],
+    "id": "4fb886fec42ca104d90ab0bd7bcb054364e12d90fc53a69a46b0b09dbd7c2d2c",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:05:44.662681Z",
+    "last_observed_at": "2026-11-20T00:05:44.662681Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "1e8cf780b432dd438f1c694c6b931470d57e6f6b1bdbcf3792fa48ff0e00682d",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:06:10.463759Z",
+    "last_observed_at": "2026-11-20T00:06:10.463759Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": {
+   "checked_urls": [
+    "https://www.buoybakeri.no/",
+    "https://www.buoybakeri.no/kontakt/"
+   ],
+   "observed_social_profiles": [
+    "https://www.facebook.com/buoybakeri"
+   ]
+  }
+ },
+ {
+  "orgnr": "993021180",
+  "claims": [
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "bedd7bc128c0096b1d623cac898aae8cfe01c0c4700cbe7730a6cd867227f6ca"
+    ],
+    "id": "352a2d939c62134bd6c8e65d9b34bcc494bed3e052237964e28f454b4316eb2a",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:54.245274Z",
+    "last_observed_at": "2026-11-19T23:59:54.245274Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registered_website",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "022651690015445c0707cfb735a459ce980c4d3540da51c6dd32af43c703bffd"
+    ],
+    "id": "14c22dd1e1d3666251787b1bfe95449940f1bf9454774bdf841e843ba166925e",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:54.245274Z",
+    "last_observed_at": "2026-11-19T23:59:54.245274Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "040dcee95c2f3d8601b95816f09066a6393506e23df59ec130d5e284cfc743a4"
+    ],
+    "id": "ac3b42eeecc9b4cd10f2e11584c406c55e29c437bd5eb813b26270a86dbcf2df",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:54.245274Z",
+    "last_observed_at": "2026-11-19T23:59:54.245274Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b479a0030a8024afcd970556d753dd0ca24b6a20c4e408a109a165471ba29190"
+    ],
+    "id": "9d741921a2461586304dbad37012f6805ee6c8ca4653c9a1600f4871b6d40a80",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:54.245274Z",
+    "last_observed_at": "2026-11-19T23:59:54.245274Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "a149240fe27608f29f04ae9f75352138a48f3b5b0e9b7ccf0466ec2e143eed09"
+    ],
+    "id": "47fa5d3787a7e7cd9b2eb44b4716ffe1e62c8638cd3178ce6fa4edcd5d1bc8b2",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:54.245274Z",
+    "last_observed_at": "2026-11-19T23:59:54.245274Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "51c976cf7f02fc3b7a0dd5b20970116a84a84557eee568977c93fee1105de756"
+    ],
+    "id": "65e56f1e588b8b5cd48da5f80cfc848a508f1a974700f1bba691a8fa9e81ca56",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:54.245274Z",
+    "last_observed_at": "2026-11-19T23:59:54.245274Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.998980089",
+    "value": {
+     "organisation_number": "998980089",
+     "name": "KVANGREELVA KRAFTVERK AS",
+     "address": {
+      "adresse": [
+       "Norddalsfjord 2042"
+      ],
+      "kommune": "KINN",
+      "kommunenummer": "4602",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "6910",
+      "poststed": "FLORØ"
+     },
+     "nace": {
+      "beskrivelse": "Produksjon av elektrisitet fra vannkraft",
+      "kode": "35.121"
+     },
+     "employees": null
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "e768854a5f576930bb74c906f0a71feaa7c861aac4a5c7df26dadfa871dea76d"
+    ],
+    "id": "82499988ff153482f61c195cc1a4ef2a666dc435276dc94e3b41c733c806f932",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:55.662508Z",
+    "last_observed_at": "2026-11-19T23:59:55.662508Z",
+    "reasons": {}
+   },
+   {
+    "field": "website.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "ff75fbd9bf499e2a5853e0162745c83f3964e88d46c786f9fef217d0cc0866d5",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:05:39.720352Z",
+    "last_observed_at": "2026-11-20T00:05:39.720352Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "0f59cabb85d1d863f469f19428b2f741ba48dc7fe95e3bdc1055efff662a0d19",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:05:39.721352Z",
+    "last_observed_at": "2026-11-20T00:05:39.721352Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": null
+ },
+ {
+  "orgnr": "960213912",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "1bd3cafc50d57e7888b67f882a37098d67de0136e53bd1872cacf4c057fe65b4"
+    ],
+    "id": "b7fc71b0e3c76262cc068914422787570410c4171468eb37b6595a71450198fe",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:57.905914Z",
+    "last_observed_at": "2026-11-19T23:59:57.905914Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registered_website",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "a52ca7f46e3f9d8961a0a2fa2bf1a443b9014d3cad652ca3f9831707a1ecf6c2"
+    ],
+    "id": "360e0ec0bef2720032467b1f1dcdc4a71134e9d1c723ab89d37b9b8cfcfb0056",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:57.905914Z",
+    "last_observed_at": "2026-11-19T23:59:57.905914Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "806525cfe00db4c271a8e4e667da38136d59ee038b86e3644fbf2ec0ab4a051d"
+    ],
+    "id": "e8f78aa3943c4284c866ccf2eec8c7b5d17af8041d324fa7dff634aafea0e593",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:57.905914Z",
+    "last_observed_at": "2026-11-19T23:59:57.905914Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "286537f86f344f31770f3591ba66aca0114f28cd3570c45f51ef2accd11bd00e"
+    ],
+    "id": "bdb98eaa912ef6aea6daf28d1bb6a9e1439206809ca5c32b9f0d9674f28fc2e7",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:57.905914Z",
+    "last_observed_at": "2026-11-19T23:59:57.905914Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "e15e7cfb878f0fee8a877d16781cf4ef049fb881e8558d834fc3f5f94d731dd2"
+    ],
+    "id": "7bfd3fc78dd9f0f80ffc033eecaa12e748b7b88c8d17711cca78f8f85c92477f",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:57.905914Z",
+    "last_observed_at": "2026-11-19T23:59:57.905914Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "316d686be960e53f720927fc30d78fd0e3ef981d38ec55d2f0ec8135a93dcee7"
+    ],
+    "id": "87e2ef35f4f1c3b4fe71c1daf45c76d51c55b118039c691b00dd6d5f4dae45cf",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:57.905914Z",
+    "last_observed_at": "2026-11-19T23:59:57.905914Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.972285501",
+    "value": {
+     "organisation_number": "972285501",
+     "name": "ROSENLUND BARNEHAGE",
+     "address": {
+      "adresse": [
+       "Gauselveien 9"
+      ],
+      "kommune": "NORDRE FOLLO",
+      "kommunenummer": "3207",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "1406",
+      "poststed": "SKI"
+     },
+     "nace": {
+      "beskrivelse": "Førskoleundervisning og drift av barnehager",
+      "kode": "85.100"
+     },
+     "employees": 34
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "533755894d3000941d736fff4316c0820281ee96ead5666e8b92cbfda995dd10"
+    ],
+    "id": "8c4f4a7eaf48218833121b84263f4a379ad6c600919d79f582f6bab825be7724",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-19T23:59:59.313083Z",
+    "last_observed_at": "2026-11-19T23:59:59.313083Z",
+    "reasons": {}
+   },
+   {
+    "field": "official_website",
+    "value": {
+     "final_url": "https://rosenlundbarnehage.no",
+     "transport_scheme": "https",
+     "identity_level": "VERIFIED",
+     "proof_type": "legal_name_and_registry_contact",
+     "proof_page_url": "https://rosenlundbarnehage.no/",
+     "signals": [
+      "exact_legal_name",
+      "street",
+      "postcode_city"
+     ],
+     "points": 6,
+     "candidate_origin": "subunit_registry_website",
+     "relationship_note": null,
+     "other_orgnrs": [],
+     "publication_tier": "A",
+     "content_allowed": true
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "27cd7b9b84fcf1a4c37115f5411f98050e599279fe63f8f9e0bf19595dbc54dc",
+     "29d85f5e0664f79abcdd38294d5826d4b9555924915af4039c9c2de7b8648e9a",
+     "3733f970a7dc10892befd5cf0746ea1650ad95a6990df356fed294e089d5adde",
+     "44a3abd36f0ce4b7e1c634eca6824fcee2bba371e25601a78ef84e9e8c6be096",
+     "533755894d3000941d736fff4316c0820281ee96ead5666e8b92cbfda995dd10",
+     "58cd166924e9249ef35cabd3c525d91ca07e9313426f6758053523895b6cee87",
+     "66fcba1e25d89df2425a607824f2711ebf6489b05059a3c25d654aec01581b68",
+     "80671f75c5a0be9564d00b6778c337ec732d6f3567c5092a5298f387b378e8da",
+     "8cef24f5fc860b90e82ed77b45194b15222ecd85ee5d9088268df066172578de",
+     "928d6d2319c5893030e171bd296996bf612c725680a67ab07e46b1ea18c84736",
+     "a2e98a8eecd91cb75ab90b07882ff7867c33a527b6cc1ea0d320235034c793da",
+     "a90bd204d070cdde076426468da2eb501cef971379a67a9ac5d94298d53a96ff",
+     "c4345b1f66b357aa724444cd5d04f1300114e73cc7f64ffec4f4a14e6ff4abdd",
+     "3521b99d691ce90f1723f4dc681cc6612d9b601c21026c2daa36b783899082dc",
+     "a447111f954dcbd4ffccd032f2682609ac47f8b9dbdaa393aebb94d05bcbe13e",
+     "ea4694a1f36b54a3321fcd62df7f7d7edc35405995d4791fbf6329350c42c42b",
+     "c04bc98dc7b766578b953b4b323e29dd75b0d0e03a20b50318348f357f59ead6",
+     "4e605f020c50817dba12bfbe72500022af61f88e69ed826a97f761966bd18037",
+     "1bd3cafc50d57e7888b67f882a37098d67de0136e53bd1872cacf4c057fe65b4",
+     "893cba215ddcd8f16a467cf60cf6a3e6e8c28da1d0a6392264db5cc20fecbbaa",
+     "110823e6677f2df21ee335e147bc134335f89701a89890a68e416c81e5d5e67c",
+     "a52ca7f46e3f9d8961a0a2fa2bf1a443b9014d3cad652ca3f9831707a1ecf6c2",
+     "ff64cf3d76cbccdbb19008cc9298a8d51cfd72229ccf02912e080a15ac6603a0",
+     "9c057e490a8c975503454bd07db9f82ff5ba6018e0a7c9c9d66cd6dcc8b76bd7",
+     "806525cfe00db4c271a8e4e667da38136d59ee038b86e3644fbf2ec0ab4a051d",
+     "0b631fb64b7f9eb96b0fe650fc2fc6e387fde6d9830e57a33c63293239a280c1",
+     "d8f170c5bdee849195f4d55aa7547f8a1f3fb1fcac145deaf5b0c681ce7bfbf8",
+     "8173878386664ab8de7986e395b29388a54931fcf239c2b3710d6f0f3e6ec8e6",
+     "23d235f15d44f90d7ca9d28817c4e6dc3e99df02bff1cb4fe7f6b2ce1bafab3f",
+     "286537f86f344f31770f3591ba66aca0114f28cd3570c45f51ef2accd11bd00e",
+     "e15e7cfb878f0fee8a877d16781cf4ef049fb881e8558d834fc3f5f94d731dd2",
+     "b875ef334613145ebf73d31c8ea215bab4e226733e47a872cd863bd8e60d8151",
+     "56e6fcb15a6c3ecdbea9418a06c258957f50f8f7676ea1fbd50a48cd3cc5f4b2",
+     "83bec465b17d9b5ae94361880f21d6161a3887ea6ca73f2f88a33521806e8c00",
+     "d5db21276a548c640c005dc02384ee75d70ef00af5994e2fddc365a1bb62ebbf",
+     "5aecc98174b222b69047a3a9496344436e42871dffb8baa76681758908ad672a",
+     "48fa6846373f68d5f339fdc852f568d674948aad93d9e63b17d7b27618c74b38",
+     "601c91e3e233a7e8f0f6d6815afeec841e9832f3927c243fe692acb9b02d7122",
+     "6fccfddd28a1f83d56d18b9b2fc2c6260801ff55b719949375688423166de123",
+     "04ac565435973ceb1b45605b9769694e77e75bfffb94aad9276e7e084b96c893",
+     "198fe7a861794408be04caa9c9c8c87642efb3b174ef1805ff4e044884d26741",
+     "e6e9a18bd43add5c4289b876542e097e49afa9b6387ac07b8f5dbafe78001026",
+     "f929cb51e1252b749e0de18d666d462931fad654dc0d26100bb67819d8d0d48c",
+     "1402480c38ef82da5742ed7e4c9bfb9c55c33418aaf6732c2c38ca5c40e93ab8",
+     "2ea33c31a452767dd419d221d6115ef404e8ac8d46c2e34f70af2508dcda82c2",
+     "786ddfb2a8872b0fbbfe9e7acf22db1d1392de0106e27b6368b430ffa866b80a",
+     "316d686be960e53f720927fc30d78fd0e3ef981d38ec55d2f0ec8135a93dcee7",
+     "34dc78c31ef81bad30515b5285bf1b711590f818996862a6704f1f684ee9c5e8",
+     "533755894d3000941d736fff4316c0820281ee96ead5666e8b92cbfda995dd10",
+     "44a3abd36f0ce4b7e1c634eca6824fcee2bba371e25601a78ef84e9e8c6be096",
+     "66fcba1e25d89df2425a607824f2711ebf6489b05059a3c25d654aec01581b68",
+     "58cd166924e9249ef35cabd3c525d91ca07e9313426f6758053523895b6cee87",
+     "a90bd204d070cdde076426468da2eb501cef971379a67a9ac5d94298d53a96ff",
+     "a2e98a8eecd91cb75ab90b07882ff7867c33a527b6cc1ea0d320235034c793da",
+     "29d85f5e0664f79abcdd38294d5826d4b9555924915af4039c9c2de7b8648e9a",
+     "3733f970a7dc10892befd5cf0746ea1650ad95a6990df356fed294e089d5adde",
+     "80671f75c5a0be9564d00b6778c337ec732d6f3567c5092a5298f387b378e8da",
+     "c4345b1f66b357aa724444cd5d04f1300114e73cc7f64ffec4f4a14e6ff4abdd",
+     "8cef24f5fc860b90e82ed77b45194b15222ecd85ee5d9088268df066172578de",
+     "928d6d2319c5893030e171bd296996bf612c725680a67ab07e46b1ea18c84736",
+     "5a9ba29b3278d2233ebe3a8dca02fc4e2389d7d740a7c5db2542fe08365c2e96",
+     "f06228c8fef8eb5f8ea244ce7ed1d7231f67c57aa8344cc557ea96bffd171741",
+     "f6dc6bdab51911eec0cf4eedfd85fff1292f97397405396dd887cbf44e99510d",
+     "075e4e7e7ef148206514ec81a14687355535fae0e6a1a5d5eedea627edadcb33",
+     "2151d24bb6f59e0313d8c8d45413e84d23bf095204578ce3785d1752b9e57c27",
+     "8c60e48544bdf595e83a868c11c30031b1c898800a7d7c6e5f4892f45e4acbcb",
+     "2f8edcbc49f3b7cd839526b76e384778c1f2d3e1401cec2c522d2adafe761c5c",
+     "e3bf6287cb12b429a961cf3dd856daf6b94c5db959f43edb8be7c8128408baf6",
+     "962054111f46b4368dda8a6b10cf18f8fbac29f41a2e07d504460dc445ff99a2",
+     "d81a3237fb1c7215bf3674a0c87051508472b03d7da7315995b6721e31d665ce",
+     "53fef938b61acaf5025ee05fc48ef20d1e78656529472a3fadecca6d1ecc0308",
+     "4d9ec7e3e5213ee0fbf4f8394b9cedde631eaf799340d69b43e07cc0d003d6f1",
+     "369d43bff2fd69df96e82de0040353b0641f718b1de813df4f64c48b24f9174a",
+     "67947bce61df13f2e4cc979e38b2b4b3566cfeb5c3e06ee63e5d231227127503",
+     "6c10ce157f183df6a1f7697c38a1bc474c1d336963a293265896e6e156c76e52",
+     "0e1340dcae85b789fe2d1d941f144b494256257143cc199c78965adef6ea0edd",
+     "d30ff17ff81f3b0c6d13d7d1597ab11953e5ed767223844c8ce834f1ff19994c",
+     "f4d65689bfd3a7297bd7c9aaae9b9e346d746ca38436a22d65cf0144304b9596",
+     "4b465daf300e55947c4bd9e7da4461223fc1606835dde8477d5e7b30243a4001",
+     "668c99b1a062d23f3b28f8fcde5955eba991a7c6bb838f4339ee3fc7beec3bed",
+     "c1019a8f59cb881c957e75504cebac796be65d46c09265e776d1f959f141d30f",
+     "7164160bcd1a26496553a0f9aa7094da00cdf3b3bbc0196fbc75eb292dae00d4",
+     "96e4a24498394d4df2759d041102c1b6f7b851e782ba7e365133116e75f2d8ed",
+     "6845c24f5f63d4b998830ef6fcc902844b3d156830b6f017808e7374a122a7f9",
+     "f6dbcf26836af755f86a10168efb111b945492ba67b3ee0cb1dc5abdd411d416",
+     "50b8a4c1972367e59d0cd95781ec0c93030e1bcb4252e6a3c18d9efc007fcff9",
+     "4080e37e571c528257fed87a4291913b18941824762c29c6a3f259bb68722b4f",
+     "0286f6cad2c63b38f073a81836ec3aa8d7e5450cac29f12e16968f27f6db29eb",
+     "e7f35d1e135bdd3c7d7b094e76e684eea56f96ed02926173da5f119a89be827e",
+     "535a3c8e63f92d01bc4efc08794b53412bc78890f7b71ba5ccfe517a4b99ff50",
+     "1a54468e39e248eaf3c216bf5a705a8b0083ffa54947bbece67e71b1869bd3b3",
+     "d06b47552c0eac55df4674fcbccd87dbd4a03d972343a75439097e90731a629f",
+     "3d673776372aa3fd27813fe0be9a92d5c8d35d0dd1ca8d3df242a8c8062a9403",
+     "3f8e90e56aa02ae96e8d1d5c863597f75040953da598e764f3819ecaa6858ee7",
+     "1b6ac13cbbcc6bd3e78e26e94425d63a764fe2013d430affc5d8ea8801a97a33",
+     "598a501113af21d36601f8b3356a1c0fead121e0674c06a6204d5b87f116bbdf",
+     "b0f21d301ce71916f6ccb83fb7eeda15ea44b7788e1c078414ef12f4ffa23c78",
+     "699d18cd450e3288690196c2154e9589996cb2e343135cf025d5172de90b1ce9",
+     "a8022ceee016e5f53102fc3f2ade3e848c6bfd69a0ec4d0ae748b30e84d5ded8",
+     "b4a0e215de7dc1e642222e9a2cd686d997fe213e75a9c9d27984df3da1c2f27d",
+     "e6fc563bf21d6c37e7e2136248edb2d9cfd48475f3cba398180a4fa91f9bfb0f",
+     "f238ecc7d7e23b5b7d5d7a93d2f2d596e25b50c3b939e97455a1559eebf75df5",
+     "497ab086bb0c81796589f9db218e757422dbeb17df4bfd7ec9915843d3cd078f",
+     "c19dbca1c5312d016d69756875130ee5d143e1778548c5d954035a01cc0a2408",
+     "4c5e8320457e65d3605e49898c399fa62dc12be7af116b7a69e686ea7f9f0cf1",
+     "1149cefd832d0d947438cc9d8fe95ba8427541767ef5085de745b328628754ab",
+     "9d05ce546a9ef2ec785418f91d583ede42d791017715c7dc509584e10163399f",
+     "17fa2c589a440a1623245ff876765533a7a182bfe6680362335f25907ded314d",
+     "f0c56308666439094ab00861552f6a5bea330d4a216de5f9aca9d1933ebf53fd",
+     "b411fbf5510caafba4a523a754e6f7097f4fee726d978a54022654102692d6ba",
+     "31527804a4a9986b6e34e819036ce3c8753668447ce6799be35638c26a3eeb82",
+     "813da62aeed801e5bd641a38f25a03c9907ce50194eebc8da5df745da7b78bfb",
+     "ffb9647b96c4efcc2e13adf30df1591069fc81ee43a67679f68eb09b469443f3",
+     "05a0fc0ef4b8e1b4455bfca85f2334da3e3b7df7e75ec5abcd37d6de3d7d7ac9",
+     "9c228ffed5f51b2b17f36f6108afc5f7d49228691009bd19e3616b85757454e2",
+     "21c8c1d58196d857fe10805f1e1263cfbc3b7742490ded074e727bcb153100da",
+     "cee3f2f3e95ee56d1652345bacba2ff858dbe0f080c4a30718b6c8d5a671e0b0",
+     "04624593338cf97abb9b5615b1822d144488730825abd6c12f7f565ad566fa5c",
+     "52f4775bc6627fb16333f4dabb83e39454b19088b8f3299875fdedd476689683",
+     "37eccc338fb7efa8d78f88cb79dc23d20cc4274a3871bf364253c08fe0f59454",
+     "26a43169edc94d21a9764f71bdcd25a39de891265d61163a55f5f17ee63e5894",
+     "faeb1e8334b7fc3c98b5c27f55042ed484ef4a71959edda131392eaf7ad880b8",
+     "fee7a3cf00a5ff9c28c9cc9b46048afc5c2fae0d01d4df0260201b1c2539bcca",
+     "92a479fb101d1e3ac7e821d792033206b0b36c4e5284e1e50a34cb3305ef2abf",
+     "e132b82f8517396832950037f477f7cc519980deb90c8f2d2e427af0e9fc05fa",
+     "bccc89b375287ca3fa9d7ddaf5cb09138e0149b022ec718085590fd913ff2220",
+     "78d80f875ea650dfdb4d6e6ab3a65d5dbfa523487b1641a187217b0c09176e54",
+     "173ee48c016439f8e46b80ee77605964cd9bf4542411f28960ae6a5cbb7da550",
+     "d1b0e973d746c2715c27549a3d1edbeaafc2cabe7a74793f1fcd4c860b65df57",
+     "53cee3440e27bf162b0346e12fa067d7aa6c1fe0aeb699da43bcb0f2bb01037a",
+     "d2877a221db61bc94916229ff9ee59249d17ab8b6508583aeb8e574aac37e370",
+     "80bce79ea1c831cfd64c2c880c6ab44907520e6913b98dc812850cc7a6dd43f0",
+     "ff7c8934c6d5992f698177d6a5118ad05eefc07a3e6aa3b53e5b65d8886a9b5f",
+     "9a5a7a8f991af7a1cd9a324577d3128ddcc7ab77ec1aada74abe1657908240b6",
+     "aad91632e5b6bbe567dd811260319388d918c5132a58469da7ea767f7ce81d67",
+     "a9a905d8285d5c3e44f1b0f5e2989faf7a01ce875fb4e0e235f179eb1cf7c879",
+     "86ae18462aa62231e0788d454c6c0e5225a20c718c63d74f7594a86e3eee6468",
+     "904241726ca4f2b6489cd47cdc4840e00dfe50b435960b6257d6a6e3dc3dbd2b",
+     "111b98a7abf091a97dfb6615c9b1c8a811893267c74f856d91cf3eb3ff036530",
+     "126403561187cd66e0eafdfdc08a783ad4d7d5fd369234067444bc616abcddde",
+     "7d48966f3fee0d5c7659aa31e0785efa1074911402ae6a05fdde6022eb1246af",
+     "c45f30cc8fe18ebb248482e695ff9f895572cff3daa0ec355065ca43884f1111",
+     "0f3fc2f422d7b5482437369e82b11718d9cdd44a00038e7a8d7333730364ea0b",
+     "23ee55b7c010f04ef555ccaaef8b6a8637f21fb539d9781dd1c7cf2bbb4ff305",
+     "7e999916f5194aaf7d3b8d2968f133688c5e7f74427154f0d6fea77aa801d875",
+     "573dd13bf753e15fa51fdaa1f2330152e64c38a37a67f60ebbe4382988444ef6",
+     "706420b22fdafb226d5a6447d75920cd93d6c3a60a891eb336692191374e5cb9",
+     "56f22ef07cb6e7d342b4f13e23c644a128b00f668b25f99b6067f1cbf6d5d7dc",
+     "429694bc00a7abe65dbd8bcbb4881acbd343b7950beb5c3b42e426eb2fc57220",
+     "0f821a308e3470c4a6fffa8b624386293f894e852f52e7fd8028541f8213a8f4",
+     "b945293bae220a32e2e44f48f6b534785f4f4c264a70c3ebe06554c563b647f0",
+     "7e9ded620b454e17da6941955903cc672573d0a9e74518595eb2fe146ef730fc",
+     "a74cfe4d803ecab39174fc922d60f1062c4110abee189eb87b051032b7123a7c",
+     "428e8bd5a15670c459ad6d77125b94a2e8c62cd572e3e196546d5c4df04cd9d2",
+     "d24705c738c34730440e09f4d19ecd9289cd4832def89f048ee51fce2fed2876",
+     "6d1191075bf6a03f6baec10ad99ff3018aa619bebe5611965aa5e315dc8c628a",
+     "ccf93fc59b897ad7ca5b6afbd88f7890ca74146635f72feaa9349461d9f252c8",
+     "afbf4b9f00891e00a45ca80a462b4f13b9caf5e02902c1f8d09f09426ed9f75b",
+     "34bba008c78865018deea6404d157c483c6984b65f51c13c158ef2d537a2f697",
+     "e6dde9b762970d18da933d155f4f57b5d23209c90260384d6f96c4f4af489f02",
+     "35ad6197fb5800a59b4d1ee0965b8a3d80e5743fac8526288d50a8dd6cc20763",
+     "e32afe3f1b01a7ac62f35415371161db9fd3d3deced0b5b158ce5be5680456fd",
+     "e050ac118bd92dda9dd6605aace9057a52313d61710cd5077556c1daee2bd87f",
+     "9265edbbe6ccfc9ee246b48720a7b666f9071332c747afdcd1a7d3899a230606",
+     "da6f2a4b48e72bdc326ec030196252b21d25f5805749dc275265e13094bacdc0",
+     "bfb0b532c73f2091657b40af5bcb0e8257eddfcb4ebf7765c2119b41ffacf0a4",
+     "90df2dc3b8336be745cfb0665276d3d927d52a9ac25b20ebd430b1cbc55869e9",
+     "08975defa7e20f23794d3d3c47f2cf3c9c67b0d154684bc09c3c3d1ef88c0919",
+     "3d896427a41cf40ea522c4492a1055f352634fa250cf6281a37c11890dab97ba",
+     "95ff44323f5aab8eb9e6b1fe1829d8ea9997ac82cc175612e76de6b7504ddffe",
+     "c27db29f57ba4e1d2773f976d6505cee8b88ace47826b5ebffd8ddd0e67b8d29",
+     "f839ec71c277595dfdedb630a9da5376ee2292dddc4ea236bc173d8a410212f1",
+     "b9dd7ca440c0b32019ca6708e016a92259558566743685505250b54a37487f2f",
+     "c1ad2d464598ab26a96d088b016a4c62f9234f916a0a36b29c77c2df8b0e264c",
+     "0412d7b25efa63ccad93ab5b081a4fe7192da01fa4abfe69c29f7daa77c44a90",
+     "dce4a7795a55ec1aa6513c40910f155dac9b127085a3f16f624bc9b357bb9838",
+     "78ccd14273a496c49f8dca8693d57383d96a3688a0e252722bc92b9e176ddda9",
+     "4aef22c4a3332ddab6eb1032adcc805daa8364f78b96a730166c9824e81a0b38",
+     "eb56f2aeeaa2aa49a005968aca49191cbd9be565f2d5620f16ef54ff3902f9c9",
+     "77d36d3f5b84443d71bcab8e121c9b7a256b251ad48cf2c2a1bf841424f92639",
+     "7fd8e0efee381d4e8b3d73452736bdcb78b0ddaf9c344db6a5f5d5b6ae811536",
+     "aeddf12f14dc03c7e81054c6f5cd734fd2dac488f8d790eea5f8be5728b114eb",
+     "47f00a101cf5c9316f0a64960a4ceed1dd8c5e6cbaa48993501003234ca5830d",
+     "25fb50bd46e1f0eb51d0e91a36f1177b733a9c31e8711f2d2ee5c3ef3fb1059b",
+     "914626ef0e5a95a793c20f018fae56fe514a767aaedff52dc9674be1818cc0df",
+     "b5461f5be4bba73a75ce476017bdeff347ca4fa83462320ef99a335e490b3405",
+     "51deaa2e6a95ba52a53153304f5e4b2f7102b099a19a0ee04822a20abf68cfd7",
+     "852d3e061385fa79ab150f1885fb8a56a32b44f18b40fe67520a4a01c417aa54",
+     "90a2b9844331c753722211e12b89e9bcb6fa9ae084b723d2d49d3a8b82cb66fc",
+     "361060b69985eab6b398cde32386bdf527e2f70ac2f2dace373b8dcd3f8a8ca8",
+     "c5590288e93e910ac09dfc28fc034f0106dda159c34b1b78236963d1d5e354fd",
+     "d1decd8c0ff32c03112ccd3f3c502cb9beb4633b13910f0320c1d530fb984d7e",
+     "15bfa4fed0fe3dd4721164c6db9dc74c2ff8df0b0b346f240dce3e954cf71677",
+     "acd2c1b321e78ec0c41a88d528303e924b948d13ea59ed4799b70c57767aba98",
+     "cef095e01b97bb36d45fe8e9e390a6913d48400d865b0dd465c7786a6fcc28f5",
+     "cd7cf01f99befc539736ffdd5e1d121581d5d4eee2c65e5be8cbb4deabe41975",
+     "5a8224650c5015f7a6b634d4f5a405963fcc0806f5f38208e411de2fce346948",
+     "4241eb0b22ceeb79b2d57fc8345d2aa2c0bfd23bc680f8c8d36c32ae3fa72a8b",
+     "63303e628d325ec33b6ceb175285b6885a414a2d1b963af9dc9fdb11a498e30c",
+     "d3ac68994f610c05ceea81bf0596fbc0f9274ca922e5ab94096719f7821152da",
+     "0ae25fe888b1df923698a16d91793b27ca4bae2050c10512694c6e45a2070c6f",
+     "f7aface9233c880b5facc23c522f51c00dc9965cc40a06c849a49e3deaf84ca2",
+     "df788c096392db67e3344ccc8387f814a00e39b8a668c6c557142ba4eed0b8c4",
+     "145ceb658b74241ce5080bbe4e506bf093db19a0c53650bd59d18c265b7cf84d",
+     "855ef0a11a9aa802722a53ab1949f11a06044dbb57d2e8d7642feedde7da9b1d",
+     "7543dfbe5a57fe202827d3f53b2d2a5425b7f281ea7f7d04ab1a2f58d1dbbf51",
+     "e8d54dfedc803f5a9719a96f9601d8a8468c414797e4ea29f45a8e8b498f56a8",
+     "2d44b5f50dd5054335ce2209f717253585553acd8f813853504d8d2321e5610d",
+     "3584665783444f5b9df0e286c52323a5b008020f814f9f64f3b9c807e72e4beb",
+     "491871c860894d77b6923ea66b1522c9929282bd2b030ad987e5b4cb635aebbb",
+     "883ddfdaeaad615489b8927e6ff482f68fd8b6e57dbf9a29fbb9a01ae5d0f4b5",
+     "24ec31af032eea40e0365bbde58dfb5b60482b59a54a2ada1517ef668ee07ca7",
+     "cf645403d7246f25d3ef8c10de8c438193d369246dd48ca0cf96dfe67238a7b6",
+     "604cf07ece19725d4702596926902d73bfc491fac965da77a1471c68baba5824"
+    ],
+    "id": "f26cec0294eb47ed782a03e2c32a29ed30546aff52d22b994ad297aa5e9925d8",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:06:07.153446Z",
+    "last_observed_at": "2026-11-20T00:06:07.153446Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.job.a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+    "value": {
+     "uuid": "a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+     "employer_orgnr": "972285501",
+     "status": "ACTIVE",
+     "title": "Er det deg vi leter etter i Rosenlund? Søk da vell!",
+     "location": [
+      {
+       "municipality": "NORDRE FOLLO",
+       "city": "SKI"
+      }
+     ],
+     "published": "2026-11-09T10:11:31+01:00",
+     "expires": "2026-11-30T00:00:00+01:00",
+     "occupation_categories": [
+      {
+       "level1": "Utdanning",
+       "level2": "Barnehage- og skolefritidsassistenter"
+      }
+     ],
+     "url": "https://arbeidsplassen.nav.no/stillinger/stilling/a3e96411-9639-48cd-a27b-2e5e4406a3e8",
+     "availability": {
+      "location": "available",
+      "occupation_categories": "available"
+     },
+     "matched_via": "subunit 972285501"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "452468619cb0310119bb07ed4a7ba7573fdfbd2078579b65b614a41fb8b5a816",
+     "a00263aa18b807254a718b4e8f9a1891d5b0457fdaad5ca62bea6ff777880759"
+    ],
+    "id": "929ee9b1f28c4d3a6d8b0fa6946e2c22b359bdff7a492ee5468eb48e3dec6f25",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:20.962201Z",
+    "last_observed_at": "2026-11-20T00:00:20.962201Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": {
+   "checked_urls": [
+    "https://rosenlundbarnehage.no/",
+    "https://rosenlundbarnehage.no/Informasjon/Kontakt",
+    "https://rosenlundbarnehage.no/Innhold/Side/114916"
+   ],
+   "observed_social_profiles": [
+    "https://www.facebook.com/rosenlundbarnehage",
+    "https://www.instagram.com/rosenlund_barnehage"
+   ]
+  }
+ },
+ {
+  "orgnr": "836233182",
+  "claims": [
+   {
+    "field": "identity.postal_address",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "93906d67316cc620f713542e1d7fc103232aca4f5150c25a97d906e0f6ae5689"
+    ],
+    "id": "d71939c66d65a079a250873ffd6f610f86027295af2388cd19c82cc23952d7af",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.452733Z",
+    "last_observed_at": "2026-11-20T00:00:03.452733Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "12eb529a4fd535e35ab09502dfb5b3bece11916fd0e4b834cf566f6cfffc8c38"
+    ],
+    "id": "932b9830a4a769701e096b5af5706bab6ed58d0802977569987529e10d9a4dca",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.452733Z",
+    "last_observed_at": "2026-11-20T00:00:03.452733Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registered_website",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "cda2c12b088cc1b7c04cef71e04922debe9dbdf24414d99515dcec11fe4484bd"
+    ],
+    "id": "eeff970f8bb069aca2c8c0e6505c9ea5f18bf7ff16af41b3f0a35738dea0d15b",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.452733Z",
+    "last_observed_at": "2026-11-20T00:00:03.452733Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "2c249d9a8d1c47d4aec05008d952e7dc7a380b9f01440d6370a0c284063fab19"
+    ],
+    "id": "0c985ac029e189c429f473f1ec7dbfc59dc4307c5cb1b809e1db24ecbf6f6cd2",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.452733Z",
+    "last_observed_at": "2026-11-20T00:00:03.452733Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "cdbfa0e9a5796941e0e85518ed6234db33e949d7b5ced84e113fece2bb37809a"
+    ],
+    "id": "77831c9f894adf8aa7692ecdb52d255e9deb9f040cd61775c2f32f4644773c08",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.452733Z",
+    "last_observed_at": "2026-11-20T00:00:03.452733Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "10d832138fd746c7743d0be75de745af632e267744673ba773c1df45f4e7f758"
+    ],
+    "id": "a48965e7feb0e60768dafede072eb7aa7ec20b3b9a303ca59956b33c0751def6",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.452733Z",
+    "last_observed_at": "2026-11-20T00:00:03.452733Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "36d7ba777ad3a9e78965122e3ac556e62834e28e611ee6d84ff854008a78b251"
+    ],
+    "id": "794476cc20904ce954ffbac1e11752cb123489711ab1bda1aef03c6d2c31bed3",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.452733Z",
+    "last_observed_at": "2026-11-20T00:00:03.452733Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.936241557",
+    "value": {
+     "organisation_number": "936241557",
+     "name": "ULF HJELMELAND INVEST AS",
+     "address": {
+      "adresse": [
+       "Barkvegen 11"
+      ],
+      "kommune": "SOLA",
+      "kommunenummer": "1124",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "4056",
+      "poststed": "TANANGER"
+     },
+     "nace": {
+      "beskrivelse": "Uoppgitt",
+      "kode": "00.000"
+     },
+     "employees": null
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "2152e8647a050d9f494f1c03c720da8e8488fb5e0d61105deabf99fd5bd3d56d"
+    ],
+    "id": "99ab3a79ad5eaef259f8cc73db33fa8b70d9bbbab43af44285de2d09b19ed31f",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:04.848500Z",
+    "last_observed_at": "2026-11-20T00:00:04.848500Z",
+    "reasons": {}
+   },
+   {
+    "field": "accounts.revenue",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "584ee04f2efbc87ecd433dfe1646720ca135406375b1477010f7ae4ca745b597"
+    ],
+    "id": "0b4523870be5ecaadcc49c82f879f607d3824a90401756918d2586d90ddf1da8",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2025",
+     "period_start": "2025-01-01",
+     "period_end": "2025-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:01:56.030572Z",
+    "last_observed_at": "2026-11-20T00:01:56.030572Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.total_liabilities",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "8fe338f3827c36fef0081d3e52050e123c381177f3f8f17741cf053529abe98e"
+    ],
+    "id": "0a8669fb46015c436d41df18becb4b32ad85c4f79c02536b4b04ab5bebdd3265",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2025",
+     "period_start": "2025-01-01",
+     "period_end": "2025-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:01:56.030572Z",
+    "last_observed_at": "2026-11-20T00:01:56.030572Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "website.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "2c2ea5761f040b62fa8e99c2cb3e5a34c9f67de45b85ce9959941fd87847039d",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:06:40.786533Z",
+    "last_observed_at": "2026-11-20T00:06:40.786533Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "d68aa03c8619ced783f6b11b8beec9277ee32e626f7158be70f0350c55f8e7fe",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:06:40.787463Z",
+    "last_observed_at": "2026-11-20T00:06:40.787463Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": null
+ },
+ {
+  "orgnr": "889244232",
+  "claims": [
+   {
+    "field": "identity.employees",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "4a5b23273a336f911678bc202cd6b56368f3071df6923192ed4beb8ee0aad5a1"
+    ],
+    "id": "83263c23c32da1dd1a3c00a11f3846933a86b204eddcdcb649b176f14b8a2974",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.697714Z",
+    "last_observed_at": "2026-11-20T00:00:03.697714Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registered_website",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "d3b8dcb8eb484cf326bd4fde7a65335e3f01525741693a8d610623cc16c07364"
+    ],
+    "id": "bc654fcbb62b9c884367c7ec23a7ff9c159762c6eb8a5292ac01afb840334435",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.697714Z",
+    "last_observed_at": "2026-11-20T00:00:03.697714Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "4e9ad8629d25bd1ae53dbc64137faf58aa7def144542f06f290a6af615cb543d"
+    ],
+    "id": "4eb654a48980567e6098cbb649f895522cb45702cc2208b1d6de1dd74d5f1f8e",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.697714Z",
+    "last_observed_at": "2026-11-20T00:00:03.697714Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "33c2bbd15de509dea349e04b63e02103ff01c7650d5d75944ccbc553d7fb0e8e"
+    ],
+    "id": "486eaab48be4da57648d5a8a8abb6fd34014478545194fd1ab3e54a97310288a",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.697714Z",
+    "last_observed_at": "2026-11-20T00:00:03.697714Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b785dadc25a32966f0562b8724ac85e33e8a9f948509c2279b376815df6ab537"
+    ],
+    "id": "0c30fe90e114ad84296fef5623b46f5e31bc23c3de9b0cfb87caf55e6ef5f4a6",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.697714Z",
+    "last_observed_at": "2026-11-20T00:00:03.697714Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7e5f139a29c498c8544d262cdbcee19ce3a4929017a3047b2866a851c3dd9bce"
+    ],
+    "id": "6d6e1a67026268bb6a81df1a68eed8dceb26ab7a93c204c73c7c317a3d6da18f",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:03.697714Z",
+    "last_observed_at": "2026-11-20T00:00:03.697714Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.817046622",
+    "value": {
+     "organisation_number": "817046622",
+     "name": "BORETTSLAGET DRONNINGENSGT. 21",
+     "address": {
+      "adresse": [
+       "Dronningens gate 21"
+      ],
+      "kommune": "NARVIK",
+      "kommunenummer": "1806",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "8514",
+      "poststed": "NARVIK"
+     },
+     "nace": {
+      "beskrivelse": "Aktiviteter i borettslag og boligsameier",
+      "kode": "97.001"
+     },
+     "employees": null
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b5883770dfa2b59b12566cb1724c4d047e3ae1f382a946ffc2d091f084a7759f"
+    ],
+    "id": "65cce99f79cf1fd22b63f084373acf49ff7c276c391d7b4cedeb342bcb59c4c2",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:05.261590Z",
+    "last_observed_at": "2026-11-20T00:00:05.261590Z",
+    "reasons": {}
+   },
+   {
+    "field": "accounts.equity",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "7ace7d6ebeb235fc48d27b8d791bdd1483aa239ba3dec7b2516926e727437adf"
+    ],
+    "id": "54bade2c76303c4ad002c379546d82d82e120e92c5a258bd41021e50586d5e6e",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2025",
+     "period_start": "2025-01-01",
+     "period_end": "2025-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:01:56.567536Z",
+    "last_observed_at": "2026-11-20T00:01:56.567536Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "accounts.total_liabilities",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b839020a72b4a8bb3719d7cd0574a94bc56057ec49ffd9e63ec3bb513afa620e"
+    ],
+    "id": "d3a9d9e74d8e495f3340b63e73b10511f82da778e444bc0291bba485734a6731",
+    "family": "accounts",
+    "reporting_period": {
+     "fiscal_year": "2025",
+     "period_start": "2025-01-01",
+     "period_end": "2025-12-31",
+     "currency": "NOK",
+     "unit": "NOK",
+     "account_type": "SELSKAP",
+     "source_unit": null,
+     "unit_basis": "four_exact_parent_2025_ratios_within_0.995_1.005"
+    },
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:01:56.567536Z",
+    "last_observed_at": "2026-11-20T00:01:56.567536Z",
+    "reasons": {
+     "unit": "whole_NOK_confirmed_by_four_ratio_calibration_no_multiplier"
+    }
+   },
+   {
+    "field": "website.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "c5c4da36548475e8d33edbc1f81503c5541886aa3f2daa7bc7f24ccc68717c4d",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:06:43.432590Z",
+    "last_observed_at": "2026-11-20T00:06:43.432590Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "21fc7b1c6eb939477321c2dc8d282ec72e8ab402077482c90ef28de66ca0ef1d",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:06:43.432590Z",
+    "last_observed_at": "2026-11-20T00:06:43.432590Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": null
+ },
+ {
+  "orgnr": "912829197",
+  "claims": [
+   {
+    "field": "identity.deleted",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "3b7f7aa395e1ae820c9396405dc6f3b5d191af8adc9b65bdc26ff6bcef55eb52"
+    ],
+    "id": "c0dc2573dbe58d66fb488b9e9301a9a05fe4bf6a47cc8f4a073b68c936313e56",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:06.463056Z",
+    "last_observed_at": "2026-11-20T00:00:06.463056Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace2",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "a6a43dd34601ab7838b41a5c9e8a1fff1e88f4e4cfa340e6c848c999e7e887c6"
+    ],
+    "id": "633143ed254dc4a39c240266fdc1f8def04899bd2a1cdd95b01a2a0ed6138ffa",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:06.463056Z",
+    "last_observed_at": "2026-11-20T00:00:06.463056Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.nace3",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "883de81c1492f087ed8c124e5750f6129d38be12a2aa322d97659393819fa897"
+    ],
+    "id": "79f3b79cea4cea84111cc139024a06cd7145c17f08fb3309a798bb3a9a4ccb10",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:06.463056Z",
+    "last_observed_at": "2026-11-20T00:00:06.463056Z",
+    "reasons": {}
+   },
+   {
+    "field": "identity.registry_annotations",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "b9cac7b8e56d976dd1ba117b30b749772b088a1b1cbe5dc7f052d34727fe631b"
+    ],
+    "id": "c5a0c4e3753c7bc6281616df30fc67f8937d6f1e19559534c28f8acb38552184",
+    "family": "identity",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:06.463056Z",
+    "last_observed_at": "2026-11-20T00:00:06.463056Z",
+    "reasons": {
+     "label": "Registry annotations"
+    }
+   },
+   {
+    "field": "subunits.unit.912845575",
+    "value": {
+     "organisation_number": "912845575",
+     "name": "CCHANGE AS",
+     "address": {
+      "adresse": [
+       "Øvre Slottsgate 3"
+      ],
+      "kommune": "OSLO",
+      "kommunenummer": "0301",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "0157",
+      "poststed": "OSLO"
+     },
+     "nace": {
+      "beskrivelse": "Bedriftsrådgivning og annen administrativ rådgivning",
+      "kode": "70.200"
+     },
+     "employees": 6
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "33abed61d617721b467178b84cc79a7549542b68475995956e6e1597f8136af8"
+    ],
+    "id": "11040ec59f89b045b5c37a9b754d18f1dfa5c3354394b4138df08f4f1a147a3a",
+    "family": "subunits",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:00:07.935719Z",
+    "last_observed_at": "2026-11-20T00:00:07.935719Z",
+    "reasons": {}
+   },
+   {
+    "field": "official_website",
+    "value": {
+     "final_url": "https://www.cchange.no",
+     "transport_scheme": "https",
+     "identity_level": "VERIFIED",
+     "proof_type": "registry_declared_name_tier_a",
+     "proof_page_url": "https://www.cchange.no/",
+     "signals": [
+      "registry_declared_domain",
+      "legal_name"
+     ],
+     "points": 4,
+     "candidate_origin": "registry_website",
+     "relationship_note": null,
+     "other_orgnrs": [],
+     "publication_tier": "A",
+     "content_allowed": true
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "6e63c1d5ee737b1411cea54925479edebd0a4d7d8b107d766785694504e7563c",
+     "5b14c256b943d615d630679e565df6eb4afc36b0d263c63027d2d0d96dcacac8",
+     "75a966481c8583b6a9550a841efcd80e04948dc158a0ac4cba6ef4aa1166e09c",
+     "64b33fe82673d753551852b84325429fc59db210867592e03a10ac1b20aea01b",
+     "35feb67b35f5d859b8b4b95c6ee9462418fec6c34434c521ed72a9690eb7575e",
+     "d1dc97480164ce3ed4c33446c5471341e2f9e91613d461f4fd3f1784f158bd54",
+     "031d12b18f2fb732c2aa94ff6b8345e56fa252be0311c98df285fd1349d0f174",
+     "9054beccbecc855ea8ecd908f4630109fff04a1d28b2e167b41a5f0da14bdabf",
+     "04b1e89622dc5f77ddcbe3f3eac6ce6f6e09bacfe43ff5bbd2f73147542a7286",
+     "7f68bde171ea5cb5b9638be415aa4ca8619d4a00f3e53997f25483992a5ae0f0",
+     "7879f57b9490b8dad7bc5faea887cc9d63526ad60a8e29ec2f99c6bf1d600299",
+     "fa83627fcb69bd8567e70744a0981be65defeff3f85eb4745cabf70204edbb8a",
+     "453d2518152342398a00da0a2d5fd50469b4294263a464169857b729ad5f3578",
+     "3b7f7aa395e1ae820c9396405dc6f3b5d191af8adc9b65bdc26ff6bcef55eb52",
+     "2686920fac4b52a71c1df608c556871b85c2a621ddd170b507ba280545abfc45",
+     "11e561b5486a368cb24455d5602d87bcf56377b69fa54604639c90152bf9d33a",
+     "827c6d2033ea2065cf85b1a3a2d52920231f63f2378e31e615751954b2cd0f9d",
+     "df5894e4d6e7eb5e0d6d864237677c52b2c7d47f47457b684bc0cf56d252f585",
+     "a6a43dd34601ab7838b41a5c9e8a1fff1e88f4e4cfa340e6c848c999e7e887c6",
+     "883de81c1492f087ed8c124e5750f6129d38be12a2aa322d97659393819fa897",
+     "6e8eddf2226c84521df4b35e9f52e50381fc9e5ed3da62b1ef46cac266262ef8",
+     "31a684eae07c5d20fc879d965215af4e72bbbe5d53ce39cb209049d6850477ab",
+     "fc0bc8abd2f0d1752812a162dcf0fc4a33257a08e3306e11548839d2c7ab2c27",
+     "9f709d6a3254cc0c9f867c23720ef67d588a0111edb5419e5836d40848722b03",
+     "312411b70cdb6d32baab46e70fcb67fe58c0e59046839c3a7dedfe22556052ca",
+     "89ba248f5421ac21cd7515c16b8fd4e672b1d2b339561c8d85fd1dc7f31e4e44",
+     "4b7840bf9ee503b0e1d067a7f1cf0ce874eb3e3bce4f4ebb3d693c3c5d46dbc3",
+     "a9c8d7e9e8d383503ec2c2b7f7b2ca0814f5f8f9d4bf401917cd9f0a849956c6",
+     "829fb21a3e2f5768921962cb84ba8fb8e838af5ee56e00682f27c4544de5e0b2",
+     "6e95b242d1dbe27923bc932f4894624d3227a92655c6973540850e8de9d7f96d",
+     "f6cdb4b7c1dfb448fbfdd299d335e6f49d167eac118b0cf843a10843dfa5b8d0",
+     "ac40095982b8fc64f06d459126e7ed296e949fa92af1d5b19ea42ae00467cfc3",
+     "30dff0fc090e2ebb15da027e3616d479a9e7bba08beea9c8a88bd49a61f5f712",
+     "f4e003582bbd588cf9e401d9773c2d90896ea8df7dac09b906a698fc4d46d4e2",
+     "7a47de2fe45bec0d915b2f7b6379b5d4f9077a69064ab6ce14ad38c06f964a33",
+     "9f5c4a1bbf39dc7535ef004dd5725e63f24bb3d5918c41c6a2b8ab18aa9ab93c",
+     "f5bc3d1fa4dcfd9ac76739606d650829d5d8535868e94f3ea03caae010aedc51",
+     "ee7691d101e1af9a9ba27848737eb75be0dcdd87aa198904ca3fb13756458478",
+     "54feade5aa615928b9d2be0b06a9a12a20e7623506f5142b3d415d5fc52ab69e",
+     "c622fc73f56c058708cfca0081f35b4748f2cae37db404a5e19ab7b302cedd1a",
+     "16182f7217d3fa580d6757d2c59a71e344b3dc05212000359a43ca621fb8d170",
+     "b9cac7b8e56d976dd1ba117b30b749772b088a1b1cbe5dc7f052d34727fe631b",
+     "33abed61d617721b467178b84cc79a7549542b68475995956e6e1597f8136af8",
+     "54bf96ae2f4e191195cf05c14b28e3c2286cf01d0f7844063900dc487ef21bbc",
+     "e78060a1250a37940cd230540d6c80884c50cb25539a1c93448fdede50a6cfa9",
+     "e4a808c318a4f582cb17e6b01f3abbaeb7ebc9aa6b5b3a2c4ef578f29e319efb",
+     "b06080fa4f657c73dcd1e8965a96e7bcfa6f6f583ab0706ecff7ddf21245ae8d",
+     "400b8f7059d9b45810f70d3c4768951a542e59d25b73aa48f28a3ae77dca0676",
+     "73ec68dc2e097e6d613180a06517b6c4b6d3ad5be0faf66614dd18be796f8149",
+     "90142644e8d0c3c336866a8ffd1acf0f87eb4473ff94923552858d2e4aefb52b",
+     "ae8fabf53e18848d5a6327a5506458e751b54852acf1d18a4fae6e16f088adef",
+     "0fe2af3d01e36cd4d1f6994fa486fc0757d2d4e87076a133bd812fcd2eafbdc8",
+     "2afc76f7adf76cc91f6d3ca10a4459d5de9ca4b5d48049048c6783c1dae35a79",
+     "87da285e863458a4449d12300855dd4afd5c0c42d840924a1915fcfc3674ca87",
+     "960cb28610bcf5211a5bfe9449d59a86835b69eb0075023e8b76151f30529530",
+     "017ee81493d28c44796140edf6954697561c3cf749bd8feaaf2a64d48bc450f6",
+     "33af503bd45456330b0d30f597854df34ce9c6e92279cfb900b39e62e1ddc89a",
+     "051f54c47d32b149b1c5a61f9b6c8ca593fe7ecdc51feb32960b01a8178d98c3",
+     "479262614e1b668ace8a747ce22634584e75e2e1f08fe2548251a557b1a8ae1f",
+     "bfa1535f656661a6cc6e16938c664cc56fb1d2954e53aa76d1dec08ebb1a502a",
+     "5fc84b512faa796ea1de000350975800b55d0266e7e474fae5f9939b3f1ce619",
+     "d25430892dc6cea7c2b9ae53eaecb094f7350b807972c5f4fd98996427e03bf0",
+     "112da39adb2244a4ca58c205a31626c1ee81f91d584bf28154d1e9a2f6232cb0",
+     "0c3128016e3a5a8041570028fbc626ded7bdfb9dc3e8c11c5bca211cc603ebcd",
+     "35757f31a32fcd895760e308453fd64a552d81daa7ce2dfea194c3a03f6d93fa",
+     "c243b4b58352cf9f53c0f4765d9f0de8ca0d146a696b4d63e432e7deb0061bde",
+     "4383d8336dc77e366953d6abe8b0324aeaf6f3b42ea73febdbea0677eff19533",
+     "9c1c45c1c4e946b0ea71babc7376e16b4f68990f535c0d11f475853b0420c37d",
+     "acc05649773f301357354ff7d682e445aba31b6a9fe8ca17043feb5a4d5a068a",
+     "6dd287d4d5be89d4af7a25274cdd8d34741afdf45982a8e4fd4a6ca9d8195fea",
+     "f256c9461148c65470af0efed0668f307ed33466ad2699c047c3fe4c039adf59",
+     "edd772ce690123b09afb17bf944cfdc992aeb3a2e8effb3b70f5e5a5deeaabad",
+     "7d9cad07152aff542d69bdb7783b1d421c05e1ce4093c7b103633b54dea32358",
+     "04e36602f36d929e82ddee827892f3f98e6390ab360f21c0571cd9335d87fc6b",
+     "ad1d7b4809f7d6578ffc03ea40ac245305ba84b8ed1190e1a73a8ba79c80e4a8",
+     "21dff14185e095faa05e9180d7de30d0de3d4d55ad78b2f9912bcb83ac268198",
+     "0abd786c555a08108d0a092b7e170d71e55740f2ba02e63a3fbe276cb700347d",
+     "28e3656481514cbb69eaed0e0d00d571631d3d9d4367fa23769be1470b0bd5e2",
+     "7dab80507e9e701066084b7cd6efe0708b5d77ca74a135bf156373413be7e882",
+     "746928039d2cbc56fa0bdb99e90601f883280d7e6ed26f892db09c3af641958c",
+     "8804dd7d564171f80222506720f065ca772a65b8f4e0c38c4a976663c55904e7",
+     "a4cad99a34517926a6a04f7f09cae2e705f3eb47f052de5fc0e3c20b655e665a",
+     "ff7c67999c01067d225b2be1673729f01512ac656122469bc1f58791a72bf5de",
+     "d70e16612d8e18f7aac1a29f428f669a732afa36e2db7a8ef885427358e79076",
+     "0d98c1b866680da3dfc51cbb171f9ff28cf636472473763882cbffe83c6e615c",
+     "7aa3f612df7281e96d74d03483ed23d5edcb41c24e913be38de80cd3bed7f20a",
+     "51af08e27b65491104b2a03dd2c7cb120e84fbd739ff556d2d428d0fa4905700",
+     "f7416d32c26e7e9077bb14e58a50585585f06fd40df15d8bb81b45cd24ac2c48",
+     "27fc3f9a7353c9d0b302263b9fd3c5ac48b7af44dde6b7a41da46474ac1e15e9",
+     "f2597d4fbbe5e786ca97d152210d099510f48a15213c821f460ea16e15f07091",
+     "a60aed422c0435963741b2c5c551f4a5a9a68b802e2893e955c7921dfaf39fe2",
+     "498252e4e26dd9bf5be95f59874dc99f25696ff05fcefde31c410efa12e202a1",
+     "b557087a11ad379a5ee95e4dec5b5a135f5b9402fae6e37bff498e153be840c6",
+     "5ec3168d6b5227b3d24384b7ca8d51b51a38b672e4a9cc42904dabf46cb10672",
+     "3c9c9f32ec0ebbe4e706ef2a6a13e56d47b80694caed9e3dd3ddb909332c4b3d",
+     "1f1cd2779b6167758294abb2f2c08a1f573e4d4133deb928e31b4ccce004991f",
+     "6d74ffa6ba916abd53078b0a483eb9a0fb0ab3a6417a11c85edacf66ad46f8ab",
+     "5a6d6dae781bd84388080dbcbeee829e469b244d95bbd7b3b1edb748137c2b17",
+     "b0cf2a14e91068046d770bca4b97dcadd2d055dfbad348f1903dcf0932b4e57f",
+     "6815eb4cd59e5f9d303ee4c504ceb4f1a7fe56514d48fbfc1eb69f124d150864",
+     "fff22f3448fa76cc818d71a890a3e53673b5b37f57569bfbefabb5fc3b26dd09",
+     "74d3e273fe0c4337338f9f4ae31cdf8581e8733365f4505edc6f888aea1aa4a1",
+     "342baee9eb297950742aad00cb08e1eecc9d71517c80ebab99bd41cb1e37c289",
+     "bc9f7a5b426096404ba895b066dcf8e3ff515a2769fe96834a135d12b2da4706",
+     "dd57d06cf4606362852c0b5bc1239fa286f84e8ac5dc3878f235a3b9db7125c9",
+     "abe5e795ec64b92c8f77c548692064fc9909f9fb08c98c52439c993ff738b4d7",
+     "2dc253bf2ac6721c742a88aa2ac6530856997c52a41ed0ed9f67bd864d1c5c95",
+     "62206ceade575becbb0b67dceba9ab1bf723ac09081a1b018dfcacf4b144e201",
+     "b383db5221b137465e0fba021a77c26171d27a779045782212bda960c73a3346",
+     "caf9116122bbabc795c6288c4cd63bed3deba1544fcfa9d0300a810724d3a513",
+     "e77f191579fbe259aa0560ea6fa3f3642d082157f9903d0eee7e45c215578196",
+     "627a2149229d75e9b9b31880e29e9210c09245a197520b8fce0b845a32a6c688",
+     "dd27837b61f404a6a3b7429f7c9e8e70d0abc0241607da296d870c4d2ca8b6ea",
+     "b1b4fd1835c7c69f927f9457ebe8fb67f8be545256ca128531cf899236256e00",
+     "a26191cb4b1d54c62d0e095107e029675da07cbdbeab1429dadf271bd0f55077",
+     "9994bc130156aa3651a05bc140121b2fb82d43a4b759ba378d720214b344bc72",
+     "9111da65e7510bfca55b2433333d13547ad05ad18eaea6b4bb3a3d4c62a6dfea",
+     "4fb7cd33538bc36b6fcf7f19c7ec4ec3102a3612954d93f59446a0c2cf0ca3bc",
+     "1cab51e87679608ad93c89bb04f2081ec4e9520447bcc5aa88ea2226726f124a",
+     "961e3924a0ea2dfe610f8ba75db611674687add0a01e7e7581a66278b32ff83a",
+     "b2646ce5f813245a8479593721560e905db275e51240785adacc169afd2bac2c",
+     "84435c1fb75b2aa56aa115788b366ca941388d1afd3db1481b5681cbbaca42ac",
+     "7c2aa9202dce287c37fd285950878ba1518b5020e92e8d0fb67cf979af2cd23a",
+     "de41d9f4a32fb435f55363d81a22010a7e149ebb0f23c1cc718f6406f968934a",
+     "5f7f33e8c65b126304a107d80a1e046df4075ec61632caee1e1207d3fa9fa766",
+     "24fff6189092d36a1a290a7d3903433b0f75f5e18c9ff9cdb796bfe8c26306f6",
+     "b0b6fdfd40ff0c0352dcf9a50cd1c3d130d87e641704af490ed58a3d6bc9d931",
+     "fadf131a5dab98c0d3651fe4439c592547a95bd7ff79aa2f73ac7a42fafc4d40",
+     "2d4ea31791698f484e86c480a621b9cf4ae6298ae12961d8a6161bd67c8e5eb1",
+     "8c60a01697a3cd2fbddca7c147a4e099e837c1e8bc0361980be87c225e90e01d",
+     "d4ae492d2361e02a53ddb36bdadf928ef041e0061e1b4adaef8423f0305e71c8",
+     "15e899e018b59c2bf7301bf3e722cb10af898b8eff43df09197777918776138f",
+     "2a297d1795c580f795045770b7d76eb1c843e286584ef4eb681ee038174271cb",
+     "53ca6c027c60f0bacc51a810f075fdbb8d5ee157dbd49ca984182065bd4c5541",
+     "e21799c87022d3710b24c964df8e6ab109785e76eb04e57b40a3fbd8deb9b4ae",
+     "63861e4223f589b952c164bfe13163165524d041f4120d3913c8cd06a0360f0c",
+     "474a29e4e868dfc6cf8f95a4ab9c440cff9a870bb5987b41c4bd2fa9277dd50e",
+     "d8aefbd73333ea568362063bf0d6863c6c7c6504c07500cf04b8b28365fe7223",
+     "179491d4b75a123556950054ec0d6ce1e8f5c512aba5a60a163e3224f3efc0ba",
+     "f3f6b64335ec4fcc2e17ca30a5d6dc725309a3c084adcec4599b2dea492607bf",
+     "c8a550f85b03f7c066e4bc5a58cd214d9e7fd93cc4fe94d6a224d9288dcbabf2",
+     "346b5877bd2f74f80478da4497bd1ab65a902703526a3e6094f2270ada9b0331",
+     "77d28b493946ddecf99afd02513d871d9904554a59697edf849ca4606b61a177",
+     "9c12f98b001acffa7ca642901d28083febce0ff7997642339771b60195c2df6f",
+     "348bc44268f6a35d7d3b23f27c31d410c121079443f3789c7587917338451696",
+     "cd89e5cd9b8c82cd27f67dfa28e9d63ccda248080a65ac5899fc9c1f53fd29cd",
+     "18bb32c7856efb1feee6c97ff5090cb1dbe325b1f4df24e687a961072f744863",
+     "df9d66a7ebcae976c8db46243bbc24d266f725835c533cadc962c563e68d7f6c",
+     "12e1a8615d7090f3bc2cd20ff06dc1ee0c6391cc408d58e2a020781ecb751e4d",
+     "7b85613b3339039ad485a9e367c3540e336a0f3dd15d8118e377b71b5a52c17b",
+     "1f351bc407546d2c7c0fd0eaafd9ac9a2aee392d2407c5205077ad035ba2f6ea",
+     "691a30a3d12d4a3c94729b110e7e9f7ae894d1b7edd6af4bdf1dc5dca1455824",
+     "3a2800b5757e701dc8fcf2add4a0d2084a0cfa1de31ea72b7c61bd407edabbac",
+     "8b8bbf2ee34cf9d1fe4065f88cf8808374f3a59361ce199ad0c66ec53eb24647",
+     "67bf733dbba707b22862aef1c6ca6125f6f1931623b896ddc361a507414e29ae",
+     "23a655716462447c2a66ad0d1afb3f9b3fe4434e4af3c4bc51085e17ab550987",
+     "b5f0d599a8b9e71c1da3abfb9b29f3f8343075778f351c203372aec298bc2403",
+     "0edb7040370292fc318860481502f8484a90e784bd69ad35f084d112510e3c25",
+     "a1e96ed301e511ccfec4b971bcdcfdc3addaf1107f2bb39e43d5f4bdac76e2d8",
+     "2b7a8d8f0f1fe05f0627dc63e47d2a9b451feb54fcbf4c8e328f5bcc6cbf20d9",
+     "8f3f95f44c0aecc54dd61a30bdd6ff90cd3fda7cc7b292dd76f755d5a4291ebc",
+     "ac59300f50de91e26c7245b848997374d412e214c49181634feb314ed199d8ff",
+     "336eecfa3a08786abbc01147e7c049eb952991a7749db09a2eea117a24c6a66d",
+     "cfe61533359740a819c824aa73564c2f4b3deaff14d1b093fa3e427162147545",
+     "8f523c7510b03533164cee2997da1bde562eefc15fdc1dd091ac1c0eb21b42b3",
+     "f4d2ca62f6b896be80bb90b85c3a10726b4045fe8b08a756e204d40b5ba8d058",
+     "083ead11770283c057e850202e91f50d69b0507427ed0b5f218730605a9ebb27",
+     "97dd941e389bb65a61118392c4bb90ea75e0196e07ae89e4304f8cab7321abcc",
+     "5b04703115b29ec91b9ba11e4e1b0c3bdecc49937c7c125a0ed15ae7f8673aff",
+     "115279d586df97598a0256fc66198cb898391c99430a2baf61655d4192028ef2",
+     "b74c15016204afa1cebaa79ea075814f3685aef1fc34bf93c0abea833d51ca29",
+     "4914ba41d303f8970574cdfc94c755e8ef779516d2c8e150d1199a4bfadd5f32",
+     "9b83150a829137c4649a6515c66475a7d52f6a8f377cba243cacc1943fcad832",
+     "764110a3bacd0cb05b748bc21b50bed2d8d0f7905370f1b318be7c25a259a916",
+     "459224dff65606e0ed5ef2270aadb9f711a4c60b3d73dccc455517b957cad270",
+     "438883d54ed0f09d8f991379a2e2890dc90b4ce4e5b57136a13730247fe68c18",
+     "fca9962fd54f943890256ad1fa38a466d9eb268bdfa93acf3c89e60d5626d2e8",
+     "493d99ad7b7e4885dfdae8bb325174fc22a18087c83faf85836add491c06284e",
+     "3355c144e226172ab9621437d843b4d1bdad674bdb1ca6cb7755f45d752c3ea7"
+    ],
+    "id": "e4a3df24b23cdb00a35ea28b8af5e984dd5219619f6c9d948f2f233c056af3d2",
+    "family": "website",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:07:08.244985Z",
+    "last_observed_at": "2026-11-20T00:07:08.244985Z",
+    "reasons": {}
+   },
+   {
+    "field": "hiring.section",
+    "value": null,
+    "availability": "not_available",
+    "confidence": 0.0,
+    "evidence_ids": [],
+    "id": "9242c1c45c4f5c3b800ce2e1d1aafbb8a067c0a40b74c7e2cadd446471b40fd9",
+    "family": "hiring",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T00:07:29.156079Z",
+    "last_observed_at": "2026-11-20T00:07:29.156079Z",
+    "reasons": {}
+   }
+  ],
+  "website_verification": {
+   "checked_urls": [
+    "https://www.cchange.no/",
+    "https://www.cchange.no/our-team"
+   ],
+   "observed_social_profiles": [
+    "https://www.instagram.com/cchange_global",
+    "https://www.linkedin.com/company/cchange-transformation"
+   ]
+  }
+ }
+]

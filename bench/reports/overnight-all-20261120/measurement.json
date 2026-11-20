@@ -1,0 +1,27 @@
+{
+  "command": [
+    "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "bench\\inputs\\1000-r3\\batch.jsonl",
+    "--output",
+    "bench\\runs\\overnight-all-20261120\\envelopes.jsonl",
+    "--report",
+    "bench\\runs\\overnight-all-20261120\\report.json",
+    "--state-dir",
+    "bench\\runs\\overnight-all-20261120\\state",
+    "--site-dir",
+    "bench\\runs\\overnight-all-20261120\\site",
+    "--expected-count",
+    "1000"
+  ],
+  "commit": "f2c7091fd831347ac36306d00ad4699c0c8235d9",
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "started_at": "2026-11-19T23:59:12.326783+00:00",
+  "conditions": "Fresh state, default concurrency, site ON; credential variables removed",
+  "exit_code": 0,
+  "wall_seconds": 1309.681,
+  "finished_at": "2026-11-20T00:21:02.042424+00:00"
+}

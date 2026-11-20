@@ -1,0 +1,149 @@
+{
+  "run": "bench\\runs\\overnight-all-20261120",
+  "commit": "f2c7091fd831347ac36306d00ad4699c0c8235d9",
+  "run_status": "completed",
+  "wall_seconds": 1309.681,
+  "projection_1100_seconds": 1440.649,
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "warnings": [],
+  "total_http": 11477,
+  "pooled_percent": 60.40526315789474,
+  "max_requests_per_company": 40,
+  "families": {
+    "websites": {
+      "companies": 115,
+      "claims": 115
+    },
+    "social": {
+      "companies": 63,
+      "claims": 129
+    },
+    "brands": {
+      "companies": 19,
+      "claims": 19
+    },
+    "gleif": {
+      "companies": 142,
+      "claims": 736
+    },
+    "ted": {
+      "companies": 6,
+      "claims": 20
+    },
+    "hiring": {
+      "companies": 3,
+      "claims": 3
+    },
+    "group_structure": {
+      "companies": 75,
+      "claims": 119
+    },
+    "signatur": {
+      "companies": 765,
+      "claims": 765
+    },
+    "prokura": {
+      "companies": 201,
+      "claims": 201
+    }
+  },
+  "social_platforms": {
+    "facebook.com": {
+      "companies": 54,
+      "claims": 58
+    },
+    "instagram.com": {
+      "companies": 36,
+      "claims": 37
+    },
+    "linkedin.com": {
+      "companies": 17,
+      "claims": 17
+    },
+    "tiktok.com": {
+      "companies": 2,
+      "claims": 2
+    },
+    "twitter.com": {
+      "companies": 5,
+      "claims": 5
+    },
+    "x.com": {
+      "companies": 2,
+      "claims": 2
+    },
+    "youtube.com": {
+      "companies": 8,
+      "claims": 8
+    }
+  },
+  "supported_facts_excluding_sections": 167200,
+  "brreg_states": {
+    "signatur": {
+      "available": 765,
+      "not_available": 232,
+      "not_available_fetch_failed": 3
+    },
+    "prokura": {
+      "available": 201,
+      "not_available": 796,
+      "not_available_fetch_failed": 3
+    },
+    "group_structure": {
+      "available": 75
+    }
+  },
+  "stages": {
+    "crawl_seconds": 814.53,
+    "outputs_seconds": 140.02,
+    "estimate_seconds": 30.0,
+    "site_estimate_seconds": 600.0,
+    "site_reserved": true,
+    "site_seconds": 341.33
+  },
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 4775,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 792556681,
+    "evidence_pages": 2772,
+    "largest_page_bytes": 239066,
+    "largest_profile_data_bytes": 802080,
+    "largest_profile_bytes": 239066,
+    "compact_profiles": 0
+  },
+  "official_extra": {
+    "requests": 126,
+    "gleif_companies": 142,
+    "parent_LEIs_batched": 14,
+    "tender_notices_nominated": 79,
+    "ted_requests": 89,
+    "ted_http_statuses": {
+      "200": 89
+    },
+    "ted_failures": [],
+    "ted_xml_seconds": 78.453,
+    "ted_notice_concurrency": 3,
+    "ted_202_circuit_breaker": {
+      "threshold": 3,
+      "open": false,
+      "skipped_notices": [],
+      "reason": null,
+      "reprobe_every_skipped": 25,
+      "reprobes": []
+    }
+  },
+  "wikidata": {
+    "status": "complete",
+    "requests": 5,
+    "errors": 0,
+    "matched_companies": 13,
+    "website_candidates": 9,
+    "social_published": 3,
+    "social_corroborated": 3
+  }
+}
