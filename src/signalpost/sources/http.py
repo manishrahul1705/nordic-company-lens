@@ -39,6 +39,7 @@ class Http:
         for attempt in range(attempts):
             self.budget.check()
             response = None
+            retry_error = None
             async with self.semaphores[host]:
                 event = self.budget.reserve(url, host, org)
                 begin = time.monotonic()
@@ -56,6 +57,7 @@ class Http:
                     if attempt == attempts - 1:
                         return result
                 except (httpx.TimeoutException, httpx.NetworkError) as exc:
+                    retry_error = exc
                     event["error"] = type(exc).__name__
                     if attempt == attempts - 1:
                         raise SourceFailure("timeout" if isinstance(exc, httpx.TimeoutException) else "network_error") from exc
@@ -64,7 +66,8 @@ class Http:
                     raise
                 finally:
                     event["runtime_ms"] = round((time.monotonic() - begin) * 1000)
-            delay = random.uniform(0.1, 0.3) * (2 ** attempt)
+            delay = (random.uniform(1.0, 2.0) if isinstance(retry_error, httpx.NetworkError)
+                     else random.uniform(0.1, 0.3) * (2 ** attempt))
             if response is not None:
                 retry = response.headers.get("Retry-After")
                 if retry:
