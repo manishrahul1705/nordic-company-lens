@@ -1,0 +1,1310 @@
+{
+  "related_company_website": [
+    {
+      "company": "MYKLEBUST MARITIME AS",
+      "orgnr": "981508734",
+      "claim": {
+        "field": "related_company_website.subsidiary.983145310",
+        "value": {
+          "hjemmeside": "www.myklebustverft.no",
+          "navn": "MYKLEBUST VERFT AS",
+          "organisasjonsnummer": "983145310",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "5fc3ba4ebbbc718fff34b0e7055ca5a6281e32ff93a87ab1c5fe5dd0d787cfb3",
+          "cfdb83465502025e7b08074e58614b1eadadd9cd9e3c1ce782ba3493e1f96b6f"
+        ],
+        "id": "27e66a79329e47c04121a57efa39f5252129a668ae905bb8ec00d0b2e122222e",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "cfdb83465502025e7b08074e58614b1eadadd9cd9e3c1ce782ba3493e1f96b6f",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/981508734",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:18:15.910259Z",
+          "content_sha256": "e8f9503030f6363a607f377e4c66ba89f1095718419daa301ca356eba82d30e1",
+          "claim_span": "{\"dato\":\"2025-12-30\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"MYKLEBUST VERFT AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"983145310\",\"parentNavn\":\"MYKLEBUST MARITIME AS\",\"parentOrganisasjonsnummer",
+          "locator": "/children/1",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "5fc3ba4ebbbc718fff34b0e7055ca5a6281e32ff93a87ab1c5fe5dd0d787cfb3",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "981d3571b38a5d1328b7f4270b5eafe42b67ca53152063b7166f0a9fade38e56",
+          "claim_span": "{\"hjemmeside\":\"www.myklebustverft.no\",\"navn\":\"MYKLEBUST VERFT AS\",\"organisasjonsnummer\":\"983145310\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "NOTEK HOLDING AS",
+      "orgnr": "882749762",
+      "claim": {
+        "field": "related_company_website.subsidiary.957503365",
+        "value": {
+          "hjemmeside": "www.notech.no",
+          "navn": "NOTECH AS",
+          "organisasjonsnummer": "957503365",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "d245e837088ba6a52306dec872730e14d2a76adcabd3a9cde9890d0d92df8097",
+          "4c2bcbb92ecf3584414130e7ed67508067007946e6f82ed9128a4773f2b53b92"
+        ],
+        "id": "18ee4521b30fed5f725a914e8917414e84cb5ebe0369d9c43c8dd818b5e92059",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "4c2bcbb92ecf3584414130e7ed67508067007946e6f82ed9128a4773f2b53b92",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/882749762",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:18:16.226744Z",
+          "content_sha256": "100b2dc53377fbcd0b23048672ea28071ebac8f8576f5590be4d0d3ccb84b943",
+          "claim_span": "{\"dato\":\"2004-06-15\",\"grunnlag\":\"100 %\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"NOTECH AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"957503365\",\"parentNavn\":\"NOTEK HOLDING AS\",\"parentOrganisasjonsnummer\":\"882749762\"",
+          "locator": "/children/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "d245e837088ba6a52306dec872730e14d2a76adcabd3a9cde9890d0d92df8097",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "8eb007aa8a1018e5264ecb67d930d430d2168c5666333c26c368ea7e74c710ee",
+          "claim_span": "{\"hjemmeside\":\"www.notech.no\",\"navn\":\"NOTECH AS\",\"organisasjonsnummer\":\"957503365\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "VIVIFY GRUPPEN AS",
+      "orgnr": "928657523",
+      "claim": {
+        "field": "related_company_website.subsidiary.988791091",
+        "value": {
+          "hjemmeside": "www.system1.as",
+          "navn": "SYSTEM1 AS",
+          "organisasjonsnummer": "988791091",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "654ce48a37e7f5a988e52f733815afcabcfac52e55b86057c950320dc621d8e3",
+          "71e339ea7bdeff297bc672f91cbeae6736189392b97f3e300b79ed9773560dd1"
+        ],
+        "id": "cffb5736100a10f52e2c9124559057db6e37db3b8053693e3ee9eaab9c0f51d6",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "71e339ea7bdeff297bc672f91cbeae6736189392b97f3e300b79ed9773560dd1",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/928657523",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:18:43.481918Z",
+          "content_sha256": "03b1b500b53899e54fed422ad31902099e8bddc5fdb7591e048277e3ef3b47b3",
+          "claim_span": "{\"dato\":\"2026-11-10\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"SYSTEM1 AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"988791091\",\"parentNavn\":\"VIVIFY GRUPPEN AS\",\"parentOrganisasjonsnummer\":\"928657523",
+          "locator": "/children/0/children/3",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "654ce48a37e7f5a988e52f733815afcabcfac52e55b86057c950320dc621d8e3",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "934f9126bd6bce667543369c185d3cb61aaeabd68de14f020fedc1489e95b52e",
+          "claim_span": "{\"hjemmeside\":\"www.system1.as\",\"navn\":\"SYSTEM1 AS\",\"organisasjonsnummer\":\"988791091\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "VIVIFY GRUPPEN AS",
+      "orgnr": "928657523",
+      "claim": {
+        "field": "related_company_website.subsidiary.985806063",
+        "value": {
+          "hjemmeside": "www.innomhus.no",
+          "navn": "INNOMHUS AS",
+          "organisasjonsnummer": "985806063",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "5118302958206bf75d61af66b3090358a3e744cef2a0f7f87b23566c3d837d96",
+          "1384339ff6cd47a45220cd257d5061c9efd81833288648c85ef160d16f9918d9"
+        ],
+        "id": "91726d85b4aa44bd80aa2010a8ccffa3668525d6adf306dfc083d573c55bd19c",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "1384339ff6cd47a45220cd257d5061c9efd81833288648c85ef160d16f9918d9",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/928657523",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:18:43.481918Z",
+          "content_sha256": "03b1b500b53899e54fed422ad31902099e8bddc5fdb7591e048277e3ef3b47b3",
+          "claim_span": "{\"dato\":\"2026-11-10\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"INNOMHUS AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"985806063\",\"parentNavn\":\"VIVIFY GRUPPEN AS\",\"parentOrganisasjonsnummer\":\"92865752",
+          "locator": "/children/0/children/4",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "5118302958206bf75d61af66b3090358a3e744cef2a0f7f87b23566c3d837d96",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "842a49e2cce48663d2a7d46e7bcdb2ae85c4e606f4e88241e949994b4a97e811",
+          "claim_span": "{\"hjemmeside\":\"www.innomhus.no\",\"navn\":\"INNOMHUS AS\",\"organisasjonsnummer\":\"985806063\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "VIVIFY GRUPPEN AS",
+      "orgnr": "928657523",
+      "claim": {
+        "field": "related_company_website.subsidiary.886342462",
+        "value": {
+          "hjemmeside": "www.toftum.no",
+          "navn": "TØFTUM INNREDNING AS",
+          "organisasjonsnummer": "886342462",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "4c923788ddc007c2b86153b3755de638cfdd0600e055e5ac2705ca447c1f7622",
+          "532a141293f9e2157e975166d1df4bb3c587022b9bf4d91e7ab436415304fe78"
+        ],
+        "id": "c81158af6c9973f079aa0df0f6a3aad022c6eb46a211d70bb15450090b12a62f",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "532a141293f9e2157e975166d1df4bb3c587022b9bf4d91e7ab436415304fe78",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/928657523",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:18:43.481918Z",
+          "content_sha256": "03b1b500b53899e54fed422ad31902099e8bddc5fdb7591e048277e3ef3b47b3",
+          "claim_span": "{\"dato\":\"2026-11-10\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"TØFTUM INNREDNING AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"886342462\",\"parentNavn\":\"VIVIFY GRUPPEN AS\",\"parentOrganisasjonsnummer\":",
+          "locator": "/children/0/children/8",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "4c923788ddc007c2b86153b3755de638cfdd0600e055e5ac2705ca447c1f7622",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "faa55b0cd8d8ffae18d1b261dc1a8a1ad7895e06c04dfc05d76445e8b2acb15a",
+          "claim_span": "{\"hjemmeside\":\"www.toftum.no\",\"navn\":\"TØFTUM INNREDNING AS\",\"organisasjonsnummer\":\"886342462\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "ELLINGSEN HOLDING AS",
+      "orgnr": "935955033",
+      "claim": {
+        "field": "related_company_website.subsidiary.950271728",
+        "value": {
+          "hjemmeside": "www.ranaent.no",
+          "navn": "RANA ENTREPRENØR AS",
+          "organisasjonsnummer": "950271728",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "9c28519351a469d8cdca544ace852002db92e4788e5d6d12ae261cd5ae1ab630",
+          "69ff4f0922a64f6ed698765f1cd4c1954b811eb2e3ed2827e13e6ed6af27d465"
+        ],
+        "id": "d412a59254c42def6405dad2ad0db21d1dd03cc921ac54a2a3445bb6fda4f307",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "69ff4f0922a64f6ed698765f1cd4c1954b811eb2e3ed2827e13e6ed6af27d465",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/935955033",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:18:50.491744Z",
+          "content_sha256": "e006e4aa3117f346b7e56247bdb9345c88534b616a19b7c6a8f6037bcf430c67",
+          "claim_span": "{\"dato\":\"1997-03-18\",\"grunnlag\":\"100 %\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"RANA ENTREPRENØR AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"950271728\",\"parentNavn\":\"ELLINGSEN HOLDING AS\",\"parentOrganisasjonsnumme",
+          "locator": "/children/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "9c28519351a469d8cdca544ace852002db92e4788e5d6d12ae261cd5ae1ab630",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "040121daeb24be9e6853bea912e369ccc2d50e490bd841e04a0bb8fb56e09911",
+          "claim_span": "{\"hjemmeside\":\"www.ranaent.no\",\"navn\":\"RANA ENTREPRENØR AS\",\"organisasjonsnummer\":\"950271728\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "OVTUN EIENDOM AS",
+      "orgnr": "888951482",
+      "claim": {
+        "field": "related_company_website.parent.983916236",
+        "value": {
+          "hjemmeside": "www.ovtun.no",
+          "navn": "VALKYRIEN HOLDING AS",
+          "organisasjonsnummer": "983916236",
+          "relationship": "parent",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "f1c0f2c6fa53b291bd519b137074bacb1f8fcb1b7740c156c7978b2f467baf17",
+          "8be31d32a98cdb889d70b21ded560a7e66374502a35349fdbfc0f9b46b1ed5f7"
+        ],
+        "id": "0de71af50c2a68b868925b9f4d12318502cfa85a561a6df8d35be70154de2c05",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "8be31d32a98cdb889d70b21ded560a7e66374502a35349fdbfc0f9b46b1ed5f7",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/888951482",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:19:02.689369Z",
+          "content_sha256": "6a10528c8ff57d4c745de130614ebbfdacf1c208f5d83a15392e79c1b1424fee",
+          "claim_span": "{\"dato\":\"2024-07-29\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"OVTUN EIENDOM AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"888951482\",\"parentNavn\":\"VALKYRIEN HOLDING AS\",\"parentOrganisasjonsnummer\":\"",
+          "locator": "/children/2",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "f1c0f2c6fa53b291bd519b137074bacb1f8fcb1b7740c156c7978b2f467baf17",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "9461d0a956bac3bf3cacba17b4379f9c3faf83d2b7e0a6901d1dc7e3cecf389c",
+          "claim_span": "{\"hjemmeside\":\"www.ovtun.no\",\"navn\":\"VALKYRIEN HOLDING AS\",\"organisasjonsnummer\":\"983916236\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "JOHS SÆLEN & SØNN EIENDOMSELSKAP AS",
+      "orgnr": "956409071",
+      "claim": {
+        "field": "related_company_website.subsidiary.856409252",
+        "value": {
+          "hjemmeside": "www.selen.no",
+          "navn": "JOHS SÆLEN & SØNN AS",
+          "organisasjonsnummer": "856409252",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "d4a784bd90e4dd70d6d0580ad78bce5c5096a592f84b475a610a5b4d9618d88a",
+          "cc564372a1fb70e96507427bb3319859a5559cde5ea248590332631a297706e0"
+        ],
+        "id": "774e17e19207ad2b7664a4875a67efcec8e3f2dfdc67476f8d6f636ddd5b13d4",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "cc564372a1fb70e96507427bb3319859a5559cde5ea248590332631a297706e0",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/956409071",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:19:03.824180Z",
+          "content_sha256": "abe10ccf2e475876c4af78351f9d261cec2dea460010d2df8a52779be67a973d",
+          "claim_span": "{\"dato\":\"2011-10-22\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"JOHS SÆLEN & SØNN AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"856409252\",\"parentNavn\":\"JOHS SÆLEN & SØNN EIENDOMSELSKAP AS\",\"parentOrg",
+          "locator": "/children/2",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "d4a784bd90e4dd70d6d0580ad78bce5c5096a592f84b475a610a5b4d9618d88a",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "48dccdeb868401995b8d53a21e130c8ce4d00345acaa13c2ba9e783ae06171d1",
+          "claim_span": "{\"hjemmeside\":\"www.selen.no\",\"navn\":\"JOHS SÆLEN & SØNN AS\",\"organisasjonsnummer\":\"856409252\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "SVV HOLDING AS",
+      "orgnr": "931338900",
+      "claim": {
+        "field": "related_company_website.subsidiary.916186827",
+        "value": {
+          "hjemmeside": "www.sveiseverkstedet.no",
+          "navn": "SVEISEVERKSTEDET K. G. KARLSSON AS",
+          "organisasjonsnummer": "916186827",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "f72810eb0db2b4f73452c7096cd5db95247143e4eed9490d67a2a99ab4ae2f9e",
+          "a190fef7a2a915b4ee2c4ebdd80a3b140ccb42e3e13d00cf972e52608265429c"
+        ],
+        "id": "218d916e9c3587f42868c3643305ba1b967860071c47fe18875cef10662ed3c8",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "a190fef7a2a915b4ee2c4ebdd80a3b140ccb42e3e13d00cf972e52608265429c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/931338900",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:19:24.532527Z",
+          "content_sha256": "cce1b9d8ca8f4df09d16e706f6775580680d45bd7e269474f7e6c4b224066edd",
+          "claim_span": "{\"dato\":\"2024-10-05\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"SVEISEVERKSTEDET K. G. KARLSSON AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"916186827\",\"parentNavn\":\"SVV HOLDING AS\",\"parentOrganisasj",
+          "locator": "/children/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "f72810eb0db2b4f73452c7096cd5db95247143e4eed9490d67a2a99ab4ae2f9e",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "5742a60c04c93a43a231f4042e8e152f6403a4712444319c70afe06ae7b66bba",
+          "claim_span": "{\"hjemmeside\":\"www.sveiseverkstedet.no\",\"navn\":\"SVEISEVERKSTEDET K. G. KARLSSON AS\",\"organisasjonsnummer\":\"916186827\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "DARK PROSJEKT AS",
+      "orgnr": "994774050",
+      "claim": {
+        "field": "related_company_website.parent.946749745",
+        "value": {
+          "hjemmeside": "www.dark.no",
+          "navn": "DARK DESIGN GROUP AS",
+          "organisasjonsnummer": "946749745",
+          "relationship": "parent",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "20eeb75fc682fd99306533f743a79c511ac5c9cc34e274c53869ee06ebf16db3",
+          "e7d0203b02bf82cb0fbbdb2c7298a193b7bb0707cf518a73211271fca4f03ebb"
+        ],
+        "id": "1cb9ca6f9674199283f4eac27abeb9868c88575fb8ad40d1c096171882828c58",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "e7d0203b02bf82cb0fbbdb2c7298a193b7bb0707cf518a73211271fca4f03ebb",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/994774050",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:19:37.911346Z",
+          "content_sha256": "06828672afd995ad9c40b9525ed6517c8495576ca63472815f1de4d18027a521",
+          "claim_span": "{\"dato\":\"2024-11-13\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"DARK PROSJEKT AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"994774050\",\"parentNavn\":\"DARK DESIGN GROUP AS\",\"parentOrganisasjonsnummer\":\"",
+          "locator": "/children/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "20eeb75fc682fd99306533f743a79c511ac5c9cc34e274c53869ee06ebf16db3",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "5311e5075cbb708c2f17c3ffcf570ac7b79ee6f97ca08956e4a4c64efa4a0eb2",
+          "claim_span": "{\"hjemmeside\":\"www.dark.no\",\"navn\":\"DARK DESIGN GROUP AS\",\"organisasjonsnummer\":\"946749745\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "HELSEHUSET VOLVAT AS",
+      "orgnr": "929456246",
+      "claim": {
+        "field": "related_company_website.parent.974227037",
+        "value": {
+          "hjemmeside": "ragde.no",
+          "navn": "RAGDE EIENDOM AS",
+          "organisasjonsnummer": "974227037",
+          "relationship": "parent",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "79af8cb54d78029ce65423750377f4dc775816bb57d68cdff06ab22730b6a207",
+          "e93ba1ba25e82aeca35ad3a87b33dc49908c46223b6e57fdd6d5571117c7d357"
+        ],
+        "id": "f4f2db5217266e09822d8d23741b131994b9eff3bb9117080ff7c2431eacd879",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "e93ba1ba25e82aeca35ad3a87b33dc49908c46223b6e57fdd6d5571117c7d357",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/929456246",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:19:41.326624Z",
+          "content_sha256": "7c006d12c3121f66249ab5d11d1b6cf9b33d1d5881921d6296836dbe8ae7f2fc",
+          "claim_span": "{\"dato\":\"2026-05-05\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"HELSEHUSET VOLVAT AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"929456246\",\"parentNavn\":\"RAGDE EIENDOM AS\",\"parentOrganisasjonsnummer\":\"",
+          "locator": "/children/104",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "79af8cb54d78029ce65423750377f4dc775816bb57d68cdff06ab22730b6a207",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "60cadcc307962570dc674743f6477232694372c8ea0dfa4268854687205530ab",
+          "claim_span": "{\"hjemmeside\":\"ragde.no\",\"navn\":\"RAGDE EIENDOM AS\",\"organisasjonsnummer\":\"974227037\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "HOTEL OPERATION VATNAHALSEN AS",
+      "orgnr": "931824317",
+      "claim": {
+        "field": "related_company_website.parent.929283392",
+        "value": {
+          "hjemmeside": "www.edgeworld.no",
+          "navn": "EDGE HOSPITALITY AS",
+          "organisasjonsnummer": "929283392",
+          "relationship": "parent",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "dd34d5ab0626c4b034d7e9a04692e2bd509fd81eda2fa6620fc0abb5333f7854",
+          "9d47aa47ee7d9b665bc7cff2887d9da685d304122a85a5a8971bee8c54598354"
+        ],
+        "id": "f009c562418bb58a61550c4c0483d4e085c23a98aeaaa53c27751f11c129d135",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "9d47aa47ee7d9b665bc7cff2887d9da685d304122a85a5a8971bee8c54598354",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/931824317",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:19:47.415502Z",
+          "content_sha256": "0d59cb5936da64c67706cef13be0baa9a9d84586a119d8fe0081fb19330c8ce2",
+          "claim_span": "{\"dato\":\"2026-01-29\",\"grunnlag\":\"51,00%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"HOTEL OPERATION VATNAHALSEN AS\",\"nivaa\":3,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"931824317\",\"parentNavn\":\"EDGE HOSPITALITY AS\",\"parentOrganis",
+          "locator": "/children/0/children/1/children/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "dd34d5ab0626c4b034d7e9a04692e2bd509fd81eda2fa6620fc0abb5333f7854",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "f2e22d58fe2d877c812f9fd8062e3e7087cea9645fbbd07e9b413096d32cd4e9",
+          "claim_span": "{\"hjemmeside\":\"www.edgeworld.no\",\"navn\":\"EDGE HOSPITALITY AS\",\"organisasjonsnummer\":\"929283392\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "INDUSTRIVEIEN 13 TRONDHEIM AS",
+      "orgnr": "997755502",
+      "claim": {
+        "field": "related_company_website.parent.974227037",
+        "value": {
+          "hjemmeside": "ragde.no",
+          "navn": "RAGDE EIENDOM AS",
+          "organisasjonsnummer": "974227037",
+          "relationship": "parent",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "79af8cb54d78029ce65423750377f4dc775816bb57d68cdff06ab22730b6a207",
+          "d176270db249fe16c10ca67da0c54d24fcc9024ac09784877d4cbd19149bdb7c"
+        ],
+        "id": "694d67ff9fbe1caec7423debbc63f406cdc5bc4e0d83d017aa9967f947ceaa78",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "d176270db249fe16c10ca67da0c54d24fcc9024ac09784877d4cbd19149bdb7c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/997755502",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:19:55.277471Z",
+          "content_sha256": "7c006d12c3121f66249ab5d11d1b6cf9b33d1d5881921d6296836dbe8ae7f2fc",
+          "claim_span": "{\"dato\":\"2026-05-05\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"INDUSTRIVEIEN 13 TRONDHEIM AS\",\"nivaa\":1,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"997755502\",\"parentNavn\":\"RAGDE EIENDOM AS\",\"parentOrganisasjons",
+          "locator": "/children/6",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "79af8cb54d78029ce65423750377f4dc775816bb57d68cdff06ab22730b6a207",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "60cadcc307962570dc674743f6477232694372c8ea0dfa4268854687205530ab",
+          "claim_span": "{\"hjemmeside\":\"ragde.no\",\"navn\":\"RAGDE EIENDOM AS\",\"organisasjonsnummer\":\"974227037\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "GRUS EIENDOM AS",
+      "orgnr": "894516682",
+      "claim": {
+        "field": "related_company_website.parent.996340341",
+        "value": {
+          "hjemmeside": "www.boseiendom.no",
+          "navn": "BERTEL O. STEEN EIENDOM AS",
+          "organisasjonsnummer": "996340341",
+          "relationship": "parent",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "7fe003681c8b1b61f541f5ef721e6052c2e8ffd65c12d0a73f83bf360fc6163e",
+          "c0f3fa2f20e7d62512549b6f2076054a50f68229b30d9aecc2950cce06675fcd"
+        ],
+        "id": "33a0a15f58c9d728fc3db177b6cc93a8838684218a271df5f031705b42573d7c",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "c0f3fa2f20e7d62512549b6f2076054a50f68229b30d9aecc2950cce06675fcd",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/894516682",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:20:25.419052Z",
+          "content_sha256": "1b219fef2da274ad96a8fd85eefd2654f454972de127e4bec826f1677bc98329",
+          "claim_span": "{\"dato\":\"2025-09-20\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"GRUS EIENDOM AS\",\"nivaa\":3,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"894516682\",\"parentNavn\":\"BERTEL O. STEEN EIENDOM AS\",\"parentOrganisasjonsnumm",
+          "locator": "/children/1/children/0/children/17",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "7fe003681c8b1b61f541f5ef721e6052c2e8ffd65c12d0a73f83bf360fc6163e",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "887a937f26d77018f8e8343c717342a9d81553fcc948ac14aade35879d4e2254",
+          "claim_span": "{\"hjemmeside\":\"www.boseiendom.no\",\"navn\":\"BERTEL O. STEEN EIENDOM AS\",\"organisasjonsnummer\":\"996340341\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "GK NORGE UTLEIE AS",
+      "orgnr": "925400467",
+      "claim": {
+        "field": "related_company_website.parent.915892981",
+        "value": {
+          "hjemmeside": "www.gk.no",
+          "navn": "GK NORGE AS",
+          "organisasjonsnummer": "915892981",
+          "relationship": "parent",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "edec2e85806ffb80cfb1108c769afecc802e70f9603f9dd4196c9d3c472ba99f",
+          "e63986963555873c517aa9f631da920b63f0602fabe6102c9ad533433e342ed0"
+        ],
+        "id": "b3a8033654b4d957cf82473497e6a5a82ba324362a2bbe2353d33aa9e0810538",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "e63986963555873c517aa9f631da920b63f0602fabe6102c9ad533433e342ed0",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/925400467",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:20:25.762757Z",
+          "content_sha256": "9eaa481bcb0d2f85d6baf76c12c51a243504d668df62a9186c4a245fb7dc7d75",
+          "claim_span": "{\"dato\":\"2026-01-20\",\"grunnlag\":\"100%\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"GK NORGE UTLEIE AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"925400467\",\"parentNavn\":\"GK NORGE AS\",\"parentOrganisasjonsnummer\":\"9158929",
+          "locator": "/children/2/children/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "edec2e85806ffb80cfb1108c769afecc802e70f9603f9dd4196c9d3c472ba99f",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "297b9ad8a79308e43f5f12d529256017acfb532aff9a54ca8d052980fc619811",
+          "claim_span": "{\"hjemmeside\":\"www.gk.no\",\"navn\":\"GK NORGE AS\",\"organisasjonsnummer\":\"915892981\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "VEIDEKKE ENTREPRENØR AS",
+      "orgnr": "984024290",
+      "claim": {
+        "field": "related_company_website.subsidiary.971203587",
+        "value": {
+          "hjemmeside": "veidekkelogistikkbygg.no",
+          "navn": "VEIDEKKE LOGISTIKKBYGG AS",
+          "organisasjonsnummer": "971203587",
+          "relationship": "subsidiary",
+          "verification": "registry-declared, not ownership-verified"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "b58f54918a9b7ed679d635214abe9c78155c3755c78d3811f093f09298bd9c1e",
+          "156bb91d830008e84f5c00b40574ed0e7d5fb9f92292f344fcd08c0377e32e8a"
+        ],
+        "id": "f9821f5e93c3a34d558b40768e142c8fd752d024fc577904bbfd21ca017ae521",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T01:21:14.581183Z",
+        "last_observed_at": "2026-11-20T01:21:14.581183Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "156bb91d830008e84f5c00b40574ed0e7d5fb9f92292f344fcd08c0377e32e8a",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/984024290",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T13:20:31.462868Z",
+          "content_sha256": "9bd08fc4483c9c55880dc035986f482b62dca9b0d48a373a3a0d33e52fd85557",
+          "claim_span": "{\"dato\":\"2021-06-08\",\"grunnlag\":\"100 %\",\"knytningsform\":{\"beskrivelse\":\"Konsern datter\",\"kode\":\"KDAT\"},\"navn\":\"VEIDEKKE LOGISTIKKBYGG AS\",\"nivaa\":2,\"organisasjonsform\":{\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"971203587\",\"parentNavn\":\"VEIDEKKE ENTREPRENØR AS\",\"parentOrganisas",
+          "locator": "/children/0/children/0",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "b58f54918a9b7ed679d635214abe9c78155c3755c78d3811f093f09298bd9c1e",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T01:21:14.581183Z",
+          "content_sha256": "fb518561ea05037b682ba8d8ea1f8b122e7d8e2fc395bf43fca0f0a2a332c48c",
+          "claim_span": "{\"hjemmeside\":\"veidekkelogistikkbygg.no\",\"navn\":\"VEIDEKKE LOGISTIKKBYGG AS\",\"organisasjonsnummer\":\"971203587\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    }
+  ],
+  "cleaning_approval": [
+    {
+      "company": "TJELTA VINDUSPUSS AS",
+      "orgnr": "925321419",
+      "claim": {
+        "field": "cleaning_approval.status",
+        "value": {
+          "name": "TJELTA VINDUSPUSS AS",
+          "organisation_number": "925321419",
+          "status": "Ikke godkjent",
+          "approved": false
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "98cd06ee038e69b731a6dfcff099b6db1cfa6ecc985dfa2642a01fb0b43d8683"
+        ],
+        "id": "61793bd669e6b701abd2e9b121422777159c0b50c444bcc58015f6a783646f00",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:38.049896Z",
+        "last_observed_at": "2026-11-20T15:23:38.049896Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "98cd06ee038e69b731a6dfcff099b6db1cfa6ecc985dfa2642a01fb0b43d8683",
+          "source_url": "https://registerdata.arbeidstilsynet.no/renhold_register.xml",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:38.049896Z",
+          "content_sha256": "278aa4193f246923d5a08f9975a83c0a8d663d882e7bfb137cd786179f113397",
+          "claim_span": "{\"name\":\"TJELTA VINDUSPUSS AS\",\"organisation_number\":\"925321419\",\"status\":\"Ikke godkjent\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 01a826c094af4002663aeb07db6495d17b5f6026025c17367511491f3767ea89",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "RENEFFEKT AS",
+      "orgnr": "935180678",
+      "claim": {
+        "field": "cleaning_approval.status",
+        "value": {
+          "name": "RENEFFEKT AS",
+          "organisation_number": "935180678",
+          "status": "Godkjent uten ansatte",
+          "approved": true
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "715858525fabd620989360eed5767656f68b62d61e91943d245aa36a36883bd3"
+        ],
+        "id": "535e6e1825f25cea026c227dcca3518ad59534516ab9810c163debc3caea4ae5",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:38.049896Z",
+        "last_observed_at": "2026-11-20T15:23:38.049896Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "715858525fabd620989360eed5767656f68b62d61e91943d245aa36a36883bd3",
+          "source_url": "https://registerdata.arbeidstilsynet.no/renhold_register.xml",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:38.049896Z",
+          "content_sha256": "a082c9c8229ef548d7b82a105f4fbee0468311bd185dfcb54a48a1f42ba5254f",
+          "claim_span": "{\"name\":\"RENEFFEKT AS\",\"organisation_number\":\"935180678\",\"status\":\"Godkjent uten ansatte\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 01a826c094af4002663aeb07db6495d17b5f6026025c17367511491f3767ea89",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "HAUGALAND VAKTMESTERTJENESTE AS",
+      "orgnr": "927044390",
+      "claim": {
+        "field": "cleaning_approval.status",
+        "value": {
+          "name": "HAUGALAND VAKTMESTERTJENESTE AS",
+          "organisation_number": "927044390",
+          "status": "Godkjent med ansatte",
+          "approved": true
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "34c31613dd3cb1bdf9a14d73a9f98601db58abce22277fa55d44b80362f31379"
+        ],
+        "id": "c159f07fceea89b7cd81defc37b1f6819c9752c09583cf1c3369e58f140badc8",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:38.049896Z",
+        "last_observed_at": "2026-11-20T15:23:38.049896Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "34c31613dd3cb1bdf9a14d73a9f98601db58abce22277fa55d44b80362f31379",
+          "source_url": "https://registerdata.arbeidstilsynet.no/renhold_register.xml",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:38.049896Z",
+          "content_sha256": "0098c43c2133ea69d1b82ad1ca32bd61de7f71f452fbe015bb488a9caf285d02",
+          "claim_span": "{\"name\":\"HAUGALAND VAKTMESTERTJENESTE AS\",\"organisation_number\":\"927044390\",\"status\":\"Godkjent med ansatte\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 01a826c094af4002663aeb07db6495d17b5f6026025c17367511491f3767ea89",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "ZAK RENHOLD AS",
+      "orgnr": "925413763",
+      "claim": {
+        "field": "cleaning_approval.status",
+        "value": {
+          "name": "ZAK RENHOLD AS",
+          "organisation_number": "925413763",
+          "status": "Godkjent med ansatte",
+          "approved": true
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "b179af83de3065e4119af9294ef59313c68dd74318b6cf8daa85dcc98c75fe20"
+        ],
+        "id": "691f677ca83da5630d7492c4a54ff5db4b4775a5481b294ea91a431305689e89",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:38.049896Z",
+        "last_observed_at": "2026-11-20T15:23:38.049896Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "b179af83de3065e4119af9294ef59313c68dd74318b6cf8daa85dcc98c75fe20",
+          "source_url": "https://registerdata.arbeidstilsynet.no/renhold_register.xml",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:38.049896Z",
+          "content_sha256": "1ce040a45cbc188d52d5271a98d4a1c0426a52680d034789a88fb44d594f25e2",
+          "claim_span": "{\"name\":\"ZAK RENHOLD AS\",\"organisation_number\":\"925413763\",\"status\":\"Godkjent med ansatte\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 01a826c094af4002663aeb07db6495d17b5f6026025c17367511491f3767ea89",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "RENHOLD & SERVICE AS",
+      "orgnr": "832761362",
+      "claim": {
+        "field": "cleaning_approval.status",
+        "value": {
+          "name": "RENHOLD & SERVICE AS",
+          "organisation_number": "832761362",
+          "status": "Godkjent med ansatte",
+          "approved": true
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "8143024a70458970b62727b8a2359d7a68815b8f71ef871b820ea58c48dd07de"
+        ],
+        "id": "d5bf1393ec850a1419684c9a3f37a1f38e6078c43adf5ce14e6ff9b691656944",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:38.049896Z",
+        "last_observed_at": "2026-11-20T15:23:38.049896Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "8143024a70458970b62727b8a2359d7a68815b8f71ef871b820ea58c48dd07de",
+          "source_url": "https://registerdata.arbeidstilsynet.no/renhold_register.xml",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:38.049896Z",
+          "content_sha256": "b8dd19176640340b766747a001ac00d5e49cb1d91231e19f7f8fa865ed1a7127",
+          "claim_span": "{\"name\":\"RENHOLD & SERVICE AS\",\"organisation_number\":\"832761362\",\"status\":\"Godkjent med ansatte\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 01a826c094af4002663aeb07db6495d17b5f6026025c17367511491f3767ea89",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "BERGEN VAKTMESTERTJENESTER AS",
+      "orgnr": "990412375",
+      "claim": {
+        "field": "cleaning_approval.status",
+        "value": {
+          "name": "BERGEN VAKTMESTERTJENESTER AS",
+          "organisation_number": "990412375",
+          "status": "Godkjent med ansatte",
+          "approved": true
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "0143aad07a325a97b6de7921f61a0b028f015c82d965b746bf6de763d583ae55"
+        ],
+        "id": "e9535fe197bad6726d6760105fa95037cbd3eb31486620ff8a8f0efbf7d6a504",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:38.049896Z",
+        "last_observed_at": "2026-11-20T15:23:38.049896Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no/2.0",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "0143aad07a325a97b6de7921f61a0b028f015c82d965b746bf6de763d583ae55",
+          "source_url": "https://registerdata.arbeidstilsynet.no/renhold_register.xml",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:38.049896Z",
+          "content_sha256": "166cb282b3dc583af236764e1fa9f8de1aa5d64da876d20f655443b4c78e05bc",
+          "claim_span": "{\"name\":\"BERGEN VAKTMESTERTJENESTER AS\",\"organisation_number\":\"990412375\",\"status\":\"Godkjent med ansatte\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 01a826c094af4002663aeb07db6495d17b5f6026025c17367511491f3767ea89",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    }
+  ],
+  "workshop_approval": [
+    {
+      "company": "ÅS GLASSMESTERFORRETNING AS",
+      "orgnr": "975962121",
+      "claim": {
+        "field": "workshop_approval.28693",
+        "value": {
+          "Adresse": "JOHAN k. SKANCKESV 2",
+          "Bedriftsnavn": "ÅS GLASSMESTERFORRETNING AS",
+          "Godkjenningsnummer": "28693",
+          "Godkjenningstyper": "BILGLASS",
+          "Organisasjonsnummer": "975962121",
+          "Postnummer": "1430",
+          "Poststed": "ÅS"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "fd0316d5a15d32d8269f8e4bfa964a7d3d8aa4ba845d3dbc04a58452e04cdbf9"
+        ],
+        "id": "c7d56a1be77dc5dbd179fbbe8175389d11e3fc5fe8310a0270409af816c046c5",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:42.198758Z",
+        "last_observed_at": "2026-11-20T15:23:42.198758Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "fd0316d5a15d32d8269f8e4bfa964a7d3d8aa4ba845d3dbc04a58452e04cdbf9",
+          "source_url": "https://pkkvr-finn-godkjent-verksted-backend.atlas.vegvesen.no/export-csv?query=__ALL__",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:42.198758Z",
+          "content_sha256": "b697927be02897324676653717ff5b511a14d11b4a5d5c345244a22a22ddd0ca",
+          "claim_span": "{\"Adresse\":\"JOHAN k. SKANCKESV 2\",\"Bedriftsnavn\":\"ÅS GLASSMESTERFORRETNING AS\",\"Godkjenningsnummer\":\"28693\",\"Godkjenningstyper\":\"BILGLASS\",\"Organisasjonsnummer\":\"975962121\",\"Postnummer\":\"1430\",\"Poststed\":\"ÅS\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 c049b71b70288b5d85700918dcc1118380f95f56231f1d86a2849d999a377dda",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "company": "ÅS GLASSMESTERFORRETNING AS",
+      "orgnr": "975962121",
+      "claim": {
+        "field": "workshop_approval.28371",
+        "value": {
+          "Adresse": "Verpetveien 32",
+          "Bedriftsnavn": "ÅS GLASSMESTERFORRETNING AS",
+          "Godkjenningsnummer": "28371",
+          "Godkjenningstyper": "BILGLASS",
+          "Organisasjonsnummer": "975962121",
+          "Postnummer": "1540",
+          "Poststed": "VESTBY"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "7c0b2c76461d8ef5dc566f814bb1baf6c48cbbc0f931daa2918db676dbbafb95"
+        ],
+        "id": "2707363d1e53df7c340b6812bfd5eede4e09c64cf3fab66798c4b5762d8cc4c8",
+        "family": "registry_enrichment",
+        "reporting_period": null,
+        "carried_forward": false,
+        "stale_since": null,
+        "first_observed_at": "2026-11-20T15:23:42.198758Z",
+        "last_observed_at": "2026-11-20T15:23:42.198758Z",
+        "reasons": {
+          "licence": "https://data.norge.no/nlod/no",
+          "snapshot": "Bundled historical snapshot; absence is not a negative finding"
+        }
+      },
+      "evidence": [
+        {
+          "id": "7c0b2c76461d8ef5dc566f814bb1baf6c48cbbc0f931daa2918db676dbbafb95",
+          "source_url": "https://pkkvr-finn-godkjent-verksted-backend.atlas.vegvesen.no/export-csv?query=__ALL__",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-20T15:23:42.198758Z",
+          "content_sha256": "7a8decd6e814837f977c63497a18a8d588aef47dc0cdc72495c1f563065d9c9b",
+          "claim_span": "{\"Adresse\":\"Verpetveien 32\",\"Bedriftsnavn\":\"ÅS GLASSMESTERFORRETNING AS\",\"Godkjenningsnummer\":\"28371\",\"Godkjenningstyper\":\"BILGLASS\",\"Organisasjonsnummer\":\"975962121\",\"Postnummer\":\"1540\",\"Poststed\":\"VESTBY\"}",
+          "locator": "/",
+          "extraction_method": "signalpost.official-bulk.selected-row.v1",
+          "source_identifier": "Official bulk selected-row JSON derivation; dataset SHA-256 c049b71b70288b5d85700918dcc1118380f95f56231f1d86a2849d999a377dda",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    }
+  ]
+}

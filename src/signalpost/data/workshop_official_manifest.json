@@ -1,0 +1,18 @@
+{
+  "source_url": "https://pkkvr-finn-godkjent-verksted-backend.atlas.vegvesen.no/export-csv?query=__ALL__",
+  "retrieved_at": "2026-11-20T15:23:42.198758Z",
+  "source_generation_time": null,
+  "dataset_sha256": "c049b71b70288b5d85700918dcc1118380f95f56231f1d86a2849d999a377dda",
+  "dataset_rows": 5208,
+  "index_sha256": "c773590c54f22fc06fc93d146e3d48c10ae98dfd4f97de5baefea879f9d45ab7",
+  "index_bytes": 13761,
+  "indexed_companies": 280,
+  "licence": "NLOD",
+  "licence_url": "https://data.norge.no/nlod/no",
+  "transformations": [
+    "Exact main-unit identifiers only; preserve selected source fields; no inferred dates.",
+    "UTF-8 canonical sorted JSON; deterministic gzip mtime=0."
+  ],
+  "source_generation_time_note": "null means the source supplies no generation timestamp",
+  "main_unit_filter_sha256": "f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba"
+}

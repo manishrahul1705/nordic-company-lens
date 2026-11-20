@@ -1,0 +1,17 @@
+{
+  "source_url": "https://registerdata.arbeidstilsynet.no/renhold_register.xml",
+  "retrieved_at": "2026-11-20T15:23:38.049896Z",
+  "source_generation_time": "2026-11-20T03:04:05.593265+01:00",
+  "dataset_sha256": "01a826c094af4002663aeb07db6495d17b5f6026025c17367511491f3767ea89",
+  "dataset_rows": 8047,
+  "index_sha256": "e69a11860720f56438c32b4c691b4201e03da8f1390943a4bcdd267e6d048e19",
+  "index_bytes": 168189,
+  "indexed_companies": 8047,
+  "licence": "NLOD 2.0",
+  "licence_url": "https://data.norge.no/nlod/no/2.0",
+  "transformations": [
+    "Exact main-unit identifiers only; preserve selected source fields; no inferred dates.",
+    "UTF-8 canonical sorted JSON; deterministic gzip mtime=0."
+  ],
+  "source_generation_time_note": "null means the source supplies no generation timestamp"
+}

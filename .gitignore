@@ -82,3 +82,8 @@ scratch/
 !/data/cc_orgnr_index.json.gz
 !/data/shared_identifiers.json.gz
 !/data/social_company_names.json.gz
+
+# Stage AS official derived snapshots are release inputs.
+!/src/signalpost/data/cleaning_official.json.gz
+!/src/signalpost/data/workshop_official.json.gz
+!/src/signalpost/data/related_official.json.gz

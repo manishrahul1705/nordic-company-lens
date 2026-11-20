@@ -1,0 +1,54 @@
+{
+  "1000": {
+    "HTTP": 0,
+    "counts": {
+      "related_company_website": {
+        "companies": 14,
+        "claims": 16
+      },
+      "cleaning_approval": {
+        "companies": 6,
+        "claims": 6
+      },
+      "workshop_approval": {
+        "companies": 1,
+        "claims": 2
+      }
+    },
+    "verifier": {
+      "lines": 1000,
+      "schema_valid": true,
+      "published_claims": 178664,
+      "source_blobs_verified": 5988,
+      "synthesis_companies": 1000,
+      "synthesis_sentences": 2548,
+      "synthesis_unverified_values": 0
+    }
+  },
+  "100": {
+    "HTTP": 0,
+    "counts": {
+      "related_company_website": {
+        "companies": 3,
+        "claims": 5
+      },
+      "cleaning_approval": {
+        "companies": 1,
+        "claims": 1
+      },
+      "workshop_approval": {
+        "companies": 0,
+        "claims": 0
+      }
+    },
+    "verifier": {
+      "lines": 100,
+      "schema_valid": true,
+      "published_claims": 18057,
+      "source_blobs_verified": 605,
+      "synthesis_companies": 100,
+      "synthesis_sentences": 266,
+      "synthesis_unverified_values": 0
+    }
+  }
+}

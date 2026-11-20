@@ -750,6 +750,8 @@ async def _run(config, client=None):
             await offload(publish_funding_snapshots, envelope, blobs)
             from .sources.skattefunn import publish as publish_skattefunn
             await offload(publish_skattefunn, envelope, blobs)
+        from .sources.approval_websites import publish as publish_approval_websites
+        await offload(publish_approval_websites, envelope, blobs)
         from .sources.registry_activity import publish as publish_registry_activity
         if config.public_activity:
             await offload(publish_registry_activity, envelope)
