@@ -551,6 +551,17 @@ async def _run(config, client=None):
     async def execute(active_client, nav_client=None):
         if storage_error is not None:return
         http = Http(active_client, config, budget, blobs)
+        from .sources import official_extra, registry_changes
+        from .web.wikidata import fetch_batch
+        allowances = {}
+        if config.registry_changes and valid_orgs:
+            allowances['__registry_changes__'] = 2 * len(valid_orgs)
+            budget.shared_request_caps['__registry_changes__'] = allowances['__registry_changes__']
+        if config.official_extra_sources and valid_orgs:
+            allowances['__official_extra__'] = official_extra.Fetcher.allowance(len(valid_orgs))
+        if config.websites and config.wikidata and valid_orgs:
+            allowances['__wikidata__'] = (len(valid_orgs) + 199) // 200
+        budget.hold_shared_requests(allowances)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
         website_http.nav_index = nav_index
         website_http.registry_http = http
@@ -584,8 +595,19 @@ async def _run(config, client=None):
         if urgent:
             await finish_before_deadline(urgent, budget, CANCEL_GRACE_SECONDS)
         progress.stage_update("Registry & Subunits", "running")
-        from .web.wikidata import fetch_batch
-        wikidata_index.update(await fetch_batch(valid_orgs, active_client, config, budget, blobs))
+        timing_markers['shared_sources_started_seconds'] = time.monotonic() - budget.start
+        extra_fetch = official_extra.Fetcher(active_client, budget, blobs, len(valid_orgs))
+        early = {'wikidata': fetch_batch(valid_orgs, active_client, config, budget, blobs)}
+        if config.registry_changes and valid_orgs:
+            early['registry'] = registry_changes.fetch_batch(valid_orgs, http, blobs, started, company_only=True)
+        if config.official_extra_sources and valid_orgs:
+            early['gleif'] = official_extra.collect_gleif(valid_orgs, extra_fetch)
+        try:
+            shared = dict(zip(early, await asyncio.gather(*early.values())))
+        finally:
+            budget.shared_request_holds.clear()
+        wikidata_index.update(shared['wikidata'])
+        timing_markers['shared_sources_complete_seconds'] = time.monotonic() - budget.start
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
         outage['tasks'] = tasks
         # Only lookups company() will actually make count; urgent ones already ran.
@@ -604,33 +626,40 @@ async def _run(config, client=None):
                 from .web.second_pass import run as second_pass
                 dns_metrics['website_second_pass']=await second_pass(envelopes,website_http,bulk,prior,nav_index,isolate,update,defer_jobs=True)
             if config.registry_changes:
-                from .sources import registry_changes
                 eligible = {org: envelopes[org] for org in sorted(valid_orgs)
                             if envelopes[org].run.sections.get('identity') == 'available'}
+                early_changes = shared.get('registry', {})
                 async def registry_activity():
-                    sections = await registry_changes.fetch_batch(eligible, http, blobs, started)
+                    sections = await registry_changes.fetch_batch(eligible, http, blobs, started,
+                                                                  company_sections=early_changes)
                     for org, section in sections.items():
                         update(envelopes[org], 'activity', registry_changes.merge(envelopes[org], section, config.public_activity))
                 task = asyncio.create_task(registry_activity())
                 unfinished, _ = await finish_before_deadline([task], budget, CANCEL_GRACE_SECONDS)
                 if unfinished or task.cancelled() or (task.done() and task.exception() is not None):
                     for org in eligible:
+                        partial = early_changes[org]
+                        partial.state = 'failed'
+                        partial.errors.extend(missing('activity', 'registry_change_incomplete').errors)
                         update(envelopes[org], 'activity', registry_changes.merge(
-                            envelopes[org], missing('activity', 'registry_change_incomplete'), config.public_activity))
+                            envelopes[org], partial, config.public_activity))
             if config.official_extra_sources:
-                from .sources.official_extra import collect
                 eligible={org:envelopes[org] for org in sorted(valid_orgs) if envelopes[org].run.sections.get('identity')=='available'}
                 try:
-                    extra,metrics=await collect(eligible,active_client,budget,blobs)
+                    extra,metrics=await official_extra.collect(eligible,active_client,budget,blobs,
+                                                               fetch=extra_fetch,gleif=shared.get('gleif'))
                     dns_metrics['official_extra']=metrics
-                    for org,section in extra.items():
-                        row=envelopes[org]
-                        row.claims.extend(section.claims);row.evidence.extend(section.evidence)
-                        from .sources.official_extra import retain_failed
-                        retain_failed(row,prior.get(org))
-                        if any(c.family=='activity' for c in section.claims):row.run.sections['activity']='available'
                 except Exception:
                     dns_metrics['official_extra']={'state':'not_available_fetch_failed'}
+                    sections, states, _ = shared.get('gleif', ({}, {}, 0))
+                    extra = {org: sections[org] for org in eligible if org in sections}
+                    for org in extra:
+                        envelopes[org].run.refresh['official_extra'] = {**states[org], 'TED':'not_available_fetch_failed'}
+                for org,section in extra.items():
+                    row=envelopes[org]
+                    row.claims.extend(section.claims);row.evidence.extend(section.evidence)
+                    official_extra.retain_failed(row,prior.get(org))
+                    if any(c.family=='activity' for c in section.claims):row.run.sections['activity']='available'
             if config.hiring and config.websites and not stuck:
                 from .web.jobs import fetch as company_jobs
                 from .sources.extract import Section

@@ -35,7 +35,8 @@ class Http:
 
     async def get(self, url, org):
         host = allow(url)
-        attempts = 1 if '/api/oppdateringer/' in url else 3 if "/regnskapsregisteret/" in url else 2
+        change_feed = '/api/oppdateringer/' in url
+        attempts = 3 if "/regnskapsregisteret/" in url else 2
         for attempt in range(attempts):
             self.budget.check()
             response = None
@@ -54,12 +55,12 @@ class Http:
                         raise SourceFailure("url_refused", "Redirects are refused; target not requested")
                     if response.status_code not in {429, 500, 502, 503, 504} and response.status_code < 500:
                         return result
-                    if attempt == attempts - 1:
+                    if change_feed or attempt == attempts - 1:
                         return result
                 except (httpx.TimeoutException, httpx.NetworkError) as exc:
                     retry_error = exc
                     event["error"] = type(exc).__name__
-                    if attempt == attempts - 1:
+                    if attempt == attempts - 1 or (change_feed and not isinstance(exc, httpx.NetworkError)):
                         raise SourceFailure("timeout" if isinstance(exc, httpx.TimeoutException) else "network_error") from exc
                 except asyncio.CancelledError:
                     event["error"] = "deadline"

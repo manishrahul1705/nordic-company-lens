@@ -165,6 +165,38 @@ def test_brreg_http400_marks_activity_failed(tmp_path):
     assert not any(c['field'].startswith('registry_change.') for c in row['claims'])
 
 
+def test_parent_change_feed_runs_before_core_and_retains_proof(tmp_path):
+    called = []
+    original = handler()
+
+    def respond(request):
+        path = request.url.path
+        called.append(path)
+        if '/oppdateringer/' in path:
+            dated_event = event(dato=request.url.params['updatedBefore'])
+            company = path.endswith('/enheter')
+            rows = [dated_event] if company else []
+            key = 'oppdaterteEnheter' if company else 'oppdaterteUnderenheter'
+            return httpx.Response(200, json={'page': {'number': 0, 'size': rc.PAGE_SIZE,
+                'totalPages': int(company), 'totalElements': len(rows)}, '_embedded': {key: rows}})
+        return original(request)
+
+    async def collect():
+        cfg = config(tmp_path, [ORG], registry_changes=True)
+        async with httpx.AsyncClient(transport=httpx.MockTransport(respond)) as client:
+            report = await run(cfg, client=client)
+        return report, json.loads(cfg.output.read_text(encoding='utf8'))
+
+    report, row = asyncio.run(collect())
+    assert called[0].endswith('/oppdateringer/enheter')
+    assert called.count(called[0]) == 1
+    claim = next(c for c in row['claims'] if c['field'].startswith('registry_change.'))
+    assert claim['value']['new_value'] == 'New name AS'
+    sources = {e['id']: e['source_url'] for e in row['evidence']}
+    assert any('/oppdateringer/enheter?' in sources[ref] for ref in claim['evidence_ids'])
+    assert report['deadline_hits'] == 0
+
+
 def test_latest_summary_citation_and_site_publication_label():
     env = envelope()
     a = extract(event())

@@ -207,14 +207,15 @@ async def pages(http, endpoint, numbers, since, until):
         page += 1
 
 
-async def fetch_batch(envelopes, http, blobs, until):
+async def fetch_batch(envelopes, http, blobs, until, *, company_only=False, company_sections=None):
     """One run-local acquisition, shared by the entire batch; errors stay explicit."""
     now = timestamp(until)
     since = window_start(now)
     since = since.isoformat().replace('+00:00', 'Z')
-    result = {org: Section(state='not_available') for org in envelopes}
+    result = {org: (company_sections or {}).get(org, Section(state='not_available')) for org in envelopes}
     # Shared batch acquisition must never spend more than two requests per
-    # input on registry announcements, including subunit pages. No hidden retry.
+    # input on registry announcements, including subunit pages. The run budget
+    # applies the same ceiling across both passes and counts transport retries.
     original_http = http
     class BoundedFeed:
         calls = 0
@@ -225,7 +226,7 @@ async def fetch_batch(envelopes, http, blobs, until):
             return await original_http.get(*args)
     http = BoundedFeed()
     scopes, owners = {}, {}
-    for org, envelope in envelopes.items():
+    for org, envelope in (() if company_only else envelopes.items()):
         try:
             if envelope.run.sections.get('subunits') not in {'available', 'not_available'}:
                 raise SourceFailure('registry_change_scope_incomplete')
@@ -235,8 +236,14 @@ async def fetch_batch(envelopes, http, blobs, until):
                     raise SourceFailure('registry_change_conflicting_parent')
                 owners[unit] = org
         except (SourceFailure, ValueError, KeyError, TypeError) as exc:
-            result[org] = missing('activity', getattr(exc, 'code', 'registry_change_scope_invalid'))
-    for endpoint, numbers in [('enheter', sorted(envelopes)), ('underenheter', sorted(owners))]:
+            result[org].state = 'failed'
+            result[org].errors.extend(missing('activity', getattr(exc, 'code', 'registry_change_scope_invalid')).errors)
+    groups = []
+    if company_sections is None:
+        groups.append(('enheter', sorted(envelopes)))
+    if not company_only:
+        groups.append(('underenheter', sorted(owners)))
+    for endpoint, numbers in groups:
         for start in range(0, len(numbers), CHUNK):
             chunk = numbers[start:start + CHUNK]
             affected = set(chunk) if endpoint == 'enheter' else {owners[n] for n in chunk}

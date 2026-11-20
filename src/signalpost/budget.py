@@ -59,6 +59,16 @@ class Budget:
         self.events = []
         self.by_host = Counter()
         self.by_company = Counter()
+        self.shared_request_caps = {}
+        self.shared_request_holds = {}
+
+    def hold_shared_requests(self, allowances):
+        """Protect existing source allowances while startup requests overlap."""
+        remaining = self.cap - len(self.events)
+        for source, allowance in allowances.items():
+            protected = min(allowance, remaining)
+            self.shared_request_holds[source] = protected
+            remaining -= protected
 
     def seconds_left(self):
         return self.start + self.total_seconds - time.monotonic()
@@ -69,8 +79,12 @@ class Budget:
 
     def reserve(self, url: str, host: str, org: str):
         self.check()
-        if len(self.events) >= self.cap:
+        held_elsewhere = sum(max(0, allowance - self.by_company[source])
+                             for source, allowance in self.shared_request_holds.items() if source != org)
+        if len(self.events) >= self.cap - held_elsewhere:
             raise SourceFailure("budget_exhausted")
+        if org in self.shared_request_caps and self.by_company[org] >= self.shared_request_caps[org]:
+            raise SourceFailure('registry_change_request_cap')
         if org in self.input_orgs and self.by_company[org] >= 40:
             raise SourceFailure('company_budget_exhausted')
         event = {"url": url, "host": host, "organisation_number": org, "attempt_started": time.monotonic() - self.start, "status": None, "error": None}

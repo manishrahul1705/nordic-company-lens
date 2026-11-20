@@ -33,7 +33,8 @@ def make_http(tmp_path, transport, budget):
     return client, http
 
 
-def test_network_error_retry_uses_one_to_two_second_jitter(tmp_path, monkeypatch):
+@pytest.mark.parametrize('path', [f'enheter/{ORG}', 'oppdateringer/enheter'])
+def test_network_error_retry_uses_one_to_two_second_jitter(tmp_path, monkeypatch, path):
     attempts = 0
     waits = []
 
@@ -51,7 +52,7 @@ def test_network_error_retry_uses_one_to_two_second_jitter(tmp_path, monkeypatch
     budget = RecordingBudget()
     client, http = make_http(tmp_path, httpx.MockTransport(handler), budget)
     try:
-        response = asyncio.run(http.get(f"https://data.brreg.no/enhetsregisteret/api/enheter/{ORG}", ORG))
+        response = asyncio.run(http.get(f"https://data.brreg.no/enhetsregisteret/api/{path}", ORG))
     finally:
         asyncio.run(client.aclose())
 

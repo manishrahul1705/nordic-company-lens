@@ -170,9 +170,13 @@ def award_extract(response,notice,org,now):
 
 
 class Fetcher:
+    @staticmethod
+    def allowance(count):
+        return max(8, min(300, count // 2))
+
     def __init__(self,client,budget,blobs,count):
         self.client,self.budget,self.blobs=client,budget,blobs
-        self.calls=0;self.cap=max(8,min(300,count//2));self.cache={};self.next_start={};self.host_locks={}
+        self.calls=0;self.cap=self.allowance(count);self.cache={};self.next_start={};self.host_locks={}
         self.ted_calls=0;self.ted_statuses={};self.ted_failures=[]
     async def get(self,url,payload=None):
         is_ted = urlsplit(url).hostname in {'api.ted.europa.eu','ted.europa.eu'}
@@ -222,11 +226,11 @@ class Fetcher:
         finally:event['runtime_ms']=round((time.monotonic()-began)*1000)
 
 
-async def collect(envelopes,client,budget,blobs):
-    """Shared source calls; failure cannot change existing section availability."""
-    fetch=Fetcher(client,budget,blobs,len(envelopes));result={o:Section() for o in envelopes}
-    states={o:{'gleif':'not_available','TED':'not_available'} for o in envelopes};records={};edges=[]
-    orgs=sorted(envelopes)
+async def collect_gleif(numbers, fetch):
+    """Acquire exact registry matches before website work can use the deadline."""
+    orgs=sorted(numbers)
+    result={o:Section() for o in orgs}
+    states={o:{'gleif':'not_available'} for o in orgs};records={};edges=[]
     for start in range(0,len(orgs),100):
         nums=orgs[start:start+100]
         try:
@@ -269,6 +273,19 @@ async def collect(envelopes,client,budget,blobs):
         # Retain the child's exact registry/LEI binding alongside relationship proof.
         child_claim=next(c for c in result[org].claims if c.field=='identity.gleif.lei')
         for c in section.claims:c.evidence_ids.extend(child_claim.evidence_ids)
+    return result, states, len(leis)
+
+
+async def collect(envelopes,client,budget,blobs, *, fetch=None, gleif=None):
+    """Shared source calls; failure cannot change existing section availability."""
+    if fetch is None:
+        fetch=Fetcher(client,budget,blobs,len(envelopes))
+    if gleif is None:
+        gleif=await collect_gleif(envelopes, fetch)
+    sections, gleif_states, parent_leis = gleif
+    orgs=sorted(envelopes)
+    result={org: sections[org] for org in orgs}
+    states={org: {**gleif_states[org], 'TED':'not_available'} for org in orgs}
     notices={};notice_links={}
     since=date.today()
     try:since=since.replace(year=since.year-3)
@@ -356,7 +373,7 @@ async def collect(envelopes,client,budget,blobs):
             unique.setdefault(evidence.id,evidence)
         section.evidence=list(unique.values())
         for source in states[org]:envelopes[org].run.refresh.setdefault('official_extra',{})[source]=states[org][source]
-    return result,{'requests':fetch.calls,'gleif_companies':len(records),'parent_LEIs_batched':len(leis),'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures,
+    return result,{'requests':fetch.calls,'gleif_companies':sum(states[org]['gleif']=='available' for org in orgs),'parent_LEIs_batched':parent_leis,'tender_notices_nominated':len(notices),'ted_requests':fetch.ted_calls,'ted_http_statuses':fetch.ted_statuses,'ted_failures':fetch.ted_failures,
         'ted_xml_seconds':xml_seconds,'ted_notice_concurrency':TED_NOTICE_CONCURRENCY,
         'ted_202_circuit_breaker':{'threshold':TED_202_BREAKER_THRESHOLD,'open':breaker_open,
                                    'skipped_notices':skipped,'reason':'ted_202_circuit_open' if skipped else None,
