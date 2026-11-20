@@ -1,0 +1,642 @@
+[
+  {
+    "orgnr": "984590881",
+    "company": "OSEBERG ENGINEERING AS",
+    "claim": {
+      "field": "skattefunn.34942",
+      "value": {
+        "project_id": "34942",
+        "title": "Utvikling av ny kappe, stable og overføringsprosess for flatbrødproduksjon",
+        "organisation_number": "984590881",
+        "applicant_name": "OSEBERG ENGINEERING AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2005,
+        "end_year": 2005,
+        "decision_date": null,
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "791546873ae5753cbbcbad6b7967e0597ef2a13f7107c126d0aa5cb44706d946"
+      ],
+      "id": "83aec58bdc56141697415276ca48ddfbfef472bfba39799c2cd60e5011fa2cab",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "791546873ae5753cbbcbad6b7967e0597ef2a13f7107c126d0aa5cb44706d946",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "6f7dfdfd3551c167d249475fd9d5ef9ae604826aee228d1e50fb40b5ebb14acf",
+      "claim_span": "{\"Prosjektnummer\":\"34942\",\"Bedriftsnavn\":\"OSEBERG ENGINEERING AS\",\"Prosjekttittel\":\"Utvikling av ny kappe, stable og overføringsprosess for flatbrødproduksjon\",\"Organisasjonsnummer\":\"984590881\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2005\",\"Prosjektets til-år\":\"2005\",\"Ved",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 56085; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "34942",
+      "Bedriftsnavn": "OSEBERG ENGINEERING AS",
+      "Prosjekttittel": "Utvikling av ny kappe, stable og overføringsprosess for flatbrødproduksjon",
+      "Organisasjonsnummer": "984590881",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2005",
+      "Prosjektets til-år": "2005",
+      "Vedtaksdato": "#N/A"
+    },
+    "source_row": 56085,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision is #N/A, correctly published as null without substituting the application date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "995541432",
+    "company": "WACKER CHEMICALS NORWAY AS",
+    "claim": {
+      "field": "skattefunn.254219",
+      "value": {
+        "project_id": "254219",
+        "title": "Metall Production - Wacker",
+        "organisation_number": "995541432",
+        "applicant_name": "WACKER CHEMICALS NORWAY AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2015,
+        "end_year": 2017,
+        "decision_date": "2015-10-29",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "4dc867ff9bac3d0dc7b9e40d918ec8251f0e26a2863331d02ea76352cdb7ac33"
+      ],
+      "id": "685a9b43bcbfcb59a019ea26c2e8a5701c87710f693f6e1762a88cbb28d06075",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "4dc867ff9bac3d0dc7b9e40d918ec8251f0e26a2863331d02ea76352cdb7ac33",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "6d04903693ec605ceaab753926afd22ac07d21c797fa62215af23321396b5226",
+      "claim_span": "{\"Prosjektnummer\":\"254219\",\"Bedriftsnavn\":\"WACKER CHEMICALS NORWAY AS\",\"Prosjekttittel\":\"Metall Production - Wacker\",\"Organisasjonsnummer\":\"995541432\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2015\",\"Prosjektets til-år\":\"2017\",\"Vedtaksdato\":\"42306.362280092602\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 32702; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "254219",
+      "Bedriftsnavn": "WACKER CHEMICALS NORWAY AS",
+      "Prosjekttittel": "Metall Production - Wacker",
+      "Organisasjonsnummer": "995541432",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2015",
+      "Prosjektets til-år": "2017",
+      "Vedtaksdato": "42306.362280092602"
+    },
+    "source_row": 32702,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "986739874",
+    "company": "AAS BETONG AS",
+    "claim": {
+      "field": "skattefunn.284377",
+      "value": {
+        "project_id": "284377",
+        "title": "Betongsteiner til større støttemurer",
+        "organisation_number": "986739874",
+        "applicant_name": "AAS BETONG AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2018,
+        "end_year": 2021,
+        "decision_date": "2018-04-20",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "259a794a62a3cbfa0528435156ac0b4b78f0c7102e314a048a50e01ee6593a75"
+      ],
+      "id": "c67e064ee3ee0833470c445a7d372b665bf858886611f10bd0b10782b6f2a574",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "259a794a62a3cbfa0528435156ac0b4b78f0c7102e314a048a50e01ee6593a75",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "52e13987e5b576db154739a2bcaab30715bb9d1a5c021ee17f9b03e672331a0a",
+      "claim_span": "{\"Prosjektnummer\":\"284377\",\"Bedriftsnavn\":\"AAS BETONG AS\",\"Prosjekttittel\":\"Betongsteiner til større støttemurer\",\"Organisasjonsnummer\":\"986739874\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2018\",\"Prosjektets til-år\":\"2021\",\"Vedtaksdato\":\"43210.500509259298\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 22299; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "284377",
+      "Bedriftsnavn": "AAS BETONG AS",
+      "Prosjekttittel": "Betongsteiner til større støttemurer",
+      "Organisasjonsnummer": "986739874",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2018",
+      "Prosjektets til-år": "2021",
+      "Vedtaksdato": "43210.500509259298"
+    },
+    "source_row": 22299,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "991368000",
+    "company": "RALSTON BAU AS",
+    "claim": {
+      "field": "skattefunn.267140",
+      "value": {
+        "project_id": "267140",
+        "title": "IDEAL LAB Tøyen Replanted",
+        "organisation_number": "991368000",
+        "applicant_name": "RALSTON BAU AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2016,
+        "end_year": 2017,
+        "decision_date": "2016-12-08",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d31d05071362718aaa07f7b7d589747ea50bfe2b2872a05f4b5806d95820d326"
+      ],
+      "id": "3f16a66c5507fa97600f47e2bc9f70955cf9c7e94326fce962b607d75fbac678",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "d31d05071362718aaa07f7b7d589747ea50bfe2b2872a05f4b5806d95820d326",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "e768c0a38c6b84d003d45fa821cdd3143999364eaa566023e1efa02b4b00eee7",
+      "claim_span": "{\"Prosjektnummer\":\"267140\",\"Bedriftsnavn\":\"RALSTON BAU AS\",\"Prosjekttittel\":\"IDEAL LAB Tøyen Replanted\",\"Organisasjonsnummer\":\"991368000\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2016\",\"Prosjektets til-år\":\"2017\",\"Vedtaksdato\":\"42712.676354166702\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 27970; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "267140",
+      "Bedriftsnavn": "RALSTON BAU AS",
+      "Prosjekttittel": "IDEAL LAB Tøyen Replanted",
+      "Organisasjonsnummer": "991368000",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2016",
+      "Prosjektets til-år": "2017",
+      "Vedtaksdato": "42712.676354166702"
+    },
+    "source_row": 27970,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "886757972",
+    "company": "PRIME CARGO AS",
+    "claim": {
+      "field": "skattefunn.281548",
+      "value": {
+        "project_id": "281548",
+        "title": "Utvikling av nytt IT-basert logistikksystem for effektiv håndtering av retursendinger fra netthandel",
+        "organisation_number": "886757972",
+        "applicant_name": "PRIME CARGO AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2017,
+        "end_year": 2019,
+        "decision_date": "2017-12-14",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "09f042d8daa7e0e8b30fe9c51beb025d46ca56d6b3f3805fdcf07737bae31303"
+      ],
+      "id": "2737a43ee5025b91141df289c1302ab1209e7e941cfa42e44572dc70fcafb7b5",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "09f042d8daa7e0e8b30fe9c51beb025d46ca56d6b3f3805fdcf07737bae31303",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "f6af32d3e0a7ef728184827bb37788358e91c3cc7c063f4f4aff1e08b64da884",
+      "claim_span": "{\"Prosjektnummer\":\"281548\",\"Bedriftsnavn\":\"PRIME CARGO AS\",\"Prosjekttittel\":\"Utvikling av nytt IT-basert logistikksystem for effektiv håndtering av retursendinger fra netthandel\",\"Organisasjonsnummer\":\"886757972\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2017\",\"Prosjektets ",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 22963; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "281548",
+      "Bedriftsnavn": "PRIME CARGO AS",
+      "Prosjekttittel": "Utvikling av nytt IT-basert logistikksystem for effektiv håndtering av retursendinger fra netthandel",
+      "Organisasjonsnummer": "886757972",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2017",
+      "Prosjektets til-år": "2019",
+      "Vedtaksdato": "43083.618692129603"
+    },
+    "source_row": 22963,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "976871448",
+    "company": "MULTI PULSE SWEEP INTERNATIONAL AS",
+    "claim": {
+      "field": "skattefunn.198683",
+      "value": {
+        "project_id": "198683",
+        "title": "MTI for magnetronradar",
+        "organisation_number": "976871448",
+        "applicant_name": "MULTI PULSE SWEEP INTERNATIONAL AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2009,
+        "end_year": 2012,
+        "decision_date": "2009-12-03",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "64102d49efa0dcd8f7f4881c7f2c3606809b9105fc28e5ca5269737804aa3b29"
+      ],
+      "id": "dadfe4b4d32fa2ef6cd34fe0774cc0b44a146d84ff007f089d0b8acaef66a7bc",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "64102d49efa0dcd8f7f4881c7f2c3606809b9105fc28e5ca5269737804aa3b29",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "c3bd71cccba428de629ae4028d81e67a99a45f8eef714061365c2e2adf38c175",
+      "claim_span": "{\"Prosjektnummer\":\"198683\",\"Bedriftsnavn\":\"MULTI PULSE SWEEP INTERNATIONAL AS\",\"Prosjekttittel\":\"MTI for magnetronradar\",\"Organisasjonsnummer\":\"976871448\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2009\",\"Prosjektets til-år\":\"2012\",\"Vedtaksdato\":\"40150.584953703699\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 47804; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "198683",
+      "Bedriftsnavn": "MULTI PULSE SWEEP INTERNATIONAL AS",
+      "Prosjekttittel": "MTI for magnetronradar",
+      "Organisasjonsnummer": "976871448",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2009",
+      "Prosjektets til-år": "2012",
+      "Vedtaksdato": "40150.584953703699"
+    },
+    "source_row": 47804,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "982801559",
+    "company": "HUSFLIDEN HAMAR BUNAD AS",
+    "claim": {
+      "field": "skattefunn.30465",
+      "value": {
+        "project_id": "30465",
+        "title": "Produktutvikling - fra kultur til næring",
+        "organisation_number": "982801559",
+        "applicant_name": "HUSFLIDEN HAMAR BUNAD AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2004,
+        "end_year": 2005,
+        "decision_date": "2004-12-10",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "5d57325aae6e06b726c18fc0023a45380ca2dae90fa45f6055dce40d09149b33"
+      ],
+      "id": "fe015f46408ed19f651a965d8340687d1b19f8e02d061475ef42984cf46e3ddd",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "5d57325aae6e06b726c18fc0023a45380ca2dae90fa45f6055dce40d09149b33",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "84bdad8a590a259cf41f568e3072f8146d6a7aae13b85185619c47c6868f900f",
+      "claim_span": "{\"Prosjektnummer\":\"30465\",\"Bedriftsnavn\":\"HUSFLIDEN HAMAR BUNAD AS\",\"Prosjekttittel\":\"Produktutvikling - fra kultur til næring\",\"Organisasjonsnummer\":\"982801559\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2004\",\"Prosjektets til-år\":\"2005\",\"Vedtaksdato\":\"38331.535196759301\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 60801; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "30465",
+      "Bedriftsnavn": "HUSFLIDEN HAMAR BUNAD AS",
+      "Prosjekttittel": "Produktutvikling - fra kultur til næring",
+      "Organisasjonsnummer": "982801559",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2004",
+      "Prosjektets til-år": "2005",
+      "Vedtaksdato": "38331.535196759301"
+    },
+    "source_row": 60801,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "950220317",
+    "company": "INFLOW MEDIA NORWAY AS",
+    "claim": {
+      "field": "skattefunn.203688",
+      "value": {
+        "project_id": "203688",
+        "title": "Edipluss2",
+        "organisation_number": "950220317",
+        "applicant_name": "INFLOW MEDIA NORWAY AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2010,
+        "end_year": 2012,
+        "decision_date": "2010-06-24",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "e5f76f79b8c20f39a2edfb36fa18e56f622bcb27f4c787264eff1ab810310c3d"
+      ],
+      "id": "7c8bb00b29f70a65da54fc1c71ed5dd5acf178fcced8591e7f668ec16ba79cd2",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "e5f76f79b8c20f39a2edfb36fa18e56f622bcb27f4c787264eff1ab810310c3d",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "9dfafd7d82dc5ed05c3b72c041659f9f5de4a5c8c7202f6dd960f664807c91fb",
+      "claim_span": "{\"Prosjektnummer\":\"203688\",\"Bedriftsnavn\":\"INFLOW MEDIA NORWAY AS\",\"Prosjekttittel\":\"Edipluss2\",\"Organisasjonsnummer\":\"950220317\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2010\",\"Prosjektets til-år\":\"2012\",\"Vedtaksdato\":\"40353.6827430556\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 46390; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "203688",
+      "Bedriftsnavn": "INFLOW MEDIA NORWAY AS",
+      "Prosjekttittel": "Edipluss2",
+      "Organisasjonsnummer": "950220317",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2010",
+      "Prosjektets til-år": "2012",
+      "Vedtaksdato": "40353.6827430556"
+    },
+    "source_row": 46390,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "980910857",
+    "company": "THE ORCHARD AS",
+    "claim": {
+      "field": "skattefunn.223890",
+      "value": {
+        "project_id": "223890",
+        "title": "Phonofile Sales and Analytics",
+        "organisation_number": "980910857",
+        "applicant_name": "THE ORCHARD AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2012,
+        "end_year": 2013,
+        "decision_date": "2012-12-03",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "704660a856676b90ecef273bf1c0a57e7997bcd4f64f01e2e0b5fac162d8e101"
+      ],
+      "id": "92560e2ea2f7ec784c9016d712cdd97929ba29d9239dfaab36490b4a2db7129c",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "704660a856676b90ecef273bf1c0a57e7997bcd4f64f01e2e0b5fac162d8e101",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "c748d029aeb13173da828e20508ac6b8887c127288ab90d52e454a67338e6ba3",
+      "claim_span": "{\"Prosjektnummer\":\"223890\",\"Bedriftsnavn\":\"THE ORCHARD AS\",\"Prosjekttittel\":\"Phonofile Sales and Analytics\",\"Organisasjonsnummer\":\"980910857\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2012\",\"Prosjektets til-år\":\"2013\",\"Vedtaksdato\":\"41246.669004629599\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 41894; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "223890",
+      "Bedriftsnavn": "THE ORCHARD AS",
+      "Prosjekttittel": "Phonofile Sales and Analytics",
+      "Organisasjonsnummer": "980910857",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2012",
+      "Prosjektets til-år": "2013",
+      "Vedtaksdato": "41246.669004629599"
+    },
+    "source_row": 41894,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  },
+  {
+    "orgnr": "942633475",
+    "company": "ØRSHALL AS",
+    "claim": {
+      "field": "skattefunn.20414",
+      "value": {
+        "project_id": "20414",
+        "title": "Utvikling av Letti magasinverktøy",
+        "organisation_number": "942633475",
+        "applicant_name": "ØRSHALL AS",
+        "scheme": "SkatteFUNN (R&D tax deduction scheme)",
+        "instrument_type": "R&D tax deduction",
+        "approval_status": "approved",
+        "start_year": 2002,
+        "end_year": 2002,
+        "decision_date": "2002-12-04",
+        "scope": "Approved R&D tax deduction application; not a grant, cash payment or proof of a claimed deduction."
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "f94f6a1e29900d55577cafb71f3d45c6c5e2d7f54652b5d1620af1c9e7abffae"
+      ],
+      "id": "7252ebc977a118f4f632f444ca5efc69eeb36460416c808b34dea8eb70d3b373",
+      "family": "funding",
+      "reporting_period": null,
+      "carried_forward": false,
+      "stale_since": null,
+      "first_observed_at": "2026-11-20T12:48:21Z",
+      "last_observed_at": "2026-11-20T12:48:21Z",
+      "reasons": {
+        "label": "SkatteFUNN (R&D tax deduction scheme)",
+        "licence": "https://data.norge.no/nlod/en/2.0",
+        "attribution": "Forskningsrådet",
+        "snapshot": "Historical bundled approval; not live-checked"
+      }
+    },
+    "evidence": {
+      "id": "f94f6a1e29900d55577cafb71f3d45c6c5e2d7f54652b5d1620af1c9e7abffae",
+      "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+      "source_class": "official_registry",
+      "retrieved_at": "2026-11-20T12:48:21Z",
+      "content_sha256": "3ea6b80272f1e8dc902635bc75866a55f5c53284694324992a2a50d5797251ad",
+      "claim_span": "{\"Prosjektnummer\":\"20414\",\"Bedriftsnavn\":\"ØRSHALL AS\",\"Prosjekttittel\":\"Utvikling av Letti magasinverktøy\",\"Organisasjonsnummer\":\"942633475\",\"Søknad godkjent\":\"JA\",\"Søknad avslått\":\"NEI\",\"Prosjektets fra-år\":\"2002\",\"Prosjektets til-år\":\"2002\",\"Vedtaksdato\":\"37594.4835185185\"}",
+      "locator": "/",
+      "extraction_method": "signalpost.funding.xlsx-selected-row.v1",
+      "source_identifier": "NLOD 2.0; Forskningsrådet; selected XLSX cells (UTF-8 JSON derivation), Rapport 1 row 70235; full dataset SHA-256 8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+      "effective_at": null,
+      "reporting_period": null
+    },
+    "source_cells": {
+      "Prosjektnummer": "20414",
+      "Bedriftsnavn": "ØRSHALL AS",
+      "Prosjekttittel": "Utvikling av Letti magasinverktøy",
+      "Organisasjonsnummer": "942633475",
+      "Søknad godkjent": "JA",
+      "Søknad avslått": "NEI",
+      "Prosjektets fra-år": "2002",
+      "Prosjektets til-år": "2002",
+      "Vedtaksdato": "37594.4835185185"
+    },
+    "source_row": 70235,
+    "why_correct": "Exact applicant organisation number; explicit approved JA and rejected NEI; title and project period copied from that row. Decision date is the explicit Excel decision-date cell converted to a calendar date. Historical R&D tax deduction approval only; no monetary award or claimed deduction is asserted."
+  }
+]

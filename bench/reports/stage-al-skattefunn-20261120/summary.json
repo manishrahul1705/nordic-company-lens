@@ -1,0 +1,125 @@
+{
+  "website_count_commit": "92ba52ceefaaa9f6b98252d6d6f368a7555e24fc",
+  "website_count_suite": {
+    "passed": 1754,
+    "failed": 1,
+    "failure": "test_independent_footer_runs_dependent_production_extraction",
+    "isolation_repeats_passed": 2
+  },
+  "full1000": {
+    "source": "bench\\runs\\stage-ak-audit-fix1000\\envelopes.jsonl",
+    "output": "bench\\runs\\stage-al-skattefunn1000",
+    "companies": 1000,
+    "before": {
+      "skattefunn": {
+        "companies": 0,
+        "claims": 0
+      },
+      "research": {
+        "companies": 0,
+        "claims": 0
+      },
+      "state_aid": {
+        "companies": 0,
+        "claims": 0
+      },
+      "all_published": 177731
+    },
+    "after": {
+      "skattefunn": {
+        "companies": 36,
+        "claims": 89
+      },
+      "research": {
+        "companies": 0,
+        "claims": 0
+      },
+      "state_aid": {
+        "companies": 0,
+        "claims": 0
+      },
+      "all_published": 177820
+    },
+    "new_HTTP_requests": 0,
+    "network_guard": "socket.connect and socket.getaddrinfo forbidden",
+    "prior_published_claims_removed": 0,
+    "deduplicated_against_research": 0,
+    "seconds": 330.792,
+    "strict_verifier": {
+      "lines": 1000,
+      "schema_valid": true,
+      "published_claims": 177820,
+      "source_blobs_verified": 5272,
+      "synthesis_companies": 1000,
+      "synthesis_sentences": 2575,
+      "synthesis_unverified_values": 0
+    }
+  },
+  "sample100": {
+    "source": "bench\\runs\\stage-ak-defaults\\envelopes.jsonl",
+    "output": "bench\\runs\\stage-al-skattefunn100",
+    "companies": 100,
+    "before": {
+      "skattefunn": {
+        "companies": 0,
+        "claims": 0
+      },
+      "research": {
+        "companies": 2,
+        "claims": 3
+      },
+      "state_aid": {
+        "companies": 8,
+        "claims": 45
+      },
+      "all_published": 17962
+    },
+    "after": {
+      "skattefunn": {
+        "companies": 5,
+        "claims": 9
+      },
+      "research": {
+        "companies": 2,
+        "claims": 3
+      },
+      "state_aid": {
+        "companies": 8,
+        "claims": 45
+      },
+      "all_published": 17971
+    },
+    "new_HTTP_requests": 0,
+    "network_guard": "socket.connect and socket.getaddrinfo forbidden",
+    "prior_published_claims_removed": 0,
+    "deduplicated_against_research": 0,
+    "seconds": 23.451,
+    "strict_verifier": {
+      "lines": 100,
+      "schema_valid": true,
+      "published_claims": 17971,
+      "source_blobs_verified": 575,
+      "synthesis_companies": 100,
+      "synthesis_sentences": 266,
+      "synthesis_unverified_values": 0
+    }
+  },
+  "index_bytes": 8581330,
+  "dataset_rows": 70599,
+  "indexed_records": 52902,
+  "indexed_companies": 18607,
+  "hand_checks": 10,
+  "suite": "1778 passed, 1 warning in 538.25s (0:08:58)",
+  "failures": [],
+  "new_tests": 23,
+  "research_bundle_overlap_for_new_cohort_approvals": 0,
+  "deterministic_rebuild": {
+    "index_identical": true,
+    "manifest_identical": true
+  },
+  "wheel": {
+    "index_manifest_notice_present": true,
+    "index_identical": true,
+    "raw_xlsx_or_csv_present": false
+  }
+}

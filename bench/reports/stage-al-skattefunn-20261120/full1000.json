@@ -1,0 +1,49 @@
+{
+  "source": "bench\\runs\\stage-ak-audit-fix1000\\envelopes.jsonl",
+  "output": "bench\\runs\\stage-al-skattefunn1000",
+  "companies": 1000,
+  "before": {
+    "skattefunn": {
+      "companies": 0,
+      "claims": 0
+    },
+    "research": {
+      "companies": 0,
+      "claims": 0
+    },
+    "state_aid": {
+      "companies": 0,
+      "claims": 0
+    },
+    "all_published": 177731
+  },
+  "after": {
+    "skattefunn": {
+      "companies": 36,
+      "claims": 89
+    },
+    "research": {
+      "companies": 0,
+      "claims": 0
+    },
+    "state_aid": {
+      "companies": 0,
+      "claims": 0
+    },
+    "all_published": 177820
+  },
+  "new_HTTP_requests": 0,
+  "network_guard": "socket.connect and socket.getaddrinfo forbidden",
+  "prior_published_claims_removed": 0,
+  "deduplicated_against_research": 0,
+  "seconds": 330.792,
+  "strict_verifier": {
+    "lines": 1000,
+    "schema_valid": true,
+    "published_claims": 177820,
+    "source_blobs_verified": 5272,
+    "synthesis_companies": 1000,
+    "synthesis_sentences": 2575,
+    "synthesis_unverified_values": 0
+  }
+}

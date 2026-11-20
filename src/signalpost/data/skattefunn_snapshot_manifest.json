@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "source_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+  "distribution_url": "https://www.forskningsradet.no/siteassets/skattefunn/tall/skattefunn-innsendte-soknader-2002-2024.xlsx",
+  "catalogue_url": "https://data.norge.no/nb/datasets/f82d3d4a-b0f8-3220-83ef-15fbd854c54f/innsendte-soknader-til-skattefunn",
+  "provider_page": "https://www.forskningsradet.no/skattefunn/suksesshistorier/",
+  "catalogued_distribution_url": "https://www.forskningsradet.no/contentassets/3bc989967e0b4225b622ae88ffb7b66f/skattefunn_innsendte_soknader-nov24.xlsx",
+  "catalogued_distribution_status": 404,
+  "catalogued_distribution_checked_on": "2026-11-20",
+  "licence": "NLOD 2.0",
+  "licence_url": "https://data.norge.no/nlod/en/2.0",
+  "licence_basis": "data.norge.no lists the dataset 'Innsendte søknader til SkatteFUNN' (Forskningsrådet) under NLOD 2.0 https://data.norge.no/nb/datasets/f82d3d4a-b0f8-3220-83ef-15fbd854c54f/innsendte-soknader-til-skattefunn. The catalogue's distribution link (nov24.xlsx) returned HTTP 404 on 2026-11-20. We use the provider's current publication of the same dataset, linked from its SkatteFUNN page, and treat it as covered by the dataset's catalogued licence. Attribution: Forskningsrådet, NLOD 2.0.",
+  "credit": "Forskningsrådet",
+  "retrieved_at": "2026-11-20T12:48:21Z",
+  "dataset_sha256": "8466f7b7a93bafc036eead0f2f418b8368d47889ab582af3fb4ad18593697cad",
+  "dataset_bytes": 12200263,
+  "dataset_rows": 70599,
+  "indexed_records": 52902,
+  "indexed_companies": 18607,
+  "excluded": {
+    "unapproved_or_invalid_explicit_cells": 17675,
+    "ambiguous_duplicate_project_rows": 22
+  },
+  "coverage_period": {
+    "provider_publication_label": "2002–2024",
+    "workbook_submission_dates_min": "2002-09-27",
+    "workbook_submission_dates_max": "2024-11-01",
+    "note": "Period comes from explicit workbook application-date cells; project periods can extend outside it."
+  },
+  "source_columns": [
+    "Prosjektnummer",
+    "Bedriftsnavn",
+    "Prosjekttittel",
+    "Organisasjonsnummer",
+    "Søknad godkjent",
+    "Søknad avslått",
+    "Prosjektets fra-år",
+    "Prosjektets til-år",
+    "Vedtaksdato"
+  ],
+  "index_bytes": 8581330,
+  "index_sha256": "cccfc6d455b958ece0a6d22371192398c20dfce39d93eb912d6dcd1938f7fbd5",
+  "transformations": [
+    "Read Rapport 1 XLSX cells, retaining source row number and selected original cell values.",
+    "Require exact valid orgnr, approved JA, rejected NEI, project number and nonblank title; exclude duplicate project numbers.",
+    "Convert numeric Excel 1900-epoch decision dates to ISO dates; missing/#N/A/invalid date becomes null.",
+    "Only explicit four-digit project years; no inferred dates or monetary benefit.",
+    "Group by exact applicant orgnr in sorted deterministic ZIP; no raw workbook committed.",
+    "Runtime deduplicates against published research project numbers; no subunit/parent/name expansion and zero HTTP."
+  ],
+  "limitations": [
+    "Historical approval is not proof of a claimed tax deduction, grant or cash payment.",
+    "Absence is not evidence of no approval; newer-system applications are not covered by this historical publication."
+  ]
+}
