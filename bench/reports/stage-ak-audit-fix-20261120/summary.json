@@ -1,0 +1,132 @@
+{
+  "old_combinations": {
+    "true_false": 1693,
+    "true_true": 0,
+    "false_false": 1124,
+    "other": 0
+  },
+  "statuses": {
+    "audit_opted_out": {
+      "claims": 1693,
+      "companies": 650
+    },
+    "audited": {
+      "claims": 1124,
+      "companies": 392
+    }
+  },
+  "HTTP_requests": 0,
+  "hand_checks": [
+    {
+      "company": "MYNT OG EIENDOM BESSAKER AS",
+      "orgnr": "912823970",
+      "value": "audit_opted_out",
+      "year": "2025",
+      "evidence": [
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+          "content_sha256": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+          "locator": "/2/revisjon/fravalgRevisjon",
+          "claim_span": "ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":3872158.00,\"egenkapital\":{\"sumEgenkapital\":678124.00,\"opptjentEgenkapital\":{\"sumOpptjentEgenkapital\":658455.0"
+        },
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+          "content_sha256": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+          "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+          "claim_span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":3872158.00,\"egenkapital\":{\"sumEgenkapital\":678124.00,\"opptjentEgenkapital\":{\"sumOpptj"
+        }
+      ]
+    },
+    {
+      "company": "FIKO EIENDOM AS",
+      "orgnr": "916729774",
+      "value": "audit_opted_out",
+      "year": "2025",
+      "evidence": [
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/916729774",
+          "content_sha256": "341bcfc71e330c6a374a975187966e95737ae1268df3169657ef6329df16aed0",
+          "locator": "/2/revisjon/fravalgRevisjon",
+          "claim_span": "ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":5361875.00,\"egenkapital\":{\"sumEgenkapital\":2384219.00,\"opptjentEgenkapital\":{\"sumOpptjentEgenkapital\":2354219"
+        },
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/916729774",
+          "content_sha256": "341bcfc71e330c6a374a975187966e95737ae1268df3169657ef6329df16aed0",
+          "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+          "claim_span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":5361875.00,\"egenkapital\":{\"sumEgenkapital\":2384219.00,\"opptjentEgenkapital\":{\"sumOppt"
+        }
+      ]
+    },
+    {
+      "company": "SQ URBAN LANDSKAP AS",
+      "orgnr": "919948493",
+      "value": "audit_opted_out",
+      "year": "2025",
+      "evidence": [
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/919948493",
+          "content_sha256": "4b50b723cebd82eac6887e492331f39af1eae50e60a13f45e3a4837889f92a96",
+          "locator": "/2/revisjon/fravalgRevisjon",
+          "claim_span": "ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":1560186.00,\"egenkapital\":{\"sumEgenkapital\":286625.00,\"opptjentEgenkapital\":{\"sumOpptjentEgenkapital\":256625.0"
+        },
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/919948493",
+          "content_sha256": "4b50b723cebd82eac6887e492331f39af1eae50e60a13f45e3a4837889f92a96",
+          "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+          "claim_span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":true},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":1560186.00,\"egenkapital\":{\"sumEgenkapital\":286625.00,\"opptjentEgenkapital\":{\"sumOpptj"
+        }
+      ]
+    },
+    {
+      "company": "DRAGEHAUGEN VERDI AS",
+      "orgnr": "917998787",
+      "value": "audited",
+      "year": "2025",
+      "evidence": [
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/917998787",
+          "content_sha256": "fc277cb31cff1e97477b4001983fb347f9f8c9c0cf064391a979aa7101089686",
+          "locator": "/2/revisjon/fravalgRevisjon",
+          "claim_span": "ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":21454758.00,\"egenkapital\":{\"sumEgenkapital\":17140509.00,\"opptjentEgenkapital\":{\"sumOpptjentEgenkapital\":8317"
+        },
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/917998787",
+          "content_sha256": "fc277cb31cff1e97477b4001983fb347f9f8c9c0cf064391a979aa7101089686",
+          "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+          "claim_span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":21454758.00,\"egenkapital\":{\"sumEgenkapital\":17140509.00,\"opptjentEgenkapital\":{\"sumO"
+        }
+      ]
+    },
+    {
+      "company": "MENSTAD NÆRINGSPARK AS",
+      "orgnr": "918049215",
+      "value": "audited",
+      "year": "2025",
+      "evidence": [
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918049215",
+          "content_sha256": "24c6c13c3377ac15ecd81ff8477ce9ea5221800e254d160f5d710e8e5b3ec491",
+          "locator": "/2/revisjon/fravalgRevisjon",
+          "claim_span": "ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":93745627.00,\"egenkapital\":{\"sumEgenkapital\":89096956.00,\"opptjentEgenkapital\":{\"sumOpptjentEgenkapital\":-217"
+        },
+        {
+          "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918049215",
+          "content_sha256": "24c6c13c3377ac15ecd81ff8477ce9ea5221800e254d160f5d710e8e5b3ec491",
+          "locator": "/2/revisjon/ikkeRevidertAarsregnskap",
+          "claim_span": "n\":\"store\",\"revisjon\":{\"ikkeRevidertAarsregnskap\":false,\"fravalgRevisjon\":false},\"regnkapsprinsipper\":{\"smaaForetak\":true,\"regnskapsregler\":\"regnskapslovenAlminneligRegler\"},\"egenkapitalGjeld\":{\"sumEgenkapitalGjeld\":93745627.00,\"egenkapital\":{\"sumEgenkapital\":89096956.00,\"opptjentEgenkapital\":{\"sumO"
+        }
+      ]
+    }
+  ],
+  "strict_verifier": {
+    "lines": 1000,
+    "published_claims": 177731,
+    "source_blobs_verified": 5183,
+    "synthesis_unverified_values": 0
+  },
+  "tests": {
+    "passed": 1754,
+    "failed": 0,
+    "seconds": 542.52
+  }
+}

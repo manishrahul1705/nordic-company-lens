@@ -106,3 +106,5 @@ Fresh default sample100 completed in 289.16 seconds including site rendering (re
 The full 1,000 offline replay passed the strict verifier with 177,731 published claims and zero unverified synthesis values. The initial full suite found activity-toggle and refresh-scope regressions. Registry activity now respects the toggle, and refresh restores the derivative from supported current identity before comparison. Existing tests were retained.
 
 Final full suite at the Stage AJ commit plus AK edits passed all 1,747 tests in 482.28 seconds. Both known evaluator network tests passed on this execution.
+
+The original single-flag audit_status mapping in this report is superseded by the [audit precision correction](../stage-ak-audit-fix-20261120/RESULTS.md), which cites both explicit booleans and distinguishes audit_opted_out.

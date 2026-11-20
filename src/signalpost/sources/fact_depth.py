@@ -2,7 +2,7 @@
 import re
 from datetime import date
 from ..models.evidence import digest, canonical
-from .extract import add
+from .extract import Section, add
 
 IDENTITY_EXTRA={
  'business_address_country_code':('forretningsadresse','landkode'),
@@ -99,10 +99,26 @@ def accounts(section,org,data,source):
             add(section,source,org,'accounts',prefix+'.'+name,value,f'/{idx}/'+'/'.join(path),reporting=period,effective=end)
             label(section,scope+' '+name.replace('_',' '))
         unaudited=get(row,('revisjon','ikkeRevidertAarsregnskap'))
-        if type(unaudited) is bool:
-            add(section,source,org,'accounts',prefix+'.audit_status',
-                'not_audited' if unaudited else 'audited',
+        opted_out=get(row,('revisjon','fravalgRevisjon'))
+        audited=get(row,('revisjon','revidertAarsregnskap'))
+        status = None
+        if type(unaudited) is bool and type(opted_out) is bool:
+            status = 'audit_opted_out' if opted_out else 'not_audited' if unaudited else 'audited'
+            if audited is not None and (type(audited) is not bool or audited != (status == 'audited')):
+                status = None
+        if status is not None:
+            audit_section = Section()
+            add(audit_section,source,org,'accounts',prefix+'.audit_status',
+                status, f'/{idx}/revisjon/fravalgRevisjon',reporting=period,effective=end)
+            claim = audit_section.claims[-1]
+            supporting = Section()
+            add(supporting,source,org,'accounts','audit_status_support',unaudited,
                 f'/{idx}/revisjon/ikkeRevidertAarsregnskap',reporting=period,effective=end)
+            known_evidence = {e.id for e in section.evidence}
+            section.evidence.extend(e for e in audit_section.evidence + supporting.evidence
+                                    if e.id not in known_evidence)
+            section.claims.append(claim)
+            claim.evidence_ids.extend(e.id for e in supporting.evidence)
             label(section,scope+' explicit audit status')
         reverse={path:name for name,path in PATHS.items()}
         for path,value in numeric_leaves(row):
