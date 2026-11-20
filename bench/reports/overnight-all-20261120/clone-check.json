@@ -1,0 +1,39 @@
+{
+  "clone_commit": "0594a69dd330cb35bc6f1948700cad5e1735d0e8",
+  "bench_runs_present": false,
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "bench/reports/stage-x-accuracy/reproduce.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.437,
+      "output": "{\"sampled\": 200, \"correct\": 200, \"wrong\": 0, \"doubtful\": 0, \"mechanical\": 153, \"hand\": 47, \"wilson_95_lower_bound\": 0.9812}\nOK: sample, population, mechanical checks and verdict tallies reproduced from committed data\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "bench/reports/stage-x-accuracy/attribution_audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.583,
+      "output": "{\"envelopes\": 1000, \"published_claims\": 165986, \"cited_evidence_records\": 166431, \"dangling\": 0, \"registry_mismatch\": 0, \"page_url_reused_across_envelopes\": 0, \"page_hash_reused_across_envelopes\": 0, \"foreign_label\": 0}\nOK: attribution audit reproduced from committed data\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\nordic-r4\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "bench/reports/overnight-all-20261120/accuracy/reproduce.py"
+      ],
+      "exit_code": 1,
+      "seconds": 2.355,
+      "output": "Traceback (most recent call last):\n  File \"C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\cache\\overnight-repro-20261120\\bench\\reports\\overnight-all-20261120\\accuracy\\reproduce.py\", line 75, in <module>\n    main()\n  File \"C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\cache\\overnight-repro-20261120\\bench\\reports\\overnight-all-20261120\\accuracy\\reproduce.py\", line 51, in main\n    if sample_p.read_text(encoding='utf-8').splitlines() != lines:\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Manish\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Manish\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Manish\\\\Downloads\\\\nordic-r4\\\\bench\\\\cache\\\\overnight-repro-20261120\\\\bench\\\\reports\\\\overnight-all-20261120\\\\accuracy\\\\sample.jsonl'\n"
+    }
+  ]
+}

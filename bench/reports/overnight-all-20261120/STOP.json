@@ -1,0 +1,21 @@
+{
+  "failed_step": 4,
+  "reason": "New Stage X clone reproduction missing accuracy/sample.jsonl; sample and verdicts excluded by JSONL ignore rule",
+  "failed_command": "python -X utf8 bench/reports/overnight-all-20261120/accuracy/reproduce.py (cwd fresh local clone)",
+  "exit_code": 1,
+  "completed": [
+    "feature commit",
+    "fresh-state live frozen 1000",
+    "strict integrity verifier",
+    "full suite",
+    "local Stage X sample and attribution audit",
+    "historical Stage X clone checks"
+  ],
+  "not_completed": [
+    "new Stage X clone reproduction",
+    "new attribution audit in clone after failure",
+    "README and SUBMISSION measured-number update"
+  ],
+  "workaround_attempted": false,
+  "pushed": false
+}

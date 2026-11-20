@@ -55,7 +55,9 @@ The unchanged committed Stage X extract/reproduce/attribution scripts were copie
 
 Attribution audit: 167,838 cited evidence records; **zero** dangling references, registry mismatch, cross-company URL/hash reuse or foreign labelled orgnr. The read-only reproduction and attribution checks both exit zero; logs and verification.json are retained. The separate historical brand_token_check.py hardcodes an older run and is not one of REPORT.md's two clone-reproduction commands; it was not represented as a clone-safe check here.
 
-Clone check: pending the report-data commit, then a fresh local clone with no bench/runs will run both read-only scripts. No live source access is needed for those two checks.
+**STOP ? clone reproduction failed.** A fresh local clone of report commit `0594a69` had no `bench/runs`. The historical Stage X reproduce.py and attribution_audit.py both passed. The new sample reproduce.py exited 1 with FileNotFoundError for `accuracy/sample.jsonl`. The repository JSONL ignore rule omitted the new `sample.jsonl` and `verdicts.jsonl` from the report commit; they existed only in the original working directory. See clone-check.json for the complete traceback. The new attribution script was not run in the clone after this failure.
+
+Per the user's stop-on-failure instruction, no missing file was force-added, no retry/workaround was attempted, and step 5 README/SUBMISSION measured-number updates were not performed. Local Stage X reproduction and attribution passed, but **the new review is not yet reproducible from a clone**. README/SUBMISSION remain at their pre-run measurements. Full live run, strict verifier and full suite results above remain valid. This report records the failure; it does not claim end-to-end success.
 
 ## Data terms
 
