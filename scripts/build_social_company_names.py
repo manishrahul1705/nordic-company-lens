@@ -1,24 +1,33 @@
-"""Build a withholding-only name index from the pinned local 411,160 corpus."""
-import gzip
-import hashlib
+"""Build the withholding-only name index from an official local BRREG bulk CSV."""
+import argparse
 import json
 from pathlib import Path
-from signalpost.web.social_universe import ARCHIVE_SHA,CONTENT_SHA,ROWS
+if __package__:
+    from .brreg_index_data import read_source, write_index
+else:
+    from brreg_index_data import read_source, write_index
 
-source=Path('bench/reports/osm-check/raw/universe.jsonl.gz')
-assert hashlib.sha256(source.read_bytes()).hexdigest()==ARCHIVE_SHA
-digest=hashlib.sha256();records=[]
-with gzip.open(source,'rb') as stream:
-    for line in stream:
-        digest.update(line);row=json.loads(line)
-        records.append([str(row['organisation_number']),row['name']])
-assert digest.hexdigest()==CONTENT_SHA and len(records)==ROWS and len(dict(records))==ROWS
-payload={'schema_version':1,'purpose':'withholding-only registered-name universe; never ownership or relationship proof',
-         'source_url':'https://builderr.ai/signalpost-company-universe-2025.jsonl.gz',
-         'archive_sha256':ARCHIVE_SHA,'content_sha256':CONTENT_SHA,'companies':records}
-out=Path('data/social_company_names.json.gz')
-out.write_bytes(gzip.compress(json.dumps(payload,ensure_ascii=False,separators=(',',':')).encode(),compresslevel=9,mtime=0))
-metadata={k:v for k,v in payload.items() if k!='companies'}
-metadata.update(rows=ROWS,bytes=out.stat().st_size,index_sha256=hashlib.sha256(out.read_bytes()).hexdigest())
-Path('data/social_company_names_build.json').write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf-8')
-print(json.dumps(metadata,indent=2))
+
+def build(source, download_manifest, destination, manifest_path):
+    records, provenance = read_source(source, download_manifest)
+    payload = {'schema_version': 2,
+        'purpose': 'withholding-only registered-name universe; never ownership or relationship proof',
+        **provenance,
+        'transformations': [
+            'Use every main-entity CSV row, without competition-cohort or legal-form filtering.',
+            'Validate organisation-number checksums; exclude invalid numbers or empty names.',
+            'Trim surrounding whitespace; preserve registered name spelling; reject duplicate numbers.',
+            'Retain only organisation number and registered name; sort by organisation number.',
+            'Serialize canonical UTF-8 JSON and gzip with mtime=0; no personal/contact fields retained.'],
+        'companies': [[org, name] for org, (name, _) in sorted(records.items())]}
+    return write_index(destination, payload, manifest_path, rows=len(records))
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('source', type=Path)
+    parser.add_argument('--download-manifest', type=Path, required=True)
+    parser.add_argument('--destination', type=Path, default=Path('data/social_company_names.json.gz'))
+    parser.add_argument('--manifest', type=Path, default=Path('data/social_company_names_build.json'))
+    args = parser.parse_args()
+    print(json.dumps(build(args.source, args.download_manifest, args.destination, args.manifest), indent=2))

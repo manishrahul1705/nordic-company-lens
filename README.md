@@ -1,6 +1,6 @@
 # Nordic Company Lens
 
-Current validation (20 November 2026): **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
+Current validation (20 November 2026): **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
 
 Nordic Company Lens researches Norwegian companies using official registries and bounded company-owned sources. It checks company identity, publishes evidence-linked facts and cited template summaries, and can generate searchable offline profiles. The Python import package and console command remain `signalpost`.
 
@@ -115,6 +115,12 @@ Step 15 bounds legal/subunit-name discovery to eight candidates, with Norwegian-
 
 
 ## Measured precision
+
+### Official BRREG index rebuild (20 November 2026)
+
+The full suite passes **1,660 tests** and the replay strict verifier passes with zero unverified values. The current name/domain collision indexes are rebuilt directly from the official Enhetsregisteret full CSV under NLOD 2.0, credited to Brønnøysundregistrene. The name index now covers **1,181,598 main entities** (16,130,532 bytes); the shared-domain index covers **5,679 domains** (202,486 bytes). The manifests record the official URL, retrieval timestamp, dataset/index hashes, row counts and transformations. No raw dataset is bundled.
+
+A zero-HTTP saved-page replay of the combined run changes **34 claims**, all for TENSIO AS (922828172), under the unchanged shared-site guard. Replay totals: **167,166 supported facts, 114 websites, 62 social companies / 126 profiles**. Brands, GLEIF, TED, hiring and the new registry information counts are unchanged. The historical live measurement below remains the actual 1,309.681-second run with the earlier indexes; this rebuild is a replay, not a new live timing. [Official provenance, exact before/after and verification](bench/reports/brreg-indexes-20261120/RESULTS.md).
 
 ### Latest combined live measurement (20 November 2026)
 

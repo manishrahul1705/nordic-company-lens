@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "purpose": "conservative shared-domain nominations; never ownership proof",
+  "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+  "retrieved_at": "2026-11-20T01:21:14.581183+00:00",
+  "dataset_sha256": "f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+  "dataset_bytes": 155330892,
+  "dataset_rows": 1181598,
+  "source_format": "gzip-compressed official UTF-8 CSV",
+  "invalid_orgnr_rows_excluded": 0,
+  "empty_name_rows_excluded": 0,
+  "credit": "Brønnøysundregistrene",
+  "licence": "NLOD 2.0",
+  "licence_url": "https://data.norge.no/nlod/en/2.0",
+  "transformations": [
+    "Read main-entity organisasjonsnummer and hjemmeside from the official full CSV.",
+    "Validate organisation numbers; trim fields and exclude empty registered names.",
+    "Normalize website URLs with the production policy and group by registrable domain.",
+    "Keep domains naming at least two distinct valid organisations; sort domains and numbers.",
+    "Serialize canonical UTF-8 JSON and gzip with mtime=0; no page bodies or contact fields."
+  ],
+  "rows": 5679,
+  "source_entities": 1181598,
+  "website_rows": 113836,
+  "domain_orgnr_pairs": 34330,
+  "bytes": 202486,
+  "index_sha256": "9311fad349f284f93080720b9a557061d0806a9e5eaca38cfc5f5a9198031661"
+}

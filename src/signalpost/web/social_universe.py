@@ -1,4 +1,4 @@
-"""Frozen-universe name collisions can withhold a profile, never prove ownership."""
+"""Official BRREG snapshot name collisions can withhold a profile, never prove ownership."""
 import gzip
 import hashlib
 import json
@@ -9,10 +9,9 @@ from pathlib import Path
 from urllib.parse import parse_qs,urlsplit
 from .shared_identifiers import folded
 
-ARCHIVE_SHA='1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384'
-CONTENT_SHA='b82d6a3e7231d1759a958c282bc4366b80ec2fab8095053d8ed7fa9cd01bc838'
-ROWS=411160
-INDEX_SHA='73662a20395c53336e168760249b78de0744180ab6a40f96784aab29ecb941e7'
+DATASET_SHA='f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba'
+ROWS=1181598
+INDEX_SHA='f4d34fa1fe6f564bd241098fe7a00e944c5296d1d1760e0ab7bd668815a5ee38'
 LOCK=threading.RLock()
 FORMS={'as','asa','ans','da','enk','nuf','sa','ba','ks','iks','sti'}
 QUALIFIERS=('gruppen','norway','norge','global','group')
@@ -50,13 +49,14 @@ def _index():
         path=next(p for p in paths if p.exists())
         assert hashlib.sha256(path.read_bytes()).hexdigest()==INDEX_SHA
         with gzip.open(path,'rt',encoding='utf-8') as source:data=json.load(source)
-        assert data['archive_sha256']==ARCHIVE_SHA and data['content_sha256']==CONTENT_SHA
+        assert data['schema_version']==2 and data['dataset_sha256']==DATASET_SHA
+        assert data['source_url']=='https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv'
         records=data['companies'];assert len(records)==ROWS
         names=dict(records);assert len(names)==ROWS
         keys={}
         for org,name in records:
             for key in name_keys(name):keys.setdefault(key,[]).append(org)
-        return {'names':names,'keys':keys,'rows':ROWS,'archive_sha256':ARCHIVE_SHA}
+        return {'names':names,'keys':keys,'rows':ROWS,'dataset_sha256':DATASET_SHA,'source_url':data['source_url']}
     except (OSError,ValueError,KeyError,TypeError,AssertionError,StopIteration):
         return None  # Missing/corrupt protection must never silently authorize.
 
@@ -110,4 +110,4 @@ def assess(url,context):
     blocked=[m for m in details if not m['permitted_registry_relationship']]
     return {'state':'withhold' if blocked else 'allow','reason':'other_registered_company' if blocked else None,
             'matches':details,'normalised_handle_keys':sorted(handle_keys(handle(url))),
-            'universe_rows':data['rows'],'universe_archive_sha256':data['archive_sha256']}
+            'universe_rows':data['rows'],'universe_dataset_sha256':data['dataset_sha256'],'universe_source_url':data['source_url']}

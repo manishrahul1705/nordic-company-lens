@@ -1,39 +1,44 @@
-"""Build conservative shared-domain nominations from a local frozen corpus.
-
-No network access. Nominations can only withhold shared-site content, never
-authorize ownership or publication. Full supplied BRREG snapshots additionally
-contribute every registry website, including companies outside the input batch.
-"""
+"""Build shared-domain withholding nominations from an official local BRREG bulk CSV."""
 import argparse
-import gzip
-import hashlib
 import json
 from pathlib import Path
+if __package__:
+    from .brreg_index_data import read_source, write_index
+else:
+    from brreg_index_data import read_source, write_index
 from signalpost.web.policy import domain, normalize_url
-from signalpost.identity.orgnr import valid
 
 
-def build(source, destination):
+def build(source, download_manifest, destination, manifest_path):
+    records, provenance = read_source(source, download_manifest)
     owners = {}
-    with gzip.open(source, 'rt', encoding='utf8') as handle:
-        for line in handle:
-            row = json.loads(line)
-            org = row['organisation_number']
-            url = normalize_url(row.get('website'))
-            if valid(org) and url:
-                owners.setdefault(domain(url), set()).add(org)
-    data = {'schema_version': 1, 'purpose': 'conservative shared-domain nominations; never ownership proof',
-            'source_url': 'https://builderr.ai/signalpost-company-universe-2025.jsonl.gz',
-            'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
-            'domains': {host: sorted(orgs) for host, orgs in sorted(owners.items()) if len(orgs) >= 2}}
-    destination.write_bytes(gzip.compress(json.dumps(data, separators=(',', ':'), sort_keys=True).encode(), mtime=0))
-    print(json.dumps({'shared_domains': len(data['domains']), 'bytes': destination.stat().st_size,
-                      'source_sha256': data['source_sha256']}))
+    website_rows = 0
+    for org, (_, website) in records.items():
+        url = normalize_url(website)
+        host = domain(url) if url else ''
+        if host:
+            owners.setdefault(host, set()).add(org)
+            website_rows += 1
+    domains = {host: sorted(orgs) for host, orgs in sorted(owners.items()) if len(orgs) >= 2}
+    payload = {'schema_version': 2, 'purpose': 'conservative shared-domain nominations; never ownership proof',
+        **provenance,
+        'transformations': [
+            'Read main-entity organisasjonsnummer and hjemmeside from the official full CSV.',
+            'Validate organisation numbers; trim fields and exclude empty registered names.',
+            'Normalize website URLs with the production policy and group by registrable domain.',
+            'Keep domains naming at least two distinct valid organisations; sort domains and numbers.',
+            'Serialize canonical UTF-8 JSON and gzip with mtime=0; no page bodies or contact fields.'],
+        'domains': domains}
+    return write_index(destination, payload, manifest_path, rows=len(domains),
+                       source_entities=len(records), website_rows=website_rows,
+                       domain_orgnr_pairs=sum(map(len, domains.values())))
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source', type=Path)
-    parser.add_argument('destination', type=Path)
+    parser.add_argument('--download-manifest', type=Path, required=True)
+    parser.add_argument('--destination', type=Path, default=Path('src/signalpost/data/registry_domains.json.gz'))
+    parser.add_argument('--manifest', type=Path, default=Path('src/signalpost/data/registry_domains_build.json'))
     args = parser.parse_args()
-    build(args.source, args.destination)
+    print(json.dumps(build(args.source, args.download_manifest, args.destination, args.manifest), indent=2))

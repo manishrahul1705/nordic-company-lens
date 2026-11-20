@@ -1,0 +1,46 @@
+{
+  "old_names": {
+    "rows": 411160,
+    "bytes": 4748226
+  },
+  "new_names": {
+    "rows": 1181598,
+    "bytes": 16130532
+  },
+  "old_domains": {
+    "rows": 2258,
+    "bytes": 86911
+  },
+  "new_domains": {
+    "rows": 5679,
+    "bytes": 202486
+  },
+  "name_orgnrs_added": 772378,
+  "name_orgnrs_removed": 1940,
+  "registered_names_changed": 1804,
+  "domains_added": 3465,
+  "domains_removed": 44,
+  "shared_domain_owner_sets_changed": 455,
+  "source": {
+    "credit": "Brønnøysundregistrene",
+    "dataset_bytes": 155330892,
+    "dataset_rows": 1181598,
+    "dataset_sha256": "f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba",
+    "empty_name_rows_excluded": 0,
+    "invalid_orgnr_rows_excluded": 0,
+    "licence": "NLOD 2.0",
+    "licence_url": "https://data.norge.no/nlod/en/2.0",
+    "purpose": "withholding-only registered-name universe; never ownership or relationship proof",
+    "retrieved_at": "2026-11-20T01:21:14.581183+00:00",
+    "schema_version": 2,
+    "source_format": "gzip-compressed official UTF-8 CSV",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+    "transformations": [
+      "Use every main-entity CSV row, without competition-cohort or legal-form filtering.",
+      "Validate organisation-number checksums; exclude invalid numbers or empty names.",
+      "Trim surrounding whitespace; preserve registered name spelling; reject duplicate numbers.",
+      "Retain only organisation number and registered name; sort by organisation number.",
+      "Serialize canonical UTF-8 JSON and gzip with mtime=0; no personal/contact fields retained."
+    ]
+  }
+}

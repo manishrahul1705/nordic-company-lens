@@ -1,6 +1,6 @@
 import json
 import pytest
-from signalpost.web.social_universe import assess,index,name_keys,handle_keys,registered_relations,ROWS,ARCHIVE_SHA
+from signalpost.web.social_universe import assess,index,name_keys,handle_keys,registered_relations,ROWS,DATASET_SHA
 from signalpost.web.social_links import veto
 from signalpost.runner import placeholder
 from signalpost.sources.extract import Section,Source,add
@@ -13,8 +13,8 @@ OTHER='937920040'
 
 def test_complete_pinned_universe_is_available():
     data=index()
-    assert data['rows']==ROWS==411160 and len(data['names'])==411160
-    assert data['archive_sha256']==ARCHIVE_SHA
+    assert data['rows']==ROWS==1181598 and len(data['names'])==ROWS
+    assert data['dataset_sha256']==DATASET_SHA
     assert data['names'][OTHER]=='HALLMAKER AS'
 
 
@@ -24,7 +24,7 @@ def test_complete_pinned_universe_is_available():
  ('https://facebook.com/valdresost','996979660',True,'914992605'),
  ('https://instagram.com/scenehuset','971558415',False,None),
 ])
-def test_requested_real_handles_against_all_411160(url,org,blocked,match):
+def test_requested_real_handles_against_official_full_snapshot(url,org,blocked,match):
     result=assess(url,{'organisation_number':org})
     assert (result['state']=='withhold')==blocked
     if match:assert match in {r['organisation_number'] for r in result['matches']}
@@ -79,7 +79,7 @@ def test_relationship_exceptions_fail_closed(kind,bad):
 def test_one_allowed_collision_does_not_allow_another_unrelated_company(monkeypatch):
     import signalpost.web.social_universe as universe
     monkeypatch.setattr(universe,'index',lambda:{'names':{OTHER:'Hallmaker AS','914992605':'Hallmaker AS'},
-        'keys':{'hallmaker':[OTHER,'914992605']},'rows':ROWS,'archive_sha256':ARCHIVE_SHA})
+        'keys':{'hallmaker':[OTHER,'914992605']},'rows':ROWS,'dataset_sha256':DATASET_SHA,'source_url':'https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv'})
     row=relationship('parent')
     result=assess('https://instagram.com/hallmakergroup',context_for_envelope(row))
     assert result['state']=='withhold' and len(result['matches'])==2

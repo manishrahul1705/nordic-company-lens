@@ -1,17 +1,11 @@
-# Frozen company-name collision index
+# Official BRREG company-name collision index
 
-Source: the competition's public [411,160-company universe](https://builderr.ai/signalpost-company-universe-2025.jsonl.gz), already retained locally for sampling and shared-domain withholding.
+Contains data under [NLOD 2.0](https://data.norge.no/nlod/en/2.0) distributed by Brønnøysundregistrene. Source: [official Enhetsregisteret full CSV](https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv), retrieved 2026-11-20T01:21:14.581183+00:00. Dataset SHA-256: `f3f4f93d2e4c597c15b3d08193d0a055e0bcc788a858b8bec8fcf7e8438f1dba`.
 
-`social_company_names.json.gz` contains only organisation numbers and registered-name strings from every row of that pinned snapshot. It is used to **withhold** potentially misattributed social profiles. It is never evidence of website ownership, live company status, or a corporate relationship, and cannot authorize a claim. A missing/corrupt index fails closed.
+`social_company_names.json.gz` contains all **1,181,598 main-entity organisation-number/name pairs**, with no competition-cohort or legal-form restriction. It replaces the earlier competition-derived 411,160-name index. The full dataset was used; the raw CSV is not distributed. Only organisation numbers and registered names are retained, with whitespace trimming and sorting. Runtime normalization for collisions is unchanged. No contact/person fields from the CSV are retained in the index.
 
-The corpus is a frozen snapshot, not a current search of all Norwegian registrations. A name absent from this corpus is not asserted to be absent from today's registry. Case, Norwegian-letter transliteration, punctuation/spacing and legal forms are normalized; trailing social qualifiers such as `group`, `gruppen` and `global` are checked as additional full-name keys. There is no substring/fuzzy-name ownership inference.
+This is a frozen snapshot, not a live registry query. The index is a withholding-only safeguard against social links matching a different registered company. It never establishes ownership, current company status or a corporate relationship. Missing/corrupt data fails closed. Exceptions still require explicit available own-company BRREG subunit, parent or subsidiary claims with proper registry citations; siblings, similar names and website branding do not qualify.
 
-Relationship exceptions require explicit available own-company BRREG subunit, parent or subsidiary claims with registry citations. Company-name similarity, website branding, a sibling in the same group, and stale carried-forward relationships cannot grant an exception. Other social vetoes remain effective.
+The index is 16,130,532 bytes. `social_company_names_build.json` records the source/retrieval date, dataset and index hashes, source/output row counts, excluded rows, transformations, attribution and licence. `scripts/build_social_company_names.py` rebuilds from the ignored official CSV and download manifest without network access. The index and notice are included in the wheel; runtime makes no dataset download.
 
-Archive SHA-256: `1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384`.
-
-Decompressed corpus SHA-256: `b82d6a3e7231d1759a958c282bc4366b80ec2fab8095053d8ed7fa9cd01bc838`.
-
-Build: `python scripts/build_social_company_names.py`, with no network access. Machine-readable provenance, row count, compressed size and index SHA-256 are in `social_company_names_build.json`. The index is included in the distributable wheel; no runtime corpus download occurs. Repository MIT licensing covers code/documentation, not a new licence grant over the upstream dataset.
-
-Upstream licence status: the downloaded competition JSONL contains no licence statement. Its public URL does not establish a general redistribution licence. No upstream MIT or NLOD licence is asserted for this derived index; permission remains unresolved. See `docs/SOURCES.md`.
+Our changes: validate organisation numbers, select the two fields, trim surrounding whitespace, sort by organisation number, serialize JSON and gzip with mtime=0. Registered names are not expanded or inferred. Upstream data retains NLOD 2.0 terms; repository MIT applies to our code/documentation, not a replacement licence over BRREG data.
