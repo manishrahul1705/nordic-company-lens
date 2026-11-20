@@ -1,0 +1,1428 @@
+{
+  "baseline": "bench\\runs\\stage-am-live1000",
+  "eligible_not_available_companies": 101,
+  "candidate_count": 116,
+  "before": {
+    "sites": {
+      "companies": 110,
+      "claims": 110
+    },
+    "brands": {
+      "companies": 19,
+      "claims": 19
+    },
+    "social": {
+      "companies": 60,
+      "claims": 123
+    },
+    "news": {
+      "companies": 30,
+      "claims": 109
+    }
+  },
+  "after": {
+    "sites": {
+      "companies": 113,
+      "claims": 113
+    },
+    "brands": {
+      "companies": 19,
+      "claims": 19
+    },
+    "social": {
+      "companies": 62,
+      "claims": 126
+    },
+    "news": {
+      "companies": 30,
+      "claims": 109
+    }
+  },
+  "recovered_sites": [
+    {
+      "orgnr": "915279082",
+      "company": "T\u00d8MRER S. FAGERBEKK AS",
+      "url": "https://www.sfagerbekk.no"
+    },
+    {
+      "orgnr": "983520944",
+      "company": "SPINELL FRIS\u00d8R AS",
+      "url": "https://www.spinellfrisor.no"
+    },
+    {
+      "orgnr": "930832707",
+      "company": "DOGLEG AS",
+      "url": "https://dogleg.no"
+    }
+  ],
+  "extra_HTTP": 291,
+  "isolated_live_and_final_guard_seconds": 279.166,
+  "second_pass": {
+    "eligible": 101,
+    "attempted": 100,
+    "candidates": 114,
+    "candidates_fetched": 17,
+    "recovered": 3,
+    "requests": 291,
+    "seconds": 213.078,
+    "companies": [
+      {
+        "organisation_number": "936276075",
+        "details": {
+          "candidates": [
+            "mbergum.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.531
+        }
+      },
+      {
+        "organisation_number": "920597122",
+        "details": {
+          "candidates": [
+            "arcticgrill.no",
+            "arcticgrill.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 3,
+          "seconds": 45.0
+        }
+      },
+      {
+        "organisation_number": "914582660",
+        "details": {
+          "candidates": [
+            "seriva.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.61
+        }
+      },
+      {
+        "organisation_number": "915483976",
+        "details": {
+          "candidates": [
+            "ayinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 45.015
+        }
+      },
+      {
+        "organisation_number": "923219137",
+        "details": {
+          "candidates": [
+            "green4you.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.656
+        }
+      },
+      {
+        "organisation_number": "993327182",
+        "details": {
+          "candidates": [
+            "norwegianbusinesspavilions.no",
+            "norwegianbusinesspavilions.com"
+          ],
+          "attempted": false,
+          "recovered": false,
+          "reason": "company_budget_exhausted"
+        }
+      },
+      {
+        "organisation_number": "929002733",
+        "details": {
+          "candidates": [
+            "hvalermarinepark.no",
+            "hvaler-marinepark.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.625
+        }
+      },
+      {
+        "organisation_number": "981391594",
+        "details": {
+          "candidates": [
+            "terob.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.485
+        }
+      },
+      {
+        "organisation_number": "913147383",
+        "details": {
+          "candidates": [
+            "nymane.no",
+            "nymane.com",
+            "nymaane.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 6,
+          "seconds": 45.015
+        }
+      },
+      {
+        "organisation_number": "930884286",
+        "details": {
+          "candidates": [
+            "advokatkontakt.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.079
+        }
+      },
+      {
+        "organisation_number": "996744744",
+        "details": {
+          "candidates": [
+            "norconnorway.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.266
+        }
+      },
+      {
+        "organisation_number": "932087650",
+        "details": {
+          "candidates": [
+            "bjoerntvedteiendom.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.156
+        }
+      },
+      {
+        "organisation_number": "942393679",
+        "details": {
+          "candidates": [
+            "harveland.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.11
+        }
+      },
+      {
+        "organisation_number": "936056687",
+        "details": {
+          "candidates": [
+            "pkholding.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 3.829
+        }
+      },
+      {
+        "organisation_number": "989998285",
+        "details": {
+          "candidates": [
+            "spray.no",
+            "byggfirmaerikjordheim.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.562
+        }
+      },
+      {
+        "organisation_number": "923172874",
+        "details": {
+          "candidates": [
+            "boligsameiet-skaret.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.109
+        }
+      },
+      {
+        "organisation_number": "933458032",
+        "details": {
+          "candidates": [
+            "motorsyklisten.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 8,
+          "seconds": 11.203
+        }
+      },
+      {
+        "organisation_number": "989171984",
+        "details": {
+          "candidates": [
+            "sag-holding.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 17.063
+        }
+      },
+      {
+        "organisation_number": "927129159",
+        "details": {
+          "candidates": [
+            "cbonw5.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.172
+        }
+      },
+      {
+        "organisation_number": "911604566",
+        "details": {
+          "candidates": [
+            "kragero-transportsentral.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.156
+        }
+      },
+      {
+        "organisation_number": "992068434",
+        "details": {
+          "candidates": [
+            "krimsinvestment.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.125
+        }
+      },
+      {
+        "organisation_number": "995243822",
+        "details": {
+          "candidates": [
+            "casis.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 47.187
+        }
+      },
+      {
+        "organisation_number": "935999820",
+        "details": {
+          "candidates": [
+            "kamillasundenymark.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.047
+        }
+      },
+      {
+        "organisation_number": "971456299",
+        "details": {
+          "candidates": [
+            "fellesforbundet.org",
+            "fellesforbundettrondheimbygningmalekontor.no",
+            "fellesforbundet-trondheim-bygning-malekontor.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.187
+        }
+      },
+      {
+        "organisation_number": "931326201",
+        "details": {
+          "candidates": [
+            "salti.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.062
+        }
+      },
+      {
+        "organisation_number": "989987291",
+        "details": {
+          "candidates": [
+            "boreiendom.no",
+            "boereiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.219
+        }
+      },
+      {
+        "organisation_number": "918407766",
+        "details": {
+          "candidates": [
+            "bluemarineinvest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.047
+        }
+      },
+      {
+        "organisation_number": "933372332",
+        "details": {
+          "candidates": [
+            "remote-robotic-systems.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.047
+        }
+      },
+      {
+        "organisation_number": "987038284",
+        "details": {
+          "candidates": [
+            "skinorway.com",
+            "ski-norway.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 5,
+          "seconds": 45.344
+        }
+      },
+      {
+        "organisation_number": "935499984",
+        "details": {
+          "candidates": [
+            "transpartner.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.984
+        }
+      },
+      {
+        "organisation_number": "931338900",
+        "details": {
+          "candidates": [
+            "svv-holding.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 6,
+          "seconds": 22.156
+        }
+      },
+      {
+        "organisation_number": "931708694",
+        "details": {
+          "candidates": [
+            "co2transport.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 43.672
+        }
+      },
+      {
+        "organisation_number": "911599287",
+        "details": {
+          "candidates": [
+            "spitsbergenlogistikk.no",
+            "spitsbergen-logistikk.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 36.453
+        }
+      },
+      {
+        "organisation_number": "992123656",
+        "details": {
+          "candidates": [
+            "torleif-larsen.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.156
+        }
+      },
+      {
+        "organisation_number": "836440862",
+        "details": {
+          "candidates": [
+            "akillestoeyen.no",
+            "akilles-toeyen.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.204
+        }
+      },
+      {
+        "organisation_number": "927211033",
+        "details": {
+          "candidates": [
+            "highcamp.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 17,
+          "seconds": 31.359
+        }
+      },
+      {
+        "organisation_number": "984821115",
+        "details": {
+          "candidates": [
+            "haraldvernes.no",
+            "harald-vernes.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.172
+        }
+      },
+      {
+        "organisation_number": "889806192",
+        "details": {
+          "candidates": [
+            "sjoteknikk.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.094
+        }
+      },
+      {
+        "organisation_number": "957883303",
+        "details": {
+          "candidates": [
+            "honningsvaag-mek-verksted.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.062
+        }
+      },
+      {
+        "organisation_number": "915279082",
+        "details": {
+          "candidates": [
+            "sfagerbekk.no"
+          ],
+          "attempted": true,
+          "recovered": true,
+          "reason": "second_pass_timeout",
+          "fetched": 1,
+          "requests": 21,
+          "seconds": 45.032
+        }
+      },
+      {
+        "organisation_number": "915261000",
+        "details": {
+          "candidates": [
+            "paletten-restaurant.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 11.421
+        }
+      },
+      {
+        "organisation_number": "936597386",
+        "details": {
+          "candidates": [
+            "helgheimnordicinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 1.328
+        }
+      },
+      {
+        "organisation_number": "928463923",
+        "details": {
+          "candidates": [
+            "anssec.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 2,
+          "seconds": 18.61
+        }
+      },
+      {
+        "organisation_number": "971400862",
+        "details": {
+          "candidates": [
+            "olga-jensens-legat-anny-trondsens-minne.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 1.265
+        }
+      },
+      {
+        "organisation_number": "936681514",
+        "details": {
+          "candidates": [
+            "arketypholding.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.86
+        }
+      },
+      {
+        "organisation_number": "998024684",
+        "details": {
+          "candidates": [
+            "schwenkesoenn.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.453
+        }
+      },
+      {
+        "organisation_number": "995516926",
+        "details": {
+          "candidates": [
+            "skogebygg.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.968
+        }
+      },
+      {
+        "organisation_number": "995133687",
+        "details": {
+          "candidates": [
+            "alfa-radon-norge.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.984
+        }
+      },
+      {
+        "organisation_number": "993395919",
+        "details": {
+          "candidates": [
+            "lkg.no",
+            "carlsonhealthyoils.no",
+            "carlson-healthy-oils.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 36.266
+        }
+      },
+      {
+        "organisation_number": "996233391",
+        "details": {
+          "candidates": [
+            "muffins.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 10,
+          "seconds": 24.563
+        }
+      },
+      {
+        "organisation_number": "834141582",
+        "details": {
+          "candidates": [
+            "ower-trafikkskole.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.422
+        }
+      },
+      {
+        "organisation_number": "983103030",
+        "details": {
+          "candidates": [
+            "storedalenkraftverk.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.781
+        }
+      },
+      {
+        "organisation_number": "919650826",
+        "details": {
+          "candidates": [
+            "tuttifrutti.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 7,
+          "seconds": 9.672
+        }
+      },
+      {
+        "organisation_number": "915884482",
+        "details": {
+          "candidates": [
+            "finnmarkrensefisk.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 2.938
+        }
+      },
+      {
+        "organisation_number": "988236756",
+        "details": {
+          "candidates": [
+            "byggtema.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 11,
+          "seconds": 14.125
+        }
+      },
+      {
+        "organisation_number": "985868972",
+        "details": {
+          "candidates": [
+            "fosseikeiendom.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.188
+        }
+      },
+      {
+        "organisation_number": "993388025",
+        "details": {
+          "candidates": [
+            "tore-grondahl.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.157
+        }
+      },
+      {
+        "organisation_number": "950137169",
+        "details": {
+          "candidates": [
+            "loken-borettslag.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.141
+        }
+      },
+      {
+        "organisation_number": "921715528",
+        "details": {
+          "candidates": [
+            "jhf-eiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.14
+        }
+      },
+      {
+        "organisation_number": "989248936",
+        "details": {
+          "candidates": [
+            "kaasen-invest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.219
+        }
+      },
+      {
+        "organisation_number": "928066193",
+        "details": {
+          "candidates": [
+            "leseth-invest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.203
+        }
+      },
+      {
+        "organisation_number": "983520944",
+        "details": {
+          "candidates": [
+            "spinellfrisor.no"
+          ],
+          "attempted": true,
+          "recovered": true,
+          "fetched": 1,
+          "requests": 14,
+          "seconds": 16.797
+        }
+      },
+      {
+        "organisation_number": "984290535",
+        "details": {
+          "candidates": [
+            "mosjoenkantinedrift.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.125
+        }
+      },
+      {
+        "organisation_number": "829695472",
+        "details": {
+          "candidates": [
+            "four-seasons-sushi.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.063
+        }
+      },
+      {
+        "organisation_number": "935213908",
+        "details": {
+          "candidates": [
+            "trivelig-hjem-bygg-og-eiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.141
+        }
+      },
+      {
+        "organisation_number": "952049070",
+        "details": {
+          "candidates": [
+            "porta.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 3.735
+        }
+      },
+      {
+        "organisation_number": "997475968",
+        "details": {
+          "candidates": [
+            "antoc.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 3,
+          "seconds": 3.515
+        }
+      },
+      {
+        "organisation_number": "991450084",
+        "details": {
+          "candidates": [
+            "lysetskriger.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 7,
+          "seconds": 12.312
+        }
+      },
+      {
+        "organisation_number": "825986332",
+        "details": {
+          "candidates": [
+            "geirtech.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 7,
+          "seconds": 6.735
+        }
+      },
+      {
+        "organisation_number": "989338811",
+        "details": {
+          "candidates": [
+            "illberginvest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.125
+        }
+      },
+      {
+        "organisation_number": "921707924",
+        "details": {
+          "candidates": [
+            "kvannli.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.125
+        }
+      },
+      {
+        "organisation_number": "918765662",
+        "details": {
+          "candidates": [
+            "fornax.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 4.547
+        }
+      },
+      {
+        "organisation_number": "930832707",
+        "details": {
+          "candidates": [
+            "dogleg.no"
+          ],
+          "attempted": true,
+          "recovered": true,
+          "fetched": 1,
+          "requests": 12,
+          "seconds": 14.859
+        }
+      },
+      {
+        "organisation_number": "933058174",
+        "details": {
+          "candidates": [
+            "minilokaler.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.094
+        }
+      },
+      {
+        "organisation_number": "923566031",
+        "details": {
+          "candidates": [
+            "trondheimhotell.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.171
+        }
+      },
+      {
+        "organisation_number": "928035212",
+        "details": {
+          "candidates": [
+            "mediacitydrammen.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 1,
+          "requests": 4,
+          "seconds": 18.156
+        }
+      },
+      {
+        "organisation_number": "913737474",
+        "details": {
+          "candidates": [
+            "tonholding.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.156
+        }
+      },
+      {
+        "organisation_number": "995652935",
+        "details": {
+          "candidates": [
+            "bertmarknorge.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.078
+        }
+      },
+      {
+        "organisation_number": "921044186",
+        "details": {
+          "candidates": [
+            "raptorinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 45.015
+        }
+      },
+      {
+        "organisation_number": "922753768",
+        "details": {
+          "candidates": [
+            "sorlie-holding.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.172
+        }
+      },
+      {
+        "organisation_number": "920417892",
+        "details": {
+          "candidates": [
+            "holbergskipsinvest.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.094
+        }
+      },
+      {
+        "organisation_number": "921186924",
+        "details": {
+          "candidates": [
+            "unime.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 6.015
+        }
+      },
+      {
+        "organisation_number": "913772431",
+        "details": {
+          "candidates": [
+            "arepoinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.156
+        }
+      },
+      {
+        "organisation_number": "828565362",
+        "details": {
+          "candidates": [
+            "tilinspirasjoninterioertjenester.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.109
+        }
+      },
+      {
+        "organisation_number": "917283109",
+        "details": {
+          "candidates": [
+            "cl-bygg-eiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.047
+        }
+      },
+      {
+        "organisation_number": "918004440",
+        "details": {
+          "candidates": [
+            "tudal-eiendom.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.047
+        }
+      },
+      {
+        "organisation_number": "985803722",
+        "details": {
+          "candidates": [
+            "fossumingero.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.25
+        }
+      },
+      {
+        "organisation_number": "913321006",
+        "details": {
+          "candidates": [
+            "rostendrift.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.109
+        }
+      },
+      {
+        "organisation_number": "812753932",
+        "details": {
+          "candidates": [
+            "time2trade.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 43.078
+        }
+      },
+      {
+        "organisation_number": "994986740",
+        "details": {
+          "candidates": [
+            "svananeset.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 0,
+          "seconds": 0.172
+        }
+      },
+      {
+        "organisation_number": "922154635",
+        "details": {
+          "candidates": [
+            "skattekisten.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 3,
+          "seconds": 45.0
+        }
+      },
+      {
+        "organisation_number": "899100492",
+        "details": {
+          "candidates": [
+            "novahousing.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 8,
+          "seconds": 11.266
+        }
+      },
+      {
+        "organisation_number": "921443234",
+        "details": {
+          "candidates": [
+            "promotransport.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 45.015
+        }
+      },
+      {
+        "organisation_number": "912342409",
+        "details": {
+          "candidates": [
+            "faune.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 3,
+          "seconds": 45.016
+        }
+      },
+      {
+        "organisation_number": "919931477",
+        "details": {
+          "candidates": [
+            "seatruck.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.14
+        }
+      },
+      {
+        "organisation_number": "934882237",
+        "details": {
+          "candidates": [
+            "tqinvest.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "reason": "second_pass_timeout",
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 45.031
+        }
+      },
+      {
+        "organisation_number": "988836311",
+        "details": {
+          "candidates": [
+            "kaikanten.org"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.109
+        }
+      },
+      {
+        "organisation_number": "985090572",
+        "details": {
+          "candidates": [
+            "musikkgarasjen.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.094
+        }
+      },
+      {
+        "organisation_number": "914718139",
+        "details": {
+          "candidates": [
+            "stianiversen.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 8,
+          "seconds": 35.782
+        }
+      },
+      {
+        "organisation_number": "935856507",
+        "details": {
+          "candidates": [
+            "tjelland.no"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.094
+        }
+      },
+      {
+        "organisation_number": "998535611",
+        "details": {
+          "candidates": [
+            "skistad.com"
+          ],
+          "attempted": true,
+          "recovered": false,
+          "fetched": 0,
+          "requests": 4,
+          "seconds": 35.375
+        }
+      }
+    ],
+    "unexpected_failures": 0
+  },
+  "pooled_requests_including_saved": 11746,
+  "pooled_cap": 19000,
+  "max_company_requests": 40,
+  "remaining_crawl_seconds_at_start": 1923.14,
+  "remaining_crawl_seconds_after_live": 1595.906,
+  "DNS_fallback_policy": "Shared production context; conservatively assume selected companies already spent their original 10-second public-DNS fallback allowance. Primary DNS remains enabled.",
+  "deadline_hits": 0,
+  "strict_verifier": {
+    "lines": 1000,
+    "schema_valid": true,
+    "published_claims": 178640,
+    "source_blobs_verified": 5965,
+    "synthesis_companies": 1000,
+    "synthesis_sentences": 2548,
+    "synthesis_unverified_values": 0
+  },
+  "total_replay_seconds": 406.217,
+  "prior_official_activity_claims_retained_for_pipeline_order": 31,
+  "offline_correction_HTTP": 0
+}

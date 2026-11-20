@@ -7,16 +7,30 @@ from .policy import DNS_ORG,DNS_FALLBACK_STATE
 from ..budget import SourceFailure
 
 TRANSIENT={'website_timeout','website_connect_error','website_tls_error','dns_timeout','dns_servfail','dns_unavailable','website_http_5xx'}
+ABSENCE_TRANSIENT={'website_timeout','website_connect_error','dns_timeout','dns_unavailable'}
 
 
 def candidates(row):
-    if row.run.sections.get('website') not in {'failed','blocked'}:return []
+    state=row.run.sections.get('website')
+    if state not in {'failed','blocked','not_available'}:return []
+    if state=='not_available' and row.run.refresh.get('website_second_pass',{}).get('attempted'):return []
     diagnostics=[]
     for error in row.errors:
         if error.code=='website_candidates':
             try:diagnostics+=json.loads(error.message)
             except (ValueError,TypeError):pass
     domains={d.get('domain') for d in diagnostics if d.get('reason') in TRANSIENT or d.get('status')==429 or isinstance(d.get('status'),int) and d['status']>=500}
+    if state=='not_available':
+        # The final candidate summary, not an individual fallback authority's
+        # NXDOMAIN, determines whether this was a transient candidate failure.
+        domains={d.get('domain') for d in diagnostics if d.get('candidate_not_reachable')
+                 and d.get('reason') in ABSENCE_TRANSIENT}
+        rejected={d.get('domain') for d in diagnostics if d.get('level') in {'REJECT','BLOCKED'}
+                  or d.get('reason') in {'website_tls_error','robots','robots_unavailable'}
+                  or d.get('reason')=='no_such_domain' and d.get('candidate_not_reachable')
+                  or d.get('level') and not d.get('candidate_not_reachable')
+                  and d.get('reason') not in ABSENCE_TRANSIENT}
+        domains-=rejected
     selected=[]
     for item in row.run.refresh.get('recall_round2',{}).get('candidates',[]):
         if item['domain'] in domains and item['domain'] not in {c.domain for c in selected}:
@@ -42,10 +56,14 @@ async def run(envelopes,http,bulk,prior,nav_index,isolate,update,*,defer_jobs=Fa
             async with semaphore:
                 DNS_ORG.set(org);meta={'candidates':[c.domain for c in selected],'attempted':False,'recovered':False}
                 row.run.refresh['website_second_pass']=meta;totals['companies'].append({'organisation_number':org,'details':meta})
+                absence_retry=row.run.sections.get('website')=='not_available'
+                if absence_retry and http.budget.deadline-time.monotonic()<=.5:
+                    meta['reason']='retry_window_closed';return
                 try:http.budget.check()
                 except SourceFailure:meta['reason']='global_budget_or_deadline';return
                 if http.budget.by_company[org]>=40:meta['reason']='company_budget_exhausted';return
                 old=row.model_copy(deep=True);start=len(http.budget.events);clock=time.monotonic()
+                working=row.model_copy(deep=True) if absence_retry else row
                 for candidate in selected:
                     for host in (candidate.domain,'www.'+candidate.domain):http.dns_cache.pop(host,None)
                 fallback=DNS_FALLBACK_STATE.get()
@@ -56,21 +74,44 @@ async def run(envelopes,http,bulk,prior,nav_index,isolate,update,*,defer_jobs=Fa
                 meta['attempted']=True;totals['attempted']+=1;totals['candidates']+=len(selected)
                 offset=len(row.run.refresh.get('recall_round2',{}).get('candidates',[]))
                 try:
-                    async with asyncio.timeout(min(45,max(.001,http.budget.deadline-time.monotonic()))):
-                        await isolate(row,'website',lambda:collector.fetch(org,row,bulk.get(org),http,prior.get(org),nav_index,retry_candidates=selected))
-                        recovered=row.run.sections.get('website')=='available'
+                    # Optional absence recovery stops before the real deadline.
+                    # Transactional publication prevents cancellation from
+                    # adding a deadline error to an otherwise terminal envelope.
+                    margin=.25 if absence_retry else 0
+                    async with asyncio.timeout(min(45,max(.001,http.budget.deadline-time.monotonic()-margin))):
+                        if absence_retry:
+                            section=await collector.fetch(org,working,bulk.get(org),http,prior.get(org),nav_index,retry_candidates=selected)
+                            update(working,'website',section)
+                        else:
+                            await isolate(working,'website',lambda:collector.fetch(org,working,bulk.get(org),http,prior.get(org),nav_index,retry_candidates=selected))
+                        recovered=working.run.sections.get('website')=='available'
                         if recovered:
+                            # A later optional activity timeout must not erase
+                            # an already proven website. Commit a clean copy;
+                            # cancelled follow-on work can only mutate working.
                             meta['recovered']=True;totals['recovered']+=1
+                            if absence_retry:
+                                checkpoint=working.model_copy(deep=True)
+                                row.claims=checkpoint.claims;row.evidence=checkpoint.evidence;row.errors=checkpoint.errors
+                                row.run.sections=checkpoint.run.sections;row.modules=checkpoint.modules
+                                row.run.refresh=checkpoint.run.refresh
+                                row.run.refresh['website_second_pass']=meta
                             if config.public_activity:
-                                await isolate(row,'activity',lambda:activity(org,row,http,http.accepted_pages.get(org,[])))
+                                await isolate(working,'activity',lambda:activity(org,working,http,http.accepted_pages.get(org,[])))
                             if config.hiring and not defer_jobs:
-                                extra=await jobs(row,http)
-                                current=[c for c in row.claims if c.family=='hiring' and c.availability=='available']
-                                if extra.claims:update(row,'hiring',Section(state='available',claims=current+extra.claims,evidence=extra.evidence,errors=extra.errors))
+                                extra=await jobs(working,http)
+                                current=[c for c in working.claims if c.family=='hiring' and c.availability=='available']
+                                if extra.claims:update(working,'hiring',Section(state='available',claims=current+extra.claims,evidence=extra.evidence,errors=extra.errors))
+                            if not absence_retry or not any(e.code=='deadline' for e in working.errors):
+                                if absence_retry:
+                                    row.claims=working.claims;row.evidence=working.evidence;row.errors=working.errors
+                                    row.run.sections=working.run.sections;row.modules=working.modules
+                                    row.run.refresh=working.run.refresh
+                                    row.run.refresh['website_second_pass']=meta
                 except TimeoutError:meta['reason']='second_pass_timeout'
                 except SourceFailure as exc:meta['reason']=exc.code
                 finally:
-                    entries=row.run.refresh.get('recall_round2',{}).get('candidates',[])[offset:]
+                    entries=working.run.refresh.get('recall_round2',{}).get('candidates',[])[offset:]
                     meta['fetched']=sum(bool(c.get('fetched')) for c in entries);totals['candidates_fetched']+=meta['fetched']
                     meta['requests']=sum(e['organisation_number']==org for e in http.budget.events[start:]);meta['seconds']=round(time.monotonic()-clock,3)
                     # Failed retries must not discard old verified optional facts
