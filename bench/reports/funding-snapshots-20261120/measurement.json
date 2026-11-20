@@ -1,0 +1,21 @@
+{
+  "baseline": "bench\\runs\\brreg-index-replay-20261120-new",
+  "replay": "bench\\runs\\funding-snapshots-final-20261120",
+  "companies": 1000,
+  "new_http_requests": 0,
+  "baseline_http_requests": 11477,
+  "claims_before": 167166,
+  "claims_after": 167862,
+  "prior_claims_removed": [],
+  "families": {
+    "research": {
+      "companies": 9,
+      "claims": 17
+    },
+    "state_aid": {
+      "companies": 98,
+      "claims": 679
+    }
+  },
+  "seconds": 78.868
+}

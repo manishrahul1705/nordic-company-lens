@@ -50,6 +50,8 @@ def main(argv=None):
                          help='Fetch explicit BRREG group relationships only for registry-flagged group members')
     command.add_argument('--signature-rights', action=argparse.BooleanOptionalAction, default=True,
                          help='Fetch registered BRREG signatur and prokura for every company')
+    command.add_argument('--funding-snapshots', action=argparse.BooleanOptionalAction, default=True,
+                         help='Publish bundled research/state-aid observations with zero runtime HTTP (default on)')
     command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=True,
                          help='Publish narrowly verified registry changes (default on; disable with --no-registry-changes)')
     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "source_url": "https://raw.githubusercontent.com/Forskningsradet/open-data/main/datasets/soknader2/dataset.csv",
+  "retrieved_at": "2026-11-20T02:01:57.524335Z",
+  "dataset_sha256": "5bd7ac2cfca44dfa6cba85bf644b172227fabf25114c28d22fa5a779f9d78485",
+  "dataset_bytes": 54010790,
+  "dataset_rows": 88268,
+  "indexed_records": 22594,
+  "indexed_companies": 4583,
+  "excluded": {
+    "Avsluttet": 7652,
+    "Bevilgning": 1680,
+    "Vurderes": 2432,
+    "Avslag": 53909,
+    "Mottatt": 1
+  },
+  "instruments": {},
+  "index_sha256": "2b2843dc1318100bdac32602b811f17e198de0729b291c9e3e2b8a4e1f45f0ab",
+  "index_bytes": 2878963,
+  "credit": "Forskningsrådet",
+  "licence": "NLOD 2.0",
+  "licence_url": "https://data.norge.no/nlod/en/2.0",
+  "transformations": [
+    "Decode official CSV; retain selected public cells, preserving their text; omit personal/contact columns.",
+    "Research: retain only Bevilgning/Avsluttet with valid responsible organisation number and finite nonnegative total project award.",
+    "State aid: retain only Registrert records with exact recipient organisation number and actual instrument; preserve specified subunit separately.",
+    "Group selected rows by exact responsible/recipient orgnr; deterministic ZIP with per-company JSON and original data-record ordinal.",
+    "Runtime stores selected row cells as UTF-8 JSON evidence extracts, explicitly labelled derived CSV rows with full dataset hash.",
+    "No negative absence claim, collaborator allocation, name match, parent inference or live-freshness claim."
+  ],
+  "limitations": [
+    "Research excludes newer Tibi system; coverage is a lower bound.",
+    "Snapshot may omit later updates; absence never proves no award."
+  ],
+  "source_encoding": "utf-8-sig",
+  "source_columns": [
+    "prosjektnummer",
+    "prosjekttittel",
+    "organisasjonsnummer",
+    "prosjektansvarlig_navn",
+    "prosjektfase",
+    "tildelt_belop",
+    "soknadsdato",
+    "prosjektstart",
+    "prosjektslutt"
+  ]
+}

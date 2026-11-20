@@ -1,0 +1,46 @@
+{
+  "research": {
+    "source_url": "https://raw.githubusercontent.com/Forskningsradet/open-data/main/datasets/soknader2/dataset.csv",
+    "retrieved_at": "2026-11-20T02:01:57.524335+00:00",
+    "dataset_sha256": "5bd7ac2cfca44dfa6cba85bf644b172227fabf25114c28d22fa5a779f9d78485",
+    "bytes": 54010790,
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/Forskningsradet/open-data/main/datasets/soknader2/dataset.csv",
+    "headers": {
+      "content-type": "text/plain; charset=utf-8",
+      "content-length": "54010790",
+      "etag": "\"fa0866f826432e36a9ec1bde785b096ab46e41c470b41a25a1d7e2ef34560923\""
+    },
+    "seconds": 14.81
+  },
+  "state_aid_csv": {
+    "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+    "retrieved_at": "2026-11-20T02:13:46.546603+00:00",
+    "dataset_sha256": "cb708e62d03decf8e2a31dc60b99c2a2b1ad55985795f282d4f8491964d5e149",
+    "bytes": 341137852,
+    "status": 200,
+    "final_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+    "headers": {
+      "content-type": "text/csv",
+      "content-length": "341137852"
+    },
+    "seconds": 645.933,
+    "complete_length": true
+  },
+  "rejected_state_aid_json": {
+    "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/json",
+    "retrieved_at": "2026-11-20T02:01:42.714197+00:00",
+    "dataset_sha256": "89c24e1a01ca541f751ab841777e8d9ba72390b1491620b9524455cb08397b0c",
+    "bytes": 73674008,
+    "status": 200,
+    "final_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/json",
+    "headers": {
+      "content-type": "application/json",
+      "content-length": "536276574"
+    },
+    "seconds": 177.137,
+    "usable": false,
+    "reason": "Declared 536276574 bytes; transfer ended at 73674008 bytes and JSON is incomplete; never indexed."
+  },
+  "range_probe": "JSON server ignored Range and returned HTTP 200; closed without downloading another copy. CSV bulk alternative completed. HEAD requests checked declared lengths."
+}

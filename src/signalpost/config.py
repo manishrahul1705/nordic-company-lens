@@ -33,6 +33,7 @@ class Config(BaseModel):
     max_output_mb: float = Field(default=4096, gt=0)
     websites: bool = False
     wikidata: bool = True
+    funding_snapshots: bool = True
     dns_precheck: bool = True
     registry_declared: bool = False
     website_suffix_contact_proof: bool = True

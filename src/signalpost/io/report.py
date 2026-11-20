@@ -181,6 +181,7 @@ def effective_configuration(config, budget, report):
         'hiring': config.hiring,
         'public_activity': config.public_activity,
         'registry_changes': config.registry_changes,
+        'funding_snapshots': config.funding_snapshots,
         'official_extra_sources': config.official_extra_sources,
         'website_suffix_contact_proof': config.website_suffix_contact_proof,
         'search': {'queries': report.get('search', {}).get('queries', 0),

@@ -1,0 +1,325 @@
+{
+ "associations": 4,
+ "companies": [
+  "915884482"
+ ],
+ "own_registry_citations_checked": true,
+ "claims": [
+  {
+   "orgnr": "915884482",
+   "company": "FINNMARK RENSEFISK AS",
+   "claim": {
+    "field": "state_aid.1000018190",
+    "value": {
+     "aid_id": "1000018190",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2022-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "14b02e6a3a634dd75647f9fcaf052ddff106178a3bf533cfb4cd04a8b6acf7ae",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "2d5cce71bcd69bd0417af5d7cf794d6541026ae487c385914432e4b6e2736d5b",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   "evidence": [
+    {
+     "id": "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54",
+     "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915884482&size=1000&page=0",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-19T23:59:41.794522Z",
+     "content_sha256": "1a0cf4ad64978c04bc24a79013b0a92ba1e02a7f2fe10c68efe6e38cdc5b6eff",
+     "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/915943012\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915884482\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Halselv\"],\"kommune\":\"ALTA\",\"kommunenummer\":\"5601\",\"land\":\"Norge\",\"landkode\":\"NO",
+     "locator": "/_embedded/underenheter/0",
+     "extraction_method": "signalpost.registry.v1",
+     "source_identifier": null,
+     "effective_at": null,
+     "reporting_period": null
+    },
+    {
+     "id": "14b02e6a3a634dd75647f9fcaf052ddff106178a3bf533cfb4cd04a8b6acf7ae",
+     "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-20T02:13:46.546603Z",
+     "content_sha256": "601a571da8e1143e062ea478d030090935d2eb798c698019322843a954b0289a",
+     "claim_span": "{\"id\":\"1000018190\",\"status\":\"Registrert\",\"recipient_orgnr\":\"915943012\",\"recipient_name\":\"\",\"subunit_orgnr\":\"\",\"subunit_name\":\"\",\"funder_orgnr\":\"974761076\",\"funder_name\":\"SKATTEETATEN\",\"award_date\":\"31.12.2022\",\"amount\":\"\",\"currency\":\"\",\"range_from\":\"0,00\",\"range_to\":\"499999,00\",\"range_currency\":\"EUR",
+     "locator": "/",
+     "extraction_method": "signalpost.funding.csv-selected-row.v1",
+     "source_identifier": "NLOD 2.0; Brønnøysundregistrene; selected CSV row cells (UTF-8 JSON derivation), record 356881; full dataset SHA-256 cb708e62d03decf8e2a31dc60b99c2a2b1ad55985795f282d4f8491964d5e149",
+     "effective_at": null,
+     "reporting_period": null
+    }
+   ]
+  },
+  {
+   "orgnr": "915884482",
+   "company": "FINNMARK RENSEFISK AS",
+   "claim": {
+    "field": "state_aid.1000018186",
+    "value": {
+     "aid_id": "1000018186",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": null,
+     "specified_subunit_name": null,
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2022-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000067",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "71237c48c39277c037bbc21ada775cb009caeb44b8622873065730588e513e2b",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "61ada6211bb91e55b314057e6c12289f596f3649823ebef04dd68b8a5c72d0c0",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   "evidence": [
+    {
+     "id": "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54",
+     "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915884482&size=1000&page=0",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-19T23:59:41.794522Z",
+     "content_sha256": "1a0cf4ad64978c04bc24a79013b0a92ba1e02a7f2fe10c68efe6e38cdc5b6eff",
+     "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/915943012\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915884482\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Halselv\"],\"kommune\":\"ALTA\",\"kommunenummer\":\"5601\",\"land\":\"Norge\",\"landkode\":\"NO",
+     "locator": "/_embedded/underenheter/0",
+     "extraction_method": "signalpost.registry.v1",
+     "source_identifier": null,
+     "effective_at": null,
+     "reporting_period": null
+    },
+    {
+     "id": "71237c48c39277c037bbc21ada775cb009caeb44b8622873065730588e513e2b",
+     "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-20T02:13:46.546603Z",
+     "content_sha256": "8ae4cc1d3def9d7f483c0a10eddaf071489d17a8fe13298239e79134a2b2aeed",
+     "claim_span": "{\"id\":\"1000018186\",\"status\":\"Registrert\",\"recipient_orgnr\":\"915943012\",\"recipient_name\":\"\",\"subunit_orgnr\":\"\",\"subunit_name\":\"\",\"funder_orgnr\":\"974761076\",\"funder_name\":\"SKATTEETATEN\",\"award_date\":\"31.12.2022\",\"amount\":\"\",\"currency\":\"\",\"range_from\":\"0,00\",\"range_to\":\"499999,00\",\"range_currency\":\"EUR",
+     "locator": "/",
+     "extraction_method": "signalpost.funding.csv-selected-row.v1",
+     "source_identifier": "NLOD 2.0; Brønnøysundregistrene; selected CSV row cells (UTF-8 JSON derivation), record 356885; full dataset SHA-256 cb708e62d03decf8e2a31dc60b99c2a2b1ad55985795f282d4f8491964d5e149",
+     "effective_at": null,
+     "reporting_period": null
+    }
+   ]
+  },
+  {
+   "orgnr": "915884482",
+   "company": "FINNMARK RENSEFISK AS",
+   "claim": {
+    "field": "state_aid.1000016694",
+    "value": {
+     "aid_id": "1000016694",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": "915884482",
+     "specified_subunit_name": "FINNMARK RENSEFISK AS",
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2021-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000033",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "ac36c6b4912ea8c2f4cbf403ae71137535c5d20466970a999abdcef6aff7463c",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "b81c747ab6a7efd511d8b29bce3d5b93ea055b259ba4188835ffc691c85e09b2",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   "evidence": [
+    {
+     "id": "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54",
+     "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915884482&size=1000&page=0",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-19T23:59:41.794522Z",
+     "content_sha256": "1a0cf4ad64978c04bc24a79013b0a92ba1e02a7f2fe10c68efe6e38cdc5b6eff",
+     "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/915943012\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915884482\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Halselv\"],\"kommune\":\"ALTA\",\"kommunenummer\":\"5601\",\"land\":\"Norge\",\"landkode\":\"NO",
+     "locator": "/_embedded/underenheter/0",
+     "extraction_method": "signalpost.registry.v1",
+     "source_identifier": null,
+     "effective_at": null,
+     "reporting_period": null
+    },
+    {
+     "id": "ac36c6b4912ea8c2f4cbf403ae71137535c5d20466970a999abdcef6aff7463c",
+     "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-20T02:13:46.546603Z",
+     "content_sha256": "4be838216cc96cfd1a5eba713bd9eda1066f270503912002fd848ed455f05459",
+     "claim_span": "{\"id\":\"1000016694\",\"status\":\"Registrert\",\"recipient_orgnr\":\"915943012\",\"recipient_name\":\"\",\"subunit_orgnr\":\"915884482\",\"subunit_name\":\"FINNMARK RENSEFISK AS\",\"funder_orgnr\":\"974761076\",\"funder_name\":\"SKATTEETATEN\",\"award_date\":\"31.12.2021\",\"amount\":\"\",\"currency\":\"\",\"range_from\":\"0,00\",\"range_to\":\"49",
+     "locator": "/",
+     "extraction_method": "signalpost.funding.csv-selected-row.v1",
+     "source_identifier": "NLOD 2.0; Brønnøysundregistrene; selected CSV row cells (UTF-8 JSON derivation), record 358181; full dataset SHA-256 cb708e62d03decf8e2a31dc60b99c2a2b1ad55985795f282d4f8491964d5e149",
+     "effective_at": null,
+     "reporting_period": null
+    }
+   ]
+  },
+  {
+   "orgnr": "915884482",
+   "company": "FINNMARK RENSEFISK AS",
+   "claim": {
+    "field": "state_aid.1000016580",
+    "value": {
+     "aid_id": "1000016580",
+     "instrument": "Skatte- eller avgiftsfordel",
+     "instrument_type": "tax benefit",
+     "recipient_orgnr": "915943012",
+     "recipient_name": "",
+     "specified_subunit_orgnr": "915884482",
+     "specified_subunit_name": "FINNMARK RENSEFISK AS",
+     "awarding_body": {
+      "organisation_number": "974761076",
+      "name": "SKATTEETATEN"
+     },
+     "award_date": "2021-12-31",
+     "awarded_amount": null,
+     "amount_interval": {
+      "from": "0.00",
+      "to": "499999.00",
+      "currency": "EUR"
+     },
+     "amount_scope": "Registered aid amount or aid element; not necessarily loan/guarantee face value or cash received.",
+     "scheme_id": "1000000067",
+     "status": "Registrert",
+     "matched_via": "registered recipient subunit 915943012",
+     "subject_company_orgnr": "915884482"
+    },
+    "availability": "available",
+    "confidence": 1.0,
+    "evidence_ids": [
+     "8073dfbae3950a864edcaed302f80e74e3fc3a483391ebc9b0fb6a554d983811",
+     "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54"
+    ],
+    "id": "ff07e4e3efa637f153dc42c421fad9ad07643290087272260b057a3531c3d3c4",
+    "family": "funding",
+    "reporting_period": null,
+    "carried_forward": false,
+    "stale_since": null,
+    "first_observed_at": "2026-11-20T02:13:46.546603Z",
+    "last_observed_at": "2026-11-20T02:13:46.546603Z",
+    "reasons": {
+     "label": "State aid: Skatte- eller avgiftsfordel",
+     "licence": "https://data.norge.no/nlod/en/2.0",
+     "snapshot": "Historical bundled observation; not live-checked",
+     "attribution": "Brønnøysundregistrene"
+    }
+   },
+   "evidence": [
+    {
+     "id": "e6e72af8c9b75ec89b8711c1d8ba1043b7c03d83c5b1bce0d927e84b6a22df54",
+     "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915884482&size=1000&page=0",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-19T23:59:41.794522Z",
+     "content_sha256": "1a0cf4ad64978c04bc24a79013b0a92ba1e02a7f2fe10c68efe6e38cdc5b6eff",
+     "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/915943012\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915884482\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Halselv\"],\"kommune\":\"ALTA\",\"kommunenummer\":\"5601\",\"land\":\"Norge\",\"landkode\":\"NO",
+     "locator": "/_embedded/underenheter/0",
+     "extraction_method": "signalpost.registry.v1",
+     "source_identifier": null,
+     "effective_at": null,
+     "reporting_period": null
+    },
+    {
+     "id": "8073dfbae3950a864edcaed302f80e74e3fc3a483391ebc9b0fb6a554d983811",
+     "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+     "source_class": "official_registry",
+     "retrieved_at": "2026-11-20T02:13:46.546603Z",
+     "content_sha256": "eff1250d0a1abf26cb2397d5e588437ca9df8ef2d471d0a70626fdf96bad6699",
+     "claim_span": "{\"id\":\"1000016580\",\"status\":\"Registrert\",\"recipient_orgnr\":\"915943012\",\"recipient_name\":\"\",\"subunit_orgnr\":\"915884482\",\"subunit_name\":\"FINNMARK RENSEFISK AS\",\"funder_orgnr\":\"974761076\",\"funder_name\":\"SKATTEETATEN\",\"award_date\":\"31.12.2021\",\"amount\":\"\",\"currency\":\"\",\"range_from\":\"0,00\",\"range_to\":\"49",
+     "locator": "/",
+     "extraction_method": "signalpost.funding.csv-selected-row.v1",
+     "source_identifier": "NLOD 2.0; Brønnøysundregistrene; selected CSV row cells (UTF-8 JSON derivation), record 358293; full dataset SHA-256 cb708e62d03decf8e2a31dc60b99c2a2b1ad55985795f282d4f8491964d5e149",
+     "effective_at": null,
+     "reporting_period": null
+    }
+   ]
+  }
+ ]
+}

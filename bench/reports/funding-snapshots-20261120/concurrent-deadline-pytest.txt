@@ -1,0 +1,40 @@
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 12%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 25%]
+..........................................F
+================================== FAILURES ===================================
+________ test_independent_footer_runs_dependent_production_extraction _________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-4/test_independent_footer_runs_d0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000023BF7D91F10>
+
+    def test_independent_footer_runs_dependent_production_extraction(tmp_path,monkeypatch):
+        from tests.test_websites import execute_web,html
+        body=html('© Example AS. Organisasjonsnummer: 923609016 <a href="https://linkedin.com/company/example">LinkedIn</a>',
+                  '<h2>Our customers</h2><p>Example AS provides specialized services for customers across Norway.</p>'
+                  '<a href="mailto:office@example.no">Office</a><a href="https://linkedin.com/company/example">LinkedIn</a>')
+        body=body.replace('</head>','<meta name="description" content="Example AS provides specialized services for customers across Norway."></head>')
+        _,row,_,_=execute_web(tmp_path,monkeypatch,body)
+        facts={c['field']:c['value'] for c in row['claims'] if c['availability']=='available'}
+>       assert facts['official_website']['identity_level']=='VERIFIED'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'official_website'
+
+tests\test_footer_ownership.py:40: KeyError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\_pytest\cacheprovider.py:469
+  C:\Users\Manish\Downloads\nordic-r4\.venv\Lib\site-packages\_pytest\cacheprovider.py:469: PytestCacheWarning: cache could not write path C:\Users\Manish\Downloads\nordic-r4\.pytest_cache\v\cache\nodeids: [Errno 13] Permission denied: 'C:\\Users\\Manish\\Downloads\\nordic-r4\\.pytest_cache\\v\\cache\\nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+.venv\Lib\site-packages\_pytest\cacheprovider.py:423
+  C:\Users\Manish\Downloads\nordic-r4\.venv\Lib\site-packages\_pytest\cacheprovider.py:423: PytestCacheWarning: could not create cache path C:\Users\Manish\Downloads\nordic-r4\.pytest_cache\v\cache\lastfailed: [WinError 5] Access is denied: 'C:\\Users\\Manish\\Downloads\\nordic-r4\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_footer_ownership.py::test_independent_footer_runs_dependent_production_extraction
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 474 passed, 2 warnings in 307.94s (0:05:07)

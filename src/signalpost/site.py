@@ -597,7 +597,7 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None, re
     body += '</section>'
     buckets = {key: [] for key, _, _ in GROUPS}
     for c in claims:
-        if c['field'].startswith('identity.gleif.'):continue
+        if c['field'].startswith('identity.gleif.') or c['family']=='funding':continue
         f = c['field']; family = c['family']
         key = ('what-it-does' if f.startswith('website_description.') else
                'locations' if family == 'subunits' else
@@ -704,6 +704,12 @@ def profile(row, title, source_routes=None, inline_limit=None, overflow=None, re
         if key in areas:
             body += '</section>'
 
+    funding = [c for c in row['claims'] if c['family']=='funding' and c['availability']=='available']
+    if funding:
+        body += '<section id="funding"><h2>Research projects and state aid</h2><p>Bundled historical observations, not live checks. Project awards may be shared with collaborators; state aid is labelled by its actual instrument.</p>'
+        for c in funding:
+            body += render(c)
+        body += '<p>Research coverage excludes the newer Tibi system. No record does not establish no funding.</p></section>'
     body += '<section id="gaps"><h2>What we could not find</h2>'
     for family,state in row['run']['sections'].items():
         if state!='available':body += '<p>'+esc(family.replace('_',' ').capitalize())+': '+chip(state)+' Checked '+esc(row['run']['completed_at'][:10])+' - '+esc(UNKNOWN.get(state,'No supported value.'))+'</p>'

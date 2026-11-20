@@ -696,6 +696,10 @@ async def _run(config, client=None):
             from .web.wikidata_facts import publish as publish_wikidata_facts
             await offload(publish_wikidata_facts, wikidata_index, org, envelope, blobs)
             await offload(publish_social, wikidata_index, org, envelope, blobs)
+        # Snapshot observations are published before refresh comparison; zero HTTP.
+        from .sources.funding_snapshots import publish as publish_funding_snapshots
+        if config.funding_snapshots:
+            await offload(publish_funding_snapshots, envelope, blobs)
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     from .web.contact_policy import filter_carried_contacts
     for envelope in envelopes.values():

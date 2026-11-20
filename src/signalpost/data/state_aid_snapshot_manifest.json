@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+  "retrieved_at": "2026-11-20T02:13:46.546603Z",
+  "dataset_sha256": "cb708e62d03decf8e2a31dc60b99c2a2b1ad55985795f282d4f8491964d5e149",
+  "dataset_bytes": 341137852,
+  "dataset_rows": 374307,
+  "indexed_records": 374102,
+  "indexed_companies": 60729,
+  "excluded": {
+    "Registrert": 204,
+    "Ulovlig støtte": 1
+  },
+  "instruments": {
+    "Skatte- eller avgiftsfritak": 329458,
+    "Skatte- eller avgiftsfordel": 10239,
+    "Tilskudd": 24280,
+    "Garanti": 10071,
+    "Annet": 27,
+    "Lån": 23,
+    "Rentesubsidier": 4
+  },
+  "index_sha256": "886ae1062aaa3e53aafc9355829540e1bbece673c071a4191e2df95309b96866",
+  "index_bytes": 30088648,
+  "credit": "Brønnøysundregistrene",
+  "licence": "NLOD 2.0",
+  "licence_url": "https://data.norge.no/nlod/en/2.0",
+  "transformations": [
+    "Decode official CSV; retain selected public cells, preserving their text; omit personal/contact columns.",
+    "Research: retain only Bevilgning/Avsluttet with valid responsible organisation number and finite nonnegative total project award.",
+    "State aid: retain only Registrert records with exact recipient organisation number and actual instrument; preserve specified subunit separately.",
+    "Group selected rows by exact responsible/recipient orgnr; deterministic ZIP with per-company JSON and original data-record ordinal.",
+    "Runtime stores selected row cells as UTF-8 JSON evidence extracts, explicitly labelled derived CSV rows with full dataset hash.",
+    "No negative absence claim, collaborator allocation, name match, parent inference or live-freshness claim."
+  ],
+  "limitations": [
+    "Only explicitly registered corporate recipients are indexed; personal recipients and illegal-aid status are excluded.",
+    "Snapshot may omit later updates; absence never proves no award."
+  ],
+  "source_encoding": "utf-16-le",
+  "source_columns": {
+    "id": "Støttetiltaksnummer",
+    "status": "Status",
+    "recipient_orgnr": "Organisasjonsnummer støttemottaker",
+    "recipient_name": "Navn støttemottaker",
+    "subunit_orgnr": "Organisasjonsnummer spesifisert støttemottaker",
+    "subunit_name": "Navn spesifisert støttemottaker",
+    "funder_orgnr": "Organisasjonsnummer støttegiver",
+    "funder_name": "Navn støttegiver",
+    "award_date": "Tildelingsdato",
+    "amount": "Tildelt beløp",
+    "currency": "Tildelt beløp valuta",
+    "range_from": "Beløpsintervall fra beløp",
+    "range_to": "Beløpsintervall til beløp",
+    "range_currency": "Beløpsintervall valuta",
+    "instrument": "Støtteinstrument",
+    "scheme_id": "Tilknyttet støtteordning"
+  }
+}

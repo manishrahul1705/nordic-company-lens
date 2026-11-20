@@ -1,0 +1,44 @@
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 12%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 25%]
+........................................................................ [ 29%]
+........................................................................ [ 34%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 51%]
+........................................................................ [ 55%]
+........................................................................ [ 59%]
+........................................................................ [ 64%]
+........................................................................ [ 68%]
+.....................................................................F
+================================== FAILURES ===================================
+_________________ test_no_embedded_bodies_and_verbatim_spans __________________
+
+tmp_path = WindowsPath('C:/Users/Manish/AppData/Local/Temp/pytest-of-Manish/pytest-5/test_no_embedded_bodies_and_ve0')
+
+    def test_no_embedded_bodies_and_verbatim_spans(tmp_path):
+        cfg = config(tmp_path, ["923609016"])
+        report, rows = execute(cfg)
+        assert report["output_bytes"] == cfg.output.stat().st_size
+>       assert report["output_bytes_per_company"] < 60000
+E       assert 327597.0 < 60000
+
+tests\test_resource_limits.py:10: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\_pytest\cacheprovider.py:469
+  C:\Users\Manish\Downloads\nordic-r4\.venv\Lib\site-packages\_pytest\cacheprovider.py:469: PytestCacheWarning: could not create cache path C:\Users\Manish\Downloads\nordic-r4\.pytest_cache\v\cache\nodeids: [WinError 5] Access is denied: 'C:\\Users\\Manish\\Downloads\\nordic-r4\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+.venv\Lib\site-packages\_pytest\cacheprovider.py:423
+  C:\Users\Manish\Downloads\nordic-r4\.venv\Lib\site-packages\_pytest\cacheprovider.py:423: PytestCacheWarning: could not create cache path C:\Users\Manish\Downloads\nordic-r4\.pytest_cache\v\cache\lastfailed: [WinError 5] Access is denied: 'C:\\Users\\Manish\\Downloads\\nordic-r4\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_resource_limits.py::test_no_embedded_bodies_and_verbatim_spans
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 1221 passed, 2 warnings in 429.33s (0:07:09)

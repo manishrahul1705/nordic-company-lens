@@ -1,6 +1,6 @@
 # Submission notes
 
-Current validation (20 November 2026): **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
+Current validation (20 November 2026): **1,686 tests passed**; [funding snapshot replay, verifier and full suite](bench/reports/funding-snapshots-20261120/RESULTS.md). Prior index rebuild: **1,660 tests passed**; [official-index rebuild and replay verification](bench/reports/brreg-indexes-20261120/RESULTS.md). Historical live run: **1,656 tests passed**; [latest combined live run, suite and strict-verifier results](bench/reports/overnight-all-20261120/RESULTS.md). Earlier stage counts below describe those historical checkpoints. Current HTTP ceilings are **19 pooled requests per distinct normalized input and 40 attributed requests per company**, including retries; lower configured limits apply.
 
 ## Official command
 
@@ -138,6 +138,12 @@ The release adds locally bundled Common Crawl candidates and registry shared-ide
 GLEIF records can store the registration number with whitespace, for example `"923 609 016"`; the previous literal comparison rejected that spelling. Matching now normalises whitespace only and accepts both official Bronnoysund child-record authorities: **RA000472 Foretaksregisteret** and **RA000473 Enhetsregisteret**. An exact complete nine-digit organisation-number match is still required, with no name matching. Parent acceptance rules are unchanged. The measured correction is **32 to 142 companies** (32 to 139 from whitespace normalisation in [Stage P](bench/reports/stage-p/REPORT.md), then 139 to 142 from RA000473 in [Stage Q](bench/reports/stage-q/REPORT.md)); **15 reviewed, 0 wrong, 0 doubtful** ([identifier audit and review](bench/reports/stage-q/REPORT.md)).
 
 ## Measured precision
+
+### Bundled research projects and state aid (20 November 2026)
+
+**1,686 tests passed**; unchanged strict verifier passed 1,000 envelopes / 167,862 claims with zero unverified synthesis values. Official NLOD 2.0 snapshots add **17 research-project claims / 9 companies** and **679 state-aid claims / 98 companies**, with **zero runtime HTTP**. The saved-run replay publishes **167,862 supported facts**, adding 696 and removing none from the official-BRREG-index baseline. State-aid labels remain actual instruments: 651 tax benefits, 21 grants and 7 guarantees. Four recipient-subunit associations cite the parent's own registry records; legal recipient and specified subunit remain separate.
+
+Research amounts are **total project awards**, not the company's exclusive allocation or cash received. Application date and project years are retained; no award-decision date or currency is invented. The provider excludes its newer **Tibi** system, so coverage is a lower bound. The selected-row evidence is explicitly derived from the original official CSV and pinned by dataset/row/extract hashes. No-match snapshots never prove no support. Attribution: Forskningsrådet and Brønnøysundregistrene under [NLOD 2.0](https://data.norge.no/nlod/en/2.0). The two indexes total 32,967,611 bytes; raw full downloads are not bundled. [Measurements, source policy and ten reviews per source](bench/reports/funding-snapshots-20261120/RESULTS.md).
 
 ### Official BRREG index rebuild (20 November 2026)
 
