@@ -43,14 +43,27 @@ def compute_funnel_metrics(envelopes, inputs, budget):
         eligible = total_companies
         sec_name = 'identity' if fam == 'registry' else fam
         claim_fam = 'identity' if fam == 'registry' else fam
-        verified_orgs = {
-            getattr(e, 'organisation_number', None) or getattr(e, 'org', None)
-            for e in envelopes
-            if getattr(e, 'run', None) and (
-                getattr(e.run, 'sections', {}).get(sec_name) == 'available'
-                or getattr(e.run, 'sections', {}).get(fam) == 'available'
-            )
-        }
+        if fam == 'website':
+            verified_orgs = {
+                getattr(e, 'organisation_number', None) or getattr(e, 'org', None)
+                for e in envelopes
+                if any(
+                    getattr(c, 'family', None) == 'website'
+                    and getattr(c, 'field', None) == 'official_website'
+                    and getattr(c, 'availability', None) == 'available'
+                    and isinstance(getattr(c, 'value', None), dict)
+                    for c in getattr(e, 'claims', [])
+                )
+            }
+        else:
+            verified_orgs = {
+                getattr(e, 'organisation_number', None) or getattr(e, 'org', None)
+                for e in envelopes
+                if getattr(e, 'run', None) and (
+                    getattr(e.run, 'sections', {}).get(sec_name) == 'available'
+                    or getattr(e.run, 'sections', {}).get(fam) == 'available'
+                )
+            }
         verified_companies = len(verified_orgs - {None})
         published_claims = sum(
             1 for e in envelopes for c in getattr(e, 'claims', [])

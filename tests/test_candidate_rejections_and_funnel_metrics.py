@@ -154,6 +154,22 @@ def test_f39_funnel_metrics_computation():
     assert funnel["accounts"]["company_yield_rate"] == 0.0
 
 
+def test_website_funnel_counts_only_published_official_website_claims():
+    envelope = make_dummy_envelope("923609016", "available")
+    envelope.claims = [c for c in envelope.claims if c.field != "official_website"]
+    envelope.evidence = [e for e in envelope.evidence if e.source_url.startswith("https://data.brreg.no/")]
+
+    funnel = compute_funnel_metrics([envelope], DummyInputs(), DummyBudget())
+
+    # The section state alone can say available when no verified site was published.
+    assert envelope.run.sections["website"] == "available"
+    assert funnel["website"]["verified_companies"] == 0
+
+    website = make_dummy_envelope("988258229", "available")
+    funnel = compute_funnel_metrics([website], DummyInputs(), DummyBudget())
+    assert funnel["website"]["verified_companies"] == 1
+
+
 def test_f18_rejection_reasons_classification():
     """F18: Verifies that candidate rejection reasons are normalized to typed categories."""
     e1 = make_dummy_envelope("923609016", "available")
