@@ -1,0 +1,2138 @@
+{
+  "jury100": {
+    "responses": {
+      "identity": 103,
+      "subunits": 103,
+      "roles": 103,
+      "accounts": 48
+    },
+    "paths": {
+      "identity": {
+        "/_links/self/href": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/aktivitet/*": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/antallAnsatte": {
+          "present_companies": 9,
+          "exact_claim_companies": 9,
+          "inside_composite_claim_companies": 0
+        },
+        "/epostadresse": {
+          "present_companies": 26,
+          "exact_claim_companies": 26,
+          "inside_composite_claim_companies": 0
+        },
+        "/erIKonsern": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/forretningsadresse/adresse/*": {
+          "present_companies": 98,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 98
+        },
+        "/forretningsadresse/kommune": {
+          "present_companies": 97,
+          "exact_claim_companies": 97,
+          "inside_composite_claim_companies": 97
+        },
+        "/forretningsadresse/kommunenummer": {
+          "present_companies": 97,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 97
+        },
+        "/forretningsadresse/land": {
+          "present_companies": 98,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 98
+        },
+        "/forretningsadresse/landkode": {
+          "present_companies": 98,
+          "exact_claim_companies": 98,
+          "inside_composite_claim_companies": 98
+        },
+        "/forretningsadresse/postnummer": {
+          "present_companies": 97,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 97
+        },
+        "/forretningsadresse/poststed": {
+          "present_companies": 98,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 98
+        },
+        "/fravalgRevisjonBeslutningsDato": {
+          "present_companies": 23,
+          "exact_claim_companies": 23,
+          "inside_composite_claim_companies": 0
+        },
+        "/fravalgRevisjonDato": {
+          "present_companies": 31,
+          "exact_claim_companies": 31,
+          "inside_composite_claim_companies": 0
+        },
+        "/frivilligMvaRegistrertBeskrivelser/*": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/harRegistrertAntallAnsatte": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/historiskeNavn": {
+          "present_companies": 84,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/historiskeNavn/*/fraDato": {
+          "present_companies": 16,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 16
+        },
+        "/historiskeNavn/*/navn": {
+          "present_companies": 16,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 16
+        },
+        "/historiskeNavn/*/tilDato": {
+          "present_companies": 16,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 16
+        },
+        "/hjelpeenhetskode/beskrivelse": {
+          "present_companies": 5,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 5
+        },
+        "/hjelpeenhetskode/kode": {
+          "present_companies": 5,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 5
+        },
+        "/hjemmeside": {
+          "present_companies": 10,
+          "exact_claim_companies": 10,
+          "inside_composite_claim_companies": 0
+        },
+        "/institusjonellSektorkode/beskrivelse": {
+          "present_companies": 98,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 98
+        },
+        "/institusjonellSektorkode/kode": {
+          "present_companies": 98,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 98
+        },
+        "/kapital/antallAksjer": {
+          "present_companies": 46,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 46
+        },
+        "/kapital/belop": {
+          "present_companies": 47,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 47
+        },
+        "/kapital/innfortDato": {
+          "present_companies": 47,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 47
+        },
+        "/kapital/type": {
+          "present_companies": 47,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 47
+        },
+        "/kapital/valuta": {
+          "present_companies": 47,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 47
+        },
+        "/konkurs": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/maalform": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/mobil": {
+          "present_companies": 25,
+          "exact_claim_companies": 25,
+          "inside_composite_claim_companies": 0
+        },
+        "/naeringskode1/beskrivelse": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/naeringskode1/kode": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/naeringskode2/beskrivelse": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/naeringskode2/kode": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/navn": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/organisasjonsform/_links/self/href": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/organisasjonsform/beskrivelse": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/organisasjonsform/kode": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/organisasjonsnummer": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/paategninger": {
+          "present_companies": 100,
+          "exact_claim_companies": 8,
+          "inside_composite_claim_companies": 0
+        },
+        "/postadresse/adresse/*": {
+          "present_companies": 12,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 12
+        },
+        "/postadresse/kommune": {
+          "present_companies": 10,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 10
+        },
+        "/postadresse/kommunenummer": {
+          "present_companies": 10,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 10
+        },
+        "/postadresse/land": {
+          "present_companies": 12,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 12
+        },
+        "/postadresse/landkode": {
+          "present_companies": 12,
+          "exact_claim_companies": 12,
+          "inside_composite_claim_companies": 12
+        },
+        "/postadresse/postnummer": {
+          "present_companies": 10,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 10
+        },
+        "/postadresse/poststed": {
+          "present_companies": 12,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 12
+        },
+        "/registreringsdatoAntallAnsatteEnhetsregisteret": {
+          "present_companies": 22,
+          "exact_claim_companies": 22,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoAntallAnsatteNAVAaregisteret": {
+          "present_companies": 22,
+          "exact_claim_companies": 22,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoEnhetsregisteret": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoForetaksregisteret": {
+          "present_companies": 57,
+          "exact_claim_companies": 57,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoFrivilligMerverdiavgiftsregisteret": {
+          "present_companies": 3,
+          "exact_claim_companies": 3,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoMerverdiavgiftsregisteret": {
+          "present_companies": 39,
+          "exact_claim_companies": 39,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret": {
+          "present_companies": 39,
+          "exact_claim_companies": 39,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIForetaksregisteret": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIFrivillighetsregisteret": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIMvaregisteret": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIPartiregisteret": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIStiftelsesregisteret": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/respons_klasse": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/sisteInnsendteAarsregnskap": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/stiftelsesdato": {
+          "present_companies": 47,
+          "exact_claim_companies": 47,
+          "inside_composite_claim_companies": 0
+        },
+        "/telefon": {
+          "present_companies": 15,
+          "exact_claim_companies": 15,
+          "inside_composite_claim_companies": 0
+        },
+        "/underAvvikling": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/underTvangsavviklingEllerTvangsopplosning": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 0
+        },
+        "/vedtektsdato": {
+          "present_companies": 47,
+          "exact_claim_companies": 47,
+          "inside_composite_claim_companies": 0
+        },
+        "/vedtektsfestetFormaal/*": {
+          "present_companies": 47,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 47
+        }
+      },
+      "subunits": {
+        "/_embedded/underenheter/*/_links/overordnetEnhet/href": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/_links/self/href": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/antallAnsatte": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/adresse/*": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/kommune": {
+          "present_companies": 71,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 71
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/kommunenummer": {
+          "present_companies": 71,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 71
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/land": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/landkode": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/postnummer": {
+          "present_companies": 71,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 71
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/poststed": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/datoEierskifte": {
+          "present_companies": 7,
+          "exact_claim_companies": 7,
+          "inside_composite_claim_companies": 7
+        },
+        "/_embedded/underenheter/*/epostadresse": {
+          "present_companies": 19,
+          "exact_claim_companies": 19,
+          "inside_composite_claim_companies": 19
+        },
+        "/_embedded/underenheter/*/harRegistrertAntallAnsatte": {
+          "present_companies": 72,
+          "exact_claim_companies": 72,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/historiskeNavn": {
+          "present_companies": 58,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 58
+        },
+        "/_embedded/underenheter/*/historiskeNavn/*/fraDato": {
+          "present_companies": 14,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 14
+        },
+        "/_embedded/underenheter/*/historiskeNavn/*/navn": {
+          "present_companies": 14,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 14
+        },
+        "/_embedded/underenheter/*/historiskeNavn/*/tilDato": {
+          "present_companies": 14,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 14
+        },
+        "/_embedded/underenheter/*/hjelpeenhetskode/beskrivelse": {
+          "present_companies": 2,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 2
+        },
+        "/_embedded/underenheter/*/hjelpeenhetskode/kode": {
+          "present_companies": 2,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 2
+        },
+        "/_embedded/underenheter/*/hjemmeside": {
+          "present_companies": 6,
+          "exact_claim_companies": 6,
+          "inside_composite_claim_companies": 6
+        },
+        "/_embedded/underenheter/*/mobil": {
+          "present_companies": 17,
+          "exact_claim_companies": 17,
+          "inside_composite_claim_companies": 17
+        },
+        "/_embedded/underenheter/*/naeringskode1/beskrivelse": {
+          "present_companies": 71,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 71
+        },
+        "/_embedded/underenheter/*/naeringskode1/kode": {
+          "present_companies": 71,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 71
+        },
+        "/_embedded/underenheter/*/naeringskode2/beskrivelse": {
+          "present_companies": 2,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 2
+        },
+        "/_embedded/underenheter/*/naeringskode2/kode": {
+          "present_companies": 2,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 2
+        },
+        "/_embedded/underenheter/*/navn": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/oppstartsdato": {
+          "present_companies": 69,
+          "exact_claim_companies": 69,
+          "inside_composite_claim_companies": 69
+        },
+        "/_embedded/underenheter/*/organisasjonsform/_links/self/href": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/organisasjonsform/beskrivelse": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/organisasjonsform/kode": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/organisasjonsnummer": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/overordnetEnhet": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/postadresse/adresse/*": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/postadresse/kommune": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/postadresse/kommunenummer": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/postadresse/land": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/postadresse/landkode": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/postadresse/postnummer": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/postadresse/poststed": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 9
+        },
+        "/_embedded/underenheter/*/registreringsdatoAntallAnsatteEnhetsregisteret": {
+          "present_companies": 22,
+          "exact_claim_companies": 22,
+          "inside_composite_claim_companies": 22
+        },
+        "/_embedded/underenheter/*/registreringsdatoAntallAnsatteNAVAaregisteret": {
+          "present_companies": 22,
+          "exact_claim_companies": 22,
+          "inside_composite_claim_companies": 22
+        },
+        "/_embedded/underenheter/*/registreringsdatoEnhetsregisteret": {
+          "present_companies": 72,
+          "exact_claim_companies": 72,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/registrertIMvaregisteret": {
+          "present_companies": 72,
+          "exact_claim_companies": 72,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/respons_klasse": {
+          "present_companies": 72,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 72
+        },
+        "/_embedded/underenheter/*/telefon": {
+          "present_companies": 7,
+          "exact_claim_companies": 7,
+          "inside_composite_claim_companies": 7
+        },
+        "/_links/self/href": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/number": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/size": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/totalElements": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/totalPages": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        }
+      },
+      "roles": {
+        "/_links/enhet/href": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/_links/self/href": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/roller/*/avregistrert": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/rollegrupper/*/roller/*/enhet/_links/self/href": {
+          "present_companies": 51,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 51
+        },
+        "/rollegrupper/*/roller/*/enhet/erSlettet": {
+          "present_companies": 51,
+          "exact_claim_companies": 51,
+          "inside_composite_claim_companies": 51
+        },
+        "/rollegrupper/*/roller/*/enhet/godkjenningsstatus": {
+          "present_companies": 49,
+          "exact_claim_companies": 49,
+          "inside_composite_claim_companies": 49
+        },
+        "/rollegrupper/*/roller/*/enhet/navn/*": {
+          "present_companies": 51,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 51
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsform/_links/self/href": {
+          "present_companies": 51,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 51
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsform/beskrivelse": {
+          "present_companies": 51,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 51
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsform/kode": {
+          "present_companies": 51,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 51
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsnummer": {
+          "present_companies": 51,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 51
+        },
+        "/rollegrupper/*/roller/*/person/erDoed": {
+          "present_companies": 99,
+          "exact_claim_companies": 99,
+          "inside_composite_claim_companies": 99
+        },
+        "/rollegrupper/*/roller/*/person/fodselsdato": {
+          "present_companies": 99,
+          "exact_claim_companies": 99,
+          "inside_composite_claim_companies": 99
+        },
+        "/rollegrupper/*/roller/*/person/navn/etternavn": {
+          "present_companies": 99,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 99
+        },
+        "/rollegrupper/*/roller/*/person/navn/fornavn": {
+          "present_companies": 99,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 99
+        },
+        "/rollegrupper/*/roller/*/person/navn/mellomnavn": {
+          "present_companies": 35,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 35
+        },
+        "/rollegrupper/*/roller/*/rekkefolge": {
+          "present_companies": 100,
+          "exact_claim_companies": 100,
+          "inside_composite_claim_companies": 100
+        },
+        "/rollegrupper/*/roller/*/type/_links/self/href": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/rollegrupper/*/roller/*/type/beskrivelse": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/rollegrupper/*/roller/*/type/kode": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 100
+        },
+        "/rollegrupper/*/roller/*/valgtAv/_links/self/href": {
+          "present_companies": 1,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 1
+        },
+        "/rollegrupper/*/roller/*/valgtAv/beskrivelse": {
+          "present_companies": 1,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 1
+        },
+        "/rollegrupper/*/roller/*/valgtAv/kode": {
+          "present_companies": 1,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 1
+        },
+        "/rollegrupper/*/sistEndret": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/type/_links/self/href": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/type/beskrivelse": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/type/kode": {
+          "present_companies": 100,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        }
+      },
+      "accounts": {
+        "/*/avviklingsregnskap": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/innskuttEgenkapital": {
+          "present_companies": 2,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial": {
+          "present_companies": 45,
+          "exact_claim_companies": 45,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/opptjentEgenkapital": {
+          "present_companies": 1,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/sumEgenkapital": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld": {
+          "present_companies": 2,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld": {
+          "present_companies": 25,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld": {
+          "present_companies": 44,
+          "exact_claim_companies": 44,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/sumGjeld": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/sumEgenkapitalGjeld": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/anleggsmidler": {
+          "present_companies": 5,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/anleggsmidler/sumAnleggsmidler": {
+          "present_companies": 44,
+          "exact_claim_companies": 44,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/goodwill": {
+          "present_companies": 1,
+          "exact_claim_companies": 1,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/omloepsmidler/sumOmloepsmidler": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumBankinnskuddOgKontanter": {
+          "present_companies": 43,
+          "exact_claim_companies": 43,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumEiendeler": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumFordringer": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumInvesteringer": {
+          "present_companies": 25,
+          "exact_claim_companies": 25,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumVarer": {
+          "present_companies": 20,
+          "exact_claim_companies": 20,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/id": {
+          "present_companies": 46,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/journalnr": {
+          "present_companies": 46,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/oppstillingsplan": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnkapsprinsipper/regnskapsregler": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnkapsprinsipper/smaaForetak": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnskapsperiode/fraDato": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnskapsperiode/tilDato": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnskapstype": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/aarsresultat": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsinntekter": {
+          "present_companies": 8,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter": {
+          "present_companies": 31,
+          "exact_claim_companies": 31,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter": {
+          "present_companies": 40,
+          "exact_claim_companies": 40,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftskostnad": {
+          "present_companies": 1,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad": {
+          "present_companies": 35,
+          "exact_claim_companies": 35,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsresultat": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finansinntekt": {
+          "present_companies": 11,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter": {
+          "present_companies": 40,
+          "exact_claim_companies": 40,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad": {
+          "present_companies": 9,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad": {
+          "present_companies": 36,
+          "exact_claim_companies": 36,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad/rentekostnadSammeKonsern": {
+          "present_companies": 5,
+          "exact_claim_companies": 5,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad": {
+          "present_companies": 43,
+          "exact_claim_companies": 43,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/nettoFinans": {
+          "present_companies": 44,
+          "exact_claim_companies": 44,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/ordinaertResultatSkattekostnad": {
+          "present_companies": 38,
+          "exact_claim_companies": 38,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/totalresultat": {
+          "present_companies": 26,
+          "exact_claim_companies": 26,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/revisjon/fravalgRevisjon": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/revisjon/ikkeRevidertAarsregnskap": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/valuta": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/virksomhet/morselskap": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/virksomhet/organisasjonsform": {
+          "present_companies": 46,
+          "exact_claim_companies": 46,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/virksomhet/organisasjonsnummer": {
+          "present_companies": 46,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        }
+      }
+    }
+  },
+  "final1000": {
+    "responses": {
+      "identity": 1000,
+      "subunits": 1000,
+      "roles": 997,
+      "accounts": 999
+    },
+    "paths": {
+      "identity": {
+        "/_links/self/href": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/aktivitet/*": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 997
+        },
+        "/antallAnsatte": {
+          "present_companies": 122,
+          "exact_claim_companies": 122,
+          "inside_composite_claim_companies": 0
+        },
+        "/epostadresse": {
+          "present_companies": 258,
+          "exact_claim_companies": 258,
+          "inside_composite_claim_companies": 0
+        },
+        "/erIKonsern": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/forretningsadresse/adresse": {
+          "present_companies": 4,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 4
+        },
+        "/forretningsadresse/adresse/*": {
+          "present_companies": 990,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 990
+        },
+        "/forretningsadresse/kommune": {
+          "present_companies": 990,
+          "exact_claim_companies": 990,
+          "inside_composite_claim_companies": 990
+        },
+        "/forretningsadresse/kommunenummer": {
+          "present_companies": 990,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 990
+        },
+        "/forretningsadresse/land": {
+          "present_companies": 994,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 994
+        },
+        "/forretningsadresse/landkode": {
+          "present_companies": 994,
+          "exact_claim_companies": 994,
+          "inside_composite_claim_companies": 994
+        },
+        "/forretningsadresse/postnummer": {
+          "present_companies": 990,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 990
+        },
+        "/forretningsadresse/poststed": {
+          "present_companies": 994,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 994
+        },
+        "/fravalgRevisjonBeslutningsDato": {
+          "present_companies": 428,
+          "exact_claim_companies": 428,
+          "inside_composite_claim_companies": 0
+        },
+        "/fravalgRevisjonDato": {
+          "present_companies": 617,
+          "exact_claim_companies": 617,
+          "inside_composite_claim_companies": 0
+        },
+        "/frivilligMvaRegistrertBeskrivelser/*": {
+          "present_companies": 93,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 93
+        },
+        "/harRegistrertAntallAnsatte": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/historiskeNavn": {
+          "present_companies": 759,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/historiskeNavn/*/fraDato": {
+          "present_companies": 241,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 241
+        },
+        "/historiskeNavn/*/navn": {
+          "present_companies": 241,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 241
+        },
+        "/historiskeNavn/*/tilDato": {
+          "present_companies": 241,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 241
+        },
+        "/hjelpeenhetskode/beskrivelse": {
+          "present_companies": 76,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 76
+        },
+        "/hjelpeenhetskode/kode": {
+          "present_companies": 76,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 76
+        },
+        "/hjemmeside": {
+          "present_companies": 108,
+          "exact_claim_companies": 108,
+          "inside_composite_claim_companies": 0
+        },
+        "/institusjonellSektorkode/beskrivelse": {
+          "present_companies": 969,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 969
+        },
+        "/institusjonellSektorkode/kode": {
+          "present_companies": 969,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 969
+        },
+        "/kapital/antallAksjer": {
+          "present_companies": 894,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 894
+        },
+        "/kapital/belop": {
+          "present_companies": 917,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 917
+        },
+        "/kapital/fulltInnbetalt": {
+          "present_companies": 12,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 12
+        },
+        "/kapital/innbetalt": {
+          "present_companies": 12,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 12
+        },
+        "/kapital/innfortDato": {
+          "present_companies": 917,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 917
+        },
+        "/kapital/type": {
+          "present_companies": 917,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 917
+        },
+        "/kapital/valuta": {
+          "present_companies": 917,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 917
+        },
+        "/konkurs": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/konkursdato": {
+          "present_companies": 3,
+          "exact_claim_companies": 3,
+          "inside_composite_claim_companies": 0
+        },
+        "/maalform": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/mobil": {
+          "present_companies": 225,
+          "exact_claim_companies": 225,
+          "inside_composite_claim_companies": 0
+        },
+        "/naeringskode1/beskrivelse": {
+          "present_companies": 996,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 996
+        },
+        "/naeringskode1/kode": {
+          "present_companies": 996,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 996
+        },
+        "/naeringskode2/beskrivelse": {
+          "present_companies": 6,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 6
+        },
+        "/naeringskode2/kode": {
+          "present_companies": 6,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 6
+        },
+        "/navn": {
+          "present_companies": 1000,
+          "exact_claim_companies": 1000,
+          "inside_composite_claim_companies": 0
+        },
+        "/organisasjonsform/_links/self/href": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 1000
+        },
+        "/organisasjonsform/beskrivelse": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 1000
+        },
+        "/organisasjonsform/kode": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 1000
+        },
+        "/organisasjonsnummer": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/paategninger": {
+          "present_companies": 997,
+          "exact_claim_companies": 70,
+          "inside_composite_claim_companies": 0
+        },
+        "/postadresse/adresse": {
+          "present_companies": 1,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 1
+        },
+        "/postadresse/adresse/*": {
+          "present_companies": 206,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 206
+        },
+        "/postadresse/kommune": {
+          "present_companies": 205,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 205
+        },
+        "/postadresse/kommunenummer": {
+          "present_companies": 205,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 205
+        },
+        "/postadresse/land": {
+          "present_companies": 207,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 207
+        },
+        "/postadresse/landkode": {
+          "present_companies": 207,
+          "exact_claim_companies": 207,
+          "inside_composite_claim_companies": 207
+        },
+        "/postadresse/postnummer": {
+          "present_companies": 205,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 205
+        },
+        "/postadresse/poststed": {
+          "present_companies": 207,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 207
+        },
+        "/registreringsdatoAntallAnsatteEnhetsregisteret": {
+          "present_companies": 331,
+          "exact_claim_companies": 331,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoAntallAnsatteNAVAaregisteret": {
+          "present_companies": 330,
+          "exact_claim_companies": 330,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoEnhetsregisteret": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoForetaksregisteret": {
+          "present_companies": 968,
+          "exact_claim_companies": 968,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoFrivilligMerverdiavgiftsregisteret": {
+          "present_companies": 93,
+          "exact_claim_companies": 93,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoFrivillighetsregisteret": {
+          "present_companies": 6,
+          "exact_claim_companies": 6,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoMerverdiavgiftsregisteret": {
+          "present_companies": 491,
+          "exact_claim_companies": 491,
+          "inside_composite_claim_companies": 0
+        },
+        "/registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret": {
+          "present_companies": 491,
+          "exact_claim_companies": 491,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIForetaksregisteret": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIFrivillighetsregisteret": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIMvaregisteret": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIPartiregisteret": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/registrertIStiftelsesregisteret": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/respons_klasse": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/sisteInnsendteAarsregnskap": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/slettedato": {
+          "present_companies": 3,
+          "exact_claim_companies": 3,
+          "inside_composite_claim_companies": 0
+        },
+        "/stiftelsesdato": {
+          "present_companies": 988,
+          "exact_claim_companies": 988,
+          "inside_composite_claim_companies": 0
+        },
+        "/telefon": {
+          "present_companies": 210,
+          "exact_claim_companies": 210,
+          "inside_composite_claim_companies": 0
+        },
+        "/underAvvikling": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/underAvviklingDato": {
+          "present_companies": 9,
+          "exact_claim_companies": 9,
+          "inside_composite_claim_companies": 0
+        },
+        "/underTvangsavviklingEllerTvangsopplosning": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 0
+        },
+        "/vedtektsdato": {
+          "present_companies": 965,
+          "exact_claim_companies": 965,
+          "inside_composite_claim_companies": 0
+        },
+        "/vedtektsfestetFormaal/*": {
+          "present_companies": 962,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 962
+        }
+      },
+      "subunits": {
+        "/_embedded/underenheter/*/_links/overordnetEnhet/href": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/_links/self/href": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/antallAnsatte": {
+          "present_companies": 122,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 122
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/adresse": {
+          "present_companies": 4,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 4
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/adresse/*": {
+          "present_companies": 768,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 768
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/kommune": {
+          "present_companies": 768,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 768
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/kommunenummer": {
+          "present_companies": 768,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 768
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/land": {
+          "present_companies": 771,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 771
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/landkode": {
+          "present_companies": 771,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 771
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/postnummer": {
+          "present_companies": 768,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 768
+        },
+        "/_embedded/underenheter/*/beliggenhetsadresse/poststed": {
+          "present_companies": 771,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 771
+        },
+        "/_embedded/underenheter/*/datoEierskifte": {
+          "present_companies": 85,
+          "exact_claim_companies": 85,
+          "inside_composite_claim_companies": 85
+        },
+        "/_embedded/underenheter/*/epostadresse": {
+          "present_companies": 180,
+          "exact_claim_companies": 180,
+          "inside_composite_claim_companies": 180
+        },
+        "/_embedded/underenheter/*/harRegistrertAntallAnsatte": {
+          "present_companies": 773,
+          "exact_claim_companies": 773,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/historiskeNavn": {
+          "present_companies": 571,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 571
+        },
+        "/_embedded/underenheter/*/historiskeNavn/*/fraDato": {
+          "present_companies": 210,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 210
+        },
+        "/_embedded/underenheter/*/historiskeNavn/*/navn": {
+          "present_companies": 210,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 210
+        },
+        "/_embedded/underenheter/*/historiskeNavn/*/tilDato": {
+          "present_companies": 210,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 210
+        },
+        "/_embedded/underenheter/*/hjelpeenhetskode/beskrivelse": {
+          "present_companies": 40,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 40
+        },
+        "/_embedded/underenheter/*/hjelpeenhetskode/kode": {
+          "present_companies": 40,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 40
+        },
+        "/_embedded/underenheter/*/hjemmeside": {
+          "present_companies": 83,
+          "exact_claim_companies": 83,
+          "inside_composite_claim_companies": 83
+        },
+        "/_embedded/underenheter/*/mobil": {
+          "present_companies": 158,
+          "exact_claim_companies": 158,
+          "inside_composite_claim_companies": 158
+        },
+        "/_embedded/underenheter/*/naeringskode1/beskrivelse": {
+          "present_companies": 767,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 767
+        },
+        "/_embedded/underenheter/*/naeringskode1/kode": {
+          "present_companies": 767,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 767
+        },
+        "/_embedded/underenheter/*/naeringskode2/beskrivelse": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/_embedded/underenheter/*/naeringskode2/kode": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/_embedded/underenheter/*/navn": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/oppstartsdato": {
+          "present_companies": 712,
+          "exact_claim_companies": 712,
+          "inside_composite_claim_companies": 712
+        },
+        "/_embedded/underenheter/*/organisasjonsform/_links/self/href": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/organisasjonsform/beskrivelse": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/organisasjonsform/kode": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/organisasjonsnummer": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/overordnetEnhet": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/postadresse/adresse": {
+          "present_companies": 2,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 2
+        },
+        "/_embedded/underenheter/*/postadresse/adresse/*": {
+          "present_companies": 180,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 180
+        },
+        "/_embedded/underenheter/*/postadresse/kommune": {
+          "present_companies": 181,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 181
+        },
+        "/_embedded/underenheter/*/postadresse/kommunenummer": {
+          "present_companies": 181,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 181
+        },
+        "/_embedded/underenheter/*/postadresse/land": {
+          "present_companies": 182,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 182
+        },
+        "/_embedded/underenheter/*/postadresse/landkode": {
+          "present_companies": 182,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 182
+        },
+        "/_embedded/underenheter/*/postadresse/postnummer": {
+          "present_companies": 181,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 181
+        },
+        "/_embedded/underenheter/*/postadresse/poststed": {
+          "present_companies": 182,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 182
+        },
+        "/_embedded/underenheter/*/registreringsdatoAntallAnsatteEnhetsregisteret": {
+          "present_companies": 331,
+          "exact_claim_companies": 331,
+          "inside_composite_claim_companies": 331
+        },
+        "/_embedded/underenheter/*/registreringsdatoAntallAnsatteNAVAaregisteret": {
+          "present_companies": 330,
+          "exact_claim_companies": 330,
+          "inside_composite_claim_companies": 330
+        },
+        "/_embedded/underenheter/*/registreringsdatoEnhetsregisteret": {
+          "present_companies": 773,
+          "exact_claim_companies": 773,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/registrertIMvaregisteret": {
+          "present_companies": 773,
+          "exact_claim_companies": 773,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/respons_klasse": {
+          "present_companies": 773,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 773
+        },
+        "/_embedded/underenheter/*/telefon": {
+          "present_companies": 143,
+          "exact_claim_companies": 143,
+          "inside_composite_claim_companies": 143
+        },
+        "/_links/self/href": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/number": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/size": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/totalElements": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/page/totalPages": {
+          "present_companies": 1000,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        }
+      },
+      "roles": {
+        "/_links/enhet/href": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/_links/self/href": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/roller/*/ansvarsandel": {
+          "present_companies": 3,
+          "exact_claim_companies": 3,
+          "inside_composite_claim_companies": 3
+        },
+        "/rollegrupper/*/roller/*/avregistrert": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/bostyrer/erDoed": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/rollegrupper/*/roller/*/bostyrer/navn": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/rollegrupper/*/roller/*/bostyrer/postadresse/adresse/*": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/rollegrupper/*/roller/*/bostyrer/postadresse/landkode": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/rollegrupper/*/roller/*/bostyrer/postadresse/postnummer": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/rollegrupper/*/roller/*/bostyrer/postadresse/poststed": {
+          "present_companies": 3,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 3
+        },
+        "/rollegrupper/*/roller/*/enhet/_links/self/href": {
+          "present_companies": 800,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 800
+        },
+        "/rollegrupper/*/roller/*/enhet/erSlettet": {
+          "present_companies": 800,
+          "exact_claim_companies": 800,
+          "inside_composite_claim_companies": 800
+        },
+        "/rollegrupper/*/roller/*/enhet/godkjenningsstatus": {
+          "present_companies": 798,
+          "exact_claim_companies": 798,
+          "inside_composite_claim_companies": 798
+        },
+        "/rollegrupper/*/roller/*/enhet/navn/*": {
+          "present_companies": 800,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 800
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsform/_links/self/href": {
+          "present_companies": 800,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 800
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsform/beskrivelse": {
+          "present_companies": 800,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 800
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsform/kode": {
+          "present_companies": 800,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 800
+        },
+        "/rollegrupper/*/roller/*/enhet/organisasjonsnummer": {
+          "present_companies": 800,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 800
+        },
+        "/rollegrupper/*/roller/*/person/erDoed": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/person/fodselsdato": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/person/navn/etternavn": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/person/navn/fornavn": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/person/navn/mellomnavn": {
+          "present_companies": 391,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 391
+        },
+        "/rollegrupper/*/roller/*/rekkefolge": {
+          "present_companies": 997,
+          "exact_claim_companies": 997,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/type/_links/self/href": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/type/beskrivelse": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/type/kode": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 997
+        },
+        "/rollegrupper/*/roller/*/valgtAv/_links/self/href": {
+          "present_companies": 85,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 85
+        },
+        "/rollegrupper/*/roller/*/valgtAv/beskrivelse": {
+          "present_companies": 85,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 85
+        },
+        "/rollegrupper/*/roller/*/valgtAv/kode": {
+          "present_companies": 85,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 85
+        },
+        "/rollegrupper/*/sistEndret": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/type/_links/self/href": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/type/beskrivelse": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/rollegrupper/*/type/kode": {
+          "present_companies": 997,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        }
+      },
+      "accounts": {
+        "/*/avviklingsregnskap": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/innskuttEgenkapital": {
+          "present_companies": 51,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial": {
+          "present_companies": 972,
+          "exact_claim_companies": 972,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/opptjentEgenkapital": {
+          "present_companies": 84,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital": {
+          "present_companies": 982,
+          "exact_claim_companies": 982,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/egenkapital/sumEgenkapital": {
+          "present_companies": 998,
+          "exact_claim_companies": 998,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld": {
+          "present_companies": 113,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld": {
+          "present_companies": 967,
+          "exact_claim_companies": 967,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld": {
+          "present_companies": 569,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld": {
+          "present_companies": 960,
+          "exact_claim_companies": 960,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/gjeldOversikt/sumGjeld": {
+          "present_companies": 990,
+          "exact_claim_companies": 990,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/egenkapitalGjeld/sumEgenkapitalGjeld": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/anleggsmidler": {
+          "present_companies": 134,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/anleggsmidler/sumAnleggsmidler": {
+          "present_companies": 983,
+          "exact_claim_companies": 983,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/goodwill": {
+          "present_companies": 64,
+          "exact_claim_companies": 64,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/omloepsmidler": {
+          "present_companies": 7,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/omloepsmidler/sumOmloepsmidler": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumBankinnskuddOgKontanter": {
+          "present_companies": 968,
+          "exact_claim_companies": 968,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumEiendeler": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumFordringer": {
+          "present_companies": 898,
+          "exact_claim_companies": 898,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumInvesteringer": {
+          "present_companies": 540,
+          "exact_claim_companies": 540,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/eiendeler/sumVarer": {
+          "present_companies": 368,
+          "exact_claim_companies": 368,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/id": {
+          "present_companies": 999,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/journalnr": {
+          "present_companies": 999,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/oppstillingsplan": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnkapsprinsipper/regnskapsregler": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnkapsprinsipper/smaaForetak": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnskapsperiode/fraDato": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnskapsperiode/tilDato": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/regnskapstype": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/aarsresultat": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsinntekter": {
+          "present_companies": 275,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter": {
+          "present_companies": 601,
+          "exact_claim_companies": 601,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter": {
+          "present_companies": 838,
+          "exact_claim_companies": 838,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftskostnad": {
+          "present_companies": 24,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad": {
+          "present_companies": 772,
+          "exact_claim_companies": 772,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad": {
+          "present_companies": 993,
+          "exact_claim_companies": 993,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/driftsresultat/driftsresultat": {
+          "present_companies": 995,
+          "exact_claim_companies": 995,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/ekstraordinaerePoster": {
+          "present_companies": 2,
+          "exact_claim_companies": 2,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finansinntekt": {
+          "present_companies": 271,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter": {
+          "present_companies": 912,
+          "exact_claim_companies": 912,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad": {
+          "present_companies": 296,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad": {
+          "present_companies": 680,
+          "exact_claim_companies": 680,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad/rentekostnadSammeKonsern": {
+          "present_companies": 99,
+          "exact_claim_companies": 99,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad": {
+          "present_companies": 891,
+          "exact_claim_companies": 891,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/finansresultat/nettoFinans": {
+          "present_companies": 957,
+          "exact_claim_companies": 957,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad": {
+          "present_companies": 998,
+          "exact_claim_companies": 998,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/ordinaertResultatSkattekostnad": {
+          "present_companies": 752,
+          "exact_claim_companies": 752,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/skattekostnadEkstraordinaertResultat": {
+          "present_companies": 3,
+          "exact_claim_companies": 3,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/resultatregnskapResultat/totalresultat": {
+          "present_companies": 593,
+          "exact_claim_companies": 593,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/revisjon/fravalgRevisjon": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/revisjon/ikkeRevidertAarsregnskap": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/valuta": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/virksomhet/morselskap": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/virksomhet/organisasjonsform": {
+          "present_companies": 999,
+          "exact_claim_companies": 999,
+          "inside_composite_claim_companies": 0
+        },
+        "/*/virksomhet/organisasjonsnummer": {
+          "present_companies": 999,
+          "exact_claim_companies": 0,
+          "inside_composite_claim_companies": 0
+        }
+      }
+    }
+  }
+}

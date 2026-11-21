@@ -1,0 +1,173 @@
+[
+  {
+    "orgnr": "969110466",
+    "field": "identity.business_address.postal_code",
+    "value": "2635",
+    "locator": "/forretningsadresse/postnummer",
+    "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "992686553",
+    "field": "identity.industry1.kode",
+    "value": "86.991",
+    "locator": "/naeringskode1/kode",
+    "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "917512248",
+    "field": "identity.institutional_sector.kode",
+    "value": "2100",
+    "locator": "/institusjonellSektorkode/kode",
+    "sha": "073134c70b5796e640c2b3ab829d26c940f3ed6404ec91a35302ba1f81e89f92",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/917512248",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "913553098",
+    "field": "identity.registered_capital.belop",
+    "value": 35000.0,
+    "locator": "/kapital/belop",
+    "sha": "4097f2bdca3d90ac50f4c248cfabb591035d2180201acdf14e4baeb105a174fc",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/913553098",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "969110466",
+    "field": "roles.group.0.type_kode",
+    "value": "INNH",
+    "locator": "/rollegrupper/0/type/kode",
+    "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "992686553",
+    "field": "roles.detail.ae90a9ec88cedf6e49a2baa0.0.role_type_kode",
+    "value": "DAGL",
+    "locator": "/rollegrupper/0/roller/0/type/kode",
+    "sha": "6d61a7a97254a0b0336ecc9613225e6e4bfb1ef2ba3bf414e28ad661b580b0c7",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553/roller",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "917512248",
+    "field": "roles.detail.55f8bf4e01582776d5d3b9ae.0.holder_organisasjonsnummer",
+    "value": "987410043",
+    "locator": "/rollegrupper/1/roller/0/enhet/organisasjonsnummer",
+    "sha": "3b9de3736db7f704ddf87df321a8de8999f072536cceba60f4812dbff1d1e096",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/917512248/roller",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "999292410",
+    "field": "roles.detail.8d5c2955d0627ddc7cc125b5.0.holder_form_kode",
+    "value": "AS",
+    "locator": "/rollegrupper/0/roller/0/enhet/organisasjonsform/kode",
+    "sha": "e8ae53a7d30c5a4a9db19d74779b1cc90cc394e9cf9d6de20d992ef68fcd971e",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/999292410/roller",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "992686553",
+    "field": "accounts.statement.2025.filing_id",
+    "value": 6544601,
+    "locator": "/2/id",
+    "sha": "d4c6e5042daacb3046c82e9a07b0c3496873c3a31f7fc57b98a6412a2de44d1f",
+    "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/992686553",
+    "period": {
+      "fiscal_year": "2025",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "currency": "NOK",
+      "unit": null,
+      "account_type": "SELSKAP"
+    },
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "917512248",
+    "field": "accounts.statement.2025.journal_number",
+    "value": "2026336617",
+    "locator": "/2/journalnr",
+    "sha": "9fd790c85fe0f2084f2c814557f55809643f1491fca3b578eba98e063d5cdd51",
+    "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/917512248",
+    "period": {
+      "fiscal_year": "2025",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "currency": "NOK",
+      "unit": null,
+      "account_type": "SELSKAP"
+    },
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "913553098",
+    "field": "accounts.statement.2025.filing_id",
+    "value": 6997634,
+    "locator": "/2/id",
+    "sha": "cdf82cb2a51a007cd86f007f122c75a29ae47ba0ce486f740768869e4edb040d",
+    "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/913553098",
+    "period": {
+      "fiscal_year": "2025",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "currency": "NOK",
+      "unit": null,
+      "account_type": "SELSKAP"
+    },
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "969110466",
+    "field": "subunits.detail.978016812.beliggenhetsadresse.postnummer",
+    "value": "2635",
+    "locator": "/_embedded/underenheter/0/beliggenhetsadresse/postnummer",
+    "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "992686553",
+    "field": "subunits.detail.992704519.naeringskode1.kode",
+    "value": "86.991",
+    "locator": "/_embedded/underenheter/0/naeringskode1/kode",
+    "sha": "3d69edbd8f666e95baad1dbc6bcb18788db5a55fbe838d74f453d831bd85f6bc",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=992686553&size=1000&page=0",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "922044775",
+    "field": "subunits.detail.974036851.naeringskode2.kode",
+    "value": "01.190",
+    "locator": "/_embedded/underenheter/0/naeringskode2/kode",
+    "sha": "75dbba49b9324902362357e26b1e37546e9401600836823bcedb36196b47da67",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=922044775&size=1000&page=0",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  },
+  {
+    "orgnr": "988008885",
+    "field": "subunits.detail.988017256.employees",
+    "value": 18,
+    "locator": "/_embedded/underenheter/0/antallAnsatte",
+    "sha": "e21afab22886fa99a20fde685bfeebc0bc2d7fd0e9fd32219ce8306d928a0faa",
+    "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988008885&size=1000&page=0",
+    "period": null,
+    "result": "exact JSON value, SHA and verbatim span verified"
+  }
+]

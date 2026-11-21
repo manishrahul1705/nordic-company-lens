@@ -1,0 +1,5242 @@
+{
+  "method": "jury_compare canonical signature and 0.7 company / 0.3 fact shares, equal family weights; same corrected category applied to every agent",
+  "excluded": [
+    "Hardik182005",
+    "tbd-hackathons",
+    "nested-facts duplicates"
+  ],
+  "before": {
+    "families": [
+      "accounts",
+      "activity",
+      "awards and approvals",
+      "group",
+      "identity",
+      "jobs",
+      "roles",
+      "social",
+      "website",
+      "workplaces"
+    ],
+    "agents": {
+      "Nordic": {
+        "score": 29.2621,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 2554,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 795,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 1313,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 3785,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 9,
+            "facts": 55,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 6,
+            "facts": 11,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 552,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 14,
+            "facts": 33,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 50,
+            "facts": 114,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "CVasilopoulos": {
+        "score": 23.1744,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1920,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 261,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 370,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 3100,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 50,
+            "facts": 148,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 9,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 98,
+            "facts": 282,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 4,
+            "facts": 10,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "tahcin": {
+        "score": 21.2677,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1461,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 288,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 452,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 49,
+            "facts": 1254,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 11,
+            "facts": 64,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 3,
+            "facts": 3,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 3,
+            "facts": 3,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 7,
+            "facts": 35,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "il-miscusi": {
+        "score": 20.8646,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1382,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 581,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 1870,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 42,
+            "facts": 79,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 6,
+            "facts": 11,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "2005sahildeshmukh": {
+        "score": 19.3153,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1796,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 333,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 467,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 2262,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 14,
+            "facts": 78,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 6,
+            "facts": 10,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 5,
+            "facts": 7,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Soumy27": {
+        "score": 17.9335,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 2030,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 2164,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 41,
+            "facts": 93,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 5,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 173,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ashokwebs": {
+        "score": 16.6206,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3902,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 3,
+            "facts": 14,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 17,
+            "facts": 52,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 6,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Venky1209": {
+        "score": 16.0938,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 4262,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 9,
+            "facts": 29,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 5,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "hrishikesh-hiray": {
+        "score": 15.7275,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 958,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 330,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 721,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "nikita-webdeveloper": {
+        "score": 15.6088,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3907,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 573,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 60,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 12,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "akayyt786": {
+        "score": 15.5999,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3907,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 573,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 56,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 12,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Sraveena1992": {
+        "score": 15.5429,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1287,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 1439,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 65,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 10,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Samkit1707": {
+        "score": 15.2949,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1700,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 352,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 794,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 5,
+            "facts": 21,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Jaswanth-dev-69": {
+        "score": 15.2515,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 969,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 448,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 9,
+            "facts": 15,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 2,
+            "facts": 4,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "mayuresh-1979": {
+        "score": 15.0448,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3901,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 15,
+            "facts": 40,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 70,
+            "facts": 70,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "iamjaydatt2006": {
+        "score": 14.9847,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 616,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 416,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 4,
+            "facts": 10,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 172,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "HyunsikParker": {
+        "score": 14.7541,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 601,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 127,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 10,
+            "facts": 35,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 5,
+            "facts": 10,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ChiaraDeVenuto": {
+        "score": 14.7505,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 4265,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 92,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "DG10911": {
+        "score": 14.6733,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 3,
+            "facts": 39,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "sudiirkumar": {
+        "score": 14.6297,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 200,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 146,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 7,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "slightlybroke": {
+        "score": 14.5564,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 4000,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "harshrajeshsankhe": {
+        "score": 14.5464,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ondmindmanagement-hub": {
+        "score": 14.5464,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ranjangogoi61": {
+        "score": 14.5464,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "shridharakki": {
+        "score": 14.5464,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Tanya-garg10": {
+        "score": 14.5464,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "96-del": {
+        "score": 14.4373,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 200,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 246,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 4,
+            "facts": 4,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "antonmareo10": {
+        "score": 13.0994,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 2494,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 284,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 1,
+            "facts": 10,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 2640,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 10,
+            "facts": 25,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 5,
+            "facts": 7,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "AnanthKumar1810": {
+        "score": 12.8276,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1773,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 99,
+            "facts": 147,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 617,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 2,
+            "facts": 5,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 402,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "rasaldushyant17": {
+        "score": 12.8206,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 819,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 125,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 3,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 98,
+            "facts": 170,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "rafaorlando3": {
+        "score": 12.8035,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 664,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 99,
+            "facts": 99,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 45,
+            "facts": 263,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 2,
+            "facts": 5,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "mstege": {
+        "score": 12.56,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1822,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 336,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 1,
+            "facts": 9,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 892,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 11,
+            "facts": 23,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 6,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "arindewangan": {
+        "score": 12.5048,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 611,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 46,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 10,
+            "facts": 13,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "rahul25118": {
+        "score": 10.7991,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 509,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 4,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 4,
+            "facts": 4,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "nightshift-labs-ai": {
+        "score": 9.1715,
+        "components": {
+          "identity": {
+            "companies": 75,
+            "facts": 304,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 75,
+            "facts": 179,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 32,
+            "facts": 586,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 51,
+            "facts": 51,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "martyn-in": {
+        "score": 4.2012,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 306,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 10,
+            "facts": 10,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "JatothKarthikKumar": {
+        "score": 3.5201,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 200,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "abhinavlenka": {
+        "score": 0.0,
+        "components": {
+          "identity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "JDInMBA": {
+        "score": 0.0,
+        "components": {
+          "identity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Punitkochaliyan": {
+        "score": 0.0,
+        "components": {
+          "identity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 14931
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2875
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17150
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 1990
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      }
+    },
+    "rank": 1
+  },
+  "after": {
+    "families": [
+      "accounts",
+      "activity",
+      "awards and approvals",
+      "group",
+      "identity",
+      "jobs",
+      "roles",
+      "social",
+      "website",
+      "workplaces"
+    ],
+    "agents": {
+      "Nordic": {
+        "score": 30.0618,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3922,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 2129,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 1313,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 4039,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 9,
+            "facts": 55,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 6,
+            "facts": 11,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 1383,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 14,
+            "facts": 33,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 50,
+            "facts": 114,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "CVasilopoulos": {
+        "score": 23.0558,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1920,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 261,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 370,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 3100,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 50,
+            "facts": 148,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 9,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 98,
+            "facts": 282,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 4,
+            "facts": 10,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "tahcin": {
+        "score": 21.1957,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1461,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 288,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 452,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 49,
+            "facts": 1254,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 11,
+            "facts": 64,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 3,
+            "facts": 3,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 3,
+            "facts": 3,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 7,
+            "facts": 35,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "il-miscusi": {
+        "score": 20.7981,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1382,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 581,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 1870,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 42,
+            "facts": 79,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 6,
+            "facts": 11,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "2005sahildeshmukh": {
+        "score": 19.2491,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1796,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 333,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 467,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 2262,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 14,
+            "facts": 78,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 6,
+            "facts": 10,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 5,
+            "facts": 7,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Soumy27": {
+        "score": 17.8412,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 2030,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 2164,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 41,
+            "facts": 93,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 5,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 173,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ashokwebs": {
+        "score": 16.544,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3902,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 3,
+            "facts": 14,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 17,
+            "facts": 52,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 6,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Venky1209": {
+        "score": 16.0155,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 4262,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 9,
+            "facts": 29,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 5,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "hrishikesh-hiray": {
+        "score": 15.6645,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 958,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 100,
+            "facts": 330,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 721,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "nikita-webdeveloper": {
+        "score": 15.5319,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3907,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 573,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 60,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 12,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "akayyt786": {
+        "score": 15.523,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3907,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 573,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 56,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 12,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Sraveena1992": {
+        "score": 15.477,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1287,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 1439,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 65,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 10,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Jaswanth-dev-69": {
+        "score": 15.2139,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 969,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 448,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 9,
+            "facts": 15,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 2,
+            "facts": 4,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Samkit1707": {
+        "score": 15.2119,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1700,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 352,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 794,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 5,
+            "facts": 21,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "mayuresh-1979": {
+        "score": 14.9687,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3901,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 15,
+            "facts": 40,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 70,
+            "facts": 70,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "iamjaydatt2006": {
+        "score": 14.9266,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 616,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 416,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 4,
+            "facts": 10,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 172,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "HyunsikParker": {
+        "score": 14.6936,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 601,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 252,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 127,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 10,
+            "facts": 35,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 5,
+            "facts": 10,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ChiaraDeVenuto": {
+        "score": 14.6722,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 4265,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 92,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "DG10911": {
+        "score": 14.5967,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 3,
+            "facts": 39,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "sudiirkumar": {
+        "score": 14.5899,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 200,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 146,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 7,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "slightlybroke": {
+        "score": 14.4793,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 4000,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "harshrajeshsankhe": {
+        "score": 14.4698,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ondmindmanagement-hub": {
+        "score": 14.4698,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "ranjangogoi61": {
+        "score": 14.4698,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "shridharakki": {
+        "score": 14.4698,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Tanya-garg10": {
+        "score": 14.4698,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 3900,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 373,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 7,
+            "facts": 17,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 2,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "96-del": {
+        "score": 14.3974,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 200,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 100,
+            "facts": 246,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 4,
+            "facts": 4,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "antonmareo10": {
+        "score": 13.0376,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 2494,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 284,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 1,
+            "facts": 10,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 2640,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 10,
+            "facts": 25,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 5,
+            "facts": 7,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "rasaldushyant17": {
+        "score": 12.7624,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 819,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 125,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 3,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 98,
+            "facts": 170,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "rafaorlando3": {
+        "score": 12.7615,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 664,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 99,
+            "facts": 99,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 45,
+            "facts": 263,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 2,
+            "facts": 5,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "AnanthKumar1810": {
+        "score": 12.7051,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1773,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 99,
+            "facts": 147,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 617,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 2,
+            "facts": 5,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 100,
+            "facts": 402,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "mstege": {
+        "score": 12.4949,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 1822,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 336,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 1,
+            "facts": 9,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 892,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 11,
+            "facts": 23,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 4,
+            "facts": 6,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 2,
+            "facts": 2,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "arindewangan": {
+        "score": 12.4694,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 611,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 100,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 46,
+            "facts": 46,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 10,
+            "facts": 13,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 72,
+            "facts": 72,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "rahul25118": {
+        "score": 10.7546,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 509,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 100,
+            "facts": 255,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 3,
+            "facts": 4,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 4,
+            "facts": 4,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "nightshift-labs-ai": {
+        "score": 9.1284,
+        "components": {
+          "identity": {
+            "companies": 75,
+            "facts": 304,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 75,
+            "facts": 179,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 32,
+            "facts": 586,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 4,
+            "facts": 8,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 1,
+            "facts": 1,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 51,
+            "facts": 51,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "martyn-in": {
+        "score": 4.1998,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 306,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 10,
+            "facts": 10,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "JatothKarthikKumar": {
+        "score": 3.5192,
+        "components": {
+          "identity": {
+            "companies": 100,
+            "facts": 200,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "abhinavlenka": {
+        "score": 0.0,
+        "components": {
+          "identity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "JDInMBA": {
+        "score": 0.0,
+        "components": {
+          "identity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      },
+      "Punitkochaliyan": {
+        "score": 0.0,
+        "components": {
+          "identity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 15649
+          },
+          "roles": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 4209
+          },
+          "activity": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2665
+          },
+          "accounts": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 17404
+          },
+          "website": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 54,
+            "union_facts": 672
+          },
+          "social": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 9,
+            "union_facts": 88
+          },
+          "jobs": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 8,
+            "union_facts": 17
+          },
+          "workplaces": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 100,
+            "union_facts": 2821
+          },
+          "group": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 14,
+            "union_facts": 45
+          },
+          "awards and approvals": {
+            "companies": 0,
+            "facts": 0,
+            "union_companies": 50,
+            "union_facts": 149
+          }
+        }
+      }
+    },
+    "rank": 1
+  }
+}

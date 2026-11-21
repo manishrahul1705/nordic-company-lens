@@ -32,7 +32,7 @@ def brand_on(title, legal, url):
 
 
 @pytest.mark.parametrize('title,legal,url,expected', [
-    ('Digitale løsninger som gir resultater | Vokser', 'VOKSER AS', 'https://vokser.no/', None),
+    ('Digitale løsninger som gir resultater | Vokser', 'VOKSER AS', 'https://vokser.no/', 'Vokser'),
     ('Contact Us | Antisink Systems', 'ANTISINK AS', 'https://antisink.no/', 'Antisink Systems'),
     ('Drøbak Montessori – Med barnet i fokus', 'DRØBAK MONTESSORI UNGDOMSSKOLE AS', 'https://dmu.no/', 'Drøbak Montessori'),
     ('Kjøkkenfronter.no – Kjokkenfronter.no', 'KITCHEN & LIVING GROUP AS', 'https://kjokkenfronter.no/', 'Kjøkkenfronter.no'),
@@ -48,3 +48,11 @@ def test_descriptive_or_cross_script_brand_is_withheld():
                     'WEBVIA AS', 'https://webvia.no/') is None
     assert brand_on('Экскурсионные туры в Норвегию от Uniktur',
                     'UNIKTUR AS', 'https://www.unikturs.com/') is None
+
+
+def test_compound_site_name_keeps_legal_brand_segment():
+    markup = '<html><head><title>Haugesund</title><meta property="og:site_name" content="A. Olufsen Ship &amp; Offshore | Haugesund"></head></html>'
+    page = Page(markup.encode(), 'https://aoso.no/')
+    assert extract_public_brand(page, 'A. OLUFSEN SHIP & OFFSHORE AS') == 'A. Olufsen Ship & Offshore'
+    page = Page(b'<html><head><title>Haugesund | A. Olufsen Ship &amp; Offshore</title></head></html>', 'https://aoso.no/')
+    assert extract_public_brand(page, 'A. OLUFSEN SHIP & OFFSHORE AS') == 'A. Olufsen Ship & Offshore'

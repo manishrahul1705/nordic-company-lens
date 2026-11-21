@@ -3,7 +3,7 @@ from urllib.parse import urlencode
 import asyncio
 from ..budget import SourceFailure
 from .extract import Section, add, finish, decode, response_source
-from .fact_depth import hidden_range,disclosure,histories,label
+from .fact_depth import hidden_range,disclosure,histories,label,subunit_scalars
 
 DETAILS={'start_date':'oppstartsdato','registration_date':'registreringsdatoEnhetsregisteret',
          'ownership_change_date':'datoEierskifte','registered_website':'hjemmeside','registered_email':'epostadresse',
@@ -60,6 +60,7 @@ def extract_page(org,response,section,page):
                 if value is not None:
                     add(section,response_source(response),org,'subunits',f'subunits.detail.{key}.{name}',value,
                         f'/_embedded/underenheter/{index}/{field}',effective=value if name.endswith('_date') else None)
+            subunit_scalars(section,response_source(response),org,raw,loc,key)
         if not normalized and page == 0:
             add(section, response_source(response), org, "subunits", "subunits.units", None, "/_embedded/underenheter")
         return int(data.get('page',{}).get('totalPages',1))

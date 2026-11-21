@@ -1,0 +1,25 @@
+{
+  "jury316": {
+    "lines": 316,
+    "schema_valid": true,
+    "published_claims": 36765,
+    "source_blobs_verified": 1284,
+    "synthesis_companies": 316,
+    "synthesis_sentences": 735,
+    "synthesis_unverified_values": 0
+  },
+  "final1000": {
+    "lines": 1000,
+    "schema_valid": true,
+    "published_claims": 236620,
+    "source_blobs_verified": 5993,
+    "synthesis_companies": 1000,
+    "synthesis_sentences": 2552,
+    "synthesis_unverified_values": 0
+  },
+  "full_suite": {
+    "passed": 1857,
+    "warnings": 1,
+    "seconds": 515.48
+  }
+}

@@ -103,23 +103,21 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     Extracts verified public brand from page, withholding generic storefront taglines,
     legal/store suffixes, and exact duplicates of the registered legal name.
     """
-    candidate_brand = page.meta.get("og:site_name") or page.meta.get("og:sitename")
-    if candidate_brand:
-        candidate_brand = html.unescape(candidate_brand).strip()
-    else:
-        parts = [html.unescape(p).strip() for p in re.split(r"\s+[|–-]\s+", page.title) if p.strip()]
-        while len(parts) > 1 and strip_page_words(parts[0]) is None:
-            parts = parts[1:]  # "Kontakt oss | Acme": the leading part names the page.
-        if parts:
-            generic_store_words = {"nettbutikk", "fiskeutstyr", "båtutstyr", "butikk", "webshop", "forside", "hjem", "velkommen", "home", "shop", "online"}
-            p0_lower = parts[0].lower()
-            if any(w in p0_lower for w in generic_store_words) and len(parts) > 1:
-                candidate_brand = parts[-1]
-            else:
-                candidate_brand = parts[0]
-
+    site_name = page.meta.get("og:site_name") or page.meta.get("og:sitename")
+    candidate_brand = html.unescape(site_name or page.title).strip()
     if not candidate_brand:
         return None
+    candidate_brand = re.sub(r"\s*[-–|:]?\s*(?:org(?:anisasjons)?\.?\s*nr\.?|organisasjonsnummer)\s*[:.]?\s*\d{9}\b.*$", "", candidate_brand, flags=re.I).strip(" .,-")
+    separators = r"\s*[|–—:·]\s*" if site_name else r"\s*[|–—:·]\s*|\s+-\s+"
+    segments = [part.strip() for part in re.split(separators, candidate_brand) if part.strip()]
+    for segment in segments:
+        accepted = _brand_segment(segment, legal_name_val, page.url, segmented=len(segments)>1)
+        if accepted:
+            return accepted
+    return None
+
+
+def _brand_segment(candidate_brand, legal_name_val, url, segmented=False):
     # A page title often leads with the page's purpose ("Kontaktinformasjon Falsen
     # Transport"). Those words describe the page, not the company: strip them, and
     # withhold the brand if nothing distinctive remains.
@@ -153,8 +151,8 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
     if (cleaned_brand and len(cleaned_brand) <= 100 and "\ufffd" not in cleaned_brand
             and norm_b not in generic_brands
             and not is_generic_tagline
-            and norm_b != legal_name(legal_name_val)
-            and shares_identity_token(cleaned_brand, legal_name_val, page.url)):
+            and (segmented or norm_b != legal_name(legal_name_val))
+            and shares_identity_token(cleaned_brand, legal_name_val, url)):
         return cleaned_brand
     return None
 

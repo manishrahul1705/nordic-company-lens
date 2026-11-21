@@ -4,7 +4,7 @@ import asyncio
 from .brreg_enhet import BASE
 from .extract import Section, add, finish, decode, response_source
 from ..models.evidence import digest, canonical
-from .fact_depth import birth_year,label
+from .fact_depth import birth_year,label,role_group_scalars,role_type_scalars
 
 
 async def fetch(org, http):
@@ -24,6 +24,7 @@ def extract(org,response):
     seen = {}
     exact_seen=set()
     for group_index, group in enumerate(data.get("rollegrupper", [])):
+        role_group_scalars(section,response_source(response),org,group,group_index)
         for role_index, item in enumerate(group.get("roller", [])):
             exact=digest(canonical([group.get('type'),item]))
             if exact in exact_seen:continue
@@ -43,6 +44,7 @@ def extract(org,response):
             seen[key] = slot + 1
             add(section, response_source(response), org, "roles", f"roles.role.{key}.{slot}", entry,
                 f"/rollegrupper/{group_index}/roller/{role_index}", effective=entry["from_date"] or entry["last_changed"])
+            role_type_scalars(section,response_source(response),org,item,group_index,role_index,key,slot)
             loc=f'/rollegrupper/{group_index}/roller/{role_index}'
             extra={'birth_year':(birth_year(person.get('fodselsdato')),'/person/fodselsdato'),
                    'person_deceased':(person.get('erDoed'),'/person/erDoed'),

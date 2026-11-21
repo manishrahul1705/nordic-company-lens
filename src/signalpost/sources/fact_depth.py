@@ -48,6 +48,119 @@ def identity(section,source,org,raw):
         add(section,source,org,'identity','identity.'+name,value,'/'+'/'.join(path));label(section)
     disclosure(section,source,org,'identity','identity',raw,'')
     histories(section,source,org,'identity','identity',raw.get('historiskeNavn'),'/historiskeNavn')
+    existing={e.locator for e in section.evidence if e.content_sha256==source.sha}
+    for address, prefix in (('forretningsadresse','business_address'),('postadresse','postal_address')):
+        item=raw.get(address)
+        if not isinstance(item,dict):continue
+        lines=item.get('adresse')
+        if isinstance(lines,list):
+            for index,value in enumerate(lines):
+                _scalar(section,source,org,'identity',f'identity.{prefix}.line.{index}',value,
+                        f'/{address}/adresse/{index}',existing)
+        elif isinstance(lines,str):
+            _scalar(section,source,org,'identity',f'identity.{prefix}.line.0',lines,
+                    f'/{address}/adresse',existing)
+        for key,name in (('postnummer','postal_code'),('poststed','postal_town'),
+                         ('kommunenummer','municipality_code'),('land','country_name')):
+            _scalar(section,source,org,'identity',f'identity.{prefix}.{name}',item.get(key),
+                    f'/{address}/{key}',existing)
+        if address=='postadresse':
+            _scalar(section,source,org,'identity','identity.postal_address.municipality',
+                    item.get('kommune'),f'/{address}/kommune',existing)
+    for object_key,prefix,keys in (
+        ('organisasjonsform','organisation_form',('kode','beskrivelse')),
+        ('naeringskode1','industry1',('kode','beskrivelse')),
+        ('naeringskode2','industry2',('kode','beskrivelse')),
+        ('naeringskode3','industry3',('kode','beskrivelse')),
+        ('institusjonellSektorkode','institutional_sector',('kode','beskrivelse')),
+        ('hjelpeenhetskode','support_unit_code',('kode','beskrivelse')),
+        ('kapital','registered_capital',('belop','antallAksjer','type','bundet','valuta','innbetalt','fulltInnbetalt','innfortDato'))):
+        item=raw.get(object_key)
+        if not isinstance(item,dict):continue
+        for key in keys:
+            _scalar(section,source,org,'identity',f'identity.{prefix}.{key}',item.get(key),
+                    f'/{object_key}/{key}',existing)
+
+
+def _scalar(section,source,org,family,field,value,locator,existing,reporting=None,effective=None):
+    """Publish a sourced leaf once, without creating null or composite claims."""
+    if locator in existing or value is None or value=='' or isinstance(value,(dict,list)):
+        return
+    add(section,source,org,family,field,value,locator,reporting=reporting,effective=effective)
+    existing.add(locator)
+    label(section)
+
+
+def role_group_scalars(section,source,org,group,index):
+    existing={e.locator for e in section.evidence if e.content_sha256==source.sha}
+    base=f'/rollegrupper/{index}'
+    kind=group.get('type') or {}
+    for key in ('kode','beskrivelse'):
+        _scalar(section,source,org,'roles',f'roles.group.{index}.type_{key}',
+                kind.get(key),f'{base}/type/{key}',existing)
+    _scalar(section,source,org,'roles',f'roles.group.{index}.last_changed',
+            group.get('sistEndret'),f'{base}/sistEndret',existing)
+
+
+def role_type_scalars(section,source,org,item,group_index,role_index,key,slot):
+    existing={e.locator for e in section.evidence if e.content_sha256==source.sha}
+    kind=item.get('type') or {}
+    base=f'/rollegrupper/{group_index}/roller/{role_index}'
+    prefix=f'roles.detail.{key}.{slot}'
+    for part in ('kode','beskrivelse'):
+        _scalar(section,source,org,'roles',f'{prefix}.role_type_{part}',
+                kind.get(part),f'{base}/type/{part}',existing)
+    for part,field in (('avregistrert','inactive'),('fraDato','from_date')):
+        _scalar(section,source,org,'roles',f'{prefix}.{field}',item.get(part),f'{base}/{part}',existing)
+    holder=item.get('enhet') or {}
+    if isinstance(holder,dict):
+        for part in ('organisasjonsnummer','navn'):
+            _scalar(section,source,org,'roles',f'{prefix}.holder_{part}',holder.get(part),
+                    f'{base}/enhet/{part}',existing)
+        form=holder.get('organisasjonsform') or {}
+        if isinstance(form,dict):
+            for part in ('kode','beskrivelse'):
+                _scalar(section,source,org,'roles',f'{prefix}.holder_form_{part}',form.get(part),
+                        f'{base}/enhet/organisasjonsform/{part}',existing)
+    elected=item.get('valgtAv') or {}
+    if isinstance(elected,dict):
+        for part in ('kode','beskrivelse'):
+            _scalar(section,source,org,'roles',f'{prefix}.elected_by_{part}',elected.get(part),
+                    f'{base}/valgtAv/{part}',existing)
+
+
+def subunit_scalars(section,source,org,raw,loc,key):
+    existing={e.locator for e in section.evidence if e.content_sha256==source.sha}
+    prefix=f'subunits.detail.{key}'
+    for object_key,fields in (
+        ('beliggenhetsadresse',('postnummer','poststed','kommune','kommunenummer','land','landkode')),
+        ('postadresse',('postnummer','poststed','kommune','kommunenummer','land','landkode')),
+        ('naeringskode1',('kode','beskrivelse')),
+        ('naeringskode2',('kode','beskrivelse')),
+        ('naeringskode3',('kode','beskrivelse'))):
+        item=raw.get(object_key)
+        if not isinstance(item,dict):continue
+        if object_key.endswith('adresse'):
+            lines=item.get('adresse')
+            if isinstance(lines,list):
+                for index,value in enumerate(lines):
+                    _scalar(section,source,org,'subunits',f'{prefix}.{object_key}.line.{index}',
+                            value,f'{loc}/{object_key}/adresse/{index}',existing)
+            elif isinstance(lines,str):
+                _scalar(section,source,org,'subunits',f'{prefix}.{object_key}.line.0',
+                        lines,f'{loc}/{object_key}/adresse',existing)
+        for part in fields:
+            _scalar(section,source,org,'subunits',f'{prefix}.{object_key}.{part}',
+                    item.get(part),f'{loc}/{object_key}/{part}',existing)
+    if raw.get('harRegistrertAntallAnsatte') is True and not hidden_range(raw.get('antallAnsatte')):
+        _scalar(section,source,org,'subunits',f'{prefix}.employees',
+                raw.get('antallAnsatte'),f'{loc}/antallAnsatte',existing)
+    for object_key in ('organisasjonsform','hjelpeenhetskode'):
+        item=raw.get(object_key)
+        if isinstance(item,dict):
+            for part in ('kode','beskrivelse'):
+                _scalar(section,source,org,'subunits',f'{prefix}.{object_key}.{part}',
+                        item.get(part),f'{loc}/{object_key}/{part}',existing)
 
 def birth_year(value):
     if not isinstance(value,str):return None
@@ -98,6 +211,9 @@ def accounts(section,org,data,source):
             if value is None:continue
             add(section,source,org,'accounts',prefix+'.'+name,value,f'/{idx}/'+'/'.join(path),reporting=period,effective=end)
             label(section,scope+' '+name.replace('_',' '))
+        for name,key in (('filing_id','id'),('journal_number','journalnr')):
+            _scalar(section,source,org,'accounts',prefix+'.'+name,row.get(key),
+                    f'/{idx}/{key}',existing,reporting=period,effective=end)
         unaudited=get(row,('revisjon','ikkeRevidertAarsregnskap'))
         opted_out=get(row,('revisjon','fravalgRevisjon'))
         audited=get(row,('revisjon','revidertAarsregnskap'))

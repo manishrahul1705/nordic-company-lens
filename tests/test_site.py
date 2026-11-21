@@ -162,12 +162,16 @@ def test_site_membership_evidence_citations_and_determinism(tmp_path, shape):
         if href.startswith('#'): assert href[1:] in markup.ids
     for claim in row.claims:
         if claim.availability == 'available':
-            assert 'fact-' + claim.id[:16] in markup.ids
-            receipt = next(attrs for tag,attrs in markup.tags if tag=='a' and attrs.get('data-receipt')==claim.id[:16])
-            target,fragment = receipt['href'].split('#',1)
-            receipt_path=(out/'c'/target).resolve()
-            assert receipt_path.is_file()
-            assert 'id="'+fragment+'"' in receipt_path.read_text(encoding='utf8')
+            if claim.field.startswith(('roles.detail.', 'subunits.detail.')):
+                detail = next(x for x in payload['registry_details'] if x['id'] == claim.id[:16])
+                assert detail['field'] == claim.field and detail['value'] == claim.value
+            else:
+                assert 'fact-' + claim.id[:16] in markup.ids
+                receipt = next(attrs for tag,attrs in markup.tags if tag=='a' and attrs.get('data-receipt')==claim.id[:16])
+                target,fragment = receipt['href'].split('#',1)
+                receipt_path=(out/'c'/target).resolve()
+                assert receipt_path.is_file()
+                assert 'id="'+fragment+'"' in receipt_path.read_text(encoding='utf8')
             for eid in claim.evidence_ids:
                 e = next(e for e in row.evidence if e.id == eid)
                 assert evidence[eid]['content_sha256'] == e.content_sha256

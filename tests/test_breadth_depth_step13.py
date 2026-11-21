@@ -124,7 +124,8 @@ def test_all_role_codes_including_deputies_and_contacts_with_no_duplicate(tmp_pa
     body=json.dumps({'organisasjonsnummer':ORG,'rollegrupper':[{'roller':roles+[roles[-1]]}]}).encode()
     section=extract(ORG,Response(body,200,'https://data.brreg.no/enhetsregisteret/api/enheter/'+ORG+'/roller','2026-11-06T00:00:00Z',BlobStore(tmp_path).put(body)))
     assert {c.value['role_type']['kode'] for c in section.claims if c.field.startswith('roles.role.')}==set(codes)
-    assert len(section.claims)==len(codes)
+    assert len([c for c in section.claims if c.field.startswith('roles.role.')])==len(codes)
+    assert len([c for c in section.claims if c.field.endswith('.role_type_kode')])==len(codes)
 
 
 def test_postal_addresses_project_as_typed_places_and_deduplicate(tmp_path):

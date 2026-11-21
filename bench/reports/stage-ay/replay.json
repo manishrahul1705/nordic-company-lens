@@ -1,0 +1,1314 @@
+{
+  "jury100": {
+    "rows": 100,
+    "before": {
+      "identity": 2615,
+      "subunits": 559,
+      "roles": 1134,
+      "activity": 1313,
+      "accounts": 4637,
+      "website": 66,
+      "funding": 40,
+      "certification": 11
+    },
+    "new": {
+      "identity": 1406,
+      "subunits": 874,
+      "roles": 1597,
+      "accounts": 254
+    },
+    "after": {
+      "identity": 4021,
+      "subunits": 1433,
+      "roles": 2731,
+      "activity": 1313,
+      "accounts": 4891,
+      "website": 66,
+      "funding": 40,
+      "certification": 11
+    },
+    "examples": [
+      {
+        "orgnr": "969110466",
+        "field": "identity.business_address.line.0",
+        "value": "Nordmedlia 641",
+        "locator": "/forretningsadresse/adresse/0",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "rIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Nordmedlia 641\"],\"kommune\":\"ØYER\",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Personlig næringsdriv",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.business_address.postal_code",
+        "value": "2635",
+        "locator": "/forretningsadresse/postnummer",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Personlig næringsdrivende\",\"kode\":\"8200\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"k",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.business_address.postal_town",
+        "value": "TRETTEN",
+        "locator": "/forretningsadresse/poststed",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "e\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Personlig næringsdrivende\",\"kode\":\"8200\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"na",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.business_address.municipality_code",
+        "value": "3440",
+        "locator": "/forretningsadresse/kommunenummer",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "Nordmedlia 641\"],\"kommune\":\"ØYER\",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Personlig næringsdrivende\",\"kode\":\"8200\"},\"konkurs\":false,\"maalform\":\"Bo",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.business_address.country_name",
+        "value": "Norge",
+        "locator": "/forretningsadresse/land",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "\"],\"kommune\":\"ØYER\",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Personlig næringsdrivende\",\"kode\":\"8200\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naering",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.organisation_form.kode",
+        "value": "ENK",
+        "locator": "/organisasjonsform/kode",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "ENK\"}},\"beskrivelse\":\"Enkeltpersonforetak\",\"kode\":\"ENK\"},\"organisasjonsnummer\":\"969110466\",\"paategninger\":[],\"registreringsdatoEnhetsregisteret\":\"1995-02-20\",\"registreringsdatoMerverdiavgiftsregisteret\":\"1991-01-01\",\"registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret\":\"1995-02-20\",\"registrer",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.organisation_form.beskrivelse",
+        "value": "Enkeltpersonforetak",
+        "locator": "/organisasjonsform/beskrivelse",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "eret/api/organisasjonsformer/ENK\"}},\"beskrivelse\":\"Enkeltpersonforetak\",\"kode\":\"ENK\"},\"organisasjonsnummer\":\"969110466\",\"paategninger\":[],\"registreringsdatoEnhetsregisteret\":\"1995-02-20\",\"registreringsdatoMerverdiavgiftsregisteret\":\"1991-01-01\",\"registreringsdatoMerverdiavgiftsregisteretEnhetsregist",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.industry1.kode",
+        "value": "01.460",
+        "locator": "/naeringskode1/kode",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/ENK\"}},\"beskrivelse\":\"Enkeltpersonforetak\",\"kode\":\"ENK\"},\"organisasjonsnummer\":\"969110466\",\"paategninger\":",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.industry1.beskrivelse",
+        "value": "Svinehold",
+        "locator": "/naeringskode1/beskrivelse",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/ENK\"}},\"beskrivelse\":\"Enkeltpersonforetak\",\"kode\":\"ENK\"},\"organisasjonsnummer\":\"9691104",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.institutional_sector.kode",
+        "value": "8200",
+        "locator": "/institusjonellSektorkode/kode",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "{\"beskrivelse\":\"Personlig næringsdrivende\",\"kode\":\"8200\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/ENK\"}},\"besk",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "identity.institutional_sector.beskrivelse",
+        "value": "Personlig næringsdrivende",
+        "locator": "/institusjonellSektorkode/beskrivelse",
+        "sha": "7222e891baa44139ea0b4ba91a47cea753cfe9cd1cb97f4afea27991fce72f2e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466",
+        "claim_span": "avn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Personlig næringsdrivende\",\"kode\":\"8200\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/a",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.beliggenhetsadresse.line.0",
+        "value": "Nordmedlia 641",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/adresse/0",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "er/969110466\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Nordmedlia 641\"],\"kommune\":\"ØYER\",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"nav",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.beliggenhetsadresse.postnummer",
+        "value": "2635",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/postnummer",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstartsdato\":\"1991-06-05\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https:",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.beliggenhetsadresse.poststed",
+        "value": "TRETTEN",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/poststed",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "e\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstartsdato\":\"1991-06-05\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/en",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.beliggenhetsadresse.kommune",
+        "value": "ØYER",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/kommune",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "sadresse\":{\"adresse\":[\"Nordmedlia 641\"],\"kommune\":\"ØYER\",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstar",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.beliggenhetsadresse.kommunenummer",
+        "value": "3440",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/kommunenummer",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "Nordmedlia 641\"],\"kommune\":\"ØYER\",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstartsdato\":\"1991-06-05\",\"o",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.beliggenhetsadresse.land",
+        "value": "Norge",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/land",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "\"],\"kommune\":\"ØYER\",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstartsdato\":\"1991-06-05\",\"organisasjonsfo",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.beliggenhetsadresse.landkode",
+        "value": "NO",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/landkode",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": ",\"kommunenummer\":\"3440\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"2635\",\"poststed\":\"TRETTEN\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstartsdato\":\"1991-06-05\",\"organisasjonsform\":{\"_links\":{\"sel",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.naeringskode1.kode",
+        "value": "01.460",
+        "locator": "/_embedded/underenheter/0/naeringskode1/kode",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstartsdato\":\"1991-06-05\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltnin",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.naeringskode1.beskrivelse",
+        "value": "Svinehold",
+        "locator": "/_embedded/underenheter/0/naeringskode1/beskrivelse",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Svinehold\",\"kode\":\"01.460\"},\"navn\":\"HJELMSTAD JOHN\",\"oppstartsdato\":\"1991-06-05\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og o",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.organisasjonsform.kode",
+        "value": "BEDR",
+        "locator": "/_embedded/underenheter/0/organisasjonsform/kode",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": " næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"978016812\",\"overordnetEnhet\":\"969110466\",\"registreringsdatoEnhetsregisteret\":\"1997-06-13\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregistere",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "subunits.detail.978016812.organisasjonsform.beskrivelse",
+        "value": "Underenhet til næringsdrivende og offentlig forvaltning",
+        "locator": "/_embedded/underenheter/0/organisasjonsform/beskrivelse",
+        "sha": "0db2cff151b081ffb89db011345db4823147a5d0d8a802ce430333aca8d2cb17",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=969110466&size=1000&page=0",
+        "claim_span": "ret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"978016812\",\"overordnetEnhet\":\"969110466\",\"registreringsdatoEnhetsregisteret\":\"1997-06-13\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.group.0.type_kode",
+        "value": "INNH",
+        "locator": "/rollegrupper/0/type/kode",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "ppetyper/INNH\"}},\"beskrivelse\":\"Innehaver\",\"kode\":\"INNH\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/912751082\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent regnskapsforetak\",\"navn\":[\"SNØHETTA REGNSKAP ØYER AS\"],\"orga",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.group.0.type_beskrivelse",
+        "value": "Innehaver",
+        "locator": "/rollegrupper/0/type/beskrivelse",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "api/roller/rollegruppetyper/INNH\"}},\"beskrivelse\":\"Innehaver\",\"kode\":\"INNH\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/912751082\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent regnskapsforetak\",\"navn\":[\"SNØHETTA REGNS",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.group.0.last_changed",
+        "value": "1995-02-20",
+        "locator": "/rollegrupper/0/sistEndret",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "ivelse\":\"Innehaver\",\"kode\":\"INNH\"}}],\"sistEndret\":\"1995-02-20\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/INNH\"}},\"beskrivelse\":\"Innehaver\",\"kode\":\"INNH\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.d70a18645bfe95cd59365664.0.role_type_kode",
+        "value": "INNH",
+        "locator": "/rollegrupper/0/roller/0/type/kode",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "lletyper/INNH\"}},\"beskrivelse\":\"Innehaver\",\"kode\":\"INNH\"}}],\"sistEndret\":\"1995-02-20\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/INNH\"}},\"beskrivelse\":\"Innehaver\",\"kode\":\"INNH\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"hr",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.d70a18645bfe95cd59365664.0.role_type_beskrivelse",
+        "value": "Innehaver",
+        "locator": "/rollegrupper/0/roller/0/type/beskrivelse",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "teret/api/roller/rolletyper/INNH\"}},\"beskrivelse\":\"Innehaver\",\"kode\":\"INNH\"}}],\"sistEndret\":\"1995-02-20\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/INNH\"}},\"beskrivelse\":\"Innehaver\",\"kode\":\"INNH\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.d70a18645bfe95cd59365664.0.inactive",
+        "value": false,
+        "locator": "/rollegrupper/0/roller/0/avregistrert",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "466\"}},\"rollegrupper\":[{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1965-12-05\",\"navn\":{\"etternavn\":\"Hjelmstad\",\"fornavn\":\"John\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/INNH\"}},\"beskrivelse\":\"Innehave",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.group.1.type_kode",
+        "value": "REGN",
+        "locator": "/rollegrupper/1/type/kode",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "per/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.group.1.type_beskrivelse",
+        "value": "Regnskapsfører",
+        "locator": "/rollegrupper/1/type/beskrivelse",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.group.1.last_changed",
+        "value": "2014-03-05",
+        "locator": "/rollegrupper/1/sistEndret",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "e\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-03-05\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.8bbd02fc17628ffe9acba918.0.role_type_kode",
+        "value": "REGN",
+        "locator": "/rollegrupper/1/roller/0/type/kode",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "per/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-03-05\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.8bbd02fc17628ffe9acba918.0.role_type_beskrivelse",
+        "value": "Regnskapsfører",
+        "locator": "/rollegrupper/1/roller/0/type/beskrivelse",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "teret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-03-05\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.8bbd02fc17628ffe9acba918.0.inactive",
+        "value": false,
+        "locator": "/rollegrupper/1/roller/0/avregistrert",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "haver\",\"kode\":\"INNH\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/912751082\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent regnskapsforetak\",\"navn\":[\"SNØHETTA REGNSKAP ØYER AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"h",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.8bbd02fc17628ffe9acba918.0.holder_organisasjonsnummer",
+        "value": "912751082",
+        "locator": "/rollegrupper/1/roller/0/enhet/organisasjonsnummer",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"912751082\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-03-05\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://dat",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.8bbd02fc17628ffe9acba918.0.holder_form_kode",
+        "value": "AS",
+        "locator": "/rollegrupper/1/roller/0/enhet/organisasjonsform/kode",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "sformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"912751082\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-03-05\",\"type\":{\"_links\":",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "969110466",
+        "field": "roles.detail.8bbd02fc17628ffe9acba918.0.holder_form_beskrivelse",
+        "value": "Aksjeselskap",
+        "locator": "/rollegrupper/1/roller/0/enhet/organisasjonsform/beskrivelse",
+        "sha": "8b43be9eb9a4fb8611b26ae5bc8d46ada8050113cbbba8bd84568b678a17845b",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/969110466/roller",
+        "claim_span": "teret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"912751082\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-03",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.business_address.line.0",
+        "value": "Spannavegen 152",
+        "locator": "/forretningsadresse/adresse/0",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "rIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Spannavegen 152\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"fravalgRevisjonDato\":\"2011-08-31\",\"harRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2008-05-20 2",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.business_address.postal_code",
+        "value": "5535",
+        "locator": "/forretningsadresse/postnummer",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"fravalgRevisjonDato\":\"2011-08-31\",\"harRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2008-05-20 20:50:37\",\"navn\":\"MELING MEDIA AS\",\"tilDato\":\"2022-01-17 11:23:15\"}],\"institusjonellSektorkode\":{\"beskrivelse",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.business_address.postal_town",
+        "value": "HAUGESUND",
+        "locator": "/forretningsadresse/poststed",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "e\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"fravalgRevisjonDato\":\"2011-08-31\",\"harRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2008-05-20 20:50:37\",\"navn\":\"MELING MEDIA AS\",\"tilDato\":\"2022-01-17 11:23:15\"}],\"institusjonellSektorkode\":{\"beskrivelse\":\"Private aksjese",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.business_address.municipality_code",
+        "value": "1106",
+        "locator": "/forretningsadresse/kommunenummer",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "vegen 152\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"fravalgRevisjonDato\":\"2011-08-31\",\"harRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2008-05-20 20:50:37\",\"navn\":\"MELING MEDIA AS\",\"tilDato\":\"2022-01-17 1",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.business_address.country_name",
+        "value": "Norge",
+        "locator": "/forretningsadresse/land",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "ommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"fravalgRevisjonDato\":\"2011-08-31\",\"harRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2008-05-20 20:50:37\",\"navn\":\"MELING MEDIA AS\",\"tilDato\":\"2022-01-17 11:23:15\"}],\"in",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.postal_address.line.0",
+        "value": "Varden 2B",
+        "locator": "/postadresse/adresse/0",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "6553\",\"paategninger\":[],\"postadresse\":{\"adresse\":[\"Varden 2B\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2022-06-15\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2022-0",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.postal_address.postal_code",
+        "value": "5535",
+        "locator": "/postadresse/postnummer",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2022-06-15\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2022-06-10\",\"registreringsdatoEnhetsregisteret\":\"2008-05-20\",\"registreringsdatoForetaksregisteret\":\"2008-05-",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.postal_address.postal_town",
+        "value": "HAUGESUND",
+        "locator": "/postadresse/poststed",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "e\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2022-06-15\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2022-06-10\",\"registreringsdatoEnhetsregisteret\":\"2008-05-20\",\"registreringsdatoForetaksregisteret\":\"2008-05-20\",\"registrerings",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.postal_address.municipality_code",
+        "value": "1106",
+        "locator": "/postadresse/kommunenummer",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "Varden 2B\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2022-06-15\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2022-06-10\",\"registreringsdatoEnhetsregisteret\":\"2008-05-",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.postal_address.country_name",
+        "value": "Norge",
+        "locator": "/postadresse/land",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "ommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2022-06-15\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2022-06-10\",\"registreringsdatoEnhetsregisteret\":\"2008-05-20\",\"registrer",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.postal_address.municipality",
+        "value": "HAUGESUND",
+        "locator": "/postadresse/kommune",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": ",\"postadresse\":{\"adresse\":[\"Varden 2B\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreringsdatoAntallAnsatteEnhetsregisteret\":\"2022-06-15\",\"registreringsdatoAntallAnsatteNAVAaregisteret\":\"2022-06-10\",\"registreringsdat",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.organisation_form.kode",
+        "value": "AS",
+        "locator": "/organisasjonsform/kode",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "sformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"992686553\",\"paategninger\":[],\"postadresse\":{\"adresse\":[\"Varden 2B\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreringsdatoAntallAnsatteEn",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.organisation_form.beskrivelse",
+        "value": "Aksjeselskap",
+        "locator": "/organisasjonsform/beskrivelse",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "teret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"992686553\",\"paategninger\":[],\"postadresse\":{\"adresse\":[\"Varden 2B\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"registreri",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.industry1.kode",
+        "value": "86.991",
+        "locator": "/naeringskode1/kode",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "rivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"992686553\",\"paategninger\":[],\"postadresse\"",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.industry1.beskrivelse",
+        "value": "Ortopedi- og fotterapitjenester",
+        "locator": "/naeringskode1/beskrivelse",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"9",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.institutional_sector.kode",
+        "value": "2100",
+        "locator": "/institusjonellSektorkode/kode",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "\"beskrivelse\":\"Private aksjeselskaper mv.\",\"kode\":\"2100\"},\"kapital\":{\"antallAksjer\":100,\"belop\":30000.00,\"innfortDato\":\"2022-01-14\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.institutional_sector.beskrivelse",
+        "value": "Private aksjeselskaper mv.",
+        "locator": "/institusjonellSektorkode/beskrivelse",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "3:15\"}],\"institusjonellSektorkode\":{\"beskrivelse\":\"Private aksjeselskaper mv.\",\"kode\":\"2100\"},\"kapital\":{\"antallAksjer\":100,\"belop\":30000.00,\"innfortDato\":\"2022-01-14\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjen",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.registered_capital.belop",
+        "value": 30000.0,
+        "locator": "/kapital/belop",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "de\":\"2100\"},\"kapital\":{\"antallAksjer\":100,\"belop\":30000.00,\"innfortDato\":\"2022-01-14\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"h",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.registered_capital.antallAksjer",
+        "value": 100,
+        "locator": "/kapital/antallAksjer",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "per mv.\",\"kode\":\"2100\"},\"kapital\":{\"antallAksjer\":100,\"belop\":30000.00,\"innfortDato\":\"2022-01-14\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO AS\",\"organisasjonsform\":{\"_links\"",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.registered_capital.type",
+        "value": "Aksjekapital",
+        "locator": "/kapital/type",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "belop\":30000.00,\"innfortDato\":\"2022-01-14\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregistere",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.registered_capital.valuta",
+        "value": "NOK",
+        "locator": "/kapital/valuta",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "Dato\":\"2022-01-14\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsforme",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "identity.registered_capital.innfortDato",
+        "value": "2022-01-14",
+        "locator": "/kapital/innfortDato",
+        "sha": "0647670ee19420fd2cae23755de8c6f3dedb84e1f7d477b71f915817c5c70eb1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/992686553",
+        "claim_span": "\"antallAksjer\":100,\"belop\":30000.00,\"innfortDato\":\"2022-01-14\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Ortopedi- og fotterapitjenester\",\"kode\":\"86.991\"},\"navn\":\"LYFO AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brre",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "992686553",
+        "field": "subunits.detail.992704519.beliggenhetsadresse.line.0",
+        "value": "Spannavegen 152",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/adresse/0",
+        "sha": "3d69edbd8f666e95baad1dbc6bcb18788db5a55fbe838d74f453d831bd85f6bc",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=992686553&size=1000&page=0",
+        "claim_span": "er/992686553\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Spannavegen 152\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"5535\",\"poststed\":\"HAUGESUND\"},\"harRegistrertAntallAnsatte\":true,\"historiskeNavn\":[{\"fraDato\":\"2008-05-24 15:22:19\",\"navn\":\"MELING MEDIA AS\",\"",
+        "reporting_period": null
+      }
+    ],
+    "output": "C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\reports\\stage-ay\\jury100-envelopes.jsonl",
+    "http_requests": 0
+  },
+  "final1000": {
+    "rows": 1000,
+    "before": {
+      "identity": 31241,
+      "subunits": 6907,
+      "roles": 18783,
+      "accounts": 100233,
+      "activity": 19925,
+      "funding": 785,
+      "registry_enrichment": 24,
+      "website": 706,
+      "certification": 62,
+      "hiring": 3
+    },
+    "new": {
+      "identity": 17093,
+      "subunits": 10757,
+      "roles": 24467,
+      "accounts": 5634
+    },
+    "after": {
+      "identity": 48334,
+      "subunits": 17664,
+      "roles": 43250,
+      "accounts": 105867,
+      "activity": 19925,
+      "funding": 785,
+      "registry_enrichment": 24,
+      "website": 706,
+      "certification": 62,
+      "hiring": 3
+    },
+    "examples": [
+      {
+        "orgnr": "912823970",
+        "field": "identity.business_address.line.0",
+        "value": "c/o Arne-Johan Nikolaisen",
+        "locator": "/forretningsadresse/adresse/0",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "rIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"c/o Arne-Johan Nikolaisen\",\"Årneshaugen 33\"],\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"fravalgRevisjonDato\":\"2017-05-31\",\"frivilligMvaRegistrertBeskrivelser\":[\"Utleier av byg",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.business_address.line.1",
+        "value": "Årneshaugen 33",
+        "locator": "/forretningsadresse/adresse/1",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "sadresse\":{\"adresse\":[\"c/o Arne-Johan Nikolaisen\",\"Årneshaugen 33\"],\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"fravalgRevisjonDato\":\"2017-05-31\",\"frivilligMvaRegistrertBeskrivelser\":[\"Utleier av bygg eller anlegg\"],\"harRegistr",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.business_address.postal_code",
+        "value": "7190",
+        "locator": "/forretningsadresse/postnummer",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"fravalgRevisjonDato\":\"2017-05-31\",\"frivilligMvaRegistrertBeskrivelser\":[\"Utleier av bygg eller anlegg\"],\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Private aksjesels",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.business_address.postal_town",
+        "value": "BESSAKER",
+        "locator": "/forretningsadresse/poststed",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "e\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"fravalgRevisjonDato\":\"2017-05-31\",\"frivilligMvaRegistrertBeskrivelser\":[\"Utleier av bygg eller anlegg\"],\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Private aksjeselskaper mv.\",\"kode\":",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.business_address.municipality_code",
+        "value": "5058",
+        "locator": "/forretningsadresse/kommunenummer",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "neshaugen 33\"],\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"fravalgRevisjonDato\":\"2017-05-31\",\"frivilligMvaRegistrertBeskrivelser\":[\"Utleier av bygg eller anlegg\"],\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institus",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.business_address.country_name",
+        "value": "Norge",
+        "locator": "/forretningsadresse/land",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": ",\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"fravalgRevisjonDato\":\"2017-05-31\",\"frivilligMvaRegistrertBeskrivelser\":[\"Utleier av bygg eller anlegg\"],\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektorko",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.organisation_form.kode",
+        "value": "AS",
+        "locator": "/organisasjonsform/kode",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "sformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"912823970\",\"paategninger\":[],\"registreringsdatoEnhetsregisteret\":\"2014-01-13\",\"registreringsdatoForetaksregisteret\":\"2014-01-13\",\"registreringsdatoFrivilligMerverdiavgiftsregisteret\":\"2015-12-21\",\"registreringsdatoMerverd",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.organisation_form.beskrivelse",
+        "value": "Aksjeselskap",
+        "locator": "/organisasjonsform/beskrivelse",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "teret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"912823970\",\"paategninger\":[],\"registreringsdatoEnhetsregisteret\":\"2014-01-13\",\"registreringsdatoForetaksregisteret\":\"2014-01-13\",\"registreringsdatoFrivilligMerverdiavgiftsregisteret\":\"2015-12-21\",\"re",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.industry1.kode",
+        "value": "47.690",
+        "locator": "/naeringskode1/kode",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "del med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"912823970\",\"paategning",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.industry1.beskrivelse",
+        "value": "Detaljhandel med kulturvarer ikke nevnt annet sted",
+        "locator": "/naeringskode1/beskrivelse",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.institutional_sector.kode",
+        "value": "2100",
+        "locator": "/institusjonellSektorkode/kode",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "\"beskrivelse\":\"Private aksjeselskaper mv.\",\"kode\":\"2100\"},\"kapital\":{\"antallAksjer\":30,\"belop\":30000.00,\"innfortDato\":\"2014-01-13\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.institutional_sector.beskrivelse",
+        "value": "Private aksjeselskaper mv.",
+        "locator": "/institusjonellSektorkode/beskrivelse",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "avn\":[],\"institusjonellSektorkode\":{\"beskrivelse\":\"Private aksjeselskaper mv.\",\"kode\":\"2100\"},\"kapital\":{\"antallAksjer\":30,\"belop\":30000.00,\"innfortDato\":\"2014-01-13\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvare",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.registered_capital.belop",
+        "value": 30000.0,
+        "locator": "/kapital/belop",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "ode\":\"2100\"},\"kapital\":{\"antallAksjer\":30,\"belop\":30000.00,\"innfortDato\":\"2014-01-13\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"o",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.registered_capital.antallAksjer",
+        "value": 30,
+        "locator": "/kapital/antallAksjer",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "per mv.\",\"kode\":\"2100\"},\"kapital\":{\"antallAksjer\":30,\"belop\":30000.00,\"innfortDato\":\"2014-01-13\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESS",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.registered_capital.type",
+        "value": "Aksjekapital",
+        "locator": "/kapital/type",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "belop\":30000.00,\"innfortDato\":\"2014-01-13\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\"",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.registered_capital.valuta",
+        "value": "NOK",
+        "locator": "/kapital/valuta",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "Dato\":\"2014-01-13\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "identity.registered_capital.innfortDato",
+        "value": "2014-01-13",
+        "locator": "/kapital/innfortDato",
+        "sha": "0ace605e6e5426c29b32cfee32b88c941e5c8f2f31795d6f0e1c091879417abb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970",
+        "claim_span": "{\"antallAksjer\":30,\"belop\":30000.00,\"innfortDato\":\"2014-01-13\",\"type\":\"Aksjekapital\",\"valuta\":\"NOK\"},\"konkurs\":false,\"maalform\":\"Bokmål\",\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"organisasjonsform\":{\"_li",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.line.0",
+        "value": "c/o Arne-Johan Nikolaisen",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/adresse/0",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "er/912823970\"}},\"beliggenhetsadresse\":{\"adresse\":[\"c/o Arne-Johan Nikolaisen\",\"Årneshaugen 33\"],\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"D",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.line.1",
+        "value": "Årneshaugen 33",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/adresse/1",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "sadresse\":{\"adresse\":[\"c/o Arne-Johan Nikolaisen\",\"Årneshaugen 33\"],\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.postnummer",
+        "value": "7190",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/postnummer",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"oppstartsdato\":\"2014-01-01",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.poststed",
+        "value": "BESSAKER",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/poststed",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "e\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"oppstartsdato\":\"2014-01-01\",\"organisasjonsfo",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.kommune",
+        "value": "ÅFJORD",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/kommune",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "rne-Johan Nikolaisen\",\"Årneshaugen 33\"],\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.kommunenummer",
+        "value": "5058",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/kommunenummer",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "neshaugen 33\"],\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT ",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.land",
+        "value": "Norge",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/land",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": ",\"kommune\":\"ÅFJORD\",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BES",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.beliggenhetsadresse.landkode",
+        "value": "NO",
+        "locator": "/_embedded/underenheter/0/beliggenhetsadresse/landkode",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": ",\"kommunenummer\":\"5058\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7190\",\"poststed\":\"BESSAKER\"},\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"oppstart",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.naeringskode1.kode",
+        "value": "47.690",
+        "locator": "/_embedded/underenheter/0/naeringskode1/kode",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "del med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"oppstartsdato\":\"2014-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentl",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.naeringskode1.beskrivelse",
+        "value": "Detaljhandel med kulturvarer ikke nevnt annet sted",
+        "locator": "/_embedded/underenheter/0/naeringskode1/beskrivelse",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "historiskeNavn\":[],\"naeringskode1\":{\"beskrivelse\":\"Detaljhandel med kulturvarer ikke nevnt annet sted\",\"kode\":\"47.690\"},\"navn\":\"MYNT OG EIENDOM BESSAKER AS\",\"oppstartsdato\":\"2014-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.organisasjonsform.kode",
+        "value": "BEDR",
+        "locator": "/_embedded/underenheter/0/organisasjonsform/kode",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": " næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"913068246\",\"overordnetEnhet\":\"912823970\",\"registreringsdatoEnhetsregisteret\":\"2014-01-14\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]},\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregistere",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "subunits.detail.913068246.organisasjonsform.beskrivelse",
+        "value": "Underenhet til næringsdrivende og offentlig forvaltning",
+        "locator": "/_embedded/underenheter/0/organisasjonsform/beskrivelse",
+        "sha": "32e0da2ef056cdcdec6e53c4c9bd58497d29f7b89d4457f882329a7aae364896",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912823970&size=1000&page=0",
+        "claim_span": "ret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"913068246\",\"overordnetEnhet\":\"912823970\",\"registreringsdatoEnhetsregisteret\":\"2014-01-14\",\"registrertIMvaregisteret\":false,\"respons_klasse\":\"Underenhet\"}]",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.0.type_kode",
+        "value": "DAGL",
+        "locator": "/rollegrupper/0/type/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "typer/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}},{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1961-10-17\",\"navn\":{\"etternavn\":\"Wolframm\",\"fornavn\":\"Volker\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolle",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.0.type_beskrivelse",
+        "value": "Daglig leder",
+        "locator": "/rollegrupper/0/type/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "api/roller/rollegruppetyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}},{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1961-10-17\",\"navn\":{\"etternavn\":\"Wolframm\",\"fornavn\":\"Volker\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregis",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.0.last_changed",
+        "value": "2015-08-20",
+        "locator": "/rollegrupper/0/sistEndret",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "lse\":\"Daglig leder\",\"kode\":\"DAGL\"}}],\"sistEndret\":\"2015-08-20\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}},{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1961-10-17",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.c88744b212cc3a8daac484a8.0.role_type_kode",
+        "value": "DAGL",
+        "locator": "/rollegrupper/0/roller/0/type/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "typer/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}}],\"sistEndret\":\"2015-08-20\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}},{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"f",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.c88744b212cc3a8daac484a8.0.role_type_beskrivelse",
+        "value": "Daglig leder",
+        "locator": "/rollegrupper/0/roller/0/type/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "teret/api/roller/rolletyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}}],\"sistEndret\":\"2015-08-20\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}},{\"roller\":[{\"avregistrert\":false,\"pers",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.c88744b212cc3a8daac484a8.0.inactive",
+        "value": false,
+        "locator": "/rollegrupper/0/roller/0/avregistrert",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "970\"}},\"rollegrupper\":[{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1977-11-17\",\"navn\":{\"etternavn\":\"Nikolaisen\",\"fornavn\":\"Arne-Johan\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL\"}},\"beskrivelse\":\"D",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.1.type_kode",
+        "value": "STYR",
+        "locator": "/rollegrupper/1/type/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "egruppetyper/STYR\"}},\"beskrivelse\":\"Styre\",\"kode\":\"STYR\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/975855635\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent regnskapsforetak\",\"navn\":[\"ÅFJORD REGNSKAP AS\"],\"organisasjo",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.1.type_beskrivelse",
+        "value": "Styre",
+        "locator": "/rollegrupper/1/type/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "api/roller/rollegruppetyper/STYR\"}},\"beskrivelse\":\"Styre\",\"kode\":\"STYR\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/975855635\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent regnskapsforetak\",\"navn\":[\"ÅFJORD REGNSKAP AS",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.1.last_changed",
+        "value": "2014-01-13",
+        "locator": "/rollegrupper/1/sistEndret",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "velse\":\"Varamedlem\",\"kode\":\"VARA\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR\"}},\"beskrivelse\":\"Styre\",\"kode\":\"STYR\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.0abb6a0b4c8a694e38da7899.0.role_type_kode",
+        "value": "LEDE",
+        "locator": "/rollegrupper/1/roller/0/type/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "yper/LEDE\"}},\"beskrivelse\":\"Styrets leder\",\"kode\":\"LEDE\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1962-08-17\",\"navn\":{\"etternavn\":\"Wolframm\",\"fornavn\":\"Sabine\"}},\"rekkefolge\":1,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/VARA\"",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.0abb6a0b4c8a694e38da7899.0.role_type_beskrivelse",
+        "value": "Styrets leder",
+        "locator": "/rollegrupper/1/roller/0/type/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "teret/api/roller/rolletyper/LEDE\"}},\"beskrivelse\":\"Styrets leder\",\"kode\":\"LEDE\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1962-08-17\",\"navn\":{\"etternavn\":\"Wolframm\",\"fornavn\":\"Sabine\"}},\"rekkefolge\":1,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.0abb6a0b4c8a694e38da7899.0.inactive",
+        "value": false,
+        "locator": "/rollegrupper/1/roller/0/avregistrert",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "leder\",\"kode\":\"DAGL\"}},{\"roller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1961-10-17\",\"navn\":{\"etternavn\":\"Wolframm\",\"fornavn\":\"Volker\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE\"}},\"beskrivelse\":\"Styrets",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.3ca67abf01fd9fcba848fb95.0.role_type_kode",
+        "value": "VARA",
+        "locator": "/rollegrupper/1/roller/1/type/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "letyper/VARA\"}},\"beskrivelse\":\"Varamedlem\",\"kode\":\"VARA\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR\"}},\"beskrivelse\":\"Styre\",\"kode\":\"STYR\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.3ca67abf01fd9fcba848fb95.0.role_type_beskrivelse",
+        "value": "Varamedlem",
+        "locator": "/rollegrupper/1/roller/1/type/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "teret/api/roller/rolletyper/VARA\"}},\"beskrivelse\":\"Varamedlem\",\"kode\":\"VARA\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR\"}},\"beskrivelse\":\"Styre\",\"kode\":\"STYR\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_lin",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.3ca67abf01fd9fcba848fb95.0.inactive",
+        "value": false,
+        "locator": "/rollegrupper/1/roller/1/avregistrert",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "\":\"Styrets leder\",\"kode\":\"LEDE\"}},{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1962-08-17\",\"navn\":{\"etternavn\":\"Wolframm\",\"fornavn\":\"Sabine\"}},\"rekkefolge\":1,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/VARA\"}},\"beskrivelse\":\"Varamed",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.2.type_kode",
+        "value": "REGN",
+        "locator": "/rollegrupper/2/type/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "per/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.2.type_beskrivelse",
+        "value": "Regnskapsfører",
+        "locator": "/rollegrupper/2/type/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.group.2.last_changed",
+        "value": "2014-01-13",
+        "locator": "/rollegrupper/2/sistEndret",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "e\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.d3813de94c7272b749fa9472.0.role_type_kode",
+        "value": "REGN",
+        "locator": "/rollegrupper/2/roller/0/type/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "per/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.d3813de94c7272b749fa9472.0.role_type_beskrivelse",
+        "value": "Regnskapsfører",
+        "locator": "/rollegrupper/2/roller/0/type/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "teret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}]}",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.d3813de94c7272b749fa9472.0.inactive",
+        "value": false,
+        "locator": "/rollegrupper/2/roller/0/avregistrert",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "Styre\",\"kode\":\"STYR\"}},{\"roller\":[{\"avregistrert\":false,\"enhet\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/975855635\"}},\"erSlettet\":false,\"godkjenningsstatus\":\"Godkjent regnskapsforetak\",\"navn\":[\"ÅFJORD REGNSKAP AS\"],\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"h",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.d3813de94c7272b749fa9472.0.holder_organisasjonsnummer",
+        "value": "975855635",
+        "locator": "/rollegrupper/2/roller/0/enhet/organisasjonsnummer",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"975855635\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://dat",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.d3813de94c7272b749fa9472.0.holder_form_kode",
+        "value": "AS",
+        "locator": "/rollegrupper/2/roller/0/enhet/organisasjonsform/kode",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "sformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"975855635\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-01-13\",\"type\":{\"_links\":",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "roles.detail.d3813de94c7272b749fa9472.0.holder_form_beskrivelse",
+        "value": "Aksjeselskap",
+        "locator": "/rollegrupper/2/roller/0/enhet/organisasjonsform/beskrivelse",
+        "sha": "9bbe351f48b97990a724ff14b9dc2ca2816651c7163a07df2686514f8f2e0a3e",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/912823970/roller",
+        "claim_span": "teret/api/organisasjonsformer/AS\"}},\"beskrivelse\":\"Aksjeselskap\",\"kode\":\"AS\"},\"organisasjonsnummer\":\"975855635\"},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN\"}},\"beskrivelse\":\"Regnskapsfører\",\"kode\":\"REGN\"}}],\"sistEndret\":\"2014-01",
+        "reporting_period": null
+      },
+      {
+        "orgnr": "912823970",
+        "field": "accounts.statement.2025.filing_id",
+        "value": 7027256,
+        "locator": "/2/id",
+        "sha": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+        "claim_span": "\":13642.00,\"sumDriftskostnad\":642262.00}}}},{\"id\":7027256,\"journalnr\":\"2026704404\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"912823970\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2025-01-01\",\"tilDato\":\"2025-12-31\"},\"valuta\":\"NOK\",\"avviklingsregns",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "orgnr": "912823970",
+        "field": "accounts.statement.2025.journal_number",
+        "value": "2026704404",
+        "locator": "/2/journalnr",
+        "sha": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+        "claim_span": "skostnad\":642262.00}}}},{\"id\":7027256,\"journalnr\":\"2026704404\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"912823970\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2025-01-01\",\"tilDato\":\"2025-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstill",
+        "reporting_period": {
+          "fiscal_year": "2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "orgnr": "912823970",
+        "field": "accounts.statement.2024.filing_id",
+        "value": 6292993,
+        "locator": "/1/id",
+        "sha": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+        "claim_span": "\":9574.00,\"sumDriftskostnad\":3556946.00}}}},{\"id\":6292993,\"journalnr\":\"2025744955\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"912823970\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2024-01-01\",\"tilDato\":\"2024-12-31\"},\"valuta\":\"NOK\",\"avviklingsregns",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "orgnr": "912823970",
+        "field": "accounts.statement.2024.journal_number",
+        "value": "2025744955",
+        "locator": "/1/journalnr",
+        "sha": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+        "claim_span": "kostnad\":3556946.00}}}},{\"id\":6292993,\"journalnr\":\"2025744955\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"912823970\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2024-01-01\",\"tilDato\":\"2024-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstill",
+        "reporting_period": {
+          "fiscal_year": "2024",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "orgnr": "912823970",
+        "field": "accounts.statement.2023.filing_id",
+        "value": 5316675,
+        "locator": "/0/id",
+        "sha": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+        "claim_span": "[{\"id\":5316675,\"journalnr\":\"2024698492\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"912823970\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2023-01-01\",\"tilDato\":\"2023-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revi",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "orgnr": "912823970",
+        "field": "accounts.statement.2023.journal_number",
+        "value": "2024698492",
+        "locator": "/0/journalnr",
+        "sha": "990d355f5acc1fa5df534500df7898ad87bdfe40f38baee571fac77856a9bedb",
+        "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/912823970",
+        "claim_span": "[{\"id\":5316675,\"journalnr\":\"2024698492\",\"regnskapstype\":\"SELSKAP\",\"virksomhet\":{\"organisasjonsnummer\":\"912823970\",\"organisasjonsform\":\"AS\",\"morselskap\":false},\"regnskapsperiode\":{\"fraDato\":\"2023-01-01\",\"tilDato\":\"2023-12-31\"},\"valuta\":\"NOK\",\"avviklingsregnskap\":false,\"oppstillingsplan\":\"store\",\"revi",
+        "reporting_period": {
+          "fiscal_year": "2023",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "currency": "NOK",
+          "unit": null,
+          "account_type": "SELSKAP"
+        }
+      },
+      {
+        "orgnr": "916729774",
+        "field": "identity.business_address.line.0",
+        "value": "Kjøpmannsgata 15",
+        "locator": "/forretningsadresse/adresse/0",
+        "sha": "5ac6f7bbf37287044e20e40896fd6bd67a715b576f5873c7583d3ab4be475dcb",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/916729774",
+        "claim_span": "rIKonsern\":false,\"forretningsadresse\":{\"adresse\":[\"Kjøpmannsgata 15\"],\"kommune\":\"STJØRDAL\",\"kommunenummer\":\"5035\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postnummer\":\"7500\",\"poststed\":\"STJØRDAL\"},\"fravalgRevisjonDato\":\"2016-02-12\",\"harRegistrertAntallAnsatte\":false,\"historiskeNavn\":[],\"institusjonellSektork",
+        "reporting_period": null
+      }
+    ],
+    "output": "C:\\Users\\Manish\\Downloads\\nordic-r4\\bench\\reports\\stage-ay\\final1000-envelopes.jsonl",
+    "http_requests": 0
+  }
+}
