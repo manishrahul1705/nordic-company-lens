@@ -430,12 +430,9 @@ async def _run(config, client=None):
             return None
         outage['failures'].append(org)
         if len(outage['failures']) == outage['expected']:
-            if outage['expected'] < IDENTITY_OUTAGE_SAMPLE:
-                settle('disarmed')  # Run smaller than the sample: never abort.
-            else:
-                outage['confirming'] = True
-                outage['gate'].clear()  # Pause new lookups while the second pass runs.
-                asyncio.ensure_future(confirm_outage(http))
+            outage['confirming'] = True
+            outage['gate'].clear()  # Pause new lookups while the second pass runs.
+            asyncio.ensure_future(confirm_outage(http))
         verdict = await asyncio.shield(outage['verdict'])
         return {'recovered': 'retry', 'outage': 'abort'}.get(verdict)
     async def company(org, http, website_http, nav_task, dibk_collector=None):
@@ -625,7 +622,7 @@ async def _run(config, client=None):
             pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
             if outage['tripped']:
                 from urllib.parse import urlparse
-                failure = IdentityOutage(urlparse(brreg_enhet.BASE).hostname, IDENTITY_OUTAGE_SAMPLE)
+                failure = IdentityOutage(urlparse(brreg_enhet.BASE).hostname, outage['expected'])
                 await offload(write_report, config.report, {
                     'run_id': config.run_id, 'run_status': 'failed',
                     'warnings': [str(failure)], 'invalid_inputs': inputs.invalid,

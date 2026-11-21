@@ -5,12 +5,13 @@ import httpx
 import pytest
 from signalpost.runner import run
 from signalpost.models.shapes import validate
-from tests.test_registry import config,handler,entity
+from tests.test_registry import config,handler,entity,numbers
 from tests.test_websites import html,OUR
 
 
 def test_registry_changes_failures_recovery_and_duplicate_idempotency(tmp_path):
     base=handler(missing_accounts=False)
+    healthy=numbers(1)[0]
     def source(version=0,failure=None):
         def dispatch(request):
             if request.url.path=='/enhetsregisteret/api/enheter/'+OUR:
@@ -22,18 +23,20 @@ def test_registry_changes_failures_recovery_and_duplicate_idempotency(tmp_path):
                     value['navn']='Example Renamed AS'
                     value['forretningsadresse']['adresse']=['New address 12']
                 return httpx.Response(200,json=value)
-            if version and '/regnskapsregisteret/' in request.url.path:
+            if version and '/regnskapsregisteret/' in request.url.path and OUR in request.url.path:
                 return httpx.Response(200,json=[{'regnskapstype':'SELSKAP','virksomhet':{'organisasjonsnummer':OUR},
                     'regnskapsperiode':{'fraDato':'2026-01-01','tilDato':'2026-12-31'},'valuta':'NOK',
                     'resultatregnskapResultat':{'aarsresultat':123}}])
             return base(request)
         return dispatch
     async def one(label,dispatch,previous=None):
-        cfg=config(tmp_path/label,[OUR,OUR],previous=previous)
+        # Keep a healthy identity lookup in the batch so the single-company DNS
+        # and timeout cases below exercise refresh preservation, not total outage.
+        cfg=config(tmp_path/label,[OUR,OUR,healthy],previous=previous)
         async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch)) as client:
             report=await run(cfg,client)
         rows=[json.loads(x) for x in cfg.output.read_text(encoding='utf8').splitlines()]
-        assert [r['organisation_number'] for r in rows]==[OUR,OUR]
+        assert [r['organisation_number'] for r in rows]==[OUR,OUR,healthy]
         assert rows[0]['claims']==rows[1]['claims']
         for row in rows:validate(row,'union')
         return cfg,report,rows[0]

@@ -3,6 +3,7 @@ import json
 
 import httpx
 import pytest
+import respx
 
 from signalpost import cli
 from signalpost.identity.orgnr import valid
@@ -111,20 +112,56 @@ def test_cli_exits_non_zero_and_names_host(tmp_path, monkeypatch, capsys):
     assert 'data.brreg.no' in capsys.readouterr().err
 
 
-def test_failed_companies_never_reported_complete(tmp_path):
-    # Fewer companies than the sample: no abort, but the report must be honest.
+def test_small_batch_dns_outage_aborts_with_report_warning(tmp_path, monkeypatch, capsys):
+    from signalpost.budget import SourceFailure
+
+    batch = tmp_path / 'batch.txt'
+    batch.write_text('\n'.join(orgs(5)), encoding='utf-8')
+    async def dns_failure(org, http):
+        raise SourceFailure('dns_unavailable', 'resolver unavailable')
+    monkeypatch.setattr(runner.brreg_enhet, 'fetch', dns_failure)
+    code = cli.main(['run', '--organisations', str(batch), '--output', str(tmp_path / 'e.jsonl'),
+                     '--report', str(tmp_path / 'r.json'), '--state-dir', str(tmp_path / 'state'),
+                     '--no-site', '--no-websites', '--no-hiring', '--no-public-activity',
+                     '--no-official-extra-sources', '--no-dibk', '--no-group-structure',
+                     '--no-signature-rights', '--no-funding-snapshots', '--no-registry-changes'])
+    assert code == cli.IDENTITY_OUTAGE_EXIT == 3
+    assert 'identity source data.brreg.no unreachable' in capsys.readouterr().err
+    report = json.loads((tmp_path / 'r.json').read_text(encoding='utf-8'))
+    assert any('identity source data.brreg.no unreachable' in warning for warning in report['warnings'])
+
+
+def test_small_batch_with_one_success_exits_zero(tmp_path):
     numbers = orgs(5)
-    cfg = config(tmp_path, numbers, websites=False, hiring=False, public_activity=False)
-    report = execute(cfg, outage)
-    assert report['run_status'] == 'failed'
+    failing = set(numbers[:-1])
+    batch = tmp_path / 'batch.txt'
+    batch.write_text('\n'.join(numbers), encoding='utf-8')
+    with respx.mock(assert_all_called=False) as router:
+        router.get(url__regex=r"https://data\.brreg\.no/.*").mock(side_effect=scattered(failing))
+        code = cli.main(['run', '--organisations', str(batch), '--output', str(tmp_path / 'e.jsonl'),
+                         '--report', str(tmp_path / 'r.json'), '--state-dir', str(tmp_path / 'state'),
+                         '--no-site', '--no-websites', '--no-hiring', '--no-public-activity',
+                         '--no-official-extra-sources', '--no-dibk', '--no-group-structure',
+                         '--no-signature-rights', '--no-funding-snapshots', '--no-registry-changes'])
+    assert code == 0
+    report = json.loads((tmp_path / 'r.json').read_text(encoding='utf-8'))
+    assert report['run_status'] == 'failed'  # Existing per-company failure reporting remains.
+    assert report['companies_succeeded'] == 1
+    assert report['companies_failed'] == 4
+    assert not any('identity source data.brreg.no unreachable' in warning for warning in report['warnings'])
+
+
+def test_invalid_only_batch_does_not_trip_outage(tmp_path):
+    batch = tmp_path / 'batch.txt'
+    batch.write_text('not-a-number\n123', encoding='utf-8')
+    code = cli.main(['run', '--organisations', str(batch), '--output', str(tmp_path / 'e.jsonl'),
+                     '--report', str(tmp_path / 'r.json'), '--state-dir', str(tmp_path / 'state'), '--no-site'])
+    assert code == 0
+    report = json.loads((tmp_path / 'r.json').read_text(encoding='utf-8'))
+    assert report['run_status'] == 'completed'
     assert report['success_rate'] == 0.0
-    assert report['companies_failed'] == 5
-    assert report['counts_by_state'].get('complete', 0) == 0
-    assert report['source_errors_by_family']['identity'] == 5
-    rows = [json.loads(x) for x in cfg.output.read_text(encoding='utf-8').splitlines()]
-    assert all(r['state'] != 'complete' for r in rows)
-    progress = json.loads((cfg.state_dir / 'progress.json').read_text())
-    assert progress['status'] == report['run_status']
+    assert report['invalid_inputs_count'] == 2
+    assert report['requests'] == 0
 
 
 def test_scattered_identity_failures_continue(tmp_path):
