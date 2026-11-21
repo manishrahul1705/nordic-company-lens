@@ -11,6 +11,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from .models.shapes import validate
+from .identity.orgnr import valid as valid_orgnr
 from .synthesis.nace import english_title
 
 THEME_BOOT = "document.documentElement.classList.add('js');try{document.documentElement.dataset.theme=localStorage.getItem('signalpost_theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme='light'}"
@@ -1375,8 +1376,8 @@ def generate_site(input_path, out, title='Nordic Company Lens'):
         unique[org]=row
     # A malformed identifier must not abort the whole site, and never becomes a filename.
     # Its terminal envelope stays in the JSON output; the site lists it in a batch notice.
-    skipped=[r['organisation_number'] for r in unique.values() if not re.fullmatch(r'\d{9}', r['organisation_number'])]
-    rows=[r for r in unique.values() if re.fullmatch(r'\d{9}', r['organisation_number'])]
+    skipped=[r['organisation_number'] for r in unique.values() if not valid_orgnr(r['organisation_number'])]
+    rows=[r for r in unique.values() if valid_orgnr(r['organisation_number'])]
     records = [index_record(r) for r in rows]
     payload = json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
     js_payload = payload.replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
@@ -1411,6 +1412,12 @@ def generate_site(input_path, out, title='Nordic Company Lens'):
     # Render everything before writes: template errors cannot leave half a new site.
     if any(len(content.encode('utf8')) >= PAGE_GATE for path, content in files.items() if path.endswith('.html')):
         raise ValueError('Profile page exceeds 250 KB gate')
+    for folder, suffixes in (('c', ('.html', '.data.js')), ('g', ('.html',))):
+        for stale in (out / folder).glob('*'):
+            if (stale.is_file() and stale.name.endswith(suffixes)
+                    and re.fullmatch(r'\d{9}(?:\.html|\.data\.js)', stale.name)
+                    and f'{folder}/{stale.name}' not in files):
+                stale.unlink()
     for filename, content in files.items():
         target = out / filename
         target.parent.mkdir(parents=True, exist_ok=True)

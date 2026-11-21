@@ -20,6 +20,13 @@ answers with HTTP 404/410 has not_applicable sections and `not_in_registry` /
 `identity_unverified` errors. Neither case can inherit prior company facts.
 Transport failures remain failed or blocked, never evidence of registry absence.
 
+`report.json` lists invalid distinct identifiers in `invalid_inputs` and counts
+them in `invalid_inputs_count`. They do not
+make `run_status` failed or enter the `success_rate` denominator; that rate is
+computed over valid distinct identifiers. The offline site omits invalid identifiers.
+A confirmed total identity-network outage exits 3 with a warning in `report.json`
+and on stderr. `end_to_end_runtime_ms` includes site generation.
+
 Output is JSONL in the file passed to `--output` (and, only when explicitly passed, the optional `--profiles-output`);
 console progress is not the data stream. Exit zero means membership was emitted,
 not that all sources succeeded. See [schema](docs/DATA_SCHEMA.md) for shapes,

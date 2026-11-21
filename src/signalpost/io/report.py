@@ -132,8 +132,9 @@ def compute_rejection_reasons(envelopes):
 
 def run_outcome(envelopes):
     """Run status from actual section outcomes, using the same success rule as progress.json:
-    a company succeeded unless every one of its sections failed."""
-    envelopes = list(envelopes)
+    a valid company succeeded unless every one of its sections failed."""
+    from ..identity.orgnr import valid
+    envelopes = [e for e in envelopes if valid(e.organisation_number)]
     families = sorted({f for e in envelopes for f in e.modules})
     source_errors = {f: sum(e.modules[f].state == 'source_error' for e in envelopes if f in e.modules) for f in families}
     succeeded = sum(not all(s == 'failed' for s in e.run.sections.values()) for e in envelopes)
@@ -161,9 +162,11 @@ def build(envelopes, inputs, budget, config, warnings, runtime):
     rejection_reasons = compute_rejection_reasons(envelopes)
 
     outcome = run_outcome(unique.values())
+    invalid_count = inputs.invalid if isinstance(inputs.invalid, int) else len(inputs.invalid)
     return {"run_id": config.run_id, **outcome, "input_rows": len(inputs.rows), "unique_inputs": len(inputs.unique),
             'emit_duplicates':config.emit_duplicates,
             "emitted_envelopes": len(envelopes), "duplicates": inputs.duplicates, "invalid_inputs": inputs.invalid,
+            "invalid_inputs_count": invalid_count,
             "counts_by_state": dict(Counter(e.state for e in envelopes)),
             "counts_by_availability": dict(Counter(s for e in envelopes for s in e.run.sections.values())),
             "requests": len(budget.events), "requests_per_company": len(company_events) / len(unique) if unique else 0,

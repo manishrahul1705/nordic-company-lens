@@ -26,6 +26,8 @@ No credentials, bulk file, expected count, LLM or search service are required. N
 
 The command accepts plain text (one orgnr per line), JSONL strings/numbers or objects with `organisation_number`, JSON arrays, and objects with an `organisation_numbers` array. Whitespace is normalized, checksums are checked, input order and duplicates are preserved. Blank/invalid lines each receive a failed envelope (and a failed profile when `--profiles-output` is passed). The expected count is inferred from the input. See [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md).
 
+Invalid lines are listed in `invalid_inputs` and counted in `invalid_inputs_count` while `run_status` remains `completed` when all valid distinct inputs succeed; `success_rate` uses only those valid distinct inputs. The site omits invalid-checksum identifiers. A confirmed total identity-network outage exits 3 with a report and stderr warning. `end_to_end_runtime_ms` includes site generation. Verified-site public brands require a legal-name or domain token, at most six words, and a matching script; offline replay changed **0** existing brands in the final 1,000.
+
 - `out/envelopes.jsonl`: one schema-validated envelope per input, with claims, citations, evidence, section states and refresh changes.
 - `out/profiles.jsonl`: optional raw profiles, written only when `--profiles-output` is passed.
 - `out/report.json`: membership, requests, time, errors, source completeness and cost.

@@ -74,6 +74,26 @@ def source(tmp, rows, shape='union'):
     return p
 
 
+def test_invalid_checksum_is_excluded_from_site(tmp_path):
+    import copy
+    row, _ = envelope(tmp_path)
+    invalid = copy.deepcopy(row)
+    invalid.organisation_number = '969110467'
+    path = source(tmp_path, [row, invalid])
+    site_dir = tmp_path / 'site'
+    (site_dir / 'c').mkdir(parents=True)
+    (site_dir / 'g').mkdir()
+    for stale in ('c/969110467.html', 'c/969110467.data.js', 'g/969110467.html'):
+        (site_dir / stale).write_text('stale', encoding='utf8')
+    result = generate_site(path, site_dir)
+    assert result['companies'] == 1
+    assert result['skipped_invalid_identifiers'] == 1
+    assert not (site_dir / 'c/969110467.html').exists()
+    assert not (site_dir / 'c/969110467.data.js').exists()
+    assert not (site_dir / 'g/969110467.html').exists()
+    assert '969110467' not in (site_dir / 'data/index.json').read_text(encoding='utf8')
+
+
 def test_gap_pages_use_recorded_brief_and_are_two_clicks_from_index(tmp_path):
     from urllib.parse import urlsplit
 

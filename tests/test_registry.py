@@ -121,6 +121,10 @@ def test_one_hundred_membership_with_crashes_and_timeouts(tmp_path, monkeypatch)
     assert report["unhandled_exceptions"] == 0 and report["handled_exceptions"] == 10
     assert len([x for x in rows if any(e["code"] == "timeout" for e in x["errors"])]) == 5
     assert len(report["invalid_inputs"]) == 3
+    assert report['invalid_inputs_count'] == 3
+    assert report['run_status'] == 'completed'
+    assert report['success_rate'] == 1.0
+    assert report['companies_succeeded'] == 97
     assert all(x["run"]["sections"]["accounts"] == "not_available" for x in rows[:15])
 
 

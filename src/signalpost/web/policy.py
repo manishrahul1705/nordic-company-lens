@@ -120,6 +120,8 @@ def normalize_url(value):
         if parts.port not in (None, 80, 443):
             return None
         host = parts.hostname.encode("idna").decode("ascii").lower().rstrip(".")
+        if len(host) > 253 or any(len(label) > 63 or not label for label in host.split('.')):
+            return None
         if not extract(host).suffix:
             return None
     except (ValueError, UnicodeError):

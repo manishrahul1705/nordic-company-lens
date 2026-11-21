@@ -41,3 +41,10 @@ def brand_on(title, legal, url):
 ])
 def test_brand_must_share_a_token_with_legal_name_or_domain(title, legal, url, expected):
     assert brand_on(title, legal, url) == expected
+
+
+def test_descriptive_or_cross_script_brand_is_withheld():
+    assert brand_on('WEBVIA makes every business shine across Norway today',
+                    'WEBVIA AS', 'https://webvia.no/') is None
+    assert brand_on('Экскурсионные туры в Норвегию от Uniktur',
+                    'UNIKTUR AS', 'https://www.unikturs.com/') is None

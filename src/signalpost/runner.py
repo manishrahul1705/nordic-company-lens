@@ -40,7 +40,7 @@ CANCEL_GRACE_SECONDS = 5
 # within the sample disables the check for the rest of the run, so scattered failures
 # never abort.
 IDENTITY_OUTAGE_SAMPLE = 25
-IDENTITY_NETWORK_CODES = frozenset({"network_error", "timeout"})
+IDENTITY_NETWORK_CODES = frozenset({"network_error", "timeout", "dns_unavailable", "dns_timeout", "dns_error", "dns_servfail"})
 # Each lookup's own retry (2 attempts, 0.1-0.3s backoff) cannot ride out a startup blip,
 # so a full sample of network failures is only a suspicion. New lookups pause, and after
 # IDENTITY_OUTAGE_RECHECK_DELAY_SECONDS up to IDENTITY_OUTAGE_RECHECK_COUNT of the failed
@@ -184,6 +184,7 @@ def write_report(path, report):
 
 
 async def run(config, client=None):
+    run_began = time.monotonic()
     from .monitor import LoopMonitor
     from .power import SystemAwake
     from .web.policy import DNSFallbackBudget, DNS_FALLBACK_STATE
@@ -199,6 +200,7 @@ async def run(config, client=None):
     report.update(dns_fallback_state.metrics())
     report['event_loop']=lag
     report['system_awake_request']=power.result
+    report['end_to_end_runtime_ms'] = round((time.monotonic() - run_began) * 1000)
     try:
         await offload(write_report,config.report,report)
     except OSError:pass  # Original report error handling remains authoritative.
@@ -623,7 +625,14 @@ async def _run(config, client=None):
             pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
             if outage['tripped']:
                 from urllib.parse import urlparse
-                raise IdentityOutage(urlparse(brreg_enhet.BASE).hostname, IDENTITY_OUTAGE_SAMPLE)
+                failure = IdentityOutage(urlparse(brreg_enhet.BASE).hostname, IDENTITY_OUTAGE_SAMPLE)
+                await offload(write_report, config.report, {
+                    'run_id': config.run_id, 'run_status': 'failed',
+                    'warnings': [str(failure)], 'invalid_inputs': inputs.invalid,
+                    'invalid_inputs_count': len(inputs.invalid),
+                    'emitted_envelopes': 0, 'success_rate': 0.0,
+                })
+                raise failure
             if stuck:
                 warnings.append(f"{stuck} company tasks did not stop within {CANCEL_GRACE_SECONDS}s of cancellation; unfinished sections are reported as deadline")
             if config.websites and not stuck:

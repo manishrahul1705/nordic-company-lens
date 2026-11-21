@@ -108,13 +108,14 @@ class WebsiteHttp:
                             timeout=min(12 if attempt else 3,max(.001,self.budget.deadline-time.monotonic())))
                         self.dns_cache[host]=policy.check_ips(ips)
                         break
-                    except (TimeoutError,OSError,SourceFailure) as exc:
+                    except (TimeoutError,OSError,SourceFailure,UnicodeError) as exc:
                         if not attempt and self.config.website_transient_retry and retryable_transport(exc):
                             self.attempts.setdefault(org,[]).append({'domain':candidate.domain,'url':candidate.url,
                                 'reason':'transient_dns_retry','exception_class':type(exc).__name__,'message':str(exc),'retry_timeout_seconds':12})
                             await self.retry_pause()
                             continue
-                        self.dns_cache[host] = exc.code if isinstance(exc,SourceFailure) and exc.code in {'no_such_domain','ssrf','dns_servfail'} else 'dns_unavailable'
+                        self.dns_cache[host] = ('url_refused' if isinstance(exc, UnicodeError) else
+                            exc.code if isinstance(exc,SourceFailure) and exc.code in {'no_such_domain','ssrf','dns_servfail'} else 'dns_unavailable')
                         break
             result = self.dns_cache[host]
             if isinstance(result, str):

@@ -129,6 +129,14 @@ def extract_public_brand(page: Page, legal_name_val: str | None) -> str | None:
 
     cleaned_brand = re.sub(r"\s*[-–|:]?\s*(?:org(?:anisasjons)?\.?\s*nr\.?|organisasjonsnummer)\s*[:.]?\s*\d{9}\b.*$", "", candidate_brand, flags=re.I).strip(" .,-")
     cleaned_brand = re.sub(r"\s*[-–|:]\s*(?:nettbutikk|butikk|webshop|forside|hjem|velkommen|home|shop|store)\b.*$", "", cleaned_brand, flags=re.I).strip(" .,-")
+    if len(cleaned_brand.split()) > 6:
+        return None
+    legal_latin = bool(re.search(r"[A-Za-z]", legal_name_val or ""))
+    legal_cyrillic = bool(re.search(r"[\u0400-\u04ff]", legal_name_val or ""))
+    brand_latin = bool(re.search(r"[A-Za-z]", cleaned_brand))
+    brand_cyrillic = bool(re.search(r"[\u0400-\u04ff]", cleaned_brand))
+    if (legal_latin and brand_cyrillic) or (legal_cyrillic and brand_latin):
+        return None
     norm_b = legal_name(cleaned_brand)
     generic_brands = {
         "home", "hjem", "welcome", "velkommen", "kontakt", "contact",

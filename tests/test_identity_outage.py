@@ -51,6 +51,7 @@ def execute(cfg, response):
 
 def test_threshold_is_a_named_constant():
     assert IDENTITY_OUTAGE_SAMPLE == 25
+    assert {'dns_unavailable', 'dns_timeout', 'dns_error', 'dns_servfail'} <= runner.IDENTITY_NETWORK_CODES
 
 
 def test_recheck_window_outlasts_a_ten_second_blip():
@@ -93,8 +94,9 @@ def test_total_identity_outage_aborts_run(tmp_path):
         execute(cfg, outage)
     assert info.value.host == 'data.brreg.no'
     assert 'data.brreg.no' in str(info.value)
-    # No report claiming completed companies is written.
-    assert not cfg.report.exists() or json.loads(cfg.report.read_text())['run_status'] == 'failed'
+    report = json.loads(cfg.report.read_text())
+    assert report['run_status'] == 'failed'
+    assert any('identity source' in warning for warning in report['warnings'])
 
 
 def test_cli_exits_non_zero_and_names_host(tmp_path, monkeypatch, capsys):
