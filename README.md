@@ -1,6 +1,6 @@
-# Nordic Company Lens
+﻿# Nordic Company Lens
 
-Current measurement: **Stage AP, 20 November 2026**, source commit `cede54701d5e50067764f472009b6c830254065a`. All figures below refer to that one fresh frozen 1,000-company run. **1,852 tests: 1,850 passed, two retained failures**. [Complete measurement and validation](bench/reports/final-20261120/RESULTS.md). Historical stage measurements remain in bench/reports and are not the current coverage.
+Current measurement: **Stage BA, 21 November 2026**, frozen source commit `2d7b3cb343a5927fef47352e9226a9fc95e5864f`. The fresh default run completed all 1,000 companies and the full suite passed: **1,857 passed, 0 failed**. [Complete measurement, precision audit and reproducible evidence](bench/reports/final-ba/RESULTS.md).
 
 Nordic Company Lens researches Norwegian companies using official registries and bounded company-owned sources. It checks company identity, publishes evidence-linked facts and cited template summaries, and can generate searchable offline profiles. The Python import package and console command remain `signalpost`.
 
@@ -70,9 +70,9 @@ Exit zero means output was written for parsed input records. Inspect report warn
 
 ## Sources and licences
 
-Registry identity, roles, subunits and accounts come from official Brønnøysundregistrene APIs or the supplied registry snapshot. Registry data is attributed under NLOD 2.0. Optional hiring uses the official NAV feed and live detail verification against the exact company or registered subunit. Job claims cite the anonymous public ad page on arbeidsplassen.nav.no where it matches the verified ad; the feed is discovery provenance. The bundled NAV index is declared discovery metadata; it does not replace live evidence.
+Registry identity, roles, subunits and accounts come from official BrÃ¸nnÃ¸ysundregistrene APIs or the supplied registry snapshot. Registry data is attributed under NLOD 2.0. Optional hiring uses the official NAV feed and live detail verification against the exact company or registered subunit. Job claims cite the anonymous public ad page on arbeidsplassen.nav.no where it matches the verified ad; the feed is discovery provenance. The bundled NAV index is declared discovery metadata; it does not replace live evidence.
 
-Website research follows robots, public-IP, redirect, request and time limits. Published website facts require the documented company-identity proof. Social profile links can be recognised on accepted company pages; social platforms are not fetched. Public activity keeps company-published articles, supported registry updates and exact-party procurement awards separately labelled. Registry updates use the official Enhetsregisteret API, not the robots-disallowed Kunngjøringer HTML service. Bundled SSB KLASS industry titles retain CC BY 4.0 attribution to Statistics Norway.
+Website research follows robots, public-IP, redirect, request and time limits. Published website facts require the documented company-identity proof. Social profile links can be recognised on accepted company pages; social platforms are not fetched. Public activity keeps company-published articles, supported registry updates and exact-party procurement awards separately labelled. Registry updates use the official Enhetsregisteret API, not the robots-disallowed KunngjÃ¸ringer HTML service. Bundled SSB KLASS industry titles retain CC BY 4.0 attribution to Statistics Norway.
 
 Bounded news discovery selects one advertised feed, sitemap or news index from a verified homepage. It publishes at most five explicitly dated items without expanding child sitemaps or article links. Publication, update and last-modification dates retain their distinct meanings; registry activity is separate.
 
@@ -84,14 +84,14 @@ Wikidata's CC0 structured data is queried by exact P2333 organisation number for
 
 | Source or service | Use in the official run | Licence / access terms | Provider cost |
 |---|---|---|---:|
-| Brønnøysundregistrene (BRREG) | Company identity, roles, subunits and accounts through the live official API | NLOD 2.0; attribute Brønnøysundregistrene | $0 |
+| BrÃ¸nnÃ¸ysundregistrene (BRREG) | Company identity, roles, subunits and accounts through the live official API | NLOD 2.0; attribute BrÃ¸nnÃ¸ysundregistrene | $0 |
 | NAV public job feed and public ad pages | Feed: candidate discovery and live verification of active job details. Public ad page: the anonymous citation for each matching job claim | Public feed; [NAV reuse terms](https://arbeidsplassen.nav.no/vilkar-api) | $0 |
 | Wikidata | Revision-cited exact-orgnr structured facts and website/social nominations | CC0; retain item attribution in claim provenance | $0 |
 | Company websites | Ownership proof and company-published descriptions, social links and activity | Robots.txt and site access rules are followed; no open licence is inferred | $0 |
 | GLEIF | Exact-orgnr LEI facts and explicitly supported parents | [CC0 1.0](https://www.gleif.org/en/meta/lei-data-terms-of-use); anonymous API, exact child matches under RA000472 or RA000473 | $0 |
 | TED | Exact winner/buyer public procurement awards | [EU Publications Office reuse terms](https://ted.europa.eu/en/legal-notice); anonymous API and public notice XML | $0 |
 | Doffin | **Not used** | Supported keyless API/access and reuse terms were not verified | - |
-| Kunngjøringer HTML service | **Not used** | w2.brreg.no robots.txt disallows /kunngjoring/; no NLOD grant for this service assumed | - |
+| KunngjÃ¸ringer HTML service | **Not used** | w2.brreg.no robots.txt disallows /kunngjoring/; no NLOD grant for this service assumed | - |
 | Search engines | No integration | No provider is called | $0 |
 | Language models | None; summaries use deterministic templates | No model provider is called | $0 |
 
@@ -99,67 +99,64 @@ No personal NAV credential is required. When `NAV_API_TOKEN` is unset, the runne
 
 The command has **$0 provider cost**. Compute, storage and network costs are excluded. `--synthesis` accepts `template` (default) or `auto`, which both use templates; `llm` is rejected.
 
-## Stage AP final combined measurement
+## Stage BA final combined measurement
 
-Standard CLI defaults, fresh state, site ON, frozen `bench/inputs/1000-r3/batch.jsonl`, source `cede547`. **run_status completed; success_rate 1.0 (1,000/1,000)**. Crawl **1,075.200s**; end-to-end **1,602.8767692s** (1,602.877s rounded). Finalisation/outputs **137.730s**, site **378.860s**, other overhead **11.0867692s**. **11,653 / 19,000 HTTP**, maximum **40/company**, **0 deadline hits, 0 handled or unhandled exceptions**. Optional-source availability is distinct from terminal success: 868 companies have no source-error flags.
+Standard CLI defaults, fresh state, site ON, frozen `bench/inputs/1000-r3/batch.jsonl`, source `2d7b3cb`. **run_status completed; success_rate 1.0 (1,000/1,000)**. Crawl **1,038.14s**; end-to-end **1,520.578s** including site publishing (`end_to_end_runtime_ms=1,520,578`). Output finalisation was 177.89s and the site build was 292.66s. The default envelope output was **496,624,523 bytes / 4,294,967,296-byte cap** (11.56%); the site separately used **1,032,289,235 bytes** and produced 5,617 pages / 1,000 profiles. **11,562 / 19,000 HTTP**, maximum **40 per company**, **0 deadline hits, 0 handled or unhandled exceptions**.
 
-Linear projection for 1,100: **1,763.164s / 3,600s** (1,836.836s headroom) and approximately **12,819 / 20,900 HTTP** (8,081 headroom). This is conditional on similar network/source conditions, including TED's breaker; it is not a tail-latency guarantee. The budget is our own safeguard; the brief specifies no numeric time limit. HTTP ceilings remain **19 pooled per distinct normalized input, 40 attributed per company**, including retries and shared requests globally. Lower configured limits apply.
+Linear projection for 1,100: **1,672.636s / 3,600s** and approximately **12,719 / 20,900 HTTP**. This is conditional on similar source and network conditions. HTTP ceilings remain **19 pooled per distinct normalized input and 40 attributed per company**, including retries and shared requests globally. Lower configured limits apply.
 
 ### Full family table
 
-All counts are published claims in this ONE run. Rows overlap; do not sum them. Accounts/identity/roles contain named subsets.
+Counts are published claims in this one run. Rows overlap; do not sum them. All families were nonzero. The total is **236,654 claims**, **57,985 above Stage AP's 178,669**.
 
 | Family / information type | Companies | Claims |
 |---|---:|---:|
-| Identity | 1,000 | 31,241 |
-| Roles | 997 | 18,783 |
-| Accounts | 999 | 100,233 |
+| Identity | 1,000 | 48,334 |
+| Roles | 997 | 43,250 |
+| Accounts | 999 | 105,867 |
 | Audit status, per year/scope | 999 | 2,817 |
 | Registry-date activity | 997 | 7,714 |
-| Previous legal names of the subject company | 241 | 324 |
-| Subunits | 773 | 6,907 |
+| Previous legal names of subject company | 241 | 324 |
+| Historical names including subunits | 302 | 701 |
+| Subunit historical names | 210 | 377 |
+| Subunits | 773 | 17,664 |
 | Group structure | 75 | 119 |
 | Signatur | 765 | 765 |
 | Prokura | 201 | 201 |
-| Registry changes | 1,000 | 12,055 |
+| Registry changes | 1,000 | 12,052 |
 | GLEIF | 142 | 736 |
-| TED awards — SOURCE UNAVAILABLE | 0 | 0 |
-| Wikidata structured identity/accounts and item claims | 13 | 47 |
-| Verified official websites | 114 | 114 |
-| Public brands | 19 | 19 |
-| Social profiles | 61 | 125 |
-| News / explicitly dated company items | 32 | 115 |
+| TED procurement awards | 2 | 4 |
+| Wikidata structured claims | 13 | 47 |
+| Verified official websites | 115 | 115 |
+| Public brands | 36 | 36 |
+| Social profiles | 62 | 126 |
+| News / dated company items | 32 | 115 |
 | Hiring | 3 | 3 |
 | Research projects | 9 | 17 |
 | State aid | 98 | 679 |
 | SkatteFUNN | 36 | 89 |
-| DiBK central approvals | 12 | 62 |
-| Cleaning status snapshot | 6 | 6 |
-| Workshop approval snapshot | 1 | 2 |
-| Related-company registry-declared websites | 14 | 16 |
-
-Total supported published facts: **178,669**. Previous-name counts above are subject-company names; the broader company-plus-subunit view is 302 companies / 701 claims. Approval snapshots combined are seven companies / eight records, including one explicitly not-approved cleaning status. Related-company sites never supply borrowed social, brand or news content.
+| DiBK central approvals | 14 | 69 |
+| Cleaning register | 6 | 6 |
+| Workshop approvals | 1 | 2 |
+| Related-company declared websites | 14 | 16 |
 
 ### Accuracy, attribution and tests
 
-Strict verifier **PASS**: 1,000 schema-valid envelopes, 178,669 claims, 5,993 source blobs, 2,552 synthesis sentences and **zero unverified synthesis values**, exact input membership/order. The Stage X stratified **200-claim** sample (seed 20261119) has **200/200 correct**, zero wrong/doubtful, 156 mechanical and 44 hand-reviewed; **Wilson 95% lower bound 98.12%**. This measures precision of the sample, not recall or an evaluator score.
+Strict verifier **PASS**: 1,000 schema-valid envelopes, 236,654 claims, 6,002 verified source blobs, 2,560 synthesis sentences and **zero unverified synthesis values**, exact input membership/order. The Stage X stratified 200-claim sample (seed 20261119) was **200/200 correct**, zero wrong/doubtful; **165 mechanical and 35 source-reviewed**; Wilson 95% lower bound **98.12%**.
 
-Attribution: **0 cross-company contamination**; four shared official bulk-URL flags were adjudicated using 791 exact-subject source rows (787 direct and four explicitly labelled, registry-proved recipient-subunit associations), without relaxing the raw audit.
+The unseen-300 fresh run retained 316 output rows, completed 310 valid companies and reported **3 invalid inputs**. Its site has **310 profiles**, with invalid identifiers skipped. A separate jury seed-7 sample of 100 claims, stratified across the 300 active companies, was **100/100 correct** (80 exact mechanical checks, 20 saved-source reviews). **Uniktur has no published brand claim** in this output. The output and checks are in [jury-precision review](bench/reports/final-ba/jury-precision/REVIEW.md).
 
-Self-sufficient accuracy and attribution checks reproduce without bench/runs: [commands and extract](bench/reports/final-20261120/accuracy/REPRODUCE.md). The full suite has **1,852 tests: 1,850 passed, two failed**:
+Attribution audit: four raw shared official bulk-URL flags; 791 exact subject-row checks, including four explicitly scoped registry-subunit rows; **zero subject mismatches and zero cross-company contamination**. Accuracy and attribution reproduce from the committed extract without `bench/runs`: [reproduction instructions](bench/reports/final-ba/accuracy/REPRODUCE.md). The initial strict verification passed; a later repeat could not read one state blob after its path disappeared. [Details](bench/reports/final-ba/strict-verifier.txt).
 
-- `test_evaluator_shapes_union_contract_reference`: live-network evaluator reference check failed after BRREG oppdateringer ConnectTimeout left activity incomplete.
-- `test_independent_footer_runs_dependent_production_extraction`: footer timing flake (`official_website` absent after website deadline); passed twice in isolation. The full-suite failure remains recorded.
-
-The suite is not all green. [Complete test output and diagnosis](bench/reports/final-20261120/RESULTS.md#every-test-failure).
+The full suite passed: **1,857 passed, 0 failed**. One pytest cache warning reported denied permission writing `.pytest_cache/v/cache/nodeids`; it did not affect test outcomes. [Detailed report and logs](bench/reports/final-ba/RESULTS.md).
 
 ## Added sources and licences
 
 | Source | Publication / access | Licence or terms |
 |---|---|---|
-| Forskningsrådet research projects | Bundled funded-phase snapshot; total project awards, not exclusive company funding | Forskningsrådet, [NLOD 2.0](https://data.norge.no/nlod/en/2.0); excludes newer Tibi system |
-| Støtteregisteret state aid | Bundled exact-recipient snapshot, actual instrument labels and explicit subunit scope | Brønnøysundregistrene, [NLOD 2.0](https://data.norge.no/nlod/en/2.0); no parseable robots file, officially published bulk download rather than crawl |
-| SkatteFUNN | Bundled approved applications, exact orgnr, deduplicated project numbers; R&D tax deduction scheme, never a cash grant | Forskningsrådet, [catalogued NLOD 2.0](https://data.norge.no/nb/datasets/f82d3d4a-b0f8-3220-83ef-15fbd854c54f/innsendte-soknader-til-skattefunn); current provider workbook substituted for stale catalogue distribution |
+| ForskningsrÃ¥det research projects | Bundled funded-phase snapshot; total project awards, not exclusive company funding | ForskningsrÃ¥det, [NLOD 2.0](https://data.norge.no/nlod/en/2.0); excludes newer Tibi system |
+| StÃ¸tteregisteret state aid | Bundled exact-recipient snapshot, actual instrument labels and explicit subunit scope | BrÃ¸nnÃ¸ysundregistrene, [NLOD 2.0](https://data.norge.no/nlod/en/2.0); no parseable robots file, officially published bulk download rather than crawl |
+| SkatteFUNN | Bundled approved applications, exact orgnr, deduplicated project numbers; R&D tax deduction scheme, never a cash grant | ForskningsrÃ¥det, [catalogued NLOD 2.0](https://data.norge.no/nb/datasets/f82d3d4a-b0f8-3220-83ef-15fbd854c54f/innsendte-soknader-til-skattefunn); current provider workbook substituted for stale catalogue distribution |
 | DiBK central approvals | NACE-gated live enterprise HTML pages; exact orgnr, status, area/class/function and dates | Direktoratet for byggkvalitet attributed; public register access, no HTML factual-reuse prohibition found. API documentation's CC BY 4.0 is not asserted for the HTML site. Robots allows enterprise pages; /api/ and /search never called |
 | Cleaning register | Bundled main-unit exact-orgnr statuses; only explicit approved statuses labelled approved | Arbeidstilsynet, [NLOD 2.0](https://data.norge.no/nlod/no/2.0); robots 403, official bulk download only |
 | Approved workshops | Bundled main-unit exact-orgnr approval numbers, type/location | Statens vegvesen, [NLOD](https://data.norge.no/nlod/no) (catalogue does not specify version); export-backend robots 404, frontend no disallow; official bulk only |
@@ -177,9 +174,9 @@ Funding synthesis preserves actual instruments and recipient/subunit scope; rese
 
 ## Known limitations
 
-- TED depends on upstream XML readiness: HTTP 202 opens the breaker with periodic re-probes; **0 awards** in Stage AP versus **6 companies / 20 awards** in an earlier run, not evidence of no procurement.
+- TED depends on upstream XML readiness: HTTP 202 opens the breaker with periodic re-probes; **2 companies / 4 awards** in Stage BA; 28 TED requests returned HTTP 202 and the configured circuit breaker skipped further notices. This is limited source coverage, not evidence that no more awards exist.
 - Hiring is limited by NAV feed discovery/availability; all three published ads use proved registered-subunit employer numbers. [Route investigation](bench/reports/nav-live-routes-20-20261119/RESULTS.md).
-- Websites are verified-only (**114**); bounded discovery, static HTML, robots, transient failures and strict proof can miss genuine sites.
+- Websites are verified-only (**115**); bounded discovery, static HTML, robots, transient failures and strict proof can miss genuine sites.
 - Related-company websites are **registry-declared, not ownership-verified**, and are not official_website claims.
 - SkatteFUNN licence basis is the catalogue's NLOD 2.0 dataset listing; its nov24 distribution returned 404 on 20 November 2026, so the provider's current publication of the same dataset is treated as covered. [Exact basis](docs/SOURCES.md#skattefunn-historical-approvals-bundled-zero-runtime-http).
 - Stage AI's baseline **"Registered name"** sentence cites the registry identity claim; it does not assert first observation or absence of prior facts. Repeat-run refresh handling is unchanged.

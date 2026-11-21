@@ -1,0 +1,269 @@
+{
+  "stage": "BA",
+  "source_head": "2d7b3cb343a5927fef47352e9226a9fc95e5864f",
+  "branch": "audit-fixes",
+  "standard_cli_defaults": true,
+  "site_enabled": true,
+  "fresh_state": true,
+  "frozen_input": "bench/inputs/1000-r3/batch.jsonl",
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "output": {
+    "directory": "bench/runs/final-ba",
+    "envelopes_bytes": 496624523,
+    "output_cap_bytes": 4294967296,
+    "output_cap_mib": 4096,
+    "envelopes_cap_pct": 11.56,
+    "output_limit_exceeded": false,
+    "site_bytes_reported": 1032289235,
+    "site_pages": 5617,
+    "site_profiles": 1000,
+    "combined_envelopes_plus_site_bytes": 1528913758,
+    "cap_scope": "Envelope output only; site size reported separately."
+  },
+  "run": {
+    "run_id": "298edb0f6425462baa6a429bfa95110f",
+    "run_status": "completed",
+    "success_rate": 1.0,
+    "companies_succeeded": 1000,
+    "companies_failed": 0,
+    "crawl_seconds": 1038.14,
+    "runtime_ms": 1214625,
+    "end_to_end_runtime_ms": 1520578,
+    "end_to_end_seconds": 1520.578,
+    "output_seconds": 177.89,
+    "site_seconds": 292.66,
+    "requests": 11562,
+    "request_cap": 19000,
+    "max_requests_per_company": 40,
+    "deadline_hits": 0,
+    "handled_exceptions": 0,
+    "unhandled_exceptions": 0,
+    "warnings": [],
+    "companies_without_source_errors": 871
+  },
+  "projection_1100": {
+    "end_to_end_seconds": 1672.636,
+    "budget_seconds": 3600,
+    "wall_headroom_seconds": 1927.364,
+    "http": 12719,
+    "http_cap": 20900,
+    "basis": "Linear 1.1x projection from this measured 1,000-company run.",
+    "http_exact": 12718.2
+  },
+  "families": {
+    "identity": {
+      "companies": 1000,
+      "claims": 48334
+    },
+    "subunits": {
+      "companies": 773,
+      "claims": 17664
+    },
+    "roles": {
+      "companies": 997,
+      "claims": 43250
+    },
+    "accounts": {
+      "companies": 999,
+      "claims": 105867
+    },
+    "audit_status": {
+      "companies": 999,
+      "claims": 2817
+    },
+    "signatur": {
+      "companies": 765,
+      "claims": 765
+    },
+    "prokura": {
+      "companies": 201,
+      "claims": 201
+    },
+    "registry_changes": {
+      "companies": 1000,
+      "claims": 12052
+    },
+    "registry_date_activity": {
+      "companies": 997,
+      "claims": 7714
+    },
+    "historical_names_all_scopes": {
+      "companies": 302,
+      "claims": 701
+    },
+    "subunit_historical_names": {
+      "companies": 210,
+      "claims": 377
+    },
+    "GLEIF": {
+      "companies": 142,
+      "claims": 736
+    },
+    "state_aid": {
+      "companies": 98,
+      "claims": 679
+    },
+    "previous_names": {
+      "companies": 241,
+      "claims": 324
+    },
+    "group_structure": {
+      "companies": 75,
+      "claims": 119
+    },
+    "research": {
+      "companies": 9,
+      "claims": 17
+    },
+    "related_company_websites": {
+      "companies": 14,
+      "claims": 16
+    },
+    "SkatteFUNN": {
+      "companies": 36,
+      "claims": 89
+    },
+    "websites": {
+      "companies": 115,
+      "claims": 115
+    },
+    "brands": {
+      "companies": 36,
+      "claims": 36
+    },
+    "social": {
+      "companies": 62,
+      "claims": 126
+    },
+    "DiBK": {
+      "companies": 14,
+      "claims": 69
+    },
+    "news": {
+      "companies": 32,
+      "claims": 115
+    },
+    "cleaning_approval": {
+      "companies": 6,
+      "claims": 6
+    },
+    "Wikidata": {
+      "companies": 13,
+      "claims": 47
+    },
+    "TED": {
+      "companies": 2,
+      "claims": 4
+    },
+    "workshop_approval": {
+      "companies": 1,
+      "claims": 2
+    },
+    "hiring": {
+      "companies": 3,
+      "claims": 3
+    }
+  },
+  "ap_comparison": {
+    "ap_claims": 178669,
+    "ba_claims": 236654,
+    "claim_delta": 57985,
+    "ap_envelope_bytes": 405598109,
+    "envelope_byte_delta": 91026414,
+    "ap_site_bytes": 828067821,
+    "site_byte_delta": 204221414,
+    "ap_requests": 11653
+  },
+  "jury_unseen300": {
+    "run_id": "3fa66fc8c3874556abacdc04a200f20b",
+    "input_rows": 316,
+    "unique_inputs": 313,
+    "emitted_envelopes": 316,
+    "companies_succeeded": 310,
+    "companies_failed": 0,
+    "invalid_inputs": [
+      "969110467",
+      "not-a-number",
+      ""
+    ],
+    "invalid_inputs_count": 3,
+    "run_status": "completed",
+    "success_rate": 1.0,
+    "requests": 3174,
+    "deadline_hits": 0,
+    "end_to_end_runtime_ms": 549078,
+    "site_profiles": 310,
+    "site_skipped_invalid_identifiers": 3,
+    "published_claims": 45606
+  },
+  "jury_precision_seed7": {
+    "sampled": 100,
+    "correct": 100,
+    "wrong": 0,
+    "observed_precision": 1.0,
+    "mechanical": 80,
+    "source_review": 20,
+    "uniktur_public_brand_claims": 0
+  },
+  "stage_x_accuracy": {
+    "sampled": 200,
+    "correct": 200,
+    "wrong": 0,
+    "doubtful": 0,
+    "mechanical": 165,
+    "hand_reviewed": 35,
+    "wilson_95_lower_bound": 0.9812
+  },
+  "attribution": {
+    "raw_shared_url_flags": 4,
+    "independent_subject_row_checks": 791,
+    "explicitly_scoped_subunit_rows": 4,
+    "subject_mismatches": 0,
+    "other_raw_contamination_flags": 0,
+    "cross_company_contamination": 0
+  },
+  "strict_verifier": {
+    "final_ba": {
+      "lines": 1000,
+      "schema_valid": true,
+      "published_claims": 236654,
+      "source_blobs_verified": 6002,
+      "synthesis_companies": 1000,
+      "synthesis_sentences": 2560,
+      "synthesis_unverified_values": 0
+    },
+    "jury_unseen300": {
+      "lines": 316,
+      "schema_valid": true,
+      "published_claims": 45606,
+      "source_blobs_verified": 1285,
+      "synthesis_companies": 316,
+      "synthesis_sentences": 735,
+      "synthesis_unverified_values": 0
+    }
+  },
+  "full_suite": {
+    "collected": 1857,
+    "passed": 1857,
+    "failed": 0,
+    "warnings": 1,
+    "warning": "PytestCacheWarning: denied permission writing .pytest_cache/v/cache/nodeids; all tests passed."
+  },
+  "sha256": {
+    "envelopes": "6e5aee7d67020b0f1de07b530af0390ba09828b49a2255e690baee9c6637a863",
+    "report": "424d9e749598aee70b4b2cd96514f6886855afef253ca1464391ceff9d35de6c"
+  },
+  "strict_verifier_repeat_after_initial_pass": {
+    "status": "incomplete_due_to_os_error",
+    "sha256": "107cc604ff4e774c6f15f619bb6a79f696540de12ed79974dd297ea5e40410f6",
+    "error": "OSError(22, Invalid argument); path later disappeared from final-ba state/blobs. Cause unconfirmed. Initial strict verification passed before this."
+  },
+  "extract_only_reproduction": {
+    "status": "passed",
+    "bench_runs_open_forbidden": true,
+    "stage_x_sample_reproduced": true,
+    "attribution_checks_reproduced": true,
+    "bulk_row_adjudication_reproduced": true,
+    "jury_seed7_sample_source_verified": true
+  }
+}

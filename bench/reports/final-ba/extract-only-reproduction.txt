@@ -1,0 +1,7 @@
+﻿Extract-only reproduction completed with all `bench/runs` opens forbidden.
+
+- Stage X sample: 200 correct; 165 mechanical and 35 source-reviewed; Wilson lower bound 0.9812.
+- Raw attribution audit: 4 reused URLs, no dangling evidence, registry mismatches, or foreign labels.
+- Bulk-row adjudication: 791 checks, four explicitly scoped recipient subunits, zero subject mismatches, zero cross-company contamination.
+- Recreated hand-review support was byte-for-byte JSON-equal to the retained review context.
+- Jury seed-7 sample independently reproduced 100/100 correct from its own retained context and SHA-256 checked source blobs.

@@ -1,0 +1,4 @@
+﻿Stage BA final-1,000 strict verifier — initial post-run check: PASS
+{"lines":1000,"schema_valid":true,"published_claims":236654,"source_blobs_verified":6002,"synthesis_companies":1000,"synthesis_sentences":2560,"synthesis_unverified_values":0}
+
+A later repeat attempt could not complete. The Windows-visible source blob 107cc604ff4e774c6f15f619bb6a79f696540de12ed79974dd297ea5e40410f6 then raised OSError(22, "Invalid argument"); its path subsequently disappeared from state/blobs. The initial pass predates that disappearance. The measured output was not regenerated.

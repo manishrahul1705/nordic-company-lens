@@ -1,0 +1,52 @@
+{
+  "run": "jury-unseen300-ba",
+  "method": "jury_precision.py seed 7; 300 active orgs; same one-per-family then max(population/(allocation+1)) allocation and sorted-within-family draw",
+  "sampled": 100,
+  "correct": 100,
+  "wrong": 0,
+  "mechanical": 80,
+  "source_review": 20,
+  "blobs": 93,
+  "files": {
+    "active-organisations.txt": {
+      "bytes": 3300,
+      "sha256": "50142f11bceaa80b7ca6103ace7f97dfa21808bad5d97e8c2ce42ad99f501671"
+    },
+    "company-context.jsonl": {
+      "bytes": 28634793,
+      "sha256": "edd8091062ca27773f88eab87baf87debe1c8959edc73071c5006e334b1efaf1"
+    },
+    "sample.jsonl": {
+      "bytes": 102419,
+      "sha256": "5541c48646ad7c37ef358e4652fddd6218daadd9dd07dfabbb9792d4f79b4e70"
+    },
+    "population.json": {
+      "bytes": 871,
+      "sha256": "b8b599c1d179af1d5d4838d0572cdcbf17356eb514e86d1ca5baf2bf73e220b2"
+    },
+    "source-blobs.jsonl.xz": {
+      "bytes": 164288,
+      "sha256": "c1f5752017af2ec855772c344691d4694c11d2081c17edb43c82c6aba7049e1d"
+    },
+    "verdicts.jsonl": {
+      "bytes": 21704,
+      "sha256": "c31e8aa7219b1a18c18bffe1fc15dfb4c91abf2f2b962e90c7de4a97e2c4b9ed"
+    },
+    "generate.py": {
+      "bytes": 2981,
+      "sha256": "625887f3787580dd52f6e7384a3c461110706771faeed04e152616cdd2e3abbb"
+    },
+    "prepare_context.py": {
+      "bytes": 846,
+      "sha256": "3fbf63dea9c90d3f4e9f3f33f9ef3b86862fd87a7848c72914ecf5793c778e24"
+    },
+    "verify_sample.py": {
+      "bytes": 9085,
+      "sha256": "661279ba92c29e93b72671f05216cd544db7cc5d0ecd0dddd9eee3865c8d7cff"
+    },
+    "REVIEW.md": {
+      "bytes": 12221,
+      "sha256": "2782940600074d06219ea1bedd35b95b0837bc07fb4b63b4c4f9cc5a1c7f33ff"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "source_head": "2d7b3cb343a5927fef47352e9226a9fc95e5864f",
+  "branch": "audit-fixes",
+  "standard_cli_defaults": true,
+  "fresh_state": true,
+  "site_enabled": true,
+  "default_run_command": ".\\.venv\\Scripts\\python.exe -u -m signalpost.cli run --organisations bench/inputs/1000-r3/batch.jsonl --output bench/runs/final-ba/envelopes.jsonl --report bench/runs/final-ba/report.json --state-dir bench/runs/final-ba/state --site-dir bench/runs/final-ba/site",
+  "final_ba_run_id": "298edb0f6425462baa6a429bfa95110f",
+  "final_ba_start_time_utc": "2026-11-21T07:51:24.957309Z",
+  "final_ba_end_to_end_runtime_ms": 1520578,
+  "jury_input": "C:\\Users\\Manish\\Downloads\\jury-audit\\orgnrs.txt",
+  "jury_input_sha256": "48ba6fee00d3c44ccea41fdd4009907ef42c894a9163e6d13b7cebd4cfeaf40c",
+  "jury_run_id": "3fa66fc8c3874556abacdc04a200f20b",
+  "jury_run_command": ".\\.venv\\Scripts\\python.exe -u -m signalpost.cli run --organisations C:\\Users\\Manish\\Downloads\\jury-audit\\orgnrs.txt --output bench/runs/jury-unseen300-ba/envelopes.jsonl --report bench/runs/jury-unseen300-ba/report.json --state-dir bench/runs/jury-unseen300-ba/state --site-dir bench/runs/jury-unseen300-ba/site"
+}

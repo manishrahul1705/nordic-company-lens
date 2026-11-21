@@ -1,0 +1,28 @@
+﻿{
+  "run": "final-ba",
+  "source_head": "2d7b3cb343a5927fef47352e9226a9fc95e5864f",
+  "input_sha256": "7ba0c3263afbca7dc5277f21f265e60484a937c59dc1871e9f1e0260d9bfe782",
+  "population": 1000,
+  "published_claims": 236654,
+  "sample": {
+    "method": "Stage X stratified allocation and exact mechanical equality/span/subject URL predicate; remaining claims source-reviewed against retained raw bytes",
+    "seed": 20261119,
+    "size": 200,
+    "mechanical": 165,
+    "source_reviewed": 35,
+    "correct": 200,
+    "wrong": 0,
+    "doubtful": 0,
+    "wilson_95_lower_bound": 0.9812
+  },
+  "jury_unseen_300": {
+    "method": "Jury seed-7 family-stratified allocation over the 300 active companies; one per family, then largest population divided by next allocation; sorted-within-family draw",
+    "size": 100,
+    "mechanical": 80,
+    "source_reviewed": 20,
+    "correct": 100,
+    "wrong": 0,
+    "uniktur_public_brand_claims": 0
+  },
+  "scope": "Measurement and reproducible evidence artifacts only; no product code, proof, validator, or cap changes."
+}
